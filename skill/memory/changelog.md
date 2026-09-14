@@ -118,3 +118,7 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
 - 2026-09-15 [docs] run2 milestone: Act 1 boss 仪式兽 killed on replay4
   (252hp, 8 rounds) — RINGING one-hit tactic + step-discipline + sync end_turn
   carried the fight; IMPERVIOUS picked for 19hp Act2 survival; gold 485.
+- 2026-09-15 [docs] run2 Act2 early progress: f1 survival clear at 9hp
+  (IMPERVIOUS 30-block anchor + forge-upgraded deck + step discipline); LOST_WISP
+  relic re-claimed via known-safe event; shop f19 haul: VENERABLE_TEA_SET
+  (rest-heal relic back), WEAK_POTION, DECAY removed -> 14hp/193g/20-card deck.
