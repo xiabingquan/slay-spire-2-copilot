@@ -110,3 +110,8 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
 - 2026-09-15 [chore] branch authority: 10h self-commit + dev-merge rights
   granted by user; feat/sts2-comm-mod merged into dev (--no-ff); ongoing play/
   docs commits land on dev, problem spikes branch fix/* off dev then merge back.
+- 2026-09-15 [fix] boss-fight end-turn stall root fix: end_turn switched to
+  multiplayer-sync entry (CombatManager.OnEndedTurnLocally +
+  ActionQueueSynchronizer.RequestEnqueue(EndPlayerTurnAction)), fallback to
+  PlayerCmd on exception. Third boss stall (RINGING + PlayerCmd freeze) motivated
+  the switch; sync path validated live round 1-2 transition (run2 仪式兽 replay3).

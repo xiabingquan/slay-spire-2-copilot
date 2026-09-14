@@ -69,3 +69,7 @@ breakthrough; remove entries that prove wrong.
   Recovery ladder proven: spirectl stop -> launch -> continue_run (~90s); boss
   fight reloads from room-entry save (in-combat progress lost, potions restored).
   Treat boss fights as burst-then-restart-tolerant; keep postmortems ready.
+- Boss-fight turn stalls (#3): RINGING-locked hands + PlayerCmd.EndTurn froze
+  turn transitions. Server fix: sync-queue end_turn path. Client rule stays:
+  on frozen fingerprint >30s -> stop/launch/continue_run ladder (~90s, boss
+  reloads from entry save).

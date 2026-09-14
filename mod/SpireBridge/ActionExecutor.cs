@@ -12,6 +12,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Merchant;
+using MegaCrit.Sts2.Core.GameActions;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Map;
 using MegaCrit.Sts2.Core.Models;
@@ -145,8 +146,28 @@ public static class ActionExecutor
             return (false, $"not player play phase (phase={pcs.Phase})");
         }
         Player playerRef = player!;
-        Fire(() => { PlayerCmd.EndTurn(playerRef, canBackOut: false); return Task.CompletedTask; }, "end turn");
-        return (true, "submitted end_turn");
+        int turnNumber = pcs.TurnNumber;
+        // Boss-fight stalls froze PlayerCmd.EndTurn's internal wait chain
+        // (RINGING debuff turns). Drive the multiplayer-sync entry instead:
+        // CombatManager.OnEndedTurnLocally + queue EndPlayerTurnAction — the
+        // path CombatSolver verified live on this game build.
+        Fire(async () =>
+        {
+            try
+            {
+                CombatManager.Instance.OnEndedTurnLocally();
+                RunManager.Instance.ActionQueueSynchronizer.RequestEnqueue(
+                    new EndPlayerTurnAction(playerRef, turnNumber));
+                BridgeMod.LogInfo($"end_turn via sync queue (turn {turnNumber})");
+                await Task.CompletedTask;
+            }
+            catch (Exception e)
+            {
+                BridgeMod.LogErr($"sync end_turn failed, falling back to PlayerCmd: {e}");
+                PlayerCmd.EndTurn(playerRef, canBackOut: false);
+            }
+        }, "end turn");
+        return (true, "submitted end_turn (sync queue path)");
     }
 
     private static (bool, string) UsePotion(JsonElement args)
