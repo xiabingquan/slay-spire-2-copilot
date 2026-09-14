@@ -301,18 +301,26 @@ public static class StateBuilder
 
     private static List<Dictionary<string, object?>> SafeDeck(Player player, RunState runState)
     {
-        // Deck lives on the run player state; PlayerCombatState piles are combat-only.
-        PropertyInfo? prop = player.GetType().GetProperty("Deck") ?? player.GetType().GetProperty("MasterDeck");
-        if (prop?.GetValue(player) is IEnumerable<CardModel> deck)
+        // Player.Deck is a CardPile; iterate its Cards collection.
+        try
         {
-            return deck.Select((CardModel c, int i) => new Dictionary<string, object?>
+            CardPile? pile = player.Deck;
+            if (pile == null)
+            {
+                return new List<Dictionary<string, object?>>();
+            }
+            return pile.Cards.Select((CardModel c, int i) => new Dictionary<string, object?>
             {
                 ["index"] = i,
                 ["id"] = c.Id.Entry,
                 ["name"] = ModelName(c),
+                ["upgraded"] = ProbeBool(c, "IsUpgraded", "Upgraded"),
             }).ToList();
         }
-        return new List<Dictionary<string, object?>>();
+        catch (Exception)
+        {
+            return new List<Dictionary<string, object?>>();
+        }
     }
 
     private static Dictionary<string, object?>? BuildCombat(CombatState combat, Player? player)
@@ -865,13 +873,26 @@ public static class StateBuilder
         List<NRestSiteButton> buttons = UiHelper.FindAll<NRestSiteButton>(screenNode);
         for (int i = 0; i < buttons.Count; i++)
         {
-            options.Add(new Dictionary<string, object?>
+            var option = new Dictionary<string, object?>
             {
                 ["kind"] = "button",
                 ["index"] = i,
                 ["id"] = buttons[i].Name.ToString(),
                 ["name"] = buttons[i].Name.ToString(),
-            });
+            };
+            try
+            {
+                // Button.Option throws if unset; resolve id/title when available.
+                MegaCrit.Sts2.Core.Entities.RestSite.RestSiteOption restOption = buttons[i].Option;
+                option["id"] = restOption.OptionId;
+                option["name"] = ResolveLoc(restOption.Title);
+                option["enabled"] = restOption.IsEnabled;
+            }
+            catch (Exception)
+            {
+                // option not bound yet
+            }
+            options.Add(option);
         }
         return options;
     }
@@ -1002,23 +1023,15 @@ public static class StateBuilder
             case "relic_choice":
             case "rewards":
             case "event":
-            case "rest":
             {
                 List<Dictionary<string, object?>> options =
                     ((BuildScreenDetail(screen, screenNode, runState, player)["options"] as List<Dictionary<string, object?>>)
                      ?? new List<Dictionary<string, object?>>());
                 foreach (Dictionary<string, object?> option in options)
                 {
-                    string action = screen switch
-                    {
-                        "rest" => option["name"]?.ToString()?.ToLowerInvariant().Contains("smith") == true ? "smith" : "rest",
-                        "event" => "choose",
-                        "rewards" => "choose",
-                        _ => "choose",
-                    };
                     actions.Add(new Dictionary<string, object?>
                     {
-                        ["action"] = action,
+                        ["action"] = "choose",
                         ["args"] = new Dictionary<string, object?> { ["index"] = option["index"] },
                     });
                 }
@@ -1029,6 +1042,21 @@ public static class StateBuilder
                 if (screen is "card_choice" or "deck_select" or "relic_choice")
                 {
                     actions.Add(new Dictionary<string, object?> { ["action"] = "proceed", ["args"] = new Dictionary<string, object?>() });
+                }
+                break;
+            }
+            case "rest":
+            {
+                foreach (Dictionary<string, object?> option in RestOptions(screenNode))
+                {
+                    string oid = option["id"]?.ToString()?.ToUpperInvariant() ?? "";
+                    string action = oid.Contains("SMITH") || oid.Contains("UPGRADE") || oid.Contains("MEND")
+                        ? "smith" : "rest";
+                    actions.Add(new Dictionary<string, object?>
+                    {
+                        ["action"] = action,
+                        ["args"] = new Dictionary<string, object?> { ["index"] = option["index"] },
+                    });
                 }
                 break;
             }
@@ -1097,7 +1125,8 @@ public static class StateBuilder
             (state["player"] as Dictionary<string, object?>)?["hp"]?.ToString() ?? "",
             ((state["combat"] as Dictionary<string, object?>)?["piles"] as Dictionary<string, object?>)?["hand"]?.ToString() ?? "",
             ((state["run"] as Dictionary<string, object?>)?["available_map_points"] as List<Dictionary<string, object?>>)?.Count.ToString() ?? "",
-            ((state["screen_detail"] as Dictionary<string, object?>)?["options"] as List<Dictionary<string, object?>>)?.Count.ToString() ?? "");
+            ((state["screen_detail"] as Dictionary<string, object?>)?["options"] as List<Dictionary<string, object?>>)?.Count.ToString() ?? "",
+            ((state["player"] as Dictionary<string, object?>)?["deck"] as List<Dictionary<string, object?>>)?.Count.ToString() ?? "");
         ulong hash = 14695981039346656037;
         foreach (char c in raw)
         {

@@ -365,6 +365,32 @@ public static class ActionExecutor
         return (true, $"submitted {label} index {index}");
     }
 
+    // Locate the right confirm button on any card-selection screen: prefer a
+    // visible preview container's own Confirm (finalizing step), then the
+    // screen-level confirm under its various naming conventions.
+    private static NConfirmButton? FindSelectionConfirm(Node screen)
+    {
+        foreach (Control container in UiHelper.FindAll<Control>(screen))
+        {
+            if (!container.Visible || !container.Name.ToString().Contains("Preview", StringComparison.OrdinalIgnoreCase))
+            {
+                continue;
+            }
+            NConfirmButton? inPreview = container.GetNodeOrNull<NConfirmButton>("Confirm")
+                ?? container.GetNodeOrNull<NConfirmButton>("%Confirm")
+                ?? UiHelper.FindFirst<NConfirmButton>(container);
+            if (inPreview != null)
+            {
+                return inPreview;
+            }
+        }
+        return screen.GetNodeOrNull<NConfirmButton>("%PreviewConfirm")
+            ?? screen.GetNodeOrNull<NConfirmButton>("PreviewConfirm")
+            ?? screen.GetNodeOrNull<NConfirmButton>("%Confirm")
+            ?? screen.GetNodeOrNull<NConfirmButton>("Confirm")
+            ?? UiHelper.FindFirst<NConfirmButton>(screen);
+    }
+
     private static (bool, string) Skip()
     {
         IScreenContext? context = ActiveScreenContext.Instance.GetCurrentScreen();
@@ -436,61 +462,25 @@ public static class ActionExecutor
             }
             return (false, "no button found on modal");
         }
-        // Card-selection screens confirm through NConfirmButton (%Confirm /
-        // %PreviewConfirm), not NProceedButton — check them first.
-        if (context is NDeckEnchantSelectScreen enchantScreen)
-        {
-            // Enchant flow: select card -> main "Confirm" (no % prefix) shows a
-            // preview container -> the container's own "Confirm" finalizes.
-            foreach (string containerName in new[] { "%EnchantSinglePreviewContainer", "%EnchantMultiPreviewContainer" })
-            {
-                if (enchantScreen.GetNodeOrNull<Control>(containerName) is { Visible: true } container
-                    && container.GetNodeOrNull<NConfirmButton>("Confirm") is { } previewConfirm)
-                {
-                    NConfirmButton target = previewConfirm;
-                    Fire(() => UiHelper.Click(target), "confirm enchant preview");
-                    return (true, $"submitted confirm (enchant preview {containerName})");
-                }
-            }
-            NConfirmButton? mainConfirm = enchantScreen.GetNodeOrNull<NConfirmButton>("Confirm");
-            if (mainConfirm != null)
-            {
-                NConfirmButton target = mainConfirm;
-                Fire(() => UiHelper.Click(target), "confirm enchant main");
-                return (true, "submitted confirm (enchant main)");
-            }
-            return (false, "no confirm button on enchant screen");
-        }
-        if (context is NDeckCardSelectScreen deckScreen)
-        {
-            NConfirmButton? preview = deckScreen.GetNodeOrNull<NConfirmButton>("%PreviewConfirm");
-            NConfirmButton? main = deckScreen.GetNodeOrNull<NConfirmButton>("%Confirm");
-            NConfirmButton? confirm = preview is { Visible: true } ? preview : main;
-            if (confirm != null)
-            {
-                NConfirmButton target = confirm;
-                Fire(() => UiHelper.Click(target), "confirm deck selection");
-                return (true, $"submitted confirm ({(confirm == preview ? "preview" : "main")})");
-            }
-            return (false, "no confirm button on deck selection screen");
-        }
+        // Card-selection screens confirm through NConfirmButton with varying
+        // naming per subclass (%Confirm / "Confirm" / preview-container Confirm).
         if (context is NSimpleCardSelectScreen
             or NChooseACardSelectionScreen
             or NChooseABundleSelectionScreen
+            or NDeckCardSelectScreen
             or NDeckUpgradeSelectScreen
             or NDeckTransformSelectScreen
             or NDeckEnchantSelectScreen)
         {
             Node node = (Node)context;
-            NConfirmButton? confirm = node.GetNodeOrNull<NConfirmButton>("%Confirm")
-                ?? node.GetNodeOrNull<NConfirmButton>("Confirm")
-                ?? UiHelper.FindFirst<NConfirmButton>(node);
+            NConfirmButton? confirm = FindSelectionConfirm(node);
             if (confirm != null)
             {
                 NConfirmButton target = confirm;
                 Fire(() => UiHelper.Click(target), "confirm card selection");
-                return (true, "submitted confirm");
+                return (true, $"submitted confirm ({target.Name})");
             }
+            return (false, $"no confirm button on screen {context.GetType().Name}");
         }
         NProceedButton? proceed = context switch
         {
@@ -521,17 +511,58 @@ public static class ActionExecutor
             return (false, "not in a rest site room");
         }
         List<NRestSiteButton> buttons = UiHelper.FindAll<NRestSiteButton>(room);
-        if (buttons.Count == 0)
+        NRestSiteButton? chosen = null;
+        foreach (NRestSiteButton button in buttons)
         {
-            return (false, "no rest site option buttons found");
+            try
+            {
+                string oid = button.Option.OptionId.ToUpperInvariant();
+                bool isSmith = oid.Contains("SMITH") || oid.Contains("UPGRADE") || oid.Contains("MEND");
+                if (isSmith == preferSmith)
+                {
+                    chosen = button;
+                    break;
+                }
+            }
+            catch (Exception)
+            {
+                // option not bound on this button
+            }
         }
-        NRestSiteButton? chosen = buttons.FirstOrDefault(b =>
-            b.Name.ToString().Contains(preferSmith ? "Smith" : "Rest", StringComparison.OrdinalIgnoreCase));
-        chosen ??= preferSmith && buttons.Count > 1 ? buttons[1] : buttons[0];
-        NClickableControl target = chosen;
+        chosen ??= buttons.FirstOrDefault();
+        if (chosen == null)
+        {
+            return (false, "no rest site buttons found");
+        }
+        NRestSiteButton target = chosen;
         string label = preferSmith ? "smith" : "rest";
-        Fire(() => UiHelper.Click(target), label);
-        return (true, $"submitted {label} ({chosen.Name})");
+        string optionId;
+        try
+        {
+            optionId = target.Option.OptionId;
+        }
+        catch (Exception)
+        {
+            optionId = target.Name.ToString();
+        }
+        Fire(async () =>
+        {
+            try
+            {
+                bool selected = await target.Option.OnSelect();
+                BridgeMod.LogInfo($"{label} OnSelect({optionId}) -> {selected}");
+                if (!selected)
+                {
+                    await UiHelper.Click(target);
+                }
+            }
+            catch (Exception e)
+            {
+                BridgeMod.LogErr($"{label} OnSelect failed: {e}; falling back to click");
+                await UiHelper.Click(target);
+            }
+        }, label);
+        return (true, $"submitted {label} ({optionId})");
     }
 
     private static (bool, string) ShopBuy(JsonElement args)
