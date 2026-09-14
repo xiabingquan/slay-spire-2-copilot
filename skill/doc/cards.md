@@ -72,3 +72,7 @@ normal and CONFUSED states; can_play flag in state is always authoritative.
   instead of vuln-scaled value); lasts until enemy death observed.
 - FIGHT_ME verified: grants STRENGTH_POWER to both player and target.
 - BREAKTHROUGH verified: 1-cost AOE ~9 + 1hp self cost.
+- BURNING_PACT: 1-cost self utility — exhaust/draw engine; no direct damage
+  (run2 f14 first play, hand refreshed). Exact exhaust count pending logs check.
+- EXPECT_A_FIGHT: picked run2 f14 — effect pending first combat draw.
+- PYRE / STOMP: reward-screen options seen; PYRE picked run2 f13, pending draw.
