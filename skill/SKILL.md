@@ -90,7 +90,9 @@ When the run ends (game_over screen, or abandon):
 
 1. Write a postmortem to skill/memory/runs/<YYYY-MM-DD>-<character>-floor<N>.md
    covering: result, key decisions, what worked, what killed the run, one lesson.
-   Reference the matching logs/run-*.log filename inside the postmortem.
+   Reference the matching logs/run-*.log filename inside the postmortem and
+   commit it into the repo with `git add -f logs/run-*.log` (logs are disk-retained
+   always; repo-retained at run end).
 2. Update skill/memory/lessons.md only with generalizable lessons (not one-off
    bad RNG). Keep lessons.md short and concrete; prune entries that prove wrong.
 3. Update skill/memory/MEMORY.md index if you added files.

@@ -57,3 +57,9 @@ normal and CONFUSED states; can_play flag in state is always authoritative.
   clicking no-ops; proceed leaves the screen.
 - Skip button exists on most card_reward screens but not all
   (NDeckCardSelectScreen removal flow has none — removal is mandatory pick).
+
+## Observed run 2 additions
+
+- FIGHT_ME: 2-cost attack ~10 dmg + grants player STRENGTH_POWER (+1 observed).
+  STS2 strength-scaling attack — priority pick for strike decks.
+- GAMBLERS_BREW: potion gained run 2 floor 1 — effect pending first use.

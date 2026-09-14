@@ -9,3 +9,5 @@ mod/obj/
 docs/research/external/
 docs/research/decompiled/
 mod/SpireBridge/.godot/
+logs/*.log
+logs/.current_run
