@@ -49,3 +49,12 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
   as client-server: server = mod (state + actuation, no decisions), client =
   spirectl + Claude (read state, decide, send ops). Rule: any unsupported
   screen encountered in play is implemented immediately, then game restart.
+- 2026-09-15 [fix] live-play completeness series: rest-site button-wired flow
+  (OnSelect bypassed room callbacks), generalized selection confirm chain
+  (two-phase main/preview), treasure index alignment, shop inventory with
+  MerchantEntry.OnTryPurchaseWrapper, deck probe via Player.Deck.Cards,
+  rest option ids via RestSiteOption.OptionId. All verified live.
+- 2026-09-15 [docs] run progress: Act 1 cleared (boss 墨影幻灵 floor 16 killed
+  round 5 via potion-strip slippery + double BLUDGEON vuln window); run
+  active in Act 2; VAJRA/GORGET relics; DEMON_FORM added; BYRDONIS_EGG removal
+  still pending (selection-screen preview flow fixed but unverified on removal).

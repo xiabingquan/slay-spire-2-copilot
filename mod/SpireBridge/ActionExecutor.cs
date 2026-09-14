@@ -481,14 +481,29 @@ public static class ActionExecutor
             or NDeckEnchantSelectScreen)
         {
             Node node = (Node)context;
-            NConfirmButton? confirm = FindSelectionConfirm(node);
-            if (confirm != null)
+            // Two-phase confirm chain: main Confirm reveals a preview; the
+            // preview's own Confirm finalizes. Click whichever is actionable
+            // now, then retry the other after a beat so a single proceed can
+            // complete screens that require both steps.
+            Fire(async () =>
             {
-                NConfirmButton target = confirm;
-                Fire(() => UiHelper.Click(target), "confirm card selection");
-                return (true, $"submitted confirm ({target.Name})");
-            }
-            return (false, $"no confirm button on screen {context.GetType().Name}");
+                for (int attempt = 0; attempt < 3; attempt++)
+                {
+                    NConfirmButton? confirm = FindSelectionConfirm(node);
+                    if (confirm == null)
+                    {
+                        return;
+                    }
+                    BridgeMod.LogInfo($"confirm chain attempt {attempt + 1} -> {confirm.Name} visible={confirm.Visible} enabled={confirm.IsEnabled}");
+                    await UiHelper.Click(confirm);
+                    await Task.Delay(500, default);
+                    if (!GodotObject.IsInstanceValid(node) || (node is Control control && !control.IsVisibleInTree()))
+                    {
+                        return; // screen closed: selection finalized
+                    }
+                }
+            }, "confirm card selection");
+            return (true, "submitted confirm (chain)");
         }
         NProceedButton? proceed = context switch
         {

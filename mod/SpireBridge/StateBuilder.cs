@@ -921,7 +921,10 @@ public static class StateBuilder
                 {
                     continue;
                 }
-                string id = ProbeModelId(entry) ?? slot.GetType().Name;
+                // Card goods wrap the model in CreationResult; probe that first.
+                object probeTarget = entry is MerchantCardEntry { CreationResult: { } creation }
+                    ? creation : entry;
+                string id = ProbeModelId(probeTarget) ?? entry.GetType().Name;
                 options.Add(new Dictionary<string, object?>
                 {
                     ["kind"] = slot is NMerchantCardRemoval ? "card_removal" : "shop_item",
