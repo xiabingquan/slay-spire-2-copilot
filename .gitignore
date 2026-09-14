@@ -6,3 +6,4 @@ mod/bin/
 mod/obj/
 *.user
 .idea/
+docs/research/external/
