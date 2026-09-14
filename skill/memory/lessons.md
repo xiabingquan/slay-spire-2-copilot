@@ -79,3 +79,10 @@ breakthrough; remove entries that prove wrong.
   boss-fight replay from entry save. Future server work: inspect RINGING
   handler interactions / consider force-advance action via CombatManager
   internals if replays multiply.
+- RINGING stall-avoidance tactic VALIDATED (run2 boss replay4 r6): on RINGING
+  turns play AT MOST one attack then immediately sync end_turn with no further
+  plays — enemy phase resolved cleanly to r7. Keep async residue minimal on
+  locked turns; brute-forcing multiple locked-state attempts correlates with
+  freezes.
+- Client discipline: re-read state after EVERY act, even mid-"obvious" dumps —
+  EXPECT_A_FIGHT misclicked twice from stale indices this fight.
