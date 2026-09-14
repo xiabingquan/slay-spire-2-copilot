@@ -1,0 +1,16 @@
+/Users/xiabingquan/projects/mimo-spire/mod/SpireBridge/.godot/mono/temp/obj/Release/SpireBridge.csproj.AssemblyReference.cache
+/Users/xiabingquan/projects/mimo-spire/mod/SpireBridge/.godot/mono/temp/obj/Release/SpireBridge.GeneratedMSBuildEditorConfig.editorconfig
+/Users/xiabingquan/projects/mimo-spire/mod/SpireBridge/.godot/mono/temp/obj/Release/SpireBridge.AssemblyInfoInputs.cache
+/Users/xiabingquan/projects/mimo-spire/mod/SpireBridge/.godot/mono/temp/obj/Release/SpireBridge.AssemblyInfo.cs
+/Users/xiabingquan/projects/mimo-spire/mod/SpireBridge/.godot/mono/temp/obj/Release/SpireBridge.csproj.CoreCompileInputs.cache
+/Users/xiabingquan/projects/mimo-spire/mod/SpireBridge/.godot/mono/temp/bin/Release/mimo-spire-bridge.deps.json
+/Users/xiabingquan/projects/mimo-spire/mod/SpireBridge/.godot/mono/temp/bin/Release/mimo-spire-bridge.runtimeconfig.json
+/Users/xiabingquan/projects/mimo-spire/mod/SpireBridge/.godot/mono/temp/bin/Release/mimo-spire-bridge.dll
+/Users/xiabingquan/projects/mimo-spire/mod/SpireBridge/.godot/mono/temp/bin/Release/mimo-spire-bridge.pdb
+/Users/xiabingquan/projects/mimo-spire/mod/SpireBridge/.godot/mono/temp/bin/Release/GodotSharp.dll
+/Users/xiabingquan/projects/mimo-spire/mod/SpireBridge/.godot/mono/temp/obj/Release/SpireBri.83156EF5.Up2Date
+/Users/xiabingquan/projects/mimo-spire/mod/SpireBridge/.godot/mono/temp/obj/Release/mimo-spire-bridge.dll
+/Users/xiabingquan/projects/mimo-spire/mod/SpireBridge/.godot/mono/temp/obj/Release/refint/mimo-spire-bridge.dll
+/Users/xiabingquan/projects/mimo-spire/mod/SpireBridge/.godot/mono/temp/obj/Release/mimo-spire-bridge.pdb
+/Users/xiabingquan/projects/mimo-spire/mod/SpireBridge/.godot/mono/temp/obj/Release/SpireBridge.genruntimeconfig.cache
+/Users/xiabingquan/projects/mimo-spire/mod/SpireBridge/.godot/mono/temp/obj/Release/ref/mimo-spire-bridge.dll

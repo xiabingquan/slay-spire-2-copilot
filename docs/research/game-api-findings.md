@@ -88,6 +88,45 @@ decompiled game code in docs/research/decompiled/ (gitignored) and sts2.xml memb
 - UiHelper.Click / WaitHelper.Until / WaitHelper.ForNode are the UI-drive utilities
   (our mod will implement equivalents for the commands we need)
 
+## Community-validated symbols (from reference mod sources)
+
+Verified in STS2-Agent / CombatSolver / slay-the-streamer-2 / BaseLib-StS2 clones
+(docs/research/external/), all against STS2 game builds at or near v0.107.x:
+
+- Play card: CardModel.TryManualPlay(target) -> internally PlayCardAction via
+  RunManager.Instance.ActionQueueSynchronizer.RequestEnqueue
+- End turn: CombatManager.Instance.OnEndedTurnLocally() then
+  RequestEnqueue(new EndPlayerTurnAction(player, turn))
+- Potion: potion.EnqueueManualUse(target)
+- Screen detection: MegaCrit.Sts2.Core.Nodes.Screens.ScreenContext.
+  ActiveScreenContext.Instance.GetCurrentScreen(); also NOverlayStack.Instance.Peek()
+- Combat state: CombatManager.Instance.DebugOnlyGetState() (CombatState);
+  run state: RunManager.Instance.DebugOnlyGetState(); liveness: IsInProgress,
+  IsAbandoned, runState.IsGameOver
+- Player: LocalContext.GetMe(combatState); PlayerCombatState exposes Hand, DrawPile,
+  DiscardPile, ExhaustPile, AllCards, Energy, Stars, OrbQueue, TurnNumber, Phase
+- Creature: CurrentHp, MaxHp, Block, IsAlive, Powers, Monster, CombatId
+- Enemy intent: creature.Monster.NextMove (MoveState) -> move.Intents;
+  AttackIntent carries damage; IntentType has Buff/Debuff/Sleep/Stun/Hidden
+- Card reward pick: NCardHolder.EmitSignal(NCardHolder.SignalName.Pressed) or
+  private NCardRewardSelectionScreen.SelectCard via reflection; skip via
+  NChoiceSelectionSkipButton
+- Event options: NEventRoom.OptionButtonClicked(EventOption, int) is public
+- Map: NMapPoint / NClickableControl.ForceClick(); RunManager.Instance.RoomEntered
+  event signals room transition completion
+- Rest site: RunManager.Instance.RestSiteSynchronizer.ChooseLocalOption(index) (per
+  STS2-Agent); chest relic picking via TreasureRoomRelicSynchronizer
+- Main thread: background threads only enqueue into ConcurrentQueue drained by a
+  Godot Node's _Process (CombatSolver SolverDispatcher) or Node.CallDeferred hop
+  (streamer DispatcherAutoload); never touch game objects off main thread
+- Version: ReleaseInfoManager.Instance (MegaCrit.Sts2.Core.Debug); game v0.107.1
+  matches AI-Ascension evidence commit 59260271
+- Packaging conventions: Godot.NET.Sdk/4.5.1, net9.0, EnableDynamicLoading,
+  HintPath refs Private=false, post-build copy dll+json into
+  <game>/SlayTheSpire2.app/Contents/MacOS/mods/<id>/; manifest min_game_version
+  "0.107.0" works on our install (streamer), "0.111.0" mods (STS2-Agent,
+  CombatSolver) will be rejected by the game loader on v0.107.1
+
 ## Implications for SpireBridge mod design
 
 1. No Harmony patching required for v1: official command APIs (CardCmd/PlayerCmd) +
