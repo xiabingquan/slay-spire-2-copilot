@@ -88,3 +88,7 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
   at 2hp via duplicator bash; historian chest haul; battle dummy event; rest
   heal 14->53 (tea set+pillow); elite trio killed; HAPPY_FLOWER+ORNAMENTAL_FAN
   relics; strike trimmed; 15 relics total; run active at 45hp/126g.
+- 2026-09-15 [docs] FAILURE RUN COMPLETE: ironclad died floor 45 act 3 boss
+  round 7 vs 女王 at 39/400hp; full postmortem in runs/2026-09-15-act3-boss-
+  defeat.md; all screens encountered supported live server-side; user notified
+  via Feishu per instruction.

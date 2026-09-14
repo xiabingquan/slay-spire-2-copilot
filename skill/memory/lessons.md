@@ -47,3 +47,9 @@ breakthrough; remove entries that prove wrong.
 - Reward buttons: executor index space is 0-based over current buttons; state
   options may include stale/unclaimable entries — prefer smallest index and
   re-read state after every claim.
+- Boss-class hp pools (400) outlast burst engines: keep vuln cycling
+  (UPPERCUT/THUNDERCLAP) every turn instead of stacking only raw damage.
+- Chains/frail debuff stacks zeroed block in boss rounds — if block reads 0
+  after block-card plays, incoming damage is full value; race or reposition.
+- Rest-site relic stacking (VENERABLE_TEA_SET + REGAL_PILLOW) was the biggest
+  run extender: +39 heals twice rescued the run from 8-14hp.
