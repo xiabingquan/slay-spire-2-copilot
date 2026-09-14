@@ -73,3 +73,9 @@ breakthrough; remove entries that prove wrong.
   turn transitions. Server fix: sync-queue end_turn path. Client rule stays:
   on frozen fingerprint >30s -> stop/launch/continue_run ladder (~90s, boss
   reloads from entry save).
+- Boss stall #4 (run2 仪式兽 r9, boss at 19hp): RINGING-locked end-turn froze
+  on BOTH end-turn paths (PlayerCmd and sync-queue) — freeze is enemy-turn/AI
+  side, not our end-turn entry. Recovery ladder remains the remedy; cost is
+  boss-fight replay from entry save. Future server work: inspect RINGING
+  handler interactions / consider force-advance action via CombatManager
+  internals if replays multiply.
