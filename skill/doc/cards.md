@@ -76,3 +76,6 @@ normal and CONFUSED states; can_play flag in state is always authoritative.
   (run2 f14 first play, hand refreshed). Exact exhaust count pending logs check.
 - EXPECT_A_FIGHT: picked run2 f14 — effect pending first combat draw.
 - PYRE / STOMP: reward-screen options seen; PYRE picked run2 f13, pending draw.
+- AROMA_OF_CHAOS event "LET_GO" (run2 f15): opens NDeckTransformSelectScreen —
+  pick any deck card, it transforms to a random card. STRIKE -> POMMEL_STRIKE
+  observed. Good sink for redundant basics.
