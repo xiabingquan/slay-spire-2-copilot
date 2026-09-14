@@ -12,3 +12,4 @@ Extracted from game sts2.xml (3 types). One entry per type.
 - VAJRA: seen in shop (154g). STS1 effect: +1 Strength at combat start. STS2 unverified.
 - PANTOGRAPH: seen in shop (236g). STS1 effect: full heal entering boss combat. STS2 unverified.
 - LEES_WAFFLE: seen in shop (229g). STS1 effect: heal on pickup / interactable. STS2 unverified.
+- GORGET: chest relic floor 9. STS1 effect: start combat with 3 Block. STS2 unverified — observe next fights.

@@ -313,14 +313,22 @@ public static class ActionExecutor
             }
             case NTreasureRoom treasureRoom:
             {
+                // Index space must match StateBuilder.TreasureOptions: chest (if
+                // present) occupies index 0, enabled relic holders follow.
                 List<NTreasureRoomRelicHolder> holders = UiHelper.FindAll<NTreasureRoomRelicHolder>(treasureRoom)
                     .Where(h => h.IsEnabled && h.Visible)
                     .ToList();
-                if (index < 0 || index >= holders.Count)
+                bool chestListed = treasureRoom.GetNodeOrNull("Chest") != null;
+                int relicIndex = chestListed ? index - 1 : index;
+                if (relicIndex < 0)
+                {
+                    return (false, "index 0 is the chest; use treasure_open for it");
+                }
+                if (relicIndex >= holders.Count)
                 {
                     return (false, $"index {index} out of range ({holders.Count} chest relics)");
                 }
-                NClickableControl chestTarget = holders[index];
+                NClickableControl chestTarget = holders[relicIndex];
                 Fire(() => UiHelper.Click(chestTarget), "choose chest relic");
                 return (true, $"submitted choose chest relic index {index}");
             }
@@ -547,20 +555,11 @@ public static class ActionExecutor
         }
         Fire(async () =>
         {
-            try
-            {
-                bool selected = await target.Option.OnSelect();
-                BridgeMod.LogInfo($"{label} OnSelect({optionId}) -> {selected}");
-                if (!selected)
-                {
-                    await UiHelper.Click(target);
-                }
-            }
-            catch (Exception e)
-            {
-                BridgeMod.LogErr($"{label} OnSelect failed: {e}; falling back to click");
-                await UiHelper.Click(target);
-            }
+            // Click the button rather than Option.OnSelect(): the room wires
+            // completion callbacks (ShowProceedButton / SetTravelEnabled) only
+            // through its own button path; OnSelect alone leaves the room stuck.
+            await UiHelper.Click(target);
+            BridgeMod.LogInfo($"{label} clicked button ({optionId})");
         }, label);
         return (true, $"submitted {label} ({optionId})");
     }
