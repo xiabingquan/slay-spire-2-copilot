@@ -20,6 +20,7 @@ using MegaCrit.Sts2.Core.Nodes;
 using MegaCrit.Sts2.Core.Nodes.Cards.Holders;
 using MegaCrit.Sts2.Core.Nodes.CommonUi;
 using MegaCrit.Sts2.Core.Nodes.Events;
+using MegaCrit.Sts2.Core.Nodes.Events.Custom.CrystalSphere;
 using MegaCrit.Sts2.Core.Nodes.GodotExtensions;
 using MegaCrit.Sts2.Core.Nodes.Relics;
 using MegaCrit.Sts2.Core.Nodes.RestSite;
@@ -149,6 +150,7 @@ public static class StateBuilder
                 NRestSiteRoom => "rest",
                 NMerchantRoom => "shop",
                 NMerchantInventory => "shop",
+                NCrystalSphereScreen => "crystal_sphere",
                 NMainMenu => "menu",
                 NCombatRoom => "combat",
                 _ => "other",
@@ -615,6 +617,7 @@ public static class StateBuilder
                 "rest" => RestOptions(screenNode),
                 "shop" => ShopOptions(screenNode),
                 "modal" => ModalOptions(screenNode),
+                "crystal_sphere" => CrystalOptions(screenNode),
                 _ => new List<Dictionary<string, object?>>(),
             };
             detail["options"] = options;
@@ -966,6 +969,28 @@ public static class StateBuilder
         return options;
     }
 
+    private static List<Dictionary<string, object?>> CrystalOptions(Node? screenNode)
+    {
+        var options = new List<Dictionary<string, object?>>();
+        if (screenNode == null)
+        {
+            return options;
+        }
+        List<NCrystalSphereCell> cells = UiHelper.FindAll<NCrystalSphereCell>(screenNode);
+        for (int i = 0; i < cells.Count; i++)
+        {
+            options.Add(new Dictionary<string, object?>
+            {
+                ["kind"] = "crystal_cell",
+                ["index"] = i,
+                ["id"] = cells[i].Name.ToString(),
+                ["name"] = cells[i].Name.ToString(),
+                ["visible"] = cells[i].Visible,
+            });
+        }
+        return options;
+    }
+
     private static List<Dictionary<string, object?>> BuildAvailableActions(
         string screen, CombatState? combat, Player? player, RunState? runState, Node? screenNode)
     {
@@ -1098,6 +1123,19 @@ public static class StateBuilder
                 actions.Add(new Dictionary<string, object?> { ["action"] = "proceed", ["args"] = new Dictionary<string, object?>() });
                 actions.Add(new Dictionary<string, object?> { ["action"] = "skip", ["args"] = new Dictionary<string, object?>() });
                 break;
+            case "crystal_sphere":
+            {
+                foreach (Dictionary<string, object?> option in CrystalOptions(screenNode))
+                {
+                    actions.Add(new Dictionary<string, object?>
+                    {
+                        ["action"] = "choose",
+                        ["args"] = new Dictionary<string, object?> { ["index"] = option["index"] },
+                    });
+                }
+                actions.Add(new Dictionary<string, object?> { ["action"] = "proceed", ["args"] = new Dictionary<string, object?>() });
+                break;
+            }
             case "menu":
                 actions.Add(new Dictionary<string, object?> { ["action"] = "start_run", ["args"] = new Dictionary<string, object?>() });
                 actions.Add(new Dictionary<string, object?> { ["action"] = "continue_run", ["args"] = new Dictionary<string, object?>() });

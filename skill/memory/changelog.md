@@ -58,3 +58,6 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
   round 5 via potion-strip slippery + double BLUDGEON vuln window); run
   active in Act 2; VAJRA/GORGET relics; DEMON_FORM added; BYRDONIS_EGG removal
   still pending (selection-screen preview flow fixed but unverified on removal).
+- 2026-09-15 [feature] crystal_sphere screen support per completeness rule:
+  cell enumeration + choose + proceed traversal verified live (Crystal Sphere
+  event floor 19 act 2); cell clickability filter pending polish.

@@ -19,6 +19,7 @@ using MegaCrit.Sts2.Core.Nodes;
 using MegaCrit.Sts2.Core.Nodes.Cards.Holders;
 using MegaCrit.Sts2.Core.Nodes.CommonUi;
 using MegaCrit.Sts2.Core.Nodes.Events;
+using MegaCrit.Sts2.Core.Nodes.Events.Custom.CrystalSphere;
 using MegaCrit.Sts2.Core.Nodes.GodotExtensions;
 using MegaCrit.Sts2.Core.Nodes.Relics;
 using MegaCrit.Sts2.Core.Nodes.RestSite;
@@ -336,6 +337,17 @@ public static class ActionExecutor
                 return ClickIndexedButton(restRoom, index, "rest site option");
             case NMerchantRoom shopRoom:
                 return ClickIndexedButton(shopRoom, index, "shop item");
+            case NCrystalSphereScreen crystalScreen:
+            {
+                List<NCrystalSphereCell> cells = UiHelper.FindAll<NCrystalSphereCell>(crystalScreen);
+                if (index < 0 || index >= cells.Count)
+                {
+                    return (false, $"index {index} out of range ({cells.Count} crystal cells)");
+                }
+                NClickableControl cell = cells[index];
+                Fire(() => UiHelper.Click(cell), "crystal cell");
+                return (true, $"submitted crystal cell {index}");
+            }
             default:
             {
                 if (context is NChooseACardSelectionScreen or NSimpleCardSelectScreen or NDeckCardSelectScreen
