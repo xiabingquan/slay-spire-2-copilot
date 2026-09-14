@@ -115,3 +115,6 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
   ActionQueueSynchronizer.RequestEnqueue(EndPlayerTurnAction)), fallback to
   PlayerCmd on exception. Third boss stall (RINGING + PlayerCmd freeze) motivated
   the switch; sync path validated live round 1-2 transition (run2 仪式兽 replay3).
+- 2026-09-15 [docs] run2 milestone: Act 1 boss 仪式兽 killed on replay4
+  (252hp, 8 rounds) — RINGING one-hit tactic + step-discipline + sync end_turn
+  carried the fight; IMPERVIOUS picked for 19hp Act2 survival; gold 485.
