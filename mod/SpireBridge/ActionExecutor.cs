@@ -385,30 +385,47 @@ public static class ActionExecutor
         return (true, $"submitted {label} index {index}");
     }
 
-    // Locate the right confirm button on any card-selection screen: prefer a
-    // visible preview container's own Confirm (finalizing step), then the
-    // screen-level confirm under its various naming conventions.
+    // Locate the right confirm button on any card-selection screen. Preview
+    // confirmations live inside container subtrees whose % unique-names do not
+    // resolve from the screen root, so walk all confirm buttons and prefer the
+    // enabled one under a preview-named parent.
     private static NConfirmButton? FindSelectionConfirm(Node screen)
     {
-        foreach (Control container in UiHelper.FindAll<Control>(screen))
+        List<NConfirmButton> all = UiHelper.FindAll<NConfirmButton>(screen);
+        NConfirmButton? enabledPreview = null;
+        NConfirmButton? enabledAny = null;
+        NConfirmButton? namedConfirm = null;
+        NConfirmButton? anyVisible = null;
+        foreach (NConfirmButton button in all)
         {
-            if (!container.Visible || !container.Name.ToString().Contains("Preview", StringComparison.OrdinalIgnoreCase))
+            if (!button.Visible)
             {
                 continue;
             }
-            NConfirmButton? inPreview = container.GetNodeOrNull<NConfirmButton>("Confirm")
-                ?? container.GetNodeOrNull<NConfirmButton>("%Confirm")
-                ?? UiHelper.FindFirst<NConfirmButton>(container);
-            if (inPreview != null)
+            anyVisible ??= button;
+            string parentName = button.GetParent()?.Name.ToString() ?? "";
+            bool previewish = parentName.Contains("review", StringComparison.OrdinalIgnoreCase)
+                || button.Name.ToString().Contains("review", StringComparison.OrdinalIgnoreCase);
+            if (button.IsEnabled)
             {
-                return inPreview;
+                if (previewish)
+                {
+                    enabledPreview ??= button;
+                }
+                enabledAny ??= button;
+            }
+            if (button.Name.ToString().Contains("Confirm", StringComparison.OrdinalIgnoreCase))
+            {
+                namedConfirm ??= button;
             }
         }
-        return screen.GetNodeOrNull<NConfirmButton>("%PreviewConfirm")
-            ?? screen.GetNodeOrNull<NConfirmButton>("PreviewConfirm")
-            ?? screen.GetNodeOrNull<NConfirmButton>("%Confirm")
-            ?? screen.GetNodeOrNull<NConfirmButton>("Confirm")
-            ?? UiHelper.FindFirst<NConfirmButton>(screen);
+        NConfirmButton? pick = enabledPreview ?? enabledAny ?? namedConfirm ?? anyVisible ?? all.FirstOrDefault();
+        if (pick != null)
+        {
+            BridgeMod.LogInfo($"FindSelectionConfirm pick={pick.Name}/{pick.GetParent()?.Name} "
+                + $"enabled={pick.IsEnabled} candidates={all.Count}");
+        }
+        return pick;
     }
 
     private static (bool, string) Skip()
@@ -593,10 +610,6 @@ public static class ActionExecutor
 
     private static (bool, string) ShopBuy(JsonElement args)
     {
-        if (!TryGetInt(args, "index", out int index))
-        {
-            return (false, "shop_buy requires index");
-        }
         NMerchantRoom? room = NMerchantRoom.Instance;
         if (room == null)
         {
@@ -609,11 +622,38 @@ public static class ActionExecutor
         List<NMerchantSlot> slots = (room.Inventory?.GetAllSlots()?.ToList() ?? new List<NMerchantSlot>())
             .Where(s => s.Entry != null)
             .ToList();
-        if (index < 0 || index >= slots.Count)
+        string? itemId = GetString(args, "item_id");
+        NMerchantSlot? slot = null;
+        if (!string.IsNullOrEmpty(itemId))
         {
-            return (false, $"shop_buy index {index} out of range ({slots.Count} items)");
+            foreach (NMerchantSlot candidate in slots)
+            {
+                MerchantEntry? e = candidate.Entry;
+                object probe = e is MerchantCardEntry { CreationResult: { } creation } ? creation : e!;
+                string id = StateBuilder.ProbeModelId(probe) ?? e!.GetType().Name;
+                if (id == itemId)
+                {
+                    slot = candidate;
+                    break;
+                }
+            }
+            if (slot == null)
+            {
+                return (false, $"item_id '{itemId}' not found in shop inventory");
+            }
         }
-        NMerchantSlot slot = slots[index];
+        else if (TryGetInt(args, "index", out int index))
+        {
+            if (index < 0 || index >= slots.Count)
+            {
+                return (false, $"shop_buy index {index} out of range ({slots.Count} items)");
+            }
+            slot = slots[index];
+        }
+        else
+        {
+            return (false, "shop_buy requires index or item_id");
+        }
         MerchantEntry entry = slot.Entry!;
         if (!entry.IsStocked)
         {
@@ -624,8 +664,32 @@ public static class ActionExecutor
             return (false, $"not enough gold for cost {entry.Cost}");
         }
         MerchantEntry entryRef = entry;
-        Fire(async () => await entryRef.OnTryPurchaseWrapper(room.Inventory!.Inventory), "shop buy");
-        return (true, $"submitted shop_buy index {index} cost={entry.Cost}");
+        NMerchantRoom roomRef = room;
+        Fire(async () =>
+        {
+            try
+            {
+                NMerchantSlot? slotNode = UiHelper.FindAll<NMerchantSlot>(roomRef)
+                    .FirstOrDefault(s => ReferenceEquals(s.Entry, entryRef));
+                if (slotNode?.Hitbox is { } hitbox)
+                {
+                    await UiHelper.Click(hitbox);
+                    await Task.Delay(300, default);
+                }
+                bool purchased = await entryRef.OnTryPurchaseWrapper(roomRef.Inventory?.Inventory, false);
+                BridgeMod.LogInfo($"shop buy wrapper entry={entryRef.GetType().Name} -> {purchased}");
+                if (!purchased && slotNode?.Hitbox is { } retryHitbox)
+                {
+                    await UiHelper.Click(retryHitbox);
+                    BridgeMod.LogInfo($"shop buy hitbox fallback slot={slotNode.Name}");
+                }
+            }
+            catch (Exception e)
+            {
+                BridgeMod.LogErr($"shop buy failed entry={entryRef.GetType().Name}: {e}");
+            }
+        }, "shop buy");
+        return (true, $"submitted shop_buy {itemId ?? $"index"} cost={entry.Cost}");
     }
 
     private static (bool, string) ShopLeave()

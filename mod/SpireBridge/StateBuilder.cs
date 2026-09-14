@@ -715,7 +715,7 @@ public static class StateBuilder
         return option;
     }
 
-    private static string? ProbeModelId(object container)
+    internal static string? ProbeModelId(object container)
     {
         foreach (string member in new[] { "Card", "card", "Model", "CardModel" })
         {

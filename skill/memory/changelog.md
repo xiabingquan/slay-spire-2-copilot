@@ -61,3 +61,11 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
 - 2026-09-15 [feature] crystal_sphere screen support per completeness rule:
   cell enumeration + choose + proceed traversal verified live (Crystal Sphere
   event floor 19 act 2); cell clickability filter pending polish.
+- 2026-09-15 [fix] shop purchase hardening: shop_buy accepts item_id (exact
+  entry match via model id / entry type name) eliminating index-space drift;
+  purchase flow = hitbox UI-state click + MerchantEntry.OnTryPurchaseWrapper
+  (real grant; removal opens deck select; relics run RelicCmd.Obtain; potions
+  correctly refuse when slots full). Removal confirm chain v2 walks all
+  NConfirmButton nodes preferring enabled preview-container confirms
+  (%PreviewConfirm does not resolve from screen root). Verified live: BYRDONIS_EGG
+  removed via item_id path; HEART_OF_IRON identified as STS2 potion not relic.
