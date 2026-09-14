@@ -23,3 +23,26 @@ Extracted from game sts2.xml (14 types). One entry per type.
   the charge appears consumed/removed after taking a hit — subsequent hits deal full damage. Verified live.
 - VULNERABLE_POWER: target takes +50% attack damage for the duration (Strike 6 -> 9 vs vulnerable 墨宝). Verified live.
 - PlatingPower / RegenPower: game-internal self-buffs used by AutoSlay smoke bot (huge flat block / regen per turn).
+
+## Observed in Act 3 boss/elite runs (2026-09-15)
+
+- WEAK_POWER: target deals ~25% less attack damage; intent display drops after application.
+- VULNERABLE_POWER: target takes +50% attack damage; also amplifies incoming damage when on the player.
+- FRAIL_POWER: reduces block gained; stacked with CHAINS_OF_BINDING observed zeroing block
+  entirely in boss rounds despite DEFEND/SECOND_WIND plays (verify exact formula later).
+- CHAINS_OF_BINDING_POWER: queen-boss debuff; suspected block-suppression component.
+- MINION_POWER: boss flag; spawns replacement minion on death (factory/queen fights).
+- STOCK_POWER: robot-assembly flag; each death spawned next robot variant until fight end.
+- RITUAL_POWER / STRENGTH_POWER on enemies: per-turn strength growth — kill priority target.
+- RAMPART_POWER: living-shield ally block-regeneration source.
+- SLIPPERY_POWER: first-hit damage massively reduced; charges consumed per hit (potions strip too).
+- TERRITORIAL_POWER / SOAR_POWER / BURROWED_POWER: elite/boss defensive stances; burrowed
+  pairs with big charged intents that cancel if block broken in time.
+- DEMON_FORM_POWER: player power — +strength per turn (upgraded); core engine.
+- CONFUSED_POWER (from FAKE_SNECKO_EYE): hand costs randomized each draw — exploit 0-cost
+  high cards; beware expensive basics.
+- PLATING_POWER (GORGET): start-of-combat flat block; observed absorbing early hits.
+- THORNS_POWER (BRONZE_SCALES): reflect damage on being attacked.
+- FLAME_BARRIER_POWER: temporary thorns+block from FLAME_BARRIER card.
+- DUPPLICATION_POWER (DUPLICATOR potion): temporary card-duplication state; redraw found
+  lethal BASH at 2hp once.

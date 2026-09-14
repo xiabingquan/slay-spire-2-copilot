@@ -133,6 +133,11 @@ def render_compact(state):
         gold = player.get("gold")
         gold_s = f" gold={gold}" if gold is not None else ""
         lines.append(f"player hp={player.get('hp')}/{player.get('max_hp')} block={player.get('block')}{gold_s}")
+        # player powers/debuffs mirror creature powers during combat
+        combat_p = state.get("combat") or {}
+        me = next((c for c in (combat_p.get("creatures") or []) if c.get("is_player")), None)
+        if me and me.get("powers"):
+            lines.append("player powers: " + ", ".join(p.get("id", "?") for p in me["powers"]))
         relics = player.get("relics") or []
         if relics:
             lines.append("relics: " + ", ".join(r.get("id", "?") for r in relics))
