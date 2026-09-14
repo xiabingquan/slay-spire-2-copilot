@@ -812,7 +812,9 @@ public static class StateBuilder
         {
             return options;
         }
-        List<NRewardButton> buttons = UiHelper.FindAll<NRewardButton>(screenNode);
+        List<NRewardButton> buttons = UiHelper.FindAll<NRewardButton>(screenNode)
+            .Where(b => b.Visible && b.IsEnabled)
+            .ToList();
         for (int i = 0; i < buttons.Count; i++)
         {
             options.Add(new Dictionary<string, object?>

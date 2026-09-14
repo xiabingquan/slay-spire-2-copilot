@@ -92,3 +92,5 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
   round 7 vs 女王 at 39/400hp; full postmortem in runs/2026-09-15-act3-boss-
   defeat.md; all screens encountered supported live server-side; user notified
   via Feishu per instruction.
+- 2026-09-15 [docs] watchdog pass 2: cards.md knowledge from live runs; reward
+  options filter to visible+enabled buttons (unclaimable-button gap polish).
