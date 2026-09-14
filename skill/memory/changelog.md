@@ -69,3 +69,6 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
   NConfirmButton nodes preferring enabled preview-container confirms
   (%PreviewConfirm does not resolve from screen root). Verified live: BYRDONIS_EGG
   removed via item_id path; HEART_OF_IRON identified as STS2 potion not relic.
+- 2026-09-15 [docs] run progress: act 2 floors through 24; key-fight knight
+  killed; PERFECTED_STRIKE + WHIRLWIND upgraded + ODDLY_SMOOTH_STONE/777g chest;
+  shop/rewards index-drift patterns documented; hatch mechanic coverage next.
