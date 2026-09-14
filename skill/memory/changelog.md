@@ -76,3 +76,7 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
   merchant UIs routed through shop pipeline via NMerchantInventory discovery;
   ShopBuy/ShopOptions/ShopLeave generalized beyond NMerchantRoom. Live-verified:
   FAKE_SNECKO_EYE bought via item_id (777->723g) and event exited cleanly.
+- 2026-09-15 [docs] run progress: Act 2 cleared (boss 无厌沙worm 321hp killed
+  round 5 — upgraded demon form + whirlwind 81-dmg burst + perfected strike);
+  act 3 entered; JUGGERNAUT picked; FAKE_SNECKO_EYE=CONFUSED costs verified
+  (0-cost bludgeon/whirlwind windows exploited); LANTERN_KEY is a deck card.
