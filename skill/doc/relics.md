@@ -38,3 +38,7 @@ Extracted from game sts2.xml (3 types). One entry per type.
 - BLESSING_OF_THE_FORGE: run2 elite potion drop. Effect pending first use.
 - Run2 combat-start package confirmed again: STRENGTH+DEXTERITY powers + energy
   6/3 — attributions between SPARKLING_ROUGE/CHANDELIER/TUNING_FORK still open.
+- THE_LANTERN_KEY event branches (run1/2 observed): RETURN_THE_KEY grants ~+100
+  gold instantly no combat; KEEP_THE_KEY starts knight fight for key card.
+  Choose RETURN at low hp, KEEP when healthy.
+- AMETHYST_AUBERGINE: chest relic run2 f24. Effect pending combat observation.

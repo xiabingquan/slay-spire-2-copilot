@@ -49,3 +49,6 @@ Extracted from game sts2.xml (14 types). One entry per type.
 - INFESTED_POWER (异蛙寄生虫 elite, run2 f7): on death spawns multiple 扭动虫
   adds (4x ~17-21hp observed). Save AOE (THUNDERCLAP/BREAKTHROUGH/WHIRLWIND)
   for the spawn wave instead of blowing it on the parent.
+- RINGING_POWER (仪式兽 boss debuff, run2): appeared on player mid-boss-fight;
+  remaining hand cards flipped to can_play=false — suspected card-play lockout
+  or play-limit debuff. Verify duration/counterplay on further boss samples.
