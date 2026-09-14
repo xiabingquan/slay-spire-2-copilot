@@ -125,3 +125,7 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
 - 2026-09-15 [docs] RUN2 ENDED: defeat floor 26 act2 elite Infected Prism
   (3hp vs 8 no-block hand); postmortem runs/2026-09-15-run2-act2-elite-defeat.md;
   run log archived; user notified via Feishu; Run3 SILENT starting per rotation.
+- 2026-09-15 [docs] run3 started: SILENT character filter fell back to ironclad
+  (starter relic BURNING_BLOOD observed) — SILENT likely locked on this profile;
+  rotation queue next tries DEFECT/NECROBINDER/REGENT names. game-over takeover
+  chain validated live (return-to-menu click logged).

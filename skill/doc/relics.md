@@ -42,3 +42,6 @@ Extracted from game sts2.xml (3 types). One entry per type.
   gold instantly no combat; KEEP_THE_KEY starts knight fight for key card.
   Choose RETURN at low hp, KEEP when healthy.
 - AMETHYST_AUBERGINE: chest relic run2 f24. Effect pending combat observation.
+- MOLTEN_EGG: THIS_OR_THAT event "ORNATE" pick granted it (run3 f2). STS1
+  molten-egg family: likely upgrades attack-card rewards / egg-hatch synergy.
+  Effect pending reward observation.
