@@ -22,6 +22,20 @@ memory and self-iteration loop across sessions and runs.
         -> mimo-spire-bridge mod inside the STS2 process
         -> MegaCrit.Sts2 game APIs (CardCmd/PlayerCmd/UI nodes)
 
+## Architecture: client–server roles
+
+Server = the SpireBridge mod inside the game process. It monitors game state
+and returns snapshots, accepts operation commands and applies them to the game.
+It makes no decisions.
+
+Client = spirectl plus the decision layer (Claude via the spire skill). It
+reads state snapshots, makes all decisions, and sends operation requests. It
+never touches game internals directly.
+
+Completeness rule: if play encounters a screen or component the server does
+not support yet, implement it immediately (rebuild mod + restart game) and
+continue — never skip or work around it.
+
 ## Setup
 
 1. Build and install the mod: `bash setup/install-mod.sh`

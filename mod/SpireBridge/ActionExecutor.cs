@@ -11,6 +11,7 @@ using MegaCrit.Sts2.Core.Context;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
+using MegaCrit.Sts2.Core.Entities.Merchant;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Map;
 using MegaCrit.Sts2.Core.Models;
@@ -31,6 +32,7 @@ using MegaCrit.Sts2.Core.Nodes.Screens.MainMenu;
 using MegaCrit.Sts2.Core.Nodes.Screens.Map;
 using MegaCrit.Sts2.Core.Nodes.Screens.Overlays;
 using MegaCrit.Sts2.Core.Nodes.Screens.ScreenContext;
+using MegaCrit.Sts2.Core.Nodes.Screens.Shops;
 using MegaCrit.Sts2.Core.Nodes.Screens.TreasureRoomRelic;
 using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.Saves;
@@ -366,6 +368,23 @@ public static class ActionExecutor
     private static (bool, string) Skip()
     {
         IScreenContext? context = ActiveScreenContext.Instance.GetCurrentScreen();
+        if (NModalContainer.Instance?.OpenModal is Node modalNode && ReferenceEquals(context, modalNode))
+        {
+            List<NButton> buttons = UiHelper.FindAll<NButton>(modalNode);
+            NButton? dismiss = buttons.FirstOrDefault(b =>
+            {
+                string name = b.Name.ToString();
+                return b.Visible && (name.Contains("No") || name.Contains("Cancel")
+                    || name.Contains("Close") || name.Contains("Dismiss"));
+            });
+            if (dismiss != null)
+            {
+                NButton target = dismiss;
+                Fire(() => UiHelper.Click(target), "modal dismiss");
+                return (true, $"submitted modal dismiss ({target.Name})");
+            }
+            return (false, "no dismiss button on modal");
+        }
         if (context is not Node screenNode)
         {
             return (false, "no active screen to skip");
@@ -398,6 +417,25 @@ public static class ActionExecutor
     private static (bool, string) Proceed()
     {
         IScreenContext? context = ActiveScreenContext.Instance.GetCurrentScreen();
+        // Modal popups: click the affirmative button (Yes/Confirm/OK/Accept).
+        if (NModalContainer.Instance?.OpenModal is Node modalNode && ReferenceEquals(context, modalNode))
+        {
+            List<NButton> buttons = UiHelper.FindAll<NButton>(modalNode);
+            NButton? affirmative = buttons.FirstOrDefault(b =>
+            {
+                string name = b.Name.ToString();
+                return b.Visible && (name.Contains("Yes") || name.Contains("Confirm")
+                    || name.Contains("OK") || name.Contains("Accept") || name.Contains("Proceed"));
+            });
+            affirmative ??= buttons.FirstOrDefault(b => b.Visible);
+            if (affirmative != null)
+            {
+                NButton target = affirmative;
+                Fire(() => UiHelper.Click(target), "modal confirm");
+                return (true, $"submitted modal confirm ({target.Name})");
+            }
+            return (false, "no button found on modal");
+        }
         // Card-selection screens confirm through NConfirmButton (%Confirm /
         // %PreviewConfirm), not NProceedButton — check them first.
         if (context is NDeckEnchantSelectScreen enchantScreen)
@@ -502,12 +540,63 @@ public static class ActionExecutor
         {
             return (false, "shop_buy requires index");
         }
-        return ClickIndexedButton((Node?)ActiveScreenContext.Instance.GetCurrentScreen() ?? new Node(), index, "shop buy");
+        NMerchantRoom? room = NMerchantRoom.Instance;
+        if (room == null)
+        {
+            return (false, "not in a merchant room");
+        }
+        if (room.Inventory is { IsOpen: false })
+        {
+            room.OpenInventory();
+        }
+        List<NMerchantSlot> slots = (room.Inventory?.GetAllSlots()?.ToList() ?? new List<NMerchantSlot>())
+            .Where(s => s.Entry != null)
+            .ToList();
+        if (index < 0 || index >= slots.Count)
+        {
+            return (false, $"shop_buy index {index} out of range ({slots.Count} items)");
+        }
+        NMerchantSlot slot = slots[index];
+        MerchantEntry entry = slot.Entry!;
+        if (!entry.IsStocked)
+        {
+            return (false, "item is out of stock");
+        }
+        if (!entry.EnoughGold)
+        {
+            return (false, $"not enough gold for cost {entry.Cost}");
+        }
+        MerchantEntry entryRef = entry;
+        Fire(async () => await entryRef.OnTryPurchaseWrapper(room.Inventory!.Inventory), "shop buy");
+        return (true, $"submitted shop_buy index {index} cost={entry.Cost}");
     }
 
     private static (bool, string) ShopLeave()
     {
-        return Proceed();
+        NMerchantRoom? room = NMerchantRoom.Instance;
+        if (room == null)
+        {
+            return Proceed();
+        }
+        NMerchantRoom roomRef = room;
+        Fire(async () =>
+        {
+            if (roomRef.Inventory is { IsOpen: true })
+            {
+                NBackButton? back = UiHelper.FindFirst<NBackButton>(roomRef.Inventory)
+                    ?? UiHelper.FindFirst<NBackButton>(roomRef);
+                if (back != null)
+                {
+                    await UiHelper.Click(back);
+                    await Task.Delay(400, default);
+                }
+            }
+            if (roomRef.ProceedButton is { } proceed)
+            {
+                await UiHelper.Click(proceed);
+            }
+        }, "shop leave");
+        return (true, "submitted shop_leave");
     }
 
     private static (bool, string) ContinueRun()

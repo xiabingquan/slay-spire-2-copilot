@@ -9,6 +9,7 @@ using MegaCrit.Sts2.Core.Context;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
+using MegaCrit.Sts2.Core.Entities.Merchant;
 using MegaCrit.Sts2.Core.Events;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Map;
@@ -17,7 +18,9 @@ using MegaCrit.Sts2.Core.MonsterMoves.Intents;
 using MegaCrit.Sts2.Core.MonsterMoves.MonsterMoveStateMachine;
 using MegaCrit.Sts2.Core.Nodes;
 using MegaCrit.Sts2.Core.Nodes.Cards.Holders;
+using MegaCrit.Sts2.Core.Nodes.CommonUi;
 using MegaCrit.Sts2.Core.Nodes.Events;
+using MegaCrit.Sts2.Core.Nodes.GodotExtensions;
 using MegaCrit.Sts2.Core.Nodes.Relics;
 using MegaCrit.Sts2.Core.Nodes.RestSite;
 using MegaCrit.Sts2.Core.Nodes.Rewards;
@@ -30,6 +33,7 @@ using MegaCrit.Sts2.Core.Nodes.Screens.MainMenu;
 using MegaCrit.Sts2.Core.Nodes.Screens.Map;
 using MegaCrit.Sts2.Core.Nodes.Screens.Overlays;
 using MegaCrit.Sts2.Core.Nodes.Screens.ScreenContext;
+using MegaCrit.Sts2.Core.Nodes.Screens.Shops;
 using MegaCrit.Sts2.Core.Nodes.Screens.TreasureRoomRelic;
 using MegaCrit.Sts2.Core.Runs;
 
@@ -118,6 +122,12 @@ public static class StateBuilder
             {
                 return "other";
             }
+            if (NModalContainer.Instance?.OpenModal is Node modalNode && ReferenceEquals(current, modalNode))
+            {
+                screenNode = modalNode;
+                screenType = modalNode.GetType().Name;
+                return "modal";
+            }
             screenNode = current as Node;
             screenType = current.GetType().Name;
             return current switch
@@ -138,6 +148,7 @@ public static class StateBuilder
                 NTreasureRoom => "treasure",
                 NRestSiteRoom => "rest",
                 NMerchantRoom => "shop",
+                NMerchantInventory => "shop",
                 NMainMenu => "menu",
                 NCombatRoom => "combat",
                 _ => "other",
@@ -594,6 +605,8 @@ public static class StateBuilder
                 "event" => EventOptions(screenNode),
                 "treasure" => TreasureOptions(screenNode),
                 "rest" => RestOptions(screenNode),
+                "shop" => ShopOptions(screenNode),
+                "modal" => ModalOptions(screenNode),
                 _ => new List<Dictionary<string, object?>>(),
             };
             detail["options"] = options;
@@ -863,6 +876,72 @@ public static class StateBuilder
         return options;
     }
 
+    private static List<Dictionary<string, object?>> ShopOptions(Node? screenNode)
+    {
+        var options = new List<Dictionary<string, object?>>();
+        NMerchantRoom? room = screenNode as NMerchantRoom ?? NMerchantRoom.Instance;
+        if (room == null)
+        {
+            return options;
+        }
+        try
+        {
+            // Slots live in the inventory UI; open it so the client sees the goods.
+            if (room.Inventory is { IsOpen: false })
+            {
+                room.OpenInventory();
+            }
+            List<NMerchantSlot> slots = room.Inventory?.GetAllSlots()?.ToList() ?? new List<NMerchantSlot>();
+            int index = 0;
+            foreach (NMerchantSlot slot in slots)
+            {
+                MerchantEntry? entry = slot.Entry;
+                if (entry == null)
+                {
+                    continue;
+                }
+                string id = ProbeModelId(entry) ?? slot.GetType().Name;
+                options.Add(new Dictionary<string, object?>
+                {
+                    ["kind"] = slot is NMerchantCardRemoval ? "card_removal" : "shop_item",
+                    ["index"] = index,
+                    ["id"] = id,
+                    ["name"] = id,
+                    ["cost"] = entry.Cost,
+                    ["affordable"] = entry.EnoughGold,
+                    ["stocked"] = entry.IsStocked,
+                });
+                index++;
+            }
+        }
+        catch (Exception e)
+        {
+            options.Add(new Dictionary<string, object?> { ["kind"] = "error", ["id"] = e.Message });
+        }
+        return options;
+    }
+
+    private static List<Dictionary<string, object?>> ModalOptions(Node? screenNode)
+    {
+        var options = new List<Dictionary<string, object?>>();
+        if (screenNode == null)
+        {
+            return options;
+        }
+        List<NButton> buttons = UiHelper.FindAll<NButton>(screenNode);
+        for (int i = 0; i < buttons.Count; i++)
+        {
+            options.Add(new Dictionary<string, object?>
+            {
+                ["kind"] = "button",
+                ["index"] = i,
+                ["id"] = buttons[i].Name.ToString(),
+                ["name"] = buttons[i].Name.ToString(),
+            });
+        }
+        return options;
+    }
+
     private static List<Dictionary<string, object?>> BuildAvailableActions(
         string screen, CombatState? combat, Player? player, RunState? runState, Node? screenNode)
     {
@@ -967,6 +1046,26 @@ public static class StateBuilder
                     }
                 }
                 actions.Add(new Dictionary<string, object?> { ["action"] = "proceed", ["args"] = new Dictionary<string, object?>() });
+                break;
+            case "shop":
+            {
+                foreach (Dictionary<string, object?> option in ShopOptions(screenNode))
+                {
+                    if (option["stocked"] is true)
+                    {
+                        actions.Add(new Dictionary<string, object?>
+                        {
+                            ["action"] = "shop_buy",
+                            ["args"] = new Dictionary<string, object?> { ["index"] = option["index"] },
+                        });
+                    }
+                }
+                actions.Add(new Dictionary<string, object?> { ["action"] = "shop_leave", ["args"] = new Dictionary<string, object?>() });
+                break;
+            }
+            case "modal":
+                actions.Add(new Dictionary<string, object?> { ["action"] = "proceed", ["args"] = new Dictionary<string, object?>() });
+                actions.Add(new Dictionary<string, object?> { ["action"] = "skip", ["args"] = new Dictionary<string, object?>() });
                 break;
             case "menu":
                 actions.Add(new Dictionary<string, object?> { ["action"] = "start_run", ["args"] = new Dictionary<string, object?>() });

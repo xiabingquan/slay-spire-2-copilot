@@ -41,3 +41,11 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
   with heartbeat logging + stall detection — retained as reference for the
   v2 headless runner TODO; play decisions return to the Claude-in-the-loop
   skill flow per user direction.
+- 2026-09-14 [feature] shop + modal support per completeness rule (user
+  directive): shop screen enumerates merchant slots (cost/affordable/stocked)
+  and shop_buy calls MerchantEntry.OnTryPurchaseWrapper; shop_leave closes
+  inventory via back then clicks room proceed; modal popups get confirm
+  (Yes/Confirm/OK) and dismiss (No/Cancel) actions. Architecture formalized
+  as client-server: server = mod (state + actuation, no decisions), client =
+  spirectl + Claude (read state, decide, send ops). Rule: any unsupported
+  screen encountered in play is implemented immediately, then game restart.
