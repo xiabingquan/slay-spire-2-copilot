@@ -64,3 +64,8 @@ breakthrough; remove entries that prove wrong.
   with it. Opposite priority vs INFESTED parasite waves.
 - Run2 relic combat start: player showed STRENGTH+DEXTERITY and energy 6/3
   (SPARKLING_ROUGE / CHANDELIER suspects) — verify which relic grants what.
+- Stall pattern #2 (run2 boss 仪式兽): enemy-phase transition freezes (fingerprint
+  frozen, intent not advancing) struck twice mid-boss after heavy play turns.
+  Recovery ladder proven: spirectl stop -> launch -> continue_run (~90s); boss
+  fight reloads from room-entry save (in-combat progress lost, potions restored).
+  Treat boss fights as burst-then-restart-tolerant; keep postmortems ready.
