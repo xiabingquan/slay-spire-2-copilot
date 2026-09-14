@@ -99,3 +99,7 @@ breakthrough; remove entries that prove wrong.
 - SLOW_POWER elite pattern (run3 f6 旧日雕像): empty-intent turns alternate with
   ~23-dmg charges + str growth — dump attacks on slow turns, SHRUG/DEFEND stacks
   on charge turns. Elite cleared at 5hp: kill-margin math matters, keep hitting.
+- INFLAME all-in validated (run3 f7 7hp comeback): INFLAME(1-cost) + BASH(vuln)
+  + upgraded FEED + STRIKE chain dealt 47hp in one turn — str engine + molten-egg
+  upgrades + vuln multiplies; at critical hp the race IS the defense when block
+  is absent. FIRE_POTION kept in reserve never needed.
