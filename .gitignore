@@ -8,3 +8,4 @@ mod/obj/
 .idea/
 docs/research/external/
 docs/research/decompiled/
+mod/SpireBridge/.godot/
