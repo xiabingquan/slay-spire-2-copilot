@@ -107,3 +107,6 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
   unexpectedly dialogs from pkill restarts); SKILL: takeover rule + character
   rotation directive (IRONCLAD/SILENT/DEFECT/NECROBINDER/REGENT); 5-min
   continuous-play watchdog (7c6bad04); per-run logs in logs/ live.
+- 2026-09-15 [chore] branch authority: 10h self-commit + dev-merge rights
+  granted by user; feat/sts2-comm-mod merged into dev (--no-ff); ongoing play/
+  docs commits land on dev, problem spikes branch fix/* off dev then merge back.
