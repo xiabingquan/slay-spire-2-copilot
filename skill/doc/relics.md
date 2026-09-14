@@ -21,3 +21,6 @@ Extracted from game sts2.xml (3 types). One entry per type.
 - LOST_WISP: gained from LOST_WISP event "claim" option floor 27 act 2. Effect pending observation.
 - FAKE_SNECKO_EYE: bought from NFakeMerchant event (54g). Fake relic — effects/trap pending observation.
 - WONGOS_MYSTERY_TICKET: Wongos event mystery box (300g) floor 28 act 2. Function pending observation — possible later redemption.
+- VENERABLE_TEA_SET / REGAL_PILLOW / NUNCHAKU: owl judge (floor 34 act 3) relic
+  drops. STS1 refs: tea set+pillow boost rest-site recovery; nunchaku grants
+  energy on attack counts. STS2 effects pending observation.

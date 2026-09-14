@@ -80,3 +80,7 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
   round 5 — upgraded demon form + whirlwind 81-dmg burst + perfected strike);
   act 3 entered; JUGGERNAUT picked; FAKE_SNECKO_EYE=CONFUSED costs verified
   (0-cost bludgeon/whirlwind windows exploited); LANTERN_KEY is a deck card.
+- 2026-09-15 [docs] run progress: act 3 floor 34 — owl magistrate 231hp killed
+  at 3 player hp (whirlwind 0-cost desperation kill); 10 relics accumulated;
+  all potions consumed; ARMAMENTS picked after skip unavailable; next room
+  unknown at 9hp — high failure probability, which is the user's notify trigger.
