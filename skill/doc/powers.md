@@ -52,3 +52,7 @@ Extracted from game sts2.xml (14 types). One entry per type.
 - RINGING_POWER (仪式兽 boss debuff, run2): appeared on player mid-boss-fight;
   remaining hand cards flipped to can_play=false — suspected card-play lockout
   or play-limit debuff. Verify duration/counterplay on further boss samples.
+- SLOW_POWER (旧日雕像 elite, run3 f6): alternating cadence — empty-intent slow
+  turns followed by 23-dmg charged hits, plus strength growth. Grind through
+  slow turns, fortify before heavy turns; fight survived at 5hp with full-hand
+  strikes finishing at 3hp margin.

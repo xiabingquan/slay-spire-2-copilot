@@ -48,3 +48,4 @@ Extracted from game sts2.xml (3 types). One entry per type.
   Effect pending reward observation.
 - MOLTEN_EGG verified (run3 f5): attack-card reward FEED arrived auto-upgraded
   (deck upgraded=True on pick). Egg upgrades attack rewards at acquisition.
+- PENDULUM: run3 elite drop f6. Effect pending observation (energy/rhythm relic suspect).

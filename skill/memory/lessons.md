@@ -96,3 +96,6 @@ breakthrough; remove entries that prove wrong.
   long-fight attrition target; bring block every turn, don't burst-plan.
 - Critical-hp hands without block: potions are the final lever — consider
   ENERGY_POTION for extra plays; leave no potion unspent at 3hp.
+- SLOW_POWER elite pattern (run3 f6 旧日雕像): empty-intent turns alternate with
+  ~23-dmg charges + str growth — dump attacks on slow turns, SHRUG/DEFEND stacks
+  on charge turns. Elite cleared at 5hp: kill-margin math matters, keep hitting.
