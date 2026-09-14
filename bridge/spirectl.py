@@ -27,6 +27,29 @@ GAME_LOG = Path(
     os.path.expanduser("~/Library/Application Support/SlayTheSpire2/logs/godot.log")
 )
 STEAM_APP_ID = "2868840"
+GAME_APP = Path(
+    os.environ.get(
+        "STS2_APP_PATH",
+        os.path.expanduser(
+            "~/Library/Application Support/Steam/steamapps/common/"
+            "Slay the Spire 2/SlayTheSpire2.app"
+        ),
+    )
+)
+
+
+def game_process_running():
+    proc = subprocess.run(["pgrep", "-f", "Slay the Spire 2"], capture_output=True, text=True)
+    return bool(proc.stdout.strip())
+
+
+def wait_for(predicate, timeout, interval=2.0):
+    deadline = time.time() + timeout
+    while time.time() < deadline:
+        if predicate():
+            return True
+        time.sleep(interval)
+    return False
 
 
 class BridgeClient:
@@ -60,12 +83,13 @@ class BridgeClient:
     def request(self, payload):
         if self.sock is None:
             self.connect()
+        assert self.wfile is not None and self.rfile is not None
         self.wfile.write(json.dumps(payload) + "\n")
         self.wfile.flush()
         line = self.rfile.readline()
         if not line:
             raise ConnectionError("bridge closed the connection")
-        return json.loads(line)
+        return json.loads(line.lstrip("﻿"))
 
     def hello(self):
         return self.request({"type": "hello"})
@@ -83,7 +107,7 @@ class BridgeClient:
         self.connect()
         return self
 
-    def __exit__(self, *exc):
+    def __exit__(self, exc_type, exc_val, exc_tb):
         self.close()
 
 
@@ -262,10 +286,24 @@ def cmd_wait(args):
 
 
 def cmd_launch(args):
-    url = f"steam://rungameid/{STEAM_APP_ID}"
-    print(f"launching via {url}")
-    subprocess.run(["open", url], check=False)
-    print("waiting for bridge (accept the in-game mod warning once if shown)...")
+    steam_running = subprocess.run(["pgrep", "-x", "Steam"], capture_output=True).returncode == 0
+    if not steam_running:
+        print("Steam not running; starting Steam first")
+        subprocess.run(["open", "-a", "Steam"], check=False)
+        wait_for(lambda: subprocess.run(["pgrep", "-x", "Steam"], capture_output=True).returncode == 0, 40)
+        time.sleep(3)
+    if not game_process_running():
+        url = f"steam://rungameid/{STEAM_APP_ID}"
+        print(f"launching via {url}")
+        subprocess.run(["open", url], check=False)
+        if not wait_for(game_process_running, 30, interval=2.0):
+            print(f"steam url did not start the game; opening app directly: {GAME_APP}")
+            subprocess.run(["open", str(GAME_APP)], check=False)
+            wait_for(game_process_running, 30, interval=2.0)
+    if not game_process_running():
+        print("game process did not start; launch it manually then re-run doctor")
+        return 1
+    print("game process up; waiting for bridge (accept the in-game mod warning once if shown)")
     deadline = time.time() + args.timeout
     while time.time() < deadline:
         time.sleep(2)

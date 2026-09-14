@@ -68,8 +68,9 @@ public sealed class TcpServer
     {
         using TcpClient _ = client;
         using NetworkStream stream = client.GetStream();
-        using var reader = new StreamReader(stream, Encoding.UTF8);
-        using var writer = new StreamWriter(stream, Encoding.UTF8) { NewLine = "\n", AutoFlush = true };
+        var utf8NoBom = new UTF8Encoding(encoderShouldEmitUTF8Identifier: false);
+        using var reader = new StreamReader(stream, utf8NoBom);
+        using var writer = new StreamWriter(stream, utf8NoBom) { NewLine = "\n", AutoFlush = true };
         BridgeMod.LogInfo("client connected");
         while (_running)
         {
