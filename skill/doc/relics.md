@@ -18,3 +18,6 @@ Extracted from game sts2.xml (3 types). One entry per type.
 - Hatch rest-site option (孵化): appears only while BYRDONIS_EGG-type card is in deck
   (observed floor 8 with egg present, absent floor 25 after egg removal). Interaction
   unverified — re-test when a future egg event occurs.
+- LOST_WISP: gained from LOST_WISP event "claim" option floor 27 act 2. Effect pending observation.
+- FAKE_SNECKO_EYE: bought from NFakeMerchant event (54g). Fake relic — effects/trap pending observation.
+- WONGOS_MYSTERY_TICKET: Wongos event mystery box (300g) floor 28 act 2. Function pending observation — possible later redemption.

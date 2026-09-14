@@ -35,3 +35,15 @@ breakthrough; remove entries that prove wrong.
 
 - After any act, if wait times out, re-read state directly — fingerprint changes
   can lag option-page transitions.
+
+## Event and relic mechanics (observed)
+
+- FAKE_* relics from the NFakeMerchant event are traps with real effects:
+  FAKE_SNECKO_EYE grants CONFUSED_POWER — hand costs randomized each draw
+  (0-cost BLUDGEON possible). Exploit: play discounted high-cost cards first.
+- ODDLY_SMOOTH_STONE verified: +1 DEXTERITY_POWER at combat start.
+- Rest-site HATCH option appears only while an egg-type card is in deck.
+- Shop index space can drift after purchases/removals; use shop_buy item_id.
+- Reward buttons: executor index space is 0-based over current buttons; state
+  options may include stale/unclaimable entries — prefer smallest index and
+  re-read state after every claim.
