@@ -477,9 +477,52 @@ public static class ActionExecutor
         return (true, "submitted treasure_open");
     }
 
+    // Drives NGameOverScreen back to the main menu using the game's own
+    // summary flow: Continue button, then Return-To-Main-Menu button. Both are
+    // polled until enabled — takeover must work from any game state.
+    private static async Task ClearGameOverScreen(NGameOverScreen screen)
+    {
+        NGameOverContinueButton? cont = UiHelper.FindFirst<NGameOverContinueButton>(screen);
+        if (cont != null)
+        {
+            for (int i = 0; i < 24 && !cont.IsEnabled; i++)
+            {
+                await Task.Delay(500, default);
+            }
+            BridgeMod.LogInfo($"game_over chain: continue enabled={cont.IsEnabled}");
+            await UiHelper.Click(cont);
+        }
+        NReturnToMainMenuButton? menuBtn = null;
+        for (int i = 0; i < 24; i++)
+        {
+            menuBtn = UiHelper.FindFirst<NReturnToMainMenuButton>(screen);
+            if (menuBtn != null && menuBtn.Visible && menuBtn.IsEnabled)
+            {
+                break;
+            }
+            await Task.Delay(500, default);
+        }
+        if (menuBtn != null)
+        {
+            BridgeMod.LogInfo("game_over chain: clicking return to main menu");
+            await UiHelper.Click(menuBtn);
+        }
+        else
+        {
+            BridgeMod.LogErr("game_over chain: return-to-menu button never appeared");
+        }
+    }
+
     private static (bool, string) Proceed()
     {
         IScreenContext? context = ActiveScreenContext.Instance.GetCurrentScreen();
+        // Game-over summary needs the Continue -> ReturnToMainMenu chain, not a
+        // proceed button; this is the any-state takeover entry.
+        if (context is NGameOverScreen endedScreen)
+        {
+            Fire(() => ClearGameOverScreen(endedScreen), "game over continue");
+            return (true, "submitted game_over continue chain");
+        }
         // Modal popups: click the affirmative button (Yes/Confirm/OK/Accept).
         if (NModalContainer.Instance?.OpenModal is Node modalNode && ReferenceEquals(context, modalNode))
         {
@@ -759,9 +802,19 @@ public static class ActionExecutor
     }
 
     // Mirrors the game's own AutoSlay menu path (AutoSlayer.PlayMainMenuAsync).
+    // Takeover-safe: clears game-over screens first so start_run works from any
+    // game state (startup, mid-run, or ended).
     private static async Task StartRunSequence(string? character, string? seed)
     {
         Node root = ((SceneTree)Engine.GetMainLoop()).Root;
+        if (ActiveScreenContext.Instance.GetCurrentScreen() is NGameOverScreen ended)
+        {
+            BridgeMod.LogInfo("start_run: clearing game-over screen first");
+            await ClearGameOverScreen(ended);
+            await WaitHelper.Until(
+                () => NGame.Instance?.MainMenu is { } m && m.IsVisibleInTree(),
+                default, TimeSpan.FromSeconds(20), "main menu after game over");
+        }
         if (!string.IsNullOrEmpty(seed))
         {
             if (NGame.Instance != null)

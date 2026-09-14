@@ -25,6 +25,29 @@ card to pick.
 3. Confirm handshake versions in doctor output. Game version drift vs the mod's
    min_game_version is a hard stop: report it, do not improvise.
 
+## Character rotation (user directive)
+
+Do not always play Ironclad. Rotate characters across runs — candidate roster
+referenced by the game build: IRONCLAD, SILENT, DEFECT, NECROBINDER, REGENT.
+Use `act start_run --args '{"character":"SILENT"}'` etc.; the menu automation
+matches button name or character id substrings and skips locked characters.
+Track which character each run used in the postmortem and run log. Build
+per-character lessons in skills memory (e.g. skill/memory/strategies/<char>.md)
+as play data accumulates.
+
+## Takeover rule (any game state)
+
+Whatever state the game is in — fresh boot, main menu, mid-run, rest/shop/event
+screen, or game_over — take over: read state, drive it forward. At game_over,
+`act start_run` clears the summary chain automatically (server-side) and begins
+a new run; logs/ rotates per run. Continuous play is the mandate: after each
+run ends (postmortem + changelog + optional Feishu notify), start the next run.
+Never deadlock: if an action loops without state change, diagnose the screen
+(implement missing server support per the completeness rule), rebuild the mod
+(`bash setup/install-mod.sh`), relaunch, and resume. Keep play decisions in
+Claude (client) — mechanical act-dumps are fine only after Claude chose the
+tactic.
+
 ## Play loop
 
 Repeat until the run ends or the user stops you:

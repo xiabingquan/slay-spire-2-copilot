@@ -82,6 +82,39 @@ def game_process_running():
     return bool(proc.stdout.strip())
 
 
+def suppress_crash_dialogs():
+    """macOS shows 'app quit unexpectedly' after hard kills; silence the
+    CrashReporter dialog so automated restarts stay quiet."""
+    subprocess.run(
+        ["defaults", "write", "com.apple.CrashReporter", "DialogType", "-string", "none"],
+        capture_output=True,
+    )
+
+
+def cmd_stop(args):
+    """Graceful game stop: AppleEvent quit -> SIGTERM -> SIGKILL."""
+    del args
+    suppress_crash_dialogs()
+    if not game_process_running():
+        print("game not running")
+        return 0
+    subprocess.run(
+        ["osascript", "-e", 'tell application "Slay the Spire 2" to quit'],
+        capture_output=True,
+    )
+    if wait_for(lambda: not game_process_running(), 8, interval=1.0):
+        print("game quit gracefully")
+        return 0
+    subprocess.run(["pkill", "-f", "Slay the Spire 2"], capture_output=True)
+    if wait_for(lambda: not game_process_running(), 5, interval=1.0):
+        print("game stopped (SIGTERM)")
+        return 0
+    subprocess.run(["pkill", "-9", "-f", "Slay the Spire 2"], capture_output=True)
+    wait_for(lambda: not game_process_running(), 5, interval=1.0)
+    print("game stopped (forced)")
+    return 0
+
+
 def wait_for(predicate, timeout, interval=2.0):
     deadline = time.time() + timeout
     while time.time() < deadline:
@@ -363,6 +396,7 @@ def steam_fully_ready():
 
 
 def cmd_launch(args):
+    suppress_crash_dialogs()
     if not steam_fully_ready():
         if not steam_fully_ready():
             print("Steam not ready; starting Steam and waiting for client boot")
@@ -425,6 +459,8 @@ def main(argv=None):
     p_launch = sub.add_parser("launch", help="launch the game via Steam and wait for the bridge")
     p_launch.add_argument("--timeout", type=float, default=120.0)
 
+    sub.add_parser("stop", help="gracefully stop the game (quiet quit -> TERM -> KILL)")
+
     args = parser.parse_args(argv)
     handlers = {
         "doctor": cmd_doctor,
@@ -432,6 +468,7 @@ def main(argv=None):
         "act": cmd_act,
         "wait": cmd_wait,
         "launch": cmd_launch,
+        "stop": cmd_stop,
     }
     try:
         return handlers[args.cmd](args)

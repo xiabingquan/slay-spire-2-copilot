@@ -101,3 +101,9 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
   appends full JSON state/act/wait records to logs/run-*.log — one file per run,
   rotated on start_run/continue_run, finalized on game_over; logs committed as
   permanent record. Watchdog cron switched to 5-min interval (2-59/5, job 96b0e26a).
+- 2026-09-15 [fix][feature] iteration batch: game-over takeover chain
+  (Continue -> ReturnToMainMenu, start_run works from any game state); quiet
+  game stop via spirectl stop + CrashReporter DialogType=none (macOS quit-
+  unexpectedly dialogs from pkill restarts); SKILL: takeover rule + character
+  rotation directive (IRONCLAD/SILENT/DEFECT/NECROBINDER/REGENT); 5-min
+  continuous-play watchdog (7c6bad04); per-run logs in logs/ live.
