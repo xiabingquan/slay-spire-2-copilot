@@ -67,3 +67,8 @@ normal and CONFUSED states; can_play flag in state is always authoritative.
   observed: killed 8hp slime, chipped others, hp -1). Cheap wave-clear.
 - FIGHT_ME correction: 2-cost attack ~10 dmg; observed granting STRENGTH to
   BOTH player and target ("duel invite" semantics) — verify against more fights.
+- RAMPAGE: 1-cost attack ~6 base dmg; per-play scaling unverified numerically yet.
+- SHRINK_POWER (enemy 缩小甲虫): reduces player attack damage (strike dealt 6
+  instead of vuln-scaled value); lasts until enemy death observed.
+- FIGHT_ME verified: grants STRENGTH_POWER to both player and target.
+- BREAKTHROUGH verified: 1-cost AOE ~9 + 1hp self cost.
