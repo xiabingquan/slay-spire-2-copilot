@@ -947,6 +947,10 @@ public static class StateBuilder
                 {
                     actions.Add(new Dictionary<string, object?> { ["action"] = "skip", ["args"] = new Dictionary<string, object?>() });
                 }
+                if (screen is "card_choice" or "deck_select" or "relic_choice")
+                {
+                    actions.Add(new Dictionary<string, object?> { ["action"] = "proceed", ["args"] = new Dictionary<string, object?>() });
+                }
                 break;
             }
             case "treasure":

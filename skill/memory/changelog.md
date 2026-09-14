@@ -31,3 +31,13 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
   2026-09-14-acceptance-session.md): two combat victories, reward and event
   decisions, map routing all verified through spirectl; energy display bug and
   untested treasure path logged as open gaps.
+- 2026-09-14 [fix] selection screens deadlocked without a confirm action:
+  deck-select/enchant screens need select + confirm. proceed now clicks
+  %Confirm/%PreviewConfirm (deck select), the preview-container Confirm then
+  main "Confirm" (enchant, no-% naming), and generic "Confirm" fallback; state
+  offers proceed on card_choice/deck_select/relic_choice. Live-verified on
+  NDeckEnchantSelectScreen (Sapphire Seed event: BASH enchanted).
+- 2026-09-14 [feature] autopilot driver prototype (scratchpad, not shipped)
+  with heartbeat logging + stall detection — retained as reference for the
+  v2 headless runner TODO; play decisions return to the Claude-in-the-loop
+  skill flow per user direction.

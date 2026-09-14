@@ -398,6 +398,62 @@ public static class ActionExecutor
     private static (bool, string) Proceed()
     {
         IScreenContext? context = ActiveScreenContext.Instance.GetCurrentScreen();
+        // Card-selection screens confirm through NConfirmButton (%Confirm /
+        // %PreviewConfirm), not NProceedButton — check them first.
+        if (context is NDeckEnchantSelectScreen enchantScreen)
+        {
+            // Enchant flow: select card -> main "Confirm" (no % prefix) shows a
+            // preview container -> the container's own "Confirm" finalizes.
+            foreach (string containerName in new[] { "%EnchantSinglePreviewContainer", "%EnchantMultiPreviewContainer" })
+            {
+                if (enchantScreen.GetNodeOrNull<Control>(containerName) is { Visible: true } container
+                    && container.GetNodeOrNull<NConfirmButton>("Confirm") is { } previewConfirm)
+                {
+                    NConfirmButton target = previewConfirm;
+                    Fire(() => UiHelper.Click(target), "confirm enchant preview");
+                    return (true, $"submitted confirm (enchant preview {containerName})");
+                }
+            }
+            NConfirmButton? mainConfirm = enchantScreen.GetNodeOrNull<NConfirmButton>("Confirm");
+            if (mainConfirm != null)
+            {
+                NConfirmButton target = mainConfirm;
+                Fire(() => UiHelper.Click(target), "confirm enchant main");
+                return (true, "submitted confirm (enchant main)");
+            }
+            return (false, "no confirm button on enchant screen");
+        }
+        if (context is NDeckCardSelectScreen deckScreen)
+        {
+            NConfirmButton? preview = deckScreen.GetNodeOrNull<NConfirmButton>("%PreviewConfirm");
+            NConfirmButton? main = deckScreen.GetNodeOrNull<NConfirmButton>("%Confirm");
+            NConfirmButton? confirm = preview is { Visible: true } ? preview : main;
+            if (confirm != null)
+            {
+                NConfirmButton target = confirm;
+                Fire(() => UiHelper.Click(target), "confirm deck selection");
+                return (true, $"submitted confirm ({(confirm == preview ? "preview" : "main")})");
+            }
+            return (false, "no confirm button on deck selection screen");
+        }
+        if (context is NSimpleCardSelectScreen
+            or NChooseACardSelectionScreen
+            or NChooseABundleSelectionScreen
+            or NDeckUpgradeSelectScreen
+            or NDeckTransformSelectScreen
+            or NDeckEnchantSelectScreen)
+        {
+            Node node = (Node)context;
+            NConfirmButton? confirm = node.GetNodeOrNull<NConfirmButton>("%Confirm")
+                ?? node.GetNodeOrNull<NConfirmButton>("Confirm")
+                ?? UiHelper.FindFirst<NConfirmButton>(node);
+            if (confirm != null)
+            {
+                NConfirmButton target = confirm;
+                Fire(() => UiHelper.Click(target), "confirm card selection");
+                return (true, "submitted confirm");
+            }
+        }
         NProceedButton? proceed = context switch
         {
             IRoomWithProceedButton roomButton => roomButton.ProceedButton,
