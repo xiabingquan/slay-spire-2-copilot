@@ -122,3 +122,6 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
   (IMPERVIOUS 30-block anchor + forge-upgraded deck + step discipline); LOST_WISP
   relic re-claimed via known-safe event; shop f19 haul: VENERABLE_TEA_SET
   (rest-heal relic back), WEAK_POTION, DECAY removed -> 14hp/193g/20-card deck.
+- 2026-09-15 [docs] RUN2 ENDED: defeat floor 26 act2 elite Infected Prism
+  (3hp vs 8 no-block hand); postmortem runs/2026-09-15-run2-act2-elite-defeat.md;
+  run log archived; user notified via Feishu; Run3 SILENT starting per rotation.

@@ -92,3 +92,7 @@ breakthrough; remove entries that prove wrong.
   defense.
 - BODY_SLAM x2 + IMPERVIOUS engine: second copy picked; expect ~30-damage
   slams on shield turns. 14hp survival fights won on this + weak potions.
+- VITAL_SPARK elite (run2 f26 Infected Prism): damage mitigation + block regen —
+  long-fight attrition target; bring block every turn, don't burst-plan.
+- Critical-hp hands without block: potions are the final lever — consider
+  ENERGY_POTION for extra plays; leave no potion unspent at 3hp.
