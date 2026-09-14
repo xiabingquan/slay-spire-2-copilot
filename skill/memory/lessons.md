@@ -53,3 +53,9 @@ breakthrough; remove entries that prove wrong.
   after block-card plays, incoming damage is full value; race or reposition.
 - Rest-site relic stacking (VENERABLE_TEA_SET + REGAL_PILLOW) was the biggest
   run extender: +39 heals twice rescued the run from 8-14hp.
+- Never issue actions during Enemy phase (potions included) — a GAMBLERS_BREW
+  use during enemy turn coincided with a Cmd.Wait stack-trace stall that froze
+  the elite fight (run2 f7 worm wave). Only act when turn_phase=Play.
+- INFESTED strategy validated (run2 f7 elite, post-stall replay): single-target
+  the parent, hoard AOE; on death-wave spawn, THUNDERCLAP x2 cleared 4 adds
+  same-turn. Elite relic LASTING_CANDY + SWORD_BOOMERANG banked.
