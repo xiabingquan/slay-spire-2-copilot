@@ -84,3 +84,7 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
   at 3 player hp (whirlwind 0-cost desperation kill); 10 relics accumulated;
   all potions consumed; ARMAMENTS picked after skip unavailable; next room
   unknown at 9hp — high failure probability, which is the user's notify trigger.
+- 2026-09-15 [docs] run progress act 3 floors 36-41: factory robots survived
+  at 2hp via duplicator bash; historian chest haul; battle dummy event; rest
+  heal 14->53 (tea set+pillow); elite trio killed; HAPPY_FLOWER+ORNAMENTAL_FAN
+  relics; strike trimmed; 15 relics total; run active at 45hp/126g.

@@ -24,3 +24,6 @@ Extracted from game sts2.xml (3 types). One entry per type.
 - VENERABLE_TEA_SET / REGAL_PILLOW / NUNCHAKU: owl judge (floor 34 act 3) relic
   drops. STS1 refs: tea set+pillow boost rest-site recovery; nunchaku grants
   energy on attack counts. STS2 effects pending observation.
+- BAG_OF_PREPARATION: chest relic floor 38 act 3. STS1: draw +2 on first turn of combat.
+- HAPPY_FLOWER: shop relic act 3 (175g). STS1: +1 energy every 3rd turn.
+- ORNAMENTAL_FAN: elite drop floor 41. STS1: +1 dex per 3 attacks.
