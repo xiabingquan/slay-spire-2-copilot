@@ -46,3 +46,6 @@ Extracted from game sts2.xml (14 types). One entry per type.
 - FLAME_BARRIER_POWER: temporary thorns+block from FLAME_BARRIER card.
 - DUPPLICATION_POWER (DUPLICATOR potion): temporary card-duplication state; redraw found
   lethal BASH at 2hp once.
+- INFESTED_POWER (异蛙寄生虫 elite, run2 f7): on death spawns multiple 扭动虫
+  adds (4x ~17-21hp observed). Save AOE (THUNDERCLAP/BREAKTHROUGH/WHIRLWIND)
+  for the spawn wave instead of blowing it on the parent.
