@@ -63,3 +63,7 @@ normal and CONFUSED states; can_play flag in state is always authoritative.
 - FIGHT_ME: 2-cost attack ~10 dmg + grants player STRENGTH_POWER (+1 observed).
   STS2 strength-scaling attack — priority pick for strike decks.
 - GAMBLERS_BREW: potion gained run 2 floor 1 — effect pending first use.
+- BREAKTHROUGH: 1-cost AOE ~9 dmg all enemies + 1hp self cost (run2 floor 5
+  observed: killed 8hp slime, chipped others, hp -1). Cheap wave-clear.
+- FIGHT_ME correction: 2-cost attack ~10 dmg; observed granting STRENGTH to
+  BOTH player and target ("duel invite" semantics) — verify against more fights.

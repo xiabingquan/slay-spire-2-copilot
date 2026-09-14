@@ -28,3 +28,5 @@ Extracted from game sts2.xml (3 types). One entry per type.
 - HAPPY_FLOWER: shop relic act 3 (175g). STS1: +1 energy every 3rd turn.
 - ORNAMENTAL_FAN: elite drop floor 41. STS1: +1 dex per 3 attacks.
 - STRIKE_DUMMY: elite relic floor 43 act3. STS1: +1 strength at combat start.
+- JUNGLE_MAZE_ADVENTURE event (run2 f4): solo quest traded 18hp for +147 gold
+  instantly (80->62, 7->154). Join-forces alternative unobserved.
