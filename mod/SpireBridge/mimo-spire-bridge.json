@@ -1,0 +1,12 @@
+{
+  "id": "mimo-spire-bridge",
+  "name": "Mimo Spire Bridge",
+  "author": "mimo-spire",
+  "description": "Exposes game state as JSON over localhost and accepts play commands for AI agents.",
+  "version": "0.1.0",
+  "has_pck": false,
+  "has_dll": true,
+  "dependencies": [],
+  "affects_gameplay": true,
+  "min_game_version": "0.107.1"
+}

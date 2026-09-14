@@ -1,0 +1,29 @@
+<Project Sdk="Godot.NET.Sdk/4.5.1">
+  <!-- SpireBridge: STS2 communication mod (state export + command input).
+       Game assemblies are referenced from the local install; Private=false so
+       nothing is copied next to the build output. Build also installs the mod
+       into the game mods folder via the CopyMod target. -->
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <AssemblyName>mimo-spire-bridge</AssemblyName>
+    <RootNamespace>MimoSpire.Bridge</RootNamespace>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Sts2DataDir Condition="'$(Sts2DataDir)' == ''">$(HOME)/Library/Application Support/Steam/steamapps/common/Slay the Spire 2/SlayTheSpire2.app/Contents/Resources/data_sts2_macos_arm64</Sts2DataDir>
+    <GameModsDir Condition="'$(GameModsDir)' == ''">$(HOME)/Library/Application Support/Steam/steamapps/common/Slay the Spire 2/SlayTheSpire2.app/Contents/MacOS/mods</GameModsDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="sts2">
+      <HintPath>$(Sts2DataDir)/sts2.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <Target Name="CopyMod" AfterTargets="Build">
+    <MakeDir Directories="$(GameModsDir)/mimo-spire-bridge" />
+    <Copy SourceFiles="$(TargetDir)mimo-spire-bridge.dll;$(MSBuildProjectDirectory)/mimo-spire-bridge.json"
+          DestinationFolder="$(GameModsDir)/mimo-spire-bridge" />
+    <Message Importance="high" Text="SpireBridge installed to $(GameModsDir)/mimo-spire-bridge" />
+  </Target>
+</Project>
