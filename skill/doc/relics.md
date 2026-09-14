@@ -30,3 +30,7 @@ Extracted from game sts2.xml (3 types). One entry per type.
 - STRIKE_DUMMY: elite relic floor 43 act3. STS1: +1 strength at combat start.
 - JUNGLE_MAZE_ADVENTURE event (run2 f4): solo quest traded 18hp for +147 gold
   instantly (80->62, 7->154). Join-forces alternative unobserved.
+- LASTING_CANDY: run2 elite drop. Rest heals observed +24 at 53hp (53->77) —
+  likely rest-boost relic like tea set; verify scaling on later rests.
+- SPARKLING_ROUGE / CHANDELIER: run2 chest drops floor 9; effects pending combat
+  observation.
