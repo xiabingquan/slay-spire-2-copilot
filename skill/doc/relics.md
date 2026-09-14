@@ -51,3 +51,4 @@ Extracted from game sts2.xml (3 types). One entry per type.
 - PENDULUM: run3 elite drop f6. Effect pending observation (energy/rhythm relic suspect).
 - LANTERN: run3 chest drop f9. STS1: +1 energy on first combat turn.
   Verify next combat turn-1 energy display.
+- STABLE_SERUM: run3 raider reward potion. Effect pending use (cleanse/immunity suspect).
