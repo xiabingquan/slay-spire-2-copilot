@@ -34,3 +34,7 @@ Extracted from game sts2.xml (3 types). One entry per type.
   likely rest-boost relic like tea set; verify scaling on later rests.
 - SPARKLING_ROUGE / CHANDELIER: run2 chest drops floor 9; effects pending combat
   observation.
+- TUNING_FORK: run2 elite drop floor 13. Effect pending observation.
+- BLESSING_OF_THE_FORGE: run2 elite potion drop. Effect pending first use.
+- Run2 combat-start package confirmed again: STRENGTH+DEXTERITY powers + energy
+  6/3 — attributions between SPARKLING_ROUGE/CHANDELIER/TUNING_FORK still open.
