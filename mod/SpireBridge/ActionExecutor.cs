@@ -611,15 +611,19 @@ public static class ActionExecutor
     private static (bool, string) ShopBuy(JsonElement args)
     {
         NMerchantRoom? room = NMerchantRoom.Instance;
-        if (room == null)
+        NMerchantInventory? inventory = room?.Inventory
+            ?? (ActiveScreenContext.Instance.GetCurrentScreen() is Node screenNode
+                ? UiHelper.FindFirst<NMerchantInventory>(screenNode) : null)
+            ?? (NRun.Instance != null ? UiHelper.FindFirst<NMerchantInventory>(NRun.Instance) : null);
+        if (inventory == null)
         {
-            return (false, "not in a merchant room");
+            return (false, "no merchant inventory active");
         }
-        if (room.Inventory is { IsOpen: false })
+        if (room?.Inventory is { IsOpen: false })
         {
             room.OpenInventory();
         }
-        List<NMerchantSlot> slots = (room.Inventory?.GetAllSlots()?.ToList() ?? new List<NMerchantSlot>())
+        List<NMerchantSlot> slots = (inventory.GetAllSlots()?.ToList() ?? new List<NMerchantSlot>())
             .Where(s => s.Entry != null)
             .ToList();
         string? itemId = GetString(args, "item_id");
@@ -664,19 +668,20 @@ public static class ActionExecutor
             return (false, $"not enough gold for cost {entry.Cost}");
         }
         MerchantEntry entryRef = entry;
-        NMerchantRoom roomRef = room;
+        NMerchantRoom? roomRef = room;
+        NMerchantInventory inventoryRef = inventory;
         Fire(async () =>
         {
             try
             {
-                NMerchantSlot? slotNode = UiHelper.FindAll<NMerchantSlot>(roomRef)
+                NMerchantSlot? slotNode = (roomRef != null ? UiHelper.FindAll<NMerchantSlot>(roomRef) : UiHelper.FindAll<NMerchantSlot>(inventoryRef))
                     .FirstOrDefault(s => ReferenceEquals(s.Entry, entryRef));
                 if (slotNode?.Hitbox is { } hitbox)
                 {
                     await UiHelper.Click(hitbox);
                     await Task.Delay(300, default);
                 }
-                bool purchased = await entryRef.OnTryPurchaseWrapper(roomRef.Inventory?.Inventory, false);
+                bool purchased = await entryRef.OnTryPurchaseWrapper(inventoryRef.Inventory, false);
                 BridgeMod.LogInfo($"shop buy wrapper entry={entryRef.GetType().Name} -> {purchased}");
                 if (!purchased && slotNode?.Hitbox is { } retryHitbox)
                 {
@@ -695,24 +700,31 @@ public static class ActionExecutor
     private static (bool, string) ShopLeave()
     {
         NMerchantRoom? room = NMerchantRoom.Instance;
-        if (room == null)
+        IScreenContext? context = ActiveScreenContext.Instance.GetCurrentScreen();
+        if (room == null && context is not Node)
         {
             return Proceed();
         }
-        NMerchantRoom roomRef = room;
+        Node? scope = (Node?)room ?? (Node?)context;
+        NMerchantRoom? roomRef = room;
+        Node scopeRef = scope!;
         Fire(async () =>
         {
-            if (roomRef.Inventory is { IsOpen: true })
+            NMerchantInventory? inv = roomRef?.Inventory
+                ?? UiHelper.FindFirst<NMerchantInventory>(scopeRef);
+            if (inv is { IsOpen: true })
             {
-                NBackButton? back = UiHelper.FindFirst<NBackButton>(roomRef.Inventory)
-                    ?? UiHelper.FindFirst<NBackButton>(roomRef);
+                NBackButton? back = UiHelper.FindFirst<NBackButton>(inv)
+                    ?? UiHelper.FindFirst<NBackButton>(scopeRef);
                 if (back != null)
                 {
                     await UiHelper.Click(back);
                     await Task.Delay(400, default);
                 }
             }
-            if (roomRef.ProceedButton is { } proceed)
+            NProceedButton? proceed = roomRef?.ProceedButton
+                ?? UiHelper.FindFirst<NProceedButton>(scopeRef);
+            if (proceed != null)
             {
                 await UiHelper.Click(proceed);
             }

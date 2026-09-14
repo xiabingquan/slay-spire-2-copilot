@@ -153,13 +153,30 @@ public static class StateBuilder
                 NCrystalSphereScreen => "crystal_sphere",
                 NMainMenu => "menu",
                 NCombatRoom => "combat",
-                _ => "other",
+                _ => DefaultScreenFor(current, screenNode),
             };
         }
         catch (Exception)
         {
             return "other";
         }
+    }
+
+    // Event-embedded merchant UIs (e.g. NFakeMerchant) expose the same
+    // NMerchantInventory slot system; route them through the shop pipeline.
+    private static string DefaultScreenFor(IScreenContext current, Node? screenNode)
+    {
+        if (screenNode == null)
+        {
+            return "other";
+        }
+        string typeName = current.GetType().Name;
+        if (typeName.Contains("Merchant", StringComparison.OrdinalIgnoreCase)
+            || UiHelper.FindFirst<NMerchantInventory>(screenNode) != null)
+        {
+            return "shop";
+        }
+        return "other";
     }
 
     private static Dictionary<string, object?>? BuildRun(RunState? runState)
@@ -904,18 +921,21 @@ public static class StateBuilder
     {
         var options = new List<Dictionary<string, object?>>();
         NMerchantRoom? room = screenNode as NMerchantRoom ?? NMerchantRoom.Instance;
-        if (room == null)
+        NMerchantInventory? inventory = room?.Inventory
+            ?? (screenNode != null ? UiHelper.FindFirst<NMerchantInventory>(screenNode) : null)
+            ?? (NRun.Instance != null ? UiHelper.FindFirst<NMerchantInventory>(NRun.Instance) : null);
+        if (inventory == null)
         {
             return options;
         }
         try
         {
             // Slots live in the inventory UI; open it so the client sees the goods.
-            if (room.Inventory is { IsOpen: false })
+            if (room?.Inventory is { IsOpen: false })
             {
                 room.OpenInventory();
             }
-            List<NMerchantSlot> slots = room.Inventory?.GetAllSlots()?.ToList() ?? new List<NMerchantSlot>();
+            List<NMerchantSlot> slots = inventory.GetAllSlots()?.ToList() ?? new List<NMerchantSlot>();
             int index = 0;
             foreach (NMerchantSlot slot in slots)
             {

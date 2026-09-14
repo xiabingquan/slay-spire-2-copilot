@@ -15,3 +15,6 @@ Extracted from game sts2.xml (3 types). One entry per type.
 - GORGET: chest relic floor 9. STS1 effect: start combat with 3 Block. STS2 unverified — observe next fights.
 - VAJRA: elite drop floor 11 (shop had it at 154g). STS1: +1 Strength at combat start. Pending live verify.
 - ODDLY_SMOOTH_STONE: chest relic floor 24 act 2. STS1: +1 Dexterity at combat start. Verify in next combat block values.
+- Hatch rest-site option (孵化): appears only while BYRDONIS_EGG-type card is in deck
+  (observed floor 8 with egg present, absent floor 25 after egg removal). Interaction
+  unverified — re-test when a future egg event occurs.

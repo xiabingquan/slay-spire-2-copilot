@@ -72,3 +72,7 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
 - 2026-09-15 [docs] run progress: act 2 floors through 24; key-fight knight
   killed; PERFECTED_STRIKE + WHIRLWIND upgraded + ODDLY_SMOOTH_STONE/777g chest;
   shop/rewards index-drift patterns documented; hatch mechanic coverage next.
+- 2026-09-15 [feature] NFakeMerchant (fake merchant event) support: event-embedded
+  merchant UIs routed through shop pipeline via NMerchantInventory discovery;
+  ShopBuy/ShopOptions/ShopLeave generalized beyond NMerchantRoom. Live-verified:
+  FAKE_SNECKO_EYE bought via item_id (777->723g) and event exited cleanly.
