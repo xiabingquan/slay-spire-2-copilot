@@ -108,6 +108,7 @@ class BridgeClient:
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
+        del exc_type, exc_val, exc_tb
         self.close()
 
 
@@ -222,13 +223,22 @@ def cmd_doctor(args):
     try:
         with BridgeClient(host=args.host, port=args.port) as client:
             hello = client.hello()
-            print(
-                f"[4] bridge handshake: OK protocol={hello.get('protocol_version')} "
-                f"game={hello.get('game_version')} mod={hello.get('mod_version')} "
-                f"assembly_hash={hello.get('assembly_hash')}"
-            )
-            state = client.state()
-            print(f"[5] state read: OK screen={state.get('screen')} fingerprint={state.get('fingerprint')}")
+            if hello.get("type") != "hello_ok":
+                print(f"[4] bridge handshake: NOT READY ({hello.get('message') or hello})")
+                print("     hint: mod still initializing; retry in a few seconds")
+                ok = False
+            else:
+                print(
+                    f"[4] bridge handshake: OK protocol={hello.get('protocol_version')} "
+                    f"game={hello.get('game_version')} mod={hello.get('mod_version')} "
+                    f"assembly_hash={hello.get('assembly_hash')}"
+                )
+                state = client.state()
+                if state.get("type") == "error":
+                    print(f"[5] state read: NOT READY ({state.get('message')})")
+                    ok = False
+                else:
+                    print(f"[5] state read: OK screen={state.get('screen')} fingerprint={state.get('fingerprint')}")
     except (ConnectionError, OSError, json.JSONDecodeError) as exc:
         print(f"[4] bridge handshake: FAILED ({exc})")
         if not game_running:
@@ -285,34 +295,54 @@ def cmd_wait(args):
     return 1
 
 
+def steam_fully_ready():
+    """Steam client process exists and a helper/renderer process is up."""
+    main = subprocess.run(["pgrep", "-f", "Steam.AppBundle/Steam/Contents/MacOS/steam_osx"],
+                          capture_output=True).returncode == 0
+    main = main or subprocess.run(["pgrep", "-x", "Steam"], capture_output=True).returncode == 0
+    if not main:
+        return False
+    # UI helpers: newer builds use steamwebhelper; macOS bundle uses Steam Helper
+    helper = subprocess.run(["pgrep", "-f", "steamwebhelper"], capture_output=True).returncode == 0
+    helper = helper or subprocess.run(["pgrep", "-f", "Steam Helper"],
+                                      capture_output=True).returncode == 0
+    return helper
+
+
 def cmd_launch(args):
-    steam_running = subprocess.run(["pgrep", "-x", "Steam"], capture_output=True).returncode == 0
-    if not steam_running:
-        print("Steam not running; starting Steam first")
-        subprocess.run(["open", "-a", "Steam"], check=False)
-        wait_for(lambda: subprocess.run(["pgrep", "-x", "Steam"], capture_output=True).returncode == 0, 40)
-        time.sleep(3)
+    if not steam_fully_ready():
+        if not steam_fully_ready():
+            print("Steam not ready; starting Steam and waiting for client boot")
+            if subprocess.run(["pgrep", "-x", "Steam"], capture_output=True).returncode != 0:
+                subprocess.run(["open", "-a", "Steam"], check=False)
+        if not wait_for(steam_fully_ready, 60, interval=2.0):
+            print("Steam client did not become ready; start Steam manually, then re-run launch")
+            return 1
+        time.sleep(5)  # extra settle time before issuing a rungameid URL
     if not game_process_running():
         url = f"steam://rungameid/{STEAM_APP_ID}"
-        print(f"launching via {url}")
+        print(f"launching via {url} (Steam ready)")
         subprocess.run(["open", url], check=False)
-        if not wait_for(game_process_running, 30, interval=2.0):
-            print(f"steam url did not start the game; opening app directly: {GAME_APP}")
-            subprocess.run(["open", str(GAME_APP)], check=False)
-            wait_for(game_process_running, 30, interval=2.0)
+        if not wait_for(game_process_running, 45, interval=2.0):
+            print("game did not start from Steam URL; retrying once after settle")
+            time.sleep(5)
+            subprocess.run(["open", url], check=False)
+            wait_for(game_process_running, 45, interval=2.0)
     if not game_process_running():
-        print("game process did not start; launch it manually then re-run doctor")
+        print("game process did not start; launch it from the Steam client manually")
         return 1
-    print("game process up; waiting for bridge (accept the in-game mod warning once if shown)")
+    print("game process up; waiting for bridge")
     deadline = time.time() + args.timeout
     while time.time() < deadline:
         time.sleep(2)
         try:
             with BridgeClient(host=args.host, port=args.port) as client:
                 hello = client.hello()
+                if hello.get("type") != "hello_ok":
+                    continue
                 print(f"bridge up: game={hello.get('game_version')} mod={hello.get('mod_version')}")
                 return 0
-        except (ConnectionError, OSError):
+        except (ConnectionError, OSError, json.JSONDecodeError):
             continue
     print("bridge did not come up in time; run spirectl doctor for details")
     return 1

@@ -62,6 +62,7 @@ public static class ActionExecutor
                 "shop_buy" => ShopBuy(args),
                 "shop_leave" => ShopLeave(),
                 "start_run" => StartRun(args),
+                "continue_run" => ContinueRun(),
                 "abandon_run" => AbandonRun(),
                 _ => (false, $"unknown action '{action}'"),
             };
@@ -186,8 +187,7 @@ public static class ActionExecutor
         {
             return (false, "map_select requires row and col");
         }
-        RunState? runState = RunManager.Instance.DebugOnlyGetState();
-        if (runState == null)
+        if (RunManager.Instance.DebugOnlyGetState() == null)
         {
             return (false, "no active run");
         }
@@ -199,14 +199,58 @@ public static class ActionExecutor
         NMapPoint? targetPoint = points.FirstOrDefault(p => p.Point.coord.row == row && p.Point.coord.col == col);
         if (targetPoint == null)
         {
-            return (false, $"no map point node at ({row},{col})");
+            return (false, $"no map point node at ({row},{col}) among {points.Count} nodes");
         }
-        if (!targetPoint.IsEnabled)
+        NMapPoint pointRef = targetPoint;
+        Fire(async () =>
         {
-            return (false, $"map point ({row},{col}) is not selectable yet");
-        }
-        NClickableControl clickTarget = targetPoint;
-        Fire(() => UiHelper.Click(clickTarget), "map select");
+            // Map points stay disabled until NMapScreen.IsTravelEnabled is set;
+            // our menu automation path never triggers the game's enabler, so set
+            // it here (honors Hook.ShouldProceedToNextMapPoint) and fall back to
+            // debug travel, then select through the game's own entry point that
+            // enqueues VoteForMapCoordAction.
+            NMapScreen? screen = NMapScreen.Instance;
+            if (screen == null)
+            {
+                BridgeMod.LogErr("map_select: NMapScreen.Instance is null");
+                return;
+            }
+            if (!screen.IsTravelEnabled)
+            {
+                try
+                {
+                    screen.SetTravelEnabled(true);
+                }
+                catch (Exception e)
+                {
+                    BridgeMod.LogErr($"map_select: SetTravelEnabled failed: {e}");
+                }
+                BridgeMod.LogInfo($"map_select: SetTravelEnabled(true) -> IsTravelEnabled={screen.IsTravelEnabled}");
+            }
+            if (!screen.IsTravelEnabled)
+            {
+                try
+                {
+                    screen.SetDebugTravelEnabled(true);
+                    BridgeMod.LogInfo("map_select: debug travel enabled (hook declined normal travel)");
+                }
+                catch (Exception e)
+                {
+                    BridgeMod.LogErr($"map_select: SetDebugTravelEnabled failed: {e}");
+                }
+            }
+            await Task.Delay(150, default);
+            try
+            {
+                screen.OnMapPointSelectedLocally(pointRef);
+                BridgeMod.LogInfo($"map_select ({row},{col}): vote enqueued via OnMapPointSelectedLocally");
+            }
+            catch (Exception e)
+            {
+                BridgeMod.LogErr($"map_select: OnMapPointSelectedLocally failed: {e}; falling back to ForceClick");
+                await UiHelper.Click(pointRef);
+            }
+        }, "map select");
         return (true, $"submitted map_select ({row},{col})");
     }
 
@@ -408,6 +452,24 @@ public static class ActionExecutor
     private static (bool, string) ShopLeave()
     {
         return Proceed();
+    }
+
+    private static (bool, string) ContinueRun()
+    {
+        if (NGame.Instance?.MainMenu is not { } mainMenu || !mainMenu.IsVisibleInTree())
+        {
+            return (false, "not at main menu");
+        }
+        List<NButton> buttons = UiHelper.FindAll<NButton>(mainMenu);
+        NButton? continueBtn = buttons.FirstOrDefault(b =>
+            b.Visible && b.Name.ToString().Contains("Continue", StringComparison.OrdinalIgnoreCase));
+        if (continueBtn == null)
+        {
+            return (false, "no continue-run button found on main menu");
+        }
+        NButton target = continueBtn;
+        Fire(() => UiHelper.Click(target), "continue run");
+        return (true, "submitted continue_run");
     }
 
     private static (bool, string) StartRun(JsonElement args)

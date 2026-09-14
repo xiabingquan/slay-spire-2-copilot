@@ -10,6 +10,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Events;
+using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Map;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.MonsterMoves.Intents;
@@ -203,8 +204,20 @@ public static class StateBuilder
         try
         {
             ActMap map = runState.Map;
-            IEnumerable<MapPoint> candidates = runState.CurrentMapPoint?.Children
-                ?? map.startMapPoints.Cast<MapPoint>();
+            IEnumerable<MapPoint> candidates;
+            if (runState.VisitedMapCoords.Count == 0)
+            {
+                // First selection of a run targets the lowest-row points on the
+                // map (the floor-0/1 entrance), mirroring the game's AutoSlay.
+                List<MapPoint> all = map.GetAllMapPoints().ToList();
+                int minRow = all.Count > 0 ? all.Min(p => p.coord.row) : 0;
+                candidates = all.Where(p => p.coord.row == minRow);
+            }
+            else
+            {
+                candidates = runState.CurrentMapPoint?.Children
+                    ?? map.startMapPoints.Cast<MapPoint>();
+            }
             foreach (MapPoint point in candidates)
             {
                 points.Add(new Dictionary<string, object?>
@@ -404,7 +417,7 @@ public static class StateBuilder
                 };
                 try
                 {
-                    dto["label"] = intent.GetIntentLabel(Array.Empty<Creature>(), owner).ToString();
+                    dto["label"] = ResolveLoc(intent.GetIntentLabel(Array.Empty<Creature>(), owner));
                 }
                 catch (Exception)
                 {
@@ -519,13 +532,9 @@ public static class StateBuilder
     {
         try
         {
-            if (model.GetType().GetProperty("Title")?.GetValue(model) is { } title)
+            if (model.GetType().GetProperty("Title")?.GetValue(model) is LocString loc)
             {
-                string? text = title.ToString();
-                if (!string.IsNullOrWhiteSpace(text))
-                {
-                    return text;
-                }
+                return ResolveLoc(loc);
             }
         }
         catch (Exception)
@@ -533,6 +542,37 @@ public static class StateBuilder
             // localization lookup failed; fall back to id
         }
         return model.Id.Entry;
+    }
+
+    // LocString.ToString() dumps table metadata; resolution goes through
+    // LocManager.SmartFormat via GetFormattedText.
+    internal static string ResolveLoc(LocString loc)
+    {
+        try
+        {
+            string text = loc.GetFormattedText();
+            if (!string.IsNullOrWhiteSpace(text))
+            {
+                return text;
+            }
+        }
+        catch (Exception)
+        {
+            // SmartFormat may fail on incomplete variables
+        }
+        try
+        {
+            string raw = loc.GetRawText();
+            if (!string.IsNullOrWhiteSpace(raw))
+            {
+                return raw;
+            }
+        }
+        catch (Exception)
+        {
+            // raw table entry missing
+        }
+        return $"{loc.LocTable}:{loc.LocEntryKey}";
     }
 
     private static Dictionary<string, object?> BuildScreenDetail(
@@ -567,15 +607,57 @@ public static class StateBuilder
 
     private static List<Dictionary<string, object?>> MapOptions(RunState? runState)
     {
-        return runState == null
-            ? new List<Dictionary<string, object?>>()
-            : AvailableMapPoints(runState).Select(d => new Dictionary<string, object?>
+        var options = new List<Dictionary<string, object?>>();
+        if (runState == null)
+        {
+            return options;
+        }
+        var uiPoints = new Dictionary<(int Row, int Col), NMapPoint>();
+        try
+        {
+            if (NMapScreen.Instance is { } mapScreen)
+            {
+                foreach (NMapPoint node in UiHelper.FindAll<NMapPoint>(mapScreen))
+                {
+                    uiPoints[(node.Point.coord.row, node.Point.coord.col)] = node;
+                }
+            }
+        }
+        catch (Exception)
+        {
+            // UI map nodes unavailable; options still come from run state
+        }
+        List<Dictionary<string, object?>> statePoints = AvailableMapPoints(runState);
+        for (int i = 0; i < statePoints.Count; i++)
+        {
+            Dictionary<string, object?> d = statePoints[i];
+            int row = (int)d["row"]!;
+            int col = (int)d["col"]!;
+            var option = new Dictionary<string, object?>
             {
                 ["kind"] = "map_point",
-                ["id"] = $"{d["row"]},{d["col"]}",
+                ["index"] = i,
+                ["id"] = $"{row},{col}",
                 ["name"] = d["point_type"]?.ToString() ?? "unknown",
                 ["detail"] = d,
-            }).ToList();
+            };
+            if (uiPoints.TryGetValue((row, col), out NMapPoint? node))
+            {
+                option["enabled"] = node.IsEnabled;
+                option["visible"] = node.Visible;
+                option["point_state"] = node.State.ToString();
+            }
+            options.Add(option);
+        }
+        if (NMapScreen.Instance is { } screen)
+        {
+            if (options.Count > 0)
+            {
+                options[0]["travel_enabled"] = screen.IsTravelEnabled;
+                options[0]["is_traveling"] = screen.IsTraveling;
+            }
+        }
+        return options;
     }
 
     private static List<Dictionary<string, object?>> CardRewardOptions(Node? screenNode)
@@ -696,8 +778,8 @@ public static class StateBuilder
             {
                 ["kind"] = "reward",
                 ["index"] = i,
-                ["id"] = buttons[i].Name,
-                ["name"] = buttons[i].Name,
+                ["id"] = buttons[i].Name.ToString(),
+                ["name"] = buttons[i].Name.ToString(),
             });
         }
         return options;
@@ -721,7 +803,7 @@ public static class StateBuilder
                 ["kind"] = "event_option",
                 ["index"] = i,
                 ["id"] = option.TextKey,
-                ["name"] = option.Title.ToString(),
+                ["name"] = ResolveLoc(option.Title),
                 ["is_proceed"] = option.IsProceed,
             });
         }
@@ -753,8 +835,8 @@ public static class StateBuilder
             {
                 ["kind"] = "relic",
                 ["index"] = options.Count,
-                ["id"] = holder.Name,
-                ["name"] = holder.Name,
+                ["id"] = holder.Name.ToString(),
+                ["name"] = holder.Name.ToString(),
             });
         }
         return options;
@@ -774,8 +856,8 @@ public static class StateBuilder
             {
                 ["kind"] = "button",
                 ["index"] = i,
-                ["id"] = buttons[i].Name,
-                ["name"] = buttons[i].Name,
+                ["id"] = buttons[i].Name.ToString(),
+                ["name"] = buttons[i].Name.ToString(),
             });
         }
         return options;
@@ -884,6 +966,7 @@ public static class StateBuilder
                 break;
             case "menu":
                 actions.Add(new Dictionary<string, object?> { ["action"] = "start_run", ["args"] = new Dictionary<string, object?>() });
+                actions.Add(new Dictionary<string, object?> { ["action"] = "continue_run", ["args"] = new Dictionary<string, object?>() });
                 break;
             case "game_over":
                 actions.Add(new Dictionary<string, object?> { ["action"] = "proceed", ["args"] = new Dictionary<string, object?>() });
@@ -905,10 +988,13 @@ public static class StateBuilder
             (state["combat"] as Dictionary<string, object?>)?["round"]?.ToString() ?? "",
             (state["combat"] as Dictionary<string, object?>)?["turn_phase"]?.ToString() ?? "",
             (state["run"] as Dictionary<string, object?>)?["total_floor"]?.ToString() ?? "",
+            (state["run"] as Dictionary<string, object?>)?["act_floor"]?.ToString() ?? "",
+            (state["run"] as Dictionary<string, object?>)?["gold"]?.ToString() ?? "",
             (state["run"] as Dictionary<string, object?>)?["room_type"]?.ToString() ?? "",
             (state["player"] as Dictionary<string, object?>)?["hp"]?.ToString() ?? "",
             ((state["combat"] as Dictionary<string, object?>)?["piles"] as Dictionary<string, object?>)?["hand"]?.ToString() ?? "",
-            ((state["run"] as Dictionary<string, object?>)?["available_map_points"] as List<Dictionary<string, object?>>)?.Count.ToString() ?? "");
+            ((state["run"] as Dictionary<string, object?>)?["available_map_points"] as List<Dictionary<string, object?>>)?.Count.ToString() ?? "",
+            ((state["screen_detail"] as Dictionary<string, object?>)?["options"] as List<Dictionary<string, object?>>)?.Count.ToString() ?? "");
         ulong hash = 14695981039346656037;
         foreach (char c in raw)
         {
