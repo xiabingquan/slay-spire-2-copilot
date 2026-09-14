@@ -52,6 +52,8 @@ Claude to load memory, run doctor, then loop: state -> decide -> act -> wait.
 
 ## Memory and self-iteration
 
+- logs/ — one file per run, full JSON records of every spirectl state/act/wait
+  call (auto-written, rotated per run, committed as the permanent play record)
 - skill/memory/lessons.md — generalizable playing lessons, pruned when wrong
 - skill/memory/runs/ — per-run postmortems written after every run
 - skill/memory/changelog.md — ledger of tool fixes and strategy corrections

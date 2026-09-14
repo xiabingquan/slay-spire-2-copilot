@@ -97,3 +97,7 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
 - 2026-09-15 [fix] watchdog pass 3: BBCode stripped from intent labels
   (server ResolveLoc + client render_compact); autopilot v2 design doc added
   under docs/design-autopilot-v2.md.
+- 2026-09-15 [feature] per-run detailed logging (user directive): spirectl
+  appends full JSON state/act/wait records to logs/run-*.log — one file per run,
+  rotated on start_run/continue_run, finalized on game_over; logs committed as
+  permanent record. Watchdog cron switched to 5-min interval (2-59/5, job 96b0e26a).

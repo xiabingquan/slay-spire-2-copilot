@@ -27,12 +27,45 @@ GAME_MODS_DIR = Path(
 GAME_LOG = Path(
     os.path.expanduser("~/Library/Application Support/SlayTheSpire2/logs/godot.log")
 )
+REPO_ROOT = Path(__file__).resolve().parent.parent
+RUNLOG_DIR = REPO_ROOT / "logs"
+RUNLOG_POINTER = RUNLOG_DIR / ".current_run"
 STEAM_APP_ID = "2868840"
 BBCODE_RE = re.compile(r"\[/?[^\]]+\]")
 
 
 def strip_bbcode(text):
     return BBCODE_RE.sub("", text) if isinstance(text, str) else text
+
+
+def _runlog_file(finalize=False):
+    """One log file per run under logs/. Rotated on start/continue_run,
+    finalized on game_over. Returns path of the active run log."""
+    RUNLOG_DIR.mkdir(parents=True, exist_ok=True)
+    current = None
+    if RUNLOG_POINTER.exists():
+        current = RUNLOG_POINTER.read_text(encoding="utf-8").strip() or None
+        if finalize:
+            return RUNLOG_DIR / current
+        if current:
+            return RUNLOG_DIR / current
+    stamp = time.strftime("%Y%m%d-%H%M%S")
+    current = f"run-{stamp}.log"
+    RUNLOG_POINTER.write_text(current + "\n", encoding="utf-8")
+    return RUNLOG_DIR / current
+
+
+def log_run_event(kind, data, rotate=False, finalize=False):
+    """Append a complete record (timestamp + kind + full JSON) to the run log."""
+    if rotate and RUNLOG_POINTER.exists():
+        RUNLOG_POINTER.unlink(missing_ok=True)
+    path = _runlog_file(finalize=finalize)
+    record = {"ts": time.strftime("%Y-%m-%d %H:%M:%S"), "kind": kind, **data}
+    if finalize:
+        record["outcome"] = data.get("outcome") or "game_over"
+    with path.open("a", encoding="utf-8") as handle:
+        handle.write(json.dumps(record, ensure_ascii=False) + "\n")
+    return path
 GAME_APP = Path(
     os.environ.get(
         "STS2_APP_PATH",
@@ -264,6 +297,9 @@ def cmd_doctor(args):
 def cmd_state(args):
     with BridgeClient(host=args.host, port=args.port) as client:
         state = client.state()
+    log_run_event("state", {"state": state})
+    if state.get("screen") == "game_over" or (state.get("run") or {}).get("is_game_over"):
+        log_run_event("run_end", {"state": state}, finalize=True)
     if args.json:
         print(json.dumps(state, indent=2, ensure_ascii=False))
     else:
@@ -275,6 +311,10 @@ def cmd_act(args):
     act_args = json.loads(args.args) if args.args else None
     with BridgeClient(host=args.host, port=args.port) as client:
         result = client.act(args.action, act_args)
+    rotate = args.action in ("start_run", "continue_run")
+    log_run_event("act", {"action": args.action, "args": act_args, "result": result}, rotate=rotate)
+    if (result.get("state") or {}).get("screen") == "game_over":
+        log_run_event("run_end", {"last_action": args.action, "state": result.get("state")}, finalize=True)
     print(f"ok={result.get('ok')} message={result.get('message')}")
     state = result.get("state")
     if state:
@@ -300,9 +340,11 @@ def cmd_wait(args):
             fp = state.get("fingerprint")
             if fp != prev:
                 print(f"changed -> fingerprint={fp} screen={state.get('screen')}")
+                log_run_event("wait_change", {"state": state})
                 print(render_compact(state) if not args.json else json.dumps(state, indent=2, ensure_ascii=False))
                 return 0
     print(f"timeout after {args.timeout}s (fingerprint={prev})")
+    log_run_event("wait_timeout", {"fingerprint": prev, "timeout": args.timeout})
     return 1
 
 
