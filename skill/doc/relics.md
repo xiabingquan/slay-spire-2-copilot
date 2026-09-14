@@ -28,8 +28,9 @@ Extracted from game sts2.xml (3 types). One entry per type.
 - HAPPY_FLOWER: shop relic act 3 (175g). STS1: +1 energy every 3rd turn.
 - ORNAMENTAL_FAN: elite drop floor 41. STS1: +1 dex per 3 attacks.
 - STRIKE_DUMMY: elite relic floor 43 act3. STS1: +1 strength at combat start.
-- JUNGLE_MAZE_ADVENTURE event (run2 f4): solo quest traded 18hp for +147 gold
-  instantly (80->62, 7->154). Join-forces alternative unobserved.
+- JUNGLE_MAZE_ADVENTURE branches fully mapped: SOLO_QUEST trades ~18hp for ~+147g;
+  JOIN_FORCES grants ~+63g with zero hp cost (run3 f4). Pick JOIN at mid/low hp,
+  SOLO only when over 60hp.
 - LASTING_CANDY: run2 elite drop. Rest heals observed +24 at 53hp (53->77) —
   likely rest-boost relic like tea set; verify scaling on later rests.
 - SPARKLING_ROUGE / CHANDELIER: run2 chest drops floor 9; effects pending combat
@@ -45,3 +46,5 @@ Extracted from game sts2.xml (3 types). One entry per type.
 - MOLTEN_EGG: THIS_OR_THAT event "ORNATE" pick granted it (run3 f2). STS1
   molten-egg family: likely upgrades attack-card rewards / egg-hatch synergy.
   Effect pending reward observation.
+- MOLTEN_EGG verified (run3 f5): attack-card reward FEED arrived auto-upgraded
+  (deck upgraded=True on pick). Egg upgrades attack rewards at acquisition.
