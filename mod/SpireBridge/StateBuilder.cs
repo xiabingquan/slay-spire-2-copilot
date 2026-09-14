@@ -583,7 +583,8 @@ public static class StateBuilder
     }
 
     // LocString.ToString() dumps table metadata; resolution goes through
-    // LocManager.SmartFormat via GetFormattedText.
+    // LocManager.SmartFormat via GetFormattedText. BBCode styling tags are
+    // stripped so agent-facing text stays clean.
     internal static string ResolveLoc(LocString loc)
     {
         try
@@ -591,7 +592,7 @@ public static class StateBuilder
             string text = loc.GetFormattedText();
             if (!string.IsNullOrWhiteSpace(text))
             {
-                return text;
+                return StripBbcode(text);
             }
         }
         catch (Exception)
@@ -603,7 +604,7 @@ public static class StateBuilder
             string raw = loc.GetRawText();
             if (!string.IsNullOrWhiteSpace(raw))
             {
-                return raw;
+                return StripBbcode(raw);
             }
         }
         catch (Exception)
@@ -611,6 +612,11 @@ public static class StateBuilder
             // raw table entry missing
         }
         return $"{loc.LocTable}:{loc.LocEntryKey}";
+    }
+
+    private static string StripBbcode(string text)
+    {
+        return System.Text.RegularExpressions.Regex.Replace(text, @"\[/?[^\]]+\]", "");
     }
 
     private static Dictionary<string, object?> BuildScreenDetail(

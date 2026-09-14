@@ -5,6 +5,7 @@
 import argparse
 import json
 import os
+import re
 import socket
 import subprocess
 import sys
@@ -27,6 +28,11 @@ GAME_LOG = Path(
     os.path.expanduser("~/Library/Application Support/SlayTheSpire2/logs/godot.log")
 )
 STEAM_APP_ID = "2868840"
+BBCODE_RE = re.compile(r"\[/?[^\]]+\]")
+
+
+def strip_bbcode(text):
+    return BBCODE_RE.sub("", text) if isinstance(text, str) else text
 GAME_APP = Path(
     os.environ.get(
         "STS2_APP_PATH",
@@ -162,7 +168,7 @@ def render_compact(state):
             if intents:
                 bits = []
                 for it in intents:
-                    label = it.get("label") or it.get("type")
+                    label = strip_bbcode(it.get("label") or it.get("type"))
                     dmg = it.get("damage")
                     hits = it.get("hits")
                     desc = label or it.get("class")

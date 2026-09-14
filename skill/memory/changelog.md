@@ -94,3 +94,6 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
   via Feishu per instruction.
 - 2026-09-15 [docs] watchdog pass 2: cards.md knowledge from live runs; reward
   options filter to visible+enabled buttons (unclaimable-button gap polish).
+- 2026-09-15 [fix] watchdog pass 3: BBCode stripped from intent labels
+  (server ResolveLoc + client render_compact); autopilot v2 design doc added
+  under docs/design-autopilot-v2.md.
