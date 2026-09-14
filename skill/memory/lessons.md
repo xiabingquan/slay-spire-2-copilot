@@ -86,3 +86,9 @@ breakthrough; remove entries that prove wrong.
   freezes.
 - Client discipline: re-read state after EVERY act, even mid-"obvious" dumps —
   EXPECT_A_FIGHT misclicked twice from stale indices this fight.
+- BURROWED cancel validated again (run2 Act2 f23): breaking the burrow block
+  (32->0 via AOE chain) cancelled the 23-dmg charge — always dump attacks into
+  burrowed enemies' block when IMPERVIOUS is unavailable; the cancel IS the
+  defense.
+- BODY_SLAM x2 + IMPERVIOUS engine: second copy picked; expect ~30-damage
+  slams on shield turns. 14hp survival fights won on this + weak potions.
