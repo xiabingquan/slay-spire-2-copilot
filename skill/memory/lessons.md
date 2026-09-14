@@ -59,3 +59,8 @@ breakthrough; remove entries that prove wrong.
 - INFESTED strategy validated (run2 f7 elite, post-stall replay): single-target
   the parent, hoard AOE; on death-wave spawn, THUNDERCLAP x2 cleared 4 adds
   same-turn. Elite relic LASTING_CANDY + SWORD_BOOMERANG banked.
+- ILLUSION_POWER (雾菇 family, run2 f12): respawning 6hp add (利齿之眼) that
+  keeps returning while parent lives — kill the parent FIRST, adds despawn
+  with it. Opposite priority vs INFESTED parasite waves.
+- Run2 relic combat start: player showed STRENGTH+DEXTERITY and energy 6/3
+  (SPARKLING_ROUGE / CHANDELIER suspects) — verify which relic grants what.
