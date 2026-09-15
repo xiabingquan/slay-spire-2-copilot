@@ -1,5 +1,68 @@
 # 药水
 
-药水效果静态参考。
+药水效果参考。来源：stratgg.com 药水数据库（63 瓶），与本地实战交叉
+核对。标注：稀有度；方括号内为角色专属（shared = 全角色可用）。
 
-- GAMBLERS_BREW / BLESSING_OF_THE_FORGE / STABLE_SERUM：效果待观察。
+- Ashwater［Uncommon，Ironclad］：消耗手牌中任意数量的卡牌。
+- Attack Potion［Common，shared］：从 3 张随机攻击牌中选 1 张加入手牌；本回合免费。
+- Beetle Juice［Rare，shared］：接下来 4 回合敌人攻击伤害 -30%。
+- Blessing of the Forge［Uncommon，shared］：本场战斗内升级手牌中所有卡牌。
+- Block Potion［Common，shared］：获得 12 格挡。
+- Blood Potion［Common，Ironclad］：回复最大 HP 的 20%。
+- Bone Brew［Uncommon，Necrobinder］：Summon 15。
+- Bottled Potential［Rare，shared］：将全部卡牌洗入抽牌堆，然后抽 5 张。
+- Clarity Extract［Uncommon，shared］：抽 1 张牌；接下来 3 回合开始时各额外抽 1 张。
+- Colorless Potion［Common，shared］：从 3 张随机无色牌中选 1 张加入手牌；本回合免费。
+- Cosmic Concoction［Rare，Regent］：向手牌加入 3 张升级版无色牌。
+- Cunning Potion［Uncommon，Silent］：向手牌加入 3 张升级版 Shiv。
+- Cure All［Uncommon，shared］：获得 1 能量；抽 2 张牌。
+- Dexterity Potion［Common，shared］：获得 2 敏捷。
+- Distilled Chaos［Rare，shared］：打出抽牌堆顶的 3 张牌。
+- Droplet of Precognition［Rare，shared］：从抽牌堆选 1 张牌加入手牌。
+- Duplicator［Uncommon，shared］：本回合你的下一张牌额外打出一次。
+- Energy Potion［Common，shared］：获得 2 能量。
+- Entropic Brew［Rare，shared］：用随机药水填满所有空药水栏。
+- Essence of Darkness［Rare，Defect］：每个充能球槽引导 1 个暗球。
+- Explosive Ampoule［Common，shared］：对所有敌人造成 10 点伤害。
+- Fairy in a Bottle［Rare，shared］：将死时改为弃掉此药水并回复至最大 HP 的 30%。
+- Fire Potion［Common，shared］：造成 20 点伤害。
+- Flex Potion［Common，shared］：获得 5 力量；回合结束失去 5 力量。
+- Focus Potion［Common，Defect］：获得 2 Focus。
+- Fortifier［Uncommon，shared］：格挡变为三倍。
+- Foul Potion［Event］：对所有人造成 12 点伤害（也可砸向商人换 100 金币）。
+- Fruit Juice［Rare，shared］：+5 最大 HP。
+- Fysh Oil［Uncommon，shared］：获得 1 力量 1 敏捷。
+- Gambler's Brew［Uncommon，shared］：弃置任意数量卡牌，然后抽取等量牌。
+- Ghost in a Jar［Rare，Silent］：获得 1 层 Intangible。
+- Gigantification Potion［Rare，shared］：你打出的下一张攻击牌造成三倍伤害。
+- Glowwater Potion［Event］：消耗手牌；抽 10 张牌。
+- Heart of Iron［Uncommon，shared］：获得 7 点镀甲（Plating）。
+- King's Courage［Uncommon，Regent］：Forge 15。
+- Liquid Bronze［Uncommon，shared］：获得 3 点荆棘。
+- Liquid Memories［Rare，shared］：将弃牌堆一张牌放入手牌；本回合其费用 -1 能量。
+- Lucky Tonic［Rare，shared］：获得 1 层 Buffer。
+- Mazaleth's Gift［Rare，shared］：获得 1 层 Ritual。
+- Orobic Acid［Rare，shared］：随机攻击、技能、能力牌各 1 张加入手牌；本回合免费。
+- Poison Potion［Common，Silent］：施加 6 层中毒。
+- Pot of Ghouls［Rare，Necrobinder］：向手牌加入 2 张 Soul。
+- Potion of Binding［Uncommon，shared］：对所有敌人施加 1 层 Weak 与 1 层 Vulnerable。
+- Potion of Capacity［Uncommon，Defect］：获得 2 个充能球槽。
+- Potion of Doom［Common，Necrobinder］：施加 33 层 Doom。
+- Potion-Shaped Rock［Token，shared］：造成 15 点伤害。
+- Powdered Demise［Uncommon，shared］：敌人每个回合结束失去 9 HP。
+- Power Potion［Common，shared］：从 3 张随机能力牌中选 1 张加入手牌；本回合免费。
+- Radiant Tincture［Uncommon，shared］：获得 1 能量；接下来 3 回合开始时各额外获得 1 能量。
+- Regen Potion［Uncommon，shared］：获得 5 层再生（Regen）。
+- Shackling Potion［Rare，shared］：本回合所有敌人失去 7 力量。
+- Ship in a Bottle［Rare，shared］：获得 10 格挡；下回合再获得 10 格挡。
+- Skill Potion［Common，shared］：从 3 张随机技能牌中选 1 张加入手牌；本回合免费。
+- Snecko Oil［Rare，shared］：抽 7 张牌；本回合随机手牌费用。
+- Soldier's Stew［Rare，Ironclad］：本场战斗所有含 Strike 的卡牌获得 1 次 Replay。
+- Speed Potion［Common，shared］：获得 5 敏捷；回合结束失去 5 敏捷。
+- Stable Serum［Uncommon，shared］：保留手牌 2 回合。
+- Star Potion［Common，Regent］：获得 3 点星星（★）。
+- Strength Potion［Common，shared］：获得 2 力量。
+- Swift Potion［Common，shared］：抽 3 张牌。
+- Touch of Insanity［Uncommon，shared］：选择手牌中一张牌；本场战斗其免费。
+- Vulnerable Potion［Common，shared］：施加 3 层 Vulnerable。
+- Weak Potion［Common，shared］：施加 3 层 Weak。

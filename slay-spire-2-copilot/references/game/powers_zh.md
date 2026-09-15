@@ -45,6 +45,8 @@
 ## 角色套牌 power
 
 - DEMON_FORM_POWER（铁甲战士）：数回合内每回合 +力量；引擎牌。
+- HELLRAISER_POWER / HEGEMONY（铁甲战士）：卡牌宿主型；逐卡效果见
+  cards_zh.md。
 - ClarityPower 与 DrawCardsNextTurnPower：下回合（们）额外抽牌；Clarity
   覆盖接下来 N 回合，DrawCardsNextTurn 仅下一回合。
 - TemporaryStrength / FlexPotionPower：回合结束过期的临时力量（Flex

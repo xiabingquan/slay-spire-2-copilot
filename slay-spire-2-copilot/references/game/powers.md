@@ -47,7 +47,8 @@ play on v0.107.1.
 ## Character-kit powers
 
 - DEMON_FORM_POWER (Ironclad): +Strength per turn for several turns; engine.
-- HELI RAISER / HEGEMONY-adjacent (Ironclad): see cards.md per-card notes.
+- HELLRAISER_POWER / HEGEMONY (Ironclad): card-hosted; per-card effects in
+  cards.md.
 - ClarityPower vs DrawCardsNextTurnPower: extra draws next turn(s); Clarity
   spans next N turns, DrawCardsNextTurn the next turn only.
 - TemporaryStrength/FlexPotionPower: temporary Strength that expires end of
