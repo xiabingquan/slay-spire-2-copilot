@@ -77,3 +77,8 @@ skill 符号链接：`~/.claude/skills/slay-spire-2-copilot` → 上述 skill �
 
 更细的协议见 `slay-spire-2-copilot/docs/protocol.md`，CLI 速查见
 `slay-spire-2-copilot/references/commands.md`。
+
+## 致谢
+
+- [BaseLib-StS2](https://github.com/Alchyr/BaseLib-StS2) — Alchyr 的《杀戮尖塔 2》
+  mod 基础库；开发 SpireBridge 时作为 mod 加载与游戏 API 约定的社区参考

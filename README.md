@@ -91,3 +91,9 @@ localhost (127.0.0.1:17612):
 
 For the detailed protocol see `slay-spire-2-copilot/docs/protocol.md`; for the
 CLI cheat sheet see `slay-spire-2-copilot/references/commands.md`.
+
+## Acknowledgements
+
+- [BaseLib-StS2](https://github.com/Alchyr/BaseLib-StS2) — Alchyr's Slay the
+  Spire 2 modding base library; consulted as a community reference for mod
+  loading and game API conventions while developing SpireBridge
