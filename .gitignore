@@ -20,3 +20,6 @@ local-archive/
 
 # Run memory is the user's local play data; never committed.
 slay-spire-2-copilot/memory/
+
+# Local working files.
+/todo.md
