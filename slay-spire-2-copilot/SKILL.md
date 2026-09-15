@@ -157,8 +157,12 @@ When the run ends (game_over screen, or abandon):
    wrong.
 3. Fold character-specific guidance into the character's playbook
    memory/lessons/roles/<character>.md.
-4. Do not commit memory files into the repo.
-5. If the user has stopped playing: disarm the watchdog (see "Runtime
+4. Fold newly observed game facts (card/relic/potion/power/intent effects)
+   into the matching references/game/ file and its `_zh` twin as plain
+   entries — the English and Chinese files must stay content-aligned. Memory
+   holds play insights and run process only, never game base data.
+5. Do not commit memory files into the repo.
+6. If the user has stopped playing: disarm the watchdog (see "Runtime
    conventions").
 
 ## Self-iteration
@@ -218,15 +222,17 @@ are relative to this skill folder):
 references/ — consult knowledge:
 
 - `references/README.md` — knowledge index
-- `references/commands.md` — CLI usage, action/state reference, log-directory
-  contract
-- `references/protocol.md` — wire protocol v1 (JSON Lines over TCP on localhost)
-- `references/cards.md` — cards
-- `references/potions.md` — potion effects
-- `references/powers.md` — powers
-- `references/relics.md` — relic effects
-- `references/intents.md` — reading enemy intents
-- `references/afflictions.md` — statuses and debuffs
+- `references/bridge/commands.md` — CLI usage, action/state reference,
+  log-directory contract
+- `references/bridge/protocol.md` — wire protocol v1 (JSON Lines over TCP on
+  localhost)
+- `references/game/cards.md` — cards
+- `references/game/potions.md` — potion effects
+- `references/game/powers.md` — powers
+- `references/game/relics.md` — relic effects
+- `references/game/intents.md` — reading enemy intents
+- `references/game/afflictions.md` — statuses and debuffs
+- `references/game/*_zh.md` — Chinese twins of the game knowledge files
 
 memory/ — run memory:
 

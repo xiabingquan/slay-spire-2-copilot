@@ -49,7 +49,8 @@ dll 更新时执行构建安装（dotnet build，产物拷贝至游戏 mods 目�
         bridge/                            （spirectl.py CLI）
         scripts/                           （shell 脚本：mod 构建安装、看门狗）
         mod/SpireBridge/                   （游戏内通讯 mod 源码）
-        references/                        （CLI 速查、线协议、游玩知识）
+        references/bridge/                 （CLI 速查、线协议）
+        references/game/                   （卡牌、能力、遗物、药水、状态、意图）
         memory/                            （对局记忆：经验、台账、复盘）
 
 skill 符号链接：`~/.claude/skills/slay-spire-2-copilot` → 上述 skill 文件夹。
@@ -75,8 +76,8 @@ skill 符号链接：`~/.claude/skills/slay-spire-2-copilot` → 上述 skill �
 - **记忆与迭代**：`memory/` 下的经验、复盘、changelog 随对局更新，下次会话
   自动加载；工具修复直接进本仓库
 
-更细的协议见 `slay-spire-2-copilot/references/protocol.md`，CLI 速查见
-`slay-spire-2-copilot/references/commands.md`。
+更细的协议见 `slay-spire-2-copilot/references/bridge/protocol.md`，CLI 速查见
+`slay-spire-2-copilot/references/bridge/commands.md`。
 
 ## 致谢
 

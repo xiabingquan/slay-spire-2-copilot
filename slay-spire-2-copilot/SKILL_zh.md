@@ -126,8 +126,11 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
 2. 仅把可泛化的经验写入 memory/lessons/lessons.md（排除一次性坏 RNG）；保持
    简短具体，被证伪的条目及时删除。
 3. 角色专属经验写入对应手册 memory/lessons/roles/<角色>.md。
-4. 不将 memory 文件提交进仓库。
-5. 若用户已停止游玩：解除看门狗武装（见「运行时约定」）。
+4. 对局中新观察到的游戏事实（卡牌/遗物/药水/能力/意图的效果）以条目形式
+   直接写入 references/game/ 下对应文件及其 `_zh` 中文版——中英内容必须
+   完全对应。memory 只记对局感悟与过程，不记游戏基础数据。
+5. 不将 memory 文件提交进仓库。
+6. 若用户已停止游玩：解除看门狗武装（见「运行时约定」）。
 
 ## 自我迭代
 
@@ -174,15 +177,15 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
 
 references/ — 查阅知识：
 
-- `references/README.md` — 知识索引
-- `references/commands.md` — CLI 用法、动作与状态参考、日志目录契约
-- `references/protocol.md` — 线协议 v1（本机 TCP 上的 JSON Lines）
-- `references/cards.md` — 卡牌
-- `references/potions.md` — 药水效果
-- `references/powers.md` — 能力/力量
-- `references/relics.md` — 遗物效果
-- `references/intents.md` — 敌人意图解读
-- `references/afflictions.md` — 状态与负面效果
+- `references/README_zh.md` — 知识索引（中文版）
+- `references/bridge/commands.md` — CLI 用法、动作与状态参考、日志目录契约
+- `references/bridge/protocol.md` — 线协议 v1（本机 TCP 上的 JSON Lines）
+- `references/game/cards_zh.md` — 卡牌
+- `references/game/potions_zh.md` — 药水效果
+- `references/game/powers_zh.md` — 能力/力量
+- `references/game/relics_zh.md` — 遗物效果
+- `references/game/intents_zh.md` — 敌人意图解读
+- `references/game/afflictions_zh.md` — 状态与负面效果
 
 memory/ — 对局记忆：
 
