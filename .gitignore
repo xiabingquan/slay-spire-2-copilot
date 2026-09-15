@@ -9,9 +9,11 @@ __pycache__/
 .claude/
 
 # Everything the skill needs to run lives under the skill folder; ignore its
-# build artifacts and bulky research dumps there.
+# build artifacts there.
 slay-spire-2-copilot/mod/bin/
 slay-spire-2-copilot/mod/obj/
 slay-spire-2-copilot/mod/SpireBridge/.godot/
-slay-spire-2-copilot/docs/research/external/
-slay-spire-2-copilot/docs/research/decompiled/
+
+# Untracked local reference archive (design/research material, kept for
+# occasional lookup only; not part of the skill and not referenced by it).
+local-archive/
