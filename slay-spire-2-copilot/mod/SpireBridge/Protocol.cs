@@ -2,7 +2,7 @@ using System.Text.Json;
 
 namespace SpireCopilot.Bridge;
 
-// Wire protocol v1 envelopes (see docs/protocol.md). State payloads are
+// Wire protocol v1 envelopes (see references/bridge/protocol.md). State payloads are
 // dictionary trees built on the game main thread by StateBuilder.
 public static class Protocol
 {

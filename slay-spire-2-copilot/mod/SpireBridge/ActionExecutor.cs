@@ -148,9 +148,8 @@ public static class ActionExecutor
         {
             return (false, $"not player play phase (phase={pcs.Phase})");
         }
-        // Victory-path stall (observed when the killing blow lands via HAVOC or
-        // other non-attack resolution): enemies are gone but combat never ends.
-        // CheckWinCondition -> EndCombatInternal is the public finisher.
+        // Combat can refuse to end after a non-attack kill; CheckWinCondition
+        // -> EndCombatInternal is the public finisher.
         bool anyEnemyAlive = false;
         foreach (Creature enemy in combat.Enemies)
         {
@@ -167,10 +166,9 @@ public static class ActionExecutor
         }
         Player playerRef = player!;
         int turnNumber = pcs.TurnNumber;
-        // Boss-fight stalls froze PlayerCmd.EndTurn's internal wait chain
-        // (RINGING debuff turns). Drive the multiplayer-sync entry instead:
-        // CombatManager.OnEndedTurnLocally + queue EndPlayerTurnAction — the
-        // path CombatSolver verified live on this game build.
+        // PlayerCmd.EndTurn can freeze on lock-style debuff turns; drive the
+        // multiplayer-sync entry instead (OnEndedTurnLocally +
+        // EndPlayerTurnAction queue).
         Fire(async () =>
         {
             try
@@ -207,9 +205,8 @@ public static class ActionExecutor
         bool ended = await cm.CheckWinCondition();
         if (!ended && cm.IsInProgress)
         {
-            // IsEnding was false despite no living enemies — drive the internal
-            // finisher directly (documented "DO NOT CALL unless in this class";
-            // bridge completeness rule overrides for automation stalls).
+            // CheckWinCondition declined while no enemies remain; call the
+            // internal finisher directly.
             BridgeMod.LogErr("force combat end: CheckWinCondition declined, calling EndCombatInternal");
             await cm.EndCombatInternal();
         }
@@ -226,9 +223,9 @@ public static class ActionExecutor
         return (true, "submitted force_combat_end");
     }
 
-    // RINGING/PLOW-style locks freeze end_turn (fingerprint stuck; abandon no-ops).
-    // Clear lock-like powers via Creature.RemovePowerInternal, then re-drive the
-    // sync end-turn path. Completeness rule: stall recovery without full SL.
+    // Lock-style debuffs can freeze end_turn (fingerprint stuck, abandon no-ops).
+    // Remove those powers via Creature.RemovePowerInternal, then re-drive the
+    // sync end-turn path.
     private static (bool, string) ForceAdvanceTurn()
     {
         if (!TryGetCombatPlayer(out Player? player, out CombatState combat, out PlayerCombatState? pcs) || pcs == null)

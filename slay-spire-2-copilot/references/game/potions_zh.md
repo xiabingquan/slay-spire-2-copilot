@@ -1,0 +1,5 @@
+# 药水
+
+药水效果静态参考。
+
+- GAMBLERS_BREW / BLESSING_OF_THE_FORGE / STABLE_SERUM：效果待观察。

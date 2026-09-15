@@ -2,40 +2,42 @@
 
 > 英文版：[README.md](README.md)
 
-让 Claude Code / Codex 在本机自动游玩《杀戮尖塔 2》的 AI 副驾驶（copilot）。
-你只要说一句「用 Claude Code 打一局杀戮尖塔2」，智能体就会自己读牌局、做决策、
-点技能、推图、打 Boss，直到对局结束并写下复盘。
+让 Claude Code / Codex 在本机自动游玩《杀戮尖塔 2》（Slay the Spire 2）的
+AI 副驾驶。skill 被触发后，智能体读取牌局状态、做出决策并操作游戏，直至对局
+结束，随后写入复盘并开启下一局。
 
 ## 这个项目是干啥的
 
-- **全自动对局**：实时读取游戏状态（血量、手牌、敌人意图、地图…），由 AI 自主
-  决定出牌、奖励、路线，通过通讯 mod 直接操作游戏
-- **持续运转**：对局结束自动写复盘、更新经验库、开启下一局；可选的外部看门狗
-  脚本定时检查游戏 / 桥接 / 日志是否存活
-- **越打越稳**：跨对局持久记忆（教训、工具修复台账），工具 bug 在本仓库修复后
-  立即生效
+- **自动对局**：每回合实时读取游戏状态（血量、手牌、敌人意图、地图等），AI
+  自主决定出牌、奖励与路线，通过通讯 mod 操作游戏
+- **连续运行**：对局结束后自动写复盘、更新经验库、开始下一局；附带的外部
+  看门狗脚本可定时检查游戏进程、桥接与日志的存活状态
+- **跨局记忆**：`memory/` 下的经验与对局记录在后续会话自动加载；工具缺陷在
+  本仓库内修复，对下次运行即时生效
 
 ## 怎么用
 
-1. **构建 mod**（需要 .NET SDK 9+；游戏程序集引用自本机 Steam 安装目录）：
+在 Claude Code 中发起 skill，并附带一个日志文件夹的绝对路径：
 
-       cd slay-spire-2-copilot/slay-spire-2-copilot
-       bash setup/install-mod.sh
+    用 Claude Code 打一局杀戮尖塔2  /Users/me/spire-logs/tonight
 
-2. **启动游戏并验证**（首次带 mod 启动，在游戏内接受一次 mod 警告）：
+触发语（中英文皆可）："用 Claude Code 打一局杀戮尖塔2"、"play Slay the
+Spire 2 via Claude Code or Codex"。
 
-       python3 bridge/spirectl.py launch
-       SPIREBRIDGE_LOG_DIR=<日志文件夹> python3 bridge/spirectl.py doctor
+skill 启动后会依次完成环境准备与对局：检查 mod 安装状态，缺失或源码比已装
+dll 更新时执行构建安装（dotnet build，产物拷贝至游戏 mods 目录）；游戏未运行
+时通过 Steam 启动；随后经 doctor 完成握手验证并进入对局循环。首次带 mod
+启动时，游戏内会出现一次 mod 警告，需要在游戏内点击接受。
 
-3. **开一局**：在 Claude Code 中调起 skill，传入一个绝对路径的日志文件夹：
+对局日志写入指定的文件夹，文件名形如 `run-20260916-013052-a3f9c012.log`
+（时间戳+哈希）。
 
-       用 Claude Code 打一局杀戮尖塔2  /Users/me/spire-logs/tonight
+以下命令用于排查与手动干预：
 
-   skill 会被这类说法触发（中英文皆可）："用 Claude Code 打一局杀戮尖塔2"、
-   "play Slay the Spire 2 via Claude Code or Codex"。
-
-4. **对局日志**写入你传入的文件夹，文件名形如 `run-20260916-013052-a3f9c012.log`
-   （时间戳+哈希）。
+    cd slay-spire-2-copilot/slay-spire-2-copilot
+    bash scripts/install-mod.sh                     # 构建/安装 mod
+    python3 bridge/spirectl.py launch               # 启动游戏
+    SPIREBRIDGE_LOG_DIR=<日志文件夹> python3 bridge/spirectl.py doctor
 
 ## 目录结构
 
@@ -44,11 +46,12 @@
       .gitignore
       slay-spire-2-copilot/                （skill 文件夹 — 全部运行时文件）
         SKILL.md                           （skill 定义 / 调用契约）
-        bridge/                            （spirectl.py CLI、看门狗脚本）
+        bridge/                            （spirectl.py CLI）
+        scripts/                           （shell 脚本：mod 构建安装、看门狗）
         mod/SpireBridge/                   （游戏内通讯 mod 源码）
-        setup/                             （mod 构建安装脚本）
-        docs/                              （协议规范、API 研究笔记）
-        doc/ memory/ references/           （游玩知识、对局记忆、CLI 速查）
+        references/bridge/                 （CLI 速查、线协议）
+        references/game/                   （卡牌、能力、遗物、药水、状态、意图）
+        memory/                            （对局记忆：经验、台账、复盘）
 
 skill 符号链接：`~/.claude/skills/slay-spire-2-copilot` → 上述 skill 文件夹。
 运行时日志与看门狗状态写在仓库外的用户目录，不入库。
@@ -64,7 +67,7 @@ skill 符号链接：`~/.claude/skills/slay-spire-2-copilot` → 上述 skill �
 
 - **服务端（mod）**：只做两件事——导出完整状态快照、执行客户端下达的操作
   （出牌/回合/选奖励/开店购物…），不做任何决策。缺界面支持时当场补实现、
-  重建 mod、重启游戏继续（完整性规则）
+  重建 mod、重启游戏继续
 - **客户端（spirectl + Claude）**：读快照 → 依经验库决策 → 发操作 → 等状态
   变化 → 循环；行动以 `act --wait` / `batch` 批量提交，决策与日志解耦
 - **提速与稳定**：游戏内 `FastMode=Instant` + `NonInteractiveMode` 跳过动画；
@@ -73,5 +76,10 @@ skill 符号链接：`~/.claude/skills/slay-spire-2-copilot` → 上述 skill �
 - **记忆与迭代**：`memory/` 下的经验、复盘、changelog 随对局更新，下次会话
   自动加载；工具修复直接进本仓库
 
-更细的协议见 `slay-spire-2-copilot/docs/protocol.md`，CLI 速查见
-`slay-spire-2-copilot/references/commands.md`。
+更细的协议见 `slay-spire-2-copilot/references/bridge/protocol.md`，CLI 速查见
+`slay-spire-2-copilot/references/bridge/commands.md`。
+
+## 致谢
+
+- [BaseLib-StS2](https://github.com/Alchyr/BaseLib-StS2) — Alchyr 的《杀戮尖塔 2》
+  mod 基础库；开发 SpireBridge 时作为 mod 加载与游戏 API 约定的社区参考
