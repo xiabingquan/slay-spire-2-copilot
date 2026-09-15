@@ -1,101 +1,85 @@
 # slay-spire-2-copilot
 
-> 中文版：[README_ZN.md](README_ZN.md)
+> 英文版：[README_EN.md](README_EN.md)
 
-An AI copilot that lets Claude Code / Codex play Slay the Spire 2 autonomously
-on your machine. Once the skill is triggered, the agent reads the run state,
-makes decisions, and operates the game until the run ends — then writes a
-postmortem and starts the next run.
+让 Claude Code / Codex 在本机自动游玩《杀戮尖塔 2》（Slay the Spire 2）的
+AI 副驾驶。skill 被触发后，智能体读取牌局状态、做出决策并操作游戏，直至对局
+结束，随后写入复盘并开启下一局。
 
-## What this project is
+## 这个项目是干啥的
 
-- **Autonomous runs**: live game state (HP, hand, enemy intents, map, …) is
-  read every turn; the AI chooses cards, rewards, and routes, operating the
-  game through a communication mod
-- **Continuous operation**: after a run ends it automatically writes a
-  postmortem, updates the experience store, and starts the next run; the
-  bundled external watchdog script can periodically check that the game
-  process, bridge, and logs are alive
-- **Cross-run memory**: lessons and run records under `memory/` auto-load in
-  later sessions; tool defects are fixed in this repo and take effect on the
-  next run
+- **自动对局**：每回合实时读取游戏状态（血量、手牌、敌人意图、地图等），AI
+  自主决定出牌、奖励与路线，通过通讯 mod 操作游戏
+- **连续运行**：对局结束后自动写复盘、更新经验库、开始下一局；附带的外部
+  看门狗脚本可定时检查游戏进程、桥接与日志的存活状态
+- **跨局记忆**：`memory/` 下的经验与对局记录在后续会话自动加载；工具缺陷在
+  本仓库内修复，对下次运行即时生效
 
-## How to use
+## 怎么用
 
-Invoke the skill in Claude Code with an absolute log folder path:
+在 Claude Code 中发起 skill，并附带一个日志文件夹的绝对路径：
 
-    play Slay the Spire 2 via Claude Code  /Users/me/spire-logs/tonight
+    用 Claude Code 打一局杀戮尖塔2  /Users/me/spire-logs/nightly
 
-Triggers (Chinese or English): "用 Claude Code 打一局杀戮尖塔2", "play Slay the
-Spire 2 via Claude Code or Codex".
+触发语（中英文皆可）："用 Claude Code 打一局杀戮尖塔2"、"play Slay the
+Spire 2 via Claude Code or Codex"。
 
-After the skill starts it prepares the environment and begins the run: it checks
-whether the mod is installed, builds and installs it when missing or when
-sources are newer than the installed dll (dotnet build; output copied into the
-game's mods folder), launches the game via Steam if it is not running, and
-completes the bridge handshake through doctor before entering the play loop.
-On the first modded launch, the game shows a one-time in-game mod warning that
-must be accepted inside the game.
+skill 启动后会依次完成环境准备与对局：检查 mod 安装状态，缺失或源码比已装
+dll 更新时执行构建安装（dotnet build，产物拷贝至游戏 mods 目录）；游戏未运行
+时通过 Steam 启动；随后经 doctor 完成握手验证并进入对局循环。首次带 mod
+启动时，游戏内会出现一次 mod 警告，需要在游戏内点击接受。
 
-Run logs are written to the given folder as `run-20260916-013052-a3f9c012.log`
-(timestamp + hash).
+对局日志写入指定的文件夹，文件名形如 `run-20260916-013052-a3f9c012.log`
+（时间戳+哈希）。
 
-Manual commands for troubleshooting and intervention:
+以下命令用于排查与手动干预：
 
     cd slay-spire-2-copilot/slay-spire-2-copilot
-    bash scripts/install-mod.sh                     # build/install mod
-    python3 bridge/spirectl.py launch               # launch the game
-    SPIREBRIDGE_LOG_DIR=<log-folder> python3 bridge/spirectl.py doctor
+    bash scripts/install-mod.sh                     # 构建/安装 mod
+    python3 bridge/spirectl.py launch               # 启动游戏
+    SPIREBRIDGE_LOG_DIR=<日志文件夹> python3 bridge/spirectl.py doctor
 
-## Directory layout
+## 目录结构
 
-    slay-spire-2-copilot/                  (repo root)
-      README.md / README_ZN.md
+    slay-spire-2-copilot/                  （仓库根目录）
+      README.md / README_EN.md
       .gitignore
-      slay-spire-2-copilot/                (skill folder — all runtime files)
-        SKILL.md                           (skill definition / invocation contract)
-        bridge/                            (spirectl.py CLI)
-        scripts/                           (shell scripts: mod install, watchdog)
-        mod/SpireBridge/                   (in-game communication mod source)
-        references/bridge/                 (CLI cheat sheet, wire protocol)
-        references/game/                   (cards, powers, relics, potions, statuses, intents)
-        memory/                            (run memory: lessons, changelog, postmortems)
+      slay-spire-2-copilot/                （skill 文件夹 — 全部运行时文件）
+        SKILL.md                           （skill 定义 / 调用契约）
+        bridge/                            （spirectl.py CLI）
+        scripts/                           （shell 脚本：mod 构建安装、看门狗）
+        mod/SpireBridge/                   （游戏内通讯 mod 源码）
+        references/bridge/                 （CLI 速查、线协议）
+        references/game/                   （卡牌、能力、遗物、药水、状态、意图）
+        memory/                            （对局记忆：经验、台账、复盘）
 
-Skill symlink: `~/.claude/skills/slay-spire-2-copilot` → the skill folder above.
-Runtime logs and watchdog state are written to user directories outside the
-repo and are not committed.
+skill 符号链接：`~/.claude/skills/slay-spire-2-copilot` → 上述 skill 文件夹。
+运行时日志与看门狗状态写在仓库外的用户目录，不入库。
 
-## Technical approach
+## 基本技术路线
 
-The architecture is client–server; the protocol is JSON Lines over TCP on
-localhost (127.0.0.1:17612):
+整体是客户端–服务端架构，协议为本机 TCP 上的 JSON Lines（127.0.0.1:17612）：
 
-    Claude Code (decision client)
-      → bridge/spirectl.py (CLI: state / act / wait / sl / profile …)
-      → spire-copilot-bridge mod (Godot .NET mod inside the game process)
-      → game APIs (cards, turns, map, rewards, …)
+    Claude Code（决策客户端）
+      → bridge/spirectl.py（CLI：state / act / wait / sl / profile …）
+      → spire-copilot-bridge mod（跑在游戏进程内的 Godot .NET mod）
+      → 游戏 API（出牌、回合、地图、奖励等）
 
-- **Server (mod)**: does only two things — export complete state snapshots
-  and apply commands issued by the client (play / end_turn / choose / shop, …);
-  it makes no decisions. If a screen is unsupported, support is implemented on
-  the spot, the mod rebuilt, and the game restarted
-- **Client (spirectl + Claude)**: read snapshot → decide from memory → send
-  ops → wait for state change → loop; acts are submitted in batches via
-  `act --wait` / `batch`, keeping decisions decoupled from logging
-- **Speed & stability**: in-game `FastMode=Instant` + `NonInteractiveMode`
-  skip animations; waits are driven by state fingerprint hashes; combat-end /
-  RINGING freezes have server-side forced advance, plus `sl` save reload
-  (~18s, used to replay a fight with foreknowledge)
-- **Memory & iteration**: lessons, postmortems, and changelog under `memory/`
-  update with each run and auto-load next session; tool fixes land directly in
-  this repo
+- **服务端（mod）**：只做两件事——导出完整状态快照、执行客户端下达的操作
+  （出牌/回合/选奖励/开店购物…），不做任何决策。缺界面支持时当场补实现、
+  重建 mod、重启游戏继续
+- **客户端（spirectl + Claude）**：读快照 → 依经验库决策 → 发操作 → 等状态
+  变化 → 循环；行动以 `act --wait` / `batch` 批量提交，决策与日志解耦
+- **提速与稳定**：游戏内 `FastMode=Instant` + `NonInteractiveMode` 跳过动画；
+  状态指纹哈希驱动等待；战斗结束/RINGING 卡死有服务端强制推进与 `sl`
+  存档重载（约 18s，用于带信息重打）
+- **记忆与迭代**：`memory/` 下的经验、复盘、changelog 随对局更新，下次会话
+  自动加载；工具修复直接进本仓库
 
-For the detailed protocol see
-`slay-spire-2-copilot/references/bridge/protocol.md`; for the CLI cheat sheet
-see `slay-spire-2-copilot/references/bridge/commands.md`.
+更细的协议见 `slay-spire-2-copilot/references/bridge/protocol.md`，CLI 速查见
+`slay-spire-2-copilot/references/bridge/commands.md`。
 
-## Acknowledgements
+## 致谢
 
-- [BaseLib-StS2](https://github.com/Alchyr/BaseLib-StS2) — Alchyr's Slay the
-  Spire 2 modding base library; consulted as a community reference for mod
-  loading and game API conventions while developing SpireBridge
+- [BaseLib-StS2](https://github.com/Alchyr/BaseLib-StS2) — Alchyr 的《杀戮尖塔 2》
+  mod 基础库；开发 SpireBridge 时作为 mod 加载与游戏 API 约定的社区参考
