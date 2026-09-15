@@ -10,8 +10,8 @@
 
 - **全自动对局**：实时读取游戏状态（血量、手牌、敌人意图、地图…），由 AI 自主
   决定出牌、奖励、路线，通过通讯 mod 直接操作游戏
-- **持续运转**：对局结束自动写复盘、更新经验库、开启下一局；看门狗监控进程
-  存活，异常时通过飞书通知
+- **持续运转**：对局结束自动写复盘、更新经验库、开启下一局；可选的外部看门狗
+  脚本定时检查游戏 / 桥接 / 日志是否存活
 - **越打越稳**：跨对局持久记忆（教训、工具修复台账），工具 bug 在本仓库修复后
   立即生效
 
@@ -27,7 +27,7 @@
        python3 bridge/spirectl.py launch
        SPIREBRIDGE_LOG_DIR=<日志文件夹> python3 bridge/spirectl.py doctor
 
-3. **开一局**：在 Claude Code 中调起 skill，传入一个绝对路径的**日志文件夹**：
+3. **开一局**：在 Claude Code 中调起 skill，传入一个绝对路径的日志文件夹：
 
        用 Claude Code 打一局杀戮尖塔2  /Users/me/spire-logs/tonight
 
@@ -35,11 +35,27 @@
    "play Slay the Spire 2 via Claude Code or Codex"。
 
 4. **对局日志**写入你传入的文件夹，文件名形如 `run-20260916-013052-a3f9c012.log`
-   （时间戳+哈希）；游玩仍在进行时如需暂停，可让 Claude 关闭看门狗告警。
+   （时间戳+哈希）。
+
+## 目录结构
+
+    slay-spire-2-copilot/                  （仓库根目录）
+      README.md / README_ZN.md
+      .gitignore
+      slay-spire-2-copilot/                （skill 文件夹 — 全部运行时文件）
+        SKILL.md                           （skill 定义 / 调用契约）
+        bridge/                            （spirectl.py CLI、看门狗脚本）
+        mod/SpireBridge/                   （游戏内通讯 mod 源码）
+        setup/                             （mod 构建安装脚本）
+        docs/                              （协议规范、API 研究笔记）
+        doc/ memory/ references/           （游玩知识、对局记忆、CLI 速查）
+
+skill 符号链接：`~/.claude/skills/slay-spire-2-copilot` → 上述 skill 文件夹。
+运行时日志与看门狗状态写在仓库外的用户目录，不入库。
 
 ## 基本技术路线
 
-整体是**客户端–服务端**架构，协议为本机 TCP 上的 JSON Lines（127.0.0.1:17612）：
+整体是客户端–服务端架构，协议为本机 TCP 上的 JSON Lines（127.0.0.1:17612）：
 
     Claude Code（决策客户端）
       → bridge/spirectl.py（CLI：state / act / wait / sl / profile …）
@@ -47,7 +63,7 @@
       → 游戏 API（出牌、回合、地图、奖励等）
 
 - **服务端（mod）**：只做两件事——导出完整状态快照、执行客户端下达的操作
-  （出牌/回合/选奖励/开店购物…），**不做任何决策**。缺界面支持时当场补实现、
+  （出牌/回合/选奖励/开店购物…），不做任何决策。缺界面支持时当场补实现、
   重建 mod、重启游戏继续（完整性规则）
 - **客户端（spirectl + Claude）**：读快照 → 依经验库决策 → 发操作 → 等状态
   变化 → 循环；行动以 `act --wait` / `batch` 批量提交，决策与日志解耦
