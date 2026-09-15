@@ -9,9 +9,6 @@ persistent memory and self-iteration loop across sessions and runs.
 
 ## Layout
 
-Outer repo root keeps only necessary meta files; everything the skill needs to
-run lives inside the skill folder (named after the skill itself):
-
     slay-spire-2-copilot/                  (repo root)
       README.md
       .gitignore

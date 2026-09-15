@@ -8,9 +8,6 @@ skill 与配套工具。智能体实时读取游戏状态、完全自主决策�
 
 ## 目录结构
 
-外层仓库根目录只保留必要元文件；skill 运行所需的**全部文件**都在 skill 文件夹内
-（与 skill 同名）：
-
     slay-spire-2-copilot/                  （仓库根目录）
       README.md
       README_ZN.md
