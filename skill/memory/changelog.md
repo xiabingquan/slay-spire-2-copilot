@@ -159,3 +159,8 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
   optimizations stay in bridge/mod/client (settle, rtt, recovery, cadence on
   obvious boards). lessons.md priority section updated; watchdog cron prompt
   revised to match.
+- 2026-09-16 [docs][feature] boss run ended frozen floor 16 (仪式兽 57/252, player
+  6/87 RINGING-locked); postmortem runs/2026-09-16-ironclad-act1-boss-4sl.md;
+  profile rtt=7ms settle=822ms cadence=3.6s. [feature] force_advance_turn action:
+  clears RINGING/LOCK/PLOW powers (Creature.RemovePowerInternal) + re-queues
+  sync end_turn — stall recovery without full SL reload.

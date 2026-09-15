@@ -131,3 +131,9 @@ breakthrough; remove entries that prove wrong.
 - SL retry budget: 1-2 tries when the known line still loses; then write
   postmortem and move on — replaying a losing seed forever wastes the watch dog
   window without changing the deck.
+- 仪式兽 boss 4xSL (2026-09-16): best line R15 boss 57/252 at 6hp; RINGING/PLOW
+  end_turn freeze recurred — server `force_advance_turn` now clears lock powers
+  via Creature.RemovePowerInternal then re-queues end turn. Use on fingerprint
+  freeze before burning another SL.
+- Boss block math: 252hp STR-scaler needs heal/relic sustain or Bludgeon-class
+  burst; WHIRLWIND+FLAME+GRIT alone leaks ~10-20hp/turn from R6 on.

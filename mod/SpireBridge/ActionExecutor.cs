@@ -16,6 +16,7 @@ using MegaCrit.Sts2.Core.GameActions;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Map;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.Nodes;
 using MegaCrit.Sts2.Core.Nodes.Cards.Holders;
 using MegaCrit.Sts2.Core.Nodes.CommonUi;
@@ -56,6 +57,7 @@ public static class ActionExecutor
                 "play" => Play(args),
                 "end_turn" => EndTurn(),
                 "force_combat_end" => ForceCombatEnd(),
+                "force_advance_turn" => ForceAdvanceTurn(),
                 "use_potion" => UsePotion(args),
                 "map_select" => MapSelect(args),
                 "choose" => Choose(args),
@@ -222,6 +224,66 @@ public static class ActionExecutor
         }
         Fire(ForceCombatEndAsync, "force combat end");
         return (true, "submitted force_combat_end");
+    }
+
+    // RINGING/PLOW-style locks freeze end_turn (fingerprint stuck; abandon no-ops).
+    // Clear lock-like powers via Creature.RemovePowerInternal, then re-drive the
+    // sync end-turn path. Completeness rule: stall recovery without full SL.
+    private static (bool, string) ForceAdvanceTurn()
+    {
+        if (!TryGetCombatPlayer(out Player? player, out CombatState combat, out PlayerCombatState? pcs) || pcs == null)
+        {
+            return (false, "not in an active combat");
+        }
+        Player playerRef = player!;
+        int turnNumber = pcs.TurnNumber;
+        Fire(async () =>
+        {
+            try
+            {
+                CombatState? live = CombatManager.Instance.DebugOnlyGetState();
+                Creature? me = live?.Allies.FirstOrDefault(a => a.IsPlayer);
+                int cleared = 0;
+                if (me != null)
+                {
+                    foreach (PowerModel power in me.Powers.ToList())
+                    {
+                        string id = power.Id?.Entry ?? power.GetType().Name;
+                        if (id.Contains("RINGING", StringComparison.OrdinalIgnoreCase)
+                            || id.Contains("LOCK", StringComparison.OrdinalIgnoreCase)
+                            || id.Contains("PLOW", StringComparison.OrdinalIgnoreCase))
+                        {
+                            me.RemovePowerInternal(power);
+                            cleared++;
+                            BridgeMod.LogInfo($"force_advance_turn: cleared power {id}");
+                        }
+                    }
+                }
+                bool anyAlive = live?.Enemies.Any(e => e.IsAlive) ?? false;
+                if (!anyAlive)
+                {
+                    await ForceCombatEndAsync();
+                    return;
+                }
+                CombatManager.Instance.OnEndedTurnLocally();
+                RunManager.Instance.ActionQueueSynchronizer.RequestEnqueue(
+                    new EndPlayerTurnAction(playerRef, turnNumber));
+                BridgeMod.LogInfo($"force_advance_turn: cleared={cleared}, re-queued end turn {turnNumber}");
+            }
+            catch (Exception e)
+            {
+                BridgeMod.LogErr($"force_advance_turn failed: {e}");
+                try
+                {
+                    PlayerCmd.EndTurn(playerRef, canBackOut: false);
+                }
+                catch (Exception e2)
+                {
+                    BridgeMod.LogErr($"force_advance_turn fallback failed: {e2}");
+                }
+            }
+        }, "force advance turn");
+        return (true, "submitted force_advance_turn");
     }
 
     private static (bool, string) UsePotion(JsonElement args)
