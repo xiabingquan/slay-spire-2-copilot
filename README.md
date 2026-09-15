@@ -2,8 +2,8 @@
 
 > 中文版：[README_ZN.md](README_ZN.md)
 
-An AI copilot that lets Claude Code / Codex **play Slay the Spire 2 autonomously
-on your machine**. Say "play Slay the Spire 2 via Claude Code" and the agent
+An AI copilot that lets Claude Code / Codex play Slay the Spire 2 autonomously
+on your machine. Say "play Slay the Spire 2 via Claude Code" and the agent
 reads the run, decides, acts, pushes the map, fights the boss — then writes a
 postmortem and starts the next run.
 
@@ -13,7 +13,8 @@ postmortem and starts the next run.
   every turn; the AI chooses cards, rewards, and routes, driving the game
   through a communication mod
 - **Continuous operation**: run end → postmortem + memory update → next run;
-  a liveness watchdog pings Feishu if the loop dies
+  an optional external watchdog script can periodically check that the game,
+  bridge and run logs are alive
 - **Compounding skill**: cross-run persistent memory (lessons, tool-fix
   ledger); tool bugs are fixed in this repo and take effect immediately
 
@@ -40,6 +41,22 @@ postmortem and starts the next run.
 
 4. **Run logs** land in your folder as `run-<timestamp>-<hash>.log`
    (e.g. `run-20260916-013052-a3f9c012.log`).
+
+## Directory layout
+
+    slay-spire-2-copilot/                  (repo root)
+      README.md / README_ZN.md
+      .gitignore
+      slay-spire-2-copilot/                (skill folder — all runtime files)
+        SKILL.md                           (skill definition / invocation contract)
+        bridge/                            (spirectl.py CLI, watchdog script)
+        mod/SpireBridge/                   (in-game communication mod source)
+        setup/                             (mod build/install script)
+        docs/                              (protocol spec, API research notes)
+        doc/ memory/ references/           (play knowledge, run memory, CLI cheat sheet)
+
+Skill symlink: `~/.claude/skills/slay-spire-2-copilot` → the skill folder above.
+Runtime logs and watchdog state live outside the repo in user directories.
 
 ## Technical approach
 
