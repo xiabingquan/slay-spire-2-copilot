@@ -35,7 +35,7 @@ dll 更新时执行构建安装（dotnet build，产物拷贝至游戏 mods 目�
 以下命令用于排查与手动干预：
 
     cd slay-spire-2-copilot/slay-spire-2-copilot
-    bash Scripts/install-mod.sh                     # 构建/安装 mod
+    bash scripts/install-mod.sh                     # 构建/安装 mod
     python3 bridge/spirectl.py launch               # 启动游戏
     SPIREBRIDGE_LOG_DIR=<日志文件夹> python3 bridge/spirectl.py doctor
 
@@ -47,7 +47,7 @@ dll 更新时执行构建安装（dotnet build，产物拷贝至游戏 mods 目�
       slay-spire-2-copilot/                （skill 文件夹 — 全部运行时文件）
         SKILL.md                           （skill 定义 / 调用契约）
         bridge/                            （spirectl.py CLI）
-        Scripts/                           （shell 脚本：mod 构建安装、看门狗）
+        scripts/                           （shell 脚本：mod 构建安装、看门狗）
         mod/SpireBridge/                   （游戏内通讯 mod 源码）
         references/                        （CLI 速查、线协议、游玩知识）
         memory/                            （对局记忆 — 本地，不入库）

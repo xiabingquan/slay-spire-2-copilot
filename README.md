@@ -43,7 +43,7 @@ Run logs are written to the given folder as `run-20260916-013052-a3f9c012.log`
 Manual commands for troubleshooting and intervention:
 
     cd slay-spire-2-copilot/slay-spire-2-copilot
-    bash Scripts/install-mod.sh                     # build/install mod
+    bash scripts/install-mod.sh                     # build/install mod
     python3 bridge/spirectl.py launch               # launch the game
     SPIREBRIDGE_LOG_DIR=<log-folder> python3 bridge/spirectl.py doctor
 
@@ -55,7 +55,7 @@ Manual commands for troubleshooting and intervention:
       slay-spire-2-copilot/                (skill folder — all runtime files)
         SKILL.md                           (skill definition / invocation contract)
         bridge/                            (spirectl.py CLI)
-        Scripts/                           (shell scripts: mod install, watchdog)
+        scripts/                           (shell scripts: mod install, watchdog)
         mod/SpireBridge/                   (in-game communication mod source)
         references/                        (CLI cheat sheet, wire protocol, play knowledge)
         memory/                            (run memory — local, untracked)
