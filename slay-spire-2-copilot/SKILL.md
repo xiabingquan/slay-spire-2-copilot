@@ -68,7 +68,7 @@ Execute in order; all of the following are the skill's own work:
    `SPIREBRIDGE_LOG_DIR=<abs-folder> python3 bridge/spirectl.py doctor`
    - doctor reports mod files MISSING, or the installed dll is older than any
      source under mod/SpireBridge `*.{cs,csproj,json}` (first run, or code
-     changed since the last install) → run `bash setup/install-mod.sh`
+     changed since the last install) → run `bash Scripts/install-mod.sh`
      (dotnet build; copies spire-copilot-bridge into the game's mods folder),
      then re-run doctor.
    - Game process not running → `spirectl launch` (starts the game via Steam
@@ -95,7 +95,7 @@ and begins a new run; a new run file is derived in the log folder.
 Continuous play is the mandate: after every run ends (postmortem + changelog),
 start the next run immediately. Never deadlock: if an action loops without a
 state change, diagnose the screen (implement the missing server-side support),
-rebuild the mod (`bash setup/install-mod.sh`), relaunch, and resume. Card-play
+rebuild the mod (`bash Scripts/install-mod.sh`), relaunch, and resume. Card-play
 decisions stay in the AI client — mechanical act-dumps are allowed only after
 the AI has chosen the tactic.
 
@@ -160,7 +160,7 @@ When the run ends (game_over screen, or abandon):
 ## Self-iteration
 
 - Tool defect (spirectl/mod/protocol issue): fix the code in this repo on the
-  current branch; if C# changed, rebuild the mod (`bash setup/install-mod.sh`)
+  current branch; if C# changed, rebuild the mod (`bash Scripts/install-mod.sh`)
   and verify with doctor, then append a line to memory/changelog.md describing
   cause and fix. Commit with nature [fix] or [feature].
 - Strategy doc proven wrong in play: correct the doc and note it in
@@ -195,7 +195,7 @@ When the run ends (game_over screen, or abandon):
   `run-20260916-013052-a3f9c012.log`).
 - `doctor` prints `[0] run log dir: ... | SPIREBRIDGE_LOG_DIR=set|unset`;
   on unset, fix first, then continue.
-- The external watchdog (crontab `bridge/watchdog-external.sh`) reads
+- The external watchdog (crontab `Scripts/watchdog-external.sh`) reads
   `SPIREBRIDGE_LOG_DIR` from **its own environment** — export the same folder
   on the crontab line to track this session's logs; when the variable is unset
   it skips the log-age check (no fallback there either).

@@ -589,7 +589,7 @@ def cmd_doctor(args):
     print(f"[1] mod files: {'OK' if dll.exists() and manifest.exists() else 'MISSING'} ({mod_dir})")
     if not dll.exists() or not manifest.exists():
         ok = False
-        print("     fix: run setup/install-mod.sh")
+        print("     fix: run Scripts/install-mod.sh")
     proc = subprocess.run(["pgrep", "-f", "Slay the Spire 2"], capture_output=True, text=True)
     game_running = bool(proc.stdout.strip())
     print(f"[2] game process: {'running pid=' + proc.stdout.strip().splitlines()[0] if game_running else 'not running'}")
