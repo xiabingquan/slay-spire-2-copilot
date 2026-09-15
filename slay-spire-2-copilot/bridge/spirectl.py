@@ -31,6 +31,7 @@ GAME_LOG = Path(
     os.path.expanduser("~/Library/Application Support/SlayTheSpire2/logs/godot.log")
 )
 REPO_ROOT = Path(__file__).resolve().parent.parent
+SKILL_ROOT = REPO_ROOT  # skill folder: <repo>/slay-spire-2-copilot (bridge lives here)
 # Runtime log dir comes ONLY from the SPIREBRIDGE_LOG_DIR environment variable
 # (user directive 2026-09-16: no pointer files, no personal paths in the repo,
 # nothing passed around via CLI flags). If unset, fall back to a runtime

@@ -60,10 +60,10 @@ Rules:
    - skill/memory/MEMORY.md (index)
    - skill/memory/lessons.md (playing lessons)
    - skill/memory/changelog.md (recent tool/strategy changes)
-3. Run the environment check:
+3. Run the environment check (cwd = this skill folder,
+   <repo>/slay-spire-2-copilot — it holds ALL runtime files):
    `SPIREBRIDGE_LOG_DIR=<abs-folder> python3 bridge/spirectl.py doctor`
-   Paths are relative to the slay-spire-2-copilot repo root (this skill lives in
-   <repo>/skill). If doctor fails on mod files, run `bash setup/install-mod.sh`.
+   If doctor fails on mod files, run `bash setup/install-mod.sh`.
    If the game is not running, `spirectl launch` starts it via Steam and waits
    for the bridge. The first modded launch shows an in-game mod warning — the
    user must click accept once; wait for the handshake after that.

@@ -1,7 +1,8 @@
 # Commands and state reference
 
 spirectl speaks JSON-lines TCP to the spire-copilot-bridge mod (default
-127.0.0.1:17612). Run all commands from the slay-spire-2-copilot repo root.
+127.0.0.1:17612). Run all commands from the skill folder
+`<repo>/slay-spire-2-copilot` (holds bridge/, mod/, setup/, docs/, skill memory).
 
 ## Runtime log folder (env-only)
 

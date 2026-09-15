@@ -206,3 +206,10 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
 - 2026-09-16 [feature] log naming: user supplies a log FOLDER via
   SPIREBRIDGE_LOG_DIR; each run file is derived as
   run-<YYYYmmdd-HHMMSS>-<sha256[:8]>.log (timestamp + hash) inside it.
+- 2026-09-16 [chore] directory reorg (user directive): skill folder renamed
+  skill/ -> slay-spire-2-copilot/ (the real skill name) and now holds ALL
+  runtime files — bridge/, mod/, setup/, docs/ moved inside it alongside
+  SKILL.md/doc/memory/references. Outer repo root keeps only README.md,
+  .gitignore and the skill folder. Symlink + crontab updated; crontab
+  watchdog stdout redirects to ~/.local/share/... (outside repo); repo-root
+  logs/ relocated there (disk-retained, not deleted).

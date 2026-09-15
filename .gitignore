@@ -2,17 +2,16 @@
 __pycache__/
 *.pyc
 .venv/
-mod/bin/
-mod/obj/
 *.user
 .idea/
-docs/research/external/
-docs/research/decompiled/
-mod/SpireBridge/.godot/
 
 # Claude Code harness runtime (scheduled tasks, lock files, local settings)
 .claude/
 
-# Run logs & watchdog runtime — retained on disk only, never committed
-# (user directive 2026-09-16)
-logs/
+# Everything the skill needs to run lives under the skill folder; ignore its
+# build artifacts and bulky research dumps there.
+slay-spire-2-copilot/mod/bin/
+slay-spire-2-copilot/mod/obj/
+slay-spire-2-copilot/mod/SpireBridge/.godot/
+slay-spire-2-copilot/docs/research/external/
+slay-spire-2-copilot/docs/research/decompiled/

@@ -1,6 +1,8 @@
 #!/bin/bash
 # slay-spire-2-copilot external liveness watchdog — runs independently of any Claude session.
-# Installed in user crontab (5-min interval). Feishu-notifies ONLY while ARMED:
+# Installed in user crontab (5-min interval). Script path:
+#   $HOME/projects/slay-spire-2-copilot/slay-spire-2-copilot/bridge/watchdog-external.sh
+# Feishu-notifies ONLY while ARMED:
 #   python3 bridge/spirectl.py watchdog enable    # arm (skill session start)
 #   python3 bridge/spirectl.py watchdog disable   # disarm (user stopped play)
 # Armed alerts: game down / bridge down / play-loop log stale >10min.
@@ -11,7 +13,8 @@
 
 set -u
 REPO="$HOME/projects/slay-spire-2-copilot"
-SPIRECTL="$REPO/bridge/spirectl.py"
+SKILL="$REPO/slay-spire-2-copilot"   # skill folder holds all runtime tooling
+SPIRECTL="$SKILL/bridge/spirectl.py"
 NOTIFY="$HOME/.claude/skills/notify/scripts/notify_feishu.py"
 STATE_DIR="$HOME/.local/share/slay-spire-2-copilot"
 DISARM_FLAG="$STATE_DIR/watchdog.disabled"
