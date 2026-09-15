@@ -3,6 +3,14 @@
 Short, generalizable, actionable. Add only after a run end or a mid-run
 breakthrough; remove entries that prove wrong.
 
+## Priority (user directive 2026-09-16)
+
+- Run quality first: floors reached and score outrank any wall-clock target.
+  The ~30min figure is a framework-latency expectation (tooling settle/RTT/
+  client gaps), never a reason to suicide, skip rests, or rush a boss.
+- Speed work means: faster bridge waits, faster recovery, faster decisions on
+  obvious boards — not thinner play on dangerous turns. Think on bosses/low HP.
+
 ## Combat
 
 - Read intents before playing: if incoming damage exceeds HP+block, prioritize
@@ -103,3 +111,14 @@ breakthrough; remove entries that prove wrong.
   + upgraded FEED + STRIKE chain dealt 47hp in one turn — str engine + molten-egg
   upgrades + vuln multiplies; at critical hp the race IS the defense when block
   is absent. FIRE_POTION kept in reserve never needed.
+- SL (save/load) validated (2026-09-15 boss): `spirectl sl` reloads room-entry
+  save in ~18s with seed-identical hand/intents. Use on lethal-incoming hands;
+  replay with foreknowledge (which slime leaks, which turn is 27 incoming).
+- CURE_ALL potion = draw cards + bonus energy (NOT a heal). FYSH_OIL = +STRENGTH
+  +DEXTERITY buff. Spend both on tempo turns, not panic.
+- MINION_POWER boss adds (Act1 同族神官): 58-59hp believers chip 7-9/turn while
+  you burst the priest — burst-only decks fold ~R5-R6 when FRAIL/WEAK stack.
+  Need kill-adds plan OR block every turn.
+- Combat-end stall pattern #5: HAVOC/random-card kills left combat in Play phase
+  with no living enemies. Server fix: end_turn win-condition force path
+  (CheckWinCondition -> EndCombatInternal). No more restart ladder for this case.

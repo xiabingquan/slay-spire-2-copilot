@@ -129,3 +129,33 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
   (starter relic BURNING_BLOOD observed) — SILENT likely locked on this profile;
   rotation queue next tries DEFECT/NECROBINDER/REGENT names. game-over takeover
   chain validated live (return-to-menu click logged).
+- 2026-09-15 [feature] SPEED MANDATE (user directive: framework stability/speed,
+  full run ≤30min, not winrate). Historical profile (logs/run-20260915-051017.log):
+  4750s span, 2684s (56%) idle after end_turn (p50=201s), gaps-before-act p50=14s —
+  bottleneck is client cadence + game animation waits, not bridge RTT.
+  Game-side: SpeedHooks.cs applies FastMode=Instant + SetFtuesEnabled(false) +
+  NonInteractiveMode (reflection on AutoSlayerCheck) on hello/start_run; handshake
+  now reports speed=; start_run path upgraded from Fast to Instant.
+  Client-side: spirectl act --wait/--wait-play (settle/play-phase poll in-process,
+  stall exit 3), batch mechanical act dumps, profile subcommand (rtt/server/queue/
+  settle/client-decision decomposition + 30min budget check), per-call metrics in
+  run logs (server_ms/queue_ms/settle_ms/rtt_ms). Autonomy: durable Claude cron
+  fc8f404b (5-min watchdog with speed mandate) + crontab bridge/watchdog-external.sh
+  (Feishu notify when game/bridge down or log stale >10min, independent of Claude).
+- 2026-09-15 [docs][fix] SPEED SESSION RESULTS: instrumented profile vs historical
+  — act cadence 30-36s -> ~3s, after-end_turn 201s p50 -> 1s, settle p50 ~800ms,
+  rtt p50 8ms. Full run wall clock ~15min including 2 mod-restart fixes + 1 SL
+  (budget 30min). RUN ENDED: ironclad died floor 16 Act1 boss 同族神官 (0/80 vs
+  101/190) after SL replay; postmortem runs/2026-09-15-ironclad-act1-boss-defeat.md.
+  Framework deliverables this session: SpeedHooks Instant+NIM, fingerprint
+  content-hash, settle stability semantics, combat-end win-condition force path,
+  skip fallback (still failing on card_reward — node names TBD), spirectl
+  act --wait/--wait-play/batch/profile/sl, external crontab liveness watchdog,
+  durable Claude cron fc8f404b. Open: card_reward skip discovery, continue_run
+  room-load race, shop_leave async settle race.
+- 2026-09-16 [docs] USER CLARIFICATION: 30min is an expectation for framework
+  stage latency, not a run-time kill switch. Priority = floors/score > stable
+  play > faster tooling. Never suicide or under-rest to hit a clock; speed
+  optimizations stay in bridge/mod/client (settle, rtt, recovery, cadence on
+  obvious boards). lessons.md priority section updated; watchdog cron prompt
+  revised to match.
