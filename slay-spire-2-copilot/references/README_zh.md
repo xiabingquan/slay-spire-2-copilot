@@ -18,3 +18,4 @@ game/ — 游戏知识（中文版）：
 - [afflictions_zh](game/afflictions_zh.md) — 状态与卡牌绑定减益
 - [intents_zh](game/intents_zh.md) — 敌人意图标签格式
 - [monsters_zh](game/monsters_zh.md) — 敌人招式表与被动
+- [events_zh](game/events_zh.md) — 事件房与已知分支

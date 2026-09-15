@@ -21,3 +21,4 @@ game/ — game knowledge:
 - [afflictions](game/afflictions.md) — statuses and card-bound debuffs
 - [intents](game/intents.md) — enemy intent label formats
 - [monsters](game/monsters.md) — enemy move tables and passives
+- [events](game/events.md) — event rooms and known branches

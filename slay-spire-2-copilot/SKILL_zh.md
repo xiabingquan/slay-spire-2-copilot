@@ -187,6 +187,7 @@ references/ — 查阅知识：
 - `references/game/relics_zh.md` — 遗物效果
 - `references/game/intents_zh.md` — 敌人意图解读
 - `references/game/monsters_zh.md` — 敌人招式表与被动
+- `references/game/events_zh.md` — 事件房与已知分支
 - `references/game/afflictions_zh.md` — 状态与负面效果
 
 memory/ — 对局记忆：

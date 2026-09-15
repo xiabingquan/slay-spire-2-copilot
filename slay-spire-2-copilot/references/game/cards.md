@@ -353,7 +353,6 @@ within each character.
 - APPARITION: 1, skill (Ancient), Ethereal; gain 1 Intangible; Exhaust.
 - BAD_LUCK: curse, in hand at end of turn lose 13 HP.
 - BECKON: 1, skill (Special), in hand at end of turn lose 6 HP.
-- BLADE-related tokens: see SHIV.
 - BOLAS: 0, attack, deal 3 damage; returns to hand at start of next turn.
 - BRIGHTEST_FLAME: 0, skill (Ancient), +2 Energy; draw 2 cards; lose 1 Max HP.
 - BURN: status, unplayable; in hand at end of turn take 2 damage.
@@ -412,7 +411,6 @@ within each character.
 - MINION_STRIKE: 0, token attack, deal 7 damage; draw 1 card; Exhaust.
 - NORMALITY: curse, you cannot play more than 3 cards this turn.
 - OMNISLICE: 0, attack, deal 8 damage; other enemies take equal damage.
-- PYRE / STOMP / SPOILS_MAP / LANTERN_KEY card products / FRANTIC_ESCAPE: see entries above; remaining event products pending live observation.
 - SHIV: 0, token attack, deal damage (Silent kits; Accuracy +4; Fan of Knives makes Shivs hit all enemies).
 - SLOTH / SLIMED / SOOT / TOXIC / VOID / WASTE_AWAY / WOUND / DAZED / DEBRIS: see afflictions.md status-card list.
 - TRASH_TO_TREASURE: on Status card creation, Channel a random Orb.
