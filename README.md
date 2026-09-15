@@ -11,13 +11,13 @@ memory and self-iteration loop across sessions and runs.
   state export + command input over localhost TCP JSONL
 - bridge/spirectl.py — Python CLI connecting Claude sessions to the mod
 - skill/ — Claude Code skill: play loop, references, persistent memory
-  (symlinked to ~/.claude/skills/spire)
+  (symlinked to ~/.claude/skills/slay-spire-2-copilot)
 - setup/install-mod.sh — build + install the mod into the game mods folder
 - docs/ — protocol spec and reverse-engineering research notes
 
 ## How it fits together
 
-    Claude Code session (skill/spire)
+    Claude Code session (skill `slay-spire-2-copilot`)
         -> spirectl.py (TCP JSONL, 127.0.0.1:17612)
         -> mimo-spire-bridge mod inside the STS2 process
         -> MegaCrit.Sts2 game APIs (CardCmd/PlayerCmd/UI nodes)

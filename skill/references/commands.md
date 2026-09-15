@@ -3,15 +3,31 @@
 spirectl speaks JSON-lines TCP to the mimo-spire-bridge mod (default
 127.0.0.1:17612). Run all commands from the mimo-spire repo root.
 
+## Runtime log path (skill invocation contract)
+
+Skill `slay-spire-2-copilot` requires an explicit log path at invocation
+(`log-path=/abs/dir`). Session start persists it:
+
+    python3 bridge/spirectl.py set-log-dir /abs/dir   # writes <repo>/.spire-log-dir
+    python3 bridge/spirectl.py --log-dir /abs/dir state   # one-off override
+    SPIREBRIDGE_LOG_DIR=/abs/dir python3 bridge/spirectl.py state  # env override
+
+Resolution: `--log-dir` > `SPIREBRIDGE_LOG_DIR` > `.spire-log-dir` pointer >
+`~/.local/share/mimo-spire/logs`. Runtime `run-*.log` / `.current_run` land in
+the resolved dir — never in the skill tree, never committed to git.
+`doctor` prints the active dir as `[0] log dir:`. `bridge/watchdog-external.sh`
+reads the same pointer for staleness checks.
+
 ## CLI
 
     python3 bridge/spirectl.py doctor
+    python3 bridge/spirectl.py set-log-dir /abs/dir
     python3 bridge/spirectl.py launch
     python3 bridge/spirectl.py state [--json]
     python3 bridge/spirectl.py act <action> [--args '{"k":v}'] [--wait|--wait-play] [--json]
     python3 bridge/spirectl.py batch --acts '[{"action":"play","args":{"card_index":2}},{"action":"end_turn"}]'
     python3 bridge/spirectl.py wait [--timeout 60] [--interval 0.2]
-    python3 bridge/spirectl.py profile [--log logs/run-*.log] [--budget 30]
+    python3 bridge/spirectl.py profile [--log /abs/dir/run-*.log] [--budget 30]
 
 ## Fast path (speed mandate)
 

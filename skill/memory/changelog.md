@@ -170,3 +170,12 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
   docs/ (protocol/design/research notes) + skill/ (knowledge/memory/postmortems).
   SKILL.md run-end protocol updated: postmortem references log paths as disk
   paths; never `git add` logs.
+- 2026-09-16 [feature] skill renamed to **slay-spire-2-copilot** (trigger: "用
+  Claude Code 打一局杀戮尖塔2" / "play Slay the Spire 2 via Claude Code or
+  Codex"); ~/.claude/skills symlink renamed. [feature] invocation contract:
+  explicit log-path required — `spirectl set-log-dir <abs>` writes
+  <repo>/.spire-log-dir pointer; runtime run-*.log go there (fallback
+  ~/.local/share/mimo-spire/logs), never in skill tree or repo. spirectl
+  --log-dir / SPIREBRIDGE_LOG_DIR overrides; doctor prints active log dir;
+  watchdog-external.sh reads the pointer. [chore] git remote origin set to
+  git@github.com:xiabingquan/slay-spire-2-copilot.git.

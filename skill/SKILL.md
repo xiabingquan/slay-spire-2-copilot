@@ -1,28 +1,53 @@
 ---
-name: spire
-description: Play Slay the Spire 2 autonomously via the SpireBridge mod (spirectl CLI). Use when the user asks to play STS2, check game state, continue a run, or run/iterate an AI game session on this machine.
+name: slay-spire-2-copilot
+description: Play Slay the Spire 2 (杀戮尖塔2) autonomously via the SpireBridge mod (spirectl CLI). Trigger when the user wants a Claude Code / Codex copilot to play STS2 — e.g. "用 Claude Code 打一局杀戮尖塔2", "用Claude打杀戮尖塔2", "play Slay the Spire 2 via Claude Code or Codex", "play STS2 with Claude", "let Claude play a run of Slay the Spire 2", "slay the spire 2 copilot". Also when the user asks to check game state, continue a run, or iterate an AI game session on this machine.
+argument-hint: "log-path=/absolute/dir  (required — runtime logs go here)"
 ---
 
-# Spire — AI plays Slay the Spire 2
+# slay-spire-2-copilot — AI plays Slay the Spire 2
 
 You control the locally installed Slay the Spire 2 through the mimo-spire-bridge
 mod. All decisions are yours: play fully autonomously, never ask the user which
 card to pick.
 
+## Invocation contract (user directive 2026-09-16)
+
+This skill MUST be invoked with an **explicit runtime log path**, e.g.:
+
+    /slay-spire-2-copilot log-path=/Users/me/spire-logs/2026-09-16-night
+
+or any absolute directory passed in the skill arguments. Rules:
+
+1. Parse the invocation arguments for an absolute log directory
+   (`log-path=...`, `log_path=...`, or a bare absolute path).
+2. If none is present, STOP before touching the game and ask the user for one.
+   Never invent a path; never write run logs into the skill directory or the repo.
+3. At session start, persist that path:
+   `python3 bridge/spirectl.py set-log-dir <abs-path>`
+   — this creates the directory, writes `<repo>/.spire-log-dir` (gitignored
+   pointer), and routes every subsequent spirectl call's `run-*.log` there.
+   Resolution order inside spirectl: `--log-dir` flag > `SPIREBRIDGE_LOG_DIR`
+   env > `.spire-log-dir` pointer > `~/.local/share/mimo-spire/logs`.
+4. Cite the same absolute path in the run postmortem and any profile report.
+   `bridge/watchdog-external.sh` reads the same pointer for staleness checks.
+
 ## Session start
 
-1. Read memory before doing anything else:
+1. **Resolve + persist the explicit log path** (contract above):
+   `python3 bridge/spirectl.py set-log-dir <abs-path>`
+   Confirm doctor later prints `log dir: <abs-path>`.
+2. Read memory before doing anything else:
    - skill/memory/MEMORY.md (index)
    - skill/memory/lessons.md (playing lessons)
    - skill/memory/changelog.md (recent tool/strategy changes)
-2. Run the environment check:
+3. Run the environment check:
    `python3 bridge/spirectl.py doctor`
    Paths are relative to the mimo-spire repo root (this skill lives in
    <repo>/skill). If doctor fails on mod files, run `bash setup/install-mod.sh`.
    If the game is not running, `python3 bridge/spirectl.py launch` starts it via
    Steam and waits for the bridge. The first modded launch shows an in-game mod
    warning — the user must click accept once; wait for the handshake after that.
-3. Confirm handshake versions in doctor output. Game version drift vs the mod's
+4. Confirm handshake versions in doctor output. Game version drift vs the mod's
    min_game_version is a hard stop: report it, do not improvise.
 
 ## Character rotation (user directive)
@@ -40,11 +65,11 @@ as play data accumulates.
 Whatever state the game is in — fresh boot, main menu, mid-run, rest/shop/event
 screen, or game_over — take over: read state, drive it forward. At game_over,
 `act start_run` clears the summary chain automatically (server-side) and begins
-a new run; logs/ rotates per run. Continuous play is the mandate: after each
-run ends (postmortem + changelog + optional Feishu notify), start the next run.
-Never deadlock: if an action loops without state change, diagnose the screen
-(implement missing server support per the completeness rule), rebuild the mod
-(`bash setup/install-mod.sh`), relaunch, and resume. Keep play decisions in
+a new run; the session log dir rotates per run. Continuous play is the mandate:
+after each run ends (postmortem + changelog + optional Feishu notify), start the
+next run. Never deadlock: if an action loops without state change, diagnose the
+screen (implement missing server support per the completeness rule), rebuild the
+mod (`bash setup/install-mod.sh`), relaunch, and resume. Keep play decisions in
 Claude (client) — mechanical act-dumps are fine only after Claude chose the
 tactic.
 
@@ -80,9 +105,10 @@ Protocol spec: docs/protocol.md in the repo.
 ## Run end (win OR loss) — memory protocol
 
 Detailed run records are automatic: every spirectl state/act/wait call appends
-its complete JSON payload to the current run log under logs/ (one file per run,
-e.g. logs/run-YYYYmmdd-HHMMSS.log). The file rotates on start_run/continue_run
-and finalizes on game_over. logs/ is gitignored — retain on disk, never commit
+its complete JSON payload to the active session log dir (set via
+`spirectl set-log-dir` at skill invocation; one `run-*.log` per run, rotated on
+start_run/continue_run, finalized on game_over). That directory is outside the
+skill tree and outside the repo — logs are gitignored, disk-retained only
 (user directive 2026-09-16); never delete or rewrite live logs mid-run.
 .claude/ is likewise gitignored (harness runtime only).
 
@@ -90,8 +116,8 @@ When the run ends (game_over screen, or abandon):
 
 1. Write a postmortem to skill/memory/runs/<YYYY-MM-DD>-<character>-floor<N>.md
    covering: result, key decisions, what worked, what killed the run, one lesson.
-   Reference the matching logs/run-*.log filename inside the postmortem as a
-   disk path only — logs/ stays untracked; commit just the postmortem markdown.
+   State the explicit session log dir and the matching run-*.log filename inside
+   the postmortem as disk paths only — commit just the postmortem markdown.
 2. Update skill/memory/lessons.md only with generalizable lessons (not one-off
    bad RNG). Keep lessons.md short and concrete; prune entries that prove wrong.
 3. Update skill/memory/MEMORY.md index if you added files.

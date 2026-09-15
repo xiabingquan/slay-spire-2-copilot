@@ -10,7 +10,7 @@ client-server contract and the completeness rule intact. Not implemented in v1.
   - Tier A (heuristic): evolve the scratchpad/autopilot.py prototype — heartbeat
     logging every loop, stall detection (unchanged fingerprint > 40s), recovery
     ladder (proceed -> skip -> abandon), outcome markers for watchers
-  - Tier B (Claude-in-the-loop): Claude Code session plays via skill/spire;
+  - Tier B (Claude-in-the-loop): Claude Code session plays via skill/SKILL.md (skill: slay-spire-2-copilot);
     batches of runs driven session-by-session; memory updated per run
 
 ## Runner loop (Tier A)
