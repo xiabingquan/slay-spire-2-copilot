@@ -1,7 +1,7 @@
 # Commands and state reference
 
-spirectl speaks JSON-lines TCP to the mimo-spire-bridge mod (default
-127.0.0.1:17612). Run all commands from the mimo-spire repo root.
+spirectl speaks JSON-lines TCP to the spire-copilot-bridge mod (default
+127.0.0.1:17612). Run all commands from the slay-spire-2-copilot repo root.
 
 ## Runtime log path (skill invocation contract)
 
@@ -13,7 +13,7 @@ Skill `slay-spire-2-copilot` requires an explicit log path at invocation
     SPIREBRIDGE_LOG_DIR=/abs/dir python3 bridge/spirectl.py state  # env override
 
 Resolution: `--log-dir` > `SPIREBRIDGE_LOG_DIR` > `.spire-log-dir` pointer >
-`~/.local/share/mimo-spire/logs`. Runtime `run-*.log` / `.current_run` land in
+`~/.local/share/slay-spire-2-copilot/logs`. Runtime `run-*.log` / `.current_run` land in
 the resolved dir — never in the skill tree, never committed to git.
 `doctor` prints the active dir as `[0] log dir:`. `bridge/watchdog-external.sh`
 reads the same pointer for staleness checks.

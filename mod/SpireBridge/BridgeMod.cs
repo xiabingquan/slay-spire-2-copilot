@@ -4,7 +4,7 @@ using Godot;
 using MegaCrit.Sts2.Core.Debug;
 using MegaCrit.Sts2.Core.Logging;
 
-namespace MimoSpire.Bridge;
+namespace SpireCopilot.Bridge;
 
 // Mod entry point. The game calls Init via ModInitializerAttribute on this
 // class during bootstrap; we register our Godot node types, attach the
@@ -12,7 +12,7 @@ namespace MimoSpire.Bridge;
 [MegaCrit.Sts2.Core.Modding.ModInitializer("Init")]
 public static class BridgeMod
 {
-    public const string ModId = "mimo-spire-bridge";
+    public const string ModId = "spire-copilot-bridge";
     public const string ModVersion = "0.1.0";
     public const int ProtocolVersion = 1;
     public const int DefaultPort = 17612;

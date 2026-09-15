@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace MimoSpire.Bridge;
+namespace SpireCopilot.Bridge;
 
 // Line-delimited JSON TCP server on localhost. Accept/client loops run on
 // background threads; each request is posted to the game main thread via

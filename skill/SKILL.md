@@ -6,7 +6,7 @@ argument-hint: "log-path=/absolute/dir  (required — runtime logs go here)"
 
 # slay-spire-2-copilot — AI plays Slay the Spire 2
 
-You control the locally installed Slay the Spire 2 through the mimo-spire-bridge
+You control the locally installed Slay the Spire 2 through the spire-copilot-bridge
 mod. All decisions are yours: play fully autonomously, never ask the user which
 card to pick.
 
@@ -27,7 +27,7 @@ or any absolute directory passed in the skill arguments. Rules:
    — this creates the directory, writes `<repo>/.spire-log-dir` (gitignored
    pointer), and routes every subsequent spirectl call's `run-*.log` there.
    Resolution order inside spirectl: `--log-dir` flag > `SPIREBRIDGE_LOG_DIR`
-   env > `.spire-log-dir` pointer > `~/.local/share/mimo-spire/logs`.
+   env > `.spire-log-dir` pointer > `~/.local/share/slay-spire-2-copilot/logs`.
 4. Cite the same absolute path in the run postmortem and any profile report.
    `bridge/watchdog-external.sh` reads the same pointer for staleness checks.
 
@@ -42,7 +42,7 @@ or any absolute directory passed in the skill arguments. Rules:
    - skill/memory/changelog.md (recent tool/strategy changes)
 3. Run the environment check:
    `python3 bridge/spirectl.py doctor`
-   Paths are relative to the mimo-spire repo root (this skill lives in
+   Paths are relative to the slay-spire-2-copilot repo root (this skill lives in
    <repo>/skill). If doctor fails on mod files, run `bash setup/install-mod.sh`.
    If the game is not running, `python3 bridge/spirectl.py launch` starts it via
    Steam and waits for the bridge. The first modded launch shows an in-game mod

@@ -38,7 +38,7 @@ using MegaCrit.Sts2.Core.Nodes.Screens.Shops;
 using MegaCrit.Sts2.Core.Nodes.Screens.TreasureRoomRelic;
 using MegaCrit.Sts2.Core.Runs;
 
-namespace MimoSpire.Bridge;
+namespace SpireCopilot.Bridge;
 
 // Builds the protocol state snapshot from live game objects. Runs only on the
 // game main thread; never holds game references between calls. Field access to

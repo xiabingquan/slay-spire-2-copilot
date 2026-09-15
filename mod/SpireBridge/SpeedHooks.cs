@@ -4,7 +4,7 @@ using System.Reflection;
 using MegaCrit.Sts2.Core.Saves;
 using MegaCrit.Sts2.Core.Settings;
 
-namespace MimoSpire.Bridge;
+namespace SpireCopilot.Bridge;
 
 // Game-side speed levers for the bridge decision loop. Applied whenever the
 // client talks to us (hello/start_run) so animations never dominate run time.

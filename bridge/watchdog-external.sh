@@ -1,20 +1,20 @@
 #!/bin/bash
-# mimo-spire external liveness watchdog — runs independently of any Claude session.
+# slay-spire-2-copilot external liveness watchdog — runs independently of any Claude session.
 # Checks game/bridge/log freshness every invocation; Feishu-notifies when the
 # autonomous play loop appears dead. Installed in user crontab (5-min interval).
 #
 # Runtime logs live at the session log dir recorded by
 #   python3 bridge/spirectl.py set-log-dir <path>
-# (pointer file <repo>/.spire-log-dir). Fallback: ~/.local/share/mimo-spire/logs.
+# (pointer file <repo>/.spire-log-dir). Fallback: ~/.local/share/slay-spire-2-copilot/logs.
 
 set -u
-REPO="$HOME/projects/mimo-spire"
+REPO="$HOME/projects/slay-spire-2-copilot"
 SPIRECTL="$REPO/bridge/spirectl.py"
 NOTIFY="$HOME/.claude/skills/notify/scripts/notify_feishu.py"
 STALE_SEC=600          # no run-log activity for 10 min while game up => stalled
 MIN_NOTIFY_GAP=1800    # don't spam Feishu more than once per 30 min
 
-LOG_DIR="$HOME/.local/share/mimo-spire/logs"
+LOG_DIR="$HOME/.local/share/slay-spire-2-copilot/logs"
 POINTER="$REPO/.spire-log-dir"
 if [[ -f "$POINTER" ]]; then
   _p=$(tr -d '\n\r' < "$POINTER" 2>/dev/null || true)
@@ -68,7 +68,7 @@ screen_line=$(echo "$bridge_msg" | head -1)
 
 if (( game_running == 0 )); then
   echo "[$(date '+%F %T')] game DOWN; bridge_ok=$bridge_ok log_dir=$LOG_DIR"
-  notify "mimo-spire watchdog：游戏未运行" \
+  notify "slay-spire-2-copilot watchdog：游戏未运行" \
     "game process down. bridge_ok=$bridge_ok. Claude session may have died — restart with: python3 $SPIRECTL launch
 log_dir: $LOG_DIR
 last log: ${newest_log:-none} age=${log_age}s
@@ -76,7 +76,7 @@ $screen_line" \
     "red"
 elif (( bridge_ok == 0 )); then
   echo "[$(date '+%F %T')] game UP but bridge DOWN; log_age=${log_age}s log_dir=$LOG_DIR"
-  notify "mimo-spire watchdog：桥接断开" \
+  notify "slay-spire-2-copilot watchdog：桥接断开" \
     "game running but bridge not answering. Mod may need re-accept or relaunch.
 doctor: python3 $SPIRECTL doctor
 log_dir: $LOG_DIR
@@ -85,7 +85,7 @@ last log: ${newest_log:-none} age=${log_age}s" \
 elif (( newest_mtime > 0 && log_age > STALE_SEC )); then
   idle_min=$(( log_age / 60 ))
   echo "[$(date '+%F %T')] play loop STALE: log_age=${log_age}s screen=$screen_line"
-  notify "mimo-spire watchdog：循环停滞" \
+  notify "slay-spire-2-copilot watchdog：循环停滞" \
     "bridge OK but no run-log activity for ${idle_min}min — Claude play loop appears dead.
 screen: $screen_line
 log_dir: $LOG_DIR

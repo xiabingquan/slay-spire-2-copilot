@@ -2,7 +2,7 @@ using System;
 using System.Collections.Concurrent;
 using Godot;
 
-namespace MimoSpire.Bridge;
+namespace SpireCopilot.Bridge;
 
 // Main-thread pump: background socket threads enqueue work here; _Process
 // drains at most MaxPerFrame items per frame. Game objects are only ever

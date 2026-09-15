@@ -131,7 +131,7 @@ Verified in STS2-Agent / CombatSolver / slay-the-streamer-2 / BaseLib-StS2 clone
 
 1. No Harmony patching required for v1: official command APIs (CardCmd/PlayerCmd) +
    UI click patterns cover all acceptance operations
-2. Mod package: mods/mimo-spire-bridge/{mimo-spire-bridge.json, mimo-spire-bridge.dll}
+2. Mod package: mods/spire-copilot-bridge/{spire-copilot-bridge.json, spire-copilot-bridge.dll}
    with has_dll true, min_game_version 0.107.1
 3. Init: static Init() starts a localhost socket server on a background thread;
    game-state access and command execution must marshal onto the Godot main thread

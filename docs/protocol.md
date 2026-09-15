@@ -2,7 +2,7 @@
 
 Transport: TCP on localhost (default 127.0.0.1:17612). One JSON object per line
 (UTF-8, newline-delimited), both directions. Client = spirectl / Claude skill;
-server = mimo-spire-bridge mod inside the game process.
+server = spire-copilot-bridge mod inside the game process.
 
 Versioning: every server message carries protocol_version, game_version,
 assembly_hash (from the game release_info.json), and mod_version. Clients must
@@ -114,4 +114,4 @@ thread from live state; stale indices are rejected with a clear error.
 - Game version change breaks hooks -> mod still serves hello/state but marks
   "unsupported_game_version": true; doctor fails loudly
 - Mod fails to load (manifest error) -> game log only; doctor checks game log for
-  "mimo-spire-bridge" load lines and for RUNNING MODDED
+  "spire-copilot-bridge" load lines and for RUNNING MODDED

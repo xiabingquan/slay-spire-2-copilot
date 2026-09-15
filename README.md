@@ -1,4 +1,4 @@
-# mimo-spire
+# slay-spire-2-copilot
 
 Claude Code skill and tooling that let an AI agent play Slay the Spire 2 on a
 local machine. The agent reads live game state, makes fully autonomous decisions,
@@ -19,7 +19,7 @@ memory and self-iteration loop across sessions and runs.
 
     Claude Code session (skill `slay-spire-2-copilot`)
         -> spirectl.py (TCP JSONL, 127.0.0.1:17612)
-        -> mimo-spire-bridge mod inside the STS2 process
+        -> spire-copilot-bridge mod inside the STS2 process
         -> MegaCrit.Sts2 game APIs (CardCmd/PlayerCmd/UI nodes)
 
 ## Architecture: client–server roles

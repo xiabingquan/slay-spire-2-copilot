@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # spirectl: CLI bridging a Claude Code session to the SpireBridge STS2 mod.
-"""spirectl — talk to the mimo-spire-bridge mod inside Slay the Spire 2."""
+"""spirectl — talk to the spire-copilot-bridge mod inside Slay the Spire 2."""
 
 import argparse
 import json
@@ -15,7 +15,7 @@ from pathlib import Path
 
 DEFAULT_HOST = "127.0.0.1"
 DEFAULT_PORT = 17612
-MOD_ID = "mimo-spire-bridge"
+MOD_ID = "spire-copilot-bridge"
 GAME_MODS_DIR = Path(
     os.environ.get(
         "GAME_MODS_DIR",
@@ -34,7 +34,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 # Resolution: --log-dir > SPIREBRIDGE_LOG_DIR env > <repo>/.spire-log-dir pointer
 # > user-level fallback outside the repo.
 LOG_DIR_POINTER = REPO_ROOT / ".spire-log-dir"
-FALLBACK_LOG_DIR = Path(os.path.expanduser("~/.local/share/mimo-spire/logs"))
+FALLBACK_LOG_DIR = Path(os.path.expanduser("~/.local/share/slay-spire-2-copilot/logs"))
 STEAM_APP_ID = "2868840"
 BBCODE_RE = re.compile(r"\[/?[^\]]+\]")
 

@@ -41,7 +41,7 @@ using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.Saves;
 using MegaCrit.Sts2.Core.Settings;
 
-namespace MimoSpire.Bridge;
+namespace SpireCopilot.Bridge;
 
 // Dispatches protocol actions on the game main thread. Long-running game
 // sequences (card play animations, menu automation) are started fire-and-

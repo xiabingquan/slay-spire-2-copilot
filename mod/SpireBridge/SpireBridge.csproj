@@ -8,8 +8,8 @@
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
     <EnableDynamicLoading>true</EnableDynamicLoading>
-    <AssemblyName>mimo-spire-bridge</AssemblyName>
-    <RootNamespace>MimoSpire.Bridge</RootNamespace>
+    <AssemblyName>spire-copilot-bridge</AssemblyName>
+    <RootNamespace>SpireCopilot.Bridge</RootNamespace>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <Sts2DataDir Condition="'$(Sts2DataDir)' == ''">$(HOME)/Library/Application Support/Steam/steamapps/common/Slay the Spire 2/SlayTheSpire2.app/Contents/Resources/data_sts2_macos_arm64</Sts2DataDir>
     <GameModsDir Condition="'$(GameModsDir)' == ''">$(HOME)/Library/Application Support/Steam/steamapps/common/Slay the Spire 2/SlayTheSpire2.app/Contents/MacOS/mods</GameModsDir>
@@ -21,9 +21,9 @@
     </Reference>
   </ItemGroup>
   <Target Name="CopyMod" AfterTargets="Build">
-    <MakeDir Directories="$(GameModsDir)/mimo-spire-bridge" />
-    <Copy SourceFiles="$(TargetDir)mimo-spire-bridge.dll;$(MSBuildProjectDirectory)/mimo-spire-bridge.json"
-          DestinationFolder="$(GameModsDir)/mimo-spire-bridge" />
-    <Message Importance="high" Text="SpireBridge installed to $(GameModsDir)/mimo-spire-bridge" />
+    <MakeDir Directories="$(GameModsDir)/spire-copilot-bridge" />
+    <Copy SourceFiles="$(TargetDir)spire-copilot-bridge.dll;$(MSBuildProjectDirectory)/spire-copilot-bridge.json"
+          DestinationFolder="$(GameModsDir)/spire-copilot-bridge" />
+    <Message Importance="high" Text="SpireBridge installed to $(GameModsDir)/spire-copilot-bridge" />
   </Target>
 </Project>

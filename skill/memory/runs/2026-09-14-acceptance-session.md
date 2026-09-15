@@ -1,7 +1,7 @@
 # 2026-09-14 acceptance session — first live play through SpireBridge
 
 Result: acceptance bar met (basic operations playable end-to-end; boss clear not required).
-Game: STS2 v0.107.1, mod mimo-spire-bridge 0.1.0, character Ironclad, seeds
+Game: STS2 v0.107.1, mod spire-copilot-bridge 0.1.0, character Ironclad, seeds
 bridge-acceptance-1/2/3. Run left active at map floor 3 (pos 4,2 frontier, Monster).
 
 ## What the agent did through the skill loop

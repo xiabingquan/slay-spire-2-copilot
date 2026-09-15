@@ -4,11 +4,11 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 MOD_DIR="$ROOT/mod/SpireBridge"
 GAME_MODS="${GAME_MODS_DIR:-$HOME/Library/Application Support/Steam/steamapps/common/Slay the Spire 2/SlayTheSpire2.app/Contents/MacOS/mods}"
-TARGET="$GAME_MODS/mimo-spire-bridge"
+TARGET="$GAME_MODS/spire-copilot-bridge"
 
 dotnet build "$MOD_DIR/SpireBridge.csproj" -c Release
 
-if [ ! -f "$TARGET/mimo-spire-bridge.dll" ] || [ ! -f "$TARGET/mimo-spire-bridge.json" ]; then
+if [ ! -f "$TARGET/spire-copilot-bridge.dll" ] || [ ! -f "$TARGET/spire-copilot-bridge.json" ]; then
   echo "ERROR: mod files missing under $TARGET" >&2
   exit 1
 fi

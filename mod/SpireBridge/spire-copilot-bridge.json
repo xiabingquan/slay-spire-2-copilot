@@ -1,7 +1,7 @@
 {
-  "id": "mimo-spire-bridge",
-  "name": "Mimo Spire Bridge",
-  "author": "mimo-spire",
+  "id": "spire-copilot-bridge",
+  "name": "Spire Copilot Bridge",
+  "author": "slay-spire-2-copilot",
   "description": "Exposes game state as JSON over localhost and accepts play commands for AI agents.",
   "version": "0.1.0",
   "has_pck": false,

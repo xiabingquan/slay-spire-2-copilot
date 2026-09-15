@@ -175,7 +175,13 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
   Codex"); ~/.claude/skills symlink renamed. [feature] invocation contract:
   explicit log-path required — `spirectl set-log-dir <abs>` writes
   <repo>/.spire-log-dir pointer; runtime run-*.log go there (fallback
-  ~/.local/share/mimo-spire/logs), never in skill tree or repo. spirectl
+  ~/.local/share/slay-spire-2-copilot/logs), never in skill tree or repo. spirectl
   --log-dir / SPIREBRIDGE_LOG_DIR overrides; doctor prints active log dir;
   watchdog-external.sh reads the pointer. [chore] git remote origin set to
   git@github.com:xiabingquan/slay-spire-2-copilot.git.
+- 2026-09-16 [chore] rebrand scrub (user directive): zero MIMO mentions —
+  mod id/assembly/namespace mimo-spire-bridge / MimoSpire.Bridge ->
+  spire-copilot-bridge / SpireCopilot.Bridge (manifest + dll rebuilt, old
+  game-mod folder removed); project/docs/notify titles renamed to
+  slay-spire-2-copilot; on-disk repo dir moved ~/projects/mimo-spire ->
+  ~/projects/slay-spire-2-copilot with skill symlink + crontab updated.
