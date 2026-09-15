@@ -1,54 +1,47 @@
 # Relics
 
-Extracted from game sts2.xml (3 types). One entry per type.
+Relic effects as observed in play. STS1 parallels are reported claims until
+verified live in STS2.
 
-- DeprecatedRelic: Represents a relic that has been removed from the game. Mostly used for the run history.
-- UndyingSigil: This relic doesn't actually _do_ anything; Doom checks for its existence and makes enemy Doom trigger at the start of the enemy's turn instead of the end of the enemy's turn (so enemies die before they can attack).
-- VakuuCardSelector: Card selector used by Vakuu (via WhisperingEarring) during auto-play. Selects cards in row-major order (top-left to bottom-right).
+## Verified
 
-## Known / observed (seeded during play)
+- BURNING_BLOOD (Ironclad starter): heal 6 HP at end of combat.
+- MOLTEN_EGG: attack-card rewards arrive auto-upgraded at acquisition (FEED
+  observed upgraded=True on pick).
+- LASTING_CANDY: rest heals boosted (+24 at 53hp observed); scaling unverified.
+- JUNGLE_MAZE_ADVENTURE branches: SOLO_QUEST trades ~18hp for ~+147g;
+  JOIN_FORCES grants ~+63g at zero hp cost. Pick JOIN at mid/low hp, SOLO only
+  when over 60hp.
+- THE_LANTERN_KEY event branches: RETURN_THE_KEY grants ~+100 gold instantly
+  (no combat); KEEP_THE_KEY starts knight fight for key card. RETURN at low hp,
+  KEEP when healthy.
+- HATCH rest-site option: appears only while a BYRDONIS_EGG-type card is in
+  deck (present with egg, absent after egg removal).
 
-- BURNING_BLOOD (Ironclad starter): heal 6 HP at end of combat. Verified live 2026-09-14.
-- VAJRA: seen in shop (154g). STS1 effect: +1 Strength at combat start. STS2 unverified.
-- PANTOGRAPH: seen in shop (236g). STS1 effect: full heal entering boss combat. STS2 unverified.
-- LEES_WAFFLE: seen in shop (229g). STS1 effect: heal on pickup / interactable. STS2 unverified.
-- GORGET: chest relic floor 9. STS1 effect: start combat with 3 Block. STS2 unverified — observe next fights.
-- VAJRA: elite drop floor 11 (shop had it at 154g). STS1: +1 Strength at combat start. Pending live verify.
-- ODDLY_SMOOTH_STONE: chest relic floor 24 act 2. STS1: +1 Dexterity at combat start. Verify in next combat block values.
-- Hatch rest-site option (孵化): appears only while BYRDONIS_EGG-type card is in deck
-  (observed floor 8 with egg present, absent floor 25 after egg removal). Interaction
-  unverified — re-test when a future egg event occurs.
-- LOST_WISP: gained from LOST_WISP event "claim" option floor 27 act 2. Effect pending observation.
-- FAKE_SNECKO_EYE: bought from NFakeMerchant event (54g). Fake relic — effects/trap pending observation.
-- WONGOS_MYSTERY_TICKET: Wongos event mystery box (300g) floor 28 act 2. Function pending observation — possible later redemption.
-- VENERABLE_TEA_SET / REGAL_PILLOW / NUNCHAKU: owl judge (floor 34 act 3) relic
-  drops. STS1 refs: tea set+pillow boost rest-site recovery; nunchaku grants
-  energy on attack counts. STS2 effects pending observation.
-- BAG_OF_PREPARATION: chest relic floor 38 act 3. STS1: draw +2 on first turn of combat.
-- HAPPY_FLOWER: shop relic act 3 (175g). STS1: +1 energy every 3rd turn.
-- ORNAMENTAL_FAN: elite drop floor 41. STS1: +1 dex per 3 attacks.
-- STRIKE_DUMMY: elite relic floor 43 act3. STS1: +1 strength at combat start.
-- JUNGLE_MAZE_ADVENTURE branches fully mapped: SOLO_QUEST trades ~18hp for ~+147g;
-  JOIN_FORCES grants ~+63g with zero hp cost (run3 f4). Pick JOIN at mid/low hp,
-  SOLO only when over 60hp.
-- LASTING_CANDY: run2 elite drop. Rest heals observed +24 at 53hp (53->77) —
-  likely rest-boost relic like tea set; verify scaling on later rests.
-- SPARKLING_ROUGE / CHANDELIER: run2 chest drops floor 9; effects pending combat
-  observation.
-- TUNING_FORK: run2 elite drop floor 13. Effect pending observation.
-- BLESSING_OF_THE_FORGE: run2 elite potion drop. Effect pending first use.
-- Run2 combat-start package confirmed again: STRENGTH+DEXTERITY powers + energy
-  6/3 — attributions between SPARKLING_ROUGE/CHANDELIER/TUNING_FORK still open.
-- THE_LANTERN_KEY event branches (run1/2 observed): RETURN_THE_KEY grants ~+100
-  gold instantly no combat; KEEP_THE_KEY starts knight fight for key card.
-  Choose RETURN at low hp, KEEP when healthy.
-- AMETHYST_AUBERGINE: chest relic run2 f24. Effect pending combat observation.
-- MOLTEN_EGG: THIS_OR_THAT event "ORNATE" pick granted it (run3 f2). STS1
-  molten-egg family: likely upgrades attack-card rewards / egg-hatch synergy.
-  Effect pending reward observation.
-- MOLTEN_EGG verified (run3 f5): attack-card reward FEED arrived auto-upgraded
-  (deck upgraded=True on pick). Egg upgrades attack rewards at acquisition.
-- PENDULUM: run3 elite drop f6. Effect pending observation (energy/rhythm relic suspect).
-- LANTERN: run3 chest drop f9. STS1: +1 energy on first combat turn.
-  Verify next combat turn-1 energy display.
-- STABLE_SERUM: run3 raider reward potion. Effect pending use (cleanse/immunity suspect).
+## Reported
+
+- VAJRA: shop/elite drop. STS1: +1 Strength at combat start. STS2 pending verify.
+- PANTOGRAPH: shop (236g). STS1: full heal entering boss combat.
+- LEES_WAFFLE: shop (229g). STS1: heal on pickup.
+- GORGET: chest. STS1: start combat with 3 Block (PLATING_POWER observations
+  are consistent with this).
+- ODDLY_SMOOTH_STONE: chest act 2. STS1: +1 Dexterity at combat start.
+- BAG_OF_PREPARATION: chest act 3. STS1: draw +2 on first turn.
+- HAPPY_FLOWER: shop (175g). STS1: +1 energy every 3rd turn.
+- ORNAMENTAL_FAN: elite drop. STS1: +1 dex per 3 attacks.
+- STRIKE_DUMMY: elite act 3. STS1: +1 strength at combat start.
+- LANTERN: chest. STS1: +1 energy on first combat turn.
+- VENERABLE_TEA_SET / REGAL_PILLOW / NUNCHAKU: owl-judge drops. STS1: tea set
+  and pillow boost rest-site recovery; nunchaku grants energy on attack counts.
+- LOST_WISP: LOST_WISP event "claim" option; effect pending.
+- FAKE_SNECKO_EYE: NFakeMerchant event (54g) — fake relic; trap pending.
+- WONGOS_MYSTERY_TICKET: Wongos mystery box (300g); function pending.
+- SPARKLING_ROUGE / CHANDELIER / TUNING_FORK / AMETHYST_AUBERGINE / PENDULUM:
+  drops with effects pending; a combat-start package (str+dex powers, energy
+  6/3) was observed but attribution among them is still open.
+
+## Mechanics
+
+- UndyingSigil: no direct effect of its own; Doom checks for its existence —
+  enemy Doom triggers at the start of the enemy's turn instead of the end, so
+  enemies die before they can attack.

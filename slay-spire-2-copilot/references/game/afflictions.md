@@ -1,16 +1,24 @@
-# Afflictions (card-bound debuffs)
+# Afflictions and statuses
 
-Extracted from game sts2.xml (7 types). One entry per type.
+Card-bound debuffs and status cards as they appear in deck/combat.
 
-- Bound: Most of this Affliction's logic lives in <see cref="T:MegaCrit.Sts2.Core.Models.Powers.ChainsOfBindingPower"/>.
-- Entangled: This Affliction has no logic of its own. All logic lives in <see cref="T:MegaCrit.Sts2.Core.Models.Powers.TangledPower"/>.
-- Galvanized: Most of this Affliction's logic lives in <see cref="T:MegaCrit.Sts2.Core.Models.Powers.GalvanicPower"/>.
-- Hexed: Most of this Affliction's logic lives in <see cref="T:MegaCrit.Sts2.Core.Models.Powers.HexPower"/>.
-- Ringing: Most of this Affliction's logic lives in <see cref="T:MegaCrit.Sts2.Core.Models.Powers.RingingPower"/>.
-- Smog: This Affliction has no logic of its own. All logic lives in <see cref="T:MegaCrit.Sts2.Core.Models.Powers.SmoggyPower"/>.
-- Tainted: Most of this Affliction's logic lives in <see cref="T:MegaCrit.Sts2.Core.Models.Powers.TaintedPower"/>.
+## Verified
 
-## Known / observed (seeded during play)
+- BYRDONIS_EGG (status card, Sapphire Seed / nest events): unplayable (-1
+  cost), dead draw — remove via shop; HATCH rest option appears while in deck.
+- SLIMED-type status cards: enemy-inflicted; some playable for minor effect.
+- DECAY / WOUND: enemy/event statuses; playable for chip or SECOND_WIND fuel;
+  shop-removal targets.
+- RINGING (affliction): effect lives in RINGING_POWER — hand cards flip to
+  can_play=false while on the player (observed in a boss fight).
 
-- BYRDONIS_EGG (status card from Sapphire Seed / nest events): unplayable (cost -1), dead draw — remove via shop when possible.
-- SLIMED-type status cards: enemy-inflicted status cards; some are playable for minor effect.
+## Reported
+
+- BYRDONIS_EGG: HATCH interaction beyond the rest-option presence is pending
+  re-test.
+
+## Mechanics
+
+- Most card-bound afflictions are pointers to their Power logic (e.g. Bound ->
+  ChainsOfBindingPower, Ringing -> RingingPower) — read the power entry for the
+  actual effect.
