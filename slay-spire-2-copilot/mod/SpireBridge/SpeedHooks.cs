@@ -6,11 +6,9 @@ using MegaCrit.Sts2.Core.Settings;
 
 namespace SpireCopilot.Bridge;
 
-// Game-side speed levers for the bridge decision loop. Applied whenever the
-// client talks to us (hello/start_run) so animations never dominate run time.
-// Research notes (docs/research/game-api-findings.md) recommend FastMode=Instant
-// + FTUE off while the bridge is connected; NonInteractiveMode short-circuits
-// the remaining Cmd.Wait / combat pause gates AutoSlay also relies on.
+// Game-side speed levers for the bridge decision loop. Applied on hello and
+// start_run: FastMode=Instant + FTUE off; NonInteractiveMode short-circuits
+// remaining Cmd.Wait and combat-pause gates.
 public static class SpeedHooks
 {
     private static bool _loggedSignature;

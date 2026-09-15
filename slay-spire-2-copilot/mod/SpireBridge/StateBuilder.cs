@@ -1182,9 +1182,8 @@ public static class StateBuilder
 
     private static string Fingerprint(Dictionary<string, object?> state)
     {
-        // Content hash over the volatile decision inputs. Nested collections are
-        // JSON-serialized — List.ToString() only yields the type name, which left
-        // the old hash blind to hand/enemy/power changes inside a combat turn.
+        // Content hash over volatile decision inputs. Nested collections are
+        // JSON-serialized; List.ToString() yields only the type name.
         var parts = new System.Text.StringBuilder();
         void Add(object? value)
         {
