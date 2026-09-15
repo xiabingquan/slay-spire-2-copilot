@@ -173,14 +173,36 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
 - 2026-09-16 [feature] skill renamed to **slay-spire-2-copilot** (trigger: "用
   Claude Code 打一局杀戮尖塔2" / "play Slay the Spire 2 via Claude Code or
   Codex"); ~/.claude/skills symlink renamed. [feature] invocation contract:
-  explicit log-path required — `spirectl set-log-dir <abs>` writes
-  <repo>/.spire-log-dir pointer; runtime run-*.log go there (fallback
-  ~/.local/share/slay-spire-2-copilot/logs), never in skill tree or repo. spirectl
-  --log-dir / SPIREBRIDGE_LOG_DIR overrides; doctor prints active log dir;
-  watchdog-external.sh reads the pointer. [chore] git remote origin set to
-  git@github.com:xiabingquan/slay-spire-2-copilot.git.
+  explicit log FOLDER required; delivered only as SPIREBRIDGE_LOG_DIR env
+  (fallback ~/.local/share/slay-spire-2-copilot/logs computed at runtime).
+  Each run derives run-<timestamp>-<hash8>.log inside that folder.
+  doctor prints active log dir; watchdog-external.sh reads the same env +
+  armed/disarmed flag (spirectl watchdog enable|disable|status) so Feishu
+  nags stop when play is intentionally stopped. [chore] git remote origin
+  set to the copilot GitHub repo (see `git remote -v`).
 - 2026-09-16 [chore] rebrand scrub (user directive): zero prior-brand mentions —
   mod id/assembly/namespace -> spire-copilot-bridge / SpireCopilot.Bridge
   (manifest + dll rebuilt, old game-mod folder removed); project/docs/notify
   titles unified as slay-spire-2-copilot; on-disk repo dir moved to
   ~/projects/slay-spire-2-copilot with skill symlink + crontab updated.
+- 2026-09-16 [fix] Feishu spam root cause: crontab watchdog treated
+  game-down as an alert while play was intentionally stopped; rate-limit
+  state file also split across two log dirs causing double-notifies.
+  Fixes: watchdog armed/disarmed via `spirectl watchdog disable|enable`
+  (state dir ~/.local/share/slay-spire-2-copilot, outside repo); notify
+  state file path is now fixed; bridge probes set SPIREBRIDGE_NO_RUNLOG=1
+  so watchdog polls no longer write run-log events (stale-loop detection
+  stays honest). [chore] removed in-repo log pointer file — log dir is
+  env-only (SPIREBRIDGE_LOG_DIR), zero personal paths in the repo.
+- 2026-09-16 [fix] Feishu spam root cause: crontab watchdog treated
+  game-down as an alert while play was intentionally stopped; rate-limit
+  state file also split across two log dirs causing double-notifies.
+  Fixes: watchdog armed/disarmed via `spirectl watchdog disable|enable`
+  (state dir ~/.local/share/slay-spire-2-copilot, outside repo); notify
+  state file path is now fixed; bridge probes set SPIREBRIDGE_NO_RUNLOG=1
+  so watchdog polls no longer write run-log events (stale-loop detection
+  stays honest). [chore] removed in-repo log pointer file — log dir is
+  env-only (SPIREBRIDGE_LOG_DIR), zero personal paths in the repo.
+- 2026-09-16 [feature] log naming: user supplies a log FOLDER via
+  SPIREBRIDGE_LOG_DIR; each run file is derived as
+  run-<YYYYmmdd-HHMMSS>-<sha256[:8]>.log (timestamp + hash) inside it.

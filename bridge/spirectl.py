@@ -3,9 +3,11 @@
 """spirectl — talk to the spire-copilot-bridge mod inside Slay the Spire 2."""
 
 import argparse
+import hashlib
 import json
 import os
 import re
+import secrets
 import socket
 import subprocess
 import sys
@@ -29,11 +31,11 @@ GAME_LOG = Path(
     os.path.expanduser("~/Library/Application Support/SlayTheSpire2/logs/godot.log")
 )
 REPO_ROOT = Path(__file__).resolve().parent.parent
-# Skill-invocation contract (user directive 2026-09-16): runtime logs live at an
-# explicit session path — never inside the skill tree, never in the repo.
-# Resolution: --log-dir > SPIREBRIDGE_LOG_DIR env > <repo>/.spire-log-dir pointer
-# > user-level fallback outside the repo.
-LOG_DIR_POINTER = REPO_ROOT / ".spire-log-dir"
+# Runtime log dir comes ONLY from the SPIREBRIDGE_LOG_DIR environment variable
+# (user directive 2026-09-16: no pointer files, no personal paths in the repo,
+# nothing passed around via CLI flags). If unset, fall back to a runtime
+# per-user directory computed at process start — never stored in the project.
+#   export SPIREBRIDGE_LOG_DIR=/abs/dir   # then run any spirectl command
 FALLBACK_LOG_DIR = Path(os.path.expanduser("~/.local/share/slay-spire-2-copilot/logs"))
 STEAM_APP_ID = "2868840"
 BBCODE_RE = re.compile(r"\[/?[^\]]+\]")
@@ -43,36 +45,19 @@ def strip_bbcode(text):
     return BBCODE_RE.sub("", text) if isinstance(text, str) else text
 
 
-def resolve_log_dir(cli_path=None):
-    if cli_path:
-        return Path(cli_path).expanduser().resolve()
+def resolve_log_dir():
     env = os.environ.get("SPIREBRIDGE_LOG_DIR")
     if env:
         return Path(env).expanduser().resolve()
-    if LOG_DIR_POINTER.exists():
-        raw = LOG_DIR_POINTER.read_text(encoding="utf-8").strip()
-        if raw:
-            return Path(raw).expanduser().resolve()
     return FALLBACK_LOG_DIR.resolve()
 
 
-def _apply_log_dir(cli_path=None):
+def _apply_log_dir():
     global RUNLOG_DIR, RUNLOG_POINTER
-    RUNLOG_DIR = resolve_log_dir(cli_path)
+    RUNLOG_DIR = resolve_log_dir()
     RUNLOG_DIR.mkdir(parents=True, exist_ok=True)
     RUNLOG_POINTER = RUNLOG_DIR / ".current_run"
     return RUNLOG_DIR
-
-
-def set_log_dir(path):
-    """Write the session log path to the repo pointer and switch this process.
-
-    Called once at skill session start with the user-supplied explicit path;
-    spirectl and watchdog-external.sh both read the pointer afterwards.
-    """
-    target = _apply_log_dir(path)
-    LOG_DIR_POINTER.write_text(str(target) + "\n", encoding="utf-8")
-    return target
 
 
 RUNLOG_DIR = FALLBACK_LOG_DIR.resolve()
@@ -81,24 +66,30 @@ _apply_log_dir()
 
 
 def _runlog_file(finalize=False):
-    """One run log under the active session log dir. Rotated on
-    start/continue_run, finalized on game_over."""
+    """Actual log file inside $SPIREBRIDGE_LOG_DIR (user-supplied folder, or the
+    per-user fallback). The user passes a FOLDER; each run derives a unique
+    file name inside it as run-<timestamp>-<hash>.log (timestamp + hash, user
+    directive 2026-09-16). Rotated on start/continue_run, finalized on
+    game_over via the .current_run pointer kept in that same folder."""
     RUNLOG_DIR.mkdir(parents=True, exist_ok=True)
     current = None
     if RUNLOG_POINTER.exists():
         current = RUNLOG_POINTER.read_text(encoding="utf-8").strip() or None
-        if finalize:
-            return RUNLOG_DIR / current
         if current:
             return RUNLOG_DIR / current
     stamp = time.strftime("%Y%m%d-%H%M%S")
-    current = f"run-{stamp}.log"
+    digest = hashlib.sha256(
+        f"{stamp}|{os.getpid()}|{secrets.token_hex(8)}".encode("utf-8")
+    ).hexdigest()[:8]
+    current = f"run-{stamp}-{digest}.log"
     RUNLOG_POINTER.write_text(current + "\n", encoding="utf-8")
     return RUNLOG_DIR / current
 
 
 def log_run_event(kind, data, rotate=False, finalize=False):
     """Append a complete record (timestamp + kind + full JSON) to the run log."""
+    if os.environ.get("SPIREBRIDGE_NO_RUNLOG"):
+        return None
     if rotate and RUNLOG_POINTER.exists():
         RUNLOG_POINTER.unlink(missing_ok=True)
     path = _runlog_file(finalize=finalize)
@@ -108,6 +99,39 @@ def log_run_event(kind, data, rotate=False, finalize=False):
     with path.open("a", encoding="utf-8") as handle:
         handle.write(json.dumps(record, ensure_ascii=False) + "\n")
     return path
+
+
+# Watchdog arm/notify state lives outside the repo (per-user runtime dir).
+WATCHDOG_STATE_DIR = Path(os.path.expanduser("~/.local/share/slay-spire-2-copilot"))
+WATCHDOG_DISARM = WATCHDOG_STATE_DIR / "watchdog.disabled"
+WATCHDOG_LAST_NOTIFY = WATCHDOG_STATE_DIR / "watchdog-last-notify"
+
+
+def cmd_watchdog(args):
+    """Arm/disarm the external Feishu liveness watchdog (crontab script)."""
+    WATCHDOG_STATE_DIR.mkdir(parents=True, exist_ok=True)
+    if args.watchdog_cmd == "disable":
+        WATCHDOG_DISARM.write_text(time.strftime("%Y-%m-%d %H:%M:%S") + "\n", encoding="utf-8")
+        print(f"watchdog DISARMED ({WATCHDOG_DISARM}) — crontab stays installed, Feishu alerts muted")
+        return 0
+    if args.watchdog_cmd == "enable":
+        WATCHDOG_DISARM.unlink(missing_ok=True)
+        WATCHDOG_LAST_NOTIFY.unlink(missing_ok=True)
+        print("watchdog ARMED — alerts resume on game-down / bridge-down / stale-loop")
+        return 0
+    if WATCHDOG_DISARM.exists():
+        print(f"watchdog: DISARMED since {WATCHDOG_DISARM.read_text(encoding='utf-8').strip()}")
+    else:
+        print("watchdog: ARMED")
+    if WATCHDOG_LAST_NOTIFY.exists():
+        print(f"last feishu notify epoch: {WATCHDOG_LAST_NOTIFY.read_text(encoding='utf-8').strip()}")
+    else:
+        print("last feishu notify: (none recorded)")
+    print(f"state dir: {WATCHDOG_STATE_DIR}")
+    print(f"run log dir: {RUNLOG_DIR} (SPIREBRIDGE_LOG_DIR={'set' if os.environ.get('SPIREBRIDGE_LOG_DIR') else 'unset'})")
+    return 0
+
+
 GAME_APP = Path(
     os.environ.get(
         "STS2_APP_PATH",
@@ -397,8 +421,8 @@ def render_compact(state):
 def cmd_doctor(args):
     ok = True
     print("== spirectl doctor ==")
-    pointer = LOG_DIR_POINTER.read_text(encoding="utf-8").strip() if LOG_DIR_POINTER.exists() else "(unset)"
-    print(f"[0] log dir: {RUNLOG_DIR} | pointer={pointer}")
+    env_dir = os.environ.get("SPIREBRIDGE_LOG_DIR")
+    print(f"[0] run log dir: {RUNLOG_DIR} | SPIREBRIDGE_LOG_DIR={env_dir or '(unset -> fallback)'}")
     mod_dir = GAME_MODS_DIR / MOD_ID
     dll = mod_dir / f"{MOD_ID}.dll"
     manifest = mod_dir / f"{MOD_ID}.json"
@@ -867,30 +891,19 @@ def cmd_sl(args):
     return 0
 
 
-def cmd_set_log_dir(args):
-    target = set_log_dir(args.path)
-    print(f"log dir set: {target}")
-    print(f"pointer: {LOG_DIR_POINTER}")
-    print(f"runtime run-*.log will be written under: {target}")
-    return 0
-
-
 def main(argv=None):
     parser = argparse.ArgumentParser(prog="spirectl", description=__doc__)
     parser.add_argument("--host", default=os.environ.get("SPIREBRIDGE_HOST", DEFAULT_HOST))
     parser.add_argument("--port", type=int, default=int(os.environ.get("SPIREBRIDGE_PORT", DEFAULT_PORT)))
-    parser.add_argument("--log-dir", default=None,
-                        help="explicit runtime log directory for this invocation "
-                             "(overrides SPIREBRIDGE_LOG_DIR and .spire-log-dir pointer)")
     sub = parser.add_subparsers(dest="cmd", required=True)
 
     sub.add_parser("doctor", help="check mod install, game process, bridge handshake")
 
-    p_set_log = sub.add_parser(
-        "set-log-dir",
-        help="record the session's explicit runtime log path (skill invocation contract)",
+    p_watchdog = sub.add_parser(
+        "watchdog",
+        help="arm/disarm/status the external Feishu liveness watchdog",
     )
-    p_set_log.add_argument("path", help="absolute directory where run-*.log files are written")
+    p_watchdog.add_argument("watchdog_cmd", choices=("enable", "disable", "status"))
 
     p_state = sub.add_parser("state", help="read current game state")
     p_state.add_argument("--json", action="store_true", help="print full JSON instead of compact text")
@@ -937,11 +950,9 @@ def main(argv=None):
     sub.add_parser("stop", help="gracefully stop the game (quiet quit -> TERM -> KILL)")
 
     args = parser.parse_args(argv)
-    if args.log_dir:
-        _apply_log_dir(args.log_dir)
     handlers = {
         "doctor": cmd_doctor,
-        "set-log-dir": cmd_set_log_dir,
+        "watchdog": cmd_watchdog,
         "state": cmd_state,
         "act": cmd_act,
         "batch": cmd_batch,

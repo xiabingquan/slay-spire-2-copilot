@@ -16,4 +16,3 @@ mod/SpireBridge/.godot/
 # Run logs & watchdog runtime — retained on disk only, never committed
 # (user directive 2026-09-16)
 logs/
-.spire-log-dir
