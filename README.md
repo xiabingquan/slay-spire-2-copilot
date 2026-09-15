@@ -57,8 +57,8 @@ Manual commands for troubleshooting and intervention:
         bridge/                            (spirectl.py CLI)
         Scripts/                           (shell scripts: mod install, watchdog)
         mod/SpireBridge/                   (in-game communication mod source)
-        docs/                              (protocol spec, API research notes)
-        doc/ memory/ references/           (play knowledge, run memory, CLI cheat sheet)
+        references/                        (CLI cheat sheet, wire protocol, play knowledge)
+        memory/                            (run memory: lessons, changelog, postmortems)
 
 Skill symlink: `~/.claude/skills/slay-spire-2-copilot` → the skill folder above.
 Runtime logs and watchdog state are written to user directories outside the
@@ -89,8 +89,8 @@ localhost (127.0.0.1:17612):
   update with each run and auto-load next session; tool fixes land directly in
   this repo
 
-For the detailed protocol see `slay-spire-2-copilot/docs/protocol.md`; for the
-CLI cheat sheet see `slay-spire-2-copilot/references/commands.md`.
+For the detailed protocol see `slay-spire-2-copilot/references/protocol.md`;
+for the CLI cheat sheet see `slay-spire-2-copilot/references/commands.md`.
 
 ## Acknowledgements
 

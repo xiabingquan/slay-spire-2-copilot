@@ -49,8 +49,8 @@ dll 更新时执行构建安装（dotnet build，产物拷贝至游戏 mods 目�
         bridge/                            （spirectl.py CLI）
         Scripts/                           （shell 脚本：mod 构建安装、看门狗）
         mod/SpireBridge/                   （游戏内通讯 mod 源码）
-        docs/                              （协议规范、API 研究笔记）
-        doc/ memory/ references/           （游玩知识、对局记忆、CLI 速查）
+        references/                        （CLI 速查、线协议、游玩知识）
+        memory/                            （对局记忆：经验、台账、复盘）
 
 skill 符号链接：`~/.claude/skills/slay-spire-2-copilot` → 上述 skill 文件夹。
 运行时日志与看门狗状态写在仓库外的用户目录，不入库。
@@ -75,7 +75,7 @@ skill 符号链接：`~/.claude/skills/slay-spire-2-copilot` → 上述 skill �
 - **记忆与迭代**：`memory/` 下的经验、复盘、changelog 随对局更新，下次会话
   自动加载；工具修复直接进本仓库
 
-更细的协议见 `slay-spire-2-copilot/docs/protocol.md`，CLI 速查见
+更细的协议见 `slay-spire-2-copilot/references/protocol.md`，CLI 速查见
 `slay-spire-2-copilot/references/commands.md`。
 
 ## 致谢

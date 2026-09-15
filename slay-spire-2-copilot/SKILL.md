@@ -167,8 +167,8 @@ When the run ends (game_over screen, or abandon):
   changelog.md.
 - Never delete changelog entries; that file is the iteration ledger.
 - Game patch broke hooks (doctor handshake ok but state fields missing/wrong):
-  re-check docs/research/game-api-findings.md, decompile if needed, adapt the
-  mod, and record it in changelog.md.
+  decompile the game assembly if needed, adapt the mod, and record the fix in
+  changelog.md.
 
 ## Notes
 
@@ -211,6 +211,21 @@ When the run ends (game_over screen, or abandon):
 Consult the following files as needed for decisions and troubleshooting (paths
 are relative to this skill folder):
 
+references/ — consult knowledge:
+
+- `references/README.md` — knowledge index
+- `references/commands.md` — CLI usage, action/state reference, log-directory
+  contract
+- `references/protocol.md` — wire protocol v1 (JSON Lines over TCP on localhost)
+- `references/cards.md` — cards
+- `references/potions.md` — potion effects
+- `references/powers.md` — powers
+- `references/relics.md` — relic effects
+- `references/intents.md` — reading enemy intents
+- `references/afflictions.md` — statuses and debuffs
+
+memory/ — run memory:
+
 - `memory/lessons.md` — decision rules of thumb: card play, rewards, map,
   events, and mechanics lessons
 - `memory/strategies/<char>.md` — per-character strategies (grows with play data)
@@ -218,17 +233,5 @@ are relative to this skill folder):
 - `memory/changelog.md` — tool-fix and strategy-correction ledger
 - `memory/runs/` — per-run postmortems: result, key decisions, cause of death,
   lessons
-- `doc/README.md` — play-knowledge index
-- `doc/cards.md` — cards
-- `doc/potions.md` — potion effects
-- `doc/powers.md` — powers
-- `doc/relics.md` — relic effects
-- `doc/intents.md` — reading enemy intents
-- `doc/afflictions.md` — statuses and debuffs
-- `references/commands.md` — action/state reference: CLI usage, action table,
-  state fields, log-directory contract
-- `docs/protocol.md` — wire protocol v1 (JSON Lines over TCP on localhost)
-- `docs/research/game-api-findings.md` — game API surface and validated symbols
-  (for self-iteration)
-- `docs/design-autopilot-v2.md` — unattended batch-run design (not implemented)
+
 - `SKILL_zh.md` — Chinese version of this skill doc

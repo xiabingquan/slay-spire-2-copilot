@@ -135,9 +135,8 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
   追加一行描述原因与修复。以 [fix] 或 [feature] 性质提交。
 - 策略文档被实战证伪：改正文档，并记录到 changelog.md。
 - 永不删除 changelog 条目；该文件是迭代台账。
-- 游戏补丁破坏 hook（doctor 握手正常但 state 字段缺失/错误）：重查
-  docs/research/game-api-findings.md，必要时反编译，适配 mod，并记录到
-  changelog.md。
+- 游戏补丁破坏 hook（doctor 握手正常但 state 字段缺失/错误）：必要时反编译游戏
+  程序集，适配 mod，并将修复记录进 changelog.md。
 
 ## 注意事项
 
@@ -172,21 +171,24 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
 
 决策与排查时按需查阅以下文件（路径均相对本 skill 文件夹）：
 
+references/ — 查阅知识：
+
+- `references/README.md` — 知识索引
+- `references/commands.md` — CLI 用法、动作与状态参考、日志目录契约
+- `references/protocol.md` — 线协议 v1（本机 TCP 上的 JSON Lines）
+- `references/cards.md` — 卡牌
+- `references/potions.md` — 药水效果
+- `references/powers.md` — 能力/力量
+- `references/relics.md` — 遗物效果
+- `references/intents.md` — 敌人意图解读
+- `references/afflictions.md` — 状态与负面效果
+
+memory/ — 对局记忆：
+
 - `memory/lessons.md` — 决策经验法则：出牌、奖励、地图、事件与机制教训
 - `memory/strategies/<角色>.md` — 分角色策略（随游玩数据积累）
 - `memory/MEMORY.md` — 记忆索引
 - `memory/changelog.md` — 工具修复与策略纠偏台账
 - `memory/runs/` — 每局复盘：结果、关键决策、死因、经验
-- `doc/README.md` — 游玩知识库索引
-- `doc/cards.md` — 卡牌
-- `doc/potions.md` — 药水效果
-- `doc/powers.md` — 能力/力量
-- `doc/relics.md` — 遗物效果
-- `doc/intents.md` — 敌人意图解读
-- `doc/afflictions.md` — 状态与负面效果
-- `references/commands.md` — 动作与状态参考：CLI 用法、动作表、状态字段、
-  日志目录契约
-- `docs/protocol.md` — 线协议 v1（本机 TCP 上的 JSON Lines）
-- `docs/research/game-api-findings.md` — 游戏 API 面与已验证符号（自迭代排查）
-- `docs/design-autopilot-v2.md` — 无人值守批量对局设计（未实现）
+
 - `SKILL.md` — skill 触发与定义（英文版）；本文件为其说明
