@@ -845,8 +845,7 @@ public static class ActionExecutor
         }
         try
         {
-            SaveManager.Instance.SetFtuesEnabled(false);
-            SaveManager.Instance.PrefsSave.FastMode = FastModeType.Fast;
+            SpeedHooks.Apply("start_run");
         }
         catch (Exception e)
         {

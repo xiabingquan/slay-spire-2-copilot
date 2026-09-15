@@ -63,7 +63,8 @@ public static class BridgeMod
             switch (type)
             {
                 case "hello":
-                    return Protocol.HelloOk(GetGameVersion(), GetAssemblyHash(), ModVersion);
+                    SpeedHooks.ApplyIfNeeded("hello");
+                    return Protocol.HelloOk(GetGameVersion(), GetAssemblyHash(), ModVersion, SpeedHooks.Status());
                 case "ping":
                     return Protocol.Pong();
                 case "state":
