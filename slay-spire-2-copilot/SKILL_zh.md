@@ -175,14 +175,14 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
 references/ — 查阅知识：
 
 - `references/README.md` — 知识索引
-- `references/commands.md` — CLI 用法、动作与状态参考、日志目录契约
-- `references/protocol.md` — 线协议 v1（本机 TCP 上的 JSON Lines）
-- `references/cards.md` — 卡牌
-- `references/potions.md` — 药水效果
-- `references/powers.md` — 能力/力量
-- `references/relics.md` — 遗物效果
-- `references/intents.md` — 敌人意图解读
-- `references/afflictions.md` — 状态与负面效果
+- `references/bridge/commands.md` — CLI 用法、动作与状态参考、日志目录契约
+- `references/bridge/protocol.md` — 线协议 v1（本机 TCP 上的 JSON Lines）
+- `references/game/cards.md` — 卡牌
+- `references/game/potions.md` — 药水效果
+- `references/game/powers.md` — 能力/力量
+- `references/game/relics.md` — 遗物效果
+- `references/game/intents.md` — 敌人意图解读
+- `references/game/afflictions.md` — 状态与负面效果
 
 memory/ — 对局记忆：
 

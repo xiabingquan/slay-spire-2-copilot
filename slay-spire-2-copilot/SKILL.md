@@ -218,15 +218,16 @@ are relative to this skill folder):
 references/ — consult knowledge:
 
 - `references/README.md` — knowledge index
-- `references/commands.md` — CLI usage, action/state reference, log-directory
-  contract
-- `references/protocol.md` — wire protocol v1 (JSON Lines over TCP on localhost)
-- `references/cards.md` — cards
-- `references/potions.md` — potion effects
-- `references/powers.md` — powers
-- `references/relics.md` — relic effects
-- `references/intents.md` — reading enemy intents
-- `references/afflictions.md` — statuses and debuffs
+- `references/bridge/commands.md` — CLI usage, action/state reference,
+  log-directory contract
+- `references/bridge/protocol.md` — wire protocol v1 (JSON Lines over TCP on
+  localhost)
+- `references/game/cards.md` — cards
+- `references/game/potions.md` — potion effects
+- `references/game/powers.md` — powers
+- `references/game/relics.md` — relic effects
+- `references/game/intents.md` — reading enemy intents
+- `references/game/afflictions.md` — statuses and debuffs
 
 memory/ — run memory:
 
