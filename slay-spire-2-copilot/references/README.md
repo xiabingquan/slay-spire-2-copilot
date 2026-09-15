@@ -20,3 +20,4 @@ game/ — game knowledge:
 - [potions](game/potions.md) — potion effects
 - [afflictions](game/afflictions.md) — statuses and card-bound debuffs
 - [intents](game/intents.md) — enemy intent label formats
+- [monsters](game/monsters.md) — enemy move tables and passives

@@ -17,3 +17,4 @@ game/ — 游戏知识（中文版）：
 - [potions_zh](game/potions_zh.md) — 药水效果
 - [afflictions_zh](game/afflictions_zh.md) — 状态与卡牌绑定减益
 - [intents_zh](game/intents_zh.md) — 敌人意图标签格式
+- [monsters_zh](game/monsters_zh.md) — 敌人招式表与被动
