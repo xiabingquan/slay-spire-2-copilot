@@ -179,9 +179,8 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
   --log-dir / SPIREBRIDGE_LOG_DIR overrides; doctor prints active log dir;
   watchdog-external.sh reads the pointer. [chore] git remote origin set to
   git@github.com:xiabingquan/slay-spire-2-copilot.git.
-- 2026-09-16 [chore] rebrand scrub (user directive): zero MIMO mentions —
-  mod id/assembly/namespace mimo-spire-bridge / MimoSpire.Bridge ->
-  spire-copilot-bridge / SpireCopilot.Bridge (manifest + dll rebuilt, old
-  game-mod folder removed); project/docs/notify titles renamed to
-  slay-spire-2-copilot; on-disk repo dir moved ~/projects/mimo-spire ->
+- 2026-09-16 [chore] rebrand scrub (user directive): zero prior-brand mentions —
+  mod id/assembly/namespace -> spire-copilot-bridge / SpireCopilot.Bridge
+  (manifest + dll rebuilt, old game-mod folder removed); project/docs/notify
+  titles unified as slay-spire-2-copilot; on-disk repo dir moved to
   ~/projects/slay-spire-2-copilot with skill symlink + crontab updated.
