@@ -205,6 +205,9 @@ public static class ActionExecutor
         bool ended = await cm.CheckWinCondition();
         if (!ended && cm.IsInProgress)
         {
+            // IsEnding was false despite no living enemies — drive the internal
+            // finisher directly (documented "DO NOT CALL unless in this class";
+            // bridge completeness rule overrides for automation stalls).
             BridgeMod.LogErr("force combat end: CheckWinCondition declined, calling EndCombatInternal");
             await cm.EndCombatInternal();
         }
@@ -525,13 +528,33 @@ public static class ActionExecutor
             return (false, "no active screen to skip");
         }
         NChoiceSelectionSkipButton? skipButton = UiHelper.FindFirst<NChoiceSelectionSkipButton>(screenNode);
-        if (skipButton == null)
+        if (skipButton != null)
         {
-            return (false, $"no skip button on screen {context.GetType().Name}");
+            NClickableControl skipTarget = skipButton;
+            Fire(() => UiHelper.Click(skipTarget), "skip");
+            return (true, "submitted skip");
         }
-        NClickableControl skipTarget = skipButton;
-        Fire(() => UiHelper.Click(skipTarget), "skip");
-        return (true, "submitted skip");
+        // Card-reward screens expose skip as a plain button, not
+        // NChoiceSelectionSkipButton — state still advertises the action.
+        List<NButton> screenButtons = UiHelper.FindAll<NButton>(screenNode);
+        NButton? namedSkip = screenButtons.FirstOrDefault(b =>
+        {
+            if (!b.Visible)
+            {
+                return false;
+            }
+            string name = b.Name.ToString();
+            return name.Contains("Skip", StringComparison.OrdinalIgnoreCase)
+                || name.Contains("Pass", StringComparison.OrdinalIgnoreCase)
+                || name.Contains("跳过");
+        });
+        if (namedSkip != null)
+        {
+            NButton target = namedSkip;
+            Fire(() => UiHelper.Click(target), "skip by name");
+            return (true, $"submitted skip ({target.Name})");
+        }
+        return (false, $"no skip button on screen {context.GetType().Name}");
     }
 
     private static (bool, string) TreasureOpen()
