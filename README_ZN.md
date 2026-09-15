@@ -35,7 +35,7 @@ dll 更新时执行构建安装（dotnet build，产物拷贝至游戏 mods 目�
 以下命令用于排查与手动干预：
 
     cd slay-spire-2-copilot/slay-spire-2-copilot
-    bash setup/install-mod.sh                       # 构建/安装 mod
+    bash Scripts/install-mod.sh                     # 构建/安装 mod
     python3 bridge/spirectl.py launch               # 启动游戏
     SPIREBRIDGE_LOG_DIR=<日志文件夹> python3 bridge/spirectl.py doctor
 
@@ -46,9 +46,9 @@ dll 更新时执行构建安装（dotnet build，产物拷贝至游戏 mods 目�
       .gitignore
       slay-spire-2-copilot/                （skill 文件夹 — 全部运行时文件）
         SKILL.md                           （skill 定义 / 调用契约）
-        bridge/                            （spirectl.py CLI、看门狗脚本）
+        bridge/                            （spirectl.py CLI）
+        Scripts/                           （shell 脚本：mod 构建安装、看门狗）
         mod/SpireBridge/                   （游戏内通讯 mod 源码）
-        setup/                             （mod 构建安装脚本）
         docs/                              （协议规范、API 研究笔记）
         doc/ memory/ references/           （游玩知识、对局记忆、CLI 速查）
 
@@ -77,3 +77,8 @@ skill 符号链接：`~/.claude/skills/slay-spire-2-copilot` → 上述 skill �
 
 更细的协议见 `slay-spire-2-copilot/docs/protocol.md`，CLI 速查见
 `slay-spire-2-copilot/references/commands.md`。
+
+## 致谢
+
+- [BaseLib-StS2](https://github.com/Alchyr/BaseLib-StS2) — Alchyr 的《杀戮尖塔 2》
+  mod 基础库；开发 SpireBridge 时作为 mod 加载与游戏 API 约定的社区参考
