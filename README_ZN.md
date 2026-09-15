@@ -1,86 +1,61 @@
 # slay-spire-2-copilot
 
-让 Claude Code / Codex 智能体在本机自动游玩《杀戮尖塔 2》（Slay the Spire 2）的
-skill 与配套工具。智能体实时读取游戏状态、完全自主决策，并通过自研通讯 mod
-驱动游戏；跨会话、跨对局拥有持久记忆与自我迭代循环。
-
 > 英文版：[README.md](README.md)
 
-## 目录结构
+让 Claude Code / Codex 在本机**自动游玩《杀戮尖塔 2》**的 AI 副驾驶（copilot）。
+你只要说一句「用 Claude Code 打一局杀戮尖塔2」，智能体就会自己读牌局、做决策、
+点技能、推图、打 Boss，直到对局结束并写下复盘。
 
-    slay-spire-2-copilot/                  （仓库根目录）
-      README.md
-      README_ZN.md
-      .gitignore
-      slay-spire-2-copilot/                （skill 文件夹 — 全部运行时文件）
-        SKILL.md                           （skill 定义 / 调用契约）
-        bridge/spirectl.py                 （Python CLI：state/act/wait/sl 等）
-        bridge/watchdog-external.sh        （crontab 存活看门狗）
-        mod/SpireBridge/                   （C# 通讯 mod 源码 + 清单）
-        setup/install-mod.sh               （构建并安装 mod 到游戏）
-        docs/                              （协议规范 + API 逆向笔记）
-        doc/                               （游玩知识：卡牌/药水/遗物等）
-        memory/                            （lessons、changelog、对局复盘）
-        references/commands.md             （CLI 与状态速查）
+## 这个项目是干啥的
 
-Claude Code 的 skill 符号链接指向 skill 文件夹：
+- **全自动对局**：实时读取游戏状态（血量、手牌、敌人意图、地图…），由 AI 自主
+  决定出牌、奖励、路线，通过通讯 mod 直接操作游戏
+- **持续运转**：对局结束自动写复盘、更新经验库、开启下一局；看门狗监控进程
+  存活，异常时通过飞书通知
+- **越打越稳**：跨对局持久记忆（教训、工具修复台账），工具 bug 在本仓库修复后
+  立即生效
 
-    ~/.claude/skills/slay-spire-2-copilot -> <仓库>/slay-spire-2-copilot/slay-spire-2-copilot
+## 怎么用
 
-运行时产物**不进仓库**：对局日志写入 `SPIREBRIDGE_LOG_DIR`（用户提供的**文件夹**，
-文件名形如 `run-<时间戳>-<哈希>.log`）；看门狗/通知状态在
-`~/.local/share/slay-spire-2-copilot/`。
+1. **构建 mod**（需要 .NET SDK 9+；游戏程序集引用自本机 Steam 安装目录）：
 
-## 整体协作关系
+       cd slay-spire-2-copilot/slay-spire-2-copilot
+       bash setup/install-mod.sh
 
-    Claude Code 会话（skill `slay-spire-2-copilot`）
-        -> bridge/spirectl.py（TCP JSONL，127.0.0.1:17612）
-        -> 游戏进程内的 spire-copilot-bridge mod
-        -> MegaCrit.Sts2 游戏 API（CardCmd/PlayerCmd/UI 节点）
+2. **启动游戏并验证**（首次带 mod 启动，在游戏内接受一次 mod 警告）：
 
-## 架构：客户端–服务端职责
+       python3 bridge/spirectl.py launch
+       SPIREBRIDGE_LOG_DIR=<日志文件夹> python3 bridge/spirectl.py doctor
 
-**服务端** = 游戏进程内的 SpireBridge mod。监控游戏状态并返回快照，接受操作
-指令并作用到游戏；它不做任何决策。
+3. **开一局**：在 Claude Code 中调起 skill，传入一个绝对路径的**日志文件夹**：
 
-**客户端** = spirectl + 决策层（通过 skill 接入的 Claude）。读取状态快照、
-做出全部决策、发送操作请求；不直接触碰游戏内部。
+       用 Claude Code 打一局杀戮尖塔2  /Users/me/spire-logs/tonight
 
-完整性规则：游玩中遇到服务端尚未支持的界面或组件时，立即实现（重建 mod +
-重启游戏）并继续，绝不跳过或绕开。
+   skill 会被这类说法触发（中英文皆可）："用 Claude Code 打一局杀戮尖塔2"、
+   "play Slay the Spire 2 via Claude Code or Codex"。
 
-## 安装与使用
+4. **对局日志**写入你传入的文件夹，文件名形如 `run-20260916-013052-a3f9c012.log`
+   （时间戳+哈希）；游玩仍在进行时如需暂停，可让 Claude 关闭看门狗告警。
 
-以下命令均在 skill 文件夹 `slay-spire-2-copilot/slay-spire-2-copilot` 下执行：
+## 基本技术路线
 
-1. 构建并安装 mod：`bash setup/install-mod.sh`
-   （需要 .NET SDK 9+；游戏程序集从 Steam 安装目录引用）
-2. 启动游戏：`python3 bridge/spirectl.py launch`
-   首次带 mod 启动会弹出游戏内 mod 警告——接受一次即可。
-3. 验证：`SPIREBRIDGE_LOG_DIR=<日志文件夹> python3 bridge/spirectl.py doctor`
+整体是**客户端–服务端**架构，协议为本机 TCP 上的 JSON Lines（127.0.0.1:17612）：
 
-## 通过 Claude Code 游玩
+    Claude Code（决策客户端）
+      → bridge/spirectl.py（CLI：state / act / wait / sl / profile …）
+      → spire-copilot-bridge mod（跑在游戏进程内的 Godot .NET mod）
+      → 游戏 API（出牌、回合、地图、奖励等）
 
-打开 Claude Code 会话并调用该 skill，例如「用 Claude Code 打一局杀戮尖塔2」或
-"play Slay the Spire 2 via Claude Code or Codex"，并传入一个绝对路径的**日志
-文件夹**。skill 会指示 Claude：加载记忆 → doctor 检查 → 武装看门狗 →
-循环执行 state → 决策 → act → wait。
+- **服务端（mod）**：只做两件事——导出完整状态快照、执行客户端下达的操作
+  （出牌/回合/选奖励/开店购物…），**不做任何决策**。缺界面支持时当场补实现、
+  重建 mod、重启游戏继续（完整性规则）
+- **客户端（spirectl + Claude）**：读快照 → 依经验库决策 → 发操作 → 等状态
+  变化 → 循环；行动以 `act --wait` / `batch` 批量提交，决策与日志解耦
+- **提速与稳定**：游戏内 `FastMode=Instant` + `NonInteractiveMode` 跳过动画；
+  状态指纹哈希驱动等待；战斗结束/RINGING 卡死有服务端强制推进与 `sl`
+  存档重载（约 18s，用于带信息重打）
+- **记忆与迭代**：`memory/` 下的经验、复盘、changelog 随对局更新，下次会话
+  自动加载；工具修复直接进本仓库
 
-## 记忆与自我迭代
-
-- `slay-spire-2-copilot/memory/lessons.md` — 可泛化的对局经验，证伪即删
-- `slay-spire-2-copilot/memory/runs/` — 每局结束后的复盘
-- `slay-spire-2-copilot/memory/changelog.md` — 工具修复与策略纠偏台账；
-  工具 bug 在本仓库修复并记录于此
-
-## 已推迟（TODO）
-
-- 无人值守批量自动对局 runner（用于迭代数据采集）
-- STS1 CommunicationMod 适配（协议按游戏无关设计）
-- mod 的推送式事件（v1 为轮询）
-
-## 参考文档
-
-- `slay-spire-2-copilot/docs/protocol.md` — 线协议 v1
-- `slay-spire-2-copilot/docs/research/game-api-findings.md` — 游戏 API 面
-- `slay-spire-2-copilot/references/commands.md` — 操作与状态速查
+更细的协议见 `slay-spire-2-copilot/docs/protocol.md`，CLI 速查见
+`slay-spire-2-copilot/references/commands.md`。

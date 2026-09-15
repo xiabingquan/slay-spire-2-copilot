@@ -2,89 +2,67 @@
 
 > 中文版：[README_ZN.md](README_ZN.md)
 
-Claude Code / Codex skill and tooling that let an AI agent play Slay the Spire 2
-on a local machine. The agent reads live game state, makes fully autonomous
-decisions, and drives the game through a self-written communication mod, with a
-persistent memory and self-iteration loop across sessions and runs.
+An AI copilot that lets Claude Code / Codex **play Slay the Spire 2 autonomously
+on your machine**. Say "play Slay the Spire 2 via Claude Code" and the agent
+reads the run, decides, acts, pushes the map, fights the boss — then writes a
+postmortem and starts the next run.
 
-## Layout
+## What this project is
 
-    slay-spire-2-copilot/                  (repo root)
-      README.md
-      .gitignore
-      slay-spire-2-copilot/                (skill folder — all runtime files)
-        SKILL.md                           (skill definition / invocation contract)
-        bridge/spirectl.py                 (Python CLI: state/act/wait/sl/…)
-        bridge/watchdog-external.sh        (crontab liveness watchdog)
-        mod/SpireBridge/                   (C# communication mod source + manifest)
-        setup/install-mod.sh               (build + install mod into the game)
-        docs/                              (protocol spec + API research notes)
-        doc/                               (playing knowledge: cards/potions/…)
-        memory/                            (lessons, changelog, run postmortems)
-        references/commands.md             (CLI + state cheat sheet)
+- **Autonomous runs**: live game state (HP, hand, enemy intents, map…) is read
+  every turn; the AI chooses cards, rewards, and routes, driving the game
+  through a communication mod
+- **Continuous operation**: run end → postmortem + memory update → next run;
+  a liveness watchdog pings Feishu if the loop dies
+- **Compounding skill**: cross-run persistent memory (lessons, tool-fix
+  ledger); tool bugs are fixed in this repo and take effect immediately
 
-The Claude Code skill symlink points at the skill folder:
+## How to use
 
-    ~/.claude/skills/slay-spire-2-copilot -> <repo>/slay-spire-2-copilot/slay-spire-2-copilot
+1. **Build the mod** (.NET SDK 9+; game assemblies referenced from the local
+   Steam install):
 
-Runtime artifacts never live in the repo: run logs are written under
-`SPIREBRIDGE_LOG_DIR` (a user-supplied **folder**, files named
-`run-<timestamp>-<hash>.log`), watchdog/notify state under
-`~/.local/share/slay-spire-2-copilot/`.
+       cd slay-spire-2-copilot/slay-spire-2-copilot
+       bash setup/install-mod.sh
 
-## How it fits together
+2. **Launch and verify** (accept the in-game mod warning once on first launch):
 
-    Claude Code session (skill `slay-spire-2-copilot`)
-        -> bridge/spirectl.py (TCP JSONL, 127.0.0.1:17612)
-        -> spire-copilot-bridge mod inside the STS2 process
-        -> MegaCrit.Sts2 game APIs (CardCmd/PlayerCmd/UI nodes)
+       python3 bridge/spirectl.py launch
+       SPIREBRIDGE_LOG_DIR=<log-folder> python3 bridge/spirectl.py doctor
 
-## Architecture: client–server roles
+3. **Start a run**: invoke the skill in Claude Code, passing an absolute **log
+   folder** path:
 
-Server = the SpireBridge mod inside the game process. It monitors game state
-and returns snapshots, accepts operation commands and applies them to the game.
-It makes no decisions.
+       play Slay the Spire 2 via Claude Code  /Users/me/spire-logs/tonight
 
-Client = spirectl plus the decision layer (Claude via the skill). It reads
-state snapshots, makes all decisions, and sends operation requests. It never
-touches game internals directly.
+   Triggers include: "用 Claude Code 打一局杀戮尖塔2", "play Slay the Spire 2
+   via Claude Code or Codex".
 
-Completeness rule: if play encounters a screen or component the server does
-not support yet, implement it immediately (rebuild mod + restart game) and
-continue — never skip or work around it.
+4. **Run logs** land in your folder as `run-<timestamp>-<hash>.log`
+   (e.g. `run-20260916-013052-a3f9c012.log`).
 
-## Setup
+## Technical approach
 
-All commands below run from the skill folder `slay-spire-2-copilot/slay-spire-2-copilot`:
+Client–server over JSON Lines on localhost TCP (127.0.0.1:17612):
 
-1. Build and install the mod: `bash setup/install-mod.sh`
-   (requires .NET SDK 9+; game assemblies are referenced from the Steam install)
-2. Launch the game: `python3 bridge/spirectl.py launch`
-   First modded launch shows an in-game mod warning — accept it once.
-3. Verify: `SPIREBRIDGE_LOG_DIR=<log-folder> python3 bridge/spirectl.py doctor`
+    Claude Code (decision client)
+      → bridge/spirectl.py (CLI: state / act / wait / sl / profile …)
+      → spire-copilot-bridge mod (Godot .NET mod inside the game process)
+      → game APIs (cards, turns, map, rewards, …)
 
-## Playing via Claude Code
+- **Server (mod)**: only exports full state snapshots and applies commands
+  (play / end_turn / choose / map_select / shop / …) — **zero decisions**.
+  Missing screen support is implemented immediately, mod rebuilt, game
+  restarted (completeness rule)
+- **Client (spirectl + Claude)**: read snapshot → decide from memory → send
+  ops → wait for fingerprint change → loop. Acts are submitted via
+  `act --wait` / `batch`; decisions stay in the AI, logs stay in the tooling
+- **Speed & stability**: in-game `FastMode=Instant` + `NonInteractiveMode`
+  skip animations; content-hashed state fingerprints drive waits;
+  combat-end / RINGING freezes have server-side force-advance; `sl` reloads
+  the room-entry save (~18s) to replay fights with foreknowledge
+- **Memory & iteration**: `memory/` lessons, postmortems and changelog update
+  every run and reload next session; tool fixes land in this repo
 
-Open a Claude Code session and invoke the skill, e.g. "用 Claude Code 打一局杀戮尖塔2"
-or "play Slay the Spire 2 via Claude Code or Codex", passing an absolute **log
-folder** path. The skill instructs Claude to load memory, run doctor, arm the
-watchdog, then loop: state -> decide -> act -> wait.
-
-## Memory and self-iteration
-
-- `slay-spire-2-copilot/memory/lessons.md` — generalizable playing lessons
-- `slay-spire-2-copilot/memory/runs/` — per-run postmortems
-- `slay-spire-2-copilot/memory/changelog.md` — ledger of tool fixes and strategy
-  corrections; tool bugs are fixed in this repo and recorded there
-
-## Deferred (TODO)
-
-- Headless unattended auto-run runner (batch games for iteration data)
-- STS1 CommunicationMod adapter (protocol is game-agnostic by design)
-- Push-style events from the mod (v1 is poll-based)
-
-## Reference docs
-
-- `slay-spire-2-copilot/docs/protocol.md` — wire protocol v1
-- `slay-spire-2-copilot/docs/research/game-api-findings.md` — game API surface
-- `slay-spire-2-copilot/references/commands.md` — action and state cheat sheet
+Protocol details: `slay-spire-2-copilot/docs/protocol.md`. CLI cheat sheet:
+`slay-spire-2-copilot/references/commands.md`.
