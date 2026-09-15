@@ -3,6 +3,9 @@
 Paths are relative to this skill folder. bridge/ documents the tooling;
 game/ is the static game reference consulted during play.
 
+> Chinese version: [README_zh.md](README_zh.md). Every game/ knowledge file
+> has a `_zh` twin with matching content.
+
 bridge/ — tooling:
 
 - [commands](bridge/commands.md) — CLI usage, action/state reference, log-directory contract
