@@ -13,13 +13,14 @@ public static class Protocol
 
     private static string Emit(object payload) => JsonSerializer.Serialize(payload, JsonOptions);
 
-    public static string HelloOk(string gameVersion, long assemblyHash, string modVersion) => Emit(new
+    public static string HelloOk(string gameVersion, long assemblyHash, string modVersion, string speedStatus) => Emit(new
     {
         type = "hello_ok",
         protocol_version = BridgeMod.ProtocolVersion,
         game_version = gameVersion,
         assembly_hash = assemblyHash,
         mod_version = modVersion,
+        speed = speedStatus,
     });
 
     public static string Pong() => Emit(new { type = "pong" });
@@ -41,6 +42,19 @@ public static class Protocol
             ? new { type = "act_result", ok, action, message }
             : new { type = "act_result", ok, action, message, state };
         return Emit(payload);
+    }
+
+    // Injects game-thread timing into an already-emitted JSON object so the
+    // client profiler can separate bridge RTT from queue wait + handler work.
+    public static string InjectServerMs(string payload, long serverMs, long queueMs)
+    {
+        if (string.IsNullOrEmpty(payload) || !payload.EndsWith("}"))
+        {
+            return payload;
+        }
+        return payload.Substring(0, payload.Length - 1)
+            + ",\"server_ms\":" + serverMs
+            + ",\"queue_ms\":" + queueMs + "}";
     }
 
     public static string Error(string message, string? detail) => detail == null

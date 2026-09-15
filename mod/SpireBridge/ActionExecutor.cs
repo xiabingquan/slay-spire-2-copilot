@@ -55,6 +55,7 @@ public static class ActionExecutor
             {
                 "play" => Play(args),
                 "end_turn" => EndTurn(),
+                "force_combat_end" => ForceCombatEnd(),
                 "use_potion" => UsePotion(args),
                 "map_select" => MapSelect(args),
                 "choose" => Choose(args),
@@ -137,13 +138,30 @@ public static class ActionExecutor
 
     private static (bool, string) EndTurn()
     {
-        if (!TryGetCombatPlayer(out Player? player, out _, out PlayerCombatState? pcs) || pcs == null)
+        if (!TryGetCombatPlayer(out Player? player, out CombatState combat, out PlayerCombatState? pcs) || pcs == null)
         {
             return (false, "not in an active combat");
         }
         if (pcs.Phase != PlayerTurnPhase.Play)
         {
             return (false, $"not player play phase (phase={pcs.Phase})");
+        }
+        // Victory-path stall (observed when the killing blow lands via HAVOC or
+        // other non-attack resolution): enemies are gone but combat never ends.
+        // CheckWinCondition -> EndCombatInternal is the public finisher.
+        bool anyEnemyAlive = false;
+        foreach (Creature enemy in combat.Enemies)
+        {
+            if (enemy.IsAlive)
+            {
+                anyEnemyAlive = true;
+                break;
+            }
+        }
+        if (!anyEnemyAlive)
+        {
+            Fire(ForceCombatEndAsync, "combat win-condition end");
+            return (true, "submitted end_turn (win-condition force path)");
         }
         Player playerRef = player!;
         int turnNumber = pcs.TurnNumber;
@@ -155,6 +173,15 @@ public static class ActionExecutor
         {
             try
             {
+                // Re-check: an enemy may have died between the submit snapshot
+                // and main-thread execution.
+                CombatState? live = CombatManager.Instance.DebugOnlyGetState();
+                bool aliveNow = live != null && live.Enemies.Any(e => e.IsAlive);
+                if (!aliveNow)
+                {
+                    await ForceCombatEndAsync();
+                    return;
+                }
                 CombatManager.Instance.OnEndedTurnLocally();
                 RunManager.Instance.ActionQueueSynchronizer.RequestEnqueue(
                     new EndPlayerTurnAction(playerRef, turnNumber));
@@ -168,6 +195,33 @@ public static class ActionExecutor
             }
         }, "end turn");
         return (true, "submitted end_turn (sync queue path)");
+    }
+
+    private static async Task ForceCombatEndAsync()
+    {
+        CombatManager cm = CombatManager.Instance;
+        BridgeMod.LogInfo(
+            $"force combat end: isEnding={cm.IsEnding} inProgress={cm.IsInProgress}");
+        bool ended = await cm.CheckWinCondition();
+        if (!ended && cm.IsInProgress)
+        {
+            // IsEnding was false despite no living enemies — drive the internal
+            // finisher directly (documented "DO NOT CALL unless in this class";
+            // bridge completeness rule overrides for automation stalls).
+            BridgeMod.LogErr("force combat end: CheckWinCondition declined, calling EndCombatInternal");
+            await cm.EndCombatInternal();
+        }
+        BridgeMod.LogInfo($"force combat end done: inProgress={cm.IsInProgress}");
+    }
+
+    private static (bool, string) ForceCombatEnd()
+    {
+        if (!TryGetCombatPlayer(out _, out _, out _))
+        {
+            return (false, "not in an active combat");
+        }
+        Fire(ForceCombatEndAsync, "force combat end");
+        return (true, "submitted force_combat_end");
     }
 
     private static (bool, string) UsePotion(JsonElement args)
@@ -474,13 +528,33 @@ public static class ActionExecutor
             return (false, "no active screen to skip");
         }
         NChoiceSelectionSkipButton? skipButton = UiHelper.FindFirst<NChoiceSelectionSkipButton>(screenNode);
-        if (skipButton == null)
+        if (skipButton != null)
         {
-            return (false, $"no skip button on screen {context.GetType().Name}");
+            NClickableControl skipTarget = skipButton;
+            Fire(() => UiHelper.Click(skipTarget), "skip");
+            return (true, "submitted skip");
         }
-        NClickableControl skipTarget = skipButton;
-        Fire(() => UiHelper.Click(skipTarget), "skip");
-        return (true, "submitted skip");
+        // Card-reward screens expose skip as a plain button, not
+        // NChoiceSelectionSkipButton — state still advertises the action.
+        List<NButton> screenButtons = UiHelper.FindAll<NButton>(screenNode);
+        NButton? namedSkip = screenButtons.FirstOrDefault(b =>
+        {
+            if (!b.Visible)
+            {
+                return false;
+            }
+            string name = b.Name.ToString();
+            return name.Contains("Skip", StringComparison.OrdinalIgnoreCase)
+                || name.Contains("Pass", StringComparison.OrdinalIgnoreCase)
+                || name.Contains("跳过");
+        });
+        if (namedSkip != null)
+        {
+            NButton target = namedSkip;
+            Fire(() => UiHelper.Click(target), "skip by name");
+            return (true, $"submitted skip ({target.Name})");
+        }
+        return (false, $"no skip button on screen {context.GetType().Name}");
     }
 
     private static (bool, string) TreasureOpen()
@@ -845,8 +919,7 @@ public static class ActionExecutor
         }
         try
         {
-            SaveManager.Instance.SetFtuesEnabled(false);
-            SaveManager.Instance.PrefsSave.FastMode = FastModeType.Fast;
+            SpeedHooks.Apply("start_run");
         }
         catch (Exception e)
         {

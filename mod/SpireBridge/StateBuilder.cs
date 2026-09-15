@@ -1182,20 +1182,72 @@ public static class StateBuilder
 
     private static string Fingerprint(Dictionary<string, object?> state)
     {
-        string raw = string.Join("|",
-            state["screen"]?.ToString() ?? "",
-            state["screen_type"]?.ToString() ?? "",
-            (state["combat"] as Dictionary<string, object?>)?["round"]?.ToString() ?? "",
-            (state["combat"] as Dictionary<string, object?>)?["turn_phase"]?.ToString() ?? "",
-            (state["run"] as Dictionary<string, object?>)?["total_floor"]?.ToString() ?? "",
-            (state["run"] as Dictionary<string, object?>)?["act_floor"]?.ToString() ?? "",
-            (state["run"] as Dictionary<string, object?>)?["gold"]?.ToString() ?? "",
-            (state["run"] as Dictionary<string, object?>)?["room_type"]?.ToString() ?? "",
-            (state["player"] as Dictionary<string, object?>)?["hp"]?.ToString() ?? "",
-            ((state["combat"] as Dictionary<string, object?>)?["piles"] as Dictionary<string, object?>)?["hand"]?.ToString() ?? "",
-            ((state["run"] as Dictionary<string, object?>)?["available_map_points"] as List<Dictionary<string, object?>>)?.Count.ToString() ?? "",
-            ((state["screen_detail"] as Dictionary<string, object?>)?["options"] as List<Dictionary<string, object?>>)?.Count.ToString() ?? "",
-            ((state["player"] as Dictionary<string, object?>)?["deck"] as List<Dictionary<string, object?>>)?.Count.ToString() ?? "");
+        // Content hash over the volatile decision inputs. Nested collections are
+        // JSON-serialized — List.ToString() only yields the type name, which left
+        // the old hash blind to hand/enemy/power changes inside a combat turn.
+        var parts = new System.Text.StringBuilder();
+        void Add(object? value)
+        {
+            parts.Append(value switch
+            {
+                null => "",
+                string s => s,
+                System.Collections.IEnumerable e and not string =>
+                    System.Text.Json.JsonSerializer.Serialize(e),
+                _ => value.ToString(),
+            });
+            parts.Append('|');
+        }
+
+        Add(state.GetValueOrDefault("screen"));
+        Add(state.GetValueOrDefault("screen_type"));
+        if (state.GetValueOrDefault("combat") is Dictionary<string, object?> combat)
+        {
+            Add(combat.GetValueOrDefault("round"));
+            Add(combat.GetValueOrDefault("current_side"));
+            Add(combat.GetValueOrDefault("turn_phase"));
+            Add(combat.GetValueOrDefault("turn_number"));
+            Add(combat.GetValueOrDefault("energy"));
+            Add(combat.GetValueOrDefault("max_energy"));
+            Add(combat.GetValueOrDefault("creatures"));
+            Add(combat.GetValueOrDefault("piles"));
+        }
+        else
+        {
+            Add("");
+        }
+        if (state.GetValueOrDefault("run") is Dictionary<string, object?> run)
+        {
+            Add(run.GetValueOrDefault("total_floor"));
+            Add(run.GetValueOrDefault("act_floor"));
+            Add(run.GetValueOrDefault("gold"));
+            Add(run.GetValueOrDefault("room_type"));
+            Add(run.GetValueOrDefault("is_game_over"));
+            Add(run.GetValueOrDefault("map_coord"));
+            Add(run.GetValueOrDefault("available_map_points"));
+        }
+        else
+        {
+            Add("");
+        }
+        if (state.GetValueOrDefault("player") is Dictionary<string, object?> player)
+        {
+            Add(player.GetValueOrDefault("hp"));
+            Add(player.GetValueOrDefault("max_hp"));
+            Add(player.GetValueOrDefault("block"));
+            Add(player.GetValueOrDefault("gold"));
+            Add(player.GetValueOrDefault("potions"));
+            Add(player.GetValueOrDefault("relics"));
+            Add((player.GetValueOrDefault("deck") as List<Dictionary<string, object?>>)?.Count);
+        }
+        else
+        {
+            Add("");
+        }
+        Add(state.GetValueOrDefault("screen_detail"));
+        Add(state.GetValueOrDefault("available_actions"));
+
+        string raw = parts.ToString();
         ulong hash = 14695981039346656037;
         foreach (char c in raw)
         {

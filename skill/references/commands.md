@@ -8,8 +8,26 @@ spirectl speaks JSON-lines TCP to the mimo-spire-bridge mod (default
     python3 bridge/spirectl.py doctor
     python3 bridge/spirectl.py launch
     python3 bridge/spirectl.py state [--json]
-    python3 bridge/spirectl.py act <action> [--args '{"k":v}'] [--json]
-    python3 bridge/spirectl.py wait [--timeout 60] [--interval 0.4]
+    python3 bridge/spirectl.py act <action> [--args '{"k":v}'] [--wait|--wait-play] [--json]
+    python3 bridge/spirectl.py batch --acts '[{"action":"play","args":{"card_index":2}},{"action":"end_turn"}]'
+    python3 bridge/spirectl.py wait [--timeout 60] [--interval 0.2]
+    python3 bridge/spirectl.py profile [--log logs/run-*.log] [--budget 30]
+
+## Fast path (speed mandate)
+
+- `act --wait` — act, then poll until fingerprint settles (~0.35s stable), print
+  the settled state. One process, one decision cycle.
+- `act --wait-play` — after `end_turn`, poll until player Play phase resumes
+  (or screen leaves combat / game_over). Default wait mode for `end_turn`.
+- `batch --acts '[...]'` — mechanical act dump after Claude chose the tactic.
+  Settles between acts, aborts on `ok=false`. Use **high-to-low** `card_index`
+  so earlier plays don't invalidate later indices.
+- Exit code 3 = STALL (fingerprint frozen > `--stall-timeout`, default 18s) —
+  run the stop/launch/continue_run recovery ladder.
+- Every command prints `[rtt=… srv=… queue=… settle=…]` profiling bits and logs
+  them into `logs/run-*.log`. Summarize with `spirectl profile`.
+- Game-side: mod sets `FastMode=Instant`, FTUE off, `NonInteractiveMode` on
+  hello/start_run (see SpeedHooks.cs). `doctor` prints `speed=` from handshake.
 
 ## Actions
 
@@ -28,7 +46,8 @@ spirectl speaks JSON-lines TCP to the mimo-spire-bridge mod (default
 | start_run | character?, seed? | menu automation; character matches id/name substring |
 | abandon_run | — | abandon current run (iteration speed) |
 
-All actions respond `submitted` immediately; poll `wait` for the outcome.
+All actions respond `submitted` immediately; `--wait` / `--wait-play` / `batch`
+observe the outcome in the same process.
 
 ## Compact state fields
 
@@ -46,3 +65,16 @@ All actions respond `submitted` immediately; poll `wait` for the outcome.
 
 Use --json when you need fields missing from the compact view (e.g. visited
 coords, deck listing, intent class names).
+
+## Timing profile (per run)
+
+`spirectl profile` decomposes run-log timestamps + instrumented metrics:
+
+- bridge instrumentation: act/state rtt, server handle, dispatch queue,
+  tcp connect, game settle (animation/resolution), command total
+- wall-clock gaps: all / before act / after end_turn
+- estimated client decision time = gap − previous settle − previous rtt
+- budget check vs `--budget` minutes (default 30 = user mandate)
+
+External liveness: `bridge/watchdog-external.sh` (crontab, 5-min) notifies
+Feishu when game/bridge is down or run-log activity is stale >10min.

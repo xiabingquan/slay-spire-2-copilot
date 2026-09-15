@@ -99,7 +99,15 @@ public sealed class TcpServer
             }
             var tcs = new TaskCompletionSource<string>(TaskCreationOptions.RunContinuationsAsynchronously);
             string request = line;
-            dispatcher.Enqueue(() => tcs.TrySetResult(BridgeMod.HandleRequest(request)));
+            long enqueuedAt = Environment.TickCount64;
+            dispatcher.Enqueue(() =>
+            {
+                long startedAt = Environment.TickCount64;
+                string payload = BridgeMod.HandleRequest(request);
+                long handledMs = Environment.TickCount64 - startedAt;
+                long queueMs = startedAt - enqueuedAt;
+                tcs.TrySetResult(Protocol.InjectServerMs(payload, handledMs, queueMs));
+            });
             if (!tcs.Task.Wait(GameThreadTimeout))
             {
                 Write(writer, Protocol.Error("game thread timeout", null));
