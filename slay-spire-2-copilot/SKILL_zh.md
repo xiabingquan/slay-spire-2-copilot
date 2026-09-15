@@ -126,9 +126,9 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
 2. 仅把可泛化的经验写入 memory/lessons/lessons.md（排除一次性坏 RNG）；保持
    简短具体，被证伪的条目及时删除。
 3. 角色专属经验写入对应手册 memory/lessons/roles/<角色>.md。
-4. 对局中新观察到的游戏事实（卡牌/遗物/药水/能力/意图的效果）沉淀进
-   references/game/ 下对应文件——实战见到的记入 Verified，待验证的记入
-   Reported。memory 只记对局感悟与过程，不记游戏基础数据。
+4. 对局中新观察到的游戏事实（卡牌/遗物/药水/能力/意图的效果）以条目形式
+   直接写入 references/game/ 下对应文件。memory 只记对局感悟与过程，不记
+   游戏基础数据。
 5. 不将 memory 文件提交进仓库。
 6. 若用户已停止游玩：解除看门狗武装（见「运行时约定」）。
 

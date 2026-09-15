@@ -1,8 +1,7 @@
 # References index
 
 Paths are relative to this skill folder. bridge/ documents the tooling;
-game/ holds STS2 game facts — verified-in-play effects first, reported claims
-marked as such.
+game/ is the static game reference consulted during play.
 
 bridge/ — tooling:
 

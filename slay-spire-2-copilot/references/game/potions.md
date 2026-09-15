@@ -1,10 +1,6 @@
 # Potions
 
-Potion effects as observed in play.
+Static potion reference.
 
-## Reported
-
-- GAMBLERS_BREW: gained run 2 floor 1; effect pending first use.
-- BLESSING_OF_THE_FORGE: elite potion drop; effect pending first use.
-- STABLE_SERUM: raider reward potion; effect pending use (cleanse/immunity
-  suspect).
+- GAMBLERS_BREW / BLESSING_OF_THE_FORGE / STABLE_SERUM: effects pending
+  observation.

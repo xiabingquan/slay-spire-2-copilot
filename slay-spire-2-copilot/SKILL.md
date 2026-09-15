@@ -158,9 +158,8 @@ When the run ends (game_over screen, or abandon):
 3. Fold character-specific guidance into the character's playbook
    memory/lessons/roles/<character>.md.
 4. Fold newly observed game facts (card/relic/potion/power/intent effects)
-   into the matching references/game/ file — Verified once seen live,
-   Reported while pending. Memory holds play insights and run process only,
-   never game base data.
+   into the matching references/game/ file as plain entries. Memory holds
+   play insights and run process only, never game base data.
 5. Do not commit memory files into the repo.
 6. If the user has stopped playing: disarm the watchdog (see "Runtime
    conventions").
