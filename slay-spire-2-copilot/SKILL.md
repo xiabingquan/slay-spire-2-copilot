@@ -61,7 +61,7 @@ Execute in order; all of the following are the skill's own work:
 2. **Read memory** (before anything else; create any missing memory file at
    the first run end):
    - memory/lessons/lessons.md (generalizable decision lessons)
-   - memory/lessons/<character>.md (per-character playbook, when present)
+   - memory/lessons/roles/<character>.md (per-character playbook, when present)
    - memory/changelog.md (recent tool/strategy changes)
    - memory/runs/ (recent postmortems)
 
@@ -114,7 +114,7 @@ IRONCLAD, SILENT, DEFECT, NECROBINDER, REGENT. Use
 `act start_run --args '{"character":"SILENT"}'` etc.; the menu automation
 matches button names / character-id substrings and skips locked characters.
 Record the character used in each run's postmortem and run log; as play data
-accumulates, build per-character lessons in memory/lessons/<char>.md.
+accumulates, build per-character lessons in memory/lessons/roles/<char>.md.
 
 ### Game loop
 
@@ -156,7 +156,7 @@ When the run ends (game_over screen, or abandon):
    one-off bad RNG); keep it short and concrete, and prune entries that prove
    wrong.
 3. Fold character-specific guidance into the character's playbook
-   memory/lessons/<character>.md.
+   memory/lessons/roles/<character>.md.
 4. Do not commit memory files into the repo.
 5. If the user has stopped playing: disarm the watchdog (see "Runtime
    conventions").
@@ -232,7 +232,7 @@ memory/ — run memory:
 
 - `memory/lessons/lessons.md` — generalizable decision lessons: card play,
   rewards, map, events, mechanics
-- `memory/lessons/<char>.md` — per-character playbooks (grows with play data)
+- `memory/lessons/roles/<char>.md` — per-character playbooks (grows with play data)
 - `memory/changelog.md` — tool-fix and strategy-correction ledger
 - `memory/runs/` — per-run postmortems: result, key decisions, cause of death,
   lessons
