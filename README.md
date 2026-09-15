@@ -1,5 +1,7 @@
 # slay-spire-2-copilot
 
+> 中文版：[README_ZN.md](README_ZN.md)
+
 Claude Code / Codex skill and tooling that let an AI agent play Slay the Spire 2
 on a local machine. The agent reads live game state, makes fully autonomous
 decisions, and drives the game through a self-written communication mod, with a
