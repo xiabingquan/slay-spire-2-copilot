@@ -9,5 +9,10 @@ mod/obj/
 docs/research/external/
 docs/research/decompiled/
 mod/SpireBridge/.godot/
-logs/*.log
-logs/.current_run
+
+# Claude Code harness runtime (scheduled tasks, lock files, local settings)
+.claude/
+
+# Run logs & watchdog runtime — retained on disk only, never committed
+# (user directive 2026-09-16)
+logs/

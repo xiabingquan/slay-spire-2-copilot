@@ -164,3 +164,9 @@ Newest entries at the bottom. One line per change: date, nature, cause, fix.
   profile rtt=7ms settle=822ms cadence=3.6s. [feature] force_advance_turn action:
   clears RINGING/LOCK/PLOW powers (Creature.RemovePowerInternal) + re-queues
   sync end_turn — stall recovery without full SL reload.
+- 2026-09-16 [chore] repo hygiene (user directive): .claude/ and logs/ are
+  gitignored and untracked — runtime state stays on disk only. Tracked surface =
+  README/.gitignore + bridge/ + setup/ + mod/SpireBridge sources+manifest +
+  docs/ (protocol/design/research notes) + skill/ (knowledge/memory/postmortems).
+  SKILL.md run-end protocol updated: postmortem references log paths as disk
+  paths; never `git add` logs.
