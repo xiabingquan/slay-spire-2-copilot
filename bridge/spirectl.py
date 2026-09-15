@@ -10,6 +10,7 @@ import socket
 import subprocess
 import sys
 import time
+from datetime import datetime
 from pathlib import Path
 
 DEFAULT_HOST = "127.0.0.1"
@@ -132,6 +133,7 @@ class BridgeClient:
         self.sock = None
         self.rfile = None
         self.wfile = None
+        self.last_metrics = {}
 
     def connect(self):
         self.sock = socket.create_connection((self.host, self.port), timeout=self.timeout)
@@ -153,15 +155,28 @@ class BridgeClient:
             pass
 
     def request(self, payload):
-        if self.sock is None:
+        t0 = time.perf_counter()
+        fresh = self.sock is None
+        if fresh:
             self.connect()
+        t1 = time.perf_counter()
         assert self.wfile is not None and self.rfile is not None
         self.wfile.write(json.dumps(payload) + "\n")
         self.wfile.flush()
         line = self.rfile.readline()
+        t2 = time.perf_counter()
         if not line:
             raise ConnectionError("bridge closed the connection")
-        return json.loads(line.lstrip("﻿"))
+        resp = json.loads(line.lstrip("﻿"))
+        self.last_metrics = {
+            "connect_ms": int((t1 - t0) * 1000) if fresh else 0,
+            "rtt_ms": int((t2 - t1) * 1000),
+            "total_ms": int((t2 - t0) * 1000),
+            "server_ms": resp.get("server_ms"),
+            "queue_ms": resp.get("queue_ms"),
+            "resp_bytes": len(line),
+        }
+        return resp
 
     def hello(self):
         return self.request({"type": "hello"})
@@ -182,6 +197,67 @@ class BridgeClient:
     def __exit__(self, exc_type, exc_val, exc_tb):
         del exc_type, exc_val, exc_tb
         self.close()
+
+
+def combat_play_ready(state):
+    """True when the client may act: not in combat, combat over, or player Play phase."""
+    screen = state.get("screen")
+    if screen == "game_over" or (state.get("run") or {}).get("is_game_over"):
+        return True
+    if screen != "combat":
+        return True
+    combat = state.get("combat") or {}
+    return combat.get("current_side") == "Player" and combat.get("turn_phase") == "Play"
+
+
+def wait_for_settle(client, mode="settle", timeout=30.0, stable_s=0.35, stall_s=18.0):
+    """Poll until game state settles (mode=settle) or player turn resumes (mode=play).
+
+    Settle succeeds once the fingerprint has been stable for stable_s — including
+    the case where the act's returned state was already final (reward claims).
+    Play mode additionally requires Play phase / non-combat screen; a frozen
+    non-play state longer than stall_s reports stalled=True.
+    Returns (state, settle_ms, stalled). settle_ms is wall time spent polling.
+    """
+    t0 = time.perf_counter()
+    state = client.state()
+    last_fp = state.get("fingerprint")
+    stable_since = time.perf_counter()
+    while time.perf_counter() - t0 < timeout:
+        time.sleep(0.15)
+        try:
+            state = client.state()
+        except (ConnectionError, OSError, json.JSONDecodeError) as exc:
+            print(f"settle poll failed: {exc}")
+            return state, int((time.perf_counter() - t0) * 1000), True
+        now = time.perf_counter()
+        fp = state.get("fingerprint")
+        if fp != last_fp:
+            last_fp = fp
+            stable_since = now
+        elapsed = now - t0
+        if mode == "play":
+            if combat_play_ready(state) and now - stable_since >= stable_s:
+                return state, int(elapsed * 1000), False
+            if elapsed > stall_s and not combat_play_ready(state):
+                return state, int(elapsed * 1000), True
+        else:
+            if now - stable_since >= stable_s:
+                return state, int(elapsed * 1000), False
+    return state, int((time.perf_counter() - t0) * 1000), True
+
+
+def metrics_line(metrics):
+    if not metrics:
+        return ""
+    bits = [f"rtt={metrics.get('rtt_ms')}ms"]
+    if metrics.get("connect_ms"):
+        bits.append(f"conn={metrics['connect_ms']}ms")
+    if metrics.get("server_ms") is not None:
+        bits.append(f"srv={metrics['server_ms']}ms")
+    if metrics.get("queue_ms") is not None:
+        bits.append(f"queue={metrics['queue_ms']}ms")
+    return " ".join(bits)
 
 
 def render_compact(state):
@@ -308,7 +384,7 @@ def cmd_doctor(args):
                 print(
                     f"[4] bridge handshake: OK protocol={hello.get('protocol_version')} "
                     f"game={hello.get('game_version')} mod={hello.get('mod_version')} "
-                    f"assembly_hash={hello.get('assembly_hash')}"
+                    f"assembly_hash={hello.get('assembly_hash')} speed={hello.get('speed', 'n/a')}"
                 )
                 state = client.state()
                 if state.get("type") == "error":
@@ -330,9 +406,11 @@ def cmd_doctor(args):
 def cmd_state(args):
     with BridgeClient(host=args.host, port=args.port) as client:
         state = client.state()
-    log_run_event("state", {"state": state})
+        metrics = dict(client.last_metrics)
+    log_run_event("state", {"state": state, "metrics": metrics})
     if state.get("screen") == "game_over" or (state.get("run") or {}).get("is_game_over"):
         log_run_event("run_end", {"state": state}, finalize=True)
+    print(f"[{metrics_line(metrics)}]")
     if args.json:
         print(json.dumps(state, indent=2, ensure_ascii=False))
     else:
@@ -340,22 +418,274 @@ def cmd_state(args):
     return 0
 
 
+def _wait_mode_for(action, explicit):
+    if explicit in ("settle", "play"):
+        return explicit
+    if action == "end_turn":
+        return "play"
+    return "settle"
+
+
 def cmd_act(args):
     act_args = json.loads(args.args) if args.args else None
+    wait_mode = None
+    if args.wait or args.wait_play or args.wait_mode:
+        wait_mode = _wait_mode_for(args.action, args.wait_mode or ("play" if args.wait_play else "settle"))
     with BridgeClient(host=args.host, port=args.port) as client:
+        t0 = time.perf_counter()
         result = client.act(args.action, act_args)
+        metrics = dict(client.last_metrics)
+        act_rtt_ms = metrics.get("rtt_ms") or 0
+        settle_ms = 0
+        stalled = False
+        state = result.get("state")
+        if wait_mode:
+            state, settle_ms, stalled = wait_for_settle(
+                client,
+                mode=wait_mode,
+                timeout=args.wait_timeout,
+                stall_s=args.stall_timeout,
+            )
+            if state is not None:
+                result["state"] = state
+        total_ms = int((time.perf_counter() - t0) * 1000)
+        del act_rtt_ms  # folded into metrics below
     rotate = args.action in ("start_run", "continue_run")
-    log_run_event("act", {"action": args.action, "args": act_args, "result": result}, rotate=rotate)
+    log_run_event(
+        "act",
+        {
+            "action": args.action,
+            "args": act_args,
+            "result": result,
+            "metrics": {**metrics, "settle_ms": settle_ms, "stalled": stalled, "total_ms": total_ms},
+            "wait_mode": wait_mode,
+        },
+        rotate=rotate,
+    )
     if (result.get("state") or {}).get("screen") == "game_over":
         log_run_event("run_end", {"last_action": args.action, "state": result.get("state")}, finalize=True)
-    print(f"ok={result.get('ok')} message={result.get('message')}")
+    settle_note = f" settle={settle_ms}ms mode={wait_mode}" if wait_mode else ""
+    stall_note = " STALL" if stalled else ""
+    print(f"ok={result.get('ok')} message={result.get('message')} [{metrics_line(metrics)}{settle_note}{stall_note}]")
     state = result.get("state")
     if state:
         if args.json:
             print(json.dumps(state, indent=2, ensure_ascii=False))
         else:
             print(render_compact(state))
+    if stalled:
+        return 3
     return 0 if result.get("ok") else 1
+
+
+def cmd_batch(args):
+    """Sequential mechanical acts after Claude chose the tactic.
+
+    Settles between acts (re-read), aborts on the first ok=false. Index-shift
+    arithmetic for hand cards is the caller's responsibility — prefer
+    high-to-low card_index so earlier plays don't invalidate later ones.
+    """
+    acts = json.loads(args.acts)
+    if not isinstance(acts, list) or not acts:
+        print("batch requires a non-empty JSON array of {action,args?}", file=sys.stderr)
+        return 2
+    with BridgeClient(host=args.host, port=args.port) as client:
+        state = client.state()
+        print(f"batch start [{metrics_line(client.last_metrics)}]")
+        print(render_compact(state) if not args.json else json.dumps(state, indent=2, ensure_ascii=False))
+        for i, item in enumerate(acts):
+            action = item.get("action")
+            act_args = item.get("args")
+            if not action:
+                print(f"batch[{i}] missing action — abort", file=sys.stderr)
+                return 2
+            result = client.act(action, act_args)
+            metrics = dict(client.last_metrics)
+            log_run_event("act", {"action": action, "args": act_args, "result": result, "metrics": metrics, "batch": i})
+            ok = bool(result.get("ok"))
+            print(f"batch[{i}] {action} ok={ok} {result.get('message')} [{metrics_line(metrics)}]")
+            if not ok:
+                state = client.state()
+                print("batch aborted on failed act")
+                print(render_compact(state) if not args.json else json.dumps(state, indent=2, ensure_ascii=False))
+                return 1
+            is_last = i == len(acts) - 1
+            if is_last and not args.wait_final:
+                state = result.get("state") or client.state()
+                print(render_compact(state) if not args.json else json.dumps(state, indent=2, ensure_ascii=False))
+                break
+            mode = "settle"
+            if is_last and args.wait_final:
+                mode = _wait_mode_for(action, None)
+            state, settle_ms, stalled = wait_for_settle(
+                client,
+                mode=mode,
+                timeout=args.wait_timeout,
+                stall_s=args.stall_timeout,
+            )
+            print(f"  settled {settle_ms}ms mode={mode}{' STALL' if stalled else ''}")
+            print(render_compact(state) if not args.json else json.dumps(state, indent=2, ensure_ascii=False))
+            log_run_event(
+                "wait_change" if not stalled else "wait_timeout",
+                {"state": state, "metrics": {"settle_ms": settle_ms, "stalled": stalled}, "batch": i, "mode": mode},
+            )
+            if stalled:
+                return 3
+            if (state or {}).get("screen") == "game_over":
+                log_run_event("run_end", {"last_action": action, "state": state}, finalize=True)
+                print("batch: game_over reached")
+                return 0
+    return 0
+
+
+def _load_run_events(path=None):
+    if path:
+        target = Path(path)
+    else:
+        pointer = RUNLOG_POINTER.read_text(encoding="utf-8").strip() if RUNLOG_POINTER.exists() else ""
+        if not pointer:
+            return None, []
+        target = RUNLOG_DIR / pointer
+    if not target.exists():
+        return target, []
+    events = []
+    with target.open(encoding="utf-8") as handle:
+        for line in handle:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                events.append(json.loads(line))
+            except json.JSONDecodeError:
+                continue
+    return target, events
+
+
+def _percentile(values, p):
+    if not values:
+        return None
+    ordered = sorted(values)
+    idx = min(len(ordered) - 1, int(len(ordered) * p))
+    return ordered[idx]
+
+
+def cmd_profile(args):
+    """Summarize where time goes in a run log: bridge RTT, game settle, client gaps."""
+    path, events = _load_run_events(args.log)
+    if not events:
+        print(f"no run log events ({path})")
+        return 1
+    print(f"== profile {path} ==")
+    t0, tN = events[0]["ts"], events[-1]["ts"]
+    print(f"events={len(events)} span {t0} -> {tN}")
+
+    def parse(ts):
+        return datetime.strptime(ts, "%Y-%m-%d %H:%M:%S")
+
+    span_s = (parse(tN) - parse(t0)).total_seconds()
+    acts = [e for e in events if e["kind"] == "act"]
+    run_ends = [e for e in events if e["kind"] == "run_end"]
+
+    rtt, server, queue, settle, connect, total = [], [], [], [], [], []
+    for e in events:
+        m = e.get("metrics") or {}
+        if m.get("rtt_ms") is not None:
+            rtt.append(m["rtt_ms"])
+        if m.get("server_ms") is not None:
+            server.append(m["server_ms"])
+        if m.get("queue_ms") is not None:
+            queue.append(m["queue_ms"])
+        if m.get("settle_ms") is not None:
+            settle.append(m["settle_ms"])
+        if m.get("connect_ms"):
+            connect.append(m["connect_ms"])
+        if m.get("total_ms") is not None:
+            total.append(m["total_ms"])
+
+    def block(name, vals, unit="ms"):
+        if not vals:
+            print(f"  {name}: n/a (no instrumentation in this log)")
+            return
+        print(
+            f"  {name}: n={len(vals)} p50={_percentile(vals, 0.5)}{unit} "
+            f"p90={_percentile(vals, 0.9)}{unit} p99={_percentile(vals, 0.99)}{unit} "
+            f"max={max(vals)}{unit} avg={sum(vals) // len(vals)}{unit}"
+        )
+
+    print("bridge instrumentation:")
+    block("act/state rtt", rtt)
+    block("server handle", server)
+    block("dispatch queue", queue)
+    block("tcp connect", connect)
+    block("game settle (wait)", settle)
+    block("command total", total)
+
+    # Client-side gaps from timestamps (works on old logs too).
+    gaps = []
+    for a, b in zip(events, events[1:]):
+        delta = (parse(b["ts"]) - parse(a["ts"])).total_seconds()
+        gaps.append((delta, a, b))
+    act_gaps = [(d, a, b) for d, a, b in gaps if b.get("kind") == "act"]
+    after_end_turn = [
+        d for d, a, _b in gaps
+        if a.get("kind") == "act" and (a.get("action") == "end_turn" or (a.get("result") or {}).get("action") == "end_turn")
+    ]
+    print("wall-clock gaps (timestamp deltas between client calls):")
+    all_d = [d for d, *_ in gaps]
+    if all_d:
+        print(
+            f"  all gaps: n={len(all_d)} p50={_percentile(all_d, 0.5):.0f}s "
+            f"p90={_percentile(all_d, 0.9):.0f}s max={max(all_d):.0f}s sum={sum(all_d):.0f}s"
+        )
+    if act_gaps:
+        ad = [d for d, *_ in act_gaps]
+        print(
+            f"  gaps before act: n={len(ad)} p50={_percentile(ad, 0.5):.0f}s "
+            f"p90={_percentile(ad, 0.9):.0f}s max={max(ad):.0f}s"
+        )
+    if after_end_turn:
+        print(
+            f"  after end_turn: n={len(after_end_turn)} p50={_percentile(after_end_turn, 0.5):.0f}s "
+            f"p90={_percentile(after_end_turn, 0.9):.0f}s max={max(after_end_turn):.0f}s "
+            f"sum={sum(after_end_turn):.0f}s"
+        )
+
+    # Decomposition when settle instrumentation exists.
+    if settle and act_gaps:
+        # Approximate client decision time = gap before act - previous settle - previous rtt
+        decisions = []
+        prev_settle = 0.0
+        prev_rtt = 0.0
+        for d, a, b in act_gaps:
+            client_est = d - prev_settle / 1000.0 - prev_rtt / 1000.0
+            if client_est >= 0:
+                decisions.append(client_est)
+            m = (a.get("metrics") or {})
+            # a is the previous event; its settle applies to the gap we just measured
+            if m.get("settle_ms") is not None:
+                prev_settle = m["settle_ms"]
+            if m.get("rtt_ms") is not None:
+                prev_rtt = m["rtt_ms"]
+        if decisions:
+            print("estimated client decision time (gap - game settle - bridge rtt):")
+            print(
+                f"  decisions: n={len(decisions)} p50={_percentile(decisions, 0.5):.1f}s "
+                f"p90={_percentile(decisions, 0.9):.1f}s max={max(decisions):.1f}s "
+                f"sum={sum(decisions):.0f}s"
+            )
+
+    if acts:
+        print(f"acts={len(acts)} run_span={span_s:.0f}s avg_act_cadence={span_s / max(1, len(acts)):.1f}s")
+    if run_ends:
+        print(f"run_end events: {len(run_ends)}")
+    stalls = [e for e in events if (e.get("metrics") or {}).get("stalled")]
+    print(f"stalls flagged: {len(stalls)}")
+    budget = args.budget * 60
+    if span_s > budget:
+        print(f"BUDGET OVER: span {span_s:.0f}s > {args.budget}min ({budget:.0f}s) by {span_s - budget:.0f}s")
+    else:
+        print(f"budget ok: span {span_s:.0f}s <= {args.budget}min")
+    return 0
 
 
 def cmd_wait(args):
@@ -367,13 +697,14 @@ def cmd_wait(args):
             time.sleep(args.interval)
             try:
                 state = client.state()
+                metrics = dict(client.last_metrics)
             except (ConnectionError, OSError, json.JSONDecodeError) as exc:
                 print(f"poll failed: {exc}")
                 return 1
             fp = state.get("fingerprint")
             if fp != prev:
-                print(f"changed -> fingerprint={fp} screen={state.get('screen')}")
-                log_run_event("wait_change", {"state": state})
+                print(f"changed -> fingerprint={fp} screen={state.get('screen')} [{metrics_line(metrics)}]")
+                log_run_event("wait_change", {"state": state, "metrics": metrics})
                 print(render_compact(state) if not args.json else json.dumps(state, indent=2, ensure_ascii=False))
                 return 0
     print(f"timeout after {args.timeout}s (fingerprint={prev})")
@@ -435,6 +766,64 @@ def cmd_launch(args):
     return 1
 
 
+def cmd_sl(args):
+    """Save/Load reload: quit to menu, continue_run, restore current room.
+
+    User-directed SL mechanism — when a fight looks bad, reload the room-entry
+    save and replay with foreknowledge (enemy intents, draw order, debuff
+    sequence observed on the failed attempt). Combat re-seeds from the same
+    room save, so the information is reusable.
+    """
+    t0 = time.perf_counter()
+    print("[sl] stopping game")
+    cmd_stop(args)
+    t_stop = time.perf_counter()
+    print("[sl] launching")
+    launch_args = argparse.Namespace(host=args.host, port=args.port, timeout=120.0)
+    if cmd_launch(launch_args) != 0:
+        print("[sl] launch failed", file=sys.stderr)
+        return 2
+    t_launch = time.perf_counter()
+    # Launch returns on bridge handshake; logo may still be playing.
+    print("[sl] waiting for main menu")
+    with BridgeClient(host=args.host, port=args.port) as client:
+        deadline = time.time() + args.menu_timeout
+        state = client.state()
+        while time.time() < deadline and state.get("screen") not in ("menu", "map", "combat"):
+            time.sleep(0.4)
+            state = client.state()
+        print(f"[sl] screen={state.get('screen')} type={state.get('screen_type')}")
+        if state.get("screen") != "menu":
+            if state.get("screen") in ("map", "combat"):
+                print("[sl] run still active — no reload needed")
+                print(render_compact(state))
+                return 0
+        print("[sl] continue_run")
+        result = client.act("continue_run")
+        log_run_event("act", {"action": "continue_run", "args": {"via": "sl"}, "result": result}, rotate=True)
+        print(f"ok={result.get('ok')} {result.get('message')}")
+        state, settle_ms, stalled = wait_for_settle(client, mode="settle", timeout=args.wait_timeout)
+        t_end = time.perf_counter()
+        log_run_event(
+            "sl_reload",
+            {
+                "state": state,
+                "timings_ms": {
+                    "stop": int((t_stop - t0) * 1000),
+                    "launch": int((t_launch - t_stop) * 1000),
+                    "continue_settle": settle_ms,
+                    "total": int((t_end - t0) * 1000),
+                },
+            },
+        )
+        print(f"[sl] total={int((t_end - t0) * 1000)}ms stop={int((t_stop - t0) * 1000)}ms "
+              f"launch={int((t_launch - t_stop) * 1000)}ms settle={settle_ms}ms"
+              f"{' STALL' if stalled else ''}")
+        print(render_compact(state) if not args.json else json.dumps(state, indent=2, ensure_ascii=False))
+        return 3 if stalled else 0
+    return 0
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(prog="spirectl", description=__doc__)
     parser.add_argument("--host", default=os.environ.get("SPIREBRIDGE_HOST", DEFAULT_HOST))
@@ -450,14 +839,40 @@ def main(argv=None):
     p_act.add_argument("action", help="action name, e.g. play / end_turn / choose / map_select")
     p_act.add_argument("--args", help="action args as JSON object, e.g. '{\"card_index\":0}'")
     p_act.add_argument("--json", action="store_true", help="print returned state as JSON")
+    p_act.add_argument("--wait", action="store_true", help="after act, poll until state settles then print it")
+    p_act.add_argument("--wait-play", action="store_true",
+                       help="after act, poll until player Play phase resumes (or non-combat screen)")
+    p_act.add_argument("--wait-mode", choices=("settle", "play"), help="explicit wait mode override")
+    p_act.add_argument("--wait-timeout", type=float, default=30.0, help="max seconds to wait for settle/play")
+    p_act.add_argument("--stall-timeout", type=float, default=18.0,
+                       help="declare STALL if fingerprint freezes this long")
+
+    p_batch = sub.add_parser("batch", help="run a JSON array of acts sequentially with settle between")
+    p_batch.add_argument("--acts", required=True,
+                         help='JSON array e.g. \'[{"action":"play","args":{"card_index":2}},{"action":"end_turn"}]\'')
+    p_batch.add_argument("--json", action="store_true")
+    p_batch.add_argument("--wait-final", dest="wait_final", action="store_true", default=True,
+                         help="wait for settle/play after the last act (default on)")
+    p_batch.add_argument("--no-wait-final", dest="wait_final", action="store_false")
+    p_batch.add_argument("--wait-timeout", type=float, default=30.0)
+    p_batch.add_argument("--stall-timeout", type=float, default=18.0)
 
     p_wait = sub.add_parser("wait", help="poll until game state fingerprint changes")
     p_wait.add_argument("--timeout", type=float, default=60.0)
-    p_wait.add_argument("--interval", type=float, default=0.4)
+    p_wait.add_argument("--interval", type=float, default=0.2)
     p_wait.add_argument("--json", action="store_true")
+
+    p_profile = sub.add_parser("profile", help="summarize run-log timing: rtt/settle/client gaps")
+    p_profile.add_argument("--log", help="run log path (default: current run)")
+    p_profile.add_argument("--budget", type=float, default=30.0, help="target minutes per run")
 
     p_launch = sub.add_parser("launch", help="launch the game via Steam and wait for the bridge")
     p_launch.add_argument("--timeout", type=float, default=120.0)
+
+    p_sl = sub.add_parser("sl", help="save/load reload: stop -> launch -> continue_run (room-entry save)")
+    p_sl.add_argument("--json", action="store_true")
+    p_sl.add_argument("--menu-timeout", type=float, default=45.0)
+    p_sl.add_argument("--wait-timeout", type=float, default=30.0)
 
     sub.add_parser("stop", help="gracefully stop the game (quiet quit -> TERM -> KILL)")
 
@@ -466,8 +881,11 @@ def main(argv=None):
         "doctor": cmd_doctor,
         "state": cmd_state,
         "act": cmd_act,
+        "batch": cmd_batch,
         "wait": cmd_wait,
+        "profile": cmd_profile,
         "launch": cmd_launch,
+        "sl": cmd_sl,
         "stop": cmd_stop,
     }
     try:
