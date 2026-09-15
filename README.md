@@ -16,9 +16,9 @@ postmortem and starts the next run.
   postmortem, updates the experience store, and starts the next run; the
   bundled external watchdog script can periodically check that the game
   process, bridge, and logs are alive
-- **Cross-run memory**: lessons and tool-fix records persist in `memory/` and
-  auto-load in later sessions; tool defects are fixed in this repo and take
-  effect on the next run
+- **Cross-run memory**: play data lives under `memory/` as local, untracked
+  files and auto-loads in later sessions; tool defects are fixed in this repo
+  and take effect on the next run
 
 ## How to use
 
@@ -58,7 +58,7 @@ Manual commands for troubleshooting and intervention:
         Scripts/                           (shell scripts: mod install, watchdog)
         mod/SpireBridge/                   (in-game communication mod source)
         references/                        (CLI cheat sheet, wire protocol, play knowledge)
-        memory/                            (run memory: lessons, changelog, postmortems)
+        memory/                            (run memory — local, untracked)
 
 Skill symlink: `~/.claude/skills/slay-spire-2-copilot` → the skill folder above.
 Runtime logs and watchdog state are written to user directories outside the
@@ -86,8 +86,8 @@ localhost (127.0.0.1:17612):
   RINGING freezes have server-side forced advance, plus `sl` save reload
   (~18s, used to replay a fight with foreknowledge)
 - **Memory & iteration**: lessons, postmortems, and changelog under `memory/`
-  update with each run and auto-load next session; tool fixes land directly in
-  this repo
+  update with each run and auto-load next session; memory stays local and
+  untracked, while tool fixes land directly in this repo
 
 For the detailed protocol see `slay-spire-2-copilot/references/protocol.md`;
 for the CLI cheat sheet see `slay-spire-2-copilot/references/commands.md`.

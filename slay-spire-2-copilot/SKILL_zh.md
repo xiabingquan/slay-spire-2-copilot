@@ -45,10 +45,12 @@ Spire 2 via Claude Code or Codex"。
 
          SPIREBRIDGE_LOG_DIR=<绝对文件夹> python3 bridge/spirectl.py <子命令>
 
-2. **读记忆**（先于其他操作）：
-   - memory/MEMORY.md（索引）
-   - memory/lessons.md（决策经验法则）
+2. **读记忆**（先于其他操作；memory/ 为本地文件且不入库——文件缺失时以空记忆
+   开局，在首次对局结束时创建）：
+   - memory/lessons/lessons.md（通用决策经验）
+   - memory/lessons/<角色>.md（分角色手册，存在时读取）
    - memory/changelog.md（最近的工具/策略变更）
+   - memory/runs/（近期复盘）
 
 3. **环境检查与 mod 自装/自愈**（cwd = 本 skill 文件夹
    `<repo>/slay-spire-2-copilot`，全部运行时文件都在此处）：
@@ -89,7 +91,7 @@ IRONCLAD / SILENT / DEFECT / NECROBINDER / REGENT，或「铁甲战士」「寂�
 IRONCLAD、SILENT、DEFECT、NECROBINDER、REGENT。使用
 `act start_run --args '{"character":"SILENT"}'` 等；菜单自动化按按钮名/角色 id
 子串匹配，自动跳过未解锁角色。在复盘与运行日志中记录每局所用角色；随游玩数据
-积累，在 memory/strategies/<角色>.md 中建立分角色经验。
+积累，在 memory/lessons/<角色>.md 中建立分角色经验。
 
 ### 游戏循环
 
@@ -121,11 +123,11 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
 
 1. 将复盘写入 memory/runs/<YYYY-MM-DD>-<角色>-floor<N>.md：结果、关键决策、
    有效的做法、导致失败的原因、一条经验。复盘中引用日志文件夹与具体的 run
-   文件名（仅磁盘路径）——只提交 markdown 本身。
-2. 仅把可泛化的经验写入 memory/lessons.md（排除一次性坏 RNG）；保持简短具体，
-   被证伪的条目及时删除。
-3. 若新增了文件，更新 memory/MEMORY.md 索引。
-4. 以 [docs] 性质将记忆变更提交进仓库。
+   文件名（仅磁盘路径）。
+2. 仅把可泛化的经验写入 memory/lessons/lessons.md（排除一次性坏 RNG）；保持
+   简短具体，被证伪的条目及时删除。
+3. 角色专属经验写入对应手册 memory/lessons/<角色>.md。
+4. memory/ 仅存本地（gitignore）：文件缺失时按需创建；绝不提交进仓库。
 5. 若用户已停止游玩：解除看门狗武装（见「运行时约定」）。
 
 ## 自我迭代
@@ -183,11 +185,10 @@ references/ — 查阅知识：
 - `references/intents.md` — 敌人意图解读
 - `references/afflictions.md` — 状态与负面效果
 
-memory/ — 对局记忆：
+memory/ — 对局记忆（本地，gitignore）：
 
-- `memory/lessons.md` — 决策经验法则：出牌、奖励、地图、事件与机制教训
-- `memory/strategies/<角色>.md` — 分角色策略（随游玩数据积累）
-- `memory/MEMORY.md` — 记忆索引
+- `memory/lessons/lessons.md` — 通用决策经验：出牌、奖励、地图、事件与机制教训
+- `memory/lessons/<角色>.md` — 分角色手册（随游玩数据积累）
 - `memory/changelog.md` — 工具修复与策略纠偏台账
 - `memory/runs/` — 每局复盘：结果、关键决策、死因、经验
 

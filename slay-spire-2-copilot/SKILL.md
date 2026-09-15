@@ -58,10 +58,13 @@ Execute in order; all of the following are the skill's own work:
 
          SPIREBRIDGE_LOG_DIR=<abs-folder> python3 bridge/spirectl.py <subcommand>
 
-2. **Read memory** (before anything else):
-   - memory/MEMORY.md (index)
-   - memory/lessons.md (decision rules of thumb)
+2. **Read memory** (before anything else; memory/ holds local files that are
+   gitignored — when a file is missing, start from empty memory and create it
+   at the first run end):
+   - memory/lessons/lessons.md (generalizable decision lessons)
+   - memory/lessons/<character>.md (per-character playbook, when present)
    - memory/changelog.md (recent tool/strategy changes)
+   - memory/runs/ (recent postmortems)
 
 3. **Environment check and mod self-install / self-heal** (cwd = this skill
    folder `<repo>/slay-spire-2-copilot`, which holds all runtime files):
@@ -112,7 +115,7 @@ IRONCLAD, SILENT, DEFECT, NECROBINDER, REGENT. Use
 `act start_run --args '{"character":"SILENT"}'` etc.; the menu automation
 matches button names / character-id substrings and skips locked characters.
 Record the character used in each run's postmortem and run log; as play data
-accumulates, build per-character lessons in memory/strategies/<char>.md.
+accumulates, build per-character lessons in memory/lessons/<char>.md.
 
 ### Game loop
 
@@ -149,11 +152,14 @@ When the run ends (game_over screen, or abandon):
 1. Write a postmortem to memory/runs/<YYYY-MM-DD>-<character>-floor<N>.md:
    result, key decisions, what worked, what killed the run, one lesson. Inside
    the postmortem cite the log folder and the concrete run file name as disk
-   paths only — commit just the markdown.
-2. Record only generalizable lessons in memory/lessons.md (exclude one-off bad
-   RNG); keep it short and concrete, and prune entries that prove wrong.
-3. If files were added, update the memory/MEMORY.md index.
-4. Commit the memory changes to the repo with nature [docs].
+   paths only.
+2. Record only generalizable lessons in memory/lessons/lessons.md (exclude
+   one-off bad RNG); keep it short and concrete, and prune entries that prove
+   wrong.
+3. Fold character-specific guidance into the character's playbook
+   memory/lessons/<character>.md.
+4. Memory is local-only (gitignored): create missing files as needed; never
+   commit memory into the repo.
 5. If the user has stopped playing: disarm the watchdog (see "Runtime
    conventions").
 
@@ -224,12 +230,11 @@ references/ — consult knowledge:
 - `references/intents.md` — reading enemy intents
 - `references/afflictions.md` — statuses and debuffs
 
-memory/ — run memory:
+memory/ — run memory (local, gitignored):
 
-- `memory/lessons.md` — decision rules of thumb: card play, rewards, map,
-  events, and mechanics lessons
-- `memory/strategies/<char>.md` — per-character strategies (grows with play data)
-- `memory/MEMORY.md` — memory index
+- `memory/lessons/lessons.md` — generalizable decision lessons: card play,
+  rewards, map, events, mechanics
+- `memory/lessons/<char>.md` — per-character playbooks (grows with play data)
 - `memory/changelog.md` — tool-fix and strategy-correction ledger
 - `memory/runs/` — per-run postmortems: result, key decisions, cause of death,
   lessons

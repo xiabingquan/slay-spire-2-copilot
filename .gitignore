@@ -17,3 +17,6 @@ slay-spire-2-copilot/mod/SpireBridge/.godot/
 # Untracked local reference archive (design/research material, kept for
 # occasional lookup only; not part of the skill and not referenced by it).
 local-archive/
+
+# Run memory is the user's local play data; never committed.
+slay-spire-2-copilot/memory/
