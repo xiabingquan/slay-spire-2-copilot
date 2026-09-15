@@ -55,6 +55,7 @@ public static class ActionExecutor
             {
                 "play" => Play(args),
                 "end_turn" => EndTurn(),
+                "force_combat_end" => ForceCombatEnd(),
                 "use_potion" => UsePotion(args),
                 "map_select" => MapSelect(args),
                 "choose" => Choose(args),
@@ -137,13 +138,30 @@ public static class ActionExecutor
 
     private static (bool, string) EndTurn()
     {
-        if (!TryGetCombatPlayer(out Player? player, out _, out PlayerCombatState? pcs) || pcs == null)
+        if (!TryGetCombatPlayer(out Player? player, out CombatState combat, out PlayerCombatState? pcs) || pcs == null)
         {
             return (false, "not in an active combat");
         }
         if (pcs.Phase != PlayerTurnPhase.Play)
         {
             return (false, $"not player play phase (phase={pcs.Phase})");
+        }
+        // Victory-path stall (observed when the killing blow lands via HAVOC or
+        // other non-attack resolution): enemies are gone but combat never ends.
+        // CheckWinCondition -> EndCombatInternal is the public finisher.
+        bool anyEnemyAlive = false;
+        foreach (Creature enemy in combat.Enemies)
+        {
+            if (enemy.IsAlive)
+            {
+                anyEnemyAlive = true;
+                break;
+            }
+        }
+        if (!anyEnemyAlive)
+        {
+            Fire(ForceCombatEndAsync, "combat win-condition end");
+            return (true, "submitted end_turn (win-condition force path)");
         }
         Player playerRef = player!;
         int turnNumber = pcs.TurnNumber;
@@ -155,6 +173,15 @@ public static class ActionExecutor
         {
             try
             {
+                // Re-check: an enemy may have died between the submit snapshot
+                // and main-thread execution.
+                CombatState? live = CombatManager.Instance.DebugOnlyGetState();
+                bool aliveNow = live != null && live.Enemies.Any(e => e.IsAlive);
+                if (!aliveNow)
+                {
+                    await ForceCombatEndAsync();
+                    return;
+                }
                 CombatManager.Instance.OnEndedTurnLocally();
                 RunManager.Instance.ActionQueueSynchronizer.RequestEnqueue(
                     new EndPlayerTurnAction(playerRef, turnNumber));
@@ -168,6 +195,30 @@ public static class ActionExecutor
             }
         }, "end turn");
         return (true, "submitted end_turn (sync queue path)");
+    }
+
+    private static async Task ForceCombatEndAsync()
+    {
+        CombatManager cm = CombatManager.Instance;
+        BridgeMod.LogInfo(
+            $"force combat end: isEnding={cm.IsEnding} inProgress={cm.IsInProgress}");
+        bool ended = await cm.CheckWinCondition();
+        if (!ended && cm.IsInProgress)
+        {
+            BridgeMod.LogErr("force combat end: CheckWinCondition declined, calling EndCombatInternal");
+            await cm.EndCombatInternal();
+        }
+        BridgeMod.LogInfo($"force combat end done: inProgress={cm.IsInProgress}");
+    }
+
+    private static (bool, string) ForceCombatEnd()
+    {
+        if (!TryGetCombatPlayer(out _, out _, out _))
+        {
+            return (false, "not in an active combat");
+        }
+        Fire(ForceCombatEndAsync, "force combat end");
+        return (true, "submitted force_combat_end");
     }
 
     private static (bool, string) UsePotion(JsonElement args)
