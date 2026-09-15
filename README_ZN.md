@@ -2,7 +2,7 @@
 
 > 英文版：[README.md](README.md)
 
-让 Claude Code / Codex 在本机**自动游玩《杀戮尖塔 2》**的 AI 副驾驶（copilot）。
+让 Claude Code / Codex 在本机自动游玩《杀戮尖塔 2》的 AI 副驾驶（copilot）。
 你只要说一句「用 Claude Code 打一局杀戮尖塔2」，智能体就会自己读牌局、做决策、
 点技能、推图、打 Boss，直到对局结束并写下复盘。
 
