@@ -16,9 +16,9 @@ postmortem and starts the next run.
   postmortem, updates the experience store, and starts the next run; the
   bundled external watchdog script can periodically check that the game
   process, bridge, and logs are alive
-- **Cross-run memory**: lessons and tool-fix records persist in `memory/` and
-  auto-load in later sessions; tool defects are fixed in this repo and take
-  effect on the next run
+- **Cross-run memory**: lessons and run records under `memory/` auto-load in
+  later sessions; tool defects are fixed in this repo and take effect on the
+  next run
 
 ## How to use
 
@@ -43,7 +43,7 @@ Run logs are written to the given folder as `run-20260916-013052-a3f9c012.log`
 Manual commands for troubleshooting and intervention:
 
     cd slay-spire-2-copilot/slay-spire-2-copilot
-    bash Scripts/install-mod.sh                     # build/install mod
+    bash scripts/install-mod.sh                     # build/install mod
     python3 bridge/spirectl.py launch               # launch the game
     SPIREBRIDGE_LOG_DIR=<log-folder> python3 bridge/spirectl.py doctor
 
@@ -55,10 +55,11 @@ Manual commands for troubleshooting and intervention:
       slay-spire-2-copilot/                (skill folder — all runtime files)
         SKILL.md                           (skill definition / invocation contract)
         bridge/                            (spirectl.py CLI)
-        Scripts/                           (shell scripts: mod install, watchdog)
+        scripts/                           (shell scripts: mod install, watchdog)
         mod/SpireBridge/                   (in-game communication mod source)
-        docs/                              (protocol spec, API research notes)
-        doc/ memory/ references/           (play knowledge, run memory, CLI cheat sheet)
+        references/bridge/                 (CLI cheat sheet, wire protocol)
+        references/game/                   (cards, powers, relics, potions, statuses, intents)
+        memory/                            (run memory: lessons, changelog, postmortems)
 
 Skill symlink: `~/.claude/skills/slay-spire-2-copilot` → the skill folder above.
 Runtime logs and watchdog state are written to user directories outside the
@@ -89,8 +90,9 @@ localhost (127.0.0.1:17612):
   update with each run and auto-load next session; tool fixes land directly in
   this repo
 
-For the detailed protocol see `slay-spire-2-copilot/docs/protocol.md`; for the
-CLI cheat sheet see `slay-spire-2-copilot/references/commands.md`.
+For the detailed protocol see
+`slay-spire-2-copilot/references/bridge/protocol.md`; for the CLI cheat sheet
+see `slay-spire-2-copilot/references/bridge/commands.md`.
 
 ## Acknowledgements
 

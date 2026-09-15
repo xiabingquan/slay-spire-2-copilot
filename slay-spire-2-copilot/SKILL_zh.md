@@ -45,17 +45,18 @@ Spire 2 via Claude Code or Codex"。
 
          SPIREBRIDGE_LOG_DIR=<绝对文件夹> python3 bridge/spirectl.py <子命令>
 
-2. **读记忆**（先于其他操作）：
-   - memory/MEMORY.md（索引）
-   - memory/lessons.md（决策经验法则）
+2. **读记忆**（先于其他操作；文件缺失时以空记忆开局，在首次对局结束时创建）：
+   - memory/lessons/lessons.md（通用决策经验）
+   - memory/lessons/roles/<角色>.md（分角色手册，存在时读取）
    - memory/changelog.md（最近的工具/策略变更）
+   - memory/runs/（近期复盘）
 
 3. **环境检查与 mod 自装/自愈**（cwd = 本 skill 文件夹
    `<repo>/slay-spire-2-copilot`，全部运行时文件都在此处）：
    `SPIREBRIDGE_LOG_DIR=<绝对文件夹> python3 bridge/spirectl.py doctor`
    - doctor 报 mod 文件 MISSING，或已安装 dll 早于 mod/SpireBridge 下任一源码
      `*.{cs,csproj,json}`（首次运行，或上次安装后代码有改动）→ 执行
-     `bash Scripts/install-mod.sh`（dotnet 构建并将 spire-copilot-bridge 拷入游戏
+     `bash scripts/install-mod.sh`（dotnet 构建并将 spire-copilot-bridge 拷入游戏
      mods 目录），然后重跑 doctor。
    - 游戏进程未运行 → `spirectl launch`（经 Steam 启动游戏并等待桥接）。首次带
      mod 启动时游戏内会出现一次 mod 警告，用户在游戏内点击接受——这是除发起
@@ -76,7 +77,7 @@ game_over——都要接管：读取状态并推进。game_over 时 `act start_r
 
 持续游玩是指令：每局结束后（复盘 + changelog）立即开始下一局。绝不死锁：若某个
 action 循环而状态不变，诊断界面（补上服务端缺失的支持），重建 mod
-（`bash Scripts/install-mod.sh`），重启并继续。出牌决策保留在 AI 客户端——仅在
+（`bash scripts/install-mod.sh`），重启并继续。出牌决策保留在 AI 客户端——仅在
 AI 选定战术后，才允许机械式批量下发 action。
 
 ### 角色轮换
@@ -89,7 +90,7 @@ IRONCLAD / SILENT / DEFECT / NECROBINDER / REGENT，或「铁甲战士」「寂�
 IRONCLAD、SILENT、DEFECT、NECROBINDER、REGENT。使用
 `act start_run --args '{"character":"SILENT"}'` 等；菜单自动化按按钮名/角色 id
 子串匹配，自动跳过未解锁角色。在复盘与运行日志中记录每局所用角色；随游玩数据
-积累，在 memory/strategies/<角色>.md 中建立分角色经验。
+积累，在 memory/lessons/roles/<角色>.md 中建立分角色经验。
 
 ### 游戏循环
 
@@ -121,23 +122,25 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
 
 1. 将复盘写入 memory/runs/<YYYY-MM-DD>-<角色>-floor<N>.md：结果、关键决策、
    有效的做法、导致失败的原因、一条经验。复盘中引用日志文件夹与具体的 run
-   文件名（仅磁盘路径）——只提交 markdown 本身。
-2. 仅把可泛化的经验写入 memory/lessons.md（排除一次性坏 RNG）；保持简短具体，
-   被证伪的条目及时删除。
-3. 若新增了文件，更新 memory/MEMORY.md 索引。
-4. 以 [docs] 性质将记忆变更提交进仓库。
-5. 若用户已停止游玩：解除看门狗武装（见「运行时约定」）。
+   文件名（仅磁盘路径）。
+2. 仅把可泛化的经验写入 memory/lessons/lessons.md（排除一次性坏 RNG）；保持
+   简短具体，被证伪的条目及时删除。
+3. 角色专属经验写入对应手册 memory/lessons/roles/<角色>.md。
+4. 对局中新观察到的游戏事实（卡牌/遗物/药水/能力/意图的效果）以条目形式
+   直接写入 references/game/ 下对应文件及其 `_zh` 中文版——中英内容必须
+   完全对应。memory 只记对局感悟与过程，不记游戏基础数据。
+5. 不将 memory 文件提交进仓库。
+6. 若用户已停止游玩：解除看门狗武装（见「运行时约定」）。
 
 ## 自我迭代
 
 - 工具缺陷（spirectl/mod/协议问题）：在当前分支的本仓库内修复；C# 有改动则重建
-  mod（`bash Scripts/install-mod.sh`），doctor 验证，然后在 memory/changelog.md
+  mod（`bash scripts/install-mod.sh`），doctor 验证，然后在 memory/changelog.md
   追加一行描述原因与修复。以 [fix] 或 [feature] 性质提交。
 - 策略文档被实战证伪：改正文档，并记录到 changelog.md。
 - 永不删除 changelog 条目；该文件是迭代台账。
-- 游戏补丁破坏 hook（doctor 握手正常但 state 字段缺失/错误）：重查
-  docs/research/game-api-findings.md，必要时反编译，适配 mod，并记录到
-  changelog.md。
+- 游戏补丁破坏 hook（doctor 握手正常但 state 字段缺失/错误）：必要时反编译游戏
+  程序集，适配 mod，并将修复记录进 changelog.md。
 
 ## 注意事项
 
@@ -158,7 +161,7 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
   `run-20260916-013052-a3f9c012.log`）。
 - `doctor` 打印 `[0] run log dir: ... | SPIREBRIDGE_LOG_DIR=set|unset`；出现
   unset 时先修复再继续。
-- 外部看门狗（crontab 中的 `Scripts/watchdog-external.sh`）从**它自己的环境**读取
+- 外部看门狗（crontab 中的 `scripts/watchdog-external.sh`）从**它自己的环境**读取
   `SPIREBRIDGE_LOG_DIR`——若要跟踪本会话日志，需在 crontab 行 export 同一文件夹；
   变量未设置时它跳过日志新鲜度检查（同样无回退）。
 - 看门狗仅在武装状态下运行检查并产生告警记录；用户停止游玩时解除武装，使其
@@ -172,21 +175,23 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
 
 决策与排查时按需查阅以下文件（路径均相对本 skill 文件夹）：
 
-- `memory/lessons.md` — 决策经验法则：出牌、奖励、地图、事件与机制教训
-- `memory/strategies/<角色>.md` — 分角色策略（随游玩数据积累）
-- `memory/MEMORY.md` — 记忆索引
+references/ — 查阅知识：
+
+- `references/README_zh.md` — 知识索引（中文版）
+- `references/bridge/commands.md` — CLI 用法、动作与状态参考、日志目录契约
+- `references/bridge/protocol.md` — 线协议 v1（本机 TCP 上的 JSON Lines）
+- `references/game/cards_zh.md` — 卡牌
+- `references/game/potions_zh.md` — 药水效果
+- `references/game/powers_zh.md` — 能力/力量
+- `references/game/relics_zh.md` — 遗物效果
+- `references/game/intents_zh.md` — 敌人意图解读
+- `references/game/afflictions_zh.md` — 状态与负面效果
+
+memory/ — 对局记忆：
+
+- `memory/lessons/lessons.md` — 通用决策经验：出牌、奖励、地图、事件与机制教训
+- `memory/lessons/roles/<角色>.md` — 分角色手册（随游玩数据积累）
 - `memory/changelog.md` — 工具修复与策略纠偏台账
 - `memory/runs/` — 每局复盘：结果、关键决策、死因、经验
-- `doc/README.md` — 游玩知识库索引
-- `doc/cards.md` — 卡牌
-- `doc/potions.md` — 药水效果
-- `doc/powers.md` — 能力/力量
-- `doc/relics.md` — 遗物效果
-- `doc/intents.md` — 敌人意图解读
-- `doc/afflictions.md` — 状态与负面效果
-- `references/commands.md` — 动作与状态参考：CLI 用法、动作表、状态字段、
-  日志目录契约
-- `docs/protocol.md` — 线协议 v1（本机 TCP 上的 JSON Lines）
-- `docs/research/game-api-findings.md` — 游戏 API 面与已验证符号（自迭代排查）
-- `docs/design-autopilot-v2.md` — 无人值守批量对局设计（未实现）
+
 - `SKILL.md` — skill 触发与定义（英文版）；本文件为其说明

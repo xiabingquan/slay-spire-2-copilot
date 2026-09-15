@@ -58,17 +58,19 @@ Execute in order; all of the following are the skill's own work:
 
          SPIREBRIDGE_LOG_DIR=<abs-folder> python3 bridge/spirectl.py <subcommand>
 
-2. **Read memory** (before anything else):
-   - memory/MEMORY.md (index)
-   - memory/lessons.md (decision rules of thumb)
+2. **Read memory** (before anything else; create any missing memory file at
+   the first run end):
+   - memory/lessons/lessons.md (generalizable decision lessons)
+   - memory/lessons/roles/<character>.md (per-character playbook, when present)
    - memory/changelog.md (recent tool/strategy changes)
+   - memory/runs/ (recent postmortems)
 
 3. **Environment check and mod self-install / self-heal** (cwd = this skill
    folder `<repo>/slay-spire-2-copilot`, which holds all runtime files):
    `SPIREBRIDGE_LOG_DIR=<abs-folder> python3 bridge/spirectl.py doctor`
    - doctor reports mod files MISSING, or the installed dll is older than any
      source under mod/SpireBridge `*.{cs,csproj,json}` (first run, or code
-     changed since the last install) → run `bash Scripts/install-mod.sh`
+     changed since the last install) → run `bash scripts/install-mod.sh`
      (dotnet build; copies spire-copilot-bridge into the game's mods folder),
      then re-run doctor.
    - Game process not running → `spirectl launch` (starts the game via Steam
@@ -95,7 +97,7 @@ and begins a new run; a new run file is derived in the log folder.
 Continuous play is the mandate: after every run ends (postmortem + changelog),
 start the next run immediately. Never deadlock: if an action loops without a
 state change, diagnose the screen (implement the missing server-side support),
-rebuild the mod (`bash Scripts/install-mod.sh`), relaunch, and resume. Card-play
+rebuild the mod (`bash scripts/install-mod.sh`), relaunch, and resume. Card-play
 decisions stay in the AI client — mechanical act-dumps are allowed only after
 the AI has chosen the tactic.
 
@@ -112,7 +114,7 @@ IRONCLAD, SILENT, DEFECT, NECROBINDER, REGENT. Use
 `act start_run --args '{"character":"SILENT"}'` etc.; the menu automation
 matches button names / character-id substrings and skips locked characters.
 Record the character used in each run's postmortem and run log; as play data
-accumulates, build per-character lessons in memory/strategies/<char>.md.
+accumulates, build per-character lessons in memory/lessons/roles/<char>.md.
 
 ### Game loop
 
@@ -149,26 +151,32 @@ When the run ends (game_over screen, or abandon):
 1. Write a postmortem to memory/runs/<YYYY-MM-DD>-<character>-floor<N>.md:
    result, key decisions, what worked, what killed the run, one lesson. Inside
    the postmortem cite the log folder and the concrete run file name as disk
-   paths only — commit just the markdown.
-2. Record only generalizable lessons in memory/lessons.md (exclude one-off bad
-   RNG); keep it short and concrete, and prune entries that prove wrong.
-3. If files were added, update the memory/MEMORY.md index.
-4. Commit the memory changes to the repo with nature [docs].
-5. If the user has stopped playing: disarm the watchdog (see "Runtime
+   paths only.
+2. Record only generalizable lessons in memory/lessons/lessons.md (exclude
+   one-off bad RNG); keep it short and concrete, and prune entries that prove
+   wrong.
+3. Fold character-specific guidance into the character's playbook
+   memory/lessons/roles/<character>.md.
+4. Fold newly observed game facts (card/relic/potion/power/intent effects)
+   into the matching references/game/ file and its `_zh` twin as plain
+   entries — the English and Chinese files must stay content-aligned. Memory
+   holds play insights and run process only, never game base data.
+5. Do not commit memory files into the repo.
+6. If the user has stopped playing: disarm the watchdog (see "Runtime
    conventions").
 
 ## Self-iteration
 
 - Tool defect (spirectl/mod/protocol issue): fix the code in this repo on the
-  current branch; if C# changed, rebuild the mod (`bash Scripts/install-mod.sh`)
+  current branch; if C# changed, rebuild the mod (`bash scripts/install-mod.sh`)
   and verify with doctor, then append a line to memory/changelog.md describing
   cause and fix. Commit with nature [fix] or [feature].
 - Strategy doc proven wrong in play: correct the doc and note it in
   changelog.md.
 - Never delete changelog entries; that file is the iteration ledger.
 - Game patch broke hooks (doctor handshake ok but state fields missing/wrong):
-  re-check docs/research/game-api-findings.md, decompile if needed, adapt the
-  mod, and record it in changelog.md.
+  decompile the game assembly if needed, adapt the mod, and record the fix in
+  changelog.md.
 
 ## Notes
 
@@ -195,7 +203,7 @@ When the run ends (game_over screen, or abandon):
   `run-20260916-013052-a3f9c012.log`).
 - `doctor` prints `[0] run log dir: ... | SPIREBRIDGE_LOG_DIR=set|unset`;
   on unset, fix first, then continue.
-- The external watchdog (crontab `Scripts/watchdog-external.sh`) reads
+- The external watchdog (crontab `scripts/watchdog-external.sh`) reads
   `SPIREBRIDGE_LOG_DIR` from **its own environment** — export the same folder
   on the crontab line to track this session's logs; when the variable is unset
   it skips the log-age check (no fallback there either).
@@ -211,24 +219,28 @@ When the run ends (game_over screen, or abandon):
 Consult the following files as needed for decisions and troubleshooting (paths
 are relative to this skill folder):
 
-- `memory/lessons.md` — decision rules of thumb: card play, rewards, map,
-  events, and mechanics lessons
-- `memory/strategies/<char>.md` — per-character strategies (grows with play data)
-- `memory/MEMORY.md` — memory index
+references/ — consult knowledge:
+
+- `references/README.md` — knowledge index
+- `references/bridge/commands.md` — CLI usage, action/state reference,
+  log-directory contract
+- `references/bridge/protocol.md` — wire protocol v1 (JSON Lines over TCP on
+  localhost)
+- `references/game/cards.md` — cards
+- `references/game/potions.md` — potion effects
+- `references/game/powers.md` — powers
+- `references/game/relics.md` — relic effects
+- `references/game/intents.md` — reading enemy intents
+- `references/game/afflictions.md` — statuses and debuffs
+- `references/game/*_zh.md` — Chinese twins of the game knowledge files
+
+memory/ — run memory:
+
+- `memory/lessons/lessons.md` — generalizable decision lessons: card play,
+  rewards, map, events, mechanics
+- `memory/lessons/roles/<char>.md` — per-character playbooks (grows with play data)
 - `memory/changelog.md` — tool-fix and strategy-correction ledger
 - `memory/runs/` — per-run postmortems: result, key decisions, cause of death,
   lessons
-- `doc/README.md` — play-knowledge index
-- `doc/cards.md` — cards
-- `doc/potions.md` — potion effects
-- `doc/powers.md` — powers
-- `doc/relics.md` — relic effects
-- `doc/intents.md` — reading enemy intents
-- `doc/afflictions.md` — statuses and debuffs
-- `references/commands.md` — action/state reference: CLI usage, action table,
-  state fields, log-directory contract
-- `docs/protocol.md` — wire protocol v1 (JSON Lines over TCP on localhost)
-- `docs/research/game-api-findings.md` — game API surface and validated symbols
-  (for self-iteration)
-- `docs/design-autopilot-v2.md` — unattended batch-run design (not implemented)
+
 - `SKILL_zh.md` — Chinese version of this skill doc
