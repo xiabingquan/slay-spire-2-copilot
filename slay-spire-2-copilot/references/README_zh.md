@@ -10,6 +10,7 @@ bridge/ — 工具（仅有英文版）：
 
 game/ — 游戏知识（中文版）：
 
+- [characters_zh](game/characters_zh.md) — 可玩角色、初始配置、流派
 - [cards_zh](game/cards_zh.md) — 可打出的卡牌：费用、效果
 - [powers_zh](game/powers_zh.md) — 战斗中的能力、增益与减益
 - [relics_zh](game/relics_zh.md) — 遗物效果

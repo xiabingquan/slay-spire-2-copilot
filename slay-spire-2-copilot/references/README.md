@@ -13,6 +13,7 @@ bridge/ — tooling:
 
 game/ — game knowledge:
 
+- [characters](game/characters.md) — playable characters, starters, archetypes
 - [cards](game/cards.md) — playable cards: costs, effects
 - [powers](game/powers.md) — combat powers, buffs and debuffs
 - [relics](game/relics.md) — relic effects

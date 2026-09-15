@@ -1,36 +1,75 @@
 # Powers
 
-Static combat buff/debuff reference; ids as they appear in state.
+Combat buffs/debuffs reference; ids as they appear in state. Numerics from
+community databases (sts2-wiki, fandom, metabot) cross-checked with observed
+play on v0.107.1.
 
-- VULNERABLE_POWER: target takes +50% attack damage; also amplifies incoming
-  damage when on the player.
-- WEAK_POWER: target deals ~25% less attack damage.
-- FRAIL_POWER: reduces block gained; with CHAINS_OF_BINDING observed zeroing
-  block entirely.
-- SLIPPERY_POWER (e.g. 墨宝): first incoming hit greatly reduced (Strike 6 ->
-  1); charges consumed per hit — later hits deal full damage.
-- STRENGTH_POWER / RITUAL_POWER (enemy): per-turn strength growth — kill first.
-- DEMON_FORM_POWER (player): +strength per turn; core engine.
-- CONFUSED_POWER (FAKE_SNECKO_EYE): hand costs randomized each draw; exploit
-  0-cost cards.
-- PLATING_POWER (GORGET): start-of-combat flat block.
-- THORNS_POWER (BRONZE_SCALES): reflect damage when attacked.
-- FLAME_BARRIER_POWER: temporary thorns + block.
-- DUPPLICATION_POWER (DUPLICATOR potion): temporary card-duplication state.
-- INFESTED_POWER (异蛙寄生虫 elite): on death spawns multiple adds (4x ~17-21hp)
-  — save AOE for the spawn wave.
-- MINION_POWER: boss flag — spawns replacement minion on death.
-- STOCK_POWER: robot-assembly flag — each death spawns next robot variant.
-- RAMPART_POWER: living-shield ally block regeneration.
-- RINGING_POWER (仪式兽 boss): on player, hand cards flip can_play=false —
-  card-play lockout.
-- SLOW_POWER (旧日雕像 elite): alternating slow (empty-intent) turns and heavy
-  charged hits + strength growth; fortify before heavy turns.
-- TERRITORIAL / SOAR / BURROWED_POWER: elite/boss defensive stances; burrowed
-  pairs with big charged intents that cancel if block broken in time.
+## Core combat statuses
+
+- VULNERABLE_POWER: target takes +50% attack damage (Paper Phrog relic raises
+  to +75% for Ironclad); amplifies incoming attack damage when on you too.
+- WEAK_POWER: target deals -25% attack damage (Paper Krane: enemies with Weak
+  deal -40% to Silent).
+- FRAIL_POWER: target gains -25% Block from cards.
+- STRENGTH_POWER: flat damage added to every attack hit; scales multi-hits.
+- DEXTERITY_POWER: flat Block added to every block-gaining card.
+- RITUAL_POWER (enemy): gains Strength every turn — kill priority.
+- POISON: creature loses HP at start of its turn, then Poison -1 per tick.
+- THORNS_POWER: deals damage back to attackers when hit (Bronze Scales: 3).
+- PLATING_POWER (Plated Armor, e.g. GORGET): gains Block at end of turn;
+  loses 1 stack each time it takes unblocked attack damage.
+- REGEN (Regeneration): heals HP at end of each turn, then -1 per turn.
+- CONFUSED_POWER (FAKE_SNECKO_EYE / Snecko Eye): card costs randomized when
+  drawn (0-3 range typical).
+- SLOW_POWER (enemy, e.g. 旧日雕像 elite): enemy takes more attack damage as
+  you play cards this turn (~+10% per card played, wiki figure); alternating
+  with heavy charged hits observed live.
+- MINION_POWER: marks summoned helpers (Necrobinder/Regent kits, boss adds).
+- DOOM_POWER (Necrobinder): stacking death-clock; kills when Doom >= HP
+  (Undying Sigil relic: enemies with Doom >= HP deal -50% damage; Doom then
+  triggers at their turn start instead of end).
+- FOCUS (Defect): scales orb passives/evoke effects; can go negative
+  (Hyperbeam applies Focus down to owner).
+- VIGOR_POWER: bonus attack damage consumed by the next attack (Akabeko: 8
+  at combat start).
+- INTANGIBLE_POWER: attack damage taken reduced to 1 (classic effect).
+- SURROUNDED_POWER + BACK_ATTACK_LEFT/RIGHT: positioning markers — BackAttack
+  markers let Surrounded checks resolve flanking rules.
+
+## Card-bound affliction powers (see afflictions.md)
+
+- CHAINS_OF_BINDING_POWER: block suppression (queen-boss debuff; with Frail
+  observed zeroing Block).
+- RINGING_POWER: hand cards flip can_play=false (card-play lockout).
+- TANGLED_POWER / GALVANIC_POWER / HEX_POWER / SMOGGY_POWER / TAINTED_POWER:
+  logic hosts for afflictions Entangled / Galvanized / Hexed / Smog / Tainted.
+
+## Character-kit powers
+
+- DEMON_FORM_POWER (Ironclad): +Strength per turn for several turns; engine.
+- HELI RAISER / HEGEMONY-adjacent (Ironclad): see cards.md per-card notes.
+- ClarityPower vs DrawCardsNextTurnPower: extra draws next turn(s); Clarity
+  spans next N turns, DrawCardsNextTurn the next turn only.
+- TemporaryStrength/FlexPotionPower: temporary Strength that expires end of
+  turn (Flex potion model).
+- DIE_FOR_YOU_POWER, OBLIVION_POWER, MAYHEM_POWER, STAMPEDE_POWER,
+  PIERCING_WAIL_POWER, THIEVERY_POWER, SURPRISE_POWER, THE_BOMB_POWER,
+  THE_HUNT_POWER, PARRY_POWER, SEEKING_EDGE_POWER, ILLUSION_POWER,
+  REATTACH_POWER, ESCAPE_ARTIST_POWER, ACCELERANT_POWER, FAN_OF_KNIVES_POWER:
+  card- or monster-hosted powers — effect follows the hosting card/monster
+  (see cards.md; e.g. TheHunt is a visual success marker, Accelerant
+  re-triggers Poison, FanOfKnives/Parry/SeekingEdge are inert markers checked
+  by Shiv / Sovereign Blade cards).
+
+## Live-play observations (v0.107.1)
+
+- SLIPPERY_POWER (e.g. 墨宝): first incoming hit greatly reduced (Strike 6
+  -> 1); charges consumed per hit.
 - SHRINK_POWER (缩小甲虫): reduces player attack damage until the enemy dies.
-- CHAINS_OF_BINDING_POWER: queen-boss debuff; suspected block suppression.
-- ClarityPower vs DrawCardsNextTurnPower: both draw next turn(s); Clarity
-  spans the next N turns, DrawCardsNextTurn the next turn only.
-- Inert marker powers exist (e.g. FanOfKnives checked by Shiv targeting) —
-  presence alone can change card behavior.
+- INFESTED_POWER (异蛙寄生虫 elite): on death spawns 4x ~17-21hp adds — save
+  AOE for the spawn wave.
+- STOCK_POWER (robot factory): each death spawns next robot variant.
+- RAMPART_POWER: living-shield ally block regeneration.
+- BURROWED / TERRITORIAL / SOAR: elite/boss defensive stances; burrowed pairs
+  with big charged intents that cancel if block broken in time.
+- DUPPLICATION_POWER (DUPLICATOR potion): temporary card-duplication state.

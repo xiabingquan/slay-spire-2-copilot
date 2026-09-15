@@ -1,31 +1,303 @@
 # Relics
 
-Static relic reference. Effects marked STS1 come from Slay the Spire 1 and
-are unverified in STS2 unless stated otherwise.
+Relic reference with effects. Source: spire-codex.com relic database
+(~296 entries incl. event variants), cross-checked with observed play on
+v0.107.1 and CombatSolver relic catalogs. Tags: rarity (Common/Uncommon/
+Rare/Ancient/Shop/Event/Starter) and owner (Shared = any character).
 
-- BURNING_BLOOD (Ironclad starter): heal 6 HP at end of combat.
-- MOLTEN_EGG: attack-card rewards arrive auto-upgraded at acquisition.
-- LASTING_CANDY: rest heals boosted (+24 at 53hp observed).
-- GORGET: start combat with flat block (PLATING_POWER).
-- VAJRA: +1 Strength at combat start (STS1).
-- PANTOGRAPH: full heal entering boss combat (STS1).
-- LEES_WAFFLE: heal on pickup (STS1).
-- ODDLY_SMOOTH_STONE: +1 Dexterity at combat start (STS1).
-- BAG_OF_PREPARATION: draw +2 on first combat turn (STS1).
-- HAPPY_FLOWER: +1 energy every 3rd turn (STS1).
-- ORNAMENTAL_FAN: +1 dex per 3 attacks (STS1).
-- STRIKE_DUMMY: +1 strength at combat start (STS1).
-- LANTERN: +1 energy on first combat turn (STS1).
-- VENERABLE_TEA_SET / REGAL_PILLOW: boost rest-site recovery (STS1).
-- NUNCHAKU: energy on attack counts (STS1).
-- UndyingSigil: enemy Doom triggers at the start of the enemy's turn instead
-  of the end — enemies die before attacking.
-- FAKE_SNECKO_EYE (NFakeMerchant 54g): fake relic; hand cost randomization
-  (CONFUSED-like), trap.
-- JUNGLE_MAZE_ADVENTURE: SOLO_QUEST ~-18hp for ~+147g; JOIN_FORCES ~+63g at
-  zero hp cost — JOIN at mid/low hp, SOLO only over 60hp.
-- THE_LANTERN_KEY event: RETURN_THE_KEY ~+100 gold no combat; KEEP_THE_KEY
-  starts knight fight for the key card.
-- HATCH rest option: appears only while a BYRDONIS_EGG-type card is in deck.
-- LOST_WISP / WONGOS_MYSTERY_TICKET / SPARKLING_ROUGE / CHANDELIER /
-  TUNING_FORK / AMETHYST_AUBERGINE / PENDULUM: effects pending observation.
+- Akabeko (Uncommon, Shared): start of each combat, gain 8 Vigor.
+- Alchemical Coffer (Ancient, Shared): on pickup, gain 4 potion slots filled with random potions.
+- Amethyst Aubergine (Common, Shared): enemies drop 15 additional Gold.
+- Anchor (Common, Shared): start each combat with 10 Block.
+- Anchor??? (Event, Shared): start each combat with 4 Block.
+- Arcane Scroll (Ancient, Shared): on pickup, obtain a random Rare card.
+- Archaic Tooth (Ancient, Shared): on pickup, transform a starter card into an ancient version.
+- Art of War (Rare, Shared): if you play no Attacks during your turn, gain 1 extra energy next turn.
+- Astrolabe (Ancient, Shared): on pickup, transform 3 cards, then upgrade them.
+- Bag of Marbles (Common, Shared): start of each combat, apply 1 Vulnerable to ALL enemies.
+- Bag of Preparation (Common, Shared): start of each combat, draw 2 additional cards.
+- Beating Remnant (Rare, Shared): you cannot lose more than 20 HP in a single turn.
+- Beautiful Bracelet (Ancient, Shared): on pickup, choose 3 cards in your deck; enchant them with Swift 3.
+- Bellows (Rare, Shared): the first hand you draw each combat is upgraded.
+- Belt Buckle (Shop, Shared): while you have no potions, you have 2 additional Dexterity.
+- Big Hat (Rare, Necrobinder): start of each combat, add 2 random Ethereal cards into your hand.
+- Big Mushroom (Event, Shared): on pickup, +20 Max HP; start of each combat, draw 2 fewer cards.
+- Biiig Hug (Ancient, Shared): on pickup, remove 4 cards; whenever you shuffle your draw pile, add a Soot into it.
+- Bing Bong (Event, Shared): whenever you add a card to your deck, add one additional copy.
+- Black Blood (Starter upgrade, Ironclad): at end of combat, heal 12 HP.
+- Black Star (Ancient, Shared): elites drop an additional relic when defeated.
+- Blessed Antler (Ancient, Shared): gain energy at start of each turn; start of each combat, shuffle 3 Dazed into your draw pile.
+- Blood Vial (Common, Shared): start of each combat, heal 2 HP.
+- Blood Vial??? (Event, Shared): start of each combat, heal 1 HP.
+- Blood-Soaked Rose (Ancient, Shared): on pickup, add 1 Enthralled to your deck; gain energy at start of each turn.
+- Bone Flute (Common, Necrobinder): whenever Osty attacks, gain 2 Block.
+- Bone Tea (Event, Shared): at start of next combat, upgrade your starting hand.
+- Book of Five Rings (Common, Shared): every 5 cards you add to your deck, heal 20 HP.
+- Book Repair Knife (Uncommon, Necrobinder): whenever a non-Minion enemy dies to Doom, heal 3 HP.
+- Bookmark (Rare, Necrobinder): end of each turn, lower the cost of a random Retained card by 1 until played.
+- Booming Conch (Ancient, Shared): start of elite combats, draw 2 additional cards and gain energy.
+- Bound Phylactery (Starter, Necrobinder): at start of your turn, Summon 1.
+- Bowler Hat (Uncommon, Shared): gain 25% additional Gold.
+- Bread (Shop, Shared): start of your first turn, lose 2 energy; start of all other turns, gain energy.
+- Brilliant Scarf (Ancient, Shared): the 5th card you play from hand each turn is free.
+- Brimstone (Shop, Ironclad): start of your turn, gain 2 Strength and ALL enemies gain 1 Strength.
+- Bronze Scales (Common, Shared): start each combat with 3 Thorns.
+- Burning Blood (Starter, Ironclad): at end of combat, heal 6 HP.
+- Burning Sticks (Shop, Shared): first time each combat you exhaust a Skill, add a copy of it to your hand.
+- Byrdpip (Event, Shared): on pickup, gain the card Byrd Swoop; a Byrdpip accompanies you in battles.
+- Calling Bell (Ancient, Shared): on pickup, obtain a unique Curse and 3 relics.
+- Candelabra (Uncommon, Shared): start of your 2nd turn, gain 2 energy.
+- Captain's Wheel (Rare, Shared): start of your 3rd turn, gain 18 Block.
+- Cauldron (Shop, Shared): on pickup, brews 5 random potions.
+- Centennial Puzzle (Common, Shared): first time you lose HP each combat, draw 3 cards.
+- Chandelier (Rare, Shared): start of your 3rd turn, gain 3 energy.
+- Charon's Ashes (Rare, Ironclad): whenever you exhaust a card, deal 3 damage to ALL enemies.
+- Chemical X (Shop, Shared): the effects of your cost-X cards are increased by 2.
+- Choices Paradox (Ancient, Shared): start of each combat, add 1 of 5 random cards to your hand; the chosen card gains Retain.
+- Circlet (Relic, Shared): it's a circlet.
+- Claws (Ancient, Shared): on pickup, transform up to 6 cards into Maul.
+- Cloak Clasp (Rare, Shared): end of your turn, gain 1 Block for each card in your hand.
+- Cracked Core (Starter, Defect): start of each combat, Channel 1 Lightning.
+- Crossbow (Ancient, Shared): start of your turn, add a random Attack to your hand; free this turn.
+- Cursed Pearl (Ancient, Shared): on pickup, receive Greed; gain 333 Gold.
+- Darkstone Periapt (Event, Shared): whenever you obtain a Curse, +6 Max HP.
+- Data Disk (Common, Defect): start each combat with 1 Focus.
+- Daughter of the Wind (Event, Shared): whenever you play an Attack, gain 1 Block.
+- Delicate Frond (Ancient, Shared): start of each combat, fill all empty potion slots with random potions.
+- Demon Tongue (Rare, Ironclad): first time you lose HP on your turn, heal HP equal to the amount lost.
+- Diamond Diadem (Ancient, Shared): whenever you play 2 or fewer cards in a turn, take half damage from enemies.
+- Dingy Rug (Shop, Shared): card rewards can now contain Colorless cards.
+- Distinguished Cape (Ancient, Shared): on pickup, lose 9 Max HP; add 3 Apparitions to your deck.
+- Divine Destiny (Starter variant, Regent): at combat start, gain 6 stars (★).
+- Divine Right (Starter, Regent): at combat start, gain 3 stars (★).
+- Dolly's Mirror (Shop, Shared): on pickup, obtain an additional copy of a card in your deck.
+- Dragon Fruit (Shop, Shared): whenever you gain Gold, +1 Max HP.
+- Dream Catcher (Event, Shared): whenever you Rest, you may add a card to your deck.
+- Driftwood (Ancient, Shared): you may reroll each card reward once.
+- Dusty Tome (Ancient, Shared): on pickup, obtain an Ancient card.
+- Ectoplasm (Ancient, Shared): you can no longer gain Gold; gain energy at start of each turn.
+- Electric Shrymp (Ancient, Shared): on pickup, enchant a Skill with Imbued.
+- Ember Tea (Event, Shared): at start of the next 5 combats, gain 2 Strength.
+- Emotion Chip (Rare, Defect): if you lost HP during the previous turn, trigger the passive of all Orbs at start of your turn.
+- Empty Cage (Ancient, Shared): on pickup, remove 2 cards from your deck.
+- Eternal Feather (Uncommon, Shared): for every 5 cards in your deck, heal 3 HP when you enter a Rest Site.
+- Fencing Manual (Common, Regent): start of each combat, Forge 10.
+- Festive Popper (Common, Shared): start of each combat, deal 9 damage to ALL enemies.
+- Fiddle (Ancient, Shared): start of each turn, draw 2 additional cards; you may not draw cards during your turn.
+- Fishing Rod (Ancient, Shared): every 3 normal combats, upgrade a random card in your deck.
+- Forgotten Soul (Event, Shared): whenever you exhaust a card, deal 1 damage to a random enemy.
+- Fragrant Mushroom (Event, Shared): on pickup, lose 15 HP and upgrade 2 random cards.
+- Fresnel Lens (Event, Shared): whenever you add a card that gains Block to your deck, enchant it with Nimble 2.
+- Frozen Egg (Rare, Shared): whenever you add a Power to your deck, upgrade it.
+- Funerary Mask (Uncommon, Necrobinder): start of each combat, add 3 Souls to your draw pile.
+- Fur Coat (Ancient, Shared): on pickup, mark 7 random combats; enemies in those rooms have 1 HP.
+- Galactic Dust (Uncommon, Regent): for every 10 stars spent, gain 10 Block.
+- Gambling Chip (Rare, Shared): start of each combat, discard any number of cards then draw that many.
+- Game Piece (Rare, Shared): whenever you play a Power, draw 1 card.
+- Ghost Seed (Shop, Shared): Strikes and Defends gain Ethereal.
+- Girya (Rare, Shared): you can now gain Strength at Rest Sites (3 times max).
+- Glass Eye (Ancient, Shared): on pickup, obtain 2 Common, 2 Uncommon and 1 Rare card.
+- Glitter (Ancient, Shared): enchant all card rewards with Glam.
+- Gnarled Hammer (Shop, Shared): on pickup, enchant up to 3 Attacks with Sharp 3.
+- Gold-Plated Cables (Uncommon, Defect): your rightmost Orb triggers its passive an additional time.
+- Golden Compass (Ancient, Shared): on pickup, replace the Act 2 map with a single special path.
+- Golden Pearl (Ancient, Shared): on pickup, gain 150 Gold.
+- Gorget (Common, Shared): start of each combat, gain 4 Plating.
+- Gremlin Horn (Uncommon, Shared): whenever an enemy dies, gain energy and draw 1 card.
+- Hand Drill (Event, Shared): whenever you break an enemy's Block, apply 2 Vulnerable.
+- Happy Flower (Common, Shared): every 3 turns, gain energy.
+- Happy Flower??? (Event, Shared): every 5 turns, gain energy.
+- Hefty Tablet (Ancient, Shared): on pickup, choose 1 of 3 Rare cards to add to your deck, and add 1 Injury.
+- Helical Dart (Rare, Silent): whenever you play a Shiv, gain 1 Dexterity this turn.
+- History Course (Event, Shared): start of your turn, play a copy of your last played Attack or Skill.
+- Horn Cleat (Uncommon, Shared): start of your 2nd turn, gain 14 Block.
+- Ice Cream (Rare, Shared): energy is conserved between turns.
+- Infused Core (Starter upgrade, Defect): start of each combat, Channel 3 Lightning; Lightning deals 1 additional damage.
+- Intimidating Helmet (Rare, Shared): whenever you play a card costing 2+ energy, gain 4 Block.
+- Iron Club (Ancient, Shared): every 4 cards you play, draw 1 card.
+- Ivory Tile (Rare, Necrobinder): whenever you play a card costing 3+ energy, gain energy.
+- Jeweled Mask (Ancient, Shared): start of each combat, put a random Power from your draw pile into your hand; free this combat.
+- Jewelry Box (Ancient, Shared): on pickup, add 1 Apotheosis to your deck.
+- Joss Paper (Uncommon, Shared): every 5 times you exhaust a card, draw 1 card.
+- Juzu Bracelet (Common, Shared): regular enemy combats no longer appear in ? rooms.
+- Kaleidoscope (Ancient, Shared): on pickup, obtain 2 card rewards from other characters.
+- Kifuda (Shop, Shared): on pickup, enchant up to 3 cards with Adroit.
+- Kunai (Rare, Shared): every time you play 3 Attacks in one turn, gain 1 Dexterity.
+- Kusarigama (Uncommon, Shared): every time you play 3 Attacks in one turn, deal 6 damage to a random enemy.
+- Lantern (Common, Shared): start each combat with 1 additional energy.
+- Large Capsule (Ancient, Shared): on pickup, obtain 2 random relics; add an additional Strike and Defend to your deck.
+- Lasting Candy (Uncommon, Shared): every other combat, your card rewards gain an additional Power.
+- Lava Lamp (Shop, Shared): end of combat, upgrade all card rewards if you took no damage.
+- Lava Rock (Ancient, Shared): the Act 1 boss drops 2 relics.
+- Lead Paperweight (Ancient, Shared): on pickup, choose 1 of 2 Colorless cards to add to your deck.
+- Leafy Poultice (Ancient, Shared): on pickup, transform 1 Strike and 1 Defend; lose 12 Max HP.
+- Lee's Waffle (Shop, Shared): on pickup, +7 Max HP and heal all of your HP.
+- Lee's Waffle??? (Event, Shared): on pickup, heal 10% of your HP.
+- Letter Opener (Uncommon, Shared): every time you play 3 Skills in one turn, deal 5 damage to ALL enemies.
+- Lizard Tail (Rare, Shared): when your HP would drop to 0, heal to 50% Max HP instead (once).
+- Looming Fruit (Ancient, Shared): on pickup, +31 Max HP.
+- Lord's Parasol (Ancient, Shared): when you encounter the Merchant, immediately obtain everything he sells.
+- Lost Coffer (Ancient, Shared): on pickup, gain 1 card reward and procure 1 random potion.
+- Lost Wisp (Event, Shared): whenever you play a Power, deal 8 damage to ALL enemies.
+- Lucky Fysh (Uncommon, Shared): whenever you add a card to your deck, gain 15 Gold.
+- Lunar Pastry (Rare, Regent): end of your turn, gain 1 star (★).
+- Mango (Rare, Shared): on pickup, +14 Max HP.
+- Mango??? (Event, Shared): on pickup, +3 Max HP.
+- Massive Scroll (Ancient, Shared): on pickup, choose 1 of 3 Multiplayer cards to add to your deck.
+- Maw Bank (Event, Shared): whenever you climb a floor, gain 12 Gold; stops working after you spend Gold at a shop.
+- Meal Ticket (Common, Shared): whenever you enter a shop room, heal 15 HP.
+- Meat Cleaver (Ancient, Shared): you may Cook at Rest Sites.
+- Meat on the Bone (Rare, Shared): if HP ≤ 50% at end of combat, heal 12 HP.
+- Membership Card (Shop, Shared): 50% discount on all products.
+- Mercury Hourglass (Uncommon, Shared): start of your turn, deal 3 damage to ALL enemies.
+- Metronome (Rare, Defect): first time you Channel 7 Orbs each combat, deal 30 damage to ALL enemies.
+- Mini Regent (Rare, Regent): first time you spend stars each turn, gain 1 Strength.
+- Miniature Cannon (Uncommon, Shared): upgraded Attacks deal 3 additional damage.
+- Miniature Tent (Shop, Shared): you may choose any number of options at Rest Sites.
+- Molten Egg (Rare, Shared): whenever you add an Attack card to your deck, upgrade it.
+- Mr. Struggles (Event, Shared): start of your turn, deal damage equal to the turn number to ALL enemies.
+- Mummified Hand (Rare, Shared): whenever you play a Power, a random card in hand is free that turn.
+- Music Box (Ancient, Shared): create an Ethereal copy of the first Attack you play each turn.
+- Mystic Lighter (Shop, Shared): enchanted Attacks deal 9 additional damage.
+- Neow's Bones (Ancient, Shared): on pickup, gain 2 random Neow relics; add 1 random Curse to your deck.
+- Neow's Talisman (Ancient, Shared): on pickup, upgrade 1 Strike and 1 Defend.
+- Neow's Torment (Ancient, Shared): on pickup, add 1 Neow's Fury to your deck.
+- New Leaf (Ancient, Shared): on pickup, transform 1 card.
+- Ninja Scroll (Shop, Silent): start of each combat, add 3 Shivs to your hand.
+- Nunchaku (Uncommon, Shared): every time you play 10 Attacks, gain energy.
+- Nutritious Oyster (Ancient, Shared): on pickup, +11 Max HP.
+- Nutritious Soup (Ancient, Shared): on pickup, enchant all Strikes with Tezcatara's Ember.
+- Oddly Smooth Stone (Common, Shared): start each combat with 1 Dexterity.
+- Old Coin (Rare, Shared): on pickup, gain 300 Gold.
+- Orange Dough (Rare, Regent): start of each combat, add 2 random Colorless cards to your hand.
+- Orichalcum (Uncommon, Shared): if you end your turn without Block, gain 6 Block.
+- Orichalcum??? (Event, Shared): if you end your turn without Block, gain 3 Block.
+- Ornamental Fan (Uncommon, Shared): every time you play 3 Attacks in one turn, gain 4 Block.
+- Orrery (Shop, Shared): on pickup, gain 5 card rewards.
+- Pael's Blood (Ancient, Shared): start of your turn, draw 1 additional card.
+- Pael's Claw (Ancient, Shared): on pickup, enchant all Defends with Goopy.
+- Pael's Eye (Ancient, Shared): first time each combat you end your turn without playing cards, exhaust your hand and take an extra turn.
+- Pael's Flesh (Ancient, Shared): gain an additional energy at start of your 3rd turn and every turn after.
+- Pael's Growth (Ancient, Shared): on pickup, enchant a card with Clone.
+- Pael's Horn (Ancient, Shared): on pickup, add 2 Relax to your deck.
+- Pael's Legion (Ancient, Shared): doubles Block gained from cards, then sleeps for 2 turns.
+- Pael's Tears (Ancient, Shared): if you end your turn with unspent energy, gain 2 additional energy next turn.
+- Pael's Tooth (Ancient, Shared): on pickup, remove 5 cards; after each combat, randomly add 1 back upgraded.
+- Pael's Wing (Ancient, Shared): you may sacrifice card rewards to Pael; every 2 sacrifices, obtain a relic.
+- Pandora's Box (Ancient, Shared): transform ALL Strikes and Defends.
+- Pantograph (Uncommon, Shared): start of each Boss combat, heal 25 HP.
+- Paper Krane (Rare, Silent): enemies with Weak deal 40% less damage to you rather than 25%.
+- Paper Phrog (Uncommon, Ironclad): enemies with Vulnerable take 75% more damage rather than 50%.
+- Parrying Shield (Uncommon, Shared): if you end a turn with at least 10 Block, deal 6 damage to a random enemy.
+- Pear (Uncommon, Shared): on pickup, +10 Max HP.
+- Pen Nib (Uncommon, Shared): every 10th Attack you play deals double damage.
+- Pendulum (Common, Shared): every 3 turns, draw 1 card.
+- Permafrost (Uncommon, Shared): first time you play a Power each combat, gain 7 Block.
+- Petrified Toad (Uncommon, Shared): start of each combat, procure a Potion-Shaped Rock.
+- Phial Holster (Ancient, Shared): on pickup, gain 1 potion slot and procure 2 random potions.
+- Philosopher's Stone (Ancient, Shared): gain energy at start of each turn; ALL enemies start combat with 1 Strength.
+- Phylactery Unbound (Starter upgrade, Necrobinder): start of each combat, Summon 5; start of your turn, Summon 2.
+- Planisphere (Uncommon, Shared): whenever you enter a ? room, heal 5 HP.
+- Pocketwatch (Rare, Shared): if you play 3 or fewer cards during your turn, draw 3 additional cards at start of next turn.
+- Pollinous Core (Event, Shared): every 4 turns, draw 2 additional cards.
+- Pomander (Ancient, Shared): on pickup, upgrade a card.
+- Potion Belt (Common, Shared): on pickup, gain 2 potion slots.
+- Power Cell (Rare, Defect): start of each combat, add 2 zero-cost cards from your draw pile to your hand.
+- Prayer Wheel (Rare, Shared): normal enemies drop an additional card reward.
+- Precarious Shears (Ancient, Shared): on pickup, remove 2 cards and lose 16 HP.
+- Precise Scissors (Ancient, Shared): on pickup, remove 1 card from your deck.
+- Preserved Fog (Ancient, Shared): on pickup, remove 3 cards; add Folly to your deck.
+- Prismatic Gem (Ancient, Shared): gain energy at start of each turn; card rewards now contain cards from other colors.
+- Pumpkin Candle (Ancient, Shared): gain energy at start of each turn; extinguishes after 5 combats; can be kindled at Rest Sites.
+- Punch Dagger (Shop, Shared): on pickup, enchant an Attack with Momentum 5.
+- Radiant Pearl (Ancient, Shared): start of each combat, add 1 Luminesce to your hand.
+- Rainbow Ring (Rare, Shared): first time you play an Attack, Skill and Power each turn, gain 1 Strength and 1 Dexterity.
+- Razor Tooth (Rare, Shared): every time you play an Attack or Skill, upgrade it for the remainder of combat.
+- Red Mask (Common, Shared): start of each combat, apply 1 Weak to ALL enemies.
+- Red Skull (Common, Ironclad): while HP ≤ 50%, you have 3 additional Strength.
+- Regal Pillow (Common, Shared): whenever you Rest, heal an additional 15 HP.
+- Regalite (Uncommon, Regent): whenever you create a card, gain 2 Block.
+- Reptile Trinket (Uncommon, Shared): whenever you use a potion, gain 3 Strength this turn.
+- Ring of the Drake (Starter upgrade, Silent): start of your first 3 turns, draw 2 additional cards.
+- Ring of the Snake (Starter, Silent): start of each combat, draw 2 additional cards.
+- Ringing Triangle (Shop, Shared): retain your hand on the first turn of combat.
+- Ripple Basin (Uncommon, Shared): if you played no Attacks during your turn, gain 4 Block.
+- Royal Poison (Event, Shared): start of each combat, lose 4 HP.
+- Royal Stamp (Shop, Shared): on pickup, choose an Attack or Skill in your deck to enchant with Royally Approved.
+- Ruined Helmet (Rare, Ironclad): first time you gain Strength each combat, double the amount gained.
+- Runic Capacitor (Shop, Defect): start each combat with 3 additional Orb slots.
+- Runic Pyramid (Ancient, Shared): end of your turn, you no longer discard your hand.
+- Sai (Ancient, Shared): start of your turn, gain 7 Block.
+- Sand Castle (Ancient, Shared): on pickup, upgrade 6 random cards.
+- Screaming Flagon (Shop, Shared): if you end your turn with no cards in hand, deal 20 damage to ALL enemies.
+- Scroll Boxes (Ancient, Shared): on pickup, choose 1 of 2 packs of cards to add to your deck.
+- Sea Glass (Ancient, Shared): see 15 cards from another character; choose any number to add to your deck.
+- Seal of Gold (Ancient, Shared): start of your turn, spend 5 Gold to gain energy.
+- Self-Forming Clay (Uncommon, Ironclad): whenever you lose HP in combat, gain 3 Block next turn.
+- Sere Talon (Ancient, Shared): on pickup, add 2 random Curses and 3 Wishes to your deck.
+- Shovel (Rare, Shared): you can now dig at Rest Sites to obtain a random relic.
+- Shuriken (Rare, Shared): every time you play 3 Attacks in one turn, gain 1 Strength.
+- Signet Ring (Ancient, Shared): on pickup, gain 999 Gold.
+- Silken Tress (Ancient, Shared): on pickup, lose all Gold; enchant all cards in the first card reward with Glam.
+- Silver Crucible (Ancient, Shared): the first 3 card rewards you see are upgraded; the first treasure chest you open is empty.
+- Sling of Courage (Shop, Shared): start each elite combat with 2 Strength.
+- Small Capsule (Ancient, Shared): on pickup, obtain a random relic.
+- Snecko Eye (Ancient, Shared): start of your turn, draw 2 additional cards; start each combat Confused.
+- Snecko Eye??? (Event, Shared): start each combat Confused.
+- Snecko Skull (Common, Silent): whenever you apply Poison, apply an additional 1 Poison.
+- Sozu (Ancient, Shared): gain energy at start of each turn; you can no longer obtain potions.
+- Sparkling Rouge (Uncommon, Shared): start of your 3rd turn, gain 1 Strength and 1 Dexterity.
+- Spiked Gauntlets (Ancient, Shared): gain energy at start of each turn; Powers cost 1 more energy.
+- Stone Calendar (Rare, Shared): end of turn 7, deal 52 damage to ALL enemies.
+- Stone Cracker (Uncommon, Shared): start of each combat, upgrade 2 random cards in your draw pile for the rest of combat.
+- Stone Humidifier (Ancient, Shared): whenever you Rest at a Rest Site, +5 Max HP.
+- Storybook (Ancient, Shared): on pickup, add 1 Brightest Flame to your deck.
+- Strawberry (Common, Shared): on pickup, +7 Max HP.
+- Strike Dummy (Common, Shared): cards containing "Strike" deal 3 additional damage.
+- Strike Dummy??? (Event, Shared): cards containing "Strike" deal 1 additional damage.
+- Sturdy Clamp (Rare, Shared): up to 10 Block persists across turns.
+- Sword of Jade (Event, Shared): start each combat with 3 Strength.
+- Sword of Stone (Event, Shared): transforms into a powerful relic after defeating 5 elites.
+- Symbiotic Virus (Uncommon, Defect): start of each combat, Channel 1 Dark.
+- Tanx's Whistle (Ancient, Shared): on pickup, add 1 Whistle to your deck.
+- Tea of Discourtesy (Event, Shared): at start of next combat, shuffle 2 Dazed into your draw pile.
+- The Abacus (Shop, Shared): whenever you shuffle your draw pile, gain 6 Block.
+- The Boot (Event, Shared): whenever you would deal 4 or less unblocked attack damage, increase it to 5.
+- The Chosen Cheese (Event, Shared): end of combat, gain 1 Max HP.
+- The Courier (Rare, Shared): the merchant never runs out of stock and his prices are reduced by 20%.
+- The Merchant's Rug??? (Event, Shared): poor imitation; does nothing.
+- Throwing Axe (Ancient, Shared): the first card you play each combat is played an extra time.
+- Tingsha (Uncommon, Silent): whenever you discard a card during your turn, deal 3 damage to a random enemy per card discarded.
+- Tiny Mailbox (Uncommon, Shared): whenever you Rest, procure 2 random potions.
+- Toasty Mittens (Ancient, Shared): start of your turn, exhaust the top card of your draw pile and gain 1 Strength.
+- Toolbox (Shop, Shared): start of each combat, choose 1 of 3 random Colorless cards and add it to your hand.
+- Touch of Orobas (Ancient, Shared): on pickup, replace your starter relic with an ancient version.
+- Tough Bandages (Rare, Silent): whenever you discard a card during your turn, gain 3 Block.
+- Toxic Egg (Rare, Shared): whenever you add a Skill to your deck, upgrade it.
+- Toy Box (Ancient, Shared): on pickup, obtain 4 Wax relics; every 3 combats, your left-most Wax relic melts away.
+- Tri-Boomerang (Ancient, Shared): choose 3 Attacks in your deck; enchant them with Instinct.
+- Tungsten Rod (Rare, Shared): whenever you would lose HP, lose 1 less.
+- Tuning Fork (Uncommon, Shared): every time you play 10 Skills, gain 7 Block.
+- Twisted Funnel (Uncommon, Silent): start of each combat, apply 4 Poison to ALL enemies.
+- Unceasing Top (Rare, Shared): whenever you have no cards in hand during your turn, draw a card.
+- Undying Sigil (Shop, Necrobinder): enemies with at least as much Doom as HP deal 50% less damage.
+- Unsettling Lamp (Rare, Shared): each combat, the first time you play a card that debuffs an enemy, double its effect.
+- Vajra (Common, Shared): start each combat with 1 Strength.
+- Vambrace (Uncommon, Shared): first time you gain Block from a card each combat, double the amount gained.
+- Velvet Choker (Ancient, Shared): gain energy at start of each turn; you cannot play more than 6 cards per turn.
+- Venerable Tea Set (Common, Shared): whenever you enter a Rest Site, start the next combat with 2 additional energy.
+- Venerable Tea Set??? (Event, Shared): whenever you enter a Rest Site, start the next combat with 1 additional energy.
+- Very Hot Cocoa (Ancient, Shared): start each combat with 4 additional energy.
+- Vexing Puzzlebox (Rare, Shared): start of each combat, add a random card to your hand; free this turn.
+- Vitruvian Minion (Shop, Regent): cards containing "Minion" deal double damage and gain double Block.
+- War Hammer (Ancient, Shared): whenever you kill an elite, upgrade 4 random cards.
+- War Paint (Common, Shared): on pickup, upgrade 2 random Skills.
+- Whetstone (Common, Shared): on pickup, upgrade 2 random Attacks.
+- Whispering Earring (Ancient, Shared): gain energy at start of each turn; Vakuu plays your first turn for you.
+- White Beast Statue (Rare, Shared): potions always appear in combat rewards.
+- White Star (Rare, Shared): elites drop an additional Rare card reward.
+- Wing Charm (Shop, Shared): a random card in each card reward is enchanted with Swift 1.
+- Winged Boots (Ancient, Shared): you may ignore paths when choosing rooms to travel to 3 times.
+- Wongo Customer Appreciation Badge (Event, Shared): does nothing.
+- Wongo's Mystery Ticket (Event, Shared): receive 3 random relics after 5 combats.
+- Yummy Cookie (Ancient, Shared): on pickup, upgrade 4 cards.

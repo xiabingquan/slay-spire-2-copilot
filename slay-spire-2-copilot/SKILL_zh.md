@@ -180,6 +180,7 @@ references/ — 查阅知识：
 - `references/README_zh.md` — 知识索引（中文版）
 - `references/bridge/commands.md` — CLI 用法、动作与状态参考、日志目录契约
 - `references/bridge/protocol.md` — 线协议 v1（本机 TCP 上的 JSON Lines）
+- `references/game/characters_zh.md` — 可玩角色、初始配置、流派
 - `references/game/cards_zh.md` — 卡牌
 - `references/game/potions_zh.md` — 药水效果
 - `references/game/powers_zh.md` — 能力/力量
