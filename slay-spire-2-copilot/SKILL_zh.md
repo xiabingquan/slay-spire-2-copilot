@@ -45,8 +45,7 @@ Spire 2 via Claude Code or Codex"。
 
          SPIREBRIDGE_LOG_DIR=<绝对文件夹> python3 bridge/spirectl.py <子命令>
 
-2. **读记忆**（先于其他操作；memory/ 为本地文件且不入库——文件缺失时以空记忆
-   开局，在首次对局结束时创建）：
+2. **读记忆**（先于其他操作；文件缺失时以空记忆开局，在首次对局结束时创建）：
    - memory/lessons/lessons.md（通用决策经验）
    - memory/lessons/<角色>.md（分角色手册，存在时读取）
    - memory/changelog.md（最近的工具/策略变更）
@@ -127,7 +126,7 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
 2. 仅把可泛化的经验写入 memory/lessons/lessons.md（排除一次性坏 RNG）；保持
    简短具体，被证伪的条目及时删除。
 3. 角色专属经验写入对应手册 memory/lessons/<角色>.md。
-4. memory/ 仅存本地（gitignore）：文件缺失时按需创建；绝不提交进仓库。
+4. 不将 memory 文件提交进仓库。
 5. 若用户已停止游玩：解除看门狗武装（见「运行时约定」）。
 
 ## 自我迭代
@@ -185,7 +184,7 @@ references/ — 查阅知识：
 - `references/intents.md` — 敌人意图解读
 - `references/afflictions.md` — 状态与负面效果
 
-memory/ — 对局记忆（本地，gitignore）：
+memory/ — 对局记忆：
 
 - `memory/lessons/lessons.md` — 通用决策经验：出牌、奖励、地图、事件与机制教训
 - `memory/lessons/<角色>.md` — 分角色手册（随游玩数据积累）

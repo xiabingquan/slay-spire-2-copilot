@@ -12,8 +12,8 @@ AI 副驾驶。skill 被触发后，智能体读取牌局状态、做出决策�
   自主决定出牌、奖励与路线，通过通讯 mod 操作游戏
 - **连续运行**：对局结束后自动写复盘、更新经验库、开始下一局；附带的外部
   看门狗脚本可定时检查游戏进程、桥接与日志的存活状态
-- **跨局记忆**：对局数据存于 `memory/`（本地文件，不入库），后续会话自动加载；
-  工具缺陷在本仓库内修复，对下次运行即时生效
+- **跨局记忆**：`memory/` 下的经验与对局记录在后续会话自动加载；工具缺陷在
+  本仓库内修复，对下次运行即时生效
 
 ## 怎么用
 
@@ -50,7 +50,7 @@ dll 更新时执行构建安装（dotnet build，产物拷贝至游戏 mods 目�
         scripts/                           （shell 脚本：mod 构建安装、看门狗）
         mod/SpireBridge/                   （游戏内通讯 mod 源码）
         references/                        （CLI 速查、线协议、游玩知识）
-        memory/                            （对局记忆 — 本地，不入库）
+        memory/                            （对局记忆：经验、台账、复盘）
 
 skill 符号链接：`~/.claude/skills/slay-spire-2-copilot` → 上述 skill 文件夹。
 运行时日志与看门狗状态写在仓库外的用户目录，不入库。
@@ -73,7 +73,7 @@ skill 符号链接：`~/.claude/skills/slay-spire-2-copilot` → 上述 skill �
   状态指纹哈希驱动等待；战斗结束/RINGING 卡死有服务端强制推进与 `sl`
   存档重载（约 18s，用于带信息重打）
 - **记忆与迭代**：`memory/` 下的经验、复盘、changelog 随对局更新，下次会话
-  自动加载；memory 仅存本地不入库，工具修复直接进本仓库
+  自动加载；工具修复直接进本仓库
 
 更细的协议见 `slay-spire-2-copilot/references/protocol.md`，CLI 速查见
 `slay-spire-2-copilot/references/commands.md`。

@@ -58,9 +58,8 @@ Execute in order; all of the following are the skill's own work:
 
          SPIREBRIDGE_LOG_DIR=<abs-folder> python3 bridge/spirectl.py <subcommand>
 
-2. **Read memory** (before anything else; memory/ holds local files that are
-   gitignored — when a file is missing, start from empty memory and create it
-   at the first run end):
+2. **Read memory** (before anything else; create any missing memory file at
+   the first run end):
    - memory/lessons/lessons.md (generalizable decision lessons)
    - memory/lessons/<character>.md (per-character playbook, when present)
    - memory/changelog.md (recent tool/strategy changes)
@@ -158,8 +157,7 @@ When the run ends (game_over screen, or abandon):
    wrong.
 3. Fold character-specific guidance into the character's playbook
    memory/lessons/<character>.md.
-4. Memory is local-only (gitignored): create missing files as needed; never
-   commit memory into the repo.
+4. Do not commit memory files into the repo.
 5. If the user has stopped playing: disarm the watchdog (see "Runtime
    conventions").
 
@@ -230,7 +228,7 @@ references/ — consult knowledge:
 - `references/intents.md` — reading enemy intents
 - `references/afflictions.md` — statuses and debuffs
 
-memory/ — run memory (local, gitignored):
+memory/ — run memory:
 
 - `memory/lessons/lessons.md` — generalizable decision lessons: card play,
   rewards, map, events, mechanics
