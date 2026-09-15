@@ -50,7 +50,7 @@ dll 更新时执行构建安装（dotnet build，产物拷贝至游戏 mods 目�
         scripts/                           （shell 脚本：mod 构建安装、看门狗）
         mod/SpireBridge/                   （游戏内通讯 mod 源码）
         references/bridge/                 （CLI 速查、线协议）
-        references/game/                   （卡牌、能力、遗物、药水、状态、意图）
+        references/game/                   （角色、卡牌、能力、遗物、药水、状态、意图、怪物、事件）
         memory/                            （对局记忆：经验、台账、复盘）
 
 skill 符号链接：`~/.claude/skills/slay-spire-2-copilot` → 上述 skill 文件夹。

@@ -83,8 +83,13 @@ Strike = 1 费攻击造成 6 点伤害；Defend = 1 费技能获得 5 格挡。�
   双减益核心牌）。
 - WHIRLWIND：X，攻击，对所有敌人造成 X 次伤害（配合力量/能量实测
   总伤 27-81）。
-- Ironclad 待补效果名单：Heavy Blade、Immolate、Limit Break、Pact's End、
-  Reaper、Rupture、Sentinel、Shockwave。
+- Ironclad 待补效果名单：Heavy Blade、Immolate、Limit Break、Midnight
+  （beta）、Pact's End（Rare 攻击）、Primal Force（0，Rare 技能）、
+  Rage（0，Uncommon 技能）、Reaper、Rupture（1，Uncommon 能力）、
+  Sentinel、Shockwave、Spite（0，Uncommon 攻击）、Stampede（2，Uncommon
+  能力）、Stone Armor（1，Uncommon 能力）、Stoke（1，Rare 技能，beta）、
+  Tear Asunder（2，Rare 攻击）、Thrash（1，Rare 攻击）、Unmovable（2，
+  Rare 能力）、Vicious（1，Uncommon 能力）。
 
 ## Silent（寂静）
 

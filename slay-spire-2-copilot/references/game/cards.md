@@ -76,7 +76,7 @@ within each character.
 - TWIN_STRIKE: 1, attack, deal 5 damage twice; Strength per hit.
 - UPPERCUT: 2, attack, damage + Weak + Vulnerable (~8-21 upgraded observed; dual-debuff staple).
 - WHIRLWIND: X, attack, deal damage to ALL enemies X times (27-81 total observed with Strength/energy).
-- Ironclad names still pending effect data: Heavy Blade, Immolate, Limit Break, Pact's End, Reaper, Rupture, Sentinel, Shockwave.
+- Ironclad names still pending effect data: Heavy Blade, Immolate, Limit Break, Midnight (beta), Pact's End (Rare attack), Primal Force (0, Rare skill), Rage (0, Uncommon skill), Reaper, Rupture (1, Uncommon power), Sentinel, Shockwave, Spite (0, Uncommon attack), Stampede (2, Uncommon power), Stone Armor (1, Uncommon power), Stoke (1, Rare skill, beta), Tear Asunder (2, Rare attack), Thrash (1, Rare attack), Unmovable (2, Rare power), Vicious (1, Uncommon power).
 
 ## Silent
 

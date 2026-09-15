@@ -58,7 +58,7 @@ Manual commands for troubleshooting and intervention:
         scripts/                           (shell scripts: mod install, watchdog)
         mod/SpireBridge/                   (in-game communication mod source)
         references/bridge/                 (CLI cheat sheet, wire protocol)
-        references/game/                   (cards, powers, relics, potions, statuses, intents)
+        references/game/                   (characters, cards, powers, relics, potions, statuses, intents, monsters, events)
         memory/                            (run memory: lessons, changelog, postmortems)
 
 Skill symlink: `~/.claude/skills/slay-spire-2-copilot` → the skill folder above.
