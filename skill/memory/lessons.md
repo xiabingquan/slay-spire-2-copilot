@@ -122,3 +122,12 @@ breakthrough; remove entries that prove wrong.
 - Combat-end stall pattern #5: HAVOC/random-card kills left combat in Play phase
   with no living enemies. Server fix: end_turn win-condition force path
   (CheckWinCondition -> EndCombatInternal). No more restart ladder for this case.
+- Floor5 shrink-beetle + STR-worm pack (2026-09-16): strike-heavy starter decks
+  fold even with correct kill order — worm scales to 25dmg/turn. Two SL retries
+  with foreknowledge still died R9-R10. Need block/heal relics before mid-act
+  multi-enemy STR floors.
+- POWER_POTION: no visible buff in bridge state after use — verify effect
+  (target requirement? hidden power?) before relying on it in races.
+- SL retry budget: 1-2 tries when the known line still loses; then write
+  postmortem and move on — replaying a losing seed forever wastes the watch dog
+  window without changing the deck.
