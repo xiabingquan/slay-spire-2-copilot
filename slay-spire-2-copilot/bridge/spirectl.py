@@ -32,68 +32,135 @@ GAME_LOG = Path(
 )
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SKILL_ROOT = REPO_ROOT  # skill folder: <repo>/slay-spire-2-copilot (bridge lives here)
-# Runtime log dir comes ONLY from the SPIREBRIDGE_LOG_DIR environment variable
-# (user directive 2026-09-16: no pointer files, no personal paths in the repo,
-# nothing passed around via CLI flags). If unset, fall back to a runtime
-# per-user directory computed at process start — never stored in the project.
-#   export SPIREBRIDGE_LOG_DIR=/abs/dir   # then run any spirectl command
-FALLBACK_LOG_DIR = Path(os.path.expanduser("~/.local/share/slay-spire-2-copilot/logs"))
+# Run-log directory: SPIREBRIDGE_LOG_DIR only — no pointer files, no CLI flags,
+# no fallback directory. Unset → commands that write run logs fail fast.
+#   export SPIREBRIDGE_LOG_DIR=/abs/dir
 STEAM_APP_ID = "2868840"
 BBCODE_RE = re.compile(r"\[/?[^\]]+\]")
 
 
 def strip_bbcode(text):
+    """Remove BBCode-style markup tags from a string.
+
+    Args:
+        text: Raw label text that may contain [tag] markup.
+
+    Returns:
+        The text with markup tags removed; non-strings pass through unchanged.
+    """
     return BBCODE_RE.sub("", text) if isinstance(text, str) else text
 
 
+LOG_DIR_UNSET_ERROR = (
+    "SPIREBRIDGE_LOG_DIR is not set. The skill invocation must supply an "
+    "absolute log folder path; set SPIREBRIDGE_LOG_DIR for the whole session. "
+    "There is no fallback log directory."
+)
+
+
 def resolve_log_dir():
+    """Resolve the run-log directory from SPIREBRIDGE_LOG_DIR.
+
+    Returns:
+        Absolute path of the log folder, created if missing.
+
+    Raises:
+        RuntimeError: If SPIREBRIDGE_LOG_DIR is unset; there is no fallback.
+    """
     env = os.environ.get("SPIREBRIDGE_LOG_DIR")
-    if env:
-        return Path(env).expanduser().resolve()
-    return FALLBACK_LOG_DIR.resolve()
+    if not env:
+        raise RuntimeError(LOG_DIR_UNSET_ERROR)
+    path = Path(env).expanduser()
+    path.mkdir(parents=True, exist_ok=True)
+    return path.resolve()
 
 
 def _apply_log_dir():
+    """Bind RUNLOG_DIR/RUNLOG_POINTER to the env-resolved log folder.
+
+    Returns:
+        The resolved log directory, or None if the env var is unset.
+    """
     global RUNLOG_DIR, RUNLOG_POINTER
-    RUNLOG_DIR = resolve_log_dir()
-    RUNLOG_DIR.mkdir(parents=True, exist_ok=True)
+    try:
+        RUNLOG_DIR = resolve_log_dir()
+    except RuntimeError:
+        RUNLOG_DIR = None
+        RUNLOG_POINTER = None
+        return None
     RUNLOG_POINTER = RUNLOG_DIR / ".current_run"
     return RUNLOG_DIR
 
 
-RUNLOG_DIR = FALLBACK_LOG_DIR.resolve()
-RUNLOG_POINTER = RUNLOG_DIR / ".current_run"
+RUNLOG_DIR = None
+RUNLOG_POINTER = None
 _apply_log_dir()
 
 
-def _runlog_file(finalize=False):
-    """Actual log file inside $SPIREBRIDGE_LOG_DIR (user-supplied folder, or the
-    per-user fallback). The user passes a FOLDER; each run derives a unique
-    file name inside it as run-<timestamp>-<hash>.log (timestamp + hash, user
-    directive 2026-09-16). Rotated on start/continue_run, finalized on
-    game_over via the .current_run pointer kept in that same folder."""
-    RUNLOG_DIR.mkdir(parents=True, exist_ok=True)
+def _require_log_dir():
+    """Return the active log directory and its current-run pointer file.
+
+    Returns:
+        Tuple (log_dir, pointer_path).
+
+    Raises:
+        SystemExit: If SPIREBRIDGE_LOG_DIR was never set for this process.
+    """
+    if RUNLOG_DIR is None or RUNLOG_POINTER is None:
+        raise SystemExit(f"error: {LOG_DIR_UNSET_ERROR}")
+    return RUNLOG_DIR, RUNLOG_POINTER
+
+
+def _runlog_file():
+    """Return the active run-log file path, deriving one if needed.
+
+    File names are run-<timestamp>-<hash8>.log inside SPIREBRIDGE_LOG_DIR;
+    rotation is driven by the .current_run pointer in that same folder.
+
+    Returns:
+        Path of the current run log file.
+
+    Raises:
+        SystemExit: If SPIREBRIDGE_LOG_DIR is unset.
+    """
+    log_dir, pointer = _require_log_dir()
+    log_dir.mkdir(parents=True, exist_ok=True)
     current = None
-    if RUNLOG_POINTER.exists():
-        current = RUNLOG_POINTER.read_text(encoding="utf-8").strip() or None
+    if pointer.exists():
+        current = pointer.read_text(encoding="utf-8").strip() or None
         if current:
-            return RUNLOG_DIR / current
+            return log_dir / current
     stamp = time.strftime("%Y%m%d-%H%M%S")
     digest = hashlib.sha256(
         f"{stamp}|{os.getpid()}|{secrets.token_hex(8)}".encode("utf-8")
     ).hexdigest()[:8]
     current = f"run-{stamp}-{digest}.log"
-    RUNLOG_POINTER.write_text(current + "\n", encoding="utf-8")
-    return RUNLOG_DIR / current
+    pointer.write_text(current + "\n", encoding="utf-8")
+    return log_dir / current
 
 
 def log_run_event(kind, data, rotate=False, finalize=False):
-    """Append a complete record (timestamp + kind + full JSON) to the run log."""
+    """Append a timestamped JSON record to the current run log.
+
+    Args:
+        kind: Record kind (state, act, wait_change, run_end, ...).
+        data: Payload merged into the JSON line.
+        rotate: Drop the current-run pointer so the next write starts a new file.
+        finalize: Mark the record as a run end (adds outcome).
+
+    Returns:
+        Path of the written log file, or None when logging is skipped
+        (SPIREBRIDGE_NO_RUNLOG set) or the log dir is unset.
+
+    Raises:
+        SystemExit: If a write is required but SPIREBRIDGE_LOG_DIR is unset.
+    """
     if os.environ.get("SPIREBRIDGE_NO_RUNLOG"):
         return None
-    if rotate and RUNLOG_POINTER.exists():
-        RUNLOG_POINTER.unlink(missing_ok=True)
-    path = _runlog_file(finalize=finalize)
+    _, pointer = _require_log_dir()
+    if rotate and pointer.exists():
+        pointer.unlink(missing_ok=True)
+    path = _runlog_file()
     record = {"ts": time.strftime("%Y-%m-%d %H:%M:%S"), "kind": kind, **data}
     if finalize:
         record["outcome"] = data.get("outcome") or "game_over"
@@ -109,11 +176,18 @@ WATCHDOG_LAST_NOTIFY = WATCHDOG_STATE_DIR / "watchdog-last-notify"
 
 
 def cmd_watchdog(args):
-    """Arm/disarm the external Feishu liveness watchdog (crontab script)."""
+    """Arm, disarm, or report status of the external liveness watchdog.
+
+    Args:
+        args: Parsed CLI args; args.watchdog_cmd is enable|disable|status.
+
+    Returns:
+        Process exit code (0 on success).
+    """
     WATCHDOG_STATE_DIR.mkdir(parents=True, exist_ok=True)
     if args.watchdog_cmd == "disable":
         WATCHDOG_DISARM.write_text(time.strftime("%Y-%m-%d %H:%M:%S") + "\n", encoding="utf-8")
-        print(f"watchdog DISARMED ({WATCHDOG_DISARM}) — crontab stays installed, Feishu alerts muted")
+        print(f"watchdog DISARMED ({WATCHDOG_DISARM}) — crontab entry stays, checks muted")
         return 0
     if args.watchdog_cmd == "enable":
         WATCHDOG_DISARM.unlink(missing_ok=True)
@@ -125,11 +199,11 @@ def cmd_watchdog(args):
     else:
         print("watchdog: ARMED")
     if WATCHDOG_LAST_NOTIFY.exists():
-        print(f"last feishu notify epoch: {WATCHDOG_LAST_NOTIFY.read_text(encoding='utf-8').strip()}")
+        print(f"last alert epoch: {WATCHDOG_LAST_NOTIFY.read_text(encoding='utf-8').strip()}")
     else:
         print("last feishu notify: (none recorded)")
     print(f"state dir: {WATCHDOG_STATE_DIR}")
-    print(f"run log dir: {RUNLOG_DIR} (SPIREBRIDGE_LOG_DIR={'set' if os.environ.get('SPIREBRIDGE_LOG_DIR') else 'unset'})")
+    print(f"run log dir: {RUNLOG_DIR or 'UNSET'} (SPIREBRIDGE_LOG_DIR={'set' if os.environ.get('SPIREBRIDGE_LOG_DIR') else 'unset — required, no fallback'})")
     return 0
 
 
@@ -145,13 +219,13 @@ GAME_APP = Path(
 
 
 def game_process_running():
+    """Return True when a Slay the Spire 2 process is present."""
     proc = subprocess.run(["pgrep", "-f", "Slay the Spire 2"], capture_output=True, text=True)
     return bool(proc.stdout.strip())
 
 
 def suppress_crash_dialogs():
-    """macOS shows 'app quit unexpectedly' after hard kills; silence the
-    CrashReporter dialog so automated restarts stay quiet."""
+    """Silence the macOS CrashReporter dialog after hard kills."""
     subprocess.run(
         ["defaults", "write", "com.apple.CrashReporter", "DialogType", "-string", "none"],
         capture_output=True,
@@ -159,7 +233,14 @@ def suppress_crash_dialogs():
 
 
 def cmd_stop(args):
-    """Graceful game stop: AppleEvent quit -> SIGTERM -> SIGKILL."""
+    """Stop the game: AppleEvent quit, then SIGTERM, then SIGKILL.
+
+    Args:
+        args: Parsed CLI args (unused).
+
+    Returns:
+        Process exit code (0 once the game process is gone).
+    """
     del args
     suppress_crash_dialogs()
     if not game_process_running():
@@ -183,6 +264,16 @@ def cmd_stop(args):
 
 
 def wait_for(predicate, timeout, interval=2.0):
+    """Poll a predicate until it returns True or the timeout expires.
+
+    Args:
+        predicate: Zero-arg callable tested on each iteration.
+        timeout: Maximum seconds to wait.
+        interval: Sleep between polls, in seconds.
+
+    Returns:
+        True if the predicate succeeded, False on timeout.
+    """
     deadline = time.time() + timeout
     while time.time() < deadline:
         if predicate():
@@ -192,7 +283,10 @@ def wait_for(predicate, timeout, interval=2.0):
 
 
 class BridgeClient:
+    """Line-delimited JSON client for the in-game bridge TCP server."""
+
     def __init__(self, host=DEFAULT_HOST, port=DEFAULT_PORT, timeout=12.0):
+        """Open a client for host:port with the given socket timeout."""
         self.host = host
         self.port = port
         self.timeout = timeout
@@ -202,12 +296,14 @@ class BridgeClient:
         self.last_metrics = {}
 
     def connect(self):
+        """Open the TCP connection and install buffered line streams."""
         self.sock = socket.create_connection((self.host, self.port), timeout=self.timeout)
         self.sock.settimeout(self.timeout)
         self.rfile = self.sock.makefile("r", encoding="utf-8")
         self.wfile = self.sock.makefile("w", encoding="utf-8")
 
     def close(self):
+        """Close streams and the socket; ignore double-close errors."""
         for f in (self.rfile, self.wfile):
             try:
                 if f:
@@ -221,6 +317,18 @@ class BridgeClient:
             pass
 
     def request(self, payload):
+        """Send one JSON request and read one JSON response line.
+
+        Args:
+            payload: Serializable request object.
+
+        Returns:
+            Parsed response dict.
+
+        Raises:
+            ConnectionError: If the server closes the connection.
+            OSError, json.JSONDecodeError: Transport or payload failures.
+        """
         t0 = time.perf_counter()
         fresh = self.sock is None
         if fresh:
@@ -245,28 +353,45 @@ class BridgeClient:
         return resp
 
     def hello(self):
+        """Request the handshake (type=hello)."""
         return self.request({"type": "hello"})
 
     def state(self):
+        """Request a full state snapshot."""
         return self.request({"type": "state"})
 
     def act(self, action, args=None):
+        """Submit one game action to the bridge.
+
+        Args:
+            action: Action name (play, end_turn, choose, ...).
+            args: Optional JSON-serializable argument object.
+        """
         payload = {"type": "act", "action": action}
         if args:
             payload["args"] = args
         return self.request(payload)
 
     def __enter__(self):
-        self.connect()
+        """Connect and enter the context manager."""
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        del exc_type, exc_val, exc_tb
+        """Close the connection on context exit."""
+        del exc_val, exc_tb
+        del exc_type
         self.close()
 
 
 def combat_play_ready(state):
-    """True when the client may act: not in combat, combat over, or player Play phase."""
+    """Return True when the client may legally act on this state.
+
+    Args:
+        state: Bridge state snapshot.
+
+    Returns:
+        True outside combat, on game_over, or in the player's Play phase.
+    """
     screen = state.get("screen")
     if screen == "game_over" or (state.get("run") or {}).get("is_game_over"):
         return True
@@ -277,13 +402,23 @@ def combat_play_ready(state):
 
 
 def wait_for_settle(client, mode="settle", timeout=30.0, stable_s=0.35, stall_s=18.0):
-    """Poll until game state settles (mode=settle) or player turn resumes (mode=play).
+    """Poll the bridge until state settles or the player turn resumes.
 
-    Settle succeeds once the fingerprint has been stable for stable_s — including
-    the case where the act's returned state was already final (reward claims).
-    Play mode additionally requires Play phase / non-combat screen; a frozen
-    non-play state longer than stall_s reports stalled=True.
-    Returns (state, settle_ms, stalled). settle_ms is wall time spent polling.
+    Args:
+        client: Connected BridgeClient.
+        mode: "settle" waits for a stable fingerprint; "play" additionally
+            requires combat_play_ready (Play phase / non-combat / game_over).
+        timeout: Maximum seconds to poll.
+        stable_s: Fingerprint stability window required to declare settled.
+        stall_s: In play mode, report stalled when not play-ready this long.
+
+    Returns:
+        Tuple (state, settle_ms, stalled): last snapshot, polling wall time,
+        and whether the wait ended without reaching the target condition.
+
+    Raises:
+        ConnectionError, OSError, json.JSONDecodeError: Bridge failures are
+            caught and returned as stalled=True.
     """
     t0 = time.perf_counter()
     state = client.state()
@@ -314,6 +449,14 @@ def wait_for_settle(client, mode="settle", timeout=30.0, stable_s=0.35, stall_s=
 
 
 def metrics_line(metrics):
+    """Format timing metrics for one-line CLI output.
+
+    Args:
+        metrics: Dict with optional rtt_ms/connect_ms/server_ms/queue_ms.
+
+    Returns:
+        Space-separated key=value line, empty when metrics is falsy.
+    """
     if not metrics:
         return ""
     bits = [f"rtt={metrics.get('rtt_ms')}ms"]
@@ -327,6 +470,14 @@ def metrics_line(metrics):
 
 
 def render_compact(state):
+    """Render a bridge state snapshot as compact human-readable lines.
+
+    Args:
+        state: Bridge state snapshot dict.
+
+    Returns:
+        Multi-line string summarizing screen, run, player, combat, options.
+    """
     lines = []
     run = state.get("run") or {}
     player = state.get("player") or {}
@@ -420,10 +571,18 @@ def render_compact(state):
 
 
 def cmd_doctor(args):
+    """Check mod install, game process, bridge handshake, and log-dir status.
+
+    Args:
+        args: Parsed CLI args (host/port).
+
+    Returns:
+        Process exit code (0 when all checks pass).
+    """
     ok = True
     print("== spirectl doctor ==")
     env_dir = os.environ.get("SPIREBRIDGE_LOG_DIR")
-    print(f"[0] run log dir: {RUNLOG_DIR} | SPIREBRIDGE_LOG_DIR={env_dir or '(unset -> fallback)'}")
+    print(f"[0] run log dir: {RUNLOG_DIR or 'UNSET'} | SPIREBRIDGE_LOG_DIR={env_dir or 'unset — required, no fallback'}")
     mod_dir = GAME_MODS_DIR / MOD_ID
     dll = mod_dir / f"{MOD_ID}.dll"
     manifest = mod_dir / f"{MOD_ID}.json"
@@ -472,6 +631,14 @@ def cmd_doctor(args):
 
 
 def cmd_state(args):
+    """Read and print the current game state; logs the snapshot.
+
+    Args:
+        args: Parsed CLI args; args.json prints full JSON.
+
+    Returns:
+        Process exit code (0 ok, 1 game over detected).
+    """
     with BridgeClient(host=args.host, port=args.port) as client:
         state = client.state()
         metrics = dict(client.last_metrics)
@@ -487,6 +654,15 @@ def cmd_state(args):
 
 
 def _wait_mode_for(action, explicit):
+    """Pick the settle wait mode for an action.
+
+    Args:
+        action: Action name being executed.
+        explicit: Caller override ("settle" or "play"), or None.
+
+    Returns:
+        "play" for end_turn (or explicit "play"), otherwise "settle".
+    """
     if explicit in ("settle", "play"):
         return explicit
     if action == "end_turn":
@@ -495,6 +671,15 @@ def _wait_mode_for(action, explicit):
 
 
 def cmd_act(args):
+    """Submit one action and optionally wait for settle/play.
+
+    Args:
+        args: Parsed CLI args (action, args, wait/wait-play/wait-mode,
+            wait-timeout, stall-timeout, json).
+
+    Returns:
+        Process exit code: 0 ok, 1 failed act, 3 stall.
+    """
     act_args = json.loads(args.args) if args.args else None
     wait_mode = None
     if args.wait or args.wait_play or args.wait_mode:
@@ -547,11 +732,17 @@ def cmd_act(args):
 
 
 def cmd_batch(args):
-    """Sequential mechanical acts after Claude chose the tactic.
+    """Run a JSON list of acts sequentially, settling between each.
 
-    Settles between acts (re-read), aborts on the first ok=false. Index-shift
-    arithmetic for hand cards is the caller's responsibility — prefer
-    high-to-low card_index so earlier plays don't invalidate later ones.
+    Hand-index arithmetic across plays belongs to the caller: prefer
+    high-to-low card_index so earlier plays do not invalidate later ones.
+
+    Args:
+        args: Parsed CLI args; args.acts is a JSON array of
+            {"action", "args"} objects.
+
+    Returns:
+        Process exit code: 0 ok, 1 failed act, 2 bad input, 3 stall, 4 game_over.
     """
     acts = json.loads(args.acts)
     if not isinstance(acts, list) or not acts:
@@ -607,13 +798,22 @@ def cmd_batch(args):
 
 
 def _load_run_events(path=None):
+    """Load JSON events from a run log.
+
+    Args:
+        path: Explicit log file; None uses the current run pointer.
+
+    Returns:
+        Tuple (path, events); events is empty when nothing could be loaded.
+    """
     if path:
         target = Path(path)
     else:
-        pointer = RUNLOG_POINTER.read_text(encoding="utf-8").strip() if RUNLOG_POINTER.exists() else ""
+        log_dir, pointer_path = _require_log_dir()
+        pointer = pointer_path.read_text(encoding="utf-8").strip() if pointer_path.exists() else ""
         if not pointer:
             return None, []
-        target = RUNLOG_DIR / pointer
+        target = log_dir / pointer
     if not target.exists():
         return target, []
     events = []
@@ -630,6 +830,7 @@ def _load_run_events(path=None):
 
 
 def _percentile(values, p):
+    """Return the p-quantile (0..1) of values, or None when empty."""
     if not values:
         return None
     ordered = sorted(values)
@@ -638,7 +839,15 @@ def _percentile(values, p):
 
 
 def cmd_profile(args):
-    """Summarize where time goes in a run log: bridge RTT, game settle, client gaps."""
+    """Summarize timing in a run log: bridge RTT, game settle, client gaps.
+
+    Args:
+        args: Parsed CLI args; args.log selects a run-log path
+            (default: current run), args.budget is the target minutes per run.
+
+    Returns:
+        Process exit code (0 on success, 1 when the log has no events).
+    """
     path, events = _load_run_events(args.log)
     if not events:
         print(f"no run log events ({path})")
@@ -648,6 +857,7 @@ def cmd_profile(args):
     print(f"events={len(events)} span {t0} -> {tN}")
 
     def parse(ts):
+        """Parse a run-log timestamp string into datetime."""
         return datetime.strptime(ts, "%Y-%m-%d %H:%M:%S")
 
     span_s = (parse(tN) - parse(t0)).total_seconds()
@@ -671,6 +881,7 @@ def cmd_profile(args):
             total.append(m["total_ms"])
 
     def block(name, vals, unit="ms"):
+        """Print one timing block: n/p50/p90/p99/max/avg."""
         if not vals:
             print(f"  {name}: n/a (no instrumentation in this log)")
             return
@@ -757,6 +968,14 @@ def cmd_profile(args):
 
 
 def cmd_wait(args):
+    """Poll until the state fingerprint changes.
+
+    Args:
+        args: Parsed CLI args (timeout, interval, json).
+
+    Returns:
+        Process exit code: 0 on change, 1 on timeout/poll failure.
+    """
     deadline = time.time() + args.timeout
     with BridgeClient(host=args.host, port=args.port) as client:
         prev = client.state().get("fingerprint")
@@ -781,7 +1000,7 @@ def cmd_wait(args):
 
 
 def steam_fully_ready():
-    """Steam client process exists and a helper/renderer process is up."""
+    """Return True when the Steam client and a helper process are running."""
     main = subprocess.run(["pgrep", "-f", "Steam.AppBundle/Steam/Contents/MacOS/steam_osx"],
                           capture_output=True).returncode == 0
     main = main or subprocess.run(["pgrep", "-x", "Steam"], capture_output=True).returncode == 0
@@ -795,6 +1014,17 @@ def steam_fully_ready():
 
 
 def cmd_launch(args):
+    """Launch the game via Steam and wait for the bridge handshake.
+
+    Starts Steam if needed, opens the steam:// run URL, then polls hello
+    until the mod bridge answers or the timeout expires.
+
+    Args:
+        args: Parsed CLI args (host, port, timeout).
+
+    Returns:
+        Process exit code: 0 when the bridge answers, 1 otherwise.
+    """
     suppress_crash_dialogs()
     if not steam_fully_ready():
         if not steam_fully_ready():
@@ -835,12 +1065,16 @@ def cmd_launch(args):
 
 
 def cmd_sl(args):
-    """Save/Load reload: quit to menu, continue_run, restore current room.
+    """Reload the current room: stop the game, relaunch, continue_run.
 
-    User-directed SL mechanism — when a fight looks bad, reload the room-entry
-    save and replay with foreknowledge (enemy intents, draw order, debuff
-    sequence observed on the failed attempt). Combat re-seeds from the same
-    room save, so the information is reusable.
+    The room-entry save replays combat with the same seed, so intents and
+    draw order observed on the previous attempt stay valid.
+
+    Args:
+        args: Parsed CLI args (json, menu_timeout, wait_timeout).
+
+    Returns:
+        Process exit code: 0 ok, 2 launch failure, 3 reload stalled.
     """
     t0 = time.perf_counter()
     print("[sl] stopping game")
@@ -893,6 +1127,14 @@ def cmd_sl(args):
 
 
 def main(argv=None):
+    """Parse CLI arguments and dispatch to the subcommand handler.
+
+    Args:
+        argv: Argument list; None uses sys.argv[1:].
+
+    Returns:
+        Exit code from the selected subcommand.
+    """
     parser = argparse.ArgumentParser(prog="spirectl", description=__doc__)
     parser.add_argument("--host", default=os.environ.get("SPIREBRIDGE_HOST", DEFAULT_HOST))
     parser.add_argument("--port", type=int, default=int(os.environ.get("SPIREBRIDGE_PORT", DEFAULT_PORT)))
@@ -902,7 +1144,7 @@ def main(argv=None):
 
     p_watchdog = sub.add_parser(
         "watchdog",
-        help="arm/disarm/status the external Feishu liveness watchdog",
+        help="arm/disarm/status the external liveness watchdog",
     )
     p_watchdog.add_argument("watchdog_cmd", choices=("enable", "disable", "status"))
 

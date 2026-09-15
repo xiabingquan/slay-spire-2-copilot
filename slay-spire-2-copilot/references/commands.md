@@ -13,20 +13,20 @@ personal paths inside the repo:
     SPIREBRIDGE_LOG_DIR=/abs/folder python3 bridge/spirectl.py state
     SPIREBRIDGE_LOG_DIR=/abs/folder python3 bridge/spirectl.py act play --args '{...}'
 
-Resolution: `SPIREBRIDGE_LOG_DIR` env > per-user fallback
-`~/.local/share/slay-spire-2-copilot/logs` (computed at runtime, never stored
-in the project). Inside the folder each run derives a unique file name:
+`SPIREBRIDGE_LOG_DIR` is the only source for the run-log folder — there is
+no fallback directory; commands that write run logs fail fast if it is unset.
+Inside the folder each run derives a unique file name:
 
     run-<YYYYmmdd-HHMMSS>-<hash8>.log     # timestamp + short sha256
 
 e.g. `run-20260916-013052-a3f9c012.log`. A `.current_run` pointer in the same
 folder tracks the active file across rotation (start_run/continue_run rotates,
-game_over finalizes). `doctor` prints `[0] run log dir: ... | SPIREBRIDGE_LOG_DIR=...`.
+game_over finalizes). `doctor` prints `[0] run log dir: ... | SPIREBRIDGE_LOG_DIR=set|unset`.
 
 External liveness watchdog (crontab `bridge/watchdog-external.sh`) reads
 `SPIREBRIDGE_LOG_DIR` from **its own environment** (set it on the crontab line
-to track the active session folder; otherwise it watches the fallback folder).
-Alerts fire only while ARMED:
+to track the active session folder; when unset it skips the log-age check —
+no fallback). Alert logging fires only while ARMED:
 
     python3 bridge/spirectl.py watchdog enable    # session start
     python3 bridge/spirectl.py watchdog disable   # user stopped play

@@ -1,54 +1,36 @@
 #!/bin/bash
-# slay-spire-2-copilot external liveness watchdog — runs independently of any Claude session.
-# Installed in user crontab (5-min interval). Script path:
-#   $HOME/projects/slay-spire-2-copilot/slay-spire-2-copilot/bridge/watchdog-external.sh
-# Feishu-notifies ONLY while ARMED:
-#   python3 bridge/spirectl.py watchdog enable    # arm (skill session start)
-#   python3 bridge/spirectl.py watchdog disable   # disarm (user stopped play)
-# Armed alerts: game down / bridge down / play-loop log stale >10min.
+# External liveness watchdog for the play loop; installed in user crontab.
+# Status-only: prints health lines to stdout; no notification side effects.
+# Disarmed via `spirectl watchdog disable` (flag under STATE_DIR).
 #
-# Run-log dir comes ONLY from env SPIREBRIDGE_LOG_DIR (set it on the crontab
-# line to track the active session dir); otherwise the per-user runtime
-# fallback is used. No pointer files, no personal paths inside the repo.
+# Paths are resolved from this script's real location: the script lives inside
+# the skill folder, which is reached through the Claude skill symlink
+# (~/.claude/skills/slay-spire-2-copilot). realpath resolves that symlink to
+# the true project path — nothing is hardcoded to a checkout location.
 
 set -u
-REPO="$HOME/projects/slay-spire-2-copilot"
-SKILL="$REPO/slay-spire-2-copilot"   # skill folder holds all runtime tooling
-SPIRECTL="$SKILL/bridge/spirectl.py"
-NOTIFY="$HOME/.claude/skills/notify/scripts/notify_feishu.py"
+SCRIPT_PATH="$(python3 -c 'import os,sys; print(os.path.realpath(sys.argv[1]))' "$0")"
+SKILL_DIR="$(dirname "$(dirname "$SCRIPT_PATH")")"   # <repo>/slay-spire-2-copilot
+REPO="$(dirname "$SKILL_DIR")"                        # repo root
+SPIRECTL="$SKILL_DIR/bridge/spirectl.py"
 STATE_DIR="$HOME/.local/share/slay-spire-2-copilot"
 DISARM_FLAG="$STATE_DIR/watchdog.disabled"
-STATE_FILE="$STATE_DIR/watchdog-last-notify"   # fixed path: rate-limit bookkeeping
 STALE_SEC=600
-MIN_NOTIFY_GAP=1800
 mkdir -p "$STATE_DIR" 2>/dev/null || true
 
-# Muted whenever play is intentionally stopped — cron keeps running silently.
+if [[ ! -f "$SPIRECTL" ]]; then
+  echo "[$(date '+%F %T')] bridge CLI not found: $SPIRECTL (script=$SCRIPT_PATH)"
+  exit 1
+fi
+
+# Disarm flag present → exit immediately; the crontab entry stays installed.
 if [[ -f "$DISARM_FLAG" ]]; then
-  echo "[$(date '+%F %T')] watchdog DISARMED ($(cat "$DISARM_FLAG" 2>/dev/null)); exit"
+  echo "[$(date '+%F %T')] watchdog DISARMED ($(cat "$DISARM_FLAG" 2>/dev/null)); skill=$SKILL_DIR"
   exit 0
 fi
 
-LOG_DIR="${SPIREBRIDGE_LOG_DIR:-$STATE_DIR/logs}"
-
-now=$(date +%s)
-last_notify=0
-if [[ -f "$STATE_FILE" ]]; then
-  last_notify=$(cat "$STATE_FILE" 2>/dev/null || echo 0)
-fi
-
-notify() {
-  local title="$1" content="$2" color="$3"
-  if (( now - last_notify < MIN_NOTIFY_GAP )); then
-    echo "skip notify (gap $((now - last_notify))s): $title"
-    return
-  fi
-  if [[ -f "$NOTIFY" ]]; then
-    python3 "$NOTIFY" --title "$title" --content "$content" --color "$color" >/dev/null 2>&1 || true
-  fi
-  echo "$now" > "$STATE_FILE"
-  echo "NOTIFIED: $title"
-}
+# Run-log dir comes ONLY from env SPIREBRIDGE_LOG_DIR; unset → log-age check skipped.
+LOG_DIR="${SPIREBRIDGE_LOG_DIR:-}"
 
 game_running=0
 if pgrep -f "Slay the Spire 2" >/dev/null 2>&1; then
@@ -66,41 +48,27 @@ fi
 
 newest_log=""
 newest_mtime=0
-if newest=$(ls -t "$LOG_DIR"/run-*.log 2>/dev/null | head -1); then
+if [[ -z "$LOG_DIR" ]]; then
+  :
+elif newest=$(ls -t "$LOG_DIR"/run-*.log 2>/dev/null | head -1); then
   newest_log="$newest"
   newest_mtime=$(stat -f %m "$newest_log" 2>/dev/null || echo 0)
 fi
-log_age=$(( now - newest_mtime ))
+now=$(date +%s)
+if (( newest_mtime == 0 )); then
+  log_age_note="n/a"
+else
+  log_age_note="$(( now - newest_mtime ))s"
+fi
 screen_line=$(echo "$bridge_msg" | head -1)
+log_dir_note="${LOG_DIR:-unset (log-age check skipped)}"
 
 if (( game_running == 0 )); then
-  echo "[$(date '+%F %T')] game DOWN; bridge_ok=$bridge_ok log_dir=$LOG_DIR"
-  notify "slay-spire-2-copilot watchdog：游戏未运行" \
-    "game process down while watchdog ARMED. If you stopped play on purpose, disarm:
-python3 $SPIRECTL watchdog disable
-To resume: invoke skill slay-spire-2-copilot with SPIREBRIDGE_LOG_DIR set.
-log_dir: $LOG_DIR
-last log: ${newest_log:-none} age=${log_age}s
-$screen_line" \
-    "red"
+  echo "[$(date '+%F %T')] status=game_down bridge_ok=$bridge_ok skill=$SKILL_DIR log_dir=$log_dir_note last_log=${newest_log:-none} age=${log_age_note}"
 elif (( bridge_ok == 0 )); then
-  echo "[$(date '+%F %T')] game UP but bridge DOWN; log_age=${log_age}s"
-  notify "slay-spire-2-copilot watchdog：桥接断开" \
-    "game running but bridge not answering (mod id spire-copilot-bridge).
-doctor: python3 $SPIRECTL doctor
-log_dir: $LOG_DIR
-last log: ${newest_log:-none} age=${log_age}s" \
-    "red"
-elif (( newest_mtime > 0 && log_age > STALE_SEC )); then
-  idle_min=$(( log_age / 60 ))
-  echo "[$(date '+%F %T')] play loop STALE: log_age=${log_age}s screen=$screen_line"
-  notify "slay-spire-2-copilot watchdog：循环停滞" \
-    "bridge OK but no run-log activity for ${idle_min}min — play loop appears dead.
-screen: $screen_line
-log_dir: $LOG_DIR
-last log: ${newest_log} age=${log_age}s
-Resume: invoke skill slay-spire-2-copilot with SPIREBRIDGE_LOG_DIR set." \
-    "orange"
+  echo "[$(date '+%F %T')] status=bridge_down skill=$SKILL_DIR log_dir=$log_dir_note last_log=${newest_log:-none} age=${log_age_note}"
+elif [[ -n "$LOG_DIR" ]] && (( newest_mtime > 0 && now - newest_mtime > STALE_SEC )); then
+  echo "[$(date '+%F %T')] status=loop_stale log_age=${log_age_note} screen=$screen_line skill=$SKILL_DIR log_dir=$LOG_DIR last_log=$newest_log"
 else
-  echo "[$(date '+%F %T')] healthy game=$game_running bridge=$bridge_ok log_age=${log_age}s $screen_line log_dir=$LOG_DIR"
+  echo "[$(date '+%F %T')] status=healthy game=$game_running bridge=$bridge_ok log_age=${log_age_note} $screen_line skill=$SKILL_DIR log_dir=$log_dir_note"
 fi
