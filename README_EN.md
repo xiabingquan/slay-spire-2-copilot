@@ -50,7 +50,7 @@ Run logs are written to the given folder as `run-20260916-013052-a3f9c012.log`
         mod/SpireBridge/                   (in-game communication mod source)
         references/bridge/                 (CLI cheat sheet, wire protocol)
         references/game/                   (characters, cards, powers, relics, potions, statuses, intents, monsters, events)
-        memory/                            (run memory: lessons, changelog, postmortems)
+        memory/                            (run memory: user guide, per-run notes)
 
 Skill symlink: `~/.claude/skills/slay-spire-2-copilot` → the skill folder above.
 
