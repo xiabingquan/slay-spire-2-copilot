@@ -649,6 +649,23 @@ public static class ActionExecutor
         {
             return (false, "no active screen to skip");
         }
+        // STS2 card rewards have NO skip button at all: the scene node
+        // NChoiceSelectionSkipButton (child "SkipButton") belongs to the
+        // RELIC selection screen, not NCardRewardSelectionScreen. The game's
+        // skip semantic for cards is a null choice — CardReward treats
+        // OptionSelected()==null as endSelection with no card obtained, and
+        // the screen's _ExitTree sets that null result. Remove the overlay
+        // the same way the game's own post-choice cleanup does
+        // (NOverlayStack.Remove) so the null choice resolves legally.
+        if (context is NCardRewardSelectionScreen rewardScreen)
+        {
+            Fire(() =>
+            {
+                NOverlayStack.Instance?.Remove(rewardScreen);
+                return Task.CompletedTask;
+            }, "card reward skip via overlay removal");
+            return (true, "submitted card-reward skip (overlay remove -> null choice)");
+        }
         NChoiceSelectionSkipButton? skipButton = UiHelper.FindFirst<NChoiceSelectionSkipButton>(screenNode);
         // Live gap 2026-09-17 (Act-3 run, 3rd occurrence): on
         // NCardRewardSelectionScreen the skip control is documented as an
