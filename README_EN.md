@@ -7,6 +7,14 @@ on your machine. Once the skill is triggered, the agent reads the run state,
 makes decisions, and operates the game until the run ends — then writes a
 postmortem and starts the next run.
 
+## Demo
+
+Split-screen capture: the game on the left, Claude Code's live decision log
+on the right.
+
+Full recording (~2 minutes, map pathing and a complete combat):
+[demo.mp4](assets/demo.mp4)
+
 ## What this project is
 
 - **Autonomous runs**: live game state (HP, hand, enemy intents, map, …) is
@@ -51,6 +59,7 @@ Manual commands for troubleshooting and intervention:
 
     slay-spire-2-copilot/                  (repo root)
       README.md / README_EN.md
+      assets/                              (demo video)
       .gitignore
       slay-spire-2-copilot/                (skill folder — all runtime files)
         SKILL.md                           (skill definition / invocation contract)
