@@ -34,6 +34,9 @@ Format: `- POWER_ID (Buff/Debuff): effect.`
   the holder) owner loses 1 stack (enemies lose `Decrement`, = player count in
   multiplayer); at end of owner's side turn (early) owner gains Amount Block.
   Enemies with Plating also gain Amount Block at combat start (round 1).
+  Players can hold Plating too (Heart of Iron potion applies 7) — same
+  mechanics; combat-start block only when applied before round 1's player turn.
+  Stack loss for players is 1/turn.
 - REGEN_POWER (Buff, Counter): at end of owner's side turn, heal Amount HP,
   then decrement 1.
 - INTANGIBLE_POWER (Buff, Counter): damage and HP loss received by owner capped

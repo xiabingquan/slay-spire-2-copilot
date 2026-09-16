@@ -87,6 +87,11 @@
   - MagiKnight 魔法骑士：POWER_SHIELD_MOVE = 单次 6 (A:7) + 自身 5 (A:9) 格挡 → DAMPEN_MOVE = 减益 DampenPower（见 powers_zh.md）→ PREP_MOVE = 自身格挡 5 (A:9) → MAGIC_BOMB = 单次 35 (A:40) → RAM_MOVE = 单次 10 (A:11)。
 - DevotedSculptor（DevotedSculptor, Act3 DevotedSculptorElite; 162 HP）：FORBIDDEN_INCANTATION_MOVE = 增益——RitualPower 9 → SAVAGE_MOVE = 单次 12 (A:15)；双状态循环。Ritual 每次增益循环抬升其力量——需速杀。
 - SlimedBerserker（SlimedBerserker, Act3 SlimedBerserkerElite; 261 HP）：VOMIT_ICHOR_MOVE = 状态 10 → LEECHING_HUG_MOVE = 减益 玩家 3 Weak + 增益 自身 +3 力量 → SMOTHER_MOVE = 单次 30 (A:33) → FURIOUS_PUMMELING_MOVE = 多段 4 (A:5) ×4。
+- LivingShield 活体盾（Act3 与高塔炮手组队; 55 HP）：被动 RAMPART_POWER 25——玩家阵营回合开始时，每名存活的 TurretOperator 系盟友（如高塔炮手）获得 25 格挡。必须先杀它，否则炮手格挡每回合回满。
+- TowerGunner 高塔炮手（Act3 与活体盾组队; 41 HP）：出场自带 25 格挡；意图 3×5 多段（15）。活体盾存活期间，其格挡在玩家回合开始时刷新。
+- FrogKnight 青蛙骑士（Act3，出现于 Unknown 房战斗; 191 HP）：被动 PlatingPower 15——回合 1 出场获得 15 格挡、其阵营回合末再获得 15 格挡，其阵营回合开始时（非回合 1）镀甲 −1 层；观察到的意图：单次 13+减益、多段 5×2、增益（+2 力量）、单次 21（力量加成后）、防御+增益。
+- MechKnight 机甲骑士（Act3 MechKnightElite; 300 HP）：出场神器 3 层（每个可见减益施加被清零并消耗 1 层）；观察到的意图：单次 25 → 状态卡 4（向玩家手牌加入灼伤）→ 防御+增益（+5 力量 +15 格挡）→ 单次 40（力量加成后）。雷霆一击/猛击/嘲讽可烧神器层数——3 层烧完后易伤才能挂上。
+- BattleFriendV1/V2/V3 战斗好伙伴（战痕假人事件陪练；单人第三章实测 75/150/300 HP 不缩放）：招式 NOTHING_MOVE——从不攻击；出场 BattlewornDummyTimeLimitPower 3（假人阵营回合末递减；到 1 时假人逃跑并置 RanOutOfTime → 事件无奖励）。纯输出竞速。
 - ScrollOfBiting 咬人卷轴（ScrollOfBiting, Act3 ScrollOfBitingNormal; 30–39 HP）：出场被动 PaperCutsPower 2；CHOMP = 单次 14 (A:16)；CHEW = 多段 5 (A:6) ×2；MORE_TEETH = 增益 自身 +2 力量。PaperCutsPower：持有者的有源攻击造成未格挡伤害时，对玩家追加纸割伤害（见 powers_zh.md）。
 - PunchConstruct 拳击构装体（PunchConstruct, Act3 PunchConstructsNormal; 55 HP）：出场 ArtifactPower 1；READY_MOVE = 自身 10 格挡 → STRONG_PUNCH_MOVE = 单次 14 (A:16) → FAST_PUNCH_MOVE = 多段 5 (A:6) ×N + 玩家 1 Frail。
 - InfestedPrism 立柱构造体（InfestedPrism）：Act2 精英与 Act3 普通怪（观察到 65 HP 变体）均出现；VitalSpark/REPEATER 行为见 Act2 精英条目。

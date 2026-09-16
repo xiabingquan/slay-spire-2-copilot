@@ -39,7 +39,7 @@ Act ancients (from act sources): Overgrowth = Neow (removed unless `UnlockState.
 - ABYSSAL_BATHS: vars MaxHp +2 / unblockable 3 damage / heal 10 — Immerse and Abstain options present (exact per-option binding partially internal); Linger/ExitBaths handlers exist.
 - AMALGAMATOR (requires ≥2 Strike-tagged and ≥2 Defend-tagged cards): CombineStrikes → remove Strikes, add UltimateStrike; CombineDefends → remove Defends, add UltimateDefend.
 - BRAIN_LEECH (Act index < 2): ShareKnowledge → add cards via card-pile add; Rip → take 5 unblockable damage, get 1 reward (choice screens: 1 pick from 5).
-- BATTLEWORN_DUMMY: Setting1/2/3 → fight BattleFriendV1/V2/V3 (HP shown per setting).
+- BATTLEWORN_DUMMY (Act3; 战痕累累的训练假人): Setting1/2/3 → fight BattleFriendV1/V2/V3 — 75/150/300 HP flat in single-player Act3 (scaleHpForMultiplayer applied by the event; observed unscaled). TimeLimitPower 3 all tiers; dummy uses NOTHING_MOVE (never attacks) — pure DPS race; at TimeLimit 1 the dummy Escapes and RanOutOfTime=true → no reward. Rewards on kill: Setting1 → 1 potion; Setting2 → upgrade 2 random deck cards; Setting3 → 1 relic (RelicFactory front).
 - BYRDONIS_NEST (requires no event pet): EAT → +7 Max HP; TAKE → add ByrdonisEgg card to deck.
 - BUGSLAYER: Extermination → Exterminate card; Squash → Squash card (option effects add those cards).
 - COLORFUL_PHILOSOPHERS (requires >1 unlocked character card pool): offers 3-card reward via OfferCustom.
@@ -61,6 +61,7 @@ Act ancients (from act sources): Overgrowth = Neow (removed unless `UnlockState.
 - REFLECTIONS: TouchAMirror → downgrade then upgrade a card (net re-roll of upgrade); Shatter → add card + BadLuck curse.
 - RELIC_TRADER (Act >0; all players ≥5 valid relics): Top/Middle/Bottom → trade (remove owned relic, obtain new one of that slot).
 - ROOM_FULL_OF_CHEESE (Act index < 2): Gorge → add card; Search → take 14 unblockable damage, gain ChosenCheese relic.
+- TANX (Act3 ancient boon room; 坦克斯): offers 3 random RelicOptions drawn from a pool of 9 — Claws, Crossbow, IronClub, MeatCleaver, Sai, SpikedGauntlets, TanxsWhistle, ThrowingAxe, WarHammer — plus TriBoomerang when the deck holds ≥3 Instinct-enchantable cards (then 3 of 10 shown). TanxsWhistle → adds Whistle card to deck (3-cost Attack, Exhaust, 33 dmg + Stun target; upgrade +11 dmg). SpikedGauntlets → +1 Max Energy, BUT your Power cards cost +1 in combat (anti-synergy with power-dense decks). WarHammer → after each Elite combat victory, upgrade 4 random upgradable deck cards.
 - ROUND_TEA_PARTY (all players HP ≥ 12): EnjoyTea → RoyalPoison relic + heal; PickFight → 11 unblockable damage + RoyalPoison.
 - SAPPHIRE_SEED: Eat → heal 9 + upgrade; Plant → Enchant Sown.
 - SELF_HELP_BOOK: ReadPassage/ReadEntireBook options enchant Sharp/Nimble/etc.; SkipBook leaves.
@@ -72,7 +73,7 @@ Act ancients (from act sources): Overgrowth = Neow (removed unless `UnlockState.
 - SUNKEN_TREASURY: FirstChest → +60 Gold; SecondChest → +333 Gold + Greed curse.
 - SYMBIOTE (Act >0): Approach → Enchant Corrupted on an Attack card — Corrupted enchant: powered attack damage ×1.5, but on play its owner takes 2 unblockable unpowered damage; KillWithFire → transform 1 chosen card.
 - TABLET_OF_TRUTH: Smash → heal 20; Decipher → lose 3 Max HP + upgrade path.
-- THE_ARCHITECT (Act3, post-boss story event at the Act3 boss node): dialogue options only; observed branch Threaten 威胁 → player HP set to 0, run ends (game_over) — the story death is immediate, not a winnable fight. The Architect monster model is a 9999-HP NOTHING-move dummy used by story scenes.
+- THE_ARCHITECT (Act3, post-boss story event at the Act3 boss node): dialogue-line walker — one respond/continue option per line (textKey THE_ARCHITECT.dialogue.N), final line offers PROCEED → WinRun(). Live outcome (runs 5 AND 6, Ironclad): PROCEED at the final line sets player HP to 0 → game_over — story death, run ends after Act-3 boss clear; click line-by-line but expect death at PROCEED. Decomp note (TheArchitect.cs): WinRun() plays attack VFX only (player hits Architect for Score; Architect 'attacks back' with VFX — AnimArchitectAttackIfNecessary issues NO CreatureCmd.Damage) then RunManager.ActChangeSynchronizer.SetLocalPlayerReady(); TheArchitectEventEncounter spawns only the Architect dummy (9999 HP, NOTHING_MOVE loop, HiddenIntent); no HP-zero hook found in event/encounter/monster sources reviewed — live death hook still unidentified, live behavior authoritative. Ironclad dialogues: 3 visits, all EndAttackers=Both; visit selection keys off profile TotalWins/Wins via LoadDialogue().
 - THIS_OR_THAT: Plain → take 6 damage + Gold; Ornate → obtain a relic + add Clumsy curse.
 - TINKER_TIME: choose card type + rider; riders include 12 damage / 8 block / 2 Weak / 2 Vulnerable / 3-hit violence; adds MadScience card.
 - TRASH_HEAP (all players HP > 5): DiveIn → 8 damage + relic; Grab → +100 Gold + add card.
@@ -80,14 +81,14 @@ Act ancients (from act sources): Overgrowth = Neow (removed unless `UnlockState.
 - UNREST_SITE (all players HP ≤ 70% Max): Rest → heal + curses; Kill → −8 Max HP + relic.
 - WAR_HISTORIAN_REPY (IsAllowed false normally — LanternKey-gated): UnlockChest → reward; UnlockCage → HistoryCourse relic; LanternKey quest completion removes the key card.
 - WATERLOGGED_SCRIPTORIUM (all players Gold ≥ 55): BloodyInk → +6 Max HP; TentacleQuill → pay 55 Gold, Enchant Steady; PricklySponge → pay 99 Gold, Enchant Steady + card options.
-- WELCOME_TO_WONGOS (Act 1; all players Gold ≥ 100): BuyBargainBin → pay 100 Gold, relic; BuyFeaturedItem → pay 200 Gold, relic; BuyMysteryBox → pay 300 Gold, WongosMysteryTicket (3 random relics after 5 combats); Leave.
+- WELCOME_TO_WONGOS (labeled Act 1 in gates; also observed spawning Act 2, run-6 2026-09-17 — treat act label as soft; all players Gold ≥ 100): BuyBargainBin → pay 100 Gold, relic; BuyFeaturedItem → pay 200 Gold, relic; BuyMysteryBox → pay 300 Gold, WongosMysteryTicket (3 random relics after 5 combats); Leave.
 - WELLSPRING: Bottle → potion reward; Bathe → remove cards (curses var 1 — Guilty add handler exists).
 - WOOD_CARVINGS (requires removable Basic card): Snake → Enchant Slither; Bird → transform into Peck; Torus → transform into ToricToughness.
 - ZEN_WEAVER (all players Gold ≥ 125): BreathingTechniques → pay 50 Gold, add Enlightenment; EmotionalAwareness → pay 125 Gold path; ArachnidAcupuncture → pay 250 Gold, remove cards path.
 
 ## Ancient events without extracted option tables
 
-DARV, NONUPEIPE, OROBAS, TANX, TEZCATARA, VAKUU exist as `AncientEventModel`s in the act pools (see gating above) but their option handlers are not present in the decompiled event sources reviewed here — omitted. Relic associations recorded in relics.md are not asserted here as event-option mechanics.
+DARV, NONUPEIPE, OROBAS, TEZCATARA, VAKUU exist as `AncientEventModel`s in the act pools but their option handlers are not present in the decompiled event sources reviewed here — omitted. (TANX extracted 2026-09-17 run-6 — see its entry above.)
 
 ## Event handling notes
 

@@ -40,7 +40,7 @@
 - ABYSSAL_BATHS（深渊浴场）：变量 最大 HP +2 / 不可格挡 3 伤害 / 回复 10——存在 Immerse 与 Abstain 选项（选项与数值的逐项绑定部分为内部逻辑）；另有 Linger/ExitBaths 处理器。
 - AMALGAMATOR（熔合者；要求 ≥2 张 Strike 标签牌且 ≥2 张 Defend 标签牌）：CombineStrikes → 移除 Strike 牌，加入 UltimateStrike；CombineDefends → 移除 Defend 牌，加入 UltimateDefend。
 - BRAIN_LEECH（脑蛭；Act 索引 < 2）：ShareKnowledge → 经卡牌堆流程加牌；Rip → 受到 5 点不可格挡伤害，获得 1 次奖励（选择界面 5 选 1）。
-- BATTLEWORN_DUMMY（战痕累累的训练假人）：Setting1/2/3 → 对战 BattleFriendV1/V2/V3（各档 HP 显示于界面）。
+- BATTLEWORN_DUMMY（战痕累累的训练假人；Act3）：Setting1/2/3 → 对战 BattleFriendV1/V2/V3——单人第三章实测 75/150/300 HP（事件走 scaleHpForMultiplayer；实测未缩放）。三档时限均为 TimeLimitPower 3；木人招式 NOTHING_MOVE（从不攻击）——纯输出竞速；时限到 1 时假人逃跑且 RanOutOfTime=true → 无奖励。击杀奖励：Setting1 → 1 瓶药水；Setting2 → 随机升级 2 张牌组卡；Setting3 → 1 件遗物（RelicFactory 队首）。
 - BYRDONIS_NEST（多尼斯异鸟巢；要求无事件宠物）：EAT → +7 最大 HP；TAKE → 向牌库加入 ByrdonisEgg 卡。
 - BUGSLAYER（害虫杀手）：Extermination → Exterminate 卡；Squash → Squash 卡。
 - COLORFUL_PHILOSOPHERS（色彩哲学家；要求已解锁角色卡池 >1）：经 OfferCustom 提供 3 张卡奖励。
@@ -62,6 +62,7 @@
 - REFLECTIONS（镜中倒影）：TouchAMirror → 对一张牌降级再升级；Shatter → 加牌 + BadLuck 诅咒。
 - RELIC_TRADER（遗物交换商；Act >0；所有玩家 ≥5 件有效遗物）：Top/Middle/Bottom → 交易（移除持有的该槽遗物，获得新的该槽遗物）。
 - ROOM_FULL_OF_CHEESE（满屋芝士；Act 索引 < 2）：Gorge → 加牌；Search → 受到 14 点不可格挡伤害，获得 ChosenCheese 遗物。
+- TANX（Act3 远古赐福房；坦克斯）：从 9 件遗物池中随机展示 3 件 RelicOption——Claws、Crossbow、IronClub、MeatCleaver、Sai、SpikedGauntlets、TanxsWhistle、ThrowingAxe、WarHammer——若牌组中存在 ≥3 张可附魔 Instinct 的卡则追加 TriBoomerang（10 选 3）。坦克斯的哨子 → 向牌组加入 Whistle 卡（3 费攻击、消耗、33 伤害+眩晕目标；升级 +11 伤害）。带刺手甲 → +1 最大能量，但你的能力牌在战斗中 +1 费（与能力密集牌组反协同）。战锤 → 每次精英战斗胜利后，随机升级 4 张可升级的牌组卡。
 - ROUND_TEA_PARTY（圆桌茶会；所有玩家 HP ≥ 12）：EnjoyTea → RoyalPoison 遗物 + 回复；PickFight → 11 点不可格挡伤害 + RoyalPoison。
 - SAPPHIRE_SEED（蓝宝石种子）：Eat → 回复 9 + 升级；Plant → 附魔 Sown。
 - SELF_HELP_BOOK（自助指南）：ReadPassage/ReadEntireBook 附魔 Sharp/Nimble 等；SkipBook 离开。
@@ -73,7 +74,7 @@
 - SUNKEN_TREASURY（淹水金库）：FirstChest → +60 金币；SecondChest → +333 金币 + Greed 诅咒。
 - SYMBIOTE（共生体；Act >0）：Approach → 对 1 张攻击牌附魔 Corrupted——Corrupted 附魔：有源攻击伤害 ×1.5，但打出时其拥有者受到 2 点不可格挡无来源伤害；KillWithFire → 变形 1 张选定牌。
 - TABLET_OF_TRUTH（真理石板）：Smash → 回复 20；Decipher → 失去 3 最大 HP + 升级路径。
-- THE_ARCHITECT（建筑师；Act3 Boss 节点后的剧情事件）：仅对话选项；观察到的分支 Threaten（威胁）→ 玩家 HP 置 0、对局结束（game_over）——剧情死亡即时生效，不是可打赢的战斗。Architect 怪物模型为 9999 HP、招式 NOTHING 的剧情占位体。
+- THE_ARCHITECT（建筑师；Act3 Boss 节点后的剧情事件）：对白行走器——每行仅一个 回应/继续 选项（textKey THE_ARCHITECT.dialogue.N），末行给出 PROCEED → WinRun()。实机结果（第 5、6 两局，铁甲战士）：末行 PROCEED 将玩家 HP 置 0 → game_over——第三章 Boss 清除后剧情死亡收束；可逐行点击，但 PROCEED 处预期死亡。反编译备注（TheArchitect.cs）：WinRun() 仅播放攻击特效（玩家按 Score 输出伤害数字；Architect '反击'为特效——AnimArchitectAttackIfNecessary 未发出任何 CreatureCmd.Damage）随后 SetLocalPlayerReady() 切章同步；TheArchitectEventEncounter 只生成 Architect 占位体（9999 HP、NOTHING_MOVE 循环、HiddenIntent）；事件/遭遇/怪物源码中未找到置 0 钩子——实机死亡钩子仍未定位，以实机为准。铁甲战士对白：3 次访问档位，全部 EndAttackers=Both；访问档位由档案 TotalWins/Wins 经 LoadDialogue() 选取。
 - THIS_OR_THAT（这个还是那个？）：Plain → 受到 6 点伤害 + 金币；Ornate → 获得遗物 + 加入 Clumsy 诅咒。
 - TINKER_TIME（打造时间）：选择卡牌类型 + 附加效果；附加效果含 12 伤害 / 8 格挡 / 2 Weak / 2 Vulnerable / 3 段暴力；加入 MadScience 卡。
 - TRASH_HEAP（垃圾堆；所有玩家 HP > 5）：DiveIn → 8 点伤害 + 遗物；Grab → +100 金币 + 加牌。
@@ -81,14 +82,14 @@
 - UNREST_SITE（无休之处；所有玩家 HP ≤ 70% 最大值）：Rest → 回复 + 诅咒；Kill → −8 最大 HP + 遗物。
 - WAR_HISTORIAN_REPY（战史学家付袭；IsAllowed 正常为 false——由 LanternKey 门槛触发）：UnlockChest → 奖励；UnlockCage → HistoryCourse 遗物；LanternKey 任务完成时移除钥匙卡。
 - WATERLOGGED_SCRIPTORIUM（水漫缮写室；所有玩家金币 ≥ 55）：BloodyInk → +6 最大 HP；TentacleQuill → 支付 55 金币，附魔 Steady；PricklySponge → 支付 99 金币，附魔 Steady + 卡牌选项。
-- WELCOME_TO_WONGOS（欢迎来到旺购百货；Act 1；所有玩家金币 ≥ 100）：BuyBargainBin → 支付 100 金币，获得遗物；BuyFeaturedItem → 支付 200 金币，获得遗物；BuyMysteryBox → 支付 300 金币，获得 WongosMysteryTicket（5 场战斗后获得 3 件随机遗物）；Leave 离开。
+- WELCOME_TO_WONGOS（欢迎来到旺购百货；门槛标注 Act 1，但 2026-09-17 第 6 局实测 Act 2 亦可触发——章节标注视为软性；所有玩家金币 ≥ 100）：BuyBargainBin → 支付 100 金币，获得遗物；BuyFeaturedItem → 支付 200 金币，获得遗物；BuyMysteryBox → 支付 300 金币，获得 WongosMysteryTicket（5 场战斗后获得 3 件随机遗物）；Leave 离开。
 - WELLSPRING（泉水）：Bottle → 药水奖励；Bathe → 移除卡牌（curses 变量 1——存在 Guilty 追加处理器）。
 - WOOD_CARVINGS（木雕；要求存在可移除的基础牌）：Snake → 附魔 Slither；Bird → 变形为 Peck；Torus → 变形为 ToricToughness。
 - ZEN_WEAVER（修禅织网者；所有玩家金币 ≥ 125）：BreathingTechniques → 支付 50 金币，加入 Enlightenment；EmotionalAwareness → 支付 125 金币路径；ArachnidAcupuncture → 支付 250 金币，移除卡牌路径。
 
 ## 未提取选项表的远古事件
 
-DARV、NONUPEIPE、OROBAS、TANX、TEZCATARA、VAKUU 在 act 池中以 `AncientEventModel` 形式存在（门槛见上），但本次审阅的反编译事件源码中没有其选项处理器——省略。relics_zh.md 中记录的遗物关联不在此处作为事件选项机制断言。
+DARV、NONUPEIPE、OROBAS、TEZCATARA、VAKUU 在 act 池中以 `AncientEventModel` 形式存在（门槛见上），但本次审阅的反编译事件源码中没有其选项处理器——省略。（TANX 已于 2026-09-17 第 6 局提取——见上文条目。）
 
 ## 事件处理备注
 
