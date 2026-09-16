@@ -546,7 +546,7 @@ public static class ActionExecutor
             {
                 if (context is NChooseACardSelectionScreen or NSimpleCardSelectScreen or NDeckCardSelectScreen
                     or NDeckUpgradeSelectScreen or NDeckTransformSelectScreen or NDeckEnchantSelectScreen
-                    or NChooseABundleSelectionScreen)
+                    or NChooseABundleSelectionScreen or NCombatPileCardSelectScreen)
                 {
                     Node screenNode = (Node)context;
                     // Same index space as StateBuilder: deck-select grids are
@@ -814,7 +814,8 @@ public static class ActionExecutor
             or NDeckCardSelectScreen
             or NDeckUpgradeSelectScreen
             or NDeckTransformSelectScreen
-            or NDeckEnchantSelectScreen)
+            or NDeckEnchantSelectScreen
+            or NCombatPileCardSelectScreen)
         {
             Node node = (Node)context;
             // Two-phase confirm chain: main Confirm reveals a preview; the

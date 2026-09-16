@@ -111,6 +111,16 @@ public static class StateBuilder
         try
         {
             Node root = ((SceneTree)Engine.GetMainLoop()).Root;
+            // NCardGridSelectionScreen covers NCombatPileCardSelectScreen
+            // (Stratagem-style in-combat chosen draws via CardSelectCmd.
+            // FromCombatPile) and the deck-select family — without it the
+            // choice overlay was invisible, PlayerChoiceContext never
+            // resolved, and combat froze in PlayerTurnPhase.Start/End
+            // (live: Act-1 Byrdonis elite with StratagemPower, 2026-09-17).
+            if (UiHelper.FindFirst<NCardGridSelectionScreen>(root) is { } g && g.IsVisibleInTree())
+            {
+                return g;
+            }
             if (UiHelper.FindFirst<NChooseACardSelectionScreen>(root) is { } a && a.IsVisibleInTree())
             {
                 return a;
@@ -996,7 +1006,8 @@ public static class StateBuilder
     internal static List<NCardHolder> SelectableCardHolders(Node screenNode)
     {
         if (screenNode is NDeckCardSelectScreen or NDeckUpgradeSelectScreen
-            or NDeckTransformSelectScreen or NDeckEnchantSelectScreen)
+            or NDeckTransformSelectScreen or NDeckEnchantSelectScreen
+            or NCombatPileCardSelectScreen)
         {
             return UiHelper.FindAll<NGridCardHolder>(screenNode).Cast<NCardHolder>().ToList();
         }
