@@ -1331,6 +1331,18 @@ public static class StateBuilder
                         ["args"] = new Dictionary<string, object?> { ["index"] = option["index"] },
                     });
                 }
+                // After HEAL/SMITH is chosen the rest-site buttons are consumed
+                // and RestOptions comes back empty — without a proceed entry the
+                // actions list degraded to abandon_run only and the agent could
+                // not see that room-leave was legal (live gap 2026-09-17, run
+                // floor 8 deadlock). Proceed() resolves the room's proceed
+                // button tree-wide, so listing it always is safe: pre-choice it
+                // simply fails with "proceed button is not enabled yet".
+                actions.Add(new Dictionary<string, object?>
+                {
+                    ["action"] = "proceed",
+                    ["args"] = new Dictionary<string, object?>(),
+                });
                 break;
             }
             case "treasure":
