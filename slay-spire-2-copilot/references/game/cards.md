@@ -1,45 +1,423 @@
 # Cards
 
-Static card reference from live play. The can_play flag in state is always
-authoritative.
+Card reference by character. Costs/effects merged from community databases
+(spire-codex, stratgg, mobalytics wiki, namu) cross-checked with play on
+v0.107.1 and game-internal class names. Shared pattern: Strike = 1-cost
+attack deal 6; Defend = 1-cost skill gain 5 Block. Entries alphabetical
+within each character.
 
-- STRIKE_IRONCLAD: 1-cost attack, ~6 dmg + strength; enchant/upgrade scales.
-- DEFEND_IRONCLAD: 1-cost, ~5 block + dexterity.
-- BASH: 2-cost, ~8-10 dmg + 2x VULNERABLE (upgraded ~10+); core vuln applier.
-- BLOOD_WALL: 2-cost self, ~16 block at 2hp cost, also chips nearby enemies
-  (~8 dmg). Never play below ~5hp.
-- SHRUG_IT_OFF: 1-cost, 8 block + draw 1.
-- DISMANTLE: 1-cost attack ~1 dmg + strips one enemy power/charge.
-- THUNDERCLAP: 1-cost AOE ~4+str all enemies + 1x VULNERABLE each; strips
-  enemy block fully (observed).
-- UPPERCUT (upgraded): 2-cost ~8-21 dmg + WEAK + VULNERABLE.
-- BLUDGEON: 3-cost, 32+str single target (35-49 observed). Boss/elite killer.
-- WHIRLWIND (upgraded): X-cost AOE multi-hit, str-scaling (27-81 total
-  observed with DEMON_FORM + energy relics).
-- PERFECTED_STRIKE (upgraded): dmg + bonus per STRIKE in deck.
-- SWORD_BOOMERANG (upgraded): multi-hit random targets, str-scaling.
-- DEMON_FORM (upgraded): 3-cost power, +strength per turn for several turns —
-  engine card, play turn 1-2.
-- JUGGERNAUT: power — deals damage when gaining block.
-- IRON_WAVE: ~10 dmg + ~5-8 block hybrid.
-- SECOND_WIND: exhaust hand cards -> block per exhausted card.
-- ARMAMENTS: 5 block + upgrades a hand card for the combat.
-- BATTLE_TRANCE: draw 3, no draws after this turn.
-- FLAME_BARRIER: block + temporary thorns power.
-- TWIN_STRIKE: 2-hit attack; strength applies per hit.
-- BLOODLETTING / OFFERING: hp-cost energy/draw — dangerous below 20hp.
-- FIGHT_ME: 2-cost attack ~10 dmg; grants STRENGTH to both player and target.
-- BREAKTHROUGH: 1-cost AOE ~9 dmg all enemies + 1hp self cost.
-- BURNING_PACT: 1-cost self, exhaust/draw engine, no direct damage.
-- RAMPAGE: 1-cost attack ~6 base dmg, per-play scaling grows.
-- EXPECT_A_FIGHT / PYRE / STOMP / SPOILS_MAP / LANTERN_KEY / FRANTIC_ESCAPE:
-  effects pending observation.
-- AROMA_OF_CHAOS event "LET_GO": opens deck transform — pick any deck card, it
-  transforms at random (STRIKE -> POMMEL_STRIKE).
+## Ironclad
 
-## Screen notes
+- AGGRESSION: 1, power, at start of your turn put a random Attack from your discard pile into your hand and upgrade it.
+- ANGER: 0, attack, deal 6 damage; add a copy of this card to your discard pile.
+- ARMAMENTS: 1, skill, gain 5 Block; upgrade a card in your hand.
+- ASHEN_STRIKE: 1, attack, deal 6 damage +3 for each card in your exhaust pile.
+- BARRICADE: 3, power, Block is not removed at the start of your turn.
+- BASH: 2, attack, deal 8 damage; apply 2 Vulnerable.
+- BATTLE_TRANCE: 0, skill, draw 3 cards; you cannot draw additional cards this turn.
+- BLOOD_WALL: 2, skill, lose 2 HP; gain 16 Block (live: also chips ~8 to nearby enemies; never below ~5 HP).
+- BLOODLETTING: 0, skill, lose 3 HP; gain 2 Energy.
+- BLUDGEON: 3, attack, deal 32 damage (35-49 observed with upgrades/Vulnerable).
+- BODY_SLAM: 1, attack, deal damage equal to your Block.
+- BRAND: 0, skill, lose 1 HP; exhaust 1 card; gain 1 Strength.
+- BREAK: 2, attack (Ancient), deal 20 damage; apply 5 Vulnerable.
+- BREAKTHROUGH: 1, attack, lose 1 HP; deal 9 damage to ALL enemies.
+- BULLY: 0, attack, deal 4 damage +2 per Vulnerable stack on the target.
+- BURNING_PACT: 1, skill, exhaust 1 card; draw 2 cards.
+- CASCADE: X, skill, play the top X cards of your draw pile.
+- CINDER: 2, attack, deal 17 damage; exhaust the top card of your draw pile.
+- COLOSSUS: 1, skill, gain 5 Block; take 50% less damage from Vulnerable enemies this turn.
+- CONFLAGRATION: 1, attack, deal 8 damage to ALL enemies +2 for each other Attack played this turn.
+- CORRUPTION: 3, power (Ancient), Skills cost 0 and are Exhausted when played.
+- CRIMSON_MANTLE: 1, power, at start of your turn lose 1 HP and gain 8 Block.
+- CRUELTY: 1, power, Vulnerable enemies take an additional 25% damage.
+- DARK_EMBRACE: 2, power, whenever a card is Exhausted draw 1 card; Exhaust.
+- DEMON_FORM: 3, power, at start of your turn gain 2 Strength.
+- DEMONIC_SHIELD: 0, skill, lose 1 HP; give another player Block equal to yours; Exhaust.
+- DISMANTLE: 1, attack, deal 8 damage; hits twice if the enemy is Vulnerable (live: also strips one enemy power/charge).
+- DOMINATE: 1, skill, gain 1 Strength for each Vulnerable on the enemy; Exhaust.
+- DRUM_OF_BATTLE: 0, power, draw 2 cards; at start of your turn exhaust the top card of your draw pile.
+- EVIL_EYE: 1, skill, gain 8 Block, +8 more if a card was Exhausted this turn; Exhaust.
+- EXPECT_A_FIGHT: 2, attack, gain 1 Energy per Attack in your hand.
+- FEED: 1, attack, deal 10 damage; if Fatal raise your Max HP by 3; Exhaust.
+- FEEL_NO_PAIN: 1, power, whenever a card is Exhausted gain 3 Block; Exhaust.
+- FIEND_FIRE: 2, attack, exhaust your hand; deal 7 damage per card Exhausted.
+- FIGHT_ME: 2, attack, deal 5 damage twice; you gain 2 Strength, the enemy gains 1.
+- FLAME_BARRIER: 2, skill, gain 12 Block; deal 4 damage back when attacked this turn.
+- FORGOTTEN_RITUAL: 1, skill, if you Exhausted a card this turn gain 3 Energy; Exhaust.
+- GRAPPLE: 1, attack, deal 7 damage; +5 damage to the enemy whenever you gain Block this turn.
+- HAVOC: 1, skill, play the top card of your draw pile and Exhaust it.
+- HEADBUTT: 1, attack, deal 9 damage; place a discard-pile card on top of your draw pile.
+- HELLRAISER: 2, power, Strike cards drawn are auto-played at a random enemy.
+- HEMOKINESIS: 1, attack, lose 2 HP; deal 14 damage.
+- HOWL_FROM_BEYOND: 3, attack, deal 16 damage to ALL enemies; plays from the exhaust pile at start of turn.
+- IMPERVIOUS: 2, skill, gain 30 Block; Exhaust.
+- INFERNO: 1, power, at start of your turn lose 1 HP; on HP loss deal 6 damage to ALL enemies.
+- INFLAME: 1, power, gain 2 Strength.
+- IRON_WAVE: 1, attack, gain 5 Block; deal 5 damage.
+- JUGGERNAUT: 2, power, whenever you gain Block deal 5 damage to a random enemy.
+- JUGGLING: 1, power, the third Attack played each turn is copied into your hand.
+- MANGLE: 3, attack, deal 15 damage; enemy loses 10 Strength this turn.
+- MOLTEN_FIST: 1, attack, deal 10 damage; double the enemy's Vulnerable; Exhaust.
+- OFFERING: 0, skill, lose 6 HP; gain 2 Energy; draw 3 cards; Exhaust.
+- ONE_TWO_PUNCH: 1, skill, the next Attack you play this turn is played an extra time.
+- PERFECTED_STRIKE: 2, attack, deal 6 damage +2 for every owned card containing "Strike" (19-32 observed).
+- POMMEL_STRIKE: 1, attack, deal 9 damage; draw 1 card.
+- RAMPAGE: 1, attack, ~6 base damage; grows per play.
+- SECOND_WIND: exhaust hand cards; gain Block per card exhausted (30+ observed in a boss fight).
+- SETUP_STRIKE: 1, attack, deal 7 damage; gain 2 Strength this turn.
+- SHRUG_IT_OFF: 1, skill, gain 8 Block; draw 1 card.
+- STRIKE_IRONCLAD: 1, attack, deal 6 damage.
+- DEFEND_IRONCLAD: 1, skill, gain 5 Block.
+- SWORD_BOOMERANG: 1, attack, deal 3 damage to a random enemy 3 times; Strength per hit.
+- THUNDERCLAP: 1, attack, deal 4 damage to ALL enemies; apply 1 Vulnerable to each.
+- TREMBLE: 1, skill, apply 2 Vulnerable.
+- TRUE_GRIT: 1, skill, gain 7 Block; exhaust 1 random card.
+- TWIN_STRIKE: 1, attack, deal 5 damage twice; Strength per hit.
+- UPPERCUT: 2, attack, damage + Weak + Vulnerable (~8-21 upgraded observed; dual-debuff staple).
+- WHIRLWIND: X, attack, deal damage to ALL enemies X times (27-81 total observed with Strength/energy).
+- Ironclad names still pending effect data: Heavy Blade, Immolate, Limit Break, Midnight (beta), Pact's End (Rare attack), Primal Force (0, Rare skill), Rage (0, Uncommon skill), Reaper, Rupture (1, Uncommon power), Sentinel, Shockwave, Spite (0, Uncommon attack), Stampede (2, Uncommon power), Stone Armor (1, Uncommon power), Stoke (1, Rare skill, beta), Tear Asunder (2, Rare attack), Thrash (1, Rare attack), Unmovable (2, Rare power), Vicious (1, Uncommon power).
 
-- Reward screens may show unclaimable buttons when potion slots are full —
-  click no-ops; proceed leaves the screen.
-- Skip button exists on most card_reward screens; NDeckCardSelectScreen
-  removal flow has none (mandatory pick).
+## Silent
+
+- ACCELERANT: 1, power, Poison triggers 1 additional time.
+- ACCURACY: 1, power, Shivs deal 4 additional damage.
+- ACROBATICS: 1, skill, draw 3 cards; discard 1 card.
+- ADRENALINE: 0, skill, gain 1 Energy; draw 2 cards; Exhaust.
+- AFTERIMAGE: 1, power, whenever you play a card gain 1 Block.
+- ANTICIPATE: 0, skill, gain 3 Dexterity this turn.
+- ASSASSINATE: 0, attack, deal 10 damage; apply 1 Vulnerable; Exhaust.
+- BACKFLIP: 1, skill, gain 5 Block; draw 2 cards.
+- BACKSTAB: 0, attack, deal 11 damage; Exhaust.
+- BLADE_DANCE: 1, skill, add 3 Shivs to your hand; Exhaust.
+- BLADE_OF_INK: 1, skill, this turn whenever you play an Attack gain 2 Strength.
+- BLUR: 1, skill, gain 5 Block; Block persists to next turn.
+- BOUNCING_FLASK: 2, skill, apply 3 Poison to a random enemy 3 times.
+- BUBBLE_BUBBLE: 1, skill, if the enemy has Poison apply 9 Poison.
+- BULLET_TIME: 3, skill, you cannot draw extra cards; ALL cards in hand are free this turn.
+- BURST: 1, skill, this turn your next Skill is played an extra time.
+- CALCULATED_GAMBLE: 0, skill, discard your hand then draw that many; Exhaust.
+- CLOAK_AND_DAGGER: 1, skill, gain 6 Block; add 1 Shiv to your hand.
+- CORROSIVE_WAVE: 1, skill, for each card drawn this turn apply 3 Poison to ALL enemies.
+- DAGGER_SPRAY: 1, attack, deal 4 damage to ALL enemies twice.
+- DAGGER_THROW: 1, attack, deal 9 damage; draw 1 card; discard 1 card.
+- DASH: 2, attack, gain 10 Block; deal 10 damage.
+- DEADLY_POISON: 1, skill, apply 5 Poison.
+- DEFLECT: 0, skill, gain 4 Block.
+- DODGE_AND_ROLL: 1, skill, gain 4 Block; next turn gain 4 Block.
+- ECHOING_SLASH: 1, attack, deal 10 damage to ALL enemies; repeats per enemy killed.
+- ENVENOM: 2, power, unblocked Attack damage applies 1 Poison.
+- ESCAPE_PLAN: 0, skill, draw 1 card; gain 3 Block if it is a Skill.
+- EXPERTISE: 1, skill, draw until you have 6 cards in hand.
+- EXPOSE: 0, skill, remove enemy Artifact and Block; apply 2 Vulnerable; Exhaust.
+- FAN_OF_KNIVES: 2, power, Shivs hit ALL enemies; add 4 Shivs to your hand.
+- FINISHER: 1, attack, deal 6 damage per Attack already played this turn.
+- FLECHETTES: 1, skill, deal 5 damage per Skill in your hand.
+- FLICK_FLACK: 1, attack (Sly), deal 7 damage to ALL enemies (upgraded 9).
+- FOLLOW_THROUGH: 1, skill, deal 6 damage to ALL enemies; apply 1 Weak to all if the last card played was a Skill.
+- FOOTWORK: 1, power, gain 2 Dexterity.
+- GRAND_FINALE: 0, attack, only playable with empty draw pile; deal 50 damage to ALL enemies.
+- HAND_TRICK: 1, skill, gain 7 Block; grant Sly to a Skill in hand this turn.
+- HAZE: 3, skill (Sly), apply 4 Poison to ALL enemies.
+- HIDDEN_DAGGERS: 0, skill, discard 2 cards; add 2 Shivs to your hand.
+- INFINITE_BLADES: 1, power, at start of your turn add 1 Shiv to your hand.
+- KNIFE_TRAP: 2, skill, play every Shiv in your exhaust pile on an enemy.
+- LEADING_STRIKE: 1, attack, deal 7 damage; add 1 Shiv to your hand.
+- LEG_SWEEP: 2, skill, apply 2 Weak; gain 11 Block.
+- MALAISE: 0, skill, enemy loses X Strength; apply X Weak; Exhaust.
+- MASTER_PLANNER: 2, power, when you play a Skill it gains Sly.
+- MEMENTO_MORI: 1, attack, deal 8 damage +4 per card discarded this turn.
+- MIRAGE: 1, skill, gain Block equal to Poison on all enemies; Exhaust.
+- MURDER: 3, attack, deal 1 damage +1 per card drawn this combat.
+- NEUTRALIZE: 0, attack, deal 3 damage; apply 1 Weak.
+- NIGHTMARE: 3, skill, choose a card; add 3 copies of it next turn; Exhaust.
+- NOXIOUS_FUMES: 1, power, at start of your turn apply 2 Poison to ALL enemies.
+- OUTBREAK: 1, power, every 3rd Poison application deals 11 damage to ALL enemies.
+- PIERCING_WAIL: 1, skill, ALL enemies lose 6 Strength this turn.
+- POISONED_STAB: 1, attack, deal 6 damage; apply 3 Poison.
+- PREPARED: 0, skill, draw 1 card; discard 1 card.
+- RICOCHET: 2, attack (Sly), deal 3 damage to a random enemy 4 times (upgraded 5 hits; namu lists cost 1 — version drift).
+- SLICE: 0, attack, deal 6 damage.
+- SNAKEBITE: 2, skill, apply 7 Poison.
+- STRIKE_SILENT: 1, attack, deal 6 damage.
+- DEFEND_SILENT: 1, skill, gain 5 Block.
+- SUCKER_PUNCH: 1, attack, deal 8 damage; apply 1 Weak.
+- SURVIVOR: 1, skill, gain 8 Block; discard 1 card.
+- UNTOUCHABLE: 2, skill (Sly), gain 9 Block (upgraded 12; namu lists cost 1 — version drift).
+- Sly keyword cards pending full data: Tactician (Sly; grants energy when discarded).
+- Silent names still pending effect data: Catalyst, Corpse Explosion, Reflex, Tools of the Trade, Well-Laid Plans, Wraith Form.
+
+## Defect
+
+- ADAPTIVE_STRIKE: 2, attack, deal 18 damage; add a discounted copy to your discard pile.
+- ALL_FOR_ONE: 2, attack, deal 10 damage; pull ALL 0-cost cards from discard pile to hand.
+- BALL_LIGHTNING: 1, attack, deal 7 damage; Channel 1 Lightning.
+- BARRAGE: 1, attack, deal 5 damage for each Channeled Orb.
+- BEAM_CELL: 0, attack, deal 3 damage; apply 1 Vulnerable.
+- BIASED_COGNITION: 1, power (Ancient), gain 4 Focus; at start of your turn lose 1 Focus.
+- BOOST_AWAY: 0, skill, gain 6 Block; add a Dazed to your discard pile.
+- BOOT_SEQUENCE: 0, skill, gain 10 Block; Exhaust.
+- BUFFER: 2, power, prevent the next time you would lose HP.
+- BULK_UP: 2, power, lose 1 Orb Slot; gain 2 Strength and 2 Dexterity.
+- CAPACITOR: 1, power, gain 2 Orb Slots.
+- CHAOS: 1, skill, Channel 1 random Orb.
+- CHARGE_BATTERY: 1, skill, gain 7 Block; gain 1 Energy next turn.
+- CHILL: 0, skill, Channel 1 Frost for each enemy; Exhaust.
+- CLAW: 0, attack, deal 3 damage; ALL Claw cards deal +2 this combat.
+- COLD_SNAP: 1, attack, deal 6 damage; Channel 1 Frost.
+- COMPACT: 1, skill, gain 6 Block; hand Status cards become Fuel.
+- COMPILE_DRIVER: 1, attack, deal 7 damage; draw 1 card per unique Orb type.
+- CONSUMING_SHADOW: 2, power, Channel 2 Dark; Evoke your leftmost Orb at end of turn.
+- COOLANT: 1, power, at start of your turn gain 2 Block per unique Orb type.
+- COOLHEADED: 1, skill, Channel 1 Frost; draw 1 card.
+- CREATIVE_AI: 3, power, at start of your turn add a random Power to your hand.
+- DARKNESS: 1, skill, Channel 1 Dark; triggers all Dark Orb passives.
+- DEFRAGMENT: 1, power, gain 1 Focus.
+- DOUBLE_ENERGY: 1, skill, double your Energy; Exhaust.
+- DUALCAST: 1, skill, Evoke your rightmost Orb twice.
+- ECHO_FORM: 3, power, Ethereal; the first card played each turn repeats.
+- ENERGY_SURGE: 1, skill, ALL players gain 2 Energy; Exhaust.
+- FERAL: 2, power, the first 0-cost Attack each turn returns to your hand.
+- FIGHT_THROUGH: 1, skill, gain 13 Block; add 2 Wounds to your discard pile.
+- FLAK_CANNON: 2, attack, exhaust all Status cards; deal 8 damage to a random enemy per card.
+- FOCUSED_STRIKE: 1, attack, deal 9 damage; gain 1 Focus this turn.
+- FTL: 0, attack, deal 5 damage; draw 1 card if fewer than 3 cards played this turn.
+- FUSION: 2, skill, Channel 1 Plasma.
+- GENETIC_ALGORITHM: 1, skill, gain 3 Block, permanently +1 per use this run; Exhaust.
+- GLACIER: 2, skill, gain 6 Block; Channel 2 Frost.
+- GLASSWORK: 1, skill, gain 5 Block; Channel 1 Glass.
+- GO_FOR_THE_EYES: 0, attack, deal 3 damage; apply 1 Weak if the enemy intends attack.
+- GUNK_UP: 1, attack, deal 4 damage 3 times; add a Slimed to your discard pile.
+- HAILSTORM: 1, power, end turn with Frost orbs: deal 6 damage to ALL enemies.
+- HELIX_DRILL: 0, attack, deal 3 damage per Energy spent this turn.
+- HOLOGRAM: 1, skill, gain 3 Block; return a discard-pile card to your hand; Exhaust.
+- HOTFIX: 0, skill, gain 2 Focus this turn.
+- HYPERBEAM: 2, attack, deal 26 damage to ALL enemies; lose 3 Focus.
+- ICE_LANCE: 3, attack, deal 19 damage; Channel 3 Frost.
+- IGNITION: 1, skill, another player Channels Plasma; Exhaust.
+- ITERATION: 1, power, the first Status card drawn each turn draws 2 cards.
+- LEAP: 1, skill, gain 9 Block.
+- LIGHTNING_ROD: 1, skill, gain 4 Block; Channel 1 Lightning at start of next 2 turns.
+- LOOP: 1, power, at start of your turn trigger your rightmost Orb's passive.
+- MACHINE_LEARNING: 1, power, at start of your turn draw 1 additional card.
+- METEOR_STRIKE: 5, attack, deal 24 damage; Channel 3 Plasma.
+- MODDED: 0, skill, +1 Orb Slot; draw 1 card; this card's cost increases by 1.
+- MOMENTUM_STRIKE: 1, attack, deal 10 damage; reduces its own cost to 0.
+- MULTI_CAST: 0, skill, Evoke your rightmost Orb X times.
+- NULL: 2, attack, deal 10 damage; apply 2 Weak; Channel 1 Dark.
+- OVERCLOCK: 0, skill, draw 2 cards; add a Burn to your discard pile.
+- STRIKE_DEFECT: 1, attack, deal 6 damage.
+- DEFEND_DEFECT: 1, skill, gain 5 Block.
+- SWEEPING_BEAM: 1, attack, deal 6 damage to ALL enemies; draw 1 card.
+- TURBO: 0, skill, gain 2 Energy; add a Void to your discard pile.
+- UPROAR: 2, attack, deal 5 damage twice; play a random Attack from your draw pile.
+- ZAP: 1, skill, Channel 1 Lightning.
+- Defect names still pending effect data: Recursion, Recycle, Reinforced Body, Seek, Skim, Steam Barrier, Storm, Sunder, Tempest, Tesla Coil, White Noise.
+
+## Necrobinder
+
+- AFTERLIFE: 1, skill, Summon 6; Exhaust.
+- BANSHEES_CRY: 6, attack, deal 33 damage to ALL enemies; cost -2 per Ethereal card played.
+- BLIGHT_STRIKE: 1, attack, deal 8 damage; apply Doom equal to damage dealt.
+- BODYGUARD: 1, skill, Summon 5.
+- BONE_SHARDS: 1, attack, if Osty is alive: Osty deals 9 damage to ALL enemies, you gain 9 Block, then Osty dies.
+- BORROWED_TIME: 0, skill, apply 3 Doom to yourself; gain 1 Energy.
+- BURY: 4, attack, deal 52 damage.
+- CALCIFY: 1, power, Osty's attacks deal 4 additional damage.
+- CALL_OF_THE_VOID: 1, power, at start of your turn add a random card to your hand; it gains Ethereal.
+- CAPTURE_SPIRIT: 1, skill, enemy loses 3 HP; add 3 Souls to your draw pile.
+- CLEANSE: 1, skill, Summon 3; exhaust 1 card from your draw pile.
+- COUNTDOWN: 1, power, at start of your turn apply 6 Doom to a random enemy.
+- DANSE_MACABRE: 1, power, playing cards costing 2+ grants 3 Block.
+- DEATH_MARCH: 1, attack, deal 8 damage +3 per card drawn during your turn.
+- DEATHBRINGER: 2, skill, apply large Doom and 1 Weak to ALL enemies.
+- DEATHS_DOOR: 1, skill, gain 6 Block; if Doom was applied this turn gain the Block again twice.
+- DEBILITATE: 1, attack, deal 7 damage; Vulnerable and Weak on the target are doubled for 3 turns.
+- DEFILE: 1, attack, deal 13 damage.
+- DEFY: 1, skill, gain 6 Block; apply 1 Weak.
+- DELAY: 2, skill, gain 11 Block; gain 1 Energy next turn.
+- DEMESNE: 3, power, at start of your turn gain 1 Energy and draw 1 extra card.
+- DEVOUR_LIFE: 1, power, whenever you play a Soul, Summon 1.
+- DIRGE: 0, skill, Summon 3 X times; add X Souls to your draw pile.
+- DRAIN_POWER: 1, attack, deal 10 damage; upgrade 2 random cards in your discard pile.
+- DREDGE: 1, skill, pull 3 discard-pile cards into your hand; Exhaust.
+- EIDOLON: 2, skill, exhaust your hand; if 9 cards were exhausted gain 1 Intangible.
+- END_OF_DAYS: 3, skill, apply large Doom to ALL enemies; kills enemies whose Doom >= HP.
+- ENFEEBLING_TOUCH: 1, skill, enemy loses 8 Strength this turn.
+- ERADICATE: 0, attack, deal 11 damage X times.
+- FEAR: 1, attack, deal 7 damage; apply 1 Vulnerable.
+- FETCH: 0, attack, Osty deals 3 damage; draw 1 card if first play this turn.
+- FLATTEN: 2, attack, Osty deals 12 damage; costs 0 if Osty attacked this turn.
+- FORBIDDEN_GRIMOIRE: 2, power (Ancient), end of combat you may remove a card; Eternal.
+- FRIENDSHIP: 1, power, lose 2 Strength; +1 Energy at start of each turn.
+- GLIMPSE_BEYOND: 1, skill, ALL players add 3 Souls to their draw pile; Exhaust.
+- GRAVE_WARDEN: 1, skill, gain 8 Block; add a Soul to your draw pile.
+- GRAVEBLAST: 1, attack, deal 4 damage; put a discard-pile card into your hand; Exhaust.
+- HANG: 1, attack, deal 10 damage; doubles ALL Hang card damage to that enemy.
+- HAUNT: 1, power, playing a Soul makes a random enemy lose 6 HP.
+- HIGH_FIVE: 2, attack, Osty deals 11 damage to ALL enemies + apply 2 Vulnerable.
+- INVOKE: 1, skill, next turn Summon 2 and gain 2 Energy.
+- LEGION_OF_BONE: 2, skill, ALL players Summon 6; Exhaust.
+- LETHALITY: 1, power, your first Attack each turn deals +50%.
+- MELANCHOLY: 3, skill, gain 13 Block; cost -1 each time anyone dies.
+- MISERY: 0, attack, deal 7 damage; copy the enemy's debuffs to all other enemies.
+- NECRO_MASTERY: 2, power, Summon 5; Osty's HP loss transfers to ALL enemies.
+- NEGATIVE_PULSE: 1, skill, gain 5 Block; apply 7 Doom to ALL enemies.
+- NEUROSURGE: 0, power, +3 Energy; draw 2 cards; at start of your turn apply 3 Doom to yourself.
+- NO_ESCAPE: 1, skill, apply 10 Doom plus 5 more per 10 Doom already on the enemy.
+- OBLIVION: 0, skill, each card played this turn applies 3 Doom to the enemy.
+- POKE: 0, attack, Osty deals 6 damage.
+- PULL_AGGRO: 2, skill, Summon 4; gain 7 Block.
+- REAP: 3, attack, deal 27 damage.
+- REAVE: 1, attack, deal 9 damage; add a Soul to your draw pile.
+- SCOURGE: 1, skill, apply 13 Doom; draw 1 card.
+- SCULPTING_STRIKE: 1, attack, deal 8 damage; add Ethereal to a card in your hand.
+- SNAP: 1, attack, Osty deals 7 damage; add Retain to a card in your hand.
+- SOW: 1, attack, deal 8 damage to ALL enemies.
+- STRIKE_NECROBINDER: 1, attack, deal 6 damage.
+- DEFEND_NECROBINDER: 1, skill, gain 5 Block.
+- UNLEASH: 1, attack, Osty deals 6 damage + additional damage equal to Osty's current HP.
+- WISP: 0, skill, gain 1 Energy.
+- Necrobinder names still pending effect data: Reanimate, Shatter, Soul Storm, Summon Forth, The Scythe, Undeath.
+
+## Regent
+
+- ALIGNMENT: 0, skill, gain 2 Energy.
+- ARSENAL: 1, power, whenever you play a Colorless card gain 1 Strength.
+- ASTRAL_PULSE: 0, attack, deal 14 damage to ALL enemies.
+- BEAT_INTO_SHAPE: 1, attack, deal 5 damage + Forge 5; +5 Forge per other hit this turn.
+- BEGONE: 1, attack, deal 4 damage; transform a card in your hand into Minion Dive Bomb.
+- BIG_BANG: 0, skill, draw 1 card; +1 Energy; +1 Star; Forge 5; Exhaust.
+- BLACK_HOLE: 1, power, whenever you spend or gain a Star deal 3 damage to ALL enemies.
+- BULWARK: 2, skill, gain 13 Block; Forge 10.
+- BUNDLE_OF_JOY: 2, skill, add 3 random Colorless cards to your hand; Exhaust.
+- CELESTIAL_MIGHT: 2, attack, deal 6 damage 3 times.
+- CHARGE!!: 1, skill, transform 2 draw-pile cards into Minion Strike.
+- CHILD_OF_THE_STARS: 1, power, whenever you spend Stars gain 2 Block per Star spent (per 2 Stars per DB wording).
+- CLOAK_OF_STARS: 0, skill, gain 7 Block.
+- COLLISION_COURSE: 0, attack, deal 9 damage; add a Debris to your hand.
+- COMET: 0, attack, deal 33 damage; apply 3 Weak; apply 3 Vulnerable.
+- CONQUEROR: 1, skill, Forge 3; Sovereign Blade deals double damage to an enemy this turn.
+- CONVERGENCE: 1, skill, next turn +1 Energy +1 Star; retain your hand this turn.
+- COSMIC_INDIFFERENCE: 1, skill, gain 6 Block; place a discard-pile card on top of your draw pile.
+- CRASH_LANDING: 1, attack, deal 21 damage to ALL enemies; fill your hand with Debris.
+- CRESCENT_SPEAR: 1, attack, deal 6 damage +2 for each card with a Star cost in your deck.
+- CRUSH_UNDER: 1, attack, deal 7 damage to ALL enemies; they lose 1 Strength this turn.
+- DECISIONS_DECISIONS: 0, skill, draw 3 cards; play a chosen Skill 3 times; Exhaust.
+- DEVASTATE: 1, attack, deal 30 damage.
+- DYING_STAR: 1, attack, deal 9 damage to ALL enemies; all enemies lose 9 Strength this turn.
+- FALLING_STAR: 0, attack, deal 7 damage; apply 1 Weak; apply 1 Vulnerable.
+- FOREGONE_CONCLUSION: 1, skill, next turn pull 2 draw-pile cards into your hand.
+- FURNACE: 1, power, at start of your turn Forge 4.
+- GAMMA_BLAST: 0, attack, deal 13 damage; apply 2 Weak; apply 2 Vulnerable.
+- GATHER_LIGHT: 1, skill, gain 7 Block; gain 1 Star.
+- GENESIS: 2, power, at start of your turn gain resources (text garbled in source — verify live).
+- GLIMMER: 1, skill, draw 3 cards; return 1 card to top of your draw pile.
+- GLITTERSTREAM: 2, skill, gain 11 Block; next turn gain 11 Block (stratgg said 4 — version drift; use live state).
+- GLOW: 1, skill, gain 1 Star; draw 2 cards.
+- GUARDS!!: 2, skill, transform any hand cards into Minion Sacrifice; Exhaust.
+- GUIDING_STAR: 1, attack, deal 12 damage; next turn draw 2 cards.
+- HAMMER_TIME: 2, power, whenever you Forge, all allies Forge as well.
+- HEGEMONY: 2, attack, deal 15 damage; gain 2 Energy next turn.
+- HEAVENLY_DRILL: 0, attack, deal 8 damage X times; X doubles at 4+.
+- HEIRLOOM_HAMMER: 2, attack, deal 17 damage; copy a Colorless card in your hand.
+- HIDDEN_CACHE: 1, skill, +1 Star; next turn gain additional Stars (value garbled in source).
+- I_AM_INVINCIBLE: 1, skill, gain 9 Block; replays from top of draw pile at end of turn.
+- KINGLY_KICK: 4, attack, deal 24 damage; cost -1 each time drawn.
+- KINGLY_PUNCH: 1, attack, deal 8 damage +3 per draw this combat.
+- KNOCKOUT_BLOW: 3, attack, deal 30 damage; if it kills gain 5 Stars.
+- KNOW_THY_PLACE: 0, skill, apply 1 Weak; apply 1 Vulnerable; Exhaust.
+- LARGESSE: 0, skill, another player gets a random Colorless card.
+- LUNAR_BLAST: 0, skill, deal 4 damage per Skill already played this turn.
+- MAKE_IT_SO: 0, attack, deal 6 damage; returns to hand every 3 Skills played in a turn.
+- MANIFEST_AUTHORITY: 1, skill, gain 7 Block; add 1 random Colorless card to your hand.
+- MONARCHS_GAZE: 3, power, enemies you attack lose 1 Strength this turn.
+- MONOLOGUE: 0, skill, each card played this turn grants +1 Strength this turn.
+- NEUTRON_AEGIS: 1, power, gain 8 Plating.
+- ORBIT: 2, power, every 4 Energy spent gain 1 Energy.
+- PATTER: 1, skill, gain 8 Block; gain 2 Vigor.
+- PHOTON_CUT: 1, attack, deal 10 damage; draw 1 card; put a hand card on top of your draw pile.
+- REFINE_BLADE: 1, skill, Forge 6; next turn gain Energy.
+- SOLAR_STRIKE: 1, attack, deal 8 damage; gain 1 Star.
+- SPOILS_OF_BATTLE: 1, skill, Forge 10.
+- STRIKE_REGENT: 1, attack, deal 6 damage.
+- DEFEND_REGENT: 1, skill, gain 5 Block.
+- VENERATE: 1, skill, gain 2 Stars.
+- WROUGHT_IN_WAR: 0, attack, deal 7 damage; Forge 5.
+- Regent names still pending effect data: Pagestorm, Protector, Royal Gamble, Royalties, Seven Stars, Seeking Edge, Stratagem, Summon Forth, The Sealed Throne, Tyranny.
+
+## Colorless / event / status / curse / token
+
+- ALCHEMIZE: 1, skill (Rare), procure a random potion; Exhaust.
+- APOTHEOSIS: 2, skill (Ancient), Innate; upgrade ALL cards; Exhaust.
+- APPARITION: 1, skill (Ancient), Ethereal; gain 1 Intangible; Exhaust.
+- BAD_LUCK: curse, in hand at end of turn lose 13 HP.
+- BECKON: 1, skill (Special), in hand at end of turn lose 6 HP.
+- BOLAS: 0, attack, deal 3 damage; returns to hand at start of next turn.
+- BRIGHTEST_FLAME: 0, skill (Ancient), +2 Energy; draw 2 cards; lose 1 Max HP.
+- BURN: status, unplayable; in hand at end of turn take 2 damage.
+- BYRD_SWOOP: 0, attack (Event), deal 14 damage.
+- BYRDONIS_EGG: Special/Quest status, unplayable (-1 cost); hatched at a Rest Site while in deck (see afflictions.md).
+- CALAMITY: 3, power, each Attack played adds a random Attack to your hand.
+- CALTROPS: 1, power (Event), whenever you are attacked deal 3 damage back.
+- CLASH: 0, attack (Event), only if hand is all Attacks; deal 14 damage.
+- COORDINATE: 1, skill, give another player 5 Strength this turn.
+- DEBT: curse, in hand at end of turn lose 10 Gold.
+- DECAY: curse, in hand at end of turn take 2 damage.
+- DESPAIR: Special, each Doom applied grants you 1 Block.
+- DISINTEGRATION: Special token, at end of turn take 6 damage.
+- DISTRACTION: 1, skill (Event), random Skill free this turn; Exhaust.
+- DOUBT: curse, in hand at end of turn gain 1 Weak.
+- DRAMATIC_ENTRANCE: 0, attack, deal 11 damage to ALL enemies; Exhaust.
+- DUAL_WIELD: 1, skill (Event), copy an Attack or Power card into your hand.
+- ENLIGHTENMENT: 0, skill (Event), ALL hand cards cost 1 this turn; Exhaust.
+- ENTHRALLED: 2, curse, must be played before other cards while in hand.
+- ENTRENCH: 2, skill (Event), double your Block.
+- EQUILIBRIUM: 2, skill, gain 13 Block; retain your hand this turn.
+- ETERNAL_ARMOR: 3, power, gain 7 Plating.
+- EXTERMINATE: 1, attack (Event), deal 3 damage 4 times to ALL enemies.
+- FASTEN: 1, power, Defend cards grant +5 additional Block.
+- FINESSE: 0, skill, gain 4 Block; draw 1 card.
+- FISTICUFFS: 1, attack, deal 7 damage; gain Block equal to damage dealt.
+- FLASH_OF_STEEL: 0, attack, deal 5 damage; draw 1 card.
+- FRANTIC_ESCAPE: 1, skill (Special), move farther; +1 Sandpit; own cost +1 each use.
+- FUEL: 0, token, +1 Energy; draw 1 card; Exhaust.
+- GANG_UP: 1, attack, deal 5 damage +5 per ally attack on that enemy this turn.
+- GHOST_EATER: Special, remove all Doom; +1 Energy per 6 Doom removed.
+- GIANT_ROCK: 1, token attack, deal 16 damage.
+- GOLD_AXE: 1, attack, damage equals cards played this combat.
+- GREED: curse (no listed text; Cursed Pearl grants it with 333 Gold).
+- HAND_OF_GREED: 2, attack, deal 20 damage; if Fatal gain 20 Gold.
+- HELLO_WORLD: 1, power (Event), at start of your turn add a random Common card to your hand.
+- HUDDLE_UP: 1, skill, ALL allies draw 2 cards.
+- IMPATIENCE: 0, attack, draw 2 cards if you have no Attacks in hand.
+- INFECTION: Special status, in hand at end of turn take 3 damage.
+- INTERCEPT: 1, skill, gain 9 Block; redirect all incoming ally attacks to you this turn.
+- JACK_OF_ALL_TRADES: 0, skill, add 1 random Colorless card; Exhaust.
+- JACKPOT: 3, attack, deal 25 damage; add 3 random 0-cost cards to your hand.
+- KNOCKDOWN: 3, attack, deal 10 damage; enemy takes double damage from other players this turn.
+- LANTERN_KEY: Special/Quest, unlocks a special event in the next Act.
+- LIFT: 1, skill, give another player 11 Block.
+- LUMINESCE: 0, token, gain 2 Energy; Exhaust.
+- MASTER_OF_STRATEGY: 0, skill, draw 3 cards; Exhaust.
+- MAYHEM: 2, power, at start of your turn play the top card of your draw pile.
+- METAMORPHOSIS: 2, skill (Event), shuffle 3 random Attacks into draw pile, free this combat; Exhaust.
+- METEOR_SHOWER: 0, attack (Ancient), deal 14 damage to ALL enemies; apply 2 Weak and Vulnerable to all.
+- MIMIC: 1, skill, gain Block equal to another player's Block; Exhaust.
+- MIND_BLAST: 1, attack, damage equals cards in your draw pile.
+- MIND_ROT: Special token, draw 1 fewer card each turn.
+- MINION_DIVE_BOMB: 1, token attack, deal 13 damage; Exhaust.
+- MINION_SACRIFICE: 0, token skill, gain 9 Block; Exhaust.
+- MINION_STRIKE: 0, token attack, deal 7 damage; draw 1 card; Exhaust.
+- NORMALITY: curse, you cannot play more than 3 cards this turn.
+- OMNISLICE: 0, attack, deal 8 damage; other enemies take equal damage.
+- SHIV: 0, token attack, deal damage (Silent kits; Accuracy +4; Fan of Knives makes Shivs hit all enemies).
+- SLOTH / SLIMED / SOOT / TOXIC / VOID / WASTE_AWAY / WOUND / DAZED / DEBRIS: see afflictions.md status-card list.
+- TRASH_TO_TREASURE: on Status card creation, Channel a random Orb.
+
+## Screen notes (card reward / selection)
+
+- Reward screens may show unclaimable buttons when potion slots are full — click no-ops; proceed leaves the screen.
+- Skip button exists on most card_reward screens; NDeckCardSelectScreen removal flow has none (mandatory pick).
+- AROMA_OF_CHAOS event "LET_GO": opens deck transform — pick any deck card, it transforms at random (STRIKE -> POMMEL_STRIKE observed).
+- Card pool sizes (spire-codex / sts2guide): Ironclad 87, Silent 88-89, Defect 88, Necrobinder 88, Regent 88; 577 total incl. colorless/status/token.

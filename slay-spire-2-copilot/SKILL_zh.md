@@ -180,11 +180,14 @@ references/ — 查阅知识：
 - `references/README_zh.md` — 知识索引（中文版）
 - `references/bridge/commands.md` — CLI 用法、动作与状态参考、日志目录契约
 - `references/bridge/protocol.md` — 线协议 v1（本机 TCP 上的 JSON Lines）
+- `references/game/characters_zh.md` — 可玩角色、初始配置、流派
 - `references/game/cards_zh.md` — 卡牌
 - `references/game/potions_zh.md` — 药水效果
 - `references/game/powers_zh.md` — 能力/力量
 - `references/game/relics_zh.md` — 遗物效果
 - `references/game/intents_zh.md` — 敌人意图解读
+- `references/game/monsters_zh.md` — 敌人招式表与被动
+- `references/game/events_zh.md` — 事件房与已知分支
 - `references/game/afflictions_zh.md` — 状态与负面效果
 
 memory/ — 对局记忆：

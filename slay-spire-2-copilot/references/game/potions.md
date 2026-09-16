@@ -1,6 +1,69 @@
 # Potions
 
-Static potion reference.
+Potion reference with effects. Source: stratgg.com potion database (63
+potions), cross-checked with local play. Tags: rarity; owner in brackets
+when character-specific.
 
-- GAMBLERS_BREW / BLESSING_OF_THE_FORGE / STABLE_SERUM: effects pending
-  observation.
+- Ashwater [Uncommon, Ironclad]: exhaust any number of cards in your hand.
+- Attack Potion [Common, shared]: choose 1 of 3 random Attack cards to add to your hand; free this turn.
+- Beetle Juice [Rare, shared]: enemy attacks deal 30% less damage for the next 4 turns.
+- Blessing of the Forge [Uncommon, shared]: upgrade all cards in your hand for the rest of combat.
+- Block Potion [Common, shared]: gain 12 Block.
+- Blood Potion [Common, Ironclad]: heal 20% of your Max HP.
+- Bone Brew [Uncommon, Necrobinder]: Summon 15.
+- Bottled Potential [Rare, shared]: shuffle ALL cards into your draw pile, then draw 5.
+- Clarity Extract [Uncommon, shared]: draw 1 card; at the start of your next 3 turns, draw 1 additional card.
+- Colorless Potion [Common, shared]: choose 1 of 3 random Colorless cards to add to your hand; free this turn.
+- Cosmic Concoction [Rare, Regent]: add 3 upgraded Colorless cards to your hand.
+- Cunning Potion [Uncommon, Silent]: add 3 upgraded Shivs to your hand.
+- Cure All [Uncommon, shared]: gain 1 energy; draw 2 cards.
+- Dexterity Potion [Common, shared]: gain 2 Dexterity.
+- Distilled Chaos [Rare, shared]: play the top 3 cards of your draw pile.
+- Droplet of Precognition [Rare, shared]: choose a card in your draw pile and add it to your hand.
+- Duplicator [Uncommon, shared]: this turn, your next card is played an extra time.
+- Energy Potion [Common, shared]: gain 2 energy.
+- Entropic Brew [Rare, shared]: fill all empty potion slots with random potions.
+- Essence of Darkness [Rare, Defect]: channel a Dark orb for each of your orb slots.
+- Explosive Ampoule [Common, shared]: deal 10 damage to ALL enemies.
+- Fairy in a Bottle [Rare, shared]: when you would die, discard this instead and heal to 30% Max HP.
+- Fire Potion [Common, shared]: deal 20 damage.
+- Flex Potion [Common, shared]: gain 5 Strength; end of your turn, lose 5 Strength.
+- Focus Potion [Common, Defect]: gain 2 Focus.
+- Fortifier [Uncommon, shared]: triple your Block.
+- Foul Potion [Event]: deal 12 damage to EVERYONE (can also be thrown at the Merchant for 100 Gold).
+- Fruit Juice [Rare, shared]: gain 5 Max HP.
+- Fysh Oil [Uncommon, shared]: gain 1 Strength and 1 Dexterity.
+- Gambler's Brew [Uncommon, shared]: discard any number of cards, then draw that many.
+- Ghost in a Jar [Rare, Silent]: gain 1 Intangible.
+- Gigantification Potion [Rare, shared]: the next Attack you play deals triple damage.
+- Glowwater Potion [Event]: exhaust your hand; draw 10 cards.
+- Heart of Iron [Uncommon, shared]: gain 7 Plating.
+- King's Courage [Uncommon, Regent]: Forge 15.
+- Liquid Bronze [Uncommon, shared]: gain 3 Thorns.
+- Liquid Memories [Rare, shared]: put a card from your discard pile into your hand; it costs 1 less energy this turn.
+- Lucky Tonic [Rare, shared]: gain 1 Buffer.
+- Mazaleth's Gift [Rare, shared]: gain 1 Ritual.
+- Orobic Acid [Rare, shared]: add a random Attack, Skill and Power to your hand; free this turn.
+- Poison Potion [Common, Silent]: apply 6 Poison.
+- Pot of Ghouls [Rare, Necrobinder]: add 2 Souls to your hand.
+- Potion of Binding [Uncommon, shared]: apply 1 Weak and 1 Vulnerable to ALL enemies.
+- Potion of Capacity [Uncommon, Defect]: gain 2 Orb Slots.
+- Potion of Doom [Common, Necrobinder]: apply 33 Doom.
+- Potion-Shaped Rock [Token, shared]: deal 15 damage.
+- Powdered Demise [Uncommon, shared]: enemy loses 9 HP at the end of each of its turns.
+- Power Potion [Common, shared]: choose 1 of 3 random Power cards to add to your hand; free this turn.
+- Radiant Tincture [Uncommon, shared]: gain 1 energy; gain 1 additional energy at the start of your next 3 turns.
+- Regen Potion [Uncommon, shared]: gain 5 Regen.
+- Shackling Potion [Rare, shared]: ALL enemies lose 7 Strength this turn.
+- Ship in a Bottle [Rare, shared]: gain 10 Block; next turn, gain 10 Block.
+- Skill Potion [Common, shared]: choose 1 of 3 random Skill cards to add to your hand; free this turn.
+- Snecko Oil [Rare, shared]: draw 7 cards; randomize the cost of cards in your hand this turn.
+- Soldier's Stew [Rare, Ironclad]: all cards containing Strike gain 1 Replay this combat.
+- Speed Potion [Common, shared]: gain 5 Dexterity; end of your turn, lose 5 Dexterity.
+- Stable Serum [Uncommon, shared]: retain your hand for 2 turns.
+- Star Potion [Common, Regent]: gain 3 stars (★).
+- Strength Potion [Common, shared]: gain 2 Strength.
+- Swift Potion [Common, shared]: draw 3 cards.
+- Touch of Insanity [Uncommon, shared]: choose a card in your hand; it is free to play this combat.
+- Vulnerable Potion [Common, shared]: apply 3 Vulnerable.
+- Weak Potion [Common, shared]: apply 3 Weak.

@@ -226,11 +226,14 @@ references/ — consult knowledge:
   log-directory contract
 - `references/bridge/protocol.md` — wire protocol v1 (JSON Lines over TCP on
   localhost)
+- `references/game/characters.md` — playable characters, starters, archetypes
 - `references/game/cards.md` — cards
 - `references/game/potions.md` — potion effects
 - `references/game/powers.md` — powers
 - `references/game/relics.md` — relic effects
 - `references/game/intents.md` — reading enemy intents
+- `references/game/monsters.md` — enemy move tables and passives
+- `references/game/events.md` — event rooms and known branches
 - `references/game/afflictions.md` — statuses and debuffs
 - `references/game/*_zh.md` — Chinese twins of the game knowledge files
 

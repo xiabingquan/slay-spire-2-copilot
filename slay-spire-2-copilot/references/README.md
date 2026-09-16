@@ -13,9 +13,12 @@ bridge/ — tooling:
 
 game/ — game knowledge:
 
+- [characters](game/characters.md) — playable characters, starters, archetypes
 - [cards](game/cards.md) — playable cards: costs, effects
 - [powers](game/powers.md) — combat powers, buffs and debuffs
 - [relics](game/relics.md) — relic effects
 - [potions](game/potions.md) — potion effects
 - [afflictions](game/afflictions.md) — statuses and card-bound debuffs
 - [intents](game/intents.md) — enemy intent label formats
+- [monsters](game/monsters.md) — enemy move tables and passives
+- [events](game/events.md) — event rooms and known branches

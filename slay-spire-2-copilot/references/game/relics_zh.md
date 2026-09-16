@@ -1,30 +1,303 @@
 # 遗物
 
-遗物效果静态参考。标注 STS1 的效果来自《杀戮尖塔 1》，未在 STS2 中实测。
+遗物效果参考。来源：spire-codex.com 遗物数据库（约 296 条含事件变体），
+与 v0.107.1 实战观察及 CombatSolver 遗物目录交叉核对；括号内为简中译名
+（来源：slaythespire2.net/zh-CN/relic）。标注：稀有度（Common/Uncommon/
+Rare/Ancient/Shop/Event/Starter）与适用（Shared = 全角色）。
 
-- BURNING_BLOOD（铁甲战士初始遗物）：战斗结束时回复 6hp。
-- MOLTEN_EGG：攻击牌奖励在获得时自动升级。
-- LASTING_CANDY：休息回复增强（53hp 时观察到 +24）。
-- GORGET：战斗开始获得固定格挡（PLATING_POWER）。
-- VAJRA：战斗开始 +1 力量（STS1）。
-- PANTOGRAPH：进入 boss 战时满血（STS1）。
-- LEES_WAFFLE：拾取时回复（STS1）。
-- ODDLY_SMOOTH_STONE：战斗开始 +1 敏捷（STS1）。
-- BAG_OF_PREPARATION：战斗首回合抽 +2（STS1）。
-- HAPPY_FLOWER：每第 3 回合 +1 能量（STS1）。
-- ORNAMENTAL_FAN：每 3 次攻击 +1 敏捷（STS1）。
-- STRIKE_DUMMY：战斗开始 +1 力量（STS1）。
-- LANTERN：战斗首回合 +1 能量（STS1）。
-- VENERABLE_TEA_SET / REGAL_PILLOW：增强休息点回复（STS1）。
-- NUNCHAKU：按攻击次数获得能量（STS1）。
-- UndyingSigil：自身无直接效果；Doom 会检查其存在——敌方 Doom 改为在敌人
-  回合开始时触发而非回合结束，敌人在攻击前死亡。
-- FAKE_SNECKO_EYE（NFakeMerchant 事件 54g）：假遗物；手牌费用随机化
-  （类似 CONFUSED），陷阱。
-- JUNGLE_MAZE_ADVENTURE：SOLO_QUEST 约 -18hp 换约 +147g；JOIN_FORCES 零 hp
-  成本约 +63g——中低血量选 JOIN，仅血量过 60 时选 SOLO。
-- THE_LANTERN_KEY 事件：RETURN_THE_KEY 立得约 +100 金币无战斗；
-  KEEP_THE_KEY 触发骑士战获取钥匙卡。
-- HATCH 休息选项：仅当牌库中有 BYRDONIS_EGG 类卡牌时出现。
-- LOST_WISP / WONGOS_MYSTERY_TICKET / SPARKLING_ROUGE / CHANDELIER /
-  TUNING_FORK / AMETHYST_AUBERGINE / PENDULUM：效果待观察。
+- Akabeko（赤牛，Uncommon，Shared）：每次战斗开始，获得 8 点 Vigor。
+- Alchemical Coffer（炼金箱，Ancient，Shared）：拾取时，获得 4 个装满随机药水的药水栏。
+- Amethyst Aubergine（紫水晶茄子，Common，Shared）：敌人额外掉落 15 金币。
+- Anchor（锚，Common，Shared）：每场战斗开始，获得 10 格挡。
+- Anchor???（锚？？？，Event，Shared）：每场战斗开始，获得 4 格挡。
+- Arcane Scroll（奥术卷轴，Ancient，Shared）：拾取时，获得一张随机稀有卡牌。
+- Archaic Tooth（古老牙齿，Ancient，Shared）：拾取时，将一张初始牌变为远古版本。
+- Art of War（孙子兵法，Rare，Shared）：若本回合未打出任何攻击牌，下回合额外获得 1 能量。
+- Astrolabe（星盘，Ancient，Shared）：拾取时，变化 3 张牌，然后升级它们。
+- Bag of Marbles（弹珠袋，Common，Shared）：每次战斗开始，对所有敌人施加 1 层 Vulnerable。
+- Bag of Preparation（准备背包，Common，Shared）：每次战斗开始，额外抽 2 张牌。
+- Beating Remnant（律动残余，Rare，Shared）：单回合失去的 HP 不会超过 20。
+- Beautiful Bracelet（华美手镯，Ancient，Shared）：拾取时，选择牌库中 3 张牌附魔 Swift 3。
+- Bellows（风箱，Rare，Shared）：每场战斗抽到的第一手牌为升级版。
+- Belt Buckle（腰带扣，Shop，Shared）：没有药水时，额外 +2 敏捷。
+- Big Hat（大帽子，Rare，Necrobinder）：每次战斗开始，向手牌加入 2 张随机虚无（Ethereal）牌。
+- Big Mushroom（大蘑菇，Event，Shared）：拾取时 +20 最大 HP；每次战斗开始少抽 2 张牌。
+- Biiig Hug（大～抱抱，Ancient，Shared）：拾取时移除 4 张牌；每次洗抽牌堆时向其中加入 1 张 Soot。
+- Bing Bong（宾邦，Event，Shared）：每次向牌库加入卡牌时，额外加一份拷贝。
+- Black Blood（黑暗之血，Starter 升级，Ironclad）：战斗结束回复 12 HP。
+- Black Star（黑星，Ancient，Shared）：精英被击败时额外掉落一件遗物。
+- Blessed Antler（赐福鹿角，Ancient，Shared）：每回合开始获得能量；每次战斗开始向抽牌堆洗入 3 张 Dazed。
+- Blood Vial（小血瓶，Common，Shared）：每次战斗开始，回复 2 HP。
+- Blood Vial???（小血瓶？？？，Event，Shared）：每次战斗开始，回复 1 HP。
+- Blood-Soaked Rose（血染玫瑰，Ancient，Shared）：拾取时向牌库加入 1 张 Enthralled；每回合开始获得能量。
+- Bone Flute（骨笛，Common，Necrobinder）：Osty 每次攻击时，获得 2 格挡。
+- Bone Tea（骨茶，Event，Shared）：下一场战斗开始时，升级你的起手牌。
+- Book of Five Rings（五轮书，Common，Shared）：每向牌库加入 5 张牌，回复 20 HP。
+- Book Repair Knife（修书小刀，Uncommon，Necrobinder）：非 Minion 敌人死于 Doom 时，回复 3 HP。
+- Bookmark（书签，Rare，Necrobinder）：每回合结束，随机一张被保留的卡牌费用 -1 直至打出。
+- Booming Conch（轰鸣海螺，Ancient，Shared）：精英战斗开始，额外抽 2 张牌并获得能量。
+- Bound Phylactery（缚魂命匣，Starter，Necrobinder）：你的回合开始时，Summon 1。
+- Bowler Hat（圆顶礼帽，Uncommon，Shared）：金币获取 +25%。
+- Bread（面包，Shop，Shared）：首回合开始失去 2 能量；其余回合开始获得能量。
+- Brilliant Scarf（艳丽围巾，Ancient，Shared）：每回合从手牌打出的第 5 张牌免费。
+- Brimstone（硫磺，Shop，Ironclad）：回合开始获得 2 力量，所有敌人获得 1 力量。
+- Bronze Scales（铜质鳞片，Common，Shared）：每场战斗开始，获得 3 点荆棘。
+- Burning Blood（燃烧之血，Starter，Ironclad）：战斗结束回复 6 HP。
+- Burning Sticks（燃烧木棍，Shop，Shared）：每场战斗首次消耗一张技能牌时，将其一份拷贝加入手牌。
+- Byrdpip（异鸟宝宝，Event，Shared）：拾取时获得卡牌 Byrd Swoop；战斗中有 Byrdpip 伴随。
+- Calling Bell（召唤铃铛，Ancient，Shared）：拾取时获得一张独特诅咒和 3 件遗物。
+- Candelabra（烛台，Uncommon，Shared）：第 2 回合开始，获得 2 能量。
+- Captain's Wheel（舵盘，Rare，Shared）：第 3 回合开始，获得 18 格挡。
+- Cauldron（大锅，Shop，Shared）：拾取时，酿造 5 瓶随机药水。
+- Centennial Puzzle（百年积木，Common，Shared）：每场战斗首次失去 HP 时，抽 3 张牌。
+- Chandelier（吊灯，Rare，Shared）：第 3 回合开始，获得 3 能量。
+- Charon's Ashes（卡戎之灰，Rare，Ironclad）：每次消耗卡牌时，对所有敌人造成 3 点伤害。
+- Chemical X（化学物X，Shop，Shared）：X 费卡牌的效果增强 2 点。
+- Choices Paradox（选择悖论，Ancient，Shared）：每次战斗开始，从 5 张随机卡中选 1 张加入手牌；该牌获得 Retain。
+- Circlet（头环，Relic，Shared）：就是个头环。
+- Claws（利爪，Ancient，Shared）：拾取时，将至多 6 张牌变为 Maul。
+- Cloak Clasp（斗篷扣，Rare，Shared）：回合结束，手牌每张牌获得 1 格挡。
+- Cracked Core（破损核心，Starter，Defect）：每次战斗开始，引导（Channel）1 个闪电球。
+- Crossbow（十字弓，Ancient，Shared）：回合开始，向手牌加入一张随机攻击牌；本回合免费。
+- Cursed Pearl（诅咒珍珠，Ancient，Shared）：拾取时获得 Greed；获得 333 金币。
+- Darkstone Periapt（黑石护符，Event，Shared）：每次获得诅咒时 +6 最大 HP。
+- Data Disk（数据磁盘，Common，Defect）：每场战斗开始，获得 1 点 Focus。
+- Daughter of the Wind（风的女儿，Event，Shared）：每次打出攻击牌时，获得 1 格挡。
+- Delicate Frond（娇嫩蕨草，Ancient，Shared）：每次战斗开始，用随机药水填满所有空药水栏。
+- Demon Tongue（恶魔之舌，Rare，Ironclad）：每场战斗在自己回合首次失去 HP 时，回复等量 HP。
+- Diamond Diadem（钻石头冠，Ancient，Shared）：回合内打出不超过 2 张牌时，受到的敌人伤害减半。
+- Dingy Rug（肮脏地毯，Shop，Shared）：卡牌奖励现在可包含无色牌。
+- Distinguished Cape（卓越斗篷，Ancient，Shared）：拾取时 -9 最大 HP；向牌库加入 3 张 Apparition。
+- Divine Destiny（天命所归，Starter 变体，Regent）：战斗开始获得 6 点星星（★）。
+- Divine Right（天赋君权，Starter，Regent）：战斗开始获得 3 点星星（★）。
+- Dolly's Mirror（多利之镜，Shop，Shared）：拾取时，获得牌库中某张牌的一份拷贝。
+- Dragon Fruit（火龙果，Shop，Shared）：每次获得金币时 +1 最大 HP。
+- Dream Catcher（捕梦网，Event，Shared）：每次休息（Rest）时，可以向牌库加入一张牌。
+- Driftwood（浮木，Ancient，Shared）：每份卡牌奖励可重掷一次。
+- Dusty Tome（尘封魔典，Ancient，Shared）：拾取时获得一张远古卡牌。
+- Ectoplasm（灵体外质，Ancient，Shared）：不再获得金币；每回合开始获得能量。
+- Electric Shrymp（放电异虾，Ancient，Shared）：拾取时，为一张技能牌附魔 Imbued。
+- Ember Tea（余烬茶，Event，Shared）：接下来 5 场战斗开始时获得 2 力量。
+- Emotion Chip（情感芯片，Rare，Defect）：若上回合失去过 HP，回合开始时触发所有充能球的被动。
+- Empty Cage（空鸟笼，Ancient，Shared）：拾取时从牌库移除 2 张牌。
+- Eternal Feather（永恒羽毛，Uncommon，Shared）：牌库每 5 张牌，进入休息点时回复 3 HP。
+- Fencing Manual（击剑指南，Common，Regent）：每次战斗开始，Forge 10。
+- Festive Popper（节日拉炮，Common，Shared）：每次战斗开始，对所有敌人造成 9 点伤害。
+- Fiddle（小提琴，Ancient，Shared）：回合开始额外抽 2 张牌；回合内不能再抽牌。
+- Fishing Rod（钓鱼竿，Ancient，Shared）：每 3 场普通战斗，升级牌库中一张随机牌。
+- Forgotten Soul（遗忘之魂，Event，Shared）：每次消耗卡牌时，对随机敌人造成 1 点伤害。
+- Fragrant Mushroom（芳香蘑菇，Event，Shared）：拾取时失去 15 HP，升级 2 张随机牌。
+- Fresnel Lens（菲涅耳透镜，Event，Shared）：每次向牌库加入获得格挡的卡牌时，为其附魔 Nimble 2。
+- Frozen Egg（冻结之蛋，Rare，Shared）：每次向牌库加入能力（Power）牌时，将其升级。
+- Funerary Mask（葬礼面具，Uncommon，Necrobinder）：每次战斗开始，向抽牌堆加入 3 张 Soul。
+- Fur Coat（皮草大衣，Ancient，Shared）：拾取时标记 7 场随机战斗；这些房间的敌人 HP 为 1。
+- Galactic Dust（星系尘埃，Uncommon，Regent）：每消耗 10 点星星，获得 10 格挡。
+- Gambling Chip（赌博筹码，Rare，Shared）：每次战斗开始，可弃置任意数量卡牌并抽取等量牌。
+- Game Piece（棋子，Rare，Shared）：每次打出能力牌时，抽 1 张牌。
+- Ghost Seed（幽灵种子，Shop，Shared）：Strike 与 Defend 获得 Ethereal。
+- Girya（壶铃，Rare，Shared）：现在可在休息点获得力量（最多 3 次）。
+- Glass Eye（玻璃眼珠，Ancient，Shared）：拾取时获得 2 张普通、2 张罕见、1 张稀有卡牌。
+- Glitter（亮片，Ancient，Shared）：为所有卡牌奖励附魔 Glam。
+- Gnarled Hammer（扭曲锤子，Shop，Shared）：拾取时，为至多 3 张攻击牌附魔 Sharp 3。
+- Gold-Plated Cables（镀金缆线，Uncommon，Defect）：最右侧的充能球额外触发一次被动。
+- Golden Compass（黄金罗盘，Ancient，Shared）：拾取时，用一条特殊路径替换第二章地图。
+- Golden Pearl（金色珍珠，Ancient，Shared）：拾取时获得 150 金币。
+- Gorget（护喉甲，Common，Shared）：每次战斗开始获得 4 点镀甲（Plating）。
+- Gremlin Horn（地精之角，Uncommon，Shared）：敌人死亡时获得能量并抽 1 张牌。
+- Hand Drill（手钻，Event，Shared）：每次击破敌方格挡时，施加 2 层 Vulnerable。
+- Happy Flower（开心小花，Common，Shared）：每 3 回合获得能量。
+- Happy Flower???（开心小花？？？，Event，Shared）：每 5 回合获得能量。
+- Hefty Tablet（沉重石板，Ancient，Shared）：拾取时从 3 张稀有牌中选 1 加入牌库，并加入 1 张 Injury。
+- Helical Dart（螺线飞镖，Rare，Silent）：每次打出 Shiv 时，本回合获得 1 敏捷。
+- History Course（历史课，Event，Shared）：回合开始，打出你上一张打出的攻击或技能牌的拷贝。
+- Horn Cleat（船夹板，Uncommon，Shared）：第 2 回合开始获得 14 格挡。
+- Ice Cream（冰淇淋，Rare，Shared）：能量在回合之间保留。
+- Infused Core（注能核心，Starter 升级，Defect）：每次战斗开始引导 3 个闪电球；闪电伤害 +1。
+- Intimidating Helmet（骇人头盔，Rare，Shared）：每次打出 2 能量及以上的卡牌时，获得 4 格挡。
+- Iron Club（铁棒，Ancient，Shared）：每打出 4 张牌，抽 1 张牌。
+- Ivory Tile（象牙麻将牌，Rare，Necrobinder）：每次打出 3 能量及以上的卡牌时，获得能量。
+- Jeweled Mask（宝石面具，Ancient，Shared）：每次战斗开始，将抽牌堆中一张随机能力牌放入手牌；本场战斗免费。
+- Jewelry Box（珠宝盒，Ancient，Shared）：拾取时向牌库加入 1 张 Apotheosis。
+- Joss Paper（金纸，Uncommon，Shared）：每消耗 5 次卡牌，抽 1 张牌。
+- Juzu Bracelet（佛珠手链，Common，Shared）：问号房间不再出现普通敌人战斗。
+- Kaleidoscope（万花筒，Ancient，Shared）：拾取时获得来自其他角色的 2 份卡牌奖励。
+- Kifuda（木札，Shop，Shared）：拾取时，为至多 3 张牌附魔 Adroit。
+- Kunai（苦无，Rare，Shared）：单回合每打出 3 张攻击牌，获得 1 敏捷。
+- Kusarigama（锁镰，Uncommon，Shared）：单回合每打出 3 张攻击牌，对随机敌人造成 6 点伤害。
+- Lantern（灯笼，Common，Shared）：每场战斗开始额外 +1 能量。
+- Large Capsule（巨大扭蛋，Ancient，Shared）：拾取时获得 2 件随机遗物；牌库额外加入一张 Strike 和一张 Defend。
+- Lasting Candy（吃不完的糖，Uncommon，Shared）：每隔一场战斗，卡牌奖励额外包含一张能力牌。
+- Lava Lamp（熔岩灯，Shop，Shared）：若战斗中未受伤，战斗结束时升级所有卡牌奖励。
+- Lava Rock（熔岩石，Ancient，Shared）：第一章 boss 掉落 2 件遗物。
+- Lead Paperweight（铅制镇纸，Ancient，Shared）：拾取时从 2 张无色牌中选 1 张加入牌库。
+- Leafy Poultice（树叶药膏，Ancient，Shared）：拾取时变化 1 张 Strike 和 1 张 Defend，失去 12 最大 HP。
+- Lee's Waffle（李家华夫饼，Shop，Shared）：拾取时 +7 最大 HP 并回满 HP。
+- Lee's Waffle???（李家华夫饼？？？，Event，Shared）：拾取时回复 10% HP。
+- Letter Opener（开信刀，Uncommon，Shared）：单回合每打出 3 张技能牌，对所有敌人造成 5 点伤害。
+- Lizard Tail（蜥蜴尾巴，Rare，Shared）：HP 将降至 0 时，改为回复至最大 HP 的 50%（一次）。
+- Looming Fruit（布质果实，Ancient，Shared）：拾取时 +31 最大 HP。
+- Lord's Parasol（领主阳伞，Ancient，Shared）：遇到商人时，立刻获得他出售的全部商品。
+- Lost Coffer（失物盒，Ancient，Shared）：拾取时获得 1 份卡牌奖励并获取 1 瓶随机药水。
+- Lost Wisp（迷失鬼火，Event，Shared）：每次打出能力牌时，对所有敌人造成 8 点伤害。
+- Lucky Fysh（招财异鱼，Uncommon，Shared）：每次向牌库加入卡牌时，获得 15 金币。
+- Lunar Pastry（月亮糕点，Rare，Regent）：回合结束获得 1 点星星（★）。
+- Mango（芒果，Rare，Shared）：拾取时 +14 最大 HP。
+- Mango???（芒果？？？，Event，Shared）：拾取时 +3 最大 HP。
+- Massive Scroll（巨大卷轴，Ancient，Shared）：拾取时从 3 张多人模式卡中选 1 张加入牌库。
+- Maw Bank（巨口储蓄罐，Event，Shared）：每上一层楼获得 12 金币；在商店花费金币后失效。
+- Meal Ticket（餐券，Common，Shared）：每次进入商店房间，回复 15 HP。
+- Meat Cleaver（切肉刀，Ancient，Shared）：可在休息点烹饪（Cook）。
+- Meat on the Bone（带骨肉，Rare，Shared）：战斗结束时若 HP ≤ 50%，回复 12 HP。
+- Membership Card（会员卡，Shop，Shared）：全部商品五折！
+- Mercury Hourglass（水银沙漏，Uncommon，Shared）：回合开始对所有敌人造成 3 点伤害。
+- Metronome（节拍器，Rare，Defect）：每场战斗首次引导 7 个充能球时，对所有敌人造成 30 点伤害。
+- Mini Regent（迷你储君，Rare，Regent）：每回合首次消耗星星时，获得 1 力量。
+- Miniature Cannon（微型大炮，Uncommon，Shared）：升级后的攻击牌额外造成 3 点伤害。
+- Miniature Tent（微型帐篷，Shop，Shared）：休息点可以选择任意数量的选项。
+- Molten Egg（熔火之蛋，Rare，Shared）：每次向牌库加入攻击牌时，将其升级。
+- Mr. Struggles（抱抱先生，Event，Shared）：回合开始，对所有敌人造成等同回合数的伤害。
+- Mummified Hand（干瘪之手，Rare，Shared）：每次打出能力牌时，手牌中一张随机牌本回合免费。
+- Music Box（音乐盒，Ancient，Shared）：每回合打出的第一张攻击牌生成一份虚无拷贝。
+- Mystic Lighter（神秘打火机，Shop，Shared）：附魔攻击牌额外造成 9 点伤害。
+- Neow's Bones（涅奥骨骰，Ancient，Shared）：拾取时获得 2 件随机 Neow 遗物；牌库加入 1 张随机诅咒。
+- Neow's Talisman（涅奥的护符，Ancient，Shared）：拾取时升级 1 张 Strike 和 1 张 Defend。
+- Neow's Torment（涅奥的苦痛，Ancient，Shared）：拾取时向牌库加入 1 张 Neow's Fury。
+- New Leaf（新叶，Ancient，Shared）：拾取时变化 1 张牌。
+- Ninja Scroll（忍术卷轴，Shop，Silent）：每次战斗开始，向手牌加入 3 张 Shiv。
+- Nunchaku（双截棍，Uncommon，Shared）：每打出 10 张攻击牌，获得能量。
+- Nutritious Oyster（营养牡蛎，Ancient，Shared）：拾取时 +11 最大 HP。
+- Nutritious Soup（营养汤，Ancient，Shared）：拾取时，为牌库中所有 Strike 附魔 Tezcatara's Ember。
+- Oddly Smooth Stone（意外光滑的石头，Common，Shared）：每场战斗开始获得 1 敏捷。
+- Old Coin（古钱币，Rare，Shared）：拾取时获得 300 金币。
+- Orange Dough（橙色团块，Rare，Regent）：每次战斗开始，向手牌加入 2 张随机无色牌。
+- Orichalcum（奥利哈钢，Uncommon，Shared）：回合结束时没有格挡，则获得 6 格挡。
+- Orichalcum???（奥利哈钢？？？，Event，Shared）：回合结束时没有格挡，则获得 3 格挡。
+- Ornamental Fan（精致折扇，Uncommon，Shared）：单回合每打出 3 张攻击牌，获得 4 格挡。
+- Orrery（星系仪，Shop，Shared）：拾取时获得 5 份卡牌奖励。
+- Pael's Blood（佩尔之血，Ancient，Shared）：回合开始额外抽 1 张牌。
+- Pael's Claw（佩尔之爪，Ancient，Shared）：拾取时，为所有 Defend 附魔 Goopy。
+- Pael's Eye（佩尔之眼，Ancient，Shared）：每场战斗首次未打出任何牌就结束回合时，消耗手牌并获得一个额外回合。
+- Pael's Flesh（佩尔之肉，Ancient，Shared）：第 3 回合及之后每回合开始，额外获得能量。
+- Pael's Growth（佩尔的增生组织，Ancient，Shared）：拾取时，为一张牌附魔 Clone。
+- Pael's Horn（佩尔之角，Ancient，Shared）：拾取时向牌库加入 2 张 Relax。
+- Pael's Legion（佩尔的士兵，Ancient，Shared）：卡牌获得的格挡翻倍，随后沉睡 2 回合。
+- Pael's Tears（佩尔之泪，Ancient，Shared）：回合结束时有未花费的能量，下回合额外获得 2 能量。
+- Pael's Tooth（佩尔之牙，Ancient，Shared）：拾取时移除 5 张牌；每场战斗后随机加回 1 张并升级。
+- Pael's Wing（佩尔之翼，Ancient，Shared）：可向 Pael 献祭卡牌奖励；每献祭 2 次获得一件遗物。
+- Pandora's Box（潘多拉魔盒，Ancient，Shared）：变化所有 Strike 和 Defend。
+- Pantograph（缩放仪，Uncommon，Shared）：每次 boss 战开始，回复 25 HP。
+- Paper Krane（纸鹤，Rare，Silent）：带 Weak 的敌人对你造成的伤害 -40%（原 -25%）。
+- Paper Phrog（纸蛙，Uncommon，Ironclad）：带 Vulnerable 的敌人受到的伤害 +75%（原 +50%）。
+- Parrying Shield（招架盾，Uncommon，Shared）：回合结束时若有至少 10 格挡，对随机敌人造成 6 点伤害。
+- Pear（梨子，Uncommon，Shared）：拾取时 +10 最大 HP。
+- Pen Nib（钢笔尖，Uncommon，Shared）：每打出的第 10 张攻击牌造成双倍伤害。
+- Pendulum（摆动球，Common，Shared）：每 3 回合抽 1 张牌。
+- Permafrost（永冻冰晶，Uncommon，Shared）：每场战斗首次打出能力牌时，获得 7 格挡。
+- Petrified Toad（石化蟾蜍，Uncommon，Shared）：每次战斗开始，获取一瓶药水形状的石头。
+- Phial Holster（药瓶皮套，Ancient，Shared）：拾取时 +1 药水栏并获取 2 瓶随机药水。
+- Philosopher's Stone（贤者之石，Ancient，Shared）：每回合开始获得能量；所有敌人战斗开始时 +1 力量。
+- Phylactery Unbound（无界命匣，Starter 升级，Necrobinder）：每次战斗开始 Summon 5；回合开始 Summon 2。
+- Planisphere（活动星图，Uncommon，Shared）：每次进入问号房间，回复 5 HP。
+- Pocketwatch（怀表，Rare，Shared）：回合内打出不超过 3 张牌时，下回合开始额外抽 3 张牌。
+- Pollinous Core（花粉核心，Event，Shared）：每 4 回合额外抽 2 张牌。
+- Pomander（橙型香盒，Ancient，Shared）：拾取时升级一张牌。
+- Potion Belt（药水腰带，Common，Shared）：拾取时 +2 药水栏。
+- Power Cell（能量电池，Rare，Defect）：每次战斗开始，从抽牌堆将 2 张零费牌加入手牌。
+- Prayer Wheel（转经轮，Rare，Shared）：普通敌人额外掉落一份卡牌奖励。
+- Precarious Shears（松动羊毛剪，Ancient，Shared）：拾取时移除 2 张牌并失去 16 HP。
+- Precise Scissors（精准剪刀，Ancient，Shared）：拾取时从牌库移除 1 张牌。
+- Preserved Fog（腌制活雾，Ancient，Shared）：拾取时移除 3 张牌；向牌库加入 Folly。
+- Prismatic Gem（棱彩宝石，Ancient，Shared）：每回合开始获得能量；卡牌奖励现在包含其他颜色的牌。
+- Pumpkin Candle（南瓜蜡烛，Ancient，Shared）：每回合开始获得能量；5 场战斗后熄灭；可在休息点点燃。
+- Punch Dagger（拳刃，Shop，Shared）：拾取时，为一张攻击牌附魔 Momentum 5。
+- Radiant Pearl（发光珍珠，Ancient，Shared）：每次战斗开始，向手牌加入 1 张 Luminesce。
+- Rainbow Ring（彩虹戒指，Rare，Shared）：每回合首次打出攻击、技能、能力各一张时，获得 1 力量 1 敏捷。
+- Razor Tooth（剃刀牙，Rare，Shared）：每次打出攻击或技能牌时，本场战斗内将其升级。
+- Red Mask（红面具，Common，Shared）：每次战斗开始，对所有敌人施加 1 层 Weak。
+- Red Skull（红头骨，Common，Ironclad）：HP ≤ 50% 时，额外 +3 力量。
+- Regal Pillow（皇家枕头，Common，Shared）：每次休息额外回复 15 HP。
+- Regalite（君王矿石，Uncommon，Regent）：每次创造卡牌时，获得 2 格挡。
+- Reptile Trinket（爬行动物饰品，Uncommon，Shared）：每次使用药水时，本回合获得 3 力量。
+- Ring of the Drake（长蛇戒指，Starter 升级，Silent）：前 3 回合开始时额外抽 2 张牌。
+- Ring of the Snake（蛇之戒指，Starter，Silent）：每次战斗开始额外抽 2 张牌。
+- Ringing Triangle（三角铃鼓，Shop，Shared）：战斗首回合保留手牌。
+- Ripple Basin（波纹水盆，Uncommon，Shared）：回合内未打出攻击牌时，获得 4 格挡。
+- Royal Poison（王室猛毒，Event，Shared）：每次战斗开始失去 4 HP。
+- Royal Stamp（王室印章，Shop，Shared）：拾取时选择牌库中一张攻击或技能牌附魔 Royally Approved。
+- Ruined Helmet（损毁头盔，Rare，Ironclad）：每场战斗首次获得力量时，获得量翻倍。
+- Runic Capacitor（符文电容器，Shop，Defect）：每场战斗开始额外 +3 充能球槽。
+- Runic Pyramid（符文金字塔，Ancient，Shared）：回合结束不再弃置手牌。
+- Sai（钗，Ancient，Shared）：回合开始获得 7 格挡。
+- Sand Castle（沙堡，Ancient，Shared）：拾取时升级 6 张随机牌。
+- Screaming Flagon（尖叫酒壶，Shop，Shared）：回合结束时手牌为空，对所有敌人造成 20 点伤害。
+- Scroll Boxes（卷轴箱，Ancient，Shared）：拾取时从 2 捆卡牌包中选 1 捆加入牌库。
+- Sea Glass（海玻璃，Ancient，Shared）：查看另一角色的 15 张牌；选择任意数量加入牌库。
+- Seal of Gold（黄金印，Ancient，Shared）：回合开始花费 5 金币获得能量。
+- Self-Forming Clay（自成型黏土，Uncommon，Ironclad）：战斗中每次失去 HP 时，下回合获得 3 格挡。
+- Sere Talon（原初之爪，Ancient，Shared）：拾取时向牌库加入 2 张随机诅咒和 3 张 Wish。
+- Shovel（铲子，Rare，Shared）：现在可在休息点挖掘获得随机遗物。
+- Shuriken（手里剑，Rare，Shared）：单回合每打出 3 张攻击牌，获得 1 力量。
+- Signet Ring（图章戒指，Ancient，Shared）：拾取时获得 999 金币。
+- Silken Tress（华美发束，Ancient，Shared）：拾取时失去全部金币；为第一份卡牌奖励中的所有牌附魔 Glam。
+- Silver Crucible（白银熔炉，Ancient，Shared）：看到的前 3 份卡牌奖励为升级版；打开的第一个宝箱为空。
+- Sling of Courage（勇气投石索，Shop，Shared）：每场精英战斗开始时 +2 力量。
+- Small Capsule（小型扭蛋，Ancient，Shared）：拾取时获得一件随机遗物。
+- Snecko Eye（异蛇之眼，Ancient，Shared）：回合开始额外抽 2 张牌；每场战斗开始处于 Confused。
+- Snecko Eye???（异蛇之眼？？？，Event，Shared）：每场战斗开始处于 Confused。
+- Snecko Skull（异蛇头骨，Common，Silent）：每次施加中毒时额外 +1 层。
+- Sozu（添水，Ancient，Shared）：每回合开始获得能量；不再能获得药水。
+- Sparkling Rouge（闪亮口红，Uncommon，Shared）：第 3 回合开始获得 1 力量 1 敏捷。
+- Spiked Gauntlets（带刺手甲，Ancient，Shared）：每回合开始获得能量；能力牌费用 +1。
+- Stone Calendar（历石，Rare，Shared）：第 7 回合结束时，对所有敌人造成 52 点伤害。
+- Stone Cracker（碎石钻，Uncommon，Shared）：每次战斗开始，将抽牌堆中 2 张随机牌升级（本场战斗内）。
+- Stone Humidifier（石炉加湿器，Ancient，Shared）：每次在休息点休息时 +5 最大 HP。
+- Storybook（故事书，Ancient，Shared）：拾取时向牌库加入 1 张 Brightest Flame。
+- Strawberry（草莓，Common，Shared）：拾取时 +7 最大 HP。
+- Strike Dummy（打击木偶，Common，Shared）：名称含 "Strike" 的卡牌额外造成 3 点伤害。
+- Strike Dummy???（打击木偶？？？，Event，Shared）：名称含 "Strike" 的卡牌额外造成 1 点伤害。
+- Sturdy Clamp（坚固钳子，Rare，Shared）：至多 10 点格挡可跨回合保留。
+- Sword of Jade（玉之剑，Event，Shared）：每场战斗开始 +3 力量。
+- Sword of Stone（石之剑，Event，Shared）：击败 5 个精英后变身为强力遗物。
+- Symbiotic Virus（共生病毒，Uncommon，Defect）：每次战斗开始引导 1 个暗球。
+- Tanx's Whistle（坦克斯的哨子，Ancient，Shared）：拾取时向牌库加入 1 张 Whistle。
+- Tea of Discourtesy（无礼之茶，Event，Shared）：下一场战斗开始时，向抽牌堆洗入 2 张 Dazed。
+- The Abacus（算盘，Shop，Shared）：每次洗抽牌堆时获得 6 格挡。
+- The Boot（发条靴，Event，Shared）：攻击将造成 ≤4 点未格挡伤害时，提升为 5 点。
+- The Chosen Cheese（天选芝士，Event，Shared）：战斗结束 +1 最大 HP。
+- The Courier（送货员，Rare，Shared）：商人库存不再耗尽，价格降低 20%。
+- The Merchant's Rug???（商人的地毯？？？，Event，Shared）：拙劣的仿制品；毫无用处。
+- Throwing Axe（投斧，Ancient，Shared）：每场战斗打出的第一张牌额外再打出一次。
+- Tingsha（铜钹，Uncommon，Silent）：回合内每次弃牌时，每弃 1 张对随机敌人造成 3 点伤害。
+- Tiny Mailbox（小邮箱，Uncommon，Shared）：每次休息时获取 2 瓶随机药水。
+- Toasty Mittens（烘焙手套，Ancient，Shared）：回合开始，消耗抽牌堆顶牌并获得 1 力量。
+- Toolbox（工具箱，Shop，Shared）：每次战斗开始，从 3 张随机无色牌中选 1 张加入手牌。
+- Touch of Orobas（欧洛巴斯之触，Ancient，Shared）：拾取时，将初始遗物替换为远古版本。
+- Tough Bandages（结实绷带，Rare，Silent）：回合内每次弃牌时获得 3 格挡。
+- Toxic Egg（毒素之蛋，Rare，Shared）：每次向牌库加入技能牌时将其升级。
+- Toy Box（玩具盒，Ancient，Shared）：拾取时获得 4 件蜡质遗物；每 3 场战斗，最左侧蜡质遗物融化消失。
+- Tri-Boomerang（三刃回旋镖，Ancient，Shared）：选择牌库中 3 张攻击牌附魔 Instinct。
+- Tungsten Rod（钨合金棍，Rare，Shared）：每次将失去 HP 时，少失去 1 点。
+- Tuning Fork（音叉，Uncommon，Shared）：每打出 10 张技能牌，获得 7 格挡。
+- Twisted Funnel（扭曲漏斗，Uncommon，Silent）：每次战斗开始，对所有敌人施加 4 层中毒。
+- Unceasing Top（不休陀螺，Rare，Shared）：回合内手牌为空时，抽 1 张牌。
+- Undying Sigil（不死符文，Shop，Necrobinder）：Doom 不低于其 HP 的敌人造成的伤害 -50%。
+- Unsettling Lamp（不安油灯，Rare，Shared）：每场战斗首次打出对敌施加减益的卡牌时，效果翻倍。
+- Vajra（金刚杵，Common，Shared）：每场战斗开始 +1 力量。
+- Vambrace（臂甲，Uncommon，Shared）：每场战斗首次从卡牌获得格挡时，获得量翻倍。
+- Velvet Choker（天鹅绒颈圈，Ancient，Shared）：每回合开始获得能量；每回合最多打出 6 张牌。
+- Venerable Tea Set（古茶具套装，Common，Shared）：进入休息点时，下一场战斗开始额外 +2 能量。
+- Venerable Tea Set???（古茶具套装？？？，Event，Shared）：进入休息点时，下一场战斗开始额外 +1 能量。
+- Very Hot Cocoa（烫嘴可可，Ancient，Shared）：每场战斗开始额外 +4 能量。
+- Vexing Puzzlebox（烦人机关盒，Rare，Shared）：每次战斗开始，向手牌加入一张随机牌；本回合免费。
+- Vitruvian Minion（维特鲁威仆从，Shop，Regent）：名称含 "Minion" 的卡牌伤害与格挡翻倍。
+- War Hammer（战锤，Ancient，Shared）：每次击杀精英时升级 4 张随机牌。
+- War Paint（战纹涂料，Common，Shared）：拾取时升级 2 张随机技能牌。
+- Whetstone（磨刀石，Common，Shared）：拾取时升级 2 张随机攻击牌。
+- Whispering Earring（低语耳环，Ancient，Shared）：每回合开始获得能量；Vakuu 代你打出第一回合。
+- White Beast Statue（白兽雕像，Rare，Shared）：药水总是出现在战斗奖励中。
+- White Star（白星，Rare，Shared）：精英额外掉落一份稀有卡牌奖励。
+- Wing Charm（羽翼护符，Shop，Shared）：每份卡牌奖励中一张随机牌附魔 Swift 1。
+- Winged Boots（羽翼之靴，Ancient，Shared）：选择行进房间时可忽略路径限制 3 次。
+- Wongo Customer Appreciation Badge（旺购客户感恩徽章，Event，Shared）：毫无用处。
+- Wongo's Mystery Ticket（旺购神秘券，Event，Shared）：5 场战斗后获得 3 件随机遗物。
+- Yummy Cookie（美味饼干，Ancient，Shared）：拾取时升级 4 张牌。
