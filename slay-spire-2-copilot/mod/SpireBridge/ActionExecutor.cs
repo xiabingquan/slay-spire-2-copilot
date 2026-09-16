@@ -766,36 +766,66 @@ public static class ActionExecutor
     // Drives NGameOverScreen back to the main menu using the game's own
     // summary flow: Continue button, then Return-To-Main-Menu button. Both are
     // polled until enabled — takeover must work from any game state.
+    // Game-over summary: Continue button, then Return-To-Main-Menu. Nodes can
+    // be disposed mid-poll while another path (start_run's own game-over clear)
+    // tears the screen down — every node touch is IsInstanceValid-guarded and
+    // re-found per step; a disposed Continue means "teardown in progress, skip"
+    // (live crash 2026-09-17 run-7: Cannot access a disposed object
+    // NGameOverContinueButton — proceed chain threw, state looked frozen).
     private static async Task ClearGameOverScreen(NGameOverScreen screen)
     {
-        NGameOverContinueButton? cont = UiHelper.FindFirst<NGameOverContinueButton>(screen);
-        if (cont != null)
-        {
-            for (int i = 0; i < 24 && !cont.IsEnabled; i++)
-            {
-                await Task.Delay(500, default);
-            }
-            BridgeMod.LogInfo($"game_over chain: continue enabled={cont.IsEnabled}");
-            await UiHelper.Click(cont);
-        }
-        NReturnToMainMenuButton? menuBtn = null;
         for (int i = 0; i < 24; i++)
         {
-            menuBtn = UiHelper.FindFirst<NReturnToMainMenuButton>(screen);
-            if (menuBtn != null && menuBtn.Visible && menuBtn.IsEnabled)
+            if (!GodotObject.IsInstanceValid(screen))
             {
+                BridgeMod.LogInfo("game_over chain: screen disposed during teardown — nothing to clear");
+                return;
+            }
+            NGameOverContinueButton? cont = UiHelper.FindFirst<NGameOverContinueButton>(screen);
+            if (cont == null)
+            {
+                break; // continue button gone — screen already advancing
+            }
+            if (!GodotObject.IsInstanceValid(cont))
+            {
+                await Task.Delay(250, default);
+                continue;
+            }
+            if (cont.IsEnabled)
+            {
+                BridgeMod.LogInfo("game_over chain: continue enabled=True");
+                if (GodotObject.IsInstanceValid(cont))
+                {
+                    await UiHelper.Click(cont);
+                }
                 break;
             }
             await Task.Delay(500, default);
         }
-        if (menuBtn != null)
+        NReturnToMainMenuButton? menuBtn = null;
+        for (int i = 0; i < 24; i++)
+        {
+            if (!GodotObject.IsInstanceValid(screen))
+            {
+                BridgeMod.LogInfo("game_over chain: screen disposed before return-to-menu — ok");
+                return;
+            }
+            menuBtn = UiHelper.FindFirst<NReturnToMainMenuButton>(screen);
+            if (menuBtn != null && GodotObject.IsInstanceValid(menuBtn) && menuBtn.Visible && menuBtn.IsEnabled)
+            {
+                break;
+            }
+            menuBtn = null;
+            await Task.Delay(500, default);
+        }
+        if (menuBtn != null && GodotObject.IsInstanceValid(menuBtn))
         {
             BridgeMod.LogInfo("game_over chain: clicking return to main menu");
             await UiHelper.Click(menuBtn);
         }
         else
         {
-            BridgeMod.LogErr("game_over chain: return-to-menu button never appeared");
+            BridgeMod.LogInfo("game_over chain: return-to-menu button never appeared (likely already cleared)");
         }
     }
 
