@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Godot;
@@ -19,6 +20,7 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.Nodes;
 using MegaCrit.Sts2.Core.Nodes.Cards.Holders;
+using MegaCrit.Sts2.Core.Nodes.Combat;
 using MegaCrit.Sts2.Core.Nodes.CommonUi;
 using MegaCrit.Sts2.Core.Nodes.Events;
 using MegaCrit.Sts2.Core.Nodes.Events.Custom.CrystalSphere;
@@ -458,6 +460,18 @@ public static class ActionExecutor
                 context = overlayContext;
             }
         }
+        // In-hand selection (Gambling Chip, Armaments upgrade-select, …) has no
+        // overlay screen node — route choose to the hand toggle only when no
+        // overlay screen is live. Overlay screens (NCombatPileCardSelectScreen
+        // Stratagem picks etc.) take priority: a stale NPlayerHand selection
+        // mode must not hijack their indices (live: Act-3 boss 2026-09-17,
+        // choose on card_choice failed with "index 8 out of range (hand size 4)").
+        if (StateBuilder.FindCombatSelectOverlay() is null
+            && context is NCombatRoom or null
+            && StateBuilder.FindHandSelectMode() is { } handSelect)
+        {
+            return ToggleHandSelectCard(handSelect, index);
+        }
         switch (context)
         {
             case NCardRewardSelectionScreen cardReward:
@@ -627,6 +641,14 @@ public static class ActionExecutor
 
     private static (bool, string) Skip()
     {
+        // In-hand selection skip: complete with an empty selection (Gambling
+        // Chip MinSelect=0 — discard nothing and unblock the turn). Overlay
+        // screens outrank a stale hand selection mode (same rule as Choose()).
+        if (StateBuilder.FindCombatSelectOverlay() is null
+            && StateBuilder.FindHandSelectMode() is { } _)
+        {
+            return SkipHandSelectEmpty();
+        }
         IScreenContext? context = ActiveScreenContext.Instance.GetCurrentScreen();
         if (NModalContainer.Instance?.OpenModal is Node modalNode && ReferenceEquals(context, modalNode))
         {
@@ -777,8 +799,102 @@ public static class ActionExecutor
         }
     }
 
+    private static (bool, string) ToggleHandSelectCard(NPlayerHand hand, int index)
+    {
+        if (!TryGetCombatPlayer(out Player? player, out _, out PlayerCombatState? pcs) || pcs == null)
+        {
+            return (false, "not in an active combat");
+        }
+        IReadOnlyList<CardModel> cards = pcs.Hand.Cards;
+        if (index < 0 || index >= cards.Count)
+        {
+            return (false, $"index {index} out of range (hand size {cards.Count})");
+        }
+        CardModel card = cards[index];
+        List<CardModel> selected = StateBuilder.GetHandSelectedCards(hand);
+        if (selected.Contains(card))
+        {
+            if (hand.GetCard(card) is not { } cardNode)
+            {
+                return (false, $"hand card node for index {index} not found");
+            }
+            Fire(() => { hand.DeselectCard(cardNode); return Task.CompletedTask; }, "hand select deselect");
+            return (true, $"hand_select deselected index {index} ({card.Id.Entry})");
+        }
+        if (hand.GetCardHolder(card) is not NHandCardHolder holder)
+        {
+            return (false, $"hand holder for index {index} not found");
+        }
+        bool upgradeMode = hand.CurrentMode == NPlayerHand.Mode.UpgradeSelect;
+        Fire(() => { InvokeHandSelectAdd(hand, holder, upgradeMode); return Task.CompletedTask; }, "hand select add");
+        return (true, $"hand_select selected index {index} ({card.Id.Entry})");
+    }
+
+    // SelectCardInSimpleMode / SelectCardInUpgradeMode are private; the game
+    // invokes them through Godot method binds on holder click — reflection is
+    // the headless equivalent.
+    private static void InvokeHandSelectAdd(NPlayerHand hand, NHandCardHolder holder, bool upgradeMode)
+    {
+        MethodInfo? method = typeof(NPlayerHand).GetMethod(
+            upgradeMode ? "SelectCardInUpgradeMode" : "SelectCardInSimpleMode",
+            BindingFlags.NonPublic | BindingFlags.Instance);
+        method?.Invoke(hand, new object[] { holder });
+    }
+
+    private static (bool, string) ConfirmHandSelect()
+    {
+        NPlayerHand? hand = StateBuilder.FindHandSelectMode();
+        if (hand == null)
+        {
+            return (false, "not in a hand card-selection mode");
+        }
+        MethodInfo? method = typeof(NPlayerHand).GetMethod(
+            "OnSelectModeConfirmButtonPressed", BindingFlags.NonPublic | BindingFlags.Instance);
+        if (method == null)
+        {
+            return (false, "hand select confirm method not found");
+        }
+        // OnSelectModeConfirmButtonPressed SetResults the live _selectionCompletionSource
+        // with the current _selectedCards — confirm and (after deselecting all)
+        // empty-complete share this path.
+        Fire(() => { method.Invoke(hand, new object?[] { null }); return Task.CompletedTask; }, "hand select confirm");
+        return (true, "submitted hand_select confirm");
+    }
+
+    private static (bool, string) SkipHandSelectEmpty()
+    {
+        NPlayerHand? hand = StateBuilder.FindHandSelectMode();
+        if (hand == null)
+        {
+            return (false, "not in a hand card-selection mode");
+        }
+        Fire(() =>
+        {
+            foreach (CardModel card in StateBuilder.GetHandSelectedCards(hand).ToList())
+            {
+                if (hand.GetCard(card) is { } cardNode && GodotObject.IsInstanceValid(cardNode))
+                {
+                    hand.DeselectCard(cardNode);
+                }
+            }
+            typeof(NPlayerHand)
+                .GetMethod("OnSelectModeConfirmButtonPressed", BindingFlags.NonPublic | BindingFlags.Instance)
+                ?.Invoke(hand, new object?[] { null });
+            return Task.CompletedTask;
+        }, "hand select skip empty");
+        return (true, "submitted hand_select skip (empty selection)");
+    }
+
     private static (bool, string) Proceed()
     {
+        // In-hand selection confirm — no NProceedButton exists in this mode.
+        // Overlay screens (card_choice/deck_select confirm chains) outrank a
+        // stale hand selection mode; same priority rule as Choose().
+        if (StateBuilder.FindCombatSelectOverlay() is null
+            && StateBuilder.FindHandSelectMode() is { } _)
+        {
+            return ConfirmHandSelect();
+        }
         IScreenContext? context = ActiveScreenContext.Instance.GetCurrentScreen();
         // Game-over summary needs the Continue -> ReturnToMainMenu chain, not a
         // proceed button; this is the any-state takeover entry.

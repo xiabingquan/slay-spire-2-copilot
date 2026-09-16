@@ -18,6 +18,7 @@ using MegaCrit.Sts2.Core.MonsterMoves.Intents;
 using MegaCrit.Sts2.Core.MonsterMoves.MonsterMoveStateMachine;
 using MegaCrit.Sts2.Core.Nodes;
 using MegaCrit.Sts2.Core.Nodes.Cards.Holders;
+using MegaCrit.Sts2.Core.Nodes.Combat;
 using MegaCrit.Sts2.Core.Nodes.CommonUi;
 using MegaCrit.Sts2.Core.Nodes.Events;
 using MegaCrit.Sts2.Core.Nodes.Events.Custom.CrystalSphere;
@@ -142,6 +143,81 @@ public static class StateBuilder
         return null;
     }
 
+    // In-hand selection mode (NPlayerHand.CurrentMode SimpleSelect/UpgradeSelect):
+    // CardSelectCmd.FromHand* resolves its PlayerChoiceContext through the hand UI
+    // itself, not through an overlay screen node — FindCombatSelectOverlay cannot
+    // see it. Public surface: IsInCardSelection; private fields _selectedCards /
+    // _prefs carry the live selection.
+    public static NPlayerHand? FindHandSelectMode()
+    {
+        try
+        {
+            NPlayerHand? hand = NCombatRoom.Instance?.Ui?.Hand;
+            if (hand != null && hand.IsInCardSelection)
+            {
+                return hand;
+            }
+        }
+        catch { /* combat room not ready */ }
+        return null;
+    }
+
+    private static readonly FieldInfo? HandSelectedCardsField =
+        typeof(NPlayerHand).GetField("_selectedCards", BindingFlags.NonPublic | BindingFlags.Instance);
+
+    private static readonly FieldInfo? HandPrefsField =
+        typeof(NPlayerHand).GetField("_prefs", BindingFlags.NonPublic | BindingFlags.Instance);
+
+    public static List<CardModel> GetHandSelectedCards(NPlayerHand hand)
+    {
+        try
+        {
+            return HandSelectedCardsField?.GetValue(hand) as List<CardModel> ?? new List<CardModel>();
+        }
+        catch
+        {
+            return new List<CardModel>();
+        }
+    }
+
+    internal static (int Min, int Max) GetHandSelectBounds(NPlayerHand hand)
+    {
+        try
+        {
+            object? prefs = HandPrefsField?.GetValue(hand);
+            if (prefs != null)
+            {
+                int min = prefs.GetType().GetProperty("MinSelect")?.GetValue(prefs) is int mn ? mn : 0;
+                int max = prefs.GetType().GetProperty("MaxSelect")?.GetValue(prefs) is int mx ? mx : 0;
+                return (min, max);
+            }
+        }
+        catch { /* reflection failed; report unconstrained */ }
+        return (0, 0);
+    }
+
+    internal static List<Dictionary<string, object?>> HandSelectOptions(Player? player, Node? screenNode)
+    {
+        var options = new List<Dictionary<string, object?>>();
+        if (screenNode is not NPlayerHand hand || player?.PlayerCombatState is not { } pcs)
+        {
+            return options;
+        }
+        List<CardModel> selected = GetHandSelectedCards(hand);
+        (int min, int max) = GetHandSelectBounds(hand);
+        IReadOnlyList<CardModel> cards = pcs.Hand.Cards;
+        for (int i = 0; i < cards.Count; i++)
+        {
+            Dictionary<string, object?> dto = CardDto(cards[i], i, player);
+            dto["kind"] = "hand_card";
+            dto["selected"] = selected.Contains(cards[i]);
+            dto["select_min"] = min;
+            dto["select_max"] = max;
+            options.Add(dto);
+        }
+        return options;
+    }
+
     private static string DetectScreen(CombatState? combat, out string screenType, out Node? screenNode)
     {
         screenNode = null;
@@ -159,6 +235,18 @@ public static class StateBuilder
                         NDeckCardSelectScreen => "deck_select",
                         _ => "card_choice",
                     };
+                }
+                // CardSelectCmd.FromHand* choices (Gambling Chip discard,
+                // Armaments upgrade-select, …) run inside NPlayerHand itself —
+                // no overlay screen node exists. Surface them as hand_select
+                // or the PlayerChoiceContext never resolves and combat freezes
+                // in PlayerTurnPhase.Start (live: Act-2 Ovicopter + GamblingChip,
+                // 2026-09-17).
+                if (FindHandSelectMode() is { } handNode)
+                {
+                    screenNode = handNode;
+                    screenType = "NPlayerHand";
+                    return "hand_select";
                 }
                 screenType = "NCombatRoom";
                 return "combat";
@@ -843,6 +931,7 @@ public static class StateBuilder
                 "card_reward" => CardRewardOptions(screenNode),
                 "relic_choice" => RelicChoiceOptions(screenNode),
                 "card_choice" or "deck_select" => CardHolderOptions(screenNode),
+                "hand_select" => HandSelectOptions(player, screenNode),
                 "rewards" => RewardButtonOptions(screenNode),
                 "event" => EventOptions(screenNode),
                 "treasure" => TreasureOptions(screenNode),
@@ -1297,6 +1386,24 @@ public static class StateBuilder
                     }
                 }
                 break;
+            case "hand_select":
+            {
+                // choose toggles a hand card in/out of the live selection;
+                // proceed confirms the current selection; skip completes with
+                // an empty selection (legal when select_min=0, e.g. Gambling
+                // Chip discarding nothing).
+                foreach (Dictionary<string, object?> option in HandSelectOptions(player, screenNode))
+                {
+                    actions.Add(new Dictionary<string, object?>
+                    {
+                        ["action"] = "choose",
+                        ["args"] = new Dictionary<string, object?> { ["index"] = option["index"] },
+                    });
+                }
+                actions.Add(new Dictionary<string, object?> { ["action"] = "proceed", ["args"] = new Dictionary<string, object?>() });
+                actions.Add(new Dictionary<string, object?> { ["action"] = "skip", ["args"] = new Dictionary<string, object?>() });
+                break;
+            }
             case "card_reward":
             case "card_choice":
             case "deck_select":
