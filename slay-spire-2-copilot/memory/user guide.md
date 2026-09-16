@@ -47,3 +47,16 @@ In "What went poorly", focus on decision-level reflections:
 - e.g. which card was picked (and why it underperformed)
 - e.g. which route was taken (and what it cost)
 - ... and similar choices to reconsider next run
+
+## Decisions and objective factors
+
+"What went well" and "What went poorly" are not limited to subjective
+decisions — they should objectively reflect both the decisions made and the
+run's circumstances:
+
+- Objective positives belong in "What went well" — e.g. draws were smooth
+  all run
+- Objective negatives belong in "What went poorly" — e.g. relic offerings
+  were poor, or draws never came together
+- Decision-level items (picks, routes) belong there as well, per the
+  previous section

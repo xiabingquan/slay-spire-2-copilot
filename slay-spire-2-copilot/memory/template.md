@@ -24,11 +24,12 @@ Core facts of the run, in a table at the very top of the note:
 
 ## What went well
 
-(what went well this run)
+(what went well this run — decisions and objective factors, e.g. smooth draws)
 
 ## What went poorly
 
-(what went poorly this run)
+(what went poorly this run — decisions and objective factors, e.g. poor relic
+luck or unlucky draws)
 
 ## Key moments
 
