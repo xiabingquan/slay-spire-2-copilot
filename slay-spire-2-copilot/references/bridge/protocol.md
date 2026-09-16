@@ -94,7 +94,7 @@ No unsolicited server pushes in v1 (may be added later as protocol v2).
 | map_select | row, col | click map point at coordinates |
 | play | card_index, target_combat_id? | CardCmd.AutoPlay on hand card |
 | end_turn | — | PlayerCmd.EndTurn |
-| use_potion | potion_index, target_combat_id? | potion EnqueueManualUse |
+| use_potion | potion_index, target_combat_id? | potion EnqueueManualUse. target_combat_id only for TargetType AnyEnemy potions; AllEnemies/AnyPlayer potions must be sent WITHOUT target — a creature target made the use a silent no-op pre-fix (mod now forces null) |
 | choose | index | pick option on current overlay screen (reward/relic/event/select) |
 | skip | — | skip current reward/selection when available |
 | treasure_open | — | open chest |

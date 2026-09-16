@@ -299,19 +299,26 @@ public static class ActionExecutor
             return (false, $"potion_index {potionIndex} is empty or out of range");
         }
         PotionModel potion = playerRef.PotionSlots[potionIndex]!;
+        // AllEnemies / AnyPlayer potions take no creature target — an explicit
+        // target_combat_id made EnqueueManualUse a silent no-op (potion not
+        // consumed, no effect; observed live with POTION_OF_BINDING). Only
+        // AnyEnemy potions resolve a creature target.
         Creature? target = null;
-        if (TryGetInt(args, "target_combat_id", out int targetId))
+        if (potion.TargetType == TargetType.AnyEnemy)
         {
-            target = combat.GetCreature((uint)targetId);
-            if (target == null)
+            if (TryGetInt(args, "target_combat_id", out int targetId))
             {
-                return (false, $"target combat_id {targetId} not found");
+                target = combat.GetCreature((uint)targetId);
+                if (target == null)
+                {
+                    return (false, $"target combat_id {targetId} not found");
+                }
             }
-        }
-        else if (potion.TargetType == TargetType.AnyEnemy)
-        {
-            var hittable = combat.HittableEnemies.ToList();
-            target = hittable.Count > 0 ? hittable[0] : null;
+            else
+            {
+                var hittable = combat.HittableEnemies.ToList();
+                target = hittable.Count > 0 ? hittable[0] : null;
+            }
         }
         Creature? targetRef = target;
         Fire(() => { potion.EnqueueManualUse(targetRef); return Task.CompletedTask; }, "use potion");
@@ -489,7 +496,10 @@ public static class ActionExecutor
                     or NChooseABundleSelectionScreen)
                 {
                     Node screenNode = (Node)context;
-                    List<NCardHolder> holders = UiHelper.FindAll<NCardHolder>(screenNode);
+                    // Same index space as StateBuilder: deck-select grids are
+                    // NGridCardHolder nodes; preview/ghost NCardHolder nodes
+                    // must not occupy indices.
+                    List<NCardHolder> holders = StateBuilder.SelectableCardHolders(screenNode);
                     if (index < 0 || index >= holders.Count)
                     {
                         return (false, $"index {index} out of range ({holders.Count} cards)");
@@ -612,6 +622,20 @@ public static class ActionExecutor
             NButton target = namedSkip;
             Fire(() => UiHelper.Click(target), "skip by name");
             return (true, $"submitted skip ({target.Name})");
+        }
+        // Deck-select screens cancel through %Close (completes with an empty
+        // selection when prefs.Cancelable) — no skip button exists there.
+        if (context is NDeckCardSelectScreen or NDeckUpgradeSelectScreen
+            or NDeckTransformSelectScreen or NDeckEnchantSelectScreen)
+        {
+            NBackButton? close = screenNode.GetNodeOrNull<NBackButton>("%Close");
+            if (close != null && close.Visible && close.IsEnabled)
+            {
+                NBackButton closeTarget = close;
+                Fire(() => UiHelper.Click(closeTarget), "deck select close");
+                return (true, "submitted deck select close (cancel)");
+            }
+            return (false, "deck select screen has no enabled close/cancel button");
         }
         return (false, $"no skip button on screen {context.GetType().Name}");
     }

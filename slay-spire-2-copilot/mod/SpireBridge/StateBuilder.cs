@@ -790,6 +790,20 @@ public static class StateBuilder
         return options;
     }
 
+    // Index space for card-selection screens. Deck-select grids route clicks
+    // through NGridCardHolder (game AutoSlay DeckCardSelectScreenHandler does
+    // the same); FindAll<NCardHolder> also returns preview/ghost holders, whose
+    // indices never map to grid clicks — choose then Presses a dead node.
+    internal static List<NCardHolder> SelectableCardHolders(Node screenNode)
+    {
+        if (screenNode is NDeckCardSelectScreen or NDeckUpgradeSelectScreen
+            or NDeckTransformSelectScreen or NDeckEnchantSelectScreen)
+        {
+            return UiHelper.FindAll<NGridCardHolder>(screenNode).Cast<NCardHolder>().ToList();
+        }
+        return UiHelper.FindAll<NCardHolder>(screenNode);
+    }
+
     private static List<Dictionary<string, object?>> CardHolderOptions(Node? screenNode)
     {
         var options = new List<Dictionary<string, object?>>();
@@ -797,7 +811,7 @@ public static class StateBuilder
         {
             return options;
         }
-        List<NCardHolder> holders = UiHelper.FindAll<NCardHolder>(screenNode);
+        List<NCardHolder> holders = SelectableCardHolders(screenNode);
         for (int i = 0; i < holders.Count; i++)
         {
             options.Add(new Dictionary<string, object?>
