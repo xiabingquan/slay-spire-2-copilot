@@ -45,9 +45,16 @@ Spire 2 via Claude Code or Codex"。
 
          SPIREBRIDGE_LOG_DIR=<绝对文件夹> python3 bridge/spirectl.py <子命令>
 
-2. **读记忆**（先于其他操作）：
-   - memory/user guide.md（用户手写的记忆要点）
-   - memory/runs/（每局一条记录）
+2. **读记忆**（先于其他操作）。memory/ 已纳入版本控制，是整个会话的
+   常驻游玩参考：
+   - 每局开始前必读：
+     - 所有已记录对局的 Summary 节（memory/runs/*.md——各局核心信息与
+       最大的得与失）
+     - 即将使用角色的关键玩法沉淀（来自该角色的对局记录，
+       <角色>_*.md）
+   - 选读：按需翻阅更早的完整对局记录。
+   - 游玩全程：memory 随时可查——历史 summary 与角色玩法笔记是局内
+     决策的实时参考。
 
 3. **环境检查与 mod 自装/自愈**（cwd = 本 skill 文件夹
    `<repo>/slay-spire-2-copilot`，全部运行时文件都在此处）：
@@ -96,7 +103,7 @@ memory 记录里。
 `SPIREBRIDGE_LOG_DIR=<绝对文件夹>`：
 
 1. `... state` — 紧凑状态（仅当需要紧凑视图未包含的字段时用 `--json`）
-2. 结合状态与记忆（user guide、近期 runs）决定动作
+2. 结合状态与记忆（对局 summary、角色玩法笔记）决定动作
 3. `... act <动作> --args '<json>' --wait` — action 立即返回（已提交）；`--wait`
    轮询至状态稳定（指纹不再跳动）后打印。战术已定时，多个动作合并为一次
    `batch --acts '[...]'` 提交（步间自动 settle；卡牌下标按从高到低排列由你负责）
@@ -108,7 +115,9 @@ memory 记录里。
    盲目重复同一调用
 
 每回合行动前至少检查：敌人意图、自身血量/格挡、能量、手牌可否打出。
-回复中保持简短的实时解说，便于用户跟上出牌思路。决策经验与卡牌/药水/遗物/意图
+回复中保持简短的实时解说，便于用户跟上出牌思路。memory 在游玩全程随时
+可查——当做决策需要借鉴过往对局时（boss 规律、路线选择、卡牌评估），
+重读相关对局的 summary 或该角色的笔记。决策经验与卡牌/药水/遗物/意图
 等知识见文末「参考文档」。
 
 ## 对局结束
@@ -126,9 +135,9 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
    run 日志的时间戳与哈希，小写、下划线分隔）及其对应的中文版
    memory/runs/<角色>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md——两者内容必须完全
    对应。均遵循 memory/user guide.md 的要点与 memory/template.md 的章节
-   结构（Run review 对局回顾 / What went well 做得好的地方 / What went
-   poorly 做得不好的地方 / Key moments 关键节点）。引用 run 日志时只写
-   文件名，绝不写个人绝对路径。
+   结构（Summary 核心信息表格 / Run review 对局回顾 / What went well
+   做得好的地方 / What went poorly 做得不好的地方 / Key moments 关键
+   节点）。引用 run 日志时只写文件名，绝不写个人绝对路径。
 2. 对局中新观察到的游戏事实（卡牌/遗物/药水/能力/意图的效果）以条目形式
    直接写入 references/game/ 下对应文件及其 `_zh` 中文版——中英内容必须
    完全对应。memory 只记对局感悟与过程，不记游戏基础数据。
@@ -150,6 +159,10 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
 - 游戏窗口可能显示其他语言或用户的其他 mod；状态以 bridge 为准，优先于截图。
 - 不要在对局循环之外替用户操作游戏内货币（如永久解锁）：元进程类选择先询问用户。
 - 绝不将个人绝对路径、会话日志文件夹或 harness 运行时文件提交进仓库。
+- skill 文件夹根目录的 proposal.md 是 agent 的本地流程建议便签：游玩过程
+  或前后的任何时候，若觉得当前流程（Summary、memory 查阅方式、references
+  组织等）有不合适之处，把问题与具体改进建议写进去。该文件被 gitignore，
+  仅供用户查阅，不要提交。
 
 ## 运行时约定
 

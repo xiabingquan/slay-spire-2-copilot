@@ -58,9 +58,17 @@ Execute in order; all of the following are the skill's own work:
 
          SPIREBRIDGE_LOG_DIR=<abs-folder> python3 bridge/spirectl.py <subcommand>
 
-2. **Read memory** (before anything else):
-   - memory/user guide.md (user-written guidance for what to record)
-   - memory/runs/ (recent run notes, one file per run)
+2. **Read memory** (before anything else). Memory under memory/ is
+   version-controlled and serves as a standing play reference for the whole
+   session:
+   - Mandatory before each run:
+     - the Summary sections of all recorded runs (memory/runs/*.md — core
+       facts plus the biggest gain/loss of each past run)
+     - the accumulated key playstyles for the character about to play
+       (gleaned from that character's run notes, <character>_*.md)
+   - Optional: read full earlier run notes as needed.
+   - During play: memory may be consulted at any time — past summaries and
+     character playstyle notes are live reference for in-run decisions.
 
 3. **Environment check and mod self-install / self-heal** (cwd = this skill
    folder `<repo>/slay-spire-2-copilot`, which holds all runtime files):
@@ -120,7 +128,7 @@ Repeat until the run ends or the user stops you. Every spirectl call carries
 
 1. `... state` — compact state (use `--json` only for fields the compact view
    omits)
-2. Decide the action from the state plus memory (user guide, recent runs)
+2. Decide the action from the state plus memory (run summaries, character playstyles)
 3. `... act <action> --args '<json>' --wait` — actions return immediately once
    submitted; `--wait` polls until the state settles (stable fingerprint) then
    prints it. For a chosen tactic spanning several acts, dump them in one
@@ -137,8 +145,10 @@ Repeat until the run ends or the user stops you. Every spirectl call carries
 
 Before acting each turn, check at least: enemy intents, your HP/block, energy,
 and whether the hand is playable. Keep a brief running commentary in your
-replies. Decision lessons and card/potion/relic/intent knowledge: see
-"References" at the end.
+replies. Memory is consultable mid-run at any moment — when a decision would
+benefit from past runs (boss patterns, route choices, card evaluations),
+re-read the relevant run summaries or the character's notes. Decision
+lessons and card/potion/relic/intent knowledge: see "References" at the end.
 
 ## Run end
 
@@ -156,8 +166,9 @@ When the run ends (game_over screen, or abandon):
    underscore-separated) and its Chinese twin
    memory/runs/<character>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md — the two files
    must stay content-aligned. Both follow memory/user guide.md and the
-   section structure of memory/template.md (Run review / What went well /
-   What went poorly / Key moments). Cite the run log by file name only —
+   section structure of memory/template.md (Summary table of core run facts /
+   Run review / What went well / What went poorly / Key moments). Cite the
+   run log by file name only —
    never personal absolute paths.
 2. Fold newly observed game facts (card/relic/potion/power/intent effects)
    into the matching references/game/ file and its `_zh` twin as plain
@@ -189,6 +200,11 @@ When the run ends (game_over screen, or abandon):
   (e.g. permanent unlocks): ask first for meta-progression choices.
 - Never commit personal absolute paths, session log folders, or harness
   runtime files into the repo.
+- proposal.md at the skill folder root is the agent's local scratchpad for
+  play-process suggestions: if any part of the flow (Summary, memory
+  consultation, references organization, ...) feels unsuited during or
+  around a run, record the concern and a concrete proposal there. It is
+  gitignored — the user reviews it; do not commit it.
 
 ## Runtime conventions
 

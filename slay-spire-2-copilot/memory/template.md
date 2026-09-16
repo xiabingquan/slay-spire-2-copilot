@@ -5,17 +5,35 @@ pair of files named <character>_<YYYYmmdd-HHMMSS>_<hash8>.md (English) and
 <character>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md (Chinese), kept content-aligned.
 Both follow this section structure.
 
+## Summary
+
+Core facts of the run in a table, plus a one- or two-sentence summary of the
+run's biggest gain and biggest loss:
+
+| Field | Value |
+|---|---|
+| Character |  |
+| Floor reached |  |
+| Score |  |
+| Ascension |  |
+| Fixed seed used |  |
+| Seed |  |
+
+Biggest gain / loss: (one or two sentences — the single biggest win of the
+run and the single biggest loss)
+
 ## Run review
 
 (overall review of the run)
 
 ## What went well
 
-(what went well this run)
+(what went well this run — decisions and objective factors, e.g. smooth draws)
 
 ## What went poorly
 
-(what went poorly this run)
+(what went poorly this run — decisions and objective factors, e.g. poor relic
+luck or unlucky draws)
 
 ## Key moments
 
