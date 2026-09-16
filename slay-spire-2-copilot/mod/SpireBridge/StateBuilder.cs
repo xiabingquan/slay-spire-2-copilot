@@ -206,7 +206,71 @@ public static class StateBuilder
         }
         run["available_map_points"] = AvailableMapPoints(runState);
         run["map"] = FullMapDto(runState);
+        run["act_start_room"] = ActStartRoom(runState, run["available_map_points"]);
         return run;
+    }
+
+    // Act-start boon rooms (Ancient/Neow-family, e.g. 先古移民 with HP
+    // restore) sit on the map's lowest row. The game transitions straight to
+    // the row-1 map after act bosses, and available_map_points never lists
+    // the start room — agents skipped the boon (live miss 2026-09-17). This
+    // surfaces the start room explicitly AND re-injects it into the
+    // selectable list while unvisited, so map_select can target it first.
+    private static object? ActStartRoom(RunState runState, object? availablePoints)
+    {
+        try
+        {
+            ActMap? map = runState.Map;
+            if (map == null)
+            {
+                return null;
+            }
+            List<MapPoint> all = map.GetAllMapPoints().ToList();
+            if (all.Count == 0)
+            {
+                return null;
+            }
+            int minRow = all.Min(p => p.coord.row);
+            MapPoint start = all.First(p => p.coord.row == minRow);
+            bool visited = false;
+            try
+            {
+                visited = runState.VisitedMapCoords.Any(c => c.row == start.coord.row && c.col == start.coord.col);
+            }
+            catch { /* visited list unavailable */ }
+            var dto = new Dictionary<string, object?>
+            {
+                ["row"] = start.coord.row,
+                ["col"] = start.coord.col,
+                ["point_type"] = start.PointType.ToString(),
+                ["visited"] = visited,
+                // String match on PointType — enum members vary by build;
+                // Ancient covers Neow-family boon rooms (先古移民 etc.).
+                ["is_boon_room"] = start.PointType.ToString() is "Ancient" or "Unknown"
+                    or "Event" or "Neow" or "NeowBoon",
+            };
+            // Re-inject unvisited boon-room starts into the selectable list.
+            if (!visited && dto["is_boon_room"] is true && availablePoints is List<Dictionary<string, object?>> list)
+            {
+                bool already = list.Any(p => (p.GetValueOrDefault("row") as int?) == start.coord.row
+                    && (p.GetValueOrDefault("col") as int?) == start.coord.col);
+                if (!already)
+                {
+                    list.Insert(0, new Dictionary<string, object?>
+                    {
+                        ["row"] = start.coord.row,
+                        ["col"] = start.coord.col,
+                        ["point_type"] = start.PointType.ToString(),
+                        ["act_start_boon"] = true,
+                    });
+                }
+            }
+            return dto;
+        }
+        catch (Exception e)
+        {
+            return new Dictionary<string, object?> { ["error"] = e.Message };
+        }
     }
 
     // Full act map for route planning: every point with its room type plus

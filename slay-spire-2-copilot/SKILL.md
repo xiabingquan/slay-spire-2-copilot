@@ -129,7 +129,13 @@ Repeat until the run ends or the user stops you. Every spirectl call carries
 1. `... state` — compact state (use `--json` only for fields the compact view
    omits). Routing decisions: `run.map.rows[]` in the JSON state carries the
    full act map (every point's `point_type` + `children` connectivity) —
-   weigh elite/rest/shop/boss paths from it, not just the current row
+   weigh elite/rest/shop/boss paths from it, not just the current row.
+   **Act-start boon rooms**: on every act transition check
+   `run.act_start_room` — Ancient/Neow-family start points (e.g. 先古移民,
+   HP-restore boons) must be map_select'd FIRST while
+   `visited=false`/`is_boon_room=true`; they appear re-injected at the head
+   of `available_map_points`. Never jump to row-1+ points while that flag
+   is live — skipping the boon is a permanent loss (no backtracking)
 2. Decide the action from the state plus memory (run summaries, character playstyles)
 3. `... act <action> --args '<json>' --wait` — actions return immediately once
    submitted; `--wait` polls until the state settles (stable fingerprint) then

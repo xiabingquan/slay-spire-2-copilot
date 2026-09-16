@@ -48,6 +48,8 @@ No unsolicited server pushes in v1 (may be added later as protocol v2).
         "map_coord": {"row": 2, "col": 1},
         "visited_coords": [{"row": 0, "col": 0}],
         "available_map_points": [{"row": 3, "col": 0, "point_type": "Monster"}],
+        "act_start_room": {"row": 0, "col": 3, "point_type": "Ancient",
+                           "visited": false, "is_boon_room": true},
         "map": {
           "rows": [
             {"row": 1, "points": [

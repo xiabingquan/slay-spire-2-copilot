@@ -32,6 +32,7 @@ slaythespire2.net/zh-CN/event，正式版 v0.107.1 共 57 个事件）。实战�
 - LUMINOUS_CHOIR（冷光合唱团）：蔓生之地章节事件；2026-09-17 实测——探入菌肉 REACH_INTO_THE_FLESH 自选移除 2 张卡牌并向牌组加入诅咒 SPORE_MIND（1 费，消耗）；供奉 OFFER_TRIBUTE 花费 149 金币（不足则锁定）获得随机遗物。移除界面为标准 2 选网格。
 - MORPHIC_GROVE（变形灵林谷）：蔓生之地章节事件。
 - NEOW（尼奥）：远古系开局赐福（Neow's Bones/Talisman/Torment 遗物家族——译名见 relics_zh.md）。
+- 章节起始远古房（实战漏走 2026-09-17，用户确认）：每章地图最低一排是 Ancient/尼奥系赐福房——Act 2 起点 (0,3)=Ancient，先古移民选项含恢复血量（用户确认是非常强的 buff）。章节切换后 bridge 直接落在第 1 排地图，且 available_map_points 历史上不列起始房——agent 永久跳过了赐福（地图不能回头）。规则：先处理 `run.act_start_room`（visited=false 且 is_boon_room=true）——最先 map_select 该点；state 会把它重新注入 available_map_points 头部，紧凑视图会打印 ACT-START BOON ROOM UNVISITED 警告。
 - NONUPEIPE：远古系事件（中文名待核实）。
 - OROBAS：远古系事件（Touch of Orobas=欧洛巴斯之触 遗物家族——将初始遗物替换为远古版）。
 - PAEL：远古系事件（Pael's 系列遗物中文名均以"佩尔之…"开头——见 relics_zh.md）。

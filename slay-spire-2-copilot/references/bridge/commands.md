@@ -45,6 +45,12 @@ State notes:
 - `run.map.rows[]` = the full act map: every point with `point_type` plus
   `children` connectivity — use it for route planning (elite/rest/shop/boss
   look-ahead) instead of the single-row view.
+- `run.act_start_room` = the act map's lowest-row point with
+  `{row, col, point_type, visited, is_boon_room}`. Ancient/Neow-family
+  starts (先古移民 and kin — HP-restore and other boons) must be selected
+  FIRST while `visited=false`; unvisited boon starts are re-injected at the
+  head of `available_map_points` with `act_start_boon: true`. The compact
+  view prints `ACT-START BOON ROOM UNVISITED: ...` while that holds.
 - Enemy intents: labels are live loc strings; loc leaks like
   `intents:FORMAT_EMPTY` are replaced server-side with the intent type, and
   the compact view falls back to `Type(move_id)` (e.g. `Buff(PREPARE_MOVE)`).

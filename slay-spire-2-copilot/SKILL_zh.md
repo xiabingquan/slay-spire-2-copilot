@@ -105,7 +105,11 @@ memory 记录里。
 1. `... state` — 紧凑状态（仅当需要紧凑视图未包含的字段时用 `--json`）。
    路线决策：JSON 状态里的 `run.map.rows[]` 携带完整 act 地图（每个点的
    `point_type` + `children` 连通性）——用它权衡精英/营火/商店/boss 路线，
-   不要只看当前可选行
+   不要只看当前可选行。**章节起始赐福房**：每次章节切换后检查
+   `run.act_start_room`——Ancient/尼奥系起始点（如先古移民，可回血）在
+   `visited=false`/`is_boon_room=true` 时必须**最先** map_select；该点会
+   重新注入 `available_map_points` 头部。该标志存在时绝不能跳到第 1 排
+   及之后的点——跳过赐福是永久损失（地图不能回头）
 2. 结合状态与记忆（对局 summary、角色玩法笔记）决定动作
 3. `... act <动作> --args '<json>' --wait` — action 立即返回（已提交）；`--wait`
    轮询至状态稳定（指纹不再跳动）后打印。战术已定时，多个动作合并为一次

@@ -33,6 +33,7 @@ as authoritative.
 - LUMINOUS_CHOIR: verified live 2026-09-17 — REACH_INTO_THE_FLESH removes 2 cards of your choice and adds SPORE_MIND curse (1 cost, Exhaust) to the deck; OFFER_TRIBUTE costs 149 Gold (locked without it) and grants a random Relic. Deck-select uses the standard 2-pick removal grid.
 - MORPHIC_GROVE: event room encounter.
 - NEOW: ancient-track run-start boon (opening offer; Neow's Fury/Bones/Talisman/Torment relic family).
+- ACT-START ANCIENT ROOMS (live miss 2026-09-17, user-confirmed): each Act's map begins with an Ancient/Neow-family boon room on the lowest row — Act 2's start presented as (0,3)=Ancient with 先古移民-style options including HP restore (very strong buff per user). After an act transition the bridge lands on the row-1 map and historically omitted the start room from available_map_points — the agent skipped the boon permanently (no backtracking). Rule: resolve `run.act_start_room` (visited=false, is_boon_room=true) with map_select FIRST before any row-1+ point; state re-injects the point at the head of available_map_points and the compact view prints an ACT-START BOON ROOM UNVISITED warning.
 - NONUPEIPE: ancient-track event.
 - OROBAS: ancient-track event (Touch of Orobas relic family — replaces starter relic with ancient version).
 - PAEL: ancient-track event (Pael's Claw/Eye/Flesh/Growth/Horn/Legion/Tears/Tooth/Wing relic family — see relics.md).
