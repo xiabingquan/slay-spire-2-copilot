@@ -448,6 +448,16 @@ public static class ActionExecutor
             return (false, "choose requires index");
         }
         IScreenContext? context = ActiveScreenContext.Instance.GetCurrentScreen();
+        // Mid-combat choose-a-card overlays (boss Curse of Knowledge, potions)
+        // may not be registered as the ActiveScreenContext — fall back to a
+        // visible-tree scan so choose works while combat is in progress.
+        if (context is NCombatRoom or null || CombatManager.Instance.IsInProgress)
+        {
+            if (StateBuilder.FindCombatSelectOverlay() is IScreenContext overlayContext)
+            {
+                context = overlayContext;
+            }
+        }
         switch (context)
         {
             case NCardRewardSelectionScreen cardReward:

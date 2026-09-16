@@ -101,6 +101,37 @@ public static class StateBuilder
         }
     }
 
+    // Mid-combat selection overlays (NChooseACardSelectionScreen & kin) open
+    // while CombatManager.IsInProgress stays true — boss Curse of Knowledge
+    // (Knowledge Demon), Skill/Colorless/Attack/Power potions. DetectScreen's
+    // combat short-circuit used to hide them and deadlock the fight
+    // (live: Act 2 Knowledge Demon boss, 2026-09-17).
+    public static Node? FindCombatSelectOverlay()
+    {
+        try
+        {
+            Node root = ((SceneTree)Engine.GetMainLoop()).Root;
+            if (UiHelper.FindFirst<NChooseACardSelectionScreen>(root) is { } a && a.IsVisibleInTree())
+            {
+                return a;
+            }
+            if (UiHelper.FindFirst<NChooseABundleSelectionScreen>(root) is { } b && b.IsVisibleInTree())
+            {
+                return b;
+            }
+            if (UiHelper.FindFirst<NSimpleCardSelectScreen>(root) is { } c && c.IsVisibleInTree())
+            {
+                return c;
+            }
+            if (UiHelper.FindFirst<NDeckCardSelectScreen>(root) is { } d && d.IsVisibleInTree())
+            {
+                return d;
+            }
+        }
+        catch { /* tree not ready */ }
+        return null;
+    }
+
     private static string DetectScreen(CombatState? combat, out string screenType, out Node? screenNode)
     {
         screenNode = null;
@@ -109,6 +140,16 @@ public static class StateBuilder
         {
             if (combat != null && CombatManager.Instance.IsInProgress)
             {
+                if (FindCombatSelectOverlay() is { } overlayNode)
+                {
+                    screenNode = overlayNode;
+                    screenType = overlayNode.GetType().Name;
+                    return overlayNode switch
+                    {
+                        NDeckCardSelectScreen => "deck_select",
+                        _ => "card_choice",
+                    };
+                }
                 screenType = "NCombatRoom";
                 return "combat";
             }
