@@ -38,6 +38,20 @@ no fallback). Alert logging fires only while ARMED:
     python3 bridge/spirectl.py watchdog enable|disable|status
     python3 bridge/spirectl.py launch
     python3 bridge/spirectl.py state [--json]
+
+State notes:
+
+- `run.available_map_points` = only the currently selectable row.
+- `run.map.rows[]` = the full act map: every point with `point_type` plus
+  `children` connectivity — use it for route planning (elite/rest/shop/boss
+  look-ahead) instead of the single-row view.
+- Enemy intents: labels are live loc strings; loc leaks like
+  `intents:FORMAT_EMPTY` are replaced server-side with the intent type, and
+  the compact view falls back to `Type(move_id)` (e.g. `Buff(PREPARE_MOVE)`).
+  `--json` adds `damage`/`hits`/`class`/`type` per intent.
+- AllEnemies/AnyPlayer potions must be sent via `use_potion` WITHOUT
+  `target_combat_id` (AnyEnemy potions may pass one); a stray target is
+  ignored and logged.
     python3 bridge/spirectl.py act <action> [--args '{"k":v}'] [--wait|--wait-play] [--stall-timeout 3] [--json]
     python3 bridge/spirectl.py batch --acts '[{"action":"play","args":{"card_index":2}},{"action":"end_turn"}]' [--stall-timeout 3]
     python3 bridge/spirectl.py wait [--quiet 3.0] [--interval 0.2]

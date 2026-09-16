@@ -47,7 +47,15 @@ No unsolicited server pushes in v1 (may be added later as protocol v2).
         "room_type": "Monster",
         "map_coord": {"row": 2, "col": 1},
         "visited_coords": [{"row": 0, "col": 0}],
-        "available_map_points": [{"row": 3, "col": 0, "point_type": "Monster"}]
+        "available_map_points": [{"row": 3, "col": 0, "point_type": "Monster"}],
+        "map": {
+          "rows": [
+            {"row": 1, "points": [
+              {"row": 1, "col": 0, "point_type": "Monster",
+               "children": [{"row": 2, "col": 0}, {"row": 2, "col": 2}]}
+            ]}
+          ]
+        }
       },
       "player": {
         "hp": 60, "max_hp": 80, "gold": 99,

@@ -127,7 +127,9 @@ Repeat until the run ends or the user stops you. Every spirectl call carries
 `SPIREBRIDGE_LOG_DIR=<abs-folder>`:
 
 1. `... state` — compact state (use `--json` only for fields the compact view
-   omits)
+   omits). Routing decisions: `run.map.rows[]` in the JSON state carries the
+   full act map (every point's `point_type` + `children` connectivity) —
+   weigh elite/rest/shop/boss paths from it, not just the current row
 2. Decide the action from the state plus memory (run summaries, character playstyles)
 3. `... act <action> --args '<json>' --wait` — actions return immediately once
    submitted; `--wait` polls until the state settles (stable fingerprint) then

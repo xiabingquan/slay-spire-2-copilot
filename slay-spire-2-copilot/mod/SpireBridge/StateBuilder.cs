@@ -205,7 +205,70 @@ public static class StateBuilder
             run["visited_coords"] = new List<object?>();
         }
         run["available_map_points"] = AvailableMapPoints(runState);
+        run["map"] = FullMapDto(runState);
         return run;
+    }
+
+    // Full act map for route planning: every point with its room type plus
+    // forward connectivity (children coords). available_map_points only lists
+    // the current selectable row — without the rest of the graph the AI
+    // cannot weigh elite/rest/shop/boss paths ahead.
+    private static object? FullMapDto(RunState runState)
+    {
+        try
+        {
+            ActMap? map = runState.Map;
+            if (map == null)
+            {
+                return null;
+            }
+            var byRow = new SortedDictionary<int, List<Dictionary<string, object?>>>();
+            void AddPoint(MapPoint p)
+            {
+                var children = new List<object?>();
+                try
+                {
+                    foreach (MapPoint c in p.Children)
+                    {
+                        children.Add(CoordDto(c.coord));
+                    }
+                }
+                catch { /* children unavailable */ }
+                if (!byRow.TryGetValue(p.coord.row, out List<Dictionary<string, object?>>? list))
+                {
+                    list = new List<Dictionary<string, object?>>();
+                    byRow[p.coord.row] = list;
+                }
+                list.Add(new Dictionary<string, object?>
+                {
+                    ["row"] = p.coord.row,
+                    ["col"] = p.coord.col,
+                    ["point_type"] = p.PointType.ToString(),
+                    ["children"] = children,
+                });
+            }
+            foreach (MapPoint p in map.GetAllMapPoints())
+            {
+                AddPoint(p);
+            }
+            // Boss / start points can live outside the grid enumeration.
+            try { if (map.BossMapPoint is { } boss) AddPoint(boss); } catch { }
+            try { if (map.StartingMapPoint is { } start) AddPoint(start); } catch { }
+            var rows = new List<object?>();
+            foreach (KeyValuePair<int, List<Dictionary<string, object?>>> kv in byRow)
+            {
+                rows.Add(new Dictionary<string, object?>
+                {
+                    ["row"] = kv.Key,
+                    ["points"] = kv.Value,
+                });
+            }
+            return new Dictionary<string, object?> { ["rows"] = rows };
+        }
+        catch (Exception e)
+        {
+            return new Dictionary<string, object?> { ["error"] = e.Message };
+        }
     }
 
     private static object? SafeGold(RunState runState)
@@ -436,6 +499,24 @@ public static class StateBuilder
         }
     }
 
+    // Loc tables leak raw keys like "intents:FORMAT_EMPTY" for buff/debuff
+    // intents — replace those segments with the intent type so the client can
+    // act on them without a --json dive.
+    private static string CleanIntentLabel(string? label, AbstractIntent intent)
+    {
+        string fallback = intent.IntentType.ToString();
+        if (string.IsNullOrEmpty(label))
+        {
+            return fallback;
+        }
+        if (!label.Contains("FORMAT_EMPTY") && !label.Contains("intents:"))
+        {
+            return label;
+        }
+        string cleaned = label.Replace("intents:FORMAT_EMPTY", fallback).Replace("FORMAT_EMPTY", fallback);
+        return string.IsNullOrWhiteSpace(cleaned) ? fallback : cleaned.Trim(';', ' ');
+    }
+
     private static List<Dictionary<string, object?>> BuildIntents(MonsterModel monster, Creature owner)
     {
         var intents = new List<Dictionary<string, object?>>();
@@ -455,11 +536,12 @@ public static class StateBuilder
                 };
                 try
                 {
-                    dto["label"] = ResolveLoc(intent.GetIntentLabel(Array.Empty<Creature>(), owner));
+                    dto["label"] = CleanIntentLabel(ResolveLoc(intent.GetIntentLabel(Array.Empty<Creature>(), owner)), intent);
                 }
                 catch (Exception)
                 {
                     // intent label unavailable for this intent type
+                    dto["label"] = intent.IntentType.ToString();
                 }
                 // Damage/hit counts live on undocumented intent subclasses; probe
                 // common member names so state stays useful across game patches.

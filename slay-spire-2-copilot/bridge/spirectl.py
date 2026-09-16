@@ -531,12 +531,20 @@ def render_compact(state):
                 line += " powers=[" + ",".join(p.get("id", "?") for p in powers) + "]"
             intents = c.get("intents") or []
             if intents:
+                move = c.get("move_id")
                 bits = []
                 for it in intents:
                     label = strip_bbcode(it.get("label") or it.get("type"))
                     dmg = it.get("damage")
                     hits = it.get("hits")
                     desc = label or it.get("class")
+                    # Loc leaks like intents:FORMAT_EMPTY carry no decision
+                    # value — fall back to intent class/type + the monster's
+                    # current move id so the intent is still readable.
+                    if not desc or "FORMAT_EMPTY" in str(desc):
+                        desc = it.get("type") or it.get("class") or "unknown"
+                        if move:
+                            desc = f"{desc}({move})"
                     if dmg is not None:
                         desc = f"{desc} dmg={dmg}"
                     if hits is not None:

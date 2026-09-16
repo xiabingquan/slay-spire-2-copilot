@@ -320,6 +320,10 @@ public static class ActionExecutor
                 target = hittable.Count > 0 ? hittable[0] : null;
             }
         }
+        else if (TryGetInt(args, "target_combat_id", out int ignoredTarget))
+        {
+            BridgeMod.LogInfo($"WARN use_potion: target_combat_id={ignoredTarget} ignored for potion {potion.Id.Entry} target_type={potion.TargetType}");
+        }
         Creature? targetRef = target;
         Fire(() => { potion.EnqueueManualUse(targetRef); return Task.CompletedTask; }, "use potion");
         return (true, $"submitted use_potion {potion.Id.Entry}");
@@ -1053,13 +1057,27 @@ public static class ActionExecutor
         Control selectScreen = mainMenu.GetNode<Control>("Submenus/CharacterSelectScreen");
         Node buttonContainer = selectScreen.GetNode("CharSelectButtons/ButtonContainer");
         List<NCharacterSelectButton> characterButtons = UiHelper.FindAll<NCharacterSelectButton>(buttonContainer);
+        // Refresh lock state from save progress (same as the game's AutoSlay
+        // path) — UnlockIfPossible only unlocks characters the save already
+        // earned; it never grants unearned unlocks.
+        foreach (NCharacterSelectButton b in characterButtons)
+        {
+            try { b.UnlockIfPossible(); } catch { /* refresh best-effort */ }
+        }
+        foreach (NCharacterSelectButton b in characterButtons)
+        {
+            string entry = "";
+            try { entry = b.Character?.Id.Entry ?? ""; } catch { }
+            BridgeMod.LogInfo($"start_run: roster name={b.Name} locked={b.IsLocked} char_entry={entry}");
+        }
         NCharacterSelectButton? chosen = null;
         if (!string.IsNullOrEmpty(character))
         {
+            // Match Character.Id.Entry first (stable id), then button Name.
             chosen = characterButtons.FirstOrDefault(b =>
-                !b.IsLocked && b.Name.ToString().Contains(character, StringComparison.OrdinalIgnoreCase));
+                !b.IsLocked && SafeCharEntry(b).Contains(character, StringComparison.OrdinalIgnoreCase));
             chosen ??= characterButtons.FirstOrDefault(b =>
-                !b.IsLocked && b.Character?.Id.Entry.Contains(character, StringComparison.OrdinalIgnoreCase) == true);
+                !b.IsLocked && b.Name.ToString().Contains(character, StringComparison.OrdinalIgnoreCase));
         }
         chosen ??= characterButtons.FirstOrDefault(b => !b.IsLocked);
         if (chosen == null)
@@ -1071,7 +1089,13 @@ public static class ActionExecutor
         await Task.Delay(200, default);
         NButton confirm = await WaitHelper.ForNode<NButton>(selectScreen, "ConfirmButton", default, TimeSpan.FromSeconds(10));
         await UiHelper.Click(confirm);
-        BridgeMod.LogInfo($"start_run: embarked as {chosen.Name} (seed={seed ?? "random"})");
+        BridgeMod.LogInfo($"start_run: embarked as {chosen.Name} char_entry={SafeCharEntry(chosen)} (seed={seed ?? "random"})");
+    }
+
+    private static string SafeCharEntry(NCharacterSelectButton b)
+    {
+        try { return b.Character?.Id.Entry ?? ""; }
+        catch { return ""; }
     }
 
     private static (bool, string) AbandonRun()
