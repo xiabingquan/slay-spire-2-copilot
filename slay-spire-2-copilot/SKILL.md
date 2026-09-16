@@ -152,10 +152,10 @@ gitignored (harness runtime only).
 When the run ends (game_over screen, or abandon):
 
 1. Write this run's memory note to memory/runs/<same base name as the run
-   log>.md (run-<YYYYmmdd-HHMMSS>-<hash8>.md): result, key decisions, what
-   worked, what killed the run, and any worth-keeping observations, following
-   memory/user guide.md. Cite the run log by file name only — never personal
-   absolute paths.
+   log>.md (run-<YYYYmmdd-HHMMSS>-<hash8>.md), following memory/user guide.md
+   and the section structure of memory/template.md (对局回顾 / 做得好的
+   地方 / 做得不好的地方 / K moments). Cite the run log by file name only —
+   never personal absolute paths.
 2. Fold newly observed game facts (card/relic/potion/power/intent effects)
    into the matching references/game/ file and its `_zh` twin as plain
    entries — the English and Chinese files must stay content-aligned. Memory
@@ -238,6 +238,7 @@ references/ — consult knowledge:
 memory/ — run memory (version-controlled):
 
 - `memory/user guide.md` — user-written guidance for what agents should record
+- `memory/template.md` — section template for per-run memory notes
 - `memory/runs/` — one note per run, named run-<YYYYmmdd-HHMMSS>-<hash8>.md
 
 - `SKILL_zh.md` — Chinese version of this skill doc

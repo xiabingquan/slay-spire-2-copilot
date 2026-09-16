@@ -122,9 +122,9 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
 对局结束时（game_over 界面，或 abandon）：
 
 1. 将本局 memory 记录写入 memory/runs/<与 run 日志同名>.md
-   （run-<YYYYmmdd-HHMMSS>-<hash8>.md）：结果、关键决策、有效的做法、
-   导致失败的原因、值得保留的观察，遵循 memory/user guide.md。引用 run
-   日志时只写文件名，绝不写个人绝对路径。
+   （run-<YYYYmmdd-HHMMSS>-<hash8>.md），遵循 memory/user guide.md 的要点
+   与 memory/template.md 的章节结构（对局回顾 / 做得好的地方 / 做得不好
+   的地方 / K moments）。引用 run 日志时只写文件名，绝不写个人绝对路径。
 2. 对局中新观察到的游戏事实（卡牌/遗物/药水/能力/意图的效果）以条目形式
    直接写入 references/game/ 下对应文件及其 `_zh` 中文版——中英内容必须
    完全对应。memory 只记对局感悟与过程，不记游戏基础数据。
@@ -191,6 +191,7 @@ references/ — 查阅知识：
 memory/ — 对局记忆（已纳入版本控制）：
 
 - `memory/user guide.md` — 用户手写的记忆要点（agent 记录时的参考）
+- `memory/template.md` — 每局 memory 记录的章节模板
 - `memory/runs/` — 每局一条记录，文件名 run-<YYYYmmdd-HHMMSS>-<hash8>.md
 
 - `SKILL.md` — skill 触发与定义（英文版）；本文件为其说明

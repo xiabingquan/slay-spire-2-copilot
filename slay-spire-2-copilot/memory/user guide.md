@@ -1,6 +1,10 @@
 # User guide
 
-User-written guidance for the agent's memory practice: what to record after
-each run, what to skip, and how run notes under runs/ should be shaped.
+（用户手写的 agent 记忆要点——记录 memory 时的参考）
 
-Content to be written by the user (TBD).
+## 记 memory 的入手方向
+
+记录 memory 时，可以从以下方面入手：角色特性、卡牌特性、遗物特性，等等。
+
+要尤其注意这几者之间的关联：例如某些卡牌相互之间、或某些卡牌与某个遗物
+之间的相互作用，会让整个卡组变得非常强大——这类协同是记录的重点。
