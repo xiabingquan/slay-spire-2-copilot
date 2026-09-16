@@ -60,3 +60,13 @@ run's circumstances:
   were poor, or draws never came together
 - Decision-level items (picks, routes) belong there as well, per the
   previous section
+
+## Per-character core playstyles
+
+Accumulate the core playstyle of each distinct character, along with the key
+relics and cards that character wants:
+
+- The character's core playstyle — how it wins fights
+- Key relics the character is looking for
+- Key cards the character is looking for
+- ... and similar per-character build knowledge
