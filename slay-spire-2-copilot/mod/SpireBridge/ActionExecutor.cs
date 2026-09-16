@@ -650,7 +650,23 @@ public static class ActionExecutor
             return (false, "no active screen to skip");
         }
         NChoiceSelectionSkipButton? skipButton = UiHelper.FindFirst<NChoiceSelectionSkipButton>(screenNode);
-        if (skipButton != null)
+        // Live gap 2026-09-17 (Act-3 run, 3rd occurrence): on
+        // NCardRewardSelectionScreen the skip control is documented as an
+        // NChoiceSelectionSkipButton ("like the choose 1 of 3 card reward
+        // screen") but is not found inside the screen node's own subtree —
+        // likely lives in a shared overlay/GlobalUi container. Walk outward
+        // (parent, then scene-tree root) before giving up so the advertised
+        // skip action is actually executable.
+        if (skipButton == null && screenNode.GetParent() is Node screenParent)
+        {
+            skipButton = UiHelper.FindFirst<NChoiceSelectionSkipButton>(screenParent);
+        }
+        if (skipButton == null)
+        {
+            skipButton = UiHelper.FindFirst<NChoiceSelectionSkipButton>(
+                ((SceneTree)Engine.GetMainLoop()).Root);
+        }
+        if (skipButton != null && skipButton.Visible)
         {
             NClickableControl skipTarget = skipButton;
             Fire(() => UiHelper.Click(skipTarget), "skip");
