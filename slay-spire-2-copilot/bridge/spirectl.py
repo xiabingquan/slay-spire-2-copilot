@@ -401,16 +401,23 @@ def combat_play_ready(state):
     return combat.get("current_side") == "Player" and combat.get("turn_phase") == "Play"
 
 
-def wait_for_settle(client, mode="settle", timeout=30.0, stable_s=0.35, stall_s=18.0):
+def wait_for_settle(client, mode="settle", stall_s=3.0, stable_s=0.35):
     """Poll the bridge until state settles or the player turn resumes.
+
+    Change-polling model (user directive 2026-09-16 — no timeout deadlines):
+    keep polling while the fingerprint keeps changing; that is real game
+    progress (animations, enemy turns) and is worth waiting through. The
+    only early-out besides reaching the target condition is a FROZEN
+    fingerprint: if state does not change for stall_s and the condition is
+    still unmet, return the current snapshot flagged stalled=True so the
+    caller can re-read and decide — never block on an idle game.
 
     Args:
         client: Connected BridgeClient.
         mode: "settle" waits for a stable fingerprint; "play" additionally
             requires combat_play_ready (Play phase / non-combat / game_over).
-        timeout: Maximum seconds to poll.
+        stall_s: Frozen-fingerprint window that ends the poll as stalled.
         stable_s: Fingerprint stability window required to declare settled.
-        stall_s: In play mode, report stalled when not play-ready this long.
 
     Returns:
         Tuple (state, settle_ms, stalled): last snapshot, polling wall time,
@@ -424,7 +431,7 @@ def wait_for_settle(client, mode="settle", timeout=30.0, stable_s=0.35, stall_s=
     state = client.state()
     last_fp = state.get("fingerprint")
     stable_since = time.perf_counter()
-    while time.perf_counter() - t0 < timeout:
+    while True:
         time.sleep(0.15)
         try:
             state = client.state()
@@ -440,12 +447,11 @@ def wait_for_settle(client, mode="settle", timeout=30.0, stable_s=0.35, stall_s=
         if mode == "play":
             if combat_play_ready(state) and now - stable_since >= stable_s:
                 return state, int(elapsed * 1000), False
-            if elapsed > stall_s and not combat_play_ready(state):
-                return state, int(elapsed * 1000), True
         else:
             if now - stable_since >= stable_s:
                 return state, int(elapsed * 1000), False
-    return state, int((time.perf_counter() - t0) * 1000), True
+        if now - stable_since >= stall_s:
+            return state, int(elapsed * 1000), True
 
 
 def metrics_line(metrics):
@@ -696,7 +702,6 @@ def cmd_act(args):
             state, settle_ms, stalled = wait_for_settle(
                 client,
                 mode=wait_mode,
-                timeout=args.wait_timeout,
                 stall_s=args.stall_timeout,
             )
             if state is not None:
@@ -779,13 +784,12 @@ def cmd_batch(args):
             state, settle_ms, stalled = wait_for_settle(
                 client,
                 mode=mode,
-                timeout=args.wait_timeout,
                 stall_s=args.stall_timeout,
             )
             print(f"  settled {settle_ms}ms mode={mode}{' STALL' if stalled else ''}")
             print(render_compact(state) if not args.json else json.dumps(state, indent=2, ensure_ascii=False))
             log_run_event(
-                "wait_change" if not stalled else "wait_timeout",
+                "wait_change" if not stalled else "wait_stall",
                 {"state": state, "metrics": {"settle_ms": settle_ms, "stalled": stalled}, "batch": i, "mode": mode},
             )
             if stalled:
@@ -968,19 +972,26 @@ def cmd_profile(args):
 
 
 def cmd_wait(args):
-    """Poll until the state fingerprint changes.
+    """Poll for a state fingerprint change; return quickly when idle.
+
+    Change-polling model (user directive 2026-09-16 — no timeout deadlines):
+    return as soon as the fingerprint changes. If it stays unchanged for
+    --quiet seconds, return the current state immediately with a "no change"
+    note so the caller can decide — never block for minutes on an idle game.
 
     Args:
-        args: Parsed CLI args (timeout, interval, json).
+        args: Parsed CLI args (quiet, interval, json).
 
     Returns:
-        Process exit code: 0 on change, 1 on timeout/poll failure.
+        Process exit code: 0 once a state snapshot is returned (changed or
+        quiet), 1 on poll failure.
     """
-    deadline = time.time() + args.timeout
     with BridgeClient(host=args.host, port=args.port) as client:
-        prev = client.state().get("fingerprint")
-        print(f"waiting (initial fingerprint={prev})")
-        while time.time() < deadline:
+        state = client.state()
+        prev = state.get("fingerprint")
+        unchanged_since = time.perf_counter()
+        print(f"polling (initial fingerprint={prev})")
+        while True:
             time.sleep(args.interval)
             try:
                 state = client.state()
@@ -989,14 +1000,21 @@ def cmd_wait(args):
                 print(f"poll failed: {exc}")
                 return 1
             fp = state.get("fingerprint")
+            now = time.perf_counter()
             if fp != prev:
                 print(f"changed -> fingerprint={fp} screen={state.get('screen')} [{metrics_line(metrics)}]")
                 log_run_event("wait_change", {"state": state, "metrics": metrics})
                 print(render_compact(state) if not args.json else json.dumps(state, indent=2, ensure_ascii=False))
                 return 0
-    print(f"timeout after {args.timeout}s (fingerprint={prev})")
-    log_run_event("wait_timeout", {"fingerprint": prev, "timeout": args.timeout})
-    return 1
+            if now - unchanged_since >= args.quiet:
+                quiet_s = now - unchanged_since
+                print(
+                    f"no change after {quiet_s:.1f}s — returning current state "
+                    f"(screen={state.get('screen')}, fingerprint={fp})"
+                )
+                log_run_event("wait_no_change", {"state": state, "metrics": metrics, "quiet_s": quiet_s})
+                print(render_compact(state) if not args.json else json.dumps(state, indent=2, ensure_ascii=False))
+                return 0
 
 
 def steam_fully_ready():
@@ -1071,7 +1089,7 @@ def cmd_sl(args):
     draw order observed on the previous attempt stay valid.
 
     Args:
-        args: Parsed CLI args (json, menu_timeout, wait_timeout).
+        args: Parsed CLI args (json, menu_timeout, stall_timeout).
 
     Returns:
         Process exit code: 0 ok, 2 launch failure, 3 reload stalled.
@@ -1104,7 +1122,7 @@ def cmd_sl(args):
         result = client.act("continue_run")
         log_run_event("act", {"action": "continue_run", "args": {"via": "sl"}, "result": result}, rotate=True)
         print(f"ok={result.get('ok')} {result.get('message')}")
-        state, settle_ms, stalled = wait_for_settle(client, mode="settle", timeout=args.wait_timeout)
+        state, settle_ms, stalled = wait_for_settle(client, mode="settle", stall_s=args.stall_timeout)
         t_end = time.perf_counter()
         log_run_event(
             "sl_reload",
@@ -1155,13 +1173,14 @@ def main(argv=None):
     p_act.add_argument("action", help="action name, e.g. play / end_turn / choose / map_select")
     p_act.add_argument("--args", help="action args as JSON object, e.g. '{\"card_index\":0}'")
     p_act.add_argument("--json", action="store_true", help="print returned state as JSON")
-    p_act.add_argument("--wait", action="store_true", help="after act, poll until state settles then print it")
+    p_act.add_argument("--wait", action="store_true",
+                       help="after act, poll until state settles (stable fingerprint) then print it")
     p_act.add_argument("--wait-play", action="store_true",
                        help="after act, poll until player Play phase resumes (or non-combat screen)")
     p_act.add_argument("--wait-mode", choices=("settle", "play"), help="explicit wait mode override")
-    p_act.add_argument("--wait-timeout", type=float, default=30.0, help="max seconds to wait for settle/play")
-    p_act.add_argument("--stall-timeout", type=float, default=18.0,
-                       help="declare STALL if fingerprint freezes this long")
+    p_act.add_argument("--stall-timeout", type=float, default=3.0,
+                       help="declare STALL and return if the fingerprint freezes this long "
+                            "(polling continues while state keeps changing — no deadline)")
 
     p_batch = sub.add_parser("batch", help="run a JSON array of acts sequentially with settle between")
     p_batch.add_argument("--acts", required=True,
@@ -1170,11 +1189,12 @@ def main(argv=None):
     p_batch.add_argument("--wait-final", dest="wait_final", action="store_true", default=True,
                          help="wait for settle/play after the last act (default on)")
     p_batch.add_argument("--no-wait-final", dest="wait_final", action="store_false")
-    p_batch.add_argument("--wait-timeout", type=float, default=30.0)
-    p_batch.add_argument("--stall-timeout", type=float, default=18.0)
+    p_batch.add_argument("--stall-timeout", type=float, default=3.0,
+                         help="declare STALL and abort the batch if the fingerprint freezes this long")
 
-    p_wait = sub.add_parser("wait", help="poll until game state fingerprint changes")
-    p_wait.add_argument("--timeout", type=float, default=60.0)
+    p_wait = sub.add_parser("wait", help="poll for a state fingerprint change; returns quickly when idle")
+    p_wait.add_argument("--quiet", type=float, default=3.0,
+                        help="return current state after this many seconds without a fingerprint change")
     p_wait.add_argument("--interval", type=float, default=0.2)
     p_wait.add_argument("--json", action="store_true")
 
@@ -1183,12 +1203,13 @@ def main(argv=None):
     p_profile.add_argument("--budget", type=float, default=30.0, help="target minutes per run")
 
     p_launch = sub.add_parser("launch", help="launch the game via Steam and wait for the bridge")
-    p_launch.add_argument("--timeout", type=float, default=120.0)
+    p_launch.add_argument("--timeout", type=float, default=120.0,
+                          help="lifecycle cap for game boot + bridge handshake (not a play-loop wait)")
 
     p_sl = sub.add_parser("sl", help="save/load reload: stop -> launch -> continue_run (room-entry save)")
     p_sl.add_argument("--json", action="store_true")
     p_sl.add_argument("--menu-timeout", type=float, default=45.0)
-    p_sl.add_argument("--wait-timeout", type=float, default=30.0)
+    p_sl.add_argument("--stall-timeout", type=float, default=3.0)
 
     sub.add_parser("stop", help="gracefully stop the game (quiet quit -> TERM -> KILL)")
 

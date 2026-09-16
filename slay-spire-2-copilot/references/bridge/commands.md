@@ -38,9 +38,24 @@ no fallback). Alert logging fires only while ARMED:
     python3 bridge/spirectl.py watchdog enable|disable|status
     python3 bridge/spirectl.py launch
     python3 bridge/spirectl.py state [--json]
-    python3 bridge/spirectl.py act <action> [--args '{"k":v}'] [--wait|--wait-play] [--json]
-    python3 bridge/spirectl.py batch --acts '[{"action":"play","args":{"card_index":2}},{"action":"end_turn"}]'
-    python3 bridge/spirectl.py wait [--timeout 60] [--interval 0.2]
+    python3 bridge/spirectl.py act <action> [--args '{"k":v}'] [--wait|--wait-play] [--stall-timeout 3] [--json]
+    python3 bridge/spirectl.py batch --acts '[{"action":"play","args":{"card_index":2}},{"action":"end_turn"}]' [--stall-timeout 3]
+    python3 bridge/spirectl.py wait [--quiet 3.0] [--interval 0.2]
     python3 bridge/spirectl.py profile [--log /abs/folder/run-<ts>-<hash>.log] [--budget 30]
     python3 bridge/spirectl.py sl [--json]
     python3 bridge/spirectl.py stop
+
+## Wait model (change-polling, no timeout deadlines)
+
+User directive 2026-09-16: play-loop waits never block on a deadline.
+
+- `wait` polls the fingerprint every `--interval` (0.2s): returns the new
+  state immediately on change; if unchanged for `--quiet` (3.0s default)
+  it returns the current state right away with a "no change" note.
+- `act --wait` / `batch` settle between acts the same way: poll until the
+  fingerprint is stable (0.35s) or Play phase resumes; a FROZEN fingerprint
+  for `--stall-timeout` (3.0s default) returns/aborts as STALL so the caller
+  can re-read and decide. Polling continues without limit while state keeps
+  changing — real progress (animations, enemy turns) is worth waiting through.
+- Lifecycle waits keep bounded caps on purpose: `launch --timeout` (120s,
+  Steam boot + handshake) and `sl --menu-timeout` (45s, boot to menu).

@@ -124,11 +124,17 @@ Repeat until the run ends or the user stops you. Every spirectl call carries
 1. `... state` — compact state (use `--json` only for fields the compact view
    omits)
 2. Decide the action from the state plus memory (lessons, strategies)
-3. `... act <action> --args '<json>'` — actions return immediately once
-   submitted; animations are played by the game itself
-4. `... wait --timeout 60` — blocks until the state fingerprint changes, then
-   prints the new state. On timeout, re-read state; the action may have been
-   illegal, or the screen may need a different input
+3. `... act <action> --args '<json>' --wait` — actions return immediately once
+   submitted; `--wait` polls until the state settles (stable fingerprint) then
+   prints it. For a chosen tactic spanning several acts, dump them in one
+   `batch --acts '[...]'` call (settle-polls between acts, high-to-low
+   card_index discipline on you)
+4. Wait model is change-polling, never a timeout deadline (user directive
+   2026-09-16): `wait --quiet 3` returns within ~3s — immediately on
+   fingerprint change, or right away with the current state when idle. Do
+   NOT use long blocking waits; if an act does not change the screen, re-read
+   state and diagnose — the action may have been illegal, or the screen needs
+   a different input
 5. If act returns ok=false: read the message, re-read state, retry with a
    corrected action — do not blind-retry the same call
 
