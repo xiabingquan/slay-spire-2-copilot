@@ -58,12 +58,9 @@ Execute in order; all of the following are the skill's own work:
 
          SPIREBRIDGE_LOG_DIR=<abs-folder> python3 bridge/spirectl.py <subcommand>
 
-2. **Read memory** (before anything else; create any missing memory file at
-   the first run end):
-   - memory/lessons/lessons.md (generalizable decision lessons)
-   - memory/lessons/roles/<character>.md (per-character playbook, when present)
-   - memory/changelog.md (recent tool/strategy changes)
-   - memory/runs/ (recent postmortems)
+2. **Read memory** (before anything else):
+   - memory/user guide.md (user-written guidance for what to record)
+   - memory/runs/ (recent run notes, one file per run)
 
 3. **Environment check and mod self-install / self-heal** (cwd = this skill
    folder `<repo>/slay-spire-2-copilot`, which holds all runtime files):
@@ -94,7 +91,7 @@ screen, or game_over — take it over: read state and push it forward. On
 game_over, `act start_run` clears the summary chain automatically (server-side)
 and begins a new run; a new run file is derived in the log folder.
 
-Continuous play is the mandate: after every run ends (postmortem + changelog),
+Continuous play is the mandate: after every run ends (run memory written),
 start the next run immediately. Never deadlock: if an action loops without a
 state change, diagnose the screen (implement the missing server-side support),
 rebuild the mod (`bash scripts/install-mod.sh`), relaunch, and resume. Card-play
@@ -113,8 +110,8 @@ character; try the candidate roster referenced by the game build in turn —
 IRONCLAD, SILENT, DEFECT, NECROBINDER, REGENT. Use
 `act start_run --args '{"character":"SILENT"}'` etc.; the menu automation
 matches button names / character-id substrings and skips locked characters.
-Record the character used in each run's postmortem and run log; as play data
-accumulates, build per-character lessons in memory/lessons/roles/<char>.md.
+Record the character used in each run's memory note and run log;
+character-specific observations belong in that run's memory note.
 
 ### Game loop
 
@@ -123,7 +120,7 @@ Repeat until the run ends or the user stops you. Every spirectl call carries
 
 1. `... state` — compact state (use `--json` only for fields the compact view
    omits)
-2. Decide the action from the state plus memory (lessons, strategies)
+2. Decide the action from the state plus memory (user guide, recent runs)
 3. `... act <action> --args '<json>' --wait` — actions return immediately once
    submitted; `--wait` polls until the state settles (stable fingerprint) then
    prints it. For a chosen tactic spanning several acts, dump them in one
@@ -154,35 +151,34 @@ gitignored (harness runtime only).
 
 When the run ends (game_over screen, or abandon):
 
-1. Write a postmortem to memory/runs/<YYYY-MM-DD>-<character>-floor<N>.md:
-   result, key decisions, what worked, what killed the run, one lesson. Inside
-   the postmortem cite the log folder and the concrete run file name as disk
-   paths only.
-2. Record only generalizable lessons in memory/lessons/lessons.md (exclude
-   one-off bad RNG); keep it short and concrete, and prune entries that prove
-   wrong.
-3. Fold character-specific guidance into the character's playbook
-   memory/lessons/roles/<character>.md.
-4. Fold newly observed game facts (card/relic/potion/power/intent effects)
+1. Write this run's memory note to memory/runs/<character>_<YYYYmmdd-HHMMSS>_<hash8>.md
+   (character id first, then the run log's timestamp and hash, lowercase,
+   underscore-separated) and its Chinese twin
+   memory/runs/<character>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md — the two files
+   must stay content-aligned. Both follow memory/user guide.md and the
+   section structure of memory/template.md (Run review / What went well /
+   What went poorly / Key moments). Cite the run log by file name only —
+   never personal absolute paths.
+2. Fold newly observed game facts (card/relic/potion/power/intent effects)
    into the matching references/game/ file and its `_zh` twin as plain
    entries — the English and Chinese files must stay content-aligned. Memory
    holds play insights and run process only, never game base data.
-5. Do not commit memory files into the repo.
-6. If the user has stopped playing: disarm the watchdog (see "Runtime
+3. Commit the run memory note and its `_zh` twin to the repo — memory is
+   version-controlled.
+4. If the user has stopped playing: disarm the watchdog (see "Runtime
    conventions").
 
 ## Self-iteration
 
 - Tool defect (spirectl/mod/protocol issue): fix the code in this repo on the
   current branch; if C# changed, rebuild the mod (`bash scripts/install-mod.sh`)
-  and verify with doctor, then append a line to memory/changelog.md describing
-  cause and fix. Commit with nature [fix] or [feature].
-- Strategy doc proven wrong in play: correct the doc and note it in
-  changelog.md.
-- Never delete changelog entries; that file is the iteration ledger.
+  and verify with doctor, then note the cause and fix in the current run's
+  memory note (memory/runs/). Commit with nature [fix] or [feature].
+- Strategy doc proven wrong in play: correct the doc and note it in the run
+  memory.
 - Game patch broke hooks (doctor handshake ok but state fields missing/wrong):
-  decompile the game assembly if needed, adapt the mod, and record the fix in
-  changelog.md.
+  decompile the game assembly if needed, adapt the mod, and note the fix in
+  the run memory.
 
 ## Notes
 
@@ -243,13 +239,11 @@ references/ — consult knowledge:
 - `references/game/afflictions.md` — statuses and debuffs
 - `references/game/*_zh.md` — Chinese twins of the game knowledge files
 
-memory/ — run memory:
+memory/ — run memory (version-controlled):
 
-- `memory/lessons/lessons.md` — generalizable decision lessons: card play,
-  rewards, map, events, mechanics
-- `memory/lessons/roles/<char>.md` — per-character playbooks (grows with play data)
-- `memory/changelog.md` — tool-fix and strategy-correction ledger
-- `memory/runs/` — per-run postmortems: result, key decisions, cause of death,
-  lessons
+- `memory/user guide.md` — user-written guidance for what agents should record
+- `memory/template.md` — section template for per-run memory notes
+- `memory/runs/` — one note per run plus a `_zh` Chinese twin, named
+  <character>_<YYYYmmdd-HHMMSS>_<hash8>.md / <character>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md
 
 - `SKILL_zh.md` — Chinese version of this skill doc

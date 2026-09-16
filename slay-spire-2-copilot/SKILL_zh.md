@@ -45,11 +45,9 @@ Spire 2 via Claude Code or Codex"。
 
          SPIREBRIDGE_LOG_DIR=<绝对文件夹> python3 bridge/spirectl.py <子命令>
 
-2. **读记忆**（先于其他操作；文件缺失时以空记忆开局，在首次对局结束时创建）：
-   - memory/lessons/lessons.md（通用决策经验）
-   - memory/lessons/roles/<角色>.md（分角色手册，存在时读取）
-   - memory/changelog.md（最近的工具/策略变更）
-   - memory/runs/（近期复盘）
+2. **读记忆**（先于其他操作）：
+   - memory/user guide.md（用户手写的记忆要点）
+   - memory/runs/（每局一条记录）
 
 3. **环境检查与 mod 自装/自愈**（cwd = 本 skill 文件夹
    `<repo>/slay-spire-2-copilot`，全部运行时文件都在此处）：
@@ -75,7 +73,7 @@ Spire 2 via Claude Code or Codex"。
 game_over——都要接管：读取状态并推进。game_over 时 `act start_run` 会自动清理
 结算链（服务端）并开始新局；日志文件夹中派生新的 run 文件。
 
-持续游玩是指令：每局结束后（复盘 + changelog）立即开始下一局。绝不死锁：若某个
+持续游玩是指令：每局结束后（写完本局 memory 记录）立即开始下一局。绝不死锁：若某个
 action 循环而状态不变，诊断界面（补上服务端缺失的支持），重建 mod
 （`bash scripts/install-mod.sh`），重启并继续。出牌决策保留在 AI 客户端——仅在
 AI 选定战术后，才允许机械式批量下发 action。
@@ -89,8 +87,8 @@ IRONCLAD / SILENT / DEFECT / NECROBINDER / REGENT，或「铁甲战士」「寂�
 用户未指定时才轮换：不要总玩同一角色，按游戏构建中的候选阵容依次尝试——
 IRONCLAD、SILENT、DEFECT、NECROBINDER、REGENT。使用
 `act start_run --args '{"character":"SILENT"}'` 等；菜单自动化按按钮名/角色 id
-子串匹配，自动跳过未解锁角色。在复盘与运行日志中记录每局所用角色；随游玩数据
-积累，在 memory/lessons/roles/<角色>.md 中建立分角色经验。
+子串匹配，自动跳过未解锁角色。在本局 memory 记录与运行日志中记录每局所用角色；角色专属观察写在该局的
+memory 记录里。
 
 ### 游戏循环
 
@@ -98,7 +96,7 @@ IRONCLAD、SILENT、DEFECT、NECROBINDER、REGENT。使用
 `SPIREBRIDGE_LOG_DIR=<绝对文件夹>`：
 
 1. `... state` — 紧凑状态（仅当需要紧凑视图未包含的字段时用 `--json`）
-2. 结合状态与记忆（经验、策略）决定动作
+2. 结合状态与记忆（user guide、近期 runs）决定动作
 3. `... act <动作> --args '<json>' --wait` — action 立即返回（已提交）；`--wait`
    轮询至状态稳定（指纹不再跳动）后打印。战术已定时，多个动作合并为一次
    `batch --acts '[...]'` 提交（步间自动 settle；卡牌下标按从高到低排列由你负责）
@@ -123,27 +121,28 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
 
 对局结束时（game_over 界面，或 abandon）：
 
-1. 将复盘写入 memory/runs/<YYYY-MM-DD>-<角色>-floor<N>.md：结果、关键决策、
-   有效的做法、导致失败的原因、一条经验。复盘中引用日志文件夹与具体的 run
-   文件名（仅磁盘路径）。
-2. 仅把可泛化的经验写入 memory/lessons/lessons.md（排除一次性坏 RNG）；保持
-   简短具体，被证伪的条目及时删除。
-3. 角色专属经验写入对应手册 memory/lessons/roles/<角色>.md。
-4. 对局中新观察到的游戏事实（卡牌/遗物/药水/能力/意图的效果）以条目形式
+1. 将本局 memory 记录写入
+   memory/runs/<角色>_<YYYYmmdd-HHMMSS>_<hash8>.md（角色 id 在前，后接
+   run 日志的时间戳与哈希，小写、下划线分隔）及其对应的中文版
+   memory/runs/<角色>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md——两者内容必须完全
+   对应。均遵循 memory/user guide.md 的要点与 memory/template.md 的章节
+   结构（Run review 对局回顾 / What went well 做得好的地方 / What went
+   poorly 做得不好的地方 / Key moments 关键节点）。引用 run 日志时只写
+   文件名，绝不写个人绝对路径。
+2. 对局中新观察到的游戏事实（卡牌/遗物/药水/能力/意图的效果）以条目形式
    直接写入 references/game/ 下对应文件及其 `_zh` 中文版——中英内容必须
    完全对应。memory 只记对局感悟与过程，不记游戏基础数据。
-5. 不将 memory 文件提交进仓库。
-6. 若用户已停止游玩：解除看门狗武装（见「运行时约定」）。
+3. 将本局 memory 记录及其 `_zh` 中文版提交进仓库——memory 已纳入版本控制。
+4. 若用户已停止游玩：解除看门狗武装（见「运行时约定」）。
 
 ## 自我迭代
 
 - 工具缺陷（spirectl/mod/协议问题）：在当前分支的本仓库内修复；C# 有改动则重建
-  mod（`bash scripts/install-mod.sh`），doctor 验证，然后在 memory/changelog.md
-  追加一行描述原因与修复。以 [fix] 或 [feature] 性质提交。
-- 策略文档被实战证伪：改正文档，并记录到 changelog.md。
-- 永不删除 changelog 条目；该文件是迭代台账。
+  mod（`bash scripts/install-mod.sh`），doctor 验证，然后在本局 memory 记录
+  （memory/runs/）里写明原因与修复。以 [fix] 或 [feature] 性质提交。
+- 策略文档被实战证伪：改正文档，并记录到本局 memory 记录。
 - 游戏补丁破坏 hook（doctor 握手正常但 state 字段缺失/错误）：必要时反编译游戏
-  程序集，适配 mod，并将修复记录进 changelog.md。
+  程序集，适配 mod，并将修复记录进本局 memory 记录。
 
 ## 注意事项
 
@@ -193,11 +192,11 @@ references/ — 查阅知识：
 - `references/game/events_zh.md` — 事件房与已知分支
 - `references/game/afflictions_zh.md` — 状态与负面效果
 
-memory/ — 对局记忆：
+memory/ — 对局记忆（已纳入版本控制）：
 
-- `memory/lessons/lessons.md` — 通用决策经验：出牌、奖励、地图、事件与机制教训
-- `memory/lessons/roles/<角色>.md` — 分角色手册（随游玩数据积累）
-- `memory/changelog.md` — 工具修复与策略纠偏台账
-- `memory/runs/` — 每局复盘：结果、关键决策、死因、经验
+- `memory/user guide.md` — 用户手写的记忆要点（agent 记录时的参考）
+- `memory/template.md` — 每局 memory 记录的章节模板
+- `memory/runs/` — 每局一条记录及其 `_zh` 中文版，文件名
+  <角色>_<YYYYmmdd-HHMMSS>_<hash8>.md / <角色>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md
 
 - `SKILL.md` — skill 触发与定义（英文版）；本文件为其说明
