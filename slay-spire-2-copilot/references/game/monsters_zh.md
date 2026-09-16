@@ -29,7 +29,7 @@ Summon / Heal / Hidden。
 - Door：DOOR_SLAM = 多段。被动：DoorRevivalPower。
 - Doormaker：WHAT_IS_IT = 眩晕；BEAM = 单次攻击。
 - Entomancer（蜂群术士）：PHEROMONE_SPIT = 增益；BEES = 多段。被动：PersonalHivePower。
-- Exoskeleton（外骨骼虫）：SKITTER = 多段；MANDIBLE = 单次；ENRAGE = 增益。被动：HardToKillPower。
+- Exoskeleton（外骨骼虫，Act 2，实战 2026-09-17）：SKITTER = 多段（1×3）；MANDIBLE = 单次约 8；ENRAGE = 增益。被动 HardToKillPower——每回合 HP 损失上限 9（见 powers.md）；按每回合约 9 伤害分回合击杀，超出上限的爆发纯浪费。
 - EyeWithTeeth：DISTRACT = 状态 ×3。被动：IllusionPower。
 - Fabricator（组装师）：FABRICATE = 召唤；DISINTEGRATE = 单次攻击。
 - FakeMerchantMonster：SWIPE = 单次；SPEW_COINS = 多段 ×8；ENRAGE = 增益。

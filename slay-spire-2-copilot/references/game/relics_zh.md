@@ -134,6 +134,7 @@ Rare/Ancient/Shop/Event/Starter）与适用（Shared = 全角色）。
 - Lee's Waffle（李家华夫饼，Shop，Shared）：拾取时 +7 最大 HP 并回满 HP。
 - Lee's Waffle???（李家华夫饼？？？，Event，Shared）：拾取时回复 10% HP。
 - Letter Opener（开信刀，Uncommon，Shared）：单回合每打出 3 张技能牌，对所有敌人造成 5 点伤害。
+- Happy Flower（欢乐花，Uncommon，Shared）：每 3 回合获得 1 点能量。（实战 2026-09-17：第 3/6 回合观察到能量 4/3，与 Lantern 的战斗开局 +1 叠加——与一代行为一致；STS2 文献稀少，实战确认。）
 - Lizard Tail（蜥蜴尾巴，Rare，Shared）：HP 将降至 0 时，改为回复至最大 HP 的 50%（一次）。
 - Looming Fruit（布质果实，Ancient，Shared）：拾取时 +31 最大 HP。
 - Lord's Parasol（领主阳伞，Ancient，Shared）：遇到商人时，立刻获得他出售的全部商品。

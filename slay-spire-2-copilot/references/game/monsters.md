@@ -28,7 +28,7 @@ Buff / Debuff / Defend / Stun / Sleep / Status(n) / Summon / Heal / Hidden.
 - Door: DOOR_SLAM = multi. Passive: DoorRevivalPower.
 - Doormaker: WHAT_IS_IT = stun; BEAM = single attack.
 - Entomancer: PHEROMONE_SPIT = buff; BEES = multi. Passive: PersonalHivePower.
-- Exoskeleton: SKITTER = multi; MANDIBLE = single; ENRAGE = buff. Passive: HardToKillPower.
+- Exoskeleton (外骨骼虫, Act 2, live 2026-09-17): SKITTER = multi (1×3); MANDIBLE = single ~8; ENRAGE = buff. Passive: HardToKillPower — HP loss capped at 9/turn (see powers.md); pace kills ~9 dmg/turn, burst beyond the cap is wasted.
 - EyeWithTeeth: DISTRACT = status ×3. Passive: IllusionPower.
 - Fabricator: FABRICATE = summon; DISINTEGRATE = single attack.
 - FakeMerchantMonster: SWIPE = single; SPEW_COINS = multi ×8; ENRAGE = buff.

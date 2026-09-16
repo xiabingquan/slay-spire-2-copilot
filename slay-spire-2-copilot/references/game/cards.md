@@ -67,6 +67,7 @@ within each character.
 - SECOND_WIND: exhaust hand cards; gain Block per card exhausted (30+ observed in a boss fight).
 - SETUP_STRIKE: 1, attack, deal 7 damage; gain 2 Strength this turn.
 - SHRUG_IT_OFF: 1, skill, gain 8 Block; draw 1 card.
+- TAUNT: 1, skill, gain 7 Block; apply 1 Vulnerable (upgraded: 8 Block, 2 Vulnerable). Live 2026-09-17: Bellows-upgraded hand variant measured ~7-13 block alongside Vulnerable application — dual block+vuln enabler, feeds DISMANTLE/Bully lines.
 - SPORE_MIND: 1, curse (Luminous Choir event), no effect beyond Exhaust — play for 1 Energy to exhaust it out of the deck.
 - STRIKE_IRONCLAD: 1, attack, deal 6 damage.
 - DEFEND_IRONCLAD: 1, skill, gain 5 Block.

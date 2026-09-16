@@ -66,9 +66,9 @@ play on v0.107.1.
 
 - SLIPPERY_POWER (e.g. Inklet): first incoming hit greatly reduced (Strike 6
   -> 1); charges consumed per hit.
-- CONSTRICT_POWER (ConstrictorSnake, live 2026-09-17): applied to player by
-  CONSTRICT move; exact effect pending observation (no clear HP/block delta
-  seen in the sampled turns).
+- CONSTRICT_POWER (ConstrictorSnake 蛇行扼杀者, researched 2026-09-17): debuff — take damage at the END of your turn while the source enemy is alive (Slithering Strangler family: "at the end of your turn, take 1 damage"); stacks are intensity-based (more stacks = more end-of-turn damage). Triggers after your turn resolves, before enemy-turn poison-style effects. Artifact blocks application. Live sampling missed the 1-dmg ticks — they land on end_turn resolution.
+- HARD_TO_KILL_POWER (Exoskeleton 外骨骼虫, researched 2026-09-17): HP LOSS IS CAPPED AT 9 PER TURN (patch note: cap changed 15 → 9) — all damage sources in a turn sum to max 9 HP lost; extra damage is discarded, not banked. Multi-hit and big single hits alike waste output past the cap; pace the kill across turns (chip 9/turn) instead of bursting one turn. Live: Bludgeon 32 hit an 25-HP Exoskeleton and it survived at 16+HP — consistent with the cap.
+- AGGRESSION_POWER (from AGGRESSION, Orobic Acid random skill, live 2026-09-17): player-side power applied; exact effect NOT confirmed by web research — live reads suggested stronger attacks while active. Pending: decompile or targeted search.
 - NO_ENERGY_GAIN_POWER (from EXPECT_A_FIGHT, live 2026-09-17): player gains
   no further energy for the rest of the turn (refund from the card still
   lands before this power applies).

@@ -134,6 +134,7 @@ Rare/Ancient/Shop/Event/Starter) and owner (Shared = any character).
 - Lee's Waffle (Shop, Shared): on pickup, +7 Max HP and heal all of your HP.
 - Lee's Waffle??? (Event, Shared): on pickup, heal 10% of your HP.
 - Letter Opener (Uncommon, Shared): every time you play 3 Skills in one turn, deal 5 damage to ALL enemies.
+- Happy Flower (Uncommon, Shared): every 3 turns, gain 1 Energy. (Live 2026-09-17: energy=4/3 observed on turns 3/6 alongside Lantern's combat-start +1 — matches STS1 behavior; STS2 sources thin, live-confirmed.)
 - Lizard Tail (Rare, Shared): when your HP would drop to 0, heal to 50% Max HP instead (once).
 - Looming Fruit (Ancient, Shared): on pickup, +31 Max HP.
 - Lord's Parasol (Ancient, Shared): when you encounter the Merchant, immediately obtain everything he sells.
