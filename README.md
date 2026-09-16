@@ -8,9 +8,14 @@ AI 副驾驶。skill 被触发后，智能体读取牌局状态、做出决策�
 
 ## 演示
 
-左右分屏实录：左侧游戏画面，右侧 Claude Code 终端实时决策日志。
+左右分屏实录：左侧游戏画面，右侧 Claude Code 终端实时决策日志。完整演示
+约 2 分钟，含地图选择与整场战斗。
 
-完整演示（约 2 分钟，含地图选择与整场战斗）：[demo.mp4](assets/demo.mp4)
+<div align="center">
+
+https://github.com/user-attachments/assets/6eae44a2-312d-4a1c-abc3-f5617fe23f21
+
+</div>
 
 ## 这个项目是干啥的
 
@@ -49,7 +54,6 @@ dll 更新时执行构建安装（dotnet build，产物拷贝至游戏 mods 目�
 
     slay-spire-2-copilot/                  （仓库根目录）
       README.md / README_EN.md
-      assets/                              （演示视频）
       .gitignore
       slay-spire-2-copilot/                （skill 文件夹 — 全部运行时文件）
         SKILL.md                           （skill 定义 / 调用契约）

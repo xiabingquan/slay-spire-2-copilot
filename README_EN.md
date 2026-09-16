@@ -10,10 +10,14 @@ postmortem and starts the next run.
 ## Demo
 
 Split-screen capture: the game on the left, Claude Code's live decision log
-on the right.
+on the right. The full recording is about 2 minutes: map pathing and a
+complete combat.
 
-Full recording (~2 minutes, map pathing and a complete combat):
-[demo.mp4](assets/demo.mp4)
+<div align="center">
+
+https://github.com/user-attachments/assets/6eae44a2-312d-4a1c-abc3-f5617fe23f21
+
+</div>
 
 ## What this project is
 
@@ -59,7 +63,6 @@ Manual commands for troubleshooting and intervention:
 
     slay-spire-2-copilot/                  (repo root)
       README.md / README_EN.md
-      assets/                              (demo video)
       .gitignore
       slay-spire-2-copilot/                (skill folder — all runtime files)
         SKILL.md                           (skill definition / invocation contract)
