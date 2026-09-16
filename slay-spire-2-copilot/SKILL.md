@@ -200,6 +200,11 @@ When the run ends (game_over screen, or abandon):
   (e.g. permanent unlocks): ask first for meta-progression choices.
 - Never commit personal absolute paths, session log folders, or harness
   runtime files into the repo.
+- proposal.md at the skill folder root is the agent's local scratchpad for
+  play-process suggestions: if any part of the flow (Summary, memory
+  consultation, references organization, ...) feels unsuited during or
+  around a run, record the concern and a concrete proposal there. It is
+  gitignored — the user reviews it; do not commit it.
 
 ## Runtime conventions
 

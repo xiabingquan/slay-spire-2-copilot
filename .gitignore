@@ -18,5 +18,8 @@ slay-spire-2-copilot/mod/SpireBridge/.godot/
 # occasional lookup only; not part of the skill and not referenced by it).
 local-archive/
 
+# Agent's local process-suggestion scratchpad; reviewed by the user only.
+slay-spire-2-copilot/proposal.md
+
 # Local working files.
 /todo.md
