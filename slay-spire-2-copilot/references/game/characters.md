@@ -1,19 +1,35 @@
 # Characters
 
-Five playable characters. Starter loadouts from game source extraction
-(STS2-Agent characters index, authoritative for v0.107.x builds);
-cross-checked with community databases (spire-codex, IGN, mobalytics).
-All characters start with 99 Gold. Test-only ids: Deprived, RandomCharacter
-(not playable in normal runs).
+Deterministic character facts. Source: decompiled game code
+`MegaCrit.Sts2.Core.Models.Characters` + starter relics in
+`MegaCrit.Sts2.Core.Models.Relics` + unlock gating in
+`MegaCrit.Sts2.Core.Unlocks/UnlockState.cs` (/tmp/sts2-decomp).
 
-- IRONCLAD — 80 HP, masculine. Starter relic: BURNING_BLOOD (heal 6 HP at end of combat; Black Blood upgrade heals 12). Starter deck: Strike ×5, Defend ×4, Bash. Card pool: ~87 (38 Attack / 28 Skill / 21 Power). Archetype: Strength stacking, heavy single hits (Bludgeon), block-for-damage payoffs (Body Slam, Juggernaut), self-damage engines (Bloodletting, Offering, Hemokinesis). Key cards: Demon Form, Whirlwind, Uppercut, Blood Wall, Second Wind, Corruption (Ancient).
-- SILENT — 70 HP, feminine. Starter relic: RING_OF_THE_SNAKE (draw 2 at combat start). Starter deck: Strike ×5, Defend ×5, Neutralize, Survivor. Card pool: ~88-89 (28 Attack / 42 Skill / 19 Power). Signature keyword: Sly — play for Energy cost, or discard to trigger the effect for free. Archetypes: Poison (Noxious Fumes, Deadly Poison, Accelerant, Envenom), Shivs (Blade Dance, Infinite Blades, Accuracy, Fan of Knives), discard synergy (Calculated Gamble, Tactician, Tough Bandages, Tingsha).
-- DEFECT — 75 HP (game source; some community sites list 70), neutral. Starter relic: CRACKED_CORE (Channel 1 Lightning at combat start). Starter deck: Strike ×4, Defend ×4, Zap, Dualcast. Card pool: ~88. Unlocks after Necrobinder. Mechanic: Orbs — channel Lightning / Frost / Plasma / Dark into orb slots; passives trigger, evokes fire on leave; Focus scales orb output (Defragment, Data Disk; Biased Cognition strong but decays). Archetypes: orb stacking (Capacitor, Loop, Multi-Cast, Glacier), zero-cost Claw, power spam (Creative AI, Echo Form, Machine Learning).
-- NECROBINDER — 66 HP, feminine. Starter relic: BOUND_PHYLACTERY (Summon 1 at start of your turn). Starter deck: Strike ×4, Defend ×4, Bodyguard, Unleash. Card pool: ~88. Unlocks after Regent. Mechanic: bone tokens, summons (Minion keyword; companion Osty commands many cards), Doom stacking death-clock (End of Days kills when Doom >= HP; Undying Sigil relic interacts), sacrifice loops (Minion Sacrifice, Death's Door, Necro Mastery).
-- REGENT — 75 HP, masculine. Starter relic: DIVINE_RIGHT (gain 3 stars ★ at combat start). Starter deck: Strike ×4, Defend ×4, Falling Star, Venerate. Card pool: ~88 (33 Attack / 36 Skill / 19 Power per site header). Unlocks after Silent. Mechanic: stars (★) as combat resource for decree-style cards; Forge keyword (Fencing Manual: Forge 10; Spoils of Battle; Hammer Time shares Forge with allies); court attendant / Minion payoffs (Vitruvian Minion doubles Minion card damage and block); prestige scaling.
+All five playable characters start with 99 Gold (`StartingGold => 99` on every CharacterModel).
 
-Unlock chain (game source): Silent is available from start; REGENT unlocks after Silent; NECROBINDER after Regent; DEFECT after Necrobinder. (Ironclad and Silent are the initial roster — verify exact fresh-save state in game.)
+## Playable characters
 
-Save-state correction (live 2026-09-17, v0.107.1): this machine's save has ONLY IRONCLAD unlocked — SILENT, DEFECT, NECROBINDER, REGENT and RANDOM_CHARACTER all report IsLocked=true after UnlockIfPossible refresh (roster logged by start_run). Unlock progression appears tied to in-game achievements (defeat elites/bosses with characters); "Silent available from start" does not hold for this save. Skill character rotation falls back to IRONCLAD until progression unlocks the roster.
+- IRONCLAD — 80 HP, Masculine, NameColor red. Starter relic: BURNING_BLOOD — heal 6 HP after combat victory (Black Blood, its starter-relic upgrade, heals 12). Starter deck (10): Strike ×5, Defend ×4, Bash. Card pool: IroncladCardPool. `UnlocksAfterRunAs => null` — always unlocked at the character-model level.
+- SILENT — 70 HP, Feminine, green. Starter relic: RING_OF_THE_SNAKE — +2 cards drawn on turn 1 only (`TurnNumber > 1` returns base draw). Starter deck (12): Strike ×5, Defend ×5, Neutralize, Survivor. Card pool: SilentCardPool. `UnlocksAfterRunAs => null` (code comment: any completed run unlocks her); roster access is gated by UnlockState below.
+- DEFECT — 75 HP, Neutral, blue. Starter relic: CRACKED_CORE — on turn 1, channel 1 Lightning orb (`BeforeSideTurnStart` while `TurnNumber <= 1`). Base orb slots: 3 (`BaseOrbSlotCount`). Starter deck (10): Strike ×4, Defend ×4, Zap, Dualcast. Card pool: DefectCardPool. `UnlocksAfterRunAs => Necrobinder`.
+- NECROBINDER — 66 HP, Feminine, purple. Starter relic: BOUND_PHYLACTERY — Summon Osty 1 at combat start (`BeforeCombatStart`); if Osty is gone on later turns, re-summons after energy reset (`AfterEnergyResetLate`, not on turn 1). SpawnsPets = true. Starter deck (10): Strike ×4, Defend ×4, Bodyguard, Unleash. Card pool: NecrobinderCardPool. `UnlocksAfterRunAs => Regent`.
+- REGENT — 75 HP, Masculine, orange; star counter always shown (`ShouldAlwaysShowStarCounter`). Starter relic: DIVINE_RIGHT — +3 stars when entering a CombatRoom (`AfterRoomEntered`). Starter deck (10): Strike ×4, Defend ×4, FallingStar, Venerate. Card pool: RegentCardPool. `UnlocksAfterRunAs => Silent`.
 
-Shared run structure: 3 acts per run, branching map (monster / elite / boss / event / shop / rest / treasure); card rewards after combat; Neow boon at run start; rest sites offer Rest and Smith plus character-specific options. In state snapshots the character field uses ids IRONCLAD, SILENT, DEFECT, NECROBINDER, REGENT.
+State snapshot character ids: IRONCLAD, SILENT, DEFECT, NECROBINDER, REGENT. Test-only ids (not playable in normal runs): Deprived, RandomCharacter, DeprecatedCharacter.
+
+## Unlock gating (deterministic game rules)
+
+- `UnlockState.Characters` starts from `ModelDb.AllCharacters` and removes:
+  - Silent — unless `IsEpochRevealed<Silent1Epoch>()`
+  - Regent — unless `IsEpochRevealed<Regent1Epoch>()`
+  - Necrobinder — unless `IsEpochRevealed<Necrobinder1Epoch>()`
+  - Defect — unless `IsEpochRevealed<Defect1Epoch>()`
+  - Ironclad is never removed — the roster always contains Ironclad.
+- Design-intent chain from `CharacterModel.UnlocksAfterRunAs`: Ironclad and Silent are null (no run-as prerequisite in the model); Regent unlocks after Silent; Necrobinder after Regent; Defect after Necrobinder. Actual roster availability additionally requires the corresponding Epoch to be revealed on the player's UnlockState (Timeline progress save).
+- `UnlockState` also tracks revealed Epochs per ancient/relic/potion/card content: e.g. Overgrowth removes Neow from `GetUnlockedAncients` unless `NeowEpoch` revealed; Underdocks applies the same NeowEpoch gate to its Neow; Hive removes Orobas unless `OrobasEpoch`; Glory's three ancients (Nonupeipe, Tanx, Vakuu) are ungated; shared ancient Darv removed unless `DarvEpoch`. Relic/potion/card pools filter via `GetUnlockedRelics/Potions/Cards(this)`.
+
+## Run structure facts (from act sources)
+
+- Acts in code order: Overgrowth (Act 1), Hive (Act 2), Glory (Act 3), Underdocks (Act 4). Boss discovery orders: Overgrowth = Vantom, CeremonialBeast, TheKin; Hive = TheInsatiable, KnowledgeDemon, KaiserCrab; Glory = Queen, TestSubject, Aeonglass; Underdocks = WaterfallGiant, SoulFysh, LagavulinMatriarch.
+- Map rooms: branching map of monster / elite / boss / event / shop / rest / treasure; card rewards after combat; an ancient/Neow-family boon room can appear at act start subject to the epoch gates above.
+- Rest sites offer Rest and Smith plus character-specific options where relic/character code adds them (e.g. PaelsGrowth adds a Clone rest option).

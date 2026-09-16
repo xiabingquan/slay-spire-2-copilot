@@ -1,69 +1,84 @@
 # 药水
 
-药水效果参考。来源：stratgg.com 药水数据库（63 瓶），与本地实战交叉
-核对；括号内为简中译名（来源：slaythespire2.net/zh-CN/potion）。标注：
-稀有度；方括号内为角色专属（shared = 全角色可用）。
+药水效果参考（确定性机制，仅含精确数值）。来源：反编译源码
+`MegaCrit.Sts2.Core.Models.Potions`（/tmp/sts2-decomp），该目录下全部
+Potion 类均已覆盖；数值取各类 `CanonicalVars` 基础值。括号内为简中译名。
 
-- Ashwater（灰水）［Uncommon，Ironclad］：消耗手牌中任意数量的卡牌。
-- Attack Potion（攻击药水）［Common，shared］：从 3 张随机攻击牌中选 1 张加入手牌；本回合免费。
-- Beetle Juice（甲虫汁）［Rare，shared］：接下来 4 回合敌人攻击伤害 -30%。
-- Blessing of the Forge（熔炉的祝福）［Uncommon，shared］：本场战斗内升级手牌中所有卡牌。
-- Block Potion（格挡药水）［Common，shared］：获得 12 格挡。
-- Blood Potion（鲜血药水）［Common，Ironclad］：回复最大 HP 的 20%。
-- Bone Brew（骨头酿）［Uncommon，Necrobinder］：Summon 15。
-- Bottled Potential（瓶装潜能）［Rare，shared］：将全部卡牌洗入抽牌堆，然后抽 5 张。
-- Clarity Extract（明晰提取物）［Uncommon，shared］：抽 1 张牌；接下来 3 回合开始时各额外抽 1 张。
-- Colorless Potion（无色药水）［Common，shared］：从 3 张随机无色牌中选 1 张加入手牌；本回合免费。
-- Cosmic Concoction（宇宙药剂）［Rare，Regent］：向手牌加入 3 张升级版无色牌。
-- Cunning Potion（狡诈药水）［Uncommon，Silent］：向手牌加入 3 张升级版 Shiv。
-- Cure All（痊愈药水）［Uncommon，shared］：获得 1 能量；抽 2 张牌。
-- Dexterity Potion（敏捷药水）［Common，shared］：获得 2 敏捷。
-- Distilled Chaos（精炼混沌）［Rare，shared］：打出抽牌堆顶的 3 张牌。
-- Droplet of Precognition（预知之滴）［Rare，shared］：从抽牌堆选 1 张牌加入手牌。
-- Duplicator（复制药水）［Uncommon，shared］：本回合你的下一张牌额外打出一次。
-- Energy Potion（能量药水）［Common，shared］：获得 2 能量。
-- Entropic Brew（混沌药水）［Rare，shared］：用随机药水填满所有空药水栏。
-- Essence of Darkness（黑暗精华）［Rare，Defect］：每个充能球槽引导 1 个暗球。
-- Explosive Ampoule（爆炸安瓿）［Common，shared］：对所有敌人造成 10 点伤害。
-- Fairy in a Bottle（瓶中精灵）［Rare，shared］：将死时改为弃掉此药水并回复至最大 HP 的 30%。
-- Fire Potion（火焰药水）［Common，shared］：造成 20 点伤害。
-- Flex Potion（肌肉药水）［Common，shared］：获得 5 力量；回合结束失去 5 力量。
-- Focus Potion（集中药水）［Common，Defect］：获得 2 Focus。
-- Fortifier（固化药水）［Uncommon，shared］：格挡变为三倍。
-- Foul Potion（污浊药水）［Event］：对所有人造成 12 点伤害（也可砸向商人换 100 金币）。
-- Fruit Juice（果汁）［Rare，shared］：+5 最大 HP。
-- Fysh Oil（异鱼之油）［Uncommon，shared］：获得 1 力量 1 敏捷。
-- Gambler's Brew（赌徒特酿）［Uncommon，shared］：弃置任意数量卡牌，然后抽取等量牌。
-- Ghost in a Jar（罐装幽灵）［Rare，Silent］：获得 1 层 Intangible。
-- Gigantification Potion（超巨化药水）［Rare，shared］：你打出的下一张攻击牌造成三倍伤害。
-- Glowwater Potion（发光水）［Event］：消耗手牌；抽 10 张牌。
-- Heart of Iron（铁心药水）［Uncommon，shared］：获得 7 点镀甲（Plating）。
-- King's Courage（王之勇气）［Uncommon，Regent］：Forge 15。
-- Liquid Bronze（流动铜液）［Uncommon，shared］：获得 3 点荆棘。
-- Liquid Memories（液态记忆）［Rare，shared］：将弃牌堆一张牌放入手牌；本回合其费用 -1 能量。
-- Lucky Tonic（幸运补剂）［Rare，shared］：获得 1 层 Buffer。
-- Mazaleth's Gift（马萨雷斯的赠礼）［Rare，shared］：获得 1 层 Ritual。
-- Orobic Acid（欧洛巴斯之酸）［Rare，shared］：随机攻击、技能、能力牌各 1 张加入手牌；本回合免费。
-- Poison Potion（毒药水）［Common，Silent］：施加 6 层中毒。
-- Pot of Ghouls（尸鬼瓮）［Rare，Necrobinder］：向手牌加入 2 张 Soul。
-- Potion of Binding（缚魂药水）［Uncommon，shared］：对所有敌人施加 1 层 Weak 与 1 层 Vulnerable。
-- Potion of Capacity（扩容药水）［Uncommon，Defect］：获得 2 个充能球槽。
-- Potion of Doom（灾厄药水）［Common，Necrobinder］：施加 33 层 Doom。
-- Potion-Shaped Rock（药水形状的石头）［Token，shared］：造成 15 点伤害。
-- Powdered Demise（消亡粉末）［Uncommon，shared］：敌人每个回合结束失去 9 HP。
-- Power Potion（能力药水）［Common，shared］：从 3 张随机能力牌中选 1 张加入手牌；本回合免费。
-- Radiant Tincture（明耀酊剂）［Uncommon，shared］：获得 1 能量；接下来 3 回合开始时各额外获得 1 能量。
-- Regen Potion（再生药水）［Uncommon，shared］：获得 5 层再生（Regen）。
-- Shackling Potion（镣铐药水）［Rare，shared］：本回合所有敌人失去 7 力量。
-- Ship in a Bottle（瓶中船）［Rare，shared］：获得 10 格挡；下回合再获得 10 格挡。
-- Skill Potion（技能药水）［Common，shared］：从 3 张随机技能牌中选 1 张加入手牌；本回合免费。
-- Snecko Oil（异蛇之油）［Rare，shared］：抽 7 张牌；本回合随机手牌费用。
-- Soldier's Stew（士兵炖汤）［Rare，Ironclad］：本场战斗所有含 Strike 的卡牌获得 1 次 Replay。
-- Speed Potion（速度药水）［Common，shared］：获得 5 敏捷；回合结束失去 5 敏捷。
-- Stable Serum（稳定血清）［Uncommon，shared］：保留手牌 2 回合。
-- Star Potion（星星药水）［Common，Regent］：获得 3 点星星（★）。
-- Strength Potion（力量药水）［Common，shared］：获得 2 力量。
-- Swift Potion（迅捷药水）［Common，shared］：抽 3 张牌。
-- Touch of Insanity（癫狂之触）［Uncommon，shared］：选择手牌中一张牌；本场战斗其免费。
-- Vulnerable Potion（易伤药水）［Common，shared］：施加 3 层 Vulnerable。
-- Weak Potion（虚弱药水）［Common，shared］：施加 3 层 Weak。
+格式：`- 名称（稀有度，使用时机，目标）：精确效果。`
+
+使用时机：`战斗中` = CombatOnly；`随时` = AnyTime；`自动` = Automatic（满足触发条件时自动生效，无需饮用）；`事件` = 仅事件产出，不在药水池中。
+目标：`自身` / `任意玩家` / `任意敌人` / `全体敌人`。全体敌人药水自动选取全部可命中敌人——不要发送单体目标 id。
+
+## 药水
+
+- Ashwater（灰水）(Uncommon, 战斗中, 自身): 消耗手牌中任意数量的卡牌。
+- Attack Potion（攻击药水）(Common, 战斗中, 自身): 从角色卡池生成 3 张不同攻击牌中选 1 张（可跳过）；加入手牌，本回合免费。
+- Beetle Juice（甲虫汁）(Rare, 战斗中, 任意敌人): 对目标施加 ShrinkPower 4 层。ShrinkPower：拥有者攻击伤害 ×0.7（−30%）；拥有者回合结束移除 1 层；层数为负数时为无限持续、不衰减。4 层 = 其 4 个回合内攻击伤害 −30%。
+- Blessing of the Forge（熔炉的祝福）(Uncommon, 战斗中, 自身): 本场战斗内升级手牌中所有可升级卡牌。
+- Block Potion（格挡药水）(Common, 战斗中, 任意玩家): 获得 12 格挡。
+- Blood Potion（鲜血药水）(Common, 随时, 任意玩家): 回复最大 HP 的 20%。
+- Bone Brew（骨头酿）(Uncommon, 战斗中, 自身): Summon Osty，数值 15。
+- Bottled Potential（瓶装潜能）(Rare, 战斗中, 任意玩家): 将手牌移入抽牌堆，洗牌，抽 5 张。
+- Clarity Extract（明晰提取物）(Uncommon, 战斗中, 任意玩家): 抽 1 张；获得 ClarityPower 3——接下来 3 回合开始时各多抽 1 张（每次己方回合开始递减）。
+- Colorless Potion（无色药水）(Common, 战斗中, 自身): 从无色卡池生成 3 张不同卡牌中选 1 张（可跳过）；加入手牌，本回合免费。
+- Cosmic Concoction（宇宙药剂）(Rare, 战斗中, 自身): 向手牌加入 3 张不同的升级版无色池卡牌。
+- Cunning Potion（狡诈药水）(Uncommon, 战斗中, 自身): 向手牌加入 3 张升级版 Shiv。
+- Cure All（痊愈药水）(Uncommon, 战斗中, 任意玩家): 获得 1 能量；抽 2 张牌。
+- Dexterity Potion（敏捷药水）(Common, 战斗中, 任意玩家): 本场战斗 +2 敏捷。
+- Distilled Chaos（精炼混沌）(Rare, 战斗中, 自身): 打出抽牌堆顶的 3 张牌。
+- Droplet of Precognition（预知之滴）(Rare, 战斗中, 自身): 从抽牌堆选 1 张牌加入手牌。
+- Duplicator（复制药水）(Uncommon, 战斗中, 自身): 获得 DuplicationPower 1——本回合你打出的下一张牌额外打出 1 次；回合结束移除。
+- Energy Potion（能量药水）(Common, 战斗中, 任意玩家): 获得 2 能量。
+- Entropic Brew（混沌药水）(Rare, 随时, 自身): 用随机药水填满所有空药水栏。
+- Essence of Darkness（黑暗精华）(Rare, 战斗中, 自身): 每个充能球槽引导 1 个暗球。
+- Explosive Ampoule（爆炸安瓿）(Common, 战斗中, 全体敌人): 对全体敌人造成 10 点伤害（自动多目标，不要发送目标 id）。
+- Fairy in a Bottle（瓶中精灵）(Rare, 自动, 自身): 将死时改为弃掉此药水并回复至最大 HP 的 30%（最少 1 点）。
+- Fire Potion（火焰药水）(Common, 战斗中, 任意敌人): 造成 20 点伤害。
+- Flex Potion（肌肉药水）(Common, 战斗中, 任意玩家): 获得 FlexPotionPower +5 力量——本回合结束时失去 5 力量（临时力量）。
+- Focus Potion（集中药水）(Common, 战斗中, 自身): +2 专注（Focus）。
+- Fortifier（固化药水）(Uncommon, 战斗中, 任意玩家): 获得等同当前格挡 2 倍的格挡（格挡变为 3 倍）。
+- Foul Potion（污浊药水）(Event, 随时): 战斗中——对每个非宠物生物（含你自己）造成 12 点伤害；商人房间——获得 100 金币；FakeMerchant 事件——触发伪商人战斗。
+- Fruit Juice（果汁）(Rare, 随时, 任意玩家): +5 最大 HP。
+- Fysh Oil（异鱼之油）(Uncommon, 战斗中, 任意玩家): 本场战斗 +1 力量 +1 敏捷。
+- Gambler's Brew（赌徒特酿）(Uncommon, 战斗中, 自身): 弃置任意数量手牌，然后抽取等量牌。
+- Ghost in a Jar（罐装幽灵）(Rare, 战斗中, 任意玩家): +1 层 Intangible。
+- Gigantification Potion（超巨化药水）(Rare, 战斗中, 任意玩家): 获得 GigantificationPower 1——本场战斗你打出的下一张有源攻击牌造成 ×3 伤害；被该次攻击消耗。
+- Glowwater Potion（发光水）(Event, 战斗中, 自身): 消耗手牌；抽 10 张。
+- Heart of Iron（铁心药水）(Uncommon, 战斗中, 任意玩家): +7 镀甲（Plating）。
+- King's Courage（王之勇气）(Uncommon, 战斗中, 任意玩家): Forge 15。
+- Liquid Bronze（流动铜液）(Uncommon, 战斗中, 任意玩家): +3 点荆棘。
+- Liquid Memories（液态记忆）(Rare, 战斗中, 自身): 从弃牌堆选 1 张牌加入手牌，本回合免费。
+- Lucky Tonic（幸运补剂）(Rare, 战斗中, 任意玩家): +1 层 Buffer。
+- Mazaleth's Gift（马萨雷斯的赠礼）(Rare, 战斗中, 任意玩家): +1 层 Ritual。
+- Orobic Acid（欧洛巴斯之酸）(Rare, 战斗中, 自身): 从角色卡池随机攻击、技能、能力牌各 1 张加入手牌；3 张本回合均免费。
+- Poison Potion（毒药水）(Common, 战斗中, 任意敌人): 施加 6 层中毒。
+- Pot of Ghouls（尸鬼瓮）(Rare, 战斗中, 自身): 向手牌加入 2 张 Soul。
+- Potion of Binding（缚魂药水）(Uncommon, 战斗中, 全体敌人): 对全体敌人施加 1 层 Weak 与 1 层 Vulnerable。
+- Potion of Capacity（扩容药水）(Uncommon, 战斗中, 自身): +2 个充能球槽。
+- Potion of Doom（灾厄药水）(Common, 战斗中, 任意敌人): 施加 33 层 Doom。
+- Potion-Shaped Rock（药水形状的石头）(Token, 战斗中, 任意敌人): 造成 15 点伤害。
+- Powdered Demise（消亡粉末）(Uncommon, 战斗中, 任意敌人): 施加 DemisePower 9——目标每个自身回合结束时受到 9 点不可格挡、无来源伤害。
+- Power Potion（能力药水）(Common, 战斗中, 自身): 从角色卡池生成 3 张不同能力牌中选 1 张（可跳过）；加入手牌，本回合免费。
+- Radiant Tincture（明耀酊剂）(Uncommon, 战斗中, 任意玩家): 立即获得 1 能量；获得 RadiancePower 3——接下来 3 次能量重置时各 +1 能量。
+- Regen Potion（再生药水）(Uncommon, 战斗中, 任意玩家): +5 层再生（Regen）。
+- Shackling Potion（镣铐药水）(Rare, 战斗中, 全体敌人): 对全体敌人施加 ShacklingPotionPower 7——临时 −7 力量，其回合结束时失去。
+- Ship in a Bottle（瓶中船）(Rare, 战斗中, 任意玩家): 获得 10 格挡；获得 BlockNextTurnPower 10——你的格挡首次被清除时再次获得 10 格挡（仅一次）。
+- Skill Potion（技能药水）(Common, 战斗中, 自身): 从角色卡池生成 3 张不同技能牌中选 1 张（可跳过）；加入手牌，本回合免费。
+- Snecko Oil（异蛇之油）(Rare, 战斗中, 任意玩家): 抽 7 张；随机化手牌中所有非 X 费卡牌的费用。
+- Soldier's Stew（士兵炖汤）(Rare, 战斗中, 任意玩家): 本场战斗内你战斗牌堆中所有含 Strike 标签的卡牌 +1 次 Replay。
+- Speed Potion（速度药水）(Common, 战斗中, 任意玩家): 获得 SpeedPotionPower +5 敏捷——本回合结束时失去 5 敏捷（临时敏捷）。
+- Stable Serum（稳定血清）(Uncommon, 战斗中, 任意玩家): 获得 RetainHandPower 2——接下来 2 个回合结束时不弃手牌。
+- Star Potion（星星药水）(Common, 战斗中, 自身): +3 点星星（★）。
+- Strength Potion（力量药水）(Common, 战斗中, 任意玩家): 本场战斗 +2 力量。
+- Swift Potion（迅捷药水）(Common, 战斗中, 任意玩家): 抽 3 张牌。
+- Touch of Insanity（癫狂之触）(Uncommon, 战斗中, 自身): 选择手牌中 1 张消耗能量或星星的卡牌；本场战斗其费用为 0。
+- Vulnerable Potion（易伤药水）(Common, 战斗中, 任意敌人): 施加 3 层 Vulnerable。
+- Weak Potion（虚弱药水）(Common, 战斗中, 任意敌人): 施加 3 层 Weak。
+
+## 源码要点
+
+- Attack / Skill / Power / Colorless 药水调用 `CardSelectCmd.FromChooseACardScreen(..., canSkip: true)`——选择界面可跳过；生成牌 `SetToFreeThisTurn()`。
+- ExplosiveAmpoule 与 PotionOfBinding 遍历 `CombatState.HittableEnemies`——目标自动选取；bridge 不得传 `target_combat_id`。
+- PotionOfBinding 的 OnUse 中变量名互换（WeakPower 用了 Vulnerable 的值、反之亦然），但两者数值均为 1——实际效果为全体敌人 1 Weak + 1 Vulnerable。
+- FlexPotionPower / SpeedPotionPower 是临时力量/敏捷的子类；ShacklingPotionPower 为负向临时力量。
+- BloodPotion、FruitJuice、EntropicBrew 为 `AnyTime`；FairyInABottle 为 `Automatic`。

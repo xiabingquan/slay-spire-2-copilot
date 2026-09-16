@@ -1,82 +1,95 @@
 # Events
 
-Event reference. Internal names from game source extraction (STS2-Agent
-event index, 69 events; AncientEventModel marks the ancient/Neow-family
-track). Behaviors known from live play, relic interactions, and community
-notes are attached where available — most events present choices whose
-rewards scale with HP/relics/multiplayer state, so read the in-game screen
-as authoritative.
+Deterministic event options only. Source: decompiled game code
+`MegaCrit.Sts2.Core.Models.Events` + related relics/cards in
+`MegaCrit.Sts2.Core.Models.Relics` / `Models.Cards` (/tmp/sts2-decomp).
 
-- ABYSSAL_BATHS: event room encounter (choices pending live observation).
-- AMALGAMATOR: event room encounter.
-- AROMA_OF_CHAOS: "LET_GO" option opens deck transform — pick any deck card, it transforms at random (STRIKE -> POMMEL_STRIKE observed).
-- BATTLEWORN_DUMMY: event room encounter.
-- BRAIN_LEECH: offers card-related branches (one branch adds cards via a non-NCardReward screen — see cards.md screen notes).
-- BUGSLAYER: event room encounter.
-- BYRDONIS_NEST: Sapphire-seed/nest family — grants BYRDONIS_EGG status card (unplayable; HATCH rest option while in deck; shop-remove target).
-- COLORFUL_PHILOSOPHERS: event room encounter.
-- COLOSSAL_FLOWER: event room encounter.
-- CRYSTAL_SPHERE: crystal-sphere screen family (deck modification flow; server support via CrystalSphereScreenHandler).
-- DARV: ancient-track event (AncientEventModel).
-- DENSE_VEGETATION: event room encounter.
-- DOLL_ROOM: event room encounter.
-- DOORS_OF_LIGHT_AND_DARK: event room encounter.
-- DROWNING_BEACON: event room encounter.
-- ENDLESS_CONVEYOR: event room encounter.
-- FAKE_MERCHANT: NFakeMerchant flow — sells FAKE_SNECKO_EYE for 54g (trap relic; Confused-like hand randomization observed).
-- FIELD_OF_MAN_SIZED_HOLES: sandpit-holes family — FRANTIC_ESCAPE card product (cost rises each use; +1 Sandpit).
-- GRAVE_OF_THE_FORGOTTEN: event room encounter.
-- HUNGRY_FOR_MUSHROOMS: event room encounter.
-- INFESTED_AUTOMATON: event room encounter.
-- JUNGLE_MAZE_ADVENTURE: branch choice verified live — SOLO_QUEST ~-18 HP for ~+147g; JOIN_FORCES ~+63g at zero HP cost (live 2026-09-17: JOIN paid +50g at 63 HP). JOIN at mid/low HP, SOLO only over 60 HP; prefer JOIN when the boss is imminent and gold has no shop sink.
-- LOST_WISP: "claim" option grants LOST_WISP relic (effect pending observation).
-- LUMINOUS_CHOIR: verified live 2026-09-17 — REACH_INTO_THE_FLESH removes 2 cards of your choice and adds SPORE_MIND curse (1 cost, Exhaust) to the deck; OFFER_TRIBUTE costs 149 Gold (locked without it) and grants a random Relic. Deck-select uses the standard 2-pick removal grid.
-- MORPHIC_GROVE: event room encounter.
-- NEOW: ancient-track run-start boon, Act 1 (Overgrowth)'s only Ancient (decomp 2026-09-17, game v0.107.1). Offers relic choices from two pools: positive relics (Arcane Scroll, Booming Conch, Fishing Rod, Golden Pearl, Kaleidoscope, Lead Paperweight, Lost Coffer, Massive Scroll, Neow's Torment, New Leaf, Phial Holster, Precise Scissors, Scroll Boxes, Winged Boots + Lava Rock / Neow's Talisman / Nutritious Oyster / Pomander / Small Capsule / Stone Humidifier) and curse-cost relics (Cursed Pearl, Hefty Tablet, Large Capsule, and kin — "CURSED" done-text). Pick positive; curse-cost needs strong cause.
-- ACT-START ANCIENT ROOMS (live miss 2026-09-17, user-confirmed; decomp same day): each Act's map begins with an Ancient/Neow-family boon room on the lowest row — Act 2's start presented as (0,3)=Ancient with 先古移民-style options including HP restore (very strong buff per user). **Act 1 gating (decomp)**: `ActModel.GenerateRooms` picks the Ancient from `GetUnlockedAncients`; Overgrowth removes Neow unless `UnlockState.IsEpochRevealed<NeowEpoch>()`, and `RunManager.GenerateMap` re-types the Act-1 StartingMapPoint to `Monster` when `ExtraFields.StartedWithNeow` is false — so an unrevealed profile literally has no Act-1 boon room. Manual play reveals NeowEpoch on the Timeline screen (open = auto-ObtainEpoch, slot click = RevealEpoch); automated runs never visit Timeline. Fix: the bridge mod's `start_run` now calls `EnsureNeowEpochRevealed()` (ObtainEpochOverride → EpochState.Revealed + save) before embark; with the flag set, `RunManager.EnterAct` auto-enters the Neow event room at run start (state = event screen, not map). Later acts: Glory/Hive ancients are ungated (Hive gates only Orobas); act transitions still land on the row-1 map — resolve `run.act_start_room` (visited=false, is_boon_room=true or point_type Ancient) with map_select FIRST before any row-1+ point; state re-injects the point at the head of available_map_points and the compact view prints an ACT-START BOON ROOM UNVISITED warning. Skipping the boon is permanent (no backtracking).
-- NONUPEIPE: ancient-track event.
-- OROBAS: ancient-track event (Touch of Orobas relic family — replaces starter relic with ancient version).
-- PAEL: ancient-track event (Pael's Claw/Eye/Flesh/Growth/Horn/Legion/Tears/Tooth/Wing relic family — see relics.md).
-- POTION_COURIER: event room encounter (potion offers).
-- PUNCH_OFF: event room encounter.
-- RANWID_THE_ELDER: event room encounter.
-- REFLECTIONS: event room encounter.
-- RELIC_TRADER: event room encounter (relic trade offers).
-- ROOM_FULL_OF_CHEESE: event room encounter (The Chosen Cheese relic family — end of combat +1 Max HP).
-- ROUND_TEA_PARTY: event room encounter (tea-set/pillow rest-synergy family).
-- SAPPHIRE_SEED: seed/nest family — BYRDONIS_EGG-type status products.
-- SELF_HELP_BOOK: event room encounter.
-- SLIPPERY_BRIDGE: event room encounter.
-- SPIRALING_WHIRLPOOL: event room encounter.
-- SPIRIT_GRAFTER: event room encounter.
-- STONE_OF_ALL_TIME: event room encounter.
-- SUNKEN_STATUE: event room encounter.
-- SUNKEN_TREASURY: event room encounter (treasure/loot offers).
-- SYMBIOTE: event room encounter.
-- TABLET_OF_TRUTH: event room encounter.
-- TANX: ancient-track event (Tanx's Whistle relic — adds Whistle card).
-- TEA_MASTER: event room encounter.
-- TEZCATARA: ancient-track event (Nutritious Soup enchant family — Tezcatara's Ember on Strikes).
-- THE_ARCHITECT: event room encounter.
-- THE_FUTURE_OF_POTIONS: event room encounter (potion-choice family).
-- THE_LANTERN_KEY: verified branches — RETURN_THE_KEY grants ~+100 gold instantly (no combat); KEEP_THE_KEY starts knight fight for the key card. RETURN at low HP, KEEP when healthy. Lantern Key quest card unlocks a special event next Act.
-- THE_LEGENDS_WERE_TRUE: event room encounter.
-- THIS_OR_THAT: verified branch — "ORNATE" pick granted MOLTEN_EGG (attack-card rewards arrive upgraded).
-- TINKER_TIME: event room encounter.
-- TRASH_HEAP: event room encounter.
-- TRIAL: event room encounter.
-- UNREST_SITE: rest-site variant event (non-standard rest options).
-- VAKUU: ancient-track event (Whispering Earring relic — Vakuu plays your first turn).
-- WAR_HISTORIAN_REPY: event room encounter.
-- WATERLOGGED_SCRIPTORIUM: event room encounter.
-- WELCOME_TO_WONGOS: verified — mystery box 300g grants WONGO'S_MYSTERY_TICKET (3 random relics after 5 combats); Wongo Customer Appreciation Badge does nothing.
-- WELLSPRING: event room encounter.
-- WHISPERING_HOLLOW: verified live 2026-09-17 — GOLD (exchange gold) costs ~36-50 Gold and pays 2 random potions (live: Potion of Binding + Swift Potion; paid 36g — beta-patched price, guides list 50); HUG (hug the tree) costs 9 HP and transforms a card at random.
-- WOOD_CARVINGS: event room encounter.
-- ZEN_WEAVER: event room encounter.
+Format: `- EVENT_ID (act): option → exact effect.`
+
+Randomized values are written as `base ± range` exactly as `CalculateVars` computes them. Branches whose effects are not present in decompiled code are omitted.
+
+Act ancients (from act sources): Overgrowth = Neow (removed unless `UnlockState.IsEpochRevealed<NeowEpoch>()`); Hive = Orobas (removed unless `OrobasEpoch`), Pael, Tezcatara; Glory = Nonupeipe, Tanx, Vakuu (ungated); Underdocks = Neow (same NeowEpoch gate). Shared ancient Darv removed unless `DarvEpoch` revealed.
+
+## Verified events
+
+- NEOW (Act1 Overgrowth ancient; also Act4 Underdocks): no-modifier run → 3 options = 2 random positive relics + 1 random curse-cost relic. Positive pool: ArcaneScroll, BoomingConch, FishingRod, GoldenPearl, Kaleidoscope, LeadPaperweight, LostCoffer, MassiveScroll, NeowsTorment, NewLeaf, PhialHolster, PreciseScissors, ScrollBoxes, WingedBoots; plus one XOR extra pair rolled independently: LavaRock XOR SmallCapsule (skipped if the curse relic is LargeCapsule), NutritiousOyster XOR StoneHumidifier, NeowsTalisman XOR Pomander. Curse pool: CursedPearl, HeftyTablet, LargeCapsule, LeafyPoultice, NeowsBones, PrecariousShears, SilkenTress, SilverCrucible. Conflicts removed from the positive pool: CursedPearl−GoldenPearl, HeftyTablet−ArcaneScroll, LeafyPoultice−NewLeaf, PrecariousShears−PreciseScissors. Each relic also filtered by `IsAllowedAtNeow`. With run modifiers active, Neow instead offers each modifier's `GenerateNeowOption` in sequence.
+- PAEL (Act2 Hive ancient): 3 relic options rolled as: (1) random of PaelsFlesh / PaelsHorn / PaelsTears; (2) pool = PaelsWing + (PaelsClaw if ≥3 Goopy-enchantable Defend cards) + (PaelsTooth if ≥5 removable cards), pool then doubled + PaelsGrowth always → random pick; (3) pool = PaelsEye / PaelsBlood + (PaelsLegion if you have no event pet) → random pick.
+  - PaelsFlesh: +1 max Energy from combat turn 3 onward.
+  - PaelsHorn: on obtain, add 2 Relax cards to your deck.
+  - PaelsTears: if you ended your last turn with unspent Energy, +2 Energy at the start of your next turn.
+  - PaelsWing: card rewards gain a SACRIFICE alternative; every 2 sacrifices grants the next relic from the front of your relic queue.
+  - PaelsClaw: on obtain, every Defend-tagged card in your deck gains Goopy 1 (Goopy: card gains Exhaust; +Amount−1 bonus Block; Amount +1 each time the card is played).
+  - PaelsTooth: on obtain, remove up to 5 upgradeable cards (stored); after each combat, 1 random stored card returns to your deck upgraded.
+  - PaelsEye: once per combat, the first time you end your turn having played 0 cards, exhaust your hand and take an extra turn.
+  - PaelsBlood: +1 card draw each turn.
+  - PaelsGrowth: on obtain, choose 1 deck card → Enchant Clone 4; rest sites gain a Clone rest option (Clone duplicates cards at rest).
+  - PaelsLegion: adds the PaelsLegion pet; while ready, the first card play each combat that grants Block doubles that Block (×2), then cooldown 2 turns.
+- TEA_MASTER (Act1-2; requires all players Gold ≥ 150): BONE_TEA → pay 50 Gold, gain BoneTea (locked without 50g) — for 1 combat: on turn 1, upgrade every card in your hand; EMBER_TEA → pay 150 Gold, gain EmberTea (locked without 150g) — for 5 combats: +2 Strength when you enter a combat room; TEA_OF_DISCOURTESY → free, gain TeaOfDiscourtesy — for 1 combat: before combat starts, 2 Dazed added to your draw pile at random positions.
+- THE_LEGENDS_WERE_TRUE (Act1 only; all players HP ≥ 10 with non-empty deck): NAB_THE_MAP → add SpoilsMap to your deck (Quest, Unplayable; SpoilsActIndex=1 — marks a spoils room on the Act-2 map worth 600 Gold); SLOWLY_FIND_AN_EXIT → take 8 unblockable unpowered damage, gain 1 random potion from your character pool + shared pool.
+- MORPHIC_GROVE (shared; requires all players Gold ≥ 100 and ≥2 transformable cards): GROUP → lose ALL Gold (stolen), choose 2 deck cards and transform each at random; LONER → +5 Max HP.
+- LUMINOUS_CHOIR (requires all players Gold ≥ cost and available relics; cost = 149 − rng 0..49 → 100–149 Gold): REACH_INTO_THE_FLESH → remove 2 chosen deck cards, add SporeMind curse (1 Energy, Curse, Exhaust keyword) to your deck; OFFER_TRIBUTE → pay the cost, gain the next relic from the front of your relic queue (locked without the gold).
+- JUNGLE_MAZE_ADVENTURE (shared): SOLO_QUEST → take 18 unblockable unpowered damage, gain 150 ± rng −15..+15 Gold (135–165); JOIN_FORCES → gain 50 ± rng −15..+15 Gold (35–65), no damage.
+- WHISPERING_HOLLOW (requires all players Gold ≥ 44): GOLD → pay 35 ± rng −9..+9 Gold (26–44), gain 2 random potions; HUG → take 9 unblockable unpowered damage, choose 1 deck card and transform it at random.
+- THE_LANTERN_KEY (shared; combat layout): RETURN_THE_KEY → +100 Gold; KEEP_THE_KEY → FIGHT → MysteriousKnightEventEncounter combat; on victory each player gains a LanternKey quest card (Unplayable; in Act 2 (act index 2) it forces unknown map points to be Event rooms and redirects the next event to WarHistorianRepy).
+- AROMA_OF_CHAOS: LET_GO → choose 1 deck card, transform it at random; MAINTAIN_CONTROL → choose 1 deck card, upgrade it.
+- FAKE_MERCHANT (Act index ≥1; solo only; requires Gold ≥ 100 or owning a FoulPotion): custom shop layout; stocks 6 of 9 fake relics rolled from FakeAnchor, FakeBloodVial, FakeHappyFlower, FakeLeesWaffle, FakeMango, FakeOrichalcum, FakeSneckoEye, FakeStrikeDummy, FakeVenerableTeaSet; relic cost 50 Gold. FoulPotion thrown at the merchant → FakeMerchantEventEncounter fight; rewards = FakeMerchantsRug + every still-stocked fake relic.
+
+## Additional events with decompiled option values
+
+- ABYSSAL_BATHS: vars MaxHp +2 / unblockable 3 damage / heal 10 — Immerse and Abstain options present (exact per-option binding partially internal); Linger/ExitBaths handlers exist.
+- AMALGAMATOR (requires ≥2 Strike-tagged and ≥2 Defend-tagged cards): CombineStrikes → remove Strikes, add UltimateStrike; CombineDefends → remove Defends, add UltimateDefend.
+- BRAIN_LEECH (Act index < 2): ShareKnowledge → add cards via card-pile add; Rip → take 5 unblockable damage, get 1 reward (choice screens: 1 pick from 5).
+- BATTLEWORN_DUMMY: Setting1/2/3 → fight BattleFriendV1/V2/V3 (HP shown per setting).
+- BYRDONIS_NEST (requires no event pet): EAT → +7 Max HP; TAKE → add ByrdonisEgg card to deck.
+- BUGSLAYER: Extermination → Exterminate card; Squash → Squash card (option effects add those cards).
+- COLORFUL_PHILOSOPHERS (requires >1 unlocked character card pool): offers 3-card reward via OfferCustom.
+- COLOSSAL_FLOWER (all players HP ≥ 19): extract prize options pay Gold from `_prizeCosts`; ObtainPollinousCore → PollinousCore relic; ReachDeeper takes damage then deeper prizes.
+- CRYSTAL_SPHERE (Act >0; all players Gold ≥ 100): UncoverFuture → pay 50 Gold (3-card prophesize flow); PaymentPlan → add Debt curse (6-count plan).
+- DENSE_VEGETATION: TrudgeOn → unblockable damage + Gold; Rest → mimic rest-site heal; Fight → DenseVegetationEventEncounter. Vars include HpLoss 8.
+- DOLL_ROOM (Act index 1): ChooseRandom → obtain a doll relic; TakeSomeTime → 5 unblockable damage; Examine → 15 unblockable damage.
+- DOORS_OF_LIGHT_AND_DARK: Light → upgrade 2 cards; Dark → remove 2 cards.
+- DROWNING_BEACON: BottleOption → GlowwaterPotion via reward; ClimbOption → lose 13 Max HP, gain FresnelLens relic.
+- ENDLESS_CONVEYOR (all players Gold ≥ 120): dish handlers: ClamRoll heal 10; Caviar +4 Max HP; GoldenFysh +75 Gold; SeapunkSalad adds FeedingFrenzy; JellyLiver transform; SpicySnappy upgrade; ObserveChef upgrade; grab cost 40 Gold.
+- FIELD_OF_MAN_SIZED_HOLES (requires PerfectFit-enchantable card): Resist → remove cards + add Normality curses ×2; EnterYourHole → Enchant PerfectFit on a card.
+- GRAVE_OF_THE_FORGOTTEN (requires enchantable cards): Confront → add Decay curse + Enchant SoulsPower; Accept → ForgottenSoul relic.
+- HUNGRY_FOR_MUSHROOMS: BigMushroom → BigMushroom relic; FragrantMushroom → FragrantMushroom relic.
+- INFESTED_AUTOMATON: Study / TouchCore → add cards to deck.
+- LOST_WISP: Search → +60 Gold; Claim → add Decay curse + LostWisp relic.
+- POTION_COURIER (Act >0): GrabPotions / Ransack → potion rewards (FoulPotions var 3).
+- PUNCH_OFF (TotalFloor ≥ 6): Nab → add Injury curse + reward; TakeThem → fight PunchOffEventEncounter.
+- RANWID_THE_ELDER (Act >0; all players Gold ≥ 100, ≥1 relic, ≥1 potion): GiveGold → pay 100 Gold, obtain a relic; GivePotion → relic; GiveRelic → remove a relic, obtain another.
+- REFLECTIONS: TouchAMirror → downgrade then upgrade a card (net re-roll of upgrade); Shatter → add card + BadLuck curse.
+- RELIC_TRADER (Act >0; all players ≥5 valid relics): Top/Middle/Bottom → trade (remove owned relic, obtain new one of that slot).
+- ROOM_FULL_OF_CHEESE (Act index < 2): Gorge → add card; Search → take 14 unblockable damage, gain ChosenCheese relic.
+- ROUND_TEA_PARTY (all players HP ≥ 12): EnjoyTea → RoyalPoison relic + heal; PickFight → 11 unblockable damage + RoyalPoison.
+- SAPPHIRE_SEED: Eat → heal 9 + upgrade; Plant → Enchant Sown.
+- SELF_HELP_BOOK: ReadPassage/ReadEntireBook options enchant Sharp/Nimble/etc.; SkipBook leaves.
+- SLIPPERY_BRIDGE (TotalFloor > 6; removable card required): Overcome → remove 1 random card; HoldOn → take HP loss.
+- SPIRALING_WHIRLPOOL (Spiral-enchantable card required): ObserveTheSpiral → Enchant Spiral; Drink → heal.
+- SPIRIT_GRAFTER: LetItIn → heal 25 + add Metamorphosis card; Rejection → upgrade + take 10 damage.
+- STONE_OF_ALL_TIME (Act 1; all players ≥1 potion): Lift → +10 Max HP (drink-potion path); Push → 6 damage + enchant (+8 Vigorous var).
+- SUNKEN_STATUE: GrabSword → SwordOfStone relic; DiveIntoWater → +111 Gold, take 7 damage.
+- SUNKEN_TREASURY: FirstChest → +60 Gold; SecondChest → +333 Gold + Greed curse.
+- SYMBIOTE (Act >0): Approach → Enchant Corrupted; KillWithFire → transform 1 card.
+- TABLET_OF_TRUTH: Smash → heal 20; Decipher → lose 3 Max HP + upgrade path.
+- THIS_OR_THAT: Plain → take 6 damage + Gold; Ornate → obtain a relic + add Clumsy curse.
+- TINKER_TIME: choose card type + rider; riders include 12 damage / 8 block / 2 Weak / 2 Vulnerable / 3-hit violence; adds MadScience card.
+- TRASH_HEAP (all players HP > 5): DiveIn → 8 damage + relic; Grab → +100 Gold + add card.
+- TRIAL: Accept/Reject then witness branches — MerchantGuilty: Regret curse + relic; MerchantInnocent: Shame curse + upgrade; NobleGuilty: heal; NobleInnocent: Regret + Gold; NondescriptGuilty: Doubt + reward; NondescriptInnocent: Doubt + transform.
+- UNREST_SITE (all players HP ≤ 70% Max): Rest → heal + curses; Kill → −8 Max HP + relic.
+- WAR_HISTORIAN_REPY (IsAllowed false normally — LanternKey-gated): UnlockChest → reward; UnlockCage → HistoryCourse relic; LanternKey quest completion removes the key card.
+- WATERLOGGED_SCRIPTORIUM (all players Gold ≥ 55): BloodyInk → +6 Max HP; TentacleQuill → pay 55 Gold, Enchant Steady; PricklySponge → pay 99 Gold, Enchant Steady + card options.
+- WELCOME_TO_WONGOS (Act 1; all players Gold ≥ 100): BuyBargainBin → pay 100 Gold, relic; BuyFeaturedItem → pay 200 Gold, relic; BuyMysteryBox → pay 300 Gold, WongosMysteryTicket (3 random relics after 5 combats); Leave.
+- WELLSPRING: Bottle → potion reward; Bathe → remove cards (curses var 1 — Guilty add handler exists).
+- WOOD_CARVINGS (requires removable Basic card): Snake → Enchant Slither; Bird → transform into Peck; Torus → transform into ToricToughness.
+- ZEN_WEAVER (all players Gold ≥ 125): BreathingTechniques → pay 50 Gold, add Enlightenment; EmotionalAwareness → pay 125 Gold path; ArachnidAcupuncture → pay 250 Gold, remove cards path.
+
+## Ancient events without extracted option tables
+
+DARV, NONUPEIPE, OROBAS, TANX, TEZCATARA, VAKUU exist as `AncientEventModel`s in the act pools (see gating above) but their option handlers are not present in the decompiled event sources reviewed here — omitted. Relic associations recorded in relics.md are not asserted here as event-option mechanics.
 
 ## Event handling notes
 
-- screen "event" in state lists options via screen_detail.options (kind=event_option); pick via act choose index; locked options show IsLocked in game UI.
-- Event rewards can transform cards, grant relics/potions/gold, or start combats — read the option text on screen before choosing; this index is for recognition, not exhaustive choice guidance.
-- Ancient-track events (Darv, Neow, Nonupeipe, Orobas, Pael, Tanx, Tezcatara, Vakuu) share the Ancient relic/currency family.
+- screen `event` in run state lists options via `screen_detail.options` (kind=event_option); pick via `act choose index`; locked options show IsLocked.
+- `IsAllowed` gates: events only spawn when their decompiled preconditions hold (act index, gold, HP, deck contents) — listed per event above where present.
+- Randomized event vars use run rng at event open (`CalculateVars`) — treat `base ± range` as the deterministic offer window.
