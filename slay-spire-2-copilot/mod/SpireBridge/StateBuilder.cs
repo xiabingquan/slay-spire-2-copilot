@@ -226,6 +226,18 @@ public static class StateBuilder
                 return null;
             }
             List<MapPoint> all = map.GetAllMapPoints().ToList();
+            // Act-start points can live outside the grid enumeration
+            // (same class of gap as boss points) — without StartingMapPoint
+            // the min-row scan lands on row 1 and misses the boon room.
+            try
+            {
+                if (map.StartingMapPoint is { } sp
+                    && !all.Any(p => p.coord.row == sp.coord.row && p.coord.col == sp.coord.col))
+                {
+                    all.Add(sp);
+                }
+            }
+            catch { /* StartingMapPoint unavailable */ }
             if (all.Count == 0)
             {
                 return null;
