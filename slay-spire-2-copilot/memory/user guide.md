@@ -78,3 +78,14 @@ one or two sentences covering the run's biggest gain and biggest loss:
 
 - The single biggest win of the run
 - The single biggest loss of the run
+
+## When to consult memory
+
+Memory is consulted throughout the whole play process — it is a standing
+reference for the game, not only a session-start artifact:
+
+- Mandatory before each run: the Summary sections of all recorded runs, plus
+  the accumulated key playstyles of the character about to play
+- Optional before the run: full earlier run records, as needed
+- Any time during play: consult past summaries and character notes mid-run —
+  e.g. to compare with previous runs when facing a decision

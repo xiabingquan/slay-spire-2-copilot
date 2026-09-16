@@ -58,9 +58,17 @@ Execute in order; all of the following are the skill's own work:
 
          SPIREBRIDGE_LOG_DIR=<abs-folder> python3 bridge/spirectl.py <subcommand>
 
-2. **Read memory** (before anything else):
-   - memory/user guide.md (user-written guidance for what to record)
-   - memory/runs/ (recent run notes, one file per run)
+2. **Read memory** (before anything else). Memory under memory/ is
+   version-controlled and serves as a standing play reference for the whole
+   session:
+   - Mandatory before each run:
+     - the Summary sections of all recorded runs (memory/runs/*.md — core
+       facts plus the biggest gain/loss of each past run)
+     - the accumulated key playstyles for the character about to play
+       (gleaned from that character's run notes, <character>_*.md)
+   - Optional: read full earlier run notes as needed.
+   - During play: memory may be consulted at any time — past summaries and
+     character playstyle notes are live reference for in-run decisions.
 
 3. **Environment check and mod self-install / self-heal** (cwd = this skill
    folder `<repo>/slay-spire-2-copilot`, which holds all runtime files):
@@ -137,8 +145,10 @@ Repeat until the run ends or the user stops you. Every spirectl call carries
 
 Before acting each turn, check at least: enemy intents, your HP/block, energy,
 and whether the hand is playable. Keep a brief running commentary in your
-replies. Decision lessons and card/potion/relic/intent knowledge: see
-"References" at the end.
+replies. Memory is consultable mid-run at any moment — when a decision would
+benefit from past runs (boss patterns, route choices, card evaluations),
+re-read the relevant run summaries or the character's notes. Decision
+lessons and card/potion/relic/intent knowledge: see "References" at the end.
 
 ## Run end
 
