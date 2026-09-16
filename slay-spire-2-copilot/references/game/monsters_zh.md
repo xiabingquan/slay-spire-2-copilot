@@ -26,6 +26,7 @@ Summon / Heal / Hidden。
 - CubexConstruct（立柱构造体）：CHARGE_UP = 增益；EXPEL_BLAST = 多段 ×2；SUBMERGE = 防御（获得格挡 + ArtifactPower）。
 - DecimillipedeSegment（残杀千足虫节段）：WRITHE = 多段 ×2；REATTACH = 治疗（SetMaxAndCurrentHp + ReattachPower）——节段需谨慎处理；存在 back/front/middle 变体。
 - DevotedSculptor（虔诚雕刻师）：FORBIDDEN_INCANTATION = 增益。
+- Door：DOOR_SLAM = 多段。被动：DoorRevivalPower。
 - Doormaker：WHAT_IS_IT = 眩晕；BEAM = 单次攻击。
 - Entomancer（蜂群术士）：PHEROMONE_SPIT = 增益；BEES = 多段。被动：PersonalHivePower。
 - Exoskeleton（外骨骼虫）：SKITTER = 多段；MANDIBLE = 单次；ENRAGE = 增益。被动：HardToKillPower。
