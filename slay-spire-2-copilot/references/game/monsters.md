@@ -67,6 +67,9 @@ Buff / Debuff / Defend / Stun / Sleep / Status(n) / Summon / Heal / Hidden.
 - Ovicopter: LAY_EGGS = summon; SMASH = single; NUTRITIONAL_PASTE = buff.
 - Queen-boss family (live play): applies CHAINS_OF_BINDING_POWER + MINION_POWER factory spawns; block suppression stacks with Frail — observed zeroing Block.
 - Robot-assembly family (live play): STOCK_POWER — each death spawns next robot variant until fight end.
+- ShrinkerBeetle (缩小甲虫, live play 2026-09-17): empty-intent turn applies SHRINK_POWER to the player (attack damage reduced while it lives); follows with single attacks ~7.
+- ThievingHopper (偷窃草蜢/偷窃跳虫, Act 2, live play 2026-09-17): THIEVERY_MOVE = single attack (~17) + applies SWIPE_POWER (steals gold); EscapeArtistPower charges on the side; CardDebuff intent injects status cards (Wound observed).
+- Vantom (墨影幻灵, Act 1 boss, live play 2026-09-17): INK_BLOT = single ~7; INKY_LANCE = multi ×2 (~8 each); DISMEMBER = heavy single (~26-28) + status cards ×3; PREPARE = buff (+2 Strength observed). Passive: SlipperyPower — incoming hit damage greatly reduced per charge (started at 8 charges; each attack hit consumes 1 — multi-hits strip faster).
 - PhrogParasite (elite, live play): INFESTED_POWER spawns 4x ~17-21hp adds on death — save AOE for the spawn wave.
 - CeremonialBeast (boss, live play): RINGING_POWER on player flips hand cards to can_play=false.
 

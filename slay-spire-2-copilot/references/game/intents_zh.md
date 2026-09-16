@@ -20,5 +20,10 @@
   约 23 伤害蓄力重击交替）；BURROWED 的蓄力意图在限时内破格挡可取消。
 - Doom 意图（死灵相关战斗）：Doom 叠加体现在怪物行为中——注意 Doom 与
   敌方 HP 阈值的关系。
+- CardDebuff 意图（class CardDebuffIntent，实战 2026-09-17）：本回合向你的
+  牌堆注入状态/诅咒牌（Vantom DISMEMBER 的 Wound、史莱姆的 SLIMED）；
+  标签常为 FORMAT_EMPTY——按「牌组污染」应对，而非伤害。
+- 组合标签如 "17; 3"、"26; 3" = 同一招式攻击 N 且注入状态牌；
+  "4×2" / "6×2" / "8×2" = 多段攻击（每段伤害 × 次数）。
 - 注意：原始 loc BBCode（如 [font_size=18]x3[/font_size]）可能泄漏到标签
   中（已知服务端待打磨项）——读取时自行剥离。

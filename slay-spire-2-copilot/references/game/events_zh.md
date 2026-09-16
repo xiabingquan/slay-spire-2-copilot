@@ -27,9 +27,9 @@ slaythespire2.net/zh-CN/event，正式版 v0.107.1 共 57 个事件）。实战�
 - GRAVE_OF_THE_FORGOTTEN（遗忘之墓）：荣光之殿章节事件。
 - HUNGRY_FOR_MUSHROOMS（蘑菇饥渴）：荣光之殿章节事件。
 - INFESTED_AUTOMATON（被寄生的自动机械）：虫巢章节事件。
-- JUNGLE_MAZE_ADVENTURE（丛林迷宫奇遇）：蔓生之地章节；分支已实测——SOLO_QUEST 约 -18 HP 换约 +147g；JOIN_FORCES 零 HP 成本约 +63g。中低血量选 JOIN，仅过 60 HP 选 SOLO。
+- JUNGLE_MAZE_ADVENTURE（丛林迷宫奇遇）：蔓生之地章节；分支已实测——SOLO_QUEST 约 -18 HP 换约 +147g；JOIN_FORCES 零 HP 成本约 +63g（2026-09-17 实测 63 HP 下 JOIN 实付 +50g）。中低血量选 JOIN，仅过 60 HP 选 SOLO；boss 临近且金币无商店出口时优先 JOIN。
 - LOST_WISP（迷失鬼火）：虫巢章节；"claim" 选项授予 LOST_WISP 遗物（效果待观察）。
-- LUMINOUS_CHOIR（冷光合唱团）：蔓生之地章节事件。
+- LUMINOUS_CHOIR（冷光合唱团）：蔓生之地章节事件；2026-09-17 实测——探入菌肉 REACH_INTO_THE_FLESH 自选移除 2 张卡牌并向牌组加入诅咒 SPORE_MIND（1 费，消耗）；供奉 OFFER_TRIBUTE 花费 149 金币（不足则锁定）获得随机遗物。移除界面为标准 2 选网格。
 - MORPHIC_GROVE（变形灵林谷）：蔓生之地章节事件。
 - NEOW（尼奥）：远古系开局赐福（Neow's Bones/Talisman/Torment 遗物家族——译名见 relics_zh.md）。
 - NONUPEIPE：远古系事件（中文名待核实）。
@@ -69,7 +69,7 @@ slaythespire2.net/zh-CN/event，正式版 v0.107.1 共 57 个事件）。实战�
 - WATERLOGGED_SCRIPTORIUM（水漫缮写室）：水底码头章节事件。
 - WELCOME_TO_WONGOS（欢迎来到旺购百货）：通用事件；已实测——300g 神秘箱授予 WONGO'S_MYSTERY_TICKET（5 场战斗后获得 3 件随机遗物）；Wongo 感谢徽章毫无用处。
 - WELLSPRING（泉水）：蔓生之地章节事件。
-- WHISPERING_HOLLOW（低语空谷）：蔓生之地章节事件。
+- WHISPERING_HOLLOW（低语空谷）：蔓生之地章节事件；2026-09-17 实测——交换金币 GOLD 约花 36-50 金币得 2 瓶随机药水（实测缚魂药水 + 迅捷药水，实付 36g——beta 改价，攻略多记 50）；拥抱树木 HUG 失去 9 HP，随机变形一张卡牌。
 - WOOD_CARVINGS（木雕）：蔓生之地章节事件。
 - ZEN_WEAVER（修禅织网者）：虫巢章节事件。
 

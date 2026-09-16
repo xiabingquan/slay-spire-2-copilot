@@ -28,9 +28,9 @@ as authoritative.
 - GRAVE_OF_THE_FORGOTTEN: event room encounter.
 - HUNGRY_FOR_MUSHROOMS: event room encounter.
 - INFESTED_AUTOMATON: event room encounter.
-- JUNGLE_MAZE_ADVENTURE: branch choice verified live — SOLO_QUEST ~-18 HP for ~+147g; JOIN_FORCES ~+63g at zero HP cost. JOIN at mid/low HP, SOLO only over 60 HP.
+- JUNGLE_MAZE_ADVENTURE: branch choice verified live — SOLO_QUEST ~-18 HP for ~+147g; JOIN_FORCES ~+63g at zero HP cost (live 2026-09-17: JOIN paid +50g at 63 HP). JOIN at mid/low HP, SOLO only over 60 HP; prefer JOIN when the boss is imminent and gold has no shop sink.
 - LOST_WISP: "claim" option grants LOST_WISP relic (effect pending observation).
-- LUMINOUS_CHOIR: event room encounter.
+- LUMINOUS_CHOIR: verified live 2026-09-17 — REACH_INTO_THE_FLESH removes 2 cards of your choice and adds SPORE_MIND curse (1 cost, Exhaust) to the deck; OFFER_TRIBUTE costs 149 Gold (locked without it) and grants a random Relic. Deck-select uses the standard 2-pick removal grid.
 - MORPHIC_GROVE: event room encounter.
 - NEOW: ancient-track run-start boon (opening offer; Neow's Fury/Bones/Talisman/Torment relic family).
 - NONUPEIPE: ancient-track event.
@@ -70,7 +70,7 @@ as authoritative.
 - WATERLOGGED_SCRIPTORIUM: event room encounter.
 - WELCOME_TO_WONGOS: verified — mystery box 300g grants WONGO'S_MYSTERY_TICKET (3 random relics after 5 combats); Wongo Customer Appreciation Badge does nothing.
 - WELLSPRING: event room encounter.
-- WHISPERING_HOLLOW: event room encounter.
+- WHISPERING_HOLLOW: verified live 2026-09-17 — GOLD (exchange gold) costs ~36-50 Gold and pays 2 random potions (live: Potion of Binding + Swift Potion; paid 36g — beta-patched price, guides list 50); HUG (hug the tree) costs 9 HP and transforms a card at random.
 - WOOD_CARVINGS: event room encounter.
 - ZEN_WEAVER: event room encounter.
 
