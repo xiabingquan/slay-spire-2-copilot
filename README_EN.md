@@ -4,7 +4,7 @@ https://github.com/user-attachments/assets/6eae44a2-312d-4a1c-abc3-f5617fe23f21
 
 </div>
 
-> 中文版（默认 README）：[README.md](README.md)
+> Chinese (default README): [README.md](README.md)
 
 # slay-spire-2-copilot
 

@@ -21,7 +21,7 @@ play on v0.107.1.
 - REGEN (Regeneration): heals HP at end of each turn, then -1 per turn.
 - CONFUSED_POWER (FAKE_SNECKO_EYE / Snecko Eye): card costs randomized when
   drawn (0-3 range typical).
-- SLOW_POWER (enemy, e.g. 旧日雕像 elite): enemy takes more attack damage as
+- SLOW_POWER (enemy, e.g. BygoneEffigy elite): enemy takes more attack damage as
   you play cards this turn (~+10% per card played, wiki figure); alternating
   with heavy charged hits observed live.
 - MINION_POWER: marks summoned helpers (Necrobinder/Regent kits, boss adds).
@@ -64,10 +64,10 @@ play on v0.107.1.
 
 ## Live-play observations (v0.107.1)
 
-- SLIPPERY_POWER (e.g. 墨宝): first incoming hit greatly reduced (Strike 6
+- SLIPPERY_POWER (e.g. Inklet): first incoming hit greatly reduced (Strike 6
   -> 1); charges consumed per hit.
-- SHRINK_POWER (缩小甲虫): reduces player attack damage until the enemy dies.
-- INFESTED_POWER (异蛙寄生虫 elite): on death spawns 4x ~17-21hp adds — save
+- SHRINK_POWER (ShrinkerBeetle): reduces player attack damage until the enemy dies.
+- INFESTED_POWER (PhrogParasite elite): on death spawns 4x ~17-21hp adds — save
   AOE for the spawn wave.
 - STOCK_POWER (robot factory): each death spawns next robot variant.
 - RAMPART_POWER: living-shield ally block regeneration.

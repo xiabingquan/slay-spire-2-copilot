@@ -69,6 +69,7 @@ Summon / Heal / Hidden。
 - PhrogParasite（异蛙寄生虫，精英）：实战变体 INFESTED_POWER 死亡时生成 4 只约 17-21hp 小怪——AOE 留给召唤波。
 - Queen（女王，boss）：施加 CHAINS_OF_BINDING_POWER + MINION_POWER 工厂式召唤；格挡压制与 Frail 叠加可使格挡归零。
 - 机器人工厂系（实战）：STOCK_POWER——每次死亡生成下一形态直至战斗结束。
+- 仪式兽 boss（实战）：RINGING_POWER 使玩家手牌 can_play 翻为 false。
 
 ## 对局中读怪物
 

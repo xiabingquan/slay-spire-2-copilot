@@ -15,15 +15,15 @@ Buff / Debuff / Defend / Stun / Sleep / Status(n) / Summon / Heal / Hidden.
 - BowlbugRock: HEADBUTT = single attack; DIZZY = stun. Passive: ImbalancedPower.
 - BowlbugSilk: TRASH = multi attack ×2.
 - BruteRubyRaider: BEAT = single attack.
-- BygoneEffigy (旧日雕像 elite): INITIAL_SLEEP/WAKE/SLEEP cycle + SLASHES = single attack. Passive: SlowPower — alternating empty-intent slow turns with heavy charged hits; fortify before heavy turns.
-- Byrdonis (墨宝): PECK = multi attack; SWOOP = single attack. Passive: TerritorialPower; SlipperyPower (first-hit damage greatly reduced, charges consumed per hit — observed live).
+- BygoneEffigy (elite): INITIAL_SLEEP/WAKE/SLEEP cycle + SLASHES = single attack. Passive: SlowPower — alternating empty-intent slow turns with heavy charged hits; fortify before heavy turns.
+- Byrdonis: PECK = multi attack; SWOOP = single attack. Passive: TerritorialPower.
 - CalcifiedCultist / DampCultist / DevotedSculptor: INCANTATION / FORBIDDEN_INCANTATION = buff.
-- CeremonialBeast (仪式兽 boss): STAMP = buff; STUN = stun; STOMP = single attack. Boss applies RINGING to player (hand card-play lockout — observed live).
+- CeremonialBeast (boss): STAMP = buff; STUN = stun; STOMP = single attack. Boss applies RINGING to player (hand card-play lockout — observed live).
 - Chomper: CLAMP = multi attack ×2. Passive: ArtifactPower.
 - CorpseSlug: WHIP_SLAP = multi; GLOMP = single; GOOP = debuff. Passive: RavenousPower.
 - Crusher: THRASH + ENLARGING_STRIKE = single attacks; ADAPT = buff. Passive: BackAttackLeftPower + CrabRagePower.
 - CubexConstruct: CHARGE_UP = buff; EXPEL_BLAST = multi ×2; SUBMERGE = defend (gain Block + ArtifactPower).
-- DecimillipedeSegment (千足虫 segments): WRITHE = multi ×2; REATTACH = heal (SetMaxAndCurrentHp + ReattachPower) — kill segments carefully; back/front/middle variants exist.
+- DecimillipedeSegment: WRITHE = multi ×2; REATTACH = heal (SetMaxAndCurrentHp + ReattachPower) — kill segments carefully; back/front/middle variants exist.
 - DevotedSculptor: FORBIDDEN_INCANTATION = buff.
 - Door: DOOR_SLAM = multi. Passive: DoorRevivalPower.
 - Doormaker: WHAT_IS_IT = stun; BEAM = single attack.
@@ -45,8 +45,8 @@ Buff / Debuff / Defend / Stun / Sleep / Status(n) / Summon / Heal / Hidden.
 - Guardbot: GUARD = defend.
 - HauntedShip: SWIPE = single; STOMP = multi; HAUNT = debuff.
 - HunterKiller: TENDERIZING_GOOP = debuff; BITE = single; PUNCTURE = multi ×3.
-- InfestedPrism (异蛙寄生虫 elite family): JAB = single; WHIRLWIND = multi. Passive: VitalSparkPower; live variant INFESTED_POWER spawns 4x ~17-21hp adds on death — save AOE for the spawn wave.
-- Inklet: JAB = single; WHIRLWIND = multi ×3; PIERCING_GAZE = single. Passive: SlipperyPower.
+- InfestedPrism: JAB = single; WHIRLWIND = multi. Passive: VitalSparkPower.
+- Inklet: JAB = single; WHIRLWIND = multi ×3; PIERCING_GAZE = single. Passive: SlipperyPower (first-hit damage greatly reduced, charges consumed per hit — observed live).
 - KinFollower: QUICK_SLASH = single; BOOMERANG = multi ×2; POWER_DANCE = buff. Passive: MinionPower.
 - KinPriest: BEAM = multi ×3; RITUAL = buff (strength growth — kill priority).
 - KnowledgeDemon: CURSE_OF_KNOWLEDGE = debuff; SLAP = single; KNOWLEDGE_OVERWHELMING = multi ×3.
@@ -67,7 +67,8 @@ Buff / Debuff / Defend / Stun / Sleep / Status(n) / Summon / Heal / Hidden.
 - Ovicopter: LAY_EGGS = summon; SMASH = single; NUTRITIONAL_PASTE = buff.
 - Queen-boss family (live play): applies CHAINS_OF_BINDING_POWER + MINION_POWER factory spawns; block suppression stacks with Frail — observed zeroing Block.
 - Robot-assembly family (live play): STOCK_POWER — each death spawns next robot variant until fight end.
-- 仪式兽 boss (live play): RINGING_POWER on player flips hand cards to can_play=false.
+- PhrogParasite (elite, live play): INFESTED_POWER spawns 4x ~17-21hp adds on death — save AOE for the spawn wave.
+- CeremonialBeast (boss, live play): RINGING_POWER on player flips hand cards to can_play=false.
 
 ## Reading monsters mid-run
 
