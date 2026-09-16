@@ -71,8 +71,9 @@
 - STONE_OF_ALL_TIME（永恒之石；Act 1；所有玩家 ≥1 瓶药水）：Lift → +10 最大 HP（饮用药水路径）；Push → 6 点伤害 + 附魔（+8 Vigorous 变量）。
 - SUNKEN_STATUE（沉没雕像）：GrabSword → SwordOfStone 遗物；DiveIntoWater → +111 金币，受到 7 点伤害。
 - SUNKEN_TREASURY（淹水金库）：FirstChest → +60 金币；SecondChest → +333 金币 + Greed 诅咒。
-- SYMBIOTE（共生体；Act >0）：Approach → 附魔 Corrupted；KillWithFire → 变形 1 张牌。
+- SYMBIOTE（共生体；Act >0）：Approach → 对 1 张攻击牌附魔 Corrupted——Corrupted 附魔：有源攻击伤害 ×1.5，但打出时其拥有者受到 2 点不可格挡无来源伤害；KillWithFire → 变形 1 张选定牌。
 - TABLET_OF_TRUTH（真理石板）：Smash → 回复 20；Decipher → 失去 3 最大 HP + 升级路径。
+- THE_ARCHITECT（建筑师；Act3 Boss 节点后的剧情事件）：仅对话选项；观察到的分支 Threaten（威胁）→ 玩家 HP 置 0、对局结束（game_over）——剧情死亡即时生效，不是可打赢的战斗。Architect 怪物模型为 9999 HP、招式 NOTHING 的剧情占位体。
 - THIS_OR_THAT（这个还是那个？）：Plain → 受到 6 点伤害 + 金币；Ornate → 获得遗物 + 加入 Clumsy 诅咒。
 - TINKER_TIME（打造时间）：选择卡牌类型 + 附加效果；附加效果含 12 伤害 / 8 格挡 / 2 Weak / 2 Vulnerable / 3 段暴力；加入 MadScience 卡。
 - TRASH_HEAP（垃圾堆；所有玩家 HP > 5）：DiveIn → 8 点伤害 + 遗物；Grab → +100 金币 + 加牌。

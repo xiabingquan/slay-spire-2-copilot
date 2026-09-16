@@ -65,7 +65,10 @@
 - Parafright（Parafright, Act2 TheObscuraNormal 召唤; 21 HP）：SLAM_MOVE = 单次攻击 16 (A:17)；重复。被动 IllusionPower 1：死亡时经 REVIVE_MOVE 回复满血复活（同 EyeWithTeeth）。击杀 TheObscura 可阻止继续召唤。
 - ThievingHopper（偷窃跳虫, Act2 ThievingHopperWeak; 79 HP）：THIEVERY_MOVE = 单次攻击 17 (A:19) + 经 SwipePower 偷走 1 张牌库卡（优先级：非 Imbued 的 Uncommon → Common/Rare/Event → Basic/Quest → Ancient/Imbued，来源为抽牌堆/弃牌堆）；NAB_MOVE = 单次攻击 14 (A:16)；HAT_TRICK_MOVE = 单次攻击 21 (A:23)；FLUTTER_MOVE = 增益 FlutterPower 5；ESCAPE_MOVE = 逃跑（到位后自循环）。循环：THIEVERY → FLUTTER → HAT_TRICK → NAB → ESCAPE。被动：EscapeArtistPower 5——逃跑倒计时，其回合结束递减；FlutterPower 5——受到的攻击伤害 ×0.5，每次未格挡攻击命中递减 1，归零时被眩晕并结束悬停。SwipePower：跳虫死亡时被偷卡牌作为战斗奖励回到你的牌库。
 - TheInsatiable 无底之欲（TheInsatiable, Act2 TheInsatiableBoss; 321 HP）：LIQUIFY_GROUND_MOVE = 增益；THRASH_MOVE / THRASH_MOVE_2 = 多段攻击 8 (A:9) ×2；LUNGING_BITE_MOVE = 单次攻击 28 (A:31)；SALIVATE_MOVE = 增益 自身 +2 力量 (A:3)。循环：LIQUIFY → THRASH → SALIVATE → THRASH_2 → LUNGING_BITE → THRASH…
-- KaiserCrab 皇蟹（KaiserCrab, Act2 KaiserCrabBoss）：Boss 遭遇——站位见 `KaiserCrabBoss.cs`；本次未提取招式数值。
+- KaiserCrab 皇蟹（KaiserCrab, Act2 KaiserCrabBoss；双爪遭遇）：槽位 crusher + rocket，无本体目标。遭遇生成 Crusher（crusher 槽）+ Rocket（rocket 槽）。玩家侧被动 SurroundedPower；每只爪各带 BackAttackLeftPower/BackAttackRightPower（朝向标记）+ CrabRagePower。
+  - Crusher 碾碎爪（Crusher；209 HP）：循环 THRASH_MOVE = 单次攻击 12 (A:14) → ENLARGING_STRIKE_MOVE = 单次攻击 4 → BUG_STING_MOVE = 多段攻击 6 (A:7) ×2 + 2 Weak + 2 Frail → ADAPT_MOVE = 增益 自身 +2 力量 (A:3) → GUARDED_STRIKE_MOVE = 单次攻击 12 (A:14) + 自身 18 格挡 → 回 THRASH。
+  - Rocket 火箭（Rocket；199 HP）：循环 TARGETING_RETICLE_MOVE = 单次攻击 3 (A:4) → PRECISION_BEAM_MOVE = 单次攻击 18 (A:20) → CHARGE_UP_MOVE = 增益 自身 +2 力量 (A:3) → LASER_MOVE = 单次攻击 31 (A:35) → RECHARGE_MOVE = 睡眠 → 回 TARGETING_RETICLE。
+  - 实战记录（2026-09-17 对局）：意图数值已含夹击 ×1.5（侧击爪的 THRASH 12 显示为 18）。有效击杀顺序：先集火 Rocket（LASER 是致死尖峰）；其死亡触发存活爪的 CrabRagePower——Crusher 获得 +6 力量 + 99 无来源格挡——随后 1-2 回合内拆掉 99 格挡，同时用格挡应对力量强化后的循环。
 - KnowledgeDemon 知识恶魔（KnowledgeDemon, Act2 KnowledgeDemonBoss; 379 HP）：招式循环 CURSE_OF_KNOWLEDGE_MOVE（减益）→ SLAP_MOVE → KNOWLEDGE_OVERWHELMING_MOVE → PONDER_MOVE → 分支（诅咒计数 <3 回 Curse，否则 Slap）。
   - CURSE_OF_KNOWLEDGE_MOVE：玩家从 2 张 IChoosable 诅咒牌中选 1——按计数轮换：0 = Disintegration | MindRot；1 = Disintegration | Sloth；2 = Disintegration | WasteAway。所选牌不进牌库；OnChosen 立即施加对应能力：Disintegration → DisintegrationPower N（按计数 6/7/8——每个己方回合结束受 N 点无来源伤害）；MindRot → MindRotPower 1（每回合抽牌 −1）；Sloth → SlothPower 3（每回合最多打出 3 张牌）；WasteAway → WasteAwayPower 1（最大能量 −1）。每次 Curse 后计数 +1。
   - SLAP_MOVE = 单次攻击 17 (A:18)。
@@ -75,7 +78,18 @@
 ## 其他章节 — 已提取 Boss（确定性数值）
 
 - Queen（Queen, Act3 QueenBoss; 400 HP）：PUPPET_STRINGS_MOVE = 卡牌减益——ChainsOfBindingPower 3；YOU_ARE_MINE_MOVE = 减益——99 Frail/Weak/Vulnerable；BURN_BRIGHT_FOR_ME_MOVE = 增益；OFF_WITH_YOUR_HEAD_MOVE = 多段攻击 3 (A:4) ×5；EXECUTION_MOVE = 单次攻击 15 (A:18)；ENRAGE_MOVE = 增益 +2 力量。
-- TestSubject（TestSubject, Act3 TestSubjectBoss; 多阶段）：BITE 20 (A:22)、SKULL_BASH 14 (A:16)、MULTI_CLAW 10 ×3、PHASE3_LACERATE 10 (A:11) ×3、BIG_POUNCE 45、BURNING_GROWL = 状态灼烧 3 (A:5) + 自身 +2 力量 (A:3)；经 RESPAWN_MOVE 重生/回复阶段。被动 AdaptablePower、EnragePower 2 (A:3)、PainfulStabsPower、NemesisPower。
+- TestSubject（TestSubject, Act3 TestSubjectBoss; 多阶段）：BITE 20 (A:22)、SKULL_BASH 14 (A:16)、MULTI_CLAW 10 ×3、PHASE3_LACERATE 10 (A:11) ×3、BIG_POUNCE 45、BURNING_GROWL = 状态灼烧 3 (A:5) + 自身 +2 力量 (A:3)；经 RESPAWN_MOVE 重生/回复阶段。被动 AdaptablePower、EnragePower 2 (A:3)、PainfulStabsPower、NemesisPower。战斗要点：EnragePower 在任何人打出技能牌时都会触发——技能牌密集的牌组会快速喂养该 Boss；优先使用攻击/能力牌。AdaptablePower 使其死亡时经重生/回复阶段复活。
+- SoulNexus（SoulNexus, Act3 SoulNexusElite; 234 HP）：SOUL_BURN_MOVE = 单次攻击 29 (A:31)；MAELSTROM_MOVE = 多段攻击 6 (A:7) ×4；DRAIN_LIFE_MOVE = 单次攻击 18 (A:19) + 强减益——对玩家施加 2 Vulnerable + 2 Weak。战斗后期观察到意图 32 = 力量强化后的单次重击。
+- OwlMagistrate（OwlMagistrate, Act3 OwlMagistrateElite; 231 HP）：循环 MAGISTRATE_SCRUTINY = 单次 16 (A:17) → PECK_ASSAULT = 多段 4 ×6 → JUDICIAL_FLIGHT = 增益——自身 SoarPower 1 → VERDICT = 单次 33 (A:36) + 4 Vulnerable + 移除自身 SoarPower。SoarPower：存续期间持有者受到的有源攻击伤害 ×0.5（在其 VERDICT 回合 Soar 脱落时集火）。
+- 三骑士精英（Act3 FlailKnightsElite 遭遇；FlailKnight 101 HP / SpectralKnight 93 HP / MagiKnight 82 HP）：
+  - FlailKnight 连枷骑士：WAR_CHANT = 增益 自身 +3 力量 → FLAIL_MOVE = 多段 9 (A:10) ×2 → RAM_MOVE = 单次 15 (A:17)。
+  - SpectralKnight 幽灵骑士：HEX = 减益 HexPower 2 → SOUL_SLASH = 单次 15 (A:17) → SOUL_FLAME = 多段 3 (A:4) ×3。HexPower：玩家全部卡牌（含之后获得的）附加 Hexed → 施加者存活期间获得虚无；施加者死亡时移除——击杀幽灵骑士即可解除。
+  - MagiKnight 魔法骑士：POWER_SHIELD_MOVE = 单次 6 (A:7) + 自身 5 (A:9) 格挡 → DAMPEN_MOVE = 减益 DampenPower（见 powers_zh.md）→ PREP_MOVE = 自身格挡 5 (A:9) → MAGIC_BOMB = 单次 35 (A:40) → RAM_MOVE = 单次 10 (A:11)。
+- DevotedSculptor（DevotedSculptor, Act3 DevotedSculptorElite; 162 HP）：FORBIDDEN_INCANTATION_MOVE = 增益——RitualPower 9 → SAVAGE_MOVE = 单次 12 (A:15)；双状态循环。Ritual 每次增益循环抬升其力量——需速杀。
+- SlimedBerserker（SlimedBerserker, Act3 SlimedBerserkerElite; 261 HP）：VOMIT_ICHOR_MOVE = 状态 10 → LEECHING_HUG_MOVE = 减益 玩家 3 Weak + 增益 自身 +3 力量 → SMOTHER_MOVE = 单次 30 (A:33) → FURIOUS_PUMMELING_MOVE = 多段 4 (A:5) ×4。
+- ScrollOfBiting 咬人卷轴（ScrollOfBiting, Act3 ScrollOfBitingNormal; 30–39 HP）：出场被动 PaperCutsPower 2；CHOMP = 单次 14 (A:16)；CHEW = 多段 5 (A:6) ×2；MORE_TEETH = 增益 自身 +2 力量。PaperCutsPower：持有者的有源攻击造成未格挡伤害时，对玩家追加纸割伤害（见 powers_zh.md）。
+- PunchConstruct 拳击构装体（PunchConstruct, Act3 PunchConstructsNormal; 55 HP）：出场 ArtifactPower 1；READY_MOVE = 自身 10 格挡 → STRONG_PUNCH_MOVE = 单次 14 (A:16) → FAST_PUNCH_MOVE = 多段 5 (A:6) ×N + 玩家 1 Frail。
+- InfestedPrism 立柱构造体（InfestedPrism）：Act2 精英与 Act3 普通怪（观察到 65 HP 变体）均出现；VitalSpark/REPEATER 行为见 Act2 精英条目。
 - Aeonglass（Aeonglass, Act3 AeonglassBoss; 512 HP）：EBB_MOVE = 单次 26 (A:32) + 33 格挡；EYE_LASERS_MOVE = 多段 11 (A:12) ×2；INCREASING_INTENSITY_MOVE = 状态 Wither 1 (A:2) + 力量成长；出场 ArtifactPower 3。
 - WaterfallGiant（WaterfallGiant, Act4 WaterfallGiantBoss; 240 HP）：PRESSURIZE 增益 SteamEruption 15 (A:20) → STOMP 15 (A:16) → RAM 10 (A:11) → SIPHON 治疗 → PRESSURE_GUN 20 (A:23，每次 Pressure Up +5) → PRESSURE_UP 13 (A:14) → 回 STOMP；ABOUT_TO_BLOW 眩晕 → EXPLODE 处决。
 - SoulFysh（SoulFysh, Act4 SoulFyshBoss; 211 HP）：BECKON 状态 ×2 → DE_GAS 单次 16 (A:17) → GAZE 单次 7 (A:8) → FADE Intangible 2 → SCREAM 单次 13 (A:15) + 3 Vulnerable → 循环。

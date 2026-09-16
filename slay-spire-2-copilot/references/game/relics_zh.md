@@ -229,7 +229,7 @@
 - 烘焙手套（ToastyMittens，Ancient）：每回合抽牌前，消耗抽牌堆顶牌并获得 1 点力量。
 - 欧洛巴斯之触（TouchOfOrobas，Ancient）：拾取时，将初始遗物替换为远古版本。
 - 玩具盒（ToyBox，Ancient）：拾取时，获得 4 件蜡质遗物；每 3 场战斗，最左侧蜡质遗物融化消失。
-- 三刃回旋镖（TriBoomerang，Ancient）：拾取时，选择 3 张攻击牌附魔 Instinct 1。
+- 三刃回旋镖（TriBoomerang，Ancient）：拾取时，选择 3 张攻击牌附魔 Instinct 1。Instinct 附魔（反编译）：有源攻击伤害 ×2（乘法，先于 Vulnerable 等其他乘区结算）。
 - 天鹅绒颈圈（VelvetChoker，Ancient）：每回合 +1 最大能量；每回合最多打出 6 张牌。
 - 烫嘴可可（VeryHotCocoa，Ancient）：第 1 回合开始，获得 +4 能量。
 - 战锤（WarHammer，Ancient）：每次击败精英时，升级牌库中 4 张随机牌。

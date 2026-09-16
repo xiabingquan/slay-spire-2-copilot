@@ -70,8 +70,9 @@ Act ancients (from act sources): Overgrowth = Neow (removed unless `UnlockState.
 - STONE_OF_ALL_TIME (Act 1; all players ≥1 potion): Lift → +10 Max HP (drink-potion path); Push → 6 damage + enchant (+8 Vigorous var).
 - SUNKEN_STATUE: GrabSword → SwordOfStone relic; DiveIntoWater → +111 Gold, take 7 damage.
 - SUNKEN_TREASURY: FirstChest → +60 Gold; SecondChest → +333 Gold + Greed curse.
-- SYMBIOTE (Act >0): Approach → Enchant Corrupted; KillWithFire → transform 1 card.
+- SYMBIOTE (Act >0): Approach → Enchant Corrupted on an Attack card — Corrupted enchant: powered attack damage ×1.5, but on play its owner takes 2 unblockable unpowered damage; KillWithFire → transform 1 chosen card.
 - TABLET_OF_TRUTH: Smash → heal 20; Decipher → lose 3 Max HP + upgrade path.
+- THE_ARCHITECT (Act3, post-boss story event at the Act3 boss node): dialogue options only; observed branch Threaten 威胁 → player HP set to 0, run ends (game_over) — the story death is immediate, not a winnable fight. The Architect monster model is a 9999-HP NOTHING-move dummy used by story scenes.
 - THIS_OR_THAT: Plain → take 6 damage + Gold; Ornate → obtain a relic + add Clumsy curse.
 - TINKER_TIME: choose card type + rider; riders include 12 damage / 8 block / 2 Weak / 2 Vulnerable / 3-hit violence; adds MadScience card.
 - TRASH_HEAP (all players HP > 5): DiveIn → 8 damage + relic; Grab → +100 Gold + add card.

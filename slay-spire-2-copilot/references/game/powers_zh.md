@@ -58,7 +58,11 @@ hook 逻辑、`CanonicalVars` 数值）核实。下文「Amount」= power 上显
   power 数值被置为 0，随后消耗 1 层人工制品。不可见/内部减益不被挡。
 - SURROUNDED_POWER（被夹击，Debuff，Single）：站位状态；当攻击者带有与
   持有者朝向匹配的 BACK_ATTACK_LEFT_POWER / BACK_ATTACK_RIGHT_POWER
-  标记时，对持有者的攻击伤害 ×1.5。标记本身为惰性 Single Buff。
+  标记时，对持有者的攻击伤害 ×1.5。标记本身为惰性 Single Buff。朝向规则
+  （反编译）：玩家打出指向某生物的卡牌/药水、且该生物的 BACK_ATTACK 标记
+  与当前朝向相反时，持有者朝向翻转——即指向某爪即面向该爪，另一只爪成为
+  ×1.5 的侧击者。侧击生物死亡时，若存活方标记同侧，朝向重定向至该标记
+  持有者。
 
 ## 卡牌绑定减益宿主（另见 afflictions_zh.md）
 
@@ -309,8 +313,9 @@ hook 逻辑、`CanonicalVars` 数值）核实。下文「Amount」= power 上显
   立即结束，增益保留供后续遭遇逻辑使用。
 - SURPRISE_POWER（Buff，Single）：持有者死亡处理——直至惊喜召唤逻辑
   （CreatureCmd.Add 下一只怪物）完成前战斗不结束。
-- CRAB_RAGE_POWER（Buff，Single）：持有者死亡时，施加力量
-  （DynamicVars）并获得 DynamicVars.Block 格挡（亡语姿态）。
+- CRAB_RAGE_POWER（蟹怒，Buff，Single）：同侧另一生物死亡时，存活的持有者获得 +6 力量与 99 无来源格挡，随后该能力自行移除。（皇蟹双爪；CanonicalVars Strength 6 / Block 99 Unpowered。）
+- DAMPEN_POWER（弱化，Debuff，None-stack）：施加时，持有者牌库中所有已升级卡牌被降级；原升级等级按施加者记录在内部数据中（重复施加会累加施加者集合）。Act3 魔法骑士使用——降级在能力存续期间持续。
+- SOAR_POWER（翱翔，Buff，Single）：存续期间，持有者受到的有源攻击伤害 ×0.5（CanonicalVars DamageDecrease 50/100）。猫头鹰法官经 JUDICIAL_FLIGHT 施加、VERDICT 移除——其大招回合正是其吃满伤害的窗口。
 - RAVENOUS_POWER（Buff，Counter）：同侧其他生物死亡且持有者存活时，
   持有者被击晕进入吞噬招式并获得 +Amount STRENGTH。
 - SUMMON_NEXT_TURN_POWER（Buff，Counter）：持有者玩家回合开始时召唤

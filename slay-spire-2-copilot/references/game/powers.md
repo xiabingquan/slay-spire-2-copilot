@@ -67,7 +67,12 @@ Format: `- POWER_ID (Buff/Debuff): effect.`
 - SURROUNDED_POWER (Debuff, Single): positioning state; attack damage to owner
   is multiplied by x1.5 when the attacker carries the matching
   BACK_ATTACK_LEFT_POWER / BACK_ATTACK_RIGHT_POWER marker for the owner's
-  facing. Markers themselves are inert Single Buffs.
+  facing. Markers themselves are inert Single Buffs. Facing rule (decomp): the
+  owner's facing flips whenever the player plays a card or potion targeting a
+  creature whose BACK_ATTACK marker matches the opposite direction — targeting
+  a claw turns the owner toward it, exposing the other claw as the ×1.5
+  flanker. On flank-creature death, facing re-targets to the remaining
+  marker-bearer if all survivors share one marker side.
 
 ## Card-bound affliction hosts (see afflictions.md)
 
@@ -341,8 +346,9 @@ Format: `- POWER_ID (Buff/Debuff): effect.`
   end on owner death; buffs retained for follow-up encounter logic.
 - SURPRISE_POWER (Buff, Single): owner death handler — combat does not end
   until the surprise-spawn logic resolves (CreatureCmd.Add of next monster).
-- CRAB_RAGE_POWER (Buff, Single): on owner death, apply Strength (DynamicVars)
-  and gain DynamicVars.Block before removal (death-rattle stance).
+- CRAB_RAGE_POWER (Buff, Single): on death of another creature on owner's side, the surviving owner gains +6 Strength and 99 unpowered Block, then this power removes itself. (KaiserCrab claws; CanonicalVars Strength 6 / Block 99 Unpowered.)
+- DAMPEN_POWER (Debuff, None-stack): on apply, every upgraded card in the owner's deck is downgraded; the prior upgrade levels are stored in internal data keyed per applier (casters set grows when re-applied). Observed on Act3 MagiKnight — the downgrade persists while the power exists.
+- SOAR_POWER (Buff, Single): while active, damage the owner receives from powered attacks is multiplied by ×0.5 (CanonicalVars DamageDecrease 50 / 100). OwlMagistrate applies it via JUDICIAL_FLIGHT and removes it on VERDICT — its big hit turn is the window where it takes full damage.
 - RAVENOUS_POWER (Buff, Counter): when another creature on owner's side dies
   and owner lives, owner is stunned into devour move and gains +Amount
   STRENGTH.

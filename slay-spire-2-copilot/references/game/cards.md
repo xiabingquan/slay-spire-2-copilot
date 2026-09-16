@@ -602,7 +602,7 @@ listed below as X.
 - CLUMSY: unplayable, curse, curse, Ethereal, no effect. No upgrade.
 - CURSE_OF_THE_BELL: unplayable, curse, curse, Eternal, no effect. No upgrade.
 - DEBT: unplayable, curse, curse, in hand at end of turn lose 10 Gold. No upgrade.
-- DECAY: unplayable, curse, curse, in hand at end of turn take 2 damage. No upgrade.
+- DECAY: unplayable, curse, curse, in hand at end of turn take 2 unpowered damage. No upgrade.
 - DOUBT: unplayable, curse, curse, in hand at end of turn gain 1 Weak. No upgrade.
 - ENTHRALLED: 2, curse, curse, Eternal, must be played before other cards while in hand. No upgrade.
 - FOLLY: unplayable, curse, curse, Unplayable, Eternal, Innate, Ethereal, no effect. No upgrade.

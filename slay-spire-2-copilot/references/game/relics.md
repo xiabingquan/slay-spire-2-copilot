@@ -229,7 +229,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Toasty Mittens (ToastyMittens, Ancient): each turn before hand draw, exhaust the top card of draw pile and gain 1 Strength.
 - Touch of Orobas (TouchOfOrobas, Ancient): on pickup, replace your starter relic with its ancient version.
 - Toy Box (ToyBox, Ancient): on pickup, gain 4 Wax relics; every 3 combats, the left-most Wax relic melts away.
-- Tri-Boomerang (TriBoomerang, Ancient): on pickup, choose 3 Attack cards to enchant with Instinct 1.
+- Tri-Boomerang (TriBoomerang, Ancient): on pickup, choose 3 Attack cards to enchant with Instinct 1. Instinct enchant (decomp): powered attack damage ×2 (multiplicative, applied before other multipliers such as Vulnerable).
 - Velvet Choker (VelvetChoker, Ancient): +1 max Energy each turn; you cannot play more than 6 cards per turn.
 - Very Hot Cocoa (VeryHotCocoa, Ancient): at start of turn 1, gain +4 Energy.
 - War Hammer (WarHammer, Ancient): whenever you defeat an elite, upgrade 4 random cards in deck.
