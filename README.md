@@ -81,5 +81,22 @@ skill 符号链接：`~/.claude/skills/slay-spire-2-copilot` → 上述 skill �
 
 ## 致谢
 
-- [BaseLib-StS2](https://github.com/Alchyr/BaseLib-StS2) — Alchyr 的《杀戮尖塔 2》
-  mod 基础库；开发 SpireBridge 时作为 mod 加载与游戏 API 约定的社区参考
+modding 项目（社区参考实现）：
+
+- [BaseLib-StS2](https://github.com/Alchyr/BaseLib-StS2) — Alchyr 的《杀戮尖塔 2》mod 基础库；mod 加载与游戏 API 约定的参考
+- [CombatSolver](https://github.com/Torch1230/CombatSolver) — 战斗路线求解器 mod；卡牌/遗物/能力效果的结构化数据参考
+- [STS2-Agent](https://github.com/CharTyr/STS2-Agent) — 游戏内 AI 队友 mod；怪物行为、事件与游戏知识提取参考
+- [slay-the-streamer-2](https://github.com/Surfinite/slay-the-streamer-2) — Twitch 弹幕投票 mod；modding API 与界面流程研究参考
+- [sts2-game-mod](https://github.com/AI-Ascension/sts2-game-mod)（AI-Ascension）— Rust 互操作 mod；游戏接口与实验记录参考
+
+数据库与图鉴（参考文档数据来源）：
+
+- [Spire Codex](https://spire-codex.com) — 卡牌/遗物数据库（577 卡、296 遗物）
+- [slaythespire2.net](https://slaythespire2.net) — 中英文图鉴：卡牌/遗物/药水/怪物/事件（简中译名主要来源）
+- [sts2.gg](https://sts2.gg) — 分角色卡牌数据库（简中卡名）
+- [stratgg.com](https://www.stratgg.com) — 分角色卡牌与药水数据库
+- [mobalytics](https://mobalytics.gg/slay-the-spire-2) — 卡牌 wiki
+- [sts2-wiki.org](https://sts2-wiki.org) / [sts2.wiki](https://sts2.wiki) — 状态效果数值
+- [gamerblurb](https://gamerblurb.com) — 状态牌列表
+- [untapped.gg](https://sts2.untapped.gg) — 卡牌费用与稀有度
+- [sts2guide.com](https://sts2guide.com)、[IGN wiki](https://www.ign.com/wikis/slay-the-spire-2/)、[游民星空](https://www.gamersky.com/z/slaythespire2/)、[灰机 wiki](https://sts.huijiwiki.com)、[namu.wiki](https://namu.wiki) — 攻略与译名参考
