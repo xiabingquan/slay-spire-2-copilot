@@ -166,9 +166,15 @@ public static class ActionExecutor
         }
         Player playerRef = player!;
         int turnNumber = pcs.TurnNumber;
+        // Empty-hand turns freeze on the sync-queue path (observed live in the
+        // KinPriest boss fight: hand empty + Play phase, RequestEnqueue logs
+        // success but ActionQueueSynchronizer defers forever — likely paused
+        // queues after an exhaust/animation window). PlayerCmd.EndTurn has no
+        // such gate when no lock-style power is present.
+        bool emptyHand = pcs.Hand.Cards.Count == 0;
         // PlayerCmd.EndTurn can freeze on lock-style debuff turns; drive the
         // multiplayer-sync entry instead (OnEndedTurnLocally +
-        // EndPlayerTurnAction queue).
+        // EndPlayerTurnAction queue) unless the hand is empty.
         Fire(async () =>
         {
             try
@@ -180,6 +186,22 @@ public static class ActionExecutor
                 if (!aliveNow)
                 {
                     await ForceCombatEndAsync();
+                    return;
+                }
+                if (emptyHand)
+                {
+                    try
+                    {
+                        PlayerCmd.EndTurn(playerRef, canBackOut: false);
+                        BridgeMod.LogInfo($"end_turn via PlayerCmd (empty hand, turn {turnNumber})");
+                    }
+                    catch (Exception pe)
+                    {
+                        BridgeMod.LogErr($"PlayerCmd empty-hand end_turn failed: {pe}; falling back to sync queue");
+                        CombatManager.Instance.OnEndedTurnLocally();
+                        RunManager.Instance.ActionQueueSynchronizer.RequestEnqueue(
+                            new EndPlayerTurnAction(playerRef, turnNumber));
+                    }
                     return;
                 }
                 CombatManager.Instance.OnEndedTurnLocally();
@@ -194,7 +216,9 @@ public static class ActionExecutor
                 PlayerCmd.EndTurn(playerRef, canBackOut: false);
             }
         }, "end turn");
-        return (true, "submitted end_turn (sync queue path)");
+        return (true, emptyHand
+            ? "submitted end_turn (empty-hand PlayerCmd path)"
+            : "submitted end_turn (sync queue path)");
     }
 
     private static async Task ForceCombatEndAsync()
@@ -261,6 +285,19 @@ public static class ActionExecutor
                 {
                     await ForceCombatEndAsync();
                     return;
+                }
+                // Always also drive PlayerCmd — the sync queue can silently
+                // defer when its internal combat-state view is out of sync
+                // with PlayerCombatState.Phase (empty-hand deadlock, KinPriest
+                // boss fight 2026-09-17).
+                try
+                {
+                    PlayerCmd.EndTurn(playerRef, canBackOut: false);
+                    BridgeMod.LogInfo($"force_advance_turn: PlayerCmd.EndTurn fired (turn {turnNumber})");
+                }
+                catch (Exception pe)
+                {
+                    BridgeMod.LogErr($"force_advance_turn PlayerCmd failed: {pe}");
                 }
                 CombatManager.Instance.OnEndedTurnLocally();
                 RunManager.Instance.ActionQueueSynchronizer.RequestEnqueue(
