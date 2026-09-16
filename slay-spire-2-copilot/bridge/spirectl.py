@@ -503,8 +503,12 @@ def render_compact(state):
     # Act-start boon rooms (Ancient/Neow-family, e.g. 先古移民 HP restore) are
     # easy to skip: the game lands on the row-1 map and available_map_points
     # historically omitted the start room. Surface it loudly while unvisited.
+    # Ancient-typed check is defensive: is_boon_room is computed in StateBuilder
+    # from point_type, but a stale/older mod build may not flag it yet.
     start_room = run.get("act_start_room") or {}
-    if start_room and not start_room.get("visited") and start_room.get("is_boon_room"):
+    if start_room and not start_room.get("visited") and (
+        start_room.get("is_boon_room") or start_room.get("point_type") in ("Ancient", "Neow", "NeowBoon")
+    ):
         lines.append(
             f"ACT-START BOON ROOM UNVISITED: ({start_room.get('row')},{start_room.get('col')})"
             f"={start_room.get('point_type')} — map_select it BEFORE any row-1+ point"

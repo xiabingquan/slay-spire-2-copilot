@@ -40,6 +40,8 @@ using MegaCrit.Sts2.Core.Nodes.Screens.TreasureRoomRelic;
 using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.Saves;
 using MegaCrit.Sts2.Core.Settings;
+using MegaCrit.Sts2.Core.Timeline;
+using MegaCrit.Sts2.Core.Timeline.Epochs;
 
 namespace SpireCopilot.Bridge;
 
@@ -1049,6 +1051,7 @@ public static class ActionExecutor
         {
             BridgeMod.LogErr($"prefs tweak failed: {e}");
         }
+        EnsureNeowEpochRevealed();
         Control mainMenu = await WaitHelper.ForNode<Control>(root, "/root/Game/RootSceneContainer/MainMenu", default, TimeSpan.FromSeconds(30));
         NButton? abandon = mainMenu.GetNodeOrNull<NButton>("MainMenuTextButtons/AbandonRunButton");
         if (abandon is { Visible: true })
@@ -1133,6 +1136,44 @@ public static class ActionExecutor
     {
         try { return b.Character?.Id.Entry ?? ""; }
         catch { return ""; }
+    }
+
+    // Act 1's run-start boon room (Neow / 先古移民 family) only spawns when the
+    // profile has revealed NeowEpoch: RunManager.SetStartedWithNeowFlag() copies
+    // UnlockState.IsEpochRevealed<NeowEpoch>() into ExtraFields.StartedWithNeow,
+    // and GenerateMap() re-types the Act-1 StartingMapPoint to Monster when the
+    // flag is false — no boon room, no relic offer (live miss 2026-09-17, user
+    // confirmed every act start has a boon). Manual play reveals the epoch by
+    // opening the Timeline screen (auto-ObtainEpoch) and clicking the Neow slot
+    // (RevealEpoch); automated runs never visit Timeline. Mirror that one-time
+    // progression step here, before embark, so run creation snapshots a
+    // revealed NeowEpoch. Not a currency/meta purchase — the Neow epoch is the
+    // profile's intended first Timeline slot.
+    private static void EnsureNeowEpochRevealed()
+    {
+        try
+        {
+            SaveManager? saves = SaveManager.Instance;
+            if (saves == null)
+            {
+                BridgeMod.LogInfo("start_run: Neow epoch reveal deferred (SaveManager not ready)");
+                return;
+            }
+            if (saves.IsEpochRevealed<NeowEpoch>())
+            {
+                return;
+            }
+            string neowId = EpochModel.GetId<NeowEpoch>();
+            // ObtainEpochOverride covers both Timeline steps in one call:
+            // OnSubmenuOpened obtains the epoch, the slot click reveals it.
+            saves.ObtainEpochOverride(neowId, EpochState.Revealed);
+            saves.SaveProgressFile();
+            BridgeMod.LogInfo($"start_run: revealed {neowId} on profile — Act 1 Neow boon room will spawn");
+        }
+        catch (Exception e)
+        {
+            BridgeMod.LogErr($"start_run: Neow epoch reveal failed: {e.Message}");
+        }
     }
 
     private static (bool, string) AbandonRun()

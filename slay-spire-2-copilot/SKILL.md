@@ -130,12 +130,18 @@ Repeat until the run ends or the user stops you. Every spirectl call carries
    omits). Routing decisions: `run.map.rows[]` in the JSON state carries the
    full act map (every point's `point_type` + `children` connectivity) —
    weigh elite/rest/shop/boss paths from it, not just the current row.
-   **Act-start boon rooms**: on every act transition check
-   `run.act_start_room` — Ancient/Neow-family start points (e.g. 先古移民,
-   HP-restore boons) must be map_select'd FIRST while
-   `visited=false`/`is_boon_room=true`; they appear re-injected at the head
-   of `available_map_points`. Never jump to row-1+ points while that flag
-   is live — skipping the boon is a permanent loss (no backtracking)
+   **Boon rooms (run start + act transitions)**: every act begins with an
+   Ancient/Neow-family boon room. Act 1's is **Neow** (relic choices —
+   typically positive relics vs curse-cost relics); `start_run` reveals the
+   profile's NeowEpoch first so the room spawns, and the game then auto-enters
+   the Neow event at run start — pick a positive boon, never a curse-cost
+   option without cause. Later acts place 先古移民-style start rooms. On every
+   act transition check `run.act_start_room` — while `visited=false` /
+   `is_boon_room=true` (or `point_type` Ancient), that point must be
+   map_select'd FIRST; state re-injects it at the head of
+   `available_map_points` and the compact view prints an ACT-START BOON ROOM
+   UNVISITED warning. Never jump to row-1+ points while that flag is live —
+   skipping the boon is a permanent loss (no backtracking)
 2. Decide the action from the state plus memory (run summaries, character playstyles)
 3. `... act <action> --args '<json>' --wait` — actions return immediately once
    submitted; `--wait` polls until the state settles (stable fingerprint) then

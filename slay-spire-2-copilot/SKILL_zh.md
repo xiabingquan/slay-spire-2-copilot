@@ -105,11 +105,16 @@ memory 记录里。
 1. `... state` — 紧凑状态（仅当需要紧凑视图未包含的字段时用 `--json`）。
    路线决策：JSON 状态里的 `run.map.rows[]` 携带完整 act 地图（每个点的
    `point_type` + `children` 连通性）——用它权衡精英/营火/商店/boss 路线，
-   不要只看当前可选行。**章节起始赐福房**：每次章节切换后检查
-   `run.act_start_room`——Ancient/尼奥系起始点（如先古移民，可回血）在
-   `visited=false`/`is_boon_room=true` 时必须**最先** map_select；该点会
-   重新注入 `available_map_points` 头部。该标志存在时绝不能跳到第 1 排
-   及之后的点——跳过赐福是永久损失（地图不能回头）
+   不要只看当前可选行。**赐福房（开局 + 章节切换）**：每章开头都有
+   Ancient/尼奥系赐福房。第一章是**尼奥（Neow）**（遗物三选一类选项——
+   正面遗物 vs 诅咒代价遗物）；`start_run` 会先在存档上揭示 NeowEpoch
+   保证房间生成，随后游戏在开局**自动进入**尼奥事件——选正面赐福，
+   无特殊理由绝不选诅咒代价选项。后续章节是先古移民式起始房。每次
+   章节切换都要检查 `run.act_start_room`——在 `visited=false`/
+   `is_boon_room=true`（或 `point_type` 为 Ancient）时必须**最先**
+   map_select 该点；state 会把它重新注入 `available_map_points` 头部，
+   紧凑视图会打印 ACT-START BOON ROOM UNVISITED 警告。该标志存在时
+   绝不能跳到第 1 排及之后的点——跳过赐福是永久损失（地图不能回头）
 2. 结合状态与记忆（对局 summary、角色玩法笔记）决定动作
 3. `... act <动作> --args '<json>' --wait` — action 立即返回（已提交）；`--wait`
    轮询至状态稳定（指纹不再跳动）后打印。战术已定时，多个动作合并为一次

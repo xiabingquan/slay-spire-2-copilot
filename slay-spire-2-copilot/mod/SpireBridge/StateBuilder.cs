@@ -1267,7 +1267,11 @@ public static class StateBuilder
                 {
                     actions.Add(new Dictionary<string, object?> { ["action"] = "skip", ["args"] = new Dictionary<string, object?>() });
                 }
-                if (screen is "card_choice" or "deck_select" or "relic_choice")
+                // "rewards" included: after all reward buttons are claimed the
+                // screen exposes no choose options, and proceed (NProceedButton)
+                // is the only way forward — without it the actions list showed
+                // abandon_run only (live gap 2026-09-17).
+                if (screen is "card_choice" or "deck_select" or "relic_choice" or "rewards")
                 {
                     actions.Add(new Dictionary<string, object?> { ["action"] = "proceed", ["args"] = new Dictionary<string, object?>() });
                 }
