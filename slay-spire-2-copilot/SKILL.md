@@ -128,7 +128,7 @@ Repeat until the run ends or the user stops you. Every spirectl call carries
 
 1. `... state` — compact state (use `--json` only for fields the compact view
    omits)
-2. Decide the action from the state plus memory (user guide, recent runs)
+2. Decide the action from the state plus memory (run summaries, character playstyles)
 3. `... act <action> --args '<json>' --wait` — actions return immediately once
    submitted; `--wait` polls until the state settles (stable fingerprint) then
    prints it. For a chosen tactic spanning several acts, dump them in one

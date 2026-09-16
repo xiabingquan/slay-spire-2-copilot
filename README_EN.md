@@ -10,21 +10,21 @@ https://github.com/user-attachments/assets/6eae44a2-312d-4a1c-abc3-f5617fe23f21
 
 An AI copilot that lets Claude Code / Codex play Slay the Spire 2 autonomously
 on your machine. Once the skill is triggered, the agent reads the run state,
-makes decisions, and operates the game until the run ends — then writes a
-postmortem and starts the next run.
+makes decisions, and operates the game until the run ends — then writes the
+run's memory note (Summary + review) and starts the next run.
 
 ## What this project is
 
 - **Autonomous runs**: live game state (HP, hand, enemy intents, map, …) is
   read every turn; the AI chooses cards, rewards, and routes, operating the
   game through a communication mod
-- **Continuous operation**: after a run ends it automatically writes a
-  postmortem, updates the experience store, and starts the next run; the
-  bundled external watchdog script can periodically check that the game
-  process, bridge, and logs are alive
-- **Cross-run memory**: lessons and run records under `memory/` auto-load in
-  later sessions; tool defects are fixed in this repo and take effect on the
-  next run
+- **Continuous operation**: after a run ends it automatically writes the
+  run's memory note and starts the next run; the bundled external watchdog
+  script can periodically check that the game process, bridge, and logs are
+  alive
+- **Cross-run memory**: run memory notes under `memory/` (summaries,
+  per-character playstyles) auto-load in later sessions; tool defects are
+  fixed in this repo and take effect on the next run
 
 ## How to use
 
