@@ -151,16 +151,20 @@ gitignored (harness runtime only).
 
 When the run ends (game_over screen, or abandon):
 
-1. Write this run's memory note to memory/runs/<same base name as the run
-   log>.md (run-<YYYYmmdd-HHMMSS>-<hash8>.md), following memory/user guide.md
-   and the section structure of memory/template.md (对局回顾 / 做得好的
-   地方 / 做得不好的地方 / K moments). Cite the run log by file name only —
+1. Write this run's memory note to memory/runs/<character>_<YYYYmmdd-HHMMSS>_<hash8>.md
+   (character id first, then the run log's timestamp and hash, lowercase,
+   underscore-separated) and its Chinese twin
+   memory/runs/<character>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md — the two files
+   must stay content-aligned. Both follow memory/user guide.md and the
+   section structure of memory/template.md (Run review / What went well /
+   What went poorly / Key moments). Cite the run log by file name only —
    never personal absolute paths.
 2. Fold newly observed game facts (card/relic/potion/power/intent effects)
    into the matching references/game/ file and its `_zh` twin as plain
    entries — the English and Chinese files must stay content-aligned. Memory
    holds play insights and run process only, never game base data.
-3. Commit the run memory note to the repo — memory is version-controlled.
+3. Commit the run memory note and its `_zh` twin to the repo — memory is
+   version-controlled.
 4. If the user has stopped playing: disarm the watchdog (see "Runtime
    conventions").
 
@@ -239,6 +243,7 @@ memory/ — run memory (version-controlled):
 
 - `memory/user guide.md` — user-written guidance for what agents should record
 - `memory/template.md` — section template for per-run memory notes
-- `memory/runs/` — one note per run, named run-<YYYYmmdd-HHMMSS>-<hash8>.md
+- `memory/runs/` — one note per run plus a `_zh` Chinese twin, named
+  <character>_<YYYYmmdd-HHMMSS>_<hash8>.md / <character>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md
 
 - `SKILL_zh.md` — Chinese version of this skill doc

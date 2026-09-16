@@ -1,10 +1,49 @@
 # User guide
 
-（用户手写的 agent 记忆要点——记录 memory 时的参考）
+User-written guidance for the agent's memory practice — consult this when
+recording run memory.
 
-## 记 memory 的入手方向
+## What to cover when recording memory
 
-记录 memory 时，可以从以下方面入手：角色特性、卡牌特性、遗物特性，等等。
+Start from these aspects:
 
-要尤其注意这几者之间的关联：例如某些卡牌相互之间、或某些卡牌与某个遗物
-之间的相互作用，会让整个卡组变得非常强大——这类协同是记录的重点。
+- Character traits
+- Card traits
+- Relic traits
+- ... and similar game elements
+
+Pay special attention to the interactions among them:
+
+- Card × card combinations
+- Card × relic combinations
+- ... and similar cross-element synergies
+
+Such synergies can make an entire deck extremely powerful — they are the
+focus of recording.
+
+## Information awareness in review
+
+When reviewing a run, pay special attention to information awareness —
+information that was available but never utilized:
+
+- e.g. the current floor's available map routes (all selectable paths shown
+  on the map)
+- ... and similar state information the bridge exposed but the run failed to
+  leverage
+
+## Accumulating beneficial experience
+
+The core goal of run memory is to accumulate correct experience that supports
+decisions in later runs. Emphasize these two sections:
+
+In "What went well", focus on unexpectedly powerful plays:
+
+- e.g. a card that played an unexpected role
+- e.g. a relic that delivered unexpected value
+- ... and similar positive outcomes worth repeating
+
+In "What went poorly", focus on decision-level reflections:
+
+- e.g. which card was picked (and why it underperformed)
+- e.g. which route was taken (and what it cost)
+- ... and similar choices to reconsider next run

@@ -1,19 +1,23 @@
-# Run memory 模板
+# Run memory template
 
-每局对局的 memory 模板——memory/runs/ 下的每局记录按此结构撰写。
+Template for per-run memory notes — write every run under memory/runs/ as a
+pair of files named <character>_<YYYYmmdd-HHMMSS>_<hash8>.md (English) and
+<character>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md (Chinese), kept content-aligned.
+Both follow this section structure.
 
-## 对局回顾
+## Run review
 
-（整局的总体回顾）
+(overall review of the run)
 
-## 做得好的地方
+## What went well
 
-（本局中做得好的点）
+(what went well this run)
 
-## 做得不好的地方
+## What went poorly
 
-（本局中做得不好的点）
+(what went poorly this run)
 
-## K moments
+## Key moments
 
-（关键节点：获取到的关键卡牌、关键遗物、关键决策、关键 boss 等，全部记录于此）
+(key moments: key card/relic pickups, key decisions, key bosses, etc. —
+record them all here)
