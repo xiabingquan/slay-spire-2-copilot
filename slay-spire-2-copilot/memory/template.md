@@ -5,6 +5,19 @@ pair of files named <character>_<YYYYmmdd-HHMMSS>_<hash8>.md (English) and
 <character>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md (Chinese), kept content-aligned.
 Both follow this section structure.
 
+## Summary
+
+Core facts of the run, in a table at the very top of the note:
+
+| Field | Value |
+|---|---|
+| Character |  |
+| Floor reached |  |
+| Score |  |
+| Ascension |  |
+| Fixed seed used |  |
+| Seed |  |
+
 ## Run review
 
 (overall review of the run)

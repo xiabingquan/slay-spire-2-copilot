@@ -156,8 +156,9 @@ When the run ends (game_over screen, or abandon):
    underscore-separated) and its Chinese twin
    memory/runs/<character>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md — the two files
    must stay content-aligned. Both follow memory/user guide.md and the
-   section structure of memory/template.md (Run review / What went well /
-   What went poorly / Key moments). Cite the run log by file name only —
+   section structure of memory/template.md (Summary table of core run facts /
+   Run review / What went well / What went poorly / Key moments). Cite the
+   run log by file name only —
    never personal absolute paths.
 2. Fold newly observed game facts (card/relic/potion/power/intent effects)
    into the matching references/game/ file and its `_zh` twin as plain
