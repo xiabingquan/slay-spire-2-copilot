@@ -38,7 +38,7 @@ within each character.
 - DOMINATE: 1, skill, gain 1 Strength for each Vulnerable on the enemy; Exhaust.
 - DRUM_OF_BATTLE: 0, power, draw 2 cards; at start of your turn exhaust the top card of your draw pile.
 - EVIL_EYE: 1, skill, gain 8 Block, +8 more if a card was Exhausted this turn; Exhaust.
-- EXPECT_A_FIGHT: 2, attack, gain 1 Energy per Attack in your hand.
+- EXPECT_A_FIGHT: 2, attack, gain 1 Energy per Attack in your hand. (Live 2026-09-17: with 3-4 attacks in hand refunded to energy 6/3; also applies NO_ENERGY_GAIN_POWER — no further energy gain that turn.)
 - FEED: 1, attack, deal 10 damage; if Fatal raise your Max HP by 3; Exhaust.
 - FEEL_NO_PAIN: 1, power, whenever a card is Exhausted gain 3 Block; Exhaust.
 - FIEND_FIRE: 2, attack, exhaust your hand; deal 7 damage per card Exhausted.

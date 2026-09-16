@@ -47,8 +47,8 @@ Buff / Debuff / Defend / Stun / Sleep / Status(n) / Summon / Heal / Hidden.
 - HunterKiller: TENDERIZING_GOOP = debuff; BITE = single; PUNCTURE = multi ×3.
 - InfestedPrism: JAB = single; WHIRLWIND = multi. Passive: VitalSparkPower.
 - Inklet: JAB = single; WHIRLWIND = multi ×3; PIERCING_GAZE = single. Passive: SlipperyPower (first-hit damage greatly reduced, charges consumed per hit — observed live).
-- KinFollower: QUICK_SLASH = single; BOOMERANG = multi ×2; POWER_DANCE = buff. Passive: MinionPower.
-- KinPriest: BEAM = multi ×3; RITUAL = buff (strength growth — kill priority).
+- KinFollower: QUICK_SLASH = single; BOOMERANG = multi ×2; POWER_DANCE = buff. Passive: MinionPower. (Live 2026-09-17: BOOMERANG label 4×2/6×2; POWER_DANCE grants Strength ~+2.)
+- KinPriest: BEAM = multi ×3; RITUAL = buff (strength growth — kill priority). (Live 2026-09-17 boss fight 187hp: ORB_OF_FRAILTY / ORB_OF_WEAKNESS = single attack ~8 + applies Frail/Weak; BEAM label 5×3; RITUAL grants +2 Strength; spawns flanked by 2x KinFollower.)
 - KnowledgeDemon: CURSE_OF_KNOWLEDGE = debuff; SLAP = single; KNOWLEDGE_OVERWHELMING = multi ×3.
 - LagavulinMatriarch: SLEEP = sleep; SLASH = single; DISEMBOWEL = multi. Passives: PlatingPower + AsleepPower.
 - LeafSlimeM: CLUMP_SHOT = single; STICKY_SHOT = status ×2.
@@ -70,7 +70,10 @@ Buff / Debuff / Defend / Stun / Sleep / Status(n) / Summon / Heal / Hidden.
 - ShrinkerBeetle (缩小甲虫, live play 2026-09-17): empty-intent turn applies SHRINK_POWER to the player (attack damage reduced while it lives); follows with single attacks ~7.
 - ThievingHopper (偷窃草蜢/偷窃跳虫, Act 2, live play 2026-09-17): THIEVERY_MOVE = single attack (~17) + applies SWIPE_POWER (steals gold); EscapeArtistPower charges on the side; CardDebuff intent injects status cards (Wound observed).
 - Vantom (墨影幻灵, Act 1 boss, live play 2026-09-17): INK_BLOT = single ~7; INKY_LANCE = multi ×2 (~8 each); DISMEMBER = heavy single (~26-28) + status cards ×3; PREPARE = buff (+2 Strength observed). Passive: SlipperyPower — incoming hit damage greatly reduced per charge (started at 8 charges; each attack hit consumes 1 — multi-hits strip faster).
-- PhrogParasite (elite, live play): INFESTED_POWER spawns 4x ~17-21hp adds on death — save AOE for the spawn wave.
+- PhrogParasite (elite, live play): INFESTED_POWER spawns 4x ~17-21hp adds on death — save AOE for the spawn wave. (Live 2026-09-17: adds are 扭动虫/WrithingWorm, move SPAWNED_MOVE — their spawn turn is Stun, free damage; then ~6-9 single attacks + Buff/StatusCard turns.)
+- ConstrictorSnake (蛇行扼杀者, live play 2026-09-17): CONSTRICT = debuff applying CONSTRICT_POWER to player (effect pending observation); THWACK = single attack + self Defend.
+- VineStumbler (藤蔓蹒跚者, live play 2026-09-17): multi 6×2 attacks; CardDebuff intent injects status cards; observed applying TANGLED_POWER (Entangled — attack costs +1 for the combat) to the player.
+- CubexConstruct (live 2026-09-17): REPEATER_BLAST = attack + buff; EXPEL = multi ×2 heavy hit; ArtifactPower 1 absorbs the first debuff (strip with ThunderclAP/Bash before Vulnerable lines).
 - CeremonialBeast (boss, live play): RINGING_POWER on player flips hand cards to can_play=false.
 
 ## Reading monsters mid-run

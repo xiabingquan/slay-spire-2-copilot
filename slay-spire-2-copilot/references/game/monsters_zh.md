@@ -48,8 +48,8 @@ Summon / Heal / Hidden。
 - HunterKiller（猎人杀手）：TENDERIZING_GOOP = 减益；BITE = 单次；PUNCTURE = 多段 ×3。
 - InfestedPrism（感染棱柱）：JAB = 单次；WHIRLWIND = 多段。被动：VitalSparkPower。
 - Inklet（墨宝）：JAB = 单次；WHIRLWIND = 多段 ×3；PIERCING_GAZE = 单次。被动：SlipperyPower（首次受击伤害大减，充能每受击消耗——实战验证）。
-- KinFollower（同族信徒）：QUICK_SLASH = 单次；BOOMERANG = 多段 ×2；POWER_DANCE = 增益。被动：MinionPower。
-- KinPriest（同族神官）：BEAM = 多段 ×3；RITUAL = 增益（力量成长——优先击杀）。
+- KinFollower（同族信徒）：QUICK_SLASH = 单次；BOOMERANG = 多段 ×2；POWER_DANCE = 增益。被动：MinionPower。（实战 2026-09-17：BOOMERANG 标签 4×2/6×2；POWER_DANCE 赋予力量约 +2。）
+- KinPriest（同族神官）：BEAM = 多段 ×3；RITUAL = 增益（力量成长——优先击杀）。（实战 2026-09-17 boss 战 187hp：ORB_OF_FRAILTY / ORB_OF_WEAKNESS = 单次攻击约 8 + 施加 Frail/Weak；BEAM 标签 5×3；RITUAL 赋予 +2 力量；两侧各 1 名 KinFollower 爪牙。）
 - KnowledgeDemon（知识恶魔）：CURSE_OF_KNOWLEDGE = 减益；SLAP = 单次；KNLEDGE_OVERWHELMING = 多段 ×3。
 - LagavulinMatriarch（乐加维林族母）：SLEEP = 睡眠；SLASH = 单次；DISEMBOWEL = 多段。被动：PlatingPower + AsleepPower。
 - LeafSlimeM（树叶史莱姆（中））：CLUMP_SHOT = 单次；STICKY_SHOT = 状态 ×2。
@@ -66,7 +66,10 @@ Summon / Heal / Hidden。
 - Noisebot：NOISE = 状态 ×2。
 - Osty（奥斯提）：Necrobinder 的召唤伙伴（通过 Summon 出场；大量死灵卡牌指挥 Osty——见 cards_zh.md）。
 - Ovicopter（直飞产卵虫）：LAY_EGGS = 召唤；SMASH = 单次；NUTRITIONAL_PASTE = 增益。
-- PhrogParasite（异蛙寄生虫，精英）：实战变体 INFESTED_POWER 死亡时生成 4 只约 17-21hp 小怪——AOE 留给召唤波。
+- PhrogParasite（异蛙寄生虫，精英）：实战变体 INFESTED_POWER 死亡时生成 4 只约 17-21hp 小怪——AOE 留给召唤波。（实战 2026-09-17：小怪为 扭动虫 WrithingWorm，move SPAWNED_MOVE——出场回合 Stun，免费输出；随后约 6-9 单次攻击 + Buff/StatusCard 回合。）
+- ConstrictorSnake（蛇行扼杀者，实战 2026-09-17）：CONSTRICT = 减益，对玩家施加 CONSTRICT_POWER（效果待观察）；THWACK = 单次攻击 + 自身获得格挡。
+- VineStumbler（藤蔓蹒跚者，实战 2026-09-17）：多段 6×2 攻击；CardDebuff 意图注入状态牌；观察到对玩家施加 TANGLED_POWER（Entangled——本场战斗攻击牌费用 +1）。
+- CubexConstruct（实战 2026-09-17 补充）：REPEATER_BLAST = 攻击 + 增益；EXPEL = 多段 ×2 重击；ArtifactPower 1 层吸收第一次减益（易伤线前先用 Thunderclap/Bash 剥掉）。
 - Queen（女王，boss）：施加 CHAINS_OF_BINDING_POWER + MINION_POWER 工厂式召唤；格挡压制与 Frail 叠加可使格挡归零。
 - 机器人工厂系（实战）：STOCK_POWER——每次死亡生成下一形态直至战斗结束。
 - ShrinkerBeetle（缩小甲虫，实战 2026-09-17）：空意图回合对玩家施加 SHRINK_POWER（其存活期间玩家攻击伤害降低）；随后单次攻击约 7。

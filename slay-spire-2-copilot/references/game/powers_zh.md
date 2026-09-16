@@ -42,6 +42,8 @@
 ## 实战观察（v0.107.1）
 
 - SLIPPERY_POWER（如 墨宝/Inklet）：首次受到的攻击伤害大减（Strike 6 -> 1）；充能每受击消耗一次。
+- CONSTRICT_POWER（蛇行扼杀者，实战 2026-09-17）：由 CONSTRICT 招式对玩家施加；确切效果待观察（抽样回合未见明显 HP/格挡变化）。
+- NO_ENERGY_GAIN_POWER（来自 EXPECT_A_FIGHT，实战 2026-09-17）：本回合不再获得能量（卡牌的能量返还在此 power 生效前结算）。
 - SHRINK_POWER（缩小甲虫）：降低玩家攻击伤害，持续到该敌人死亡。
 - INFESTED_POWER（异蛙寄生虫精英）：死亡时生成 4 只约 17-21hp 小怪——AOE 留给召唤波。
 - STOCK_POWER（机器人工厂）：每次死亡生成下一形态。

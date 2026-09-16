@@ -66,6 +66,12 @@ play on v0.107.1.
 
 - SLIPPERY_POWER (e.g. Inklet): first incoming hit greatly reduced (Strike 6
   -> 1); charges consumed per hit.
+- CONSTRICT_POWER (ConstrictorSnake, live 2026-09-17): applied to player by
+  CONSTRICT move; exact effect pending observation (no clear HP/block delta
+  seen in the sampled turns).
+- NO_ENERGY_GAIN_POWER (from EXPECT_A_FIGHT, live 2026-09-17): player gains
+  no further energy for the rest of the turn (refund from the card still
+  lands before this power applies).
 - SHRINK_POWER (ShrinkerBeetle): reduces player attack damage until the enemy dies.
 - INFESTED_POWER (PhrogParasite elite): on death spawns 4x ~17-21hp adds — save
   AOE for the spawn wave.

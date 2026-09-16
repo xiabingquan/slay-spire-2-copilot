@@ -14,4 +14,6 @@ All characters start with 99 Gold. Test-only ids: Deprived, RandomCharacter
 
 Unlock chain (game source): Silent is available from start; REGENT unlocks after Silent; NECROBINDER after Regent; DEFECT after Necrobinder. (Ironclad and Silent are the initial roster — verify exact fresh-save state in game.)
 
+Save-state correction (live 2026-09-17, v0.107.1): this machine's save has ONLY IRONCLAD unlocked — SILENT, DEFECT, NECROBINDER, REGENT and RANDOM_CHARACTER all report IsLocked=true after UnlockIfPossible refresh (roster logged by start_run). Unlock progression appears tied to in-game achievements (defeat elites/bosses with characters); "Silent available from start" does not hold for this save. Skill character rotation falls back to IRONCLAD until progression unlocks the roster.
+
 Shared run structure: 3 acts per run, branching map (monster / elite / boss / event / shop / rest / treasure); card rewards after combat; Neow boon at run start; rest sites offer Rest and Smith plus character-specific options. In state snapshots the character field uses ids IRONCLAD, SILENT, DEFECT, NECROBINDER, REGENT.
