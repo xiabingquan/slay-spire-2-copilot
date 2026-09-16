@@ -70,3 +70,11 @@ relics and cards that character wants:
 - Key relics the character is looking for
 - Key cards the character is looking for
 - ... and similar per-character build knowledge
+
+## Summary contents
+
+In the Summary section of each run note, besides the core-facts table, write
+one or two sentences covering the run's biggest gain and biggest loss:
+
+- The single biggest win of the run
+- The single biggest loss of the run

@@ -7,7 +7,8 @@ Both follow this section structure.
 
 ## Summary
 
-Core facts of the run, in a table at the very top of the note:
+Core facts of the run in a table, plus a one- or two-sentence summary of the
+run's biggest gain and biggest loss:
 
 | Field | Value |
 |---|---|
@@ -17,6 +18,9 @@ Core facts of the run, in a table at the very top of the note:
 | Ascension |  |
 | Fixed seed used |  |
 | Seed |  |
+
+Biggest gain / loss: (one or two sentences — the single biggest win of the
+run and the single biggest loss)
 
 ## Run review
 
