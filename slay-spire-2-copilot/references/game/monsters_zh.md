@@ -63,6 +63,7 @@ Summon / Heal / Hidden。
 - MysteriousKnight：被动 StrengthPower + PlatingPower。
 - Myte（异螨）：TOXIC = 状态 ×2；BITE = 单次攻击。
 - Nibbit（小啃兽）：BUTT = 单次；HISS = 增益。
+- Noisebot：NOISE = 状态 ×2。
 - Osty（奥斯提）：Necrobinder 的召唤伙伴（通过 Summon 出场；大量死灵卡牌指挥 Osty——见 cards_zh.md）。
 - Ovicopter（直飞产卵虫）：LAY_EGGS = 召唤；SMASH = 单次；NUTRITIONAL_PASTE = 增益。
 - PhrogParasite（异蛙寄生虫，精英）：实战变体 INFESTED_POWER 死亡时生成 4 只约 17-21hp 小怪——AOE 留给召唤波。
