@@ -96,6 +96,22 @@ see `slay-spire-2-copilot/references/bridge/commands.md`.
 
 ## Acknowledgements
 
-- [BaseLib-StS2](https://github.com/Alchyr/BaseLib-StS2) — Alchyr's Slay the
-  Spire 2 modding base library; consulted as a community reference for mod
-  loading and game API conventions while developing SpireBridge
+Modding projects (community reference implementations):
+
+- [BaseLib-StS2](https://github.com/Alchyr/BaseLib-StS2) — Alchyr's Slay the Spire 2 modding base library; reference for mod loading and game API conventions
+- [CombatSolver](https://github.com/Torch1230/CombatSolver) — combat route solver mod; structured data reference for card/relic/power effects
+- [STS2-Agent](https://github.com/CharTyr/STS2-Agent) — in-game AI companion mod; monster behaviors, events, and game-knowledge extraction reference
+- [slay-the-streamer-2](https://github.com/Surfinite/slay-the-streamer-2) — Twitch chat voting mod; modding API and UI-flow research reference
+- [sts2-game-mod](https://github.com/AI-Ascension/sts2-game-mod) (AI-Ascension) — Rust-interop mod; game interface and experiment records reference
+
+Databases and wikis (reference-doc data sources):
+
+- [Spire Codex](https://spire-codex.com) — card/relic database (577 cards, 296 relics)
+- [slaythespire2.net](https://slaythespire2.net) — CN/EN codex for cards/relics/potions/monsters/events (main source for Simplified Chinese names)
+- [sts2.gg](https://sts2.gg) — per-character card database (CN names)
+- [stratgg.com](https://www.stratgg.com) — per-character card and potion databases
+- [mobalytics](https://mobalytics.gg/slay-the-spire-2) — card wiki
+- [sts2-wiki.org](https://sts2-wiki.org) / [sts2.wiki](https://sts2.wiki) — status-effect numerics
+- [gamerblurb](https://gamerblurb.com) — status-card list
+- [untapped.gg](https://sts2.untapped.gg) — card costs and rarities
+- [sts2guide.com](https://sts2guide.com), [IGN wiki](https://www.ign.com/wikis/slay-the-spire-2/), [Gamersky](https://www.gamersky.com/z/slaythespire2/), [huijiwiki](https://sts.huijiwiki.com), [namu.wiki](https://namu.wiki) — guides and name references
