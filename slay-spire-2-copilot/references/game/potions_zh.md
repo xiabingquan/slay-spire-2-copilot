@@ -65,7 +65,7 @@ Potion 类均已覆盖；数值取各类 `CanonicalVars` 基础值。括号内�
 - Ship in a Bottle（瓶中船）(Rare, 战斗中, 任意玩家): 获得 10 格挡；获得 BlockNextTurnPower 10——你的格挡首次被清除时再次获得 10 格挡（仅一次）。
 - Skill Potion（技能药水）(Common, 战斗中, 自身): 从角色卡池生成 3 张不同技能牌中选 1 张（可跳过）；加入手牌，本回合免费。
 - Snecko Oil（异蛇之油）(Rare, 战斗中, 任意玩家): 抽 7 张；随机化手牌中所有非 X 费卡牌的费用。
-- Soldier's Stew（士兵炖汤）(Rare, 战斗中, 任意玩家): 本场战斗内你战斗牌堆中所有含 Strike 标签的卡牌 +1 次 Replay。
+- Soldier's Stew（士兵炖汤）(Rare, 战斗中, 任意玩家): 本场战斗内你战斗牌堆中所有含 Strike 标签的卡牌 +1 次 Replay。run-16 实测：Replay 表现为用药时对各张卡的一次性充能 —— 用药时已在手牌/抽牌堆中的打击牌打出时额外结算一次；战斗后期才抽到的打击只结算一次。
 - Speed Potion（速度药水）(Common, 战斗中, 任意玩家): 获得 SpeedPotionPower +5 敏捷——本回合结束时失去 5 敏捷（临时敏捷）。
 - Stable Serum（稳定血清）(Uncommon, 战斗中, 任意玩家): 获得 RetainHandPower 2——接下来 2 个回合结束时不弃手牌。
 - Star Potion（星星药水）(Common, 战斗中, 自身): +3 点星星（★）。

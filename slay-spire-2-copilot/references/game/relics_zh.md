@@ -53,7 +53,7 @@
 - 葬礼面具（FuneraryMask，Uncommon，Necrobinder）：战斗开始，向抽牌堆洗入 3 张 Soul。
 - 星系尘埃（GalacticDust，Uncommon，Regent）：每消耗 10 点星星，获得 10 格挡。
 - 镀金缆线（GoldPlatedCables，Uncommon，Defect）：最右侧的充能球额外触发 1 次被动。
-- 地精之角（GremlinHorn，Uncommon）：敌人死亡时，获得 1 点能量并抽 1 张牌。
+- 地精之角（GremlinHorn，Uncommon）：敌人死亡时，获得 1 点能量并抽 1 张牌。run-16 实测：击杀连锁验证 —— 每次死亡立刻 +1 能量（回合中显示 4/3→6/4）并抽牌，支撑波次战多杀回合。
 - 船夹板（HornCleat，Uncommon）：第 2 回合开始，获得 14 格挡。
 - 金纸（JossPaper，Uncommon）：每消耗 5 张牌，抽 1 张牌（Ethereal 回合末消耗在回合结束时计入）。
 - 锁镰（Kusarigama，Uncommon）：单回合每打出 3 张攻击牌，对随机敌人造成 6 点伤害。
@@ -75,7 +75,7 @@
 - 活动星图（Planisphere，Uncommon）：进入问号房间时，回复 5 HP。
 - 君王矿石（Regalite，Uncommon，Regent）：每次创造卡牌时，获得 2 格挡。
 - 爬行动物饰品（ReptileTrinket，Uncommon）：每次使用药水时，本回合获得 3 点力量。
-- 波纹水盆（RippleBasin，Uncommon）：回合结束时，若本回合未打出任何攻击牌，获得 4 格挡。
+- 波纹水盆（RippleBasin，Uncommon）：回合结束时，若本回合未打出任何攻击牌，获得 4 格挡。run-16 实测：回合末与卡牌格挡加法叠加（Spiral 附魔防御 22 + 水盆 4 = 26 挡吃 18 入侵，1 HP 存活）；低血时「弃攻击换挡」是真实生存杠杆。
 - 自成型黏土（SelfFormingClay，Uncommon，Ironclad）：战斗中每次失去 HP 时，下回合开始获得 3 格挡。
 - 闪亮口红（SparklingRouge，Uncommon）：第 3 回合开始，获得 1 点力量和 1 点敏捷。
 - 碎石钻（StoneCracker，Uncommon）：战斗开始，将抽牌堆中 2 张随机牌升级（本场战斗内）。

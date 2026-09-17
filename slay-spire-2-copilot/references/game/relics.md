@@ -53,7 +53,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Funerary Mask (FuneraryMask, Uncommon, Necrobinder): at combat start, shuffle 3 Soul cards into your draw pile.
 - Galactic Dust (GalacticDust, Uncommon, Regent): every 10 Stars spent, gain 10 Block.
 - Gold-Plated Cables (GoldPlatedCables, Uncommon, Defect): your rightmost Orb triggers its passive 1 additional time.
-- Gremlin Horn (GremlinHorn, Uncommon): when an enemy dies, gain 1 Energy and draw 1 card.
+- Gremlin Horn (GremlinHorn, Uncommon): when an enemy dies, gain 1 Energy and draw 1 card. Run-16 live: kill-chains verified — each death refunded +1 Energy (display 4/3→6/4 mid-turn) and drew immediately, enabling multi-kill turns vs wave fights.
 - Horn Cleat (HornCleat, Uncommon): at start of turn 2, gain 14 Block.
 - Joss Paper (JossPaper, Uncommon): every 5 cards exhausted, draw 1 card (Ethereal end-of-turn exhausts are counted at turn end).
 - Kusarigama (Kusarigama, Uncommon): every 3 Attack cards played in one turn, deal 6 damage to a random enemy.
@@ -75,7 +75,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Planisphere (Planisphere, Uncommon): on entering a ? room, heal 5 HP.
 - Regalite (Regalite, Uncommon, Regent): whenever you create a card, gain 2 Block.
 - Reptile Trinket (ReptileTrinket, Uncommon): whenever you use a potion, gain 3 Strength this turn.
-- Ripple Basin (RippleBasin, Uncommon): end of turn, if you played no Attack cards this turn, gain 4 Block.
+- Ripple Basin (RippleBasin, Uncommon): end of turn, if you played no Attack cards this turn, gain 4 Block. Run-16 live: stacks additively with card block at end of turn (Spiral-enchant Defend 22 + Basin 4 = 26 vs 18 incoming, survived at 1 HP); the no-attack-turn discipline is a real survival lever at low HP.
 - Self-Forming Clay (SelfFormingClay, Uncommon, Ironclad): whenever you lose HP in combat, gain 3 Block at start of next turn.
 - Sparkling Rouge (SparklingRouge, Uncommon): at start of turn 3, gain 1 Strength and 1 Dexterity.
 - Stone Cracker (StoneCracker, Uncommon): at combat start, upgrade 2 random cards in your draw pile for the rest of combat.

@@ -65,7 +65,7 @@ Target: `self` / `any player` / `any enemy` / `ALL enemies`. ALL-enemies potions
 - Ship in a Bottle (Rare, combat, any player): gain 10 Block; apply BlockNextTurnPower 10 — the first time your Block is cleared, gain 10 Block again (once).
 - Skill Potion (Common, combat, self): choose 1 of 3 distinct Skill cards from your character card pool (may skip); add to hand, free this turn.
 - Snecko Oil (Rare, combat, any player): draw 7; randomize the cost of every non-X card currently in your hand.
-- Soldier's Stew (Rare, combat, any player): every card with the Strike tag in your combat piles gains +1 Replay for this combat.
+- Soldier's Stew (Rare, combat, any player): every card with the Strike tag in your combat piles gains +1 Replay for this combat. Run-16 live: the Replay behaves as a one-shot charge per card at use-time — strikes already in hand/draw when the potion is drunk replay once when played; strikes drawn later in the same combat resolved a single time.
 - Speed Potion (Common, combat, any player): apply SpeedPotionPower +5 Dexterity — lose 5 Dexterity at end of this turn (temporary Dexterity).
 - Stable Serum (Uncommon, combat, any player): apply RetainHandPower 2 — your hand is not flushed at end of turn for the next 2 turns.
 - Star Potion (Common, combat, self): +3 stars (★).

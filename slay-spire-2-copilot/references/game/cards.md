@@ -61,7 +61,7 @@ listed below as X.
 - INFERNAL_BLADE: 1, skill, uncommon, Exhaust, add 1 random Attack from your class pool to your hand; it costs 0 this turn. Upgrade: cost 0.
 - INFERNO: 1, power, uncommon, at start of your turn lose 1 HP (unblockable); whenever you lose HP on your turn deal 6 damage to ALL enemies. Upgrade: deal 9 damage.
 - INFLAME: 1, power, uncommon, gain 2 Strength. Upgrade: +3 Strength.
-- IRON_WAVE: 1, attack, common, gain 5 Block; deal 5 damage. Upgrade: +2 damage, +2 Block.
+- IRON_WAVE: 1, attack, common, gain 5 Block; deal 5 damage. Upgrade: +2 damage, +2 Block. Run-16 live (A1): playing it with `target_combat_id` on an already-dead Reattach segment returned ok=true but no-oped the WHOLE card — neither damage nor the Block component applied. Never target 0-HP segments; the block is tied to the attack resolving on a live target.
 - JUGGERNAUT: 2, power, rare, whenever you gain Block deal 6 damage to a random enemy. Upgrade: deal 8 damage.
 - JUGGLING: 1, power, uncommon, the 3rd Attack you play each turn is copied into your hand. Upgrade: gains Innate.
 - MANGLE: 3, attack, rare, deal 15 damage; the enemy loses 10 Strength this turn. Upgrade: +5 damage, +5 Strength loss.
