@@ -96,9 +96,13 @@ Action notes:
   energy unchanged). The bridge now fail-loud rejects `target_combat_id` on
   any card whose TargetType is not AnyEnemy/AnyAlly/AnyPlayer. Only
   AnyEnemy/AnyAlly/AnyPlayer consume an explicit target id.
-- X-cost cards (live 2026-09-18 run-20): `play` with no extra args submits
+- X-cost cards (live 2026-09-18 run-20/21): `play` with no extra args submits
   Whirlwind-class X-cost cards at **full current energy as X** (3 energy →
-  X=3, three hits per enemy). Omit `target_combat_id` (AllEnemies).
+  X=3, three hits per enemy). Omit `target_combat_id` (AllEnemies). An explicit
+  `"x":N` argument is **accepted syntactically but silently ignored** — the
+  game still spends full current energy as X (run-21 live: `x:2` at 3 energy
+  still played X=3). Do not plan around partial-X Whirlwind; treat the card
+  as always-all-energy.
 - After any overlay confirm (hand_select/deck_select `proceed`, Headbutt
   pile choices), **re-read state before computing follow-up play indices** —
   hand reindexes and a computed index hits the wrong card (live: Armaments
