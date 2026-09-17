@@ -47,7 +47,7 @@ Potion 类均已覆盖；数值取各类 `CanonicalVars` 基础值。括号内�
 - Heart of Iron（铁心药水）(Uncommon, 战斗中, 任意玩家): +7 镀甲（Plating）。
 - King's Courage（王之勇气）(Uncommon, 战斗中, 任意玩家): Forge 15。
 - Liquid Bronze（流动铜液）(Uncommon, 战斗中, 任意玩家): +3 点荆棘。
-- Liquid Memories（液态记忆）(Rare, 战斗中, 自身): 从弃牌堆选 1 张牌加入手牌，本回合免费。
+- Liquid Memories（液态记忆）(Rare, 战斗中, 自身): 从弃牌堆选 1 张牌加入手牌，本回合免费。run-25 实测（A1 2026-09-18）：弃牌堆为空时打出（全部卡在手牌/抽牌堆）— 药水被消耗但**无选牌界面、无任何效果**（完全空耗）。使用前先确认 piles；弃牌堆=0 时不可用。
 - Lucky Tonic（幸运补剂）(Rare, 战斗中, 任意玩家): +1 层 Buffer。
 - Mazaleth's Gift（马萨雷斯的赠礼）(Rare, 战斗中, 任意玩家): +1 层 Ritual。
 - Orobic Acid（欧洛巴斯之酸）(Rare, 战斗中, 自身): 从角色卡池随机攻击、技能、能力牌各 1 张加入手牌；3 张本回合均免费。

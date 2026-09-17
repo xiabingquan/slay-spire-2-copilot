@@ -47,7 +47,7 @@ Target: `self` / `any player` / `any enemy` / `ALL enemies`. ALL-enemies potions
 - Heart of Iron (Uncommon, combat, any player): +7 Plating.
 - King's Courage (Uncommon, combat, any player): Forge 15.
 - Liquid Bronze (Uncommon, combat, any player): +3 Thorns.
-- Liquid Memories (Rare, combat, self): choose 1 card from your discard pile; add it to hand and it is free this turn.
+- Liquid Memories (Rare, combat, self): choose 1 card from your discard pile; add it to hand and it is free this turn. Run-25 live (A1 2026-09-18): played with an EMPTY discard pile (all cards in hand/draw) — potion consumed with NO card_choice and no effect (total whiff). Check piles before use; unusable when discard=0.
 - Lucky Tonic (Rare, combat, any player): +1 Buffer.
 - Mazaleth's Gift (Rare, combat, any player): +1 Ritual.
 - Orobic Acid (Rare, combat, self): add 1 random Attack, 1 random Skill, 1 random Power from your character card pool to hand; all 3 are free this turn.
