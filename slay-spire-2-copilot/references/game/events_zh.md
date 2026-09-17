@@ -47,8 +47,7 @@
 - COLOSSAL_FLOWER（巨大花卉；所有玩家 HP ≥ 19）：取蜜选项按 `_prizeCosts` 支付金币；ObtainPollinousCore → PollinousCore 遗物；ReachDeeper 扣血后进入更深层奖励。
 - CRYSTAL_SPHERE（水晶球；Act >0；所有玩家金币 ≥ 100）：UncoverFuture → 支付 50 金币，开启
   CrystalSphereMinigame：11×11=121 格，DivinationCount=3 次点击；隐藏物品 CardReward/Curse/Gold/Potion/Relic
-  经 Rng 播种于四角及其横纵连线（两轮扩展）；揭示后于小游戏 proceed 时统一发放。bridge 注意：121 格
-  在 state 中均为无名 crystal_cell 节点，揭示内容仅图形可见，代理盲选（run-7 角落簇 0/10/120 观察空奖励）。PaymentPlan → 加入 Debt 诅咒（6 次分期变量）。
+  经 Rng 播种于四角及其横纵连线（两轮扩展）；揭示后于小游戏 proceed 时统一发放。PaymentPlan → 加入 Debt 诅咒（6 次分期变量）。
 - DENSE_VEGETATION（茂密的植被）：TrudgeOn → 不可格挡伤害 + 金币；Rest → 模拟休息点回复；Fight → DenseVegetationEventEncounter。变量含 HpLoss 8。
 - DOLL_ROOM（玩偶室；Act 索引 1）：ChooseRandom → 获得玩偶遗物；TakeSomeTime → 5 点不可格挡伤害；Examine → 15 点不可格挡伤害。
 - DOORS_OF_LIGHT_AND_DARK（光与暗的门扉）：Light → 升级 2 张牌；Dark → 移除 2 张牌。
@@ -77,7 +76,7 @@
 - SUNKEN_TREASURY（淹水金库）：FirstChest → +60 金币；SecondChest → +333 金币 + Greed 诅咒。
 - SYMBIOTE（共生体；Act >0）：Approach → 对 1 张攻击牌附魔 Corrupted——Corrupted 附魔：有源攻击伤害 ×1.5，但打出时其拥有者受到 2 点不可格挡无来源伤害；KillWithFire → 变形 1 张选定牌。
 - TABLET_OF_TRUTH（真理石板）：Smash → 回复 20；Decipher → 失去 3 最大 HP + 升级路径。
-- THE_ARCHITECT（建筑师；Act3 Boss 节点后的剧情事件）——**EA 胜利终点**：到达本事件即代表第三幕 Boss 已被击破、当前 EA 版本所有已实装流程内容全部通关——本局已经胜利。游戏处于抢先体验阶段，建筑师 Boss 本体尚未实装；PROCEED → HP 0 是 EA 占位收束，不是失败。此类对局按胜利记录，以 Boss 战表现评价。机制：对白行走器——每行仅一个 回应/继续 选项（textKey THE_ARCHITECT.dialogue.N），末行给出 PROCEED → WinRun()。实机结果（第 5、6、8、9 局，铁甲战士）：末行 PROCEED 将玩家 HP 置 0 → game_over（floor 48）。铁甲战士对白线为 威胁 → 继续 → PROCEED（外部攻略 2026-09 确认同一剧本流程）。反编译备注（TheArchitect.cs）：WinRun() 仅播放攻击特效（玩家按 Score 输出伤害数字；Architect '反击'为特效——AnimArchitectAttackIfNecessary 未发出任何 CreatureCmd.Damage）随后 SetLocalPlayerReady() 切章同步；TheArchitectEventEncounter 只生成 Architect 占位体（9999 HP、NOTHING_MOVE 循环、HiddenIntent）——与"Boss 未实装"一致。铁甲战士对白：3 次访问档位，全部 EndAttackers=Both；访问档位由档案 TotalWins/Wins 经 LoadDialogue() 选取。
+- THE_ARCHITECT（建筑师；Act3 Boss 节点后的剧情事件）——**EA 结局屏**：到达本事件即代表第三幕 Boss 已被击破、当前 EA 版本所有已实装流程内容全部通关。游戏处于抢先体验阶段，建筑师 Boss 本体尚未实装；PROCEED → HP 0 是 EA 占位收束。机制：对白行走器——每行仅一个 回应/继续 选项（textKey THE_ARCHITECT.dialogue.N）；铁甲战士线为 威胁 → 继续 → PROCEED；PROCEED 将玩家 HP 置 0 → game_over（floor 48）。反编译备注（TheArchitect.cs）：WinRun() 仅播放攻击特效（玩家按 Score 输出伤害数字；Architect '反击'为特效——AnimArchitectAttackIfNecessary 未发出任何 CreatureCmd.Damage）随后 SetLocalPlayerReady() 切章同步；TheArchitectEventEncounter 只生成 Architect 占位体（9999 HP、NOTHING_MOVE 循环、HiddenIntent）——与"Boss 未实装"一致。铁甲战士对白：3 次访问档位，全部 EndAttackers=Both；访问档位由档案 TotalWins/Wins 经 LoadDialogue() 选取。
 - THIS_OR_THAT（这个还是那个？）：Plain → 受到 6 点伤害 + 金币；Ornate → 获得遗物 + 加入 Clumsy 诅咒。
 - TINKER_TIME（打造时间）：选择卡牌类型 + 附加效果；附加效果含 12 伤害 / 8 格挡 / 2 Weak / 2 Vulnerable / 3 段暴力；加入 MadScience 卡。
 - TRASH_HEAP（垃圾堆；所有玩家 HP > 5）：DiveIn → 8 点伤害 + 遗物；Grab → +100 金币 + 加牌。

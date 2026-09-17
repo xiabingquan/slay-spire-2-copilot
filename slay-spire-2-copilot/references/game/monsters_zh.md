@@ -77,10 +77,10 @@
 
 ## 其他章节 — 已提取 Boss（确定性数值）
 
-- Queen（Queen, Act3 QueenBoss; 400 HP）：PUPPET_STRINGS_MOVE = 卡牌减益——ChainsOfBindingPower 3；YOU_ARE_MINE_MOVE = 减益——99 Frail/Weak/Vulnerable；BURN_BRIGHT_FOR_ME_MOVE = 增益；OFF_WITH_YOUR_HEAD_MOVE = 多段攻击 3 (A:4) ×5；EXECUTION_MOVE = 单次攻击 15 (A:18)；ENRAGE_MOVE = 增益 +2 力量。实机 chains 备注（2026-09-17 run-9，本 session 存档首次战胜此 Boss）：玩家身上有 ChainsOfBindingPower 时，部分出牌 ok=true 但牌被消耗且零效果（静默无效）——但该模式并非严格的每回合出牌次数上限（观察到单回合 3+ 次全额生效，另一些回合部分沉默）；chains 在身时必须逐张核对敌人 HP 增量。斩杀窗口：女王意图 Buff 的回合是白送输出——run-9 在这样一个回合一发 连环拳+ × 腐化附魔 BLUDGEON 清掉最后 118 HP。火炬头聚合体是独立战斗目标——它存活时战斗不会结束。
+- Queen（Queen, Act3 QueenBoss; 400 HP）：PUPPET_STRINGS_MOVE = 卡牌减益——ChainsOfBindingPower 3；YOU_ARE_MINE_MOVE = 减益——99 Frail/Weak/Vulnerable；BURN_BRIGHT_FOR_ME_MOVE = 增益；OFF_WITH_YOUR_HEAD_MOVE = 多段攻击 3 (A:4) ×5；EXECUTION_MOVE = 单次攻击 15 (A:18)；ENRAGE_MOVE = 增益 +2 力量。ChainsOfBindingPower 行为（实机观察）：玩家身上有 chains 时，部分出牌会消耗卡牌且零效果（静默无效）——该模式并非严格的每回合出牌次数上限（同一回合观察到全额生效与部分沉默并存）。火炬头聚合体是独立战斗目标——它存活时战斗不会结束。
 - TestSubject（TestSubject, Act3 TestSubjectBoss; 多阶段）：BITE 20 (A:22)、SKULL_BASH 14 (A:16)、MULTI_CLAW 10 ×3、PHASE3_LACERATE 10 (A:11) ×3、BIG_POUNCE 45、BURNING_GROWL = 状态灼烧 3 (A:5) + 自身 +2 力量 (A:3)；经 RESPAWN_MOVE 重生/回复阶段。被动 AdaptablePower、EnragePower 2 (A:3)、PainfulStabsPower、NemesisPower。战斗要点：EnragePower 在任何人打出技能牌时都会触发——技能牌密集的牌组会快速喂养该 Boss；优先使用攻击/能力牌。AdaptablePower 使其死亡时经重生/回复阶段复活。
 - SoulNexus（SoulNexus, Act3 SoulNexusElite; 234 HP）：SOUL_BURN_MOVE = 单次攻击 29 (A:31)；MAELSTROM_MOVE = 多段攻击 6 (A:7) ×4；DRAIN_LIFE_MOVE = 单次攻击 18 (A:19) + 强减益——对玩家施加 2 Vulnerable + 2 Weak。战斗后期观察到意图 32 = 力量强化后的单次重击。
-- OwlMagistrate 猫头鹰法官（OwlMagistrate, Act3 OwlMagistrateElite 并观察到 Act3 普通怪变体 floor46; 231 HP）：循环 MAGISTRATE_SCRUTINY = 单次 16 (A:17) → PECK_ASSAULT = 多段 4 ×6 → JUDICIAL_FLIGHT = 增益——自身 SoarPower 1 → VERDICT = 单次 33 (A:36) + 4 Vulnerable + 移除自身 SoarPower。SoarPower：存续期间持有者受到的有源攻击伤害 ×0.5（在其 VERDICT 回合 Soar 脱落时集火）。实机备注 run-9：compact 状态显示中文名 猫头鹰法官——按数值/意图（16 → 4×6）检索 references，不要按显示名；本战在 Flight/Verdict 出现前即被 2 回合击破。
+- OwlMagistrate 猫头鹰法官（OwlMagistrate, Act3 OwlMagistrateElite 并有 Act3 普通怪变体; 231 HP）：循环 MAGISTRATE_SCRUTINY = 单次 16 (A:17) → PECK_ASSAULT = 多段 4 ×6 → JUDICIAL_FLIGHT = 增益——自身 SoarPower 1 → VERDICT = 单次 33 (A:36) + 4 Vulnerable + 移除自身 SoarPower。SoarPower：存续期间持有者受到的有源攻击伤害 ×0.5（在其 VERDICT 回合 Soar 脱落时集火）。compact 状态显示中文名 猫头鹰法官。
 - 三骑士精英（Act3 FlailKnightsElite 遭遇；FlailKnight 101 HP / SpectralKnight 93 HP / MagiKnight 82 HP）：
   - FlailKnight 连枷骑士：WAR_CHANT = 增益 自身 +3 力量 → FLAIL_MOVE = 多段 9 (A:10) ×2 → RAM_MOVE = 单次 15 (A:17)。
   - SpectralKnight 幽灵骑士：HEX = 减益 HexPower 2 → SOUL_SLASH = 单次 15 (A:17) → SOUL_FLAME = 多段 3 (A:4) ×3。HexPower：玩家全部卡牌（含之后获得的）附加 Hexed → 施加者存活期间获得虚无；施加者死亡时移除——击杀幽灵骑士即可解除。
@@ -96,7 +96,7 @@
 - LivingShield 活体盾（Act3 与高塔炮手组队; 55 HP）：被动 RAMPART_POWER 25——玩家阵营回合开始时，每名存活的 TurretOperator 系盟友（如高塔炮手）获得 25 格挡。必须先杀它，否则炮手格挡每回合回满。
 - TowerGunner 高塔炮手（Act3 与活体盾组队; 41 HP）：出场自带 25 格挡；意图 3×5 多段（15）。活体盾存活期间，其格挡在玩家回合开始时刷新。
 - FrogKnight 青蛙骑士（Act3，出现于 Unknown 房战斗; 191 HP）：被动 PlatingPower 15——回合 1 出场获得 15 格挡、其阵营回合末再获得 15 格挡，其阵营回合开始时（非回合 1）镀甲 −1 层；观察到的意图：单次 13+减益、多段 5×2、增益（+2 力量）、单次 21（力量加成后）、防御+增益。
-- MechKnight 机甲骑士（Act3 MechKnightElite; 300 HP）：出场神器 3 层（每个可见减益施加被清零并消耗 1 层）；观察到的意图：单次 25 → 状态卡 4（向玩家手牌加入灼伤）→ 防御+增益（+5 力量 +15 格挡）→ 单次 40（力量加成后）。雷霆一击/猛击/嘲讽可烧神器层数——3 层烧完后易伤才能挂上。实机分歧标记（2026-09-17 run-9）：战斗开始时 HP 显示且实际表现为 1/300——被一张未升级打击单杀，任何动作都没来得及结算；出生 HP 似乎可变，不要默认每次都是 300-HP/神器完整形态。
+- MechKnight 机甲骑士（Act3 MechKnightElite; 300 HP）：出场神器 3 层（每个可见减益施加被清零并消耗 1 层）；观察到的意图：单次 25 → 状态卡 4（向玩家手牌加入灼伤）→ 防御+增益（+5 力量 +15 格挡）→ 单次 40（力量加成后）。雷霆一击/猛击/嘲讽可烧神器层数——3 层烧完后易伤才能挂上。出生 HP 可变：观察到以 1/300 当前 HP 出生的场次——不保证满血。
 - BattleFriendV1/V2/V3 战斗好伙伴（战痕假人事件陪练；单人第三章实测 75/150/300 HP 不缩放）：招式 NOTHING_MOVE——从不攻击；出场 BattlewornDummyTimeLimitPower 3（假人阵营回合末递减；到 1 时假人逃跑并置 RanOutOfTime → 事件无奖励）。纯输出竞速。
 - ScrollOfBiting 咬人卷轴（ScrollOfBiting, Act3 ScrollOfBitingNormal; 30–39 HP）：出场被动 PaperCutsPower 2；CHOMP = 单次 14 (A:16)；CHEW = 多段 5 (A:6) ×2；MORE_TEETH = 增益 自身 +2 力量。PaperCutsPower：持有者的有源攻击造成未格挡伤害时，对玩家追加纸割伤害（见 powers_zh.md）。
 - PunchConstruct 拳击构装体（PunchConstruct, Act3 PunchConstructsNormal; 55 HP）：出场 ArtifactPower 1；READY_MOVE = 自身 10 格挡 → STRONG_PUNCH_MOVE = 单次 14 (A:16) → FAST_PUNCH_MOVE = 多段 5 (A:6) ×N + 玩家 1 Frail。
@@ -128,7 +128,7 @@
 - DemisePower 9：拥有者每个自身回合结束受 9 点不可格挡伤害（消亡粉末药水）。
 - CurlUpPower N：被玩家卡牌攻击命中后获得 N 格挡一次，随后移除。
 - RavenousPower：队友死亡时自身获得力量 + 自我眩晕（噬尸蛞蝓吞噬）。
-- StockPower：死亡时生成 StockAmount−1 的 Axebot（机器人装配链；充能未尽时阻止战斗结束）。实机备注（run-9）：链环显示/表现为各 1/x 当前 HP（观察到上限 77→72→71）——每节都是一击即死；出生 HP 与机甲骑士同款可变。
+- StockPower：死亡时生成 StockAmount−1 的 Axebot（机器人装配链；充能未尽时阻止战斗结束）。出生 HP 可变：观察到链环以 1/x 当前 HP 出生（一次遭遇上限 77→72→71）——与机甲骑士同类，不保证满血。
 - GalvanicPower N：你的能力牌获得 Galvanized；打出时对你造成 N 点伤害。
 - VitalSparkPower N：你的技能牌获得 Tainted；打出时对你施加 TaintedPower N。
 - SuckPower N：拥有者有源攻击对任意目标造成未格挡伤害后，每次命中实例 +N 力量。

@@ -65,6 +65,21 @@ State notes:
     python3 bridge/spirectl.py sl [--json]
     python3 bridge/spirectl.py stop
 
+Action notes:
+
+- `timeline_sync` (main menu only, no args): runs the Timeline reveal drain
+  without starting a run — the mod visits the Timeline screen and clicks every
+  Obtained epoch slot through the game's native inspect/unlock UI so
+  QueueUnlocks side effects (character unlocks, timeline expansions) fire as
+  they do in manual play. A repair step first places EARNED character epochs
+  at ObtainedNoSlot+UnlockSlot (the states the game's own QueueUnlocks
+  writes); nothing unearned is granted. start_run runs the same drain
+  automatically before character select. Verify via progress.save epoch
+  states / `pending_character_unlock`, or the `timeline:` lines in godot.log.
+- Crystal-sphere minigame (CRYSTAL_SPHERE event): all 121 cells surface in
+  state as unnamed `crystal_cell` nodes — revealed contents are visual-only,
+  so the agent picks blind; rewards grant on minigame proceed.
+
 ## Wait model (change-polling, no timeout deadlines)
 
 User directive 2026-09-16: play-loop waits never block on a deadline.
