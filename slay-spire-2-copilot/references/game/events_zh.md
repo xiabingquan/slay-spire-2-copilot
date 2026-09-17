@@ -90,7 +90,7 @@
 - WATERLOGGED_SCRIPTORIUM（水漫缮写室；所有玩家金币 ≥ 55）：BloodyInk → +6 最大 HP；TentacleQuill → 支付 55 金币，附魔 Steady；PricklySponge → 支付 99 金币，附魔 Steady + 卡牌选项。
 - WELCOME_TO_WONGOS（欢迎来到旺购百货；门槛标注 Act 1，但 2026-09-17 第 6 局实测 Act 2 亦可触发——章节标注视为软性；所有玩家金币 ≥ 100）：BuyBargainBin → 支付 100 金币，获得遗物；BuyFeaturedItem → 支付 200 金币，获得遗物；BuyMysteryBox → 支付 300 金币，获得 WongosMysteryTicket（5 场战斗后获得 3 件随机遗物）；Leave 离开。
 - WELLSPRING（泉水）：Bottle → 药水奖励；Bathe → 移除卡牌（curses 变量 1——存在 Guilty 追加处理器）。
-- WOOD_CARVINGS（木雕；要求存在可移除的基础牌）：Snake → 附魔 Slither；Bird → 变形为 Peck；Torus → 变形为 ToricToughness。
+- WOOD_CARVINGS（木雕；要求存在可移除的基础牌）：Snake → 附魔 Slither；Bird → 变形为 Peck；Torus → 变形为 ToricToughness。Slither 附魔效果（2026-09-18 perplexity 研究，run-22）：被附魔的卡牌每次抽到时费用在 0~3 之间随机；随机化之后再施加的改费效果仍可能把最终费用抬到 3 以上。run-22 选 Bird→Peck（2 伤 ×3，打击标签多段，吃力量加成）而非 Snake/Slither（方差与组合技牌库反协同）与 Torus→ToricToughness（2 费 5 挡 + 后续 2 次挡被清空时重新获得该挡值）。
 - ZEN_WEAVER（修禅织网者；所有玩家金币 ≥ 125）：BreathingTechniques → 支付 50 金币，加入 Enlightenment；EmotionalAwareness → 支付 125 金币路径；ArachnidAcupuncture → 支付 250 金币，移除卡牌路径。
 
 ## 未提取选项表的远古事件

@@ -88,7 +88,7 @@ Act ancients (from act sources): Overgrowth = Neow (removed unless `UnlockState.
 - WATERLOGGED_SCRIPTORIUM (all players Gold ≥ 55): BloodyInk → +6 Max HP; TentacleQuill → pay 55 Gold, Enchant Steady; PricklySponge → pay 99 Gold, Enchant Steady + card options.
 - WELCOME_TO_WONGOS (labeled Act 1 in gates; also observed spawning Act 2, run-6 2026-09-17 — treat act label as soft; all players Gold ≥ 100): BuyBargainBin → pay 100 Gold, relic; BuyFeaturedItem → pay 200 Gold, relic; BuyMysteryBox → pay 300 Gold, WongosMysteryTicket (3 random relics after 5 combats); Leave.
 - WELLSPRING: Bottle → potion reward; Bathe → remove cards (curses var 1 — Guilty add handler exists).
-- WOOD_CARVINGS (requires removable Basic card): Snake → Enchant Slither; Bird → transform into Peck; Torus → transform into ToricToughness.
+- WOOD_CARVINGS (requires removable Basic card): Snake → Enchant Slither; Bird → transform into Peck; Torus → transform into ToricToughness. Slither enchant effect (perplexity research 2026-09-18, run-22): the enchanted card's cost randomizes from 0 to 3 each time you draw it; cost-changing effects applied after the randomization can still raise the final cost above 3. Run-22 chose Bird→Peck (2 dmg ×3, Strike-tagged multi-hit that scales with Strength) over Snake/Slither (variance anti-synergy with a combo deck) and Torus→ToricToughness (2-cost 5 Block + regain that Block next 2 times Block is cleared).
 - ZEN_WEAVER (all players Gold ≥ 125): BreathingTechniques → pay 50 Gold, add Enlightenment; EmotionalAwareness → pay 125 Gold path; ArachnidAcupuncture → pay 250 Gold, remove cards path.
 
 ## Ancient events without extracted option tables
