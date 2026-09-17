@@ -120,28 +120,52 @@ public static class ActionExecutor
             return (false, $"card_index {cardIndex} out of range (hand size {hand.Count})");
         }
         CardModel card = hand[cardIndex];
+        // Parity gate (user report 2026-09-17, run-12): CardCmd.AutoPlay builds
+        // ResourceInfo { EnergySpent = 0 } and calls OnPlayWrapper(isAutoPlay:
+        // true) — it never runs CanPlay or SpendResources, so every bridge play
+        // was FREE energy/stars (observed live: 5-6 one-cost cards per turn at
+        // a displayed 3/3). The game's honest player path is PlayCardAction
+        // (CanPlay -> SpendResources -> OnPlayWrapper isAutoPlay:false); the
+        // mod now enqueues that action and pre-checks CanPlay so the client
+        // gets a real rejection instead of a silent free play.
+        if (!card.CanPlay(out UnplayableReason unplayableReason, out AbstractModel? preventer))
+        {
+            return (false, $"card not playable ({unplayableReason}"
+                + (preventer != null ? $" via {preventer.GetType().Name}" : "") + ")");
+        }
         Creature? target = null;
+        // Targeting is strict (user directive 2026-09-17): never fall back to
+        // hittable[0]. An explicit but unparseable target must error out loud,
+        // and AnyEnemy/AnyAlly plays must carry target_combat_id — silent
+        // mis-targeting hid a whole run's worth of wrong hits behind
+        // `target:"id1"` strings that TryGetInt never parsed.
+        if (args.TryGetProperty("target", out JsonElement rawTarget))
+        {
+            return (false, $"unsupported target arg {rawTarget.GetRawText()} — "
+                + "pass target_combat_id=<int> from state combat ids");
+        }
         if (TryGetInt(args, "target_combat_id", out int targetId))
         {
             target = combat.GetCreature((uint)targetId);
             if (target == null)
             {
-                return (false, $"target combat_id {targetId} not found");
+                return (false, $"target_combat_id {targetId} not found in combat");
             }
         }
-        else if (card.TargetType == TargetType.AnyEnemy)
+        else if (card.TargetType is TargetType.AnyEnemy or TargetType.AnyAlly)
         {
-            var hittable = combat.HittableEnemies.ToList();
-            if (hittable.Count == 0)
-            {
-                return (false, "card requires a target but no hittable enemies");
-            }
-            target = hittable[0];
+            return (false, $"card {card.Id.Entry} needs a target — pass "
+                + "target_combat_id=<int> (no auto-target fallback)");
         }
         CardModel cardRef = card;
         Creature? targetRef = target;
-        Fire(async () => await CardCmd.AutoPlay(new BlockingPlayerChoiceContext(), cardRef, targetRef), "play card");
-        return (true, $"submitted play {card.Id.Entry} -> {(target?.Name ?? "none")}");
+        Fire(() =>
+        {
+            RunManager.Instance.ActionQueueSynchronizer.RequestEnqueue(
+                new PlayCardAction(cardRef, targetRef));
+            return Task.CompletedTask;
+        }, "play card (PlayCardAction)");
+        return (true, $"submitted play {card.Id.Entry} -> {(target?.Name ?? "none")} (energy-checked)");
     }
 
     private static (bool, string) EndTurn()
@@ -574,8 +598,51 @@ public static class ActionExecutor
                         return (false, $"index {index} out of range ({holders.Count} cards)");
                     }
                     NCardHolder holder = holders[index];
-                    Fire(() => { holder.EmitSignal(NCardHolder.SignalName.Pressed, holder); return Task.CompletedTask; }, "choose card");
-                    return (true, $"submitted choose card index {index}");
+                    // NCardGridSelectionScreen subclasses (deck_select screens
+                    // and NCombatPileCardSelectScreen) route clicks through
+                    // NCardGrid.HolderPressed, which the grid re-emits only for
+                    // holders it allocated AND connected — EmitSignal(Pressed)
+                    // on a found holder never reaches OnCardClicked when the
+                    // connection is missing/pooled (live 2026-09-17 run-12:
+                    // PaelsTooth 5-card storage and Neow's Fury recovery picks
+                    // silently registered nothing; MinSelect==MaxSelect screens
+                    // then deadlock because Confirm stays disabled).
+                    // NChooseACardSelectionScreen / NChooseABundleSelectionScreen
+                    // connect holder.Pressed directly and stay on the signal
+                    // path; grid-backed screens invoke OnCardClicked via
+                    // reflection, same pattern as InvokeHandSelectAdd.
+                    if (context is NChooseACardSelectionScreen or NChooseABundleSelectionScreen)
+                    {
+                        Fire(() => { holder.EmitSignal(NCardHolder.SignalName.Pressed, holder); return Task.CompletedTask; }, "choose card (holder signal)");
+                        return (true, $"submitted choose card index {index}");
+                    }
+                    IScreenContext screenCtx = context;
+                    CardModel cardModel = holder.CardModel;
+                    Fire(() =>
+                    {
+                        MethodInfo? onClicked = screenCtx.GetType().GetMethod(
+                            "OnCardClicked",
+                            BindingFlags.NonPublic | BindingFlags.Instance,
+                            null,
+                            new[] { typeof(CardModel) },
+                            null);
+                        onClicked ??= typeof(NCardGridSelectionScreen).GetMethod(
+                            "OnCardClicked",
+                            BindingFlags.NonPublic | BindingFlags.Instance,
+                            null,
+                            new[] { typeof(CardModel) },
+                            null);
+                        if (onClicked != null)
+                        {
+                            onClicked.Invoke(screenCtx, new object[] { cardModel });
+                        }
+                        else
+                        {
+                            holder.EmitSignal(NCardHolder.SignalName.Pressed, holder);
+                        }
+                        return Task.CompletedTask;
+                    }, "choose card (OnCardClicked)");
+                    return (true, $"submitted choose card index {index} via OnCardClicked");
                 }
                 return (false, $"choose not supported on screen {context?.GetType().Name ?? "null"}");
             }

@@ -1096,8 +1096,14 @@ public static class StateBuilder
     {
         if (screenNode is NDeckCardSelectScreen or NDeckUpgradeSelectScreen
             or NDeckTransformSelectScreen or NDeckEnchantSelectScreen
-            or NCombatPileCardSelectScreen)
+            or NCombatPileCardSelectScreen
+            or NChooseACardSelectionScreen or NChooseABundleSelectionScreen)
         {
+            // NChooseACardSelectionScreen also clicks NGridCardHolder nodes
+            // (decomp: nGridCardHolder.Pressed -> SelectHolder); unfiltered
+            // FindAll<NCardHolder> put preview/ghost holders in the index
+            // space and choose(2) silently picked the wrong card live
+            // (run-12: THE_GAMBIT pick landed on PROLONG).
             return UiHelper.FindAll<NGridCardHolder>(screenNode).Cast<NCardHolder>().ToList();
         }
         return UiHelper.FindAll<NCardHolder>(screenNode);
