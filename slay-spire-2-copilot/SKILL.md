@@ -145,15 +145,20 @@ Repeat until the run ends or the user stops you. Every spirectl call carries
 2. Decide the action from the state plus memory (run summaries, character playstyles)
 3. `... act <action> --args '<json>' --wait` — actions return immediately once
    submitted; `--wait` polls until the state settles (stable fingerprint) then
-   prints it. For a chosen tactic spanning several acts, dump them in one
-   `batch --acts '[...]'` call (settle-polls between acts, high-to-low
-   card_index discipline on you). **Card-index discipline across draws
-   (run-4 lesson)**: any act that draws cards (Battle Trance, Shrug It Off,
-   Pommel Strike, …) invalidates the indices of later acts in the same
-   batch — end the batch at the draw, re-read state, then continue with
-   fresh indices. Mid-combat choose-card overlays (boss Curse of Knowledge,
-   potion card picks) now surface as screen=card_choice via the mod's
-   overlay scan — answer them with `choose` like any other card screen.
+   prints it. **One card per call — hard rule (user directive 2026-09-18)**:
+   combat card plays are NEVER batched. Play exactly one card per `act play`
+   call, re-read state, then decide the next card from the fresh indices —
+   no multi-card `batch` dumps, no precomputed play chains. This kills card
+   index drift at the source (it recurred across nearly every A1 run —
+   run-4/14–25, ~10–12× per run — and cost run-25's KaiserCrab RECHARGE
+   burst window ~50 damage). `end_turn` is its own call, issued only after a
+   fresh state read shows no further plays wanted. `batch` remains allowed
+   only for non-card sequences that cannot reindex the hand (e.g. a lone
+   map_select); even then, prefer separate calls. An index is valid only for
+   the single act it was computed for, straight from the latest state print.
+   Mid-combat choose-card overlays (boss Curse of Knowledge, potion card
+   picks) now surface as screen=card_choice via the mod's overlay scan —
+   answer them with `choose` like any other card screen.
 4. Wait model is change-polling, never a timeout deadline (user directive
    2026-09-16): `wait --quiet 3` returns within ~3s — immediately on
    fingerprint change, or right away with the current state when idle. Do
