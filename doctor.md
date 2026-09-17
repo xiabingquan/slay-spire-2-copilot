@@ -113,3 +113,19 @@ everywhere: READMEs, SKILL docs, `memory/`, `references/`.
 Violation → strip the conversational framing. Keep an underlying fact only if
 it already belongs under that doc's duty (checks 1–4); delete pure dialogue
 residue.
+
+### 6. No language mixing
+
+Rule: every document has one working language and should stay in it. Chinese
+docs (`README.md`, `SKILL_zh.md`, `*_zh.md`) stay Chinese; English docs
+(`README_EN.md`, `SKILL.md`, `doctor.md`, non-`_zh` counterparts) stay
+English. Prose must not drift mid-document — no English sentences inside a
+Chinese doc, no Chinese paragraphs inside an English one.
+
+Exempt (may stay in source form inside either language): code identifiers,
+game ids and proper nouns (e.g. `IRONCLAD`, `BURNING_BLOOD`, card names that
+must match game data), file paths, and CLI output. The rule governs prose,
+not terminology that has to stay canonical.
+
+Violation → translate the stray prose into the doc's working language; leave
+identifiers, game names, and code references untouched.

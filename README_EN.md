@@ -70,8 +70,9 @@ Doc health check: [doctor.md](doctor.md) at the repo root is a
 documentation-organization checklist — README stays a project overview;
 `mod/` and `bridge/` stay code-only; run memory is written only under
 `memory/runs/`; `references/game/` keeps static material only; docs carry no
-user-conversation content (comments, requests, improvement asks). How to run:
-have the agent execute the checklist (e.g. "run doctor.md") and fix
+user-conversation content (comments, requests, improvement asks); docs don't
+mix languages (Chinese docs stay Chinese, English docs stay English). How to
+run: have the agent execute the checklist (e.g. "run doctor.md") and fix
 violations. When to run: after each run ends, before committing documentation
 changes, or whenever files look misplaced.
 

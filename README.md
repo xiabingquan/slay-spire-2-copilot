@@ -63,7 +63,8 @@ skill 符号链接：`~/.claude/skills/slay-spire-2-copilot` → 上述 skill �
 
 文档体检：仓库根目录的 [doctor.md](doctor.md) 是文档组织结构检查清单——README 只做
 项目综述、`mod/` 与 `bridge/` 只放代码、对局记忆只写入 `memory/runs/`、
-`references/game/` 只保留静态资料、文档不含用户对话内容（评论、需求、改进等）。
+`references/game/` 只保留静态资料、文档不含用户对话内容（评论、需求、改进等）、
+文档不混语言（中文文档尽量全中文，英文文档尽量全英文）。
 使用方法：让 agent 按清单执行（如 "run doctor.md"）并修正违规。触发时机：每局对局
 结束后、提交文档改动前，或怀疑文档放错位置时。
 
