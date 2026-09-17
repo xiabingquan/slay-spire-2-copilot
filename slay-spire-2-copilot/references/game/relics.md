@@ -227,7 +227,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Tanx's Whistle (TanxsWhistle, Ancient): on pickup, add 1 Whistle card to deck.
 - Throwing Axe (ThrowingAxe, Ancient): the first card you play each combat is played an extra time.
 - Toasty Mittens (ToastyMittens, Ancient): each turn before hand draw, exhaust the top card of draw pile and gain 1 Strength.
-- Touch of Orobas (TouchOfOrobas, Ancient): on pickup, replace your starter relic with its ancient version.
+- Touch of Orobas (TouchOfOrobas, Ancient): on pickup, replace your starter relic with its ancient version. Run-19 live: IRONCLAD Burning Blood → BlackBlood (heal 12 HP at combat victory, up from 6); relic id swaps in state and both relics' combat-end effects stack with ChosenCheese.
 - Toy Box (ToyBox, Ancient): on pickup, gain 4 Wax relics; every 3 combats, the left-most Wax relic melts away.
 - Tri-Boomerang (TriBoomerang, Ancient): on pickup, choose 3 Attack cards to enchant with Instinct 1. Instinct enchant (decomp): powered attack damage ×2 (multiplicative, applied before other multipliers such as Vulnerable).
 - Velvet Choker (VelvetChoker, Ancient): +1 max Energy each turn; you cannot play more than 6 cards per turn.

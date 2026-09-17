@@ -26,7 +26,7 @@
   - PaelsGrowth（佩尔的增生组织）：拾取时选择 1 张牌库卡 → 附魔 Clone 4；休息点新增 Clone 休息选项（Clone 用于在休息点复制卡牌）。
   - PaelsLegion（佩尔的士兵）：加入 PaelsLegion 宠物；就绪时每场战斗首次获得格挡的卡牌打出使该格挡翻倍（×2），随后冷却 2 回合。
 - TEA_MASTER（茶艺大师；Act1-2；要求所有玩家金币 ≥ 150）：BONE_TEA → 支付 50 金币，获得 BoneTea（骨茶；金币不足则锁定）——1 场战斗：第 1 回合升级手牌中所有卡牌；EMBER_TEA → 支付 150 金币，获得 EmberTea（余烬茶；金币不足则锁定）——5 场战斗：进入战斗房时 +2 力量；TEA_OF_DISCOURTESY → 免费，获得 TeaOfDiscourtesy（无礼之茶）——1 场战斗：战斗开始前向抽牌堆随机位置加入 2 张 Dazed。
-- THE_LEGENDS_WERE_TRUE（传说是真的；仅 Act1；所有玩家 HP ≥ 10 且牌库非空）：NAB_THE_MAP → 向牌库加入 SpoilsMap（Quest，不可打出；SpoilsActIndex=1——在第二章地图标记价值 600 金币的战利品房）；SLOWLY_FIND_AN_EXIT → 受到 8 点不可格挡、无来源伤害，获得 1 瓶随机药水（角色药水池 + 共享池）。
+- THE_LEGENDS_WERE_TRUE（传说是真的；仅 Act1；所有玩家 HP ≥ 10 且牌库非空）：NAB_THE_MAP → 向牌库加入 SpoilsMap（Quest，不可打出；SpoilsActIndex=1——在第二章地图标记价值 600 金币的战利品房）；SLOWLY_FIND_AN_EXIT → 受到 8 点不可格挡、无来源伤害，获得 1 瓶随机药水（角色药水池 + 共享池）。run-19 实测（2026-09-17）：SpoilsMap 在 Act2 宝箱房 (8,3) 兑现——金 65→708（+643，约 600 战利品+箱金）；兑现后任务牌离deck。移除类服务在 Act2 宝箱前绝不可选中 SpoilsMap。
 - MORPHIC_GROVE（变形灵林谷；共享；要求所有玩家金币 ≥ 100 且 ≥2 张可变形牌）：GROUP → 失去全部金币（被窃），自选 2 张牌库卡各自随机变形；LONER → +5 最大 HP。
 - LUMINOUS_CHOIR（冷光合唱团；要求所有玩家金币 ≥ 花费且遗物队列仍有存货；花费 = 149 − rng 0..49 → 100–149 金币）：REACH_INTO_THE_FLESH → 移除自选 2 张牌库卡，向牌库加入诅咒 SporeMind（孢子之心：1 费，诅咒，带消耗关键词）；OFFER_TRIBUTE → 支付花费，获得遗物队列最前端的下一件遗物（金币不足则锁定）。
 - JUNGLE_MAZE_ADVENTURE（丛林迷宫奇遇；共享）：SOLO_QUEST → 受到 18 点不可格挡、无来源伤害，获得 150 ± rng −15..+15 金币（135–165）；JOIN_FORCES → 获得 50 ± rng −15..+15 金币（35–65），不掉血。
@@ -68,7 +68,7 @@
 - ROUND_TEA_PARTY（圆桌茶会；所有玩家 HP ≥ 12）：EnjoyTea → RoyalPoison 遗物 + 回复；PickFight → 11 点不可格挡伤害 + RoyalPoison。
 - SAPPHIRE_SEED（蓝宝石种子）：Eat → 回复 9 + 升级；Plant → 附魔 Sown。
 - SELF_HELP_BOOK（自助指南）：ReadPassage/ReadEntireBook 附魔 Sharp/Nimble 等；SkipBook 离开。
-- SLIPPERY_BRIDGE（滑脚木桥；TotalFloor > 6；要求存在可移除牌）：Overcome → 移除 1 张随机卡；HoldOn → 受到 HP 损失 = 3 + 本事件已选 HoldOn 次数（3、4、5……递增）；事件在 HoldOn 与 Overcome 之间循环直到选择 Overcome。
+- SLIPPERY_BRIDGE（滑脚木桥；TotalFloor > 6；要求存在可移除牌）：Overcome → 移除 1 张随机卡；HoldOn → 受到 HP 损失 = 3 + 本事件已选 HoldOn 次数（3、4、5……递增）；事件在 HoldOn 与 Overcome 之间循环直到选择 Overcome。run-19 实测：**除 Overcome 外没有出口**——拖延只是在同一随机移除之上叠加 HP 税；移除池为整个牌库（同层刚拿到的卡即被移除实例）。
 - SPIRALING_WHIRLPOOL（螺旋漩涡；要求存在 Spiral 可附魔卡）：ObserveTheSpiral → 附魔 Spiral；Drink → 回复。
 - SPIRIT_GRAFTER（灵魂嫁接者）：LetItIn → 回复 25 + 加入 Metamorphosis 卡；Rejection → 升级 + 受到 10 点伤害。run-15 实测：12 HP 接纳后到 57（+45，references 记 +25——Metamorphosis 拾取附加效果或 A1 加成待核）。
 - STONE_OF_ALL_TIME（永恒之石；Act 1；所有玩家 ≥1 瓶药水）：Lift → +10 最大 HP（饮用药水路径）；Push → 6 点伤害 + 附魔（+8 Vigorous 变量）。
@@ -95,7 +95,9 @@
 
 ## 未提取选项表的远古事件
 
-DARV、NONUPEIPE、OROBAS、TEZCATARA、VAKUU 在 act 池中以 `AncientEventModel` 形式存在（门槛见上），但本次审阅的反编译事件源码中没有其选项处理器——省略。（TANX 已于 2026-09-17 第 6 局提取——见上文条目。）
+DARV、NONUPEIPE、TEZCATARA、VAKUU 在 act 池中以 `AncientEventModel` 形式存在（门槛见上），但本次审阅的反编译事件源码中没有其选项处理器——省略。（TANX 已于 2026-09-17 第 6 局提取——见上文条目。OROBAS 已于 2026-09-17 第 19 局经 perplexity 研究提取——见下条。）
+
+- OROBAS（欧洛巴斯；Act2 虫巢远古；2026-09-17 run-19 perplexity 研究+局内实测）：ELECTRIC_SHRYMP 放电异虾 → 拾取时选 1 张技能牌附魔 **Imbued**（Imbued = 战斗开始自动打出、不耗能量——每战等效免费）；DRIFTWOOD 浮木 → 每张卡牌奖励可重掷 1 次；TOUCH_OF_OROBAS 欧洛巴斯之触 → 将初始遗物替换为远古版（IRONCLAD：燃烧之血每战+6 → **黑暗之血每战回 12**；run-19 实测：遗物 id 更换，战斗结束回 12 与天选芝士 +1 Max HP 同战叠加）。
 - TEZCATARA 选项（2026-09-17 perplexity 研究 + run-18 实测选择）：YUMMY_COOKIE 美味饼干 → 获得 YummyCookie 遗物并自选升级 4 张牌（deck_select 浮层：选择后 proceed 确认）；STORYBOOK 故事书 → 向牌库加入 1 张 Brightest Flame；SEAL_OF_GOLD 黄金印 → SealOfGold 遗物：回合开始花 5 金获得 1 能量（金不足 5 时无效；一处来源写 3，5 为多源印证值）。
 
 ## 事件处理备注

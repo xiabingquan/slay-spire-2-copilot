@@ -227,7 +227,7 @@
 - 坦克斯的哨子（TanxsWhistle，Ancient）：拾取时，向牌库加入 1 张 Whistle。
 - 投斧（ThrowingAxe，Ancient）：每场战斗打出的第一张牌额外再打出一次。
 - 烘焙手套（ToastyMittens，Ancient）：每回合抽牌前，消耗抽牌堆顶牌并获得 1 点力量。
-- 欧洛巴斯之触（TouchOfOrobas，Ancient）：拾取时，将初始遗物替换为远古版本。
+- 欧洛巴斯之触（TouchOfOrobas，Ancient）：拾取时，将初始遗物替换为远古版本。run-19 实测：IRONCLAD 燃烧之血 → 黑暗之血（战斗胜利回 12，原 6）；state 中遗物 id 同步更换，战后回复与天选芝士叠加。
 - 玩具盒（ToyBox，Ancient）：拾取时，获得 4 件蜡质遗物；每 3 场战斗，最左侧蜡质遗物融化消失。
 - 三刃回旋镖（TriBoomerang，Ancient）：拾取时，选择 3 张攻击牌附魔 Instinct 1。Instinct 附魔（反编译）：有源攻击伤害 ×2（乘法，先于 Vulnerable 等其他乘区结算）。
 - 天鹅绒颈圈（VelvetChoker，Ancient）：每回合 +1 最大能量；每回合最多打出 6 张牌。

@@ -528,6 +528,8 @@ hook 逻辑、`CanonicalVars` 数值）核实。下文「Amount」= power 上显
   实例；击晕逻辑由怪物宿主执行）。
 - SHRIEK_POWER（Debuff，Counter，可为负）：持有者在 CurrentHp <= Amount
   时受到未格挡伤害，则被击晕进入 TerrorEel 恐惧状态并自移除该 power。
+  run-19 实测（A1，140 HP 骇鳗精英）：击晕在未格挡伤害越过 HP 区间时触发（观测窗口 68–74 HP；确切 Amount 未在 state 暴露）——阈值以上的攻击无效果，战术=先把鳗鱼打进区间再用未格挡伤害触发。
+- TAINTED_POWER 实测方向注（run-19）：见下条 VITAL_SPARK 注记——打出 Tainted 技能后 TAINTED_POWER 落在**玩家（牌主）**身上，税为"对我的攻击伤害 +Amount"（棱柱意图 15→17 单技能/15→19 双技能实测），非自伤。
 - IMBALANCED_POWER（Debuff，Single）：持有者的攻击被完全格挡时被击晕
   （BowlbugRock 改为设置 IsOffBalance）。
 - MONARCHS_GAZE_POWER（Buff，Counter）：持有者的攻击命中时，对目标施加

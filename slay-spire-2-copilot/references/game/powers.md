@@ -106,7 +106,7 @@ Format: `- POWER_ID (Buff/Debuff): effect.`
   exists. Smog afflictions clear at end of owner's side turn.
 - TAINTED_POWER (Debuff, Counter): attacks that hit owner deal +Amount damage
   (ModifyDamageAdditive on incoming powered attacks). Removed at end of Enemy
-  side turn.
+  side turn. Run-19 live direction confirmed: VitalSpark Tainted skills apply TAINTED_POWER to the PLAYER (card owner) — prism intent rose 15→17 after one Tainted skill played and 15→19 after two; the tax is incoming attack damage +Amount, not self-damage.
 - VITAL_SPARK_POWER (Buff, Counter, on the enemy): player Skill cards are
   afflicted with Tainted (Amount) at combat start and on entering combat;
   playing a Tainted card applies TAINTED_POWER Amount to the card's owner.
@@ -588,7 +588,7 @@ when negative.
   monster-hosted).
 - SHRIEK_POWER (Debuff, Counter, negative allowed): if owner takes unblocked
   damage while CurrentHp <= Amount, owner is stunned into TerrorEel terror
-  state and the power removes itself.
+  state and the power removes itself. Run-19 live (A1, 140-HP TerrorEel elite): the stun fired on an unblocked hit that crossed the HP bracket (68–74 HP observed window; exact Amount not surfaced in state) — hits above the threshold did nothing, so burst the eel under the bracket THEN hit unblocked.
 - IMBALANCED_POWER (Debuff, Single): when owner's attack is fully blocked,
   owner is stunned (BowlbugRock sets IsOffBalance instead).
 - MONARCHS_GAZE_POWER (Buff, Counter): when owner's powered attack hits,
