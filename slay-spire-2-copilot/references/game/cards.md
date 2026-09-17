@@ -403,7 +403,7 @@ listed below as X.
 - DEFEND_REGENT: 1, skill, basic, gain 5 Block. Upgrade: +3 Block.
 - DEVASTATE: 1, attack, uncommon, deal 30 damage. Upgrade: +10 damage.
 - DYING_STAR: 1, attack, rare, Ethereal, deal 9 damage to ALL enemies; all enemies lose 9 Strength this turn. Upgrade: +2 damage, lose 11 Strength.
-- FALLING_STAR: 0, attack, basic, deal 8 damage; apply 1 Weak; apply 1 Vulnerable. Upgrade: +4 damage.
+- FALLING_STAR: 0, attack, basic, deal 8 damage; apply 1 Weak; apply 1 Vulnerable. Upgrade: +4 damage. Has an undocumented Star cost in addition to the 0 Energy label — live 2026-09-17 (run-13): bridge reports `StarCostTooHigh` when Stars are insufficient; DIVINE_RIGHT's +3 combat-start Stars pay for a turn-1 play, and it becomes unplayable later in the fight once the Star bank is drained.
 - FOREGONE_CONCLUSION: 1, skill, rare, next turn draw, pull 2 cards from your draw pile into your hand. Upgrade: pull 3.
 - FURNACE: 1, power, uncommon, at start of your turn Forge 5. Upgrade: Forge 7.
 - GAMMA_BLAST: 0, attack, uncommon, deal 13 damage; apply 2 Weak; apply 2 Vulnerable. Upgrade: +5 damage.
@@ -441,7 +441,7 @@ listed below as X.
 - PILLAR_OF_CREATION: 1, power, uncommon, whenever a card is generated for you gain 3 Block. Upgrade: +4 Block.
 - PROPHESIZE: 2, skill, uncommon, draw 6 cards. Upgrade: draw 9.
 - QUASAR: 0, skill, uncommon, choose 1 of 3 random Colorless cards; add it to your hand. Upgrade: offered cards are upgraded.
-- RADIATE: 0, attack, uncommon, deal 3 damage to ALL enemies once per Star you gained this turn. Upgrade: +1 damage.
+- RADIATE: 0, attack, uncommon, deal 3 damage to ALL enemies once per Star you gained this turn. Upgrade: +1 damage. Live 2026-09-17 (run-13): DIVINE_RIGHT's AfterRoomEntered +3 Stars count as "Stars gained this turn" — turn-1 ShiningStrike (+2★) → RADIATE deals 5×3 = 15 AoE for 0 Energy in every combat.
 - REFINE_BLADE: 1, skill, common, Forge 9; gain 1 Energy next turn. Upgrade: Forge 13.
 - REFLECT: 1, skill, uncommon, gain 15 Block; this turn when your Block absorbs attack damage deal that much back. Upgrade: +5 Block.
 - RESONANCE: 1, skill, uncommon, gain 1 Strength; ALL enemies lose 1 Strength. Upgrade: gain 2 Strength.
@@ -591,7 +591,7 @@ listed below as X.
 - SHIV: 0, attack, token, Exhaust, Shiv-tagged, deal 4 damage; hits ALL enemies if Fan of Knives is active. Upgrade: +2 damage.
 - SLOTH: unplayable, token, status, applies Sloth 3. No upgrade.
 - SOUL: 0, skill, token, Exhaust, draw 2 cards. Upgrade: draw 3.
-- SOVEREIGN_BLADE: 2, attack, token, Retain, deal 10 damage; gain Block equal to your Parry; hits ALL enemies if Seeking Edge is active. Upgrade: cost 1.
+- SOVEREIGN_BLADE: 2, attack, token, Retain, deal 10 damage; gain Block equal to your Parry; hits ALL enemies if Seeking Edge is active. Upgrade: cost 1. Live 2026-09-17 (run-13): Forge stacks add to the base 10 — WroughtInWar (Forge 7) produced a Blade that dealt 17; Block = Parry confirmed at 14 with a Parry+ (14) marker power active. Created in-deck by playing Forge cards; PARRY_POWER is combat-persistent, so any Blade drawn later in the fight keeps the Parry-scaled block.
 - SWEEPING_GAZE: 0, attack, token, Ethereal, Exhaust, Osty-attack, Osty deals 10 damage to a random enemy. Upgrade: Osty +5 damage.
 - WASTE_AWAY: unplayable, token, status, applies Waste Away 1 (energy-related debuff). No upgrade.
 
