@@ -24,7 +24,7 @@
 - 百年积木（CentennialPuzzle，Common）：每场战斗首次失去 HP 时，抽 3 张牌。
 - 数据磁盘（DataDisk，Common，Defect）：战斗开始，获得 1 点 Focus。
 - 击剑指南（FencingManual，Common，Regent）：第 1 回合开始，Forge 10。
-- 节日拉炮（FestivePopper，Common）：第 1 回合开始，对所有敌人造成 9 点伤害。
+- 节日拉炮（FestivePopper，Common）：第 1 回合开始，对所有敌人造成 9 点伤害。run-27 实测：3 场战斗预削确认（啃咬机 63→54/64→55、千足虫各段 -9、皇蟹双爪 209→200/199→190）。
 - 护喉甲（Gorget，Common）：战斗开始，获得 4 点镀甲（Plating）。
 - 开心小花（HappyFlower，Common）：每第 3 回合开始，获得 1 点能量。
 - 佛珠手链（JuzuBracelet，Common）：问号房间不再出现普通敌人战斗；仅可在第三幕宝箱前获得。
@@ -49,7 +49,7 @@
 - 修书小刀（BookRepairKnife，Uncommon，Necrobinder）：非 Minion 敌人死于 Doom 时，按每个此类生物回复 3 HP。
 - 圆顶礼帽（BowlerHat，Uncommon）：金币获取 ×1.25；仅可在第三幕宝箱前获得；商店中不会出售。
 - 烛台（Candelabra，Uncommon）：第 2 回合开始，获得 2 点能量。
-- 永恒羽毛（EternalFeather，Uncommon）：进入休息点时，每 5 张牌回复 3 HP。
+- 永恒羽毛（EternalFeather，Uncommon）：进入休息点时，每 5 张牌回复 3 HP。run-27 实测：25 张牌库 +15、27 张 +15、~20-24 张 +12（进入休息点即结算，先于休息选项）。
 - 葬礼面具（FuneraryMask，Uncommon，Necrobinder）：战斗开始，向抽牌堆洗入 3 张 Soul。
 - 星系尘埃（GalacticDust，Uncommon，Regent）：每消耗 10 点星星，获得 10 格挡。
 - 镀金缆线（GoldPlatedCables，Uncommon，Defect）：最右侧的充能球额外触发 1 次被动。
@@ -280,8 +280,8 @@
 - 锚？？？（FakeAnchor，Event）：战斗开始，获得 4 格挡。
 - 小血瓶？？？（FakeBloodVial，Event）：第 1 回合开始，回复 1 HP。
 - 开心小花？？？（FakeHappyFlower，Event）：每第 5 回合开始，获得 1 点能量。
-- 李家华夫饼？？？（FakeLeesWaffle，Event）：拾取时，回复最大 HP 的 10%。
-- 芒果？？？（FakeMango，Event）：拾取时，+3 最大 HP。
+- 李家华夫饼？？？（FakeLeesWaffle，Event）：拾取时，回复最大 HP 的 10%。run-27 实测：伪商人 56 金；97 Max 池下 18→27（≈9 = 10% 下取整）。
+- 芒果？？？（FakeMango，Event）：拾取时，+3 最大 HP。run-27 实测：伪商人 43 金；27/94→30/97（当前与最大各 +3）。
 - 商人的地毯？？？（FakeMerchantsRug，Event）：无效果。
 - 奥利哈钢？？？（FakeOrichalcum，Event）：回合结束时，若没有格挡，获得 3 格挡。
 - 异蛇之眼？？？（FakeSneckoEye，Event）：战斗开始时处于 Confused。

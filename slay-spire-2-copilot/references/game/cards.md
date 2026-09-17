@@ -65,7 +65,7 @@ listed below as X.
 - JUGGERNAUT: 2, power, rare, whenever you gain Block deal 6 damage to a random enemy. Upgrade: deal 8 damage.
 - JUGGLING: 1, power, uncommon, the 3rd Attack you play each turn is copied into your hand. Upgrade: gains Innate.
 - MANGLE: 3, attack, rare, deal 15 damage; the enemy loses 10 Strength this turn. Upgrade: +5 damage, +5 Strength loss.
-- MOLTEN_FIST: 1, attack, common, Exhaust, deal 10 damage; apply Vulnerable equal to the target's current Vulnerable stacks (doubles it). Upgrade: +4 damage.
+- MOLTEN_FIST: 1, attack, common, Exhaust, deal 10 damage; apply Vulnerable equal to the target's current Vulnerable stacks (doubles it). Upgrade: +4 damage. **Run-27 live**: on a target with 0 Vulnerable stacks it applies 0 Vuln (doubles zero) AND does not consume an enemy Artifact stack — no debuff event is generated at 0 stacks (Chomper Artifact 2 stayed 2). Value is wasted on un-Vulned/Artifact targets: apply Vuln first (Bash/Thunderclap), MoltenFist after.
 - NOT_YET: 2, skill, rare, Exhaust, heal 10 HP. Upgrade: heal 13 HP. Run-26 live: +10 HP healed in-combat (42→52) — emergency sustain for HP-starved lines; stacks same-turn with TuningFork skill-count block.
 - OFFERING: 0, skill, rare, Exhaust, lose 6 HP (unblockable); gain 2 Energy; draw 3 cards. Upgrade: draw 5.
 - ONE_TWO_PUNCH: 1, skill, rare, the next Attack you play this turn is played an extra time. Upgrade: extra 2 Attacks. Run-18 live (A1 2026-09-17): upgraded ONE_TWO_PUNCH adds the next attack 2 extra times (3 total resolutions — Strike×3 wiped 21-48 HP adds in one play); DOMINATE live math: on a 0-Vuln target grants roughly +1~2 Strength (applying 1 Vuln), on a target already carrying Vuln stacks the Strength gain equals the post-application stack count — Bash (2 Vuln) → DOMINATE = ~+3 Strength observed.
@@ -77,7 +77,7 @@ listed below as X.
 - PYRE: 2, power, rare, +1 max Energy. Upgrade: +2 max Energy.
 - RAGE: 0, skill, uncommon, this turn whenever you play an Attack gain 3 Block. Upgrade: gain 5 Block.
 - RAMPAGE: 1, attack, uncommon, deal 9 damage; each time this card is played this combat its damage permanently increases by 5. Upgrade: +4 increase per play.
-- RUPTURE: 1, power, uncommon, when you lose HP on your turn from a card you played, gain 1 Strength. Upgrade: gain 2 Strength.
+- RUPTURE: 1, power, uncommon, when you lose HP on your turn from a card you played, gain 1 Strength. Upgrade: gain 2 Strength. **Run-27 live (A1 2026-09-18): power Amount STACKS across copies** — smith-upgraded Rupture (Amount 2) + a second un-upgraded Rupture card played later raised RUPTURE_POWER to 3; every subsequent self-damage event granted +3 Strength (Bloodletting 0e = +3 Str AND +2 Energy, confirmed across four triggers). Foul Potion combat self-damage also triggered Rupture live (potion is not a "card you played" per the wording, but the HP loss counted — treat any same-turn HP loss as a trigger).
 - SECOND_WIND: 1, skill, uncommon, Exhaust, exhaust all non-Attack cards in your hand; gain 5 Block for each card Exhausted. Upgrade: +7 Block each. Run-20 live corrections (A1 2026-09-18): the effect exhausts OTHER non-Attacks only — Attacks in hand (e.g. Fiend Fire) are NOT exhausted and SW itself does not count toward its own exhaust-block total (2 Defends in hand → exhaust count 2, Block 10 at base values). Charon's Ashes procs once per card the effect exhausts, not on SW itself. Trap cards (FranticEscape-class) are defused by this exhaust — they are discarded-to-exhaust without their on-play downside firing. An event enchant granting +2 Block per exhausted card stacked with a smith upgrade that added +2 more (live: 7→9 per card on an enchanted copy; the table's +7 upgrade value did not appear on that path).
 - SETUP_STRIKE: 1, attack, common, Strike-tagged, deal 7 damage; gain 2 temporary Strength this turn. Upgrade: +2 damage, +1 Strength.
 - SHRUG_IT_OFF: 1, skill, common, gain 8 Block; draw 1 card. Upgrade: +3 Block.
@@ -505,7 +505,7 @@ listed below as X.
 - MIND_BLAST: 1, attack, uncommon, Innate, deal damage equal to the number of cards in your draw pile. Upgrade: cost 0.
 - NOSTALGIA: 1, power, rare, the first 1 Attack/Skill you play each turn goes to the top of your draw pile instead of your discard pile. Upgrade: cost 0.
 - OMNISLICE: 0, attack, uncommon, deal 8 damage to the target; other enemies of the target take equal damage. Upgrade: +3 damage.
-- PANACHE: 0, power, uncommon, every 5 cards you play deal 10 damage to ALL enemies. Upgrade: deal 14 damage.
+- PANACHE: 0, power, uncommon, every 5 cards you play deal 10 damage to ALL enemies. Upgrade: deal 14 damage. **Run-27 live**: procs cleanly on 5-card turns after deployment (10 AoE both KaiserCrab claws observed twice); the DEPLOY turn itself did not visibly proc at the 5th card played (Panache+4 follow-ups) — either the deploy card is excluded from the count or the counter starts post-deploy. Plan proc math from the turn AFTER deploy.
 - PANIC_BUTTON: 0, skill, uncommon, Exhaust, gain 30 Block; for 2 turns your card-sourced Block gains are 0. Upgrade: +10 Block.
 - PREP_TIME: 1, power, uncommon, at start of your turn gain 4 Vigor. Upgrade: +2 Vigor.
 - PRODUCTION: 0, skill, uncommon, Exhaust, gain 2 Energy. Upgrade: gain 3 Energy.

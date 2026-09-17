@@ -24,7 +24,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Centennial Puzzle (CentennialPuzzle, Common): first time each combat you lose HP, draw 3 cards.
 - Data Disk (DataDisk, Common, Defect): at combat start, gain 1 Focus.
 - Fencing Manual (FencingManual, Common, Regent): at start of turn 1, Forge 10.
-- Festive Popper (FestivePopper, Common): at start of turn 1, deal 9 damage to ALL enemies.
+- Festive Popper (FestivePopper, Common): at start of turn 1, deal 9 damage to ALL enemies. Run-27 live: pre-chip confirmed 3 encounters (Chompers 63→54/64→55, millipede segments −9 each, KaiserCrab claws 209→200/199→190).
 - Gorget (Gorget, Common): at combat start, gain 4 Plating.
 - Happy Flower (HappyFlower, Common): every 3rd turn start, gain 1 Energy.
 - Juzu Bracelet (JuzuBracelet, Common): ? rooms can no longer roll Monster combats; only obtainable before the Act-3 treasure chest.
@@ -49,7 +49,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Book Repair Knife (BookRepairKnife, Uncommon, Necrobinder): when non-Minion enemies die to Doom, heal 3 HP per such creature.
 - Bowler Hat (BowlerHat, Uncommon): Gold gained ×1.25; only obtainable before the Act-3 treasure chest; never sold in shops.
 - Candelabra (Candelabra, Uncommon): at start of turn 2, gain 2 Energy.
-- Eternal Feather (EternalFeather, Uncommon): on entering a Rest Site, heal 3 HP per 5 cards in your deck.
+- Eternal Feather (EternalFeather, Uncommon): on entering a Rest Site, heal 3 HP per 5 cards in your deck. Run-27 live: +15 heal at 25-card deck, +15 at 27 cards, +12 at ~20-24 cards observed on rest-site entry (heal applies BEFORE the rest-site action is chosen).
 - Funerary Mask (FuneraryMask, Uncommon, Necrobinder): at combat start, shuffle 3 Soul cards into your draw pile.
 - Galactic Dust (GalacticDust, Uncommon, Regent): every 10 Stars spent, gain 10 Block.
 - Gold-Plated Cables (GoldPlatedCables, Uncommon, Defect): your rightmost Orb triggers its passive 1 additional time.
@@ -280,8 +280,8 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Fake Anchor (FakeAnchor, Event): at combat start, gain 4 Block.
 - Fake Blood Vial (FakeBloodVial, Event): at start of turn 1, heal 1 HP.
 - Fake Happy Flower (FakeHappyFlower, Event): every 5th turn start, gain 1 Energy.
-- Fake Lee's Waffle (FakeLeesWaffle, Event): on pickup, heal 10% of Max HP.
-- Fake Mango (FakeMango, Event): on pickup, +3 Max HP.
+- Fake Lee's Waffle (FakeLeesWaffle, Event): on pickup, heal 10% of Max HP. Run-27 live: 56g at fake merchant, healed 18→27 on a 97-Max pool (≈9 = floor 10%).
+- Fake Mango (FakeMango, Event): on pickup, +3 Max HP. Run-27 live: 43g at fake merchant; 27/94 → 30/97 (+3 current and Max).
 - Fake Merchant's Rug (FakeMerchantsRug, Event): no effect.
 - Fake Orichalcum (FakeOrichalcum, Event): end of turn, if you have no Block, gain 3 Block.
 - Fake Snecko Eye (FakeSneckoEye, Event): at combat start, gain Confused.

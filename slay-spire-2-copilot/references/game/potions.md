@@ -37,7 +37,7 @@ Target: `self` / `any player` / `any enemy` / `ALL enemies`. ALL-enemies potions
 - Flex Potion (Common, combat, any player): apply FlexPotionPower +5 Strength — lose 5 Strength at end of this turn (temporary Strength).
 - Focus Potion (Common, combat, self): +2 Focus.
 - Fortifier (Uncommon, combat, any player): gain Block equal to 2× your current Block (your Block becomes 3×).
-- Foul Potion (Event, anytime): in combat — deal 12 damage to every non-pet creature (including you); in a Merchant room — gain 100 Gold; in the FakeMerchant event — starts the FakeMerchant fight.
+- Foul Potion (Event, anytime): in combat — deal 12 damage to every non-pet creature (including you); in a Merchant room — gain 100 Gold; in the FakeMerchant event — starts the FakeMerchant fight. **Run-27 live (A1 2026-09-18)**: combat use is a same-window AoE tool — 12 damage killed a 12-HP Decimillipede segment outright and set up a Thunderclap finish (all 3 segments at 0, REATTACH never resolved); the self-damage triggered Rupture (+Str per Amount live). Never use in a FakeMerchant room (fight clause) — holding it for a real Merchant room (+100g) is the economy line.
 - Fruit Juice (Rare, anytime, any player): +5 Max HP.
 - Fysh Oil (Uncommon, combat, any player): +1 Strength and +1 Dexterity for the combat.
 - Gambler's Brew (Uncommon, combat, self): discard any number of hand cards, then draw that many.

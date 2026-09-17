@@ -37,7 +37,7 @@ Potion 类均已覆盖；数值取各类 `CanonicalVars` 基础值。括号内�
 - Flex Potion（肌肉药水）(Common, 战斗中, 任意玩家): 获得 FlexPotionPower +5 力量——本回合结束时失去 5 力量（临时力量）。
 - Focus Potion（集中药水）(Common, 战斗中, 自身): +2 专注（Focus）。
 - Fortifier（固化药水）(Uncommon, 战斗中, 任意玩家): 获得等同当前格挡 2 倍的格挡（格挡变为 3 倍）。
-- Foul Potion（污浊药水）(Event, 随时): 战斗中——对每个非宠物生物（含你自己）造成 12 点伤害；商人房间——获得 100 金币；FakeMerchant 事件——触发伪商人战斗。
+- Foul Potion（污浊药水）(Event, 随时): 战斗中——对每个非宠物生物（含你自己）造成 12 点伤害；商人房间——获得 100 金币；FakeMerchant 事件——触发伪商人战斗。**run-27 实测（A1 2026-09-18）**：战斗用法=同窗 AoE 工具——12 伤直接带走 12 HP 千足虫段并铺垫 Thunderclap 收头（三段全 0，REATTACH 零结算）；自伤触发 Rupture（按 Amount +力 实测）。伪商人房绝不可用（战斗条款）——留给真商人房 +100 金是经济线。
 - Fruit Juice（果汁）(Rare, 随时, 任意玩家): +5 最大 HP。
 - Fysh Oil（异鱼之油）(Uncommon, 战斗中, 任意玩家): 本场战斗 +1 力量 +1 敏捷。
 - Gambler's Brew（赌徒特酿）(Uncommon, 战斗中, 自身): 弃置任意数量手牌，然后抽取等量牌。
