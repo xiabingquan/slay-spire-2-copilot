@@ -33,7 +33,7 @@
 - 意外光滑的石头（OddlySmoothStone，Common）：战斗开始，获得 1 点敏捷。
 - 摆动球（Pendulum，Common）：每第 3 回合开始，抽 1 张牌。
 - 药水腰带（PotionBelt，Common）：拾取时，获得 2 个药水栏。
-- 红面具（RedMask，Common）：战斗开始（第 1 回合），对所有敌人施加 1 层 Weak。
+- 红面具（RedMask，Common）：战斗开始（第 1 回合），对所有敌人施加 1 层 Weak。run-28 实测：开战 state 读数每个敌人都带 WEAK_POWER:1（多敌同帧全标记）；被削弱敌方意图 live 下降（外骨骼虫类 MANDIBLES 8→6、蜂群术士 BEES 每击 3→1 巨像+虚弱叠层、无厌沙虫 THRASH 9→8 每击）。
 - 红头骨（RedSkull，Common，Ironclad）：HP ≤ 最大 HP 的 50% 时，额外 +3 点力量。
 - 皇家枕头（RegalPillow，Common）：休息点回复量增加 15 HP。run-26 实测：与石炉加湿器休息叠加 —— HP 9→58/102 与 9→59/108（基础百分比治疗 + 枕头 15 + 加湿器每次休息 +5 Max）。
 - 异蛇头骨（SneckoSkull，Common，Silent）：你施加的中毒层数 +1。
@@ -42,7 +42,7 @@
 - 金刚杵（Vajra，Common）：战斗开始，获得 1 点力量。
 - 古茶具套装（VenerableTeaSet，Common）：进入休息点时，下一场战斗开始额外 +2 能量。
 - 战纹涂料（WarPaint，Common）：拾取时，升级牌库中 2 张随机技能牌。
-- 磨刀石（Whetstone，Common）：拾取时，升级牌库中 2 张随机攻击牌。
+- 磨刀石（Whetstone，Common）：拾取时，升级牌库中 2 张随机攻击牌。run-28 实测（Act1 宝箱）：命中 Bash→Bash+（10 伤/3 易伤——升级值其后战斗 live 确认）与 MoltenFist→MoltenFist+（14 伤——对啃咬机/千足虫 live 确认）。两目标均为攻击标签，与条目一致。
 - 头环（Circlet，None）：无效果。
 
 - 赤牛（Akabeko，Uncommon）：第 1 回合开始，获得 8 点 Vigor。
@@ -66,7 +66,7 @@
 - 奥利哈钢（Orichalcum，Uncommon）：回合结束时，若没有格挡，获得 6 格挡。
 - 精致折扇（OrnamentalFan，Uncommon）：单回合每打出 3 张攻击牌，获得 4 格挡。
 - 缩放仪（Pantograph，Uncommon）：Boss 战开始时，回复 25 HP。
-- 纸蛙（PaperPhrog，Uncommon，Ironclad）：带 Vulnerable 的敌人受到的攻击伤害 +75%（原 +50%）。run-17 实测（A1 2026-09-17）：与残酷能力（+25%）加法叠加 → 易伤目标受到攻击伤害 +100%（×2.0）— 实测 Strike 6→12、御血术 15→30、Bludgeon+ 42→84。 商店标价 196 金实测（run-17 Act1 商店、run-18 Act1 商店）——按此预算。
+- 纸蛙（PaperPhrog，Uncommon，Ironclad）：带 Vulnerable 的敌人受到的攻击伤害 +75%（原 +50%）。run-17 实测（A1 2026-09-17）：与残酷能力（+25%）加法叠加 → 易伤目标受到攻击伤害 +100%（×2.0）— 实测 Strike 6→12、御血术 15→30、Bludgeon+ 42→84。 商店标价 196 金实测（run-17 Act1 商店、run-18 Act1 商店）——按此预算。run-28 实测（牌库无残酷）：易伤目标命中值=（基础+力量）×1.75 精确——熔拳+ (14+2)×1.75=28、剑柄 (9+3)×1.75=21、Bash+ (10+1)×1.75=19、狂宴 (10+2)×1.75=21 全部 live 确认；**力量在乘区内而非乘区后加**。纸蛙单独=×1.75；×2.0 需残酷加法叠层。
 - 招架盾（ParryingShield，Uncommon）：回合结束时，若有至少 10 格挡，对随机敌人造成 6 点伤害。
 - 梨子（Pear，Uncommon）：拾取时，+10 最大 HP。
 - 钢笔尖（PenNib，Uncommon）：每打出的第 10 张攻击牌造成双倍伤害。
@@ -84,7 +84,7 @@
 - 小邮箱（TinyMailbox，Uncommon）：在休息点休息时，获得 2 瓶随机药水。
 - 音叉（TuningFork，Uncommon）：每打出 10 张技能牌，获得 7 格挡。
 - 扭曲漏斗（TwistedFunnel，Uncommon，Silent）：战斗开始（第 1 回合），对所有敌人施加 4 层中毒。
-- 臂甲（Vambrace，Uncommon）：每场战斗首次从卡牌获得格挡时，获得量翻倍。
+- 臂甲（Vambrace，Uncommon）：每场战斗首次从卡牌获得格挡时，获得量翻倍。run-28 实测：嘲讽 7→14、火焰屏障 12→24、Defend 5→10——每战首张挡牌精确翻倍；仅首次触发（同战后续 Defend 按面值）。
 - 孙子兵法（ArtOfWar，Rare）：若上回合未打出任何攻击牌，第 2 回合起回合开始获得 1 点能量。
 - 律动残余（BeatingRemnant，Rare）：单回合失去的 HP 不超过 20。
 - 风箱（Bellows，Rare）：第 1 回合开始，升级手牌中所有卡牌。
@@ -226,7 +226,7 @@
 - 故事书（Storybook，Ancient）：拾取时，向牌库加入 1 张 Brightest Flame。
 - 坦克斯的哨子（TanxsWhistle，Ancient）：拾取时，向牌库加入 1 张 Whistle。
 - 投斧（ThrowingAxe，Ancient）：每场战斗打出的第一张牌额外再打出一次。
-- 烘焙手套（ToastyMittens，Ancient）：每回合抽牌前，消耗抽牌堆顶牌并获得 1 点力量。
+- 烘焙手套（ToastyMittens，Ancient）：每回合抽牌前，消耗抽牌堆顶牌并获得 1 点力量。run-28 实测（Act2 祝福选入）：约 12 场战斗每回合 +1 力零例外；消耗顶牌在无痛部署时同步触发 FnP（回合开始可见 +3 挡来自手套触发的消耗——消耗源计入无痛）。力量与 Rupture Amount-3 引擎联乘，Boss 战中峰值 23。
 - 欧洛巴斯之触（TouchOfOrobas，Ancient）：拾取时，将初始遗物替换为远古版本。run-19 实测：IRONCLAD 燃烧之血 → 黑暗之血（战斗胜利回 12，原 6）；state 中遗物 id 同步更换，战后回复与天选芝士叠加。
 - 玩具盒（ToyBox，Ancient）：拾取时，获得 4 件蜡质遗物；每 3 场战斗，最左侧蜡质遗物融化消失。
 - 三刃回旋镖（TriBoomerang，Ancient）：拾取时，选择 3 张攻击牌附魔 Instinct 1。Instinct 附魔（反编译）：有源攻击伤害 ×2（乘法，先于 Vulnerable 等其他乘区结算）。
@@ -272,7 +272,7 @@
 - 宾邦（BingBong，Event）：每次向牌库加入卡牌时，额外加一份拷贝。
 - 骨茶（BoneTea，Event）：接下来 1 场战斗：第 1 回合开始，升级手牌中所有卡牌。
 - 异鸟宝宝（Byrdpip，Event）：拾取时，获得卡牌 Byrd Swoop；战斗中有 Byrdpip 伴随。
-- 天选芝士（ChosenCheese，Event）：战斗结束，+1 最大 HP。run-26 实测 ×3（棱柱/产卵虫/千足虫击杀）：战后 state 可见 Max 102→103 类触发；由满屋奶酪 Search 选项获得（−14 不可格挡 HP）。
+- 天选芝士（ChosenCheese，Event）：战斗结束，+1 最大 HP。run-26 实测 ×3（棱柱/产卵虫/千足虫击杀）：战后 state 可见 Max 102→103 类触发；由满屋奶酪 Search 选项获得（−14 不可格挡 HP）。run-28 实测：全战胜利触发——Max 与狂宴 Fatel 联合爬升 80→98（芝士 +1/杀+狂宴 +3/杀在战后 state 可见叠加）；本局 Search 税精确 −14（事件时 53→39 类数学）。
 - 黑石护符（DarkstonePeriapt，Event）：每次向牌库加入诅咒时，+6 最大 HP。
 - 风的女儿（DaughterOfTheWind，Event）：每次打出攻击牌时，获得 1 格挡。
 - 捕梦网（DreamCatcher，Event）：在休息点休息时，可以向牌库加入一张牌。

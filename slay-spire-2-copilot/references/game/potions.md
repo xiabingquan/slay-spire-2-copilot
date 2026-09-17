@@ -27,12 +27,13 @@ Target: `self` / `any player` / `any enemy` / `ALL enemies`. ALL-enemies potions
 - Dexterity Potion (Common, combat, any player): +2 Dexterity for the combat.
 - Distilled Chaos (Rare, combat, self): play the top 3 cards of your draw pile.
 - Droplet of Precognition (Rare, combat, self): choose 1 card from your draw pile; add it to hand.
-- Duplicator (Uncommon, combat, self): apply DuplicationPower 1 — the next card you play this turn is played 1 extra time; removed at end of turn.
+- Duplicator (Uncommon, combat, self): apply DuplicationPower 1 — the next card you play this turn is played 1 extra time; removed at end of turn. Run-28 live: DUPLICATION_POWER:1 same state read on use; next Bash+ resolved twice — TheInsatiable 146→76 (single act 70 damage: (10+10str)×PaperPhrog-mult×2 plays + Vulnerable applied twice 5→11); power gone at end of turn as documented.
 - Energy Potion (Common, combat, any player): gain 2 Energy.
 - Entropic Brew (Rare, anytime, self): fill every empty potion slot with a random potion.
 - Essence of Darkness (Rare, combat, self): channel 1 Dark orb per orb slot you have.
 - Explosive Ampoule (Common, combat, ALL enemies): deal 10 damage to ALL enemies (automatic multi-target; do not send a target id).
-- Fairy in a Bottle (Rare, auto, self): when you would die, this is discarded instead and you heal to 30% Max HP (minimum 1).
+- Fairy in a Bottle (Rare, auto, self): when you would die, this is discarded instead and you heal to 30% Max HP (minimum 1). Run-28 live: consumed when Inferno start-of-turn self-damage killed at HP 1 — HP set to 29/98 ≈ 29.6% of Max, consistent with the 30%-Max rule; potion vanished from belt same state read.
+- Fysh Oil (Uncommon, combat, any player): +1 Strength and +1 Dexterity for the combat. Run-28 live: STRENGTH_POWER +1 and DEXTERITY_POWER:1 appeared same state read on use; Dex +1 raised subsequent card-block values by 1 each (Defend 5→6 class) same combat.
 - Fire Potion (Common, combat, any enemy): deal 20 damage.
 - Flex Potion (Common, combat, any player): apply FlexPotionPower +5 Strength — lose 5 Strength at end of this turn (temporary Strength).
 - Focus Potion (Common, combat, self): +2 Focus.

@@ -70,7 +70,8 @@
 - SELF_HELP_BOOK（自助指南）：三选项已解码（perplexity 2026-09-18，run-23 实测）：**READ_THE_BACK → 为一张攻击牌附魔 Sharp 2（+2 伤害）；READ_PASSAGE → 为一张技能牌附魔 Nimble 2（+2 格挡）；READ_ENTIRE_BOOK → 为一张能力牌附魔 Swift 2（打出时抽 2 张）**。run-20 实测：READ_PASSAGE 池仅技能牌（4×Defend + 重振精神）；重振精神 Nimble 每张被消耗牌 +2 挡（5→7；对附魔副本锻造 7→9——非表中 +7）。run-23 实测：READ_ENTIRE_BOOK 自动指向牌库中唯一能力牌（Rupture）——Swift 2 打出抽 2 战斗内确认。此前「仅两个选项键」的观察是 UI 覆盖不全。
 - SLIPPERY_BRIDGE（滑脚木桥；TotalFloor > 6；要求存在可移除牌）：Overcome → 移除 1 张随机卡；HoldOn → 受到 HP 损失 = 3 + 本事件已选 HoldOn 次数（3、4、5……递增）；事件在 HoldOn 与 Overcome 之间循环直到选择 Overcome。run-19 实测：**除 Overcome 外没有出口**——拖延只是在同一随机移除之上叠加 HP 税；移除池为整个牌库（同层刚拿到的卡即被移除实例）。
 - SPIRALING_WHIRLPOOL（螺旋漩涡；要求存在 Spiral 可附魔卡）：ObserveTheSpiral → 附魔 Spiral；Drink → 回复。
-- SPIRIT_GRAFTER（灵魂嫁接者）：LetItIn → 回复 25 + 加入 Metamorphosis 卡；Rejection → 升级 + 受到 10 点伤害。run-15 实测：12 HP 接纳后到 57（+45，references 记 +25——Metamorphosis 拾取附加效果或 A1 加成待核）。
+- SPIRIT_GRAFTER（灵魂嫁接者）：LetItIn → 回复 25 + 加入 Metamorphosis 卡；Rejection → 升级 + 受到 10 点伤害。run-15 实测：12 HP 接纳后到 57（+45，references 记 +25——Metamorphosis 拾取附加效果或 A1 加成待核）。run-28 实测：53 HP 接纳后到 78（+25 精确——本实例档案值成立；run-15 的 +45 仍为未解变异）；Metamorphosis 入牌库（效果仍未知——见 cards_zh.md METAMORPHOSIS 条）。
+- ROOM_FULL_OF_CHEESE（满屋芝士；Act 索引 < 2）：Gorge → 加牌；Search → 受到 14 点不可挡挡伤害，获得 ChosenCheese 遗物。（run-28 live 注已并入上方 SPIRIT_GRAFTER 条目段——另见 relics_zh.md 天选芝士条。）run-28 实测：Search 税精确 −14（事件时 HP 读数吻合）；其后每次战斗胜利天选芝士 +1 Max HP 触发。
 - STONE_OF_ALL_TIME（永恒之石；Act 1；所有玩家 ≥1 瓶药水）：Lift → +10 最大 HP（饮用药水路径）；Push → 6 点伤害 + 附魔（+8 Vigorous 变量）。
 - SUNKEN_STATUE（沉没雕像）：GrabSword → SwordOfStone 遗物；DiveIntoWater → +111 金币，受到 7 点伤害。run-26 A1 实测：DiveIntoWater 实付 **+108 金**（41→149），非表值 +111 —— A1 金币值按 ~108 计，7 伤税精确。
 - THE_FUTURE_OF_POTIONS（药水的未来；2026-09-17 run-12 实测，Act 2）：三个选项

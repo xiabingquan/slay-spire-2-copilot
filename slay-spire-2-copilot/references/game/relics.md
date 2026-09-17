@@ -33,7 +33,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Oddly Smooth Stone (OddlySmoothStone, Common): at combat start, gain 1 Dexterity.
 - Pendulum (Pendulum, Common): every 3rd turn start, draw 1 card.
 - Potion Belt (PotionBelt, Common): on pickup, gain 2 potion slots.
-- Red Mask (RedMask, Common): at combat start (turn 1), apply 1 Weak to ALL enemies.
+- Red Mask (RedMask, Common): at combat start (turn 1), apply 1 Weak to ALL enemies. Run-28 live: WEAK_POWER:1 visible on every enemy at combat start state read (multi-enemy packs all flagged same frame); weakened enemy intents dropped live (Nibbit-class MANDIBLES 8→6, Entomancer BEES per-hit 3→1 under Colossus+Weak stacking, TheInsatiable THRASH 9→8 per hit).
 - Red Skull (RedSkull, Common, Ironclad): while HP ≤ 50% of Max HP, you have +3 Strength.
 - Regal Pillow (RegalPillow, Common): Rest Site heal amount is increased by 15 HP. Run-26 live: stacks with StoneHumidifier rests — HP 9→58/102 and 9→59/108 observed (base % heal + pillow 15 + humidifier +5 Max each rest).
 - Snecko Skull (SneckoSkull, Common, Silent): Poison you apply is increased by 1.
@@ -42,7 +42,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Vajra (Vajra, Common): at combat start, gain 1 Strength.
 - Venerable Tea Set (VenerableTeaSet, Common): on entering a Rest Site, the next combat starts with +2 Energy.
 - War Paint (WarPaint, Common): on pickup, upgrade 2 random Skill cards in your deck.
-- Whetstone (Whetstone, Common): on pickup, upgrade 2 random Attack cards in your deck.
+- Whetstone (Whetstone, Common): on pickup, upgrade 2 random Attack cards in your deck. Run-28 live (Act-1 chest): hit Bash → Bash+ (10 damage / 3 Vulnerable — upgraded values confirmed live later: Bash+ 10dmg, Vuln 3 on targets) and MoltenFist → MoltenFist+ (14 damage — confirmed live vs Chompers/millipedes). Upgrade targets were both Attack-tagged, consistent with the entry.
 - Circlet (Circlet, None): no effect.
 
 - Akabeko (Akabeko, Uncommon): at start of turn 1, gain 8 Vigor.
@@ -66,7 +66,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Orichalcum (Orichalcum, Uncommon): end of turn, if you have no Block, gain 6 Block.
 - Ornamental Fan (OrnamentalFan, Uncommon): every 3 Attack cards played in one turn, gain 4 Block.
 - Pantograph (Pantograph, Uncommon): at start of Boss combats, heal 25 HP.
-- Paper Phrog (PaperPhrog, Uncommon, Ironclad): enemies with Vulnerable take +75% attack damage instead of +50%. Run-17 live (A1 2026-09-17): stacks additively with Cruelty power (+25%) → Vulnerable target takes +100% attack damage (×2.0) — live-verified Strike 6→12, Hemokinesis 15→30, Bludgeon+ 42→84. Shop-priced 196 gold live (run-17 and run-18 Act1 shops) — budget accordingly.
+- Paper Phrog (PaperPhrog, Uncommon, Ironclad): enemies with Vulnerable take +75% attack damage instead of +50%. Run-17 live (A1 2026-09-17): stacks additively with Cruelty power (+25%) → Vulnerable target takes +100% attack damage (×2.0) — live-verified Strike 6→12, Hemokinesis 15→30, Bludgeon+ 42→84. Shop-priced 196 gold live (run-17 and run-18 Act1 shops) — budget accordingly. Run-28 live WITHOUT Cruelty in deck: Vuln-target hits matched (base+Str)×1.75 exactly — MoltenFist+ (14+2)×1.75=28, Pommel (9+3)×1.75=21, Bash+ (10+1)×1.75=19, Feed (10+2)×1.75=21 all live-confirmed; Str is inside the multiplier, not added after. PaperPhrog alone = ×1.75; ×2.0 requires the Cruelty add-stack.
 - Parrying Shield (ParryingShield, Uncommon): end of turn, if you have ≥10 Block, deal 6 damage to a random enemy.
 - Pear (Pear, Uncommon): on pickup, +10 Max HP.
 - Pen Nib (PenNib, Uncommon): every 10th Attack card you play deals double damage.
@@ -84,7 +84,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Tiny Mailbox (TinyMailbox, Uncommon): on Resting at a Rest Site, procure 2 random potions.
 - Tuning Fork (TuningFork, Uncommon): every 10 Skill cards played, gain 7 Block.
 - Twisted Funnel (TwistedFunnel, Uncommon, Silent): at combat start (turn 1), apply 4 Poison to ALL enemies.
-- Vambrace (Vambrace, Uncommon): first time each combat you gain Block from a card, the Block amount is doubled.
+- Vambrace (Vambrace, Uncommon): first time each combat you gain Block from a card, the Block amount is doubled. Run-28 live: Taunt 7→14, FlameBarrier 12→24, Defend 5→10 — first block card of each combat doubled exactly; procs on the first card-granted Block only (later Defends that combat granted face value).
 - Art of War (ArtOfWar, Rare): if you played no Attack cards last turn, start of turn 2+ gain 1 Energy.
 - Beating Remnant (BeatingRemnant, Rare): you cannot lose more than 20 HP in a single turn.
 - Bellows (Bellows, Rare): at start of turn 1, upgrade all cards in hand.
@@ -226,7 +226,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Storybook (Storybook, Ancient): on pickup, add 1 Brightest Flame to deck.
 - Tanx's Whistle (TanxsWhistle, Ancient): on pickup, add 1 Whistle card to deck.
 - Throwing Axe (ThrowingAxe, Ancient): the first card you play each combat is played an extra time.
-- Toasty Mittens (ToastyMittens, Ancient): each turn before hand draw, exhaust the top card of draw pile and gain 1 Strength.
+- Toasty Mittens (ToastyMittens, Ancient): each turn before hand draw, exhaust the top card of draw pile and gain 1 Strength. Run-28 live (Act-2 boon pick): +1 Strength every turn without exception across ~12 combats; the exhaust also fired FeelNoPain when deployed (block +3 observed at turn start from Mittens-triggered exhaust — exhaust source counts for FnP). Str stack combined with Rupture Amount-3 engine to peaks of 23 by mid-boss-fight.
 - Touch of Orobas (TouchOfOrobas, Ancient): on pickup, replace your starter relic with its ancient version. Run-19 live: IRONCLAD Burning Blood → BlackBlood (heal 12 HP at combat victory, up from 6); relic id swaps in state and both relics' combat-end effects stack with ChosenCheese.
 - Toy Box (ToyBox, Ancient): on pickup, gain 4 Wax relics; every 3 combats, the left-most Wax relic melts away.
 - Tri-Boomerang (TriBoomerang, Ancient): on pickup, choose 3 Attack cards to enchant with Instinct 1. Instinct enchant (decomp): powered attack damage ×2 (multiplicative, applied before other multipliers such as Vulnerable).
@@ -272,7 +272,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Bing Bong (BingBong, Event): whenever a card is added to your deck, add an additional copy.
 - Bone Tea (BoneTea, Event): next 1 combat: at start of turn 1, upgrade all cards in hand.
 - Byrdpip (Byrdpip, Event): on pickup, gain the Byrd Swoop card; accompanies you in battles.
-- Chosen Cheese (ChosenCheese, Event): at combat end, +1 Max HP. Run-26 live ×3 (prism/Ovicopter/millipede kills): Max 102→103 class proc visible in post-combat state; obtained from ROOM_FULL_OF_CHEESE Search (−14 unblockable HP).
+- Chosen Cheese (ChosenCheese, Event): at combat end, +1 Max HP. Run-26 live ×3 (prism/Ovicopter/millipede kills): Max 102→103 class proc visible in post-combat state; obtained from ROOM_FULL_OF_CHEESE Search (−14 unblockable HP). Run-28 live: procced every combat victory across the run — Max climbed 80→98 jointly with Feed Fatals (ChosenCheese +1/kill + Feed Fatal +3/kill stacking visible in post-combat states); Search tax paid exactly −14 this run (53→39-class math at event).
 - Darkstone Periapt (DarkstonePeriapt, Event): whenever a Curse is added to your deck, +6 Max HP.
 - Daughter of the Wind (DaughterOfTheWind, Event): whenever you play an Attack card, gain 1 Block.
 - Dream Catcher (DreamCatcher, Event): when Resting at a Rest Site, you may add a card to deck.

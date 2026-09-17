@@ -27,19 +27,19 @@ Potion 类均已覆盖；数值取各类 `CanonicalVars` 基础值。括号内�
 - Dexterity Potion（敏捷药水）(Common, 战斗中, 任意玩家): 本场战斗 +2 敏捷。
 - Distilled Chaos（精炼混沌）(Rare, 战斗中, 自身): 打出抽牌堆顶的 3 张牌。
 - Droplet of Precognition（预知之滴）(Rare, 战斗中, 自身): 从抽牌堆选 1 张牌加入手牌。
-- Duplicator（复制药水）(Uncommon, 战斗中, 自身): 获得 DuplicationPower 1——本回合你打出的下一张牌额外打出 1 次；回合结束移除。
+- Duplicator（复制药水）(Uncommon, 战斗中, 自身): 获得 DuplicationPower 1——本回合你打出的下一张牌额外打出 1 次；回合结束移除。run-28 实测：Boss 战使用后 DUPLICATION_POWER:1 同帧可见，下一张 Bash+ 双结算——无厌沙虫 146→76（单动作 70 伤：(10+10力)×纸蛙乘区×2 次打出+易伤双施加 5→11）；药水消费后 DuplicationPower 随回合结束消失。
 - Energy Potion（能量药水）(Common, 战斗中, 任意玩家): 获得 2 能量。
 - Entropic Brew（混沌药水）(Rare, 随时, 自身): 用随机药水填满所有空药水栏。
 - Essence of Darkness（黑暗精华）(Rare, 战斗中, 自身): 每个充能球槽引导 1 个暗球。
 - Explosive Ampoule（爆炸安瓿）(Common, 战斗中, 全体敌人): 对全体敌人造成 10 点伤害（自动多目标，不要发送目标 id）。
-- Fairy in a Bottle（瓶中精灵）(Rare, 自动, 自身): 将死时改为弃掉此药水并回复至最大 HP 的 30%（最少 1 点）。
+- Fairy in a Bottle（瓶中精灵）(Rare, 自动, 自身): 将死时改为弃掉此药水并回复至最大 HP 的 30%（最少 1 点）。run-28 实测：狱火回合开始自伤在 HP 1 时击杀触发——HP 置 29/98≈Max 的 29.6%，与 30% Max 规则吻合；药水同帧从药槽消失。
 - Fire Potion（火焰药水）(Common, 战斗中, 任意敌人): 造成 20 点伤害。
 - Flex Potion（肌肉药水）(Common, 战斗中, 任意玩家): 获得 FlexPotionPower +5 力量——本回合结束时失去 5 力量（临时力量）。
 - Focus Potion（集中药水）(Common, 战斗中, 自身): +2 专注（Focus）。
 - Fortifier（固化药水）(Uncommon, 战斗中, 任意玩家): 获得等同当前格挡 2 倍的格挡（格挡变为 3 倍）。
 - Foul Potion（污浊药水）(Event, 随时): 战斗中——对每个非宠物生物（含你自己）造成 12 点伤害；商人房间——获得 100 金币；FakeMerchant 事件——触发伪商人战斗。**run-27 实测（A1 2026-09-18）**：战斗用法=同窗 AoE 工具——12 伤直接带走 12 HP 千足虫段并铺垫 Thunderclap 收头（三段全 0，REATTACH 零结算）；自伤触发 Rupture（按 Amount +力 实测）。伪商人房绝不可用（战斗条款）——留给真商人房 +100 金是经济线。
 - Fruit Juice（果汁）(Rare, 随时, 任意玩家): +5 最大 HP。
-- Fysh Oil（异鱼之油）(Uncommon, 战斗中, 任意玩家): 本场战斗 +1 力量 +1 敏捷。
+- Fysh Oil（异鱼之油）(Uncommon, 战斗中, 任意玩家): 本场战斗 +1 力量 +1 敏捷。run-28 实测：使用后同帧 STRENGTH_POWER +1 与 DEXTERITY_POWER:1；敏捷 +1 使后续卡牌挡值各 +1（Defend 5→6 级）同战生效。
 - Gambler's Brew（赌徒特酿）(Uncommon, 战斗中, 自身): 弃置任意数量手牌，然后抽取等量牌。
 - Ghost in a Jar（罐装幽灵）(Rare, 战斗中, 任意玩家): +1 层 Intangible。
 - Gigantification Potion（超巨化药水）(Rare, 战斗中, 任意玩家): 获得 GigantificationPower 1——本场战斗你打出的下一张有源攻击牌造成 ×3 伤害；被该次攻击消耗。
