@@ -72,7 +72,7 @@
 - SPIRALING_WHIRLPOOL（螺旋漩涡；要求存在 Spiral 可附魔卡）：ObserveTheSpiral → 附魔 Spiral；Drink → 回复。
 - SPIRIT_GRAFTER（灵魂嫁接者）：LetItIn → 回复 25 + 加入 Metamorphosis 卡；Rejection → 升级 + 受到 10 点伤害。run-15 实测：12 HP 接纳后到 57（+45，references 记 +25——Metamorphosis 拾取附加效果或 A1 加成待核）。
 - STONE_OF_ALL_TIME（永恒之石；Act 1；所有玩家 ≥1 瓶药水）：Lift → +10 最大 HP（饮用药水路径）；Push → 6 点伤害 + 附魔（+8 Vigorous 变量）。
-- SUNKEN_STATUE（沉没雕像）：GrabSword → SwordOfStone 遗物；DiveIntoWater → +111 金币，受到 7 点伤害。
+- SUNKEN_STATUE（沉没雕像）：GrabSword → SwordOfStone 遗物；DiveIntoWater → +111 金币，受到 7 点伤害。run-26 A1 实测：DiveIntoWater 实付 **+108 金**（41→149），非表值 +111 —— A1 金币值按 ~108 计，7 伤税精确。
 - THE_FUTURE_OF_POTIONS（药水的未来；2026-09-17 run-12 实测，Act 2）：三个选项
   "放入 稀有 / 罕见 / 普通 药水" — 所选药水被消耗；奖励 = 1 次本职业卡池选卡
   （实测：放入普通 Speed Potion → 死灵池 WISP / INVOKE / NEGATIVE_PULSE 三选一）。
@@ -91,7 +91,7 @@
 - WELCOME_TO_WONGOS（欢迎来到旺购百货；门槛标注 Act 1，但 2026-09-17 第 6 局实测 Act 2 亦可触发——章节标注视为软性；所有玩家金币 ≥ 100）：BuyBargainBin → 支付 100 金币，获得遗物；BuyFeaturedItem → 支付 200 金币，获得遗物；BuyMysteryBox → 支付 300 金币，获得 WongosMysteryTicket（5 场战斗后获得 3 件随机遗物）；Leave 离开。
 - WELLSPRING（泉水）：Bottle → 药水奖励；Bathe → 移除卡牌（curses 变量 1——存在 Guilty 追加处理器）。
 - WOOD_CARVINGS（木雕；要求存在可移除的基础牌）：Snake → 附魔 Slither；Bird → 变形为 Peck；Torus → 变形为 ToricToughness。Slither 附魔效果（2026-09-18 perplexity 研究，run-22）：被附魔的卡牌每次抽到时费用在 0~3 之间随机；随机化之后再施加的改费效果仍可能把最终费用抬到 3 以上。run-22 选 Bird→Peck（2 伤 ×3，打击标签多段，吃力量加成）而非 Snake/Slither（方差与组合技牌库反协同）与 Torus→ToricToughness（2 费 5 挡 + 后续 2 次挡被清空时重新获得该挡值）。
-- ZEN_WEAVER（修禅织网者；所有玩家金币 ≥ 125）：BreathingTechniques → 支付 50 金币，加入 Enlightenment；EmotionalAwareness → 支付 125 金币路径；ArachnidAcupuncture → 支付 250 金币，移除卡牌路径。
+- ZEN_WEAVER（修禅织网者；所有玩家金币 ≥ 125）：BreathingTechniques → 支付 50 金币，**加入 2 张 Enlightenment**（perplexity 2026-09-18 解码，run-26 实测事件面板）；EmotionalAwareness → 支付 125 金币，**移除 1 张牌**；ArachnidAcupuncture → 支付 250 金币，**移除 2 张牌**。注意：两个移除选项单价 125/张均贵于商店移除（75g）；事件无离开选项，必须三选一。Enlightenment（启迪）0 费「手牌全部费用变 1」对 0 费引擎牌是反协同 —— Ructure 线否决 BreathingTechniques。
 
 ## 未提取选项表的远古事件
 

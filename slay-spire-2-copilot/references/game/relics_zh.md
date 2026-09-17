@@ -28,16 +28,16 @@
 - 护喉甲（Gorget，Common）：战斗开始，获得 4 点镀甲（Plating）。
 - 开心小花（HappyFlower，Common）：每第 3 回合开始，获得 1 点能量。
 - 佛珠手链（JuzuBracelet，Common）：问号房间不再出现普通敌人战斗；仅可在第三幕宝箱前获得。
-- 灯笼（Lantern，Common）：第 1 回合开始，获得 +1 能量。
+- 灯笼（Lantern，Common）：第 1 回合开始，获得 +1 能量。run-26 实测：蜡烛燃着时与南瓜蜡烛叠层（T1 5 能实测）；蜡烛燃尽后 T1 回归基础 3 + 灯笼 1 = 4 能 —— 灯笼单独无法恢复蜡烛时代的能量。
 - 餐券（MealTicket，Common）：进入商店房间（MerchantRoom）时，回复 15 HP；仅可在第三幕宝箱前获得。
 - 意外光滑的石头（OddlySmoothStone，Common）：战斗开始，获得 1 点敏捷。
 - 摆动球（Pendulum，Common）：每第 3 回合开始，抽 1 张牌。
 - 药水腰带（PotionBelt，Common）：拾取时，获得 2 个药水栏。
 - 红面具（RedMask，Common）：战斗开始（第 1 回合），对所有敌人施加 1 层 Weak。
 - 红头骨（RedSkull，Common，Ironclad）：HP ≤ 最大 HP 的 50% 时，额外 +3 点力量。
-- 皇家枕头（RegalPillow，Common）：休息点回复量增加 15 HP。
+- 皇家枕头（RegalPillow，Common）：休息点回复量增加 15 HP。run-26 实测：与石炉加湿器休息叠加 —— HP 9→58/102 与 9→59/108（基础百分比治疗 + 枕头 15 + 加湿器每次休息 +5 Max）。
 - 异蛇头骨（SneckoSkull，Common，Silent）：你施加的中毒层数 +1。
-- 打击木偶（StrikeDummy，Common）：名称含 Strike 标签的攻击牌额外造成 3 点伤害。
+- 打击木偶（StrikeDummy，Common）：名称含 Strike 标签的攻击牌额外造成 3 点伤害。run-26 实测：Pommel Strike（Strike 标签）打出 18 =（9 基础 +3 木偶）×1.5 易伤 —— 木偶加成在易伤乘区之前；Peck（事件 Strike 标签）的 2 伤段未见木偶加成（2×3=6 实测），事件牌标签覆盖范围未确认。
 - 草莓（Strawberry，Common）：拾取时，+7 最大 HP。
 - 金刚杵（Vajra，Common）：战斗开始，获得 1 点力量。
 - 古茶具套装（VenerableTeaSet，Common）：进入休息点时，下一场战斗开始额外 +2 能量。
@@ -59,7 +59,7 @@
 - 锁镰（Kusarigama，Uncommon）：单回合每打出 3 张攻击牌，对随机敌人造成 6 点伤害。
 - 吃不完的糖（LastingCandy，Uncommon）：首场战斗之后每隔一场战斗，战斗卡牌奖励额外包含 1 张能力牌；仅可在第三幕宝箱前获得。
 - 开信刀（LetterOpener，Uncommon）：单回合每打出 3 张技能牌，对所有敌人造成 5 点伤害。
-- 招财异鱼（LuckyFysh，Uncommon）：每次向牌库加入卡牌时，获得 15 金币。
+- 招财异鱼（LuckyFysh，Uncommon）：每次向牌库加入卡牌时，获得 15 金币。run-26 实测触发源：商店购卡（Impervious 入库 +15）、卡牌奖励领取（每次 +15）、SwipePower 偷牌在偷窃草蜢死亡时归还（静默入库 +15 可见）。
 - 水银沙漏（MercuryHourglass，Uncommon）：回合开始，对所有敌人造成 3 点伤害。
 - 微型大炮（MiniatureCannon，Uncommon）：升级后的攻击牌额外造成 3 点伤害。
 - 双截棍（Nunchaku，Uncommon）：每打出 10 张攻击牌，获得 1 点能量。
@@ -206,7 +206,7 @@
 - 精准剪刀（PreciseScissors，Ancient）：拾取时，从牌库移除 1 张牌。
 - 腌制活雾（PreservedFog，Ancient）：拾取时，移除 3 张牌；向牌库加入 1 张 Folly。
 - 棱彩宝石（PrismaticGem，Ancient）：每回合 +1 最大能量；卡牌奖励包含其他角色的牌。
-- 南瓜蜡烛（PumpkinCandle，Ancient）：每回合 +1 最大能量；5 场战斗后熄灭；休息点获得 Kindle 选项（+5 场战斗）。
+- 南瓜蜡烛（PumpkinCandle，Ancient）：每回合 +1 最大能量；5 场战斗后熄灭；休息点获得 Kindle 选项（+5 场战斗）。run-26 实测：第 5 战（Act2 开局→Boss：地道虫/草蜢/胧光怪/棱柱/产卵虫）准时燃尽；KINDLE 作为营火第三按钮（HEAL/SMITH/KINDLE）出现；复燃消耗当次营火行动 —— HP 危机迫使每次营火都 HEAL 时蜡烛在 Boss 战前保持熄灭。
 - 发光珍珠（RadiantPearl，Ancient）：第 1 回合开始，向手牌加入 1 张 Luminesce。
 - 符文金字塔（RunicPyramid，Ancient）：回合结束不再弃置手牌。
 - 钗（Sai，Ancient）：每回合开始，获得 7 格挡。
@@ -272,7 +272,7 @@
 - 宾邦（BingBong，Event）：每次向牌库加入卡牌时，额外加一份拷贝。
 - 骨茶（BoneTea，Event）：接下来 1 场战斗：第 1 回合开始，升级手牌中所有卡牌。
 - 异鸟宝宝（Byrdpip，Event）：拾取时，获得卡牌 Byrd Swoop；战斗中有 Byrdpip 伴随。
-- 天选芝士（ChosenCheese，Event）：战斗结束，+1 最大 HP。
+- 天选芝士（ChosenCheese，Event）：战斗结束，+1 最大 HP。run-26 实测 ×3（棱柱/产卵虫/千足虫击杀）：战后 state 可见 Max 102→103 类触发；由满屋奶酪 Search 选项获得（−14 不可格挡 HP）。
 - 黑石护符（DarkstonePeriapt，Event）：每次向牌库加入诅咒时，+6 最大 HP。
 - 风的女儿（DaughterOfTheWind，Event）：每次打出攻击牌时，获得 1 格挡。
 - 捕梦网（DreamCatcher，Event）：在休息点休息时，可以向牌库加入一张牌。

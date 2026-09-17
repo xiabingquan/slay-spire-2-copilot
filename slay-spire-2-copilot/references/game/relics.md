@@ -28,16 +28,16 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Gorget (Gorget, Common): at combat start, gain 4 Plating.
 - Happy Flower (HappyFlower, Common): every 3rd turn start, gain 1 Energy.
 - Juzu Bracelet (JuzuBracelet, Common): ? rooms can no longer roll Monster combats; only obtainable before the Act-3 treasure chest.
-- Lantern (Lantern, Common): at start of turn 1, gain +1 Energy.
+- Lantern (Lantern, Common): at start of turn 1, gain +1 Energy. Run-26 live: stacks with Pumpkin Candle while the candle is lit (T1 5e observed); after candle burnout T1 runs at base 3 + lantern 1 = 4e — lantern alone does not restore candle-era energy.
 - Meal Ticket (MealTicket, Common): on entering a MerchantRoom, heal 15 HP; only obtainable before the Act-3 treasure chest.
 - Oddly Smooth Stone (OddlySmoothStone, Common): at combat start, gain 1 Dexterity.
 - Pendulum (Pendulum, Common): every 3rd turn start, draw 1 card.
 - Potion Belt (PotionBelt, Common): on pickup, gain 2 potion slots.
 - Red Mask (RedMask, Common): at combat start (turn 1), apply 1 Weak to ALL enemies.
 - Red Skull (RedSkull, Common, Ironclad): while HP ≤ 50% of Max HP, you have +3 Strength.
-- Regal Pillow (RegalPillow, Common): Rest Site heal amount is increased by 15 HP.
+- Regal Pillow (RegalPillow, Common): Rest Site heal amount is increased by 15 HP. Run-26 live: stacks with StoneHumidifier rests — HP 9→58/102 and 9→59/108 observed (base % heal + pillow 15 + humidifier +5 Max each rest).
 - Snecko Skull (SneckoSkull, Common, Silent): Poison you apply is increased by 1.
-- Strike Dummy (StrikeDummy, Common): Strike-tagged attack cards deal +3 damage.
+- Strike Dummy (StrikeDummy, Common): Strike-tagged attack cards deal +3 damage. Run-26 live: Pommel Strike (Strike-tagged) dealt 18 = (9 base +3 dummy) ×1.5 Vulnerable — dummy applies before vuln multiplier; Peck (event Strike-tagged) showed no dummy bonus on its 2-damage instances (2×3=6 observed), event-card tag coverage unconfirmed.
 - Strawberry (Strawberry, Common): on pickup, +7 Max HP.
 - Vajra (Vajra, Common): at combat start, gain 1 Strength.
 - Venerable Tea Set (VenerableTeaSet, Common): on entering a Rest Site, the next combat starts with +2 Energy.
@@ -59,7 +59,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Kusarigama (Kusarigama, Uncommon): every 3 Attack cards played in one turn, deal 6 damage to a random enemy.
 - Lasting Candy (LastingCandy, Uncommon): every other combat after the first, combat card rewards gain 1 additional Power card; only obtainable before the Act-3 treasure chest.
 - Letter Opener (LetterOpener, Uncommon): every 3 Skill cards played in one turn, deal 5 damage to ALL enemies.
-- Lucky Fysh (LuckyFysh, Uncommon): whenever a card is added to your deck, gain 15 Gold.
+- Lucky Fysh (LuckyFysh, Uncommon): whenever a card is added to your deck, gain 15 Gold. Run-26 live trigger sources: shop card buys (+15 on Impervious add), card-reward picks (+15 each), SwipePower stolen-card return on ThievingHopper death (silent deck-add +15 observed).
 - Mercury Hourglass (MercuryHourglass, Uncommon): at start of your turn, deal 3 damage to ALL enemies.
 - Miniature Cannon (MiniatureCannon, Uncommon): upgraded Attack cards deal +3 damage.
 - Nunchaku (Nunchaku, Uncommon): every 10 Attack cards played, gain 1 Energy.
@@ -206,7 +206,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Precise Scissors (PreciseScissors, Ancient): on pickup, remove 1 card from deck.
 - Preserved Fog (PreservedFog, Ancient): on pickup, remove 3 cards; add 1 Folly to deck.
 - Prismatic Gem (PrismaticGem, Ancient): +1 max Energy each turn; card rewards include cards from other characters.
-- Pumpkin Candle (PumpkinCandle, Ancient): +1 max Energy each turn; extinguishes after 5 combats; Rest Sites gain a Kindle option that adds 5 combats.
+- Pumpkin Candle (PumpkinCandle, Ancient): +1 max Energy each turn; extinguishes after 5 combats; Rest Sites gain a Kindle option that adds 5 combats. Run-26 live: burnout confirmed at exactly the 5th combat (Act 2 opener→boss = Tunneler/Hopper/Obscura/Prism/Ovicopter); KINDLE appears as a third rest-site button (HEAL/SMITH/KINDLE); re-lighting costs the rest action — when HP-crisis forces HEAL at every rest the candle stays dead into the boss fight.
 - Radiant Pearl (RadiantPearl, Ancient): at start of turn 1, add 1 Luminesce to hand.
 - Runic Pyramid (RunicPyramid, Ancient): you no longer discard your hand at end of turn.
 - Sai (Sai, Ancient): at start of each turn, gain 7 Block.
@@ -272,7 +272,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Bing Bong (BingBong, Event): whenever a card is added to your deck, add an additional copy.
 - Bone Tea (BoneTea, Event): next 1 combat: at start of turn 1, upgrade all cards in hand.
 - Byrdpip (Byrdpip, Event): on pickup, gain the Byrd Swoop card; accompanies you in battles.
-- Chosen Cheese (ChosenCheese, Event): at combat end, +1 Max HP.
+- Chosen Cheese (ChosenCheese, Event): at combat end, +1 Max HP. Run-26 live ×3 (prism/Ovicopter/millipede kills): Max 102→103 class proc visible in post-combat state; obtained from ROOM_FULL_OF_CHEESE Search (−14 unblockable HP).
 - Darkstone Periapt (DarkstonePeriapt, Event): whenever a Curse is added to your deck, +6 Max HP.
 - Daughter of the Wind (DaughterOfTheWind, Event): whenever you play an Attack card, gain 1 Block.
 - Dream Catcher (DreamCatcher, Event): when Resting at a Rest Site, you may add a card to deck.

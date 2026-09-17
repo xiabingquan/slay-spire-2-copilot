@@ -69,7 +69,7 @@ Act ancients (from act sources): Overgrowth = Neow (removed unless `UnlockState.
 - SPIRALING_WHIRLPOOL (Spiral-enchantable card required): ObserveTheSpiral → Enchant Spiral; Drink → heal.
 - SPIRIT_GRAFTER: LetItIn → heal 25 + add Metamorphosis card; Rejection → upgrade + take 10 damage. Run-15 live: LetItIn at 12 HP ended at 57 (+45 observed, refs say heal 25 — Metamorphosis-on-pickup or A1 scaling may add more; recheck if it matters).
 - STONE_OF_ALL_TIME (Act 1; all players ≥1 potion): Lift → +10 Max HP (drink-potion path); Push → 6 damage + enchant (+8 Vigorous var).
-- SUNKEN_STATUE: GrabSword → SwordOfStone relic; DiveIntoWater → +111 Gold, take 7 damage.
+- SUNKEN_STATUE: GrabSword → SwordOfStone relic; DiveIntoWater → +111 Gold, take 7 damage. Run-26 A1 live: DiveIntoWater paid **+108 Gold** (gold 41→149), not the table's +111 — treat the gold value as ~108 at A1, 7-damage tax exact.
 - THE_FUTURE_OF_POTIONS (live 2026-09-17 run-12, Act 2): three options "deposit
   a Rare / Uncommon / Common potion" — the chosen potion is consumed; reward =
   1 card pick from your class pool (live: deposited a Common Speed Potion →
@@ -89,7 +89,7 @@ Act ancients (from act sources): Overgrowth = Neow (removed unless `UnlockState.
 - WELCOME_TO_WONGOS (labeled Act 1 in gates; also observed spawning Act 2, run-6 2026-09-17 — treat act label as soft; all players Gold ≥ 100): BuyBargainBin → pay 100 Gold, relic; BuyFeaturedItem → pay 200 Gold, relic; BuyMysteryBox → pay 300 Gold, WongosMysteryTicket (3 random relics after 5 combats); Leave.
 - WELLSPRING: Bottle → potion reward; Bathe → remove cards (curses var 1 — Guilty add handler exists).
 - WOOD_CARVINGS (requires removable Basic card): Snake → Enchant Slither; Bird → transform into Peck; Torus → transform into ToricToughness. Slither enchant effect (perplexity research 2026-09-18, run-22): the enchanted card's cost randomizes from 0 to 3 each time you draw it; cost-changing effects applied after the randomization can still raise the final cost above 3. Run-22 chose Bird→Peck (2 dmg ×3, Strike-tagged multi-hit that scales with Strength) over Snake/Slither (variance anti-synergy with a combo deck) and Torus→ToricToughness (2-cost 5 Block + regain that Block next 2 times Block is cleared).
-- ZEN_WEAVER (all players Gold ≥ 125): BreathingTechniques → pay 50 Gold, add Enlightenment; EmotionalAwareness → pay 125 Gold path; ArachnidAcupuncture → pay 250 Gold, remove cards path.
+- ZEN_WEAVER (all players Gold ≥ 125): BreathingTechniques → pay 50 Gold, **add 2 Enlightenment** (perplexity decode 2026-09-18, run-26 live panel); EmotionalAwareness → pay 125 Gold, **remove 1 card**; ArachnidAcupuncture → pay 250 Gold, **remove 2 cards**. Both removal options price at 125/card — worse than shop removal (75g); the event has NO leave option, one of three must be taken. Enlightenment's 0-cost "all cards cost 1 this turn" is anti-synergy with 0-cost engine cards — declined on a Rupture-line deck.
 
 ## Ancient events without extracted option tables
 

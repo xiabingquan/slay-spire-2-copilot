@@ -16,7 +16,7 @@ listed below as X.
 
 - AGGRESSION: 1, power, rare, at start of your turn put 1 random Attack from your discard pile into your hand and upgrade it. Upgrade: gains Innate.
 - ANGER: 0, attack, common, deal 6 damage; add a copy of this card to your discard pile. Upgrade: +2 damage.
-- ARMAMENTS: 1, skill, common, gain 5 Block; upgrade a card in your hand. Upgrade: instead upgrades ALL cards in your hand.
+- ARMAMENTS: 1, skill, common, gain 5 Block; upgrade a card in your hand. Upgrade: instead upgrades ALL cards in your hand. **Run-26 live (A1 2026-09-18): in-combat upgrades are combat-scoped only** — Bloodletting upgraded via Armaments gave +3 Energy that combat but reverted to +2 the next; a shop/rest SMITH upgrade (Rupture+) persisted normally. Do not plan Armaments upgrades as permanent deck value.
 - ASHEN_STRIKE: 1, attack, uncommon, Exhaust, Strike-tagged, deal damage = 6 + 3 for each card in your exhaust pile. Upgrade: +1 per exhaust card (4 each).
 - BARRICADE: 3, power, rare, your Block is not removed at the start of your turn. Upgrade: cost 2.
 - BASH: 2, attack, basic, deal 8 damage; apply 2 Vulnerable. Upgrade: +2 damage, +1 Vulnerable.
@@ -51,7 +51,7 @@ listed below as X.
 - FIEND_FIRE: 2, attack, rare, Exhaust, exhaust your hand; deal 7 damage to the target per card Exhausted. Upgrade: +3 damage per card.
 - FIGHT_ME: 2, attack, uncommon, deal 5 damage twice; gain 3 Strength; the enemy gains 1 Strength. Upgrade: +1 damage, +1 Strength.
 - FLAME_BARRIER: 2, skill, uncommon, gain 12 Block; when attacked this turn deal 4 damage back. Upgrade: +4 Block, +6 damage back.
-- FORGOTTEN_RITUAL: 1, skill, uncommon, Exhaust, if you Exhausted a card this turn gain 3 Energy. Upgrade: gain 4 Energy.
+- FORGOTTEN_RITUAL: 1, skill, uncommon, Exhaust, if you Exhausted a card this turn gain 3 Energy. Upgrade: gain 4 Energy. Run-26 live: its own Exhaust does NOT satisfy its own condition (EvilEye-class) — played alone, energy went 6→5 (paid 1, no +3). Another card must be exhausted FIRST the same turn (Brand/Slimed-class) for the +3 to fire.
 - HAVOC: 1, skill, common, Exhaust, play the top card of your draw pile and Exhaust it. Upgrade: cost 0.
 - HEADBUTT: 1, attack, common, deal 9 damage; place a card from your discard pile on top of your draw pile. Upgrade: +3 damage.
 - HELLRAISER: 2, power, rare, Strike-tagged cards you draw are auto-played at a random enemy. Upgrade: cost 1.
@@ -66,7 +66,7 @@ listed below as X.
 - JUGGLING: 1, power, uncommon, the 3rd Attack you play each turn is copied into your hand. Upgrade: gains Innate.
 - MANGLE: 3, attack, rare, deal 15 damage; the enemy loses 10 Strength this turn. Upgrade: +5 damage, +5 Strength loss.
 - MOLTEN_FIST: 1, attack, common, Exhaust, deal 10 damage; apply Vulnerable equal to the target's current Vulnerable stacks (doubles it). Upgrade: +4 damage.
-- NOT_YET: 2, skill, rare, Exhaust, heal 10 HP. Upgrade: heal 13 HP.
+- NOT_YET: 2, skill, rare, Exhaust, heal 10 HP. Upgrade: heal 13 HP. Run-26 live: +10 HP healed in-combat (42→52) — emergency sustain for HP-starved lines; stacks same-turn with TuningFork skill-count block.
 - OFFERING: 0, skill, rare, Exhaust, lose 6 HP (unblockable); gain 2 Energy; draw 3 cards. Upgrade: draw 5.
 - ONE_TWO_PUNCH: 1, skill, rare, the next Attack you play this turn is played an extra time. Upgrade: extra 2 Attacks. Run-18 live (A1 2026-09-17): upgraded ONE_TWO_PUNCH adds the next attack 2 extra times (3 total resolutions — Strike×3 wiped 21-48 HP adds in one play); DOMINATE live math: on a 0-Vuln target grants roughly +1~2 Strength (applying 1 Vuln), on a target already carrying Vuln stacks the Strength gain equals the post-application stack count — Bash (2 Vuln) → DOMINATE = ~+3 Strength observed.
 - PACTS_END: 0, attack, rare, deal 17 damage to ALL enemies; only deals damage if your exhaust pile has at least 3 cards. Upgrade: +6 damage.
@@ -543,7 +543,7 @@ listed below as X.
 - CLASH: 0, attack, event, only playable if your hand is all Attacks; deal 14 damage. Upgrade: +4 damage.
 - DISTRACTION: 1, skill, event, Exhaust, add 1 random Skill from your class pool to your hand; free this turn. Upgrade: cost 0.
 - DUAL_WIELD: 1, skill, event, copy an Attack or Power card in your hand into your hand. Upgrade: copy 2.
-- ENLIGHTENMENT: 0, skill, event, Exhaust, all cards in your hand cost 1 this turn. Upgrade: cards cost 1 this combat (reduce-only).
+- ENLIGHTENMENT: 0, skill, event, Exhaust, all cards in your hand cost 1 this turn. Upgrade: cards cost 1 this combat (reduce-only). Run-26 decision note: base effect is ANTI-synergy with 0-cost engine cards (Bloodletting/Brand get raised to 1 cost that turn) — ZenWeaver BreathingTechniques (50g, +2 copies) declined on an IRONCLAD Rupture-line deck for this reason.
 - ENTRENCH: 2, skill, event, gain Block equal to your current Block. Upgrade: cost 1.
 - EXTERMINATE: 1, attack, event, deal 3 damage to ALL enemies 4 times. Upgrade: +1 damage.
 - FEEDING_FRENZY: 0, skill, event, gain 5 Strength this turn. Upgrade: +2 Strength.
