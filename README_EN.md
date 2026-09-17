@@ -8,10 +8,11 @@ https://github.com/user-attachments/assets/6eae44a2-312d-4a1c-abc3-f5617fe23f21
 
 # slay-spire-2-copilot
 
-An AI copilot that lets Claude Code / Codex play Slay the Spire 2 autonomously
-on your machine. Once the skill is triggered, the agent reads the run state,
-makes decisions, and operates the game until the run ends — then writes the
-run's memory note (Summary + review) and starts the next run.
+A skill that loads directly into agent harnesses like Claude Code or Codex,
+letting the agent play Slay the Spire 2 autonomously on your machine. Once
+the skill is triggered, the agent reads the run state, makes decisions, and
+operates the game until the run ends — then writes the run's memory note
+(Summary + review) and starts the next run.
 
 ## What this project is
 

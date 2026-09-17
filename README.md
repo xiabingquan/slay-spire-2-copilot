@@ -8,9 +8,10 @@ https://github.com/user-attachments/assets/6eae44a2-312d-4a1c-abc3-f5617fe23f21
 
 # slay-spire-2-copilot
 
-让 Claude Code / Codex 在本机自动游玩《杀戮尖塔 2》（Slay the Spire 2）的
-AI助手。skill 被触发后，智能体读取牌局状态、做出决策并操作游戏，直至对局
-结束，随后写入本局 memory 记录（Summary + 回顾）并开启下一局。
+一个可直接加载进 Claude Code、Codex 等 agent harness 的 skill，让智能体在本机
+自动游玩《杀戮尖塔 2》（Slay the Spire 2）。skill 被触发后，智能体读取牌局
+状态、做出决策并操作游戏，直至对局结束，随后写入本局 memory 记录
+（Summary + 回顾）并开启下一局。
 
 ## 这个项目是干啥的
 
