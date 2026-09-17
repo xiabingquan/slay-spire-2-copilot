@@ -37,7 +37,7 @@ Act ancients (from act sources): Overgrowth = Neow (removed unless `UnlockState.
 ## Additional events with decompiled option values
 
 - ABYSSAL_BATHS: vars MaxHp +2 / unblockable 3 damage / heal 10 — Immerse and Abstain options present (exact per-option binding partially internal); Linger/ExitBaths handlers exist.
-- AMALGAMATOR (requires ≥2 Strike-tagged and ≥2 Defend-tagged cards): CombineStrikes → remove Strikes, add UltimateStrike; CombineDefends → remove Defends, add UltimateDefend.
+- AMALGAMATOR (requires ≥2 Strike-tagged and ≥2 Defend-tagged cards): CombineStrikes → remove Strikes, add UltimateStrike; CombineDefends → remove Defends, add UltimateDefend. Live (run-18 A1 2026-09-17): CombineDefends removed exactly 2 Defends from a 4-Defend deck and added UltimateDefend (1-cost, 11 Block) — net deck -1 card; a deck_select overlay lets you pick which copies, choose then proceed. Strike-tagged removal includes POMMEL_STRIKE copies — combining Strikes also eats draw engines.
 - BRAIN_LEECH (Act index < 2): ShareKnowledge → add cards via card-pile add; Rip → take 5 unblockable damage, get 1 reward (choice screens: 1 pick from 5).
 - BATTLEWORN_DUMMY (Act3; 战痕累累的训练假人): Setting1/2/3 → fight BattleFriendV1/V2/V3 — 75/150/300 HP flat in single-player Act3 (scaleHpForMultiplayer applied by the event; observed unscaled). TimeLimitPower 3 all tiers; dummy uses NOTHING_MOVE (never attacks) — pure DPS race; at TimeLimit 1 the dummy Escapes and RanOutOfTime=true → no reward. Rewards on kill: Setting1 → 1 potion; Setting2 → upgrade 2 random deck cards; Setting3 → 1 relic (RelicFactory front).
 - BYRDONIS_NEST (requires no event pet): EAT → +7 Max HP; TAKE → add ByrdonisEgg card to deck.
@@ -94,6 +94,7 @@ Act ancients (from act sources): Overgrowth = Neow (removed unless `UnlockState.
 ## Ancient events without extracted option tables
 
 DARV, NONUPEIPE, OROBAS, TEZCATARA, VAKUU exist as `AncientEventModel`s in the act pools but their option handlers are not present in the decompiled event sources reviewed here — omitted. (TANX extracted 2026-09-17 run-6 — see its entry above.)
+- TEZCATARA options (researched via perplexity 2026-09-17, run-18 live pick): YUMMY_COOKIE 美味饼干 → gain relic YummyCookie and upgrade 4 cards of your choice (deck_select overlay: choose cards then proceed to confirm); STORYBOOK 故事书 → add 1 Brightest Flame to your deck; SEAL_OF_GOLD 黄金印 → relic SealOfGold: at start of your turn, spend 5 Gold to gain 1 Energy (no effect if gold < 5; one source says 3 — 5 is the better-attested value).
 
 ## Event handling notes
 

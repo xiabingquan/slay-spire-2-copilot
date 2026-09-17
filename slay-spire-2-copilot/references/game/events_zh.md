@@ -38,7 +38,7 @@
 ## 其余含反编译数值的事件
 
 - ABYSSAL_BATHS（深渊浴场）：变量 最大 HP +2 / 不可格挡 3 伤害 / 回复 10——存在 Immerse 与 Abstain 选项（选项与数值的逐项绑定部分为内部逻辑）；另有 Linger/ExitBaths 处理器。
-- AMALGAMATOR（熔合者；要求 ≥2 张 Strike 标签牌且 ≥2 张 Defend 标签牌）：CombineStrikes → 移除 Strike 牌，加入 UltimateStrike；CombineDefends → 移除 Defend 牌，加入 UltimateDefend。
+- AMALGAMATOR（熔合者；要求 ≥2 张 Strike 标签牌且 ≥2 张 Defend 标签牌）：CombineStrikes → 移除 Strike 牌，加入 UltimateStrike；CombineDefends → 移除 Defend 牌，加入 UltimateDefend。 实测（run-18 A1 2026-09-17）：CombineDefends 从 4 张 Defend 的牌库中恰好移除 2 张并加入 UltimateDefend（1 费 11 挡）——牌库净 -1 张；deck_select 浮层可选具体副本，choose 后 proceed 确认。Strike 标签移除包含 POMMEL_STRIKE 副本——融合打击会连抽牌引擎一起吃掉。
 - BRAIN_LEECH（脑蛭；Act 索引 < 2）：ShareKnowledge → 经卡牌堆流程加牌；Rip → 受到 5 点不可格挡伤害，获得 1 次奖励（选择界面 5 选 1）。
 - BATTLEWORN_DUMMY（战痕累累的训练假人；Act3）：Setting1/2/3 → 对战 BattleFriendV1/V2/V3——单人第三章实测 75/150/300 HP（事件走 scaleHpForMultiplayer；实测未缩放）。三档时限均为 TimeLimitPower 3；木人招式 NOTHING_MOVE（从不攻击）——纯输出竞速；时限到 1 时假人逃跑且 RanOutOfTime=true → 无奖励。击杀奖励：Setting1 → 1 瓶药水；Setting2 → 随机升级 2 张牌组卡；Setting3 → 1 件遗物（RelicFactory 队首）。
 - BYRDONIS_NEST（多尼斯异鸟巢；要求无事件宠物）：EAT → +7 最大 HP；TAKE → 向牌库加入 ByrdonisEgg 卡。
@@ -96,6 +96,7 @@
 ## 未提取选项表的远古事件
 
 DARV、NONUPEIPE、OROBAS、TEZCATARA、VAKUU 在 act 池中以 `AncientEventModel` 形式存在（门槛见上），但本次审阅的反编译事件源码中没有其选项处理器——省略。（TANX 已于 2026-09-17 第 6 局提取——见上文条目。）
+- TEZCATARA 选项（2026-09-17 perplexity 研究 + run-18 实测选择）：YUMMY_COOKIE 美味饼干 → 获得 YummyCookie 遗物并自选升级 4 张牌（deck_select 浮层：选择后 proceed 确认）；STORYBOOK 故事书 → 向牌库加入 1 张 Brightest Flame；SEAL_OF_GOLD 黄金印 → SealOfGold 遗物：回合开始花 5 金获得 1 能量（金不足 5 时无效；一处来源写 3，5 为多源印证值）。
 
 ## 事件处理备注
 

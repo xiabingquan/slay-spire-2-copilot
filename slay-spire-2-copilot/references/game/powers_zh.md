@@ -248,6 +248,12 @@ hook 逻辑、`CanonicalVars` 数值）核实。下文「Amount」= power 上显
   GuardedPower 联动）。
 - SURROUNDED_POWER：见核心状态（侧翼攻击者 ×1.5）。
 - TENDER_POWER（Debuff，Counter）：持有者每打出一张牌，静默获得 -1 力量
+  （run-18 A1 实测 2026-09-17 猎人杀手战——run-17「机制未解」部分解码）：
+  TENDER_POWER 挂在玩家身上时，能力牌结算疑似反哺玩家力量/敏捷（Rupture、
+  ONE_TWO_PUNCH 打出后观察到 DEXTERITY_POWER 出现），同回合后续卡牌结算被
+  回合中扣税——Strike 伤害在触发后掉档（力量被吞），Defend 显示 3 挡而非 5。
+  卡牌面板数值按税后处理；每次出牌后须重读 state。
+  档案原文：持有者每打出一张牌，静默获得 -1 力量
   与 -1 敏捷；持有者阵营回合结束时按本回合出牌数等量返还
   （+N 力量/敏捷）。
 - TAINTED_POWER：见减益宿主（受到的攻击伤害 +Amount）。
@@ -339,7 +345,12 @@ hook 逻辑、`CanonicalVars` 数值）核实。下文「Amount」= power 上显
   时，为宠物主人召唤 Amount 只 Osty。持有者阵营回合结束时移除。
 - DEVOUR_LIFE_POWER（Buff，Counter）：出牌 hook 时触发 OstyCmd.Summon
   （Amount）——宠物召唤触发由宿主卡决定。
-- BURROWED_POWER（钻地，Buff，Single）：持有者不可被选中/命中
+- BURROWED_POWER（钻地，Buff，Single）：持有者不可被选中/命中——**订正**
+  （run-18 A1 实测 2026-09-17 地道虫）：潜地目标**可以被攻击**，卡牌伤害正常
+  作用于其格挡（Bash/Strike/SPITE 均生效）。格挡被打破时触发 AfterBlockBroken：
+  DIZZY 眩晕 + Burrowed 移除 + 清空全部剩余格挡，潜地攻击（BELOW 意图）取消。
+  打碎挡层即可取消攻击；不要回避攻击潜地目标。
+  档案原文：持有者不可被选中/命中
   （ShouldAllowHitting 对持有者 false）；持有者格挡被击破时，持有者被
   击晕进入眩晕招式并移除 Burrowed；移除时持有者失去全部格挡
   （999999999）。

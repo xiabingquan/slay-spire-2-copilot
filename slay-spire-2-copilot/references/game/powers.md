@@ -272,6 +272,14 @@ Format: `- POWER_ID (Buff/Debuff): effect.`
   GuardedPower on apply per decomp interaction with guarded targets).
 - SURROUNDED_POWER: see core statuses (x1.5 from flanking attackers).
 - TENDER_POWER (Debuff, Counter): each card the owner plays this turn applies
+  (run-18 live A1 2026-09-17, HunterKiller fight — partial decode of run-17's
+  "mechanism unresolved"): when TENDER_POWER sits on the PLAYER, power-card
+  resolves appear to grant the player Strength/Dexterity feedback
+  (DEXTERITY_POWER appeared after Rupture and ONE_TWO_PUNCH plays), while the
+  same turn's later card resolves are taxed mid-turn — Strike damage fell
+  after procs (Strength consumed) and Defend displayed 3 Block instead of 5.
+  Treat displayed per-card numbers as post-tax; re-read state after every play.
+  Original archive line: each card the owner plays this turn applies
   -1 Strength and -1 Dexterity to owner (silently); at end of owner's side
   turn those debuffs are refunded (+N Strength/Dex where N = cards played this
   turn).
@@ -379,7 +387,13 @@ Format: `- POWER_ID (Buff/Debuff): effect.`
   turn.
 - DEVOUR_LIFE_POWER (Buff, Counter): on card-play hooks, OstyCmd.Summon
   (Amount) — pet summon trigger hosted by source card.
-- BURROWED_POWER (Buff, Single): owner cannot be targeted/hit
+- BURROWED_POWER (Buff, Single): owner cannot be targeted/hit — CORRECTION
+  (run-18 live A1 2026-09-17 Tunneler): burrowed creatures CAN be attacked;
+  card damage applies to their Block as normal (Bash/Strike/SPITE all landed).
+  AfterBlockBroken fires when the Block breaks: DIZZY stun + Burrowed removed
+  + all remaining Block cleared, cancelling the burrow attack (BELOW intent).
+  Break the block to cancel the attack; do not avoid attacking burrowed foes.
+  Original archive line: owner cannot be targeted/hit
   (ShouldAllowHitting false for owner); if owner's Block breaks, owner is
   stunned into dizzy move and Burrowed is removed; on removal owner loses all
   Block (999999999).

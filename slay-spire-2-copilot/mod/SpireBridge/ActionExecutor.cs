@@ -163,6 +163,27 @@ public static class ActionExecutor
             {
                 return (false, $"target_combat_id {targetId} not found in combat");
             }
+            // Faction gate (live-observed 2026-09-17 A1 run-18): the TargetType
+            // enum gate alone still let Self/AllEnemies-class cards through on
+            // some builds (DEFEND/THUNDERCLAP plays returned ok=true, echoed
+            // "-> enemy name", and silently no-op'd — energy and block both
+            // unchanged). The game's PlayCardAction drops a mismatched faction
+            // target without resolving the card. Fail loud on faction too:
+            // enemy-targeted cards must resolve to a non-ally; player/ally-
+            // targeted cards must resolve to an ally (the player).
+            bool targetIsAlly = combat.Allies != null
+                && combat.Allies.Any(a => a != null && a.CombatId == target.CombatId);
+            if (card.TargetType == TargetType.AnyEnemy && targetIsAlly)
+            {
+                return (false, $"card {card.Id.Entry} target_type=AnyEnemy — "
+                    + $"target_combat_id {targetId} resolves to an ally; pick an enemy id");
+            }
+            if (card.TargetType is (TargetType.AnyAlly or TargetType.AnyPlayer) && !targetIsAlly)
+            {
+                return (false, $"card {card.Id.Entry} target_type={card.TargetType} — "
+                    + $"target_combat_id {targetId} resolves to an enemy; self/ally cards "
+                    + "must omit the arg or target an ally id (mismatch silently no-ops)");
+            }
         }
         else if (card.TargetType is TargetType.AnyEnemy or TargetType.AnyAlly or TargetType.AnyPlayer)
         {

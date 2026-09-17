@@ -68,7 +68,7 @@ listed below as X.
 - MOLTEN_FIST: 1, attack, common, Exhaust, deal 10 damage; apply Vulnerable equal to the target's current Vulnerable stacks (doubles it). Upgrade: +4 damage.
 - NOT_YET: 2, skill, rare, Exhaust, heal 10 HP. Upgrade: heal 13 HP.
 - OFFERING: 0, skill, rare, Exhaust, lose 6 HP (unblockable); gain 2 Energy; draw 3 cards. Upgrade: draw 5.
-- ONE_TWO_PUNCH: 1, skill, rare, the next Attack you play this turn is played an extra time. Upgrade: extra 2 Attacks.
+- ONE_TWO_PUNCH: 1, skill, rare, the next Attack you play this turn is played an extra time. Upgrade: extra 2 Attacks. Run-18 live (A1 2026-09-17): upgraded ONE_TWO_PUNCH adds the next attack 2 extra times (3 total resolutions — Strike×3 wiped 21-48 HP adds in one play); DOMINATE live math: on a 0-Vuln target grants roughly +1~2 Strength (applying 1 Vuln), on a target already carrying Vuln stacks the Strength gain equals the post-application stack count — Bash (2 Vuln) → DOMINATE = ~+3 Strength observed.
 - PACTS_END: 0, attack, rare, deal 17 damage to ALL enemies; only deals damage if your exhaust pile has at least 3 cards. Upgrade: +6 damage.
 - PERFECTED_STRIKE: 2, attack, common, Strike-tagged, deal damage = 6 + 2 for each Strike-tagged card you own. Upgrade: +3 per Strike.
 - PILLAGE: 1, attack, uncommon, deal 6 damage; then draw cards, repeating while each drawn card is an Attack and your hand is not full. Upgrade: +3 damage.

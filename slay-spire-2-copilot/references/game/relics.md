@@ -66,7 +66,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Orichalcum (Orichalcum, Uncommon): end of turn, if you have no Block, gain 6 Block.
 - Ornamental Fan (OrnamentalFan, Uncommon): every 3 Attack cards played in one turn, gain 4 Block.
 - Pantograph (Pantograph, Uncommon): at start of Boss combats, heal 25 HP.
-- Paper Phrog (PaperPhrog, Uncommon, Ironclad): enemies with Vulnerable take +75% attack damage instead of +50%. Run-17 live (A1 2026-09-17): stacks additively with Cruelty power (+25%) → Vulnerable target takes +100% attack damage (×2.0) — live-verified Strike 6→12, Hemokinesis 15→30, Bludgeon+ 42→84.
+- Paper Phrog (PaperPhrog, Uncommon, Ironclad): enemies with Vulnerable take +75% attack damage instead of +50%. Run-17 live (A1 2026-09-17): stacks additively with Cruelty power (+25%) → Vulnerable target takes +100% attack damage (×2.0) — live-verified Strike 6→12, Hemokinesis 15→30, Bludgeon+ 42→84. Shop-priced 196 gold live (run-17 and run-18 Act1 shops) — budget accordingly.
 - Parrying Shield (ParryingShield, Uncommon): end of turn, if you have ≥10 Block, deal 6 damage to a random enemy.
 - Pear (Pear, Uncommon): on pickup, +10 Max HP.
 - Pen Nib (PenNib, Uncommon): every 10th Attack card you play deals double damage.
