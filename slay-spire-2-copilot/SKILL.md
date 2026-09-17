@@ -172,12 +172,39 @@ Repeat until the run ends or the user stops you. Every spirectl call carries
    chests open with `treasure_open`, not choose. After `use_potion`, potion
    slots reindex — re-read before the next potion call.
 
-Before acting each turn, check at least: enemy intents, your HP/block, energy,
-and whether the hand is playable. Keep a brief running commentary in your
-replies. Memory is consultable mid-run at any moment — when a decision would
-benefit from past runs (boss patterns, route choices, card evaluations),
-re-read the relevant run summaries or the character's notes. Decision
-lessons and card/potion/relic/intent knowledge: see "References" at the end.
+### Mechanic-first combat (user directive 2026-09-18 — hard rule)
+
+Failures here come from key mechanics missing from decisions, not from weak
+decks. Every fight is played mechanic-first:
+
+1. **Before the first turn of every combat against an unfamiliar enemy, and
+   every elite/boss without exception**: read that enemy's full entry in
+   `references/game/monsters.md` — move cycle, every passive Power, every
+   debuff/buff it applies. Every power/intent the live state shows must be
+   one you can explain from references. Any unknown → perplexity-search →
+   fold the answer into references EN+ZH → only then play.
+2. **Counter-class powers are kill timers, not flavor**: SANDPIT (devour at
+   0 — block does not save you), RINGING (1 card/turn), ESCAPE_ARTIST,
+   HATCH, TIME_LIMIT, HardToKill caps, Plating thresholds. Track their
+   Amount every turn; the compact state prints `POWER:amount` — read it.
+   Build the turn plan around the counter (damage race vs extension cards),
+   not just around incoming attack intents.
+3. **Never dismiss unexplained lethal as a "display bug"** — that mistake
+   cost three runs to TheInsatiable's Sandpit timer while the archive
+   carried a wrong "never play FranticEscape" rule. If something kills you
+   through mathematically sufficient block, the mechanic you haven't
+   researched is the cause: research it before the next attempt.
+4. Archive data can be wrong (it was, fatally). Live state + researched
+   sources outrank one-line reference summaries; correct references the same
+   session the wrongness is discovered.
+
+Before acting each turn, check: ALL enemy powers/debuffs/buffs with amounts,
+enemy intents, your HP/block, energy, and whether the hand is playable.
+Keep a brief running commentary in your replies. Memory is consultable
+mid-run at any moment — when a decision would benefit from past runs (boss
+patterns, route choices, card evaluations), re-read the relevant run
+summaries or the character's notes. Decision lessons and card/potion/relic/
+intent knowledge: see "References" at the end.
 
 ## Run end
 

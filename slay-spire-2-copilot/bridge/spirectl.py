@@ -475,6 +475,13 @@ def metrics_line(metrics):
     return " ".join(bits)
 
 
+def fmt_power(p):
+    """Compact power label: ID or ID:amount (kill-timer amounts must be visible)."""
+    pid = p.get("id", "?")
+    amt = p.get("amount")
+    return f"{pid}:{amt}" if amt is not None else pid
+
+
 def render_compact(state):
     """Render a bridge state snapshot as compact human-readable lines.
 
@@ -524,7 +531,7 @@ def render_compact(state):
         combat_p = state.get("combat") or {}
         me = next((c for c in (combat_p.get("creatures") or []) if c.get("is_player")), None)
         if me and me.get("powers"):
-            lines.append("player powers: " + ", ".join(p.get("id", "?") for p in me["powers"]))
+            lines.append("player powers: " + ", ".join(fmt_power(p) for p in me["powers"]))
         relics = player.get("relics") or []
         if relics:
             lines.append("relics: " + ", ".join(r.get("id", "?") for r in relics))
@@ -544,7 +551,7 @@ def render_compact(state):
             )
             powers = c.get("powers") or []
             if powers:
-                line += " powers=[" + ",".join(p.get("id", "?") for p in powers) + "]"
+                line += " powers=[" + ",".join(fmt_power(p) for p in powers) + "]"
             intents = c.get("intents") or []
             if intents:
                 move = c.get("move_id")

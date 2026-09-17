@@ -414,9 +414,15 @@ Format: `- POWER_ID (Buff/Debuff): effect.`
   (ThievingHopper escape imminent; escape action hosted by monster move).
 - BATTLEWORN_DUMMY_TIME_LIMIT_POWER (Buff, Counter): decrements at end of
   owner's side turn; at 1, dummy escapes (event encounter logic).
-- SANDPIT_POWER (Buff, Counter): The Insatiable arena state — decrements at
-  start of Enemy side turn (late); creature positions update from Amount; at
-  critical amounts the fight resolves via kill logic.
+- SANDPIT_POWER (Buff, Counter): The Insatiable's kill timer — **starts at
+  4**, decrements by 1 at start of Enemy side turn (late); **at 0 the player
+  is instantly devoured regardless of HP/Block** (unblockable kill — run-16/
+  20/22 A1 deaths, previously misattributed to an intent-display bug). The
+  boss injects **6 FranticEscape** cards into the player deck at fight start;
+  playing one **+1 Sandpit Amount** (and permanently +1's that card's own
+  cost) — hold them for counter 1–2 as emergency extensions, do NOT hoard
+  unplayed and do NOT spam early. Fight plan: damage race first (block does
+  not stop the devour), track Sandpit Amount every turn.
 - HATCH_POWER (Buff, Counter): decrements at end of owner's side turn (hatch
   timer; hatch action hosted by monster/relic).
 - FAN_OF_KNIVES_POWER / PARRY_POWER / SEEKING_EDGE_POWER / THE_HUNT_POWER /

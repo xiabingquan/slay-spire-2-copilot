@@ -84,4 +84,4 @@ Potion 类均已覆盖；数值取各类 `CanonicalVars` 基础值。括号内�
 - BloodPotion、FruitJuice、EntropicBrew 为 `AnyTime`；FairyInABottle 为 `Automatic`。
 
 - 药石 Potion-Shaped Rock（石化蟾蜍产出，战斗限定，任意敌人）：造成 15 点无增幅伤害。石化蟾蜍每次战斗开始发 1 瓶；药水栏可叠多瓶。按普通单敌药水选目标（传 target_combat_id）；每次使用后药水槽位重排索引。
-- Fruit Juice（FRUIT_JUICE）：效果未解——2026-09-17 perplexity 研究无可靠 STS2 来源；不得套用 STS1 +5 最大 HP 行为。run-18 A1 Act1 商店在售实测。
+- Fruit Juice（FRUIT_JUICE）：**+5 最大 HP——已解**（perplexity 2026-09-18 多源确认：namu/untapped/sportskeedia 等；STS2 与 STS1 行为一致）。2026-09-17「效果未解」条目退役。亦可作 StoneOfAllTime Lift 燃料（run-23 实测：献祭药水换 +10 Max HP，优于单独喝掉）。run-18 A1 Act1 商店在售；run-23 战斗奖励实测。

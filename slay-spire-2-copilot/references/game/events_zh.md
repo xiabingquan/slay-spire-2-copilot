@@ -67,7 +67,7 @@
 - TANX（Act3 远古赐福房；坦克斯）：从 9 件遗物池中随机展示 3 件 RelicOption——Claws、Crossbow、IronClub、MeatCleaver、Sai、SpikedGauntlets、TanxsWhistle、ThrowingAxe、WarHammer——若牌组中存在 ≥3 张可附魔 Instinct 的卡则追加 TriBoomerang（10 选 3）。坦克斯的哨子 → 向牌组加入 Whistle 卡（3 费攻击、消耗、33 伤害+眩晕目标；升级 +11 伤害）。带刺手甲 → +1 最大能量，但你的能力牌在战斗中 +1 费（与能力密集牌组反协同）。战锤 → 每次精英战斗胜利后，随机升级 4 张可升级的牌组卡。
 - ROUND_TEA_PARTY（圆桌茶会；所有玩家 HP ≥ 12）：EnjoyTea → RoyalPoison 遗物 + 回复；PickFight → 11 点不可格挡伤害 + RoyalPoison。
 - SAPPHIRE_SEED（蓝宝石种子）：Eat → 回复 9 + 升级；Plant → 附魔 Sown。
-- SELF_HELP_BOOK（自助指南）：run-20 A1 实测（2026-09-18）实机选项键为 READ_THE_BACK / READ_PASSAGE——游戏 UI 中没有 SkipBook 按钮；READ_THE_BACK 在反编译摘录中无档（勿盲点，先研究或选 ReadPassage）。READ_PASSAGE → deck_select 附魔屏；run-20 观察到池子仅限技能牌（只列出 4 张 Defend + 重振精神，攻击牌/Bash 不可选）。附魔实测值：重振精神每张被消耗牌 +2 格挡（5→7）；之后对该附魔副本锻造再 +2（每张 9——并非表中 +7）。原摘要：ReadPassage/ReadEntireBook 附魔 Sharp/Nimble 等；SkipBook 离开。
+- SELF_HELP_BOOK（自助指南）：三选项已解码（perplexity 2026-09-18，run-23 实测）：**READ_THE_BACK → 为一张攻击牌附魔 Sharp 2（+2 伤害）；READ_PASSAGE → 为一张技能牌附魔 Nimble 2（+2 格挡）；READ_ENTIRE_BOOK → 为一张能力牌附魔 Swift 2（打出时抽 2 张）**。run-20 实测：READ_PASSAGE 池仅技能牌（4×Defend + 重振精神）；重振精神 Nimble 每张被消耗牌 +2 挡（5→7；对附魔副本锻造 7→9——非表中 +7）。run-23 实测：READ_ENTIRE_BOOK 自动指向牌库中唯一能力牌（Rupture）——Swift 2 打出抽 2 战斗内确认。此前「仅两个选项键」的观察是 UI 覆盖不全。
 - SLIPPERY_BRIDGE（滑脚木桥；TotalFloor > 6；要求存在可移除牌）：Overcome → 移除 1 张随机卡；HoldOn → 受到 HP 损失 = 3 + 本事件已选 HoldOn 次数（3、4、5……递增）；事件在 HoldOn 与 Overcome 之间循环直到选择 Overcome。run-19 实测：**除 Overcome 外没有出口**——拖延只是在同一随机移除之上叠加 HP 税；移除池为整个牌库（同层刚拿到的卡即被移除实例）。
 - SPIRALING_WHIRLPOOL（螺旋漩涡；要求存在 Spiral 可附魔卡）：ObserveTheSpiral → 附魔 Spiral；Drink → 回复。
 - SPIRIT_GRAFTER（灵魂嫁接者）：LetItIn → 回复 25 + 加入 Metamorphosis 卡；Rejection → 升级 + 受到 10 点伤害。run-15 实测：12 HP 接纳后到 57（+45，references 记 +25——Metamorphosis 拾取附加效果或 A1 加成待核）。
@@ -98,7 +98,7 @@
 DARV、NONUPEIPE、TEZCATARA、VAKUU 在 act 池中以 `AncientEventModel` 形式存在（门槛见上），但本次审阅的反编译事件源码中没有其选项处理器——省略。（TANX 已于 2026-09-17 第 6 局提取——见上文条目。OROBAS 已于 2026-09-17 第 19 局经 perplexity 研究提取——见下条。）
 
 - OROBAS（欧洛巴斯；Act2 虫巢远古；2026-09-17 run-19 perplexity 研究+局内实测）：ELECTRIC_SHRYMP 放电异虾 → 拾取时选 1 张技能牌附魔 **Imbued**（Imbued = 战斗开始自动打出、不耗能量——每战等效免费）；DRIFTWOOD 浮木 → 每张卡牌奖励可重掷 1 次；TOUCH_OF_OROBAS 欧洛巴斯之触 → 将初始遗物替换为远古版（IRONCLAD：燃烧之血每战+6 → **黑暗之血每战回 12**；run-19 实测：遗物 id 更换，战斗结束回 12 与天选芝士 +1 Max HP 同战叠加）。
-- TEZCATARA 选项（2026-09-17 perplexity 研究 + run-18 实测选择）：YUMMY_COOKIE 美味饼干 → 获得 YummyCookie 遗物并自选升级 4 张牌（deck_select 浮层：选择后 proceed 确认）；STORYBOOK 故事书 → 向牌库加入 1 张 Brightest Flame；SEAL_OF_GOLD 黄金印 → SealOfGold 遗物：回合开始花 5 金获得 1 能量（金不足 5 时无效；一处来源写 3，5 为多源印证值）。
+- TEZCATARA 选项（2026-09-17 perplexity 研究 + run-18 实测选择）：YUMMY_COOKIE 美味饼干 → 获得 YummyCookie 遗物并自选升级 4 张牌（deck_select 浮层：选择后 proceed 确认）；STORYBOOK 故事书 → 向牌库加入 1 张 Brightest Flame；SEAL_OF_GOLD 黄金印 → SealOfGold 遗物：回合开始花 5 金获得 1 能量（金不足 5 时无效；一处来源写 3，5 为多源印证值）。**祝福池其余选项（run-23 实测 2026-09-18，relics.md 交叉引用）**：NUTRITIOUS_SOUP 营养汤 → NutritiousSoup 遗物：拾取时为所有带 Strike 标签的基础牌附魔 Tezcatara's Ember（Ember = **0 费、+3 伤害、Eternal**——perplexity 2026-09-18）；TOASTY_MITTENS 烘焙手套 → ToastyMittens 遗物：每回合抽牌前消耗抽牌堆顶牌并获得 1 力量（run-23 选择——被动力量引擎，消耗同时瘦牌）；GOLDEN_COMPASS 黄金罗盘 → GoldenCompass 遗物：拾取时以一条特殊路径替换第二章地图；VERY_HOT_COCOA 烫嘴可可 → 第 1 回合 +4 能量（run-18/20/22 选择，run-22 与灯笼叠加 8 能实测）。
 
 ## 事件处理备注
 

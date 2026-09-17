@@ -84,4 +84,4 @@ Target: `self` / `any player` / `any enemy` / `ALL enemies`. ALL-enemies potions
 - BloodPotion, FruitJuice, EntropicBrew are `AnyTime`; FairyInABottle is `Automatic`.
 
 - Potion-Shaped Rock (PetrifiedToad spawn, combat, any enemy): deal 15 unpowered damage. Petrified Toad grants 1 at every combat start; slots can stack multiple rocks. Targeted like a normal single-enemy potion (pass target_combat_id); potion slot reindexes after each use.
-- Fruit Juice (FRUIT_JUICE): effect UNRESOLVED — perplexity research 2026-09-17 found no reliable STS2 source; do not assume the STS1 +5 Max HP behavior. Seen as shop stock at A1 Act1 (run-18).
+- Fruit Juice (FRUIT_JUICE): **+5 Max HP — RESOLVED** (perplexity 2026-09-18, multi-source incl. namu/untapped/sportskeedia; STS2 behavior matches STS1). The 2026-09-17 "UNRESOLVED" note is retired. Also usable as StoneOfAllTime Lift fuel (+10 Max HP event path, run-23 live — better than drinking it alone). Seen as shop stock A1 Act1 (run-18); combat reward (run-23).

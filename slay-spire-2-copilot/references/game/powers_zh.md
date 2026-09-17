@@ -368,9 +368,13 @@ hook 逻辑、`CanonicalVars` 数值）核实。下文「Amount」= power 上显
   即将逃跑；逃跑动作由怪物招式执行）。
 - BATTLEWORN_DUMMY_TIME_LIMIT_POWER（Buff，Counter）：持有者阵营回合
   结束时 -1 层；归 1 时木偶逃脱（事件遭遇逻辑）。
-- SANDPIT_POWER（沙坑，Buff，Counter）：The Insatiable 场地状态——敌方
-  阵营回合开始（late）时 -1 层；生物站位随 Amount 更新；关键层数时通过
-  击杀逻辑结算战斗。
+- SANDPIT_POWER（沙坑，Buff，Counter）：The Insatiable 的击杀倒计时——
+  **初始 4 层**，敌方阵营回合开始（late）时 -1；**归 0 时玩家被直接吞噬，
+  无视 HP/格挡**（不可格挡的处决——run-16/20/22 A1 三次死亡，此前被误判为
+  意图显示 bug）。Boss 开战时向玩家牌库注入 **6 张 FranticEscape**；打出
+  一张 **沙坑 Amount +1**（该牌自身费用永久 +1）——留到计数 1–2 时作紧急
+  延时用，既不可全程不打，也不可早早挥霍。战斗计划：输出竞速优先（格挡
+  拦不住吞噬），每回合跟踪沙坑层数。
 - HATCH_POWER（Buff，Counter）：持有者阵营回合结束时 -1 层（孵化计时；
   孵化动作由怪物/遗物宿主执行）。
 - FAN_OF_KNIVES_POWER / PARRY_POWER / SEEKING_EDGE_POWER / THE_HUNT_POWER /
