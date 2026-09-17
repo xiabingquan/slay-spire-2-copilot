@@ -78,7 +78,7 @@
 - 波纹水盆（RippleBasin，Uncommon）：回合结束时，若本回合未打出任何攻击牌，获得 4 格挡。run-16 实测：回合末与卡牌格挡加法叠加（Spiral 附魔防御 22 + 水盆 4 = 26 挡吃 18 入侵，1 HP 存活）；低血时「弃攻击换挡」是真实生存杠杆。
 - 自成型黏土（SelfFormingClay，Uncommon，Ironclad）：战斗中每次失去 HP 时，下回合开始获得 3 格挡。
 - 闪亮口红（SparklingRouge，Uncommon）：第 3 回合开始，获得 1 点力量和 1 点敏捷。
-- 碎石钻（StoneCracker，Uncommon）：战斗开始，将抽牌堆中 2 张随机牌升级（本场战斗内）。
+- 碎石钻（StoneCracker，Uncommon）：战斗开始，将抽牌堆中 2 张随机牌升级（本场战斗内）。run-20 实测命中范围（A1 2026-09-18）：旋风斩 5→8/击、防御 5→8、打击 6→9、双重打击 5→7/击、剑柄打击 9→10——升级仅战斗内有效且卡面不显示 + 标记，以实机伤害数字为准。
 - 共生病毒（SymbioticVirus，Uncommon，Defect）：第 1 回合开始，引导 1 个暗球。
 - 铜钹（Tingsha，Uncommon，Silent）：回合内每弃 1 张牌，对随机敌人造成 3 点伤害。
 - 小邮箱（TinyMailbox，Uncommon）：在休息点休息时，获得 2 瓶随机药水。

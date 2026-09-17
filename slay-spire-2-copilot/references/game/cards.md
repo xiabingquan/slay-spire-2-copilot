@@ -78,7 +78,7 @@ listed below as X.
 - RAGE: 0, skill, uncommon, this turn whenever you play an Attack gain 3 Block. Upgrade: gain 5 Block.
 - RAMPAGE: 1, attack, uncommon, deal 9 damage; each time this card is played this combat its damage permanently increases by 5. Upgrade: +4 increase per play.
 - RUPTURE: 1, power, uncommon, when you lose HP on your turn from a card you played, gain 1 Strength. Upgrade: gain 2 Strength.
-- SECOND_WIND: 1, skill, uncommon, Exhaust, exhaust all non-Attack cards in your hand; gain 5 Block for each card Exhausted. Upgrade: +7 Block each.
+- SECOND_WIND: 1, skill, uncommon, Exhaust, exhaust all non-Attack cards in your hand; gain 5 Block for each card Exhausted. Upgrade: +7 Block each. Run-20 live corrections (A1 2026-09-18): the effect exhausts OTHER non-Attacks only — Attacks in hand (e.g. Fiend Fire) are NOT exhausted and SW itself does not count toward its own exhaust-block total (2 Defends in hand → exhaust count 2, Block 10 at base values). Charon's Ashes procs once per card the effect exhausts, not on SW itself. Trap cards (FranticEscape-class) are defused by this exhaust — they are discarded-to-exhaust without their on-play downside firing. An event enchant granting +2 Block per exhausted card stacked with a smith upgrade that added +2 more (live: 7→9 per card on an enchanted copy; the table's +7 upgrade value did not appear on that path).
 - SETUP_STRIKE: 1, attack, common, Strike-tagged, deal 7 damage; gain 2 temporary Strength this turn. Upgrade: +2 damage, +1 Strength.
 - SHRUG_IT_OFF: 1, skill, common, gain 8 Block; draw 1 card. Upgrade: +3 Block.
 - SPITE: 0, attack, uncommon, deal 5 damage; if you lost HP this turn, hits 2 times. Upgrade: 3 hits.

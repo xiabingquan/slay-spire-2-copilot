@@ -78,7 +78,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Ripple Basin (RippleBasin, Uncommon): end of turn, if you played no Attack cards this turn, gain 4 Block. Run-16 live: stacks additively with card block at end of turn (Spiral-enchant Defend 22 + Basin 4 = 26 vs 18 incoming, survived at 1 HP); the no-attack-turn discipline is a real survival lever at low HP.
 - Self-Forming Clay (SelfFormingClay, Uncommon, Ironclad): whenever you lose HP in combat, gain 3 Block at start of next turn.
 - Sparkling Rouge (SparklingRouge, Uncommon): at start of turn 3, gain 1 Strength and 1 Dexterity.
-- Stone Cracker (StoneCracker, Uncommon): at combat start, upgrade 2 random cards in your draw pile for the rest of combat.
+- Stone Cracker (StoneCracker, Uncommon): at combat start, upgrade 2 random cards in your draw pile for the rest of combat. Run-20 live hits (A1 2026-09-18) confirmed the range: Whirlwind 5→8 per hit, Defend 5→8, Strike 6→9, Twin Strike 5→7 per hit, Pommel Strike 9→10 — upgrades are in-combat only and the card display does not mark them; read live damage numbers.
 - Symbiotic Virus (SymbioticVirus, Uncommon, Defect): at start of turn 1, Channel 1 Dark.
 - Tingsha (Tingsha, Uncommon, Silent): for each card discarded during your turn, deal 3 damage to a random enemy.
 - Tiny Mailbox (TinyMailbox, Uncommon): on Resting at a Rest Site, procure 2 random potions.

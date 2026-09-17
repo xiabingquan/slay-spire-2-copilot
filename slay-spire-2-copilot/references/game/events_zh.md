@@ -33,7 +33,7 @@
 - WHISPERING_HOLLOW（低语空谷；要求所有玩家金币 ≥ 44）：GOLD → 支付 35 ± rng −9..+9 金币（26–44），获得 2 瓶随机药水；HUG → 受到 9 点不可格挡、无来源伤害，自选 1 张牌库卡随机变形。
 - THE_LANTERN_KEY（灯火钥匙；共享；战斗布局）：RETURN_THE_KEY → +100 金币；KEEP_THE_KEY → FIGHT → MysteriousKnightEventEncounter 战斗；获胜后每名玩家获得 LanternKey 任务卡（不可打出；Act 索引 2 时强制未知地图点为事件房，并将下一个事件重定向至 WarHistorianRepy）。
 - AROMA_OF_CHAOS（混沌芳香）：LET_GO → 自选 1 张牌库卡随机变形；MAINTAIN_CONTROL → 自选 1 张牌库卡升级。
-- FAKE_MERCHANT（伪商人；Act 索引 ≥1；仅单人；要求金币 ≥ 100 或持有 FoulPotion）：自定义商店布局；库存为 FakeAnchor、FakeBloodVial、FakeHappyFlower、FakeLeesWaffle、FakeMango、FakeOrichalcum、FakeSneckoEye、FakeStrikeDummy、FakeVenerableTeaSet 中随机 6 件；遗物单价 50 金币。向商人投掷 FoulPotion → FakeMerchantEventEncounter 战斗；奖励 = FakeMerchantsRug + 所有仍在售的伪遗物。
+- FAKE_MERCHANT（伪商人；Act 索引 ≥1；仅单人；要求金币 ≥ 100 或持有 FoulPotion）：自定义商店布局；库存为 FakeAnchor、FakeBloodVial、FakeHappyFlower、FakeLeesWaffle、FakeMango、FakeOrichalcum、FakeSneckoEye、FakeStrikeDummy、FakeVenerableTeaSet 中随机 6 件；标价约 50 金/件（run-20 实测 FakeMango 54、FakeLee'sWaffle 47——非固定 50）。向商人投掷 FoulPotion → FakeMerchantEventEncounter 战斗；奖励 = FakeMerchantsRug + 所有仍在售的伪遗物。run-20 择买原则：FakeMango（+3 Max HP）与 FakeLee'sWaffle（拾取回 10% Max）为正面；FakeSneckoEye（战斗开始 Confused）为负面绝不购买。
 
 ## 其余含反编译数值的事件
 
@@ -67,7 +67,7 @@
 - TANX（Act3 远古赐福房；坦克斯）：从 9 件遗物池中随机展示 3 件 RelicOption——Claws、Crossbow、IronClub、MeatCleaver、Sai、SpikedGauntlets、TanxsWhistle、ThrowingAxe、WarHammer——若牌组中存在 ≥3 张可附魔 Instinct 的卡则追加 TriBoomerang（10 选 3）。坦克斯的哨子 → 向牌组加入 Whistle 卡（3 费攻击、消耗、33 伤害+眩晕目标；升级 +11 伤害）。带刺手甲 → +1 最大能量，但你的能力牌在战斗中 +1 费（与能力密集牌组反协同）。战锤 → 每次精英战斗胜利后，随机升级 4 张可升级的牌组卡。
 - ROUND_TEA_PARTY（圆桌茶会；所有玩家 HP ≥ 12）：EnjoyTea → RoyalPoison 遗物 + 回复；PickFight → 11 点不可格挡伤害 + RoyalPoison。
 - SAPPHIRE_SEED（蓝宝石种子）：Eat → 回复 9 + 升级；Plant → 附魔 Sown。
-- SELF_HELP_BOOK（自助指南）：ReadPassage/ReadEntireBook 附魔 Sharp/Nimble 等；SkipBook 离开。
+- SELF_HELP_BOOK（自助指南）：run-20 A1 实测（2026-09-18）实机选项键为 READ_THE_BACK / READ_PASSAGE——游戏 UI 中没有 SkipBook 按钮；READ_THE_BACK 在反编译摘录中无档（勿盲点，先研究或选 ReadPassage）。READ_PASSAGE → deck_select 附魔屏；run-20 观察到池子仅限技能牌（只列出 4 张 Defend + 重振精神，攻击牌/Bash 不可选）。附魔实测值：重振精神每张被消耗牌 +2 格挡（5→7）；之后对该附魔副本锻造再 +2（每张 9——并非表中 +7）。原摘要：ReadPassage/ReadEntireBook 附魔 Sharp/Nimble 等；SkipBook 离开。
 - SLIPPERY_BRIDGE（滑脚木桥；TotalFloor > 6；要求存在可移除牌）：Overcome → 移除 1 张随机卡；HoldOn → 受到 HP 损失 = 3 + 本事件已选 HoldOn 次数（3、4、5……递增）；事件在 HoldOn 与 Overcome 之间循环直到选择 Overcome。run-19 实测：**除 Overcome 外没有出口**——拖延只是在同一随机移除之上叠加 HP 税；移除池为整个牌库（同层刚拿到的卡即被移除实例）。
 - SPIRALING_WHIRLPOOL（螺旋漩涡；要求存在 Spiral 可附魔卡）：ObserveTheSpiral → 附魔 Spiral；Drink → 回复。
 - SPIRIT_GRAFTER（灵魂嫁接者）：LetItIn → 回复 25 + 加入 Metamorphosis 卡；Rejection → 升级 + 受到 10 点伤害。run-15 实测：12 HP 接纳后到 57（+45，references 记 +25——Metamorphosis 拾取附加效果或 A1 加成待核）。
@@ -79,7 +79,7 @@
   优先消耗身上价值最低的那档药水。
 - SUNKEN_TREASURY（淹水金库）：FirstChest → +60 金币；SecondChest → +333 金币 + Greed 诅咒。
 - SYMBIOTE（共生体；Act >0）：Approach → 对 1 张攻击牌附魔 Corrupted——Corrupted 附魔：有源攻击伤害 ×1.5，但打出时其拥有者受到 2 点不可格挡无来源伤害；KillWithFire → 变形 1 张选定牌。
-- TABLET_OF_TRUTH（真理石板）：Smash → 回复 20；Decipher → 失去 3 最大 HP + 升级路径。
+- TABLET_OF_TRUTH（真理石板）：Smash → 回复 20。Decipher → 递增的最大 HP 阶梯（run-20 A1 实测 2026-09-18）：各级代价 −3/−6/−12 Max HP（翻倍；loc 键 DECIPHER_1/2/3，每级选项"继续解读"），每级均可"放弃"；**任何已完成级别与放弃均未观察到奖励**——实测为纯最大 HP 消耗事件；原一行摘要"失去 3 最大 HP + 升级路径"判定为错误，除非另有来源确认奖励路径，否则应选 Smash。run-20 三级+放弃共付 21 Max HP（85→64）换零收益。
 - THE_ARCHITECT（建筑师；Act3 Boss 节点后的剧情事件）——**EA 结局屏**：到达本事件即代表第三幕 Boss 已被击破、当前 EA 版本所有已实装流程内容全部通关。游戏处于抢先体验阶段，建筑师 Boss 本体尚未实装；PROCEED → HP 0 是 EA 占位收束。机制：对白行走器——每行仅一个 回应/继续 选项（textKey THE_ARCHITECT.dialogue.N）；铁甲战士线为 威胁 → 继续 → PROCEED；PROCEED 将玩家 HP 置 0 → game_over（floor 48）。反编译备注（TheArchitect.cs）：WinRun() 仅播放攻击特效（玩家按 Score 输出伤害数字；Architect '反击'为特效——AnimArchitectAttackIfNecessary 未发出任何 CreatureCmd.Damage）随后 SetLocalPlayerReady() 切章同步；TheArchitectEventEncounter 只生成 Architect 占位体（9999 HP、NOTHING_MOVE 循环、HiddenIntent）——与"Boss 未实装"一致。铁甲战士对白：3 次访问档位，全部 EndAttackers=Both；访问档位由档案 TotalWins/Wins 经 LoadDialogue() 选取。
 - THIS_OR_THAT（这个还是那个？）：Plain → 受到 6 点伤害 + 金币；Ornate → 获得遗物 + 加入 Clumsy 诅咒。
 - TINKER_TIME（打造时间）：选择卡牌类型 + 附加效果；附加效果含 12 伤害 / 8 格挡 / 2 Weak / 2 Vulnerable / 3 段暴力；加入 MadScience 卡。
