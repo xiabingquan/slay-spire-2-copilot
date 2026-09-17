@@ -288,7 +288,15 @@ hook 逻辑、`CanonicalVars` 数值）核实。下文「Amount」= power 上显
 - PAPER_CUTS_POWER（Buff，Counter）：持有者的攻击对玩家造成未格挡伤害
   > 0 时，该玩家失去 Amount 最大 HP。
 - THE_GAMBIT_POWER（Debuff，Single）：持有者受到未格挡的攻击伤害 > 0 时，
-  持有者立即死亡（触发时移除 power）。
+  持有者立即死亡（触发时移除 power）。持续时间：该 power **会持续到打出
+  THE_GAMBIT 的回合之外**，直到条款触发为止 — 2026-09-17 run-12 实测死亡
+  案例：第 6 回合打出，第 8 回合仍在，8 点未格挡擦伤让 32 HP 玩家直接清零。
+  没有"此后每轮攻击伤害全部格挡"的把握就不要选 THE_GAMBIT。
+- SURROUNDED_POWER 朝向触发（帝王蟹，反编译）：`BeforeCardPlayed` — 你打出
+  任何**单体目标**指向某只爪的牌，朝向即转向该爪（背对的爪伤害 ×1.5，
+  正面朝向的爪 ×1.0）。AOE / 自身目标牌（Negative Pulse、Bone Shards、
+  Defend、对自身用的药水）**不会**转向；对**爪**使用的药水经
+  `BeforePotionUsed` 同样转向。界面显示的意图数值已含适用的 ×1.5。
 
 ## 复活 / 召唤 / 怪物姿态 power
 

@@ -73,6 +73,10 @@
 - SPIRIT_GRAFTER（灵魂嫁接者）：LetItIn → 回复 25 + 加入 Metamorphosis 卡；Rejection → 升级 + 受到 10 点伤害。
 - STONE_OF_ALL_TIME（永恒之石；Act 1；所有玩家 ≥1 瓶药水）：Lift → +10 最大 HP（饮用药水路径）；Push → 6 点伤害 + 附魔（+8 Vigorous 变量）。
 - SUNKEN_STATUE（沉没雕像）：GrabSword → SwordOfStone 遗物；DiveIntoWater → +111 金币，受到 7 点伤害。
+- THE_FUTURE_OF_POTIONS（药水的未来；2026-09-17 run-12 实测，Act 2）：三个选项
+  "放入 稀有 / 罕见 / 普通 药水" — 所选药水被消耗；奖励 = 1 次本职业卡池选卡
+  （实测：放入普通 Speed Potion → 死灵池 WISP / INVOKE / NEGATIVE_PULSE 三选一）。
+  优先消耗身上价值最低的那档药水。
 - SUNKEN_TREASURY（淹水金库）：FirstChest → +60 金币；SecondChest → +333 金币 + Greed 诅咒。
 - SYMBIOTE（共生体；Act >0）：Approach → 对 1 张攻击牌附魔 Corrupted——Corrupted 附魔：有源攻击伤害 ×1.5，但打出时其拥有者受到 2 点不可格挡无来源伤害；KillWithFire → 变形 1 张选定牌。
 - TABLET_OF_TRUTH（真理石板）：Smash → 回复 20；Decipher → 失去 3 最大 HP + 升级路径。

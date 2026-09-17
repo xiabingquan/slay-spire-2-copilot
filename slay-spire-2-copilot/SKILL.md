@@ -261,6 +261,17 @@ When the run ends (game_over screen, or abandon):
       python3 bridge/spirectl.py watchdog disable    # when the user stops play
       python3 bridge/spirectl.py watchdog status
 
+- **SL restore path (user directive 2026-09-17)**: when an SL (save/load
+  restore) is needed mid-run — deadlock recovery, mod rebuild, wedged screen —
+  return to the game's **main menu inside the running game process**, then
+  `continue_run` from there. **Never quit/kill the game process and relaunch
+  for an SL.** In-game path: pause menu (top-bar pause button →
+  `NPauseMenu`) → `Save And Quit` (`_saveAndQuitButton` /
+  `OnSaveAndQuitButtonPressed`) → main menu → `act continue_run`. Only a real
+  game crash (process gone) justifies `spirectl launch`; `spirectl sl`'s
+  stop→launch flow is superseded by this rule and must not be used for
+  routine SLs.
+
 ## References
 
 Consult the following files as needed for decisions and troubleshooting (paths

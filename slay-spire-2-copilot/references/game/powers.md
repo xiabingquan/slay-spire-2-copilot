@@ -317,7 +317,17 @@ Format: `- POWER_ID (Buff/Debuff): effect.`
 - DISINTEGRATION (card-applied): see afflictions.md — KnowledgeDemon choice
   card applies DISINTEGRATION_POWER 6.
 - THE_GAMBIT_POWER (Debuff, Single): if owner takes unblocked powered-attack
-  damage > 0, owner is killed (power removed as it fires).
+  damage > 0, owner is killed (power removed as it fires). Duration: the power
+  **persists beyond the turn THE_GAMBIT was played** until the clause fires —
+  live 2026-09-17 run-12 death: played on turn 6, still present on turn 8 when
+  8 unblocked chip killed the player at 32 HP. Do not pick THE_GAMBIT without
+  a plan to fully block every remaining attack in the fight.
+- SURROUNDED_POWER facing trigger (KaiserCrab, decomp): `BeforeCardPlayed` —
+  any card you play with a **single-target** claw target flips Facing toward
+  that claw (opposite-facing claw then hits ×1.5; faced claw ×1.0). AOE /
+  self-target cards (Negative Pulse, Bone Shards, Defend, potions on self)
+  do NOT flip. Potions used **on a claw** flip via `BeforePotionUsed`.
+  Displayed intent numbers already include the ×1.5 where applicable.
 
 ## Revival / summon / monster stances
 

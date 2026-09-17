@@ -70,6 +70,11 @@ Act ancients (from act sources): Overgrowth = Neow (removed unless `UnlockState.
 - SPIRIT_GRAFTER: LetItIn → heal 25 + add Metamorphosis card; Rejection → upgrade + take 10 damage.
 - STONE_OF_ALL_TIME (Act 1; all players ≥1 potion): Lift → +10 Max HP (drink-potion path); Push → 6 damage + enchant (+8 Vigorous var).
 - SUNKEN_STATUE: GrabSword → SwordOfStone relic; DiveIntoWater → +111 Gold, take 7 damage.
+- THE_FUTURE_OF_POTIONS (live 2026-09-17 run-12, Act 2): three options "deposit
+  a Rare / Uncommon / Common potion" — the chosen potion is consumed; reward =
+  1 card pick from your class pool (live: deposited a Common Speed Potion →
+  Necrobinder pool pick of WISP / INVOKE / NEGATIVE_PULSE). Deposit the
+  least-valuable potion tier you hold.
 - SUNKEN_TREASURY: FirstChest → +60 Gold; SecondChest → +333 Gold + Greed curse.
 - SYMBIOTE (Act >0): Approach → Enchant Corrupted on an Attack card — Corrupted enchant: powered attack damage ×1.5, but on play its owner takes 2 unblockable unpowered damage; KillWithFire → transform 1 chosen card.
 - TABLET_OF_TRUTH: Smash → heal 20; Decipher → lose 3 Max HP + upgrade path.

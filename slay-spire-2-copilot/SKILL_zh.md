@@ -210,6 +210,15 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
       python3 bridge/spirectl.py watchdog disable    # 用户停止游玩时
       python3 bridge/spirectl.py watchdog status
 
+- **SL 恢复路径（用户指令 2026-09-17）**：对局中需要 SL（读档恢复）时——死锁
+  排除、mod 重建、界面卡死等——必须在**不关闭游戏进程**的前提下先退回游戏内
+  **主菜单**，再从主菜单 `continue_run` 进入。**严禁为了 SL 直接退出/杀掉游戏
+  进程再重启。** 游戏内路径：暂停菜单（顶栏暂停按钮 → `NPauseMenu`）→
+  `Save And Quit`（`_saveAndQuitButton` / `OnSaveAndQuitButtonPressed`）→
+  主菜单 → `act continue_run`。只有游戏进程真正崩溃（进程已不存在）才允许
+  `spirectl launch`；`spirectl sl` 的 stop→launch 流程被本规则取代，不得用于
+  常规 SL。
+
 ## 参考文档
 
 决策与排查时按需查阅以下文件（路径均相对本 skill 文件夹）：
