@@ -14,6 +14,16 @@ the skill is triggered, the agent reads the run state, makes decisions, and
 operates the game until the run ends — then writes the run's memory note
 (Summary + review) and starts the next run.
 
+# Current best records
+
+| Character | Record |
+|---|---|
+| <img src="assets/characters/character_icon_ironclad.webp" alt="IRONCLAD" width="28"> | 0 ✅ |
+| <img src="assets/characters/character_icon_silent.webp" alt="SILENT" width="28"> | N.A. |
+| <img src="assets/characters/character_icon_defect.webp" alt="DEFECT" width="28"> | N.A. |
+| <img src="assets/characters/character_icon_necrobinder.webp" alt="NECROBINDER" width="28"> | N.A. |
+| <img src="assets/characters/character_icon_regent.webp" alt="REGENT" width="28"> | N.A. |
+
 ## What this project is
 
 - **Autonomous runs**: live game state (HP, hand, enemy intents, map, …) is

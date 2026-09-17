@@ -13,6 +13,16 @@ https://github.com/user-attachments/assets/6eae44a2-312d-4a1c-abc3-f5617fe23f21
 状态、做出决策并操作游戏，直至对局结束，随后写入本局 memory 记录
 （Summary + 回顾）并开启下一局。
 
+# 当前最好战绩
+
+| 角色 | 战绩 |
+|---|---|
+| <img src="assets/characters/character_icon_ironclad.webp" alt="IRONCLAD" width="28"> | 0 ✅ |
+| <img src="assets/characters/character_icon_silent.webp" alt="SILENT" width="28"> | N.A. |
+| <img src="assets/characters/character_icon_defect.webp" alt="DEFECT" width="28"> | N.A. |
+| <img src="assets/characters/character_icon_necrobinder.webp" alt="NECROBINDER" width="28"> | N.A. |
+| <img src="assets/characters/character_icon_regent.webp" alt="REGENT" width="28"> | N.A. |
+
 ## 这个项目是干啥的
 
 - **自动对局**：每回合实时读取游戏状态（血量、手牌、敌人意图、地图等），AI
