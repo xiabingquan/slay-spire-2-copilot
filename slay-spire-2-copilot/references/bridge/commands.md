@@ -76,6 +76,30 @@ Action notes:
   writes); nothing unearned is granted. start_run runs the same drain
   automatically before character select. Verify via progress.save epoch
   states / `pending_character_unlock`, or the `timeline:` lines in godot.log.
+- `start_run` args: `character` (optional substring match on Character.Id.Entry
+  / button name), `seed` (optional), `ascension` (optional int >= 0). When
+  `ascension` is present it is fail-loud validated against the profile's
+  `CharacterStats.MaxAscension` for that character (levels unlock via wins;
+  nothing unearned is granted) — missing stats, unloaded progress, or a level
+  above max all return ok=false before any UI work, and an explicit character
+  arg is required. Application writes profile `PreferredAscension` before
+  character Select, then `NAscensionPanel.SetAscensionLevel` +
+  `StartRunLobby.SyncAscensionChange` (plus reflection fallback to the game's
+  private singleplayer path); godot.log `start_run:` lines record each path.
+  Verify post-embark via `run.ascension` (RunState.AscensionLevel — authority),
+  `player.character` / `player.character_id`,
+  `player.ascension_max_at_start`, and compact state `asc=` / `char=`.
+- Card play targeting (live 2026-09-17): Self/AoE/random-target cards
+  (Defend, Shrug It Off, Bloodletting, Armaments, Whirlwind, Sword Boomerang,
+  …) must **omit** `target_combat_id` — the game silently no-ops
+  PlayCardAction when a creature target is passed to them (card stays in hand,
+  energy unchanged). The bridge now fail-loud rejects `target_combat_id` on
+  any card whose TargetType is not AnyEnemy/AnyAlly/AnyPlayer. Only
+  AnyEnemy/AnyAlly/AnyPlayer consume an explicit target id.
+- After any overlay confirm (hand_select/deck_select `proceed`, Headbutt
+  pile choices), **re-read state before computing follow-up play indices** —
+  hand reindexes and a computed index hits the wrong card (live: Armaments
+  confirm then play(index) hit Bludgeon instead of the upgraded Defend).
 - Treasure rooms: the chest is opened with `treasure_open` (no args) — `choose`
   on the chest button returns `use treasure_open for it`. After opening, the
   relic holder is claimed with `choose(index=<holder>)`; gold credits

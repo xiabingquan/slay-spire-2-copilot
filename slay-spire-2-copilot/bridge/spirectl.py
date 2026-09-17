@@ -496,6 +496,8 @@ def render_compact(state):
         parts.append(f"floor={run.get('total_floor')}")
         parts.append(f"act={(run.get('act_index') or 0) + 1}")
         parts.append(f"room={run.get('room_type')}")
+        if run.get("ascension") is not None:
+            parts.append(f"asc={run.get('ascension')}")
         if run.get("map_coord"):
             c = run["map_coord"]
             parts.append(f"pos=({c.get('row')},{c.get('col')})")
@@ -516,7 +518,8 @@ def render_compact(state):
     if player:
         gold = player.get("gold")
         gold_s = f" gold={gold}" if gold is not None else ""
-        lines.append(f"player hp={player.get('hp')}/{player.get('max_hp')} block={player.get('block')}{gold_s}")
+        char_s = f" char={player.get('character')}" if player.get("character") else ""
+        lines.append(f"player hp={player.get('hp')}/{player.get('max_hp')} block={player.get('block')}{gold_s}{char_s}")
         # player powers/debuffs mirror creature powers during combat
         combat_p = state.get("combat") or {}
         me = next((c for c in (combat_p.get("creatures") or []) if c.get("is_player")), None)

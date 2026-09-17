@@ -146,13 +146,25 @@ public static class ActionExecutor
         }
         if (TryGetInt(args, "target_combat_id", out int targetId))
         {
+            // Live-observed 2026-09-17 (A1 run-14): Self/Skill cards passed a
+            // creature target enqueue PlayCardAction that the game silently
+            // no-ops (card stays in hand, energy/HP unchanged) — Defend and
+            // Bloodletting plays were lost mid-boss-fight this way. Fail loud
+            // instead: only AnyEnemy/AnyAlly/AnyPlayer consume an explicit
+            // target; Self/AllEnemies/RandomEnemy/etc. must omit the arg.
+            if (card.TargetType is not (TargetType.AnyEnemy or TargetType.AnyAlly or TargetType.AnyPlayer))
+            {
+                return (false, $"card {card.Id.Entry} target_type={card.TargetType} — "
+                    + "omit target_combat_id (only AnyEnemy/AnyAlly/AnyPlayer take an explicit "
+                    + "target; passing one to self/aoe/random cards no-ops in PlayCardAction)");
+            }
             target = combat.GetCreature((uint)targetId);
             if (target == null)
             {
                 return (false, $"target_combat_id {targetId} not found in combat");
             }
         }
-        else if (card.TargetType is TargetType.AnyEnemy or TargetType.AnyAlly)
+        else if (card.TargetType is TargetType.AnyEnemy or TargetType.AnyAlly or TargetType.AnyPlayer)
         {
             return (false, $"card {card.Id.Entry} needs a target — pass "
                 + "target_combat_id=<int> (no auto-target fallback)");
@@ -1273,18 +1285,67 @@ public static class ActionExecutor
         return (true, "submitted continue_run");
     }
 
+    // start_run args: character (optional substring match), seed (optional),
+    // ascension (optional int >= 0). Ascension is fail-loud: when the key is
+    // present it must be a valid level the profile already unlocked for that
+    // character (CharacterStats.MaxAscension, earned by wins) — otherwise
+    // ok=false before any UI work. Omitting the key keeps profile-preferred.
     private static (bool, string) StartRun(JsonElement args)
     {
         string? character = GetString(args, "character");
         string? seed = GetString(args, "seed");
-        Fire(() => StartRunSequence(character, seed), "start run");
-        return (true, $"submitted start_run (character={character ?? "random"}, seed={seed ?? "random"})");
+        int? ascension = null;
+        if (args.TryGetProperty("ascension", out _))
+        {
+            if (string.IsNullOrEmpty(character))
+            {
+                return (false, "start_run: ascension requires an explicit character arg (fail-loud)");
+            }
+            if (!TryGetInt(args, "ascension", out int want) || want < 0)
+            {
+                return (false, "start_run: invalid ascension value (need integer >= 0); fail-loud, not silently ignored");
+            }
+            try
+            {
+                ProgressState? progress = SaveManager.Instance?.Progress;
+                if (progress == null)
+                {
+                    return (false, "start_run: progress save not loaded; cannot validate ascension (fail-loud)");
+                }
+                CharacterStats? stats = FindCharacterStats(progress, character);
+                if (stats == null)
+                {
+                    return (false, $"start_run: no character_stats entry matching '{character}'; cannot validate ascension (fail-loud)");
+                }
+                if (want > stats.MaxAscension)
+                {
+                    return (false, $"start_run: ascension {want} exceeds unlocked max_ascension={stats.MaxAscension} for {stats.Id} (fail-loud; levels unlock via wins)");
+                }
+                ascension = want;
+            }
+            catch (Exception e)
+            {
+                return (false, $"start_run: ascension validation failed: {e.Message} (fail-loud)");
+            }
+        }
+        Fire(() => StartRunSequence(character, seed, ascension), "start run");
+        return (true, $"submitted start_run (character={character ?? "random"}, seed={seed ?? "random"}, ascension={(ascension?.ToString() ?? "profile-preferred")})");
+    }
+
+    // Match profile CharacterStats by ModelId entry/id substring — same
+    // matching rule as the character-select button lookup.
+    private static CharacterStats? FindCharacterStats(ProgressState progress, string character)
+    {
+        return progress.CharacterStats.Values.FirstOrDefault(s =>
+            s != null && (
+                (s.Id?.Entry?.Contains(character, StringComparison.OrdinalIgnoreCase) ?? false)
+                || (s.Id?.ToString()?.Contains(character, StringComparison.OrdinalIgnoreCase) ?? false)));
     }
 
     // Mirrors the game's own AutoSlay menu path (AutoSlayer.PlayMainMenuAsync).
     // Takeover-safe: clears game-over screens first so start_run works from any
     // game state (startup, mid-run, or ended).
-    private static async Task StartRunSequence(string? character, string? seed)
+    private static async Task StartRunSequence(string? character, string? seed, int? ascension)
     {
         Node root = ((SceneTree)Engine.GetMainLoop()).Root;
         if (ActiveScreenContext.Instance.GetCurrentScreen() is NGameOverScreen ended)
@@ -1393,11 +1454,118 @@ public static class ActionExecutor
             BridgeMod.LogErr("start_run: no unlocked character button found");
             return;
         }
+        // Profile PreferredAscension must be written BEFORE Select(): the game's
+        // own character-select handler reads it when the character changes.
+        if (ascension is int wantPre)
+        {
+            WriteProfilePreferredAscension(SafeCharEntry(chosen), wantPre);
+        }
         chosen.Select();
         await Task.Delay(200, default);
+        if (ascension is int wantAsc)
+        {
+            ApplyAscensionOnSelectScreen(selectScreen, chosen, wantAsc);
+        }
         NButton confirm = await WaitHelper.ForNode<NButton>(selectScreen, "ConfirmButton", default, TimeSpan.FromSeconds(10));
         await UiHelper.Click(confirm);
-        BridgeMod.LogInfo($"start_run: embarked as {chosen.Name} char_entry={SafeCharEntry(chosen)} (seed={seed ?? "random"})");
+        BridgeMod.LogInfo($"start_run: embarked as {chosen.Name} char_entry={SafeCharEntry(chosen)} (seed={seed ?? "random"}, ascension={ascension?.ToString() ?? "profile-preferred"})");
+    }
+
+    // Ascension parity: only levels the profile already unlocked for this
+    // character (CharacterStats.MaxAscension — written by the game's own win
+    // handling) are ever applied; nothing unearned is granted. Preferred level
+    // is written to the profile first (before Select, so the game's own
+    // character-change path can read it), then applied through the public UI
+    // setters on NAscensionPanel and StartRunLobby.SyncAscensionChange, with a
+    // reflection fallback to the game's private singleplayer path. RunState.
+    // AscensionLevel in state is the authority for post-embark verification.
+    private static int WriteProfilePreferredAscension(string charEntry, int want)
+    {
+        int max = -1;
+        try
+        {
+            ProgressState? progress = SaveManager.Instance?.Progress;
+            CharacterStats? stats = progress == null ? null : FindCharacterStats(progress, charEntry);
+            if (stats != null)
+            {
+                max = stats.MaxAscension;
+                stats.PreferredAscension = want;
+                SaveManager.Instance!.SaveProgressFile();
+                BridgeMod.LogInfo($"start_run: profile PreferredAscension={want} for {stats.Id} (max={max})");
+            }
+            else
+            {
+                BridgeMod.LogErr($"start_run: no character_stats for '{charEntry}' when writing preferred ascension");
+            }
+        }
+        catch (Exception e)
+        {
+            BridgeMod.LogErr($"start_run: profile preferred-ascension write failed: {e.Message}");
+        }
+        return max;
+    }
+
+    private static void ApplyAscensionOnSelectScreen(Control selectScreen, NCharacterSelectButton chosen, int want)
+    {
+        string charEntry = SafeCharEntry(chosen);
+        int max = WriteProfilePreferredAscension(charEntry, want);
+        try
+        {
+            NAscensionPanel? panel = UiHelper.FindAll<NAscensionPanel>(selectScreen).FirstOrDefault();
+            if (panel != null)
+            {
+                if (max >= 0)
+                {
+                    panel.SetMaxAscension(max);
+                }
+                panel.SetAscensionLevel(want);
+                BridgeMod.LogInfo($"start_run: NAscensionPanel.SetAscensionLevel({want}) -> panel.Ascension={panel.Ascension} (max={max})");
+            }
+            else
+            {
+                BridgeMod.LogErr("start_run: NAscensionPanel not found on character select — using lobby path only");
+            }
+        }
+        catch (Exception e)
+        {
+            BridgeMod.LogErr($"start_run: NAscensionPanel apply failed: {e.Message}");
+        }
+        try
+        {
+            if (selectScreen is NCharacterSelectScreen ncss && ncss.Lobby is { } lobby)
+            {
+                lobby.SyncAscensionChange(want); // public API
+                if (lobby.Ascension != want)
+                {
+                    // Game's own singleplayer path: reads profile PreferredAscension.
+                    MethodInfo? setAfter = lobby.GetType().GetMethod(
+                        "SetSingleplayerAscensionAfterCharacterChanged",
+                        BindingFlags.Instance | BindingFlags.NonPublic);
+                    if (setAfter != null && chosen.Character?.Id is { } cid)
+                    {
+                        setAfter.Invoke(lobby, new object[] { cid });
+                    }
+                }
+                if (lobby.Ascension != want)
+                {
+                    PropertyInfo? prop = lobby.GetType().GetProperty("Ascension");
+                    prop?.SetMethod?.Invoke(lobby, new object[] { want });
+                }
+                BridgeMod.LogInfo($"start_run: lobby ascension readback={lobby.Ascension} (wanted={want}, lobby.MaxAscension={lobby.MaxAscension})");
+                if (lobby.Ascension != want)
+                {
+                    BridgeMod.LogErr($"start_run: FAILED to set lobby ascension to {want}; run may embark at {lobby.Ascension}");
+                }
+            }
+            else
+            {
+                BridgeMod.LogErr("start_run: StartRunLobby not reachable on character select");
+            }
+        }
+        catch (Exception e)
+        {
+            BridgeMod.LogErr($"start_run: lobby ascension apply failed: {e.Message}");
+        }
     }
 
     private static string SafeCharEntry(NCharacterSelectButton b)

@@ -333,6 +333,7 @@ public static class StateBuilder
             ["room_type"] = runState.CurrentRoom?.RoomType.ToString() ?? "Unassigned",
             ["is_game_over"] = runState.IsGameOver,
             ["gold"] = SafeGold(runState),
+            ["ascension"] = runState.AscensionLevel,
             ["map_coord"] = runState.CurrentMapCoord is { } coord ? CoordDto(coord) : null,
         };
         try
@@ -570,6 +571,22 @@ public static class StateBuilder
                     ["target_type"] = p.TargetType.ToString(),
                 }).ToList(),
         };
+        try
+        {
+            // Character + ascension verification fields (long-term policy):
+            // character id entry (e.g. "IRONCLAD") and the profile's unlocked
+            // max ascension snapshot taken at run start.
+            if (player.Character?.Id is { } charId)
+            {
+                dto["character"] = charId.Entry;
+                dto["character_id"] = charId.ToString();
+            }
+            dto["ascension_max_at_start"] = player.MaxAscensionWhenRunStarted;
+        }
+        catch (Exception)
+        {
+            // character/ascension not exposed on this build
+        }
         try
         {
             PropertyInfo? gold = player.GetType().GetProperty("Gold");
