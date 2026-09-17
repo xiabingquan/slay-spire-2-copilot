@@ -17,7 +17,7 @@ https://github.com/user-attachments/assets/6eae44a2-312d-4a1c-abc3-f5617fe23f21
 
 | 角色 | 战绩 |
 |---|---|
-| <img src="assets/characters/character_icon_ironclad.webp" alt="IRONCLAD" width="28"> | 0 ✅ |
+| <img src="assets/characters/character_icon_ironclad.webp" alt="IRONCLAD" width="28"> | 进阶0 ✅ |
 | <img src="assets/characters/character_icon_silent.webp" alt="SILENT" width="28"> | N.A. |
 | <img src="assets/characters/character_icon_defect.webp" alt="DEFECT" width="28"> | N.A. |
 | <img src="assets/characters/character_icon_necrobinder.webp" alt="NECROBINDER" width="28"> | N.A. |

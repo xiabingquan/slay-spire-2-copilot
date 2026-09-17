@@ -18,7 +18,7 @@ operates the game until the run ends — then writes the run's memory note
 
 | Character | Record |
 |---|---|
-| <img src="assets/characters/character_icon_ironclad.webp" alt="IRONCLAD" width="28"> | 0 ✅ |
+| <img src="assets/characters/character_icon_ironclad.webp" alt="IRONCLAD" width="28"> | Ascension 0 ✅ |
 | <img src="assets/characters/character_icon_silent.webp" alt="SILENT" width="28"> | N.A. |
 | <img src="assets/characters/character_icon_defect.webp" alt="DEFECT" width="28"> | N.A. |
 | <img src="assets/characters/character_icon_necrobinder.webp" alt="NECROBINDER" width="28"> | N.A. |
