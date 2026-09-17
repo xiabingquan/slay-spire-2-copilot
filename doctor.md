@@ -101,3 +101,15 @@ dates, or session notes.
 
 Violation → delete the run-specific content; it belongs in `memory/runs/`,
 not here.
+
+### 5. No user-conversation content
+
+Rule: documentation must not record anything from user conversations — the
+user's comments, requests, improvement asks, or any paraphrase of what was
+said in a session. Docs describe the project, the game, and what happened in
+runs; they never describe the dialogue that produced them. This holds
+everywhere: READMEs, SKILL docs, `memory/`, `references/`.
+
+Violation → strip the conversational framing. Keep an underlying fact only if
+it already belongs under that doc's duty (checks 1–4); delete pure dialogue
+residue.
