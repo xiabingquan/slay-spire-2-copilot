@@ -161,7 +161,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Electric Shrymp (ElectricShrymp, Ancient): on pickup, choose 1 Skill card to enchant with Imbued.
 - Empty Cage (EmptyCage, Ancient): on pickup, remove 2 cards from deck.
 - Fiddle (Fiddle, Ancient): hand draw +2 cards each turn; you cannot draw cards during your turn.
-- Fishing Rod (FishingRod, Ancient): every 3 Monster combats, upgrade 1 random card in deck.
+- Fishing Rod (FishingRod, Ancient): every 3 Monster combats, upgrade 1 random card in deck. Live A1 2026-09-17: counter counts Monster-room combats only — upgrades fired after regular monster fights 3/6/9; three elite-room fights in the same run never advanced the counter.
 - Fur Coat (FurCoat, Ancient): on pickup, mark 7 combats; enemies in marked rooms have 1 HP.
 - Glass Eye (GlassEye, Ancient): on pickup, gain 2 Common, 2 Uncommon and 1 Rare cards.
 - Glitter (Glitter, Ancient): all card rewards are enchanted with Glam.

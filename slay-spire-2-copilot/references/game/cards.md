@@ -73,7 +73,7 @@ listed below as X.
 - PERFECTED_STRIKE: 2, attack, common, Strike-tagged, deal damage = 6 + 2 for each Strike-tagged card you own. Upgrade: +3 per Strike.
 - PILLAGE: 1, attack, uncommon, deal 6 damage; then draw cards, repeating while each drawn card is an Attack and your hand is not full. Upgrade: +3 damage.
 - POMMEL_STRIKE: 1, attack, common, Strike-tagged, deal 9 damage; draw 1 card. Upgrade: +1 damage, draw 2.
-- PRIMAL_FORCE: 0, skill, rare, transform all Attack cards in your hand into GiantRock (1-cost token Attack, 16 damage). Upgrade: transformed GiantRocks are upgraded.
+- PRIMAL_FORCE: 0, skill, rare, transform all Attack cards in your hand into GiantRock (1-cost token Attack, 16 damage). Upgrade: transformed GiantRocks are upgraded. Live A1 2026-09-17: the transform is combat-scoped — deck still contained the original attack cards after fights where hand attacks had been transformed (GiantRocks do not permanently replace deck cards).
 - PYRE: 2, power, rare, +1 max Energy. Upgrade: +2 max Energy.
 - RAGE: 0, skill, uncommon, this turn whenever you play an Attack gain 3 Block. Upgrade: gain 5 Block.
 - RAMPAGE: 1, attack, uncommon, deal 9 damage; each time this card is played this combat its damage permanently increases by 5. Upgrade: +4 increase per play.

@@ -161,7 +161,7 @@
 - 放电异虾（ElectricShrymp，Ancient）：拾取时，选择 1 张技能牌附魔 Imbued。
 - 空鸟笼（EmptyCage，Ancient）：拾取时，从牌库移除 2 张牌。
 - 小提琴（Fiddle，Ancient）：每回合抽牌阶段额外抽 2 张牌；回合内不能再抽牌。
-- 钓鱼竿（FishingRod，Ancient）：每 3 场普通敌人战斗，升级牌库中 1 张随机牌。
+- 钓鱼竿（FishingRod，Ancient）：每 3 场普通敌人战斗，升级牌库中 1 张随机牌。A1 实测 2026-09-17：计数只统计 Monster 房间战斗——普通怪战第 3/6/9 场触发升级；同局三场精英战从未推进计数。
 - 皮草大衣（FurCoat，Ancient）：拾取时，标记 7 场战斗；这些房间的敌人 HP 为 1。
 - 玻璃眼珠（GlassEye，Ancient）：拾取时，获得 2 张普通、2 张罕见、1 张稀有卡牌。
 - 亮片（Glitter，Ancient）：所有卡牌奖励附魔 Glam。

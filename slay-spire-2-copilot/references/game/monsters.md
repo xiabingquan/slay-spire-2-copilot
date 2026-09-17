@@ -105,7 +105,7 @@ Act pools (from `GenerateAllEncounters`):
 - Aeonglass (Aeonglass, Act3 AeonglassBoss; 512 HP): EBB_MOVE = single 26 (A:32) + 33 Block; EYE_LASERS_MOVE = multi 11 (A:12) ×2; INCREASING_INTENSITY_MOVE = Status Wither 1 (A:2) + Strength ramp; ArtifactPower 3 at spawn.
 - WaterfallGiant (WaterfallGiant, Act4 WaterfallGiantBoss; 240 HP): PRESSURIZE buff SteamEruption 15 (A:20) → STOMP 15 (A:16) → RAM 10 (A:11) → SIPHON heal → PRESSURE_GUN 20 (A:23, +5 per Pressure Up) → PRESSURE_UP 13 (A:14) → back to STOMP; ABOUT_TO_BLOW stun → EXPLODE deathblow.
 - SoulFysh (SoulFysh, Act4 SoulFyshBoss; 211 HP): BECKON Status ×2 → DE_GAS single 16 (A:17) → GAZE single 7 (A:8) → FADE Intangible 2 → SCREAM single 13 (A:15) + 3 Vulnerable → repeat.
-- LagavulinMatriarch (LagavulinMatriarch, Act4 LagavulinMatriarchBoss; 222 HP): SLEEP → SLASH 19 (A:21) → SLASH2 12 (A:14) + Block → DISEMBOWEL 9 (A:10) ×2 → SOUL_SIPHON debuff (−2 Str/Dex to player, +2 Str to self). Passives PlatingPower 12, AsleepPower 3.
+- LagavulinMatriarch (LagavulinMatriarch, Act4 LagavulinMatriarchBoss; 222 HP): SLEEP → SLASH 19 (A:21) → SLASH2 12 (A:14) + Block → DISEMBOWEL 9 (A:10) ×2 → SOUL_SIPHON debuff (−2 Str/Dex to player, +2 Str to self). Passives PlatingPower 12, AsleepPower 3. Live 2026-09-17 A1: appeared as the **Act 1 Boss** (222 HP; epoch content — same pattern as WaterfallGiant; game is authoritative over the Act4 table label). Wake tactic: unblocked card damage while Asleep removes Plating and stuns it into WakeUpMove — better than letting it sleep out 2-3 Plating-12 turns.
 
 ## Power quick reference (exact values from Powers source)
 

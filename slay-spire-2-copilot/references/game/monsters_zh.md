@@ -104,7 +104,7 @@
 - Aeonglass（Aeonglass, Act3 AeonglassBoss; 512 HP）：EBB_MOVE = 单次 26 (A:32) + 33 格挡；EYE_LASERS_MOVE = 多段 11 (A:12) ×2；INCREASING_INTENSITY_MOVE = 状态 Wither 1 (A:2) + 力量成长；出场 ArtifactPower 3。
 - WaterfallGiant（WaterfallGiant, Act4 WaterfallGiantBoss; 240 HP）：PRESSURIZE 增益 SteamEruption 15 (A:20) → STOMP 15 (A:16) → RAM 10 (A:11) → SIPHON 治疗 → PRESSURE_GUN 20 (A:23，每次 Pressure Up +5) → PRESSURE_UP 13 (A:14) → 回 STOMP；ABOUT_TO_BLOW 眩晕 → EXPLODE 处决。
 - SoulFysh（SoulFysh, Act4 SoulFyshBoss; 211 HP）：BECKON 状态 ×2 → DE_GAS 单次 16 (A:17) → GAZE 单次 7 (A:8) → FADE Intangible 2 → SCREAM 单次 13 (A:15) + 3 Vulnerable → 循环。
-- LagavulinMatriarch（LagavulinMatriarch, Act4 LagavulinMatriarchBoss; 222 HP）：SLEEP → SLASH 19 (A:21) → SLASH2 12 (A:14) + 格挡 → DISEMBOWEL 9 (A:10) ×2 → SOUL_SIPHON 减益（玩家 −2 力量/敏捷，自身 +2 力量）。被动 PlatingPower 12、AsleepPower 3。
+- LagavulinMatriarch（LagavulinMatriarch, Act4 LagavulinMatriarchBoss; 222 HP）：SLEEP → SLASH 19 (A:21) → SLASH2 12 (A:14) + 格挡 → DISEMBOWEL 9 (A:10) ×2 → SOUL_SIPHON 减益（玩家 −2 力量/敏捷，自身 +2 力量）。被动 PlatingPower 12、AsleepPower 3。2026-09-17 A1 实测：作为 **Act 1 Boss** 出现（222 HP；epoch 内容——与 WaterfallGiant 同模式；以游戏为准，表内 Act4 标签不作数）。唤醒战术：沉睡期间用卡牌打出未格挡伤害 → 移除镀甲并将其击晕进 WakeUpMove——优于白送它睡过 2-3 个镀甲 12 回合。
 
 ## 能力速查（Powers 源码精确值）
 
