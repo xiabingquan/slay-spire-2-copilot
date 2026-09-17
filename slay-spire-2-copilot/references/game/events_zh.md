@@ -98,3 +98,5 @@ DARV、NONUPEIPE、OROBAS、TEZCATARA、VAKUU 在 act 池中以 `AncientEventMod
 - state 中 screen="event" 时 screen_detail.options 列出选项（kind=event_option）；用 `act choose index` 选择；锁定选项在游戏界面显示 IsLocked。
 - `IsAllowed` 门槛：事件仅在其反编译前置条件满足时生成（章节索引、金币、HP、牌库内容）——存在门槛的已在上文逐条列出。
 - 事件随机变量在打开事件时由对局 rng 计算（`CalculateVars`）——`基准 ± 范围` 即确定性的报价窗口。
+
+- 漩涡事件实战记录（2026-09-17）：Spiral 附魔 = EnchantPlayCount +1（每次打出结算两次；decomp Spiral.cs — 仅限基础打击/防御标签；实测：附魔防御 5→"双结算"=10 基础，每次结算分别吃敏捷加成，与锻造升级 +3/次叠加）。Drink 治疗量为数据驱动（DynamicVars.Heal — decomp 未硬编码）。佩尔实战：佩尔之角 = +2 张 RELAX（RELAX：3 费 技能 消耗 15 挡+下回合抽 2+2 能量）；祝福房进幕时另有满血回复 9→70（HP 回复似乎是幕开场远古房固有效果，与遗物选择无关）。

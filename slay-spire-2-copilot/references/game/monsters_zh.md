@@ -134,3 +134,7 @@
 - SuckPower N：拥有者有源攻击对任意目标造成未格挡伤害后，每次命中实例 +N 力量。
 - SurprisePower：死亡时生成 SneakyGremlin + FatGremlin 并移交被偷金币（地精佣兵）。
 - 授予负荆棘的招式（如 SpinyToad 爆发 −5）会移除其先前授予的荆棘。
+
+- 产卵虫 直飞产卵虫（Ovicopter，Act2 OvicopterNormal 族，实测 128 HP）：SUMMON 召唤 3 枚结实的卵（各自 HATCH_POWER 倒计时）；孵化 → 幼虫；循环 召唤 → 单击 ~10+干扰 → 召唤（力量随战斗叠加，实测意图 10→28→33）。2026-09-17 实战笔记：应母虫集火；清波消耗战输给其力量叠层。EN: Ovicopter.
+- 幼虫（产卵虫孵化体；实测 19–21 HP）：MINION_POWER；NIBBLE 级单击基础 4，每轮循环叠力（实测 4→6）。死亡不结束战斗。EN: Larvae.
+- 实测中文名折叠：ThievingHopper 偷窃草蜢；HauntedShip 幽灵船；BowlbugRock 盛碗虫（石）；BowlbugNectar 盛碗虫（蜜）；GremlinMerc 地精佣兵；TerrorEel 族四鳗组 花园幽灵鳗（Act1 精英 (7,1) 实测：27–31 HP ×4，SKITTISH_POWER，意图 1×3/5/7/Buff）；Act1 淤泥旋螺（实测 39 HP，Debuff+5 意图循环，类未识别 — 仅现场观察）；WaterfallGiant 瀑布巨兽 — 2026-09-17 实测作为 **Act 1 Boss** 出现（epoch 内容；上表条目标注 Act4 — 以游戏为准）。死后假人模式：999999999/999999999 HP + Stun 意图，EXPLODE 处决 ~51（可用格挡硬吃；其后战斗结束）。

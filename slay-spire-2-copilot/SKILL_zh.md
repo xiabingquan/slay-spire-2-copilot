@@ -130,6 +130,13 @@ memory 记录里。
    可能不合法，或界面需要另一种输入
 5. 若 act 返回 ok=false，读 message、重读 state、用修正后的 action 重试——不要
    盲目重复同一调用
+6. 动作后核验（结算滞后类）：act 返回后动作可能延迟 1-3 秒才生效——立即读到的
+   state 可能是动作前手牌，据此计算的后续动作会静默空转。任何 `act`/`batch`
+   之后先重读 state（首轮读数仍像动作前则读第二次）再计算后续索引。覆盖层
+   （锻造/附魔/去除 deck_select、弃牌 hand_select、工具交易类 phase=Start
+   弹窗）均为 choose(index) 后 **proceed 确认**——仅 choose 不算确认。宝箱用
+   `treasure_open` 开启，不是 choose。`use_potion` 后药水槽位重排——下一次
+   用药前重读 state。
 
 每回合行动前至少检查：敌人意图、自身血量/格挡、能量、手牌可否打出。
 回复中保持简短的实时解说，便于用户跟上出牌思路。memory 在游玩全程随时

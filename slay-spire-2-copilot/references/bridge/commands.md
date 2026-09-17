@@ -76,6 +76,22 @@ Action notes:
   writes); nothing unearned is granted. start_run runs the same drain
   automatically before character select. Verify via progress.save epoch
   states / `pending_character_unlock`, or the `timeline:` lines in godot.log.
+- Treasure rooms: the chest is opened with `treasure_open` (no args) — `choose`
+  on the chest button returns `use treasure_open for it`. After opening, the
+  relic holder is claimed with `choose(index=<holder>)`; gold credits
+  automatically. Then `proceed` leaves the room.
+- Overlay screens that select-then-confirm (deck_select for smith/enchant/
+  removal, hand_select for discards: Dagger Throw / Survivor / Tools of the
+  Trade turn-start prompts): `choose(index=N)` marks the pick (fingerprint may
+  not change), **`proceed` confirms** — always follow choose with proceed.
+  hand_select prompts that open at `phase=Start` (start-of-turn discard
+  powers) must be answered before any Play-phase acts.
+- After `use_potion`, remaining potions reindex to fill the empty slot —
+  re-read state before the next `use_potion` (stale index → "empty or out of
+  range").
+- Killing all enemies does not always auto-transition: if combat screen lingers
+  with no enemies, `end_turn` fires the mod's win-condition force path into
+  rewards.
 - Crystal-sphere minigame (CRYSTAL_SPHERE event): all 121 cells surface in
   state as unnamed `crystal_cell` nodes — revealed contents are visual-only,
   so the agent picks blind; rewards grant on minigame proceed.

@@ -162,6 +162,15 @@ Repeat until the run ends or the user stops you. Every spirectl call carries
    a different input
 5. If act returns ok=false: read the message, re-read state, retry with a
    corrected action — do not blind-retry the same call
+6. Post-act verification (settle-lag class): acts can resolve 1-3s after the
+   call returns — a state read taken immediately may show the pre-act hand, and
+   follow-up acts computed from it silently no-op. After any `act`/`batch`,
+   re-read state (twice if the first read still looks pre-act) before computing
+   indices for follow-ups. Overlay screens (smith/enchant/removal deck_select,
+   discard hand_select, Tools-of-the-Trade style phase=Start prompts) work
+   choose(index) THEN `proceed` — choose alone does not confirm. Treasure
+   chests open with `treasure_open`, not choose. After `use_potion`, potion
+   slots reindex — re-read before the next potion call.
 
 Before acting each turn, check at least: enemy intents, your HP/block, energy,
 and whether the hand is playable. Keep a brief running commentary in your

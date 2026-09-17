@@ -95,3 +95,5 @@ DARV, NONUPEIPE, OROBAS, TEZCATARA, VAKUU exist as `AncientEventModel`s in the a
 - screen `event` in run state lists options via `screen_detail.options` (kind=event_option); pick via `act choose index`; locked options show IsLocked.
 - `IsAllowed` gates: events only spawn when their decompiled preconditions hold (act index, gold, HP, deck contents) — listed per event above where present.
 - Randomized event vars use run rng at event open (`CalculateVars`) — treat `base ± range` as the deterministic offer window.
+
+- Whirlpool live notes (2026-09-17): Spiral enchant = EnchantPlayCount +1 (card resolves twice per play; decomp Spiral.cs — Basic Strike/Defend tags only; observed: Enchant Defend 5→"two resolves" = 10 base, scales with Dex per resolve, stacks with Smith upgrade +3 per resolve). Drink heal value is data-driven (DynamicVars.Heal — not decomp-hardcoded). Pael live: Pael's Horn = +2 RELAX cards (RELAX: 3c skill Exhaust 15 Block + next turn draw 2 + 2 Energy); boon room also full-restored HP 9→70 on Act2 entry (HP restore appears inherent to the act-start ancient room regardless of relic choice).

@@ -82,3 +82,5 @@ Potion 类均已覆盖；数值取各类 `CanonicalVars` 基础值。括号内�
 - PotionOfBinding 的 OnUse 中变量名互换（WeakPower 用了 Vulnerable 的值、反之亦然），但两者数值均为 1——实际效果为全体敌人 1 Weak + 1 Vulnerable。
 - FlexPotionPower / SpeedPotionPower 是临时力量/敏捷的子类；ShacklingPotionPower 为负向临时力量。
 - BloodPotion、FruitJuice、EntropicBrew 为 `AnyTime`；FairyInABottle 为 `Automatic`。
+
+- 药石 Potion-Shaped Rock（石化蟾蜍产出，战斗限定，任意敌人）：造成 15 点无增幅伤害。石化蟾蜍每次战斗开始发 1 瓶；药水栏可叠多瓶。按普通单敌药水选目标（传 target_combat_id）；每次使用后药水槽位重排索引。

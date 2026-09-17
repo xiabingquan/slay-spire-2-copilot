@@ -135,3 +135,7 @@ Act pools (from `GenerateAllEncounters`):
 - SuckPower N: after owner's powered attack deals unblocked damage to any target, +N Strength per successful hit instance.
 - SurprisePower: on death spawn SneakyGremlin + FatGremlin and hand over stolen gold (GremlinMerc).
 - Burst/Thorns moves that apply negative Thorns (e.g. SpinyToad explosion −5) remove the buff they granted.
+
+- Ovicopter 直飞产卵虫 (Ovicopter, Act2 OvicopterNormal-class, 128 HP live observed): SUMMON_MOVE spawns 3 ToughEgg (HatchPower countdown each); hatch → Larvae; cycle Summon → attack ~10 + Debuff → Summon (strength stacks over fight, live intents 10→28→33). Live-run note 2026-09-17: mother-first targeting recommended; wave-clear attrition loses to its Strength ramp. ZH: 直飞产卵虫.
+- Larvae 幼虫 (Ovicopter hatchlings; 19–21 HP live): MINION_POWER; NIBBLE-class single attack 4 base, Strength grows each cycle (live 4→6). Death does not end combat. ZH: 幼虫.
+- Live ZH name folds: ThievingHopper 偷窃草蜢; HauntedShip 幽灵船; BowlbugRock 盛碗虫（石）; BowlbugNectar 盛碗虫（蜜）; GremlinMerc 地精佣兵; TerrorEel-class eel quartet 花园幽灵鳗 (Act1 elite (7,1) live: 27–31 HP ×4, SKITTISH_POWER, intents 1×3/5/7/Buff); Act1 mud-snail 淤泥旋螺 (39 HP live, Debuff+5 intent cycle, class unidentified — live observation only); WaterfallGiant 瀑布巨兽 — live 2026-09-17 appeared as the ACT 1 BOSS (epoch content; table entry above is Act4-labeled — game is authoritative). Post-death dummy pattern: 999999999/999999999 HP + Stun intent, EXPLODE deathblow ~51 (tankable with block; combat ends after).

@@ -82,3 +82,5 @@ Target: `self` / `any player` / `any enemy` / `ALL enemies`. ALL-enemies potions
 - PotionOfBinding's OnUse reads its vars swapped (`WeakPower` applied with the Vulnerable value and vice versa) but both values are 1 — effect is 1 Weak + 1 Vulnerable on all enemies.
 - FlexPotionPower / SpeedPotionPower are subclasses of Temporary Strength/Dexterity; ShacklingPotionPower is a negative-side temporary Strength.
 - BloodPotion, FruitJuice, EntropicBrew are `AnyTime`; FairyInABottle is `Automatic`.
+
+- Potion-Shaped Rock (PetrifiedToad spawn, combat, any enemy): deal 15 unpowered damage. Petrified Toad grants 1 at every combat start; slots can stack multiple rocks. Targeted like a normal single-enemy potion (pass target_combat_id); potion slot reindexes after each use.
