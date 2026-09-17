@@ -14,7 +14,7 @@ the skill is triggered, the agent reads the run state, makes decisions, and
 operates the game until the run ends — then writes the run's memory note
 (Summary + review) and starts the next run.
 
-# Current best records
+## Current best records
 
 | Character | Record |
 |---|---|
