@@ -66,7 +66,7 @@
 - 奥利哈钢（Orichalcum，Uncommon）：回合结束时，若没有格挡，获得 6 格挡。
 - 精致折扇（OrnamentalFan，Uncommon）：单回合每打出 3 张攻击牌，获得 4 格挡。
 - 缩放仪（Pantograph，Uncommon）：Boss 战开始时，回复 25 HP。
-- 纸蛙（PaperPhrog，Uncommon，Ironclad）：带 Vulnerable 的敌人受到的攻击伤害 +75%（原 +50%）。
+- 纸蛙（PaperPhrog，Uncommon，Ironclad）：带 Vulnerable 的敌人受到的攻击伤害 +75%（原 +50%）。run-17 实测（A1 2026-09-17）：与残酷能力（+25%）加法叠加 → 易伤目标受到攻击伤害 +100%（×2.0）— 实测 Strike 6→12、御血术 15→30、Bludgeon+ 42→84。
 - 招架盾（ParryingShield，Uncommon）：回合结束时，若有至少 10 格挡，对随机敌人造成 6 点伤害。
 - 梨子（Pear，Uncommon）：拾取时，+10 最大 HP。
 - 钢笔尖（PenNib，Uncommon）：每打出的第 10 张攻击牌造成双倍伤害。
