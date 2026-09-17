@@ -79,6 +79,21 @@ one or two sentences covering the run's biggest gain and biggest loss:
 - The single biggest win of the run
 - The single biggest loss of the run
 
+## SL count (user directive 2026-09-17)
+
+Every run note MUST record the run's SL (save/load) count — the number of
+times the run was restored via `continue_run` / game relaunch mid-run (0 if
+the game process held the whole run). Record it in BOTH places:
+
+- The run note's Summary table (`SL count` field) — plus a one-line note of
+  what was SL'd and why when the count is > 0
+- The overview.md table (new `SL 次数` column) for that run's row
+
+Count rule: each `continue_run` after a game-process interruption = +1. A
+fresh `start_run` begins a new count. For runs recorded before this rule
+existed, mark the overview cell 未记录 unless a memory note already documents
+the number.
+
 ## When to consult memory
 
 Memory is consulted throughout the whole play process — it is a standing

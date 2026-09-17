@@ -399,7 +399,7 @@ listed below as X.
 - CRASH_LANDING: 1, attack, rare, deal 21 damage to ALL enemies; fill your hand with Debris. Upgrade: +5 damage.
 - CRESCENT_SPEAR: 1, attack, common, deal damage = 8 + 2 per card you own with a Star cost. Upgrade: +1 per Star-cost card.
 - CRUSH_UNDER: 1, attack, common, deal 7 damage to ALL enemies; they lose 1 Strength this turn. Upgrade: +1 damage, lose 2 Strength.
-- DECISIONS_DECISIONS: 0, skill, rare, Exhaust, draw 3 cards; play a chosen Skill 3 times. Upgrade: draw 5.
+- DECISIONS_DECISIONS: 0, skill, rare, Exhaust, draw 3 cards; play a chosen Skill 3 times (chosen Skill replays cost no Energy — live 2026-09-17: 3×Bulwark = 36 Block + 30 Forge in one action). Has a Star cost in addition to the 0 Energy label — bridge reports `StarCostTooHigh` when Stars are insufficient (playable once stars are banked, e.g. after DivineRight/Venerate). Upgrade: draw 5.
 - DEFEND_REGENT: 1, skill, basic, gain 5 Block. Upgrade: +3 Block.
 - DEVASTATE: 1, attack, uncommon, deal 30 damage. Upgrade: +10 damage.
 - DYING_STAR: 1, attack, rare, Ethereal, deal 9 damage to ALL enemies; all enemies lose 9 Strength this turn. Upgrade: +2 damage, lose 11 Strength.

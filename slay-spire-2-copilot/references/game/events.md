@@ -53,7 +53,7 @@ Act ancients (from act sources): Overgrowth = Neow (removed unless `UnlockState.
 - FIELD_OF_MAN_SIZED_HOLES (requires PerfectFit-enchantable card): Resist → remove cards + add Normality curses ×2; EnterYourHole → Enchant PerfectFit on a card.
 - GRAVE_OF_THE_FORGOTTEN (requires enchantable cards): Confront → add Decay curse + Enchant SoulsPower; Accept → ForgottenSoul relic.
 - HUNGRY_FOR_MUSHROOMS: BigMushroom → BigMushroom relic; FragrantMushroom → FragrantMushroom relic.
-- INFESTED_AUTOMATON: Study / TouchCore → add cards to deck.
+- INFESTED_AUTOMATON: Study → add 1 random Power card from your character pool to deck; TouchCore → add 1 random character-pool card filtered by EnergyCost (decomp delegate on `c.EnergyCost`) to deck.
 - LOST_WISP: Search → +60 Gold; Claim → add Decay curse + LostWisp relic.
 - POTION_COURIER (Act >0): GrabPotions / Ransack → potion rewards (FoulPotions var 3).
 - PUNCH_OFF (TotalFloor ≥ 6): Nab → add Injury curse + reward; TakeThem → fight PunchOffEventEncounter.
@@ -65,7 +65,7 @@ Act ancients (from act sources): Overgrowth = Neow (removed unless `UnlockState.
 - ROUND_TEA_PARTY (all players HP ≥ 12): EnjoyTea → RoyalPoison relic + heal; PickFight → 11 unblockable damage + RoyalPoison.
 - SAPPHIRE_SEED: Eat → heal 9 + upgrade; Plant → Enchant Sown.
 - SELF_HELP_BOOK: ReadPassage/ReadEntireBook options enchant Sharp/Nimble/etc.; SkipBook leaves.
-- SLIPPERY_BRIDGE (TotalFloor > 6; removable card required): Overcome → remove 1 random card; HoldOn → take HP loss.
+- SLIPPERY_BRIDGE (TotalFloor > 6; removable card required): Overcome → remove 1 random card; HoldOn → take HP loss = 3 + times HoldOn was already chosen this event (3, 4, 5, … escalating); the event loops HoldOn vs Overcome until Overcome is picked.
 - SPIRALING_WHIRLPOOL (Spiral-enchantable card required): ObserveTheSpiral → Enchant Spiral; Drink → heal.
 - SPIRIT_GRAFTER: LetItIn → heal 25 + add Metamorphosis card; Rejection → upgrade + take 10 damage.
 - STONE_OF_ALL_TIME (Act 1; all players ≥1 potion): Lift → +10 Max HP (drink-potion path); Push → 6 damage + enchant (+8 Vigorous var).

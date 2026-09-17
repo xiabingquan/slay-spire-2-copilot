@@ -18,6 +18,7 @@ run's biggest gain and biggest loss:
 | Ascension |  |
 | Fixed seed used |  |
 | Seed |  |
+| SL count |  |
 
 Biggest gain / loss: (one or two sentences — the single biggest win of the
 run and the single biggest loss)

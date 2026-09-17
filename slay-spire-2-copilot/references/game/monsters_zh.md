@@ -41,7 +41,7 @@
 - BygoneEffigy（旧日雕像, Act1 BygoneEffigyElite; 127 HP）：SLEEP_MOVE（初始）睡眠 → WAKE_MOVE 增益（自身 +10 力量）→ SLASHES_MOVE = 单次攻击 13 (A:15)，SLASHES 自循环。被动 SlowPower：你本回合每打出一张牌，其受到你有源攻击的伤害 +10%（其阵营回合开始时计数清零）——多打牌后爆发。
 - KinPriest（同族神官, Act1 TheKinBoss leaderSlot; 190 HP）：ORB_OF_FRAILTY_MOVE = 单次攻击 8 (A:9) + 1 Frail；ORB_OF_WEAKNESS_MOVE = 单次攻击 8 (A:9) + 1 Weak；BEAM_MOVE = 多段攻击 3 ×3；RITUAL_MOVE = 增益 自身 +2 力量 (A:3)。循环 Frail球 → Weak球 → BEAM → RITUAL。
 - KinFollower（同族信徒, Act1 TheKinBoss slot1+slot2——神官两侧各 1; 58–59 HP）：QUICK_SLASH_MOVE = 单次攻击 5；BOOMERANG_MOVE = 多段攻击 2 ×2；POWER_DANCE_MOVE = 增益 自身 +2 力量 (A:3)。被动 MinionPower 1。循环 QUICK → BOOMERANG → POWER_DANCE。
-- Vantom（墨影幻灵, Act1 VantomBoss; 173 HP）：INK_BLOT_MOVE = 单次攻击 7 (A:8)；INKY_LANCE_MOVE = 多段攻击 6 (A:7) ×2；DISMEMBER_MOVE = 单次攻击 26 (A:30)；PREPARE_MOVE = 增益 自身 +2 力量。循环 INK_BLOT → INKY_LANCE → DISMEMBER → PREPARE。被动 SlipperyPower（多人时层数 × 玩家数）：充能未耗尽时每次受击 HP 损失上限 1；每次未格挡命中 ≥1 消耗 1 层。
+- Vantom（墨影幻灵, Act1 VantomBoss; 173 HP）：INK_BLOT_MOVE = 单次攻击 7 (A:8)；INKY_LANCE_MOVE = 多段攻击 6 (A:7) ×2；DISMEMBER_MOVE = 单次攻击 26 (A:30)；PREPARE_MOVE = 增益 自身 +2 力量。循环 INK_BLOT → INKY_LANCE → DISMEMBER → PREPARE。被动 SlipperyPower：充能未耗尽时每次受击 HP 损失上限 1；每次未格挡命中 ≥1 消耗 1 层。层数 = 基础 8，进阶 ToughEnemies 时 9（decomp `SlipperyAmt`；多人按 ×玩家数缩放）—— 先用多段/芯片伤害泄层，层尽后再打大单发。
 - CeremonialBeast（仪式兽, Act1 CeremonialBeastBoss; 252 HP）：STAMP_MOVE = 增益——自身 PlowPower 150 (A:160)；PLOW_MOVE = 单次攻击 18 (A:20) + 增益，自循环；STUN_MOVE = 眩晕苏醒；BEAST_CRY_MOVE = 减益——对全体玩家 RingingPower 1；STOMP_MOVE = 单次攻击 15 (A:17)；CRUSH_MOVE = 单次攻击 17 (A:19) + 自身 +3 力量 (A:4)。流程：STAMP → PLOW（循环）——PlowPower：拥有者受到未格挡伤害且当前 HP ≤ Plow 阈值（150）时，移除全部力量（含临时）并被眩晕 → STUN → BEAST_CRY → STOMP → CRUSH → BEAST_CRY…。RingingPower：你的所有卡牌获得 Ringing 词缀——持续期间每回合只能起手打出 1 张牌；你的回合结束时移除。
 
 ## 第二章 — 虫巢

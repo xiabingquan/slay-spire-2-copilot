@@ -56,7 +56,7 @@
 - FIELD_OF_MAN_SIZED_HOLES（人形洞穴之地；要求存在 PerfectFit 可附魔卡）：Resist → 移除卡牌 + 加入 2 张 Normality 诅咒；EnterYourHole → 对卡牌附魔 PerfectFit。
 - GRAVE_OF_THE_FORGOTTEN（遗忘之墓；要求存在可附魔卡）：Confront → 加入 Decay 诅咒 + 附魔 SoulsPower；Accept → ForgottenSoul 遗物。
 - HUNGRY_FOR_MUSHROOMS（蘑菇饥渴）：BigMushroom → BigMushroom 遗物；FragrantMushroom → FragrantMushroom 遗物。
-- INFESTED_AUTOMATON（被寄生的自动机械）：Study / TouchCore → 向牌库加牌。
+- INFESTED_AUTOMATON（被寄生的自动机械）：Study → 向牌库添加 1 张角色池随机能力牌；TouchCore → 向牌库添加 1 张按能量费用过滤（decomp 对 `c.EnergyCost` 的委托）的角色池随机卡。
 - LOST_WISP（迷失鬼火）：Search → +60 金币；Claim → 加入 Decay 诅咒 + LostWisp 遗物。
 - POTION_COURIER（药水快递员；Act >0）：GrabPotions / Ransack → 药水奖励（FoulPotions 变量 3）。
 - PUNCH_OFF（重拳出击；TotalFloor ≥ 6）：Nab → 加入 Injury 诅咒 + 奖励；TakeThem → 战斗 PunchOffEventEncounter。
@@ -68,7 +68,7 @@
 - ROUND_TEA_PARTY（圆桌茶会；所有玩家 HP ≥ 12）：EnjoyTea → RoyalPoison 遗物 + 回复；PickFight → 11 点不可格挡伤害 + RoyalPoison。
 - SAPPHIRE_SEED（蓝宝石种子）：Eat → 回复 9 + 升级；Plant → 附魔 Sown。
 - SELF_HELP_BOOK（自助指南）：ReadPassage/ReadEntireBook 附魔 Sharp/Nimble 等；SkipBook 离开。
-- SLIPPERY_BRIDGE（滑脚木桥；TotalFloor > 6；要求存在可移除牌）：Overcome → 移除 1 张随机卡；HoldOn → 受到 HP 损失。
+- SLIPPERY_BRIDGE（滑脚木桥；TotalFloor > 6；要求存在可移除牌）：Overcome → 移除 1 张随机卡；HoldOn → 受到 HP 损失 = 3 + 本事件已选 HoldOn 次数（3、4、5……递增）；事件在 HoldOn 与 Overcome 之间循环直到选择 Overcome。
 - SPIRALING_WHIRLPOOL（螺旋漩涡；要求存在 Spiral 可附魔卡）：ObserveTheSpiral → 附魔 Spiral；Drink → 回复。
 - SPIRIT_GRAFTER（灵魂嫁接者）：LetItIn → 回复 25 + 加入 Metamorphosis 卡；Rejection → 升级 + 受到 10 点伤害。
 - STONE_OF_ALL_TIME（永恒之石；Act 1；所有玩家 ≥1 瓶药水）：Lift → +10 最大 HP（饮用药水路径）；Push → 6 点伤害 + 附魔（+8 Vigorous 变量）。
