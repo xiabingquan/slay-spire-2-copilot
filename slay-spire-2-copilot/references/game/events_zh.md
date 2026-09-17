@@ -64,7 +64,7 @@
 - REFLECTIONS（镜中倒影）：TouchAMirror → 对一张牌降级再升级；Shatter → 加牌 + BadLuck 诅咒。
 - RELIC_TRADER（遗物交换商；Act >0；所有玩家 ≥5 件有效遗物）：Top/Middle/Bottom → 交易（移除持有的该槽遗物，获得新的该槽遗物）。
 - ROOM_FULL_OF_CHEESE（满屋芝士；Act 索引 < 2）：Gorge → 加牌；Search → 受到 14 点不可格挡伤害，获得 ChosenCheese 遗物。
-- TANX（Act3 远古赐福房；坦克斯）：从 9 件遗物池中随机展示 3 件 RelicOption——Claws、Crossbow、IronClub、MeatCleaver、Sai、SpikedGauntlets、TanxsWhistle、ThrowingAxe、WarHammer——若牌组中存在 ≥3 张可附魔 Instinct 的卡则追加 TriBoomerang（10 选 3）。坦克斯的哨子 → 向牌组加入 Whistle 卡（3 费攻击、消耗、33 伤害+眩晕目标；升级 +11 伤害）。带刺手甲 → +1 最大能量，但你的能力牌在战斗中 +1 费（与能力密集牌组反协同）。战锤 → 每次精英战斗胜利后，随机升级 4 张可升级的牌组卡。
+- TANX（Act3 远古赐福房；坦克斯）：从 9 件遗物池中随机展示 3 件 RelicOption——Claws、Crossbow、IronClub、MeatCleaver、Sai、SpikedGauntlets、TanxsWhistle、ThrowingAxe、WarHammer——若牌组中存在 ≥3 张可附魔 Instinct 的卡则追加 TriBoomerang（10 选 3）。坦克斯的哨子 → 向牌组加入 Whistle 卡（3 费攻击、消耗、33 伤害+眩晕目标；升级 +11 伤害）。带刺手甲 → +1 最大能量，但你的能力牌在战斗中 +1 费（与能力密集牌组反协同）。战锤 → 每次精英战斗胜利后，随机升级 4 张可升级的牌组卡。**祝福池效果解码（perplexity 2026-09-18, run-23 实测）**：Claws 利爪 → 将至多 6 张牌变形为 Maul（Maul = 5 伤 ×2，本场战斗内伤害递增）；IronClub 铁棒 → 每打出 4 张牌抽 1 张；TriBoomerang 三刃回旋镖 → 选 3 张攻击牌附魔 Instinct（各 −1 能量费用）。run-23 实测选择：TriBoomerang → Bludgeon/Peck/Breakthrough 附魔 Instinct（deck_select 选 3 张后 proceed）；重锤 2 费打开了此后全书 Bash+重锤 同回合线。
 - ROUND_TEA_PARTY（圆桌茶会；所有玩家 HP ≥ 12）：EnjoyTea → RoyalPoison 遗物 + 回复；PickFight → 11 点不可格挡伤害 + RoyalPoison。
 - SAPPHIRE_SEED（蓝宝石种子）：Eat → 回复 9 + 升级；Plant → 附魔 Sown。
 - SELF_HELP_BOOK（自助指南）：三选项已解码（perplexity 2026-09-18，run-23 实测）：**READ_THE_BACK → 为一张攻击牌附魔 Sharp 2（+2 伤害）；READ_PASSAGE → 为一张技能牌附魔 Nimble 2（+2 格挡）；READ_ENTIRE_BOOK → 为一张能力牌附魔 Swift 2（打出时抽 2 张）**。run-20 实测：READ_PASSAGE 池仅技能牌（4×Defend + 重振精神）；重振精神 Nimble 每张被消耗牌 +2 挡（5→7；对附魔副本锻造 7→9——非表中 +7）。run-23 实测：READ_ENTIRE_BOOK 自动指向牌库中唯一能力牌（Rupture）——Swift 2 打出抽 2 战斗内确认。此前「仅两个选项键」的观察是 UI 覆盖不全。
@@ -78,7 +78,7 @@
   （实测：放入普通 Speed Potion → 死灵池 WISP / INVOKE / NEGATIVE_PULSE 三选一）。
   优先消耗身上价值最低的那档药水。
 - SUNKEN_TREASURY（淹水金库）：FirstChest → +60 金币；SecondChest → +333 金币 + Greed 诅咒。
-- SYMBIOTE（共生体；Act >0）：Approach → 对 1 张攻击牌附魔 Corrupted——Corrupted 附魔：有源攻击伤害 ×1.5，但打出时其拥有者受到 2 点不可格挡无来源伤害；KillWithFire → 变形 1 张选定牌。
+- SYMBIOTE（共生体；Act >0）：Approach → 对 1 张攻击牌附魔 Corrupted——Corrupted 附魔：有源攻击伤害 ×1.5，但打出时其拥有者受到 2 点不可格挡无来源伤害；KillWithFire → 变形 1 张选定牌。**run-23 A1 实测（2026-09-18）**：Corrupted 的 deck_select 池**排除已带其它附魔的牌**——Bludgeon（已带 TriBoomerang 的 Instinct）未被展示；池内只有未附魔攻击（Strikes/Bash/Spite/Unrelenting/Headbutt/Ashen/Hemo/Feed）。本局选择：Ashen Strike（消耗堆成长 ×1.5 + 每次打出 2 自伤反哺 Rupture/Spite/自成型黏土）。选择后 proceed 确认。
 - TABLET_OF_TRUTH（真理石板）：Smash → 回复 20。Decipher → 递增的最大 HP 阶梯（run-20 A1 实测 2026-09-18）：各级代价 −3/−6/−12 Max HP（翻倍；loc 键 DECIPHER_1/2/3，每级选项"继续解读"），每级均可"放弃"；**任何已完成级别与放弃均未观察到奖励**——实测为纯最大 HP 消耗事件；原一行摘要"失去 3 最大 HP + 升级路径"判定为错误，除非另有来源确认奖励路径，否则应选 Smash。run-20 三级+放弃共付 21 Max HP（85→64）换零收益。
 - THE_ARCHITECT（建筑师；Act3 Boss 节点后的剧情事件）——**EA 结局屏**：到达本事件即代表第三幕 Boss 已被击破、当前 EA 版本所有已实装流程内容全部通关。游戏处于抢先体验阶段，建筑师 Boss 本体尚未实装；PROCEED → HP 0 是 EA 占位收束。机制：对白行走器——每行仅一个 回应/继续 选项（textKey THE_ARCHITECT.dialogue.N）；铁甲战士线为 威胁 → 继续 → PROCEED；PROCEED 将玩家 HP 置 0 → game_over（floor 48）。反编译备注（TheArchitect.cs）：WinRun() 仅播放攻击特效（玩家按 Score 输出伤害数字；Architect '反击'为特效——AnimArchitectAttackIfNecessary 未发出任何 CreatureCmd.Damage）随后 SetLocalPlayerReady() 切章同步；TheArchitectEventEncounter 只生成 Architect 占位体（9999 HP、NOTHING_MOVE 循环、HiddenIntent）——与"Boss 未实装"一致。铁甲战士对白：3 次访问档位，全部 EndAttackers=Both；访问档位由档案 TotalWins/Wins 经 LoadDialogue() 选取。
 - THIS_OR_THAT（这个还是那个？）：Plain → 受到 6 点伤害 + 金币；Ornate → 获得遗物 + 加入 Clumsy 诅咒。
