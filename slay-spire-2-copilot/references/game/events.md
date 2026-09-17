@@ -44,7 +44,7 @@ Act ancients (from act sources): Overgrowth = Neow (removed unless `UnlockState.
 - BUGSLAYER: Extermination → Exterminate card; Squash → Squash card (option effects add those cards).
 - COLORFUL_PHILOSOPHERS (requires >1 unlocked character card pool): offers 3-card reward via OfferCustom.
 - COLOSSAL_FLOWER (all players HP ≥ 19): extract prize options pay Gold from `_prizeCosts`; ObtainPollinousCore → PollinousCore relic; ReachDeeper takes damage then deeper prizes.
-- CRYSTAL_SPHERE (Act >0; all players Gold ≥ 100): UncoverFuture → pay 50 Gold (3-card prophesize flow); PaymentPlan → add Debt curse (6-count plan).
+- CRYSTAL_SPHERE (Act >0; all players Gold ≥ 100): UncoverFuture → pay 50 Gold (3-card prophesize flow); PaymentPlan → add Debt curse (6-count plan). Run-15 live: minigame is an 11×11=121-cell grid, DivinationCount=3 clicks; hidden items seed along the corners' rows/cols at random positions — clicking the corners themselves (cells 0/10/120) yielded zero rewards; treat clicks as ~3/121 lottery, not corner-guaranteed.
 - DENSE_VEGETATION: TrudgeOn → unblockable damage + Gold; Rest → mimic rest-site heal; Fight → DenseVegetationEventEncounter. Vars include HpLoss 8.
 - DOLL_ROOM (Act index 1): ChooseRandom → obtain a doll relic; TakeSomeTime → 5 unblockable damage; Examine → 15 unblockable damage.
 - DOORS_OF_LIGHT_AND_DARK: Light → upgrade 2 cards; Dark → remove 2 cards.
@@ -67,7 +67,7 @@ Act ancients (from act sources): Overgrowth = Neow (removed unless `UnlockState.
 - SELF_HELP_BOOK: ReadPassage/ReadEntireBook options enchant Sharp/Nimble/etc.; SkipBook leaves.
 - SLIPPERY_BRIDGE (TotalFloor > 6; removable card required): Overcome → remove 1 random card; HoldOn → take HP loss = 3 + times HoldOn was already chosen this event (3, 4, 5, … escalating); the event loops HoldOn vs Overcome until Overcome is picked.
 - SPIRALING_WHIRLPOOL (Spiral-enchantable card required): ObserveTheSpiral → Enchant Spiral; Drink → heal.
-- SPIRIT_GRAFTER: LetItIn → heal 25 + add Metamorphosis card; Rejection → upgrade + take 10 damage.
+- SPIRIT_GRAFTER: LetItIn → heal 25 + add Metamorphosis card; Rejection → upgrade + take 10 damage. Run-15 live: LetItIn at 12 HP ended at 57 (+45 observed, refs say heal 25 — Metamorphosis-on-pickup or A1 scaling may add more; recheck if it matters).
 - STONE_OF_ALL_TIME (Act 1; all players ≥1 potion): Lift → +10 Max HP (drink-potion path); Push → 6 damage + enchant (+8 Vigorous var).
 - SUNKEN_STATUE: GrabSword → SwordOfStone relic; DiveIntoWater → +111 Gold, take 7 damage.
 - THE_FUTURE_OF_POTIONS (live 2026-09-17 run-12, Act 2): three options "deposit

@@ -44,7 +44,7 @@ listed below as X.
 - DISMANTLE: 1, attack, uncommon, deal 8 damage; hits twice if the target has Vulnerable. Upgrade: +2 damage.
 - DOMINATE: 1, skill, uncommon, Exhaust, apply 1 Vulnerable; gain Strength equal to the target's Vulnerable stacks. Upgrade: applies 2 Vulnerable.
 - DRUM_OF_BATTLE: 1, skill, uncommon, Exhaust, draw 2 cards; when this card is Exhausted gain 2 Energy. Upgrade: gain 3 Energy on Exhaust.
-- EVIL_EYE: 1, skill, uncommon, Exhaust, gain 8 Block; if you Exhausted a card this turn, gain the Block twice (16 total). Upgrade: +3 Block.
+- EVIL_EYE: 1, skill, uncommon, Exhaust, gain 8 Block; if you Exhausted a card this turn, gain the Block twice (16 total). Upgrade: +3 Block. Run-15 live: Evil Eye's own Exhaust does NOT count for the double trigger — another card must be exhausted earlier the same turn (Tremble/Offering/Bloodletting-with-exhaust etc.); played alone it grants 8, played after a prior Exhaust it grants 16.
 - EXPECT_A_FIGHT: 2, skill, uncommon, gain 1 Energy per Attack in your hand; you cannot gain more Energy this turn. Upgrade: cost 1.
 - FEED: 1, attack, rare, Exhaust, deal 10 damage; if Fatal gain 3 Max HP. Upgrade: +2 damage, +1 Max HP.
 - FEEL_NO_PAIN: 1, power, uncommon, Exhaust, whenever a card is Exhausted gain 3 Block. Upgrade: +4 Block.

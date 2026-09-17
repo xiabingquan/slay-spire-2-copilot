@@ -47,7 +47,7 @@
 - COLOSSAL_FLOWER（巨大花卉；所有玩家 HP ≥ 19）：取蜜选项按 `_prizeCosts` 支付金币；ObtainPollinousCore → PollinousCore 遗物；ReachDeeper 扣血后进入更深层奖励。
 - CRYSTAL_SPHERE（水晶球；Act >0；所有玩家金币 ≥ 100）：UncoverFuture → 支付 50 金币，开启
   CrystalSphereMinigame：11×11=121 格，DivinationCount=3 次点击；隐藏物品 CardReward/Curse/Gold/Potion/Relic
-  经 Rng 播种于四角及其横纵连线（两轮扩展）；揭示后于小游戏 proceed 时统一发放。PaymentPlan → 加入 Debt 诅咒（6 次分期变量）。
+  经 Rng 播种于四角及其横纵连线（两轮扩展）；揭示后于小游戏 proceed 时统一发放。PaymentPlan → 加入 Debt 诅咒（6 次分期变量）。run-15 实测：点击三个角点（格 0/10/120）零命中——物品在线上随机位而非必在角点，视作 ~3/121 抽奖。
 - DENSE_VEGETATION（茂密的植被）：TrudgeOn → 不可格挡伤害 + 金币；Rest → 模拟休息点回复；Fight → DenseVegetationEventEncounter。变量含 HpLoss 8。
 - DOLL_ROOM（玩偶室；Act 索引 1）：ChooseRandom → 获得玩偶遗物；TakeSomeTime → 5 点不可格挡伤害；Examine → 15 点不可格挡伤害。
 - DOORS_OF_LIGHT_AND_DARK（光与暗的门扉）：Light → 升级 2 张牌；Dark → 移除 2 张牌。
@@ -70,7 +70,7 @@
 - SELF_HELP_BOOK（自助指南）：ReadPassage/ReadEntireBook 附魔 Sharp/Nimble 等；SkipBook 离开。
 - SLIPPERY_BRIDGE（滑脚木桥；TotalFloor > 6；要求存在可移除牌）：Overcome → 移除 1 张随机卡；HoldOn → 受到 HP 损失 = 3 + 本事件已选 HoldOn 次数（3、4、5……递增）；事件在 HoldOn 与 Overcome 之间循环直到选择 Overcome。
 - SPIRALING_WHIRLPOOL（螺旋漩涡；要求存在 Spiral 可附魔卡）：ObserveTheSpiral → 附魔 Spiral；Drink → 回复。
-- SPIRIT_GRAFTER（灵魂嫁接者）：LetItIn → 回复 25 + 加入 Metamorphosis 卡；Rejection → 升级 + 受到 10 点伤害。
+- SPIRIT_GRAFTER（灵魂嫁接者）：LetItIn → 回复 25 + 加入 Metamorphosis 卡；Rejection → 升级 + 受到 10 点伤害。run-15 实测：12 HP 接纳后到 57（+45，references 记 +25——Metamorphosis 拾取附加效果或 A1 加成待核）。
 - STONE_OF_ALL_TIME（永恒之石；Act 1；所有玩家 ≥1 瓶药水）：Lift → +10 最大 HP（饮用药水路径）；Push → 6 点伤害 + 附魔（+8 Vigorous 变量）。
 - SUNKEN_STATUE（沉没雕像）：GrabSword → SwordOfStone 遗物；DiveIntoWater → +111 金币，受到 7 点伤害。
 - THE_FUTURE_OF_POTIONS（药水的未来；2026-09-17 run-12 实测，Act 2）：三个选项

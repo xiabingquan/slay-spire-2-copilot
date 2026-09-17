@@ -79,6 +79,20 @@ one or two sentences covering the run's biggest gain and biggest loss:
 - The single biggest win of the run
 - The single biggest loss of the run
 
+## Overview table rules (user directive 2026-09-17)
+
+Every run must also be recorded in `memory/overview.md`, following these
+rules:
+
+- Column order: 角色 | 日期 | **进阶** | 到达楼层 | 胜负 | SL 次数 | 备注
+- The 进阶 (Ascension) column holds a **bare number only** (0, 1, 2, …) —
+  the ascension level the run was actually played at
+- **Newest run goes at the TOP of the table** (reverse chronological
+  order); when appending a new run, insert its row at the top — never at
+  the bottom
+- The ascension recorded in the run note's Summary table, the memory
+  remark, and the overview row must all match
+
 ## SL count (user directive 2026-09-17)
 
 Every run note MUST record the run's SL (save/load) count — the number of
@@ -87,7 +101,7 @@ the game process held the whole run). Record it in BOTH places:
 
 - The run note's Summary table (`SL count` field) — plus a one-line note of
   what was SL'd and why when the count is > 0
-- The overview.md table (new `SL 次数` column) for that run's row
+- The overview.md table (`SL 次数` column) for that run's row
 
 Count rule: each `continue_run` after a game-process interruption = +1. A
 fresh `start_run` begins a new count. For runs recorded before this rule
