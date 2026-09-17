@@ -85,7 +85,13 @@
   - FlailKnight 连枷骑士：WAR_CHANT = 增益 自身 +3 力量 → FLAIL_MOVE = 多段 9 (A:10) ×2 → RAM_MOVE = 单次 15 (A:17)。
   - SpectralKnight 幽灵骑士：HEX = 减益 HexPower 2 → SOUL_SLASH = 单次 15 (A:17) → SOUL_FLAME = 多段 3 (A:4) ×3。HexPower：玩家全部卡牌（含之后获得的）附加 Hexed → 施加者存活期间获得虚无；施加者死亡时移除——击杀幽灵骑士即可解除。
   - MagiKnight 魔法骑士：POWER_SHIELD_MOVE = 单次 6 (A:7) + 自身 5 (A:9) 格挡 → DAMPEN_MOVE = 减益 DampenPower（见 powers_zh.md）→ PREP_MOVE = 自身格挡 5 (A:9) → MAGIC_BOMB = 单次 35 (A:40) → RAM_MOVE = 单次 10 (A:11)。
-- DevotedSculptor（DevotedSculptor, Act3 DevotedSculptorElite; 162 HP）：FORBIDDEN_INCANTATION_MOVE = 增益——RitualPower 9 → SAVAGE_MOVE = 单次 12 (A:15)；双状态循环。Ritual 每次增益循环抬升其力量——需速杀。
+- LostThing 失落之物（Act3 与 ForgottenThing 组队; 93 HP）：被动 PossessStrengthPower 1——战斗中跟踪
+  玩家力量值的负向变化（窃取）；持有者死亡时玩家等量返还。起手观察：Debuff;Buff 后进入攻击循环（见 6×2）。
+- ForgottenThing 遗忘之物（Act3 与 LostThing 组队; 106 HP）：被动 PossessSpeedPower 1——对敏捷同套
+  窃取/返还机制。起手：Debuff;Defend;Buff 后单次 15。
+- TorchHeadAggregate 火炬头聚合体（女王 Boss 随从，Act3 Glory; 199 HP）：MinionPower + 力量成长
+  （观察 +2/回合）；意图区间 18 → 12×3 → 16×3 → 24（多段攻击循环）。独立战斗目标——存活时女王战不会结束。
+- DevotedSculptor（DevotedSculptor, Act3 精英 + Act3 普通怪变体（floor37 观察）; 162 HP）：FORBIDDEN_INCANTATION_MOVE = 增益——RitualPower 9 → SAVAGE_MOVE = 单次 12 (A:15)；双状态循环。Ritual 每次增益循环抬升其力量——需速杀。
 - SlimedBerserker（SlimedBerserker, Act3 SlimedBerserkerElite; 261 HP）：VOMIT_ICHOR_MOVE = 状态 10 → LEECHING_HUG_MOVE = 减益 玩家 3 Weak + 增益 自身 +3 力量 → SMOTHER_MOVE = 单次 30 (A:33) → FURIOUS_PUMMELING_MOVE = 多段 4 (A:5) ×4。
 - LivingShield 活体盾（Act3 与高塔炮手组队; 55 HP）：被动 RAMPART_POWER 25——玩家阵营回合开始时，每名存活的 TurretOperator 系盟友（如高塔炮手）获得 25 格挡。必须先杀它，否则炮手格挡每回合回满。
 - TowerGunner 高塔炮手（Act3 与活体盾组队; 41 HP）：出场自带 25 格挡；意图 3×5 多段（15）。活体盾存活期间，其格挡在玩家回合开始时刷新。

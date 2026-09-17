@@ -56,7 +56,7 @@ listed below as X.
 - HEADBUTT: 1, attack, common, deal 9 damage; place a card from your discard pile on top of your draw pile. Upgrade: +3 damage.
 - HELLRAISER: 2, power, rare, Strike-tagged cards you draw are auto-played at a random enemy. Upgrade: cost 1.
 - HEMOKINESIS: 1, attack, uncommon, lose 2 HP (unblockable); deal 15 damage. Upgrade: +5 damage.
-- HOWL_FROM_BEYOND: 3, attack, uncommon, Exhaust, deal 16 damage to ALL enemies; if this card is in your Exhaust pile when the post-play phase begins, it auto-plays. Upgrade: +5 damage.
+- HOWL_FROM_BEYOND: run-7 live note: exhaust-auto-replay did NOT re-fire on the same post-play phase in one observed cast (exhausted, ~1x damage only) — treat auto-replay as conditional until trigger confirmed. 3, attack, uncommon, Exhaust, deal 16 damage to ALL enemies; if this card is in your Exhaust pile when the post-play phase begins, it auto-plays. Upgrade: +5 damage.
 - IMPERVIOUS: 2, skill, rare, Exhaust, gain 30 Block. Upgrade: +10 Block.
 - INFERNAL_BLADE: 1, skill, uncommon, Exhaust, add 1 random Attack from your class pool to your hand; it costs 0 this turn. Upgrade: cost 0.
 - INFERNO: 1, power, uncommon, at start of your turn lose 1 HP (unblockable); whenever you lose HP on your turn deal 6 damage to ALL enemies. Upgrade: deal 9 damage.

@@ -80,6 +80,10 @@ Format: `- POWER_ID (Buff/Debuff): effect.`
 ## Card-bound affliction hosts (see afflictions.md)
 
 - CHAINS_OF_BINDING_POWER (Debuff, Counter): on drawing cards during owner's
+  run-7 live note: beyond roughly 2 effective card-plays per turn, further play-requests returned
+  ok=True server-side but resolved as no-ops (3rd/4th plays dealt no damage) — count real damage
+  landings, not ok=True, when sequencing under Chains.
+
   side turn, afflict up to Amount cards with Bound (per-turn afflicted count
   capped at Amount). While this power is active only 1 Bound card may be
   played per turn; all Bound afflictions clear at end of owner's side turn.
@@ -109,6 +113,9 @@ Format: `- POWER_ID (Buff/Debuff): effect.`
 
 ## Player economy / draw powers
 
+- SKITTISH_POWER (Buff, Counter): if the owner gained no Block this turn and took card-sourced
+  attack damage, the owner gains Amount Block (once per turn; flag resets at end of the opposing
+  side's turn). Mirror of powers_zh.md 同名条目.
 - MIND_ROT_POWER (Debuff, Counter): owner's hand draw each turn reduced by
   Amount (floored at 0): ModifyHandDraw = max(0, count - Amount).
 - WASTE_AWAY_POWER (Debuff, Counter): owner's max Energy reduced by Amount.

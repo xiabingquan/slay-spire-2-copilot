@@ -45,7 +45,10 @@
 - BUGSLAYER（害虫杀手）：Extermination → Exterminate 卡；Squash → Squash 卡。
 - COLORFUL_PHILOSOPHERS（色彩哲学家；要求已解锁角色卡池 >1）：经 OfferCustom 提供 3 张卡奖励。
 - COLOSSAL_FLOWER（巨大花卉；所有玩家 HP ≥ 19）：取蜜选项按 `_prizeCosts` 支付金币；ObtainPollinousCore → PollinousCore 遗物；ReachDeeper 扣血后进入更深层奖励。
-- CRYSTAL_SPHERE（水晶球；Act >0；所有玩家金币 ≥ 100）：UncoverFuture → 支付 50 金币（3 张预言流程）；PaymentPlan → 加入 Debt 诅咒（6 次分期变量）。
+- CRYSTAL_SPHERE（水晶球；Act >0；所有玩家金币 ≥ 100）：UncoverFuture → 支付 50 金币，开启
+  CrystalSphereMinigame：11×11=121 格，DivinationCount=3 次点击；隐藏物品 CardReward/Curse/Gold/Potion/Relic
+  经 Rng 播种于四角及其横纵连线（两轮扩展）；揭示后于小游戏 proceed 时统一发放。bridge 注意：121 格
+  在 state 中均为无名 crystal_cell 节点，揭示内容仅图形可见，代理盲选（run-7 角落簇 0/10/120 观察空奖励）。PaymentPlan → 加入 Debt 诅咒（6 次分期变量）。
 - DENSE_VEGETATION（茂密的植被）：TrudgeOn → 不可格挡伤害 + 金币；Rest → 模拟休息点回复；Fight → DenseVegetationEventEncounter。变量含 HpLoss 8。
 - DOLL_ROOM（玩偶室；Act 索引 1）：ChooseRandom → 获得玩偶遗物；TakeSomeTime → 5 点不可格挡伤害；Examine → 15 点不可格挡伤害。
 - DOORS_OF_LIGHT_AND_DARK（光与暗的门扉）：Light → 升级 2 张牌；Dark → 移除 2 张牌。

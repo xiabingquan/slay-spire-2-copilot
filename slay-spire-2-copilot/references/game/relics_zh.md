@@ -173,7 +173,7 @@
 - 珠宝盒（JewelryBox，Ancient）：拾取时，向牌库加入 1 张 Apotheosis。
 - 万花筒（Kaleidoscope，Ancient）：拾取时，获得来自其他角色的 2 份卡牌奖励。
 - 巨大扭蛋（LargeCapsule，Ancient）：拾取时，获得 2 件随机遗物；向牌库加入 1 张 Strike 和 1 张 Defend。
-- 熔岩石（LavaRock，Ancient）：第一章 Boss 战奖励额外掉落 2 件遗物（一次）。
+- 熔岩石（LavaRock，Ancient）：Boss 战奖励额外掉落 2 件遗物（一次）。原文标注第一章 Boss；run-7 在第二章皇蟹 Boss 奖励屏观察到 +2 遗物按钮——章节标签视为软性（同类 WONGOS 门槛偏差）。
 - 铅制镇纸（LeadPaperweight，Ancient）：拾取时，从 2 张无色牌中选 1 张加入牌库。
 - 树叶药膏（LeafyPoultice，Ancient）：拾取时，变化 1 张 Strike 和 1 张 Defend；失去 12 最大 HP。
 - 布质果实（LoomingFruit，Ancient）：拾取时，+31 最大 HP。

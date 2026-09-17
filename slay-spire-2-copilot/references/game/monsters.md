@@ -84,7 +84,15 @@ Act pools (from `GenerateAllEncounters`):
   - FlailKnight 连枷骑士: WAR_CHANT = buff self +3 Strength → FLAIL_MOVE = multi 9 (A:10) ×2 → RAM_MOVE = single 15 (A:17).
   - SpectralKnight 幽灵骑士: HEX = debuff HexPower 2 on player → SOUL_SLASH = single 15 (A:17) → SOUL_FLAME = multi 3 (A:4) ×3. HexPower: all player cards (and new ones) gain Hexed → Ethereal while the applier lives; removed when the applier dies — kill SpectralKnight to lift it.
   - MagiKnight 魔法骑士: POWER_SHIELD_MOVE = single 6 (A:7) + self 5 (A:9) Block → DAMPEN_MOVE = debuff DampenPower (see powers.md) → PREP_MOVE = self Block 5 (A:9) → MAGIC_BOMB = single 35 (A:40) → RAM_MOVE = single 10 (A:11).
-- DevotedSculptor (DevotedSculptor, Act3 DevotedSculptorElite; 162 HP): FORBIDDEN_INCANTATION_MOVE = buff — RitualPower 9 → SAVAGE_MOVE = single 12 (A:15); two-state loop. Ritual ramps its strength every buff cycle — kill fast.
+- LostThing 失落之物 (Act3 pair with ForgottenThing; 93 HP): passive PossessStrengthPower 1 — tracks
+  negative Strength-power changes on the player during combat (steals); on holder death the player
+  regains the stolen amounts. Openers observed: Debuff;Buff then attack cycles (6×2 seen).
+- ForgottenThing 遗忘之物 (Act3 pair with LostThing; 106 HP): passive PossessSpeedPower 1 — same
+  steal/refund pattern for Dexterity. Opener: Debuff;Defend;Buff then single 15.
+- TorchHeadAggregate 火炬头聚合体 (Queen-boss minion, Act3 Glory; 199 HP): MinionPower + Strength
+  ramp (+2/turn observed); intents 18 → 12×3 → 16×3 → 24 range (multi-attack cycles). Counts as a
+  separate combat target; Queen fight does not end while it lives.
+- DevotedSculptor (DevotedSculptor, Act3 DevotedSculptorElite AND Act3 regular-monster variant observed floor37; 162 HP): FORBIDDEN_INCANTATION_MOVE = buff — RitualPower 9 → SAVAGE_MOVE = single 12 (A:15); two-state loop. Ritual ramps its strength every buff cycle — kill fast.
 - SlimedBerserker (SlimedBerserker, Act3 SlimedBerserkerElite; 261 HP): VOMIT_ICHOR_MOVE = Status 10 → LEECHING_HUG_MOVE = debuff 3 Weak on player + buff self +3 Strength → SMOTHER_MOVE = single 30 (A:33) → FURIOUS_PUMMELING_MOVE = multi 4 (A:5) ×4.
 - LivingShield 活体盾 (Act3 LivingShieldNormal-pair encounter; 55 HP): passive RAMPART_POWER 25 — at start of Player side turn each living TurretOperator-type ally (e.g. TowerGunner) gains 25 Block. Kill it first or the gunner's block regenerates every turn.
 - TowerGunner 高塔炮手 (Act3 pair with LivingShield; 41 HP): starts with 25 Block; intent 3×5 multi attack (15). RAMPART-fed block refreshes each player-turn start while LivingShield lives.

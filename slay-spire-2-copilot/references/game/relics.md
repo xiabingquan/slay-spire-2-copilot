@@ -173,7 +173,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Jewelry Box (JewelryBox, Ancient): on pickup, add 1 Apotheosis to deck.
 - Kaleidoscope (Kaleidoscope, Ancient): on pickup, gain 2 card rewards from other characters.
 - Large Capsule (LargeCapsule, Ancient): on pickup, gain 2 random relics; add 1 Strike and 1 Defend to deck.
-- Lava Rock (LavaRock, Ancient): Act 1 boss combat rewards gain 2 additional relics (once).
+- Lava Rock (LavaRock, Ancient): boss combat rewards gain 2 additional relics (once). Refs text said Act 1 boss; run-7 observed the +2-relic reward buttons at the Act-2 KaiserCrab screen — treat the act label as soft (same class as WONGOS act-gate).
 - Lead Paperweight (LeadPaperweight, Ancient): on pickup, choose 1 of 2 Colorless cards to add to deck.
 - Leafy Poultice (LeafyPoultice, Ancient): on pickup, transform 1 Strike and 1 Defend; lose 12 Max HP.
 - Looming Fruit (LoomingFruit, Ancient): on pickup, +31 Max HP.

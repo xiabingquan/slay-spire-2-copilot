@@ -31,6 +31,10 @@ hook 逻辑、`CanonicalVars` 数值）核实。下文「Amount」= power 上显
 - PLATING_POWER（镀甲，Buff，Counter）：持有者阵营回合开始时 -1 层
   （联机下敌方按 `Decrement`=玩家数 扣层）；阵营回合结束（early）时获得
   Amount 格挡。开局即带镀甲的敌人在第 1 轮还会获得 Amount 格挡。
+- DISINTEGRATION（卡牌施加）：见 afflictions.md——知识恶魔对白选项卡施加 DISINTEGRATION_POWER 6。
+- COUNTER / 卡牌宿主杂项：触发数额见宿主卡牌。
+- FURNACE / 锻造相关：见 FURNACE_POWER、HAMMER_TIME_POWER。
+- FOCUS / 充能球套件：见 FOCUS_POWER。
 - REGEN_POWER（再生，Buff，Counter）：持有者阵营回合结束时回复 Amount
   HP，随后 -1 层。
 - INTANGIBLE_POWER（虚无，Buff，Counter）：持有者每次受到的伤害/HP 损失
@@ -66,7 +70,10 @@ hook 逻辑、`CanonicalVars` 数值）核实。下文「Amount」= power 上显
 
 ## 卡牌绑定减益宿主（另见 afflictions_zh.md）
 
-- CHAINS_OF_BINDING_POWER（束缚之链，Debuff，Counter）：持有者阵营回合内
+- CHAINS_OF_BINDING_POWER
+  run-7 实机备注：每回合约 2 次有效出牌后，后续出牌请求服务端返回 ok=True 但结算为空（第 3/4 张无伤害）——
+  连锁下按真实伤害落点计数，勿以 ok=True 计数。
+（束缚之链，Debuff，Counter）：持有者阵营回合内
   抽牌时，最多 Amount 张牌被附加 Bound（本回合已附加数达到 Amount 后停止）。
   power 生效期间每回合只能打出 1 张 Bound 牌；持有者阵营回合结束时清除
   所有 Bound。
