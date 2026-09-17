@@ -99,6 +99,12 @@ hook 逻辑、`CanonicalVars` 数值）核实。下文「Amount」= power 上显
 - VITAL_SPARK_POWER（Buff，Counter，位于敌方）：战斗开始及进入战斗时给
   玩家技能牌附加 Tainted（Amount）；打出 Tainted 牌时对其拥有者施加
   TAINTED_POWER Amount。
+- PERSONAL_HIVE_POWER（个人蜂巢，Buff，Counter，位于敌方）：拥有者每次被
+  有源攻击命中时，攻击者的抽牌堆随机位置加入 Amount 张 Dazed。
+  PHEROMONE_SPIT（蜂群术士）在同一次增益中把 Amount +1 并赋予力量。
+  run-24 A1 实测（2026-09-18）：层数经 `PERSONAL_HIVE_POWER:n` 可见；
+  信息素后 n=2，每张有源攻击牌代价 2 张 Dazed——多段攻击按命中次数计税。
+  在 Buff 回合结束前击杀蜂群术士，否则蜂群意图在翻倍 Dazed 税之上还随力量上涨。
 
 ## 玩家经济 / 抽牌类 power
 

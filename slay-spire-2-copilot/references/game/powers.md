@@ -110,6 +110,14 @@ Format: `- POWER_ID (Buff/Debuff): effect.`
 - VITAL_SPARK_POWER (Buff, Counter, on the enemy): player Skill cards are
   afflicted with Tainted (Amount) at combat start and on entering combat;
   playing a Tainted card applies TAINTED_POWER Amount to the card's owner.
+- PERSONAL_HIVE_POWER (Buff, Counter, on the enemy): whenever the owner is hit
+  by a powered attack, the attacker gets Amount Dazed added to their draw pile
+  at a random position. PHEROMONE_SPIT (Entomancer) increments Amount by 1 and
+  grants Strength on the same buff. Run-24 A1 live (2026-09-18): stacks visible
+  as `PERSONAL_HIVE_POWER:n`; after the spit n=2, so every powered-attack card
+  costs 2 Dazed — multi-hit attacks are taxed per hit. Kill the Entomancer
+  before the buff turn, or the bees intent rises with Strength on top of the
+  doubled Dazed tax.
 
 ## Player economy / draw powers
 
