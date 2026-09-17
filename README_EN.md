@@ -43,6 +43,7 @@ Run logs are written to the given folder as `run-20260916-013052-a3f9c012.log`
 
     slay-spire-2-copilot/                  (repo root)
       README.md / README_EN.md
+      doctor.md                            (documentation health-check checklist)
       .gitignore
       slay-spire-2-copilot/                (skill folder — all runtime files)
         SKILL.md                           (skill definition / invocation contract)
@@ -54,6 +55,14 @@ Run logs are written to the given folder as `run-20260916-013052-a3f9c012.log`
         memory/                            (run memory: user guide, per-run notes)
 
 Skill symlink: `~/.claude/skills/slay-spire-2-copilot` → the skill folder above.
+
+Doc health check: [doctor.md](doctor.md) at the repo root is a
+documentation-organization checklist — README stays a project overview;
+`mod/` and `bridge/` stay code-only; run memory is written only under
+`memory/runs/`; `references/game/` keeps static material only. How to run:
+have the agent execute the checklist (e.g. "run doctor.md") and fix
+violations. When to run: after each run ends, before committing documentation
+changes, or whenever files look misplaced.
 
 ## Acknowledgements
 

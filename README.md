@@ -38,6 +38,7 @@ Spire 2 via Claude Code or Codex"。
 
     slay-spire-2-copilot/                  （仓库根目录）
       README.md / README_EN.md
+      doctor.md                            （文档体检清单）
       .gitignore
       slay-spire-2-copilot/                （skill 文件夹 — 全部运行时文件）
         SKILL.md                           （skill 定义 / 调用契约）
@@ -49,6 +50,12 @@ Spire 2 via Claude Code or Codex"。
         memory/                            （对局记忆：user guide、每局记录）
 
 skill 符号链接：`~/.claude/skills/slay-spire-2-copilot` → 上述 skill 文件夹。
+
+文档体检：仓库根目录的 [doctor.md](doctor.md) 是文档组织结构检查清单——README 只做
+项目综述、`mod/` 与 `bridge/` 只放代码、对局记忆只写入 `memory/runs/`、
+`references/game/` 只保留静态资料。使用方法：让 agent 按清单执行（如 "run
+doctor.md"）并修正违规。触发时机：每局对局结束后、提交文档改动前，或怀疑文档
+放错位置时。
 
 ## 致谢
 
