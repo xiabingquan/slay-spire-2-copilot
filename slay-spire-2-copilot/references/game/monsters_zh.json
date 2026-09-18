@@ -9695,6 +9695,126 @@
     "play_notes": "",
     "source": "md:monsters.md:L83"
   },
+  "PHANTASMAL_GARDENER": {
+    "acts": [
+      "Act1"
+    ],
+    "aliases": [
+      "花园幽灵鳗",
+      "花园幽灵鳗四件组",
+      "TerrorEel",
+      "EelQuartet"
+    ],
+    "curated": true,
+    "cycle": [
+      "FLAIL_MOVE",
+      "ENLARGE_MOVE",
+      "BITE_MOVE",
+      "LASH_MOVE"
+    ],
+    "description": "Act1 精英四件套（4 只同 model_id PHANTASMAL_GARDENER）。live run-37：全员 SKITTISH_POWER:6——每回合首次命中该生物的攻击牌结算后 +6 挡；多段单指令规则：同一攻击指令内全部命中先于 Skittish 挡结算（Dismantle/FightMe 双击穿透）。四鳗同循环不同相位：FLAIL→ENLARGE→BITE→LASH。ENLARGE=Buff +2 力量；BITE=单击（live 5→7[base5]）；LASH=单击 7 档（live 7→9[base7]）；FLAIL=多段 1×3（live 随力量升至 3×3）。",
+    "hp": {
+      "base": "26-31 each",
+      "notes": "live run-37 quartet 27/26/29/30"
+    },
+    "id": "PHANTASMAL_GARDENER",
+    "is_boss": false,
+    "is_elite": true,
+    "kind": "monster",
+    "moves": {
+      "BITE_MOVE": {
+        "aliases": [
+          "Bite"
+        ],
+        "curated": true,
+        "description": "single attack; live 5→7[base5] with Str stacks (codex table 13 A:15 — live wins).",
+        "effect": "single attack; live 5→7[base5] with Str stacks (codex table 13 A:15 — live wins).",
+        "follow_up_id": "LASH_MOVE",
+        "id": "BITE_MOVE",
+        "intents": [
+          {
+            "base_damage": 5,
+            "class": "SingleAttackIntent",
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "PHANTASMAL_GARDENER",
+        "name": "Bite",
+        "needs_zh": false,
+        "source": "run-37 live + codex"
+      },
+      "ENLARGE_MOVE": {
+        "aliases": [
+          "Enlarge"
+        ],
+        "curated": true,
+        "description": "Buff: +2 Strength to self (live history: applied 2 STRENGTH_POWER). Free damage window — dump here.",
+        "effect": "Buff: +2 Strength to self (live history: applied 2 STRENGTH_POWER). Free damage window — dump here.",
+        "follow_up_id": "BITE_MOVE",
+        "id": "ENLARGE_MOVE",
+        "intents": [
+          {
+            "type": "Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "PHANTASMAL_GARDENER",
+        "name": "Enlarge",
+        "needs_zh": false,
+        "source": "run-37 live"
+      },
+      "FLAIL_MOVE": {
+        "aliases": [
+          "Flail"
+        ],
+        "curated": true,
+        "description": "multi 1×3 base; live scaled 1×3→3×3 as Enlarge Strength stacked (per-hit shows Str in intent tag multi:Nx3[base1]).",
+        "effect": "multi 1×3 base; live scaled 1×3→3×3 as Enlarge Strength stacked (per-hit shows Str in intent tag multi:Nx3[base1]).",
+        "id": "FLAIL_MOVE",
+        "intents": [
+          {
+            "base_damage": 1,
+            "class": "MultiAttackIntent",
+            "hits": 3,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "PHANTASMAL_GARDENER",
+        "name": "Flail",
+        "needs_zh": false,
+        "source": "run-37 live"
+      },
+      "LASH_MOVE": {
+        "aliases": [
+          "Lash"
+        ],
+        "curated": true,
+        "description": "single 7-class attack; live 7→9[base7] with Str stacks.",
+        "effect": "single 7-class attack; live 7→9[base7] with Str stacks.",
+        "follow_up_id": "FLAIL_MOVE",
+        "id": "LASH_MOVE",
+        "intents": [
+          {
+            "base_damage": 7,
+            "class": "SingleAttackIntent",
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "PHANTASMAL_GARDENER",
+        "name": "Lash",
+        "needs_zh": false,
+        "source": "run-37 live"
+      }
+    },
+    "name": "花园幽灵鳗",
+    "needs_zh": false,
+    "play_notes": "击杀顺序教条（run-37 T8 清场）：从 move_graph.current_move_id 读各鳗相位；攻击意图回合集火攻击者；ENLARGE（buff）窗倾泻伤害；多段指令穿透 Skittish（易伤下 Dismantle / FightMe）。run-21 死于此处的路线几何（无前置休息）——run-37 休息后 61 血 + 药水储备进场，T8 清场。",
+    "source": "run-37 live quartet decode + codex-api /monsters/phantasmal_gardener",
+    "type": "Elite"
+  },
   "PaelsSoldier": {
     "acts": [
       "Act2"
@@ -15607,6 +15727,183 @@
     ],
     "play_notes": "",
     "source": "md:monsters.md:L37"
+  },
+  "WATERFALL_GIANT": {
+    "acts": [
+      "Act1"
+    ],
+    "aliases": [
+      "瀑布巨兽",
+      "WaterfallGiant"
+    ],
+    "curated": true,
+    "cycle": [
+      "PRESSURIZE_MOVE",
+      "STOMP_MOVE",
+      "RAM_MOVE",
+      "SIPHON_MOVE",
+      "PRESSURE_GUN_MOVE",
+      "PRESSURE_UP_MOVE"
+    ],
+    "description": "Act1 Boss。Live（run-37，20 回合战 + run-36 击杀）：全循环 PRESSURIZE_MOVE→STOMP_MOVE→RAM_MOVE→SIPHON_MOVE→PRESSURE_GUN_MOVE→PRESSURE_UP_MOVE→循环。STEAM_ERUPTION_POWER 每敌方回合 +3（起始 15，live 实测 20 回合爬到 69）；EXPLODE 死亡炸药 = 当前 Steam 值，在击杀的下一个敌方回合结算（run-36：击杀回合出现 999999999 假人+眩晕，EXPLODE 于次敌方回合落地——该回合必须备挡）。Siphon 每循环 +10 回血——竞速计划每循环净输出必须 >10。PressureGun 每次出现 +5 递增（live：26→31→36→41）。",
+    "hp": {
+      "base": 240,
+      "notes": "A1 live 240/240; run-36/37 both 240"
+    },
+    "id": "WATERFALL_GIANT",
+    "is_boss": true,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "PRESSURE_GUN_MOVE": {
+        "aliases": [
+          "PressureGun"
+        ],
+        "curated": true,
+        "description": "Attack + buff; GROWS +5 per occurrence — live run-37 tags: 20(A:23) base → atk:26[base25] → 31[base30] → 36[base35] → 41[base40] across repeated cycles. Lethal-class at mid-HP by second cycle; Impervious/厚挡包 required.",
+        "effect": "Attack + buff; GROWS +5 per occurrence — live run-37 tags: 20(A:23) base → atk:26[base25] → 31[base30] → 36[base35] → 41[base40] across repeated cycles. Lethal-class at mid-HP by second cycle; Impervious/厚挡包 required.",
+        "follow_up_id": "PRESSURE_UP_MOVE",
+        "id": "PRESSURE_GUN_MOVE",
+        "intents": [
+          {
+            "base_damage": 20,
+            "base_damage_ascension": {
+              "a1": 23
+            },
+            "class": "SingleAttackIntent",
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "WATERFALL_GIANT",
+        "name": "Pressure Gun",
+        "needs_zh": false,
+        "source": "run-37 live growth chain"
+      },
+      "PRESSURE_UP_MOVE": {
+        "aliases": [
+          "PressureUp"
+        ],
+        "curated": true,
+        "description": "Attack + buff; returns cycle to STOMP. Live tags atk:13→14[base13] as boss Str climbed.",
+        "effect": "Attack + buff; returns cycle to STOMP. Live tags atk:13→14[base13] as boss Str climbed.",
+        "follow_up_id": "STOMP_MOVE",
+        "id": "PRESSURE_UP_MOVE",
+        "intents": [
+          {
+            "base_damage": 13,
+            "base_damage_ascension": {
+              "a1": 14
+            },
+            "class": "SingleAttackIntent",
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "WATERFALL_GIANT",
+        "name": "Pressure Up",
+        "needs_zh": false,
+        "source": "run-37 live"
+      },
+      "PRESSURIZE_MOVE": {
+        "aliases": [
+          "Pressurize"
+        ],
+        "curated": true,
+        "description": "Buff: +4 Strength race timer (run-36 archive; live run-37 T1 showed intent=buff + STEAM_ERUPTION_POWER:15 applied same enemy turn).",
+        "effect": "Buff: +4 Strength race timer (run-36 archive; live run-37 T1 showed intent=buff + STEAM_ERUPTION_POWER:15 applied same enemy turn).",
+        "follow_up_id": "STOMP_MOVE",
+        "id": "PRESSURIZE_MOVE",
+        "intents": [
+          {
+            "type": "Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "WATERFALL_GIANT",
+        "name": "Pressurize",
+        "needs_zh": false,
+        "source": "run-37 live + run-36 archive"
+      },
+      "RAM_MOVE": {
+        "aliases": [
+          "Ram"
+        ],
+        "curated": true,
+        "description": "Single attack; live tags atk:10→11[base10] as boss Str climbed (base 15 archive vs live 10-class — live wins; growth from boss Strength +1 stacks).",
+        "effect": "Single attack; live tags atk:10→11[base10] as boss Str climbed (base 15 archive vs live 10-class — live wins; growth from boss Strength +1 stacks).",
+        "follow_up_id": "SIPHON_MOVE",
+        "id": "RAM_MOVE",
+        "intents": [
+          {
+            "base_damage": 15,
+            "base_damage_ascension": {
+              "a1": 17
+            },
+            "class": "SingleAttackIntent",
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "WATERFALL_GIANT",
+        "name": "Ram",
+        "needs_zh": false,
+        "source": "run-37 live + archive"
+      },
+      "SIPHON_MOVE": {
+        "aliases": [
+          "Siphon"
+        ],
+        "curated": true,
+        "description": "Heal +10 HP; live intent=heal; buff. Free damage window for the player — dump engine here; net race must beat +10/cycle.",
+        "effect": "Heal +10 HP; live intent=heal; buff. Free damage window for the player — dump engine here; net race must beat +10/cycle.",
+        "follow_up_id": "PRESSURE_GUN_MOVE",
+        "id": "SIPHON_MOVE",
+        "intents": [
+          {
+            "type": "Heal"
+          },
+          {
+            "type": "Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "WATERFALL_GIANT",
+        "name": "Siphon",
+        "needs_zh": false,
+        "source": "run-37 live"
+      },
+      "STOMP_MOVE": {
+        "aliases": [
+          "Stomp"
+        ],
+        "curated": true,
+        "description": "Triple-intent live: atk 15/16-class + debuff (applies WEAK_POWER:1 to player) + buff (applies 3 STEAM_ERUPTION_POWER). Live run-37 tags: atk:15; debuff; buff.",
+        "effect": "Triple-intent live: atk 15/16-class + debuff (applies WEAK_POWER:1 to player) + buff (applies 3 STEAM_ERUPTION_POWER). Live run-37 tags: atk:15; debuff; buff.",
+        "follow_up_id": "RAM_MOVE",
+        "id": "STOMP_MOVE",
+        "intents": [
+          {
+            "base_damage": 15,
+            "base_damage_ascension": {
+              "a1": 16
+            },
+            "class": "SingleAttackIntent",
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "WATERFALL_GIANT",
+        "name": "Stomp",
+        "needs_zh": false,
+        "source": "run-37 live"
+      }
+    },
+    "name": "瀑布巨兽",
+    "needs_zh": false,
+    "play_notes": "击杀剧本（run-36 T10 击杀，run-37 T20 死亡）：滚动挡下竞速；击杀后 EXPLODE 回合备同量挡（=Steam 值，run-37 死亡时 Steam 已 69——届时不可挡）；Vuln 续窗（Tremble 类）必须整场预算——run-37 T12 前引擎件耗尽，+5/回合的 Gun 递增关闭竞速。Siphon 回合 = 免费输出窗。消耗包经济决定本战：run-37 的 TrueGrit 随机税在三个关键时刻吃掉 Bash/FightMe/EvilEye。",
+    "source": "run-36 kill + run-37 live 20-turn decode; codex-api cross-ref",
+    "type": "Boss"
   },
   "WaterfallGiant": {
     "acts": [],

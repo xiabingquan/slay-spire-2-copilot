@@ -12872,7 +12872,7 @@
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
+    "curated": true,
     "description": "Exhaust, apply 3 Vulnerable. Upgrade: +4 Vulnerable.",
     "id": "TREMBLE",
     "keywords": [
@@ -12881,7 +12881,7 @@
     "kind": "card",
     "name": "Tremble",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "LIVE (run-37): Tremble+ applies Vulnerable 4 TOTAL (not 3+4=7) — live state VULNERABLE_POWER:4 after play; treat upgrade as total-4 duration.",
     "rarity": "common",
     "source": "md:cards.md:L96; md:cards_zh.md",
     "target_type": null,

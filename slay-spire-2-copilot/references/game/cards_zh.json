@@ -11788,7 +11788,7 @@
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
+    "curated": true,
     "description": "1，技能，普通，消耗，施加 3 层易伤。升级：易伤 +4。",
     "id": "TREMBLE",
     "keywords": [
@@ -11797,7 +11797,7 @@
     "kind": "card",
     "name": "战栗",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "LIVE (run-37): Tremble+ applies Vulnerable 4 TOTAL (not 3+4=7) — live state VULNERABLE_POWER:4 after play; treat upgrade as total-4 duration.",
     "rarity": "common",
     "source": "md:cards.md:L96; md:cards_zh.md",
     "target_type": null,
