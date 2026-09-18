@@ -22,7 +22,7 @@ listed below as X.
 - BASH: 2, attack, basic, deal 8 damage; apply 2 Vulnerable. Upgrade: +2 damage, +1 Vulnerable.
 - BATTLE_TRANCE: 0, skill, uncommon, draw 3 cards; you cannot draw additional cards this turn. Upgrade: draw 4.
 - BLOODLETTING: 0, skill, common, lose 3 HP (unblockable); gain 2 Energy. Upgrade: gain 3 Energy.
-- BLOOD_WALL: 2, skill, common, lose 2 HP (unblockable); gain 16 Block. Upgrade: +4 Block.
+- BLOOD_WALL: 2, skill, common, lose 2 HP (unblockable); gain 16 Block. Upgrade: +4 Block. LIVE (run-36): the 2 self-damage fires Inferno's "whenever you lose HP on your turn" AoE same play — used as the KILL INSTRUMENT twice vs Act2 elites (Entomancer died at 1 HP, InfestedPrism at 6 HP; a Snecko-Oil-rolled 0-cost BloodWall closed both fights before enemy damage resolved). With PaelsLegion awake, BloodWall's 16 doubles to 32-class.
 - BLUDGEON: 3, attack, uncommon, deal 32 damage. Upgrade: +10 damage.
 - BODY_SLAM: 1, attack, common, deal damage equal to your Block (0 + 1x Block). Upgrade: cost 0.
 - BRAND: 0, skill, rare, Exhaust, lose 1 HP (unblockable); exhaust a card; gain 1 Strength. Upgrade: +1 Strength.
@@ -70,7 +70,7 @@ listed below as X.
 - OFFERING: 0, skill, rare, Exhaust, lose 6 HP (unblockable); gain 2 Energy; draw 3 cards. Upgrade: draw 5.
 - ONE_TWO_PUNCH: 1, skill, rare, the next Attack you play this turn is played an extra time. Upgrade: extra 2 Attacks. Upgraded ONE_TWO_PUNCH adds the next attack 2 extra times (3 total resolutions — Strike×3 can wipe 21-48 HP adds in one play); Dominate Strength math: on a 0-Vuln target grants roughly +1~2 Strength (applying 1 Vuln), on a target already carrying Vuln stacks the Strength gain equals the post-application stack count — Bash (2 Vuln) then DOMINATE = ~+3 Strength.
 - PACTS_END: 0, attack, rare, deal 17 damage to ALL enemies; only deals damage if your exhaust pile has at least 3 cards. Upgrade: +6 damage.
-- PERFECTED_STRIKE: 2, attack, common, Strike-tagged, deal damage = 6 + 2 for each Strike-tagged card you own. Upgrade: +3 per Strike.
+- PERFECTED_STRIKE: 2, attack, common, Strike-tagged, deal damage = 6 + 2 for each Strike-tagged card you own. Upgrade: +3 per Strike. LIVE (run-36): formula confirmed — with 7-9 Strike-tags in deck plus player Strength plus StrikeDummy +3 (Dummy applies before Vuln multiplier), resolves 23–30 class; TwinStrike copies each add a tag (+2 PS base each).
 - PILLAGE: 1, attack, uncommon, deal 6 damage; then draw cards, repeating while each drawn card is an Attack and your hand is not full. Upgrade: +3 damage.
 - POMMEL_STRIKE: 1, attack, common, Strike-tagged, deal 9 damage; draw 1 card. Upgrade: +1 damage, draw 2.
 - PRIMAL_FORCE: 0, skill, rare, transform all Attack cards in your hand into GiantRock (1-cost token Attack, 16 damage). Upgrade: transformed GiantRocks are upgraded. The transform is combat-scoped — the deck still contains the original attack cards after fights where hand attacks had been transformed (GiantRocks do not permanently replace deck cards).
@@ -90,17 +90,17 @@ listed below as X.
 - SWORD_BOOMERANG: 1, attack, common, deal 3 damage to a random enemy 3 times. Upgrade: 4 hits.
 - TANK: 2, power, rare, other players gain 1 Guarded; you take double attack damage. Upgrade: cost 1.
 - TAUNT: 1, skill, uncommon, gain 7 Block; apply 1 Vulnerable. Upgrade: +1 Block, +1 Vulnerable.
-- TEAR_ASUNDER: 2, attack, rare, deal 5 damage 1 time, plus 1 hit for each time you have received unblocked damage this combat. Upgrade: +2 damage.
+- TEAR_ASUNDER: 2, attack, rare, deal 5 damage 1 time, plus 1 hit for each time you have received unblocked damage this combat. Upgrade: +2 damage. LIVE (run-36 boss mid-fight): single resolution landed 40 damage — the "times" growth formula confirmed; extreme value in long fights where unblocked hits accumulate.
 - THRASH: 1, attack, rare, Exhaust, deal 4 damage twice; exhaust a random Attack in your hand and permanently add its damage to this card. Upgrade: +2 damage.
 - THUNDERCLAP: 1, attack, common, deal 4 damage to ALL enemies; apply 1 Vulnerable to each. Upgrade: +3 damage.
 - TREMBLE: 1, skill, common, Exhaust, apply 3 Vulnerable. Upgrade: +4 Vulnerable.
 - TRUE_GRIT: 1, skill, common, Exhaust, gain 7 Block; exhaust a random card in your hand. Upgrade: +2 Block; exhaust a card of your choice.
 - TWIN_STRIKE: 1, attack, common, Strike-tagged, deal 5 damage twice. Upgrade: +2 damage.
-- UNMOVABLE: 2, power, rare, the first 2 times each turn you gain Block from a card, that Block is doubled. Upgrade: cost 1.
+- UNMOVABLE: 2, power, rare, the first 2 times each turn you gain Block from a card, that Block is doubled. Upgrade: cost 1. LIVE (run-36): power Amount displayed as 1 and observed ONE card-block doubled per turn (Defend 5+Dex→12-class single double); the "first 2 times" table value did not appear — plan on once-per-turn doubling and treat Legion (relic, sleep-cadence) as the second doubling layer, not a stacked ×4 on the same card.
 - UNRELENTING: 2, attack, uncommon, deal 14 damage; your next Attack costs 0. Upgrade: +6 damage.
 - UPPERCUT: 2, attack, uncommon, deal 13 damage; apply 1 Weak and 1 Vulnerable. Upgrade: applies 2 Weak and 2 Vulnerable. With UnsettlingLamp, Uppercut+ as the combat's first debuff card applies **4 Weak / 4 Vulnerable** (2/2 base doubled) — Lamp+Uppercut+ is the premier opener for boss/elite windows when that relic is in play.
 - VICIOUS: 1, power, uncommon, whenever you apply Vulnerable draw 1 card. Upgrade: draw 2.
-- WHIRLWIND: X, attack, uncommon, deal 5 damage to ALL enemies X times. Upgrade: +3 damage. Instances are flat — Strength/Dummy additive is NOT applied per instance (upgraded hits resolve at flat 8/hit); do not plan +Str per Whirlwind instance (contrast multi-hit Strike-tagged cards, which ARE Strength-scalers — see Card interactions).
+- WHIRLWIND: X, attack, uncommon, deal 5 damage to ALL enemies X times. Upgrade: +3 damage. Instances are flat — Strength/Dummy additive is NOT applied per instance (upgraded hits resolve at flat 8/hit); do not plan +Str per Whirlwind instance (contrast multi-hit Strike-tagged cards, which ARE Strength-scalers — see Card interactions). LIVE X-semantics (run-36): compact state displays `cost=0`, but playing it DUMPS ALL remaining energy as X hits — with 1 energy left it dealt 1 hit and consumed the energy (5 base resolved live at 7 with Strength). Never assume cost=0 means a free no-hit play; X = energy spent at play time.
 
 ## Silent
 

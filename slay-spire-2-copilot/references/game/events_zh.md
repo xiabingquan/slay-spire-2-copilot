@@ -50,7 +50,7 @@
   经 Rng 播种于四角及其横纵连线（两轮扩展）；揭示后于小游戏 proceed 时统一发放。PaymentPlan → 加入 Debt 诅咒（6 次分期变量）。小游戏解码：点击三个角点（格 0/10/120）零命中——物品在线上随机位而非必在角点，视作 ~3/121 抽奖。
 - DENSE_VEGETATION（茂密的植被）：TrudgeOn → 不可格挡伤害 + 金币；Rest → 模拟休息点回复；Fight → DenseVegetationEventEncounter。变量含 HpLoss 8。
 - DOLL_ROOM（玩偶室；Act 索引 1）：ChooseRandom → 获得玩偶遗物；TakeSomeTime → 5 点不可格挡伤害；Examine → 15 点不可格挡伤害。
-- DOORS_OF_LIGHT_AND_DARK（光与暗的门扉）：Light → 升级 2 张牌；Dark → 移除 2 张牌。
+- DOORS_OF_LIGHT_AND_DARK（光与暗的门扉）：Light → 升级 2 张牌；Dark → 移除 2 张牌。LIVE（对局 36）：Light 升级的是 **2 张随机牌——玩家不能自选**（实测 Strike+/Defend+ 落地，而 Inferno/Bash 未被升级）。把 Light 当随机收益规划，不要当定向锻造。
 - DROWNING_BEACON（淹水灯塔）：BottleOption → 经奖励获得 GlowwaterPotion；ClimbOption → 失去 13 最大 HP，获得 FresnelLens 遗物。
 - ENDLESS_CONVEYOR（无尽传送带；所有玩家金币 ≥ 120）：菜品处理器：ClamRoll 回复 10；Caviar +4 最大 HP；GoldenFysh +75 金币；SeapunkSalad 加入 FeedingFrenzy；JellyLiver 变形；SpicySnappy 升级；ObserveChef 升级；取餐费用 40 金币。
 - FIELD_OF_MAN_SIZED_HOLES（人形洞穴之地；要求存在 PerfectFit 可附魔卡）：Resist → 移除卡牌 + 加入 2 张 Normality 诅咒；EnterYourHole → 对卡牌附魔 PerfectFit。

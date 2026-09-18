@@ -195,7 +195,7 @@
 - 佩尔之肉（PaelsFlesh，Ancient）：第 3 回合起，每回合 +1 最大能量。
 - 佩尔的增生组织（PaelsGrowth，Ancient）：拾取时，选择 1 张牌附魔 Clone 4；休息点获得 Clone 选项。
 - 佩尔之角（PaelsHorn，Ancient）：拾取时，向牌库加入 2 张 Relax。
-- 佩尔的士兵（PaelsLegion，Ancient）：卡牌获得的格挡翻倍；卡牌为你提供格挡后，该遗物沉睡 2 回合，期间格挡不翻倍。
+- 佩尔的士兵（PaelsLegion，Ancient）：卡牌获得的格挡翻倍；卡牌为你提供格挡后，该遗物沉睡 2 回合，期间格挡不翻倍。LIVE 节奏（对局 36）：**并非每战斗一次**——翻倍→休眠约 2 回合→再翻倍，整场战斗循环。实测：Impervious 30+敏捷在苏醒回合结算 46 与 62 多次；Defend+ 苏醒回合 8→16 级翻倍。events.md 旧文「每战斗首次挡牌翻倍」为**错误**——本条休眠节奏为准。
 - 佩尔之泪（PaelsTears，Ancient）：回合结束时若有未花费的能量，下回合开始获得 2 点能量。
 - 佩尔之牙（PaelsTooth，Ancient）：拾取时，移除 5 张选定牌；每场战斗后随机加回 1 张被移除的牌并升级。
 - 佩尔之翼（PaelsWing，Ancient）：卡牌奖励获得献祭（Sacrifice）选项；每献祭 2 次，获得 1 件遗物。
@@ -235,7 +235,7 @@
 - 烫嘴可可（VeryHotCocoa，Ancient）：第 1 回合开始，获得 +4 能量。
 - 战锤（WarHammer，Ancient）：每次击败精英时，升级牌库中 4 张随机牌。
 - 低语耳环（WhisperingEarring，Ancient）：每回合 +1 最大能量；Vakuu 代你打出第一回合（至多 13 张牌）。
-- 羽翼之靴（WingedBoots，Ancient）：选择行进房间时可忽略路径限制 3 次。
+- 羽翼之靴（WingedBoots，Ancient）：选择行进房间时可忽略路径限制 3 次。LIVE（对局 36）：`map_select` 指向**任意**地图坐标均可成功，无视 `available_map_points` 列表——是完全传送，不限于子节点选择。实用例：(14,3)→(12,6) 商店，再 (12,6)→(15,3) Boss 门，跳过精英走廊；3 跳消耗 2 跳。
 - 美味饼干（YummyCookie，Ancient）：拾取时，升级 4 张选定牌。升级为永久牌库升级（deck_select 叠层——逐张 choose 后 proceed 确认）；该方式升级的 Rupture+ Amount 2 此后每次 Bloodletting/Breakthrough 自伤 +2 力量。
 
 - 腰带扣（BeltBuckle，Shop）：没有药水时，额外 +2 点敏捷（战斗内）。
@@ -273,7 +273,7 @@
 - 宾邦（BingBong，Event）：每次向牌库加入卡牌时，额外加一份拷贝。
 - 骨茶（BoneTea，Event）：接下来 1 场战斗：第 1 回合开始，升级手牌中所有卡牌。
 - 异鸟宝宝（Byrdpip，Event）：拾取时，获得卡牌 Byrd Swoop；战斗中有 Byrdpip 伴随。
-- 天选芝士（ChosenCheese，Event）：战斗结束，+1 最大 HP。每场战斗胜利均触发；与狂宴 Fatel 叠加（芝士 +1/杀 + 狂宴 +3/杀）。由满屋奶酪 Search 选项获得（−14 不可格挡 HP，税精确）。
+- 天选芝士（ChosenCheese，Event）：战斗结束，+1 最大 HP。每场战斗胜利均触发；与狂宴 Fatel 叠加（芝士 +1/杀 + 狂宴 +3/杀）。由满屋奶酪 Search 选项获得（−14 不可格挡 HP，税精确）。LIVE（对局 36）：每场战斗胜利 **+1 Max HP 且 +1 现值 HP**（state 双数值同涨确认）。
 - 黑石护符（DarkstonePeriapt，Event）：每次向牌库加入诅咒时，+6 最大 HP。
 - 风的女儿（DaughterOfTheWind，Event）：每次打出攻击牌时，获得 1 格挡。
 - 捕梦网（DreamCatcher，Event）：在休息点休息时，可以向牌库加入一张牌。

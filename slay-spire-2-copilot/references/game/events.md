@@ -47,7 +47,7 @@ Act ancients (from act sources): Overgrowth = Neow (removed unless `UnlockState.
 - CRYSTAL_SPHERE (Act >0; all players Gold ≥ 100): UncoverFuture → pay 50 Gold (3-card prophesize flow); PaymentPlan → add Debt curse (6-count plan). Minigame decode: 11×11=121-cell grid, DivinationCount=3 clicks; hidden items seed along the corners' rows/cols at random positions — clicking the corners themselves (cells 0/10/120) yielded zero rewards; treat clicks as ~3/121 lottery, not corner-guaranteed.
 - DENSE_VEGETATION: TrudgeOn → unblockable damage + Gold; Rest → mimic rest-site heal; Fight → DenseVegetationEventEncounter. Vars include HpLoss 8.
 - DOLL_ROOM (Act index 1): ChooseRandom → obtain a doll relic; TakeSomeTime → 5 unblockable damage; Examine → 15 unblockable damage.
-- DOORS_OF_LIGHT_AND_DARK: Light → upgrade 2 cards; Dark → remove 2 cards.
+- DOORS_OF_LIGHT_AND_DARK: Light → upgrade 2 cards; Dark → remove 2 cards. LIVE (run-36): Light upgrades **2 RANDOM cards — the player does NOT choose** (observed Strike+ and Defend+ landing while Inferno/Bash sat un-upgraded). Plan Light as random value, not targeted smithing.
 - DROWNING_BEACON: BottleOption → GlowwaterPotion via reward; ClimbOption → lose 13 Max HP, gain FresnelLens relic.
 - ENDLESS_CONVEYOR (all players Gold ≥ 120): dish handlers: ClamRoll heal 10; Caviar +4 Max HP; GoldenFysh +75 Gold; SeapunkSalad adds FeedingFrenzy; JellyLiver transform; SpicySnappy upgrade; ObserveChef upgrade; grab cost 40 Gold.
 - FIELD_OF_MAN_SIZED_HOLES (requires PerfectFit-enchantable card): Resist → remove cards + add Normality curses ×2; EnterYourHole → Enchant PerfectFit on a card.

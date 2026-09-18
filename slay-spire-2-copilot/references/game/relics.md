@@ -195,7 +195,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Pael's Flesh (PaelsFlesh, Ancient): from turn 3 onward, +1 max Energy each turn.
 - Pael's Growth (PaelsGrowth, Ancient): on pickup, choose 1 card to enchant with Clone 4; Rest Sites gain a Clone option.
 - Pael's Horn (PaelsHorn, Ancient): on pickup, add 2 Relax cards to deck.
-- Pael's Legion (PaelsLegion, Ancient): Block gained from your cards is doubled; after a card grants you Block, the relic sleeps 2 turns during which Block is not doubled.
+- Pael's Legion (PaelsLegion, Ancient): Block gained from your cards is doubled; after a card grants you Block, the relic sleeps 2 turns during which Block is not doubled. LIVE cadence (run-36): NOT once-per-combat — double → sleep ~2 turns → double again, repeating all combat. Impervious 30+Dex resolved at 46 and 62 on Legion-awake turns in multiple combats; Defend+ doubled 8→16-class on awake turns. events.md's older "first block-card each combat" line is WRONG — this sleep-cadence entry is authoritative.
 - Pael's Tears (PaelsTears, Ancient): end of turn, if you have unspent Energy, start of next turn gain 2 Energy.
 - Pael's Tooth (PaelsTooth, Ancient): on pickup, remove 5 chosen cards; after each combat, add 1 random removed card back, upgraded.
 - Pael's Wing (PaelsWing, Ancient): card rewards gain a Sacrifice option; every 2 sacrifices, gain 1 relic.
@@ -235,7 +235,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Very Hot Cocoa (VeryHotCocoa, Ancient): at start of turn 1, gain +4 Energy.
 - War Hammer (WarHammer, Ancient): whenever you defeat an elite, upgrade 4 random cards in deck.
 - Whispering Earring (WhisperingEarring, Ancient): +1 max Energy each turn; Vakuu plays your first turn for you (up to 13 cards).
-- Winged Boots (WingedBoots, Ancient): you may ignore map path restrictions 3 times.
+- Winged Boots (WingedBoots, Ancient): you may ignore map path restrictions 3 times. LIVE (run-36): `map_select` to ANY map coordinate succeeds regardless of `available_map_points` — a full teleport, not just child-picking. Used (14,3)→(12,6) shop then (12,6)→(15,3) boss, skipping an elite corridor; 2 of 3 charges consumed.
 - Yummy Cookie (YummyCookie, Ancient): on pickup, upgrade 4 chosen cards. Upgrades are permanent deck upgrades (deck_select overlay — choose each card then proceed to confirm); Rupture upgraded to Amount 2 this way grants +2 Strength on every subsequent Bloodletting/Breakthrough self-damage.
 
 - Belt Buckle (BeltBuckle, Shop): while you have no potions, you have +2 Dexterity (combat).
@@ -273,7 +273,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Bing Bong (BingBong, Event): whenever a card is added to your deck, add an additional copy.
 - Bone Tea (BoneTea, Event): next 1 combat: at start of turn 1, upgrade all cards in hand.
 - Byrdpip (Byrdpip, Event): on pickup, gain the Byrd Swoop card; accompanies you in battles.
-- Chosen Cheese (ChosenCheese, Event): at combat end, +1 Max HP. Procs on EVERY combat victory; stacks with Feed Fatals (ChosenCheese +1/kill + Feed Fatal +3/kill). Obtained from ROOM_FULL_OF_CHEESE Search (−14 unblockable HP, tax exact).
+- Chosen Cheese (ChosenCheese, Event): at combat end, +1 Max HP. Procs on EVERY combat victory; stacks with Feed Fatals (ChosenCheese +1/kill + Feed Fatal +3/kill). Obtained from ROOM_FULL_OF_CHEESE Search (−14 unblockable HP, tax exact). LIVE (run-36): grants +1 Max HP AND +1 current HP each combat victory (state read confirms both numbers move).
 - Darkstone Periapt (DarkstonePeriapt, Event): whenever a Curse is added to your deck, +6 Max HP.
 - Daughter of the Wind (DaughterOfTheWind, Event): whenever you play an Attack card, gain 1 Block.
 - Dream Catcher (DreamCatcher, Event): when Resting at a Rest Site, you may add a card to deck.
