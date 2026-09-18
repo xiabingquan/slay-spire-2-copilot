@@ -1,0 +1,107 @@
+{
+  "DEFECT": {
+    "aliases": [
+      "CHARACTER.DEFECT",
+      "Defect",
+      "故障机器人"
+    ],
+    "card_pool": "DefectCardPool",
+    "curated": false,
+    "description": "75 HP，中性，蓝色。初始遗物：CRACKED_CORE（破损核心）——第 1 回合引导 1 个闪电球（`BeforeSideTurnStart`，条件 `TurnNumber <= 1`）。基础充能球槽：3（`BaseOrbSlotCount`）。初始牌组（10 张）：Strike×4、Defend×4、Zap=电击、Dualcast=双重释放。卡池：DefectCardPool。`UnlocksAfterRunAs => Necrobinder`。",
+    "gold": 99,
+    "hp": 75,
+    "id": "DEFECT",
+    "kind": "character",
+    "name": "故障机器人",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "md:characters.md:L14; md:characters_zh.md:L15",
+    "starter_deck": "Strike ×4, Defend ×4, Zap, Dualcast",
+    "starter_relic": "CRACKED_CORE",
+    "unlocks_after_run_as": "Necrobinder"
+  },
+  "IRONCLAD": {
+    "aliases": [
+      "CHARACTER.IRONCLAD",
+      "Ironclad",
+      "铁甲战士"
+    ],
+    "card_pool": "IroncladCardPool",
+    "curated": false,
+    "description": "80 HP，男性，名称色红。初始遗物：BURNING_BLOOD（燃烧之血）——战斗胜利后回复 6 HP（其升级版 Black Blood=黑暗之血 回复 12）。初始牌组（10 张）：Strike×5、Defend×4、Bash。卡池：IroncladCardPool。`UnlocksAfterRunAs => null`——角色模型层面始终解锁。",
+    "gold": 99,
+    "hp": 80,
+    "id": "IRONCLAD",
+    "kind": "character",
+    "name": "铁甲战士",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "md:characters.md:L12; md:characters_zh.md:L13",
+    "starter_deck": "Strike ×5, Defend ×4, Bash",
+    "starter_relic": "BURNING_BLOOD",
+    "unlocks_after_run_as": null
+  },
+  "NECROBINDER": {
+    "aliases": [
+      "CHARACTER.NECROBINDER",
+      "Necrobinder",
+      "亡灵契约师"
+    ],
+    "card_pool": "NecrobinderCardPool",
+    "curated": false,
+    "description": "66 HP，女性，紫色。初始遗物：BOUND_PHYLACTERY（缚魂命匣）——战斗开始 Summon Osty 1（`BeforeCombatStart`）；后续回合若 Osty 不在场，能量重置后重新召唤（`AfterEnergyResetLate`，第 1 回合除外）。SpawnsPets = true。初始牌组（10 张）：Strike×4、Defend×4、Bodyguard=护卫、Unleash=出击。卡池：NecrobinderCardPool。`UnlocksAfterRunAs => Regent`。",
+    "gold": 99,
+    "hp": 66,
+    "id": "NECROBINDER",
+    "kind": "character",
+    "name": "亡灵契约师",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "md:characters.md:L15; md:characters_zh.md:L16",
+    "starter_deck": "Strike ×4, Defend ×4, Bodyguard, Unleash",
+    "starter_relic": "BOUND_PHYLACTERY",
+    "unlocks_after_run_as": "Regent"
+  },
+  "REGENT": {
+    "aliases": [
+      "CHARACTER.REGENT",
+      "Regent",
+      "储君"
+    ],
+    "card_pool": "RegentCardPool",
+    "curated": false,
+    "description": "75 HP，男性，橙色；星数计数器常显（`ShouldAlwaysShowStarCounter`）。初始遗物：DIVINE_RIGHT（天赋君权）——进入战斗房时 +3 星星（`AfterRoomEntered`）。初始牌组（10 张）：Strike×4、Defend×4、FallingStar=陨星、Venerate=崇拜。卡池：RegentCardPool。`UnlocksAfterRunAs => Silent`。",
+    "gold": 99,
+    "hp": 75,
+    "id": "REGENT",
+    "kind": "character",
+    "name": "储君",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "md:characters.md:L16; md:characters_zh.md:L17",
+    "starter_deck": "Strike ×4, Defend ×4, FallingStar, Venerate",
+    "starter_relic": "DIVINE_RIGHT",
+    "unlocks_after_run_as": "Silent"
+  },
+  "SILENT": {
+    "aliases": [
+      "CHARACTER.SILENT",
+      "Silent",
+      "静默猎手"
+    ],
+    "card_pool": "SilentCardPool",
+    "curated": false,
+    "description": "70 HP，女性，绿色。初始遗物：RING_OF_THE_SNAKE（蛇之戒指）——仅第 1 回合抽牌 +2（`TurnNumber > 1` 返回基础抽牌数）。初始牌组（12 张）：Strike×5、Defend×5、Neutralize=中和、Survivor=生存者。卡池：SilentCardPool。`UnlocksAfterRunAs => null`（源码注释：任意角色完成一局即可解锁她）；名单可用性另受下方 UnlockState 门槛约束。",
+    "gold": 99,
+    "hp": 70,
+    "id": "SILENT",
+    "kind": "character",
+    "name": "静默猎手",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "md:characters.md:L13; md:characters_zh.md:L14",
+    "starter_deck": "Strike ×5, Defend ×5, Neutralize, Survivor",
+    "starter_relic": "RING_OF_THE_SNAKE",
+    "unlocks_after_run_as": null
+  }
+}

@@ -1,0 +1,4359 @@
+{
+  "ACCELERANT_POWER": {
+    "aliases": [
+      "AccelerantPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "inert marker powers — no hooks of their own; queried by specific cards (Shiv / SovereignBlade / TheHunt success marker / theft logic) or by Poison trigger-count math (Accelerant).",
+    "host_of_affliction": false,
+    "id": "ACCELERANT_POWER",
+    "kind": "power",
+    "name": "Accelerant",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": null,
+    "source": "md:powers.md:L429; md:powers_zh.md:L264",
+    "stack_type": null,
+    "zh_description": "自身无 hook——使对面 POISON 的触发 次数 +（对面 AccelerantPower 层数之和），不超过毒层数。",
+    "zh_name": "Accelerant"
+  },
+  "ACCURACY_POWER": {
+    "aliases": [
+      "AccuracyPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "+Amount attack damage on owner's Shiv-tagged attacks (ModifyDamageAdditive; only cards with CardTag.Shiv).",
+    "host_of_affliction": false,
+    "id": "ACCURACY_POWER",
+    "kind": "power",
+    "name": "Accuracy",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L249; md:powers_zh.md:L223",
+    "stack_type": "Counter",
+    "zh_description": "持有者带 Shiv 标签的攻击 +Amount 伤害（ModifyDamageAdditive，仅 CardTag.Shiv）。",
+    "zh_name": "精准"
+  },
+  "ADAPTABLE_POWER": {
+    "aliases": [
+      "ADAPTABLE",
+      "AdaptablePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "Test-Subject-style self-revive — death prevents combat end and creature removal until revive logic completes (monster-hosted state machine; buffs retained).",
+    "host_of_affliction": false,
+    "id": "ADAPTABLE_POWER",
+    "kind": "power",
+    "name": "Adaptable",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L362; md:powers_zh.md:L320",
+    "stack_type": "Single",
+    "zh_description": "Test Subject 式自我复活——死亡时战斗 不结束、生物不移除，直至复活逻辑完成（怪物状态机宿主；增益保留）。",
+    "zh_name": "Adaptable"
+  },
+  "AFTERIMAGE_POWER": {
+    "aliases": [
+      "AFTERIMAGE",
+      "AfterimagePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "after owner plays a card, owner gains Amount Block.",
+    "host_of_affliction": false,
+    "id": "AFTERIMAGE_POWER",
+    "kind": "power",
+    "name": "Afterimage",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L213; md:powers_zh.md:L190",
+    "stack_type": "Counter",
+    "zh_description": "持有者每打出一张牌，获得 Amount 格挡。",
+    "zh_name": "余像"
+  },
+  "AGGRESSION_POWER": {
+    "aliases": [
+      "AGGRESSION",
+      "AggressionPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at start of owner's side turn, take Amount Attack cards from discard, move them to hand and Upgrade each (if upgradable).",
+    "host_of_affliction": false,
+    "id": "AGGRESSION_POWER",
+    "kind": "power",
+    "name": "Aggression",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L166; md:powers_zh.md:L145",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合开始时，从弃牌堆随机 取 Amount 张攻击牌置入手牌并各升级 1 次（可升级时）。",
+    "zh_name": "Aggression"
+  },
+  "ARSENAL_POWER": {
+    "aliases": [
+      "ArsenalPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "on cards generated for combat, applies +Amount STRENGTH (hosted by generating effect).",
+    "host_of_affliction": false,
+    "id": "ARSENAL_POWER",
+    "kind": "power",
+    "name": "Arsenal",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": null,
+    "source": "md:powers.md:L522; md:powers_zh.md:L459",
+    "stack_type": "Counter",
+    "zh_description": "战斗生成卡牌时施加 +Amount STRENGTH （由生成效果宿主触发）。",
+    "zh_name": "Arsenal"
+  },
+  "ARTIFACT_POWER": {
+    "aliases": [
+      "ARTIFACT",
+      "ArtifactPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "each incoming visible Debuff-type power application to owner is set to 0 amount, then 1 Artifact stack is consumed. Invisible/internal debuffs are not blocked.",
+    "host_of_affliction": false,
+    "id": "ARTIFACT_POWER",
+    "kind": "power",
+    "name": "Artifact",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L71; md:powers_zh.md:L62",
+    "stack_type": "Counter",
+    "zh_description": "对持有者施加的可见 Debuff 类 power 数值被置为 0，随后消耗 1 层人工制品。不可见/内部减益不被挡。",
+    "zh_name": "人工制品"
+  },
+  "ASLEEP_POWER": {
+    "aliases": [
+      "ASLEEP",
+      "AsleepPower"
+    ],
+    "counter_class": true,
+    "curated": false,
+    "description": "owner sleeps — if owner takes unblocked damage != 0, owner wakes (removes own Plating if any, stuns self into WakeUpMove, removes Asleep). At end of owner's side turn, Asleep decrements 1; when it hits 0, owner wakes via WakeUpMove. When Asleep <= 1 at turn end, Plating is removed.",
+    "host_of_affliction": false,
+    "id": "ASLEEP_POWER",
+    "kind": "power",
+    "name": "Asleep",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L401; md:powers_zh.md:L353",
+    "stack_type": "Counter",
+    "zh_description": "持有者沉睡——若受到未格挡伤害 != 0，立即醒来（移除自身镀甲（如有）、击晕自己进入 WakeUpMove、移除 Asleep）。持有者阵营回合结束时 Asleep -1 层；归 0 时通过 WakeUpMove 醒来。Asleep <= 1 的回合结束时移除其镀甲。",
+    "zh_name": "沉睡"
+  },
+  "AUTOMATION_POWER": {
+    "aliases": [
+      "AutomationPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "every 10th card drawn by owner grants Amount Energy (counter `BaseCards` 10, then resets to 10).",
+    "host_of_affliction": false,
+    "id": "AUTOMATION_POWER",
+    "kind": "power",
+    "name": "Automation",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L162; md:powers_zh.md:L141",
+    "stack_type": "Counter",
+    "zh_description": "持有者每抽第 10 张牌时获得 Amount 能量（计数 `BaseCards` 10，触发后重置为 10）。",
+    "zh_name": "Automation"
+  },
+  "BACK_ATTACK_LEFT_POWER": {
+    "aliases": [
+      "BACK_ATTACK_LEFT",
+      "BackAttackLeftPower"
+    ],
+    "counter_class": false,
+    "curated": true,
+    "description": "Inert facing marker (Buff, Single) consumed by SURROUNDED_POWER flank checks — the claw carrying this marker hits a Surrounded owner at x1.5 when the owner faces the opposite direction. No hooks of its own.",
+    "host_of_affliction": false,
+    "id": "BACK_ATTACK_LEFT_POWER",
+    "kind": "power",
+    "name": "Back Attack Left",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "curated:powers.md SURROUNDED facing + KaiserCrab",
+    "stack_type": "Single"
+  },
+  "BACK_ATTACK_RIGHT_POWER": {
+    "aliases": [
+      "BACK_ATTACK_RIGHT",
+      "BackAttackRightPower"
+    ],
+    "counter_class": false,
+    "curated": true,
+    "description": "Inert facing marker (Buff, Single) consumed by SURROUNDED_POWER flank checks — the claw carrying this marker hits a Surrounded owner at x1.5 when the owner faces the opposite direction. No hooks of its own.",
+    "host_of_affliction": false,
+    "id": "BACK_ATTACK_RIGHT_POWER",
+    "kind": "power",
+    "name": "Back Attack Right",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "curated:powers.md SURROUNDED facing + KaiserCrab",
+    "stack_type": "Single"
+  },
+  "BARRICADE_POWER": {
+    "aliases": [
+      "BARRICADE",
+      "BarricadePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner's Block is not cleared at turn (ShouldClearBlock always false for owner).",
+    "host_of_affliction": false,
+    "id": "BARRICADE_POWER",
+    "kind": "power",
+    "name": "Barricade",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L196; md:powers_zh.md:L173",
+    "stack_type": "Single",
+    "zh_description": "持有者的格挡不再于回合开始时 清空（ShouldClearBlock 恒 false）。",
+    "zh_name": "壁垒"
+  },
+  "BATTLEWORN_DUMMY_TIME_LIMIT_POWER": {
+    "aliases": [
+      "BATTLEWORN_DUMMY_TIME_LIMIT",
+      "BattlewornDummyTimeLimitPower"
+    ],
+    "counter_class": true,
+    "curated": false,
+    "description": "decrements at end of owner's side turn; at 1, dummy escapes (event encounter logic).",
+    "host_of_affliction": false,
+    "id": "BATTLEWORN_DUMMY_TIME_LIMIT_POWER",
+    "kind": "power",
+    "name": "Battleworn Dummy Time Limit",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L416; md:powers_zh.md:L365",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合 结束时 -1 层；归 1 时木偶逃脱（事件遭遇逻辑）。",
+    "zh_name": "Battleworn Dummy Time Limit"
+  },
+  "BEACON_OF_HOPE_POWER": {
+    "aliases": [
+      "BeaconOfHopePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "the first time owner gains Block on owner's side turn, all allies gain floor-half of that Block amount (amount * 0.5, only if >= 1); triggers once per instance.",
+    "host_of_affliction": false,
+    "id": "BEACON_OF_HOPE_POWER",
+    "kind": "power",
+    "name": "Beacon Of Hope",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L206; md:powers_zh.md:L183",
+    "stack_type": "Single",
+    "zh_description": "持有者在本方阵营回合内首次获得 格挡时，全体队友各获得该格挡量的一半（×0.5，<1 不触发）；每实例仅 触发一次。",
+    "zh_name": "Beacon Of Hope"
+  },
+  "BIASED_COGNITION_POWER": {
+    "aliases": [
+      "BiasedCognitionPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at start of owner's side turn, apply -Amount FOCUS_POWER to owner.",
+    "host_of_affliction": false,
+    "id": "BIASED_COGNITION_POWER",
+    "kind": "power",
+    "name": "Biased Cognition",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L471; md:powers_zh.md:L416",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合 开始时获得 -Amount FOCUS_POWER。",
+    "zh_name": "偏见认知"
+  },
+  "BLACK_HOLE_POWER": {
+    "aliases": [
+      "BlackHolePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "when owner's player spends Stars on a card (last in series) or gains Stars, deal damage to all hittable enemies (amount hosted by DynamicVars).",
+    "host_of_affliction": false,
+    "id": "BLACK_HOLE_POWER",
+    "kind": "power",
+    "name": "Black Hole",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L532; md:powers_zh.md:L469",
+    "stack_type": "Counter",
+    "zh_description": "持有者玩家在卡牌上花费星辰（系列 最后一张）或获得星辰时，对所有可命中敌人造成伤害（数值由 DynamicVars 宿主设定）。",
+    "zh_name": "Black Hole"
+  },
+  "BLOCK_NEXT_TURN_POWER": {
+    "aliases": [
+      "BLOCK_NEXT_TURN",
+      "BlockNextTurnPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "when owner's Block is cleared, gain Amount Block once and remove the power.",
+    "host_of_affliction": false,
+    "id": "BLOCK_NEXT_TURN_POWER",
+    "kind": "power",
+    "name": "Block Next Turn",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L200; md:powers_zh.md:L177",
+    "stack_type": "Counter",
+    "zh_description": "持有者格挡被清空时，获得 Amount 格挡一次并移除该 power。",
+    "zh_name": "Block Next Turn"
+  },
+  "BLUR_POWER": {
+    "aliases": [
+      "BlurPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner's Block is not cleared at turn start; decrements 1 at start of owner's side turn.",
+    "host_of_affliction": false,
+    "id": "BLUR_POWER",
+    "kind": "power",
+    "name": "Blur",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L198; md:powers_zh.md:L175",
+    "stack_type": "Counter",
+    "zh_description": "持有者格挡不清空；持有者阵营回合 开始时 -1 层。",
+    "zh_name": "模糊"
+  },
+  "BORROWED_TIME_POWER": {
+    "aliases": [
+      "BorrowedTimePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "all owner's cards cost +Amount Energy. Removed at end of owner's side turn.",
+    "host_of_affliction": false,
+    "id": "BORROWED_TIME_POWER",
+    "kind": "power",
+    "name": "Borrowed Time",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L184; md:powers_zh.md:L161",
+    "stack_type": "Counter",
+    "zh_description": "持有者所有卡牌费用 +Amount。 持有者阵营回合结束时移除。",
+    "zh_name": "Borrowed Time"
+  },
+  "BUFFER_POWER": {
+    "aliases": [
+      "BUFFER",
+      "BufferPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "next Amount HP-loss events that would deal HP loss to owner deal 0 instead (consumed 1 per prevented loss; late hook, so other reducers apply first).",
+    "host_of_affliction": false,
+    "id": "BUFFER_POWER",
+    "kind": "power",
+    "name": "Buffer",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L48; md:powers_zh.md:L43",
+    "stack_type": "Counter",
+    "zh_description": "接下来 Amount 次会使持有者损失 HP 的事件改为损失 0（每次消耗 1 层；为 late hook，其他减伤先结算）。",
+    "zh_name": "缓冲"
+  },
+  "BURROWED_POWER": {
+    "aliases": [
+      "BURROWED",
+      "BurrowedPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner cannot be targeted/hit — CORRECTION: burrowed creatures CAN be attacked; card damage applies to their Block as normal (Bash/Strike/SPITE all landed). AfterBlockBroken fires when the Block breaks: DIZZY stun + Burrowed removed + all remaining Block cleared, cancelling the burrow attack (BELOW intent). Break the block to cancel the attack; do not avoid attacking burrowed foes. Original archive line: owner cannot be targeted/hit (ShouldAllowHitting false for owner); if owner's Block breaks, owner is stunned into dizzy move and Burrowed is removed; on removal owner loses all Block (999999999).",
+    "host_of_affliction": false,
+    "id": "BURROWED_POWER",
+    "kind": "power",
+    "name": "Burrowed",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L391; md:powers_zh.md:L344",
+    "stack_type": "Single",
+    "zh_description": "持有者不可被选中/命中——**订正**： 潜地目标**可以被攻击**，卡牌伤害正常 作用于其格挡（Bash/Strike/SPITE 均生效）。格挡被打破时触发 AfterBlockBroken： DIZZY 眩晕 + Burrowed 移除 + 清空全部剩余格挡，潜地攻击（BELOW 意图）取消。 打碎挡层即可取消攻击；不要回避攻击潜地目标。 档案原文：持有者不可被选中/命中 （ShouldAllowHitting 对持有者 false）；持有者格挡被击破时，持有者被 击晕进入眩晕招式并移除 Burrowed；移除时持有者失去全部格挡 （999999999）。",
+    "zh_name": "钻地"
+  },
+  "BURST_POWER": {
+    "aliases": [
+      "BurstPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner's next Amount Skill plays count twice (ModifyCardPlayCount +1 per Skill); 1 stack consumed per Skill played; removed at end of owner's side turn.",
+    "host_of_affliction": false,
+    "id": "BURST_POWER",
+    "kind": "power",
+    "name": "Burst",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L473; md:powers_zh.md:L418",
+    "stack_type": "Counter",
+    "zh_description": "持有者接下来 Amount 次技能牌打出 计为 2 次（ModifyCardPlayCount +1）；每打出 1 张技能牌消耗 1 层； 持有者阵营回合结束时移除。",
+    "zh_name": "爆发"
+  },
+  "CALAMITY_POWER": {
+    "aliases": [
+      "CalamityPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "after owner plays an Attack, add Amount random class-pool cards to owner's hand (card generation hosted by source).",
+    "host_of_affliction": false,
+    "id": "CALAMITY_POWER",
+    "kind": "power",
+    "name": "Calamity",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L535; md:powers_zh.md:L472",
+    "stack_type": "Counter",
+    "zh_description": "持有者打出攻击牌后，向其手牌加入 Amount 张随机职业池卡牌（生成逻辑由宿主决定）。",
+    "zh_name": "Calamity"
+  },
+  "CALCIFY_POWER": {
+    "aliases": [
+      "CalcifyPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "+Amount attack damage on owner's attacks (ModifyDamageAdditive; trigger hosted by source).",
+    "host_of_affliction": false,
+    "id": "CALCIFY_POWER",
+    "kind": "power",
+    "name": "Calcify",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L251; md:powers_zh.md:L225",
+    "stack_type": "Counter",
+    "zh_description": "持有者攻击 +Amount 伤害 （ModifyDamageAdditive；触发由宿主决定）。",
+    "zh_name": "Calcify"
+  },
+  "CALL_OF_THE_VOID_POWER": {
+    "aliases": [
+      "CallOfTheVoidPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "before owner's hand draw, add Distinct cards (with keyword application) to owner's hand — source-hosted draw pollution.",
+    "host_of_affliction": false,
+    "id": "CALL_OF_THE_VOID_POWER",
+    "kind": "power",
+    "name": "Call Of The Void",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L537; md:powers_zh.md:L474",
+    "stack_type": "Counter",
+    "zh_description": "持有者手牌抽取前，向其手牌 加入 Distinct 卡（并附加关键词）——宿主驱动的牌组污染。",
+    "zh_name": "Call Of The Void"
+  },
+  "CHAINS_OF_BINDING_POWER": {
+    "affliction_keys": [
+      "BOUND"
+    ],
+    "aliases": [
+      "CHAINS_OF_BINDING",
+      "ChainsOfBindingPower"
+    ],
+    "counter_class": true,
+    "curated": false,
+    "description": "on drawing cards during owner's side turn, afflict up to Amount cards with Bound (per-turn afflicted count capped at Amount). While this power is active only 1 Bound card may be played per turn; all Bound afflictions clear at end of owner's side turn. Sequencing note: beyond roughly 2 effective card-plays per turn, further play-requests returned ok=True server-side but resolved as no-ops (3rd/4th plays dealt no damage) — count real damage landings, not ok=True, when sequencing under Chains.",
+    "host_of_affliction": true,
+    "id": "CHAINS_OF_BINDING_POWER",
+    "kind": "power",
+    "name": "Chains Of Binding",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L86; md:powers_zh.md:L74",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合内 抽牌时，最多 Amount 张牌被附加 Bound（本回合已附加数达到 Amount 后停止）。 power 生效期间每回合只能打出 1 张 Bound 牌；持有者阵营回合结束时清除 所有 Bound。出牌排序备注：每回合约 2 次有效出牌后，后续出牌请求服务端返回 ok=True 但结算为空（第 3/4 张无伤害）——连锁下按真实伤害落点计数，勿以 ok=True 计数。",
+    "zh_name": "束缚之链"
+  },
+  "CHILD_OF_THE_STARS_POWER": {
+    "aliases": [
+      "CHILD_OF_THE_STARS",
+      "ChildOfTheStarsPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "when owner's player spends Stars, owner gains Amount * stars-spent Block.",
+    "host_of_affliction": false,
+    "id": "CHILD_OF_THE_STARS_POWER",
+    "kind": "power",
+    "name": "Child Of The Stars",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L223; md:powers_zh.md:L200",
+    "stack_type": "Counter",
+    "zh_description": "持有者玩家花费星辰时获得 Amount × 花费星辰数 的格挡。",
+    "zh_name": "Child Of The Stars"
+  },
+  "CLARITY_POWER": {
+    "aliases": [
+      "CLARITY",
+      "ClarityPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "+1 hand draw at the start of each of owner's next Amount turns; decrements at each of those turn starts.",
+    "host_of_affliction": false,
+    "id": "CLARITY_POWER",
+    "kind": "power",
+    "name": "Clarity",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L138; md:powers_zh.md:L117",
+    "stack_type": "Counter",
+    "zh_description": "持有者接下来 Amount 个回合的回合开始 各 +1 抽牌；每个触发回合 -1 层。",
+    "zh_name": "Clarity"
+  },
+  "COLOSSUS_POWER": {
+    "aliases": [
+      "COLOSSUS",
+      "ColossusPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "attacks against owner from a dealer that has VULNERABLE_POWER deal x0.5 (`DamageDecrease` 0.5). Decrements 1 at end of Enemy side turn.",
+    "host_of_affliction": false,
+    "id": "COLOSSUS_POWER",
+    "kind": "power",
+    "name": "Colossus",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L235; md:powers_zh.md:L212",
+    "stack_type": "Counter",
+    "zh_description": "来自带有 VULNERABLE_POWER 的 攻击者的攻击对持有者伤害 ×0.5（`DamageDecrease` 0.5）。敌方阵营回合 结束时 -1 层。",
+    "zh_name": "巨像"
+  },
+  "CONFUSED_POWER": {
+    "aliases": [
+      "ConfusedPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "every card drawn by owner (canonical cost >= 0) gets its combat cost rerolled to a random int in 0..3 (`Rng.CombatEnergyCosts.NextInt(4)`).",
+    "host_of_affliction": false,
+    "id": "CONFUSED_POWER",
+    "kind": "power",
+    "name": "Confused",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L61; md:powers_zh.md:L54",
+    "stack_type": "Single",
+    "zh_description": "持有者每次抽到的卡（原费用 >= 0）战斗内费用重掷为 0..3 的随机整数 （`Rng.CombatEnergyCosts.NextInt(4)`）。",
+    "zh_name": "混乱"
+  },
+  "CONQUEROR_POWER": {
+    "aliases": [
+      "CONQUEROR",
+      "ConquerorPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "SovereignBlade attacks against owner deal x2 damage. Decrements at end of owner's side turn.",
+    "host_of_affliction": false,
+    "id": "CONQUEROR_POWER",
+    "kind": "power",
+    "name": "Conqueror",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L261; md:powers_zh.md:L235",
+    "stack_type": "Counter",
+    "zh_description": "SovereignBlade 对持有者的攻击伤害 ×2。持有者阵营回合结束时 -1 层。",
+    "zh_name": "Conqueror"
+  },
+  "CONSTRICT_POWER": {
+    "aliases": [
+      "CONSTRICT",
+      "ConstrictPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at end of owner's side turn, deal Amount unpowered damage to owner. Removed when the applier dies.",
+    "host_of_affliction": false,
+    "id": "CONSTRICT_POWER",
+    "kind": "power",
+    "name": "Constrict",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L321; md:powers_zh.md:L289",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合结束时， 持有者受到 Amount 点非攻击伤害。施加者死亡时移除。",
+    "zh_name": "缩紧"
+  },
+  "CONSUMING_SHADOW_POWER": {
+    "aliases": [
+      "ConsumingShadowPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at end of owner's side turn, if owner's player has orbs, evoke the last orb Amount times.",
+    "host_of_affliction": false,
+    "id": "CONSUMING_SHADOW_POWER",
+    "kind": "power",
+    "name": "Consuming Shadow",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L610; md:powers_zh.md:L541",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合结束时，若 持有者玩家有充能球，将最后一个球激发 Amount 次。",
+    "zh_name": "Consuming Shadow"
+  },
+  "COOLANT_POWER": {
+    "aliases": [
+      "CoolantPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at start of owner's side turn, gain (number of distinct orb types in queue) * Amount Block.",
+    "host_of_affliction": false,
+    "id": "COOLANT_POWER",
+    "kind": "power",
+    "name": "Coolant",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L209; md:powers_zh.md:L186",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合开始时，获得 （球队列中不同球种类数 × Amount）格挡。",
+    "zh_name": "Coolant"
+  },
+  "CORROSIVE_WAVE_POWER": {
+    "aliases": [
+      "CorrosiveWavePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "on card draw hooks, applies Amount POISON to all hittable enemies (source-hosted trigger; see monster move).",
+    "host_of_affliction": false,
+    "id": "CORROSIVE_WAVE_POWER",
+    "kind": "power",
+    "name": "Corrosive Wave",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L297; md:powers_zh.md:L266",
+    "stack_type": "Counter",
+    "zh_description": "抽牌 hook 时对所有可命中敌人 施加 Amount 层 POISON（触发由怪物招式宿主决定）。",
+    "zh_name": "Corrosive Wave"
+  },
+  "CORRUPTION_POWER": {
+    "aliases": [
+      "CorruptionPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner's Skill cards cost 0 and Exhaust when played.",
+    "host_of_affliction": false,
+    "id": "CORRUPTION_POWER",
+    "kind": "power",
+    "name": "Corruption",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L177; md:powers_zh.md:L155",
+    "stack_type": "Single",
+    "zh_description": "持有者的技能牌费用为 0，打出后 消耗（Exhaust）。",
+    "zh_name": "腐化"
+  },
+  "COUNTDOWN_POWER": {
+    "aliases": [
+      "CountdownPower"
+    ],
+    "counter_class": true,
+    "curated": false,
+    "description": "at start of owner's side turn, applies DOOM-related countdown (Apply<DoomPower> to owner — kill clock; see monster card text for displayed number).",
+    "host_of_affliction": false,
+    "id": "COUNTDOWN_POWER",
+    "kind": "power",
+    "name": "Countdown",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L308; md:powers_zh.md:L277",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合开始时触发倒计时 逻辑（decomp 中 Apply<DoomPower> 到持有者——击杀钟；显示数值见怪物 卡面文案）。",
+    "zh_name": "Countdown"
+  },
+  "COVERED_POWER": {
+    "aliases": [
+      "CoveredPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "attacks against owner deal x0 while the covering applier lives; removed at end of Enemy side turn or when applier dies.",
+    "host_of_affliction": false,
+    "id": "COVERED_POWER",
+    "kind": "power",
+    "name": "Covered",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L277; md:powers_zh.md:L248",
+    "stack_type": "Single",
+    "zh_description": "掩护者存活期间对持有者的 攻击伤害 ×0；敌方阵营回合结束或掩护者死亡时移除。",
+    "zh_name": "位于被掩护者"
+  },
+  "CRAB_RAGE_POWER": {
+    "aliases": [
+      "CRAB_RAGE",
+      "CrabRagePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "on death of another creature on owner's side, the surviving owner gains +6 Strength and 99 unpowered Block, then this power removes itself. (KaiserCrab claws; CanonicalVars Strength 6 / Block 99 Unpowered.)",
+    "host_of_affliction": false,
+    "id": "CRAB_RAGE_POWER",
+    "kind": "power",
+    "name": "Crab Rage",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L378; md:powers_zh.md:L333",
+    "stack_type": "Single",
+    "zh_description": "同侧另一生物死亡时，存活的持有者获得 +6 力量与 99 无来源格挡，随后该能力自行移除。（皇蟹双爪；CanonicalVars Strength 6 / Block 99 Unpowered。）",
+    "zh_name": "蟹怒"
+  },
+  "CREATIVE_AI_POWER": {
+    "aliases": [
+      "CreativeAiPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "before owner's hand draw, add Amount distinct Power cards to hand.",
+    "host_of_affliction": false,
+    "id": "CREATIVE_AI_POWER",
+    "kind": "power",
+    "name": "Creative Ai",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L540; md:powers_zh.md:L476",
+    "stack_type": "Counter",
+    "zh_description": "持有者手牌抽取前，加入 Amount 张 不重复的 Power 牌。",
+    "zh_name": "Creative Ai"
+  },
+  "CRIMSON_MANTLE_POWER": {
+    "curated": true,
+    "description": "At start of owner's side turn, owner loses 1 HP (unblockable) and gains Amount Block (card CRIMSON_MANTLE: 8 base, 10 upgraded). The turn-start HP loss fires same-turn HP-loss triggers (Rupture, Self-Forming Clay, Centennial Puzzle class) and counts for Spite/Inferno-style 'lost HP this turn' conditions.",
+    "id": "CRIMSON_MANTLE_POWER",
+    "kind": "power",
+    "name": "Crimson Mantle",
+    "power_type": "Buff",
+    "source": "curated:cards.md CRIMSON_MANTLE + powers doctrine",
+    "stack_type": "Counter"
+  },
+  "CRUELTY_POWER": {
+    "curated": true,
+    "description": "Vulnerable enemies take +Amount% attack damage from owner (card CRUELTY: +25% base, +50% upgraded). Stacks additively with Paper Phrog (+25%) — both active a Vulnerable target takes +100% attack damage (x2.0 total). Multiplies after Strength additions.",
+    "id": "CRUELTY_POWER",
+    "kind": "power",
+    "name": "Cruelty",
+    "power_type": "Buff",
+    "source": "curated:cards.md CRUELTY + relics.md PaperPhrog",
+    "stack_type": "Counter"
+  },
+  "CURIOUS_POWER": {
+    "aliases": [
+      "CuriousPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner's Power cards with cost > 0 cost Amount less (min 0).",
+    "host_of_affliction": false,
+    "id": "CURIOUS_POWER",
+    "kind": "power",
+    "name": "Curious",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L169; md:powers_zh.md:L147",
+    "stack_type": "Counter",
+    "zh_description": "持有者费用 > 0 的 Power 牌费用 -Amount （下限 0）。",
+    "zh_name": "Curious"
+  },
+  "CURL_UP_POWER": {
+    "aliases": [
+      "CURL_UP",
+      "CurlUpPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "when owner would take attack damage from a new card source, owner curls — gains Block (hosted amount) once per incoming card; data resets via card-play tracking (Giant Louse).",
+    "host_of_affliction": false,
+    "id": "CURL_UP_POWER",
+    "kind": "power",
+    "name": "Curl Up",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L589; md:powers_zh.md:L523",
+    "stack_type": "Counter",
+    "zh_description": "持有者将受到来自新卡牌来源的攻击伤害 时蜷缩——获得格挡（数值由宿主设定），每张来袭卡触发一次；数据通过 出牌追踪重置（巨型虱）。",
+    "zh_name": "Curl Up"
+  },
+  "DAMPEN_POWER": {
+    "aliases": [
+      "DAMPEN",
+      "DampenPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "on apply, every upgraded card in the owner's deck is downgraded; the prior upgrade levels are stored in internal data keyed per applier (casters set grows when re-applied). Observed on Act3 MagiKnight — the downgrade persists while the power exists.",
+    "host_of_affliction": false,
+    "id": "DAMPEN_POWER",
+    "kind": "power",
+    "name": "Dampen",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L379; md:powers_zh.md:L334",
+    "stack_type": "None-stack",
+    "zh_description": "施加时，持有者牌库中所有已升级卡牌被降级；原升级等级按施加者记录在内部数据中（重复施加会累加施加者集合）。Act3 魔法骑士使用——降级在能力存续期间持续。",
+    "zh_name": "弱化"
+  },
+  "DANSE_MACABRE_POWER": {
+    "aliases": [
+      "DANSE_MACABRE",
+      "DanseMacabrePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "before owner plays a card, owner gains Amount Block (source-hosted trigger).",
+    "host_of_affliction": false,
+    "id": "DANSE_MACABRE_POWER",
+    "kind": "power",
+    "name": "Danse Macabre",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L221; md:powers_zh.md:L198",
+    "stack_type": "Counter",
+    "zh_description": "持有者出牌前获得 Amount 格挡 （触发由宿主卡牌决定）。",
+    "zh_name": "Danse Macabre"
+  },
+  "DARK_EMBRACE_POWER": {
+    "aliases": [
+      "DARK_EMBRACE",
+      "DarkEmbracePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "draw Amount cards whenever an owner's card is Exhausted; Ethereal-triggered exhausts batch their draws to end of owner's side turn (Amount * ethereal count).",
+    "host_of_affliction": false,
+    "id": "DARK_EMBRACE_POWER",
+    "kind": "power",
+    "name": "Dark Embrace",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L458; md:powers_zh.md:L403",
+    "stack_type": "Counter",
+    "zh_description": "持有者的牌被消耗 （Exhaust）时抽 Amount 张牌；虚无触发的消耗在持有者阵营回合结束时 批量结算（Amount × 虚无触发次数）。",
+    "zh_name": "黑暗之拥"
+  },
+  "DEMESNE_POWER": {
+    "aliases": [
+      "DEMESNE",
+      "DemesnePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "+Amount hand draw per turn AND +Amount max Energy.",
+    "host_of_affliction": false,
+    "id": "DEMESNE_POWER",
+    "kind": "power",
+    "name": "Demesne",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L144; md:powers_zh.md:L123",
+    "stack_type": "Counter",
+    "zh_description": "每回合 +Amount 抽牌 且 +Amount 最大能量。",
+    "zh_name": "Demesne"
+  },
+  "DEMISE_POWER": {
+    "aliases": [
+      "DEMISE",
+      "DemisePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at end of owner's side turn, deal Amount unblockable unpowered damage to owner.",
+    "host_of_affliction": false,
+    "id": "DEMISE_POWER",
+    "kind": "power",
+    "name": "Demise",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L311; md:powers_zh.md:L280",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合结束时，持有者受到 Amount 点不可格挡、非攻击伤害。",
+    "zh_name": "Demise"
+  },
+  "DEMON_FORM_POWER": {
+    "aliases": [
+      "DEMON_FORM",
+      "DemonFormPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at start of owner's side turn, apply +Amount STRENGTH_POWER to owner.",
+    "host_of_affliction": false,
+    "id": "DEMON_FORM_POWER",
+    "kind": "power",
+    "name": "Demon Form",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L456; md:powers_zh.md:L401",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合开始时 获得 +Amount STRENGTH_POWER。",
+    "zh_name": "恶魔形态"
+  },
+  "DEVOUR_LIFE_POWER": {
+    "aliases": [
+      "DevourLifePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "on card-play hooks, OstyCmd.Summon (Amount) — pet summon trigger hosted by source card.",
+    "host_of_affliction": false,
+    "id": "DEVOUR_LIFE_POWER",
+    "kind": "power",
+    "name": "Devour Life",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L389; md:powers_zh.md:L342",
+    "stack_type": "Counter",
+    "zh_description": "出牌 hook 时触发 OstyCmd.Summon （Amount）——宠物召唤触发由宿主卡决定。",
+    "zh_name": "Devour Life"
+  },
+  "DEXTERITY_POWER": {
+    "aliases": [
+      "DEXTERITY",
+      "DexterityPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "+Amount Block on every block-gaining card/monster move of the owner.",
+    "host_of_affliction": false,
+    "id": "DEXTERITY_POWER",
+    "kind": "power",
+    "name": "Dexterity",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L25; md:powers_zh.md:L24",
+    "stack_type": "Counter",
+    "zh_description": "持有者每次从卡牌/招式 获得格挡时 +Amount 格挡。",
+    "zh_name": "敏捷"
+  },
+  "DIAMOND_DIADEM_POWER": {
+    "aliases": [
+      "DiamondDiademPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "attacks against owner deal x0.5; removed at end of Enemy side turn.",
+    "host_of_affliction": false,
+    "id": "DIAMOND_DIADEM_POWER",
+    "kind": "power",
+    "name": "Diamond Diadem",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L272; md:powers_zh.md:L244",
+    "stack_type": "Single",
+    "zh_description": "对持有者的攻击伤害 ×0.5；敌方 阵营回合结束时移除。",
+    "zh_name": "Diamond Diadem"
+  },
+  "DIE_FOR_YOU_POWER": {
+    "aliases": [
+      "DIE_FOR_YOU",
+      "DieForYouPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "Member of the DIE_FOR_YOU_POWER family. combat does not end on owner death; owner removed from combat; revive handled by pet logic (see character cards).",
+    "host_of_affliction": false,
+    "id": "DIE_FOR_YOU_POWER",
+    "kind": "power",
+    "name": "Die For You",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L365; md:powers_zh.md:L322",
+    "stack_type": "Single",
+    "zh_description": "Osty 系死亡处理——持有者死亡时战斗 不结束，持有者移出战斗；复活由宠物逻辑处理（见角色卡）。",
+    "zh_name": "Die For You"
+  },
+  "DISINTEGRATION": {
+    "aliases": [
+      "DisintegrationPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "see afflictions.md — KnowledgeDemon choice card applies DISINTEGRATION_POWER 6.",
+    "host_of_affliction": false,
+    "id": "DISINTEGRATION",
+    "kind": "power",
+    "name": "Disintegration",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": null,
+    "source": "md:powers.md:L326; md:powers_zh.md:L35",
+    "stack_type": null,
+    "zh_description": "见 afflictions.md——知识恶魔对白选项卡施加 DISINTEGRATION_POWER 6。",
+    "zh_name": "卡牌施加"
+  },
+  "DISINTEGRATION_POWER": {
+    "aliases": [
+      "DISINTEGRATION",
+      "DisintegrationPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at end of owner's side turn (late), deal Amount unpowered damage to owner.",
+    "host_of_affliction": false,
+    "id": "DISINTEGRATION_POWER",
+    "kind": "power",
+    "name": "Disintegration",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L313; md:powers_zh.md:L282",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合结束 （late）时，持有者受到 Amount 点非攻击伤害。",
+    "zh_name": "崩解"
+  },
+  "DOOM_POWER": {
+    "aliases": [
+      "DOOM",
+      "DoomPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at end of owner's side turn, if owner CurrentHp <= Amount, owner is killed (Doom kill, special VFX; all doomed creatures on that side die together).",
+    "host_of_affliction": false,
+    "id": "DOOM_POWER",
+    "kind": "power",
+    "name": "Doom",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L58; md:powers_zh.md:L51",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合结束时，若 CurrentHp <= Amount 则直接被 Doom 击杀（特殊 VFX；同侧所有 doomed 生物一并结算）。",
+    "zh_name": "末日"
+  },
+  "DOUBLE_DAMAGE_POWER": {
+    "aliases": [
+      "DoubleDamagePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner's attack damage dealt multiplied by x2 while stacks > 0; decrements at end of owner's side turn.",
+    "host_of_affliction": false,
+    "id": "DOUBLE_DAMAGE_POWER",
+    "kind": "power",
+    "name": "Double Damage",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L244; md:powers_zh.md:L219",
+    "stack_type": "Counter",
+    "zh_description": "持有者造成的攻击伤害 ×2； 持有者阵营回合结束时 -1 层。",
+    "zh_name": "Double Damage"
+  },
+  "DRAW_CARDS_NEXT_TURN_POWER": {
+    "aliases": [
+      "DRAW_CARDS_NEXT_TURN",
+      "DrawCardsNextTurnPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "+Amount hand draw at the start of owner's next turn only, then removed.",
+    "host_of_affliction": false,
+    "id": "DRAW_CARDS_NEXT_TURN_POWER",
+    "kind": "power",
+    "name": "Draw Cards Next Turn",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L140; md:powers_zh.md:L119",
+    "stack_type": "Counter",
+    "zh_description": "仅在持有者下一回合开始时 +Amount 抽牌，随后移除。",
+    "zh_name": "Draw Cards Next Turn"
+  },
+  "DUPLICATION_POWER": {
+    "aliases": [
+      "DUPLICATION",
+      "DuplicationPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner's next Amount card plays count twice (any card type); 1 stack consumed per card played; removed at end of owner's side turn.",
+    "host_of_affliction": false,
+    "id": "DUPLICATION_POWER",
+    "kind": "power",
+    "name": "Duplication",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L476; md:powers_zh.md:L421",
+    "stack_type": "Counter",
+    "zh_description": "持有者接下来 Amount 次任意 卡牌打出计为 2 次；每打出 1 张牌消耗 1 层；持有者阵营回合结束时移除。",
+    "zh_name": "复制"
+  },
+  "ECHO_FORM_POWER": {
+    "aliases": [
+      "EchoFormPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "first card owner plays each turn is played twice (ModifyCardPlayCount doubles the first-in-series play each turn).",
+    "host_of_affliction": false,
+    "id": "ECHO_FORM_POWER",
+    "kind": "power",
+    "name": "Echo Form",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L484; md:powers_zh.md:L427",
+    "stack_type": "Counter",
+    "zh_description": "持有者每回合打出的第一张 牌计为打出 2 次（ModifyCardPlayCount 对每回合首次系列 play 翻倍）。",
+    "zh_name": "回响形态"
+  },
+  "ENERGY_NEXT_TURN_POWER": {
+    "aliases": [
+      "ENERGY_NEXT_TURN",
+      "EnergyNextTurnPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at next energy reset, gain Amount Energy, then removed.",
+    "host_of_affliction": false,
+    "id": "ENERGY_NEXT_TURN_POWER",
+    "kind": "power",
+    "name": "Energy Next Turn",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L152; md:powers_zh.md:L130",
+    "stack_type": "Counter",
+    "zh_description": "下次能量重置时获得 Amount 能量， 随后移除。",
+    "zh_name": "Energy Next Turn"
+  },
+  "ENRAGE_POWER": {
+    "aliases": [
+      "ENRAGE",
+      "EnragePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "whenever a Skill card is played (by anyone), owner gains +Amount STRENGTH.",
+    "host_of_affliction": false,
+    "id": "ENRAGE_POWER",
+    "kind": "power",
+    "name": "Enrage",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L461; md:powers_zh.md:L406",
+    "stack_type": "Counter",
+    "zh_description": "任何人打出技能牌时，持有者获得 +Amount STRENGTH。",
+    "zh_name": "暴怒"
+  },
+  "ENVENOM_POWER": {
+    "aliases": [
+      "EnvenomPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "when owner's powered attack deals unblocked damage > 0, apply Amount POISON to the target.",
+    "host_of_affliction": false,
+    "id": "ENVENOM_POWER",
+    "kind": "power",
+    "name": "Envenom",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L290; md:powers_zh.md:L260",
+    "stack_type": "Counter",
+    "zh_description": "持有者的攻击造成未格挡伤害 > 0 时，对目标施加 Amount 层 POISON。",
+    "zh_name": "中毒涂毒"
+  },
+  "ESCAPE_ARTIST_POWER": {
+    "aliases": [
+      "ESCAPE_ARTIST",
+      "EscapeArtistPower"
+    ],
+    "counter_class": true,
+    "curated": false,
+    "description": "visual escape timer — decrements at end of owner's side turn while Amount > 1; at Amount == 1 starts pulsing (ThievingHopper escape imminent; escape action hosted by monster move).",
+    "host_of_affliction": false,
+    "id": "ESCAPE_ARTIST_POWER",
+    "kind": "power",
+    "name": "Escape Artist",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L413; md:powers_zh.md:L362",
+    "stack_type": "Counter",
+    "zh_description": "逃跑倒计时视觉——持有者阵营 回合结束时 Amount > 1 则 -1 层；Amount == 1 时开始脉冲（ThievingHopper 即将逃跑；逃跑动作由怪物招式执行）。",
+    "zh_name": "Escape Artist"
+  },
+  "FAN_OF_KNIVES_POWER": {
+    "aliases": [
+      "FanOfKnivesPower"
+    ],
+    "counter_class": false,
+    "curated": true,
+    "description": "Inert marker power (Buff, Counter) — no hooks of its own; queried by Shiv-tagged cards (Shiv-family effects read it, e.g. Shiv hitting ALL enemies while Fan of Knives is active).",
+    "host_of_affliction": false,
+    "id": "FAN_OF_KNIVES_POWER",
+    "kind": "power",
+    "name": "Fan of Knives",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "curated:powers.md inert marker group",
+    "stack_type": "Counter"
+  },
+  "FASTEN_POWER": {
+    "aliases": [
+      "FASTEN",
+      "FastenPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "+Amount Block on owner's block gains (ModifyBlockAdditive, card/move-sourced block only).",
+    "host_of_affliction": false,
+    "id": "FASTEN_POWER",
+    "kind": "power",
+    "name": "Fasten",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L228; md:powers_zh.md:L205",
+    "stack_type": "Counter",
+    "zh_description": "持有者卡牌/招式来源的格挡 +Amount （ModifyBlockAdditive）。",
+    "zh_name": "Fasten"
+  },
+  "FEEL_NO_PAIN_POWER": {
+    "aliases": [
+      "FEEL_NO_PAIN",
+      "FeelNoPainPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "whenever an owner's card is Exhausted, owner gains Amount Block.",
+    "host_of_affliction": false,
+    "id": "FEEL_NO_PAIN_POWER",
+    "kind": "power",
+    "name": "Feel No Pain",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L192; md:powers_zh.md:L169",
+    "stack_type": "Counter",
+    "zh_description": "持有者每消耗（Exhaust）一张 自己的牌，获得 Amount 格挡。",
+    "zh_name": "无痛"
+  },
+  "FLAME_BARRIER_POWER": {
+    "aliases": [
+      "FLAME_BARRIER",
+      "FlameBarrierPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "when owner is hit by a powered attack, dealer takes Amount unpowered damage. Removed at end of the opposing side's turn (not owner's).",
+    "host_of_affliction": false,
+    "id": "FLAME_BARRIER_POWER",
+    "kind": "power",
+    "name": "Flame Barrier",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L466; md:powers_zh.md:L411",
+    "stack_type": "Counter",
+    "zh_description": "持有者被攻击命中时， 攻击者受到 Amount 点非攻击伤害。在对方阵营回合结束时移除（非持有者 回合）。",
+    "zh_name": "火焰屏障"
+  },
+  "FLANKING_POWER": {
+    "aliases": [
+      "FlankingPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "attacks against owner from anyone except the applier deal xAmount damage. Removed at end of owner's side turn.",
+    "host_of_affliction": false,
+    "id": "FLANKING_POWER",
+    "kind": "power",
+    "name": "Flanking",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L265; md:powers_zh.md:L239",
+    "stack_type": "Counter",
+    "zh_description": "除施加者外任何人对持有者的攻击 伤害 ×Amount。持有者阵营回合结束时移除。",
+    "zh_name": "Flanking"
+  },
+  "FLEX_POTION_POWER": {
+    "curated": true,
+    "description": "Temporary Strength subclass: grants +Amount Strength on apply (Flex Potion = +5); the same amount is reverted at end of owner's side turn. Type shows Buff when positive. Does not persist to next turn — use the same-turn burst window.",
+    "id": "FLEX_POTION_POWER",
+    "kind": "power",
+    "name": "Flex Potion Power",
+    "power_type": "Buff",
+    "source": "curated:potions.md FlexPotion + powers.md temporary family",
+    "stack_type": "Counter"
+  },
+  "FLUTTER_POWER": {
+    "curated": true,
+    "description": "Incoming powered-attack damage to owner multiplied by x0.5 while stacks > 0; each unblocked attack hit on owner decrements 1 stack; at 0 the owner is stunned (ThievingHopper stops hovering). Multi-hit attacks decrement per unblocked hit — pace chip to clear Flutter, then burst.",
+    "id": "FLUTTER_POWER",
+    "kind": "power",
+    "name": "Flutter",
+    "power_type": "Buff",
+    "source": "curated:monsters.md ThievingHopper passives",
+    "stack_type": "Counter"
+  },
+  "FOCUS_POWER": {
+    "aliases": [
+      "FocusPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "orb passive/evoke values of owner get Math.Max(value + Amount, 0) — scales orb effects, floors at 0.",
+    "host_of_affliction": false,
+    "id": "FOCUS_POWER",
+    "kind": "power",
+    "name": "Focus",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L54; md:powers_zh.md:L47",
+    "stack_type": "Counter",
+    "zh_description": "持有者充能球被动/激发数值 变为 max(原值 + Amount, 0)。",
+    "zh_name": "专注"
+  },
+  "FORBIDDEN_GRIMOIRE_POWER": {
+    "aliases": [
+      "ForbiddenGrimoirePower"
+    ],
+    "counter_class": false,
+    "curated": true,
+    "description": "Source-hosted utility power (Buff, Counter) — combat-end / pre-play logic hosted by the source card; see the hosting card text for exact trigger.",
+    "host_of_affliction": false,
+    "id": "FORBIDDEN_GRIMOIRE_POWER",
+    "kind": "power",
+    "name": "Forbidden Grimoire",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "curated:powers.md source-hosted utility group",
+    "stack_type": "Counter"
+  },
+  "FOREGONE_CONCLUSION_POWER": {
+    "aliases": [
+      "ForegoneConclusionPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "before owner's hand draw, shuffle if necessary and move a selected draw-pile card to hand.",
+    "host_of_affliction": false,
+    "id": "FOREGONE_CONCLUSION_POWER",
+    "kind": "power",
+    "name": "Foregone Conclusion",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L542; md:powers_zh.md:L478",
+    "stack_type": "Counter",
+    "zh_description": "持有者手牌抽取前，必要时 洗牌并将选中的抽牌堆卡牌移入手牌。",
+    "zh_name": "Foregone Conclusion"
+  },
+  "FRAIL_POWER": {
+    "aliases": [
+      "FRAIL",
+      "FrailPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "Block owner gains from cards/monster moves is multiplied by x0.75. Ticks down 1 at end of Enemy side turn.",
+    "host_of_affliction": false,
+    "id": "FRAIL_POWER",
+    "kind": "power",
+    "name": "Frail",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L21; md:powers_zh.md:L20",
+    "stack_type": "Counter",
+    "zh_description": "持有者从卡牌/怪物招式获得的格挡 ×0.75。敌方阵营回合结束时 -1 层。",
+    "zh_name": "脆弱"
+  },
+  "FREE_ATTACK_POWER": {
+    "aliases": [
+      "FREE_ATTACK",
+      "FreeAttackPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner's Attack cards in hand/play cost 0; 1 stack consumed per Attack played.",
+    "host_of_affliction": false,
+    "id": "FREE_ATTACK_POWER",
+    "kind": "power",
+    "name": "Free Attack",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L171; md:powers_zh.md:L149",
+    "stack_type": "Counter",
+    "zh_description": "持有者手牌/打出区的攻击牌费用为 0； 每打出 1 张攻击牌消耗 1 层。",
+    "zh_name": "Free Attack"
+  },
+  "FREE_POWER_POWER": {
+    "aliases": [
+      "FreePowerPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner's Power cards in hand/play cost 0; 1 stack consumed per Power played.",
+    "host_of_affliction": false,
+    "id": "FREE_POWER_POWER",
+    "kind": "power",
+    "name": "Free Power",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L175; md:powers_zh.md:L153",
+    "stack_type": "Counter",
+    "zh_description": "持有者手牌/打出区的 Power 牌费用为 0；每打出 1 张 Power 牌消耗 1 层。",
+    "zh_name": "Free Power"
+  },
+  "FREE_SKILL_POWER": {
+    "aliases": [
+      "FreeSkillPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner's Skill cards in hand/play cost 0; 1 stack consumed per Skill played.",
+    "host_of_affliction": false,
+    "id": "FREE_SKILL_POWER",
+    "kind": "power",
+    "name": "Free Skill",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L173; md:powers_zh.md:L151",
+    "stack_type": "Counter",
+    "zh_description": "持有者手牌/打出区的技能牌费用为 0； 每打出 1 张技能牌消耗 1 层。",
+    "zh_name": "Free Skill"
+  },
+  "FRIENDSHIP_POWER": {
+    "aliases": [
+      "FriendshipPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "+Amount max Energy.",
+    "host_of_affliction": false,
+    "id": "FRIENDSHIP_POWER",
+    "kind": "power",
+    "name": "Friendship",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L147; md:powers_zh.md:L125",
+    "stack_type": "Counter",
+    "zh_description": "+Amount 最大能量。",
+    "zh_name": "Friendship"
+  },
+  "FURNACE_POWER": {
+    "aliases": [
+      "FurnacePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at start of owner's side turn, Forge Amount (upgrade Amount cards via forge logic).",
+    "host_of_affliction": false,
+    "id": "FURNACE_POWER",
+    "kind": "power",
+    "name": "Furnace",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L579; md:powers_zh.md:L513",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合开始时锻造 Amount 次 （通过锻造逻辑升级 Amount 张牌）。",
+    "zh_name": "Furnace"
+  },
+  "GALVANIC_POWER": {
+    "affliction_keys": [
+      "GALVANIZED"
+    ],
+    "aliases": [
+      "GALVANIC",
+      "GalvanicPower"
+    ],
+    "counter_class": true,
+    "curated": false,
+    "description": "at combat start and when Power cards enter combat, afflict player Power cards with Galvanized (Amount). Playing a Galvanized card deals Amount unpowered damage to its owner.",
+    "host_of_affliction": true,
+    "id": "GALVANIC_POWER",
+    "kind": "power",
+    "name": "Galvanic",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L101; md:powers_zh.md:L85",
+    "stack_type": "Counter",
+    "zh_description": "战斗开始及 Power 牌 进入战斗时，给玩家的 Power 牌附加 Galvanized（Amount）。打出 Galvanized 牌时，其拥有者受到 Amount 点非攻击伤害。",
+    "zh_name": "电镀"
+  },
+  "GENESIS_POWER": {
+    "aliases": [
+      "GenesisPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at each energy reset, gain Amount Stars.",
+    "host_of_affliction": false,
+    "id": "GENESIS_POWER",
+    "kind": "power",
+    "name": "Genesis",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L154; md:powers_zh.md:L132",
+    "stack_type": "Counter",
+    "zh_description": "每次能量重置时获得 Amount 星辰（Stars）。",
+    "zh_name": "Genesis"
+  },
+  "GIGANTIFICATION_POWER": {
+    "aliases": [
+      "GigantificationPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "one owner's Attack per activation deals x3 damage; 1 stack consumed after that attack resolves.",
+    "host_of_affliction": false,
+    "id": "GIGANTIFICATION_POWER",
+    "kind": "power",
+    "name": "Gigantification",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L259; md:powers_zh.md:L233",
+    "stack_type": "Counter",
+    "zh_description": "持有者下一张攻击 ×3 伤害； 该攻击结算后 -1 层。",
+    "zh_name": "Gigantification"
+  },
+  "GRAVITY_POWER": {
+    "aliases": [
+      "GravityPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "each card owner plays deals Amount unpowered damage to all hittable enemies; power removed at end of owner's side turn.",
+    "host_of_affliction": false,
+    "id": "GRAVITY_POWER",
+    "kind": "power",
+    "name": "Gravity",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L554; md:powers_zh.md:L490",
+    "stack_type": "Counter",
+    "zh_description": "持有者每打出一张牌，对所有可命中敌人 造成 Amount 点非攻击伤害；持有者阵营回合结束时移除。",
+    "zh_name": "Gravity"
+  },
+  "GUARDED_POWER": {
+    "aliases": [
+      "GuardedPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "attacks against owner deal x0.5; removed when applier dies.",
+    "host_of_affliction": false,
+    "id": "GUARDED_POWER",
+    "kind": "power",
+    "name": "Guarded",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L280; md:powers_zh.md:L250",
+    "stack_type": "Single",
+    "zh_description": "对持有者的攻击伤害 ×0.5；施加者死亡时 移除。",
+    "zh_name": "Guarded"
+  },
+  "HAMMER_TIME_POWER": {
+    "aliases": [
+      "HammerTimePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "when any other player forges, all other living players also Forge that amount (Hammer Time relay).",
+    "host_of_affliction": false,
+    "id": "HAMMER_TIME_POWER",
+    "kind": "power",
+    "name": "Hammer Time",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L577; md:powers_zh.md:L511",
+    "stack_type": "Single",
+    "zh_description": "其他玩家锻造时，其余存活玩家同样 锻造该数量（锤击联动）。",
+    "zh_name": "Hammer Time"
+  },
+  "HANG_POWER": {
+    "aliases": [
+      "HangPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "the Hang card's attack against owner deals xAmount damage.",
+    "host_of_affliction": false,
+    "id": "HANG_POWER",
+    "kind": "power",
+    "name": "Hang",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L267; md:powers_zh.md:L241",
+    "stack_type": "Counter",
+    "zh_description": "Hang 卡对持有者的攻击伤害 ×Amount。",
+    "zh_name": "Hang"
+  },
+  "HARDENED_SHELL_POWER": {
+    "aliases": [
+      "HARDENED_SHELL",
+      "HardenedShellPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "HP loss to owner per turn is capped at Amount minus damage already received this turn (tracker resets at turn start).",
+    "host_of_affliction": false,
+    "id": "HARDENED_SHELL_POWER",
+    "kind": "power",
+    "name": "Hardened Shell",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L350; md:powers_zh.md:L310",
+    "stack_type": "Counter",
+    "zh_description": "持有者每回合 HP 损失上限为 Amount 减去本回合已受伤害（计数回合开始重置）。",
+    "zh_name": "Hardened Shell"
+  },
+  "HARD_TO_KILL_POWER": {
+    "aliases": [
+      "HARD_TO_KILL",
+      "HardToKillPower"
+    ],
+    "counter_class": true,
+    "curated": false,
+    "description": "owner's damage received per instance is capped at Amount HP-loss (`ModifyDamageCap` = Amount). Exoskeleton applies it with Amount = 9 — HP loss per hit capped at 9; excess is discarded, not banked.",
+    "host_of_affliction": false,
+    "id": "HARD_TO_KILL_POWER",
+    "kind": "power",
+    "name": "Hard To Kill",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L343; md:powers_zh.md:L305",
+    "stack_type": "Counter",
+    "zh_description": "持有者单次受到的伤害上限 为 Amount（`ModifyDamageCap` = Amount）。外骨骼虫（Exoskeleton）施加 Amount = 9——单次 HP 损失上限 9，超出部分直接作废、不保留。",
+    "zh_name": "坚韧"
+  },
+  "HATCH_POWER": {
+    "aliases": [
+      "HATCH",
+      "HatchPower"
+    ],
+    "counter_class": true,
+    "curated": false,
+    "description": "decrements at end of owner's side turn (hatch timer; hatch action hosted by monster/relic).",
+    "host_of_affliction": false,
+    "id": "HATCH_POWER",
+    "kind": "power",
+    "name": "Hatch",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L427; md:powers_zh.md:L374",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合结束时 -1 层（孵化计时； 孵化动作由怪物/遗物宿主执行）。",
+    "zh_name": "Hatch"
+  },
+  "HAUNT_POWER": {
+    "aliases": [
+      "HauntPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "after owner plays a Soul card, deal damage to a random enemy (amount hosted by source).",
+    "host_of_affliction": false,
+    "id": "HAUNT_POWER",
+    "kind": "power",
+    "name": "Haunt",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L575; md:powers_zh.md:L509",
+    "stack_type": "Counter",
+    "zh_description": "持有者打出 Soul 卡后，对随机敌人造成 伤害（数值由宿主决定）。",
+    "zh_name": "Haunt"
+  },
+  "HEIST_POWER": {
+    "aliases": [
+      "HEIST",
+      "HeistPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "if owner (thief) dies before cashing out, stolen Gold reward (Amount) is granted back to base.Target player.",
+    "host_of_affliction": false,
+    "id": "HEIST_POWER",
+    "kind": "power",
+    "name": "Heist",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L512; md:powers_zh.md:L453",
+    "stack_type": "Counter",
+    "zh_description": "持有者（窃贼）在结算前死亡时，被偷的 金币奖励（Amount）返还给 base.Target 玩家。",
+    "zh_name": "Heist"
+  },
+  "HELLO_WORLD_POWER": {
+    "aliases": [
+      "HelloWorldPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "before owner's hand draw (AmountOnTurnStart >= 1), add distinct unlocked cards to hand.",
+    "host_of_affliction": false,
+    "id": "HELLO_WORLD_POWER",
+    "kind": "power",
+    "name": "Hello World",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L544; md:powers_zh.md:L480",
+    "stack_type": "Counter",
+    "zh_description": "持有者手牌抽取前 （AmountOnTurnStart >= 1），加入不重复的已解锁卡牌。",
+    "zh_name": "Hello World"
+  },
+  "HELLRAISER_POWER": {
+    "aliases": [
+      "HELLRAISER",
+      "HellraiserPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "Strike-tagged cards drawn by owner can auto-play (infinite-autoplay cap 9) with bonus VFX; data resets at end of owner's side turn.",
+    "host_of_affliction": false,
+    "id": "HELLRAISER_POWER",
+    "kind": "power",
+    "name": "Hellraiser",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L490; md:powers_zh.md:L433",
+    "stack_type": "Single",
+    "zh_description": "持有者抽到带 Strike 标签的牌时可 自动打出（无限自动打出上限 9，附带额外 VFX）；数据在持有者阵营回合 结束时重置。",
+    "zh_name": "Hellraiser"
+  },
+  "HEX_POWER": {
+    "affliction_keys": [
+      "HEXED"
+    ],
+    "aliases": [
+      "HEX",
+      "HexPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "afflict all owner's cards (and new ones) with Hexed; Hexed cards gain the Ethereal keyword while this power exists. Removed when the applier dies; clears Hexed on removal.",
+    "host_of_affliction": true,
+    "id": "HEX_POWER",
+    "kind": "power",
+    "name": "Hex",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L104; md:powers_zh.md:L88",
+    "stack_type": "Single",
+    "zh_description": "给持有者所有卡牌（及新牌）附加 Hexed；power 存在期间 Hexed 牌获得虚无（Ethereal）关键词。施加者死亡 时移除；移除时清除 Hexed。",
+    "zh_name": "诅咒"
+  },
+  "HIGH_VOLTAGE_POWER": {
+    "aliases": [
+      "HighVoltagePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at end of owner's side turn, apply +Amount STRENGTH_POWER to owner.",
+    "host_of_affliction": false,
+    "id": "HIGH_VOLTAGE_POWER",
+    "kind": "power",
+    "name": "High Voltage",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L568; md:powers_zh.md:L503",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合结束时获得 +Amount STRENGTH_POWER。",
+    "zh_name": "High Voltage"
+  },
+  "ILLUSION_POWER": {
+    "aliases": [
+      "ILLUSION",
+      "IllusionPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "on death, keeps its buffs (debuffs removed unless non-temporary), queues REVIVE_MOVE with HealIntent which heals owner to full (MaxHp - CurrentHp). Applies MINION_POWER on apply if missing. Reviving owner is untargetable until revive resolves.",
+    "host_of_affliction": false,
+    "id": "ILLUSION_POWER",
+    "kind": "power",
+    "name": "Illusion",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L358; md:powers_zh.md:L316",
+    "stack_type": "Single",
+    "zh_description": "死亡时保留增益（减益除非常驻类 外均移除），排入带 HealIntent 的 REVIVE_MOVE——回复至满血 （MaxHp - CurrentHp）。施加时若无 MINION_POWER 则补 1 层。复活期间 持有者不可被选中。",
+    "zh_name": "幻象"
+  },
+  "IMBALANCED_POWER": {
+    "aliases": [
+      "IMBALANCED",
+      "ImbalancedPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "when owner's attack is fully blocked, owner is stunned (BowlbugRock sets IsOffBalance instead).",
+    "host_of_affliction": false,
+    "id": "IMBALANCED_POWER",
+    "kind": "power",
+    "name": "Imbalanced",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L599; md:powers_zh.md:L532",
+    "stack_type": "Single",
+    "zh_description": "持有者的攻击被完全格挡时被击晕 （BowlbugRock 改为设置 IsOffBalance）。",
+    "zh_name": "Imbalanced"
+  },
+  "IMPROVEMENT_POWER": {
+    "aliases": [
+      "ImprovementPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at combat end, Upgrade Amount random upgradable cards in owner's deck.",
+    "host_of_affliction": false,
+    "id": "IMPROVEMENT_POWER",
+    "kind": "power",
+    "name": "Improvement",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L510; md:powers_zh.md:L451",
+    "stack_type": "Counter",
+    "zh_description": "战斗结束时，随机升级持有者牌库中 Amount 张可升级卡牌。",
+    "zh_name": "Improvement"
+  },
+  "INFERNO_POWER": {
+    "curated": true,
+    "description": "At start of owner's side turn, owner loses 1 HP (unblockable); whenever owner loses HP during owner's side turn, deal Amount unpowered damage to ALL hittable enemies (card INFERNO: Amount 6 base, 9 upgraded). Self-damage cards (Bloodletting, Blood Wall, Breakthrough, Hemokinesis) and any same-turn HP loss fire the AoE once per loss event. Kills through enemy turns only if the loss happens on owner's own turn.",
+    "id": "INFERNO_POWER",
+    "kind": "power",
+    "name": "Inferno",
+    "power_type": "Buff",
+    "source": "curated:cards.md INFERNO",
+    "stack_type": "Counter"
+  },
+  "INFESTED_POWER": {
+    "aliases": [
+      "INFESTED",
+      "InfestedPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "on owner's death, spawns 4 Wriggler monsters (StartStunned = true) on the owner's side; combat end is blocked until the spawn resolves.",
+    "host_of_affliction": false,
+    "id": "INFESTED_POWER",
+    "kind": "power",
+    "name": "Infested",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L368; md:powers_zh.md:L324",
+    "stack_type": "Single",
+    "zh_description": "持有者死亡时在同侧生成 4 只 Wriggler（StartStunned = true）；生成结算完成前战斗结束判定被阻塞。",
+    "zh_name": "寄生"
+  },
+  "INFINITE_BLADES_POWER": {
+    "aliases": [
+      "InfiniteBladesPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "before owner's hand draw, create Amount Shiv cards in hand.",
+    "host_of_affliction": false,
+    "id": "INFINITE_BLADES_POWER",
+    "kind": "power",
+    "name": "Infinite Blades",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L546; md:powers_zh.md:L482",
+    "stack_type": "Counter",
+    "zh_description": "持有者手牌抽取前，在手牌生成 Amount 张 Shiv。",
+    "zh_name": "Infinite Blades"
+  },
+  "INTANGIBLE_POWER": {
+    "aliases": [
+      "INTANGIBLE",
+      "IntangiblePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "damage and HP loss received by owner capped at 1 per instance. Ticks down at end of owner's side turn.",
+    "host_of_affliction": false,
+    "id": "INTANGIBLE_POWER",
+    "kind": "power",
+    "name": "Intangible",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L46; md:powers_zh.md:L41",
+    "stack_type": "Counter",
+    "zh_description": "持有者每次受到的伤害/HP 损失 上限为 1。持有者阵营回合结束时 -1 层。",
+    "zh_name": "虚无"
+  },
+  "INTERCEPT_POWER": {
+    "aliases": [
+      "InterceptPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner takes (covered-creatures-count + 1) x attack damage multiplier — used with CoveredPower flanking logic; removed at end of Enemy side turn.",
+    "host_of_affliction": false,
+    "id": "INTERCEPT_POWER",
+    "kind": "power",
+    "name": "Intercept",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L274; md:powers_zh.md:L246",
+    "stack_type": "Single",
+    "zh_description": "对持有者的攻击伤害倍率 = （被掩护生物数 + 1）；与 CoveredPower 联动；敌方阵营回合结束时移除。",
+    "zh_name": "Intercept"
+  },
+  "ITERATION_POWER": {
+    "aliases": [
+      "IterationPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "draw Amount cards the first time owner draws a Status card each turn (AfterCardDrawn, source-hosted gating).",
+    "host_of_affliction": false,
+    "id": "ITERATION_POWER",
+    "kind": "power",
+    "name": "Iteration",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L500; md:powers_zh.md:L441",
+    "stack_type": "Counter",
+    "zh_description": "持有者每回合首次抽到状态牌时抽 Amount 张牌（AfterCardDrawn，门控由宿主决定）。",
+    "zh_name": "Iteration"
+  },
+  "JUGGERNAUT_POWER": {
+    "aliases": [
+      "JUGGERNAUT",
+      "JuggernautPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "whenever owner gains >0 Block, deal Amount unpowered damage to a random hittable enemy.",
+    "host_of_affliction": false,
+    "id": "JUGGERNAUT_POWER",
+    "kind": "power",
+    "name": "Juggernaut",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L194; md:powers_zh.md:L171",
+    "stack_type": "Counter",
+    "zh_description": "持有者每当获得 >0 格挡，对一名随机 可命中敌人造成 Amount 点非攻击伤害。",
+    "zh_name": "Juggernaut"
+  },
+  "JUGGLING_POWER": {
+    "curated": true,
+    "description": "The 3rd Attack card owner plays each turn is copied into owner's hand (card JUGGLING). The copy enters hand — it is not auto-played and still costs energy unless discounted.",
+    "id": "JUGGLING_POWER",
+    "kind": "power",
+    "name": "Juggling",
+    "power_type": "Buff",
+    "source": "curated:cards.md JUGGLING",
+    "stack_type": "Counter"
+  },
+  "KNOCKDOWN_POWER": {
+    "aliases": [
+      "KnockdownPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "attacks against owner from anyone except the applier deal xAmount damage. Removed at end of owner's side turn.",
+    "host_of_affliction": false,
+    "id": "KNOCKDOWN_POWER",
+    "kind": "power",
+    "name": "Knockdown",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L263; md:powers_zh.md:L237",
+    "stack_type": "Counter",
+    "zh_description": "除施加者外任何人对持有者的攻击 伤害 ×Amount。持有者阵营回合结束时移除。",
+    "zh_name": "Knockdown"
+  },
+  "LEADERSHIP_POWER": {
+    "aliases": [
+      "LeadershipPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "+Amount attack damage on owner's attacks (ModifyDamageAdditive; trigger hosted by source).",
+    "host_of_affliction": false,
+    "id": "LEADERSHIP_POWER",
+    "kind": "power",
+    "name": "Leadership",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L253; md:powers_zh.md:L227",
+    "stack_type": "Counter",
+    "zh_description": "持有者攻击 +Amount 伤害 （ModifyDamageAdditive；触发由宿主决定）。",
+    "zh_name": "Leadership"
+  },
+  "LETHALITY_POWER": {
+    "aliases": [
+      "LethalityPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner's card-sourced attack damage dealt multiplied by x(1 + Amount/100) — i.e. +Amount% while the card is being played from Play pile (hosted modifier; see card text for trigger).",
+    "host_of_affliction": false,
+    "id": "LETHALITY_POWER",
+    "kind": "power",
+    "name": "Lethality",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L246; md:powers_zh.md:L221",
+    "stack_type": "Counter",
+    "zh_description": "持有者卡牌来源的攻击伤害 × (1 + Amount/100)（即 +Amount%；触发与生效窗口由宿主卡决定）。",
+    "zh_name": "Lethality"
+  },
+  "LIGHTNING_ROD_POWER": {
+    "aliases": [
+      "LightningRodPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at energy reset, Channel 1 Lightning orb, then decrement 1.",
+    "host_of_affliction": false,
+    "id": "LIGHTNING_ROD_POWER",
+    "kind": "power",
+    "name": "Lightning Rod",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L159; md:powers_zh.md:L137",
+    "stack_type": "Counter",
+    "zh_description": "能量重置时引导 1 个闪电球，随后 -1 层。",
+    "zh_name": "Lightning Rod"
+  },
+  "MACHINE_LEARNING_POWER": {
+    "aliases": [
+      "MachineLearningPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "+Amount hand draw every turn (permanent while power lasts).",
+    "host_of_affliction": false,
+    "id": "MACHINE_LEARNING_POWER",
+    "kind": "power",
+    "name": "Machine Learning",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L142; md:powers_zh.md:L121",
+    "stack_type": "Counter",
+    "zh_description": "每回合 +Amount 抽牌（power 存续期间永久生效）。",
+    "zh_name": "Machine Learning"
+  },
+  "MAGIC_BOMB_POWER": {
+    "aliases": [
+      "MagicBombPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at end of owner's side turn, if applier still alive, deal Amount unpowered damage to owner, then remove the power. Removed also if applier dies.",
+    "host_of_affliction": false,
+    "id": "MAGIC_BOMB_POWER",
+    "kind": "power",
+    "name": "Magic Bomb",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L315; md:powers_zh.md:L284",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合结束时，若施加者 仍存活，持有者受到 Amount 点非攻击伤害，随后该 power 移除。施加者 死亡时同样移除。",
+    "zh_name": "Magic Bomb"
+  },
+  "MASTER_PLANNER_POWER": {
+    "aliases": [
+      "MasterPlannerPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "after owner plays a Skill, that Skill gains the Sly keyword.",
+    "host_of_affliction": false,
+    "id": "MASTER_PLANNER_POWER",
+    "kind": "power",
+    "name": "Master Planner",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L508; md:powers_zh.md:L449",
+    "stack_type": "Single",
+    "zh_description": "持有者打出技能牌后，该牌获得 Sly 关键词。",
+    "zh_name": "Master Planner"
+  },
+  "MAYHEM_POWER": {
+    "aliases": [
+      "MayhemPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at start of owner's pre-play phase, auto-play Amount cards from top of draw pile (not exhausted).",
+    "host_of_affliction": false,
+    "id": "MAYHEM_POWER",
+    "kind": "power",
+    "name": "Mayhem",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L486; md:powers_zh.md:L429",
+    "stack_type": "Counter",
+    "zh_description": "持有者预打出阶段开始时，从抽牌堆 顶自动打出 Amount 张牌（不消耗）。",
+    "zh_name": "混乱"
+  },
+  "MIND_ROT_POWER": {
+    "aliases": [
+      "MIND_ROT",
+      "MindRotPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner's hand draw each turn reduced by Amount (floored at 0): ModifyHandDraw = max(0, count - Amount).",
+    "host_of_affliction": false,
+    "id": "MIND_ROT_POWER",
+    "kind": "power",
+    "name": "Mind Rot",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L130; md:powers_zh.md:L110",
+    "stack_type": "Counter",
+    "zh_description": "持有者每回合手牌抽取 -Amount （下限 0）：ModifyHandDraw = max(0, count - Amount)。",
+    "zh_name": "脑蚀"
+  },
+  "MINION_POWER": {
+    "aliases": [
+      "MINION",
+      "MinionPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "marks a summoned helper — its death does not trigger combat-end fatal logic (OwnerIsSecondaryEnemy; power not persisted after owner death).",
+    "host_of_affliction": false,
+    "id": "MINION_POWER",
+    "kind": "power",
+    "name": "Minion",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L68; md:powers_zh.md:L60",
+    "stack_type": "Single",
+    "zh_description": "标记召唤物——其死亡不触发战斗结束 判定（OwnerIsSecondaryEnemy；持有者死后 power 不保留）。",
+    "zh_name": "仆从"
+  },
+  "MONARCHS_GAZE_POWER": {
+    "aliases": [
+      "MonarchsGazePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "when owner's powered attack hits, apply Amount MONARCHS_GAZE_STRENGTH_DOWN_POWER to the target (strength-down engine hosted on target).",
+    "host_of_affliction": false,
+    "id": "MONARCHS_GAZE_POWER",
+    "kind": "power",
+    "name": "Monarchs Gaze",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L601; md:powers_zh.md:L534",
+    "stack_type": "Counter",
+    "zh_description": "持有者的攻击命中时，对目标施加 Amount 层 MONARCHS_GAZE_STRENGTH_DOWN_POWER（力量削减引擎在目标上）。",
+    "zh_name": "Monarchs Gaze"
+  },
+  "MONARCHS_GAZE_STRENGTH_DOWN_POWER": {
+    "aliases": [
+      "MonarchsGazePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "strength-down marker applied by MonarchsGaze; paired debuff logic hosted by Monarch cards.",
+    "host_of_affliction": false,
+    "id": "MONARCHS_GAZE_STRENGTH_DOWN_POWER",
+    "kind": "power",
+    "name": "Monarchs Gaze",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L604; md:powers_zh.md:L536",
+    "stack_type": "Counter",
+    "zh_description": "由 MonarchsGaze 施加的力量削减标记；配套减益逻辑由君主卡牌宿主。",
+    "zh_name": "Monarchs Gaze"
+  },
+  "MONOLOGUE_POWER": {
+    "aliases": [
+      "MONOLOGUE",
+      "MonologuePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "card-play strength engine — tracks StrengthApplied; applies/revokes STRENGTH per cards played (hosted by source card; display shows accumulated Strength).",
+    "host_of_affliction": false,
+    "id": "MONOLOGUE_POWER",
+    "kind": "power",
+    "name": "Monologue",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L562; md:powers_zh.md:L498",
+    "stack_type": "Counter",
+    "zh_description": "出牌力量引擎——追踪 StrengthApplied， 按打出牌数施加/回退 STRENGTH（由宿主卡驱动；显示层数为累积力量）。",
+    "zh_name": "Monologue"
+  },
+  "NECRO_MASTERY_POWER": {
+    "aliases": [
+      "NecroMasteryPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "when the owner's Osty pet loses HP, deal (HP lost * Amount) unblockable unpowered damage to all hittable enemies.",
+    "host_of_affliction": false,
+    "id": "NECRO_MASTERY_POWER",
+    "kind": "power",
+    "name": "Necro Mastery",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L572; md:powers_zh.md:L507",
+    "stack_type": "Counter",
+    "zh_description": "持有者的 Osty 宠物失去 HP 时， 对所有可命中敌人造成（失去 HP × Amount）点不可格挡、非攻击伤害。",
+    "zh_name": "Necro Mastery"
+  },
+  "NEUROSURGE_POWER": {
+    "aliases": [
+      "NeurosurgePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at start of owner's side turn, apply Amount DOOM to owner.",
+    "host_of_affliction": false,
+    "id": "NEUROSURGE_POWER",
+    "kind": "power",
+    "name": "Neurosurge",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L306; md:powers_zh.md:L275",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合开始时对持有者 施加 Amount 层 DOOM。",
+    "zh_name": "Neurosurge"
+  },
+  "NIGHTMARE_POWER": {
+    "aliases": [
+      "NightmarePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "before owner's hand draw, add Amount clones of the selected card to hand (clones are affliction-cleared).",
+    "host_of_affliction": false,
+    "id": "NIGHTMARE_POWER",
+    "kind": "power",
+    "name": "Nightmare",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L548; md:powers_zh.md:L484",
+    "stack_type": "Counter",
+    "zh_description": "持有者手牌抽取前，向手牌加入 Amount 张所选牌的复制（复制体清除减益附着）。",
+    "zh_name": "噩梦"
+  },
+  "NOSTALGIA_POWER": {
+    "aliases": [
+      "NostalgiaPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "modifies played-card result pile/position (hosted by source card text).",
+    "host_of_affliction": false,
+    "id": "NOSTALGIA_POWER",
+    "kind": "power",
+    "name": "Nostalgia",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": null,
+    "source": "md:powers.md:L526; md:powers_zh.md:L463",
+    "stack_type": "Counter",
+    "zh_description": "修改打出牌的结算牌堆/位置（按宿主 卡面文案）。",
+    "zh_name": "Nostalgia"
+  },
+  "NOXIOUS_FUMES_POWER": {
+    "aliases": [
+      "NoxiousFumesPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at start of owner's side turn, apply Amount POISON to all hittable enemies.",
+    "host_of_affliction": false,
+    "id": "NOXIOUS_FUMES_POWER",
+    "kind": "power",
+    "name": "Noxious Fumes",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L292; md:powers_zh.md:L262",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合开始时 对所有可命中敌人施加 Amount 层 POISON。",
+    "zh_name": "恶臭气体"
+  },
+  "NO_DRAW_POWER": {
+    "aliases": [
+      "NO_DRAW",
+      "NoDrawPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "non-hand draws (card-effect draws) by owner are blocked for the rest of the turn. Removed at end of owner's side turn. Initial hand draw is not blocked.",
+    "host_of_affliction": false,
+    "id": "NO_DRAW_POWER",
+    "kind": "power",
+    "name": "No Draw",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L133; md:powers_zh.md:L113",
+    "stack_type": "Single",
+    "zh_description": "本回合内持有者的非起手抽牌 （卡牌效果抽牌）被封锁。持有者阵营回合结束时移除。起手抽牌不受影响。",
+    "zh_name": "禁止抽牌"
+  },
+  "NO_ENERGY_GAIN_POWER": {
+    "aliases": [
+      "NO_ENERGY_GAIN",
+      "NoEnergyGainPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "energy gains for owner this turn are set to 0. Removed at end of owner's side turn.",
+    "host_of_affliction": false,
+    "id": "NO_ENERGY_GAIN_POWER",
+    "kind": "power",
+    "name": "No Energy Gain",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L136; md:powers_zh.md:L115",
+    "stack_type": "Single",
+    "zh_description": "本回合持有者获得的能量变为 0。 持有者阵营回合结束时移除。",
+    "zh_name": "No Energy Gain"
+  },
+  "OBLIVION_POWER": {
+    "aliases": [
+      "OblivionPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "each card the applier's player plays this turn applies Amount DOOM to owner. Removed at end of Player side turn.",
+    "host_of_affliction": false,
+    "id": "OBLIVION_POWER",
+    "kind": "power",
+    "name": "Oblivion",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L304; md:powers_zh.md:L273",
+    "stack_type": "Counter",
+    "zh_description": "施加者玩家每打出一张牌，对持有者 施加 Amount 层 DOOM。玩家阵营回合结束时移除。",
+    "zh_name": "Oblivion"
+  },
+  "ONE_TWO_PUNCH_POWER": {
+    "aliases": [
+      "ONE_TWO_PUNCH",
+      "OneTwoPunchPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner's next Amount Attack plays count twice; 1 stack consumed per Attack played; removed at end of owner's side turn.",
+    "host_of_affliction": false,
+    "id": "ONE_TWO_PUNCH_POWER",
+    "kind": "power",
+    "name": "One Two Punch",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L479; md:powers_zh.md:L423",
+    "stack_type": "Counter",
+    "zh_description": "持有者接下来 Amount 次攻击牌 打出计为 2 次；每打出 1 张攻击牌消耗 1 层；持有者阵营回合结束时移除。",
+    "zh_name": "One Two Punch"
+  },
+  "ORBIT_POWER": {
+    "aliases": [
+      "OrbitPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "every 4 Energy owner spends on cards triggers GainEnergy(Amount) per trigger (threshold 4).",
+    "host_of_affliction": false,
+    "id": "ORBIT_POWER",
+    "kind": "power",
+    "name": "Orbit",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L164; md:powers_zh.md:L143",
+    "stack_type": "Counter",
+    "zh_description": "持有者每通过卡牌花费 4 点能量，触发 获得 Amount 能量（阈值 4）。",
+    "zh_name": "Orbit"
+  },
+  "OUTBREAK_POWER": {
+    "aliases": [
+      "OutbreakPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "every 3rd time owner applies POISON to anyone (Amount-change > 0), deal Amount unpowered damage to all hittable enemies; internal counter resets modulo 3.",
+    "host_of_affliction": false,
+    "id": "OUTBREAK_POWER",
+    "kind": "power",
+    "name": "Outbreak",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L299; md:powers_zh.md:L268",
+    "stack_type": "Counter",
+    "zh_description": "持有者每次对他人施加 POISON（数值 变化 > 0）计 1 次；每第 3 次对所有可命中敌人造成 Amount 点非攻击 伤害；内部计数对 3 取模。",
+    "zh_name": "Outbreak"
+  },
+  "PAGESTORM_POWER": {
+    "aliases": [
+      "PagestormPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "whenever owner draws an Ethereal card, draw Amount more.",
+    "host_of_affliction": false,
+    "id": "PAGESTORM_POWER",
+    "kind": "power",
+    "name": "Pagestorm",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L502; md:powers_zh.md:L443",
+    "stack_type": "Counter",
+    "zh_description": "持有者每当抽到虚无（Ethereal）牌， 额外抽 Amount 张。",
+    "zh_name": "Pagestorm"
+  },
+  "PAINFUL_STABS_POWER": {
+    "aliases": [
+      "PainfulStabsPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "see stances — SKITTISH_POWER (Buff, Counter): if owner has not gained Block this turn and takes card-sourced attack damage, owner gains Amount Block (once per turn flag; flag resets at end of opposing side's turn).",
+    "host_of_affliction": false,
+    "id": "PAINFUL_STABS_POWER",
+    "kind": "power",
+    "name": "Painful Stabs",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": null,
+    "source": "md:powers.md:L606; md:powers_zh.md:L359",
+    "stack_type": null,
+    "zh_description": "持有者攻击对玩家造成未格挡伤害 时，对该玩家施加 Wound 状态牌（逐次命中逻辑见 AfterAttack；持有者 死亡后 power 与生物按移除规则保留）。",
+    "zh_name": "Painful Stabs"
+  },
+  "PALE_BLUE_DOT_POWER": {
+    "curated": true,
+    "description": "If owner played 5 or more cards last turn, owner draws Amount additional cards this turn (card PALE_BLUE_DOT, Regent pool: draw 1 base, 2 upgraded).",
+    "id": "PALE_BLUE_DOT_POWER",
+    "kind": "power",
+    "name": "Pale Blue Dot",
+    "power_type": "Buff",
+    "source": "curated:cards.md PALE_BLUE_DOT",
+    "stack_type": "Counter"
+  },
+  "PANACHE_POWER": {
+    "aliases": [
+      "PANACHE",
+      "PanachePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "every 5th card owner plays deals Amount unpowered damage to ALL hittable enemies (`CardsLeft` starts at 5, decrements per card played after the first, resets to 5 on proc and at turn end).",
+    "host_of_affliction": false,
+    "id": "PANACHE_POWER",
+    "kind": "power",
+    "name": "Panache",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L493; md:powers_zh.md:L436",
+    "stack_type": "Counter",
+    "zh_description": "持有者每打出第 5 张牌，对所有 可命中敌人造成 Amount 点非攻击伤害（`CardsLeft` 初始 5，首张后递减， 触发及回合结束时重置为 5）。",
+    "zh_name": "实例化"
+  },
+  "PAPER_CUTS_POWER": {
+    "aliases": [
+      "PAPER_CUTS",
+      "PaperCutsPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "when owner's powered attack deals unblocked damage > 0 to a player, that player loses Amount max HP. Amount 2 exact — each leaking ScrollOfBiting-class attacker costs −2 MaxHP per turn when unblocked; **full-block turns cost ZERO MaxHP** (51 block vs 44 incoming produced no tax) — the counterplay is block completeness per attacker, not average block. Related pairing decode: **Inferno's own turn-start HP loss triggers Rupture** (Inferno + Rupture Amount 2 deployed = +2 Str per turn passive) **and satisfies Spite's \"lost HP this turn\" condition** (Spite double-fires on Inferno-deployed fights).",
+    "host_of_affliction": false,
+    "id": "PAPER_CUTS_POWER",
+    "kind": "power",
+    "name": "Paper Cuts",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L323; md:powers_zh.md:L292",
+    "stack_type": "Counter",
+    "zh_description": "持有者的攻击对玩家造成未格挡伤害 > 0 时，该玩家失去 Amount 点最大 HP。Amount 2 精确——每漏挡一路咬人卷轴类攻击者每回合 −2 MaxHP；**全挡回合零 MaxHP 税**（51 挡对 44 来袭零税）——对策是每个攻击者的挡完整性而非平均挡值。关联配对解码：**Inferno 自身开回合 HP 损失触发 Rupture**（Inferno+Rupture Amount2 同部署 = 每回合被动 +2 力量）**且满足 Spite「本回合掉血」条件**（部署 Inferno 的战斗 Spite 常态双击）。",
+    "zh_name": "Paper Cuts"
+  },
+  "PARRY_POWER": {
+    "aliases": [
+      "PARRY",
+      "ParryPower"
+    ],
+    "counter_class": false,
+    "curated": true,
+    "description": "Inert marker power (Buff, Counter) — no hooks of its own; queried by specific cards (SovereignBlade family parry logic).",
+    "host_of_affliction": false,
+    "id": "PARRY_POWER",
+    "kind": "power",
+    "name": "Parry",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "curated:powers.md inert marker group",
+    "stack_type": "Counter"
+  },
+  "PERSONAL_HIVE_POWER": {
+    "aliases": [
+      "PERSONAL_HIVE",
+      "PersonalHivePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "whenever the owner is hit by a powered attack, the attacker gets Amount Dazed added to their draw pile at a random position. PHEROMONE_SPIT (Entomancer) increments Amount by 1 and grants Strength on the same buff. Stacks visible as `PERSONAL_HIVE_POWER:n`; after the spit n=2, so every powered-attack card costs 2 Dazed — multi-hit attacks are taxed per hit. Kill the Entomancer before the buff turn, or the bees intent rises with Strength on top of the doubled Dazed tax.",
+    "host_of_affliction": false,
+    "id": "PERSONAL_HIVE_POWER",
+    "kind": "power",
+    "name": "Personal Hive",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L117; md:powers_zh.md:L101",
+    "stack_type": "Counter",
+    "zh_description": "拥有者每次被 有源攻击命中时，攻击者的抽牌堆随机位置加入 Amount 张 Dazed。 PHEROMONE_SPIT（蜂群术士）在同一次增益中把 Amount +1 并赋予力量。 层数经 `PERSONAL_HIVE_POWER:n` 可见； 信息素后 n=2，每张有源攻击牌代价 2 张 Dazed——多段攻击按命中次数计税。 在 Buff 回合结束前击杀蜂群术士，否则蜂群意图在翻倍 Dazed 税之上还随力量上涨。",
+    "zh_name": "个人蜂巢"
+  },
+  "PHANTOM_BLADES_POWER": {
+    "aliases": [
+      "PhantomBladesPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "+Amount attack damage on owner's attacks; also grants Retain to owner's cards on apply/enter-combat.",
+    "host_of_affliction": false,
+    "id": "PHANTOM_BLADES_POWER",
+    "kind": "power",
+    "name": "Phantom Blades",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L255; md:powers_zh.md:L229",
+    "stack_type": "Counter",
+    "zh_description": "持有者攻击 +Amount 伤害；施加 及卡牌进入战斗时给持有者卡牌附加 Retain。",
+    "zh_name": "Phantom Blades"
+  },
+  "PIERCING_WAIL_POWER": {
+    "curated": true,
+    "description": "Temporary Strength subclass (negative): applies -Amount Strength to affected enemies on apply; the same amount is reverted at end of each affected enemy's side turn. Type shows Debuff when the granted amount is negative.",
+    "id": "PIERCING_WAIL_POWER",
+    "kind": "power",
+    "name": "Piercing Wail",
+    "power_type": "Debuff",
+    "source": "curated:powers.md temporary-strength family",
+    "stack_type": "Counter"
+  },
+  "PILLAR_OF_CREATION_POWER": {
+    "aliases": [
+      "PillarOfCreationPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "gains owner Amount Block (trigger hosted by source card/relic).",
+    "host_of_affliction": false,
+    "id": "PILLAR_OF_CREATION_POWER",
+    "kind": "power",
+    "name": "Pillar Of Creation",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L230; md:powers_zh.md:L207",
+    "stack_type": "Counter",
+    "zh_description": "为持有者提供 Amount 格挡 （触发由宿主卡牌/遗物决定）。",
+    "zh_name": "Pillar Of Creation"
+  },
+  "PLATING_POWER": {
+    "aliases": [
+      "PLATING",
+      "PlatingPower"
+    ],
+    "counter_class": true,
+    "curated": false,
+    "description": "at start of owner's side turn (not turn 1 for the holder) owner loses 1 stack (enemies lose `Decrement`, = player count in multiplayer); at end of owner's side turn (early) owner gains Amount Block. Enemies with Plating also gain Amount Block at combat start (round 1). Players can hold Plating too (Heart of Iron potion applies 7) — same mechanics; combat-start block only when applied before round 1's player turn. Mid-combat use on a player grants Amount block at the END of the player's side turn (e.g. PLATING_POWER:7 drunk on turn 1: +7 block lands before the enemy attack, stacks decrement 7→6→5… each subsequent turn start). Exact-cover math: current block + end-of-turn plating = the number that matters vs the enemy's incoming intent. Stack loss for players is 1/turn.",
+    "host_of_affliction": false,
+    "id": "PLATING_POWER",
+    "kind": "power",
+    "name": "Plating",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L33; md:powers_zh.md:L31",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合开始时 -1 层 （联机下敌方按 `Decrement`=玩家数 扣层）；阵营回合结束（early）时获得 Amount 格挡。开局即带镀甲的敌人在第 1 轮还会获得 Amount 格挡。 玩家也可持有镀甲（HeartOfIron 药水施加 7）——机制相同；仅在 round1 玩家回合开始前施加才给战斗开始挡；**战斗中途使用在玩家侧回合结束时授予 Amount 挡**（例如 T1 玩家回合饮下 PLATING_POWER:7：+7 挡在敌方攻击前到账，此后每回合递减 7→6→5…）。精确覆盖算术：当前挡 + 回合结束镀层 = 对敌方意图的有效数字。玩家侧每回合扣 1 层。",
+    "zh_name": "镀甲"
+  },
+  "PLOW_POWER": {
+    "aliases": [
+      "PLOW",
+      "PlowPower"
+    ],
+    "counter_class": true,
+    "curated": false,
+    "description": "if owner takes unblocked damage while CurrentHp <= Amount, owner is stunned (temporary-strength powers on owner are consumed — decomp clears TemporaryStrengthPower instances; stun logic monster-hosted).",
+    "host_of_affliction": false,
+    "id": "PLOW_POWER",
+    "kind": "power",
+    "name": "Plow",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L592; md:powers_zh.md:L526",
+    "stack_type": "Counter",
+    "zh_description": "持有者在 CurrentHp <= Amount 时受到 未格挡伤害，则被击晕（decomp 清除持有者身上 TemporaryStrengthPower 实例；击晕逻辑由怪物宿主执行）。",
+    "zh_name": "Plow"
+  },
+  "POISON": {
+    "aliases": [
+      "PoisonPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at start of owner's side turn, deals Amount unblockable unpowered damage to owner, then decrements 1; repeats per trigger. Trigger count = min(stacks, 1 + sum of opposing AccelerantPower amounts).",
+    "host_of_affliction": false,
+    "id": "POISON",
+    "kind": "power",
+    "name": "Poison",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L27; md:powers_zh.md:L26",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合开始时受到 Amount 点 不可格挡、非攻击来源伤害，随后 -1 层；按触发次数重复。触发次数 = min(层数, 1 + 对面 AccelerantPower 层数之和)。",
+    "zh_name": "中毒"
+  },
+  "POSSESS_SPEED_POWER": {
+    "aliases": [
+      "POSSESS_SPEED",
+      "PossessSpeedPower"
+    ],
+    "counter_class": false,
+    "curated": true,
+    "description": "On the holder's turn the holder steals player Dexterity (each holder gains +2 of the stolen stat per steal). Stolen stats return to the player same-resolution on holder death — kill holders to reclaim. Carried by ForgottenThing (遗忘之物).",
+    "host_of_affliction": false,
+    "id": "POSSESS_SPEED_POWER",
+    "kind": "power",
+    "name": "Possess Speed",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "curated:powers.md POSSESS group + monsters.md ForgottenThing",
+    "stack_type": "Counter"
+  },
+  "POSSESS_STRENGTH_POWER": {
+    "aliases": [
+      "POSSESS_STRENGTH",
+      "PossessStrengthPower"
+    ],
+    "counter_class": false,
+    "curated": true,
+    "description": "On the holder's turn the holder steals player Strength (each holder gains +2 of the stolen stat per steal; player Strength display empties as it is stolen). Stolen stats return to the player same-resolution on holder death — kill holders to reclaim. Carried by LostThing (失落之物).",
+    "host_of_affliction": false,
+    "id": "POSSESS_STRENGTH_POWER",
+    "kind": "power",
+    "name": "Possess Strength",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "curated:powers.md POSSESS group + monsters.md LostThing",
+    "stack_type": "Counter"
+  },
+  "PYRE_POWER": {
+    "aliases": [
+      "PYRE",
+      "PyrePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "Gain [energy:1] at the start of each turn.",
+    "host_of_affliction": false,
+    "id": "PYRE_POWER",
+    "kind": "power",
+    "name": "Pyre",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L146; md:powers_zh.md:L124; codex:powers/PYRE",
+    "stack_type": "Counter",
+    "zh_description": "+Amount 最大能量。",
+    "zh_name": "Pyre"
+  },
+  "RADIANCE_POWER": {
+    "aliases": [
+      "RADIANCE",
+      "RadiancePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at energy reset, gain Energy equal to DynamicVars.Energy (set by applier), then decrement.",
+    "host_of_affliction": false,
+    "id": "RADIANCE_POWER",
+    "kind": "power",
+    "name": "Radiance",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L157; md:powers_zh.md:L135",
+    "stack_type": "Counter",
+    "zh_description": "能量重置时获得 DynamicVars.Energy 点 能量（数值由施加者设定），随后 -1 层。",
+    "zh_name": "Radiance"
+  },
+  "RAGE_POWER": {
+    "aliases": [
+      "RAGE",
+      "RagePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "whenever owner plays an Attack card, owner gains Amount Block. Power removed at end of owner's side turn.",
+    "host_of_affliction": false,
+    "id": "RAGE_POWER",
+    "kind": "power",
+    "name": "Rage",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L190; md:powers_zh.md:L167",
+    "stack_type": "Counter",
+    "zh_description": "持有者每当打出一张攻击牌，获得 Amount 格挡。持有者阵营回合结束时移除该 power。",
+    "zh_name": "愤怒"
+  },
+  "RAMPART_POWER": {
+    "aliases": [
+      "RAMPART",
+      "RampartPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at start of Player side turn, each living TurretOperator enemy gains Amount Block.",
+    "host_of_affliction": false,
+    "id": "RAMPART_POWER",
+    "kind": "power",
+    "name": "Rampart",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L211; md:powers_zh.md:L188",
+    "stack_type": "Counter",
+    "zh_description": "玩家阵营回合开始时，每名存活的 TurretOperator 敌人获得 Amount 格挡。",
+    "zh_name": "Rampart"
+  },
+  "RAVENOUS_POWER": {
+    "aliases": [
+      "RAVENOUS",
+      "RavenousPower"
+    ],
+    "counter_class": true,
+    "curated": true,
+    "description": "When another creature on owner's side dies and owner lives, owner is stunned into a devour move and gains +Amount STRENGTH. Kill-window doctrine (CorpseSlug/SEAPUNK-class): one kill per turn converts each ally death into a free stun window on survivors — sequence kills to open stun windows, or avoid feeding Strength by leaving adds alive.",
+    "host_of_affliction": false,
+    "id": "RAVENOUS_POWER",
+    "kind": "power",
+    "name": "Ravenous",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "curated:powers.md RAVENOUS + coordinator audit 2026-09-18",
+    "stack_type": "Counter",
+    "zh_description": "同侧其他生物死亡且持有者存活时， 持有者被击晕进入吞噬招式并获得 +Amount STRENGTH。",
+    "zh_name": "Ravenous"
+  },
+  "REAPER_FORM_POWER": {
+    "aliases": [
+      "ReaperFormPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "when owner (or owner's pet) deals attack damage > 0, apply DOOM = total damage * Amount to the target.",
+    "host_of_affliction": false,
+    "id": "REAPER_FORM_POWER",
+    "kind": "power",
+    "name": "Reaper Form",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L302; md:powers_zh.md:L271",
+    "stack_type": "Counter",
+    "zh_description": "持有者（或其宠物）造成攻击伤害 > 0 时，对目标施加 DOOM = 总伤害 × Amount。",
+    "zh_name": "Reaper Form"
+  },
+  "REATTACH_POWER": {
+    "aliases": [
+      "REATTACH",
+      "ReattachPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "on death, if any other segment with Reattach is still alive, the segment enters a dead state (not removed from combat, untargetable) and at end of its turn reattaches — healing Amount HP. Death is fatal only when ALL other segments are dead. Buffs persist through death.",
+    "host_of_affliction": false,
+    "id": "REATTACH_POWER",
+    "kind": "power",
+    "name": "Reattach",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L353; md:powers_zh.md:L312",
+    "stack_type": "Single",
+    "zh_description": "死亡时，若仍有其他 带 Reattach 的体节存活，该体节进入死亡状态（不移出战斗、不可选中）， 并在其回合结束时重组——回复 Amount HP。仅当其他所有体节全部死亡时 其死亡才为致命。死亡期间增益保留。",
+    "zh_name": "重组"
+  },
+  "REBOUND_POWER": {
+    "aliases": [
+      "ReboundPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "played-card result pile/position modified (card returns per card text); decrements at end of owner's side turn.",
+    "host_of_affliction": false,
+    "id": "REBOUND_POWER",
+    "kind": "power",
+    "name": "Rebound",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": null,
+    "source": "md:powers.md:L520; md:powers_zh.md:L457",
+    "stack_type": "Counter",
+    "zh_description": "打出牌的结算牌堆/位置被修改（按卡面 文案回手等）；持有者阵营回合结束时 -1 层。",
+    "zh_name": "Rebound"
+  },
+  "REGEN_POWER": {
+    "aliases": [
+      "REGEN",
+      "RegenPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at end of owner's side turn, heal Amount HP, then decrement 1.",
+    "host_of_affliction": false,
+    "id": "REGEN_POWER",
+    "kind": "power",
+    "name": "Regen",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L44; md:powers_zh.md:L39",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合结束时回复 Amount HP，随后 -1 层。",
+    "zh_name": "再生"
+  },
+  "REPTILE_TRINKET_POWER": {
+    "curated": true,
+    "description": "Temporary Strength subclass: whenever owner uses a potion, gain +Amount Strength this turn (relic REPTILE_TRINKET: +3); reverted at end of owner's side turn. Fires on any potion use — stacks same-turn with potion-native Strength effects.",
+    "id": "REPTILE_TRINKET_POWER",
+    "kind": "power",
+    "name": "Reptile Trinket",
+    "power_type": "Buff",
+    "source": "curated:relics.md ReptileTrinket + powers.md family",
+    "stack_type": "Counter"
+  },
+  "RETAIN_HAND_POWER": {
+    "aliases": [
+      "RETAIN_HAND",
+      "RetainHandPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner's hand is not flushed at turn end (ShouldFlush false); decrements at end of owner's side turn.",
+    "host_of_affliction": false,
+    "id": "RETAIN_HAND_POWER",
+    "kind": "power",
+    "name": "Retain Hand",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L518; md:powers_zh.md:L455",
+    "stack_type": "Counter",
+    "zh_description": "持有者回合结束时手牌不被弃置 （ShouldFlush false）；持有者阵营回合结束时 -1 层。",
+    "zh_name": "Retain Hand"
+  },
+  "RINGING_POWER": {
+    "affliction_keys": [
+      "RINGING"
+    ],
+    "aliases": [
+      "RINGING",
+      "RingingPower"
+    ],
+    "counter_class": true,
+    "curated": false,
+    "description": "on apply, afflict all owner's cards with Ringing; new cards entering combat also get it. A Ringing card is unplayable once any card has been played by owner this turn. Power removes itself at end of owner's side turn (clearing all Ringing).",
+    "host_of_affliction": true,
+    "id": "RINGING_POWER",
+    "kind": "power",
+    "name": "Ringing",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L94; md:powers_zh.md:L78",
+    "stack_type": "Single",
+    "zh_description": "施加时给持有者所有卡牌附加 Ringing，之后进入战斗的新牌也附加。本回合只要打出过任意一张牌， Ringing 牌即不可打出。power 在持有者阵营回合结束时自移除（并清除 全部 Ringing）。",
+    "zh_name": "耳鸣"
+  },
+  "RITUAL_POWER": {
+    "aliases": [
+      "RITUAL",
+      "RitualPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at end of owner's side turn, apply +Amount STRENGTH_POWER to owner (skips the very turn it was applied if applied by an enemy during that enemy's turn).",
+    "host_of_affliction": false,
+    "id": "RITUAL_POWER",
+    "kind": "power",
+    "name": "Ritual",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L51; md:powers_zh.md:L45",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合结束时获得 +Amount STRENGTH_POWER（若由敌方在其回合施加，当回合跳过不触发）。",
+    "zh_name": "仪式"
+  },
+  "ROYALTIES_POWER": {
+    "aliases": [
+      "RoyaltiesPower"
+    ],
+    "counter_class": false,
+    "curated": true,
+    "description": "Source-hosted utility power (Buff, Counter) — trigger logic hosted by the source card; see the hosting card text.",
+    "host_of_affliction": false,
+    "id": "ROYALTIES_POWER",
+    "kind": "power",
+    "name": "Royalties",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "curated:powers.md source-hosted utility group",
+    "stack_type": "Counter"
+  },
+  "RUPTURE_POWER": {
+    "aliases": [
+      "RUPTURE",
+      "RupturePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "when owner takes unblocked damage during owner's side turn from a card source, that card's post-play resolution applies +Amount STRENGTH to owner (per-card tracking).",
+    "host_of_affliction": false,
+    "id": "RUPTURE_POWER",
+    "kind": "power",
+    "name": "Rupture",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L463; md:powers_zh.md:L408",
+    "stack_type": "Counter",
+    "zh_description": "持有者在本方阵营回合内受到来自 卡牌来源的未格挡伤害时，该卡牌的结算为持有者施加 +Amount STRENGTH （按卡追踪）。",
+    "zh_name": "破灭"
+  },
+  "SANDPIT_POWER": {
+    "aliases": [
+      "SANDPIT",
+      "SandpitPower"
+    ],
+    "counter_class": true,
+    "curated": false,
+    "description": "The Insatiable's kill timer — **starts at 4**, decrements by 1 at start of Enemy side turn (late); **at 0 the player is instantly devoured regardless of HP/Block** (unblockable kill — previously misattributed to an intent-display bug). The boss injects **6 FranticEscape** cards into the player deck at fight start; playing one **+1 Sandpit Amount** (and permanently +1's that card's own cost) — hold them for counter 1–2 as emergency extensions, do NOT hoard unplayed and do NOT spam early. Fight plan: damage race first (block does not stop the devour), track Sandpit Amount every turn.",
+    "host_of_affliction": false,
+    "id": "SANDPIT_POWER",
+    "kind": "power",
+    "name": "Sandpit",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L418; md:powers_zh.md:L367",
+    "stack_type": "Counter",
+    "zh_description": "The Insatiable 的击杀倒计时—— **初始 4 层**，敌方阵营回合开始（late）时 -1；**归 0 时玩家被直接吞噬， 无视 HP/格挡**（不可格挡的处决——此前被误判为 意图显示 bug）。Boss 开战时向玩家牌库注入 **6 张 FranticEscape**；打出 一张 **沙坑 Amount +1**（该牌自身费用永久 +1）——留到计数 1–2 时作紧急 延时用，既不可全程不打，也不可早早挥霍。战斗计划：输出竞速优先（格挡 拦不住吞噬），每回合跟踪沙坑层数。",
+    "zh_name": "沙坑"
+  },
+  "SEEKING_EDGE_POWER": {
+    "aliases": [
+      "SeekingEdgePower"
+    ],
+    "counter_class": false,
+    "curated": true,
+    "description": "Inert marker power (Buff, Counter) — no hooks of its own; queried by SovereignBlade-family cards.",
+    "host_of_affliction": false,
+    "id": "SEEKING_EDGE_POWER",
+    "kind": "power",
+    "name": "Seeking Edge",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "curated:powers.md inert marker group",
+    "stack_type": "Counter"
+  },
+  "SELF_FORMING_CLAY_POWER": {
+    "aliases": [
+      "SELF_FORMING_CLAY",
+      "SelfFormingClayPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "when owner's Block is cleared, gain Amount Block once and remove the power.",
+    "host_of_affliction": false,
+    "id": "SELF_FORMING_CLAY_POWER",
+    "kind": "power",
+    "name": "Self Forming Clay",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L202; md:powers_zh.md:L179",
+    "stack_type": "Counter",
+    "zh_description": "持有者格挡被 清空时，获得 Amount 格挡一次并移除该 power。",
+    "zh_name": "自成型黏土"
+  },
+  "SENTRY_MODE_POWER": {
+    "aliases": [
+      "SentryModePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "before owner's hand draw, add Amount SweepingGaze cards to hand.",
+    "host_of_affliction": false,
+    "id": "SENTRY_MODE_POWER",
+    "kind": "power",
+    "name": "Sentry Mode",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L550; md:powers_zh.md:L486",
+    "stack_type": "Counter",
+    "zh_description": "持有者手牌抽取前，向手牌加入 Amount 张 SweepingGaze。",
+    "zh_name": "Sentry Mode"
+  },
+  "SERPENT_FORM_POWER": {
+    "aliases": [
+      "SerpentFormPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "each card owner plays deals Amount unpowered damage to a random enemy (per-card amount tracked at play time).",
+    "host_of_affliction": false,
+    "id": "SERPENT_FORM_POWER",
+    "kind": "power",
+    "name": "Serpent Form",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L556; md:powers_zh.md:L492",
+    "stack_type": "Counter",
+    "zh_description": "持有者每打出一张牌，对一名随机 敌人造成 Amount 点非攻击伤害（按打出时记录的数值）。",
+    "zh_name": "Serpent Form"
+  },
+  "SETUP_STRIKE_POWER": {
+    "curated": true,
+    "description": "Temporary Strength subclass: +Amount Strength for the rest of the current turn (card SETUP_STRIKE: +2 base, +3 upgraded); reverted at end of owner's side turn.",
+    "id": "SETUP_STRIKE_POWER",
+    "kind": "power",
+    "name": "Setup Strike",
+    "power_type": "Buff",
+    "source": "curated:cards.md SETUP_STRIKE",
+    "stack_type": "Counter"
+  },
+  "SHADOWMELD_POWER": {
+    "aliases": [
+      "ShadowmeldPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner's Block gains multiplied by 2^Amount; power removed at end of owner's side turn.",
+    "host_of_affliction": false,
+    "id": "SHADOWMELD_POWER",
+    "kind": "power",
+    "name": "Shadowmeld",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L225; md:powers_zh.md:L202",
+    "stack_type": "Counter",
+    "zh_description": "持有者获得的格挡 ×2^Amount； 持有者阵营回合结束时移除。",
+    "zh_name": "Shadowmeld"
+  },
+  "SHRIEK_POWER": {
+    "aliases": [
+      "SHRIEK",
+      "ShriekPower"
+    ],
+    "counter_class": true,
+    "curated": false,
+    "description": "if owner takes unblocked damage while CurrentHp <= Amount, owner is stunned into TerrorEel terror state and the power removes itself. The stun fires on an unblocked hit that crosses the HP bracket (observed window 68–74 HP; exact Amount not surfaced in state) — hits above the threshold do nothing, so burst the eel under the bracket THEN hit unblocked.",
+    "host_of_affliction": false,
+    "id": "SHRIEK_POWER",
+    "kind": "power",
+    "name": "Shriek",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L596; md:powers_zh.md:L529",
+    "stack_type": "Counter",
+    "zh_description": "持有者在 CurrentHp <= Amount 时受到未格挡伤害，则被击晕进入 TerrorEel 恐惧状态并自移除该 power。 击晕在未格挡伤害越过 HP 区间时触发（观测窗口 68–74 HP；确切 Amount 未在 state 暴露）——阈值以上的攻击无效果，战术=先把鳗鱼打进区间再用未格挡伤害触发。",
+    "zh_name": "可为负"
+  },
+  "SHRINK_POWER": {
+    "aliases": [
+      "SHRINK",
+      "ShrinkPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner's attack damage dealt multiplied by x0.75 (`DamageDecrease` 30 → (100-30)/100). Decrements 1 at end of owner's side turn; removed if applier dies. Visual: owner scales to 0.5.",
+    "host_of_affliction": false,
+    "id": "SHRINK_POWER",
+    "kind": "power",
+    "name": "Shrink",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L238; md:powers_zh.md:L215",
+    "stack_type": "Counter",
+    "zh_description": "持有者造成的攻击伤害 ×0.75（`DamageDecrease` 30 → (100-30)/100）。 持有者阵营回合结束时 -1 层；施加者死亡时移除。视觉：持有者缩至 0.5。",
+    "zh_name": "缩小"
+  },
+  "SHROUD_POWER": {
+    "aliases": [
+      "ShroudPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "gains owner Amount Block (triggered by power amount changes — hosted by source card/relic).",
+    "host_of_affliction": false,
+    "id": "SHROUD_POWER",
+    "kind": "power",
+    "name": "Shroud",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L215; md:powers_zh.md:L192",
+    "stack_type": "Counter",
+    "zh_description": "为持有者提供 Amount 格挡（触发由宿主 卡牌/遗物决定）。",
+    "zh_name": "Shroud"
+  },
+  "SIC_EM_POWER": {
+    "aliases": [
+      "SicEmPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "when the applier's Osty pet damages owner, summon Amount Osty for the pet's player. Removed at end of owner's side turn.",
+    "host_of_affliction": false,
+    "id": "SIC_EM_POWER",
+    "kind": "power",
+    "name": "Sic Em",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L386; md:powers_zh.md:L340",
+    "stack_type": "Counter",
+    "zh_description": "施加者的 Osty 宠物对持有者造成伤害 时，为宠物主人召唤 Amount 只 Osty。持有者阵营回合结束时移除。",
+    "zh_name": "Sic Em"
+  },
+  "SIGNAL_BOOST_POWER": {
+    "aliases": [
+      "SignalBoostPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner's next Amount Power plays count twice; 1 stack consumed per Power played.",
+    "host_of_affliction": false,
+    "id": "SIGNAL_BOOST_POWER",
+    "kind": "power",
+    "name": "Signal Boost",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L482; md:powers_zh.md:L425",
+    "stack_type": "Counter",
+    "zh_description": "持有者接下来 Amount 次 Power 牌 打出计为 2 次；每打出 1 张 Power 牌消耗 1 层。",
+    "zh_name": "Signal Boost"
+  },
+  "SKITTISH_POWER": {
+    "aliases": [
+      "SKITTISH",
+      "SkittishPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "if the owner gained no Block this turn and took card-sourced attack damage, the owner gains Amount Block (once per turn; flag resets at end of the opposing side's turn). Mirror of the same-named entry in powers_zh.md.",
+    "host_of_affliction": false,
+    "id": "SKITTISH_POWER",
+    "kind": "power",
+    "name": "Skittish",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L127; md:powers_zh.md:L538",
+    "stack_type": "Counter",
+    "zh_description": "持有者本回合未获得过格挡且受到卡牌 来源的攻击伤害时，获得 Amount 格挡（每回合一次标记；标记在对方阵营 回合结束时重置）。",
+    "zh_name": "Skittish"
+  },
+  "SLEIGHT_OF_FLESH_POWER": {
+    "curated": true,
+    "description": "Whenever owner applies a non-temporary debuff to an enemy, deal Amount unpowered damage to that enemy (card SLEIGHT_OF_FLESH, Necrobinder: 9 base, 13 upgraded). Temporary-stat debuffs do not proc it.",
+    "id": "SLEIGHT_OF_FLESH_POWER",
+    "kind": "power",
+    "name": "Sleight of Flesh",
+    "power_type": "Buff",
+    "source": "curated:cards.md SLEIGHT_OF_FLESH",
+    "stack_type": "Counter"
+  },
+  "SLIPPERY_POWER": {
+    "aliases": [
+      "SLIPPERY",
+      "SlipperyPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "any HP loss to owner that would be >= 1 is reduced to exactly 1; 1 stack consumed per hit that deals >= 1 unblocked damage.",
+    "host_of_affliction": false,
+    "id": "SLIPPERY_POWER",
+    "kind": "power",
+    "name": "Slippery",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L347; md:powers_zh.md:L308",
+    "stack_type": "Counter",
+    "zh_description": "对持有者任何 >= 1 的 HP 损失 降为恰好 1；每次造成 >= 1 未格挡伤害的命中消耗 1 层。",
+    "zh_name": "湿滑"
+  },
+  "SLOTH_POWER": {
+    "counter_class": true,
+    "curated": true,
+    "description": "Owner may play at most Amount cards per turn (counter resets at owner's turn start; display shows cards played this turn). Applied at Amount 3 by the KnowledgeDemon CURSE_OF_KNOWLEDGE choice card SLOTH. Counter-class kill-window semantics: the cap is the fight constraint — burst plans needing >Amount plays per turn are dead under Sloth.",
+    "id": "SLOTH_POWER",
+    "kind": "power",
+    "name": "Sloth",
+    "power_type": "Debuff",
+    "source": "curated:afflictions.md SLOTH + monsters.md KnowledgeDemon",
+    "stack_type": "Counter"
+  },
+  "SLOW_POWER": {
+    "aliases": [
+      "SLOW",
+      "SlowPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "attack damage received by owner is multiplied by x(1 + 0.1 * cards the player has played this turn). `SlowAmount` +1 per card played; resets to 0 at start of owner's side turn. Display amount = SlowAmount * 10.",
+    "host_of_affliction": false,
+    "id": "SLOW_POWER",
+    "kind": "power",
+    "name": "Slow",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L64; md:powers_zh.md:L57",
+    "stack_type": "Counter",
+    "zh_description": "持有者受到的攻击伤害 × (1 + 0.1 × 本回合玩家已打出的卡牌数)。`SlowAmount` 每打出一张牌 +1， 持有者阵营回合开始时归零。显示层数 = SlowAmount × 10。",
+    "zh_name": "缓速"
+  },
+  "SLUMBER_POWER": {
+    "aliases": [
+      "SLUMBER",
+      "SlumberPower"
+    ],
+    "counter_class": true,
+    "curated": false,
+    "description": "decrements on unblocked damage received AND at end of owner's side turn; at 0, owner wakes via WakeUpMove (Slumbering Beetle).",
+    "host_of_affliction": false,
+    "id": "SLUMBER_POWER",
+    "kind": "power",
+    "name": "Slumber",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L406; md:powers_zh.md:L357",
+    "stack_type": "Counter",
+    "zh_description": "受到未格挡伤害时 -1 层，且持有者阵营 回合结束时 -1 层；归 0 时通过 WakeUpMove 醒来（沉睡甲虫）。",
+    "zh_name": "Slumber"
+  },
+  "SMOGGY_POWER": {
+    "affliction_keys": [
+      "SMOG"
+    ],
+    "aliases": [
+      "SMOGGY",
+      "SmoggyPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "after owner plays a Skill, afflict all unafflicted Skill cards with Smog; new Skills entering combat after a Skill was played this turn also get it. Smog cards are unplayable while this power exists. Smog afflictions clear at end of owner's side turn.",
+    "host_of_affliction": true,
+    "id": "SMOGGY_POWER",
+    "kind": "power",
+    "name": "Smoggy",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L107; md:powers_zh.md:L91",
+    "stack_type": "Single",
+    "zh_description": "持有者打出一张技能牌后，给所有 未附加减益的技能牌附加 Smog；本回合已打出过技能后进入战斗的新技能牌 同样附加。power 存在期间 Smog 牌不可打出。持有者阵营回合结束时清除 Smog。",
+    "zh_name": "烟雾"
+  },
+  "SNEAKY_POWER": {
+    "aliases": [
+      "SneakyPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner gains Amount Block (fast VFX; trigger hosted by source card).",
+    "host_of_affliction": false,
+    "id": "SNEAKY_POWER",
+    "kind": "power",
+    "name": "Sneaky",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L217; md:powers_zh.md:L194",
+    "stack_type": "Counter",
+    "zh_description": "为持有者提供 Amount 格挡（触发由宿主 卡牌决定）。",
+    "zh_name": "Sneaky"
+  },
+  "SOAR_POWER": {
+    "aliases": [
+      "SOAR",
+      "SoarPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "while active, damage the owner receives from powered attacks is multiplied by ×0.5 (CanonicalVars DamageDecrease 50 / 100). OwlMagistrate applies it via JUDICIAL_FLIGHT and removes it on VERDICT — its big hit turn is the window where it takes full damage.",
+    "host_of_affliction": false,
+    "id": "SOAR_POWER",
+    "kind": "power",
+    "name": "Soar",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L380; md:powers_zh.md:L242",
+    "stack_type": "Single",
+    "zh_description": "持有者受到的攻击伤害 ×0.5 （`DamageDecrease` 50/100）。",
+    "zh_name": "Soar"
+  },
+  "SPECTRUM_SHIFT_POWER": {
+    "aliases": [
+      "SpectrumShiftPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "before owner's hand draw, add Amount distinct Colorless-pool cards to hand.",
+    "host_of_affliction": false,
+    "id": "SPECTRUM_SHIFT_POWER",
+    "kind": "power",
+    "name": "Spectrum Shift",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L552; md:powers_zh.md:L488",
+    "stack_type": "Counter",
+    "zh_description": "持有者手牌抽取前，加入 Amount 张不重复的无色池卡牌。",
+    "zh_name": "Spectrum Shift"
+  },
+  "SPEEDSTER_POWER": {
+    "curated": true,
+    "description": "Whenever owner draws a card outside the normal hand draw, deal Amount unpowered damage to ALL hittable enemies (card SPEEDSTER, Silent pool: Amount 2 base, Innate; upgraded value per card text).",
+    "id": "SPEEDSTER_POWER",
+    "kind": "power",
+    "name": "Speedster",
+    "power_type": "Buff",
+    "source": "curated:cards.md SPEEDSTER",
+    "stack_type": "Counter"
+  },
+  "SPEED_POTION_POWER": {
+    "curated": true,
+    "description": "Temporary Dexterity subclass: +Amount Dexterity on apply (Speed Potion = +5); reverted at end of owner's side turn. NOT a draw potion (distinct from Swift Potion) — treat as same-turn block value; the Dex boost expires by next turn.",
+    "id": "SPEED_POTION_POWER",
+    "kind": "power",
+    "name": "Speed Potion Power",
+    "power_type": "Buff",
+    "source": "curated:potions.md SpeedPotion + powers.md family",
+    "stack_type": "Counter"
+  },
+  "SPINNER_POWER": {
+    "aliases": [
+      "SpinnerPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at energy reset, Channel Amount Glass orbs.",
+    "host_of_affliction": false,
+    "id": "SPINNER_POWER",
+    "kind": "power",
+    "name": "Spinner",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L161; md:powers_zh.md:L139",
+    "stack_type": "Counter",
+    "zh_description": "能量重置时引导 Amount 个玻璃球 （GlassOrb）。",
+    "zh_name": "Spinner"
+  },
+  "SPIRIT_OF_ASH_POWER": {
+    "aliases": [
+      "SpiritOfAshPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "before owner plays a card, owner gains Amount Block (source-hosted trigger).",
+    "host_of_affliction": false,
+    "id": "SPIRIT_OF_ASH_POWER",
+    "kind": "power",
+    "name": "Spirit Of Ash",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L219; md:powers_zh.md:L196",
+    "stack_type": "Counter",
+    "zh_description": "持有者出牌前获得 Amount 格挡 （触发由宿主卡牌决定）。",
+    "zh_name": "Spirit Of Ash"
+  },
+  "STAMPEDE_POWER": {
+    "aliases": [
+      "STAMPEDE",
+      "StampedePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at end of owner's auto post-play phase, auto-play Amount Attack cards from hand.",
+    "host_of_affliction": false,
+    "id": "STAMPEDE_POWER",
+    "kind": "power",
+    "name": "Stampede",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L488; md:powers_zh.md:L431",
+    "stack_type": "Counter",
+    "zh_description": "持有者自动后打出阶段时，从手牌自动 打出 Amount 张攻击牌。",
+    "zh_name": "Stampede"
+  },
+  "STAR_NEXT_TURN_POWER": {
+    "aliases": [
+      "STAR_NEXT_TURN",
+      "StarNextTurnPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at next energy reset, gain Amount Stars, then removed.",
+    "host_of_affliction": false,
+    "id": "STAR_NEXT_TURN_POWER",
+    "kind": "power",
+    "name": "Star Next Turn",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L155; md:powers_zh.md:L133",
+    "stack_type": "Counter",
+    "zh_description": "下次能量重置时获得 Amount 星辰， 随后移除。",
+    "zh_name": "Star Next Turn"
+  },
+  "STEAM_ERUPTION_POWER": {
+    "aliases": [
+      "STEAM_ERUPTION",
+      "SteamEruptionPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner death handler — combat does not end on owner death; buffs retained for follow-up encounter logic.",
+    "host_of_affliction": false,
+    "id": "STEAM_ERUPTION_POWER",
+    "kind": "power",
+    "name": "Steam Eruption",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L374; md:powers_zh.md:L329",
+    "stack_type": "Single",
+    "zh_description": "持有者死亡处理——死亡时战斗不 立即结束，增益保留供后续遭遇逻辑使用。",
+    "zh_name": "Steam Eruption"
+  },
+  "STOCK_POWER": {
+    "aliases": [
+      "STOCK",
+      "StockPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "on owner's death (Amount > 0), spawns an Axebot in the same slot with StockAmount = Amount - 1 (next robot variant chain); combat does not end during spawn.",
+    "host_of_affliction": false,
+    "id": "STOCK_POWER",
+    "kind": "power",
+    "name": "Stock",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L371; md:powers_zh.md:L326",
+    "stack_type": "Counter",
+    "zh_description": "持有者死亡（Amount > 0）时，在 同格生成 1 只 Axebot，其 StockAmount = Amount - 1（机器人形态链）； 生成期间战斗不结束。",
+    "zh_name": "储备"
+  },
+  "STORM_POWER": {
+    "aliases": [
+      "StormPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "each Power card owner plays Channels Amount Lightning orbs.",
+    "host_of_affliction": false,
+    "id": "STORM_POWER",
+    "kind": "power",
+    "name": "Storm",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L558; md:powers_zh.md:L494",
+    "stack_type": "Counter",
+    "zh_description": "持有者每打出一张 Power 牌，引导 Amount 个闪电球。",
+    "zh_name": "Storm"
+  },
+  "STRANGLE_POWER": {
+    "aliases": [
+      "StranglePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "each card the applier's player plays this turn deals Amount unblockable unpowered damage to owner. Removed at end of owner's side turn.",
+    "host_of_affliction": false,
+    "id": "STRANGLE_POWER",
+    "kind": "power",
+    "name": "Strangle",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L318; md:powers_zh.md:L287",
+    "stack_type": "Counter",
+    "zh_description": "施加者玩家每打出一张牌，持有者 受到 Amount 点不可格挡、非攻击伤害。持有者阵营回合结束时移除。",
+    "zh_name": "Strangle"
+  },
+  "STRATAGEM_POWER": {
+    "aliases": [
+      "STRATAGEM",
+      "StratagemPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "on shuffle, selected draw-pile cards move to hand (selection prefs hosted by source).",
+    "host_of_affliction": false,
+    "id": "STRATAGEM_POWER",
+    "kind": "power",
+    "name": "Stratagem",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L524; md:powers_zh.md:L461",
+    "stack_type": "Counter",
+    "zh_description": "洗牌时按选择偏好将抽牌堆中的牌移入 手牌（选择逻辑由宿主决定）。",
+    "zh_name": "Stratagem"
+  },
+  "STRENGTH_POWER": {
+    "aliases": [
+      "STRENGTH",
+      "StrengthPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "+Amount attack damage on every attack the owner deals (added per hit; multi-hit scales per hit).",
+    "host_of_affliction": false,
+    "id": "STRENGTH_POWER",
+    "kind": "power",
+    "name": "Strength",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L23; md:powers_zh.md:L22",
+    "stack_type": "Counter",
+    "zh_description": "持有者每次攻击命中 +Amount 伤害（多段逐段附加）。",
+    "zh_name": "力量"
+  },
+  "SUBROUTINE_POWER": {
+    "aliases": [
+      "SubroutinePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "Power-card play tracking — trigger hosted by source card (see card text).",
+    "host_of_affliction": false,
+    "id": "SUBROUTINE_POWER",
+    "kind": "power",
+    "name": "Subroutine",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L560; md:powers_zh.md:L496",
+    "stack_type": "Counter",
+    "zh_description": "Power 牌打出追踪——触发逻辑由宿主 卡决定（见卡面文案）。",
+    "zh_name": "Subroutine"
+  },
+  "SUCK_POWER": {
+    "curated": true,
+    "description": "After owner's powered attack deals unblocked damage to any target, owner gains +Amount Strength per successful hit instance (FossilStalker passive: +3). Full-block attack turns keep SUCK dormant — blocking attack-intent turns prevents the Strength ramp.",
+    "id": "SUCK_POWER",
+    "kind": "power",
+    "name": "Suck",
+    "power_type": "Buff",
+    "source": "curated:monsters.md FossilStalker + power quick reference",
+    "stack_type": "Counter"
+  },
+  "SUMMON_NEXT_TURN_POWER": {
+    "aliases": [
+      "SUMMON_NEXT_TURN",
+      "SummonNextTurnPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at start of owner player's turn, summon Amount Osty pets, then remove the power.",
+    "host_of_affliction": false,
+    "id": "SUMMON_NEXT_TURN_POWER",
+    "kind": "power",
+    "name": "Summon Next Turn",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L384; md:powers_zh.md:L338",
+    "stack_type": "Counter",
+    "zh_description": "持有者玩家回合开始时召唤 Amount 只 Osty 宠物，随后移除该 power。",
+    "zh_name": "Summon Next Turn"
+  },
+  "SURPRISE_POWER": {
+    "aliases": [
+      "SURPRISE",
+      "SurprisePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner death handler — combat does not end until the surprise-spawn logic resolves (CreatureCmd.Add of next monster).",
+    "host_of_affliction": false,
+    "id": "SURPRISE_POWER",
+    "kind": "power",
+    "name": "Surprise",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L376; md:powers_zh.md:L331",
+    "stack_type": "Single",
+    "zh_description": "持有者死亡处理——直至惊喜召唤逻辑 （CreatureCmd.Add 下一只怪物）完成前战斗不结束。",
+    "zh_name": "Surprise"
+  },
+  "SURROUNDED_POWER": {
+    "aliases": [
+      "SURROUNDED",
+      "SurroundedPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "positioning state; attack damage to owner is multiplied by x1.5 when the attacker carries the matching BACK_ATTACK_LEFT_POWER / BACK_ATTACK_RIGHT_POWER marker for the owner's facing. Markers themselves are inert Single Buffs. Facing rule (decomp): the owner's facing flips whenever the player plays a card or potion targeting a creature whose BACK_ATTACK marker matches the opposite direction — targeting a claw turns the owner toward it, exposing the other claw as the ×1.5 flanker. On flank-creature death, facing re-targets to the remaining marker-bearer if all survivors share one marker side.",
+    "host_of_affliction": false,
+    "id": "SURROUNDED_POWER",
+    "kind": "power",
+    "name": "Surrounded",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L74; md:powers_zh.md:L64",
+    "stack_type": "Single",
+    "zh_description": "站位状态；当攻击者带有与 持有者朝向匹配的 BACK_ATTACK_LEFT_POWER / BACK_ATTACK_RIGHT_POWER 标记时，对持有者的攻击伤害 ×1.5。标记本身为惰性 Single Buff。朝向规则 （反编译）：玩家打出指向某生物的卡牌/药水、且该生物的 BACK_ATTACK 标记 与当前朝向相反时，持有者朝向翻转——即指向某爪即面向该爪，另一只爪成为 ×1.5 的侧击者。侧击生物死亡时，若存活方标记同侧，朝向重定向至该标记 持有者。",
+    "zh_name": "被夹击"
+  },
+  "SWIPE_POWER": {
+    "curated": true,
+    "description": "Owner holds 1 stolen deck card (ThievingHopper THIEVERY_MOVE priority: non-Imbued Uncommon → Common/Rare/Event → Basic/Quest → Ancient/Imbued); on owner's death the stolen card returns to the victim's deck and an extra card reward is granted. Lucky Fysh pays +15 Gold on the silent deck-add.",
+    "id": "SWIPE_POWER",
+    "kind": "power",
+    "name": "Swipe",
+    "power_type": "Buff",
+    "source": "curated:monsters.md ThievingHopper",
+    "stack_type": "Single"
+  },
+  "SWORD_SAGE_POWER": {
+    "aliases": [
+      "SwordSagePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "Member of the SWORD_SAGE_POWER family. adds Amount replay counters to Sovereign Blade-family cards (BaseReplayCount); removed when power leaves.",
+    "host_of_affliction": false,
+    "id": "SWORD_SAGE_POWER",
+    "kind": "power",
+    "name": "Sword Sage",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L506; md:powers_zh.md:L447",
+    "stack_type": "Counter",
+    "zh_description": "为 Sovereign Blade 系卡牌添加 Amount 次重放计数（BaseReplayCount）；power 移除时回退。",
+    "zh_name": "Sword Sage"
+  },
+  "TAINTED_POWER": {
+    "affliction_keys": [
+      "TAINTED"
+    ],
+    "aliases": [
+      "TAINTED",
+      "TaintedPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "attacks that hit owner deal +Amount damage (ModifyDamageAdditive on incoming powered attacks). Removed at end of Enemy side turn. Direction confirmed: VitalSpark Tainted skills apply TAINTED_POWER to the PLAYER (card owner) — prism intent rose 15→17 after one Tainted skill played and 15→19 after two; the tax is incoming attack damage +Amount, not self-damage.",
+    "host_of_affliction": true,
+    "id": "TAINTED_POWER",
+    "kind": "power",
+    "name": "Tainted",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L111; md:powers_zh.md:L95",
+    "stack_type": "Counter",
+    "zh_description": "对持有者的攻击伤害 +Amount （ModifyDamageAdditive，仅对攻击伤害生效）。敌方阵营回合结束时移除。 方向已确认：打出 Tainted 技能后 TAINTED_POWER 落在**玩家（牌主）**身上，税为\"对我的攻击伤害 +Amount\"（棱柱意图 15→17 单技能/15→19 双技能），非自伤。",
+    "zh_name": "污染"
+  },
+  "TANGLED_POWER": {
+    "affliction_keys": [
+      "ENTANGLED"
+    ],
+    "aliases": [
+      "TANGLED",
+      "TangledPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "on apply, afflict all owner's Attack cards with Entangled; new Attacks entering combat also get it. Entangled cards cost +Amount Energy. Power removes itself at end of owner's side turn.",
+    "host_of_affliction": true,
+    "id": "TANGLED_POWER",
+    "kind": "power",
+    "name": "Tangled",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L98; md:powers_zh.md:L82",
+    "stack_type": "Counter",
+    "zh_description": "施加时给持有者所有攻击牌附加 Entangled，新进入战斗的攻击牌同样附加。Entangled 牌费用 +Amount 能量。 power 在持有者阵营回合结束时自移除。",
+    "zh_name": "缠结"
+  },
+  "TANK_POWER": {
+    "aliases": [
+      "TankPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner's outgoing attack damage x2 (applies GuardedPower on apply per decomp interaction with guarded targets).",
+    "host_of_affliction": false,
+    "id": "TANK_POWER",
+    "kind": "power",
+    "name": "Tank",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L282; md:powers_zh.md:L252",
+    "stack_type": "Single",
+    "zh_description": "持有者造成的攻击伤害 ×2（并按 decomp 与 GuardedPower 联动）。",
+    "zh_name": "Tank"
+  },
+  "TENDER_POWER": {
+    "aliases": [
+      "TENDER",
+      "TenderPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "while active, EVERY card played (attacks and skills both observed) drains player Strength −1 and Dexterity −1 each play within the turn; **all Tender drains restore at the start of the player's next turn** (Str/Dex return to pre-turn baseline). Not a buff; net effect is a mid-turn stat tax that resets each turn. Kill the applier or weather the turn cycle. Displayed per-card numbers are post-tax — re-read state after every play. (Supersedes an earlier \"grant Strength/Dex feedback\" reading that mis-read the drain/restore cycle.)",
+    "host_of_affliction": false,
+    "id": "TENDER_POWER",
+    "kind": "power",
+    "name": "Tender",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L285; md:powers_zh.md:L255",
+    "stack_type": "Counter",
+    "zh_description": "激活期间每打出一张牌（攻击与技能均观察到）在回合内抽走玩家力量 −1 与敏捷 −1；**所有 Tender 抽走在玩家下一回合开始时全部恢复**（Str/Dex 回到回合前基线）。不是增益；净效果为回合内属性税、每回合重置。击杀施加者或扛过回合循环即可。卡牌面板数值按税后处理；每次出牌后须重读 state。（取代早前「反哺力量/敏捷」误读——该误读未识别抽走/返还循环。）",
+    "zh_name": "玩家侧"
+  },
+  "TERRITORIAL_POWER": {
+    "aliases": [
+      "TERRITORIAL",
+      "TerritorialPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at end of owner's side turn, apply +Amount STRENGTH_POWER to owner.",
+    "host_of_affliction": false,
+    "id": "TERRITORIAL_POWER",
+    "kind": "power",
+    "name": "Territorial",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L586; md:powers_zh.md:L520",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合结束时获得 +Amount STRENGTH_POWER。",
+    "zh_name": "领域"
+  },
+  "THE_BOMB_POWER": {
+    "aliases": [
+      "TheBombPower"
+    ],
+    "counter_class": true,
+    "curated": false,
+    "description": "decrements at end of owner's side turn while Amount > 1; at Amount <= 1, deals DynamicVars.Damage (default DamageVar 40 unpowered) to ALL hittable enemies, then removed.",
+    "host_of_affliction": false,
+    "id": "THE_BOMB_POWER",
+    "kind": "power",
+    "name": "The Bomb",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L565; md:powers_zh.md:L500",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合结束时 Amount > 1 则 -1 层；Amount <= 1 时对所有可命中敌人造成 DynamicVars.Damage（默认 DamageVar 40，非攻击）伤害，随后移除。",
+    "zh_name": "炸弹"
+  },
+  "THE_GAMBIT_POWER": {
+    "aliases": [
+      "THE_GAMBIT",
+      "TheGambitPower"
+    ],
+    "counter_class": true,
+    "curated": false,
+    "description": "if owner takes unblocked powered-attack damage > 0, owner is killed (power removed as it fires). Duration: the power **persists beyond the turn THE_GAMBIT was played** until the clause fires — observed still present on turn 8 after a turn-6 play, when unblocked chip killed the player at 32 HP. Do not pick THE_GAMBIT without a plan to fully block every remaining attack in the fight.",
+    "host_of_affliction": false,
+    "id": "THE_GAMBIT_POWER",
+    "kind": "power",
+    "name": "The Gambit",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L328; md:powers_zh.md:L293",
+    "stack_type": "Single",
+    "zh_description": "持有者受到未格挡的攻击伤害 > 0 时， 持有者立即死亡（触发时移除 power）。持续时间：该 power **会持续到打出 THE_GAMBIT 的回合之外**，直到条款触发为止——曾观察到第 6 回合打出、第 8 回合仍在，8 点未格挡擦伤让 32 HP 玩家直接清零。 没有\"此后每轮攻击伤害全部格挡\"的把握就不要选 THE_GAMBIT。",
+    "zh_name": "The Gambit"
+  },
+  "THE_HUNT_POWER": {
+    "aliases": [
+      "TheHuntPower"
+    ],
+    "counter_class": false,
+    "curated": true,
+    "description": "Inert success-marker power (Buff, Counter) — no hooks of its own; queried by TheHunt card logic.",
+    "host_of_affliction": false,
+    "id": "THE_HUNT_POWER",
+    "kind": "power",
+    "name": "The Hunt",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "curated:powers.md inert marker group",
+    "stack_type": "Counter"
+  },
+  "THE_SEALED_THRONE_POWER": {
+    "aliases": [
+      "TheSealedThronePower"
+    ],
+    "counter_class": false,
+    "curated": true,
+    "description": "Source-hosted utility power (Buff, Counter) — combat-end / pre-play logic hosted by the source card; see the hosting card text.",
+    "host_of_affliction": false,
+    "id": "THE_SEALED_THRONE_POWER",
+    "kind": "power",
+    "name": "The Sealed Throne",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "curated:powers.md source-hosted utility group",
+    "stack_type": "Counter"
+  },
+  "THIEVERY_POWER": {
+    "aliases": [
+      "THIEVERY",
+      "ThieveryPower"
+    ],
+    "counter_class": false,
+    "curated": true,
+    "description": "Thievery logic marker (Buff, Counter) — queried by theft logic; GremlinMerc's version steals 20 Gold from the player on its turn. No hooks of its own.",
+    "host_of_affliction": false,
+    "id": "THIEVERY_POWER",
+    "kind": "power",
+    "name": "Thievery",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "curated:powers.md inert marker group + monsters.md GremlinMerc",
+    "stack_type": "Counter"
+  },
+  "THORNS_POWER": {
+    "aliases": [
+      "THORNS",
+      "ThornsPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "when owner is hit by a powered attack (or Omnislice), dealer takes Amount unpowered damage.",
+    "host_of_affliction": false,
+    "id": "THORNS_POWER",
+    "kind": "power",
+    "name": "Thorns",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L31; md:powers_zh.md:L29",
+    "stack_type": "Counter",
+    "zh_description": "持有者被攻击（或 Omnislice）命中 时，攻击者受到 Amount 点非攻击伤害。",
+    "zh_name": "荆棘"
+  },
+  "THUNDER_POWER": {
+    "aliases": [
+      "ThunderPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "when owner's player evokes a Lightning orb, deal Amount unpowered damage to the evoke targets.",
+    "host_of_affliction": false,
+    "id": "THUNDER_POWER",
+    "kind": "power",
+    "name": "Thunder",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L570; md:powers_zh.md:L505",
+    "stack_type": "Counter",
+    "zh_description": "持有者玩家激发闪电球时，对激发目标 造成 Amount 点非攻击伤害。",
+    "zh_name": "Thunder"
+  },
+  "TOOLS_OF_THE_TRADE_POWER": {
+    "aliases": [
+      "TOOLS_OF_THE_TRADE",
+      "ToolsOfTheTradePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "+Amount hand draw per turn; at owner's turn start, select Amount cards from hand to discard.",
+    "host_of_affliction": false,
+    "id": "TOOLS_OF_THE_TRADE_POWER",
+    "kind": "power",
+    "name": "Tools Of The Trade",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L148; md:powers_zh.md:L126",
+    "stack_type": "Counter",
+    "zh_description": "每回合 +Amount 抽牌；持有者 回合开始时从手牌选择 Amount 张弃掉。",
+    "zh_name": "Tools Of The Trade"
+  },
+  "TORIC_TOUGHNESS_POWER": {
+    "aliases": [
+      "TORIC_TOUGHNESS",
+      "ToricToughnessPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "when owner's Block is cleared, gain DynamicVars.Block Block, then decrement 1.",
+    "host_of_affliction": false,
+    "id": "TORIC_TOUGHNESS_POWER",
+    "kind": "power",
+    "name": "Toric Toughness",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L204; md:powers_zh.md:L181",
+    "stack_type": "Counter",
+    "zh_description": "持有者格挡被清空时，获得 DynamicVars.Block 格挡，随后 -1 层。",
+    "zh_name": "Toric Toughness"
+  },
+  "TRACKING_POWER": {
+    "aliases": [
+      "TrackingPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner's (or owner's pets') attack damage against a target with WEAK_POWER multiplied by Amount (x-value from stacks).",
+    "host_of_affliction": false,
+    "id": "TRACKING_POWER",
+    "kind": "power",
+    "name": "Tracking",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L257; md:powers_zh.md:L231",
+    "stack_type": "Counter",
+    "zh_description": "持有者（或其宠物）对带有 WEAK_POWER 的目标造成的攻击伤害 ×Amount。",
+    "zh_name": "Tracking"
+  },
+  "TYRANNY_POWER": {
+    "aliases": [
+      "TYRANNY",
+      "TyrannyPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "+Amount hand draw per turn; at owner's turn start, select Amount cards from hand to Exhaust.",
+    "host_of_affliction": false,
+    "id": "TYRANNY_POWER",
+    "kind": "power",
+    "name": "Tyranny",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L150; md:powers_zh.md:L128",
+    "stack_type": "Counter",
+    "zh_description": "每回合 +Amount 抽牌；持有者回合开始时 从手牌选择 Amount 张消耗（Exhaust）。",
+    "zh_name": "Tyranny"
+  },
+  "UNMOVABLE_POWER": {
+    "aliases": [
+      "UNMOVABLE",
+      "UnmovablePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "The first 2 times you gain Block from a card each turn, double the amount gained.",
+    "host_of_affliction": false,
+    "id": "UNMOVABLE_POWER",
+    "kind": "power",
+    "name": "Unmovable",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L227; md:powers_zh.md:L204; codex:powers/UNMOVABLE",
+    "stack_type": "Counter",
+    "zh_description": "持有者获得的格挡 ×2。",
+    "zh_name": "Unmovable"
+  },
+  "VEILPIERCER_POWER": {
+    "aliases": [
+      "VeilpiercerPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner's Ethereal cards in hand/play cost 0; 1 stack consumed per Ethereal card played.",
+    "host_of_affliction": false,
+    "id": "VEILPIERCER_POWER",
+    "kind": "power",
+    "name": "Veilpiercer",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L179; md:powers_zh.md:L157",
+    "stack_type": "Counter",
+    "zh_description": "持有者手牌/打出区的虚无（Ethereal） 牌费用为 0；每打出 1 张虚无牌消耗 1 层。",
+    "zh_name": "Veilpiercer"
+  },
+  "VICIOUS_POWER": {
+    "aliases": [
+      "VICIOUS",
+      "ViciousPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "whenever owner applies VULNERABLE_POWER to anyone (amount > 0), draw Amount cards.",
+    "host_of_affliction": false,
+    "id": "VICIOUS_POWER",
+    "kind": "power",
+    "name": "Vicious",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L504; md:powers_zh.md:L445",
+    "stack_type": "Counter",
+    "zh_description": "持有者每当对他人施加 VULNERABLE_POWER （数值 > 0），抽 Amount 张牌。",
+    "zh_name": "Vicious"
+  },
+  "VIGOR_POWER": {
+    "aliases": [
+      "VIGOR",
+      "VigorPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "+Amount attack damage on the owner's next attack (ModifyDamageAdditive; consumed by that attack).",
+    "host_of_affliction": false,
+    "id": "VIGOR_POWER",
+    "kind": "power",
+    "name": "Vigor",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L56; md:powers_zh.md:L49",
+    "stack_type": "Counter",
+    "zh_description": "持有者下一次攻击 +Amount 伤害 （ModifyDamageAdditive；该次攻击后消耗）。",
+    "zh_name": "活力"
+  },
+  "VITAL_SPARK_POWER": {
+    "aliases": [
+      "VITAL_SPARK",
+      "VitalSparkPower"
+    ],
+    "counter_class": true,
+    "curated": true,
+    "description": "On the enemy: player Skill cards are afflicted with Tainted (Amount) at combat start and on entering combat; playing a Tainted card applies TAINTED_POWER Amount to the card's owner (incoming attack damage +Amount tax, removed end of Enemy side turn). Counter-class: displayed as VITAL_SPARK_POWER:n and can rise mid-fight (e.g. InfestedPrism 2→4) — track it every turn; leave Tainted Skills unplayed on key turns.",
+    "host_of_affliction": false,
+    "id": "VITAL_SPARK_POWER",
+    "kind": "power",
+    "name": "Vital Spark",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "curated:powers.md VITAL_SPARK + monsters.md InfestedPrism",
+    "stack_type": "Counter",
+    "zh_description": "战斗开始及进入战斗时给 玩家技能牌附加 Tainted（Amount）；打出 Tainted 牌时对其拥有者施加 TAINTED_POWER Amount。",
+    "zh_name": "位于敌方"
+  },
+  "VOID_FORM_POWER": {
+    "aliases": [
+      "VoidFormPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "owner's cards (and Star costs) in hand/play cost 0 up to Amount non-autoplay cards played per turn; counter resets at turn start.",
+    "host_of_affliction": false,
+    "id": "VOID_FORM_POWER",
+    "kind": "power",
+    "name": "Void Form",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L181; md:powers_zh.md:L159",
+    "stack_type": "Counter",
+    "zh_description": "每回合持有者前 Amount 张非自动打出的 手牌（及星辰费用）费用为 0；回合开始重置计数。",
+    "zh_name": "Void Form"
+  },
+  "VULNERABLE_POWER": {
+    "aliases": [
+      "VULNERABLE",
+      "VulnerablePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "attack damage received by owner is multiplied by x1.5 (`DamageIncrease` 1.5). Paper Phrog / CrueltyPower / DebilitatePower can modify that multiplier. Ticks down 1 at end of Enemy side turn.",
+    "host_of_affliction": false,
+    "id": "VULNERABLE_POWER",
+    "kind": "power",
+    "name": "Vulnerable",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L14; md:powers_zh.md:L14",
+    "stack_type": "Counter",
+    "zh_description": "持有者受到的攻击伤害 ×1.5 （`DamageIncrease` 1.5）；Paper Phrog / CrueltyPower / DebilitatePower 可 修改该倍率。敌方阵营回合结束时 -1 层。",
+    "zh_name": "易伤"
+  },
+  "WASTE_AWAY_POWER": {
+    "aliases": [
+      "WASTE_AWAY",
+      "WasteAwayPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "Gain 1 less Energy per turn.",
+    "host_of_affliction": false,
+    "id": "WASTE_AWAY_POWER",
+    "kind": "power",
+    "name": "Waste Away",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L132; md:powers_zh.md:L112; codex:powers/WASTE_AWAY",
+    "stack_type": "Counter",
+    "zh_description": "持有者最大能量 -Amount。",
+    "zh_name": "衰朽"
+  },
+  "WEAK_POWER": {
+    "aliases": [
+      "WEAK",
+      "WeakPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "attack damage dealt by owner is multiplied by x0.75 (`DamageDecrease` 0.75). Paper Krane / DebilitatePower can modify the multiplier. Ticks down 1 at end of Enemy side turn.",
+    "host_of_affliction": false,
+    "id": "WEAK_POWER",
+    "kind": "power",
+    "name": "Weak",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L18; md:powers_zh.md:L17",
+    "stack_type": "Counter",
+    "zh_description": "持有者造成的攻击伤害 ×0.75 （`DamageDecrease` 0.75）；Paper Krane / DebilitatePower 可修改倍率。 敌方阵营回合结束时 -1 层。",
+    "zh_name": "虚弱"
+  },
+  "WELL_LAID_PLANS_POWER": {
+    "aliases": [
+      "WellLaidPlansPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "end-of-turn hand flush selection logic (retained-card choice; BeforeFlushLate).",
+    "host_of_affliction": false,
+    "id": "WELL_LAID_PLANS_POWER",
+    "kind": "power",
+    "name": "Well Laid Plans",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": null,
+    "source": "md:powers.md:L528; md:powers_zh.md:L465",
+    "stack_type": "Counter",
+    "zh_description": "回合结束手牌弃置时的选择逻辑 （保留手牌；BeforeFlushLate）。",
+    "zh_name": "Well Laid Plans"
+  },
+  "WITHERING_PRESENCE_POWER": {
+    "aliases": [
+      "WITHERING_PRESENCE",
+      "WitheringPresencePower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "every 6th card the target player plays adds a Wither curse/status card to their hand (`CardsLeft` 6 → 0 then add Wither).",
+    "host_of_affliction": false,
+    "id": "WITHERING_PRESENCE_POWER",
+    "kind": "power",
+    "name": "Withering Presence",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Buff",
+    "source": "md:powers.md:L497; md:powers_zh.md:L439",
+    "stack_type": "Counter",
+    "zh_description": "目标玩家每打出第 6 张牌， 其手牌加入 1 张 Wither（`CardsLeft` 6 → 0 后加入）。",
+    "zh_name": "Withering Presence"
+  },
+  "WRAITH_FORM_POWER": {
+    "aliases": [
+      "WraithFormPower"
+    ],
+    "counter_class": false,
+    "curated": false,
+    "description": "at start of owner's side turn, apply -Amount DEXTERITY_POWER to owner.",
+    "host_of_affliction": false,
+    "id": "WRAITH_FORM_POWER",
+    "kind": "power",
+    "name": "Wraith Form",
+    "needs_zh": false,
+    "play_notes": "",
+    "power_type": "Debuff",
+    "source": "md:powers.md:L469; md:powers_zh.md:L414",
+    "stack_type": "Counter",
+    "zh_description": "持有者阵营回合开始时 获得 -Amount DEXTERITY_POWER。",
+    "zh_name": "幽灵形态"
+  }
+}

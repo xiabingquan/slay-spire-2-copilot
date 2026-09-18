@@ -1,0 +1,1139 @@
+{
+  "ASHWATER": {
+    "aliases": [
+      "Ashwater"
+    ],
+    "curated": false,
+    "description": "消耗手牌中任意数量的卡牌。",
+    "display_name": "Ashwater",
+    "id": "ASHWATER",
+    "kind": "potion",
+    "name": "灰水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "md:potions.md:L14; md:potions_zh.md:L14",
+    "target": "self",
+    "usage": "combat"
+  },
+  "ATTACK_POTION": {
+    "aliases": [
+      "Attack Potion",
+      "AttackPotion"
+    ],
+    "curated": false,
+    "description": "从角色卡池生成 3 张不同攻击牌中选 1 张（可跳过）；加入手牌，本回合免费。",
+    "display_name": "Attack Potion",
+    "id": "ATTACK_POTION",
+    "kind": "potion",
+    "name": "攻击药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Common",
+    "source": "md:potions.md:L15; md:potions_zh.md:L15",
+    "target": "self",
+    "usage": "combat"
+  },
+  "BEETLE_JUICE": {
+    "aliases": [
+      "Beetle Juice",
+      "BeetleJuice"
+    ],
+    "curated": false,
+    "description": "对目标施加 ShrinkPower 4 层。ShrinkPower：拥有者攻击伤害 ×0.7（−30%）；拥有者回合结束移除 1 层；层数为负数时为无限持续、不衰减。4 层 = 其 4 个回合内攻击伤害 −30%。",
+    "display_name": "Beetle Juice",
+    "id": "BEETLE_JUICE",
+    "kind": "potion",
+    "name": "甲虫汁",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "md:potions.md:L16; md:potions_zh.md:L16",
+    "target": "any enemy",
+    "usage": "combat"
+  },
+  "BLESSING_OF_THE_FORGE": {
+    "aliases": [
+      "Blessing of the Forge",
+      "BlessingoftheForge"
+    ],
+    "curated": false,
+    "description": "本场战斗内升级手牌中所有可升级卡牌。",
+    "display_name": "Blessing of the Forge",
+    "id": "BLESSING_OF_THE_FORGE",
+    "kind": "potion",
+    "name": "熔炉的祝福",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "md:potions.md:L17; md:potions_zh.md:L17",
+    "target": "self",
+    "usage": "combat"
+  },
+  "BLOCK_POTION": {
+    "aliases": [
+      "Block Potion",
+      "BlockPotion"
+    ],
+    "curated": false,
+    "description": "获得 12 格挡。",
+    "display_name": "Block Potion",
+    "id": "BLOCK_POTION",
+    "kind": "potion",
+    "name": "格挡药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Common",
+    "source": "md:potions.md:L18; md:potions_zh.md:L18; codex:potions/BLOCK_POTION",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "BLOOD_POTION": {
+    "aliases": [
+      "Blood Potion",
+      "BloodPotion"
+    ],
+    "curated": false,
+    "description": "回复最大 HP 的 20%。",
+    "display_name": "Blood Potion",
+    "id": "BLOOD_POTION",
+    "kind": "potion",
+    "name": "鲜血药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Common",
+    "source": "md:potions.md:L19; md:potions_zh.md:L19; codex:potions/BLOOD_POTION",
+    "target": "any player",
+    "usage": "anytime"
+  },
+  "BONE_BREW": {
+    "aliases": [
+      "Bone Brew",
+      "BoneBrew"
+    ],
+    "curated": false,
+    "description": "Summon Osty，数值 15。",
+    "display_name": "Bone Brew",
+    "id": "BONE_BREW",
+    "kind": "potion",
+    "name": "骨头酿",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "md:potions.md:L20; md:potions_zh.md:L20",
+    "target": "self",
+    "usage": "combat"
+  },
+  "BOTTLED_POTENTIAL": {
+    "aliases": [
+      "Bottled Potential",
+      "BottledPotential"
+    ],
+    "curated": false,
+    "description": "将手牌移入抽牌堆，洗牌，抽 5 张。",
+    "display_name": "Bottled Potential",
+    "id": "BOTTLED_POTENTIAL",
+    "kind": "potion",
+    "name": "瓶装潜能",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "md:potions.md:L21; md:potions_zh.md:L21",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "CLARITY": {
+    "aliases": [
+      "CLARITY_EXTRACT",
+      "Clarity Extract",
+      "ClarityExtract"
+    ],
+    "curated": false,
+    "description": "抽 1 张；获得 ClarityPower 3——接下来 3 回合开始时各多抽 1 张（每次己方回合开始递减）。",
+    "display_name": "Clarity Extract",
+    "id": "CLARITY",
+    "kind": "potion",
+    "name": "明晰提取物",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "md:potions.md:L22; md:potions_zh.md:L22",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "COLORLESS_POTION": {
+    "aliases": [
+      "Colorless Potion",
+      "ColorlessPotion"
+    ],
+    "curated": false,
+    "description": "从无色卡池生成 3 张不同卡牌中选 1 张（可跳过）；加入手牌，本回合免费。",
+    "display_name": "Colorless Potion",
+    "id": "COLORLESS_POTION",
+    "kind": "potion",
+    "name": "无色药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Common",
+    "source": "md:potions.md:L23; md:potions_zh.md:L23",
+    "target": "self",
+    "usage": "combat"
+  },
+  "COSMIC_CONCOCTION": {
+    "aliases": [
+      "Cosmic Concoction",
+      "CosmicConcoction"
+    ],
+    "curated": false,
+    "description": "向手牌加入 3 张不同的升级版无色池卡牌。",
+    "display_name": "Cosmic Concoction",
+    "id": "COSMIC_CONCOCTION",
+    "kind": "potion",
+    "name": "宇宙药剂",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "md:potions.md:L24; md:potions_zh.md:L24",
+    "target": "self",
+    "usage": "combat"
+  },
+  "CUNNING_POTION": {
+    "aliases": [
+      "Cunning Potion",
+      "CunningPotion"
+    ],
+    "curated": false,
+    "description": "向手牌加入 3 张升级版 Shiv。",
+    "display_name": "Cunning Potion",
+    "id": "CUNNING_POTION",
+    "kind": "potion",
+    "name": "狡诈药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "md:potions.md:L25; md:potions_zh.md:L25",
+    "target": "self",
+    "usage": "combat"
+  },
+  "CURE_ALL": {
+    "aliases": [
+      "Cure All",
+      "CureAll"
+    ],
+    "curated": false,
+    "description": "获得 1 能量；抽 2 张牌。名称像治疗但**不是治疗**——爆发/挖牌类（+1能+抽2）；任何「CureAll 治疗」注记均为错误。",
+    "display_name": "Cure All",
+    "id": "CURE_ALL",
+    "kind": "potion",
+    "name": "痊愈药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "md:potions.md:L26; md:potions_zh.md:L26",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "DEXTERITY_POTION": {
+    "aliases": [
+      "Dexterity Potion",
+      "DexterityPotion"
+    ],
+    "curated": false,
+    "description": "本场战斗 +2 敏捷。",
+    "display_name": "Dexterity Potion",
+    "id": "DEXTERITY_POTION",
+    "kind": "potion",
+    "name": "敏捷药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Common",
+    "source": "md:potions.md:L27; md:potions_zh.md:L27; codex:potions/DEXTERITY_POTION",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "DISTILLED_CHAOS": {
+    "aliases": [
+      "Distilled Chaos",
+      "DistilledChaos"
+    ],
+    "curated": false,
+    "description": "打出抽牌堆顶的 3 张牌。",
+    "display_name": "Distilled Chaos",
+    "id": "DISTILLED_CHAOS",
+    "kind": "potion",
+    "name": "精炼混沌",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "md:potions.md:L28; md:potions_zh.md:L28; codex:potions/DISTILLED_CHAOS",
+    "target": "self",
+    "usage": "combat"
+  },
+  "DROPLET_OF_PRECOGNITION": {
+    "aliases": [
+      "Droplet of Precognition",
+      "DropletofPrecognition"
+    ],
+    "curated": false,
+    "description": "从抽牌堆选 1 张牌加入手牌。",
+    "display_name": "Droplet of Precognition",
+    "id": "DROPLET_OF_PRECOGNITION",
+    "kind": "potion",
+    "name": "预知之滴",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "md:potions.md:L29; md:potions_zh.md:L29",
+    "target": "self",
+    "usage": "combat"
+  },
+  "DUPLICATOR": {
+    "aliases": [
+      "Duplicator"
+    ],
+    "curated": false,
+    "description": "获得 DuplicationPower 1——本回合你打出的下一张牌额外打出 1 次；回合结束移除。使用后 DUPLICATION_POWER:1 同帧可见，下一张攻击双结算（如 Bash+ 双结算）；药水消费后 DuplicationPower 随回合结束消失。",
+    "display_name": "Duplicator",
+    "id": "DUPLICATOR",
+    "kind": "potion",
+    "name": "复制药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "md:potions.md:L30; md:potions_zh.md:L30",
+    "target": "self",
+    "usage": "combat"
+  },
+  "ENERGY_POTION": {
+    "aliases": [
+      "Energy Potion",
+      "EnergyPotion"
+    ],
+    "curated": false,
+    "description": "获得 2 能量。",
+    "display_name": "Energy Potion",
+    "id": "ENERGY_POTION",
+    "kind": "potion",
+    "name": "能量药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Common",
+    "source": "md:potions.md:L31; md:potions_zh.md:L31; codex:potions/ENERGY_POTION",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "ENTROPIC_BREW": {
+    "aliases": [
+      "Entropic Brew",
+      "EntropicBrew"
+    ],
+    "curated": false,
+    "description": "用随机药水填满所有空药水栏。",
+    "display_name": "Entropic Brew",
+    "id": "ENTROPIC_BREW",
+    "kind": "potion",
+    "name": "混沌药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "md:potions.md:L32; md:potions_zh.md:L32",
+    "target": "self",
+    "usage": "anytime"
+  },
+  "ESSENCE_OF_DARKNESS": {
+    "aliases": [
+      "Essence of Darkness",
+      "EssenceofDarkness"
+    ],
+    "curated": false,
+    "description": "每个充能球槽引导 1 个暗球。",
+    "display_name": "Essence of Darkness",
+    "id": "ESSENCE_OF_DARKNESS",
+    "kind": "potion",
+    "name": "黑暗精华",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "md:potions.md:L33; md:potions_zh.md:L33",
+    "target": "self",
+    "usage": "combat"
+  },
+  "EXPLOSIVE_AMPOULE": {
+    "aliases": [
+      "Explosive Ampoule",
+      "ExplosiveAmpoule"
+    ],
+    "curated": false,
+    "description": "对全体敌人造成 10 点伤害（自动多目标，不要发送目标 id）。",
+    "display_name": "Explosive Ampoule",
+    "id": "EXPLOSIVE_AMPOULE",
+    "kind": "potion",
+    "name": "爆炸安瓿",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Common",
+    "source": "md:potions.md:L34; md:potions_zh.md:L34",
+    "target": "ALL enemies",
+    "usage": "combat"
+  },
+  "FAIRY_IN_A_BOTTLE": {
+    "aliases": [
+      "Fairy in a Bottle",
+      "FairyinaBottle"
+    ],
+    "curated": false,
+    "description": "将死时改为弃掉此药水并回复至最大 HP 的 30%（最少 1 点）。在 HP 1 被回合开始自伤击杀时触发——HP 置为 Max 的 ~29.6%，与 30% Max 规则吻合；药水同帧从药槽消失。",
+    "display_name": "Fairy in a Bottle",
+    "id": "FAIRY_IN_A_BOTTLE",
+    "kind": "potion",
+    "name": "瓶中精灵",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "md:potions.md:L35; md:potions_zh.md:L35",
+    "target": "self",
+    "usage": "auto"
+  },
+  "FIRE_POTION": {
+    "aliases": [
+      "Fire Potion",
+      "FirePotion"
+    ],
+    "curated": false,
+    "description": "造成 20 点伤害。",
+    "display_name": "Fire Potion",
+    "id": "FIRE_POTION",
+    "kind": "potion",
+    "name": "火焰药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Common",
+    "source": "md:potions.md:L37; md:potions_zh.md:L36; codex:potions/FIRE_POTION",
+    "target": "any enemy",
+    "usage": "combat"
+  },
+  "FLEX_POTION": {
+    "aliases": [
+      "Flex Potion",
+      "FlexPotion"
+    ],
+    "curated": false,
+    "description": "获得 FlexPotionPower +5 力量——本回合结束时失去 5 力量（临时力量）。",
+    "display_name": "Flex Potion",
+    "id": "FLEX_POTION",
+    "kind": "potion",
+    "name": "肌肉药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Common",
+    "source": "md:potions.md:L38; md:potions_zh.md:L37",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "FOCUS_POTION": {
+    "aliases": [
+      "Focus Potion",
+      "FocusPotion"
+    ],
+    "curated": false,
+    "description": "+2 专注（Focus）。",
+    "display_name": "Focus Potion",
+    "id": "FOCUS_POTION",
+    "kind": "potion",
+    "name": "集中药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Common",
+    "source": "md:potions.md:L39; md:potions_zh.md:L38",
+    "target": "self",
+    "usage": "combat"
+  },
+  "FORTIFIER": {
+    "aliases": [
+      "Fortifier"
+    ],
+    "curated": false,
+    "description": "获得等同当前格挡 2 倍的格挡（格挡变为 3 倍）。",
+    "display_name": "Fortifier",
+    "id": "FORTIFIER",
+    "kind": "potion",
+    "name": "固化药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "md:potions.md:L40; md:potions_zh.md:L39",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "FOUL_POTION": {
+    "aliases": [
+      "Foul Potion",
+      "FoulPotion"
+    ],
+    "curated": false,
+    "description": "战斗中——对每个非宠物生物（含你自己）造成 12 点伤害；商人房间——获得 100 金币；FakeMerchant 事件——触发伪商人战斗。战斗用法=同窗 AoE 工具——12 伤可直接带走 12 HP 千足虫段并铺垫 Thunderclap 收头；自伤触发 Rupture（按 Amount +力）。伪商人房绝不可用（战斗条款）——留给真商人房 +100 金是经济线。",
+    "display_name": "Foul Potion",
+    "id": "FOUL_POTION",
+    "kind": "potion",
+    "name": "污浊药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Event",
+    "source": "md:potions.md:L41; md:potions_zh.md:L40",
+    "target": "anytime",
+    "usage": "Event"
+  },
+  "FRUIT_JUICE": {
+    "aliases": [
+      "Fruit Juice",
+      "FruitJuice"
+    ],
+    "curated": false,
+    "description": "+5 最大 HP。",
+    "display_name": "Fruit Juice",
+    "id": "FRUIT_JUICE",
+    "kind": "potion",
+    "name": "果汁",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "md:potions.md:L42; md:potions_zh.md:L41; codex:potions/FRUIT_JUICE",
+    "target": "any player",
+    "usage": "anytime"
+  },
+  "FYSH_OIL": {
+    "aliases": [
+      "Fysh Oil",
+      "FyshOil"
+    ],
+    "curated": false,
+    "description": "本场战斗 +1 力量 +1 敏捷。使用后同帧 STRENGTH_POWER +1 与 DEXTERITY_POWER:1；敏捷 +1 使后续卡牌挡值各 +1（Defend 5→6 级）同战生效。使用时机存在异文：另有解码记为「随时/自身」、同样立刻 +1/+1——按 build 核实时机。",
+    "display_name": "Fysh Oil",
+    "id": "FYSH_OIL",
+    "kind": "potion",
+    "name": "异鱼之油",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "md:potions.md:L36; md:potions_zh.md:L42",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "GAMBLER_S_BREW": {
+    "aliases": [
+      "GAMBLERS_BREW",
+      "Gambler's Brew",
+      "GamblersBrew"
+    ],
+    "curated": false,
+    "description": "弃置任意数量手牌，然后抽取等量牌。",
+    "display_name": "Gambler's Brew",
+    "id": "GAMBLER_S_BREW",
+    "kind": "potion",
+    "name": "赌徒特酿",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "md:potions.md:L43; md:potions_zh.md:L43",
+    "target": "self",
+    "usage": "combat"
+  },
+  "GHOST_IN_A_JAR": {
+    "aliases": [
+      "Ghost in a Jar",
+      "GhostinaJar"
+    ],
+    "curated": false,
+    "description": "+1 层 Intangible。",
+    "display_name": "Ghost in a Jar",
+    "id": "GHOST_IN_A_JAR",
+    "kind": "potion",
+    "name": "罐装幽灵",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "md:potions.md:L44; md:potions_zh.md:L44",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "GIGANTIFICATION_POTION": {
+    "aliases": [
+      "Gigantification Potion",
+      "GigantificationPotion"
+    ],
+    "curated": false,
+    "description": "获得 GigantificationPower 1——本场战斗你打出的下一张有源攻击牌造成 ×3 伤害；被该次攻击消耗。",
+    "display_name": "Gigantification Potion",
+    "id": "GIGANTIFICATION_POTION",
+    "kind": "potion",
+    "name": "超巨化药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "md:potions.md:L45; md:potions_zh.md:L45",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "GLOWWATER_POTION": {
+    "aliases": [
+      "Glowwater Potion",
+      "GlowwaterPotion"
+    ],
+    "curated": false,
+    "description": "消耗手牌；抽 10 张。",
+    "display_name": "Glowwater Potion",
+    "id": "GLOWWATER_POTION",
+    "kind": "potion",
+    "name": "发光水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Event",
+    "source": "md:potions.md:L46; md:potions_zh.md:L46; codex:potions/GLOWWATER_POTION",
+    "target": "combat",
+    "usage": "Event"
+  },
+  "HEART_OF_IRON": {
+    "aliases": [
+      "Heart of Iron",
+      "HeartofIron"
+    ],
+    "curated": false,
+    "description": "+7 镀甲（Plating）。",
+    "display_name": "Heart of Iron",
+    "id": "HEART_OF_IRON",
+    "kind": "potion",
+    "name": "铁心药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "md:potions.md:L47; md:potions_zh.md:L47; codex:potions/HEART_OF_IRON",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "KING_S_COURAGE": {
+    "aliases": [
+      "KINGS_COURAGE",
+      "King's Courage",
+      "KingsCourage"
+    ],
+    "curated": false,
+    "description": "Forge 15。",
+    "display_name": "King's Courage",
+    "id": "KING_S_COURAGE",
+    "kind": "potion",
+    "name": "王之勇气",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "md:potions.md:L48; md:potions_zh.md:L48",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "LIQUID_BRONZE": {
+    "aliases": [
+      "Liquid Bronze",
+      "LiquidBronze"
+    ],
+    "curated": false,
+    "description": "+3 点荆棘。",
+    "display_name": "Liquid Bronze",
+    "id": "LIQUID_BRONZE",
+    "kind": "potion",
+    "name": "流动铜液",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "md:potions.md:L49; md:potions_zh.md:L49; codex:potions/LIQUID_BRONZE",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "LIQUID_MEMORIES": {
+    "aliases": [
+      "Liquid Memories",
+      "LiquidMemories"
+    ],
+    "curated": false,
+    "description": "从弃牌堆选 1 张牌加入手牌，本回合免费。弃牌堆为空时不可用——空弃牌堆打出时药水被消耗但**无选牌界面、无任何效果**（完全空耗）。使用前先确认 piles。",
+    "display_name": "Liquid Memories",
+    "id": "LIQUID_MEMORIES",
+    "kind": "potion",
+    "name": "液态记忆",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "md:potions.md:L50; md:potions_zh.md:L50",
+    "target": "self",
+    "usage": "combat"
+  },
+  "LUCKY_TONIC": {
+    "aliases": [
+      "Lucky Tonic",
+      "LuckyTonic"
+    ],
+    "curated": false,
+    "description": "+1 层 Buffer。",
+    "display_name": "Lucky Tonic",
+    "id": "LUCKY_TONIC",
+    "kind": "potion",
+    "name": "幸运补剂",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "md:potions.md:L51; md:potions_zh.md:L51; codex:potions/LUCKY_TONIC",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "MAZALETH_S_GIFT": {
+    "aliases": [
+      "MAZALETHS_GIFT",
+      "Mazaleth's Gift",
+      "MazalethsGift"
+    ],
+    "curated": false,
+    "description": "+1 层 Ritual。",
+    "display_name": "Mazaleth's Gift",
+    "id": "MAZALETH_S_GIFT",
+    "kind": "potion",
+    "name": "马萨雷斯的赠礼",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "md:potions.md:L52; md:potions_zh.md:L52",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "OROBIC_ACID": {
+    "aliases": [
+      "Orobic Acid",
+      "OrobicAcid"
+    ],
+    "curated": false,
+    "description": "从角色卡池随机攻击、技能、能力牌各 1 张加入手牌；3 张本回合均免费。",
+    "display_name": "Orobic Acid",
+    "id": "OROBIC_ACID",
+    "kind": "potion",
+    "name": "欧洛巴斯之酸",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "md:potions.md:L53; md:potions_zh.md:L53",
+    "target": "self",
+    "usage": "combat"
+  },
+  "POISON_POTION": {
+    "aliases": [
+      "Poison Potion",
+      "PoisonPotion"
+    ],
+    "curated": false,
+    "description": "施加 6 层中毒。",
+    "display_name": "Poison Potion",
+    "id": "POISON_POTION",
+    "kind": "potion",
+    "name": "毒药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Common",
+    "source": "md:potions.md:L54; md:potions_zh.md:L54",
+    "target": "any enemy",
+    "usage": "combat"
+  },
+  "POTION_OF_BINDING": {
+    "aliases": [
+      "Potion of Binding",
+      "PotionofBinding"
+    ],
+    "curated": false,
+    "description": "对全体敌人施加 1 层 Weak 与 1 层 Vulnerable。",
+    "display_name": "Potion of Binding",
+    "id": "POTION_OF_BINDING",
+    "kind": "potion",
+    "name": "缚魂药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "md:potions.md:L56; md:potions_zh.md:L56",
+    "target": "ALL enemies",
+    "usage": "combat"
+  },
+  "POTION_OF_CAPACITY": {
+    "aliases": [
+      "Potion of Capacity",
+      "PotionofCapacity"
+    ],
+    "curated": false,
+    "description": "+2 个充能球槽。",
+    "display_name": "Potion of Capacity",
+    "id": "POTION_OF_CAPACITY",
+    "kind": "potion",
+    "name": "扩容药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "md:potions.md:L57; md:potions_zh.md:L57",
+    "target": "self",
+    "usage": "combat"
+  },
+  "POTION_OF_DOOM": {
+    "aliases": [
+      "Potion of Doom",
+      "PotionofDoom"
+    ],
+    "curated": false,
+    "description": "施加 33 层 Doom。",
+    "display_name": "Potion of Doom",
+    "id": "POTION_OF_DOOM",
+    "kind": "potion",
+    "name": "灾厄药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Common",
+    "source": "md:potions.md:L58; md:potions_zh.md:L58",
+    "target": "any enemy",
+    "usage": "combat"
+  },
+  "POTION_SHAPED_ROCK": {
+    "aliases": [
+      "POTION-SHAPED_ROCK",
+      "Potion-Shaped Rock",
+      "Potion-ShapedRock"
+    ],
+    "curated": false,
+    "description": "造成 15 点伤害。",
+    "display_name": "Potion-Shaped Rock",
+    "id": "POTION_SHAPED_ROCK",
+    "kind": "potion",
+    "name": "药水形状的石头",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Token",
+    "source": "md:potions.md:L59; md:potions_zh.md:L59; codex:potions/POTION_SHAPED_ROCK",
+    "target": "any enemy",
+    "usage": "combat"
+  },
+  "POT_OF_GHOULS": {
+    "aliases": [
+      "Pot of Ghouls",
+      "PotofGhouls"
+    ],
+    "curated": false,
+    "description": "向手牌加入 2 张 Soul。",
+    "display_name": "Pot of Ghouls",
+    "id": "POT_OF_GHOULS",
+    "kind": "potion",
+    "name": "尸鬼瓮",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "md:potions.md:L55; md:potions_zh.md:L55",
+    "target": "self",
+    "usage": "combat"
+  },
+  "POWDERED_DEMISE": {
+    "aliases": [
+      "Powdered Demise",
+      "PowderedDemise"
+    ],
+    "curated": false,
+    "description": "施加 DemisePower 9——目标每个自身回合结束时受到 9 点不可格挡、无来源伤害。",
+    "display_name": "Powdered Demise",
+    "id": "POWDERED_DEMISE",
+    "kind": "potion",
+    "name": "消亡粉末",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "md:potions.md:L60; md:potions_zh.md:L60",
+    "target": "any enemy",
+    "usage": "combat"
+  },
+  "POWER_POTION": {
+    "aliases": [
+      "Power Potion",
+      "PowerPotion"
+    ],
+    "curated": false,
+    "description": "从角色卡池生成 3 张不同能力牌中选 1 张（可跳过）；加入手牌，本回合免费。",
+    "display_name": "Power Potion",
+    "id": "POWER_POTION",
+    "kind": "potion",
+    "name": "能力药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Common",
+    "source": "md:potions.md:L61; md:potions_zh.md:L61",
+    "target": "self",
+    "usage": "combat"
+  },
+  "RADIANT_TINCTURE": {
+    "aliases": [
+      "Radiant Tincture",
+      "RadiantTincture"
+    ],
+    "curated": false,
+    "description": "立即获得 1 能量；获得 RadiancePower 3——接下来 3 次能量重置时各 +1 能量。",
+    "display_name": "Radiant Tincture",
+    "id": "RADIANT_TINCTURE",
+    "kind": "potion",
+    "name": "明耀酊剂",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "md:potions.md:L62; md:potions_zh.md:L62",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "REGEN_POTION": {
+    "aliases": [
+      "Regen Potion",
+      "RegenPotion"
+    ],
+    "curated": false,
+    "description": "+5 层再生（Regen）。",
+    "display_name": "Regen Potion",
+    "id": "REGEN_POTION",
+    "kind": "potion",
+    "name": "再生药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "md:potions.md:L63; md:potions_zh.md:L63; codex:potions/REGEN_POTION",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "SHACKLING_POTION": {
+    "aliases": [
+      "Shackling Potion",
+      "ShacklingPotion"
+    ],
+    "curated": false,
+    "description": "对全体敌人施加 ShacklingPotionPower 7——临时 −7 力量，其回合结束时失去。",
+    "display_name": "Shackling Potion",
+    "id": "SHACKLING_POTION",
+    "kind": "potion",
+    "name": "镣铐药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "md:potions.md:L64; md:potions_zh.md:L64",
+    "target": "ALL enemies",
+    "usage": "combat"
+  },
+  "SHIP_IN_A_BOTTLE": {
+    "aliases": [
+      "Ship in a Bottle",
+      "ShipinaBottle"
+    ],
+    "curated": false,
+    "description": "获得 10 格挡；获得 BlockNextTurnPower 10——你的格挡首次被清除时再次获得 10 格挡（仅一次）。",
+    "display_name": "Ship in a Bottle",
+    "id": "SHIP_IN_A_BOTTLE",
+    "kind": "potion",
+    "name": "瓶中船",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "md:potions.md:L65; md:potions_zh.md:L65",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "SKILL_POTION": {
+    "aliases": [
+      "Skill Potion",
+      "SkillPotion"
+    ],
+    "curated": false,
+    "description": "从角色卡池生成 3 张不同技能牌中选 1 张（可跳过）；加入手牌，本回合免费。",
+    "display_name": "Skill Potion",
+    "id": "SKILL_POTION",
+    "kind": "potion",
+    "name": "技能药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Common",
+    "source": "md:potions.md:L66; md:potions_zh.md:L66",
+    "target": "self",
+    "usage": "combat"
+  },
+  "SNECKO_OIL": {
+    "aliases": [
+      "Snecko Oil",
+      "SneckoOil"
+    ],
+    "curated": false,
+    "description": "抽 7 张；随机化手牌中所有非 X 费卡牌的费用。",
+    "display_name": "Snecko Oil",
+    "id": "SNECKO_OIL",
+    "kind": "potion",
+    "name": "异蛇之油",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "md:potions.md:L67; md:potions_zh.md:L67",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "SOLDIER_S_STEW": {
+    "aliases": [
+      "SOLDIERS_STEW",
+      "Soldier's Stew",
+      "SoldiersStew"
+    ],
+    "curated": false,
+    "description": "本场战斗内你战斗牌堆中所有含 Strike 标签的卡牌 +1 次 Replay。Replay 表现为用药时对各张卡的一次性充能 —— 用药时已在手牌/抽牌堆中的打击牌打出时额外结算一次；战斗后期才抽到的打击只结算一次。",
+    "display_name": "Soldier's Stew",
+    "id": "SOLDIER_S_STEW",
+    "kind": "potion",
+    "name": "士兵炖汤",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "md:potions.md:L68; md:potions_zh.md:L68",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "SPEED_POTION": {
+    "aliases": [
+      "Speed Potion",
+      "SpeedPotion"
+    ],
+    "curated": false,
+    "description": "获得 SpeedPotionPower +5 敏捷——本回合结束时失去 5 敏捷（临时敏捷）。",
+    "display_name": "Speed Potion",
+    "id": "SPEED_POTION",
+    "kind": "potion",
+    "name": "速度药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Common",
+    "source": "md:potions.md:L69; md:potions_zh.md:L69",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "STABLE_SERUM": {
+    "aliases": [
+      "Stable Serum",
+      "StableSerum"
+    ],
+    "curated": false,
+    "description": "获得 RetainHandPower 2——接下来 2 个回合结束时不弃手牌。",
+    "display_name": "Stable Serum",
+    "id": "STABLE_SERUM",
+    "kind": "potion",
+    "name": "稳定血清",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "md:potions.md:L70; md:potions_zh.md:L70",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "STAR_POTION": {
+    "aliases": [
+      "Star Potion",
+      "StarPotion"
+    ],
+    "curated": false,
+    "description": "+3 点星星（★）。",
+    "display_name": "Star Potion",
+    "id": "STAR_POTION",
+    "kind": "potion",
+    "name": "星星药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Common",
+    "source": "md:potions.md:L71; md:potions_zh.md:L71",
+    "target": "self",
+    "usage": "combat"
+  },
+  "STRENGTH_POTION": {
+    "aliases": [
+      "Strength Potion",
+      "StrengthPotion"
+    ],
+    "curated": false,
+    "description": "本场战斗 +2 力量。",
+    "display_name": "Strength Potion",
+    "id": "STRENGTH_POTION",
+    "kind": "potion",
+    "name": "力量药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Common",
+    "source": "md:potions.md:L72; md:potions_zh.md:L72; codex:potions/STRENGTH_POTION",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "SWIFT_POTION": {
+    "aliases": [
+      "Swift Potion",
+      "SwiftPotion"
+    ],
+    "curated": false,
+    "description": "抽 3 张牌。",
+    "display_name": "Swift Potion",
+    "id": "SWIFT_POTION",
+    "kind": "potion",
+    "name": "迅捷药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Common",
+    "source": "md:potions.md:L73; md:potions_zh.md:L73; codex:potions/SWIFT_POTION",
+    "target": "any player",
+    "usage": "combat"
+  },
+  "TOUCH_OF_INSANITY": {
+    "aliases": [
+      "Touch of Insanity",
+      "TouchofInsanity"
+    ],
+    "curated": false,
+    "description": "选择手牌中 1 张消耗能量或星星的卡牌；本场战斗其费用为 0。",
+    "display_name": "Touch of Insanity",
+    "id": "TOUCH_OF_INSANITY",
+    "kind": "potion",
+    "name": "癫狂之触",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "md:potions.md:L74; md:potions_zh.md:L74",
+    "target": "self",
+    "usage": "combat"
+  },
+  "VULNERABLE_POTION": {
+    "aliases": [
+      "Vulnerable Potion",
+      "VulnerablePotion"
+    ],
+    "curated": false,
+    "description": "施加 3 层 Vulnerable。",
+    "display_name": "Vulnerable Potion",
+    "id": "VULNERABLE_POTION",
+    "kind": "potion",
+    "name": "易伤药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Common",
+    "source": "md:potions.md:L75; md:potions_zh.md:L75; codex:potions/VULNERABLE_POTION",
+    "target": "any enemy",
+    "usage": "combat"
+  },
+  "WEAK_POTION": {
+    "aliases": [
+      "Weak Potion",
+      "WeakPotion"
+    ],
+    "curated": false,
+    "description": "施加 3 层 Weak。",
+    "display_name": "Weak Potion",
+    "id": "WEAK_POTION",
+    "kind": "potion",
+    "name": "虚弱药水",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Common",
+    "source": "md:potions.md:L76; md:potions_zh.md:L76; codex:potions/WEAK_POTION",
+    "target": "any enemy",
+    "usage": "combat"
+  }
+}
