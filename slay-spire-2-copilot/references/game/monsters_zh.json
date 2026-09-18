@@ -1715,9 +1715,9 @@
       "Bygoneeffigy",
       "旧日雕像"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [],
-    "description": "SLEEP_MOVE（初始）睡眠 → WAKE_MOVE 增益（自身 +10 力量）→ SLASHES_MOVE = 单次攻击 13 (A:15)，SLASHES 自循环。被动 SlowPower：你本回合每打出一张牌，其受到你有源攻击的伤害 +10%（其阵营回合开始时计数清零）——多打牌后爆发。",
+    "description": "Act1 精英（run-38 A1 实时：127 HP）。循环 SLEEP（自由伤害窗）→ WAKE（自身 +10 力量）→ SLASHES（单体 13 A:15 → +10 力后实时 23）自循环。被动 SLOW_POWER：玩家本回合每打一张牌，其受到玩家有源攻击伤害 +10%（其阵营回合开始清零；实时曲线：2 张先手 → Strike×1.2，6 张 → ×1.6，run-38 T1 验证）。A1 注记（run-38 实时）：档案眩晕翻转教条（睡眠期未格挡伤害剥镀甲+Asleep → 意图翻转 Stun）未触发——A1 生成全程无 Plating power 可见，且 SLEEP 期间吃下 39 点未格挡伤害后 WAKE 照常 +10 Str。眩晕翻转在 A1 按有条件/不存在处理；按 +10 力 WAKE 规划竞速。爆发教条：自由窗上 Offering×Ritual + Slow 增幅（run-38：T1 39 伤，T4 在 SLASHES 结算前 61 伤估算/55 实时击杀链）。",
     "display_names": [
       "BygoneEffigy",
       "旧日雕像"
@@ -1824,7 +1824,8 @@
       }
     ],
     "play_notes": "",
-    "source": "md:monsters.md:L40"
+    "source": "md:monsters.md:L40",
+    "zh_description": "Act1 精英（run-38 A1 实时：127 HP）。循环 SLEEP（自由伤害窗）→ WAKE（自身 +10 力量）→ SLASHES（单体 13 A:15 → +10 力后实时 23）自循环。被动 SLOW_POWER：玩家本回合每打一张牌，其受到玩家有源攻击伤害 +10%（其阵营回合开始清零；实时曲线：2 张先手 → Strike×1.2，6 张 → ×1.6，run-38 T1 验证）。A1 注记（run-38 实时）：档案眩晕翻转教条（睡眠期未格挡伤害剥镀甲+Asleep → 意图翻转 Stun）未触发——A1 生成全程无 Plating power 可见，且 SLEEP 期间吃下 39 点未格挡伤害后 WAKE 照常 +10 Str。眩晕翻转在 A1 按有条件/不存在处理；按 +10 力 WAKE 规划竞速。爆发教条：自由窗上 Offering×Ritual + Slow 增幅（run-38：T1 39 伤，T4 在 SLASHES 结算前 61 伤估算/55 实时击杀链）。"
   },
   "Byrdonis": {
     "acts": [],
@@ -1833,7 +1834,7 @@
       "Byrdonis",
       "多尼斯异鸟"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "SWOOP_MOVE",
       "PECK_MOVE",
@@ -1848,7 +1849,7 @@
       "TURN_MOVE",
       "STRENGTH_MOVE"
     ],
-    "description": "PECK_MOVE = 多段攻击 3 (A:4) ×3；SWOOP_MOVE = 单次攻击 17 (A:19)；循环 SWOOP → PECK → SWOOP…。被动 TerritorialPower 1：其阵营回合结束时 +1 力量。",
+    "description": "Act1 精英（run-38 A1 实时：82 HP）。被动 TERRITORIAL_POWER 1：其阵营回合结束 +1 力量——实时 STR 逐回合 0→1→2→3 爬升；SWOOP 实时意图 17[base17] → 叠 Territorial 后 19。循环 SWOOP（单体 17 A:19）→ PECK（多段 3×3 A:4）→ 循环。Red Mask Weak T1 实时（SWOOP 17→12）。击杀窗教条：成长计时器战斗——Territorial 让每回合变贵；Offering 引擎爆发 + 挡（run-38 技能药给的 Impervious 类在 HP 24 挡下 SWOOP 19）T4 收官。弓手类精英，不是消耗战。",
     "display_names": [
       "Byrdonis",
       "多尼斯异鸟"
@@ -1952,7 +1953,8 @@
       }
     ],
     "play_notes": "",
-    "source": "md:monsters.md:L39"
+    "source": "md:monsters.md:L39",
+    "zh_description": "Act1 精英（run-38 A1 实时：82 HP）。被动 TERRITORIAL_POWER 1：其阵营回合结束 +1 力量——实时 STR 逐回合 0→1→2→3 爬升；SWOOP 实时意图 17[base17] → 叠 Territorial 后 19。循环 SWOOP（单体 17 A:19）→ PECK（多段 3×3 A:4）→ 循环。Red Mask Weak T1 实时（SWOOP 17→12）。击杀窗教条：成长计时器战斗——Territorial 让每回合变贵；Offering 引擎爆发 + 挡（run-38 技能药给的 Impervious 类在 HP 24 挡下 SWOOP 19）T4 收官。弓手类精英，不是消耗战。"
   },
   "CALCIFIED_CULTIST": {
     "acts": [
@@ -5951,12 +5953,12 @@
       "Fuzzywurmcrawler",
       "毛绒伏地虫"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "ACID_MOVE",
       "INHALE"
     ],
-    "description": "FIRST_ACID_GOOP = 单次攻击 4 (A:6)；ACID_GOOP = 单次攻击 4 (A:6)；INHALE = 增益 +7 力量。循环：酸液 → 吸气 → 酸液…",
+    "description": "Act1 怪物（run-38 实时：56 HP，显示 毛绒伏地虫）。循环 FIRST_ACID_GOOP（单体 4 A:6）→ INHALE（自身 +7 力量——实时：一次吸气后 STR:7，下一发酸液意图 11[base4]）→ ACID_GOOP（单体 4 A:6）→ 循环。INHALE +7 力 = 陡峭成长计时器——≤3 回合内在第二次吸气前击杀（run-38：T1 Bash+Strike，T2 自由窗 3×Strike，T3 第二次吸气循环前击杀）。",
     "display_names": [
       "FuzzyWurmCrawler",
       "毛绒伏地虫"
@@ -6071,7 +6073,8 @@
     "needs_zh": false,
     "passives": [],
     "play_notes": "",
-    "source": "md:monsters.md:L28"
+    "source": "md:monsters.md:L28",
+    "zh_description": "Act1 怪物（run-38 实时：56 HP，显示 毛绒伏地虫）。循环 FIRST_ACID_GOOP（单体 4 A:6）→ INHALE（自身 +7 力量——实时：一次吸气后 STR:7，下一发酸液意图 11[base4]）→ ACID_GOOP（单体 4 A:6）→ 循环。INHALE +7 力 = 陡峭成长计时器——≤3 回合内在第二次吸气前击杀（run-38：T1 Bash+Strike，T2 自由窗 3×Strike，T3 第二次吸气循环前击杀）。"
   },
   "GasBomb": {
     "acts": [
@@ -7173,13 +7176,13 @@
       "Kinfollower",
       "同族信徒"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "QUICK_MOVE",
       "BOOMERANG_MOVE",
       "POWER_DANCE_MOVE"
     ],
-    "description": "QUICK_SLASH_MOVE = 单次攻击 5；BOOMERANG_MOVE = 多段攻击 2 ×2；POWER_DANCE_MOVE = 增益 自身 +2 力量 (A:3)。被动 MinionPower 1。循环 QUICK → BOOMERANG → POWER_DANCE。",
+    "description": "同族神官随从（MINION_POWER:1，run-38 实时 59/58 HP）。循环 QUICK_SLASH（单体 5 A:5，实时 7-9 含力量）→ BOOMERANG（多段 2×2，实时 4x2）→ POWER_DANCE（自身 +2 力量 A:3）→ 循环。MINION_POWER：死亡不结束战斗——不是胜利条件。POWER_DANCE 每循环 +2 力使随从伤害逐轮抬升；教条：击杀顺序无视（本体优先），挡下其零头，仅通过免费 AoE（Pacts End 17）或本体死后清掉。",
     "display_names": [
       "KinFollower",
       "同族信徒"
@@ -7322,7 +7325,8 @@
       }
     ],
     "play_notes": "",
-    "source": "md:monsters.md:L42"
+    "source": "md:monsters.md:L42",
+    "zh_description": "同族神官随从（MINION_POWER:1，run-38 实时 59/58 HP）。循环 QUICK_SLASH（单体 5 A:5，实时 7-9 含力量）→ BOOMERANG（多段 2×2，实时 4x2）→ POWER_DANCE（自身 +2 力量 A:3）→ 循环。MINION_POWER：死亡不结束战斗——不是胜利条件。POWER_DANCE 每循环 +2 力使随从伤害逐轮抬升；教条：击杀顺序无视（本体优先），挡下其零头，仅通过免费 AoE（Pacts End 17）或本体死后清掉。"
   },
   "KinPriest": {
     "acts": [],
@@ -7331,14 +7335,14 @@
       "Kinpriest",
       "同族神官"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "FRAIL_ORB_MOVE",
       "WEAK_ORB_MOVE",
       "BEAM_MOVE",
       "RITUAL_MOVE"
     ],
-    "description": "ORB_OF_FRAILTY_MOVE = 单次攻击 8 (A:9) + 1 Frail；ORB_OF_WEAKNESS_MOVE = 单次攻击 8 (A:9) + 1 Weak；BEAM_MOVE = 多段攻击 3 ×3；RITUAL_MOVE = 增益 自身 +2 力量 (A:3)。循环 Frail球 → Weak球 → BEAM → RITUAL。",
+    "description": "Act1 Boss 级本体（run-38 A1 实时：190 HP + 2 同族信徒随从）。循环 ORB_OF_FRAILTY（单体 8 A:9 + 玩家 1 Frail）→ ORB_OF_WEAKNESS（单体 8 A:9 + 玩家 1 Weak）→ BEAM（多段 3×3）→ RITUAL（自身 +2 力量 A:3）→ 循环。本体-随从教条：随从带 MINION_POWER——其死亡不结束战斗；击杀同族神官才是胜利条件（LivingFog 本体规则）。RITUAL 每循环 +Str = 成长型击杀计时器：竞速打本体，除非 AoE 免费窗（Pacts End）否则不理会随从。run-38 死亡复盘：Boss 死于 39→4 的五回合 HP 经济磨损（随从 7-9/回合 + 球 6-10 + Frail/Weak 循环），死时 Boss 剩 26/190——约束是入场 HP 而非引擎。Red Mask 战斗开局 Weak 实时生效。",
     "display_names": [
       "KinPriest",
       "同族神官"
@@ -7480,8 +7484,9 @@
     "name": "同族神官",
     "needs_zh": false,
     "passives": [],
-    "play_notes": "",
-    "source": "md:monsters.md:L41"
+    "play_notes": "Master-minion kill order (run-38 live). RITUAL +2 Str/cycle = race timer. Entry HP is the binding constraint — adds+orbs tax ~15-19/turn even while boss dies fast.",
+    "source": "md:monsters.md:L41",
+    "zh_description": "Act1 Boss 级本体（run-38 A1 实时：190 HP + 2 同族信徒随从）。循环 ORB_OF_FRAILTY（单体 8 A:9 + 玩家 1 Frail）→ ORB_OF_WEAKNESS（单体 8 A:9 + 玩家 1 Weak）→ BEAM（多段 3×3）→ RITUAL（自身 +2 力量 A:3）→ 循环。本体-随从教条：随从带 MINION_POWER——其死亡不结束战斗；击杀同族神官才是胜利条件（LivingFog 本体规则）。RITUAL 每循环 +Str = 成长型击杀计时器：竞速打本体，除非 AoE 免费窗（Pacts End）否则不理会随从。run-38 死亡复盘：Boss 死于 39→4 的五回合 HP 经济磨损（随从 7-9/回合 + 球 6-10 + Frail/Weak 循环），死时 Boss 剩 26/190——约束是入场 HP 而非引擎。Red Mask 战斗开局 Weak 实时生效。"
   },
   "KnowledgeDemon": {
     "acts": [],
@@ -10154,9 +10159,9 @@
       "Phrogparasite",
       "异蛙寄生虫"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [],
-    "description": "INFECT_MOVE = 向每个目标弃牌堆加入 3 张 Infection（不可打出；回合结束在手则受 3 点无来源伤害）；LASH_MOVE = 多段攻击 4 (A:5) ×4。被动 InfestedPower 4（Single，出场时施加）：死亡时生成 4 只 Wriggler（StartStunned=true），且 InfestedPower 拥有者存活时战斗无法结束——召唤波延续战斗。",
+    "description": "Act1 精英（run-38 A1 实时：64 HP，显示 异蛙寄生虫）。INFESTED_POWER 4（出场施加）：死亡时生成 4 只 Wriggler（StartStunned=true）；该 power 持有者存活时战斗无法结束——召唤波延续战斗（run-38 实时：寄生虫 T2 爆发到 9，T3 Anger-9 精确击杀，4 只扭动虫同帧生成，T8 前波次清完）。INFECT = 向每个目标弃牌堆加 3 张 Infection 状态牌（不可打出，cost −1；回合末在手每张受 3 伤——实时：可被格挡，剩余挡吸收 tick）。LASH（本怪）= 多段 4 (A:5) ×4——与单体类 LASH 条目不同。教条：在自由/自选窗爆发寄生虫（run-38 双药回合 37 伤），然后两点一体清眩晕波；Infection 牌可挡但堵塞手牌——通过手牌稀释起击杀计时器作用。",
     "display_names": [
       "PhrogParasite",
       "异蛙寄生虫"
@@ -10278,7 +10283,8 @@
       }
     ],
     "play_notes": "",
-    "source": "md:monsters.md:L34"
+    "source": "md:monsters.md:L34",
+    "zh_description": "Act1 精英（run-38 A1 实时：64 HP，显示 异蛙寄生虫）。INFESTED_POWER 4（出场施加）：死亡时生成 4 只 Wriggler（StartStunned=true）；该 power 持有者存活时战斗无法结束——召唤波延续战斗（run-38 实时：寄生虫 T2 爆发到 9，T3 Anger-9 精确击杀，4 只扭动虫同帧生成，T8 前波次清完）。INFECT = 向每个目标弃牌堆加 3 张 Infection 状态牌（不可打出，cost −1；回合末在手每张受 3 伤——实时：可被格挡，剩余挡吸收 tick）。LASH（本怪）= 多段 4 (A:5) ×4——与单体类 LASH 条目不同。教条：在自由/自选窗爆发寄生虫（run-38 双药回合 37 伤），然后两点一体清眩晕波；Infection 牌可挡但堵塞手牌——通过手牌稀释起击杀计时器作用。"
   },
   "PunchConstruct": {
     "acts": [],
@@ -11604,13 +11610,13 @@
       "Shrinkerbeetle",
       "缩小甲虫"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "SHRINKER_MOVE",
       "CHOMP",
       "STOMP_MOVE"
     ],
-    "description": "SHRINKER_MOVE = 减益——对玩家施加 ShrinkPower −1（负数=无限持续）：甲虫存活期间玩家攻击伤害 ×0.7（−30%）；CHOMP_MOVE = 单次攻击 7 (A:8)；STOMP_MOVE = 单次攻击 13 (A:14)。循环 SHRINKER → CHOMP → STOMP → CHOMP…",
+    "description": "Act1 怪物（run-38 实时：成对 40/44 HP）。SHRINKER = 减益对玩家施加 SHRINK_POWER −1（负数=甲虫存活期间）：玩家攻击伤害 ×0.70（实时向下取整：Bash 8→5、Strike 6→4）；施加者死亡时移除——击杀计时器类。循环 SHRINKER → RAND 分支（TACKLE w1.00）；同场树叶史莱姆按嵌套条目走 GOOP(Status×1)/STICKY(Status×2)/CLUMP(8 A:9)。SHINK 实时注记：powers.json 档案行写 ×0.75 但 DamageDecrease-30 公式 = ×0.70——实时向下取整值确认 ×0.70。",
     "display_names": [
       "ShrinkerBeetle",
       "缩小甲虫"
@@ -11736,7 +11742,8 @@
       }
     ],
     "play_notes": "",
-    "source": "md:monsters.md:L22"
+    "source": "md:monsters.md:L22",
+    "zh_description": "Act1 怪物（run-38 实时：成对 40/44 HP）。SHRINKER = 减益对玩家施加 SHRINK_POWER −1（负数=甲虫存活期间）：玩家攻击伤害 ×0.70（实时向下取整：Bash 8→5、Strike 6→4）；施加者死亡时移除——击杀计时器类。循环 SHRINKER → RAND 分支（TACKLE w1.00）；同场树叶史莱姆按嵌套条目走 GOOP(Status×1)/STICKY(Status×2)/CLUMP(8 A:9)。SHINK 实时注记：powers.json 档案行写 ×0.75 但 DamageDecrease-30 公式 = ×0.70——实时向下取整值确认 ×0.70。"
   },
   "Skulking": {
     "acts": [],
@@ -12162,9 +12169,9 @@
       "Slitheringstrangler",
       "蛇行扼杀者"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [],
-    "description": "CONSTRICT = 减益——对玩家施加 ConstrictPower 3：玩家每个回合结束时每层受到 3 点无来源伤害；施加者死亡时移除；THWACK = 单次攻击 7 (A:8) + 自身格挡；LASH = 单次攻击 12 (A:13)。",
+    "description": "Act1 双体怪之一（run-38 实时：53 HP，显示 蛇行扼杀者）。循环 CONSTRICT → rand(THWACK w1.0 / LASH w1.0) → 循环。CONSTRICT = 减益：对玩家施加 CONSTRICT_POWER 3——实时叠加：每次 CONSTRICT 招式释放 +3 层（T1 施加 3，T3 释放推到 :6）；玩家回合结束按层数每层受 3 伤；施加者死亡时移除；实时可被格挡。THWACK = 单体 7 A:8 + 自身格挡；LASH = 单体 12 A:13（本怪——与鳗鱼精英 LASH 7-class 不同）。击杀计时器类 3→6→9；run-38 两回合击杀线 Anger+Bash+Pommel（Vuln 下 34）在 33 HP 搭档倒下后收掉本 53 HP 体；施加者死亡解除全部层数。",
     "display_names": [
       "SlitheringStrangler",
       "蛇行扼杀者"
@@ -12366,7 +12373,8 @@
       }
     ],
     "play_notes": "",
-    "source": "md:monsters.md:L36"
+    "source": "md:monsters.md:L36",
+    "zh_description": "Act1 双体怪之一（run-38 实时：53 HP，显示 蛇行扼杀者）。循环 CONSTRICT → rand(THWACK w1.0 / LASH w1.0) → 循环。CONSTRICT = 减益：对玩家施加 CONSTRICT_POWER 3——实时叠加：每次 CONSTRICT 招式释放 +3 层（T1 施加 3，T3 释放推到 :6）；玩家回合结束按层数每层受 3 伤；施加者死亡时移除；实时可被格挡。THWACK = 单体 7 A:8 + 自身格挡；LASH = 单体 12 A:13（本怪——与鳗鱼精英 LASH 7-class 不同）。击杀计时器类 3→6→9；run-38 两回合击杀线 Anger+Bash+Pommel（Vuln 下 34）在 33 HP 搭档倒下后收掉本 53 HP 体；施加者死亡解除全部层数。"
   },
   "SludgeSpinner": {
     "acts": [],
@@ -12660,9 +12668,9 @@
       "Snappingjaxfruit",
       "闪光贾克斯果"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [],
-    "description": "闪光贾克斯果（Act1 SnappingJaxfruitNormal，与飞蝇菌子同场；31-33 HP）：ENERGY_ORB_MOVE = 单段攻击 3（A:4）+自身 2 力量；每回合重复——力量滚雪球，尽早击杀。",
+    "description": "Act1 怪物（run-38 实时：33 HP，实时 id SNAPPING_JAXFRUIT，显示 闪光贾克斯果）。ENERGY_ORB = 单体攻击 3 (A:4) + 自身 +2 力量，每回合重复——实时 T2 时 STR 0→2，意图随层数 2[base3]→3→5。成长击杀计时器：+2 力/回合不加干预约 4 回合后 Orb 走向致命。双怪战先杀它（搭档 53HP 蛇行扼杀者）；run-38 线 Setup+Strike×2 单回合 T2 爆发收掉 33 再按 Vuln 磨搭档。",
     "display_names": [
       "SnappingJaxfruit"
     ],
@@ -12707,7 +12715,8 @@
     "needs_zh": false,
     "passives": [],
     "play_notes": "",
-    "source": "md:monsters.md:L26"
+    "source": "md:monsters.md:L26",
+    "zh_description": "Act1 怪物（run-38 实时：33 HP，实时 id SNAPPING_JAXFRUIT，显示 闪光贾克斯果）。ENERGY_ORB = 单体攻击 3 (A:4) + 自身 +2 力量，每回合重复——实时 T2 时 STR 0→2，意图随层数 2[base3]→3→5。成长击杀计时器：+2 力/回合不加干预约 4 回合后 Orb 走向致命。双怪战先杀它（搭档 53HP 蛇行扼杀者）；run-38 线 Setup+Strike×2 单回合 T2 爆发收掉 33 再按 Vuln 磨搭档。"
   },
   "SneakyGremlin": {
     "acts": [

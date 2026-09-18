@@ -1881,6 +1881,22 @@
     "zh_description": "休息点获得 Lift 选项（最多 3 次）；战斗开始，获得等同 Lift 次数的力量。",
     "zh_name": "壶铃"
   },
+  "GLAM": {
+    "aliases": [
+      "Glitter",
+      "GLITTER"
+    ],
+    "character": "shared",
+    "curated": false,
+    "description": "Enchant all card rewards with Glam.",
+    "id": "GLAM",
+    "kind": "relic",
+    "name": "Glitter",
+    "needs_zh": true,
+    "play_notes": "",
+    "rarity": "Ancient",
+    "source": "codex-api:/relics/GLITTER"
+  },
   "GLASS_EYE": {
     "aliases": [
       "Glass Eye",
@@ -2285,8 +2301,8 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "every 5 cards exhausted, draw 1 card (Ethereal end-of-turn exhausts are counted at turn end).",
+    "curated": true,
+    "description": "Every 5 cards exhausted, draw 1 card (counter JOSS_PAPER:n; Ethereal end-of-turn exhausts counted at turn end; resets on proc). LIVE run-38: counter advanced on Offering/Ritual/Tremble/MoltenFist exhausts; proc at :5 drew 1 mid-boss-fight; counter reset to :0 after proc. Passive draw engine for exhaust-package decks.",
     "id": "JOSS_PAPER",
     "kind": "relic",
     "name": "Joss Paper",
@@ -2294,7 +2310,7 @@
     "play_notes": "",
     "rarity": "Uncommon",
     "source": "md:relics.md:L58; md:relics_zh.md:L58",
-    "zh_description": "每消耗 5 张牌，抽 1 张牌（Ethereal 回合末消耗在回合结束时计入）。",
+    "zh_description": "每消耗 5 张牌，抽 1 张牌（计数 JOSS_PAPER:n；虚灵回合末消耗在回合结束计入；触发后清零重计）。run-38 实时：Offering/Ritual/Tremble/MoltenFist 消耗推进计数；:5 时 Boss 战中触发抽 1；触发后计数清零。消耗包牌组的被动抽牌引擎。",
     "zh_name": "金纸"
   },
   "JUZU_BRACELET": {
@@ -3113,8 +3129,8 @@
     ],
     "character": null,
     "counter_shown": true,
-    "curated": false,
-    "description": "every 10 Attack cards played, gain 1 Energy.",
+    "curated": true,
+    "description": "Every 10 Attack cards played, gain 1 Energy (counter displayed as NUNCHAKU:n; resets on proc). LIVE run-38: proc fired at :10 → +1 Energy same turn (energy display 4/3); Anger/Pacts End 0-cost attacks advance the counter for free.",
     "id": "NUNCHAKU",
     "kind": "relic",
     "name": "Nunchaku",
@@ -3122,7 +3138,7 @@
     "play_notes": "",
     "rarity": "Uncommon",
     "source": "md:relics.md:L65; md:relics_zh.md:L65",
-    "zh_description": "每打出 10 张攻击牌，获得 1 点能量。",
+    "zh_description": "每打出 10 张攻击牌，获得 1 点能量（计数显示 NUNCHAKU:n，触发后清零重计）。run-38 实时：:10 触发 → 同回合 +1 能量（能量显示 4/3）；Anger/Pacts End 0 费攻击免费推进计数。",
     "zh_name": "双截棍"
   },
   "NUTRITIOUS_OYSTER": {
@@ -3620,8 +3636,8 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "first time each combat you play a Power, gain 7 Block.",
+    "curated": true,
+    "description": "First time each combat you play a Power, gain 7 Block. Effect archived; run-38 deck contained no Power cards (Feel No Pain/Stone Armor-class skipped) — relic inactive all run. Value unlocks when a Power enters the deck.",
     "id": "PERMAFROST",
     "kind": "relic",
     "name": "Permafrost",
@@ -3629,7 +3645,7 @@
     "play_notes": "",
     "rarity": "Uncommon",
     "source": "md:relics.md:L73; md:relics_zh.md:L74",
-    "zh_description": "每场战斗首次打出能力牌时，获得 7 格挡。",
+    "zh_description": "每场战斗首次打出能力牌时，获得 7 格挡。效果已归档；run-38 牌组无能力牌（Feel No Pain/Stone Armor 类均跳过）——本局遗物全程未激活。牌组进能力牌后价值解锁。",
     "zh_name": "永冻冰晶"
   },
   "PETRIFIED_TOAD": {
@@ -4016,8 +4032,8 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "at combat start (turn 1), apply 1 Weak to ALL enemies. WEAK_POWER:1 visible on every enemy at combat start state read; weakened enemy intents drop (Nibbit-class MANDIBLES 8→6, Entomancer BEES per-hit 3→1 under Colossus+Weak stacking, TheInsatiable THRASH 9→8 per hit).",
+    "curated": true,
+    "description": "At combat start (turn 1), apply 1 Weak to ALL enemies. LIVE run-38: WEAK_POWER:1 visible on every enemy at T1 across all fights (Byrdonis SWOOP 17→12; slime tackles 4→3/3→2; KinPriest orbs 8→6). Reduces enemy attack damage ~25% while Weak lasts (decrements end of their side turn). Coexists with TERRITORIAL-class passives — brief \"no Weak\" reads are state settle-lag, not relic failure.",
     "id": "RED_MASK",
     "kind": "relic",
     "name": "Red Mask",
@@ -4025,7 +4041,7 @@
     "play_notes": "",
     "rarity": "Common",
     "source": "md:relics.md:L36; md:relics_zh.md:L36",
-    "zh_description": "战斗开始（第 1 回合），对所有敌人施加 1 层 Weak。开战 state 读数每个敌人都带 WEAK_POWER:1；被削弱敌方意图下降（外骨骼虫类 MANDIBLES 8→6、蜂群术士 BEES 每击 3→1 巨像+虚弱叠层、无厌沙虫 THRASH 9→8 每击）。",
+    "zh_description": "战斗开始（第 1 回合）对所有敌人施加 1 层虚弱。run-38 实时：全部战斗 T1 敌方均可见 WEAK_POWER:1（Byrdonis SWOOP 17→12；史莱姆撞击 4→3/3→2；同族神官球 8→6）。虚弱持续期间敌方攻击伤害约 −25%（其阵营回合结束递减）。与 TERRITORIAL 类被动共存——短暂的「无 Weak」读数是 state settle-lag，非遗物失效。",
     "zh_name": "红面具"
   },
   "RED_SKULL": {

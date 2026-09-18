@@ -542,8 +542,8 @@
       "ConstrictPower"
     ],
     "counter_class": false,
-    "curated": false,
-    "description": "持有者阵营回合结束时， 持有者受到 Amount 点非攻击伤害。施加者死亡时移除。",
+    "curated": true,
+    "description": "玩家身上的减益计数（run-38 实时）：玩家回合结束按层数每层受 Amount 点伤害；实时叠加——每次 CONSTRICT 招式释放 +3（蛇行扼杀者 T1 施加 3，T3 释放 → :6）；可被格挡（剩余挡吸收 tick）；施加者死亡时移除。计数类击杀计时器：3→6→9 递增——在 2-3 个循环内击杀施加者。",
     "host_of_affliction": false,
     "id": "CONSTRICT_POWER",
     "kind": "power",
@@ -552,7 +552,8 @@
     "play_notes": "",
     "power_type": "Debuff",
     "source": "md:powers.md:L321; md:powers_zh.md:L289",
-    "stack_type": "Counter"
+    "stack_type": "Counter",
+    "zh_description": "玩家身上的减益计数（run-38 实时）：玩家回合结束按层数每层受 Amount 点伤害；实时叠加——每次 CONSTRICT 招式释放 +3（蛇行扼杀者 T1 施加 3，T3 释放 → :6）；可被格挡（剩余挡吸收 tick）；施加者死亡时移除。计数类击杀计时器：3→6→9 递增——在 2-3 个循环内击杀施加者。"
   },
   "CONSUMING_SHADOW_POWER": {
     "aliases": [
@@ -2002,8 +2003,8 @@
       "MinionPower"
     ],
     "counter_class": false,
-    "curated": false,
-    "description": "标记召唤物——其死亡不触发战斗结束 判定（OwnerIsSecondaryEnemy；持有者死后 power 不保留）。",
+    "curated": true,
+    "description": "召唤物身上的单层增益标记（run-38 实时 KinFollower×2）：其死亡不触发战斗结束致命逻辑（OwnerIsSecondaryEnemy）。本体-随从教条（run-38 Boss + LivingFog 档案）：被标随从不是胜利条件——击杀本体（未标记的 Boss/召唤者）才结束战斗；随从死亡免费但与胜利无关。竞速本体期间可用 AoE（Pacts End 类）顺带削随从。",
     "host_of_affliction": false,
     "id": "MINION_POWER",
     "kind": "power",
@@ -2012,7 +2013,8 @@
     "play_notes": "",
     "power_type": "Buff",
     "source": "md:powers.md:L68; md:powers_zh.md:L60",
-    "stack_type": "Single"
+    "stack_type": "Single",
+    "zh_description": "召唤物身上的单层增益标记（run-38 实时 KinFollower×2）：其死亡不触发战斗结束致命逻辑（OwnerIsSecondaryEnemy）。本体-随从教条（run-38 Boss + LivingFog 档案）：被标随从不是胜利条件——击杀本体（未标记的 Boss/召唤者）才结束战斗；随从死亡免费但与胜利无关。竞速本体期间可用 AoE（Pacts End 类）顺带削随从。"
   },
   "MONARCHS_GAZE_POWER": {
     "aliases": [
@@ -3503,8 +3505,8 @@
       "TerritorialPower"
     ],
     "counter_class": false,
-    "curated": false,
-    "description": "持有者阵营回合结束时获得 +Amount STRENGTH_POWER。",
+    "curated": true,
+    "description": "持有者身上的增益计数（run-38 实时 Byrdonis）：其阵营回合结束时 +Amount 力量（基础 Amount=1；实时 STR 每回合爬一级——SWOOP 两个敌方回合内 17→19）。成长击杀计时器：每拖一回合，其全部攻击 +Amount。",
     "host_of_affliction": false,
     "id": "TERRITORIAL_POWER",
     "kind": "power",
@@ -3513,7 +3515,8 @@
     "play_notes": "",
     "power_type": "Buff",
     "source": "md:powers.md:L586; md:powers_zh.md:L520",
-    "stack_type": "Counter"
+    "stack_type": "Counter",
+    "zh_description": "持有者身上的增益计数（run-38 实时 Byrdonis）：其阵营回合结束时 +Amount 力量（基础 Amount=1；实时 STR 每回合爬一级——SWOOP 两个敌方回合内 17→19）。成长击杀计时器：每拖一回合，其全部攻击 +Amount。"
   },
   "THE_BOMB_POWER": {
     "aliases": [

@@ -63,8 +63,8 @@
       "Blessing of the Forge",
       "BlessingoftheForge"
     ],
-    "curated": false,
-    "description": "upgrade every upgradable card in your hand for the combat.",
+    "curated": true,
+    "description": "Upgrade every upgradable card in your hand for the combat (combat-scoped — reverts after combat, Armaments-class). LIVE run-38: Defend 5→8 confirmed live on a lethal-intent boss turn (8+8=16 block vs 17 incoming); Molten Fist 10→14 likewise. Spend on the turn hand density is highest / incoming is lethal — not a permanent deck investment.",
     "display_name": "Blessing of the Forge",
     "id": "BLESSING_OF_THE_FORGE",
     "kind": "potion",
@@ -75,7 +75,7 @@
     "source": "md:potions.md:L17; md:potions_zh.md:L17",
     "target": "self",
     "usage": "combat",
-    "zh_description": "本场战斗内升级手牌中所有可升级卡牌。",
+    "zh_description": "为本场战斗升级手牌中所有可升级卡（战斗内限定——战斗后还原，Armaments 同类）。run-38 实时：致命意图 Boss 回合确认 Defend 5→8（8+8=16 挡对 17 来袭）；熔岩拳 10→14 同理。在手牌密度最高/来袭致命的回合使用——不是永久牌库投资。",
     "zh_name": "熔炉的祝福"
   },
   "BLOCK_POTION": {
@@ -1046,8 +1046,8 @@
       "Skill Potion",
       "SkillPotion"
     ],
-    "curated": false,
-    "description": "choose 1 of 3 distinct Skill cards from your character card pool (may skip); add to hand, free this turn.",
+    "curated": true,
+    "description": "Choose 1 of 3 distinct Skill cards from your character card pool (may skip); add to hand, free this turn. LIVE run-38: card_choice overlay offered IMPERVOUS/TRUE_GRIT/PRIMAL_FORCE; picked Impervious — free +30 Block walled elite SWOOP 19 at HP 24 on a zero-Defend hand. Lethal-intent potion: spend when incoming exceeds hand block ceiling.",
     "display_name": "Skill Potion",
     "id": "SKILL_POTION",
     "kind": "potion",
@@ -1058,7 +1058,7 @@
     "source": "md:potions.md:L66; md:potions_zh.md:L66",
     "target": "self",
     "usage": "combat",
-    "zh_description": "从角色卡池生成 3 张不同技能牌中选 1 张（可跳过）；加入手牌，本回合免费。",
+    "zh_description": "从你的角色卡池 3 张不同技能牌中选 1（可跳过）；加入手牌，本回合免费。run-38 实时：card_choice 覆盖层给出 IMPERVOUS/TRUE_GRIT/PRIMAL_FORCE；选 Impervious——免费 +30 挡在 HP 24、零防御手牌的回合挡下精英 SWOOP 19。致命意图药水：当来袭超过手牌挡上限时使用。",
     "zh_name": "技能药水"
   },
   "SNECKO_OIL": {

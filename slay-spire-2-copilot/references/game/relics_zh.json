@@ -1681,6 +1681,22 @@
     "rarity": "Rare",
     "source": "md:relics.md:L103; md:relics_zh.md:L103"
   },
+  "GLAM": {
+    "aliases": [
+      "Glitter",
+      "GLITTER"
+    ],
+    "character": "shared",
+    "curated": false,
+    "description": "Enchant all card rewards with Glam.",
+    "id": "GLAM",
+    "kind": "relic",
+    "name": "Glitter",
+    "needs_zh": true,
+    "play_notes": "",
+    "rarity": "Ancient",
+    "source": "codex-api:/relics/GLITTER"
+  },
   "GLASS_EYE": {
     "aliases": [
       "Glass Eye",
@@ -2043,15 +2059,16 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "每消耗 5 张牌，抽 1 张牌（Ethereal 回合末消耗在回合结束时计入）。",
+    "curated": true,
+    "description": "每消耗 5 张牌，抽 1 张牌（计数 JOSS_PAPER:n；虚灵回合末消耗在回合结束计入；触发后清零重计）。run-38 实时：Offering/Ritual/Tremble/MoltenFist 消耗推进计数；:5 时 Boss 战中触发抽 1；触发后计数清零。消耗包牌组的被动抽牌引擎。",
     "id": "JOSS_PAPER",
     "kind": "relic",
     "name": "金纸",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:relics.md:L58; md:relics_zh.md:L58"
+    "source": "md:relics.md:L58; md:relics_zh.md:L58",
+    "zh_description": "每消耗 5 张牌，抽 1 张牌（计数 JOSS_PAPER:n；虚灵回合末消耗在回合结束计入；触发后清零重计）。run-38 实时：Offering/Ritual/Tremble/MoltenFist 消耗推进计数；:5 时 Boss 战中触发抽 1；触发后计数清零。消耗包牌组的被动抽牌引擎。"
   },
   "JUZU_BRACELET": {
     "aliases": [
@@ -2783,15 +2800,16 @@
     ],
     "character": null,
     "counter_shown": true,
-    "curated": false,
-    "description": "每打出 10 张攻击牌，获得 1 点能量。",
+    "curated": true,
+    "description": "每打出 10 张攻击牌，获得 1 点能量（计数显示 NUNCHAKU:n，触发后清零重计）。run-38 实时：:10 触发 → 同回合 +1 能量（能量显示 4/3）；Anger/Pacts End 0 费攻击免费推进计数。",
     "id": "NUNCHAKU",
     "kind": "relic",
     "name": "双截棍",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:relics.md:L65; md:relics_zh.md:L65"
+    "source": "md:relics.md:L65; md:relics_zh.md:L65",
+    "zh_description": "每打出 10 张攻击牌，获得 1 点能量（计数显示 NUNCHAKU:n，触发后清零重计）。run-38 实时：:10 触发 → 同回合 +1 能量（能量显示 4/3）；Anger/Pacts End 0 费攻击免费推进计数。"
   },
   "NUTRITIOUS_OYSTER": {
     "aliases": [
@@ -3236,15 +3254,16 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "每场战斗首次打出能力牌时，获得 7 格挡。",
+    "curated": true,
+    "description": "每场战斗首次打出能力牌时，获得 7 格挡。效果已归档；run-38 牌组无能力牌（Feel No Pain/Stone Armor 类均跳过）——本局遗物全程未激活。牌组进能力牌后价值解锁。",
     "id": "PERMAFROST",
     "kind": "relic",
     "name": "永冻冰晶",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:relics.md:L73; md:relics_zh.md:L74"
+    "source": "md:relics.md:L73; md:relics_zh.md:L74",
+    "zh_description": "每场战斗首次打出能力牌时，获得 7 格挡。效果已归档；run-38 牌组无能力牌（Feel No Pain/Stone Armor 类均跳过）——本局遗物全程未激活。牌组进能力牌后价值解锁。"
   },
   "PETRIFIED_TOAD": {
     "aliases": [
@@ -3590,15 +3609,16 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始（第 1 回合），对所有敌人施加 1 层 Weak。开战 state 读数每个敌人都带 WEAK_POWER:1；被削弱敌方意图下降（外骨骼虫类 MANDIBLES 8→6、蜂群术士 BEES 每击 3→1 巨像+虚弱叠层、无厌沙虫 THRASH 9→8 每击）。",
+    "curated": true,
+    "description": "战斗开始（第 1 回合）对所有敌人施加 1 层虚弱。run-38 实时：全部战斗 T1 敌方均可见 WEAK_POWER:1（Byrdonis SWOOP 17→12；史莱姆撞击 4→3/3→2；同族神官球 8→6）。虚弱持续期间敌方攻击伤害约 −25%（其阵营回合结束递减）。与 TERRITORIAL 类被动共存——短暂的「无 Weak」读数是 state settle-lag，非遗物失效。",
     "id": "RED_MASK",
     "kind": "relic",
     "name": "红面具",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:relics.md:L36; md:relics_zh.md:L36"
+    "source": "md:relics.md:L36; md:relics_zh.md:L36",
+    "zh_description": "战斗开始（第 1 回合）对所有敌人施加 1 层虚弱。run-38 实时：全部战斗 T1 敌方均可见 WEAK_POWER:1（Byrdonis SWOOP 17→12；史莱姆撞击 4→3/3→2；同族神官球 8→6）。虚弱持续期间敌方攻击伤害约 −25%（其阵营回合结束递减）。与 TERRITORIAL 类被动共存——短暂的「无 Weak」读数是 state settle-lag，非遗物失效。"
   },
   "RED_SKULL": {
     "aliases": [

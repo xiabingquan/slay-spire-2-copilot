@@ -7887,8 +7887,8 @@
     "card_type": "attack",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
-    "description": "Exhaust, deal 10 damage; apply Vulnerable equal to the target's current Vulnerable stacks (doubles it). Upgrade: +4 damage. On a target with 0 Vulnerable stacks it applies 0 Vuln (doubles zero) AND does not consume an enemy Artifact stack — no debuff event is generated at 0 stacks (an Artifact 2 stack stays 2). Value is wasted on un-Vulned/Artifact targets: apply Vuln first (Bash/Thunderclap), MoltenFist after.",
+    "curated": true,
+    "description": "Exhaust, deal 10 damage; apply Vulnerable equal to the target current Vulnerable stacks (doubles it). Upgrade: +4 damage. LIVE run-38: on a Vuln-2 target dealt 15 (10×1.5) AND doubled stacks to 4; on Vuln-4 dealt 15 + doubled to 8-class (live showed +2 per the applied-amount line — stacks went 2→4→6 across Bash→MoltenFist sequences). At 0 Vuln it applies 0 AND does not consume enemy Artifact. Ordering doctrine: Bash/Tremble first, Molten Fist second — value is the double, not the 10.",
     "id": "MOLTEN_FIST",
     "keywords": [
       "Exhaust"
@@ -7901,7 +7901,7 @@
     "source": "md:cards.md:L68; md:cards_zh.md",
     "target_type": null,
     "upgrade": "+4 damage. On a target with 0 Vulnerable stacks it applies 0 Vuln (doubles zero) AND does not consume an enemy Artifact stack — no debuff event is generated at 0 stacks (an Artifact 2 stack stays 2). Value is wasted on un-Vulned/Artifact targets: apply Vuln first (Bash/Thunderclap), MoltenFist after.",
-    "zh_description": "1，攻击，普通，消耗，造成 10 点伤害；施加等同目标当前易伤层数的易伤（翻倍）。升级：伤害 +4。对 0 层易伤目标施加 0 层（零翻零）且**不消耗敌方 Artifact 层**——0 层不产生 debuff 事件（Artifact 2 层保持 2）。对未易伤/Artifact 目标价值浪费：先 Bash/Thunderclap 上易伤，再 MoltenFist。",
+    "zh_description": "消耗，造成 10 点伤害；施加等同目标当前易伤层数的易伤（翻倍）。升级：+4 伤害。run-38 实时：对 Vuln-2 目标造成 15（10×1.5）且层数翻至 4；Vuln-4 时 15 伤 + 层数继续叠加（实时 Bash→MoltenFist 序列显示 2→4→6）。对 0 层易伤目标施加 0 且不消耗敌方 Artifact。顺序教条：先 Bash/Tremble，后熔岩拳——价值在翻倍而非那 10 点。",
     "zh_name": "熔融之拳"
   },
   "MOMENTUM_STRIKE": {
@@ -8522,8 +8522,8 @@
     "card_type": "attack",
     "character_pool": "IRONCLAD",
     "cost": "0",
-    "curated": false,
-    "description": "deal 17 damage to ALL enemies; only deals damage if your exhaust pile has at least 3 cards. Upgrade: +6 damage.",
+    "curated": true,
+    "description": "0-cost Attack, deal 17 damage to ALL enemies; ONLY deals damage if your exhaust pile has at least 3 cards. Upgrade: +6. LIVE run-38: at exhaust=3 dealt 17 AoE (slime-quartet: 26→9 / 33→16 / 1-HP kill); at exhaust<3 played legal but dealt 0 — condition gate real. Exhaust threshold met naturally by Offering+Ritual+Tremble/MoltenFist chains mid-fight. Also counts as an Attack for Nunchaku even when the condition whiffs.",
     "id": "PACTS_END",
     "keywords": [],
     "kind": "card",
@@ -8534,7 +8534,7 @@
     "source": "md:cards.md:L72; md:cards_zh.md",
     "target_type": "AllEnemies",
     "upgrade": "+6 damage.",
-    "zh_description": "0，攻击，稀有，对所有敌人造成 17 点伤害；仅当消耗堆至少 3 张牌时造成伤害。升级：伤害 +6。",
+    "zh_description": "0 费攻击，对所有敌人造成 17 点伤害；仅当消耗堆至少 3 张牌时造成伤害。升级：+6。run-38 实时：exhaust=3 时 17 AoE（四史莱姆：26→9 / 33→16 / 1 HP 补刀）；exhaust<3 时打出合法但 0 伤——条件闸门真实。Offering+Ritual+Tremble/MoltenFist 链在战斗中段自然凑满阈值。条件未满足时打出仍计入 Nunchaku 攻击数。",
     "zh_name": "契约终结"
   },
   "PAGESTORM": {
@@ -10522,8 +10522,8 @@
     "card_type": "attack",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
-    "description": "Strike-tagged, deal 7 damage; gain 2 temporary Strength this turn. Upgrade: +2 damage, +1 Strength.",
+    "curated": true,
+    "description": "Strike-tagged, deal 7 damage; gain 2 temporary Strength this turn. Upgrade: +2 damage, +1 Strength. LIVE run-38: its own hit does NOT include the temp Str — the +2 applies AFTER the hit resolves (live: Setup hit 7 unbuffed, following Strike that turn hit 8 with the +2). Value = the follow-up attacks; play Setup first in a burst chain.",
     "id": "SETUP_STRIKE",
     "keywords": [
       "Strike-tagged"
@@ -10536,7 +10536,7 @@
     "source": "md:cards.md:L82; md:cards_zh.md",
     "target_type": null,
     "upgrade": "+2 damage, +1 Strength.",
-    "zh_description": "1，攻击，普通，打击标签，造成 7 点伤害；本回合获得 2 临时力量。升级：伤害 +2、力量 +1。",
+    "zh_description": "打击标签，造成 7 点伤害；本回合获得 2 点临时力量。升级：+2 伤害、+1 力量。run-38 实时：其自身一击不包含临时力量——+2 在该击结算后施加（实时：Setup 自身 7 伤未吃加成，同回合后续 Strike 吃到 +2 打出 8）。价值在后续攻击；爆发链中先打 Setup。",
     "zh_name": "预备打击"
   },
   "SEVEN_STARS": {
@@ -10832,8 +10832,8 @@
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
-    "description": "gain 8 Block; draw 1 card. Upgrade: +3 Block.",
+    "curated": true,
+    "description": "Gain 8 Block; draw 1 card. Upgrade: +3 Block. Cantrip block — replaces itself, 8 block for 1 energy; run-38 boss-gate pick over a second Iron Wave/Armaments. Best generic block card in the Ironclad common pool for race-fights where block density per energy matters.",
     "id": "SHRUG_IT_OFF",
     "keywords": [],
     "kind": "card",
@@ -10844,7 +10844,7 @@
     "source": "md:cards.md:L83; md:cards_zh.md",
     "target_type": null,
     "upgrade": "+3 Block.",
-    "zh_description": "1，技能，普通，获得 8 格挡；抽 1 张牌。升级：格挡 +3。",
+    "zh_description": "获得 8 格挡；抽 1 张牌。升级：+3 格挡。罐头挡——自我替换，1 能换 8 挡；run-38 Boss 闸门选择（胜过第二张 Iron Wave/Armaments）。Ironclad 普通池中竞速战（每点能量的挡密度要紧时）最好的通用挡牌。",
     "zh_name": "耸肩无视"
   },
   "SIC_EM": {
