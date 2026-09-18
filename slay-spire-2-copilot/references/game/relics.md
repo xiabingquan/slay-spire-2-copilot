@@ -120,7 +120,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Power Cell (PowerCell, Rare, Defect): at combat start (turn 1), add 2 zero-cost cards from draw pile to hand.
 - Prayer Wheel (PrayerWheel, Rare): Monster combat rewards gain 1 additional card reward.
 - Rainbow Ring (RainbowRing, Rare): first time each turn you play an Attack, a Skill and a Power, gain 1 Strength and 1 Dexterity.
-- Razor Tooth (RazorTooth, Rare): whenever you play an Attack or Skill card, upgrade it for the rest of combat.
+- Razor Tooth (RazorTooth, Rare): whenever you play an Attack or Skill card, upgrade it for the rest of combat. Run-29 live semantics: the play that triggers the upgrade still uses BASE values; that card type is upgraded for subsequent plays in the same combat (live: Rage Amount 3 on first play / 5 later, Defend 5 first / 8 later, Bash Vuln 2→3 on later plays; Defend with Speed-Potion Dex read 13 = 5 base + 3 upgrade + 5 Dex on a later-play Defend).
 - Ruined Helmet (RuinedHelmet, Rare, Ironclad): first time each combat you gain Strength, the amount gained is doubled.
 - Shovel (Shovel, Rare): Rest Sites gain a Dig option that grants a random relic.
 - Shuriken (Shuriken, Rare): every 3 Attack cards played in one turn, gain 1 Strength.
@@ -235,7 +235,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - War Hammer (WarHammer, Ancient): whenever you defeat an elite, upgrade 4 random cards in deck.
 - Whispering Earring (WhisperingEarring, Ancient): +1 max Energy each turn; Vakuu plays your first turn for you (up to 13 cards).
 - Winged Boots (WingedBoots, Ancient): you may ignore map path restrictions 3 times.
-- Yummy Cookie (YummyCookie, Ancient): on pickup, upgrade 4 chosen cards.
+- Yummy Cookie (YummyCookie, Ancient): on pickup, upgrade 4 chosen cards. Run-29 live: upgrades are permanent deck upgrades (deck_select overlay — choose each card then proceed to confirm); Rupture upgraded to Amount 2 this way and every subsequent Bloodletting/Breakthrough self-damage granted +2 Strength live.
 
 - Belt Buckle (BeltBuckle, Shop): while you have no potions, you have +2 Dexterity (combat).
 - Bread (Bread, Shop): turn 1 start, lose 2 Energy; turns 2+, +1 max Energy each turn.

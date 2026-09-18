@@ -82,7 +82,7 @@
 - SYMBIOTE（共生体；Act >0）：Approach → 对 1 张攻击牌附魔 Corrupted——Corrupted 附魔：有源攻击伤害 ×1.5，但打出时其拥有者受到 2 点不可格挡无来源伤害；KillWithFire → 变形 1 张选定牌。**run-23 A1 实测（2026-09-18）**：Corrupted 的 deck_select 池**排除已带其它附魔的牌**——Bludgeon（已带 TriBoomerang 的 Instinct）未被展示；池内只有未附魔攻击（Strikes/Bash/Spite/Unrelenting/Headbutt/Ashen/Hemo/Feed）。本局选择：Ashen Strike（消耗堆成长 ×1.5 + 每次打出 2 自伤反哺 Rupture/Spite/自成型黏土）。选择后 proceed 确认。
 - TABLET_OF_TRUTH（真理石板）：Smash → 回复 20。Decipher → 递增的最大 HP 阶梯（run-20 A1 实测 2026-09-18）：各级代价 −3/−6/−12 Max HP（翻倍；loc 键 DECIPHER_1/2/3，每级选项"继续解读"），每级均可"放弃"；**任何已完成级别与放弃均未观察到奖励**——实测为纯最大 HP 消耗事件；原一行摘要"失去 3 最大 HP + 升级路径"判定为错误，除非另有来源确认奖励路径，否则应选 Smash。run-20 三级+放弃共付 21 Max HP（85→64）换零收益。
 - THE_ARCHITECT（建筑师；Act3 Boss 节点后的剧情事件）——**EA 结局屏**：到达本事件即代表第三幕 Boss 已被击破、当前 EA 版本所有已实装流程内容全部通关。游戏处于抢先体验阶段，建筑师 Boss 本体尚未实装；PROCEED → HP 0 是 EA 占位收束。机制：对白行走器——每行仅一个 回应/继续 选项（textKey THE_ARCHITECT.dialogue.N）；铁甲战士线为 威胁 → 继续 → PROCEED；PROCEED 将玩家 HP 置 0 → game_over（floor 48）。反编译备注（TheArchitect.cs）：WinRun() 仅播放攻击特效（玩家按 Score 输出伤害数字；Architect '反击'为特效——AnimArchitectAttackIfNecessary 未发出任何 CreatureCmd.Damage）随后 SetLocalPlayerReady() 切章同步；TheArchitectEventEncounter 只生成 Architect 占位体（9999 HP、NOTHING_MOVE 循环、HiddenIntent）——与"Boss 未实装"一致。铁甲战士对白：3 次访问档位，全部 EndAttackers=Both；访问档位由档案 TotalWins/Wins 经 LoadDialogue() 选取。
-- THIS_OR_THAT（这个还是那个？）：Plain → 受到 6 点伤害 + 金币；Ornate → 获得遗物 + 加入 Clumsy 诅咒。
+- THIS_OR_THAT（这个还是那个？）：Plain → 受到 6 点伤害 + 金币；Ornate → 获得遗物 + 加入 Clumsy 诅咒。run-29 实测：Plain 精确 −6HP 并 +64 金（70→134）。
 - TINKER_TIME（打造时间）：选择卡牌类型 + 附加效果；附加效果含 12 伤害 / 8 格挡 / 2 Weak / 2 Vulnerable / 3 段暴力；加入 MadScience 卡。
 - TRASH_HEAP（垃圾堆；所有玩家 HP > 5）：DiveIn → 8 点伤害 + 遗物；Grab → +100 金币 + 加牌。
 - TRIAL（审判）：Accept/Reject 后按证人分支——MerchantGuilty：Regret 诅咒 + 遗物；MerchantInnocent：Shame 诅咒 + 升级；NobleGuilty：回复；NobleInnocent：Regret + 金币；NondescriptGuilty：Doubt + 奖励；NondescriptInnocent：Doubt + 变形。
@@ -92,7 +92,7 @@
 - WELCOME_TO_WONGOS（欢迎来到旺购百货；门槛标注 Act 1，但 2026-09-17 第 6 局实测 Act 2 亦可触发——章节标注视为软性；所有玩家金币 ≥ 100）：BuyBargainBin → 支付 100 金币，获得遗物；BuyFeaturedItem → 支付 200 金币，获得遗物；BuyMysteryBox → 支付 300 金币，获得 WongosMysteryTicket（5 场战斗后获得 3 件随机遗物）；Leave 离开。
 - WELLSPRING（泉水）：Bottle → 药水奖励；Bathe → 移除卡牌（curses 变量 1——存在 Guilty 追加处理器）。
 - WOOD_CARVINGS（木雕；要求存在可移除的基础牌）：Snake → 附魔 Slither；Bird → 变形为 Peck；Torus → 变形为 ToricToughness。Slither 附魔效果（2026-09-18 perplexity 研究，run-22）：被附魔的卡牌每次抽到时费用在 0~3 之间随机；随机化之后再施加的改费效果仍可能把最终费用抬到 3 以上。run-22 选 Bird→Peck（2 伤 ×3，打击标签多段，吃力量加成）而非 Snake/Slither（方差与组合技牌库反协同）与 Torus→ToricToughness（2 费 5 挡 + 后续 2 次挡被清空时重新获得该挡值）。
-- ZEN_WEAVER（修禅织网者；所有玩家金币 ≥ 125）：BreathingTechniques → 支付 50 金币，**加入 2 张 Enlightenment**（perplexity 2026-09-18 解码，run-26 实测事件面板）；EmotionalAwareness → 支付 125 金币，**移除 1 张牌**；ArachnidAcupuncture → 支付 250 金币，**移除 2 张牌**。注意：两个移除选项单价 125/张均贵于商店移除（75g）；事件无离开选项，必须三选一。Enlightenment（启迪）0 费「手牌全部费用变 1」对 0 费引擎牌是反协同 —— Ructure 线否决 BreathingTechniques。
+- ZEN_WEAVER（修禅织网者；所有玩家金币 ≥ 125）：BreathingTechniques → 支付 50 金币，**加入 2 张 Enlightenment**（perplexity 2026-09-18 解码，run-26 实测事件面板）；EmotionalAwareness → 支付 125 金币，**移除 1 张牌**；ArachnidAcupuncture → 支付 250 金币，**移除 2 张牌**。注意：两个移除选项单价 125/张均贵于商店移除（75g）；事件无离开选项，必须三选一。Enlightenment（启迪）0 费「手牌全部费用变 1」对 0 费引擎牌是反协同 —— Ructure 线否决 BreathingTechniques。run-29 实测：157 金时仅提供 BreathingTechniques+EmotionalAwareness（ArachnidAcupuncture 未出现——与 250 金门槛一致）；情绪觉察 125 金支付，移除 Strike。
 
 ## 未提取选项表的远古事件
 

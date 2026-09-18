@@ -497,7 +497,7 @@ listed below as X.
 - IMPATIENCE: 0, skill, uncommon, if you have no Attacks in hand draw 2 cards. Upgrade: draw 3.
 - INTERCEPT: 1, skill, uncommon, another player gains 9 Block; their attacks targeting allies redirect to you this turn (Covered). Upgrade: +4 Block.
 - JACK_OF_ALL_TRADES: 0, skill, uncommon, Exhaust, add 1 random Colorless card to your hand. Upgrade: add 2.
-- JACKPOT: 3, attack, rare, deal 25 damage; add 3 random 0-cost cards from your class pool to your hand. Upgrade: +5 damage; cards upgraded.
+- JACKPOT: 3, attack, rare, deal 25 damage; add 3 random 0-cost cards from your class pool to your hand. Upgrade: +5 damage; cards upgraded. Run-29 live: a Colorless-Potion-granted copy played at **0 cost** this turn (potion rule: granted card is free this turn) and its 25 damage finished Act1 Boss WaterfallGiant from 1 HP; the 3 granted 0-cost cards were Rage/Bully/BattleTrance.
 - KNOCKDOWN: 3, attack, rare, deal 10 damage; other players' attacks deal double damage to this enemy this turn. Upgrade: +4 damage; 3x damage from others.
 - LIFT: 1, skill, uncommon, another player gains 11 Block. Upgrade: +5 Block.
 - MASTER_OF_STRATEGY: 0, skill, rare, Exhaust, draw 3 cards. Upgrade: draw 4.

@@ -120,7 +120,7 @@
 - 能量电池（PowerCell，Rare，Defect）：战斗开始（第 1 回合），从抽牌堆将 2 张零费牌加入手牌。
 - 转经轮（PrayerWheel，Rare）：普通敌人战斗奖励额外掉落 1 份卡牌奖励。
 - 彩虹戒指（RainbowRing，Rare）：单回合首次打出攻击、技能、能力各一张时，获得 1 点力量和 1 点敏捷。
-- 剃刀牙（RazorTooth，Rare）：每次打出攻击或技能牌时，本场战斗内将其升级。
+- 剃刀牙（RazorTooth，Rare）：每次打出攻击或技能牌时，本场战斗内将其升级。run-29 实测语义：触发升级的那次打出仍按**基础值**结算，该牌此后本战打出才用升级值（实测：Rage 首打 Amount 3/后打 5、Defend 首打 5/后打 8、Bash 易伤后打升至 3；速度药水敏捷回合的后打 Defend 读数 13 = 基础5+升级3+敏捷5）。
 - 损毁头盔（RuinedHelmet，Rare，Ironclad）：每场战斗首次获得力量时，获得量翻倍。
 - 铲子（Shovel，Rare）：休息点获得 Dig 选项，可获得随机遗物。
 - 手里剑（Shuriken，Rare）：单回合每打出 3 张攻击牌，获得 1 点力量。
@@ -235,7 +235,7 @@
 - 战锤（WarHammer，Ancient）：每次击败精英时，升级牌库中 4 张随机牌。
 - 低语耳环（WhisperingEarring，Ancient）：每回合 +1 最大能量；Vakuu 代你打出第一回合（至多 13 张牌）。
 - 羽翼之靴（WingedBoots，Ancient）：选择行进房间时可忽略路径限制 3 次。
-- 美味饼干（YummyCookie，Ancient）：拾取时，升级 4 张选定牌。
+- 美味饼干（YummyCookie，Ancient）：拾取时，升级 4 张选定牌。run-29 实测：升级为永久牌库升级（deck_select 叠层——逐张 choose 后 proceed 确认）；该方式升级的 Rupture+ Amount 2 此后每次 Bloodletting/Breakthrough 自伤 +2 力量（实弹）。
 
 - 腰带扣（BeltBuckle，Shop）：没有药水时，额外 +2 点敏捷（战斗内）。
 - 面包（Bread，Shop）：第 1 回合开始，失去 2 点能量；第 2 回合起，每回合 +1 最大能量。
