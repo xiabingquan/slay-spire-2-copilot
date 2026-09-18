@@ -329,7 +329,8 @@ Format: `- POWER_ID (Buff/Debuff): effect.`
 - CONSTRICT_POWER (Debuff, Counter): at end of owner's side turn, deal Amount
   unpowered damage to owner. Removed when the applier dies.
 - PAPER_CUTS_POWER (Buff, Counter): when owner's powered attack deals
-  unblocked damage > 0 to a player, that player loses Amount max HP.
+  unblocked damage > 0 to a player, that player loses Amount max HP. Run-33 live (2026-09-18): Amount 2 exact — each leaking ScrollOfBiting attacker cost −2 MaxHP per turn (two attackers × two leak turns = −8 MaxHP total at fight open); **full-block turns cost ZERO MaxHP** (51 block vs 44 incoming produced no tax three turns running) — the counterplay is block completeness per attacker, not average block. Also decoded run-33: **Inferno's own turn-start HP loss triggers Rupture** (Inferno+Rupture+ Amount2 deployed = +2 Str per turn passive, observed as a per-turn Str pump across GlobeHead/FrogKnight turns) **and satisfies Spite's "lost HP this turn" condition** (Spite double-fired on Inferno-deployed fights — KaiserCrab Crusher T7 Spite dealt 68 at Str 29 via this pairing).
+- **POSSESS_STRENGTH_POWER / POSSESS_SPEED_POWER run-33 live reconfirm (2026-09-18)**: holders steal player stats on the holder's turn (player Str display emptied on first steal; Dex −2 then −4 across two ForgottenThing steal turns; each holder gained +2 of the stolen stat per steal); **stolen stats return to the player same-resolution on holder death** (LostThing death: player Str 4→6 reclaimed live; ForgottenThing death: Dex tax cleared live). Kill holders to reclaim — doctrine holds at A1 Act3 values.
 - DISINTEGRATION (card-applied): see afflictions.md — KnowledgeDemon choice
   card applies DISINTEGRATION_POWER 6.
 - THE_GAMBIT_POWER (Debuff, Single): if owner takes unblocked powered-attack

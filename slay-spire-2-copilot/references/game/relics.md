@@ -74,11 +74,11 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Petrified Toad (PetrifiedToad, Uncommon): at combat start, procure 1 Potion-Shaped Rock.
 - Planisphere (Planisphere, Uncommon): on entering a ? room, heal 5 HP.
 - Regalite (Regalite, Uncommon, Regent): whenever you create a card, gain 2 Block.
-- Reptile Trinket (ReptileTrinket, Uncommon): whenever you use a potion, gain 3 Strength this turn.
+- Reptile Trinket (ReptileTrinket, Uncommon): whenever you use a potion, gain 3 Strength this turn. Run-33 live ×4 (2026-09-18): +3 Str fired on DexPotion / BloodPotion / FlexPotion / AttackPotion uses — the Strength lands same-turn as an own power (REPTILE_TRINKET_POWER:3) stacking with potion-native effects (Flex +5 + Trinket +3 = +8 Str burst window observed at KaiserCrab T7).
 - Ripple Basin (RippleBasin, Uncommon): end of turn, if you played no Attack cards this turn, gain 4 Block. Run-16 live: stacks additively with card block at end of turn (Spiral-enchant Defend 22 + Basin 4 = 26 vs 18 incoming, survived at 1 HP); the no-attack-turn discipline is a real survival lever at low HP.
 - Self-Forming Clay (SelfFormingClay, Uncommon, Ironclad): whenever you lose HP in combat, gain 3 Block at start of next turn.
 - Sparkling Rouge (SparklingRouge, Uncommon): at start of turn 3, gain 1 Strength and 1 Dexterity.
-- Stone Cracker (StoneCracker, Uncommon): at combat start, upgrade 2 random cards in your draw pile for the rest of combat. Run-20 live hits (A1 2026-09-18) confirmed the range: Whirlwind 5→8 per hit, Defend 5→8, Strike 6→9, Twin Strike 5→7 per hit, Pommel Strike 9→10 — upgrades are in-combat only and the card display does not mark them; read live damage numbers.
+- Stone Cracker (StoneCracker, Uncommon): at combat start, upgrade 2 random cards in your draw pile for the rest of combat. Run-33 live hit list: Bash→Bash+ (Vuln 2→3), TrueGrit→TrueGrit+ (random exhaust → **choice-exhaust overlay** — the upgraded form IS the choose-your-exhaust card), Spite→Spite+ (2→3 hits on HP-loss turns — 24-68 dmg plays observed), Impervious→Impervious+ (Block 30→40), Hemokinesis→Hemokinesis+ (15→20). Run-20 live hits (A1 2026-09-18) confirmed the range: Whirlwind 5→8 per hit, Defend 5→8, Strike 6→9, Twin Strike 5→7 per hit, Pommel Strike 9→10 — upgrades are in-combat only and the card display does not mark them; read live damage numbers.
 - Symbiotic Virus (SymbioticVirus, Uncommon, Defect): at start of turn 1, Channel 1 Dark.
 - Tingsha (Tingsha, Uncommon, Silent): for each card discarded during your turn, deal 3 damage to a random enemy.
 - Tiny Mailbox (TinyMailbox, Uncommon): on Resting at a Rest Site, procure 2 random potions.
@@ -131,7 +131,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Toxic Egg (ToxicEgg, Rare): Skill cards added to your deck are created upgraded.
 - Tough Bandages (ToughBandages, Rare, Silent): for each card discarded during your turn, gain 3 Block.
 - Unceasing Top (UnceasingTop, Rare): whenever your hand is empty during your turn, draw 1 card.
-- Unsettling Lamp (UnsettlingLamp, Rare): first card each combat that applies debuffs to enemies has those debuff amounts doubled.
+- Unsettling Lamp (UnsettlingLamp, Rare): first card each combat that applies debuffs to enemies has those debuff amounts doubled. Run-33 live values: Uppercut+ (2 Weak / 2 Vuln base) doubled to **4 Weak / 4 Vuln** exact on InfestedPrism opener; Tremble applied **8 Vulnerable** on KaiserCrab Rocket — above the 6 expected from base-3×2, explained by StoneCracker combat-start upgrading Tremble before play (Tremble+ 7-class × Lamp interaction; treat first-debuff doubling as applying to the *current in-combat value* of the card, which StoneCracker may have already raised).
 - Vexing Puzzlebox (VexingPuzzlebox, Rare): at start of turn 1, add a random card from your card pool to hand; free this turn.
 - White Beast Statue (WhiteBeastStatue, Rare): potions always appear in combat rewards.
 - White Star (WhiteStar, Rare): elite combat rewards gain 1 additional Rare card reward.
@@ -180,7 +180,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Lord's Parasol (LordsParasol, Ancient): on entering a MerchantRoom, immediately purchase the merchant's entire inventory.
 - Lost Coffer (LostCoffer, Ancient): on pickup, gain 1 card reward and 1 random potion.
 - Massive Scroll (MassiveScroll, Ancient): on pickup, choose 1 of 3 Multiplayer cards to add to deck.
-- Meat Cleaver (MeatCleaver, Ancient): Rest Sites gain a Cook option.
+- Meat Cleaver (MeatCleaver, Ancient): Rest Sites gain a Cook option — **Cook = permanently remove 2 cards from your deck AND gain 9 Max HP** (perplexity 2026-09-18; spire-codex/sportskeeda). Run-33 live pick at Tanx: relic obtained but Cook never exercised — HP crisis forced HEAL at every subsequent rest site; the Cook-vs-HEAL tension is real at low HP (HEAL restores current survivability, Cook compounds deck+MaxHP for later).
 - Music Box (MusicBox, Ancient): first Attack card played each turn creates an Ethereal copy in hand.
 - Neow's Bones (NeowsBones, Ancient): on pickup, gain 2 random Neow relics; add 1 random Curse to deck.
 - Neow's Talisman (NeowsTalisman, Ancient): on pickup, upgrade 1 Strike and 1 Defend.

@@ -297,7 +297,8 @@ hook 逻辑、`CanonicalVars` 数值）核实。下文「Amount」= power 上显
   受到 Amount 点不可格挡、非攻击伤害。持有者阵营回合结束时移除。
 - CONSTRICT_POWER（缩紧，Debuff，Counter）：持有者阵营回合结束时，
   持有者受到 Amount 点非攻击伤害。施加者死亡时移除。
-- PAPER_CUTS_POWER（Buff，Counter）：持有者的攻击对玩家造成未格挡伤害
+- **POSSESS_STRENGTH_POWER / POSSESS_SPEED_POWER run-33 live 再确认（2026-09-18）**：持球者在其回合偷取玩家属性（首次偷取后玩家力量显示清空；遗忘之物两次偷取回合 Dex −2→−4；每位持球者每次偷取各+2 对应属性）；**持球者死亡时被偷属性同次结算归还**（失落之物死亡：玩家力量 4→6 夺回 live；遗忘之物死亡：Dex 税清零 live）。杀持球者夺回——A1 Act3 数值下教条成立。
+- PAPER_CUTS_POWER（Buff，Counter）：持有者的攻击对玩家造成未格挡伤害时，玩家失去 Amount 点最大 HP。run-33 live（2026-09-18）：Amount 2 精确——每漏挡一路咬人卷轴攻击每回合 −2 MaxHP（两攻击者×两漏挡回合=开局共 −8 MaxHP）；**全挡回合零 MaxHP 税**（51挡对44来袭连续三回合零税）——对策是每个攻击者的挡完整性而非平均挡值。run-33 同局解码：**Inferno 自身开回合 HP 损失触发 Rupture**（Inferno+Rupture+ Amount2 同部署 = 每回合被动 +2 力量，电球头/青蛙骑士战逐回合力量泵观察）**且满足 Spite「本回合掉血」条件**（部署 Inferno 的战斗 Spite 常态双击——KaiserCrab Crusher T7 Spite 经此配对在力量29 下打出68）。
   > 0 时，该玩家失去 Amount 最大 HP。
 - THE_GAMBIT_POWER（Debuff，Single）：持有者受到未格挡的攻击伤害 > 0 时，
   持有者立即死亡（触发时移除 power）。持续时间：该 power **会持续到打出

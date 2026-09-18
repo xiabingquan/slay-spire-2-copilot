@@ -53,7 +53,7 @@ listed below as X.
 - FLAME_BARRIER: 2, skill, uncommon, gain 12 Block; when attacked this turn deal 4 damage back. Upgrade: +4 Block, +6 damage back.
 - FORGOTTEN_RITUAL: 1, skill, uncommon, Exhaust, if you Exhausted a card this turn gain 3 Energy. Upgrade: gain 4 Energy. Run-26 live: its own Exhaust does NOT satisfy its own condition (EvilEye-class) — played alone, energy went 6→5 (paid 1, no +3). Another card must be exhausted FIRST the same turn (Brand/Slimed-class) for the +3 to fire.
 - HAVOC: 1, skill, common, Exhaust, play the top card of your draw pile and Exhaust it. Upgrade: cost 0.
-- HEADBUTT: 1, attack, common, deal 9 damage; place a card from your discard pile on top of your draw pile. Upgrade: +3 damage.
+- HEADBUTT: 1, attack, common, deal 9 damage; place a card from your discard pile on top of your draw pile. Upgrade: +3 damage. Run-33 notes: retrieve overlay (NCombatPileCardSelectScreen) resolves on choose alone — no skip button (run-32 fail-loud rule held live ×4 this run). **Anti-synergy with ToastyMittens**: Mittens exhausts draw-pile TOP at the start of your next turn — a Headbutt-retrieved card sitting on top gets eaten before you draw it (live ×2: retrieved Cinder exhausted both times). Retrieve value is only realized when the retrieved card is drawn the same turn via another draw effect, or when Mittens is not in play.
 - HELLRAISER: 2, power, rare, Strike-tagged cards you draw are auto-played at a random enemy. Upgrade: cost 1.
 - HEMOKINESIS: 1, attack, uncommon, lose 2 HP (unblockable); deal 15 damage. Upgrade: +5 damage.
 - HOWL_FROM_BEYOND: run-7 live note: exhaust-auto-replay did NOT re-fire on the same post-play phase in one observed cast (exhausted, ~1x damage only) — treat auto-replay as conditional until trigger confirmed. 3, attack, uncommon, Exhaust, deal 16 damage to ALL enemies; if this card is in your Exhaust pile when the post-play phase begins, it auto-plays. Upgrade: +5 damage.
@@ -99,7 +99,7 @@ listed below as X.
 - TWIN_STRIKE: 1, attack, common, Strike-tagged, deal 5 damage twice. Upgrade: +2 damage.
 - UNMOVABLE: 2, power, rare, the first 2 times each turn you gain Block from a card, that Block is doubled. Upgrade: cost 1.
 - UNRELENTING: 2, attack, uncommon, deal 14 damage; your next Attack costs 0. Upgrade: +6 damage.
-- UPPERCUT: 2, attack, uncommon, deal 13 damage; apply 1 Weak and 1 Vulnerable. Upgrade: applies 2 Weak and 2 Vulnerable.
+- UPPERCUT: 2, attack, uncommon, deal 13 damage; apply 1 Weak and 1 Vulnerable. Upgrade: applies 2 Weak and 2 Vulnerable. Run-33 note: with UnsettlingLamp, Uppercut+ as the combat's first debuff card applied **4 Weak / 4 Vulnerable** live (2/2 base doubled) — Lamp+Uppercut+ is the premier opener for boss/elite windows on this build.
 - VICIOUS: 1, power, uncommon, whenever you apply Vulnerable draw 1 card. Upgrade: draw 2.
 - WHIRLWIND: X, attack, uncommon, deal 5 damage to ALL enemies X times. Upgrade: +3 damage.
 
@@ -573,7 +573,8 @@ listed below as X.
 - DEBRIS: 1, status, status, Exhaust, no effect when played. No upgrade.
 - FRANTIC_ESCAPE: 1, status, status, increases the Sandpit enemy's power on you by 1; this card's cost permanently +1. No upgrade.
 - INFECTION: unplayable, status, status, in hand at end of turn take 3 damage. No upgrade.
-- SLIMED: 1, status, status, Exhaust, draw 1 card. No upgrade.
+- SLIMED: 1, status, status, Exhaust, draw 1 card. No upgrade. Run-33 live + perplexity reconfirm: playing Slimed draws 1 then exhausts — it is a 1e cycle+thin, NOT a dead card; played it to cycle on slime-fight T3 as designed.
+- **Run-33 engine cross-notes (Brand × Rupture+)**: Brand resolves as +1 Strength from its own text AND +Amount Strength from Rupture on Brand's self-damage — **+3 Str per Brand play at Rupture+ Amount 2** (live, repeated every combat both were drawn together). Fuel count for Rupture-line IRONCLAD: Bloodletting / BloodWall×2 / Brand / Hemokinesis / Breakthrough all trigger Rupture; run-33 entered Act1 Boss with only 1 fuel (run-32 death cause) — this run carried 5 and Vantom died T6.
 - SOOT: unplayable, status, status, no effect. No upgrade.
 - TOXIC: 1, status, status, Exhaust, in hand at end of turn take 5 damage. No upgrade.
 - VOID: unplayable, status, status, Ethereal, on draw lose 1 Energy. No upgrade.

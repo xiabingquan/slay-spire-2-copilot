@@ -623,3 +623,11 @@ ResolveEnergyXValue() / ResolveStarXValue() 结算 X；下文统一记作 X。
 - BYRDONIS_EGG（伯德尼斯之蛋）：无法打出，任务，任务，在牌组中时可在休息点孵化。无升级。
 - LANTERN_KEY（灯笼钥匙）：无法打出，任务，任务，解锁下一章节的特殊事件。无升级。
 - SPOILS_MAP（战利品地图）：无法打出，任务，任务，与 600 金币关联。无升级。
+
+
+## Run-33 引擎注记（A1，2026-09-18）
+
+- HEADBUTT（头槌）：1费 攻击 普通 9伤；将弃牌堆一张牌置于抽牌堆顶。升级 +3伤。run-33 注记：取回叠层（NCombatPileCardSelectScreen）choose 即确认——无 skip 键（run-32 fail-loud 规则本局 live ×4 保持）。**与烘焙手套反协同**：Mittens 在下回合开始时消耗抽牌堆顶——Headbutt 取回件在顶会被吃掉（live ×2：取回的 Cinder 两次均被消耗）。取回价值仅在同回合经其他抽牌效应抽到、或 Mittens 不在场时兑现。
+- UPPERCUT（上切）：2费 攻击 罕见 13伤；施加 1 虚弱 1 易伤。升级 2虚弱 2易伤。run-33 注记：配合 UnsettlingLamp 时 Uppercut+ 作为战斗首张 debuff 牌实测施加 **4虚弱/4易伤**（2/2 基础翻倍）——Lamp+Uppercut+ 是本构筑 Boss/精英窗的首选开局件。
+- SLIMED（黏液）：1费 状态 消耗 抽1。run-33 live + perplexity 再确认：打出 Slimed 抽1后消耗——是 1费循环+瘦身件，**不是死牌**；史莱姆战 T3 按设计打出循环。
+- **run-33 引擎交叉注记（Brand × Rupture+）**：Brand 结算为其文本自带 +1 力量 且 Rupture 对 Brand 自伤触发 +Amount 力量——**Rupture+ Amount2 下每次 Brand +3 力**（live，两牌同抽的每场战斗均重复）。Rupture 线 IRONCLAD 燃料计数：Bloodletting / BloodWall×2 / Brand / Hemokinesis / Breakthrough 全部触发 Rupture；run-32 死因即 Act1 Boss 前仅 1 张燃料——run-33 携 5 张入闸，Vantom T6 死亡。

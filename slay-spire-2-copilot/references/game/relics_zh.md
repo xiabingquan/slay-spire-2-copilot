@@ -305,3 +305,12 @@
 - 旺购神秘券（WongosMysteryTicket，Event）：完成 5 场战斗后，下一场战斗奖励额外获得 3 件遗物。
 - 铃铛三角（RINGING_TRIANGLE，Common）：战斗第 1 回合结束时保留手牌——首回合抽到的牌不弃（2026-09-17 perplexity 研究；与 run-12/13 的 RINGING_POWER 铃锁 debuff 无关）。
 - Run-30 实弹验证遗物（A1，2026-09-18，种子 GVL70LGGH2）：营养汤 Ember Strike = **0费/+3伤/Eternal** 全程确认（每次抽到手 cost=0）；威吓头盔每张2费以上出牌 +4挡（锚10+头盔4 = T1 读数 block 14）；锚战斗开始 10挡；弹珠袋战斗开始全体 Vulnerable 1（单敌与多敌战均实弹）；青铜鳞战斗开始 3荆棘（对 3×5 炮手类多段的反伤价值实弹）；光滑石头战斗开始 +1敏捷；战纹升级 Defend+（基础8）与 Taunt+（8挡+Vuln2）——双双实弹计价；铁棒每打出4张牌抽1（0费 Strike 链上观察到触发）；药瓶皮套 +1 药槽（4槽领取窗实弹）；燃烧之血胜利回6。HeartOfIron 是**药水**（非遗物）施加玩家镀层7——见 potions.md。
+
+
+## Run-33 live folds（A1，2026-09-18，Seed TL1U9HRACR）
+
+- Reptile Trinket（爬行动物饰品，ReptileTrinket，罕见）：使用药水时本回合获得 3 力量。run-33 live ×4：Dex药/血药/Flex药/攻击药 使用时 +3 力均触发——以独立 power（REPTILE_TRINKET_POWER:3）与药水原生效果同回合叠加（KaiserCrab T7：Flex +5 + 饰品 +3 = 单回合 +8 力爆发窗实测）。
+- Meat Cleaver（切肉刀，MeatCleaver，远古）：休息点获得 Cook 选项——**Cook = 永久移除牌库 2 张牌并获得 9 最大 HP**（perplexity 2026-09-18 研究）。run-33 Tanx live 选中：遗物入手但 Cook 未行使——HP 危机下其后每次休息被迫 HEAL；低 HP 时 Cook 与 HEAL 的张力真实存在（HEAL 恢复当前生存力，Cook 为后期复利牌库+MaxHP）。
+- Unsettling Lamp（不安之灯，UnsettlingLamp，稀有）：每场战斗第一张对敌施加减益的牌，其减益数值翻倍。run-33 live 值：Uppercut+（基础 2弱/2易伤）在感染棱柱开局翻倍至 **4弱/4易伤** 精确；Tremble 在 KaiserCrab 火箭上施加 **8 易伤**——高于基础3×2=6 的预期，由 StoneCracker 战斗开局先行升级 Tremble 解释（Tremble+ 7级×Lamp 交互；首debuff翻倍作用于打出时的*战内当前值*，该值可能已被 StoneCracker 抬升）。
+- Stone Cracker（碎石者，StoneCracker，罕见）：战斗开始时升级抽牌堆中 2 张随机牌（仅本战）。run-33 live 命中清单：Bash→Bash+（易伤2→3）、TrueGrit→TrueGrit+（随机消耗→**选择式消耗叠层**——升级形态即选择式消耗版）、Spite→Spite+（掉血回合 2→3 击——24-68 伤实测）、Impervious→Impervious+（挡30→40）、Hemokinesis→Hemokinesis+（伤15→20）。
+- HornCleat / Chandelier / ToastyMittens / Pocketwatch / CentennialPuzzle：run-33 全程 live 再确认——HornCleat T2 14挡每战触发；Chandelier T3 +3能每战触发（爆发窗核心）；烘焙手套每回合 +1 力+顶牌消耗（**与 Headbutt 取回反协同：取回件置于抽牌堆顶后被 Mittens 下回合开始时消耗——live ×2**）；积木首次掉血抽3 每战触发；Pocketwatch ≤3牌回合下回合+3抽多次触发。
