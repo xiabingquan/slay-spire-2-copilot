@@ -113,8 +113,13 @@ public static class StateBuilder
 
         // Information contract: screens that imply run/combat state must have
         // the object backing them — a null here is unverified information, not
-        // an empty world.
-        if (runState == null && screen is not ("menu" or "hello" or "error"))
+        // an empty world. 'other' is exempt: DetectScreen returns it when
+        // ActiveScreenContext is null (boot/loading transient) or the context
+        // is unclassified — neither implies a run, so a null RunState there is
+        // the same empty world the player sees, not an information gap.
+        // (Live: 2026-09-19 boot race flagged menu as 'other' + RunState
+        // unreadable and hard-stopped a clean main menu via exit 78.)
+        if (runState == null && screen is not ("menu" or "hello" or "error" or "other"))
         {
             InfoCompleteness.FlagDuringBuild($"screen '{screen}' active but RunState unreadable");
         }

@@ -400,19 +400,8 @@ class BridgeClient:
         except OSError:
             pass
 
-    def request(self, payload):
-        """Send one JSON request and read one JSON response line.
-
-        Args:
-            payload: Serializable request object.
-
-        Returns:
-            Parsed response dict.
-
-        Raises:
-            ConnectionError: If the server closes the connection.
-            OSError, json.JSONDecodeError: Transport or payload failures.
-        """
+    def _raw_request(self, payload):
+        """Send one JSON request and read one JSON response line (no info gate)."""
         t0 = time.perf_counter()
         fresh = self.sock is None
         if fresh:
@@ -426,10 +415,6 @@ class BridgeClient:
         if not line:
             raise ConnectionError("bridge closed the connection")
         resp = json.loads(line.lstrip("﻿"))
-        # Information-completeness gate: incomplete server info = hard stop +
-        # Feishu, never play through uncertainty.
-        if _info_gate_triggered(resp):
-            _info_stop_and_notify(resp)
         self.last_metrics = {
             "connect_ms": int((t1 - t0) * 1000) if fresh else 0,
             "rtt_ms": int((t2 - t1) * 1000),
@@ -438,6 +423,49 @@ class BridgeClient:
             "queue_ms": resp.get("queue_ms"),
             "resp_bytes": len(line),
         }
+        return resp
+
+    def request(self, payload):
+        """Send one JSON request and read one JSON response line.
+
+        Information-completeness gate: incomplete server info = hard stop +
+        Feishu, never play through uncertainty. Transient incompleteness
+        (settle-lag during screen transitions — combat/rewards flipping in
+        while CombatState/RunState is still resolving) self-heals: one
+        re-read of state; only PERSISTENT incompleteness stops and notifies.
+        The contract targets acting on uncertain info; a re-read that shows
+        complete info means we never did.
+
+        Args:
+            payload: Serializable request object.
+
+        Returns:
+            Parsed response dict.
+
+        Raises:
+            ConnectionError: If the server closes the connection.
+            OSError, json.JSONDecodeError: Transport or payload failures.
+        """
+        resp = self._raw_request(payload)
+        if _info_gate_triggered(resp):
+            time.sleep(0.4)
+            try:
+                fresh = self._raw_request({"type": "state"})
+            except Exception:
+                fresh = None
+            fresh_st = None
+            if isinstance(fresh, dict):
+                fresh_st = fresh.get("state") if isinstance(fresh.get("state"), dict) else fresh
+            if isinstance(fresh_st, dict) and fresh_st.get("info_complete") is not False:
+                print(
+                    "[INFO-INCOMPLETE] transient — immediate re-read shows "
+                    "info_complete, continuing without stop flag",
+                    file=sys.stderr,
+                )
+                if payload.get("type") == "state" and isinstance(fresh, dict):
+                    resp = fresh
+            else:
+                _info_stop_and_notify(resp)
         return resp
 
     def hello(self):
