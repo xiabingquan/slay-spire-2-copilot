@@ -1298,8 +1298,8 @@
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "0",
-    "curated": false,
-    "description": "0，技能，稀有，消耗，失去 1 HP（无视格挡）；消耗 1 张牌；获得 1 力量。升级：力量 +1。",
+    "curated": true,
+    "description": "费用 1 技能：消耗；失去 1 HP（不可格挡）；消耗一张手牌（hand_select choose+proceed 覆盖层 — 挑最便宜损失）；获得 1 力量。升级：+1 力量。run-42 live：Vital Spark 下它就是技能类（收税）；Corruption 下打出时费用显示以 live 为准。Rupture/Inferno 在场时与其自伤链协同。",
     "id": "BRAND",
     "keywords": [
       "Exhaust"
@@ -2179,8 +2179,8 @@
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
-    "description": "1，技能，罕见，获得 5 格挡；获得巨像 1——本回合易伤敌人对你造成的攻击伤害 -50%（敌方回合结束递减）。升级：格挡 +3。",
+    "curated": true,
+    "description": "费用 1 技能类卡框（run-42 live：Vital Spark 下按技能收税 — Spark 4 时打出附加 +4 TAINTED，尽管效果是获得能力）。效果：获得 5 格挡；施加 COLOSSUS_POWER 1 — 携带 VULNERABLE_POWER 的攻击者对持有者的攻击 x0.5（DamageDecrease 0.5）；敌方阵营回合末减 1 层（一个敌方回合后消耗，除非重新施加）。run-39/42 live：当回合施加易伤后 SLASH 19→9 级减半。Corruption 下自身被消耗。",
     "id": "COLOSSUS",
     "keywords": [],
     "kind": "card",
@@ -2433,8 +2433,8 @@
     "card_type": "power",
     "character_pool": "IRONCLAD",
     "cost": "3",
-    "curated": false,
-    "description": "3，能力，远古，消耗，你的技能牌费用变为 0，打出时被消耗。升级：费用 2。",
+    "curated": true,
+    "description": "消耗；你的技能牌费用变为 0，打出时被消耗。升级：费用 2（腐化+ 由尘封魔典赐福授予，run-42）。run-42 live 组合：与 FORGOTTEN_RITUAL（技能条件由任意先前消耗满足后 Corruption 下 0c → +3 能量）；与 FEEL_NO_PAIN Amount 3（每次技能打出即消耗 → 触发挡）；与 IMPERVIOUS（0c 30 挡 + FNP 触发墙）；技能在 Vital Spark 下即使 0 费仍按技能类收税（感染棱柱战）。",
     "id": "CORRUPTION",
     "keywords": [
       "Exhaust"
@@ -4711,8 +4711,8 @@
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
-    "description": "1，技能，罕见，消耗，本回合若消耗过卡牌则获得 3 能量。升级：获得 4 能量。自身 Exhaust 不满足自身条件（EvilEye 同类）—— 单独打出能量 6→5（付 1 费无 +3）。需同回合**先**有其他牌被消耗（Brand/Slimed 类）+3 才触发。",
+    "curated": true,
+    "description": "费用 1 技能：消耗；本回合若已消耗过其他牌（自身消耗不算），获得 3 能量。升级：获得 4。Corruption 下 0 费 — 先打任意技能（自动消耗）再打 Ritual 0c → 净 +3 能引擎（run-42 T3 猎人杀手 + Act2 Boss T1 live：能量 1→4）。自身消耗不满足自身条件（Evil Eye 级）。",
     "id": "FORGOTTEN_RITUAL",
     "keywords": [
       "Exhaust"
@@ -5657,8 +5657,8 @@
     "card_type": "attack",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
-    "description": "1，攻击，罕见，失去 2 HP（无视格挡）；造成 15 点伤害。升级：伤害 +5。",
+    "curated": true,
+    "description": "费用 1 攻击：失去 2 HP（不可格挡）；造成 15 伤害。升级：+5。run-42 live：易伤 x1.5 下命中 21 级；力量+易伤+Inferno 在场时自伤同打出触发 Inferno AoE（对易伤目标观察到 22 + Inferno 9 触发）；Rupture 在场时自伤触发 +1 力量。",
     "id": "HEMOKINESIS",
     "keywords": [],
     "kind": "card",
@@ -11771,7 +11771,7 @@
     "character_pool": "IRONCLAD",
     "cost": "1",
     "curated": true,
-    "description": "1，技能，普通，消耗，施加 3 层易伤。升级：易伤 +4。",
+    "description": "费用 1 技能：消耗；施加 3 层易伤（对已有层数相加 — run-39/42 live 确认：Bash-2 + Tremble-3 后 1→4；无前置时 1→4）。升级：+4 易伤。Corruption 下 0 费，Spark 税仍按技能类。run-42 Act2 Boss 用法：Tremble→易伤4 → 巨化钝器竞速窗。",
     "id": "TREMBLE",
     "keywords": [
       "Exhaust"

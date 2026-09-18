@@ -835,6 +835,140 @@
     "source": "codex-api:/monsters/BOWLBUG_SILK; run-40 live fold 2026-09-18",
     "type": "Normal"
   },
+  "BYGONE_EFFIGY": {
+    "acts": [],
+    "aliases": [
+      "Bygone Effigy"
+    ],
+    "curated": true,
+    "cycle": [
+      "SLEEP_MOVE",
+      "WAKE_MOVE",
+      "SLEEP_MOVE_2_MOVE",
+      "SLASHES_MOVE"
+    ],
+    "description": "旧日雕像（codex 重复键 BYGONE_EFFIGY；live 条目见 BygoneEffigy）。SLASHES 单次 13（A:15）；SLEEP 睡眠自由窗，A1 无镀甲/无眩晕翻转；SLEEP_MOVE_2 睡眠变体（run-42 live 图未出现）；WAKE 自身 +10 力量自由窗。",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 132
+      },
+      "base": 127,
+      "max": null,
+      "notes": ""
+    },
+    "id": "BYGONE_EFFIGY",
+    "is_boss": false,
+    "is_elite": true,
+    "kind": "monster",
+    "moves": {
+      "SLASHES_MOVE": {
+        "aliases": [
+          "Slashes",
+          "SLASHES"
+        ],
+        "curated": false,
+        "effect": "Slashes: Attack; damage 13 A:15",
+        "follow_up_id": null,
+        "id": "SLASHES_MOVE",
+        "intents": [
+          {
+            "base_damage": 13,
+            "base_damage_ascension": {
+              "ascension": 15
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "BYGONE_EFFIGY",
+        "name": "Slashes",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/BYGONE_EFFIGY#SLASHES"
+      },
+      "SLEEP_MOVE": {
+        "aliases": [
+          "Sleep",
+          "SLEEP"
+        ],
+        "curated": false,
+        "effect": "Sleep: Sleep",
+        "follow_up_id": null,
+        "id": "SLEEP_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Sleep"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "BYGONE_EFFIGY",
+        "name": "Sleep",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/BYGONE_EFFIGY#SLEEP"
+      },
+      "SLEEP_MOVE_2_MOVE": {
+        "aliases": [
+          "Sleep Move 2",
+          "SLEEP_MOVE_2"
+        ],
+        "curated": false,
+        "effect": "Sleep Move 2: Sleep",
+        "follow_up_id": null,
+        "id": "SLEEP_MOVE_2_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Sleep"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "BYGONE_EFFIGY",
+        "name": "Sleep Move 2",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/BYGONE_EFFIGY#SLEEP_MOVE_2"
+      },
+      "WAKE_MOVE": {
+        "aliases": [
+          "Wake",
+          "WAKE"
+        ],
+        "curated": false,
+        "effect": "Wake: Buff; STRENGTH 10 (self)",
+        "follow_up_id": null,
+        "id": "WAKE_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "BYGONE_EFFIGY",
+        "name": "Wake",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/BYGONE_EFFIGY#WAKE"
+      }
+    },
+    "name": "Bygone Effigy",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/BYGONE_EFFIGY",
+    "type": "Elite",
+    "zh_description": "旧日雕像（codex 重复键 BYGONE_EFFIGY；live 条目见 BygoneEffigy）。SLASHES 单次 13（A:15）；SLEEP 睡眠自由窗，A1 无镀甲/无眩晕翻转；SLEEP_MOVE_2 睡眠变体（run-42 live 图未出现）；WAKE 自身 +10 力量自由窗。"
+  },
   "BattleFriendV1": {
     "acts": [],
     "aliases": [
@@ -1812,7 +1946,7 @@
     ],
     "curated": true,
     "cycle": [],
-    "description": "Act1 精英（run-38 A1 实时：127 HP）。循环 SLEEP（自由伤害窗）→ WAKE（自身 +10 力量）→ SLASHES（单体 13 A:15 → +10 力后实时 23）自循环。被动 SLOW_POWER：玩家本回合每打一张牌，其受到玩家有源攻击伤害 +10%（其阵营回合开始清零；实时曲线：2 张先手 → Strike×1.2，6 张 → ×1.6，run-38 T1 验证）。A1 注记（run-38 实时）：档案眩晕翻转教条（睡眠期未格挡伤害剥镀甲+Asleep → 意图翻转 Stun）未触发——A1 生成全程无 Plating power 可见，且 SLEEP 期间吃下 39 点未格挡伤害后 WAKE 照常 +10 Str。眩晕翻转在 A1 按有条件/不存在处理；按 +10 力 WAKE 规划竞速。爆发教条：自由窗上 Offering×Ritual + Slow 增幅（run-38：T1 39 伤，T4 在 SLASHES 结算前 61 伤估算/55 实时击杀链）。",
+    "description": "Act1 精英，run-42 A1 live 127HP（表值 A 132 本次未观测）。A1 刷新无镀甲、无眩晕翻转 — Lagavulin 级唤醒教条不适用（run-38 修正 run-42 维持）。SLOW_POWER：受到的攻击伤害 x(1+0.1×本回合已打出牌数)；后打的牌伤害更高 — 便宜攻击先打、大伤害后打。循环 SLEEP → WAKE（自身+10 力量，自由窗）→ SLASHES 13（A:15，Str 6+ 时 live 23 级）→ 重复（run-42 live 图：SLEEP→WAKE→SLASHES，无第二次睡眠）。教条：自由窗纯竞速；第二次 SLASHES 前击杀（run-38 T4 / run-42 T4 双杀）。",
     "display_names": [
       "BygoneEffigy",
       "旧日雕像"
@@ -2249,6 +2383,146 @@
     "passives": [],
     "play_notes": "",
     "source": "codex:monsters/CORPSE_SLUG"
+  },
+  "CUBEX_CONSTRUCT": {
+    "acts": [],
+    "aliases": [
+      "Cubex Construct"
+    ],
+    "curated": true,
+    "cycle": [
+      "CHARGE_UP_MOVE",
+      "REPEATER_BLAST_MOVE",
+      "REPEATER_BLAST_MOVE_2_MOVE",
+      "EXPEL_MOVE"
+    ],
+    "description": "立柱构造体（codex 重复键 CUBEX_CONSTRUCT；live 条目见 CubexConstruct）。CHARGE_UP 自身 +2 力量；EXPEL 多段 5x2（A:6/命中）；REPEATER_BLAST/变体 攻击+增益 7（A:8）+ 自身 +2 力量。循环 CHARGE_UP→REPEATER→REPEATER_2→EXPEL（live run-42）。",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 70
+      },
+      "base": 65,
+      "max": null,
+      "notes": ""
+    },
+    "id": "CUBEX_CONSTRUCT",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "CHARGE_UP_MOVE": {
+        "aliases": [
+          "Charge Up",
+          "CHARGE_UP"
+        ],
+        "curated": false,
+        "effect": "Charge Up: Buff; STRENGTH 2 (self)",
+        "follow_up_id": null,
+        "id": "CHARGE_UP_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "CUBEX_CONSTRUCT",
+        "name": "Charge Up",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/CUBEX_CONSTRUCT#CHARGE_UP"
+      },
+      "EXPEL_MOVE": {
+        "aliases": [
+          "Expel",
+          "EXPEL"
+        ],
+        "curated": false,
+        "effect": "Expel: Attack; damage 5x2 A:6",
+        "follow_up_id": null,
+        "id": "EXPEL_MOVE",
+        "intents": [
+          {
+            "base_damage": 5,
+            "base_damage_ascension": {
+              "ascension": 6
+            },
+            "class": "MultiAttackIntent",
+            "hits": 2,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "CUBEX_CONSTRUCT",
+        "name": "Expel",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/CUBEX_CONSTRUCT#EXPEL"
+      },
+      "REPEATER_BLAST_MOVE": {
+        "aliases": [
+          "Repeater Blast",
+          "REPEATER_BLAST"
+        ],
+        "curated": false,
+        "effect": "Repeater Blast: Attack + Buff; damage 7 A:8; STRENGTH 2 (self)",
+        "follow_up_id": null,
+        "id": "REPEATER_BLAST_MOVE",
+        "intents": [
+          {
+            "base_damage": 7,
+            "base_damage_ascension": {
+              "ascension": 8
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "CUBEX_CONSTRUCT",
+        "name": "Repeater Blast",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/CUBEX_CONSTRUCT#REPEATER_BLAST"
+      },
+      "REPEATER_BLAST_MOVE_2_MOVE": {
+        "aliases": [
+          "Repeater Blast Move 2",
+          "REPEATER_BLAST_MOVE_2"
+        ],
+        "curated": false,
+        "effect": "Repeater Blast Move 2: Attack + Buff; damage 7 A:8; STRENGTH 2 (self)",
+        "follow_up_id": null,
+        "id": "REPEATER_BLAST_MOVE_2_MOVE",
+        "intents": [
+          {
+            "base_damage": 7,
+            "base_damage_ascension": {
+              "ascension": 8
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "CUBEX_CONSTRUCT",
+        "name": "Repeater Blast Move 2",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/CUBEX_CONSTRUCT#REPEATER_BLAST_MOVE_2"
+      }
+    },
+    "name": "Cubex Construct",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/CUBEX_CONSTRUCT",
+    "type": "Normal",
+    "zh_description": "立柱构造体（codex 重复键 CUBEX_CONSTRUCT；live 条目见 CubexConstruct）。CHARGE_UP 自身 +2 力量；EXPEL 多段 5x2（A:6/命中）；REPEATER_BLAST/变体 攻击+增益 7（A:8）+ 自身 +2 力量。循环 CHARGE_UP→REPEATER→REPEATER_2→EXPEL（live run-42）。"
   },
   "CeremonialBeast": {
     "acts": [],
@@ -3353,7 +3627,7 @@
       "碾碎爪",
       "获得"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "THRASH_MOVE",
       "SINGLE_MOVE",
@@ -3368,7 +3642,7 @@
       "SELF_MOVE",
       "STRENGTH_MOVE"
     ],
-    "description": "循环 THRASH_MOVE = 单次攻击 12 (A:14) → ENLARGING_STRIKE_MOVE = 单次攻击 4 → BUG_STING_MOVE = 多段攻击 6 (A:7) ×2 + 2 Weak + 2 Frail → ADAPT_MOVE = 增益 自身 +2 力量 (A:3) → GUARDED_STRIKE_MOVE = 单次攻击 12 (A:14) + 自身 18 格挡 → 回 THRASH。",
+    "description": "Act2 Boss 部件（皇蟹级），209HP（表值 A:219；run-42 live 209）。能力：BACK_ATTACK_LEFT 面向惰性标记 + CRAB_RAGE。循环 THRASH 12（A:14；live 观测侧翼 x1.5 时 18[base12]、未侧翼 12[base12]）→ ENLARGING_STRIKE 4 → BUG_STING 6x2（A:7）+ 附加弱 2 + 衰 2 → ADAPT（增益）→ GUARDED_STRIKE 12 级 + 自身格挡 → 重复。CRAB_RAGE run-42 live：火箭死亡当帧碾碎爪获得 +6 力量与 99 无源格挡，随后能力移除。面向教条：SURROUNDED 持有者被携带侧翼标记的攻击者打 x1.5；指向碾碎爪使面向翻转、火箭成为侧翼方（其增益回合代价低）；指向火箭则碾碎爪成为侧翼方（THRASH 回合代价高）。",
     "display_names": [
       "Crusher 碾碎爪",
       "碾碎爪"
@@ -5482,6 +5756,118 @@
     "play_notes": "run-39 live：SUCK 无挡攻击命中 +3 力量/实例；完全格挡攻击回合=休眠。竞速教条：2 回合内击杀或格挡每个攻击意图。",
     "source": "codex-api + run-39 live T2 击杀 + powers SUCK 教条; run-40 live fold 2026-09-18"
   },
+  "FUZZY_WURM_CRAWLER": {
+    "acts": [],
+    "aliases": [
+      "Fuzzy Wurm Crawler"
+    ],
+    "curated": true,
+    "cycle": [
+      "FIRST_ACID_GOOP_MOVE",
+      "ACID_GOOP_MOVE",
+      "INHALE_MOVE"
+    ],
+    "description": "毛绒伏地虫（codex 重复键 FUZZY_WURM_CRAWLER；live 条目见 FuzzyWurmCrawler）。ACID_GOOP 单次 4（A:6）；FIRST_ACID_GOOP 开战变体单次 4（A:6）；INHALE 自身 +7 力量 — run-38/42 live：一次吸入后 STR:7、下一次酸液意图 11 级；第二次吸入前 3–4 回合内击杀。",
+    "hp": {
+      "ascension": {
+        "max": 59,
+        "min": 58
+      },
+      "base": 55,
+      "max": 57,
+      "notes": ""
+    },
+    "id": "FUZZY_WURM_CRAWLER",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "ACID_GOOP_MOVE": {
+        "aliases": [
+          "Acid Goop",
+          "ACID_GOOP"
+        ],
+        "curated": false,
+        "effect": "Acid Goop: Attack; damage 4 A:6",
+        "follow_up_id": null,
+        "id": "ACID_GOOP_MOVE",
+        "intents": [
+          {
+            "base_damage": 4,
+            "base_damage_ascension": {
+              "ascension": 6
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "FUZZY_WURM_CRAWLER",
+        "name": "Acid Goop",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/FUZZY_WURM_CRAWLER#ACID_GOOP"
+      },
+      "FIRST_ACID_GOOP_MOVE": {
+        "aliases": [
+          "First Acid Goop",
+          "FIRST_ACID_GOOP"
+        ],
+        "curated": false,
+        "effect": "First Acid Goop: Attack; damage 4 A:6",
+        "follow_up_id": null,
+        "id": "FIRST_ACID_GOOP_MOVE",
+        "intents": [
+          {
+            "base_damage": 4,
+            "base_damage_ascension": {
+              "ascension": 6
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "FUZZY_WURM_CRAWLER",
+        "name": "First Acid Goop",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/FUZZY_WURM_CRAWLER#FIRST_ACID_GOOP"
+      },
+      "INHALE_MOVE": {
+        "aliases": [
+          "Inhale",
+          "INHALE"
+        ],
+        "curated": false,
+        "effect": "Inhale: Buff; STRENGTH 7 (self)",
+        "follow_up_id": null,
+        "id": "INHALE_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "FUZZY_WURM_CRAWLER",
+        "name": "Inhale",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/FUZZY_WURM_CRAWLER#INHALE"
+      }
+    },
+    "name": "Fuzzy Wurm Crawler",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/FUZZY_WURM_CRAWLER",
+    "type": "Normal",
+    "zh_description": "毛绒伏地虫（codex 重复键 FUZZY_WURM_CRAWLER；live 条目见 FuzzyWurmCrawler）。ACID_GOOP 单次 4（A:6）；FIRST_ACID_GOOP 开战变体单次 4（A:6）；INHALE 自身 +7 力量 — run-38/42 live：一次吸入后 STR:7、下一次酸液意图 11 级；第二次吸入前 3–4 回合内击杀。"
+  },
   "FatGremlin": {
     "acts": [
       "Act2"
@@ -6726,9 +7112,9 @@
       "Hunterkiller",
       "猎人杀手"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [],
-    "description": "TENDERIZING_GOOP_MOVE = 减益 TenderPower 1；BITE_MOVE = 单次攻击 17 (A:19)；PUNCTURE_MOVE = 多段攻击 7 (A:8) ×3。",
+    "description": "Act2 怪物 run-42 live 121HP。TENDERIZING_GOOP 把 TENDER_POWER 加到玩家身上：run-42 live 观察每打出一张玩家牌 力量 -1 且 敏捷 -1；下一玩家回合开始时恢复 +N/+N（N=累计抽取量 — 观察到 +2/+2、+4/+4、+5/+5）。\"尊重机制否则战斗变刺\" — 少打大牌而非多打小牌。循环 TENDERIZING_GOOP（减益）→ RAND BITE 13（A:15；live 17 级）/ PUNCTURE 7x3（A:8x3）；BITE 档案残片另提及其他刷新的 BurrowedPower 先挡后攻交互 — 以 live 为准。",
     "display_names": [
       "HunterKiller"
     ],
@@ -7023,9 +7409,9 @@
       "感染棱柱",
       "立柱构造体"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [],
-    "description": "Act2 精英与 Act3 普通怪（观察到 65 HP 变体）均出现；VitalSpark/REPEATER 行为见 Act2 精英条目。",
+    "description": "Act2 精英 run-42 A1 live 161HP。VITAL_SPARK 计数类：玩家技能牌开战即带 Tainted(Amount)；打出一张给玩家附加 TAINTED_POWER Amount = 该敌方回合受击攻击伤害 +Amount（敌方回合末移除）；Pulsate 战斗中途 Spark +2。run-41 死亡 + run-42 击杀的扩展：（1）战斗中生成的牌（Puzzlebox 类）可带 Tainted 到场 — run-42 One-Two Punch 打出即 +2 税；（2）COLOSSUS 卡牌框在游戏内为技能标签 — Spark 下打出收 +4 税（尽管效果是能力）；牌库抽到的能力（Inferno/Rupture/Corruption/FNP/Cruelty）不收税；（3）纯攻击回合零税 — 零技能纪律 = 只打攻击与能力。循环 JAB 15（A:17）→ RADIATE 11（A:13）+ 自身格挡 11 → WHIRLWIND 5x3（A:6x3）→ PULSATE 8（A:10）+ 自身格挡 20 + Spark +2。击杀窗：免税回合后爆发竞速；run-42 于 7HP 入场 T7 击杀。",
     "display_names": [
       "InfestedPrism",
       "感染棱柱"
@@ -8742,9 +9128,9 @@
       "泥虫之祖",
       "虱虫之祖"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [],
-    "description": "WEB_CANNON_MOVE = 单次攻击 9 (A:10) + 2 Frail；POUNCE_MOVE = 单次攻击 14 (A:16)；CURL_AND_GROW_MOVE = 防御——CurlUpPower 14 (A:18) + 自身 +5 力量。CurlUpPower：你用卡牌攻击命中它后，获得等额格挡一次，随后该能力移除。",
+    "description": "Act2 怪物 run-42 live 121HP（run-39 另 cited 118 级）。CURL_UP 能力：持有者被第一张攻击牌命中后，获得等同宿主数值（14；表 A:18）的格挡一次 — 命中后授予：伤害先落到 HP，然后 +14 格挡生效；用最便宜攻击先破壳。CURL_AND_GROW：自身格挡 14 + 力量 +5。POUNCE 14+力量（Str 5 时 live 17 级；弱化前意图 19[base14]）— 弱化按命中削减。WEB_CANNON 9（A:10）+ 衰 2。循环 WEB → CURL_AND_GROW → POUNCE → 重复（观察到 RAND 变体）。",
     "display_names": [
       "LouseProgenitor"
     ],
@@ -10207,6 +10593,90 @@
     "play_notes": "击杀顺序教条（run-37 T8 清场）：从 move_graph.current_move_id 读各鳗相位；攻击意图回合集火攻击者；ENLARGE（buff）窗倾泻伤害；多段指令穿透 Skittish（易伤下 Dismantle / FightMe）。run-21 死于此处的路线几何（无前置休息）——run-37 休息后 61 血 + 药水储备进场，T8 清场。",
     "source": "run-37 live quartet decode + codex-api /monsters/phantasmal_gardener",
     "type": "Elite"
+  },
+  "PHROG_PARASITE": {
+    "acts": [],
+    "aliases": [
+      "Phrog Parasite"
+    ],
+    "curated": true,
+    "cycle": [
+      "INFECT_MOVE",
+      "LASH_MOVE"
+    ],
+    "description": "异蛙寄生虫（codex 重复键 PHROG_PARASITE；live 条目见 PhrogParasite）。INFECT 向每个目标弃牌堆加入 3 张 Infection — 不可打出费用 −1；回合末在手中则每张 3 伤（可格挡，run-38/42 live）。LASH：INFECT→LASH 循环中的攻击；run-42 live T4 击杀未见 LASH 结算（档案嵌套 base 4 A:5 级；以 live 意图为准）。",
+    "hp": {
+      "ascension": {
+        "max": 68,
+        "min": 66
+      },
+      "base": 61,
+      "max": 64,
+      "notes": ""
+    },
+    "id": "PHROG_PARASITE",
+    "is_boss": false,
+    "is_elite": true,
+    "kind": "monster",
+    "moves": {
+      "INFECT_MOVE": {
+        "aliases": [
+          "Infect",
+          "INFECT"
+        ],
+        "curated": false,
+        "effect": "Infect: Status",
+        "follow_up_id": null,
+        "id": "INFECT_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Status"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "PHROG_PARASITE",
+        "name": "Infect",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/PHROG_PARASITE#INFECT"
+      },
+      "LASH_MOVE": {
+        "aliases": [
+          "Lash",
+          "LASH"
+        ],
+        "curated": false,
+        "effect": "Lash: Attack; damage 4x4 A:5",
+        "follow_up_id": null,
+        "id": "LASH_MOVE",
+        "intents": [
+          {
+            "base_damage": 4,
+            "base_damage_ascension": {
+              "ascension": 5
+            },
+            "class": "MultiAttackIntent",
+            "hits": 4,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "PHROG_PARASITE",
+        "name": "Lash",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/PHROG_PARASITE#LASH"
+      }
+    },
+    "name": "Phrog Parasite",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/PHROG_PARASITE",
+    "type": "Elite",
+    "zh_description": "异蛙寄生虫（codex 重复键 PHROG_PARASITE；live 条目见 PhrogParasite）。INFECT 向每个目标弃牌堆加入 3 张 Infection — 不可打出费用 −1；回合末在手中则每张 3 伤（可格挡，run-38/42 live）。LASH：INFECT→LASH 循环中的攻击；run-42 live T4 击杀未见 LASH 结算（档案嵌套 base 4 A:5 级；以 live 意图为准）。"
   },
   "PUNCH_CONSTRUCT": {
     "acts": [
@@ -16302,14 +16772,14 @@
     "aliases": [
       "Vantom"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "INK_BLOT_MOVE",
       "INKY_LANCE_MOVE",
       "DISMEMBER_MOVE",
       "PREPARE_MOVE"
     ],
-    "description": "INK_BLOT_MOVE = 单次攻击 7 (A:8)；INKY_LANCE_MOVE = 多段攻击 6 (A:7) ×2；DISMEMBER_MOVE = 单次攻击 26 (A:30)；PREPARE_MOVE = 增益 自身 +2 力量。循环 INK_BLOT → INKY_LANCE → DISMEMBER → PREPARE。DISMEMBER_MOVE = 单次攻击 26 (A:30) 并注入 WOUND 状态牌（意图显示「26; 3」= 26 伤 + 3 张 Wound）。被动 SlipperyPower：充能未耗尽时每次受击 HP 损失上限 1；每次未格挡命中 ≥1 消耗 1 层——水银沙漏回合开始伤害同样每 tick 消耗 1 层（≤1 规则对遗物伤害生效）。层数 = 基础 8，进阶 ToughEnemies 时 9（decomp `SlipperyAmt`；多人按 ×玩家数缩放）—— 先用多段/芯片伤害泄层；最后一层耗尽当帧 SlipperyPower 从 state 消失，全额伤害窗同帧开启。WOUND = 费用 −1、不可打出、**无回合末 HP 税**——纯牌库堵塞物，非 Infection 级伤害。",
+    "description": "Act1 Boss run-42 A1 live 173HP（显示 墨影幻灵；id Vantom）。SLIPPERY:8 被动：持有者受到的任何 >=1 的 HP 损失降为恰好 1；每次造成 >=1 未格挡伤害的命中消耗 1 充能 — 芯片/多段先行，充能清空后再上大伤害；最后一层被消耗当帧 Slippery 从 state 消失、全额伤害窗同帧开启（教条文本 run-42 live 验证）。Inferno/遗物 tick 伤害同样每 tick 消耗 1 层。循环 INK_BLOT 7（A:8）→ INKY_LANCE 6x2（A:7x2）→ DISMEMBER 26（A:30）+ 3 张 Wound → PREPARE +2 力量 → 重复。WOUND 状态牌：费用 −1、不可打出、**无回合末 HP 税** — 纯堵手，非 Infection 级伤害。击杀窗：run-38 T9 / run-42 T5（T1–T3 泄层后 Str 12–13×易伤单回合抹掉 75HP）。",
     "display_names": [
       "Vantom",
       "墨影幻灵"

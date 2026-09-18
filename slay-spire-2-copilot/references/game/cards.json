@@ -1416,8 +1416,8 @@
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "0",
-    "curated": false,
-    "description": "Exhaust, lose 1 HP (unblockable); exhaust a card; gain 1 Strength. Upgrade: +1 Strength.",
+    "curated": true,
+    "description": "Cost 1 skill: Exhaust; lose 1 HP (unblockable); exhaust a card (hand_select choose+proceed overlay — pick cheapest loss); gain 1 Strength. Upgrade: +1 Strength. Live run-42: under Vital Spark it IS skill-class (taxes); under Corruption still costs 1 until... played 0c-adjacent only via other enablers — verify cost display live. Pairs with Rupture/Inferno self-dmg chains when those powers are in play.",
     "id": "BRAND",
     "keywords": [
       "Exhaust"
@@ -2379,8 +2379,8 @@
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
-    "description": "gain 5 Block; gain Colossus 1 — attacks from Vulnerable enemies deal 50% damage to you (decrements at end of enemy turn). Upgrade: +3 Block.",
+    "curated": true,
+    "description": "Cost 1 skill-class card frame (live run-42: taxes under Vital Spark like any skill — +4 TAINTED on play at Spark 4, despite granting a power). Effect: gain 5 Block; apply COLOSSUS_POWER 1 — attacks against owner from a dealer carrying VULNERABLE_POWER deal x0.5 (DamageDecrease 0.5); decrements 1 at end of Enemy side turn (consumed after one enemy turn unless reapplied). Live run-39/42: SLASH 19->9-class halving when vuln applied same turn. Exhausts itself under Corruption.",
     "id": "COLOSSUS",
     "keywords": [],
     "kind": "card",
@@ -2657,8 +2657,8 @@
     "card_type": "power",
     "character_pool": "IRONCLAD",
     "cost": "3",
-    "curated": false,
-    "description": "Exhaust, your Skills cost 0 and are Exhausted when played. Upgrade: cost 2.",
+    "curated": true,
+    "description": "Exhaust; your Skills cost 0 and are Exhausted when played. Upgrade: cost 2 (CORRUPTION+ granted by Dusty Tome boon, run-42). Live run-42 combos: with FORGOTTEN_RITUAL (0c under Corruption once skill-condition met by any prior exhaust -> +3 Energy); with FEEL_NO_PAIN Amount 3 (every skill play exhausts -> block proc); with IMPERVIOUS (0c 30-block + FNP proc wall); skills remain SKILL-class for Vital Spark tax even at 0 cost (InfestedPrism fight).",
     "id": "CORRUPTION",
     "keywords": [
       "Exhaust"
@@ -5143,8 +5143,8 @@
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
-    "description": "Exhaust, if you Exhausted a card this turn gain 3 Energy. Upgrade: gain 4 Energy. Its own Exhaust does NOT satisfy its own condition (EvilEye-class) — played alone, energy went 6→5 (paid 1, no +3). Another card must be exhausted FIRST the same turn (Brand/Slimed-class) for the +3 to fire.",
+    "curated": true,
+    "description": "Cost 1 skill: Exhaust; if you Exhausted a card this turn (another card — own exhaust does NOT count), gain 3 Energy. Upgrade: gain 4. Under Corruption: cost 0 — play any skill first (auto-exhausts) then Ritual 0c -> +3 Energy net engine (live run-42 T3 HunterKiller + Act2-boss T1: e 1->4). Own exhaust never satisfies own condition (Evil Eye-class).",
     "id": "FORGOTTEN_RITUAL",
     "keywords": [
       "Exhaust"
@@ -6175,8 +6175,8 @@
     "card_type": "attack",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
-    "description": "lose 2 HP (unblockable); deal 15 damage. Upgrade: +5 damage.",
+    "curated": true,
+    "description": "Cost 1 attack: lose 2 HP (unblockable); deal 15 damage. Upgrade: +5. Live run-42: under Vuln x1.5 hit 21-class; with Str + Vuln + Inferno-in-play the self-damage fires Inferno AoE same play (22 + Inferno 9 proc observed vs vuln'd target); Rupture gains +1 Str from the self-damage when in play.",
     "id": "HEMOKINESIS",
     "keywords": [],
     "kind": "card",
@@ -12845,7 +12845,7 @@
     "character_pool": "IRONCLAD",
     "cost": "1",
     "curated": true,
-    "description": "Exhaust, apply 3 Vulnerable. Upgrade: +4 Vulnerable.",
+    "description": "Cost 1 skill: Exhaust; apply 3 Vulnerable (additive to existing stacks — confirmed live run-39/42: Vuln 1->4 after Bash-2 + Tremble-3, and 1->4 solo pre-stack). Upgrade: +4 Vulnerable. Under Corruption: 0 cost, still skill-class for Spark tax. Live run-42 Act2-boss use: Tremble->Vuln4 -> Gigantified Bludgeon race window.",
     "id": "TREMBLE",
     "keywords": [
       "Exhaust"
