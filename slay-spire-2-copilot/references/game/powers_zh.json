@@ -122,6 +122,14 @@
     "source": "md:powers.md:L71; md:powers_zh.md:L62",
     "stack_type": "Counter"
   },
+  "ASLEEP": {
+    "curated": true,
+    "description": "计数类：物主沉睡——若受到非零未挡伤害则醒来（移除自身镀甲若有、自眩晕进唤醒招、移除沉睡）。物主回合结束时沉睡减1；归零经唤醒招醒来；回合结束时沉睡≤1则镀甲被移除。对局39+40 live：乐加维林族母两次均由穿镀甲挡的小额未挡伤害触发唤醒（对局40：剑柄9+打击6 把12挡打穿至3未挡 → 同回合剥甲+眩晕）。",
+    "id": "ASLEEP",
+    "kind": "power",
+    "name": "沉睡",
+    "source": "; run-40 live fold 2026-09-18"
+  },
   "ASLEEP_POWER": {
     "aliases": [
       "ASLEEP",
@@ -1217,21 +1225,21 @@
     "stack_type": "Counter"
   },
   "FLUTTER_POWER": {
-    "id": "FLUTTER_POWER",
-    "kind": "power",
-    "name": "闪避",
     "aliases": [
       "FLUTTER",
       "FlutterPower"
     ],
-    "description": "闪避层：持有者受攻击伤害被大幅减免；每次被攻击命中消耗 1 层（run-39 草蜢 live：FLUTTER 5 时打击预算 15 实落 7 并降至 4；Flutter 3 时 Pommel 15→11；Flutter 4 时 Bash 21→10）。同指令多段攻击每段命中各耗 1 层——Whirlwind 类穿透最快烧层。高层时约减半伤害；按竞速窗口减速器对待，不是无敌。",
-    "power_type": "Buff",
-    "stack_type": "Counter",
     "counter_class": true,
-    "host_of_affliction": false,
     "curated": true,
+    "description": "闪避层：持有者受攻击伤害被大幅减免；每次被攻击命中消耗 1 层（run-39 草蜢 live：FLUTTER 5 时打击预算 15 实落 7 并降至 4；Flutter 3 时 Pommel 15→11；Flutter 4 时 Bash 21→10）。同指令多段攻击每段命中各耗 1 层——Whirlwind 类穿透最快烧层。高层时约减半伤害；按竞速窗口减速器对待，不是无敌。",
+    "host_of_affliction": false,
+    "id": "FLUTTER_POWER",
+    "kind": "power",
+    "name": "闪避",
+    "play_notes": "run-39 live：Flutter 每次攻击命中后减伤并 −1 层。层高时按约五成伤害规划击杀数学；优先多段指令烧层。",
+    "power_type": "Buff",
     "source": "run-39 草蜢战 live 数据",
-    "play_notes": "run-39 live：Flutter 每次攻击命中后减伤并 −1 层。层高时按约五成伤害规划击杀数学；优先多段指令烧层。"
+    "stack_type": "Counter"
   },
   "FOCUS_POWER": {
     "aliases": [
@@ -1525,6 +1533,14 @@
     "source": "md:powers.md:L350; md:powers_zh.md:L310",
     "stack_type": "Counter"
   },
+  "HARD_TO_KILL": {
+    "curated": true,
+    "description": "计数类：物主每次伤害实例的 HP 损失上限为 Amount（ModifyDamageCap = Amount）；单次超出部分弃掉、不保留。对局40 live 外骨骼虫 Amount=9：突破/狱火 9 实例命中满值；重锤32 对该类目标浪费23——用多实例小额命中控速，避免单次大实例攻击。",
+    "id": "HARD_TO_KILL",
+    "kind": "power",
+    "name": "杀不死",
+    "source": "; run-40 live fold 2026-09-18"
+  },
   "HARD_TO_KILL_POWER": {
     "aliases": [
       "HARD_TO_KILL",
@@ -1686,6 +1702,14 @@
     "power_type": "Buff",
     "source": "md:powers.md:L358; md:powers_zh.md:L316",
     "stack_type": "Single"
+  },
+  "IMBALANCED": {
+    "curated": true,
+    "description": "物主的攻击被完全格挡时眩晕（石碗虫改为设置 IsOffBalance）。部分格挡不触发。对局40 live：红面具弱化把头槌 15→11 显示；血墙16≥11 → 同敌方回合眩晕；三人组在眩晕窗内清场。",
+    "id": "IMBALANCED",
+    "kind": "power",
+    "name": "失衡",
+    "source": "; run-40 live fold 2026-09-18"
   },
   "IMBALANCED_POWER": {
     "aliases": [
@@ -2358,6 +2382,14 @@
     "source": "curated:powers.md inert marker group",
     "stack_type": "Counter"
   },
+  "PERSONAL_HIVE": {
+    "curated": true,
+    "description": "物主被攻击牌命中时，攻击者抽牌堆随机位置获得 Amount 张眩晕。信息素喷吐同一次读取内增加 Amount 并赋予力量。对局40 live：狱火能力伤害不触发 Hive 税（狱火 tick 期间 Hive 保持 :1；税仅由攻击牌命中触发）；零攻击纯技能回合使 Hive 保持休眠。",
+    "id": "PERSONAL_HIVE",
+    "kind": "power",
+    "name": "个人蜂巢",
+    "source": "; run-40 live fold 2026-09-18"
+  },
   "PERSONAL_HIVE_POWER": {
     "aliases": [
       "PERSONAL_HIVE",
@@ -2601,6 +2633,14 @@
     "power_type": "Buff",
     "source": "md:powers.md:L302; md:powers_zh.md:L271",
     "stack_type": "Counter"
+  },
+  "REATTACH": {
+    "curated": true,
+    "description": "死亡时若其他带重接的段仍存活，物主进入 DEAD 状态（不可选中、不移出战斗）并在其回合结束重接、回复 Amount HP。仅当所有其他段同时死亡时才是真死。对局40 live：同窗清场教条——铺伤，其他段存活时绝不单杀（杀掉最后活段会让全部 DEAD 段各 +Amount 复活）；狱火 9 实例 tick 为三人组控速；最后对 1hp 活段的打击赢得淡出胜利。",
+    "id": "REATTACH",
+    "kind": "power",
+    "name": "重接",
+    "source": "; run-40 live fold 2026-09-18"
   },
   "REATTACH_POWER": {
     "aliases": [
@@ -2951,6 +2991,14 @@
     "power_type": "Buff",
     "source": "md:powers.md:L482; md:powers_zh.md:L425",
     "stack_type": "Counter"
+  },
+  "SKITTISH": {
+    "curated": true,
+    "description": "物主本回合未获得格挡且受到卡牌攻击伤害时获得 Amount 挡（每回合一次；标记在对方回合结束重置）。对局40 live 鳗四件组：突破 AllEnemies 同一指令触发四只全部易惊（AoE 结算后各+6）；同回合后续攻击全额命中——AoE 穿透教条成立。",
+    "id": "SKITTISH",
+    "kind": "power",
+    "name": "易惊",
+    "source": "; run-40 live fold 2026-09-18"
   },
   "SKITTISH_POWER": {
     "aliases": [
@@ -3703,6 +3751,14 @@
     "power_type": "Buff",
     "source": "md:powers.md:L150; md:powers_zh.md:L128",
     "stack_type": "Counter"
+  },
+  "UNMOVABLE": {
+    "curated": true,
+    "description": "每回合前 Amount 次从卡牌获得格挡时翻倍。对局40 live 数值（Amount=1 能力牌，每回合前两次卡牌挡增益翻倍）：血墙16→32、邪眼8→16、究极防御11→22、耸肩8→16、武装5→10、防御5→10。药水源格挡不翻倍（封锁药水12仍为12）。",
+    "id": "UNMOVABLE",
+    "kind": "power",
+    "name": "岿然不动",
+    "source": "; run-40 live fold 2026-09-18"
   },
   "UNMOVABLE_POWER": {
     "aliases": [

@@ -4,8 +4,8 @@
       "Abyssal Baths",
       "深渊浴场"
     ],
-    "curated": false,
-    "description": "变量 最大 HP +2 / 不可格挡 3 伤害 / 回复 10——存在 Immerse 与 Abstain 选项（选项与数值的逐项绑定部分为内部逻辑）；另有 Linger/ExitBaths 处理器。",
+    "curated": true,
+    "description": "Unknown 房事件。投身其中→+2最大HP，受到3点伤害；敬而远之→回复10点HP。对局40 live：精英闸门前 73/94 时选敬而远之——87/87 入场优于 76/89（天选芝士已在被动增长最大HP；闸门时当前HP优先）。",
     "id": "ABYSSAL_BATHS",
     "kind": "event",
     "name": "深渊浴场",
@@ -81,15 +81,15 @@
       }
     },
     "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "source": "md:events.md; md:events_zh.md; run-40 live fold 2026-09-18"
   },
   "AMALGAMATOR": {
     "aliases": [
       "Amalgamator",
       "熔合者"
     ],
-    "curated": false,
-    "description": "CombineStrikes → 移除 Strike 牌，加入 UltimateStrike；CombineDefends → 移除 Defend 牌，加入 UltimateDefend。 CombineDefends 移除所选 Defend（例如 4 张 Defend 的牌库中恰好移除 2 张）并加入 UltimateDefend（1 费 11 挡）——移除 2 张时牌库净 -1 张；deck_select 浮层可选具体副本，choose 后 proceed 确认。Strike 标签移除包含 POMMEL_STRIKE 副本——融合打击会连抽牌引擎一起吃掉。",
+    "curated": true,
+    "description": "Unknown 房事件。融合打击→移除2张打击标签牌（含剑柄打击副本！）+加入终极打击（1费/14伤 打击标签）。融合防御→移除2张防御+加入究极防御（1费/11挡 防御标签）。deck_select 覆盖层：选择副本后 proceed。无离开选项。对局40 live：选融合防御——究极防御11（Unmovable→22）价值高于失去复制体防御的50%风险。",
     "id": "AMALGAMATOR",
     "kind": "event",
     "name": "熔合者",
@@ -132,7 +132,7 @@
       }
     },
     "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "source": "md:events.md; md:events_zh.md; run-40 live fold 2026-09-18"
   },
   "AROMA_OF_CHAOS": {
     "aliases": [
@@ -2508,8 +2508,8 @@
       "Room Full Of Cheese",
       "满屋芝士"
     ],
-    "curated": false,
-    "description": "Gorge → 加牌；Search → 受到 14 点不可格挡伤害，获得 ChosenCheese 遗物。Search 税精确 −14；天选芝士每次战斗胜利后 +1 Max HP。",
+    "curated": true,
+    "description": "Unknown 房事件。大快朵颐→从8张随机普通牌选2张加入牌组；仔细翻找→受到14点无挡伤害，获得天选芝士遗物（每场战斗胜利+1最大且+1当前HP）。对局40 live：43 级 HP 时选翻找，两节点后 (8,5) 有休息——此后芝士每战触发（死亡时最大HP 86→94）。",
     "id": "ROOM_FULL_OF_CHEESE",
     "kind": "event",
     "name": "满屋芝士",
@@ -2552,7 +2552,7 @@
       }
     },
     "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "source": "md:events.md; md:events_zh.md; run-40 live fold 2026-09-18"
   },
   "ROUND_TEA_PARTY": {
     "aliases": [
@@ -2814,8 +2814,8 @@
       "Spiraling Whirlpool",
       "螺旋漩涡"
     ],
-    "curated": false,
-    "description": "ObserveTheSpiral → 附魔 Spiral；Drink → 回复。",
+    "curated": true,
+    "description": "Unknown 房事件。观察→为基础打击或防御附魔涡旋；饮用→回血。涡旋/螺旋 附魔=重演1：被附魔的牌打出时自动再打出一次（2026-09-18 perplexity 研究，sts2 附魔指南）。对局40 live：选观察→重演1 防御=1能量获得 5+5=10 格挡；配合 Unmovable 第一次增益翻倍至 10→20 级。",
     "id": "SPIRALING_WHIRLPOOL",
     "kind": "event",
     "name": "螺旋漩涡",
@@ -2876,7 +2876,7 @@
       }
     },
     "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "source": "md:events.md; md:events_zh.md; run-40 live fold 2026-09-18"
   },
   "SPIRIT_GRAFTER": {
     "aliases": [
@@ -2928,6 +2928,14 @@
     },
     "play_notes": "",
     "source": "md:events.md; md:events_zh.md"
+  },
+  "STEADY": {
+    "curated": true,
+    "description": "卡牌附魔=保留：被附魔的牌回合结束留在手牌而非弃掉。该副本上的永久修饰符。由水漫缮写室 触手羽毛笔（55金，1张）/ 扎手海绵（99金，2张）提供。来源：2026-09-18 perplexity（sts2.untapped.gg/enchantments/steady、spire-codex 附魔指南）。",
+    "id": "STEADY",
+    "kind": "event",
+    "name": "稳定（附魔）",
+    "source": "; run-40 live fold 2026-09-18"
   },
   "STONE_OF_ALL_TIME": {
     "aliases": [
@@ -3517,11 +3525,11 @@
       "Tezcatara",
       "选项"
     ],
-    "curated": false,
-    "description": "YUMMY_COOKIE 美味饼干 → 获得 YummyCookie 遗物并自选升级 4 张牌（deck_select 浮层：选择后 proceed 确认）；STORYBOOK 故事书 → 向牌库加入 1 张 Brightest Flame；SEAL_OF_GOLD 黄金印 → SealOfGold 遗物：回合开始花 5 金获得 1 能量（金不足 5 时无效；一处来源写 3，5 为多源印证值）。**祝福池其余选项**：NUTRITIOUS_SOUP 营养汤 → NutritiousSoup 遗物：拾取时为所有带 Strike 标签的基础牌附魔 Tezcatara's Ember（Ember = **0 费、+3 伤害、Eternal**）；TOASTY_MITTENS 烘焙手套 → ToastyMittens 遗物：每回合抽牌前消耗抽牌堆顶牌并获得 1 力量（被动力量引擎，消耗同时瘦牌；与 Headbutt 取回反协同）；GOLDEN_COMPASS 黄金罗盘 → GoldenCompass 遗物：拾取时以一条特殊路径替换第二章地图；PUMPKIN_CANDLE 南瓜蜡烛 → 遗物解码见 relics_zh.md（+1 能/回合、5 战后熄灭、休息点 KINDLE 选项——短暂性+休息点行动税）；VERY_HOT_COCOA 烫嘴可可 → 第 1 回合 +4 能量（与灯笼叠加 8 能已验证）。",
+    "curated": true,
+    "description": "Act2（及后续章节）开局赐福房。对局40 live 见到选项：烫嘴可可（每战 T1 +4能量）、大～抱抱（删4张牌；每次抽牌堆洗牌加1煤灰）、黄金印（回合开始若≥5金则花5金获得1能量）。档案另列：美味饼干（升级4张）、故事书（加入最亮火焰）、营养汤、烤手套、金罗盘、南瓜烛。对局40 live 选择：烫嘴可可——无金币税、无污染牌、每战 T1 引擎在线。",
     "id": "TEZCATARA",
     "kind": "event",
-    "name": "选项",
+    "name": "Tezcatara（先古织网者）",
     "needs_zh": false,
     "options": {
       "TEZCATARA.pages.INITIAL.options.BIIIG_HUG": {
@@ -3696,7 +3704,7 @@
       }
     },
     "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "source": "md:events.md; md:events_zh.md; run-40 live fold 2026-09-18"
   },
   "THE_ARCHITECT": {
     "aliases": [
@@ -4218,6 +4226,14 @@
     "play_notes": "",
     "source": "md:events.md; md:events_zh.md"
   },
+  "VORTEX": {
+    "curated": true,
+    "description": "卡牌附魔=重演1：打出时该牌在同一战斗内自动再打出一次。永久修饰符。由螺旋漩涡「观察」对基础打击或防御提供。来源：2026-09-18 perplexity（sts2.untapped.gg/enchantments、spire-codex 附魔指南、sts2guides 附魔指南）。",
+    "id": "VORTEX",
+    "kind": "event",
+    "name": "涡旋/螺旋（附魔）",
+    "source": "; run-40 live fold 2026-09-18"
+  },
   "WAR_HISTORIAN_REPY": {
     "aliases": [
       "War Historian Repy",
@@ -4274,8 +4290,8 @@
       "Waterlogged Scriptorium",
       "水漫缮写室"
     ],
-    "curated": false,
-    "description": "BloodyInk → +6 最大 HP；TentacleQuill → 支付 55 金币，附魔 Steady；PricklySponge → 支付 99 金币，附魔 Steady + 卡牌选项。",
+    "curated": true,
+    "description": "Unknown 房事件。血液墨水→+6最大HP（免费）；触手羽毛笔→支付55金，为1张牌附魔稳定；扎手海绵→支付99金，为2张牌附魔稳定。稳定附魔=保留（回合结束留在手牌），永久修饰符。对局40 live：79/86 时选血液墨水——针对头号死因的免费HP；55/99金附魔会抽干 Shop#1 沉淀口。",
     "id": "WATERLOGGED_SCRIPTORIUM",
     "kind": "event",
     "name": "水漫缮写室",
@@ -4335,7 +4351,7 @@
       }
     },
     "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "source": "md:events.md; md:events_zh.md; run-40 live fold 2026-09-18"
   },
   "WELCOME_TO_WONGOS": {
     "aliases": [
@@ -4632,8 +4648,8 @@
       "Zen Weaver",
       "修禅织网者"
     ],
-    "curated": false,
-    "description": "BreathingTechniques → 支付 50 金币，**加入 2 张 Enlightenment**；EmotionalAwareness → 支付 125 金币，**移除 1 张牌**；ArachnidAcupuncture → 支付 250 金币，**移除 2 张牌**。注意：两个移除选项单价 125/张均贵于商店移除（75g）；事件无离开选项，必须三选一。ArachnidAcupuncture 有 250 金门槛——金币低于门槛时不出现。Enlightenment（启迪）0 费「手牌全部费用变 1」对 0 费引擎牌（Bloodletting/Brand 类）是反协同——Rupture 线牌库对该选项需谨慎。",
+    "curated": true,
+    "description": "Unknown 房事件，无离开选项——三选一必选。呼吸技法 50金→加入2张启迪；情绪觉察 125金→移除1张牌；蜘蛛针灸 250金→移除2张（门槛，低于250金不出现）。删除单价125/张——劣于商店删除75金。对局40 live：付125金删除（1张打击），拒绝2张启迪（与0费引擎牌反协同）。",
     "id": "ZEN_WEAVER",
     "kind": "event",
     "name": "修禅织网者",
@@ -4693,7 +4709,7 @@
       }
     },
     "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "source": "md:events.md; md:events_zh.md; run-40 live fold 2026-09-18"
   },
   "宾邦": {
     "aliases": [],

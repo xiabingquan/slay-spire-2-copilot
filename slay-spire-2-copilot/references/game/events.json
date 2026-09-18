@@ -4,8 +4,8 @@
       "Abyssal Baths",
       "深渊浴场"
     ],
-    "curated": false,
-    "description": "vars MaxHp +2 / unblockable 3 damage / heal 10 — Immerse and Abstain options present (exact per-option binding partially internal); Linger/ExitBaths handlers exist.",
+    "curated": true,
+    "description": "Unknown-room event. Immerse → +2 Max HP, take 3 damage; Abstain → heal 10 HP. LIVE run-40: Abstain taken at 73/94 before elite gate — 87/87 entry beat 76/89 (Chosen Cheese already grows Max HP passively; current HP at the gate wins).",
     "id": "ABYSSAL_BATHS",
     "kind": "event",
     "name": "Abyssal Baths",
@@ -81,7 +81,7 @@
       }
     },
     "play_notes": "",
-    "source": "md:events.md; md:events_zh.md",
+    "source": "md:events.md; md:events_zh.md; run-40 live fold 2026-09-18",
     "zh_description": "变量 最大 HP +2 / 不可格挡 3 伤害 / 回复 10——存在 Immerse 与 Abstain 选项（选项与数值的逐项绑定部分为内部逻辑）；另有 Linger/ExitBaths 处理器。",
     "zh_name": "深渊浴场"
   },
@@ -90,8 +90,8 @@
       "Amalgamator",
       "熔合者"
     ],
-    "curated": false,
-    "description": "CombineStrikes → remove Strikes, add UltimateStrike; CombineDefends → remove Defends, add UltimateDefend. CombineDefends removes the chosen Defends (e.g. exactly 2 from a 4-Defend deck) and adds UltimateDefend (1-cost, 11 Block) — net deck −1 when 2 are removed; a deck_select overlay lets you pick which copies, choose then proceed. Strike-tagged removal includes POMMEL_STRIKE copies — combining Strikes also eats draw engines.",
+    "curated": true,
+    "description": "Unknown-room event. CombineStrikes → remove 2 Strike-tagged cards (includes Pommel Strike copies!) + add UltimateStrike (1c/14 dmg Strike-tagged). CombineDefends → remove 2 Defends + add UltimateDefend (1c/11 block Defend-tagged). deck_select overlay: choose the copies then proceed. NO leave option. LIVE run-40: Combine Defends picked — Ultimate Defend 11 (Unmovable→22) outweighed 50% risk of losing the Replay-1 Defend.",
     "id": "AMALGAMATOR",
     "kind": "event",
     "name": "Amalgamator",
@@ -134,7 +134,7 @@
       }
     },
     "play_notes": "",
-    "source": "md:events.md; md:events_zh.md",
+    "source": "md:events.md; md:events_zh.md; run-40 live fold 2026-09-18",
     "zh_description": "CombineStrikes → 移除 Strike 牌，加入 UltimateStrike；CombineDefends → 移除 Defend 牌，加入 UltimateDefend。 CombineDefends 移除所选 Defend（例如 4 张 Defend 的牌库中恰好移除 2 张）并加入 UltimateDefend（1 费 11 挡）——移除 2 张时牌库净 -1 张；deck_select 浮层可选具体副本，choose 后 proceed 确认。Strike 标签移除包含 POMMEL_STRIKE 副本——融合打击会连抽牌引擎一起吃掉。",
     "zh_name": "熔合者"
   },
@@ -2579,8 +2579,8 @@
       "Room Full Of Cheese",
       "满屋芝士"
     ],
-    "curated": false,
-    "description": "Gorge → add card; Search → take 14 unblockable damage, gain ChosenCheese relic. Search tax paid exactly −14; ChosenCheese procs +1 Max HP after every combat victory.",
+    "curated": true,
+    "description": "Unknown-room event. Gorge → pick 2 of 8 random commons; Search → take 14 unblockable damage, gain ChosenCheese relic (+1 Max & +1 current HP per combat victory). LIVE run-40: Search taken at 43-class HP with rest at (8,5) two nodes ahead — Cheese procced every combat thereafter (max 86→94 by death).",
     "id": "ROOM_FULL_OF_CHEESE",
     "kind": "event",
     "name": "Room Full Of Cheese",
@@ -2623,7 +2623,7 @@
       }
     },
     "play_notes": "",
-    "source": "md:events.md; md:events_zh.md",
+    "source": "md:events.md; md:events_zh.md; run-40 live fold 2026-09-18",
     "zh_description": "Gorge → 加牌；Search → 受到 14 点不可格挡伤害，获得 ChosenCheese 遗物。Search 税精确 −14；天选芝士每次战斗胜利后 +1 Max HP。",
     "zh_name": "满屋芝士"
   },
@@ -2895,8 +2895,8 @@
       "Spiraling Whirlpool",
       "螺旋漩涡"
     ],
-    "curated": false,
-    "description": "ObserveTheSpiral → Enchant Spiral; Drink → heal.",
+    "curated": true,
+    "description": "Unknown-room event. Observe → enchant a basic Strike or Defend with Vortex; Drink → heal. VORTEX/螺旋 enchant = Replay 1: enchanted card plays twice automatically when played (perplexity-sourced 2026-09-18, sts2 enchantment guides). LIVE run-40: Observe → Replay-1 Defend = 5+5=10 Block for 1 energy under normal values; with Unmovable the first gain doubles 10→20-class.",
     "id": "SPIRALING_WHIRLPOOL",
     "kind": "event",
     "name": "Spiraling Whirlpool",
@@ -2957,7 +2957,7 @@
       }
     },
     "play_notes": "",
-    "source": "md:events.md; md:events_zh.md",
+    "source": "md:events.md; md:events_zh.md; run-40 live fold 2026-09-18",
     "zh_description": "ObserveTheSpiral → 附魔 Spiral；Drink → 回复。",
     "zh_name": "螺旋漩涡"
   },
@@ -3013,6 +3013,14 @@
     "source": "md:events.md; md:events_zh.md",
     "zh_description": "LetItIn → 回复 25 + 加入 Metamorphosis 卡；Rejection → 升级 + 受到 10 点伤害。LetItIn 治疗为 +25 精确（曾有一次 +45 样本——未解变异）；Metamorphosis 入牌库（已解码效果：将职业池 3 张随机攻击牌洗入抽牌堆，本场战斗免费——见 cards_zh.md 事件区 METAMORPHOSIS 条）。",
     "zh_name": "灵魂嫁接者"
+  },
+  "STEADY": {
+    "curated": true,
+    "description": "Card enchant = RETAIN: enchanted card stays in hand at end of turn instead of being discarded. Permanent modifier on that copy. Offered by Waterlogged Scriptorium TentacleQuill (55g, 1 card) / PricklySponge (99g, 2 cards). Source: perplexity 2026-09-18 (sts2.untapped.gg/enchantments/steady, spire-codex enchantments guide).",
+    "id": "STEADY",
+    "kind": "event",
+    "name": "Steady (enchant)",
+    "source": "; run-40 live fold 2026-09-18"
   },
   "STONE_OF_ALL_TIME": {
     "aliases": [
@@ -3616,8 +3624,8 @@
       "Tezcatara",
       "选项"
     ],
-    "curated": false,
-    "description": "YUMMY_COOKIE → gain relic YummyCookie and upgrade 4 cards of your choice (deck_select overlay: choose cards then proceed to confirm); STORYBOOK → add 1 Brightest Flame to your deck; SEAL_OF_GOLD → relic SealOfGold: at start of your turn, spend 5 Gold to gain 1 Energy (no effect if gold < 5; one source says 3 — 5 is the better-attested value). **Additional boon pool options**: NUTRITIOUS_SOUP → relic NutritiousSoup: on pickup enchant all Strike-tagged Basic cards with Tezcatara's Ember (Ember = **cost 0, +3 dmg, Eternal**); TOASTY_MITTENS → relic ToastyMittens: each turn before hand draw, exhaust top card of draw pile + gain 1 Strength (passive Str engine; exhaust also thins; anti-synergy with Headbutt retrieves); GOLDEN_COMPASS → relic GoldenCompass: on pickup replace the Act 2 map with a single special path; PUMPKIN_CANDLE → relic decode in relics.md (+1e/turn, extinguishes after 5 combats, KINDLE rest option — transient + rest-action tax); VERY_HOT_COCOA → +4 energy turn 1 (Lantern-stacking verified).",
+    "curated": true,
+    "description": "Act2 (and later act) start boon room. Options seen live run-40: VERY_HOT_COCOA (+4e T1 every combat), BIIIG_HUG (remove 4 cards; +1 Soot on every draw-pile shuffle), SEAL_OF_GOLD (start of turn, if ≥5g spend 5g gain 1 Energy). Archive also lists YUMMY_COOKIE (upgrade 4), STORYBOOK (add Brightest Flame), NUTRITIOUS_SOUP, TOASTY_MITTENS, GOLDEN_COMPASS, PUMPKIN_CANDLE. LIVE run-40 pick: Very Hot Cocoa — no gold tax, no curse pollution, engine-online T1 every fight.",
     "id": "TEZCATARA",
     "kind": "event",
     "name": "Tezcatara",
@@ -3795,7 +3803,7 @@
       }
     },
     "play_notes": "",
-    "source": "md:events.md; md:events_zh.md",
+    "source": "md:events.md; md:events_zh.md; run-40 live fold 2026-09-18",
     "zh_description": "YUMMY_COOKIE 美味饼干 → 获得 YummyCookie 遗物并自选升级 4 张牌（deck_select 浮层：选择后 proceed 确认）；STORYBOOK 故事书 → 向牌库加入 1 张 Brightest Flame；SEAL_OF_GOLD 黄金印 → SealOfGold 遗物：回合开始花 5 金获得 1 能量（金不足 5 时无效；一处来源写 3，5 为多源印证值）。**祝福池其余选项**：NUTRITIOUS_SOUP 营养汤 → NutritiousSoup 遗物：拾取时为所有带 Strike 标签的基础牌附魔 Tezcatara's Ember（Ember = **0 费、+3 伤害、Eternal**）；TOASTY_MITTENS 烘焙手套 → ToastyMittens 遗物：每回合抽牌前消耗抽牌堆顶牌并获得 1 力量（被动力量引擎，消耗同时瘦牌；与 Headbutt 取回反协同）；GOLDEN_COMPASS 黄金罗盘 → GoldenCompass 遗物：拾取时以一条特殊路径替换第二章地图；PUMPKIN_CANDLE 南瓜蜡烛 → 遗物解码见 relics_zh.md（+1 能/回合、5 战后熄灭、休息点 KINDLE 选项——短暂性+休息点行动税）；VERY_HOT_COCOA 烫嘴可可 → 第 1 回合 +4 能量（与灯笼叠加 8 能已验证）。",
     "zh_name": "选项"
   },
@@ -4339,6 +4347,14 @@
     "zh_description": "血染玫瑰 → BloodSoakedRose 遗物：每回合 +1 最大能量，但拾取时向牌库加入 1 张 **Enthralled**——Enthralled = 2 费诅咒、永恒、**在手时必须先于其他牌打出**（每次出现税 2 能、付清前封锁其他出牌；+1 能/回合无法对冲爆发线破坏）；原初之爪 → 拾取加 2 随机诅咒 + 3 张 Wish（诅咒代价类）；选择悖论 → 第 1 回合开始从 5 张随机卡选 1 加入手牌，这些卡均获 Retain——**语义解码：添加为带 Retain 的本战斗手牌添加，每战 T1 新五选一，非永久入牌库**。档案反编译此前缺 Vakuu 选项处理器——本解码补齐该缺口。",
     "zh_name": "荣光远古"
   },
+  "VORTEX": {
+    "curated": true,
+    "description": "Card enchant = REPLAY 1: when played, the card automatically plays one additional time in the same combat. Permanent modifier. Offered by Spiraling Whirlpool Observe on a basic Strike or Defend. Source: perplexity 2026-09-18 (sts2.untapped.gg/enchantments, spire-codex enchantments guide, sts2guides enchantment-guide).",
+    "id": "VORTEX",
+    "kind": "event",
+    "name": "Vortex / Spiral (enchant)",
+    "source": "; run-40 live fold 2026-09-18"
+  },
   "WAR_HISTORIAN_REPY": {
     "aliases": [
       "War Historian Repy",
@@ -4397,8 +4413,8 @@
       "Waterlogged Scriptorium",
       "水漫缮写室"
     ],
-    "curated": false,
-    "description": "BloodyInk → +6 Max HP; TentacleQuill → pay 55 Gold, Enchant Steady; PricklySponge → pay 99 Gold, Enchant Steady + card options.",
+    "curated": true,
+    "description": "Unknown-room event. BloodyInk → +6 Max HP (free); TentacleQuill → pay 55g, enchant 1 card Steady; PricklySponge → pay 99g, enchant 2 cards Steady. Steady enchant = Retain (card stays in hand end of turn), permanent modifier. LIVE run-40: Bloody Ink taken at 79/86 — free HP against the #1 death class; 55/99g enchants would have gutted the Shop#1 sink.",
     "id": "WATERLOGGED_SCRIPTORIUM",
     "kind": "event",
     "name": "Waterlogged Scriptorium",
@@ -4458,7 +4474,7 @@
       }
     },
     "play_notes": "",
-    "source": "md:events.md; md:events_zh.md",
+    "source": "md:events.md; md:events_zh.md; run-40 live fold 2026-09-18",
     "zh_description": "BloodyInk → +6 最大 HP；TentacleQuill → 支付 55 金币，附魔 Steady；PricklySponge → 支付 99 金币，附魔 Steady + 卡牌选项。",
     "zh_name": "水漫缮写室"
   },
@@ -4765,8 +4781,8 @@
       "Zen Weaver",
       "修禅织网者"
     ],
-    "curated": false,
-    "description": "BreathingTechniques → pay 50 Gold, **add 2 Enlightenment**; EmotionalAwareness → pay 125 Gold, **remove 1 card**; ArachnidAcupuncture → pay 250 Gold, **remove 2 cards**. Both removal options price at 125/card — worse than shop removal (75g); the event has NO leave option, one of three must be taken. ArachnidAcupuncture is gated at 250g — absent when gold is below that. Enlightenment's 0-cost \"all cards cost 1 this turn\" is anti-synergy with 0-cost engine cards (Bloodletting/Brand class) — risky on a Rupture-line deck.",
+    "curated": true,
+    "description": "Unknown-room event, NO leave option — one of three must be taken. BreathingTechniques 50g → add 2 Enlightenment; EmotionalAwareness 125g → remove 1 card; ArachnidAcupuncture 250g → remove 2 (gated, absent below 250g). Removal prices 125/card — worse than shop removal 75g. LIVE run-40: paid 125g removal (1 Strike) over 2× Enlightenment (anti-synergy with 0-cost engine cards).",
     "id": "ZEN_WEAVER",
     "kind": "event",
     "name": "Zen Weaver",
@@ -4826,7 +4842,7 @@
       }
     },
     "play_notes": "",
-    "source": "md:events.md; md:events_zh.md",
+    "source": "md:events.md; md:events_zh.md; run-40 live fold 2026-09-18",
     "zh_description": "BreathingTechniques → 支付 50 金币，**加入 2 张 Enlightenment**；EmotionalAwareness → 支付 125 金币，**移除 1 张牌**；ArachnidAcupuncture → 支付 250 金币，**移除 2 张牌**。注意：两个移除选项单价 125/张均贵于商店移除（75g）；事件无离开选项，必须三选一。ArachnidAcupuncture 有 250 金门槛——金币低于门槛时不出现。Enlightenment（启迪）0 费「手牌全部费用变 1」对 0 费引擎牌（Bloodletting/Brand 类）是反协同——Rupture 线牌库对该选项需谨慎。",
     "zh_name": "修禅织网者"
   },

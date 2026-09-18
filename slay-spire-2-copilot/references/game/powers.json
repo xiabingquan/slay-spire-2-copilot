@@ -136,6 +136,14 @@
     "zh_description": "对持有者施加的可见 Debuff 类 power 数值被置为 0，随后消耗 1 层人工制品。不可见/内部减益不被挡。",
     "zh_name": "人工制品"
   },
+  "ASLEEP": {
+    "curated": true,
+    "description": "Counter-class: owner sleeps — if owner takes unblocked damage ≠0, owner wakes (removes own Plating if any, stuns self into WakeUpMove, removes Asleep). At end of owner side turn Asleep decrements 1; at 0 wakes via WakeUpMove; when Asleep≤1 at turn end Plating is removed. LIVE runs 39+40: LagavulinMatriarch wake fired both times from small unblocked damage through Plating block (run-40: Pommel 9 + Strike 6 broke 12 block to 3 unblocked → strip+stun same turn).",
+    "id": "ASLEEP",
+    "kind": "power",
+    "name": "Asleep",
+    "source": "; run-40 live fold 2026-09-18"
+  },
   "ASLEEP_POWER": {
     "aliases": [
       "ASLEEP",
@@ -1357,21 +1365,21 @@
     "stack_type": "Counter"
   },
   "FLUTTER_POWER": {
-    "id": "FLUTTER_POWER",
-    "kind": "power",
-    "name": "Flutter",
     "aliases": [
       "FLUTTER",
       "FlutterPower"
     ],
-    "description": "Evasion stacks: incoming attack damage against the owner is heavily mitigated while stacks remain; each time the owner is hit by an attack, 1 stack is consumed (live run-39 ThievingHopper: Strike planned 15 landed 7 at FLUTTER 5, stack decremented to 4 on the hit; Pommel 15→11 at Flutter 3; Bash 21→10 at Flutter 4). Multi-hit same-command attacks consume one stack per hit instance — Whirlwind-class pierce chews Flutter fastest. Roughly half-damage mitigation at high stacks; treat as a race-window reducer, not immunity.",
-    "power_type": "Buff",
-    "stack_type": "Counter",
     "counter_class": true,
-    "host_of_affliction": false,
     "curated": true,
+    "description": "Evasion stacks: incoming attack damage against the owner is heavily mitigated while stacks remain; each time the owner is hit by an attack, 1 stack is consumed (live run-39 ThievingHopper: Strike planned 15 landed 7 at FLUTTER 5, stack decremented to 4 on the hit; Pommel 15→11 at Flutter 3; Bash 21→10 at Flutter 4). Multi-hit same-command attacks consume one stack per hit instance — Whirlwind-class pierce chews Flutter fastest. Roughly half-damage mitigation at high stacks; treat as a race-window reducer, not immunity.",
+    "host_of_affliction": false,
+    "id": "FLUTTER_POWER",
+    "kind": "power",
+    "name": "Flutter",
+    "play_notes": "run-39 live: Flutter mitigates each attack hit then decrements 1/hit. Plan kill math at ~50% damage while stacks are high; prefer multi-hit commands to burn stacks.",
+    "power_type": "Buff",
     "source": "run-39 live ThievingHopper combat math",
-    "play_notes": "run-39 live: Flutter mitigates each attack hit then decrements 1/hit. Plan kill math at ~50% damage while stacks are high; prefer multi-hit commands to burn stacks."
+    "stack_type": "Counter"
   },
   "FOCUS_POWER": {
     "aliases": [
@@ -1701,6 +1709,14 @@
     "zh_description": "持有者每回合 HP 损失上限为 Amount 减去本回合已受伤害（计数回合开始重置）。",
     "zh_name": "Hardened Shell"
   },
+  "HARD_TO_KILL": {
+    "curated": true,
+    "description": "Counter-class: owner's damage received per instance is capped at Amount HP-loss (ModifyDamageCap = Amount); excess on a hit is discarded, not banked. LIVE run-40 Exoskeleton Amount=9: Breakthrough/Inferno 9-instance hits land full value; Bludgeon 32 wastes 23 against these targets — pace multi-instance small hits, avoid single large-instance attacks.",
+    "id": "HARD_TO_KILL",
+    "kind": "power",
+    "name": "Hard To Kill",
+    "source": "; run-40 live fold 2026-09-18"
+  },
   "HARD_TO_KILL_POWER": {
     "aliases": [
       "HARD_TO_KILL",
@@ -1880,6 +1896,14 @@
     "stack_type": "Single",
     "zh_description": "死亡时保留增益（减益除非常驻类 外均移除），排入带 HealIntent 的 REVIVE_MOVE——回复至满血 （MaxHp - CurrentHp）。施加时若无 MINION_POWER 则补 1 层。复活期间 持有者不可被选中。",
     "zh_name": "幻象"
+  },
+  "IMBALANCED": {
+    "curated": true,
+    "description": "When owner's attack is FULLY blocked, owner is stunned (BowlbugRock sets IsOffBalance instead). Partial block does NOT stun. LIVE run-40: Red Mask Weak cut HEADBUTT 15→11 displayed; Blood Wall 16 ≥ 11 → STUNNED same enemy turn; trio fight cleaned inside stun windows.",
+    "id": "IMBALANCED",
+    "kind": "power",
+    "name": "Imbalanced",
+    "source": "; run-40 live fold 2026-09-18"
   },
   "IMBALANCED_POWER": {
     "aliases": [
@@ -2625,6 +2649,14 @@
     "source": "curated:powers.md inert marker group",
     "stack_type": "Counter"
   },
+  "PERSONAL_HIVE": {
+    "curated": true,
+    "description": "Whenever owner is hit by a powered ATTACK CARD, attacker gets Amount Dazed added to draw pile at random position. PHEROMONE_SPIT increments Amount + grants Strength same read. LIVE run-40: Inferno POWER damage does NOT tax Hive (Hive held :1 across Inferno ticks; tax fires only on powered attack CARD hits); zero-attack skill-only turns hold Hive dormant.",
+    "id": "PERSONAL_HIVE",
+    "kind": "power",
+    "name": "Personal Hive",
+    "source": "; run-40 live fold 2026-09-18"
+  },
   "PERSONAL_HIVE_POWER": {
     "aliases": [
       "PERSONAL_HIVE",
@@ -2906,6 +2938,14 @@
     "stack_type": "Counter",
     "zh_description": "持有者（或其宠物）造成攻击伤害 > 0 时，对目标施加 DOOM = 总伤害 × Amount。",
     "zh_name": "Reaper Form"
+  },
+  "REATTACH": {
+    "curated": true,
+    "description": "On death, if any other segment with Reattach is still alive, owner enters DEAD state (untargetable, not removed) and reattaches at end of its turn healing Amount HP. Death is fatal only when ALL other segments are dead simultaneously. LIVE run-40: same-window clear doctrine — spread damage, never solo-kill while others live (killing the last live segment revives all DEAD ones +Amount each); Inferno 9-instance ticks paced the trio; final Strike on the last 1hp live segment won the fade-out.",
+    "id": "REATTACH",
+    "kind": "power",
+    "name": "Reattach",
+    "source": "; run-40 live fold 2026-09-18"
   },
   "REATTACH_POWER": {
     "aliases": [
@@ -3296,6 +3336,14 @@
     "stack_type": "Counter",
     "zh_description": "持有者接下来 Amount 次 Power 牌 打出计为 2 次；每打出 1 张 Power 牌消耗 1 层。",
     "zh_name": "Signal Boost"
+  },
+  "SKITTISH": {
+    "curated": true,
+    "description": "If owner gained no Block this turn and took card-sourced attack damage, owner gains Amount Block (once per turn; flag resets end of opposing side turn). LIVE run-40 eel quartet: Breakthrough AllEnemies attack consumed Skittish on all four same command (each +6 after the AoE resolved); subsequent same-turn attacks dealt full damage — AoE pierce doctrine holds.",
+    "id": "SKITTISH",
+    "kind": "power",
+    "name": "Skittish",
+    "source": "; run-40 live fold 2026-09-18"
   },
   "SKITTISH_POWER": {
     "aliases": [
@@ -4126,6 +4174,14 @@
     "stack_type": "Counter",
     "zh_description": "每回合 +Amount 抽牌；持有者回合开始时 从手牌选择 Amount 张消耗（Exhaust）。",
     "zh_name": "Tyranny"
+  },
+  "UNMOVABLE": {
+    "curated": true,
+    "description": "The first Amount times you gain Block from a card each turn, double the gain. LIVE run-40 values (Amount=1 power card, doubles first 2 card-block gains/turn): Blood Wall 16→32, Evil Eye 8→16, Ultimate Defend 11→22, Shrug It Off 8→16, Armaments 5→10, Defend 5→10. Potion block is not card-sourced (Block Potion 12 stayed 12).",
+    "id": "UNMOVABLE",
+    "kind": "power",
+    "name": "Unmovable",
+    "source": "; run-40 live fold 2026-09-18"
   },
   "UNMOVABLE_POWER": {
     "aliases": [

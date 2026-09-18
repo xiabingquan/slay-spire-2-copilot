@@ -385,8 +385,8 @@
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
-    "description": "1，技能，普通，获得 5 格挡；升级一张手牌。升级：改为升级全部手牌。**战斗内升级仅限本场战斗** —— Armaments 升级的 Bloodletting 当战 +3 能量，下一战回到 +2；商店/营火 SMITH 升级（Rupture+）正常跨战保留。不可把 Armaments 升级规划为永久牌库价值。",
+    "curated": true,
+    "description": "1费技能，获得5格挡；升级手牌中一张牌（仅战斗内——战斗后还原）。升级：改为升级全部手牌。覆盖层：先 choose(index) 再 proceed。对局40 live：Unmovable 把5翻倍至10；用于蜂群术士零攻击线与通用10挡填充。",
     "id": "ARMAMENTS",
     "keywords": [],
     "kind": "card",
@@ -394,7 +394,7 @@
     "needs_zh": false,
     "play_notes": "",
     "rarity": "common",
-    "source": "md:cards.md:L19; md:cards_zh.md",
+    "source": "md:cards.md:L19; md:cards_zh.md; run-40 live fold 2026-09-18",
     "target_type": null,
     "upgrade": "instead upgrades ALL cards in your hand. **In-combat upgrades are combat-scoped only** — Bloodletting upgraded via Armaments gave +3 Energy that combat but reverted to +2 the next; a shop/rest SMITH upgrade (Rupture+) persisted normally. Do not plan Armaments upgrades as permanent deck value."
   },
@@ -3268,21 +3268,21 @@
     "upgrade": "removes Exhaust."
   },
   "DEMON_FORM": {
-    "id": "DEMON_FORM",
-    "kind": "card",
-    "name": "恶魔形态",
     "aliases": [
       "DemonForm"
     ],
-    "cost": "3",
     "card_type": "power",
-    "rarity": "rare",
-    "target_type": "Self",
     "character_pool": "IRONCLAD",
-    "description": "回合开始时获得 2 力量。升级待 codex 补全。run-39 live：草蜢逃跑钟战 T1 投入——5 回合内力量 2→8，在 ESCAPE_ARTIST 窗口内收掉 79hp；与 Rupture/Inferno 自伤泵叠加形成每回合+3 级成长。",
+    "cost": "3",
     "curated": true,
+    "description": "回合开始时获得 2 力量。升级待 codex 补全。run-39 live：草蜢逃跑钟战 T1 投入——5 回合内力量 2→8，在 ESCAPE_ARTIST 窗口内收掉 79hp；与 Rupture/Inferno 自伤泵叠加形成每回合+3 级成长。",
+    "id": "DEMON_FORM",
+    "kind": "card",
+    "name": "恶魔形态",
+    "play_notes": "run-39 live：3 费铺场换每回合开始+2 力量；与 Rupture 引擎复利是 Act2+ 竞速主脊。对逃跑计时敌，T1 Demon Form+后续手牌赢下 5 回合竞速。",
+    "rarity": "rare",
     "source": "codex-api + run-39 live 草蜢竞速",
-    "play_notes": "run-39 live：3 费铺场换每回合开始+2 力量；与 Rupture 引擎复利是 Act2+ 竞速主脊。对逃跑计时敌，T1 Demon Form+后续手牌赢下 5 回合竞速。"
+    "target_type": "Self"
   },
   "DEVASTATE": {
     "aliases": [
@@ -3824,8 +3824,8 @@
     "card_type": "skill",
     "character_pool": "EVENT",
     "cost": "0",
-    "curated": false,
-    "description": "0，技能，事件，消耗，本回合手牌全部费用为 1。升级：本场战斗费用为 1（仅降低）。基础效果与 0 费引擎牌反协同（Bloodletting/Brand 当回合被抬到 1 费）—— Rupture 线 IRONCLAD 牌库应对本牌与禅织者呼吸技法（50g +2 张）保持警惕。",
+    "curated": true,
+    "description": "事件牌（修禅织网者「呼吸技法」50金加入2张）。0费技能 消耗：本回合手牌所有牌费用变为1。升级：本战斗内费用1（仅降低）。反协同：会把 0 费引擎牌（怨恨/放血类）当回合抬到 1 费。对局40 live：基于此在修禅织网者拒绝，改走 125 金删除路线。",
     "id": "ENLIGHTENMENT",
     "keywords": [
       "Exhaust"
@@ -3835,7 +3835,7 @@
     "needs_zh": false,
     "play_notes": "",
     "rarity": "event",
-    "source": "md:cards.md:L547; md:cards_zh.md",
+    "source": "md:cards.md:L547; md:cards_zh.md; run-40 live fold 2026-09-18",
     "target_type": null,
     "upgrade": "cards cost 1 this combat (reduce-only). Base effect is ANTI-synergy with 0-cost engine cards (Bloodletting/Brand get raised to 1 cost that turn) — a Rupture-line IRONCLAD deck should treat this card and ZenWeaver BreathingTechniques (50g, +2 copies) with caution for that reason."
   },
@@ -4257,21 +4257,21 @@
     "upgrade": "+2 Strength."
   },
   "FEEL_NO_PAIN": {
-    "id": "FEEL_NO_PAIN",
-    "kind": "card",
-    "name": "无痛",
     "aliases": [
       "FeelNoPain"
     ],
-    "cost": "1",
     "card_type": "power",
-    "rarity": "uncommon",
-    "target_type": "Self",
     "character_pool": "IRONCLAD",
-    "description": "每当有牌被消耗，获得 3 挡。run-39 live：碗虫战奖励入手；牌库带颤栗/MoltenFist/契约/仪式消耗密度——每次消耗在卡牌自身效果之上再付 3 挡。run-23 胜局包（FNP+SecondWind+契约+TrueGrit）挡引擎同类。",
+    "cost": "1",
     "curated": true,
+    "description": "每当有牌被消耗，获得 3 挡。run-39 live：碗虫战奖励入手；牌库带颤栗/MoltenFist/契约/仪式消耗密度——每次消耗在卡牌自身效果之上再付 3 挡。run-23 胜局包（FNP+SecondWind+契约+TrueGrit）挡引擎同类。",
+    "id": "FEEL_NO_PAIN",
+    "kind": "card",
+    "name": "无痛",
+    "play_notes": "run-39：消耗包挡引擎件——颤栗/MoltenFist/契约的消耗各+3挡；与仪式（消耗触发回能）同回合联动。",
+    "rarity": "uncommon",
     "source": "codex-api + run-39 入手",
-    "play_notes": "run-39：消耗包挡引擎件——颤栗/MoltenFist/契约的消耗各+3挡；与仪式（消耗触发回能）同回合联动。"
+    "target_type": "Self"
   },
   "FERAL": {
     "aliases": [
@@ -4346,16 +4346,16 @@
     "card_type": "attack",
     "character_pool": "IRONCLAD",
     "cost": "2",
-    "curated": false,
-    "description": "2，攻击，罕见，造成 5 点伤害 ×2；你获得 3 力量，敌人获得 1 力量。升级：伤害 +1、力量 +1。",
+    "curated": true,
+    "description": "2费攻击，造成5点伤害两次；获得3力量；目标敌人获得1力量。升级+1伤+1力量。经浩劫打出时被消耗（战斗内）。对局40 live：自身+3力量在 powers 中确认；敌人+1力量税在红面具弱化+Unmovable 挡包下可接受。",
     "id": "FIGHT_ME",
     "keywords": [],
     "kind": "card",
-    "name": "与我一战！",
+    "name": "与我一战",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "uncommon",
-    "source": "md:cards.md:L52; md:cards_zh.md",
+    "source": "md:cards.md:L52; md:cards_zh.md; run-40 live fold 2026-09-18",
     "target_type": null,
     "upgrade": "+1 damage, +1 Strength."
   },
@@ -4474,8 +4474,8 @@
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "2",
-    "curated": false,
-    "description": "2，技能，罕见，获得 12 格挡；本回合受攻击时反伤 4 点。升级：格挡 +4、反伤 6。",
+    "curated": true,
+    "description": "2费技能，获得12格挡；本回合受攻击时反伤4点。升级+4挡、反伤+6。对局40 live：Unmovable 把12翻倍至24；反伤为攻击类回馈（与尖刺力量分离）。",
     "id": "FLAME_BARRIER",
     "keywords": [],
     "kind": "card",
@@ -4483,7 +4483,7 @@
     "needs_zh": false,
     "play_notes": "",
     "rarity": "uncommon",
-    "source": "md:cards.md:L53; md:cards_zh.md",
+    "source": "md:cards.md:L53; md:cards_zh.md; run-40 live fold 2026-09-18",
     "target_type": null,
     "upgrade": "+4 Block, +6 damage back."
   },
@@ -7212,7 +7212,7 @@
     "character_pool": "IRONCLAD",
     "cost": "1",
     "curated": true,
-    "description": "消耗，造成 10 点伤害；施加等同目标当前易伤层数的易伤（翻倍）。升级：+4 伤害。run-38 实时：对 Vuln-2 目标造成 15（10×1.5）且层数翻至 4；Vuln-4 时 15 伤 + 层数继续叠加（实时 Bash→MoltenFist 序列显示 2→4→6）。对 0 层易伤目标施加 0 且不消耗敌方 Artifact。顺序教条：先 Bash/Tremble，后熔岩拳——价值在翻倍而非那 10 点。",
+    "description": "1费攻击 消耗，造成10点伤害；使目标当前易伤层数翻倍（延长持续时间，并非 ×1.5 乘区翻倍）。升级+4伤。对局38+40 live：对易伤2目标命中15级（10×1.5）且层数翻倍2→4；0层易伤时施加0且不消耗敌方人工制品。顺序教条：重击/颤栗/升龙拳在先，熔融之拳在后——价值在于层数翻倍。",
     "id": "MOLTEN_FIST",
     "keywords": [
       "Exhaust"
@@ -7222,7 +7222,7 @@
     "needs_zh": false,
     "play_notes": "",
     "rarity": "common",
-    "source": "md:cards.md:L68; md:cards_zh.md",
+    "source": "md:cards.md:L68; md:cards_zh.md; run-40 live fold 2026-09-18",
     "target_type": null,
     "upgrade": "+4 damage. On a target with 0 Vulnerable stacks it applies 0 Vuln (doubles zero) AND does not consume an enemy Artifact stack — no debuff event is generated at 0 stacks (an Artifact 2 stack stays 2). Value is wasted on un-Vulned/Artifact targets: apply Vuln first (Bash/Thunderclap), MoltenFist after.",
     "zh_description": "消耗，造成 10 点伤害；施加等同目标当前易伤层数的易伤（翻倍）。升级：+4 伤害。run-38 实时：对 Vuln-2 目标造成 15（10×1.5）且层数翻至 4；Vuln-4 时 15 伤 + 层数继续叠加（实时 Bash→MoltenFist 序列显示 2→4→6）。对 0 层易伤目标施加 0 且不消耗敌方 Artifact。顺序教条：先 Bash/Tremble，后熔岩拳——价值在翻倍而非那 10 点。"
@@ -10415,8 +10415,8 @@
     "card_type": "attack",
     "character_pool": "IRONCLAD",
     "cost": "0",
-    "curated": false,
-    "description": "0，攻击，罕见，造成 5 点伤害；本回合失去过 HP 时命中 2 次。升级：3 次。",
+    "curated": true,
+    "description": "0费攻击，造成5点伤害；本回合若失去过HP则攻击2次（10）。升级3次。对局40 触发探测：血墙打出阶段自伤（−2HP）同回合双击成立；仅狱火回合初 tick（−1HP）先行时不成立——条件折叠为「同回合玩家阶段 HP 损失」，待进一步探测。HardToKill/易惊交互：每次 hit 为独立伤害实例。",
     "id": "SPITE",
     "keywords": [],
     "kind": "card",
@@ -10424,7 +10424,7 @@
     "needs_zh": false,
     "play_notes": "",
     "rarity": "uncommon",
-    "source": "md:cards.md:L84; md:cards_zh.md",
+    "source": "md:cards.md:L84; md:cards_zh.md; run-40 live fold 2026-09-18",
     "target_type": null,
     "upgrade": "3 hits."
   },
@@ -11890,18 +11890,18 @@
     "card_type": "skill",
     "character_pool": "COLORLESS",
     "cost": "1",
-    "curated": false,
-    "description": "1，技能，罕见，防御标签，获得 11 格挡。升级：格挡 +4。",
+    "curated": true,
+    "description": "防御标签，1费，获得11格挡。升级+4格挡。熔合者「融合防御」事件牌（删2张防御加入本牌）。对局40 live：Unmovable 把 11 翻倍至 22——挡包中最强单卡；蜂群术士 T1（零攻击线）与千足虫 T6（2HP 存活）均使用。",
     "id": "ULTIMATE_DEFEND",
     "keywords": [
       "Defend-tagged"
     ],
     "kind": "card",
-    "name": "终极防御",
+    "name": "究极防御",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "uncommon",
-    "source": "md:cards.md:L533; md:cards_zh.md",
+    "source": "md:cards.md:L533; md:cards_zh.md; run-40 live fold 2026-09-18",
     "target_type": null,
     "upgrade": "+4 Block."
   },
@@ -12041,16 +12041,16 @@
     "card_type": "attack",
     "character_pool": "IRONCLAD",
     "cost": "2",
-    "curated": false,
-    "description": "2，攻击，罕见，造成 13 点伤害；施加 1 层虚弱与 1 层易伤。升级：各施加 2 层。配合 UnsettlingLamp 时 Uppercut+ 作为战斗首张 debuff 牌施加 **4 虚弱/4 易伤**（2/2 基础翻倍）——Lamp+Uppercut+ 是有该遗物时 Boss/精英窗的首选开局件。",
+    "curated": true,
+    "description": "2费攻击，造成13点伤害；施加1层弱化与1层易伤。升级施加2/2。对局40 live：Act2 Shop#1 买入作为精英/Boss debuff 包；弱化按 hit 削减多段意图（蜜蜂 3x7→2x7 级），易伤喂养重锤 48 级窗口。",
     "id": "UPPERCUT",
     "keywords": [],
     "kind": "card",
-    "name": "上勾拳",
+    "name": "升龙拳",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "uncommon",
-    "source": "md:cards.md:L101; md:cards_zh.md",
+    "source": "md:cards.md:L101; md:cards_zh.md; run-40 live fold 2026-09-18",
     "target_type": null,
     "upgrade": "applies 2 Weak and 2 Vulnerable. With UnsettlingLamp, Uppercut+ as the combat's first debuff card applies **4 Weak / 4 Vulnerable** (2/2 base doubled) — Lamp+Uppercut+ is the premier opener for boss/elite windows when that relic is in play."
   },

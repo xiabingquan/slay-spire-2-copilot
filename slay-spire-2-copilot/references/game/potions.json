@@ -83,8 +83,8 @@
       "Block Potion",
       "BlockPotion"
     ],
-    "curated": false,
-    "description": "Gain 12 Block.",
+    "curated": true,
+    "description": "Gain 12 Block on use. Uncommon-class reserve potion for lethal-intent turns and boss gates. LIVE run-40: consumed Decimillipede T4 — 12 + Evil Eye 16 (Unmovable-doubled) = 28 vs 32 incoming at 34 HP. Potion-sourced block does NOT double with Unmovable (card-block only).",
     "display_name": "Block Potion",
     "id": "BLOCK_POTION",
     "kind": "potion",
@@ -92,7 +92,7 @@
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:potions.md:L18; md:potions_zh.md:L18; codex:potions/BLOCK_POTION",
+    "source": "md:potions.md:L18; md:potions_zh.md:L18; codex:potions/BLOCK_POTION; run-40 live fold 2026-09-18",
     "target": "any player",
     "usage": "combat",
     "zh_description": "获得 12 格挡。",
@@ -986,8 +986,8 @@
       "Regen Potion",
       "RegenPotion"
     ],
-    "curated": false,
-    "description": "Gain 5 Regen.",
+    "curated": true,
+    "description": "Gain 5 Regen on use (heal 5 at start of each of your turns, stacks decrement). Uncommon. LIVE run-40: held on belt through Act2 as the HP-rail reserve; not spent — died with it at Entomancer.",
     "display_name": "Regen Potion",
     "id": "REGEN_POTION",
     "kind": "potion",
@@ -995,7 +995,7 @@
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L63; md:potions_zh.md:L63; codex:potions/REGEN_POTION",
+    "source": "md:potions.md:L63; md:potions_zh.md:L63; codex:potions/REGEN_POTION; run-40 live fold 2026-09-18",
     "target": "any player",
     "usage": "combat",
     "zh_description": "+5 层再生（Regen）。",
@@ -1047,7 +1047,7 @@
       "SkillPotion"
     ],
     "curated": true,
-    "description": "Choose 1 of 3 distinct Skill cards from your character card pool (may skip); add to hand, free this turn. LIVE run-38: card_choice overlay offered IMPERVOUS/TRUE_GRIT/PRIMAL_FORCE; picked Impervious — free +30 Block walled elite SWOOP 19 at HP 24 on a zero-Defend hand. Lethal-intent potion: spend when incoming exceeds hand block ceiling.",
+    "description": "Choose 1 of 3 distinct Skill cards from your character card pool (may skip); add to hand, free this turn. Common. LIVE runs 38+40: run-38 picked Impervious (+30 block) vs elite SWOOP; run-40 card_choice offered SHRUG_IT_OFF / ONE_TWO_PUNCH / PRIMAL_FORCE — picked Shrug It Off (0-cost that turn, Unmovable doubled 8→16) vs Entomancer bees. Lethal-intent potion: spend when incoming exceeds hand block ceiling.",
     "display_name": "Skill Potion",
     "id": "SKILL_POTION",
     "kind": "potion",
@@ -1055,7 +1055,7 @@
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:potions.md:L66; md:potions_zh.md:L66",
+    "source": "md:potions.md:L66; md:potions_zh.md:L66; run-40 live fold 2026-09-18",
     "target": "self",
     "usage": "combat",
     "zh_description": "从你的角色卡池 3 张不同技能牌中选 1（可跳过）；加入手牌，本回合免费。run-38 实时：card_choice 覆盖层给出 IMPERVOUS/TRUE_GRIT/PRIMAL_FORCE；选 Impervious——免费 +30 挡在 HP 24、零防御手牌的回合挡下精英 SWOOP 19。致命意图药水：当来袭超过手牌挡上限时使用。",
@@ -1121,6 +1121,21 @@
     "usage": "combat",
     "zh_description": "获得 SpeedPotionPower +5 敏捷——本回合结束时失去 5 敏捷（临时敏捷）。",
     "zh_name": "速度药水"
+  },
+  "STABLE": {
+    "aliases": [
+      "Stable Serum",
+      "STABLE_SERUM"
+    ],
+    "curated": true,
+    "description": "Stable Serum: Retain your Hand for 2 turns (cards stay in hand end of turn). Uncommon. LIVE run-40: held as belt reserve through Act2; retain does not add block — not a lethal-intent answer by itself.",
+    "id": "STABLE",
+    "kind": "potion",
+    "name": "Stable Serum",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "codex-api:/potions/STABLE_SERUM"
   },
   "STABLE_SERUM": {
     "aliases": [

@@ -756,61 +756,101 @@
     "zh_name": "巨斧机器人"
   },
   "BOWLBUG_EGG": {
-    "id": "BOWLBUG_EGG",
-    "kind": "monster",
-    "name": "Bowlbug (Egg)",
+    "acts": [
+      "Act2"
+    ],
     "aliases": [
       "BowlbugEgg",
       "盛碗虫（卵）"
     ],
-    "is_boss": false,
-    "acts": [
-      "Act2"
-    ],
-    "hp": {
-      "base": 21,
-      "notes": "live run-39 21/21; codex 21-22 (A 23-24)",
-      "ascension": {
-        "min": 23,
-        "max": 24
-      }
-    },
-    "description": "Act2 pair add with BowlbugRock. Single-move cycle BITE (attack 7 + self block 7; A:8). Kill-first target in the pair — 7/turn tax compounds with Rock's 15. Run-39: Strikes ground it to 9hp T1, cleaned in Rock's IMBALANCED stun window T3.",
+    "curated": true,
     "cycle": [
       "BITE_MOVE"
     ],
-    "curated": true,
-    "source": "codex-api + run-39 live",
-    "play_notes": "run-39 live: BITE = 7 dmg + 7 self-block each turn; kill inside the Rock stun window for zero-counterpay cleanup."
+    "description": "Act2 add, 22 HP live run-40 (A 23-24). Single move BITE: attack 7 + self 7 Block. Kill-first in the pair/trio — 7/turn tax compounds. LIVE run-40: cleaned inside the Rock IMBALANCED stun window T1-T2.",
+    "hp": {
+      "ascension": {
+        "max": 24,
+        "min": 23
+      },
+      "base": 21,
+      "notes": "live run-39 21/21; codex 21-22 (A 23-24)"
+    },
+    "id": "BOWLBUG_EGG",
+    "is_boss": false,
+    "kind": "monster",
+    "name": "Bowlbug (Egg)",
+    "play_notes": "run-39 live: BITE = 7 dmg + 7 self-block each turn; kill inside the Rock stun window for zero-counterpay cleanup.",
+    "source": "codex-api + run-39 live; run-40 live fold 2026-09-18"
   },
   "BOWLBUG_ROCK": {
-    "id": "BOWLBUG_ROCK",
-    "kind": "monster",
-    "name": "Bowlbug (Rock)",
+    "acts": [
+      "Act2"
+    ],
     "aliases": [
       "BowlbugRock",
       "盛碗虫（石）"
     ],
-    "is_boss": false,
-    "acts": [
-      "Act2"
-    ],
-    "hp": {
-      "base": 45,
-      "notes": "live run-39 45/45; codex 45-48 (A 46-49)",
-      "ascension": {
-        "min": 46,
-        "max": 49
-      }
-    },
-    "description": "Act2 pair fight with BowlbugEgg. IMBALANCED:1 — when owner's attack is FULLY blocked, owner stunned (run-39 live: Blood Wall 16 ≥ HEADBUTT 15 → STUNNED same enemy turn). Cycle HEADBUTT(15 A:16)→POST_HEADBUTT/DIZZY. Full-block doctrine: 15+ block on its attack turns = free stun window; partial block does NOT stun. Run-39: stun window T3 cleaned Egg + dumped; Rock killed T5 9=9 exact after Dex-Potion block math (14 vs 15, one short of second stun).",
+    "curated": true,
     "cycle": [
       "HEADBUTT_MOVE",
       "POST_HEADBUTT"
     ],
+    "description": "Act2, 48 HP live run-40 (A 46-49). IMBALANCED:1 — when owner's attack is FULLY blocked, owner stunned. HEADBUTT 15 base (live run-40 at A1: 11 displayed after Red Mask Weak1; Str stacks raise it). Doctrine: Blood Wall 16-class block on its attack turns = free stun window; partial block does NOT stun. LIVE run-40: stun fired T1 (BW 16 ≥ Weak-cut 11), trio cleared T4.",
+    "hp": {
+      "ascension": {
+        "max": 49,
+        "min": 46
+      },
+      "base": 45,
+      "notes": "live run-39 45/45; codex 45-48 (A 46-49)"
+    },
+    "id": "BOWLBUG_ROCK",
+    "is_boss": false,
+    "kind": "monster",
+    "name": "Bowlbug (Rock)",
+    "play_notes": "run-39 live: IMBALANCED full-block stun fires only at ≥incoming block (15 for HEADBUTT); BloodWall 16-class cards are the doctrine instrument. Pair-kill order: clean Egg in the stun window, then race Rock.",
+    "source": "codex-api + run-39 live IMBALANCED stun; run-40 live fold 2026-09-18"
+  },
+  "BOWLBUG_SILK": {
+    "acts": [],
+    "aliases": [
+      "Bowlbug (Silk)"
+    ],
     "curated": true,
-    "source": "codex-api + run-39 live IMBALANCED stun",
-    "play_notes": "run-39 live: IMBALANCED full-block stun fires only at ≥incoming block (15 for HEADBUTT); BloodWall 16-class cards are the doctrine instrument. Pair-kill order: clean Egg in the stun window, then race Rock."
+    "cycle": [
+      "THRASH_MOVE",
+      "TOXIC_SPIT_MOVE"
+    ],
+    "description": "Act2 normal, 42 HP live run-40 (codex 40-43, A 41-44). Cycle THRASH (multi 4x2) → TOXIC_SPIT (debuff Weak 1 on player). Fights alongside BowlbugRock and BowlbugEgg as a trio. Kill order: Egg first in Rock stun windows.",
+    "hp": {
+      "ascension": {
+        "max": 44,
+        "min": 41
+      },
+      "base": 40,
+      "max": 43,
+      "notes": ""
+    },
+    "id": "BOWLBUG_SILK",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "THRASH_MOVE": {
+        "description": "multi attack 4x2 (A:5 per hit) — silk-class Bowlbug cycle move 1; live run-40 4x2 displayed.",
+        "name": "Thrash"
+      },
+      "TOXIC_SPIT_MOVE": {
+        "description": "debuff move — applies Weak 1 to the player; silk-class Bowlbug cycle move 2; live run-40.",
+        "name": "Toxic Spit"
+      }
+    },
+    "name": "Bowlbug (Silk)",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/BOWLBUG_SILK; run-40 live fold 2026-09-18",
+    "type": "Normal"
   },
   "BattleFriendV1": {
     "acts": [],
@@ -3847,6 +3887,14 @@
     },
     "zh_name": "立柱构造体"
   },
+  "DECIMILLIPEDE": {
+    "curated": true,
+    "description": "Act2 Elite trio (Front/Middle/Back segments, 44/42/46 live run-40; A slightly higher). REATTACH:25 each — segment dying while another is alive enters DEAD (untargetable), reattaches +25 at end of its turn; when ALL are dead simultaneously they fade out permanently. Same-window mass-kill is the only win: killing the last live segment revives all DEAD ones +25 each. Never aim at 0-HP DEAD segments. Moves: WRITHE multi 5x2, CONSTRICT single 8 + player Constrict 3 (end-of-player-turn unblocked damage/stack, stacks +3 per cast, removed when applier dies), BULK single 6 + self +2 Str. LIVE run-40 T7 clear: Inferno+9 tick 9-instance/turn pressured all three; T6 all at 4/0/10 with player 2 HP held by 32-class Unmovable block; T7 tick killed one, Strike closed the last live segment while another was already DEAD → fade-out win at 8/95.",
+    "id": "DECIMILLIPEDE",
+    "kind": "monster",
+    "name": "Decimillipede",
+    "source": "; run-40 live fold 2026-09-18"
+  },
   "DEFECT": {
     "acts": [],
     "aliases": [
@@ -5011,6 +5059,22 @@
     },
     "zh_name": "精英"
   },
+  "ENTOMANCER": {
+    "curated": true,
+    "description": "Act2 Elite. 145 HP (A:155). Cycle PHEROMONE_SPIT→BEES→SPEAR. PERSONAL_HIVE:1 — each powered-attack CARD that hits adds 1 Dazed per Hive stack to the attacker draw pile; Inferno-class POWER damage does NOT tax Hive. PHEROMONE_SPIT: Hive +1 AND +1 Strength (bees 3x7→4x7→5x7). BEES multi 3x7 (per-hit scales with Str; Weak cuts PER-HIT: Red Mask Weak1 → 2x7 displayed). SPEAR single 18 (A:20). Kill-before-buff-turn doctrine. LIVE run-40: entered 8/95 — T1 zero-attack skill line (Unmovable+UltimateDefend+BloodWall+Armaments=43 block) full-blocked Weak-cut bees 2x7 and held Hive at :1; T4 bees 4x7=28 vs 21-block hand ceiling at 6 HP = death, boss left 117/145. Counter-class: HP-economy entry gate ≥50 HP or BlockPotion-class reserve.",
+    "id": "ENTOMANCER",
+    "kind": "monster",
+    "name": "Entomancer",
+    "source": "; run-40 live fold 2026-09-18"
+  },
+  "EXOSKELETON": {
+    "curated": true,
+    "description": "Act2 normal, 24-28 HP (A 25-29); run-40 saw triples 25-28 and a quartet 24-28. HARD_TO_KILL:9 — damage received per instance capped at 9 HP-loss, excess discarded (not banked). Pacing doctrine: Inferno/Breakthrough-class 9-instance hits land full value; Bludgeon 32 wastes 23. Moves: SKITTER multi 1x3, MANDIBLES single 8 (A:9), ENRAGE buff +2 Str. LIVE run-40: Red Mask Weak cut Skitter 1x3→0x3 and Mandibles 8→6; cleared by Breakthrough/Inferno 9-instance pacing + focused Strikes.",
+    "id": "EXOSKELETON",
+    "kind": "monster",
+    "name": "Exoskeleton",
+    "source": "; run-40 live fold 2026-09-18"
+  },
   "Entomancer": {
     "acts": [],
     "aliases": [
@@ -5558,51 +5622,51 @@
     "zh_name": "由雾菇召唤"
   },
   "FOSSIL_STALKER": {
-    "id": "FOSSIL_STALKER",
-    "kind": "monster",
-    "name": "Fossil Stalker",
+    "acts": [
+      "Act1"
+    ],
     "aliases": [
       "FossilStalker",
       "化石追踪者"
     ],
-    "is_boss": false,
-    "acts": [
-      "Act1"
-    ],
-    "hp": {
-      "base": 52,
-      "notes": "live run-39 52/52; codex A 54-56",
-      "ascension": {
-        "min": 54,
-        "max": 56
-      }
-    },
-    "description": "Act1 SUCK-race fight. SUCK_POWER:3 curated doctrine: after owner's powered attack deals unblocked damage, owner gains +3 Strength per successful hit instance; FULL-BLOCK attack-intent turns keep SUCK dormant — blocking attack turns prevents the Strength ramp. Random-cannot-repeat cycle live: LATCH(12 A:14) / TACKLE(3 A:4) / LASH(7-class, Str-scaled live 7→9[base7]). Run-39: T1 could not kill (hand max 18 < 52) so accepted one +3 Str tax on an unblocked LATCH turn; T2 Hemo 22 + Pommel 13 exact-kill line (35 = remaining HP) closed before further SUCK stacks.",
+    "curated": true,
     "cycle": [
       "LATCH_MOVE",
       "TACKLE_MOVE",
       "LASH_MOVE"
     ],
+    "description": "Act1 SUCK-race fight, 53 HP live run-40 (codex A 54-56). SUCK_POWER:3 — after OWNER's powered attack deals unblocked damage, owner gains +3 Str per hit instance; full-block attack-intent turns keep SUCK dormant. LIVE run-40 correction: player's Inferno POWER damage does NOT trigger SUCK (only the stalker's own attack hits do). Random cycle LATCH 12 / TACKLE 3 (+debuff live) / LASH 7-class. LIVE run-40: T1 Blood Wall 16 fully blocked LATCH 12 → SUCK dormant; T2 Breakthrough+Inferno+Strikes race; T5 Inferno tick killed at fight start.",
+    "hp": {
+      "ascension": {
+        "max": 56,
+        "min": 54
+      },
+      "base": 52,
+      "notes": "live run-39 52/52; codex A 54-56"
+    },
+    "id": "FOSSIL_STALKER",
+    "is_boss": false,
+    "kind": "monster",
     "moves": {
+      "LASH_MOVE": {
+        "base_damage": 7,
+        "description": "single 7-class attack; live 7→9[base7] as Str stacks grow",
+        "name": "Lash"
+      },
       "LATCH_MOVE": {
-        "name": "Latch",
+        "base_damage": 12,
         "description": "single attack 12 (live run-39 atk:12; codex A:14)",
-        "base_damage": 12
+        "name": "Latch"
       },
       "TACKLE_MOVE": {
-        "name": "Tackle",
+        "base_damage": 3,
         "description": "single attack 3 (A:4)",
-        "base_damage": 3
-      },
-      "LASH_MOVE": {
-        "name": "Lash",
-        "description": "single 7-class attack; live 7→9[base7] as Str stacks grow",
-        "base_damage": 7
+        "name": "Tackle"
       }
     },
-    "curated": true,
-    "source": "codex-api + run-39 live T2 kill + powers SUCK doctrine",
-    "play_notes": "run-39 live: SUCK +3 Str/instance on unblocked attack hits; full-block attack turns = dormancy. Race doctrine: kill inside 2 turns or block every attack intent."
+    "name": "Fossil Stalker",
+    "play_notes": "run-39 live: SUCK +3 Str/instance on unblocked attack hits; full-block attack turns = dormancy. Race doctrine: kill inside 2 turns or block every attack intent.",
+    "source": "codex-api + run-39 live T2 kill + powers SUCK doctrine; run-40 live fold 2026-09-18"
   },
   "FatGremlin": {
     "acts": [
@@ -6742,6 +6806,33 @@
     "source": "md:monsters.md:L165",
     "zh_description": "地精佣兵：THIEVERY_POWER 每回合偷取玩家 20 金；死亡时 SurprisePower 生成卑鄙地精（11 HP）+ 胖地精（17 HP），两者携带 HEIST_POWER、意图 Escape，1 HP 逃脱无奖励。死后假人模式：999999999 HP + Stun 意图，EXPLODE 死亡打击约 51 基础 / A1 36（可用格挡吃下；EXPLODE 后战斗结束）。",
     "zh_name": "地精佣兵"
+  },
+  "HAUNTED_SHIP": {
+    "acts": [
+      "Act1"
+    ],
+    "aliases": [
+      "HauntedShip",
+      "幽灵船",
+      "GHOST_SHIP"
+    ],
+    "curated": true,
+    "cycle": [
+      "HAUNT_MOVE",
+      "SWIPE_MOVE",
+      "STOMP_MOVE"
+    ],
+    "description": "Act1 (13,2)-class fight. Cycle HAUNT→SWIPE→STOMP. HAUNT: Weak 3 + inject 5 Dazed (unplayable Ethereal status cards) — no damage turn, free setup window. SWIPE: attack 8 + self +1 Str (live intent can show higher with Str). STOMP: multi 4x3-class live (archive base 3x3; run-39 live multi:4x3=12). Attack-Potion free Uppercut (13+Weak1+Vuln1) enabled run-39's T3 Bash+Hemo kill before STOMP fired.",
+    "hp": {
+      "base": 63,
+      "notes": "live run-39 63/63"
+    },
+    "id": "HAUNTED_SHIP",
+    "is_boss": false,
+    "kind": "monster",
+    "name": "Haunted Ship",
+    "play_notes": "run-39 live: HAUNT = free window (debuff only); dump damage there. STOMP 12-class incoming on T3 — kill or full-block before it. Dazed cards are Ethereal (vanish EoT) — deck pollution is turn-scoped.",
+    "source": "run-39 live T3 kill + codex move fragments"
   },
   "HauntedShip": {
     "acts": [],
@@ -8029,26 +8120,14 @@
     "zh_name": "知识恶魔"
   },
   "LAGAVULIN_MATRIARCH": {
-    "id": "LAGAVULIN_MATRIARCH",
-    "kind": "monster",
-    "name": "Lagavulin Matriarch",
+    "acts": [
+      "Act1"
+    ],
     "aliases": [
       "LagavulinMatriarch",
       "乐加维林族母"
     ],
-    "is_boss": true,
-    "acts": [
-      "Act1"
-    ],
-    "hp": {
-      "base": 222,
-      "notes": "live run-39 222/222; codex A-range 233+",
-      "ascension": {
-        "min": 233,
-        "max": null
-      }
-    },
-    "description": "Act1 Boss. Cycle SLEEP→SLASH(19)→SLASH2(12+12block)→DISEMBOWEL(9x2)→SOUL_SIPHON(debuff+buff; player Dex-2, boss Str+2). Opens ASLEEP:3 + PLATING:12 + block 12. KILL WINDOW (curated doctrine, live run-39 T9 kill): any unblocked damage ≠ 0 wakes it — strips ALL Plating, stuns self into WakeUpMove, removes Asleep; Asleep also ticks down each enemy turn (wake at 0, Plating pre-removed at ≤1). Wake immediately on attack-heavy hands: run-39 Hemo 15−12block=3 unblocked woke+stripped+stunned same turn, then free-window dumped; strength engine (Rupture/Inferno) snowballed Str 1→7 across the 9-turn kill. SOUL_SIPHON is debuff+buff class (no attack damage) — free window for burst. Colossus halves attack intents while boss is Vuln'd (SLASH 19→9 live).",
+    "curated": true,
     "cycle": [
       "SLEEP_MOVE",
       "SLASH_MOVE",
@@ -8056,62 +8135,74 @@
       "DISEMBOWEL_MOVE",
       "SOUL_SIPHON_MOVE"
     ],
+    "description": "Act1 Boss, 222 HP (A 233+). Opens ASLEEP:3 + PLATING:12 + 12 Block. Cycle SLEEP→SLASH 19→SLASH2 (12 dmg + self 12 Block)→DISEMBOWEL 9x2→SOUL_SIPHON. Wake doctrine (live runs 39 T9 + 40 T8): any unblocked damage ≠0 strips ALL Plating, stuns self into WakeUpMove, removes Asleep; Asleep also ticks down each enemy turn (wake at 0, Plating pre-removed at ≤1). SOUL_SIPHON LIVE run-40 correction: applies player Strength −2 AND Dexterity −2 (archive said Dex only) + boss Strength +2; no attack damage — free window. LIVE run-40 T8 kill: T1 Pommel 9 + Strike 6 broke 12 Plating block to 3 unblocked → wake+strip+stun; T4 Vulnerable Potion + Bludgeon = 48 on SLASH2 turn; T8 Pommel 7 + Strike 4 + Strike closed 222→0 at player 30/89. Race package that won: Inferno+9 ticks + Bludgeon + Red Mask Weak + Unmovable block lines.",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 233
+      },
+      "base": 222,
+      "notes": "live run-39 222/222; codex A-range 233+"
+    },
+    "id": "LAGAVULIN_MATRIARCH",
+    "is_boss": true,
+    "kind": "monster",
     "moves": {
-      "SLASH_MOVE": {
-        "name": "Slash",
-        "description": "single attack 19 (live run-39 atk:19; A:21)",
-        "base_damage": 19
+      "DISEMBOWEL_MOVE": {
+        "base_damage": 9,
+        "description": "multi 9x2 (A:10)",
+        "hits": 2,
+        "name": "Disembowel"
       },
       "SLASH2_MOVE": {
-        "name": "Slash2",
+        "base_damage": 12,
         "description": "attack 12 + self block 12 (A:14)",
-        "base_damage": 12
+        "name": "Slash2"
       },
-      "DISEMBOWEL_MOVE": {
-        "name": "Disembowel",
-        "description": "multi 9x2 (A:10)",
-        "base_damage": 9,
-        "hits": 2
-      },
-      "SOUL_SIPHON_MOVE": {
-        "name": "Soul Siphon",
-        "description": "Debuff+Buff: player DEXTERITY -2 + boss STRENGTH +2 (live run-39); no attack damage — free window",
-        "base_damage": null
+      "SLASH_MOVE": {
+        "base_damage": 19,
+        "description": "single attack 19 (live run-39 atk:19; A:21)",
+        "name": "Slash"
       },
       "SLEEP_MOVE": {
-        "name": "Sleep",
-        "description": "opening slumber; ASLEEP stacks govern wake"
+        "description": "opening slumber; ASLEEP stacks govern wake",
+        "name": "Sleep"
+      },
+      "SOUL_SIPHON_MOVE": {
+        "base_damage": null,
+        "description": "Debuff+Buff: player DEXTERITY -2 + boss STRENGTH +2 (live run-39); no attack damage — free window",
+        "name": "Soul Siphon"
       }
     },
-    "curated": true,
-    "source": "codex-api + run-39 live T9 kill + powers ASLEEP doctrine",
-    "play_notes": "run-39 live kill T9: wake-window doctrine first (3 unblocked → strip PLATING:12 + stun); Colossus live-halved SLASH/DISEMBOWEL intents; Pact→Ritual 4-energy burst turn; Weak Potion on SLASH 21(Str2)→15; Explosive Ampoule T8; Hemo+Strike closed at Str 7. Player entered boss at 57/80, finished at 9/80."
+    "name": "Lagavulin Matriarch",
+    "play_notes": "run-39 live kill T9: wake-window doctrine first (3 unblocked → strip PLATING:12 + stun); Colossus live-halved SLASH/DISEMBOWEL intents; Pact→Ritual 4-energy burst turn; Weak Potion on SLASH 21(Str2)→15; Explosive Ampoule T8; Hemo+Strike closed at Str 7. Player entered boss at 57/80, finished at 9/80.",
+    "source": "codex-api + run-39 live T9 kill + powers ASLEEP doctrine; run-40 live fold 2026-09-18"
   },
   "LIVING_FOG": {
-    "id": "LIVING_FOG",
-    "kind": "monster",
-    "name": "Living Fog",
+    "acts": [
+      "Act1"
+    ],
     "aliases": [
       "LivingFog",
       "活雾"
     ],
-    "is_boss": false,
-    "acts": [
-      "Act1"
-    ],
-    "hp": {
-      "base": 80,
-      "notes": "live run-39 80/80"
-    },
-    "description": "Act1 fight with Gas Bomb adds. Cycle ADVANCED_GAS(8+Smoggy 1)→BLOAT(5 + summon GasBomb 7hp MINION_POWER intent 8)→SUPER_GAS_BLAST(8 A:9 — census stub resolved live as plain 8-damage attack, NOT a nuke). SMOGGY: after first Skill played per turn, all other Skills become unplayable (no(None), distinct from EnergyCostTooHigh) — one-skill-per-turn discipline; clears EoT. GasBomb EXPLODE = deathblow ~36 at A1 if the bomb dies — KILL THE MASTER (LivingFog) instead: run-39 live, master death despawned the bomb, explosion never fired.",
+    "curated": true,
     "cycle": [
       "ADVANCED_GAS_MOVE",
       "BLOAT_MOVE",
       "SUPER_GAS_BLAST_MOVE"
     ],
-    "curated": true,
-    "source": "codex-api + run-39 live T4 kill + census SUPER_GAS_BLAST resolution",
-    "play_notes": "run-39 live: SUPER_GAS_BLAST = atk 8-class (archive census stub was misleading); Smoggy one-skill turns make attack chains the play pattern; master-kill despawns adds (kill-master-despawns-summons doctrine confirmed live)."
+    "description": "Act1 fight with Gas Bomb adds. Cycle ADVANCED_GAS(8+Smoggy 1)→BLOAT(5 + summon GasBomb 7hp MINION_POWER intent 8)→SUPER_GAS_BLAST(8 A:9 — census stub resolved live as plain 8-damage attack, NOT a nuke). SMOGGY: after first Skill played per turn, all other Skills become unplayable (no(None), distinct from EnergyCostTooHigh) — one-skill-per-turn discipline; clears EoT. GasBomb EXPLODE = deathblow ~36 at A1 if the bomb dies — KILL THE MASTER (LivingFog) instead: run-39 live, master death despawned the bomb, explosion never fired.",
+    "hp": {
+      "base": 80,
+      "notes": "live run-39 80/80"
+    },
+    "id": "LIVING_FOG",
+    "is_boss": false,
+    "kind": "monster",
+    "name": "Living Fog",
+    "play_notes": "run-39 live: SUPER_GAS_BLAST = atk 8-class (archive census stub was misleading); Smoggy one-skill turns make attack chains the play pattern; master-kill despawns adds (kill-master-despawns-summons doctrine confirmed live).",
+    "source": "codex-api + run-39 live T4 kill + census SUPER_GAS_BLAST resolution"
   },
   "LagavulinMatriarch": {
     "acts": [
@@ -10406,34 +10497,34 @@
     "type": "Elite"
   },
   "PUNCH_CONSTRUCT": {
-    "id": "PUNCH_CONSTRUCT",
-    "kind": "monster",
-    "name": "Punch Construct",
+    "acts": [
+      "Act1"
+    ],
     "aliases": [
       "PunchConstruct",
       "拳击构装体"
     ],
-    "is_boss": false,
-    "acts": [
-      "Act1"
-    ],
-    "hp": {
-      "base": 55,
-      "notes": "live run-39 55/55; codex A 60+",
-      "ascension": {
-        "min": 60,
-        "max": null
-      }
-    },
-    "description": "Act1 (13,2)-class fight. ARTIFACT:1 — first visible debuff application is zeroed and 1 Artifact stack consumed (run-39 live: Tremble into Artifact → 'received -1 ARTIFACT_POWER', Vuln landed as 0; stack gone, later debuffs land). Cycle READY(self block 10)→FAST_PUNCH(multi 5x2 + Frail 1)→STRONG_PUNCH(single 14 A:16), random-cannot-repeat between. Doctrine: strip Artifact with a cheap debuff (Tremble-class) BEFORE the Vuln window; Molten Fist at 0 Vuln applies 0 AND does not consume Artifact.",
+    "curated": true,
     "cycle": [
       "READY_MOVE",
       "FAST_PUNCH_MOVE",
       "STRONG_PUNCH_MOVE"
     ],
-    "curated": true,
-    "source": "codex-api + run-39 live T4 kill",
-    "play_notes": "run-39 live: Artifact strip cost = one Tremble exhaust; STRONG_PUNCH 14 needs block; READY turns are free windows. Bash+Hemo 30-damage burst turn closed the race."
+    "description": "Act1 (13,2)-class fight. ARTIFACT:1 — first visible debuff application is zeroed and 1 Artifact stack consumed (run-39 live: Tremble into Artifact → 'received -1 ARTIFACT_POWER', Vuln landed as 0; stack gone, later debuffs land). Cycle READY(self block 10)→FAST_PUNCH(multi 5x2 + Frail 1)→STRONG_PUNCH(single 14 A:16), random-cannot-repeat between. Doctrine: strip Artifact with a cheap debuff (Tremble-class) BEFORE the Vuln window; Molten Fist at 0 Vuln applies 0 AND does not consume Artifact.",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 60
+      },
+      "base": 55,
+      "notes": "live run-39 55/55; codex A 60+"
+    },
+    "id": "PUNCH_CONSTRUCT",
+    "is_boss": false,
+    "kind": "monster",
+    "name": "Punch Construct",
+    "play_notes": "run-39 live: Artifact strip cost = one Tremble exhaust; STRONG_PUNCH 14 needs block; READY turns are free windows. Bash+Hemo 30-damage burst turn closed the race.",
+    "source": "codex-api + run-39 live T4 kill"
   },
   "PaelsSoldier": {
     "acts": [
@@ -11831,7 +11922,7 @@
       "SPINNING_KICK_MOVE",
       "BUBBLE_BURP_MOVE"
     ],
-    "description": "Live model_id for 海洋混混 (archive name CorpseSlug; ~44-46 HP, 47-49 at Ascension). Cycle: SEA_KICK_MOVE (single attack 11, A:13) → SPINNING_KICK_MOVE (multi 2x4) → BUBBLE_BURP_MOVE (2 intents) → repeat. Passive RAVENOUS_POWER: when an ALLY dies and this creature lives, it is stunned into a devour move and gains +Amount Strength — one kill per turn converts each death into a free stun window on survivors. Doctrine: kill-window via ally-death stun; live intents can exceed table values (Glomp 8 table / 11-class observed at A1).",
+    "description": "Act1 normal, 44-46 HP (A 47-49); run-40 live 46. Cycle SEA_KICK 11 (A:13) → SPINNING_KICK multi 2x4 → BUBBLE_BURP buff+defend (LIVE run-40: self +7 Block AND +1 Strength — no attack damage; free damage window). Kill during/after burp windows; block SEA_KICK turns.",
     "hp": {
       "base": 45,
       "notes": "44-46 base; 47-49 A"
@@ -12006,37 +12097,37 @@
       }
     ],
     "play_notes": "",
-    "source": "curated:census run-37 SEAPUNK model_id + monsters.md CorpseSlug",
+    "source": "curated:census run-37 SEAPUNK model_id + monsters.md CorpseSlug; run-40 live fold 2026-09-18",
     "zh_name": "海洋混混"
   },
   "SEWER_CLAM": {
-    "id": "SEWER_CLAM",
-    "kind": "monster",
-    "name": "Sewer Clam",
+    "acts": [
+      "Act1"
+    ],
     "aliases": [
       "SewerClam",
       "下水道蚌"
     ],
-    "is_boss": false,
-    "acts": [
-      "Act1"
-    ],
-    "hp": {
-      "base": 56,
-      "notes": "live run-39 56/56; codex A 58+",
-      "ascension": {
-        "min": 58,
-        "max": null
-      }
-    },
-    "description": "Act1 rolling-plating race fight. PLATING:8 — end of owner's side turn +8 Block; stacks decrement 1/turn start (8→7→…); combat-start block 8 fires round 1. PRESSURIZE = +4 Strength (race timer: JET 10→14→18…). JET = attack 10-class live. Cycle PRESSURIZE→JET. Doctrine: pace damage through rolling 8-block; kill before 2+ Pressurize stacks. Run-39: T1 Inferno+full-block, T2 free-window Tremble+BloodWall (note: block does NOT persist across turns — BloodWall on a free window is engine-proc only), T3 Hemo+MoltenFist+Defend under Vuln, T4 Whirlwind X=2 exact kill at Vuln 3.",
+    "curated": true,
     "cycle": [
       "PRESSURIZE_MOVE",
       "JET_MOVE"
     ],
-    "curated": true,
-    "source": "codex-api + run-39 live T4 kill",
-    "play_notes": "run-39 live: PLATING rolling 8-block/turn confirmed; PRESSURIZE +4 Str is the kill timer; block-not-persistent lesson: pre-building block on free windows does nothing."
+    "description": "Act1 rolling-plating race fight. PLATING:8 — end of owner's side turn +8 Block; stacks decrement 1/turn start (8→7→…); combat-start block 8 fires round 1. PRESSURIZE = +4 Strength (race timer: JET 10→14→18…). JET = attack 10-class live. Cycle PRESSURIZE→JET. Doctrine: pace damage through rolling 8-block; kill before 2+ Pressurize stacks. Run-39: T1 Inferno+full-block, T2 free-window Tremble+BloodWall (note: block does NOT persist across turns — BloodWall on a free window is engine-proc only), T3 Hemo+MoltenFist+Defend under Vuln, T4 Whirlwind X=2 exact kill at Vuln 3.",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 58
+      },
+      "base": 56,
+      "notes": "live run-39 56/56; codex A 58+"
+    },
+    "id": "SEWER_CLAM",
+    "is_boss": false,
+    "kind": "monster",
+    "name": "Sewer Clam",
+    "play_notes": "run-39 live: PLATING rolling 8-block/turn confirmed; PRESSURIZE +4 Str is the kill timer; block-not-persistent lesson: pre-building block on free windows does nothing.",
+    "source": "codex-api + run-39 live T4 kill"
   },
   "SILENT": {
     "acts": [],
@@ -12061,64 +12152,64 @@
     "zh_name": "静默猎手"
   },
   "SLUDGE_SPINNER": {
-    "id": "SLUDGE_SPINNER",
-    "kind": "monster",
-    "name": "Sludge Spinner",
+    "acts": [
+      "Act1"
+    ],
     "aliases": [
       "SludgeSpinner",
       "淤泥旋螺"
     ],
-    "is_boss": false,
-    "acts": [
-      "Act1"
-    ],
-    "hp": {
-      "base": 52,
-      "notes": "live run-39 52/52; codex 37-39 base (table drift — live wins); archive A1 range noted 41-42",
-      "ascension": {
-        "min": 41,
-        "max": 42
-      }
-    },
-    "description": "Act1 random-cannot-repeat cycle OIL_SPRAY(8+Weak 1)→SLAM(11)→RAGE(6 + self Str +3). RAGE = race timer — each Rage stacks +3 Str; kill before 2+ Rages. Run-39 live: T1 Tremble+Strike×2 (18 dmg under Vuln), T2 Hemo+Pommel exact 35-damage kill line (22+13=35 = remaining HP) one turn after; RAGE never fired its Str stack.",
+    "curated": true,
     "cycle": [
       "OIL_SPRAY_MOVE",
       "SLAM_MOVE",
       "RAGE_MOVE"
     ],
-    "curated": true,
-    "source": "run-39 live T2 kill + archive/codex blend",
-    "play_notes": "run-39 live: OIL_SPRAY Weak 1 lands on enemy turn (player's same-turn skills unaffected); RAGE Str+3 is the growth clock — race, don't grind."
+    "description": "Act1 random-cannot-repeat cycle OIL_SPRAY(8+Weak 1)→SLAM(11)→RAGE(6 + self Str +3). RAGE = race timer — each Rage stacks +3 Str; kill before 2+ Rages. Run-39 live: T1 Tremble+Strike×2 (18 dmg under Vuln), T2 Hemo+Pommel exact 35-damage kill line (22+13=35 = remaining HP) one turn after; RAGE never fired its Str stack.",
+    "hp": {
+      "ascension": {
+        "max": 42,
+        "min": 41
+      },
+      "base": 52,
+      "notes": "live run-39 52/52; codex 37-39 base (table drift — live wins); archive A1 range noted 41-42"
+    },
+    "id": "SLUDGE_SPINNER",
+    "is_boss": false,
+    "kind": "monster",
+    "name": "Sludge Spinner",
+    "play_notes": "run-39 live: OIL_SPRAY Weak 1 lands on enemy turn (player's same-turn skills unaffected); RAGE Str+3 is the growth clock — race, don't grind.",
+    "source": "run-39 live T2 kill + archive/codex blend"
   },
   "SPINY_TOAD": {
-    "id": "SPINY_TOAD",
-    "kind": "monster",
-    "name": "Spiny Toad",
+    "acts": [
+      "Act2"
+    ],
     "aliases": [
       "SpinyToad",
       "棘刺蟾蜍"
     ],
-    "is_boss": false,
-    "acts": [
-      "Act2"
-    ],
-    "hp": {
-      "base": 118,
-      "notes": "live run-39 118/118; codex 116-119 (A 121-124)",
-      "ascension": {
-        "min": 121,
-        "max": 124
-      }
-    },
-    "description": "Act2 tank fight. Cycle PROTRUDING_SPIKES(buff THORNS 5 self)→SPIKE_EXPLOSION(23; thorns decrement to 0 after explosion — free-attack window afterward)→TONGUE_LASH(17). THORNS 5 = each attack hit on the toad deals 5 back to the dealer — attack lines are attrition suicide until explosion clears spikes. Run-39 death class: entered at 16 HP, T2 drew zero block cards vs SPIKE_EXPLOSION 23 — draw-variance checkmate. Do not enter sub-~30 HP without a block-dense hand plan or potion block reserve; full-block or post-explosion windows are the fight's beat points.",
+    "curated": true,
     "cycle": [
       "PROTRUDING_SPIKES_MOVE",
       "SPIKE_EXPLOSION_MOVE",
       "TONGUE_LASH_MOVE"
     ],
-    "curated": true,
-    "source": "codex-api + run-39 live death T2",
-    "play_notes": "run-39: 118hp + 23-damage T2 + THORNS 5 — treat as elite-class threat on ordinary map nodes. HP gate needed before entry; explosion turn demands 23 block or evasion; post-explosion (thorns 0) is the burst window."
+    "description": "Act2 tank fight. Cycle PROTRUDING_SPIKES(buff THORNS 5 self)→SPIKE_EXPLOSION(23; thorns decrement to 0 after explosion — free-attack window afterward)→TONGUE_LASH(17). THORNS 5 = each attack hit on the toad deals 5 back to the dealer — attack lines are attrition suicide until explosion clears spikes. Run-39 death class: entered at 16 HP, T2 drew zero block cards vs SPIKE_EXPLOSION 23 — draw-variance checkmate. Do not enter sub-~30 HP without a block-dense hand plan or potion block reserve; full-block or post-explosion windows are the fight's beat points.",
+    "hp": {
+      "ascension": {
+        "max": 124,
+        "min": 121
+      },
+      "base": 118,
+      "notes": "live run-39 118/118; codex 116-119 (A 121-124)"
+    },
+    "id": "SPINY_TOAD",
+    "is_boss": false,
+    "kind": "monster",
+    "name": "Spiny Toad",
+    "play_notes": "run-39: 118hp + 23-damage T2 + THORNS 5 — treat as elite-class threat on ordinary map nodes. HP gate needed before entry; explosion turn demands 23 block or evasion; post-explosion (thorns 0) is the burst window.",
+    "source": "codex-api + run-39 live death T2"
   },
   "ScrollOfBiting": {
     "acts": [],
@@ -14160,26 +14251,14 @@
     "zh_name": "刺蟾"
   },
   "THIEVING_HOPPER": {
-    "id": "THIEVING_HOPPER",
-    "kind": "monster",
-    "name": "Thieving Hopper",
+    "acts": [
+      "Act2"
+    ],
     "aliases": [
       "ThievingHopper",
       "偷窃草蜢"
     ],
-    "is_boss": false,
-    "acts": [
-      "Act2"
-    ],
-    "hp": {
-      "base": 79,
-      "notes": "live run-39 79/79; codex A 84+",
-      "ascension": {
-        "min": 84,
-        "max": null
-      }
-    },
-    "description": "Act2 escape-timer fight. ESCAPE_ARTIST:5 — decrements each enemy turn; at 1 pulses; ESCAPE_MOVE flees at 1 HP unrewarded. 5-turn kill race. Cycle live: THIEVERY(17+steal 1 deck card)→FLUTTER(buff FLUTTER 5 evade)→HAT_TRICK(21)→NAB(14)→ESCAPE. Flutter evade stacks mitigate each attack hit then −1/hit (see powers FLUTTER_POWER). Run-39: Demon Form T1 investment, Str 2→8 across the window, killed on T5 player turn one turn before escape.",
+    "curated": true,
     "cycle": [
       "THIEVERY_MOVE",
       "FLUTTER_MOVE",
@@ -14187,9 +14266,37 @@
       "NAB_MOVE",
       "ESCAPE_MOVE"
     ],
+    "description": "Act2 escape-timer fight. ESCAPE_ARTIST:5 — decrements each enemy turn; at 1 pulses; ESCAPE_MOVE flees at 1 HP unrewarded. 5-turn kill race. Cycle live: THIEVERY(17+steal 1 deck card)→FLUTTER(buff FLUTTER 5 evade)→HAT_TRICK(21)→NAB(14)→ESCAPE. Flutter evade stacks mitigate each attack hit then −1/hit (see powers FLUTTER_POWER). Run-39: Demon Form T1 investment, Str 2→8 across the window, killed on T5 player turn one turn before escape.",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 84
+      },
+      "base": 79,
+      "notes": "live run-39 79/79; codex A 84+"
+    },
+    "id": "THIEVING_HOPPER",
+    "is_boss": false,
+    "kind": "monster",
+    "name": "Thieving Hopper",
+    "play_notes": "run-39 live: escape clock is real — plan ≤5 turn kill. THIEVERY steals a deck card T1 (priority non-?) — recoverable after combat. Flutter burns per hit; multi-hit commands chew stacks. Demon Form + Inferno chip won the race despite Flutter mitigation.",
+    "source": "codex-api + run-39 live T5 race kill"
+  },
+  "TOADPOLE": {
     "curated": true,
-    "source": "codex-api + run-39 live T5 race kill",
-    "play_notes": "run-39 live: escape clock is real — plan ≤5 turn kill. THIEVERY steals a deck card T1 (priority non-?) — recoverable after combat. Flutter burns per hit; multi-hit commands chew stacks. Demon Form + Inferno chip won the race despite Flutter mitigation."
+    "description": "Act2 normal, 23-25 HP live run-40; Act1-class trash seen in Act2 corridors. SPIKEN: self THORNS 2 buff; THORNS = dealer takes Amount unpowered damage when hitting the owner with a powered attack. Cycle SPIKEN→SPIKE_SPIT (3x3)→WHIRL 7. Doctrine: dump on SPIKEN (buff) windows; attacking a thorns-up toadpole costs HP per hit — LIVE run-40: killed both in the buff-window chain, Inferno power damage appeared not to recoil from THORNS (attack-card hits only).",
+    "id": "TOADPOLE",
+    "kind": "monster",
+    "name": "Toadpole",
+    "source": "; run-40 live fold 2026-09-18"
+  },
+  "TUNNELER": {
+    "curated": true,
+    "description": "Act2, 87 HP (A:92+). Cycle BITE 13 → BURROW (+32 Block + BurrowedPower 1, hidden; block resolves on enemy turn) → BELOW 23 while burrowed (self-loops) → DIZZY wakeup. AfterBlockBroken: if Block is broken, STUNNED, Burrowed removed, remaining block zeroed — cancels the burrowed attack. LIVE run-40: T1 Bludgeon 32 + Strikes 44 dmg; T4 Bludgeon 32 broke 14-remaining block → STUN + BELOW cancelled; killed T5 by Inferno tick + Strike chain. Doctrine: break the 32-block to cancel BELOW and stun.",
+    "id": "TUNNELER",
+    "kind": "monster",
+    "name": "Tunneler",
+    "source": "; run-40 live fold 2026-09-18"
   },
   "TerrorEel": {
     "acts": [],
@@ -18041,32 +18148,5 @@
     "source": "generator:synthesized",
     "zh_description": "共享/未归属的 live 招式 id。当没有怪物条目认领时 lookup 在此解析——折叠进对应怪物条目前以 live state 的意图字段为权威。",
     "zh_name": "共享招式"
-  },
-  "HAUNTED_SHIP": {
-    "id": "HAUNTED_SHIP",
-    "kind": "monster",
-    "name": "Haunted Ship",
-    "aliases": [
-      "HauntedShip",
-      "幽灵船",
-      "GHOST_SHIP"
-    ],
-    "is_boss": false,
-    "acts": [
-      "Act1"
-    ],
-    "hp": {
-      "base": 63,
-      "notes": "live run-39 63/63"
-    },
-    "description": "Act1 (13,2)-class fight. Cycle HAUNT→SWIPE→STOMP. HAUNT: Weak 3 + inject 5 Dazed (unplayable Ethereal status cards) — no damage turn, free setup window. SWIPE: attack 8 + self +1 Str (live intent can show higher with Str). STOMP: multi 4x3-class live (archive base 3x3; run-39 live multi:4x3=12). Attack-Potion free Uppercut (13+Weak1+Vuln1) enabled run-39's T3 Bash+Hemo kill before STOMP fired.",
-    "cycle": [
-      "HAUNT_MOVE",
-      "SWIPE_MOVE",
-      "STOMP_MOVE"
-    ],
-    "curated": true,
-    "source": "run-39 live T3 kill + codex move fragments",
-    "play_notes": "run-39 live: HAUNT = free window (debuff only); dump damage there. STOMP 12-class incoming on T3 — kill or full-block before it. Dazed cards are Ethereal (vanish EoT) — deck pollution is turn-scoped."
   }
 }

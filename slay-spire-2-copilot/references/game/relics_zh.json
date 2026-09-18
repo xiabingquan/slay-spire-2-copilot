@@ -302,17 +302,17 @@
     "source": "md:relics.md:L273; md:relics_zh.md:L273"
   },
   "BLACK_BLOOD": {
-    "id": "BLACK_BLOOD",
-    "kind": "relic",
-    "name": "黑暗之血",
     "aliases": [
       "BlackBlood"
     ],
-    "rarity": "Ancient",
-    "description": "战斗结束时回复 12 HP（经欧洛巴斯之触替换燃血的 6）。run-39 live：草蜢战 24→36、碗虫战 4→16 两次 +12 确认——铁甲战士每战 HP 经济翻倍；档案称其为 Act2 HP 经济主力来源。",
     "curated": true,
-    "source": "run-39 live 结算 + events.json OROBAS",
-    "play_notes": "run-39 live：每战回12 两次确认。燃血翻倍；与 ChosenCheese 类 Max HP 增益叠加。"
+    "description": "战斗结束时回复 12 HP（经欧洛巴斯之触替换燃血的 6）。run-39 live：草蜢战 24→36、碗虫战 4→16 两次 +12 确认——铁甲战士每战 HP 经济翻倍；档案称其为 Act2 HP 经济主力来源。",
+    "id": "BLACK_BLOOD",
+    "kind": "relic",
+    "name": "黑暗之血",
+    "play_notes": "run-39 live：每战回12 两次确认。燃血翻倍；与 ChosenCheese 类 Max HP 增益叠加。",
+    "rarity": "Ancient",
+    "source": "run-39 live 结算 + events.json OROBAS"
   },
   "BLACK_STAR": {
     "aliases": [
@@ -372,15 +372,15 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "第 1 回合开始，回复 2 HP。",
+    "curated": true,
+    "description": "每场战斗开始时回复2点HP。对局40 live：每战触发（战斗开始读取时HP+2）；与燃烧之血战后+6、天选芝士+1/+1 同 HP 经济轨叠加。",
     "id": "BLOOD_VIAL",
     "kind": "relic",
-    "name": "小血瓶",
+    "name": "血瓶",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:relics.md:L20; md:relics_zh.md:L20; codex:relics/BLOOD_VIAL"
+    "source": "md:relics.md:L20; md:relics_zh.md:L20; codex:relics/BLOOD_VIAL; run-40 live fold 2026-09-18"
   },
   "BONE_FLUTE": {
     "aliases": [
@@ -790,15 +790,15 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "战斗结束，+1 最大 HP。每场战斗胜利均触发；与狂宴 Fatel 叠加（芝士 +1/杀 + 狂宴 +3/杀）。由满屋奶酪 Search 选项获得（−14 不可格挡 HP，税精确）。LIVE（对局 36）：每场战斗胜利 **+1 Max HP 且 +1 现值 HP**（state 双数值同涨确认）。",
+    "curated": true,
+    "description": "战斗结束（胜利）时 +1 最大HP 且 +1 当前HP。满屋芝士事件「翻找」遗物（−14 无挡HP，税额精确）。对局40 live：全局最大HP 86→94（每场胜利触发）；与燃烧之血+6、血瓶+2 同轨叠加。14HP 税约14场战斗回本；长期最大HP成长是 HP 经济对策类。",
     "id": "CHOSEN_CHEESE",
     "kind": "relic",
     "name": "天选芝士",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Event",
-    "source": "md:relics.md:L276; md:relics_zh.md:L276"
+    "source": "md:relics.md:L276; md:relics_zh.md:L276; run-40 live fold 2026-09-18"
   },
   "CIRCLET": {
     "aliases": [
@@ -2073,15 +2073,15 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "问号房间不再出现普通敌人战斗；仅可在第三幕宝箱前获得。",
+    "curated": true,
+    "description": "Unknown（?）房不再出现怪物战斗——仅事件/宝箱。对局40 live：入手后 (10,2) Unknown 两次均出事件（熔合者、修禅织网者）；精英 (11,2) 仍为精英类型（该遗物仅影响 Unknown 房）。",
     "id": "JUZU_BRACELET",
     "kind": "relic",
-    "name": "佛珠手链",
+    "name": "寿数手环",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:relics.md:L30; md:relics_zh.md:L30"
+    "source": "md:relics.md:L30; md:relics_zh.md:L30; run-40 live fold 2026-09-18"
   },
   "KALEIDOSCOPE": {
     "aliases": [
@@ -2153,15 +2153,15 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "第 1 回合开始，获得 +1 能量。蜡烛燃着时与南瓜蜡烛叠层（T1 5 能）；蜡烛燃尽后 T1 回归基础 3 + 灯笼 1 = 4 能 —— 灯笼单独无法恢复蜡烛时代的能量。",
+    "curated": true,
+    "description": "每场战斗开始+1能量（仅第一回合）。对局40 live：Act2 宝箱 (8,1)；与烫嘴可可+4、venerable 茶具+2 叠加。",
     "id": "LANTERN",
     "kind": "relic",
     "name": "灯笼",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:relics.md:L31; md:relics_zh.md:L31"
+    "source": "md:relics.md:L31; md:relics_zh.md:L31; run-40 live fold 2026-09-18"
   },
   "LARGE_CAPSULE": {
     "aliases": [
@@ -3606,14 +3606,14 @@
     "character": null,
     "counter_shown": false,
     "curated": true,
-    "description": "战斗开始（第 1 回合）对所有敌人施加 1 层虚弱。run-38 实时：全部战斗 T1 敌方均可见 WEAK_POWER:1（Byrdonis SWOOP 17→12；史莱姆撞击 4→3/3→2；同族神官球 8→6）。虚弱持续期间敌方攻击伤害约 −25%（其阵营回合结束递减）。与 TERRITORIAL 类被动共存——短暂的「无 Weak」读数是 state settle-lag，非遗物失效。",
+    "description": "战斗开始（第一回合）对所有敌人施加1层弱化。对局38+40 live：T1 每个敌人均可见弱化；对多段招式按 hit 削减攻击意图（外骨骼虫撕咬1x3→0x3；蜂群术士蜜蜂3x7→2x7；石碗虫头槌15→11；乐加维林族母 T1 沉睡未受益）。弱化在其回合结束递减。对局40 Act2 Shop#1 162 金买入——之后每战兑现。",
     "id": "RED_MASK",
     "kind": "relic",
     "name": "红面具",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:relics.md:L36; md:relics_zh.md:L36",
+    "source": "md:relics.md:L36; md:relics_zh.md:L36; run-40 live fold 2026-09-18",
     "zh_description": "战斗开始（第 1 回合）对所有敌人施加 1 层虚弱。run-38 实时：全部战斗 T1 敌方均可见 WEAK_POWER:1（Byrdonis SWOOP 17→12；史莱姆撞击 4→3/3→2；同族神官球 8→6）。虚弱持续期间敌方攻击伤害约 −25%（其阵营回合结束递减）。与 TERRITORIAL 类被动共存——短暂的「无 Weak」读数是 state settle-lag，非遗物失效。"
   },
   "RED_SKULL": {
@@ -4509,17 +4509,17 @@
     "source": "md:relics.md:L267; md:relics_zh.md:L267"
   },
   "TOUCH_OF_OROBAS": {
-    "id": "TOUCH_OF_OROBAS",
-    "kind": "relic",
-    "name": "欧洛巴斯之触",
     "aliases": [
       "TouchOfOrobas"
     ],
-    "rarity": "Ancient",
-    "description": "Orobas 事件选项：将初始遗物替换为远古版（IRONCLAD：燃血→黑暗之血 每战回12）。标记替换本身；回血效果在 BLACK_BLOOD 上。全池解码见 events.json OROBAS。",
     "curated": true,
-    "source": "run-39 live 选择 + events.json OROBAS",
-    "play_notes": "run-39：Act2 赐福房选择；BlackBlood 每战回12 同局 live 确认。"
+    "description": "Orobas 事件选项：将初始遗物替换为远古版（IRONCLAD：燃血→黑暗之血 每战回12）。标记替换本身；回血效果在 BLACK_BLOOD 上。全池解码见 events.json OROBAS。",
+    "id": "TOUCH_OF_OROBAS",
+    "kind": "relic",
+    "name": "欧洛巴斯之触",
+    "play_notes": "run-39：Act2 赐福房选择；BlackBlood 每战回12 同局 live 确认。",
+    "rarity": "Ancient",
+    "source": "run-39 live 选择 + events.json OROBAS"
   },
   "TOUGH_BANDAGES": {
     "aliases": [
@@ -4747,15 +4747,15 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "进入休息点时，下一场战斗开始额外 +2 能量。",
+    "curated": true,
+    "description": "进入休息点后，下一场战斗开始+2能量（第一回合）。对局40 live：每次访问休息点触发一次；被下一场战斗消耗（非休息后所有战斗）。与可可/灯笼叠加，休息后 T1 10 能量。",
     "id": "VENERABLE_TEA_SET",
     "kind": "relic",
-    "name": "古茶具套装",
+    "name": "venerable 茶具",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:relics.md:L43; md:relics_zh.md:L43"
+    "source": "md:relics.md:L43; md:relics_zh.md:L43; run-40 live fold 2026-09-18"
   },
   "VERY_HOT_COCOA": {
     "aliases": [
@@ -4764,15 +4764,15 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "第 1 回合开始，获得 +4 能量。",
+    "curated": true,
+    "description": "每场战斗开始额外+4能量（仅第一回合）。Ancient 级赐福遗物（Act2 赐福房 Tezcatara；灯笼叠加已验证）。对局40 live：与 venerable 茶具（休息后+2）和灯笼（+1）加法叠加——(7,2) 休息后精英 T1 energy=10/3。",
     "id": "VERY_HOT_COCOA",
     "kind": "relic",
     "name": "烫嘴可可",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L235; md:relics_zh.md:L235; codex:relics/VERY_HOT_COCOA"
+    "source": "md:relics.md:L235; md:relics_zh.md:L235; codex:relics/VERY_HOT_COCOA; run-40 live fold 2026-09-18"
   },
   "VEXING_PUZZLEBOX": {
     "aliases": [

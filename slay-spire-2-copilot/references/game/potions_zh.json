@@ -76,16 +76,16 @@
       "Block Potion",
       "BlockPotion"
     ],
-    "curated": false,
-    "description": "获得 12 格挡。",
+    "curated": true,
+    "description": "使用时获得12格挡。致命意图回合与 Boss 闸门的非常规储备药水。对局40 live：千足虫 T4 使用——12 + 邪眼16（Unmovable 翻倍）=28 对 32 来袭于 34HP。药水源格挡不被 Unmovable 翻倍（仅卡牌挡）。",
     "display_name": "Block Potion",
     "id": "BLOCK_POTION",
     "kind": "potion",
-    "name": "格挡药水",
+    "name": "封锁药水",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:potions.md:L18; md:potions_zh.md:L18; codex:potions/BLOCK_POTION",
+    "source": "md:potions.md:L18; md:potions_zh.md:L18; codex:potions/BLOCK_POTION; run-40 live fold 2026-09-18",
     "target": "any player",
     "usage": "combat"
   },
@@ -889,8 +889,8 @@
       "Regen Potion",
       "RegenPotion"
     ],
-    "curated": false,
-    "description": "+5 层再生（Regen）。",
+    "curated": true,
+    "description": "使用时获得5再生（每回合开始回复5点，层数递减）。罕见。对局40 live：Act2 全程作为 HP 轨储备持有；未使用——死于蜂群术士时仍在腰带。",
     "display_name": "Regen Potion",
     "id": "REGEN_POTION",
     "kind": "potion",
@@ -898,7 +898,7 @@
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L63; md:potions_zh.md:L63; codex:potions/REGEN_POTION",
+    "source": "md:potions.md:L63; md:potions_zh.md:L63; codex:potions/REGEN_POTION; run-40 live fold 2026-09-18",
     "target": "any player",
     "usage": "combat"
   },
@@ -944,15 +944,15 @@
       "SkillPotion"
     ],
     "curated": true,
-    "description": "从你的角色卡池 3 张不同技能牌中选 1（可跳过）；加入手牌，本回合免费。run-38 实时：card_choice 覆盖层给出 IMPERVOUS/TRUE_GRIT/PRIMAL_FORCE；选 Impervious——免费 +30 挡在 HP 24、零防御手牌的回合挡下精英 SWOOP 19。致命意图药水：当来袭超过手牌挡上限时使用。",
+    "description": "从角色牌池选3张不同技能牌之一（可跳过）；加入手牌，本回合免费。普通。对局38+40 live：对局38 选坚不可摧（+30挡）对精英俯冲；对局40 card_choice 提供 耸肩没事/二连击/原始力量——选耸肩没事（当回合0费，Unmovable 把8翻倍至16）对蜂群术士蜜蜂。致命意图药水：来袭超过手牌挡上限时使用。",
     "display_name": "Skill Potion",
     "id": "SKILL_POTION",
     "kind": "potion",
-    "name": "技能药水",
+    "name": "技巧药水",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:potions.md:L66; md:potions_zh.md:L66",
+    "source": "md:potions.md:L66; md:potions_zh.md:L66; run-40 live fold 2026-09-18",
     "target": "self",
     "usage": "combat",
     "zh_description": "从你的角色卡池 3 张不同技能牌中选 1（可跳过）；加入手牌，本回合免费。run-38 实时：card_choice 覆盖层给出 IMPERVOUS/TRUE_GRIT/PRIMAL_FORCE；选 Impervious——免费 +30 挡在 HP 24、零防御手牌的回合挡下精英 SWOOP 19。致命意图药水：当来袭超过手牌挡上限时使用。"
@@ -1011,6 +1011,21 @@
     "source": "md:potions.md:L69; md:potions_zh.md:L69",
     "target": "any player",
     "usage": "combat"
+  },
+  "STABLE": {
+    "aliases": [
+      "Stable Serum",
+      "STABLE_SERUM"
+    ],
+    "curated": true,
+    "description": "稳定血清：手牌保留2回合（回合结束留在手牌）。罕见。对局40 live：Act2 全程腰带储备；保留不提供格挡——其本身不是致命意图的答案。",
+    "id": "STABLE",
+    "kind": "potion",
+    "name": "Stable Serum",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "source": "codex-api:/potions/STABLE_SERUM"
   },
   "STABLE_SERUM": {
     "aliases": [
