@@ -1357,14 +1357,21 @@
     "stack_type": "Counter"
   },
   "FLUTTER_POWER": {
-    "curated": true,
-    "description": "Incoming powered-attack damage to owner multiplied by x0.5 while stacks > 0; each unblocked attack hit on owner decrements 1 stack; at 0 the owner is stunned (ThievingHopper stops hovering). Multi-hit attacks decrement per unblocked hit — pace chip to clear Flutter, then burst.",
     "id": "FLUTTER_POWER",
     "kind": "power",
     "name": "Flutter",
+    "aliases": [
+      "FLUTTER",
+      "FlutterPower"
+    ],
+    "description": "Evasion stacks: incoming attack damage against the owner is heavily mitigated while stacks remain; each time the owner is hit by an attack, 1 stack is consumed (live run-39 ThievingHopper: Strike planned 15 landed 7 at FLUTTER 5, stack decremented to 4 on the hit; Pommel 15→11 at Flutter 3; Bash 21→10 at Flutter 4). Multi-hit same-command attacks consume one stack per hit instance — Whirlwind-class pierce chews Flutter fastest. Roughly half-damage mitigation at high stacks; treat as a race-window reducer, not immunity.",
     "power_type": "Buff",
-    "source": "curated:monsters.md ThievingHopper passives",
-    "stack_type": "Counter"
+    "stack_type": "Counter",
+    "counter_class": true,
+    "host_of_affliction": false,
+    "curated": true,
+    "source": "run-39 live ThievingHopper combat math",
+    "play_notes": "run-39 live: Flutter mitigates each attack hit then decrements 1/hit. Plan kill math at ~50% damage while stacks are high; prefer multi-hit commands to burn stacks."
   },
   "FOCUS_POWER": {
     "aliases": [

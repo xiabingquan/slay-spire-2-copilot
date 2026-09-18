@@ -740,6 +740,61 @@
     "play_notes": "",
     "source": "curated:powers.md STOCK_POWER + monsters.md StockPower notes"
   },
+  "BOWLBUG_EGG": {
+    "id": "BOWLBUG_EGG",
+    "kind": "monster",
+    "name": "盛碗虫（卵）",
+    "aliases": [
+      "BowlbugEgg"
+    ],
+    "is_boss": false,
+    "acts": [
+      "Act2"
+    ],
+    "hp": {
+      "base": 21,
+      "notes": "run-39 live 21/21；codex 21-22（A 23-24）",
+      "ascension": {
+        "min": 23,
+        "max": 24
+      }
+    },
+    "description": "Act2 配对小怪（盛碗虫石）。单循环 BITE（7 伤+自身 7 挡；A:8）。配对中的先杀目标——每回合 7 税与 Rock 的 15 叠加。run-39：T1 双打击磨至 9hp，T3 在 Rock 的 IMBALANCED 眩晕窗内清理。",
+    "cycle": [
+      "BITE_MOVE"
+    ],
+    "curated": true,
+    "source": "codex-api + run-39 live",
+    "play_notes": "run-39 live：BITE=7伤+7自挡/回合；在 Rock 眩晕窗内击杀=零反击清理。"
+  },
+  "BOWLBUG_ROCK": {
+    "id": "BOWLBUG_ROCK",
+    "kind": "monster",
+    "name": "盛碗虫（石）",
+    "aliases": [
+      "BowlbugRock"
+    ],
+    "is_boss": false,
+    "acts": [
+      "Act2"
+    ],
+    "hp": {
+      "base": 45,
+      "notes": "run-39 live 45/45；codex 45-48（A 46-49）",
+      "ascension": {
+        "min": 46,
+        "max": 49
+      }
+    },
+    "description": "Act2 与盛碗虫（卵）配对战。IMBALANCED:1——持有者攻击被完全格挡时被击晕（run-39 live：血墙 16≥HEADBUTT 15→同敌方回合 STUNNED）。循环 HEADBUTT(15 A:16)→POST_HEADBUTT/DIZZY。完全格挡教条：其攻击回合 ≥15 挡=免费眩晕窗；部分格挡不触发。run-39：眩晕窗 T3 清 Egg+倾泻；Dex 药水挡算（14 vs 15 差 1）后 T5 打击 9=9 精确杀 Rock。",
+    "cycle": [
+      "HEADBUTT_MOVE",
+      "POST_HEADBUTT"
+    ],
+    "curated": true,
+    "source": "codex-api + run-39 live IMBALANCED 击晕",
+    "play_notes": "run-39 live：IMBALANCED 仅在挡≥来袭时触发（HEADBUTT 需 15）；血墙 16 级卡牌是教条工具。配对杀序：眩晕窗清 Egg，再竞速 Rock。"
+  },
   "BattleFriendV1": {
     "acts": [],
     "aliases": [
@@ -5317,6 +5372,52 @@
     "play_notes": "",
     "source": "md:monsters.md:L30"
   },
+  "FOSSIL_STALKER": {
+    "id": "FOSSIL_STALKER",
+    "kind": "monster",
+    "name": "化石追踪者",
+    "aliases": [
+      "FossilStalker"
+    ],
+    "is_boss": false,
+    "acts": [
+      "Act1"
+    ],
+    "hp": {
+      "base": 52,
+      "notes": "run-39 live 52/52；codex A 54-56",
+      "ascension": {
+        "min": 54,
+        "max": 56
+      }
+    },
+    "description": "Act1 SUCK 竞速战。SUCK_POWER:3 curated 教条：持有者有挡外伤害的攻击命中后，每命中实例 +3 力量；**完全格挡攻击意图回合可让 SUCK 休眠**——格挡攻击回合即阻断力量滚层。live 随机不可重复循环：LATCH(12 A:14) / TACKLE(3 A:4) / LASH(7 级，live 7→9[base7] 随力量)。run-39：T1 手牌最大 18<52 杀不死，接受一次无挡 LATCH 的 +3 力量税；T2 Hemo 22+Pommel 13 精确杀线（35=剩余血量）在更多 SUCK 层前收头。",
+    "cycle": [
+      "LATCH_MOVE",
+      "TACKLE_MOVE",
+      "LASH_MOVE"
+    ],
+    "moves": {
+      "LATCH_MOVE": {
+        "name": "Latch",
+        "description": "单次攻击 12（run-39 live atk:12；codex A:14）",
+        "base_damage": 12
+      },
+      "TACKLE_MOVE": {
+        "name": "Tackle",
+        "description": "单次攻击 3（A:4）",
+        "base_damage": 3
+      },
+      "LASH_MOVE": {
+        "name": "Lash",
+        "description": "单次 7 级攻击；live 随力量 7→9[base7]",
+        "base_damage": 7
+      }
+    },
+    "curated": true,
+    "source": "codex-api + run-39 live T2 击杀 + powers SUCK 教条",
+    "play_notes": "run-39 live：SUCK 无挡攻击命中 +3 力量/实例；完全格挡攻击回合=休眠。竞速教条：2 回合内击杀或格挡每个攻击意图。"
+  },
   "FatGremlin": {
     "acts": [
       "Act2"
@@ -7634,6 +7735,62 @@
     "play_notes": "",
     "source": "md:monsters_zh.md:L176"
   },
+  "LAGAVULIN_MATRIARCH": {
+    "id": "LAGAVULIN_MATRIARCH",
+    "kind": "monster",
+    "name": "乐加维林族母",
+    "aliases": [
+      "LagavulinMatriarch"
+    ],
+    "is_boss": true,
+    "acts": [
+      "Act1"
+    ],
+    "hp": {
+      "base": 222,
+      "notes": "run-39 live 222/222；codex A 区间 233+",
+      "ascension": {
+        "min": 233,
+        "max": null
+      }
+    },
+    "description": "Act1 Boss。循环 SLEEP→SLASH(19)→SLASH2(12+12挡)→DISEMBOWEL(9×2)→SOUL_SIPHON(debuff+buff：玩家 Dex−2、Boss 力量+2)。开场 ASLEEP:3+PLATING:12+自带12挡。杀窗教条（curated，run-39 T9 击杀 live）：任何非零挡外伤害即醒来——剥除全部镀甲、对自己击晕进 WakeUpMove、Asleep 消除；Asleep 每敌方回合亦递减（归零醒来，≤1 时镀甲已先移除）。攻击型手牌立即唤醒：run-39 Hemo 15−12挡=3 挡外伤同回合唤醒+剥甲+眩晕，随后免费窗倾泻；力量引擎（Rupture/Inferno）在 9 回合击杀战中把力量从 1 滚至 7。SOUL_SIPHON 为 debuff+buff 类（无攻击伤害）——爆发免费窗。Boss 易伤时 Colossus 减半攻击意图（SLASH 19→9 live）。",
+    "cycle": [
+      "SLEEP_MOVE",
+      "SLASH_MOVE",
+      "SLASH2_MOVE",
+      "DISEMBOWEL_MOVE",
+      "SOUL_SIPHON_MOVE"
+    ],
+    "curated": true,
+    "source": "codex-api + run-39 live T9 击杀 + powers ASLEEP 教条",
+    "play_notes": "run-39 live T9 击杀：先打唤醒窗（3 挡外→剥 PLATING:12+眩晕）；Colossus live 减半 SLASH/DISEMBOWEL；契约→仪式 4 能爆发回合；SLASH 21(力量2) 吃虚弱药水降至 15；T8 爆炸安瓿；力量 7 时 Hemo+打击收头。入场 57/80，战毕 9/80。"
+  },
+  "LIVING_FOG": {
+    "id": "LIVING_FOG",
+    "kind": "monster",
+    "name": "活雾",
+    "aliases": [
+      "LivingFog"
+    ],
+    "is_boss": false,
+    "acts": [
+      "Act1"
+    ],
+    "hp": {
+      "base": 80,
+      "notes": "run-39 live 80/80"
+    },
+    "description": "Act1 与气体炸弹随从战。循环 ADVANCED_GAS(8+Smoggy 1)→BLOAT(5+召唤 GasBomb 7hp MINION_POWER intent 8)→SUPER_GAS_BLAST(8 A:9——census 残条 live 解析为普通 8 伤攻击，不是大招)。SMOGGY：每回合打出首张技能牌后，其余技能牌全部禁打（no(None)，区别于 EnergyCostTooHigh）——每回合一技能纪律；回合末清除。GasBomb EXPLODE=死亡冲击约 36@A1（若炸弹死亡触发）——**杀主母**：run-39 live，主母死亡炸弹随召唤链消亡，爆炸从未触发。",
+    "cycle": [
+      "ADVANCED_GAS_MOVE",
+      "BLOAT_MOVE",
+      "SUPER_GAS_BLAST_MOVE"
+    ],
+    "curated": true,
+    "source": "codex-api + run-39 live T4 击杀 + census SUPER_GAS_BLAST 解析",
+    "play_notes": "run-39 live：SUPER_GAS_BLAST=8 伤级（档案 census 残条误导）；Smoggy 每回合一技能使攻击链成为出牌模式；杀主令随从消亡（kill-master-despawns-summons 教条 live 确认）。"
+  },
   "LagavulinMatriarch": {
     "acts": [
       "Act1",
@@ -9820,6 +9977,35 @@
     "source": "run-37 live quartet decode + codex-api /monsters/phantasmal_gardener",
     "type": "Elite"
   },
+  "PUNCH_CONSTRUCT": {
+    "id": "PUNCH_CONSTRUCT",
+    "kind": "monster",
+    "name": "拳击构装体",
+    "aliases": [
+      "PunchConstruct"
+    ],
+    "is_boss": false,
+    "acts": [
+      "Act1"
+    ],
+    "hp": {
+      "base": 55,
+      "notes": "run-39 live 55/55；codex A 60+",
+      "ascension": {
+        "min": 60,
+        "max": null
+      }
+    },
+    "description": "Act1 (13,2) 级战斗。ARTIFACT:1——首个可见 debuff 被清零并消耗 1 层抗性（run-39 live：颤栗打进抗性→'received -1 ARTIFACT_POWER'，易伤以 0 结算；层耗尽后后续 debuff 正常落地）。循环 READY(自身10挡)→FAST_PUNCH(多段 5×2+Frail 1)→STRONG_PUNCH(单次 14 A:16)，随机不可重复。教条：易伤窗前先用廉价 debuff（颤栗类）剥抗性；Molten Fist 在 0 易伤时施加 0 且不消耗抗性。",
+    "cycle": [
+      "READY_MOVE",
+      "FAST_PUNCH_MOVE",
+      "STRONG_PUNCH_MOVE"
+    ],
+    "curated": true,
+    "source": "codex-api + run-39 live T4 击杀",
+    "play_notes": "run-39 live：抗性剥层成本=一张颤栗消耗；STRONG_PUNCH 14 需挡；READY 回合是免费窗。Bash+Hemo 30 伤爆发回合收竞速。"
+  },
   "PaelsSoldier": {
     "acts": [
       "Act2"
@@ -11339,6 +11525,34 @@
     "play_notes": "",
     "source": "curated:census run-37 SEAPUNK model_id + monsters.md CorpseSlug"
   },
+  "SEWER_CLAM": {
+    "id": "SEWER_CLAM",
+    "kind": "monster",
+    "name": "下水道蚌",
+    "aliases": [
+      "SewerClam"
+    ],
+    "is_boss": false,
+    "acts": [
+      "Act1"
+    ],
+    "hp": {
+      "base": 56,
+      "notes": "run-39 live 56/56；codex A 58+",
+      "ascension": {
+        "min": 58,
+        "max": null
+      }
+    },
+    "description": "Act1 滚动镀甲竞速战。PLATING:8——持有者回合结束 +8 挡；回合开始层数 −1（8→7→…）；第 1 回合开战自带 8 挡。PRESSURIZE=+4 力量（竞速计时器：JET 10→14→18…）。JET=live 10 伤级。循环 PRESSURIZE→JET。教条：穿滚动 8 挡配速输出；2 层 Pressurize 前击杀。run-39：T1 Inferno+全挡，T2 免费窗颤栗+血墙（注意：挡不跨回合保留——免费窗血墙只是引擎触发），T3 易伤下 Hemo+MoltenFist+防御，T4 Vuln3 时 Whirlwind X=2 精确击杀。",
+    "cycle": [
+      "PRESSURIZE_MOVE",
+      "JET_MOVE"
+    ],
+    "curated": true,
+    "source": "codex-api + run-39 live T4 击杀",
+    "play_notes": "run-39 live：PLATING 每回合滚动 8 挡确认；PRESSURIZE +4 力量是杀时钟；挡不跨回合教训：免费窗预建挡无意义。"
+  },
   "SILENT": {
     "acts": [],
     "curated": true,
@@ -11356,6 +11570,64 @@
     "needs_zh": false,
     "passives": [],
     "source": "curated:characters.json cross-ref"
+  },
+  "SLUDGE_SPINNER": {
+    "id": "SLUDGE_SPINNER",
+    "kind": "monster",
+    "name": "淤泥旋螺",
+    "aliases": [
+      "SludgeSpinner"
+    ],
+    "is_boss": false,
+    "acts": [
+      "Act1"
+    ],
+    "hp": {
+      "base": 52,
+      "notes": "run-39 live 52/52；codex 基值 37-39（表格漂移——live 优先）；档案 A1 区间 41-42",
+      "ascension": {
+        "min": 41,
+        "max": 42
+      }
+    },
+    "description": "Act1 随机不可重复循环 OIL_SPRAY(8+Weak 1)→SLAM(11)→RAGE(6+自身力量+3)。RAGE=竞速计时器——每次 RAGE 叠 +3 力量；2 次 RAGE 前击杀。run-39 live：T1 颤栗+双打击（Vuln 下 18 伤），T2 Hemo+Pommel 精确 35 伤杀线（22+13=35=剩余血量）；RAGE 的力量叠层从未触发。",
+    "cycle": [
+      "OIL_SPRAY_MOVE",
+      "SLAM_MOVE",
+      "RAGE_MOVE"
+    ],
+    "curated": true,
+    "source": "run-39 live T2 击杀 + 档案/codex 融合",
+    "play_notes": "run-39 live：OIL_SPRAY 的 Weak 1 在敌方回合落地（我方同回合技能不受影响）；RAGE 力量+3 是成长钟——竞速不磨。"
+  },
+  "SPINY_TOAD": {
+    "id": "SPINY_TOAD",
+    "kind": "monster",
+    "name": "棘刺蟾蜍",
+    "aliases": [
+      "SpinyToad"
+    ],
+    "is_boss": false,
+    "acts": [
+      "Act2"
+    ],
+    "hp": {
+      "base": 118,
+      "notes": "run-39 live 118/118；codex 116-119（A 121-124）",
+      "ascension": {
+        "min": 121,
+        "max": 124
+      }
+    },
+    "description": "Act2 坦克战。循环 PROTRUDING_SPIKES(buff 自身 THORNS 5)→SPIKE_EXPLOSION(23；爆炸后尖刺归零=后续免费攻击窗)→TONGUE_LASH(17)。THORNS 5=每次攻击命中蟾蜍对攻击者反伤 5——爆炸清刺前攻击线等同消耗自杀。run-39 死因：16 HP 入场，T2 抽到零挡手牌对 SPIKE_EXPLOSION 23——抽牌方差将死。无挡密手牌规划或药水挡储备时禁止 <~30 HP 进场；全挡回合或爆炸后窗口是此战节拍点。",
+    "cycle": [
+      "PROTRUDING_SPIKES_MOVE",
+      "SPIKE_EXPLOSION_MOVE",
+      "TONGUE_LASH_MOVE"
+    ],
+    "curated": true,
+    "source": "codex-api + run-39 live T2 战死",
+    "play_notes": "run-39：118hp+T2 23伤+THORNS 5——普通地图节点按精英级威胁对待。入场前需 HP 闸门；爆炸回合需要 23 挡或闪避；爆炸后（尖刺 0）才是爆发窗。"
   },
   "ScrollOfBiting": {
     "acts": [],
@@ -13306,6 +13578,37 @@
     "passives": [],
     "play_notes": "",
     "source": "md:monsters.md:L59"
+  },
+  "THIEVING_HOPPER": {
+    "id": "THIEVING_HOPPER",
+    "kind": "monster",
+    "name": "偷窃草蜢",
+    "aliases": [
+      "ThievingHopper"
+    ],
+    "is_boss": false,
+    "acts": [
+      "Act2"
+    ],
+    "hp": {
+      "base": 79,
+      "notes": "run-39 live 79/79；codex A 84+",
+      "ascension": {
+        "min": 84,
+        "max": null
+      }
+    },
+    "description": "Act2 逃跑计时战。ESCAPE_ARTIST:5——每敌方回合 −1，归 1 时脉冲；ESCAPE_MOVE 以 1hp 逃跑且零奖励。5 回合击杀竞速。live 循环：THIEVERY(17+偷1张牌库牌)→FLUTTER(buff FLUTTER 5 闪避层)→HAT_TRICK(21)→NAB(14)→ESCAPE。Flutter 每次攻击命中减伤后 −1/命中（见 powers FLUTTER_POWER）。run-39：T1 Demon Form 投资，窗口内力量 2→8，T5 玩家回合先于逃跑一回合击杀。",
+    "cycle": [
+      "THIEVERY_MOVE",
+      "FLUTTER_MOVE",
+      "HAT_TRICK_MOVE",
+      "NAB_MOVE",
+      "ESCAPE_MOVE"
+    ],
+    "curated": true,
+    "source": "codex-api + run-39 live T5 竞速击杀",
+    "play_notes": "run-39 live：逃跑钟真实存在——规划 ≤5 回合击杀。THIEVERY T1 偷牌库牌（战后可恢复）。Flutter 每命中烧层；多段指令最快。Demon Form+Inferno 削血在 Flutter 减伤下仍赢竞速。"
   },
   "TerrorEel": {
     "acts": [],
@@ -17037,5 +17340,31 @@
     "passives": [],
     "play_notes": "",
     "source": "generator:synthesized"
+  },
+  "HAUNTED_SHIP": {
+    "id": "HAUNTED_SHIP",
+    "kind": "monster",
+    "name": "幽灵船",
+    "aliases": [
+      "HauntedShip",
+      "GHOST_SHIP"
+    ],
+    "is_boss": false,
+    "acts": [
+      "Act1"
+    ],
+    "hp": {
+      "base": 63,
+      "notes": "run-39 live 63/63"
+    },
+    "description": "Act1 (13,2) 级战斗。循环 HAUNT→SWIPE→STOMP。HAUNT：Weak 3+注入 5 张 Dazed（不可打出的虚性状态牌）——零伤害回合，免费铺场窗。SWIPE：8 伤+自身+1 力量（live 意图随力量升高）。STOMP：live 多段 4×3=12（档案基值 3×3）。run-39 经攻击药水免费 Uppercut（13+Weak1+Vuln1）促成 T3 Bash+Hemo 杀链，STOMP 未出发。",
+    "cycle": [
+      "HAUNT_MOVE",
+      "SWIPE_MOVE",
+      "STOMP_MOVE"
+    ],
+    "curated": true,
+    "source": "run-39 live T3 击杀 + codex move 片段",
+    "play_notes": "run-39 live：HAUNT=免费窗（纯 debuff）；倾泻伤害。T3 STOMP 12 级来袭——击杀或全挡。Dazed 为 Ethereal（回合末自消）——牌库污染仅回合内。"
   }
 }

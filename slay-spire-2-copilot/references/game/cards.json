@@ -3570,27 +3570,22 @@
     "zh_name": "恶魔护盾"
   },
   "DEMON_FORM": {
-    "aliases": [
-      "Demon Form",
-      "恶魔形态"
-    ],
-    "card_type": "power",
-    "character_pool": "IRONCLAD",
-    "cost": "3",
-    "curated": false,
-    "description": "at start of your turn gain 2 Strength. Upgrade: +3 Strength.",
     "id": "DEMON_FORM",
-    "keywords": [],
     "kind": "card",
     "name": "Demon Form",
-    "needs_zh": false,
-    "play_notes": "",
+    "aliases": [
+      "DemonForm",
+      "恶魔形态"
+    ],
+    "cost": "3",
+    "card_type": "power",
     "rarity": "rare",
-    "source": "md:cards.md:L42; md:cards_zh.md",
-    "target_type": null,
-    "upgrade": "+3 Strength.",
-    "zh_description": "3，能力，稀有，回合开始获得 2 力量。升级：获得 3 力量。",
-    "zh_name": "恶魔形态"
+    "target_type": "Self",
+    "character_pool": "IRONCLAD",
+    "description": "At the start of your turn, gain 2 Strength. Upgrade pending codex. Live run-39: paid T1 on ThievingHopper (escape-clock race) — Str 2→8 across 5 turns closed 79hp inside the ESCAPE_ARTIST window; stacks with Rupture/Inferno self-damage pumps for +3/turn-class growth.",
+    "curated": true,
+    "source": "codex-api + run-39 live ThievingHopper race",
+    "play_notes": "run-39 live: 3-cost setup turn buys +2 Str/turn start; compounding with Rupture engine is the Act2+ race backbone. Against escape-timers, T1 Demon Form + later hands won the 5-turn race."
   },
   "DEVASTATE": {
     "aliases": [
@@ -4653,29 +4648,22 @@
     "zh_name": "摄食狂热"
   },
   "FEEL_NO_PAIN": {
-    "aliases": [
-      "Feel No Pain",
-      "无惧疼痛"
-    ],
-    "card_type": "power",
-    "character_pool": "IRONCLAD",
-    "cost": "1",
-    "curated": false,
-    "description": "Exhaust, whenever a card is Exhausted gain 3 Block. Upgrade: +4 Block.",
     "id": "FEEL_NO_PAIN",
-    "keywords": [
-      "Exhaust"
-    ],
     "kind": "card",
     "name": "Feel No Pain",
-    "needs_zh": false,
-    "play_notes": "",
+    "aliases": [
+      "FeelNoPain",
+      "无痛"
+    ],
+    "cost": "1",
+    "card_type": "power",
     "rarity": "uncommon",
-    "source": "md:cards.md:L50; md:cards_zh.md",
-    "target_type": null,
-    "upgrade": "+4 Block.",
-    "zh_description": "1，能力，罕见，消耗，每次有卡牌被消耗时获得 3 格挡。升级：获得 4 格挡。",
-    "zh_name": "无惧疼痛"
+    "target_type": "Self",
+    "character_pool": "IRONCLAD",
+    "description": "Whenever a card is Exhausted, gain 3 Block. Live run-39: acquired at Bowlbug rewards; deck ran Tremble/MoltenFist/BurningPact/ForgottenRitual exhaust density — each exhaust pays 3 block on top of the card's own effect. Run-23 win package (FNP+SecondWind+Pact+TrueGrit) block engine class.",
+    "curated": true,
+    "source": "codex-api + run-39 acquisition",
+    "play_notes": "run-39: exhaust-package block engine piece — Tremble/MoltenFist/Pact exhausts each +3 block; combos with Ritual (exhaust-triggered energy) on the same turns."
   },
   "FERAL": {
     "aliases": [
@@ -6024,25 +6012,21 @@
   "HEADBUTT": {
     "aliases": [
       "Headbutt",
-      "头槌"
+      "HEADBUTT"
     ],
-    "card_type": "attack",
-    "character_pool": "IRONCLAD",
-    "cost": "1",
+    "card_type": "Attack",
+    "character_pool": "ironclad",
+    "cost": 1,
     "curated": false,
-    "description": "deal 9 damage; place a card from your discard pile on top of your draw pile. Upgrade: +3 damage. Retrieve overlay (NCombatPileCardSelectScreen) resolves on choose alone — no skip button; a choose must be submitted to resolve the retrieve. **Anti-synergy with ToastyMittens**: Mittens exhausts draw-pile TOP at the start of your next turn — a Headbutt-retrieved card sitting on top gets eaten before you draw it. Retrieve value is only realized when the retrieved card is drawn the same turn via another draw effect, or when Mittens is not in play.",
+    "description": "Deal 9 damage.\nPut a card from your Discard Pile on top of your Draw Pile.",
     "id": "HEADBUTT",
-    "keywords": [],
     "kind": "card",
     "name": "Headbutt",
     "needs_zh": false,
     "play_notes": "",
-    "rarity": "common",
-    "source": "md:cards.md:L56; md:cards_zh.md",
-    "target_type": null,
-    "upgrade": "+3 damage. Retrieve overlay (NCombatPileCardSelectScreen) resolves on choose alone — no skip button; a choose must be submitted to resolve the retrieve. **Anti-synergy with ToastyMittens**: Mittens exhausts draw-pile TOP at the start of your next turn — a Headbutt-retrieved card sitting on top gets eaten before you draw it. Retrieve value is only realized when the retrieved card is drawn the same turn via another draw effect, or when Mittens is not in play.",
-    "zh_description": "1，攻击，普通，造成 9 点伤害；将弃牌堆 1 张牌放到抽牌堆顶。升级：伤害 +3。取回叠层（NCombatPileCardSelectScreen）choose 即确认——无 skip 键，须提交一次 choose 才能结算取回。**与烘焙手套反协同**：Mittens 在下回合开始时消耗抽牌堆顶——Headbutt 取回件在顶会被吃掉。取回价值仅在同回合经其他抽牌效应抽到、或 Mittens 不在场时兑现。",
-    "zh_name": "头槌"
+    "rarity": "Common",
+    "source": "codex-api:/cards/HEADBUTT",
+    "target_type": "AnyEnemy"
   },
   "HEAVENLY_DRILL": {
     "aliases": [
@@ -12603,27 +12587,21 @@
   "THRASH": {
     "aliases": [
       "Thrash",
-      "痛殴"
+      "THRASH"
     ],
-    "card_type": "attack",
-    "character_pool": "IRONCLAD",
-    "cost": "1",
+    "card_type": "Attack",
+    "character_pool": "ironclad",
+    "cost": 1,
     "curated": false,
-    "description": "Exhaust, deal 4 damage twice; exhaust a random Attack in your hand and permanently add its damage to this card. Upgrade: +2 damage.",
+    "description": "Deal 4 damage twice.\nExhaust a random Attack in your Hand and add its damage to this card.",
     "id": "THRASH",
-    "keywords": [
-      "Exhaust"
-    ],
     "kind": "card",
     "name": "Thrash",
     "needs_zh": false,
     "play_notes": "",
-    "rarity": "rare",
-    "source": "md:cards.md:L94; md:cards_zh.md",
-    "target_type": null,
-    "upgrade": "+2 damage.",
-    "zh_description": "1，攻击，稀有，消耗，造成 4 点伤害 ×2；消耗手牌中 1 张随机攻击牌并永久将其伤害并入此牌。升级：伤害 +2。",
-    "zh_name": "痛殴"
+    "rarity": "Rare",
+    "source": "codex-api:/cards/THRASH",
+    "target_type": "AnyEnemy"
   },
   "THRUMMING_HATCHET": {
     "aliases": [
@@ -12881,7 +12859,7 @@
     "kind": "card",
     "name": "Tremble",
     "needs_zh": false,
-    "play_notes": "LIVE (run-37): Tremble+ applies Vulnerable 4 TOTAL (not 3+4=7) — live state VULNERABLE_POWER:4 after play; treat upgrade as total-4 duration.",
+    "play_notes": "LIVE correction run-39: base Tremble ADDS 3 Vulnerable to existing stacks (SewerClam VULN 1→4 after play) — it does NOT set total to 3. Run-37's 'Tremble+ applies Vulnerable 4 TOTAL' referred to the upgraded card's total-vs-add confusion; base semantics are additive. Molten Fist doubles CURRENT stacks after Tremble (3→6 live on boss T3 run-39 wait — run-39 boss: Tremble on 0-Vuln target = 3, MoltenFist doubled 3→6 live).",
     "rarity": "common",
     "source": "md:cards.md:L96; md:cards_zh.md",
     "target_type": null,

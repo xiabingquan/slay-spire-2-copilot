@@ -1936,7 +1936,7 @@
       "Orobas",
       "欧洛巴斯"
     ],
-    "curated": false,
+    "curated": true,
     "description": "ELECTRIC_SHRYMP → on pickup, choose 1 Skill card to enchant with **Imbued** (Imbued = the card automatically plays at combat start, before energy is spent — effectively free every fight); DRIFTWOOD → you may reroll each card reward once; TOUCH_OF_OROBAS → replace your starter relic with its Ancient version (IRONCLAD: Burning Blood +6/combat → **BlackBlood heal 12/combat**; relic id swaps, combat-end heal 12 stacks with ChosenCheese +1 Max HP each fight). **Full-pool decode**: ELECTRIC_SHRYMP (Imbued enchant on 1 Skill), GLASS_EYE (2 common + 2 uncommon + 1 rare cards), SAND_CASTLE (**upgrade 6 random cards on pickup**), ALCHEMICAL_COFFER (**4 potion slots filled with random potions**), DRIFTWOOD (reroll each card reward once), RADIANT_PEARL (**at start of each combat add 1 Luminesce to hand**), PRISMATIC_GEM (gain 1 at start of each turn; card rewards contain other-color cards), SEA_GLASS (see 15 cards from another character, choose any number), TOUCH_OF_OROBAS (starter relic → ancient version), ARCHAIC_TOOTH (transform a starter card into an ancient version). BlackBlood's 12/combat is a major Act-2 HP-economy source.",
     "id": "OROBAS",
     "kind": "event",
@@ -2029,7 +2029,7 @@
         "zh_description": "事件 OROBAS 的选项 `TOUCH_OF_OROBAS`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
       }
     },
-    "play_notes": "",
+    "play_notes": "run-39 live: picked TOUCH_OF_OROBAS at Act2 boon (Burning Blood→BlackBlood 12/combat) — archive's 'major Act-2 HP-economy source' claim live-confirmed (+12 after each subsequent fight). Options seen live: GLASS_EYE / RADIANT_PEARL / TOUCH_OF_OROBAS. Act-transition heal to full HP fired same screen.",
     "source": "md:events.md; md:events_zh.md",
     "zh_description": "ELECTRIC_SHRYMP 放电异虾 → 拾取时选 1 张技能牌附魔 **Imbued**（Imbued = 战斗开始自动打出、不耗能量——每战等效免费）；DRIFTWOOD 浮木 → 每张卡牌奖励可重掷 1 次；TOUCH_OF_OROBAS 欧洛巴斯之触 → 将初始遗物替换为远古版（IRONCLAD：燃烧之血每战+6 → **黑暗之血每战回 12**；遗物 id 更换，战斗结束回 12 与天选芝士 +1 Max HP 同战叠加）。**全选项池解码**：ELECTRIC_SHRYMP（1 技能牌 Imbued 附魔）、GLASS_EYE（2 普通+2 罕见+1 稀有卡）、SAND_CASTLE 沙堡（**拾取时随机升级 6 张牌**）、ALCHEMICAL_COFFER（**4 药槽填满随机药水**）、DRIFTWOOD（卡牌奖励重掷）、RADIANT_PEARL 发光珍珠（**每战开局手牌加 1 张 Luminesce**）、PRISMATIC_GEM（回合开始 +1；卡牌奖励混入他色牌）、SEA_GLASS（查看 15 张他角色牌选任意张）、TOUCH_OF_OROBAS（起始遗物→远古版）、ARCHAIC_TOOTH（1 张起始牌变化为远古版）。黑暗之血 12/战是 Act2 HP 经济的重要来源。",
     "zh_name": "欧洛巴斯"

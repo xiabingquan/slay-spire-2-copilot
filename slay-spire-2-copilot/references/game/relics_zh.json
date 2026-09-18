@@ -302,21 +302,17 @@
     "source": "md:relics.md:L273; md:relics_zh.md:L273"
   },
   "BLACK_BLOOD": {
-    "aliases": [
-      "Black Blood",
-      "BlackBlood"
-    ],
-    "character": "Ironclad",
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗胜利时，回复 12 HP。",
     "id": "BLACK_BLOOD",
     "kind": "relic",
     "name": "黑暗之血",
-    "needs_zh": false,
-    "play_notes": "",
-    "rarity": "Starter",
-    "source": "md:relics.md:L13; md:relics_zh.md:L13; codex:relics/BLACK_BLOOD"
+    "aliases": [
+      "BlackBlood"
+    ],
+    "rarity": "Ancient",
+    "description": "战斗结束时回复 12 HP（经欧洛巴斯之触替换燃血的 6）。run-39 live：草蜢战 24→36、碗虫战 4→16 两次 +12 确认——铁甲战士每战 HP 经济翻倍；档案称其为 Act2 HP 经济主力来源。",
+    "curated": true,
+    "source": "run-39 live 结算 + events.json OROBAS",
+    "play_notes": "run-39 live：每战回12 两次确认。燃血翻倍；与 ChosenCheese 类 Max HP 增益叠加。"
   },
   "BLACK_STAR": {
     "aliases": [
@@ -1692,7 +1688,7 @@
     "id": "GLAM",
     "kind": "relic",
     "name": "Glitter",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
     "source": "codex-api:/relics/GLITTER"
@@ -4513,21 +4509,17 @@
     "source": "md:relics.md:L267; md:relics_zh.md:L267"
   },
   "TOUCH_OF_OROBAS": {
-    "aliases": [
-      "Touch of Orobas",
-      "TouchOfOrobas"
-    ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，将初始遗物替换为远古版本。IRONCLAD 燃烧之血 → 黑暗之血（战斗胜利回 12，原 6）；state 中遗物 id 同步更换，战后回复与天选芝士叠加。",
     "id": "TOUCH_OF_OROBAS",
     "kind": "relic",
     "name": "欧洛巴斯之触",
-    "needs_zh": false,
-    "play_notes": "",
+    "aliases": [
+      "TouchOfOrobas"
+    ],
     "rarity": "Ancient",
-    "source": "md:relics.md:L231; md:relics_zh.md:L231"
+    "description": "Orobas 事件选项：将初始遗物替换为远古版（IRONCLAD：燃血→黑暗之血 每战回12）。标记替换本身；回血效果在 BLACK_BLOOD 上。全池解码见 events.json OROBAS。",
+    "curated": true,
+    "source": "run-39 live 选择 + events.json OROBAS",
+    "play_notes": "run-39：Act2 赐福房选择；BlackBlood 每战回12 同局 live 确认。"
   },
   "TOUGH_BANDAGES": {
     "aliases": [

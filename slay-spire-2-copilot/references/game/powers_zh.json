@@ -1217,15 +1217,21 @@
     "stack_type": "Counter"
   },
   "FLUTTER_POWER": {
-    "curated": true,
-    "description": "层数 >0 时持有者受到的攻击伤害 x0.5；每次未格挡的攻击命中持有者消耗 1 层；归零时持有者被击晕（偷窃草蜢停止悬停）。多段攻击逐段消耗——先用小伤害清层数再爆发。",
     "id": "FLUTTER_POWER",
     "kind": "power",
-    "name": "振翅",
-    "needs_zh": false,
+    "name": "闪避",
+    "aliases": [
+      "FLUTTER",
+      "FlutterPower"
+    ],
+    "description": "闪避层：持有者受攻击伤害被大幅减免；每次被攻击命中消耗 1 层（run-39 草蜢 live：FLUTTER 5 时打击预算 15 实落 7 并降至 4；Flutter 3 时 Pommel 15→11；Flutter 4 时 Bash 21→10）。同指令多段攻击每段命中各耗 1 层——Whirlwind 类穿透最快烧层。高层时约减半伤害；按竞速窗口减速器对待，不是无敌。",
     "power_type": "Buff",
-    "source": "curated:monsters.md ThievingHopper passives",
-    "stack_type": "Counter"
+    "stack_type": "Counter",
+    "counter_class": true,
+    "host_of_affliction": false,
+    "curated": true,
+    "source": "run-39 草蜢战 live 数据",
+    "play_notes": "run-39 live：Flutter 每次攻击命中后减伤并 −1 层。层高时按约五成伤害规划击杀数学；优先多段指令烧层。"
   },
   "FOCUS_POWER": {
     "aliases": [

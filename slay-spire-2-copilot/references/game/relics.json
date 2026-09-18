@@ -338,23 +338,18 @@
     "zh_name": "宾邦"
   },
   "BLACK_BLOOD": {
-    "aliases": [
-      "Black Blood",
-      "BlackBlood"
-    ],
-    "character": "Ironclad",
-    "counter_shown": false,
-    "curated": false,
-    "description": "At the end of combat, heal 12 HP.",
     "id": "BLACK_BLOOD",
     "kind": "relic",
     "name": "Black Blood",
-    "needs_zh": false,
-    "play_notes": "",
-    "rarity": "Starter",
-    "source": "md:relics.md:L13; md:relics_zh.md:L13; codex:relics/BLACK_BLOOD",
-    "zh_description": "战斗胜利时，回复 12 HP。",
-    "zh_name": "黑暗之血"
+    "aliases": [
+      "BlackBlood",
+      "黑暗之血"
+    ],
+    "rarity": "Ancient",
+    "description": "Heal 12 HP at end of combat (replaces Burning Blood's 6 via Touch of Orobas). Live run-39: +12 confirmed after ThievingHopper (24→36) and Bowlbug (4→16) fights — doubles Ironclad's per-fight HP economy; archive calls it a major Act-2 HP-economy source.",
+    "curated": true,
+    "source": "run-39 live procs + events.json OROBAS",
+    "play_notes": "run-39 live: 12/combat heal confirmed twice. Doubles Burning Blood; stacks with any ChosenCheese-class Max HP gains."
   },
   "BLACK_STAR": {
     "aliases": [
@@ -1892,7 +1887,7 @@
     "id": "GLAM",
     "kind": "relic",
     "name": "Glitter",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
     "source": "codex-api:/relics/GLITTER"
@@ -5043,23 +5038,18 @@
     "zh_name": "工具箱"
   },
   "TOUCH_OF_OROBAS": {
-    "aliases": [
-      "Touch of Orobas",
-      "TouchOfOrobas"
-    ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, replace your starter relic with its ancient version. IRONCLAD Burning Blood → BlackBlood (heal 12 HP at combat victory, up from 6); relic id swaps in state and combat-end effects stack with ChosenCheese.",
     "id": "TOUCH_OF_OROBAS",
     "kind": "relic",
     "name": "Touch of Orobas",
-    "needs_zh": false,
-    "play_notes": "",
+    "aliases": [
+      "TouchOfOrobas",
+      "欧洛巴斯之触"
+    ],
     "rarity": "Ancient",
-    "source": "md:relics.md:L231; md:relics_zh.md:L231",
-    "zh_description": "拾取时，将初始遗物替换为远古版本。IRONCLAD 燃烧之血 → 黑暗之血（战斗胜利回 12，原 6）；state 中遗物 id 同步更换，战后回复与天选芝士叠加。",
-    "zh_name": "欧洛巴斯之触"
+    "description": "Orobas event option: replaces the starter relic with its Ancient version (IRONCLAD: Burning Blood → BlackBlood 12/combat). Marks the swap; the heal lives on BLACK_BLOOD. Full-pool decode in events.json OROBAS.",
+    "curated": true,
+    "source": "run-39 live pick + events.json OROBAS",
+    "play_notes": "run-39: picked at Act2 boon; BlackBlood 12/combat live-confirmed same run."
   },
   "TOUGH_BANDAGES": {
     "aliases": [
