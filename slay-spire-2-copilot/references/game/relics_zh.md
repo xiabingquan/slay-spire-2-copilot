@@ -304,3 +304,4 @@
 - 旺购客户感恩徽章（WongoCustomerAppreciationBadge，Event）：无效果。
 - 旺购神秘券（WongosMysteryTicket，Event）：完成 5 场战斗后，下一场战斗奖励额外获得 3 件遗物。
 - 铃铛三角（RINGING_TRIANGLE，Common）：战斗第 1 回合结束时保留手牌——首回合抽到的牌不弃（2026-09-17 perplexity 研究；与 run-12/13 的 RINGING_POWER 铃锁 debuff 无关）。
+- Run-30 实弹验证遗物（A1，2026-09-18，种子 GVL70LGGH2）：营养汤 Ember Strike = **0费/+3伤/Eternal** 全程确认（每次抽到手 cost=0）；威吓头盔每张2费以上出牌 +4挡（锚10+头盔4 = T1 读数 block 14）；锚战斗开始 10挡；弹珠袋战斗开始全体 Vulnerable 1（单敌与多敌战均实弹）；青铜鳞战斗开始 3荆棘（对 3×5 炮手类多段的反伤价值实弹）；光滑石头战斗开始 +1敏捷；战纹升级 Defend+（基础8）与 Taunt+（8挡+Vuln2）——双双实弹计价；铁棒每打出4张牌抽1（0费 Strike 链上观察到触发）；药瓶皮套 +1 药槽（4槽领取窗实弹）；燃烧之血胜利回6。HeartOfIron 是**药水**（非遗物）施加玩家镀层7——见 potions.md。

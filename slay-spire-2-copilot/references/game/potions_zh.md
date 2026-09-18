@@ -85,3 +85,7 @@ Potion 类均已覆盖；数值取各类 `CanonicalVars` 基础值。括号内�
 
 - 药石 Potion-Shaped Rock（石化蟾蜍产出，战斗限定，任意敌人）：造成 15 点无增幅伤害。石化蟾蜍每次战斗开始发 1 瓶；药水栏可叠多瓶。按普通单敌药水选目标（传 target_combat_id）；每次使用后药水槽位重排索引。
 - Fruit Juice（FRUIT_JUICE）：**+5 最大 HP——已解**（perplexity 2026-09-18 多源确认：namu/untapped/sportskeedia 等；STS2 与 STS1 行为一致）。2026-09-17「效果未解」条目退役。亦可作 StoneOfAllTime Lift 燃料（run-23 实测：献祭药水换 +10 Max HP，优于单独喝掉）。run-18 A1 Act1 商店在售；run-23 战斗奖励实测。
+- 鱼油 Fysh Oil（稀有，任意时机，自身）：**立刻 +1 力量与 +1 敏捷**（perplexity 2026-09-18 + run-30 实弹：同一 state 读数 Str 4→5 / Dex 1→2）。战斗内属性增益类。
+- 速度药水 Speed Potion（普通档，战斗）：**+5 敏捷战斗增益**——run-30 实弹：DEXTERITY_POWER 1→6 伴随 SPEED_POTION_POWER:5 计数；**不是抽牌药水**（与下方 Swift Potion 区分）；观察到次回合过期（战斗增益类，回合数封顶——按同回合/短窗价值处理）。
+- 清晰药水 Clarity（战斗）：**立刻抽 1 张，且后续 3 个回合开始各多抽 1 张**（perplexity 2026-09-18 + run-30 实弹：CLARITY_POWER:3 计数出现，使用时抽 1，次回合计数 3→2）。
+- 铁心 HeartOfIron（药水）：对玩家施加 **PLATING_POWER 7**——时机见 powers.md 玩家镀层条目（战斗中途使用在玩家侧回合结束时给挡）。

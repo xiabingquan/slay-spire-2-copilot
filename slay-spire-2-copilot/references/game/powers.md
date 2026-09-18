@@ -625,3 +625,5 @@ when negative.
 ## Not a power
 
 - BURNING_BLOOD is a Relic (Ironclad), not a power — see relics.md.
+- TENDER_POWER (on player, Act3 HunterKiller-class Debuff) — **run-30 live decode (corrects run-17 "grant" note)**: while active, EVERY card played (attacks and skills both observed) drains player Strength −1 and Dexterity −1 each play within the turn; **all Tender drains restore at the start of the player's next turn** (Str/Dex return to pre-turn baseline — observed baseline-restore across 3 consecutive turns). Not a buff; net effect is mid-turn stat tax that resets each turn. Kill the applier or weather the turn cycle.
+- PLATING_POWER on players (HeartOfIron potion applies 7): same mechanics as enemy plating — combat-start block only when applied before round 1's player turn; **mid-combat use grants Amount block at the END of the player's side turn** (run-30 live: drank T1 player-turn, PLATING_POWER:7 appeared, +7 block landed before enemy attack, stacks decremented 7→6→5.. each subsequent turn start-class). Exact-cover math: current block + end-of-turn plating = the number that matters vs the enemy's incoming intent.
