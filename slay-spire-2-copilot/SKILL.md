@@ -130,6 +130,17 @@ Repeat until the run ends or the user stops you. Every spirectl call carries
    omits). Routing decisions: `run.map.rows[]` in the JSON state carries the
    full act map (every point's `point_type` + `children` connectivity) —
    weigh elite/rest/shop/boss paths from it, not just the current row.
+   **Route draft at act start (user directive 2026-09-18 — hard rule)**:
+   before entering ANY room of a new act, read the full map and write an
+   explicit route draft in the reply: number/positions of elites, shops (and
+   whether gold earned by then can actually be spent there), rest geometry —
+   is there a rest BEFORE each elite and BEFORE the boss, treasure placement —
+   then pick the spine that satisfies the checklist. Note variance points
+   (Unknown rooms). Revise the draft mid-act when a fork or major event
+   changes the calculus. Run-35 lesson: act-transition full-HP assumptions
+   break under fight attrition — if entry HP for a no-pre-rest elite lands
+   below ~50%, potions ARE the reserve plan; spend gold at the latest shop
+   BEFORE elite corridors, not after.
    **Boon rooms (run start + act transitions)**: every act begins with an
    Ancient/Neow-family boon room. Act 1's is **Neow** (relic choices —
    typically positive relics vs curse-cost relics); `start_run` reveals the

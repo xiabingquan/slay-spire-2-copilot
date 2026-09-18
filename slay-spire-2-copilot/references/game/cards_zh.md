@@ -14,7 +14,7 @@ ResolveEnergyXValue() / ResolveStarXValue() 结算 X；下文统一记作 X。
 ## Ironclad（铁甲战士）
 
 - AGGRESSION（好勇斗狠）：1，能力，稀有，回合开始将弃牌堆 1 张随机攻击牌放入手牌并升级。升级：获得固有。
-- ANGER（愤怒）：0，攻击，普通，造成 6 点伤害；将自身拷贝加入弃牌堆。升级：伤害 +2。
+- ANGER（愤怒）：0，攻击，普通，造成 6 点伤害；将自身拷贝加入弃牌堆。升级：伤害 +2。**run-35 Corrupted 附魔 live 解码（共生体事件）**：Corrupted =「攻击伤害 ×1.5；打出时拥有者受 2 点不可格挡伤害」。Anger 上实测：每次打出 ~12-16 伤（(6+力)×1.5）+ 自伤 2 + 复制入弃牌堆；**Rupture Amount2 在场时自伤 2 触发 Rupture 每次 Anger +2 力——复制体不继承附魔但本体 Anger 每洗牌从弃牌堆重新触发；单回合两次 Anger 打出 Str 2→4→6 live（产卵虫 T5 实测）**。Corrupted 池中最高频率 0 费 Rupture 燃料目标。
 - ARMAMENTS（武装）：1，技能，普通，获得 5 格挡；升级一张手牌。升级：改为升级全部手牌。**run-26 实测（A1 2026-09-18）：战斗内升级仅限本场战斗** —— Armaments 升级的 Bloodletting 当战 +3 能量，下一战回到 +2；商店/营火 SMITH 升级（Rupture+）正常跨战保留。不可把 Armaments 升级规划为永久牌库价值。
 - ASHEN_STRIKE（灰烬打击）：1，攻击，罕见，消耗，打击标签，伤害 = 6 + 消耗堆每张牌 3 点。升级：每张 +4。
 - BARRICADE（壁垒）：3，能力，稀有，回合开始格挡不再被移除。升级：费用 2。

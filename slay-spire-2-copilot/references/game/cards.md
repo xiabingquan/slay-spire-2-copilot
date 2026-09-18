@@ -15,7 +15,7 @@ listed below as X.
 ## Ironclad
 
 - AGGRESSION: 1, power, rare, at start of your turn put 1 random Attack from your discard pile into your hand and upgrade it. Upgrade: gains Innate.
-- ANGER: 0, attack, common, deal 6 damage; add a copy of this card to your discard pile. Upgrade: +2 damage.
+- ANGER: 0, attack, common, deal 6 damage; add a copy of this card to your discard pile. Upgrade: +2 damage. **Run-35 Corrupted-enchant live decode (Symbiote event)**: Corrupted = "attacks deal ×1.5 damage; owner takes 2 unblockable damage when played". On Anger: each play dealt ~12-16 live ((6+Str)×1.5) + 2 self-damage + copy to discard; **with Rupture Amount2 in play the 2 self-damage fires Rupture +2 Strength per Anger play — copies inherit no enchant but the base Anger keeps re-triggering from discard every reshuffle; Str 2→4→6 observed across two Anger plays in one turn (Ovicopter T5 live)**. Highest-frequency 0-cost Rupture fuel target in the Corrupted pool.
 - ARMAMENTS: 1, skill, common, gain 5 Block; upgrade a card in your hand. Upgrade: instead upgrades ALL cards in your hand. **Run-26 live (A1 2026-09-18): in-combat upgrades are combat-scoped only** — Bloodletting upgraded via Armaments gave +3 Energy that combat but reverted to +2 the next; a shop/rest SMITH upgrade (Rupture+) persisted normally. Do not plan Armaments upgrades as permanent deck value.
 - ASHEN_STRIKE: 1, attack, uncommon, Exhaust, Strike-tagged, deal damage = 6 + 3 for each card in your exhaust pile. Upgrade: +1 per exhaust card (4 each).
 - BARRICADE: 3, power, rare, your Block is not removed at the start of your turn. Upgrade: cost 2.

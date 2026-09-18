@@ -32,7 +32,7 @@
 - SLIMED（黏液，Status）：费用 1；打出时抽 1 张牌，然后消耗（Exhaust）。
   （PersonalHivePower 将 Dazed 牌加入攻击者的抽牌堆。）
 - DAZED（眩晕，Status）：不可打出，虚无——回合结束未打出则消失。
-- WOUND（创伤，Status）：不可打出；纯牌库堵塞物。
+- WOUND（创伤，Status）：不可打出；纯牌库堵塞物。**run-35 live 再确认（Vantom Boss 战）**：3 张 Wound 在手过回合末 HP 零损——无 Infection 级回合末税；档案「纯堵塞物」声明 live 成立。
 - TOXIC（剧毒，Status）：费用 1，消耗；回合结束仍在手牌时，对拥有者
   造成 5 点非攻击伤害（DamageVar 5）。
 - DISINTEGRATION（崩解，Status，KnowledgeDemon 选项）：费用 -1，战斗中
