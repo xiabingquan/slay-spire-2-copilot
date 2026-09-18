@@ -67,6 +67,10 @@ Potion 类均已覆盖；数值取各类 `CanonicalVars` 基础值。括号内�
 - Snecko Oil（异蛇之油）(Rare, 战斗中, 任意玩家): 抽 7 张；随机化手牌中所有非 X 费卡牌的费用。
 - Soldier's Stew（士兵炖汤）(Rare, 战斗中, 任意玩家): 本场战斗内你战斗牌堆中所有含 Strike 标签的卡牌 +1 次 Replay。run-16 实测：Replay 表现为用药时对各张卡的一次性充能 —— 用药时已在手牌/抽牌堆中的打击牌打出时额外结算一次；战斗后期才抽到的打击只结算一次。
 - Speed Potion（速度药水）(Common, 战斗中, 任意玩家): 获得 SpeedPotionPower +5 敏捷——本回合结束时失去 5 敏捷（临时敏捷）。
+- 痊愈药水 run-34 订正：**获得 1 能量；抽 2 张牌**——名称像治疗但效果为爆发类（+1能+抽2）。run-34 memory 一度误档为治疗药；CURE_ALL 按爆发/挖牌工具使用（run-34 T2 电球头战用它抽出 Defend+TwinStrike 进入生存手牌）。档案中任何「CureAll 治疗」注记均为错误。
+- 爆炸安瓿 run-34 live：对全体敌人 10 伤（自动多目标，不传 target id）——蜂群术士 T4 补刀：卡牌链将 Boss 压至 4 HP，安瓿 10 同回合击杀；run-24 的 BEES 4×7=28 死亡数字从未结算。
+- 速度药水+敏捷药水叠用 run-34 live：DexPotion +2（战斗持续）再 SpeedPotion +5（当回合，SPEED_POTION_POWER:5 计数）→ 同读 DEXTERITY_POWER:7；Frail 2 下 Defend live 结算 9 挡；Speed 部分次回合过期（敏捷回 2）——run-30 过期注记精确再确认。
+- 束缚药水 run-34 live：对目标施加 Weak 3+Vuln 1（虱虫之祖意图 19→14 弱化 live）；档案「Weak 1+Vuln 1 全体」——live 单体为 Weak 3 级；层数按 live 读数；全体规则成立（无需 target id）。
 - Stable Serum（稳定血清）(Uncommon, 战斗中, 任意玩家): 获得 RetainHandPower 2——接下来 2 个回合结束时不弃手牌。
 - Star Potion（星星药水）(Common, 战斗中, 自身): +3 点星星（★）。
 - Strength Potion（力量药水）(Common, 战斗中, 任意玩家): 本场战斗 +2 力量。
