@@ -52,6 +52,51 @@ public static class StateBuilder
     private static readonly FieldInfo? RelicChoiceField =
         typeof(NChooseARelicSelection).GetField("_relics", BindingFlags.Instance | BindingFlags.NonPublic);
 
+    // RandomBranchState.GetStateWeight(StateWeight, Creature) — private static;
+    // applies UseOnlyOnce/CannotRepeat/CanRepeatXTimes/cooldown gating against
+    // StateLog. Read-only evaluation; NEVER call rng-consuming RollMove/
+    // GetNextState paths (they would desync live monster AI rolls).
+    // decomp: MegaCrit.Sts2.Core.MonsterMoves.MonsterMoveStateMachine/RandomBranchState.cs:130
+    private static readonly MethodInfo? BranchGetStateWeightMethod =
+        typeof(MegaCrit.Sts2.Core.MonsterMoves.MonsterMoveStateMachine.RandomBranchState)
+            .GetMethod("GetStateWeight", BindingFlags.Static | BindingFlags.NonPublic);
+
+    // ConditionalBranchState.States — private List<ConditionalBranch>;
+    // ConditionalBranch is a private nested struct with public readonly id and
+    // public float Evaluate().
+    private static readonly FieldInfo? ConditionalBranchStatesField =
+        typeof(MegaCrit.Sts2.Core.MonsterMoves.MonsterMoveStateMachine.ConditionalBranchState)
+            .GetField("States", BindingFlags.Instance | BindingFlags.NonPublic);
+
+    // AbstractIntent.GetIntentDescription(IEnumerable<Creature>, Creature) —
+    // protected virtual; SmartFormat loc resolution can throw, so each call is
+    // wrapped and a failure omits the field.
+    private static readonly Dictionary<Type, MethodInfo?> IntentDescriptionMethods = new();
+
+    private static MethodInfo? GetIntentDescriptionMethod(Type intentType)
+    {
+        if (IntentDescriptionMethods.TryGetValue(intentType, out MethodInfo? cached))
+        {
+            return cached;
+        }
+        MethodInfo? method = null;
+        try
+        {
+            method = intentType.GetMethod(
+                "GetIntentDescription",
+                BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic,
+                binder: null,
+                types: new[] { typeof(IEnumerable<Creature>), typeof(Creature) },
+                modifiers: null);
+        }
+        catch (Exception)
+        {
+            method = null;
+        }
+        IntentDescriptionMethods[intentType] = method;
+        return method;
+    }
+
     public static Dictionary<string, object?> Build()
     {
         RunState? runState = SafeRunState();
@@ -336,6 +381,16 @@ public static class StateBuilder
             ["ascension"] = runState.AscensionLevel,
             ["map_coord"] = runState.CurrentMapCoord is { } coord ? CoordDto(coord) : null,
         };
+        try { run["seed"] = runState.Rng.StringSeed; } catch (Exception) { /* omit */ }
+        try { run["game_mode"] = runState.GameMode.ToString(); } catch (Exception) { /* omit */ }
+        try
+        {
+            run["modifiers"] = runState.Modifiers
+                .Select(m => m.Id.Entry)
+                .Where(e => !string.IsNullOrEmpty(e))
+                .ToList();
+        }
+        catch (Exception) { run["modifiers"] = new List<string>(); }
         try
         {
             run["visited_coords"] = runState.VisitedMapCoords.Select(CoordDto).ToList();
@@ -556,20 +611,42 @@ public static class StateBuilder
             ["hp"] = creature.CurrentHp,
             ["max_hp"] = creature.MaxHp,
             ["block"] = creature.Block,
-            ["relics"] = player.Relics.Select(r => new Dictionary<string, object?>
+            ["relics"] = player.Relics.Select(r =>
             {
-                ["id"] = r.Id.Entry,
-                ["name"] = ModelName(r),
+                var relic = new Dictionary<string, object?>
+                {
+                    ["id"] = r.Id.Entry,
+                    ["name"] = ModelName(r),
+                };
+                try { relic["stack_count"] = r.StackCount; } catch (Exception) { /* omit */ }
+                try { relic["is_used_up"] = r.IsUsedUp; } catch (Exception) { /* omit */ }
+                try
+                {
+                    if (r.ShowCounter)
+                    {
+                        relic["counter"] = r.DisplayAmount;
+                    }
+                }
+                catch (Exception) { /* omit */ }
+                return relic;
             }).ToList(),
-            ["potions"] = player.PotionSlots.Select((PotionModel? p, int i) => p == null
-                ? null
-                : new Dictionary<string, object?>
+            ["potions"] = player.PotionSlots.Select((PotionModel? p, int i) =>
+            {
+                if (p == null)
+                {
+                    return null;
+                }
+                var potion = new Dictionary<string, object?>
                 {
                     ["index"] = i,
                     ["id"] = p.Id.Entry,
                     ["name"] = ModelName(p),
                     ["target_type"] = p.TargetType.ToString(),
-                }).ToList(),
+                };
+                try { potion["rarity"] = p.Rarity.ToString(); } catch (Exception) { /* omit */ }
+                try { potion["usage"] = p.Usage.ToString(); } catch (Exception) { /* omit */ }
+                return potion;
+            }).ToList(),
         };
         try
         {
@@ -658,8 +735,19 @@ public static class StateBuilder
             piles["draw_count"] = pcs.DrawPile.Cards.Count;
             piles["discard_count"] = pcs.DiscardPile.Cards.Count;
             piles["exhaust_count"] = pcs.ExhaustPile.Cards.Count;
+            // Id-only pile arrays — full card semantics via lookup; "+" marks
+            // upgraded copies. ~400B per pile, not CardDto.
+            try { piles["draw_card_ids"] = CardPileIdList(pcs.DrawPile); } catch (Exception) { /* omit */ }
+            try { piles["discard_card_ids"] = CardPileIdList(pcs.DiscardPile); } catch (Exception) { /* omit */ }
+            try { piles["exhaust_card_ids"] = CardPileIdList(pcs.ExhaustPile); } catch (Exception) { /* omit */ }
+            try
+            {
+                piles["play_count"] = pcs.PlayPile.Cards.Count;
+                piles["play_card_ids"] = CardPileIdList(pcs.PlayPile);
+            }
+            catch (Exception) { /* omit */ }
         }
-        return new Dictionary<string, object?>
+        var dto = new Dictionary<string, object?>
         {
             ["round"] = combat.RoundNumber,
             ["current_side"] = combat.CurrentSide.ToString(),
@@ -670,6 +758,66 @@ public static class StateBuilder
             ["creatures"] = creatures,
             ["piles"] = piles,
         };
+        try
+        {
+            if (combat.Encounter is { } encounter)
+            {
+                dto["encounter_id"] = encounter.Id.Entry;
+                dto["should_give_rewards"] = encounter.ShouldGiveRewards;
+                dto["min_gold_reward"] = encounter.MinGoldReward;
+                dto["max_gold_reward"] = encounter.MaxGoldReward;
+            }
+        }
+        catch (Exception) { /* encounter unavailable */ }
+        try
+        {
+            dto["hittable_enemy_combat_ids"] = combat.HittableEnemies.Select(c => c.CombatId).ToList();
+        }
+        catch (Exception) { /* omit */ }
+        try
+        {
+            dto["escaped_creature_combat_ids"] = combat.EscapedCreatures.Select(c => c.CombatId).ToList();
+        }
+        catch (Exception) { /* omit */ }
+        // Combat history — last 10 entries, excluded from fingerprint inputs.
+        try
+        {
+            var all = CombatManager.Instance.History.Entries.ToList();
+            List<Dictionary<string, object?>> history = all
+                .Skip(Math.Max(0, all.Count - 10))
+                .Select(e =>
+                {
+                    var h = new Dictionary<string, object?> { ["kind"] = e.GetType().Name };
+                    try { h["text"] = e.HumanReadableString; } catch (Exception) { /* omit text */ }
+                    return h;
+                })
+                .ToList();
+            dto["history"] = history;
+        }
+        catch (Exception) { /* history unavailable */ }
+        return dto;
+    }
+
+    private static List<string> CardPileIdList(CardPile? pile)
+    {
+        var ids = new List<string>();
+        if (pile == null)
+        {
+            return ids;
+        }
+        foreach (CardModel card in pile.Cards)
+        {
+            try
+            {
+                bool upgraded = ProbeBool(card, "IsUpgraded", "Upgraded") is true;
+                ids.Add(upgraded ? card.Id.Entry + "+" : card.Id.Entry);
+            }
+            catch (Exception)
+            {
+                try { ids.Add(card.Id.Entry); } catch (Exception) { /* skip card */ }
+            }
+        }
+        return ids;
     }
 
     private static object? SafeMaxEnergy(PlayerCombatState? pcs)
@@ -699,10 +847,30 @@ public static class StateBuilder
             ["is_hittable"] = SafeIsHittable(creature),
             ["powers"] = creature.Powers.Select(PowerDto).ToList(),
         };
+        try { dto["model_id"] = creature.ModelId.Entry; } catch (Exception) { /* omit */ }
+        try { dto["slot_name"] = creature.SlotName; } catch (Exception) { /* omit */ }
+        try { dto["is_primary_enemy"] = creature.IsPrimaryEnemy; } catch (Exception) { /* omit */ }
+        try { dto["is_secondary_enemy"] = creature.IsSecondaryEnemy; } catch (Exception) { /* omit */ }
+        try { dto["is_stunned"] = creature.IsStunned; } catch (Exception) { /* omit */ }
         if (creature.Monster is { } monster)
         {
             dto["move_id"] = SafeMoveId(monster);
             dto["intents"] = BuildIntents(monster, creature);
+            if (creature.IsAlive)
+            {
+                try
+                {
+                    Dictionary<string, object?>? graph = MoveGraphDto(monster, creature);
+                    if (graph != null)
+                    {
+                        dto["move_graph"] = graph;
+                    }
+                }
+                catch (Exception)
+                {
+                    // move graph unavailable — state build must not fail
+                }
+            }
         }
         return dto;
     }
@@ -749,6 +917,65 @@ public static class StateBuilder
         return string.IsNullOrWhiteSpace(cleaned) ? fallback : cleaned.Trim(';', ' ');
     }
 
+    // Typed intent DTO. Member names verified against decomp
+    // (/tmp/sts2-decomp/MegaCrit.Sts2.Core.MonsterMoves.Intents/*):
+    // AttackIntent.DamageCalc (Func<decimal>?), .Repeats (virtual int),
+    // .GetSingleDamage/.GetTotalDamage (public, run the live damage hooks),
+    // StatusIntent.CardCount (public int),
+    // AbstractIntent.GetIntentDescription (protected virtual — cached reflection).
+    private static Dictionary<string, object?> IntentDto(AbstractIntent intent, Creature owner)
+    {
+        var dto = new Dictionary<string, object?>
+        {
+            ["type"] = intent.IntentType.ToString(),
+            ["class"] = intent.GetType().Name,
+        };
+        try
+        {
+            dto["label"] = CleanIntentLabel(ResolveLoc(intent.GetIntentLabel(Array.Empty<Creature>(), owner)), intent);
+        }
+        catch (Exception)
+        {
+            dto["label"] = intent.IntentType.ToString();
+        }
+        if (intent is AttackIntent attack)
+        {
+            try { dto["damage"] = attack.GetSingleDamage(Array.Empty<Creature>(), owner); } catch (Exception) { /* omit */ }
+            try { dto["total_damage"] = attack.GetTotalDamage(Array.Empty<Creature>(), owner); } catch (Exception) { /* omit */ }
+            try { dto["hits"] = attack.Repeats; } catch (Exception) { /* omit */ }
+            try
+            {
+                if (attack.DamageCalc?.Invoke() is { } baseDmg)
+                {
+                    dto["base_damage"] = (int)baseDmg;
+                }
+            }
+            catch (Exception) { /* omit */ }
+        }
+        if (intent is StatusIntent status)
+        {
+            try { dto["card_count"] = status.CardCount; } catch (Exception) { /* omit */ }
+        }
+        try
+        {
+            MethodInfo? descMethod = GetIntentDescriptionMethod(intent.GetType());
+            if (descMethod != null
+                && descMethod.Invoke(intent, new object[] { Array.Empty<Creature>(), owner }) is MegaCrit.Sts2.Core.Localization.LocString loc)
+            {
+                string? text = ResolveLoc(loc);
+                if (!string.IsNullOrWhiteSpace(text))
+                {
+                    dto["description"] = StripBbcode(text);
+                }
+            }
+        }
+        catch (Exception)
+        {
+            // description loc can fail on incomplete SmartFormat vars — omit
+        }
+        return dto;
+    }
+
     private static List<Dictionary<string, object?>> BuildIntents(MonsterModel monster, Creature owner)
     {
         var intents = new List<Dictionary<string, object?>>();
@@ -761,37 +988,14 @@ public static class StateBuilder
             }
             foreach (AbstractIntent intent in move.Intents)
             {
-                var dto = new Dictionary<string, object?>
-                {
-                    ["type"] = intent.IntentType.ToString(),
-                    ["class"] = intent.GetType().Name,
-                };
                 try
                 {
-                    dto["label"] = CleanIntentLabel(ResolveLoc(intent.GetIntentLabel(Array.Empty<Creature>(), owner)), intent);
+                    intents.Add(IntentDto(intent, owner));
                 }
                 catch (Exception)
                 {
-                    // intent label unavailable for this intent type
-                    dto["label"] = intent.IntentType.ToString();
+                    // single intent failure must not drop the whole list
                 }
-                // Damage/hit counts live on undocumented intent subclasses; probe
-                // common member names so state stays useful across game patches.
-                foreach (string member in new[] { "Damage", "damage", "Hits", "hits", "HitCount", "Times" })
-                {
-                    MemberInfo? hit = intent.GetType().GetMember(member, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic).FirstOrDefault();
-                    object? value = hit switch
-                    {
-                        PropertyInfo p => p.GetValue(intent),
-                        FieldInfo f => f.GetValue(intent),
-                        _ => null,
-                    };
-                    if (value != null && (member is "Damage" or "damage" or "Hits" or "hits" or "HitCount" or "Times"))
-                    {
-                        dto[member is "Damage" or "damage" ? "damage" : "hits"] = value is decimal d ? (int)d : value;
-                    }
-                }
-                intents.Add(dto);
             }
         }
         catch (Exception)
@@ -801,6 +1005,220 @@ public static class StateBuilder
         return intents;
     }
 
+    // Full move-state-machine graph per alive monster: every move with its
+    // intents, linear follow-ups, branch weights, and the performed-move log.
+    // Read-only — never calls RollMove/GetNextState with live RNG.
+    private static Dictionary<string, object?>? MoveGraphDto(MonsterModel monster, Creature owner)
+    {
+        MonsterMoveStateMachine? machine = monster.MoveStateMachine;
+        if (machine == null)
+        {
+            return null;
+        }
+        var graph = new Dictionary<string, object?>
+        {
+            ["current_move_id"] = SafeMoveId(monster),
+        };
+        try
+        {
+            List<string> log = machine.StateLog
+                .Select(s => s.Id)
+                .Where(id => !string.IsNullOrEmpty(id))
+                .ToList();
+            if (log.Count > 12)
+            {
+                log = log.Skip(log.Count - 12).ToList();
+            }
+            graph["state_log"] = log;
+        }
+        catch (Exception)
+        {
+            graph["state_log"] = new List<string>();
+        }
+        var states = new List<Dictionary<string, object?>>();
+        string? currentId = SafeMoveId(monster);
+        try
+        {
+            foreach (MonsterState state in machine.States.Values)
+            {
+                try
+                {
+                    states.Add(StateDto(state, owner, currentId));
+                }
+                catch (Exception)
+                {
+                    // per-state failure must not drop the whole graph
+                    try
+                    {
+                        states.Add(new Dictionary<string, object?> { ["id"] = state.Id, ["kind"] = "other" });
+                    }
+                    catch (Exception) { /* omit */ }
+                }
+            }
+        }
+        catch (Exception)
+        {
+            // States enumeration failed — return whatever was collected
+        }
+        graph["states"] = states;
+        return graph;
+    }
+
+    private static Dictionary<string, object?> StateDto(MonsterState state, Creature owner, string? currentId)
+    {
+        if (state is MoveState move)
+        {
+            bool isCurrent = move.Id == currentId;
+            var dto = new Dictionary<string, object?>
+            {
+                ["id"] = move.Id,
+                ["kind"] = "move",
+                ["is_current"] = isCurrent,
+            };
+            try { dto["must_perform_once"] = move.MustPerformOnceBeforeTransitioning; } catch (Exception) { /* omit */ }
+            try
+            {
+                string? followUp = null;
+                try { followUp = move.FollowUpState?.Id; } catch (Exception) { /* fall through */ }
+                followUp ??= move.FollowUpStateId;
+                if (!string.IsNullOrEmpty(followUp))
+                {
+                    dto["follow_up_id"] = followUp;
+                }
+            }
+            catch (Exception) { /* omit */ }
+            try
+            {
+                if (move.Intents != null)
+                {
+                    var intents = new List<Dictionary<string, object?>>();
+                    foreach (AbstractIntent intent in move.Intents)
+                    {
+                        try
+                        {
+                            Dictionary<string, object?> idto = IntentDto(intent, owner);
+                            // Payload budget: non-current moves keep the math
+                            // (damage/hits/base/total) but drop prose fields.
+                            if (!isCurrent)
+                            {
+                                idto.Remove("description");
+                                idto.Remove("label");
+                            }
+                            intents.Add(idto);
+                        }
+                        catch (Exception) { /* omit one */ }
+                    }
+                    dto["intents"] = intents;
+                }
+            }
+            catch (Exception) { /* omit */ }
+            return dto;
+        }
+        if (state is RandomBranchState branch)
+        {
+            var dto = new Dictionary<string, object?>
+            {
+                ["id"] = branch.Id,
+                ["kind"] = "random_branch",
+            };
+            var branches = new List<Dictionary<string, object?>>();
+            try
+            {
+                foreach (RandomBranchState.StateWeight sw in branch.States)
+                {
+                    var b = new Dictionary<string, object?>
+                    {
+                        ["state_id"] = sw.stateId,
+                        ["cooldown"] = sw.cooldown,
+                        ["repeat_type"] = sw.repeatType.ToString(),
+                        ["max_times"] = sw.maxTimes,
+                    };
+                    try
+                    {
+                        if (sw.weightLambda?.Invoke() is { } w)
+                        {
+                            b["weight"] = w;
+                        }
+                    }
+                    catch (Exception) { /* weight lambda unavailable */ }
+                    try
+                    {
+                        if (BranchGetStateWeightMethod != null
+                            && BranchGetStateWeightMethod.Invoke(null, new object[] { sw, owner }) is float ew)
+                        {
+                            b["effective_weight"] = ew;
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        // gate evaluation unavailable — fall back to raw weight
+                        if (!b.ContainsKey("weight"))
+                        {
+                            try { b["effective_weight"] = sw.GetWeight(); } catch (Exception) { /* omit */ }
+                        }
+                    }
+                    branches.Add(b);
+                }
+            }
+            catch (Exception) { /* branch list unavailable */ }
+            dto["branches"] = branches;
+            return dto;
+        }
+        if (state is ConditionalBranchState conditional)
+        {
+            var dto = new Dictionary<string, object?>
+            {
+                ["id"] = conditional.Id,
+                ["kind"] = "conditional_branch",
+            };
+            var branches = new List<Dictionary<string, object?>>();
+            try
+            {
+                if (ConditionalBranchStatesField?.GetValue(conditional) is System.Collections.IEnumerable raw)
+                {
+                    foreach (object? element in raw)
+                    {
+                        if (element == null)
+                        {
+                            continue;
+                        }
+                        Type elementType = element.GetType();
+                        var b = new Dictionary<string, object?>();
+                        try
+                        {
+                            if (elementType.GetField("id", BindingFlags.Instance | BindingFlags.Public)?.GetValue(element) is string bid)
+                            {
+                                b["state_id"] = bid;
+                            }
+                        }
+                        catch (Exception) { /* omit */ }
+                        try
+                        {
+                            MethodInfo? evaluate = elementType.GetMethod("Evaluate", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                            if (evaluate?.Invoke(element, null) is float score)
+                            {
+                                b["condition_met"] = score > 0f;
+                            }
+                        }
+                        catch (Exception) { /* omit rather than guess */ }
+                        if (b.Count > 0)
+                        {
+                            branches.Add(b);
+                        }
+                    }
+                }
+            }
+            catch (Exception) { /* branch list unavailable */ }
+            dto["branches"] = branches;
+            return dto;
+        }
+        return new Dictionary<string, object?>
+        {
+            ["id"] = state.Id,
+            ["kind"] = "other",
+        };
+    }
+
     private static Dictionary<string, object?> PowerDto(PowerModel power)
     {
         var dto = new Dictionary<string, object?>
@@ -808,14 +1226,19 @@ public static class StateBuilder
             ["id"] = power.Id.Entry,
             ["name"] = ModelName(power),
         };
-        foreach (string member in new[] { "Amount", "Stacks", "StackCount" })
+        try { dto["amount"] = power.Amount; } catch (Exception) { /* omit */ }
+        try { dto["type"] = power.Type.ToString(); } catch (Exception) { /* omit */ }
+        try { dto["stack_type"] = power.StackType.ToString(); } catch (Exception) { /* omit */ }
+        try { dto["is_visible"] = power.IsVisible; } catch (Exception) { /* omit */ }
+        try
         {
-            if (power.GetType().GetProperty(member)?.GetValue(power) is { } v)
+            if (power.Applier is { } applier)
             {
-                dto["amount"] = v is decimal d ? (int)d : v;
-                break;
+                dto["applier_combat_id"] = applier.CombatId;
+                dto["applier_name"] = applier.Name;
             }
         }
+        catch (Exception) { /* omit */ }
         return dto;
     }
 
@@ -1183,14 +1606,48 @@ public static class StateBuilder
         for (int i = 0; i < buttons.Count; i++)
         {
             EventOption option = buttons[i].Option;
-            options.Add(new Dictionary<string, object?>
+            var dto = new Dictionary<string, object?>
             {
                 ["kind"] = "event_option",
                 ["index"] = i,
                 ["id"] = option.TextKey,
                 ["name"] = ResolveLoc(option.Title),
                 ["is_proceed"] = option.IsProceed,
-            });
+            };
+            try
+            {
+                string? description = ResolveLoc(option.Description);
+                if (!string.IsNullOrWhiteSpace(description))
+                {
+                    dto["description"] = StripBbcode(description);
+                }
+            }
+            catch (Exception) { /* omit */ }
+            try
+            {
+                // Live textKey shape: "NEOW.pages.INITIAL.options.NEOWS_TALISMAN"
+                // — event id is the segment before ".pages.".
+                string textKey = option.TextKey ?? "";
+                int pages = textKey.IndexOf(".pages.", StringComparison.Ordinal);
+                if (pages > 0)
+                {
+                    dto["event_id"] = textKey[..pages];
+                }
+                else if (!string.IsNullOrEmpty(textKey))
+                {
+                    dto["event_id"] = textKey.Split('.')[0];
+                }
+            }
+            catch (Exception) { /* omit */ }
+            try
+            {
+                if (option.Relic is { } relic)
+                {
+                    dto["relic_id"] = relic.Id.Entry;
+                }
+            }
+            catch (Exception) { /* omit */ }
+            options.Add(dto);
         }
         return options;
     }
