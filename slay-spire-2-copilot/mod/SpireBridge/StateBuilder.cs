@@ -46,7 +46,7 @@ namespace SpireCopilot.Bridge;
 // a few private screen members fails soft to index-only option lists.
 public static class StateBuilder
 {
-    private static readonly FieldInfo? CardRewardOptionsField =
+    internal static readonly FieldInfo? CardRewardOptionsField =
         typeof(NCardRewardSelectionScreen).GetField("_options", BindingFlags.Instance | BindingFlags.NonPublic);
 
     private static readonly FieldInfo? RelicChoiceField =
@@ -99,6 +99,7 @@ public static class StateBuilder
 
     public static Dictionary<string, object?> Build()
     {
+        InfoCompleteness.BeginBuild();
         RunState? runState = SafeRunState();
         CombatState? combat = SafeCombatState();
         Player? player = null;
@@ -109,6 +110,19 @@ public static class StateBuilder
         player ??= combat != null ? LocalContext.GetMe(combat) : null;
 
         string screen = DetectScreen(combat, out string screenType, out Node? screenNode);
+
+        // Information contract: screens that imply run/combat state must have
+        // the object backing them — a null here is unverified information, not
+        // an empty world.
+        if (runState == null && screen is not ("menu" or "hello" or "error"))
+        {
+            InfoCompleteness.FlagDuringBuild($"screen '{screen}' active but RunState unreadable");
+        }
+        if (combat == null && screen == "combat")
+        {
+            InfoCompleteness.FlagDuringBuild("screen 'combat' active but CombatState unreadable");
+        }
+
         var state = new Dictionary<string, object?>
         {
             ["screen"] = screen,
@@ -119,8 +133,93 @@ public static class StateBuilder
             ["screen_detail"] = BuildScreenDetail(screen, screenNode, runState, player),
         };
         state["available_actions"] = BuildAvailableActions(screen, combat, player, runState, screenNode);
+
+        // Card-reward choose verification: resolve pending press against the
+        // live deck delta (see InfoCompleteness.cs). Runs before fingerprint.
+        AttachChooseVerification(state, screen, player, runState);
+
+        // Completeness envelope — client hard-stops + Feishu on info_complete:false.
+        List<string> missing = InfoCompleteness.DrainForState();
+        state["info_complete"] = missing.Count == 0;
+        state["missing_info"] = missing;
+        state["notify_user"] = missing.Count > 0;
+
         state["fingerprint"] = Fingerprint(state);
         return state;
+    }
+
+    internal static List<string> DeckTupleSnapshot(Player? player, RunState? runState)
+    {
+        var tuples = new List<string>();
+        if (player == null || runState == null)
+        {
+            InfoCompleteness.FlagDuringAction("deck snapshot unavailable (player/runState null) — choose verification impossible");
+            return tuples;
+        }
+        foreach (Dictionary<string, object?> row in SafeDeck(player, runState))
+        {
+            string id = row.TryGetValue("id", out object? v) ? v?.ToString() ?? "?" : "?";
+            bool upgraded = row.TryGetValue("upgraded", out object? u) && u is true;
+            tuples.Add(upgraded ? id + "+" : id);
+        }
+        return tuples;
+    }
+
+    private static void AttachChooseVerification(
+        Dictionary<string, object?> state, string screen, Player? player, RunState? runState)
+    {
+        if (BridgeMod.CardRewardVerifyPending is not { } pending)
+        {
+            return;
+        }
+        List<string> deckNow = DeckTupleSnapshot(player, runState);
+        if (screen == "card_reward")
+        {
+            pending.BuildsOnScreen++;
+            state["last_choose_verification"] = new Dictionary<string, object?>
+            {
+                ["requested_index"] = pending.Index,
+                ["requested_option_id"] = pending.RequestedId,
+                ["verify"] = "pending",
+                ["builds_on_screen"] = pending.BuildsOnScreen,
+            };
+            return;
+        }
+        // Screen moved on: the press must now be explainable by a clean deck delta.
+        var gained = deckNow.Except(pending.DeckBefore).ToList();
+        var lost = pending.DeckBefore.Except(deckNow).ToList();
+        var resolved = new Dictionary<string, object?>
+        {
+            ["requested_index"] = pending.Index,
+            ["requested_option_id"] = pending.RequestedId,
+            ["deck_delta_gained"] = gained,
+            ["deck_delta_lost"] = lost,
+        };
+        if (gained.Count == 1 && lost.Count == 0)
+        {
+            resolved["verify"] = "applied";
+            resolved["applied"] = gained[0];
+            resolved["applied_matches_request"] =
+                gained[0].StartsWith(pending.RequestedId, StringComparison.Ordinal);
+        }
+        else if (gained.Count == 1 && lost.Count == 1 && gained[0].StartsWith(lost[0].TrimEnd('+'), StringComparison.Ordinal))
+        {
+            // same-card upgrade path (e.g. PERFECTED_STRIKE -> PERFECTED_STRIKE+)
+            resolved["verify"] = "applied_upgrade";
+            resolved["applied"] = gained[0];
+            resolved["applied_matches_request"] =
+                gained[0].StartsWith(pending.RequestedId, StringComparison.Ordinal);
+        }
+        else
+        {
+            resolved["verify"] = "unresolved";
+            resolved["applied"] = null;
+            InfoCompleteness.FlagDuringBuild(
+                $"card_reward choose verification unresolved: index={pending.Index} requested={pending.RequestedId} " +
+                $"gained=[{string.Join(",", gained)}] lost=[{string.Join(",", lost)}] — applied card unverified");
+        }
+        state["last_choose_verification"] = resolved;
+        BridgeMod.CardRewardVerifyPending = null;
     }
 
     private static RunState? SafeRunState()
@@ -708,8 +807,9 @@ public static class StateBuilder
                 ["upgraded"] = ProbeBool(c, "IsUpgraded", "Upgraded"),
             }).ToList();
         }
-        catch (Exception)
+        catch (Exception e)
         {
+            InfoCompleteness.FlagDuringBuild($"player deck unreadable ({e.GetType().Name}) — player can open the deck in-game");
             return new List<Dictionary<string, object?>>();
         }
     }
@@ -1013,6 +1113,10 @@ public static class StateBuilder
         MonsterMoveStateMachine? machine = monster.MoveStateMachine;
         if (machine == null)
         {
+            // No fallback: the player can always read the enemy's move cycle
+            // in-game — an unreadable state machine is incomplete information.
+            InfoCompleteness.FlagDuringBuild(
+                $"monster '{monster.Id.Entry}': move_graph unavailable (MoveStateMachine unreadable)");
             return null;
         }
         var graph = new Dictionary<string, object?>
@@ -1045,20 +1149,24 @@ public static class StateBuilder
                 {
                     states.Add(StateDto(state, owner, currentId));
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
-                    // per-state failure must not drop the whole graph
+                    // Per-state failure: keep the stub AND flag it — a stub
+                    // without data is uncertainty, not information.
+                    InfoCompleteness.FlagDuringBuild(
+                        $"monster '{monster.Id.Entry}' move '{state.Id}': state serialization failed ({e.GetType().Name})");
                     try
                     {
-                        states.Add(new Dictionary<string, object?> { ["id"] = state.Id, ["kind"] = "other" });
+                        states.Add(new Dictionary<string, object?> { ["id"] = state.Id, ["kind"] = "other", ["incomplete"] = true });
                     }
                     catch (Exception) { /* omit */ }
                 }
             }
         }
-        catch (Exception)
+        catch (Exception e)
         {
-            // States enumeration failed — return whatever was collected
+            InfoCompleteness.FlagDuringBuild(
+                $"monster '{monster.Id.Entry}': move_graph states enumeration failed ({e.GetType().Name})");
         }
         graph["states"] = states;
         return graph;
@@ -1208,14 +1316,27 @@ public static class StateBuilder
                     }
                 }
             }
-            catch (Exception) { /* branch list unavailable */ }
+            catch (Exception e)
+            {
+                InfoCompleteness.FlagDuringBuild(
+                    $"monster move '{conditional.Id}': conditional branch reflection failed ({e.GetType().Name})");
+            }
+            if (branches.Count == 0)
+            {
+                // The game evaluates these branches live — an empty table means
+                // our reflection missed, not that the branch has no outcomes.
+                InfoCompleteness.FlagDuringBuild(
+                    $"monster move '{conditional.Id}': conditional branch table empty (reflection miss — player can see the branch outcomes in-game)");
+            }
             dto["branches"] = branches;
+            dto["incomplete"] = branches.Count == 0;
             return dto;
         }
         return new Dictionary<string, object?>
         {
             ["id"] = state.Id,
             ["kind"] = "other",
+            ["incomplete"] = true,
         };
     }
 
@@ -1461,18 +1582,38 @@ public static class StateBuilder
                 i++;
             }
         }
+        if (options.Count == 0)
+        {
+            // The player sees three card rewards on screen — an empty list from
+            // reflection is a miss, not an empty reward.
+            InfoCompleteness.FlagDuringBuild(
+                "card_reward screen active but options list unreadable (reflection miss — player sees the card options in-game)");
+        }
         return options;
     }
 
     private static Dictionary<string, object?> CardResultOption(object result, int index)
     {
+        string? id = ProbeModelId(result);
         var option = new Dictionary<string, object?>
         {
             ["kind"] = "card",
             ["index"] = index,
-            ["id"] = ProbeModelId(result),
-            ["name"] = ProbeModelId(result) ?? $"option_{index}",
+            ["id"] = id,
         };
+        if (string.IsNullOrEmpty(id))
+        {
+            // NO FALLBACK: no invented option_N names. The id the player can
+            // read on the card face is unreadable to us — that is incomplete.
+            option["name"] = null;
+            option["incomplete"] = true;
+            InfoCompleteness.FlagDuringBuild(
+                $"card_reward option {index}: card id unresolved (reflection miss — player reads the card name on screen)");
+        }
+        else
+        {
+            option["name"] = id;
+        }
         return option;
     }
 

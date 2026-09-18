@@ -129,6 +129,25 @@ Lookup (reference resolution):
     python3 bridge/spirectl.py sl [--json]
     python3 bridge/spirectl.py stop
 
+
+- **Information-completeness contract (mod 0.3.0, 2026-09-19)**: every state
+  payload carries `info_complete:bool`, `missing_info:[...]`,
+  `notify_user:bool`. The server must return exactly what a player can read
+  in-game — no fallbacks (no invented `option_N` names, no silent null
+  move_graphs, no unverified card-reward presses). Card-reward `choose`
+  resolves the requested option id BEFORE pressing (refuses with
+  `ok=false, "info incomplete: ..."` when unresolvable) and verifies the
+  applied card against the deck delta on the next state — result stamped as
+  `last_choose_verification {verify: pending|applied|applied_upgrade|unresolved}`.
+  Conditional move-graph branches with empty tables, unreadable decks/rewards,
+  and unresolved option ids all raise `missing_info` entries. Client gate
+  (spirectl): any payload with `notify_user:true` / `info_complete:false` /
+  `message` starting `info incomplete` → prints `[INFO-INCOMPLETE]`, sends a
+  Feishu notification once per stop fingerprint, writes
+  `~/.local/share/slay-spire-2-copilot/info-incomplete-stop`, exits **78**.
+  Subsequent `act`/`batch`/`sl` calls refuse while the stop flag exists —
+  clear with `rm <stop flag>` after the gap is fixed.
+
 Action notes:
 
 - `timeline_sync` (main menu only, no args): runs the Timeline reveal drain

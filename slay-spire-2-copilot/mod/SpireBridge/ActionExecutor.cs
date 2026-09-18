@@ -540,9 +540,62 @@ public static class ActionExecutor
                 {
                     return (false, $"index {index} out of range ({holders.Count} card options)");
                 }
+                // Information contract (2026-09-19): printed reward order has
+                // diverged from the applied card live (run-44). Resolve the
+                // REQUESTED option id before pressing — if it cannot be
+                // resolved, refuse the choose (no fallback, no guess) and let
+                // the state payload flag notify_user so the client stops and
+                // pings Feishu. On success, snapshot the deck so the next
+                // Build can verify what was actually applied.
+                string? requestedId = null;
+                try
+                {
+                    if (StateBuilder.CardRewardOptionsField?.GetValue(cardReward) is System.Collections.IEnumerable raw)
+                    {
+                        int i = 0;
+                        foreach (object? opt in raw)
+                        {
+                            if (i == index && opt != null)
+                            {
+                                requestedId = StateBuilder.ProbeModelId(opt);
+                                break;
+                            }
+                            i++;
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    BridgeMod.LogErr($"card_reward requested-id probe failed: {e}");
+                }
+                if (string.IsNullOrEmpty(requestedId))
+                {
+                    InfoCompleteness.FlagDuringAction(
+                        $"card_reward choose refused: option {index} id unresolvable at press time (player reads the card on screen)");
+                    return (false,
+                        $"info incomplete: card_reward option {index} id unresolvable — choose refused (no fallback; client must stop + notify)");
+                }
+                RunState? verifyRun = null;
+                Player? verifyPlayer = null;
+                try
+                {
+                    verifyRun = RunManager.Instance.DebugOnlyGetState();
+                    if (verifyRun != null)
+                    {
+                        verifyPlayer = LocalContext.GetMe(verifyRun.Players);
+                    }
+                }
+                catch (Exception e)
+                {
+                    BridgeMod.LogErr($"card_reward deck snapshot failed: {e}");
+                }
+                List<string> deckBefore = StateBuilder.DeckTupleSnapshot(verifyPlayer, verifyRun);
+                BridgeMod.CardRewardVerifyPending =
+                    new CardRewardVerifyPending(index, requestedId, deckBefore);
                 NCardHolder holder = holders[index];
                 Fire(() => { holder.EmitSignal(NCardHolder.SignalName.Pressed, holder); return Task.CompletedTask; }, "choose card reward");
-                return (true, $"submitted choose card reward index {index}");
+                return (true,
+                    $"submitted choose card reward index {index} (requested_id={requestedId}; applied-card verification pending next state — check last_choose_verification)");
             }
             case NChooseARelicSelection relicScreen:
             {
