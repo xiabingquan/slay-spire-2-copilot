@@ -36,7 +36,11 @@ Format: `- POWER_ID (Buff/Debuff): effect.`
   Enemies with Plating also gain Amount Block at combat start (round 1).
   Players can hold Plating too (Heart of Iron potion applies 7) — same
   mechanics; combat-start block only when applied before round 1's player turn.
-  Stack loss for players is 1/turn.
+  Mid-combat use on a player grants Amount block at the END of the player's
+  side turn (e.g. PLATING_POWER:7 drunk on turn 1: +7 block lands before the
+  enemy attack, stacks decrement 7→6→5… each subsequent turn start). Exact-cover
+  math: current block + end-of-turn plating = the number that matters vs the
+  enemy's incoming intent. Stack loss for players is 1/turn.
 - REGEN_POWER (Buff, Counter): at end of owner's side turn, heal Amount HP,
   then decrement 1.
 - INTANGIBLE_POWER (Buff, Counter): damage and HP loss received by owner capped
@@ -80,13 +84,13 @@ Format: `- POWER_ID (Buff/Debuff): effect.`
 ## Card-bound affliction hosts (see afflictions.md)
 
 - CHAINS_OF_BINDING_POWER (Debuff, Counter): on drawing cards during owner's
-  run-7 live note: beyond roughly 2 effective card-plays per turn, further play-requests returned
-  ok=True server-side but resolved as no-ops (3rd/4th plays dealt no damage) — count real damage
-  landings, not ok=True, when sequencing under Chains.
-
   side turn, afflict up to Amount cards with Bound (per-turn afflicted count
   capped at Amount). While this power is active only 1 Bound card may be
   played per turn; all Bound afflictions clear at end of owner's side turn.
+  Sequencing note: beyond roughly 2 effective card-plays per turn, further
+  play-requests returned ok=True server-side but resolved as no-ops (3rd/4th
+  plays dealt no damage) — count real damage landings, not ok=True, when
+  sequencing under Chains.
 - RINGING_POWER (Debuff, Single): on apply, afflict all owner's cards with
   Ringing; new cards entering combat also get it. A Ringing card is unplayable
   once any card has been played by owner this turn. Power removes itself at
@@ -106,24 +110,23 @@ Format: `- POWER_ID (Buff/Debuff): effect.`
   exists. Smog afflictions clear at end of owner's side turn.
 - TAINTED_POWER (Debuff, Counter): attacks that hit owner deal +Amount damage
   (ModifyDamageAdditive on incoming powered attacks). Removed at end of Enemy
-  side turn. Run-19 live direction confirmed: VitalSpark Tainted skills apply TAINTED_POWER to the PLAYER (card owner) — prism intent rose 15→17 after one Tainted skill played and 15→19 after two; the tax is incoming attack damage +Amount, not self-damage.
+  side turn. Direction confirmed: VitalSpark Tainted skills apply TAINTED_POWER to the PLAYER (card owner) — prism intent rose 15→17 after one Tainted skill played and 15→19 after two; the tax is incoming attack damage +Amount, not self-damage.
 - VITAL_SPARK_POWER (Buff, Counter, on the enemy): player Skill cards are
   afflicted with Tainted (Amount) at combat start and on entering combat;
   playing a Tainted card applies TAINTED_POWER Amount to the card's owner.
 - PERSONAL_HIVE_POWER (Buff, Counter, on the enemy): whenever the owner is hit
   by a powered attack, the attacker gets Amount Dazed added to their draw pile
   at a random position. PHEROMONE_SPIT (Entomancer) increments Amount by 1 and
-  grants Strength on the same buff. Run-24 A1 live (2026-09-18): stacks visible
-  as `PERSONAL_HIVE_POWER:n`; after the spit n=2, so every powered-attack card
-  costs 2 Dazed — multi-hit attacks are taxed per hit. Kill the Entomancer
-  before the buff turn, or the bees intent rises with Strength on top of the
-  doubled Dazed tax.
+  grants Strength on the same buff. Stacks visible as `PERSONAL_HIVE_POWER:n`;
+  after the spit n=2, so every powered-attack card costs 2 Dazed — multi-hit
+  attacks are taxed per hit. Kill the Entomancer before the buff turn, or the
+  bees intent rises with Strength on top of the doubled Dazed tax.
 
 ## Player economy / draw powers
 
 - SKITTISH_POWER (Buff, Counter): if the owner gained no Block this turn and took card-sourced
   attack damage, the owner gains Amount Block (once per turn; flag resets at end of the opposing
-  side's turn). Mirror of powers_zh.md 同名条目.
+  side's turn). Mirror of the same-named entry in powers_zh.md.
 - MIND_ROT_POWER (Debuff, Counter): owner's hand draw each turn reduced by
   Amount (floored at 0): ModifyHandDraw = max(0, count - Amount).
 - WASTE_AWAY_POWER (Debuff, Counter): owner's max Energy reduced by Amount.
@@ -279,18 +282,7 @@ Format: `- POWER_ID (Buff/Debuff): effect.`
 - TANK_POWER (Buff, Single): owner's outgoing attack damage x2 (applies
   GuardedPower on apply per decomp interaction with guarded targets).
 - SURROUNDED_POWER: see core statuses (x1.5 from flanking attackers).
-- TENDER_POWER (Debuff, Counter): each card the owner plays this turn applies
-  (run-18 live A1 2026-09-17, HunterKiller fight — partial decode of run-17's
-  "mechanism unresolved"): when TENDER_POWER sits on the PLAYER, power-card
-  resolves appear to grant the player Strength/Dexterity feedback
-  (DEXTERITY_POWER appeared after Rupture and ONE_TWO_PUNCH plays), while the
-  same turn's later card resolves are taxed mid-turn — Strike damage fell
-  after procs (Strength consumed) and Defend displayed 3 Block instead of 5.
-  Treat displayed per-card numbers as post-tax; re-read state after every play.
-  Original archive line: each card the owner plays this turn applies
-  -1 Strength and -1 Dexterity to owner (silently); at end of owner's side
-  turn those debuffs are refunded (+N Strength/Dex where N = cards played this
-  turn).
+- TENDER_POWER (Debuff, Counter, on the player, Act3 HunterKiller-class): while active, EVERY card played (attacks and skills both observed) drains player Strength −1 and Dexterity −1 each play within the turn; **all Tender drains restore at the start of the player's next turn** (Str/Dex return to pre-turn baseline). Not a buff; net effect is a mid-turn stat tax that resets each turn. Kill the applier or weather the turn cycle. Displayed per-card numbers are post-tax — re-read state after every play. (Supersedes an earlier "grant Strength/Dex feedback" reading that mis-read the drain/restore cycle.)
 - TAINTED_POWER: see affliction hosts (+Amount incoming attack damage).
 
 ## Poison / Doom / death-clock powers
@@ -329,15 +321,15 @@ Format: `- POWER_ID (Buff/Debuff): effect.`
 - CONSTRICT_POWER (Debuff, Counter): at end of owner's side turn, deal Amount
   unpowered damage to owner. Removed when the applier dies.
 - PAPER_CUTS_POWER (Buff, Counter): when owner's powered attack deals
-  unblocked damage > 0 to a player, that player loses Amount max HP. Run-33 live (2026-09-18): Amount 2 exact — each leaking ScrollOfBiting attacker cost −2 MaxHP per turn (two attackers × two leak turns = −8 MaxHP total at fight open); **full-block turns cost ZERO MaxHP** (51 block vs 44 incoming produced no tax three turns running) — the counterplay is block completeness per attacker, not average block. Also decoded run-33: **Inferno's own turn-start HP loss triggers Rupture** (Inferno+Rupture+ Amount2 deployed = +2 Str per turn passive, observed as a per-turn Str pump across GlobeHead/FrogKnight turns) **and satisfies Spite's "lost HP this turn" condition** (Spite double-fired on Inferno-deployed fights — KaiserCrab Crusher T7 Spite dealt 68 at Str 29 via this pairing).
-- **POSSESS_STRENGTH_POWER / POSSESS_SPEED_POWER run-33 live reconfirm (2026-09-18)**: holders steal player stats on the holder's turn (player Str display emptied on first steal; Dex −2 then −4 across two ForgottenThing steal turns; each holder gained +2 of the stolen stat per steal); **stolen stats return to the player same-resolution on holder death** (LostThing death: player Str 4→6 reclaimed live; ForgottenThing death: Dex tax cleared live). Kill holders to reclaim — doctrine holds at A1 Act3 values.
+  unblocked damage > 0 to a player, that player loses Amount max HP. Amount 2 exact — each leaking ScrollOfBiting-class attacker costs −2 MaxHP per turn when unblocked; **full-block turns cost ZERO MaxHP** (51 block vs 44 incoming produced no tax) — the counterplay is block completeness per attacker, not average block. Related pairing decode: **Inferno's own turn-start HP loss triggers Rupture** (Inferno + Rupture Amount 2 deployed = +2 Str per turn passive) **and satisfies Spite's "lost HP this turn" condition** (Spite double-fires on Inferno-deployed fights).
+- POSSESS_STRENGTH_POWER / POSSESS_SPEED_POWER: holders steal player stats on the holder's turn (player Str display empties on first steal; each holder gains +2 of the stolen stat per steal); **stolen stats return to the player same-resolution on holder death**. Kill holders to reclaim — the rule holds at A1 Act3 values.
 - DISINTEGRATION (card-applied): see afflictions.md — KnowledgeDemon choice
   card applies DISINTEGRATION_POWER 6.
 - THE_GAMBIT_POWER (Debuff, Single): if owner takes unblocked powered-attack
   damage > 0, owner is killed (power removed as it fires). Duration: the power
   **persists beyond the turn THE_GAMBIT was played** until the clause fires —
-  live 2026-09-17 run-12 death: played on turn 6, still present on turn 8 when
-  8 unblocked chip killed the player at 32 HP. Do not pick THE_GAMBIT without
+  observed still present on turn 8 after a turn-6 play, when unblocked chip
+  killed the player at 32 HP. Do not pick THE_GAMBIT without
   a plan to fully block every remaining attack in the fight.
 - SURROUNDED_POWER facing trigger (KaiserCrab, decomp): `BeforeCardPlayed` —
   any card you play with a **single-target** claw target flips Facing toward
@@ -396,8 +388,8 @@ Format: `- POWER_ID (Buff/Debuff): effect.`
   turn.
 - DEVOUR_LIFE_POWER (Buff, Counter): on card-play hooks, OstyCmd.Summon
   (Amount) — pet summon trigger hosted by source card.
-- BURROWED_POWER (Buff, Single): owner cannot be targeted/hit — CORRECTION
-  (run-18 live A1 2026-09-17 Tunneler): burrowed creatures CAN be attacked;
+- BURROWED_POWER (Buff, Single): owner cannot be targeted/hit — CORRECTION:
+  burrowed creatures CAN be attacked;
   card damage applies to their Block as normal (Bash/Strike/SPITE all landed).
   AfterBlockBroken fires when the Block breaks: DIZZY stun + Burrowed removed
   + all remaining Block cleared, cancelling the burrow attack (BELOW intent).
@@ -425,8 +417,8 @@ Format: `- POWER_ID (Buff/Debuff): effect.`
   owner's side turn; at 1, dummy escapes (event encounter logic).
 - SANDPIT_POWER (Buff, Counter): The Insatiable's kill timer — **starts at
   4**, decrements by 1 at start of Enemy side turn (late); **at 0 the player
-  is instantly devoured regardless of HP/Block** (unblockable kill — run-16/
-  20/22 A1 deaths, previously misattributed to an intent-display bug). The
+  is instantly devoured regardless of HP/Block** (unblockable kill —
+  previously misattributed to an intent-display bug). The
   boss injects **6 FranticEscape** cards into the player deck at fight start;
   playing one **+1 Sandpit Amount** (and permanently +1's that card's own
   cost) — hold them for counter 1–2 as emergency extensions, do NOT hoard
@@ -603,7 +595,7 @@ when negative.
   monster-hosted).
 - SHRIEK_POWER (Debuff, Counter, negative allowed): if owner takes unblocked
   damage while CurrentHp <= Amount, owner is stunned into TerrorEel terror
-  state and the power removes itself. Run-19 live (A1, 140-HP TerrorEel elite): the stun fired on an unblocked hit that crossed the HP bracket (68–74 HP observed window; exact Amount not surfaced in state) — hits above the threshold did nothing, so burst the eel under the bracket THEN hit unblocked.
+  state and the power removes itself. The stun fires on an unblocked hit that crosses the HP bracket (observed window 68–74 HP; exact Amount not surfaced in state) — hits above the threshold do nothing, so burst the eel under the bracket THEN hit unblocked.
 - IMBALANCED_POWER (Debuff, Single): when owner's attack is fully blocked,
   owner is stunned (BowlbugRock sets IsOffBalance instead).
 - MONARCHS_GAZE_POWER (Buff, Counter): when owner's powered attack hits,
@@ -626,5 +618,3 @@ when negative.
 ## Not a power
 
 - BURNING_BLOOD is a Relic (Ironclad), not a power — see relics.md.
-- TENDER_POWER (on player, Act3 HunterKiller-class Debuff) — **run-30 live decode (corrects run-17 "grant" note)**: while active, EVERY card played (attacks and skills both observed) drains player Strength −1 and Dexterity −1 each play within the turn; **all Tender drains restore at the start of the player's next turn** (Str/Dex return to pre-turn baseline — observed baseline-restore across 3 consecutive turns). Not a buff; net effect is mid-turn stat tax that resets each turn. Kill the applier or weather the turn cycle.
-- PLATING_POWER on players (HeartOfIron potion applies 7): same mechanics as enemy plating — combat-start block only when applied before round 1's player turn; **mid-combat use grants Amount block at the END of the player's side turn** (run-30 live: drank T1 player-turn, PLATING_POWER:7 appeared, +7 block landed before enemy attack, stacks decremented 7→6→5.. each subsequent turn start-class). Exact-cover math: current block + end-of-turn plating = the number that matters vs the enemy's incoming intent.

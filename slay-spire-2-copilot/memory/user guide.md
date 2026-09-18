@@ -79,7 +79,7 @@ one or two sentences covering the run's biggest gain and biggest loss:
 - The single biggest win of the run
 - The single biggest loss of the run
 
-## Overview table rules (user directive 2026-09-17)
+## Overview table rules
 
 Every run must also be recorded in `memory/overview.md`, following these
 rules:
@@ -93,7 +93,7 @@ rules:
 - The ascension recorded in the run note's Summary table, the memory
   remark, and the overview row must all match
 
-## SL count (user directive 2026-09-17)
+## SL count
 
 Every run note MUST record the run's SL (save/load) count — the number of
 times the run was restored via `continue_run` / game relaunch mid-run (0 if

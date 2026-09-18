@@ -31,6 +31,7 @@ hook 逻辑、`CanonicalVars` 数值）核实。下文「Amount」= power 上显
 - PLATING_POWER（镀甲，Buff，Counter）：持有者阵营回合开始时 -1 层
   （联机下敌方按 `Decrement`=玩家数 扣层）；阵营回合结束（early）时获得
   Amount 格挡。开局即带镀甲的敌人在第 1 轮还会获得 Amount 格挡。
+  玩家也可持有镀甲（HeartOfIron 药水施加 7）——机制相同；仅在 round1 玩家回合开始前施加才给战斗开始挡；**战斗中途使用在玩家侧回合结束时授予 Amount 挡**（例如 T1 玩家回合饮下 PLATING_POWER:7：+7 挡在敌方攻击前到账，此后每回合递减 7→6→5…）。精确覆盖算术：当前挡 + 回合结束镀层 = 对敌方意图的有效数字。玩家侧每回合扣 1 层。
 - DISINTEGRATION（卡牌施加）：见 afflictions.md——知识恶魔对白选项卡施加 DISINTEGRATION_POWER 6。
 - COUNTER / 卡牌宿主杂项：触发数额见宿主卡牌。
 - FURNACE / 锻造相关：见 FURNACE_POWER、HAMMER_TIME_POWER。
@@ -70,13 +71,10 @@ hook 逻辑、`CanonicalVars` 数值）核实。下文「Amount」= power 上显
 
 ## 卡牌绑定减益宿主（另见 afflictions_zh.md）
 
-- CHAINS_OF_BINDING_POWER
-  run-7 实机备注：每回合约 2 次有效出牌后，后续出牌请求服务端返回 ok=True 但结算为空（第 3/4 张无伤害）——
-  连锁下按真实伤害落点计数，勿以 ok=True 计数。
-（束缚之链，Debuff，Counter）：持有者阵营回合内
+- CHAINS_OF_BINDING_POWER（束缚之链，Debuff，Counter）：持有者阵营回合内
   抽牌时，最多 Amount 张牌被附加 Bound（本回合已附加数达到 Amount 后停止）。
   power 生效期间每回合只能打出 1 张 Bound 牌；持有者阵营回合结束时清除
-  所有 Bound。
+  所有 Bound。出牌排序备注：每回合约 2 次有效出牌后，后续出牌请求服务端返回 ok=True 但结算为空（第 3/4 张无伤害）——连锁下按真实伤害落点计数，勿以 ok=True 计数。
 - RINGING_POWER（耳鸣，Debuff，Single）：施加时给持有者所有卡牌附加
   Ringing，之后进入战斗的新牌也附加。本回合只要打出过任意一张牌，
   Ringing 牌即不可打出。power 在持有者阵营回合结束时自移除（并清除
@@ -96,13 +94,14 @@ hook 逻辑、`CanonicalVars` 数值）核实。下文「Amount」= power 上显
   Smog。
 - TAINTED_POWER（污染，Debuff，Counter）：对持有者的攻击伤害 +Amount
   （ModifyDamageAdditive，仅对攻击伤害生效）。敌方阵营回合结束时移除。
+  方向已确认：打出 Tainted 技能后 TAINTED_POWER 落在**玩家（牌主）**身上，税为"对我的攻击伤害 +Amount"（棱柱意图 15→17 单技能/15→19 双技能），非自伤。
 - VITAL_SPARK_POWER（Buff，Counter，位于敌方）：战斗开始及进入战斗时给
   玩家技能牌附加 Tainted（Amount）；打出 Tainted 牌时对其拥有者施加
   TAINTED_POWER Amount。
 - PERSONAL_HIVE_POWER（个人蜂巢，Buff，Counter，位于敌方）：拥有者每次被
   有源攻击命中时，攻击者的抽牌堆随机位置加入 Amount 张 Dazed。
   PHEROMONE_SPIT（蜂群术士）在同一次增益中把 Amount +1 并赋予力量。
-  run-24 A1 实测（2026-09-18）：层数经 `PERSONAL_HIVE_POWER:n` 可见；
+  层数经 `PERSONAL_HIVE_POWER:n` 可见；
   信息素后 n=2，每张有源攻击牌代价 2 张 Dazed——多段攻击按命中次数计税。
   在 Buff 回合结束前击杀蜂群术士，否则蜂群意图在翻倍 Dazed 税之上还随力量上涨。
 
@@ -253,15 +252,7 @@ hook 逻辑、`CanonicalVars` 数值）核实。下文「Amount」= power 上显
 - TANK_POWER（Buff，Single）：持有者造成的攻击伤害 ×2（并按 decomp 与
   GuardedPower 联动）。
 - SURROUNDED_POWER：见核心状态（侧翼攻击者 ×1.5）。
-- TENDER_POWER（Debuff，Counter）：持有者每打出一张牌，静默获得 -1 力量
-  （run-18 A1 实测 2026-09-17 猎人杀手战——run-17「机制未解」部分解码）：
-  TENDER_POWER 挂在玩家身上时，能力牌结算疑似反哺玩家力量/敏捷（Rupture、
-  ONE_TWO_PUNCH 打出后观察到 DEXTERITY_POWER 出现），同回合后续卡牌结算被
-  回合中扣税——Strike 伤害在触发后掉档（力量被吞），Defend 显示 3 挡而非 5。
-  卡牌面板数值按税后处理；每次出牌后须重读 state。
-  档案原文：持有者每打出一张牌，静默获得 -1 力量
-  与 -1 敏捷；持有者阵营回合结束时按本回合出牌数等量返还
-  （+N 力量/敏捷）。
+- TENDER_POWER（Debuff，Counter，玩家侧，Act3 猎人杀手类）：激活期间每打出一张牌（攻击与技能均观察到）在回合内抽走玩家力量 −1 与敏捷 −1；**所有 Tender 抽走在玩家下一回合开始时全部恢复**（Str/Dex 回到回合前基线）。不是增益；净效果为回合内属性税、每回合重置。击杀施加者或扛过回合循环即可。卡牌面板数值按税后处理；每次出牌后须重读 state。（取代早前「反哺力量/敏捷」误读——该误读未识别抽走/返还循环。）
 - TAINTED_POWER：见减益宿主（受到的攻击伤害 +Amount）。
 
 ## 中毒 / Doom / 死亡钟 power
@@ -297,13 +288,11 @@ hook 逻辑、`CanonicalVars` 数值）核实。下文「Amount」= power 上显
   受到 Amount 点不可格挡、非攻击伤害。持有者阵营回合结束时移除。
 - CONSTRICT_POWER（缩紧，Debuff，Counter）：持有者阵营回合结束时，
   持有者受到 Amount 点非攻击伤害。施加者死亡时移除。
-- **POSSESS_STRENGTH_POWER / POSSESS_SPEED_POWER run-33 live 再确认（2026-09-18）**：持球者在其回合偷取玩家属性（首次偷取后玩家力量显示清空；遗忘之物两次偷取回合 Dex −2→−4；每位持球者每次偷取各+2 对应属性）；**持球者死亡时被偷属性同次结算归还**（失落之物死亡：玩家力量 4→6 夺回 live；遗忘之物死亡：Dex 税清零 live）。杀持球者夺回——A1 Act3 数值下教条成立。
-- PAPER_CUTS_POWER（Buff，Counter）：持有者的攻击对玩家造成未格挡伤害时，玩家失去 Amount 点最大 HP。run-33 live（2026-09-18）：Amount 2 精确——每漏挡一路咬人卷轴攻击每回合 −2 MaxHP（两攻击者×两漏挡回合=开局共 −8 MaxHP）；**全挡回合零 MaxHP 税**（51挡对44来袭连续三回合零税）——对策是每个攻击者的挡完整性而非平均挡值。run-33 同局解码：**Inferno 自身开回合 HP 损失触发 Rupture**（Inferno+Rupture+ Amount2 同部署 = 每回合被动 +2 力量，电球头/青蛙骑士战逐回合力量泵观察）**且满足 Spite「本回合掉血」条件**（部署 Inferno 的战斗 Spite 常态双击——KaiserCrab Crusher T7 Spite 经此配对在力量29 下打出68）。
-  > 0 时，该玩家失去 Amount 最大 HP。
+- POSSESS_STRENGTH_POWER / POSSESS_SPEED_POWER：持球者在其回合偷取玩家属性（首次偷取后玩家力量显示清空；每位持球者每次偷取各 +2 对应属性）；**持球者死亡时被偷属性同次结算归还**。杀持球者夺回——A1 Act3 数值下该规则成立。
+- PAPER_CUTS_POWER（Buff，Counter）：持有者的攻击对玩家造成未格挡伤害 > 0 时，该玩家失去 Amount 点最大 HP。Amount 2 精确——每漏挡一路咬人卷轴类攻击者每回合 −2 MaxHP；**全挡回合零 MaxHP 税**（51 挡对 44 来袭零税）——对策是每个攻击者的挡完整性而非平均挡值。关联配对解码：**Inferno 自身开回合 HP 损失触发 Rupture**（Inferno+Rupture Amount2 同部署 = 每回合被动 +2 力量）**且满足 Spite「本回合掉血」条件**（部署 Inferno 的战斗 Spite 常态双击）。
 - THE_GAMBIT_POWER（Debuff，Single）：持有者受到未格挡的攻击伤害 > 0 时，
   持有者立即死亡（触发时移除 power）。持续时间：该 power **会持续到打出
-  THE_GAMBIT 的回合之外**，直到条款触发为止 — 2026-09-17 run-12 实测死亡
-  案例：第 6 回合打出，第 8 回合仍在，8 点未格挡擦伤让 32 HP 玩家直接清零。
+  THE_GAMBIT 的回合之外**，直到条款触发为止——曾观察到第 6 回合打出、第 8 回合仍在，8 点未格挡擦伤让 32 HP 玩家直接清零。
   没有"此后每轮攻击伤害全部格挡"的把握就不要选 THE_GAMBIT。
 - SURROUNDED_POWER 朝向触发（帝王蟹，反编译）：`BeforeCardPlayed` — 你打出
   任何**单体目标**指向某只爪的牌，朝向即转向该爪（背对的爪伤害 ×1.5，
@@ -352,8 +341,8 @@ hook 逻辑、`CanonicalVars` 数值）核实。下文「Amount」= power 上显
   时，为宠物主人召唤 Amount 只 Osty。持有者阵营回合结束时移除。
 - DEVOUR_LIFE_POWER（Buff，Counter）：出牌 hook 时触发 OstyCmd.Summon
   （Amount）——宠物召唤触发由宿主卡决定。
-- BURROWED_POWER（钻地，Buff，Single）：持有者不可被选中/命中——**订正**
-  （run-18 A1 实测 2026-09-17 地道虫）：潜地目标**可以被攻击**，卡牌伤害正常
+- BURROWED_POWER（钻地，Buff，Single）：持有者不可被选中/命中——**订正**：
+  潜地目标**可以被攻击**，卡牌伤害正常
   作用于其格挡（Bash/Strike/SPITE 均生效）。格挡被打破时触发 AfterBlockBroken：
   DIZZY 眩晕 + Burrowed 移除 + 清空全部剩余格挡，潜地攻击（BELOW 意图）取消。
   打碎挡层即可取消攻击；不要回避攻击潜地目标。
@@ -377,7 +366,7 @@ hook 逻辑、`CanonicalVars` 数值）核实。下文「Amount」= power 上显
   结束时 -1 层；归 1 时木偶逃脱（事件遭遇逻辑）。
 - SANDPIT_POWER（沙坑，Buff，Counter）：The Insatiable 的击杀倒计时——
   **初始 4 层**，敌方阵营回合开始（late）时 -1；**归 0 时玩家被直接吞噬，
-  无视 HP/格挡**（不可格挡的处决——run-16/20/22 A1 三次死亡，此前被误判为
+  无视 HP/格挡**（不可格挡的处决——此前被误判为
   意图显示 bug）。Boss 开战时向玩家牌库注入 **6 张 FranticEscape**；打出
   一张 **沙坑 Amount +1**（该牌自身费用永久 +1）——留到计数 1–2 时作紧急
   延时用，既不可全程不打，也不可早早挥霍。战斗计划：输出竞速优先（格挡
@@ -539,8 +528,7 @@ hook 逻辑、`CanonicalVars` 数值）核实。下文「Amount」= power 上显
   实例；击晕逻辑由怪物宿主执行）。
 - SHRIEK_POWER（Debuff，Counter，可为负）：持有者在 CurrentHp <= Amount
   时受到未格挡伤害，则被击晕进入 TerrorEel 恐惧状态并自移除该 power。
-  run-19 实测（A1，140 HP 骇鳗精英）：击晕在未格挡伤害越过 HP 区间时触发（观测窗口 68–74 HP；确切 Amount 未在 state 暴露）——阈值以上的攻击无效果，战术=先把鳗鱼打进区间再用未格挡伤害触发。
-- TAINTED_POWER 实测方向注（run-19）：见下条 VITAL_SPARK 注记——打出 Tainted 技能后 TAINTED_POWER 落在**玩家（牌主）**身上，税为"对我的攻击伤害 +Amount"（棱柱意图 15→17 单技能/15→19 双技能实测），非自伤。
+  击晕在未格挡伤害越过 HP 区间时触发（观测窗口 68–74 HP；确切 Amount 未在 state 暴露）——阈值以上的攻击无效果，战术=先把鳗鱼打进区间再用未格挡伤害触发。
 - IMBALANCED_POWER（Debuff，Single）：持有者的攻击被完全格挡时被击晕
   （BowlbugRock 改为设置 IsOffBalance）。
 - MONARCHS_GAZE_POWER（Buff，Counter）：持有者的攻击命中时，对目标施加
@@ -558,5 +546,3 @@ hook 逻辑、`CanonicalVars` 数值）核实。下文「Amount」= power 上显
 ## 非 power
 
 - BURNING_BLOOD 是遗物（铁甲战士），不是 power——见 relics_zh.md。
-- TENDER_POWER（玩家侧，Act3 猎人杀手类 Debuff）——**run-30 实弹解码（订正 run-17「grant」注记）**：激活期间每打出一张牌（攻击与技能均观察到）在回合内抽走玩家力量 −1 与敏捷 −1；**所有 Tender 抽走在玩家下一回合开始时全部恢复**（Str/Dex 回到回合前基线——连续 3 回合观察到基线恢复）。不是增益；净效果为回合内属性税、每回合重置。击杀施加者或扛过回合循环即可。
-- PLATING_POWER 玩家侧（HeartOfIron 药水施加 7）：与敌方镀层机制相同——仅在 round1 玩家回合开始前施加才给战斗开始挡；**战斗中途使用在玩家侧回合结束时授予 Amount 挡**（run-30 实弹：T1 玩家回合饮下，PLATING_POWER:7 出现，+7 挡在敌方攻击前到账，此后每回合递减 7→6→5..）。精确覆盖算术：当前挡 + 回合结束镀层 = 对敌方意图的有效数字。

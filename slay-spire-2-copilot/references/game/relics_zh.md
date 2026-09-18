@@ -21,54 +21,53 @@
 - 骨笛（BoneFlute，Common，Necrobinder）：Osty 每次攻击时，获得 2 格挡。
 - 五轮书（BookOfFiveRings，Common）：每向牌库加入 5 张牌，回复 20 HP。
 - 铜质鳞片（BronzeScales，Common）：战斗开始，获得 3 点荆棘。
-- 百年积木（CentennialPuzzle，Common）：每场战斗首次失去 HP 时，抽 3 张牌。
+- 百年积木（CentennialPuzzle，Common）：每场战斗首次失去 HP 时，抽 3 张牌。任意掉血 tick 均触发——猩红披风回合开始 −1 / 放血 / 祭品类；披风部署后等效「T1 后战斗开始抽 3」。
 - 数据磁盘（DataDisk，Common，Defect）：战斗开始，获得 1 点 Focus。
 - 击剑指南（FencingManual，Common，Regent）：第 1 回合开始，Forge 10。
-- 节日拉炮（FestivePopper，Common）：第 1 回合开始，对所有敌人造成 9 点伤害。run-27 实测：3 场战斗预削确认（啃咬机 63→54/64→55、千足虫各段 -9、皇蟹双爪 209→200/199→190）。
+- 节日拉炮（FestivePopper，Common）：第 1 回合开始，对所有敌人造成 9 点伤害。预削已在多类遭遇确认（啃咬机、千足虫各段、皇蟹双爪开战各 −9）。
 - 护喉甲（Gorget，Common）：战斗开始，获得 4 点镀甲（Plating）。
 - 开心小花（HappyFlower，Common）：每第 3 回合开始，获得 1 点能量。
 - 佛珠手链（JuzuBracelet，Common）：问号房间不再出现普通敌人战斗；仅可在第三幕宝箱前获得。
-- 灯笼（Lantern，Common）：第 1 回合开始，获得 +1 能量。run-26 实测：蜡烛燃着时与南瓜蜡烛叠层（T1 5 能实测）；蜡烛燃尽后 T1 回归基础 3 + 灯笼 1 = 4 能 —— 灯笼单独无法恢复蜡烛时代的能量。
+- 灯笼（Lantern，Common）：第 1 回合开始，获得 +1 能量。蜡烛燃着时与南瓜蜡烛叠层（T1 5 能）；蜡烛燃尽后 T1 回归基础 3 + 灯笼 1 = 4 能 —— 灯笼单独无法恢复蜡烛时代的能量。
 - 餐券（MealTicket，Common）：进入商店房间（MerchantRoom）时，回复 15 HP；仅可在第三幕宝箱前获得。
 - 意外光滑的石头（OddlySmoothStone，Common）：战斗开始，获得 1 点敏捷。
 - 摆动球（Pendulum，Common）：每第 3 回合开始，抽 1 张牌。
 - 药水腰带（PotionBelt，Common）：拾取时，获得 2 个药水栏。
-- 红面具（RedMask，Common）：战斗开始（第 1 回合），对所有敌人施加 1 层 Weak。run-28 实测：开战 state 读数每个敌人都带 WEAK_POWER:1（多敌同帧全标记）；被削弱敌方意图 live 下降（外骨骼虫类 MANDIBLES 8→6、蜂群术士 BEES 每击 3→1 巨像+虚弱叠层、无厌沙虫 THRASH 9→8 每击）。
+- 红面具（RedMask，Common）：战斗开始（第 1 回合），对所有敌人施加 1 层 Weak。开战 state 读数每个敌人都带 WEAK_POWER:1；被削弱敌方意图下降（外骨骼虫类 MANDIBLES 8→6、蜂群术士 BEES 每击 3→1 巨像+虚弱叠层、无厌沙虫 THRASH 9→8 每击）。
 - 红头骨（RedSkull，Common，Ironclad）：HP ≤ 最大 HP 的 50% 时，额外 +3 点力量。
-- 皇家枕头（RegalPillow，Common）：休息点回复量增加 15 HP。run-26 实测：与石炉加湿器休息叠加 —— HP 9→58/102 与 9→59/108（基础百分比治疗 + 枕头 15 + 加湿器每次休息 +5 Max）。
+- 皇家枕头（RegalPillow，Common）：休息点回复量增加 15 HP。与石炉加湿器休息叠加（基础百分比治疗 + 枕头 15 + 加湿器每次休息 +5 Max）。
 - 异蛇头骨（SneckoSkull，Common，Silent）：你施加的中毒层数 +1。
-- 打击木偶（StrikeDummy，Common）：名称含 Strike 标签的攻击牌额外造成 3 点伤害。run-26 实测：Pommel Strike（Strike 标签）打出 18 =（9 基础 +3 木偶）×1.5 易伤 —— 木偶加成在易伤乘区之前；Peck（事件 Strike 标签）的 2 伤段未见木偶加成（2×3=6 实测），事件牌标签覆盖范围未确认。
+- 打击木偶（StrikeDummy，Common）：名称含 Strike 标签的攻击牌额外造成 3 点伤害。木偶加成在易伤乘区之前（如 Pommel Strike 18 =（9 基础 +3 木偶）×1.5）；Peck（事件 Strike 标签）的 2 伤段未见木偶加成，事件牌标签覆盖范围未确认。
 - 草莓（Strawberry，Common）：拾取时，+7 最大 HP。
 - 金刚杵（Vajra，Common）：战斗开始，获得 1 点力量。
 - 古茶具套装（VenerableTeaSet，Common）：进入休息点时，下一场战斗开始额外 +2 能量。
 - 战纹涂料（WarPaint，Common）：拾取时，升级牌库中 2 张随机技能牌。
-- 磨刀石（Whetstone，Common）：拾取时，升级牌库中 2 张随机攻击牌。run-28 实测（Act1 宝箱）：命中 Bash→Bash+（10 伤/3 易伤——升级值其后战斗 live 确认）与 MoltenFist→MoltenFist+（14 伤——对啃咬机/千足虫 live 确认）。两目标均为攻击标签，与条目一致。
+- 磨刀石（Whetstone，Common）：拾取时，升级牌库中 2 张随机攻击牌。升级目标为攻击标签（如 Bash→Bash+ 10 伤/3 易伤；MoltenFist→MoltenFist+ 14 伤）。
 - 头环（Circlet，None）：无效果。
 
 - 赤牛（Akabeko，Uncommon）：第 1 回合开始，获得 8 点 Vigor。
 - 修书小刀（BookRepairKnife，Uncommon，Necrobinder）：非 Minion 敌人死于 Doom 时，按每个此类生物回复 3 HP。
 - 圆顶礼帽（BowlerHat，Uncommon）：金币获取 ×1.25；仅可在第三幕宝箱前获得；商店中不会出售。
 - 烛台（Candelabra，Uncommon）：第 2 回合开始，获得 2 点能量。
-- 永恒羽毛（EternalFeather，Uncommon）：进入休息点时，每 5 张牌回复 3 HP。run-27 实测：25 张牌库 +15、27 张 +15、~20-24 张 +12（进入休息点即结算，先于休息选项）。
+- 永恒羽毛（EternalFeather，Uncommon）：进入休息点时，每 5 张牌回复 3 HP。进入休息点即结算，先于休息选项（如 25 张牌库 +15、~20-24 张 +12）。
 - 葬礼面具（FuneraryMask，Uncommon，Necrobinder）：战斗开始，向抽牌堆洗入 3 张 Soul。
 - 星系尘埃（GalacticDust，Uncommon，Regent）：每消耗 10 点星星，获得 10 格挡。
 - 镀金缆线（GoldPlatedCables，Uncommon，Defect）：最右侧的充能球额外触发 1 次被动。
-- 地精之角（GremlinHorn，Uncommon）：敌人死亡时，获得 1 点能量并抽 1 张牌。run-16 实测：击杀连锁验证 —— 每次死亡立刻 +1 能量（回合中显示 4/3→6/4）并抽牌，支撑波次战多杀回合。
+- 地精之角（GremlinHorn，Uncommon）：敌人死亡时，获得 1 点能量并抽 1 张牌。击杀连锁：每次死亡立刻 +1 能量并抽牌，支撑波次战多杀回合。
 - 船夹板（HornCleat，Uncommon）：第 2 回合开始，获得 14 格挡。
 - 金纸（JossPaper，Uncommon）：每消耗 5 张牌，抽 1 张牌（Ethereal 回合末消耗在回合结束时计入）。
 - 锁镰（Kusarigama，Uncommon）：单回合每打出 3 张攻击牌，对随机敌人造成 6 点伤害。
 - 吃不完的糖（LastingCandy，Uncommon）：首场战斗之后每隔一场战斗，战斗卡牌奖励额外包含 1 张能力牌；仅可在第三幕宝箱前获得。
 - 开信刀（LetterOpener，Uncommon）：单回合每打出 3 张技能牌，对所有敌人造成 5 点伤害。
-- 招财异鱼（LuckyFysh，Uncommon）：每次向牌库加入卡牌时，获得 15 金币。run-26 实测触发源：商店购卡（Impervious 入库 +15）、卡牌奖励领取（每次 +15）、SwipePower 偷牌在偷窃草蜢死亡时归还（静默入库 +15 可见）。
+- 招财异鱼（LuckyFysh，Uncommon）：每次向牌库加入卡牌时，获得 15 金币。触发源：商店购卡、卡牌奖励领取、SwipePower 偷牌在偷窃草蜢死亡时归还（静默入库同样 +15）。
 - 水银沙漏（MercuryHourglass，Uncommon）：回合开始，对所有敌人造成 3 点伤害。
 - 微型大炮（MiniatureCannon，Uncommon）：升级后的攻击牌额外造成 3 点伤害。
 - 双截棍（Nunchaku，Uncommon）：每打出 10 张攻击牌，获得 1 点能量。
 - 奥利哈钢（Orichalcum，Uncommon）：回合结束时，若没有格挡，获得 6 格挡。
 
-- **run-34 遗物实弹折档（A1，2026-09-18，种子 BZS6HFJL7Y）**：**天选芝士全战账本**：每场战胜 +1 MaxHP 全勤触发（Act1-3 全程可见 Max 递增；卷轴战纸割 −16 税后全战净值 Max 80→82）——HP 经济骨干；与燃烧之血 +6/杀构成 IRONCLAD 常备续航轨。**红骷髅阈值 run-34 再确认**：HP ≤ ~50% Max 时 +3 力 live（全战多次开关；Max 80 时 HP 41 观察到 OFF——阈值数学按 run-31 注记成立）。**奥利哈钢 live**：回合结束无挡则 +6 挡——多战覆盖 Buff 窗侧伤（无厌沙虫 T1 的 6 等）；竞速回合保险类再确认。**紫水晶茄子 live**：每场战斗奖励 +15 金（Act3 每次领奖基础金之后可见 +15）。**石裂者 run-34 live**：开战 +2 随机战斗内升级确认触发（战斗范围类按 run-26/33 注记；同战观察到 Defend→Defend+ 8 挡手牌）。**百年拼图 run-34 live**：每战首掉血抽 3——经猩红披风回合开始 −1/放血/祭品类每战触发；披风部署后等效「T1 后战斗开始抽 3」。**灯笼 run-34 再确认**：每战 T1 energy=4/3。**营养汤/血染玫瑰/南瓜蜡烛/原初之爪解码**：见 events.md run-34 VAKUU/TEZCATARA 折档。
 - 精致折扇（OrnamentalFan，Uncommon）：单回合每打出 3 张攻击牌，获得 4 格挡。
 - 缩放仪（Pantograph，Uncommon）：Boss 战开始时，回复 25 HP。
-- 纸蛙（PaperPhrog，Uncommon，Ironclad）：带 Vulnerable 的敌人受到的攻击伤害 +75%（原 +50%）。run-17 实测（A1 2026-09-17）：与残酷能力（+25%）加法叠加 → 易伤目标受到攻击伤害 +100%（×2.0）— 实测 Strike 6→12、御血术 15→30、Bludgeon+ 42→84。 商店标价 196 金实测（run-17 Act1 商店、run-18 Act1 商店）——按此预算。run-28 实测（牌库无残酷）：易伤目标命中值=（基础+力量）×1.75 精确——熔拳+ (14+2)×1.75=28、剑柄 (9+3)×1.75=21、Bash+ (10+1)×1.75=19、狂宴 (10+2)×1.75=21 全部 live 确认；**力量在乘区内而非乘区后加**。纸蛙单独=×1.75；×2.0 需残酷加法叠层。
+- 纸蛙（PaperPhrog，Uncommon，Ironclad）：带 Vulnerable 的敌人受到的攻击伤害 +75%（原 +50%）。与残酷能力（+25%）加法叠加 → 易伤目标受到攻击伤害 +100%（×2.0）。牌库无残酷时：易伤目标命中值=（基础+力量）×1.75 精确——**力量在乘区内而非乘区后加**。纸蛙单独=×1.75；×2.0 需残酷加法叠层。商店标价约 196 金。
 - 招架盾（ParryingShield，Uncommon）：回合结束时，若有至少 10 格挡，对随机敌人造成 6 点伤害。
 - 梨子（Pear，Uncommon）：拾取时，+10 最大 HP。
 - 钢笔尖（PenNib，Uncommon）：每打出的第 10 张攻击牌造成双倍伤害。
@@ -76,17 +75,17 @@
 - 石化蟾蜍（PetrifiedToad，Uncommon）：战斗开始，获得 1 瓶药水形状的石头。
 - 活动星图（Planisphere，Uncommon）：进入问号房间时，回复 5 HP。
 - 君王矿石（Regalite，Uncommon，Regent）：每次创造卡牌时，获得 2 格挡。
-- 爬行动物饰品（ReptileTrinket，Uncommon）：每次使用药水时，本回合获得 3 点力量。
-- 波纹水盆（RippleBasin，Uncommon）：回合结束时，若本回合未打出任何攻击牌，获得 4 格挡。run-16 实测：回合末与卡牌格挡加法叠加（Spiral 附魔防御 22 + 水盆 4 = 26 挡吃 18 入侵，1 HP 存活）；低血时「弃攻击换挡」是真实生存杠杆。
+- 爬行动物饰品（ReptileTrinket，Uncommon）：每次使用药水时，本回合获得 3 点力量。任意药水使用均触发（Dex/血/Flex/攻击类）——以独立 power（REPTILE_TRINKET_POWER:3）与药水原生效果同回合叠加（如 Flex +5 + 饰品 +3 = 单回合 +8 力爆发窗）。
+- 波纹水盆（RippleBasin，Uncommon）：回合结束时，若本回合未打出任何攻击牌，获得 4 格挡。回合末与卡牌格挡加法叠加（如 Spiral 附魔防御 22 + 水盆 4 = 26）；低血时「弃攻击换挡」是真实生存杠杆。
 - 自成型黏土（SelfFormingClay，Uncommon，Ironclad）：战斗中每次失去 HP 时，下回合开始获得 3 格挡。
 - 闪亮口红（SparklingRouge，Uncommon）：第 3 回合开始，获得 1 点力量和 1 点敏捷。
-- 碎石钻（StoneCracker，Uncommon）：战斗开始，将抽牌堆中 2 张随机牌升级（本场战斗内）。run-20 实测命中范围（A1 2026-09-18）：旋风斩 5→8/击、防御 5→8、打击 6→9、双重打击 5→7/击、剑柄打击 9→10——升级仅战斗内有效且卡面不显示 + 标记，以实机伤害数字为准。
+- 碎石钻（StoneCracker，Uncommon）：战斗开始，将抽牌堆中 2 张随机牌升级（本场战斗内）。命中示例：Bash→Bash+（易伤 2→3）、TrueGrit→TrueGrit+（随机消耗→**选择式消耗叠层**——升级形态即选择式消耗版）、Spite→Spite+（掉血回合 2→3 击）、Impervious→Impervious+（挡 30→40）、Hemokinesis→Hemokinesis+（伤 15→20）、旋风斩 5→8/击、防御 5→8、打击 6→9、双重打击 5→7/击、剑柄打击 9→10。升级仅战斗内有效且卡面不显示 + 标记，以实机伤害数字为准。
 - 共生病毒（SymbioticVirus，Uncommon，Defect）：第 1 回合开始，引导 1 个暗球。
 - 铜钹（Tingsha，Uncommon，Silent）：回合内每弃 1 张牌，对随机敌人造成 3 点伤害。
 - 小邮箱（TinyMailbox，Uncommon）：在休息点休息时，获得 2 瓶随机药水。
 - 音叉（TuningFork，Uncommon）：每打出 10 张技能牌，获得 7 格挡。
 - 扭曲漏斗（TwistedFunnel，Uncommon，Silent）：战斗开始（第 1 回合），对所有敌人施加 4 层中毒。
-- 臂甲（Vambrace，Uncommon）：每场战斗首次从卡牌获得格挡时，获得量翻倍。run-28 实测：嘲讽 7→14、火焰屏障 12→24、Defend 5→10——每战首张挡牌精确翻倍；仅首次触发（同战后续 Defend 按面值）。
+- 臂甲（Vambrace，Uncommon）：每场战斗首次从卡牌获得格挡时，获得量翻倍。每战首张挡牌精确翻倍（嘲讽 7→14、火焰屏障 12→24、Defend 5→10）；仅首次触发（同战后续 Defend 按面值）。
 - 孙子兵法（ArtOfWar，Rare）：若上回合未打出任何攻击牌，第 2 回合起回合开始获得 1 点能量。
 - 律动残余（BeatingRemnant，Rare）：单回合失去的 HP 不超过 20。
 - 风箱（Bellows，Rare）：第 1 回合开始，升级手牌中所有卡牌。
@@ -122,7 +121,7 @@
 - 能量电池（PowerCell，Rare，Defect）：战斗开始（第 1 回合），从抽牌堆将 2 张零费牌加入手牌。
 - 转经轮（PrayerWheel，Rare）：普通敌人战斗奖励额外掉落 1 份卡牌奖励。
 - 彩虹戒指（RainbowRing，Rare）：单回合首次打出攻击、技能、能力各一张时，获得 1 点力量和 1 点敏捷。
-- 剃刀牙（RazorTooth，Rare）：每次打出攻击或技能牌时，本场战斗内将其升级。run-29 实测语义：触发升级的那次打出仍按**基础值**结算，该牌此后本战打出才用升级值（实测：Rage 首打 Amount 3/后打 5、Defend 首打 5/后打 8、Bash 易伤后打升至 3；速度药水敏捷回合的后打 Defend 读数 13 = 基础5+升级3+敏捷5）。
+- 剃刀牙（RazorTooth，Rare）：每次打出攻击或技能牌时，本场战斗内将其升级。语义：触发升级的那次打出仍按**基础值**结算，该牌此后本战打出才用升级值（如 Rage 首打 Amount 3/后打 5、Defend 首打 5/后打 8；速度药水敏捷回合的后打 Defend 读数 13 = 基础5+升级3+敏捷5）。
 - 损毁头盔（RuinedHelmet，Rare，Ironclad）：每场战斗首次获得力量时，获得量翻倍。
 - 铲子（Shovel，Rare）：休息点获得 Dig 选项，可获得随机遗物。
 - 手里剑（Shuriken，Rare）：单回合每打出 3 张攻击牌，获得 1 点力量。
@@ -133,7 +132,7 @@
 - 毒素之蛋（ToxicEgg，Rare）：向牌库加入的技能牌会被升级。
 - 结实绷带（ToughBandages，Rare，Silent）：回合内每弃 1 张牌，获得 3 格挡。
 - 不休陀螺（UnceasingTop，Rare）：回合内手牌为空时，抽 1 张牌。
-- 不安油灯（UnsettlingLamp，Rare）：每场战斗首次打出对敌施加减益的卡牌时，减益效果翻倍。
+- 不安油灯（UnsettlingLamp，Rare）：每场战斗首次打出对敌施加减益的卡牌时，减益效果翻倍。数值示例：Uppercut+（基础 2 弱/2 易伤）作为首张 debuff 牌翻倍至 **4 弱/4 易伤**；首 debuff 翻倍作用于打出时的*战内当前值*——被 StoneCracker 先行升级的 Tremble+（7 级）翻倍可到 8 易伤，高于基础 3×2=6。
 - 烦人机关盒（VexingPuzzlebox，Rare）：第 1 回合开始，向手牌加入一张随机牌；本回合免费。
 - 白兽雕像（WhiteBeastStatue，Rare）：药水总是出现在战斗奖励中。
 - 白星（WhiteStar，Rare）：精英战斗奖励额外掉落 1 份稀有卡牌奖励。
@@ -150,7 +149,7 @@
 - 轰鸣海螺（BoomingConch，Ancient）：精英战第 1 回合开始，额外抽 2 张牌并获得 1 点能量。
 - 艳丽围巾（BrilliantScarf，Ancient）：每回合从手牌打出的第 5 张牌免费。
 - 召唤铃铛（CallingBell，Ancient）：拾取时，获得 1 张独特诅咒和 3 件遗物。
-- 选择悖论（ChoicesParadox，Ancient）：第 1 回合开始，从 5 张随机卡中选 1 张加入手牌；这 5 张牌均获得 Retain。
+- 选择悖论（ChoicesParadox，Ancient）：第 1 回合开始，从 5 张随机卡中选 1 张加入手牌；这 5 张牌均获得 Retain。语义：为本战斗手牌添加（带 Retain），每战 T1 新五选一——**非**永久入牌库。
 - 利爪（Claws，Ancient）：拾取时，将至多 6 张牌变为 Maul。
 - 十字弓（Crossbow，Ancient）：每回合开始，向手牌加入 1 张随机攻击牌；本回合免费。
 - 诅咒珍珠（CursedPearl，Ancient）：拾取时，向牌库加入 1 张 Greed 并获得 333 金币。
@@ -163,7 +162,7 @@
 - 放电异虾（ElectricShrymp，Ancient）：拾取时，选择 1 张技能牌附魔 Imbued。
 - 空鸟笼（EmptyCage，Ancient）：拾取时，从牌库移除 2 张牌。
 - 小提琴（Fiddle，Ancient）：每回合抽牌阶段额外抽 2 张牌；回合内不能再抽牌。
-- 钓鱼竿（FishingRod，Ancient）：每 3 场普通敌人战斗，升级牌库中 1 张随机牌。A1 实测 2026-09-17：计数只统计 Monster 房间战斗——普通怪战第 3/6/9 场触发升级；同局三场精英战从未推进计数。
+- 钓鱼竿（FishingRod，Ancient）：每 3 场普通敌人战斗，升级牌库中 1 张随机牌。计数只统计 Monster 房间战斗——普通怪战第 3/6/9 场触发升级；精英战不推进计数。
 - 皮草大衣（FurCoat，Ancient）：拾取时，标记 7 场战斗；这些房间的敌人 HP 为 1。
 - 玻璃眼珠（GlassEye，Ancient）：拾取时，获得 2 张普通、2 张罕见、1 张稀有卡牌。
 - 亮片（Glitter，Ancient）：所有卡牌奖励附魔 Glam。
@@ -175,21 +174,21 @@
 - 珠宝盒（JewelryBox，Ancient）：拾取时，向牌库加入 1 张 Apotheosis。
 - 万花筒（Kaleidoscope，Ancient）：拾取时，获得来自其他角色的 2 份卡牌奖励。
 - 巨大扭蛋（LargeCapsule，Ancient）：拾取时，获得 2 件随机遗物；向牌库加入 1 张 Strike 和 1 张 Defend。
-- 熔岩石（LavaRock，Ancient）：Boss 战奖励额外掉落 2 件遗物（一次）。原文标注第一章 Boss；run-7 在第二章皇蟹 Boss 奖励屏观察到 +2 遗物按钮——章节标签视为软性（同类 WONGOS 门槛偏差）。
+- 熔岩石（LavaRock，Ancient）：Boss 战奖励额外掉落 2 件遗物（一次）。章节标签视为软性——Act2 Boss 奖励屏同样观察到 +2 遗物按钮（同类 WONGOS 门槛偏差）。
 - 铅制镇纸（LeadPaperweight，Ancient）：拾取时，从 2 张无色牌中选 1 张加入牌库。
 - 树叶药膏（LeafyPoultice，Ancient）：拾取时，变化 1 张 Strike 和 1 张 Defend；失去 12 最大 HP。
 - 布质果实（LoomingFruit，Ancient）：拾取时，+31 最大 HP。
 - 领主阳伞（LordsParasol，Ancient）：进入商人房间时，立刻购入商人的全部库存。
 - 失物盒（LostCoffer，Ancient）：拾取时，获得 1 份卡牌奖励和 1 瓶随机药水。
 - 巨大卷轴（MassiveScroll，Ancient）：拾取时，从 3 张多人模式卡中选 1 张加入牌库。
-- 切肉刀（MeatCleaver，Ancient）：休息点获得 Cook 选项。
+- 切肉刀（MeatCleaver，Ancient）：休息点获得 Cook 选项——**Cook = 永久移除牌库 2 张牌并获得 9 最大 HP**。低 HP 时 Cook 与 HEAL 的张力真实存在（HEAL 恢复当前生存力，Cook 为后期复利牌库+MaxHP）。
 - 音乐盒（MusicBox，Ancient）：每回合打出的第一张攻击牌在手牌中生成一份虚无拷贝。
 - 涅奥骨骰（NeowsBones，Ancient）：拾取时，获得 2 件随机 Neow 遗物；向牌库加入 1 张随机诅咒。
 - 涅奥的护符（NeowsTalisman，Ancient）：拾取时，升级 1 张 Strike 和 1 张 Defend。
 - 涅奥的苦痛（NeowsTorment，Ancient）：拾取时，向牌库加入 1 张 Neow's Fury。
 - 新叶（NewLeaf，Ancient）：拾取时，变化 1 张选定牌。
 - 营养牡蛎（NutritiousOyster，Ancient）：拾取时，+11 最大 HP。
-- 营养汤（NutritiousSoup，Ancient）：拾取时，为牌库中所有带 Strike 标签的基础牌附魔 Tezcatara's Ember。
+- 营养汤（NutritiousSoup，Ancient）：拾取时，为牌库中所有带 Strike 标签的基础牌附魔 Tezcatara's Ember（Ember = **0 费 / +3 伤 / Eternal**——附魔期间基础 Strike 每战免费 +3 结算）。
 - 佩尔之血（PaelsBlood，Ancient）：每回合抽牌阶段额外抽 1 张牌。
 - 佩尔之爪（PaelsClaw，Ancient）：拾取时，为牌库中所有 Defend 标签牌附魔 Goopy（附带 Exhaust）。
 - 佩尔之眼（PaelsEye，Ancient）：每场战斗首次未打出任何牌就结束回合时，消耗手牌并获得一个额外回合。
@@ -208,7 +207,7 @@
 - 精准剪刀（PreciseScissors，Ancient）：拾取时，从牌库移除 1 张牌。
 - 腌制活雾（PreservedFog，Ancient）：拾取时，移除 3 张牌；向牌库加入 1 张 Folly。
 - 棱彩宝石（PrismaticGem，Ancient）：每回合 +1 最大能量；卡牌奖励包含其他角色的牌。
-- 南瓜蜡烛（PumpkinCandle，Ancient）：每回合 +1 最大能量；5 场战斗后熄灭；休息点获得 Kindle 选项（+5 场战斗）。run-26 实测：第 5 战（Act2 开局→Boss：地道虫/草蜢/胧光怪/棱柱/产卵虫）准时燃尽；KINDLE 作为营火第三按钮（HEAL/SMITH/KINDLE）出现；复燃消耗当次营火行动 —— HP 危机迫使每次营火都 HEAL 时蜡烛在 Boss 战前保持熄灭。
+- 南瓜蜡烛（PumpkinCandle，Ancient）：每回合 +1 最大能量；5 场战斗后熄灭；休息点获得 Kindle 选项（+5 场战斗）。第 5 战准时燃尽；KINDLE 作为营火第三按钮（HEAL/SMITH/KINDLE）出现；复燃消耗当次营火行动 —— HP 危机迫使每次营火都 HEAL 时蜡烛在 Boss 战前保持熄灭。
 - 发光珍珠（RadiantPearl，Ancient）：第 1 回合开始，向手牌加入 1 张 Luminesce。
 - 符文金字塔（RunicPyramid，Ancient）：回合结束不再弃置手牌。
 - 钗（Sai，Ancient）：每回合开始，获得 7 格挡。
@@ -228,8 +227,8 @@
 - 故事书（Storybook，Ancient）：拾取时，向牌库加入 1 张 Brightest Flame。
 - 坦克斯的哨子（TanxsWhistle，Ancient）：拾取时，向牌库加入 1 张 Whistle。
 - 投斧（ThrowingAxe，Ancient）：每场战斗打出的第一张牌额外再打出一次。
-- 烘焙手套（ToastyMittens，Ancient）：每回合抽牌前，消耗抽牌堆顶牌并获得 1 点力量。run-28 实测（Act2 祝福选入）：约 12 场战斗每回合 +1 力零例外；消耗顶牌在无痛部署时同步触发 FnP（回合开始可见 +3 挡来自手套触发的消耗——消耗源计入无痛）。力量与 Rupture Amount-3 引擎联乘，Boss 战中峰值 23。
-- 欧洛巴斯之触（TouchOfOrobas，Ancient）：拾取时，将初始遗物替换为远古版本。run-19 实测：IRONCLAD 燃烧之血 → 黑暗之血（战斗胜利回 12，原 6）；state 中遗物 id 同步更换，战后回复与天选芝士叠加。
+- 烘焙手套（ToastyMittens，Ancient）：每回合抽牌前，消耗抽牌堆顶牌并获得 1 点力量。每回合 +1 力零例外；消耗顶牌在无痛部署时同步触发 FnP（消耗源计入无痛）。**与 Headbutt 取回反协同**：取回件置于抽牌堆顶后会被 Mittens 下回合开始时消耗。
+- 欧洛巴斯之触（TouchOfOrobas，Ancient）：拾取时，将初始遗物替换为远古版本。IRONCLAD 燃烧之血 → 黑暗之血（战斗胜利回 12，原 6）；state 中遗物 id 同步更换，战后回复与天选芝士叠加。
 - 玩具盒（ToyBox，Ancient）：拾取时，获得 4 件蜡质遗物；每 3 场战斗，最左侧蜡质遗物融化消失。
 - 三刃回旋镖（TriBoomerang，Ancient）：拾取时，选择 3 张攻击牌附魔 Instinct 1。Instinct 附魔（反编译）：有源攻击伤害 ×2（乘法，先于 Vulnerable 等其他乘区结算）。
 - 天鹅绒颈圈（VelvetChoker，Ancient）：每回合 +1 最大能量；每回合最多打出 6 张牌。
@@ -237,7 +236,7 @@
 - 战锤（WarHammer，Ancient）：每次击败精英时，升级牌库中 4 张随机牌。
 - 低语耳环（WhisperingEarring，Ancient）：每回合 +1 最大能量；Vakuu 代你打出第一回合（至多 13 张牌）。
 - 羽翼之靴（WingedBoots，Ancient）：选择行进房间时可忽略路径限制 3 次。
-- 美味饼干（YummyCookie，Ancient）：拾取时，升级 4 张选定牌。run-29 实测：升级为永久牌库升级（deck_select 叠层——逐张 choose 后 proceed 确认）；该方式升级的 Rupture+ Amount 2 此后每次 Bloodletting/Breakthrough 自伤 +2 力量（实弹）。
+- 美味饼干（YummyCookie，Ancient）：拾取时，升级 4 张选定牌。升级为永久牌库升级（deck_select 叠层——逐张 choose 后 proceed 确认）；该方式升级的 Rupture+ Amount 2 此后每次 Bloodletting/Breakthrough 自伤 +2 力量。
 
 - 腰带扣（BeltBuckle，Shop）：没有药水时，额外 +2 点敏捷（战斗内）。
 - 面包（Bread，Shop）：第 1 回合开始，失去 2 点能量；第 2 回合起，每回合 +1 最大能量。
@@ -274,7 +273,7 @@
 - 宾邦（BingBong，Event）：每次向牌库加入卡牌时，额外加一份拷贝。
 - 骨茶（BoneTea，Event）：接下来 1 场战斗：第 1 回合开始，升级手牌中所有卡牌。
 - 异鸟宝宝（Byrdpip，Event）：拾取时，获得卡牌 Byrd Swoop；战斗中有 Byrdpip 伴随。
-- 天选芝士（ChosenCheese，Event）：战斗结束，+1 最大 HP。run-26 实测 ×3（棱柱/产卵虫/千足虫击杀）：战后 state 可见 Max 102→103 类触发；由满屋奶酪 Search 选项获得（−14 不可格挡 HP）。run-28 实测：全战胜利触发——Max 与狂宴 Fatel 联合爬升 80→98（芝士 +1/杀+狂宴 +3/杀在战后 state 可见叠加）；本局 Search 税精确 −14（事件时 53→39 类数学）。
+- 天选芝士（ChosenCheese，Event）：战斗结束，+1 最大 HP。每场战斗胜利均触发；与狂宴 Fatel 叠加（芝士 +1/杀 + 狂宴 +3/杀）。由满屋奶酪 Search 选项获得（−14 不可格挡 HP，税精确）。
 - 黑石护符（DarkstonePeriapt，Event）：每次向牌库加入诅咒时，+6 最大 HP。
 - 风的女儿（DaughterOfTheWind，Event）：每次打出攻击牌时，获得 1 格挡。
 - 捕梦网（DreamCatcher，Event）：在休息点休息时，可以向牌库加入一张牌。
@@ -282,8 +281,8 @@
 - 锚？？？（FakeAnchor，Event）：战斗开始，获得 4 格挡。
 - 小血瓶？？？（FakeBloodVial，Event）：第 1 回合开始，回复 1 HP。
 - 开心小花？？？（FakeHappyFlower，Event）：每第 5 回合开始，获得 1 点能量。
-- 李家华夫饼？？？（FakeLeesWaffle，Event）：拾取时，回复最大 HP 的 10%。run-27 实测：伪商人 56 金；97 Max 池下 18→27（≈9 = 10% 下取整）。
-- 芒果？？？（FakeMango，Event）：拾取时，+3 最大 HP。run-27 实测：伪商人 43 金；27/94→30/97（当前与最大各 +3）。
+- 李家华夫饼？？？（FakeLeesWaffle，Event）：拾取时，回复最大 HP 的 10%（下取整）。伪商人标价约 56 金。
+- 芒果？？？（FakeMango，Event）：拾取时，+3 最大 HP（当前与最大各 +3）。伪商人标价约 43 金。
 - 商人的地毯？？？（FakeMerchantsRug，Event）：无效果。
 - 奥利哈钢？？？（FakeOrichalcum，Event）：回合结束时，若没有格挡，获得 3 格挡。
 - 异蛇之眼？？？（FakeSneckoEye，Event）：战斗开始时处于 Confused。
@@ -305,16 +304,13 @@
 - 发条靴（TheBoot，Event）：你对敌人造成的 1-4 点未格挡攻击伤害提升为 5 点。
 - 旺购客户感恩徽章（WongoCustomerAppreciationBadge，Event）：无效果。
 - 旺购神秘券（WongosMysteryTicket，Event）：完成 5 场战斗后，下一场战斗奖励额外获得 3 件遗物。
-- 铃铛三角（RINGING_TRIANGLE，Common）：战斗第 1 回合结束时保留手牌——首回合抽到的牌不弃（2026-09-17 perplexity 研究；与 run-12/13 的 RINGING_POWER 铃锁 debuff 无关）。
-- Run-30 实弹验证遗物（A1，2026-09-18，种子 GVL70LGGH2）：营养汤 Ember Strike = **0费/+3伤/Eternal** 全程确认（每次抽到手 cost=0）；威吓头盔每张2费以上出牌 +4挡（锚10+头盔4 = T1 读数 block 14）；锚战斗开始 10挡；弹珠袋战斗开始全体 Vulnerable 1（单敌与多敌战均实弹）；青铜鳞战斗开始 3荆棘（对 3×5 炮手类多段的反伤价值实弹）；光滑石头战斗开始 +1敏捷；战纹升级 Defend+（基础8）与 Taunt+（8挡+Vuln2）——双双实弹计价；铁棒每打出4张牌抽1（0费 Strike 链上观察到触发）；药瓶皮套 +1 药槽（4槽领取窗实弹）；燃烧之血胜利回6。HeartOfIron 是**药水**（非遗物）施加玩家镀层7——见 potions.md。
+- 铃铛三角（RINGING_TRIANGLE，Common）：战斗第 1 回合结束时保留手牌——首回合抽到的牌不弃（与 RINGING_POWER 铃锁 debuff 无关）。
 
+## 其他遗物解码备注
 
-## Run-33 live folds（A1，2026-09-18，Seed TL1U9HRACR）
+静态补充；无 run 记录。
 
-- Reptile Trinket（爬行动物饰品，ReptileTrinket，罕见）：使用药水时本回合获得 3 力量。run-33 live ×4：Dex药/血药/Flex药/攻击药 使用时 +3 力均触发——以独立 power（REPTILE_TRINKET_POWER:3）与药水原生效果同回合叠加（KaiserCrab T7：Flex +5 + 饰品 +3 = 单回合 +8 力爆发窗实测）。
-- Meat Cleaver（切肉刀，MeatCleaver，远古）：休息点获得 Cook 选项——**Cook = 永久移除牌库 2 张牌并获得 9 最大 HP**（perplexity 2026-09-18 研究）。run-33 Tanx live 选中：遗物入手但 Cook 未行使——HP 危机下其后每次休息被迫 HEAL；低 HP 时 Cook 与 HEAL 的张力真实存在（HEAL 恢复当前生存力，Cook 为后期复利牌库+MaxHP）。
-- Unsettling Lamp（不安之灯，UnsettlingLamp，稀有）：每场战斗第一张对敌施加减益的牌，其减益数值翻倍。run-33 live 值：Uppercut+（基础 2弱/2易伤）在感染棱柱开局翻倍至 **4弱/4易伤** 精确；Tremble 在 KaiserCrab 火箭上施加 **8 易伤**——高于基础3×2=6 的预期，由 StoneCracker 战斗开局先行升级 Tremble 解释（Tremble+ 7级×Lamp 交互；首debuff翻倍作用于打出时的*战内当前值*，该值可能已被 StoneCracker 抬升）。
-- Stone Cracker（碎石者，StoneCracker，罕见）：战斗开始时升级抽牌堆中 2 张随机牌（仅本战）。run-33 live 命中清单：Bash→Bash+（易伤2→3）、TrueGrit→TrueGrit+（随机消耗→**选择式消耗叠层**——升级形态即选择式消耗版）、Spite→Spite+（掉血回合 2→3 击——24-68 伤实测）、Impervious→Impervious+（挡30→40）、Hemokinesis→Hemokinesis+（伤15→20）。
-- HornCleat / Chandelier / ToastyMittens / Pocketwatch / CentennialPuzzle：run-33 全程 live 再确认——HornCleat T2 14挡每战触发；Chandelier T3 +3能每战触发（爆发窗核心）；烘焙手套每回合 +1 力+顶牌消耗（**与 Headbutt 取回反协同：取回件置于抽牌堆顶后被 Mittens 下回合开始时消耗——live ×2**）；积木首次掉血抽3 每战触发；Pocketwatch ≤3牌回合下回合+3抽多次触发。
-
-- run-35 live 实弹遗物（A1，2026-09-18，种子 XWBAE0RFZL）：轰鸣海螺 精英T1 +2抽+1能（每场精英战能量 4/3 live）；开信刀 每 3 张技能牌触发 ~5 伤全体 AoE（地道虫 T5 与蜂群术士 T1 实测触发——计数技能含 Rage/BattleTrance/UltimateDefend/BloodWall/ShrugItOff 类）；五轮书 每向牌库加 5 张牌回 20 HP——**Anger 卡奖入库时 live 触发（42→62 精确）**；佩尔之牙 获得时存至多 5 张可升级牌出库，每场战斗后随机 1 张升级回归（实测存 Strike×4+Defend×1——Act2 开局牌库 20→15）；光滑石 战斗开始 +1 敏（Act2 Defend 5+1=6 全程 live）；BloodPotion 级药水回复 = 20% 最大 HP（Max80 时 16，live 精确）；FruitJuice +5 最大 HP 永久（perplexity 确认，档案条目已解）。
+- HeartOfIron 是**药水**（非遗物）施加玩家镀层 7——见 potions_zh.md / powers_zh.md。
+- BloodPotion 级药水回复 = 20% 最大 HP；FruitJuice +5 最大 HP 永久——见 potions_zh.md。
+- HornCleat 回合 2 开始 14 挡、Chandelier 回合 3 开始 +3 能、Pocketwatch ≤3 牌回合下回合 +3 抽、百年积木每战首掉血抽 3、烘焙手套每回合 +1 力+顶牌消耗——均按各自条目每战触发。
+- 事件祝福遗物解码（营养汤、血染玫瑰、南瓜蜡烛、原初之爪、选择悖论）：见 events_zh.md 远古事件选项。

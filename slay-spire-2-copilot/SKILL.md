@@ -130,17 +130,17 @@ Repeat until the run ends or the user stops you. Every spirectl call carries
    omits). Routing decisions: `run.map.rows[]` in the JSON state carries the
    full act map (every point's `point_type` + `children` connectivity) —
    weigh elite/rest/shop/boss paths from it, not just the current row.
-   **Route draft at act start (user directive 2026-09-18 — hard rule)**:
+   **Route draft at act start (hard rule)**:
    before entering ANY room of a new act, read the full map and write an
    explicit route draft in the reply: number/positions of elites, shops (and
    whether gold earned by then can actually be spent there), rest geometry —
    is there a rest BEFORE each elite and BEFORE the boss, treasure placement —
    then pick the spine that satisfies the checklist. Note variance points
    (Unknown rooms). Revise the draft mid-act when a fork or major event
-   changes the calculus. Run-35 lesson: act-transition full-HP assumptions
-   break under fight attrition — if entry HP for a no-pre-rest elite lands
-   below ~50%, potions ARE the reserve plan; spend gold at the latest shop
-   BEFORE elite corridors, not after.
+   changes the calculus. Act-transition full-HP assumptions break under fight
+   attrition — if entry HP for a no-pre-rest elite lands below ~50%, potions
+   ARE the reserve plan; spend gold at the latest shop BEFORE elite corridors,
+   not after.
    **Boon rooms (run start + act transitions)**: every act begins with an
    Ancient/Neow-family boon room. Act 1's is **Neow** (relic choices —
    typically positive relics vs curse-cost relics); `start_run` reveals the
@@ -156,13 +156,12 @@ Repeat until the run ends or the user stops you. Every spirectl call carries
 2. Decide the action from the state plus memory (run summaries, character playstyles)
 3. `... act <action> --args '<json>' --wait` — actions return immediately once
    submitted; `--wait` polls until the state settles (stable fingerprint) then
-   prints it. **One card per call — hard rule (user directive 2026-09-18)**:
+   prints it. **One card per call — hard rule**:
    combat card plays are NEVER batched. Play exactly one card per `act play`
    call, re-read state, then decide the next card from the fresh indices —
    no multi-card `batch` dumps, no precomputed play chains. This kills card
-   index drift at the source (it recurred across nearly every A1 run —
-   run-4/14–25, ~10–12× per run — and cost run-25's KaiserCrab RECHARGE
-   burst window ~50 damage). `end_turn` is its own call, issued only after a
+   index drift at the source — batched or precomputed chains reindex the hand
+   and can silently play the wrong card. `end_turn` is its own call, issued only after a
    fresh state read shows no further plays wanted. `batch` remains allowed
    only for non-card sequences that cannot reindex the hand (e.g. a lone
    map_select); even then, prefer separate calls. An index is valid only for
@@ -170,8 +169,8 @@ Repeat until the run ends or the user stops you. Every spirectl call carries
    Mid-combat choose-card overlays (boss Curse of Knowledge, potion card
    picks) now surface as screen=card_choice via the mod's overlay scan —
    answer them with `choose` like any other card screen.
-4. Wait model is change-polling, never a timeout deadline (user directive
-   2026-09-16): `wait --quiet 3` returns within ~3s — immediately on
+4. Wait model is change-polling, never a timeout deadline:
+   `wait --quiet 3` returns within ~3s — immediately on
    fingerprint change, or right away with the current state when idle. Do
    NOT use long blocking waits; if an act does not change the screen, re-read
    state and diagnose — the action may have been illegal, or the screen needs
@@ -188,7 +187,7 @@ Repeat until the run ends or the user stops you. Every spirectl call carries
    chests open with `treasure_open`, not choose. After `use_potion`, potion
    slots reindex — re-read before the next potion call.
 
-### Mechanic-first combat (user directive 2026-09-18 — hard rule)
+### Mechanic-first combat (hard rule)
 
 Failures here come from key mechanics missing from decisions, not from weak
 decks. Every fight is played mechanic-first:
@@ -205,14 +204,12 @@ decks. Every fight is played mechanic-first:
    Amount every turn; the compact state prints `POWER:amount` — read it.
    Build the turn plan around the counter (damage race vs extension cards),
    not just around incoming attack intents.
-3. **Never dismiss unexplained lethal as a "display bug"** — that mistake
-   cost three runs to TheInsatiable's Sandpit timer while the archive
-   carried a wrong "never play FranticEscape" rule. If something kills you
-   through mathematically sufficient block, the mechanic you haven't
-   researched is the cause: research it before the next attempt.
-4. Archive data can be wrong (it was, fatally). Live state + researched
-   sources outrank one-line reference summaries; correct references the same
-   session the wrongness is discovered.
+3. **Never dismiss unexplained lethal as a "display bug".** If something
+   kills you through mathematically sufficient block, the mechanic you
+   haven't researched is the cause: research it before the next attempt.
+4. Archive data can be wrong. Live state + researched sources outrank
+   one-line reference summaries; correct references the same session the
+   wrongness is discovered.
 
 Before acting each turn, check: ALL enemy powers/debuffs/buffs with amounts,
 enemy intents, your HP/block, energy, and whether the hand is playable.
@@ -304,7 +301,7 @@ When the run ends (game_over screen, or abandon):
       python3 bridge/spirectl.py watchdog disable    # when the user stops play
       python3 bridge/spirectl.py watchdog status
 
-- **SL restore path (user directive 2026-09-17)**: when an SL (save/load
+- **SL restore path**: when an SL (save/load
   restore) is needed mid-run — deadlock recovery, mod rebuild, wedged screen —
   return to the game's **main menu inside the running game process**, then
   `continue_run` from there. **Never quit/kill the game process and relaunch

@@ -21,52 +21,52 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Bone Flute (BoneFlute, Common, Necrobinder): whenever Osty attacks, gain 2 Block.
 - Book of Five Rings (BookOfFiveRings, Common): every 5 cards added to your deck, heal 20 HP.
 - Bronze Scales (BronzeScales, Common): at combat start, gain 3 Thorns.
-- Centennial Puzzle (CentennialPuzzle, Common): first time each combat you lose HP, draw 3 cards.
+- Centennial Puzzle (CentennialPuzzle, Common): first time each combat you lose HP, draw 3 cards. Any HP-loss tick triggers it — CrimsonMantle turn-start −1 / BloodWall / Bloodletting / Offering class; with Mantle deployed it is effectively "draw 3 at combat start after T1".
 - Data Disk (DataDisk, Common, Defect): at combat start, gain 1 Focus.
 - Fencing Manual (FencingManual, Common, Regent): at start of turn 1, Forge 10.
-- Festive Popper (FestivePopper, Common): at start of turn 1, deal 9 damage to ALL enemies. Run-27 live: pre-chip confirmed 3 encounters (Chompers 63→54/64→55, millipede segments −9 each, KaiserCrab claws 209→200/199→190).
+- Festive Popper (FestivePopper, Common): at start of turn 1, deal 9 damage to ALL enemies. Pre-chip confirmed across encounters (e.g. Chompers, millipede segments, KaiserCrab claws each −9 at combat start).
 - Gorget (Gorget, Common): at combat start, gain 4 Plating.
 - Happy Flower (HappyFlower, Common): every 3rd turn start, gain 1 Energy.
 - Juzu Bracelet (JuzuBracelet, Common): ? rooms can no longer roll Monster combats; only obtainable before the Act-3 treasure chest.
-- Lantern (Lantern, Common): at start of turn 1, gain +1 Energy. Run-26 live: stacks with Pumpkin Candle while the candle is lit (T1 5e observed); after candle burnout T1 runs at base 3 + lantern 1 = 4e — lantern alone does not restore candle-era energy.
+- Lantern (Lantern, Common): at start of turn 1, gain +1 Energy. Stacks with Pumpkin Candle while the candle is lit (T1 5e); after candle burnout T1 runs at base 3 + lantern 1 = 4e — lantern alone does not restore candle-era energy.
 - Meal Ticket (MealTicket, Common): on entering a MerchantRoom, heal 15 HP; only obtainable before the Act-3 treasure chest.
 - Oddly Smooth Stone (OddlySmoothStone, Common): at combat start, gain 1 Dexterity.
 - Pendulum (Pendulum, Common): every 3rd turn start, draw 1 card.
 - Potion Belt (PotionBelt, Common): on pickup, gain 2 potion slots.
-- Red Mask (RedMask, Common): at combat start (turn 1), apply 1 Weak to ALL enemies. Run-28 live: WEAK_POWER:1 visible on every enemy at combat start state read (multi-enemy packs all flagged same frame); weakened enemy intents dropped live (Nibbit-class MANDIBLES 8→6, Entomancer BEES per-hit 3→1 under Colossus+Weak stacking, TheInsatiable THRASH 9→8 per hit).
+- Red Mask (RedMask, Common): at combat start (turn 1), apply 1 Weak to ALL enemies. WEAK_POWER:1 visible on every enemy at combat start state read; weakened enemy intents drop (Nibbit-class MANDIBLES 8→6, Entomancer BEES per-hit 3→1 under Colossus+Weak stacking, TheInsatiable THRASH 9→8 per hit).
 - Red Skull (RedSkull, Common, Ironclad): while HP ≤ 50% of Max HP, you have +3 Strength.
-- Regal Pillow (RegalPillow, Common): Rest Site heal amount is increased by 15 HP. Run-26 live: stacks with StoneHumidifier rests — HP 9→58/102 and 9→59/108 observed (base % heal + pillow 15 + humidifier +5 Max each rest).
+- Regal Pillow (RegalPillow, Common): Rest Site heal amount is increased by 15 HP. Stacks with StoneHumidifier rests (base % heal + pillow 15 + humidifier +5 Max each rest).
 - Snecko Skull (SneckoSkull, Common, Silent): Poison you apply is increased by 1.
-- Strike Dummy (StrikeDummy, Common): Strike-tagged attack cards deal +3 damage. Run-26 live: Pommel Strike (Strike-tagged) dealt 18 = (9 base +3 dummy) ×1.5 Vulnerable — dummy applies before vuln multiplier; Peck (event Strike-tagged) showed no dummy bonus on its 2-damage instances (2×3=6 observed), event-card tag coverage unconfirmed.
+- Strike Dummy (StrikeDummy, Common): Strike-tagged attack cards deal +3 damage. Dummy applies before the Vulnerable multiplier (e.g. Pommel Strike 18 = (9 base +3 dummy) ×1.5); Peck (event Strike-tagged) showed no dummy bonus on its 2-damage instances — event-card tag coverage unconfirmed.
 - Strawberry (Strawberry, Common): on pickup, +7 Max HP.
 - Vajra (Vajra, Common): at combat start, gain 1 Strength.
 - Venerable Tea Set (VenerableTeaSet, Common): on entering a Rest Site, the next combat starts with +2 Energy.
 - War Paint (WarPaint, Common): on pickup, upgrade 2 random Skill cards in your deck.
-- Whetstone (Whetstone, Common): on pickup, upgrade 2 random Attack cards in your deck. Run-28 live (Act-1 chest): hit Bash → Bash+ (10 damage / 3 Vulnerable — upgraded values confirmed live later: Bash+ 10dmg, Vuln 3 on targets) and MoltenFist → MoltenFist+ (14 damage — confirmed live vs Chompers/millipedes). Upgrade targets were both Attack-tagged, consistent with the entry.
+- Whetstone (Whetstone, Common): on pickup, upgrade 2 random Attack cards in your deck. Upgrade targets are Attack-tagged (e.g. Bash → Bash+ 10 damage / 3 Vulnerable; MoltenFist → MoltenFist+ 14 damage).
 - Circlet (Circlet, None): no effect.
 
 - Akabeko (Akabeko, Uncommon): at start of turn 1, gain 8 Vigor.
 - Book Repair Knife (BookRepairKnife, Uncommon, Necrobinder): when non-Minion enemies die to Doom, heal 3 HP per such creature.
 - Bowler Hat (BowlerHat, Uncommon): Gold gained ×1.25; only obtainable before the Act-3 treasure chest; never sold in shops.
 - Candelabra (Candelabra, Uncommon): at start of turn 2, gain 2 Energy.
-- Eternal Feather (EternalFeather, Uncommon): on entering a Rest Site, heal 3 HP per 5 cards in your deck. Run-27 live: +15 heal at 25-card deck, +15 at 27 cards, +12 at ~20-24 cards observed on rest-site entry (heal applies BEFORE the rest-site action is chosen).
+- Eternal Feather (EternalFeather, Uncommon): on entering a Rest Site, heal 3 HP per 5 cards in your deck. Heal applies BEFORE the rest-site action is chosen (e.g. +15 at 25-card deck, +12 at ~20-24 cards).
 - Funerary Mask (FuneraryMask, Uncommon, Necrobinder): at combat start, shuffle 3 Soul cards into your draw pile.
 - Galactic Dust (GalacticDust, Uncommon, Regent): every 10 Stars spent, gain 10 Block.
 - Gold-Plated Cables (GoldPlatedCables, Uncommon, Defect): your rightmost Orb triggers its passive 1 additional time.
-- Gremlin Horn (GremlinHorn, Uncommon): when an enemy dies, gain 1 Energy and draw 1 card. Run-16 live: kill-chains verified — each death refunded +1 Energy (display 4/3→6/4 mid-turn) and drew immediately, enabling multi-kill turns vs wave fights.
+- Gremlin Horn (GremlinHorn, Uncommon): when an enemy dies, gain 1 Energy and draw 1 card. Kill-chains refund +1 Energy and draw immediately on each death — enables multi-kill turns vs wave fights.
 - Horn Cleat (HornCleat, Uncommon): at start of turn 2, gain 14 Block.
 - Joss Paper (JossPaper, Uncommon): every 5 cards exhausted, draw 1 card (Ethereal end-of-turn exhausts are counted at turn end).
 - Kusarigama (Kusarigama, Uncommon): every 3 Attack cards played in one turn, deal 6 damage to a random enemy.
 - Lasting Candy (LastingCandy, Uncommon): every other combat after the first, combat card rewards gain 1 additional Power card; only obtainable before the Act-3 treasure chest.
 - Letter Opener (LetterOpener, Uncommon): every 3 Skill cards played in one turn, deal 5 damage to ALL enemies.
-- Lucky Fysh (LuckyFysh, Uncommon): whenever a card is added to your deck, gain 15 Gold. Run-26 live trigger sources: shop card buys (+15 on Impervious add), card-reward picks (+15 each), SwipePower stolen-card return on ThievingHopper death (silent deck-add +15 observed).
+- Lucky Fysh (LuckyFysh, Uncommon): whenever a card is added to your deck, gain 15 Gold. Trigger sources: shop card buys, card-reward picks, SwipePower stolen-card return on ThievingHopper death (silent deck-add also pays +15).
 - Mercury Hourglass (MercuryHourglass, Uncommon): at start of your turn, deal 3 damage to ALL enemies.
 - Miniature Cannon (MiniatureCannon, Uncommon): upgraded Attack cards deal +3 damage.
 - Nunchaku (Nunchaku, Uncommon): every 10 Attack cards played, gain 1 Energy.
 - Orichalcum (Orichalcum, Uncommon): end of turn, if you have no Block, gain 6 Block.
 - Ornamental Fan (OrnamentalFan, Uncommon): every 3 Attack cards played in one turn, gain 4 Block.
 - Pantograph (Pantograph, Uncommon): at start of Boss combats, heal 25 HP.
-- Paper Phrog (PaperPhrog, Uncommon, Ironclad): enemies with Vulnerable take +75% attack damage instead of +50%. Run-17 live (A1 2026-09-17): stacks additively with Cruelty power (+25%) → Vulnerable target takes +100% attack damage (×2.0) — live-verified Strike 6→12, Hemokinesis 15→30, Bludgeon+ 42→84. Shop-priced 196 gold live (run-17 and run-18 Act1 shops) — budget accordingly. Run-28 live WITHOUT Cruelty in deck: Vuln-target hits matched (base+Str)×1.75 exactly — MoltenFist+ (14+2)×1.75=28, Pommel (9+3)×1.75=21, Bash+ (10+1)×1.75=19, Feed (10+2)×1.75=21 all live-confirmed; Str is inside the multiplier, not added after. PaperPhrog alone = ×1.75; ×2.0 requires the Cruelty add-stack.
+- Paper Phrog (PaperPhrog, Uncommon, Ironclad): enemies with Vulnerable take +75% attack damage instead of +50%. Stacks additively with Cruelty power (+25%) → Vulnerable target takes +100% attack damage (×2.0). WITHOUT Cruelty: Vuln-target hits = (base+Str)×1.75 exactly — Str is inside the multiplier, not added after. PaperPhrog alone = ×1.75; ×2.0 requires the Cruelty add-stack. Shop price ~196 gold.
 - Parrying Shield (ParryingShield, Uncommon): end of turn, if you have ≥10 Block, deal 6 damage to a random enemy.
 - Pear (Pear, Uncommon): on pickup, +10 Max HP.
 - Pen Nib (PenNib, Uncommon): every 10th Attack card you play deals double damage.
@@ -74,19 +74,18 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Petrified Toad (PetrifiedToad, Uncommon): at combat start, procure 1 Potion-Shaped Rock.
 - Planisphere (Planisphere, Uncommon): on entering a ? room, heal 5 HP.
 - Regalite (Regalite, Uncommon, Regent): whenever you create a card, gain 2 Block.
-- Reptile Trinket (ReptileTrinket, Uncommon): whenever you use a potion, gain 3 Strength this turn. Run-33 live ×4 (2026-09-18): +3 Str fired on DexPotion / BloodPotion / FlexPotion / AttackPotion uses — the Strength lands same-turn as an own power (REPTILE_TRINKET_POWER:3) stacking with potion-native effects (Flex +5 + Trinket +3 = +8 Str burst window observed at KaiserCrab T7).
-- Ripple Basin (RippleBasin, Uncommon): end of turn, if you played no Attack cards this turn, gain 4 Block. Run-16 live: stacks additively with card block at end of turn (Spiral-enchant Defend 22 + Basin 4 = 26 vs 18 incoming, survived at 1 HP); the no-attack-turn discipline is a real survival lever at low HP.
+- Reptile Trinket (ReptileTrinket, Uncommon): whenever you use a potion, gain 3 Strength this turn. +3 Str fires on any potion use (Dex/Blood/Flex/Attack-class) — lands same-turn as an own power (REPTILE_TRINKET_POWER:3) stacking with potion-native effects (e.g. Flex +5 + Trinket +3 = +8 Str burst window).
+- Ripple Basin (RippleBasin, Uncommon): end of turn, if you played no Attack cards this turn, gain 4 Block. Stacks additively with card block at end of turn (e.g. Spiral-enchant Defend 22 + Basin 4 = 26 vs 18 incoming); the no-attack-turn discipline is a real survival lever at low HP.
 - Self-Forming Clay (SelfFormingClay, Uncommon, Ironclad): whenever you lose HP in combat, gain 3 Block at start of next turn.
 - Sparkling Rouge (SparklingRouge, Uncommon): at start of turn 3, gain 1 Strength and 1 Dexterity.
-- Stone Cracker (StoneCracker, Uncommon): at combat start, upgrade 2 random cards in your draw pile for the rest of combat. Run-33 live hit list: Bash→Bash+ (Vuln 2→3), TrueGrit→TrueGrit+ (random exhaust → **choice-exhaust overlay** — the upgraded form IS the choose-your-exhaust card), Spite→Spite+ (2→3 hits on HP-loss turns — 24-68 dmg plays observed), Impervious→Impervious+ (Block 30→40), Hemokinesis→Hemokinesis+ (15→20). Run-20 live hits (A1 2026-09-18) confirmed the range: Whirlwind 5→8 per hit, Defend 5→8, Strike 6→9, Twin Strike 5→7 per hit, Pommel Strike 9→10 — upgrades are in-combat only and the card display does not mark them; read live damage numbers.
+- Stone Cracker (StoneCracker, Uncommon): at combat start, upgrade 2 random cards in your draw pile for the rest of combat. Hit-list examples: Bash→Bash+ (Vuln 2→3), TrueGrit→TrueGrit+ (random exhaust → **choice-exhaust overlay** — the upgraded form IS the choose-your-exhaust card), Spite→Spite+ (2→3 hits on HP-loss turns), Impervious→Impervious+ (Block 30→40), Hemokinesis→Hemokinesis+ (15→20), Whirlwind 5→8 per hit, Defend 5→8, Strike 6→9, Twin Strike 5→7 per hit, Pommel Strike 9→10. Upgrades are in-combat only and the card display does not mark them; read live damage numbers.
 
-- **Run-34 relic live folds (A1, 2026-09-18, Seed BZS6HFJL7Y)**: **ChosenCheese full-run tally**: +1 Max HP fired on EVERY combat victory across Act1-3 (visible Max increments 80→…→82 NET after PaperCuts −16 tax fight) — HP-economy backbone; pairs with BurningBlood +6/kill as the standing IRONCLAD sustain rail. **RedSkull threshold run-34 reconfirm**: +3 Strength live at HP ≤ ~50% Max (toggled ON/OFF multiple times per fight as HP crossed ~40-47/80-90 class; OFF at HP 41 with Max 80 live-observed — threshold math per run-31 note held). **Orichalcum live**: end-of-turn 6 Block if none — covered Buff-window side damage multiple fights (TheInsatiable T1 6, Sculptor-class ticks); race-turn insurance class reconfirmed. **Amethyst Aubergine live**: +15 gold on every combat reward claim (visible +15 after base gold on each reward read, Act3 fights). **Stone Cracker run-34 live**: combat-start +2 random in-combat upgrades confirmed firing (combat-scoped class per run-26/33 notes; Defend→Defend+ 8-block hands observed same combat). **Centennial Puzzle run-34 live**: draw-3 on first HP loss fired every combat via CrimsonMantle turn-start −1 tick / BloodWall / Bloodletting / Offering classes — with Mantle deployed it is effectively "draw 3 at combat start after T1". **Choices Paradox semantics** (events cross-ref): T1 pick-1-of-5 hand-add with Retain, combat-scoped, new offer each combat. **Lantern run-34 reconfirm**: energy=4/3 at every combat T1 open. **NutritiousSoup / BloodSoakedRose / PumpkinCandle / SereTalon decode**: see events.md run-34 VAKUU/TEZCATARA folds.
 - Symbiotic Virus (SymbioticVirus, Uncommon, Defect): at start of turn 1, Channel 1 Dark.
 - Tingsha (Tingsha, Uncommon, Silent): for each card discarded during your turn, deal 3 damage to a random enemy.
 - Tiny Mailbox (TinyMailbox, Uncommon): on Resting at a Rest Site, procure 2 random potions.
 - Tuning Fork (TuningFork, Uncommon): every 10 Skill cards played, gain 7 Block.
 - Twisted Funnel (TwistedFunnel, Uncommon, Silent): at combat start (turn 1), apply 4 Poison to ALL enemies.
-- Vambrace (Vambrace, Uncommon): first time each combat you gain Block from a card, the Block amount is doubled. Run-28 live: Taunt 7→14, FlameBarrier 12→24, Defend 5→10 — first block card of each combat doubled exactly; procs on the first card-granted Block only (later Defends that combat granted face value).
+- Vambrace (Vambrace, Uncommon): first time each combat you gain Block from a card, the Block amount is doubled. First block card of each combat doubled exactly (Taunt 7→14, FlameBarrier 12→24, Defend 5→10); procs on the first card-granted Block only (later Defends that combat grant face value).
 - Art of War (ArtOfWar, Rare): if you played no Attack cards last turn, start of turn 2+ gain 1 Energy.
 - Beating Remnant (BeatingRemnant, Rare): you cannot lose more than 20 HP in a single turn.
 - Bellows (Bellows, Rare): at start of turn 1, upgrade all cards in hand.
@@ -122,7 +121,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Power Cell (PowerCell, Rare, Defect): at combat start (turn 1), add 2 zero-cost cards from draw pile to hand.
 - Prayer Wheel (PrayerWheel, Rare): Monster combat rewards gain 1 additional card reward.
 - Rainbow Ring (RainbowRing, Rare): first time each turn you play an Attack, a Skill and a Power, gain 1 Strength and 1 Dexterity.
-- Razor Tooth (RazorTooth, Rare): whenever you play an Attack or Skill card, upgrade it for the rest of combat. Run-29 live semantics: the play that triggers the upgrade still uses BASE values; that card type is upgraded for subsequent plays in the same combat (live: Rage Amount 3 on first play / 5 later, Defend 5 first / 8 later, Bash Vuln 2→3 on later plays; Defend with Speed-Potion Dex read 13 = 5 base + 3 upgrade + 5 Dex on a later-play Defend).
+- Razor Tooth (RazorTooth, Rare): whenever you play an Attack or Skill card, upgrade it for the rest of combat. Semantics: the play that triggers the upgrade still uses BASE values; that card type is upgraded for subsequent plays in the same combat (e.g. Rage Amount 3 first play / 5 later, Defend 5 first / 8 later; a later-play Defend with Speed-Potion Dex read 13 = 5 base + 3 upgrade + 5 Dex).
 - Ruined Helmet (RuinedHelmet, Rare, Ironclad): first time each combat you gain Strength, the amount gained is doubled.
 - Shovel (Shovel, Rare): Rest Sites gain a Dig option that grants a random relic.
 - Shuriken (Shuriken, Rare): every 3 Attack cards played in one turn, gain 1 Strength.
@@ -133,7 +132,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Toxic Egg (ToxicEgg, Rare): Skill cards added to your deck are created upgraded.
 - Tough Bandages (ToughBandages, Rare, Silent): for each card discarded during your turn, gain 3 Block.
 - Unceasing Top (UnceasingTop, Rare): whenever your hand is empty during your turn, draw 1 card.
-- Unsettling Lamp (UnsettlingLamp, Rare): first card each combat that applies debuffs to enemies has those debuff amounts doubled. Run-33 live values: Uppercut+ (2 Weak / 2 Vuln base) doubled to **4 Weak / 4 Vuln** exact on InfestedPrism opener; Tremble applied **8 Vulnerable** on KaiserCrab Rocket — above the 6 expected from base-3×2, explained by StoneCracker combat-start upgrading Tremble before play (Tremble+ 7-class × Lamp interaction; treat first-debuff doubling as applying to the *current in-combat value* of the card, which StoneCracker may have already raised).
+- Unsettling Lamp (UnsettlingLamp, Rare): first card each combat that applies debuffs to enemies has those debuff amounts doubled. Values: Uppercut+ (2 Weak / 2 Vuln base) doubled to **4 Weak / 4 Vuln** as the combat's first debuff card; first-debuff doubling applies to the *current in-combat value* of the card — a StoneCracker-upgraded Tremble+ (7-class) doubled to 8 Vulnerable observed, above base-3×2=6.
 - Vexing Puzzlebox (VexingPuzzlebox, Rare): at start of turn 1, add a random card from your card pool to hand; free this turn.
 - White Beast Statue (WhiteBeastStatue, Rare): potions always appear in combat rewards.
 - White Star (WhiteStar, Rare): elite combat rewards gain 1 additional Rare card reward.
@@ -150,7 +149,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Booming Conch (BoomingConch, Ancient): at start of elite combats (turn 1), hand draw +2 cards and gain 1 Energy.
 - Brilliant Scarf (BrilliantScarf, Ancient): the 5th card you play from hand each turn costs 0.
 - Calling Bell (CallingBell, Ancient): on pickup, gain 1 unique Curse and 3 relics.
-- Choices Paradox (ChoicesParadox, Ancient): at start of turn 1, choose 1 of 5 random cards to add to hand; those cards gain Retain.
+- Choices Paradox (ChoicesParadox, Ancient): at start of turn 1, choose 1 of 5 random cards to add to hand; those cards gain Retain. Semantics: hand-add with Retain for that combat, new 5-option offer every combat T1 — NOT a permanent deck add.
 - Claws (Claws, Ancient): on pickup, transform up to 6 cards into Maul.
 - Crossbow (Crossbow, Ancient): at start of each turn, add 1 random Attack to hand; it is free this turn.
 - Cursed Pearl (CursedPearl, Ancient): on pickup, add 1 Greed to deck and gain 333 Gold.
@@ -163,7 +162,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Electric Shrymp (ElectricShrymp, Ancient): on pickup, choose 1 Skill card to enchant with Imbued.
 - Empty Cage (EmptyCage, Ancient): on pickup, remove 2 cards from deck.
 - Fiddle (Fiddle, Ancient): hand draw +2 cards each turn; you cannot draw cards during your turn.
-- Fishing Rod (FishingRod, Ancient): every 3 Monster combats, upgrade 1 random card in deck. Live A1 2026-09-17: counter counts Monster-room combats only — upgrades fired after regular monster fights 3/6/9; three elite-room fights in the same run never advanced the counter.
+- Fishing Rod (FishingRod, Ancient): every 3 Monster combats, upgrade 1 random card in deck. Counter counts Monster-room combats only — upgrades fire after regular monster fights 3/6/9; elite-room fights do not advance the counter.
 - Fur Coat (FurCoat, Ancient): on pickup, mark 7 combats; enemies in marked rooms have 1 HP.
 - Glass Eye (GlassEye, Ancient): on pickup, gain 2 Common, 2 Uncommon and 1 Rare cards.
 - Glitter (Glitter, Ancient): all card rewards are enchanted with Glam.
@@ -175,21 +174,21 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Jewelry Box (JewelryBox, Ancient): on pickup, add 1 Apotheosis to deck.
 - Kaleidoscope (Kaleidoscope, Ancient): on pickup, gain 2 card rewards from other characters.
 - Large Capsule (LargeCapsule, Ancient): on pickup, gain 2 random relics; add 1 Strike and 1 Defend to deck.
-- Lava Rock (LavaRock, Ancient): boss combat rewards gain 2 additional relics (once). Refs text said Act 1 boss; run-7 observed the +2-relic reward buttons at the Act-2 KaiserCrab screen — treat the act label as soft (same class as WONGOS act-gate).
+- Lava Rock (LavaRock, Ancient): boss combat rewards gain 2 additional relics (once). Act label is soft — +2-relic reward buttons also observed at an Act-2 boss reward screen (same class as WONGOS act-gate).
 - Lead Paperweight (LeadPaperweight, Ancient): on pickup, choose 1 of 2 Colorless cards to add to deck.
 - Leafy Poultice (LeafyPoultice, Ancient): on pickup, transform 1 Strike and 1 Defend; lose 12 Max HP.
 - Looming Fruit (LoomingFruit, Ancient): on pickup, +31 Max HP.
 - Lord's Parasol (LordsParasol, Ancient): on entering a MerchantRoom, immediately purchase the merchant's entire inventory.
 - Lost Coffer (LostCoffer, Ancient): on pickup, gain 1 card reward and 1 random potion.
 - Massive Scroll (MassiveScroll, Ancient): on pickup, choose 1 of 3 Multiplayer cards to add to deck.
-- Meat Cleaver (MeatCleaver, Ancient): Rest Sites gain a Cook option — **Cook = permanently remove 2 cards from your deck AND gain 9 Max HP** (perplexity 2026-09-18; spire-codex/sportskeeda). Run-33 live pick at Tanx: relic obtained but Cook never exercised — HP crisis forced HEAL at every subsequent rest site; the Cook-vs-HEAL tension is real at low HP (HEAL restores current survivability, Cook compounds deck+MaxHP for later).
+- Meat Cleaver (MeatCleaver, Ancient): Rest Sites gain a Cook option — **Cook = permanently remove 2 cards from your deck AND gain 9 Max HP**. Cook-vs-HEAL tension is real at low HP (HEAL restores current survivability, Cook compounds deck+MaxHP for later).
 - Music Box (MusicBox, Ancient): first Attack card played each turn creates an Ethereal copy in hand.
 - Neow's Bones (NeowsBones, Ancient): on pickup, gain 2 random Neow relics; add 1 random Curse to deck.
 - Neow's Talisman (NeowsTalisman, Ancient): on pickup, upgrade 1 Strike and 1 Defend.
 - Neow's Torment (NeowsTorment, Ancient): on pickup, add 1 Neow's Fury to deck.
 - New Leaf (NewLeaf, Ancient): on pickup, transform 1 chosen card.
 - Nutritious Oyster (NutritiousOyster, Ancient): on pickup, +11 Max HP.
-- Nutritious Soup (NutritiousSoup, Ancient): on pickup, enchant all Strike-tagged Basic cards with Tezcatara's Ember.
+- Nutritious Soup (NutritiousSoup, Ancient): on pickup, enchant all Strike-tagged Basic cards with Tezcatara's Ember (Ember = **cost 0 / +3 dmg / Eternal** — Strike-tagged Basics resolve free +3 every combat while enchanted).
 - Pael's Blood (PaelsBlood, Ancient): hand draw +1 card each turn.
 - Pael's Claw (PaelsClaw, Ancient): on pickup, enchant all Defend-tagged cards in deck with Goopy (adds Exhaust).
 - Pael's Eye (PaelsEye, Ancient): first time each combat you end your turn having played 0 cards, exhaust your hand and take an extra turn.
@@ -208,7 +207,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Precise Scissors (PreciseScissors, Ancient): on pickup, remove 1 card from deck.
 - Preserved Fog (PreservedFog, Ancient): on pickup, remove 3 cards; add 1 Folly to deck.
 - Prismatic Gem (PrismaticGem, Ancient): +1 max Energy each turn; card rewards include cards from other characters.
-- Pumpkin Candle (PumpkinCandle, Ancient): +1 max Energy each turn; extinguishes after 5 combats; Rest Sites gain a Kindle option that adds 5 combats. Run-26 live: burnout confirmed at exactly the 5th combat (Act 2 opener→boss = Tunneler/Hopper/Obscura/Prism/Ovicopter); KINDLE appears as a third rest-site button (HEAL/SMITH/KINDLE); re-lighting costs the rest action — when HP-crisis forces HEAL at every rest the candle stays dead into the boss fight.
+- Pumpkin Candle (PumpkinCandle, Ancient): +1 max Energy each turn; extinguishes after 5 combats; Rest Sites gain a Kindle option that adds 5 combats. Burnout occurs at exactly the 5th combat; KINDLE appears as a third rest-site button (HEAL/SMITH/KINDLE); re-lighting costs the rest action — when HP-crisis forces HEAL at every rest the candle stays dead into the boss fight.
 - Radiant Pearl (RadiantPearl, Ancient): at start of turn 1, add 1 Luminesce to hand.
 - Runic Pyramid (RunicPyramid, Ancient): you no longer discard your hand at end of turn.
 - Sai (Sai, Ancient): at start of each turn, gain 7 Block.
@@ -228,8 +227,8 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Storybook (Storybook, Ancient): on pickup, add 1 Brightest Flame to deck.
 - Tanx's Whistle (TanxsWhistle, Ancient): on pickup, add 1 Whistle card to deck.
 - Throwing Axe (ThrowingAxe, Ancient): the first card you play each combat is played an extra time.
-- Toasty Mittens (ToastyMittens, Ancient): each turn before hand draw, exhaust the top card of draw pile and gain 1 Strength. Run-28 live (Act-2 boon pick): +1 Strength every turn without exception across ~12 combats; the exhaust also fired FeelNoPain when deployed (block +3 observed at turn start from Mittens-triggered exhaust — exhaust source counts for FnP). Str stack combined with Rupture Amount-3 engine to peaks of 23 by mid-boss-fight.
-- Touch of Orobas (TouchOfOrobas, Ancient): on pickup, replace your starter relic with its ancient version. Run-19 live: IRONCLAD Burning Blood → BlackBlood (heal 12 HP at combat victory, up from 6); relic id swaps in state and both relics' combat-end effects stack with ChosenCheese.
+- Toasty Mittens (ToastyMittens, Ancient): each turn before hand draw, exhaust the top card of draw pile and gain 1 Strength. +1 Strength every turn without exception; the exhaust also fires FeelNoPain when deployed (exhaust source counts for FnP). **Anti-synergy with Headbutt**: Mittens exhausts draw-pile TOP at the start of your next turn — a Headbutt-retrieved card on top gets eaten before you draw it.
+- Touch of Orobas (TouchOfOrobas, Ancient): on pickup, replace your starter relic with its ancient version. IRONCLAD Burning Blood → BlackBlood (heal 12 HP at combat victory, up from 6); relic id swaps in state and combat-end effects stack with ChosenCheese.
 - Toy Box (ToyBox, Ancient): on pickup, gain 4 Wax relics; every 3 combats, the left-most Wax relic melts away.
 - Tri-Boomerang (TriBoomerang, Ancient): on pickup, choose 3 Attack cards to enchant with Instinct 1. Instinct enchant (decomp): powered attack damage ×2 (multiplicative, applied before other multipliers such as Vulnerable).
 - Velvet Choker (VelvetChoker, Ancient): +1 max Energy each turn; you cannot play more than 6 cards per turn.
@@ -237,7 +236,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - War Hammer (WarHammer, Ancient): whenever you defeat an elite, upgrade 4 random cards in deck.
 - Whispering Earring (WhisperingEarring, Ancient): +1 max Energy each turn; Vakuu plays your first turn for you (up to 13 cards).
 - Winged Boots (WingedBoots, Ancient): you may ignore map path restrictions 3 times.
-- Yummy Cookie (YummyCookie, Ancient): on pickup, upgrade 4 chosen cards. Run-29 live: upgrades are permanent deck upgrades (deck_select overlay — choose each card then proceed to confirm); Rupture upgraded to Amount 2 this way and every subsequent Bloodletting/Breakthrough self-damage granted +2 Strength live.
+- Yummy Cookie (YummyCookie, Ancient): on pickup, upgrade 4 chosen cards. Upgrades are permanent deck upgrades (deck_select overlay — choose each card then proceed to confirm); Rupture upgraded to Amount 2 this way grants +2 Strength on every subsequent Bloodletting/Breakthrough self-damage.
 
 - Belt Buckle (BeltBuckle, Shop): while you have no potions, you have +2 Dexterity (combat).
 - Bread (Bread, Shop): turn 1 start, lose 2 Energy; turns 2+, +1 max Energy each turn.
@@ -274,7 +273,7 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Bing Bong (BingBong, Event): whenever a card is added to your deck, add an additional copy.
 - Bone Tea (BoneTea, Event): next 1 combat: at start of turn 1, upgrade all cards in hand.
 - Byrdpip (Byrdpip, Event): on pickup, gain the Byrd Swoop card; accompanies you in battles.
-- Chosen Cheese (ChosenCheese, Event): at combat end, +1 Max HP. Run-26 live ×3 (prism/Ovicopter/millipede kills): Max 102→103 class proc visible in post-combat state; obtained from ROOM_FULL_OF_CHEESE Search (−14 unblockable HP). Run-28 live: procced every combat victory across the run — Max climbed 80→98 jointly with Feed Fatals (ChosenCheese +1/kill + Feed Fatal +3/kill stacking visible in post-combat states); Search tax paid exactly −14 this run (53→39-class math at event).
+- Chosen Cheese (ChosenCheese, Event): at combat end, +1 Max HP. Procs on EVERY combat victory; stacks with Feed Fatals (ChosenCheese +1/kill + Feed Fatal +3/kill). Obtained from ROOM_FULL_OF_CHEESE Search (−14 unblockable HP, tax exact).
 - Darkstone Periapt (DarkstonePeriapt, Event): whenever a Curse is added to your deck, +6 Max HP.
 - Daughter of the Wind (DaughterOfTheWind, Event): whenever you play an Attack card, gain 1 Block.
 - Dream Catcher (DreamCatcher, Event): when Resting at a Rest Site, you may add a card to deck.
@@ -282,8 +281,8 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - Fake Anchor (FakeAnchor, Event): at combat start, gain 4 Block.
 - Fake Blood Vial (FakeBloodVial, Event): at start of turn 1, heal 1 HP.
 - Fake Happy Flower (FakeHappyFlower, Event): every 5th turn start, gain 1 Energy.
-- Fake Lee's Waffle (FakeLeesWaffle, Event): on pickup, heal 10% of Max HP. Run-27 live: 56g at fake merchant, healed 18→27 on a 97-Max pool (≈9 = floor 10%).
-- Fake Mango (FakeMango, Event): on pickup, +3 Max HP. Run-27 live: 43g at fake merchant; 27/94 → 30/97 (+3 current and Max).
+- Fake Lee's Waffle (FakeLeesWaffle, Event): on pickup, heal 10% of Max HP (floor). Fake-merchant price ~56g.
+- Fake Mango (FakeMango, Event): on pickup, +3 Max HP (+3 current and Max). Fake-merchant price ~43g.
 - Fake Merchant's Rug (FakeMerchantsRug, Event): no effect.
 - Fake Orichalcum (FakeOrichalcum, Event): end of turn, if you have no Block, gain 3 Block.
 - Fake Snecko Eye (FakeSneckoEye, Event): at combat start, gain Confused.
@@ -305,6 +304,12 @@ Deterministic relic effects from decompiled game code (`/tmp/sts2-decomp/MegaCri
 - The Boot (TheBoot, Event): your attack damage to enemies of 1-4 unblocked HP is increased to 5.
 - Wongo Customer Appreciation Badge (WongoCustomerAppreciationBadge, Event): no effect.
 - Wongo's Mystery Ticket (WongosMysteryTicket, Event): after 5 combats finished, the next combat's rewards gain 3 relic rewards.
-- Run-30 live-verified relics (A1, 2026-09-18, Seed GVL70LGGH2): NutritiousSoup Ember Strikes = **cost 0 / +3 dmg / Eternal** confirmed all-run (hand cost=0 live every draw); IntimidatingHelmet +4 Block on every 2+Energy card play (Anchor 10 + Helm 4 = block 14 T1 reads); Anchor 10 Block combat start; BagOfMarbles Vulnerable 1 ALL at combat start (single- and multi-enemy fights); BronzeScales 3 Thorns combat start (multi-hit tax value live vs 3×5 Gunner-class); OddlySmoothStone +1 Dex combat start; WarPaint upgraded Defend+ (8 base) and Taunt+ (8 block + Vuln 2) — both live-valued; IronClub draw-1 every 4 cards played (proc observed on 0e Strike chains); PhialHolster +1 potion slot (4-slot claim windows live); BurningBlood +6 combat victory. HeartOfIron is a POTION (not relic) applying player Plating 7 — see potions.md.
 
-Run-35 live-verified relics (A1, 2026-09-18, Seed XWBAE0RFZL): BoomingConch elite-T1 +2 draw +1 Energy (energy=4/3 live every elite fight); LetterOpener ~5 damage AoE to ALL enemies per 3 Skill cards played (proc observed Tunneler T5 and Entomancer T1 — skills counted include Rage/BattleTrance/UltimateDefend/BloodWall/ShrugItOff class); BookOfFiveRings heal 20 HP every 5 cards added to deck — **fired live on the Anger card-reward pickup (42→62 exact)**; PaelsTooth on-obtain store up to 5 upgradeable cards out of deck, 1 random stored card returns upgraded after each combat (stored Strike×4+Defend×1 live — deck 20→15 for Act2 opening); OddlySmoothStone +1 Dex combat start (Defend 5+1=6 live all Act2); BloodPotion-class potion heal = 20% Max HP (16 at Max 80, live exact); FruitJuice +5 Max HP permanent (perplexity-confirmed, archive entry already resolved).
+## Additional decoded relic notes
+
+Static clarifications; no run records.
+
+- HeartOfIron is a POTION (not a relic) applying player Plating 7 — see potions.md / powers.md.
+- BloodPotion-class potion heal = 20% Max HP; FruitJuice +5 Max HP permanent — see potions.md.
+- HornCleat start-of-turn-2 14 Block, Chandelier start-of-turn-3 +3 Energy, Pocketwatch ≤3-card-turn draw +3, CentennialPuzzle first-HP-loss draw 3, ToastyMittens per-turn +1 Str + top-deck exhaust — all fire every combat as documented in their entries.
+- Event boon-relic decodes (NutritiousSoup, BloodSoakedRose, PumpkinCandle, SereTalon, ChoicesParadox): see events.md ancient-event options.

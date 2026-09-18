@@ -33,7 +33,7 @@ at end of turn. "Unplayable" = cannot be played.
 - SLIMED (Status): cost 1; on play draw 1 card, Exhausts.
 - DAZED (Status): unplayable, Ethereal — vanishes if unplayed at end of turn.
   (PersonalHivePower injects Dazed cards into the attacker's draw pile.)
-- WOUND (Status): unplayable; pure deck clog. **Run-35 live reconfirm (Vantom boss)**: 3 Wounds in hand through end of turn dealt ZERO HP damage — no Infection-class EOT tax; archive "pure deck clog" claim holds live.
+- WOUND (Status): unplayable; pure deck clog. 3 Wounds in hand through end of turn dealt ZERO HP damage — no Infection-class EOT tax; the "pure deck clog" classification holds.
 - TOXIC (Status): cost 1, Exhausts; if still in hand at end of turn, deals 5
   unpowered damage to its owner (DamageVar 5).
 - DISINTEGRATION (Status, KnowledgeDemon choice): cost -1, not generated in

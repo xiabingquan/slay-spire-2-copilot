@@ -89,24 +89,25 @@ Action notes:
   Verify post-embark via `run.ascension` (RunState.AscensionLevel — authority),
   `player.character` / `player.character_id`,
   `player.ascension_max_at_start`, and compact state `asc=` / `char=`.
-- Card play targeting (live 2026-09-17): Self/AoE/random-target cards
+- Card play targeting: Self/AoE/random-target cards
   (Defend, Shrug It Off, Bloodletting, Armaments, Whirlwind, Sword Boomerang,
   …) must **omit** `target_combat_id` — the game silently no-ops
   PlayCardAction when a creature target is passed to them (card stays in hand,
   energy unchanged). The bridge now fail-loud rejects `target_combat_id` on
   any card whose TargetType is not AnyEnemy/AnyAlly/AnyPlayer. Only
   AnyEnemy/AnyAlly/AnyPlayer consume an explicit target id.
-- X-cost cards (live 2026-09-18 run-20/21): `play` with no extra args submits
+- X-cost cards: `play` with no extra args submits
   Whirlwind-class X-cost cards at **full current energy as X** (3 energy →
   X=3, three hits per enemy). Omit `target_combat_id` (AllEnemies). An explicit
   `"x":N` argument is **accepted syntactically but silently ignored** — the
-  game still spends full current energy as X (run-21 live: `x:2` at 3 energy
-  still played X=3). Do not plan around partial-X Whirlwind; treat the card
+  game still spends full current energy as X (`x:2` at 3 energy
+  still plays X=3). Do not plan around partial-X Whirlwind; treat the card
   as always-all-energy.
 - After any overlay confirm (hand_select/deck_select `proceed`, Headbutt
   pile choices), **re-read state before computing follow-up play indices** —
-  hand reindexes and a computed index hits the wrong card (live: Armaments
-  confirm then play(index) hit Bludgeon instead of the upgraded Defend).
+  hand reindexes and a computed index hits the wrong card (e.g. an Armaments
+  confirm followed by play(index) can hit Bludgeon instead of the upgraded
+  Defend).
 - Treasure rooms: the chest is opened with `treasure_open` (no args) — `choose`
   on the chest button returns `use treasure_open for it`. After opening, the
   relic holder is claimed with `choose(index=<holder>)`; gold credits
@@ -129,7 +130,7 @@ Action notes:
 
 ## Wait model (change-polling, no timeout deadlines)
 
-User directive 2026-09-16: play-loop waits never block on a deadline.
+Play-loop waits never block on a deadline.
 
 - `wait` polls the fingerprint every `--interval` (0.2s): returns the new
   state immediately on change; if unchanged for `--quiet` (3.0s default)
