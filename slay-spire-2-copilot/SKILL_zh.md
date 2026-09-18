@@ -103,6 +103,10 @@ memory 记录里。
 `SPIREBRIDGE_LOG_DIR=<绝对文件夹>`：
 
 1. `... state` — 紧凑状态（仅当需要紧凑视图未包含的字段时用 `--json`）。
+   compact 现在恒显每个怪物的 `move=<move_id>`、结构化意图位（`atk:8` /
+   `multi:7x2` / `status:2c` / 小写意图类型）以及每个存活怪物的
+   move-graph 段（state_log、循环、分支权重、`current=`）——任何 id 的
+   完整条目用 `python3 bridge/spirectl.py lookup <id>` 解析。
    路线决策：JSON 状态里的 `run.map.rows[]` 携带完整 act 地图（每个点的
    `point_type` + `children` 连通性）——用它权衡精英/营火/商店/boss 路线，
    不要只看当前可选行。**每章开局路线草稿（硬规则）**：
@@ -153,18 +157,24 @@ memory 记录里。
 此处的失败多因关键机制未纳入决策，而非硬实力不足。每场战斗机制优先：
 
 1. **每场与不熟悉敌人的战斗首回合前，以及每场精英/Boss 战无例外**：
-   先读 `references/game/monsters_zh.md`（或 EN）中该敌人的完整条目——
-   招式循环、每一个被动 Power、施加的每一个 debuff/buff。live state 显示的
-   每个 power/意图都必须能用档案解释；任何未知 → perplexity-search →
-   折入 references 双语 → 再出牌。
-2. **计数类 power 是击杀倒计时，不是装饰**：SANDPIT（归 0 直接吞噬，
+   先用 `python3 bridge/spirectl.py lookup <id>` 解析每一个不熟悉的
+   move_id/power_id/relic_id（或直接读 references/game/monsters.json /
+   powers.json）——招式循环、每一个被动 Power、施加的每一个
+   debuff/buff。live state 显示的每个 power/意图都必须能用参考解释；
+   任何未知 → perplexity-search → 折入 references 双语 → 再出牌。
+2. **禁止标识符猜测**：live state 中出现的每一个 move_id、power_id、
+   relic_id、card_id、potion_id、event id，凡不在工作记忆中的，必须先经
+   `spirectl lookup` 解析后才能用于决策。凭档案记忆推导效果被禁止；
+   lookup miss 是高声研究触发器（codex 回退自动执行；codex 也未命中时用
+   perplexity-search 再把事实折入 JSON 双语对），绝不是猜测许可。
+3. **计数类 power 是击杀倒计时，不是装饰**：SANDPIT（归 0 直接吞噬，
    格挡无效）、RINGING（每回合限 1 张牌）、ESCAPE_ARTIST、HATCH、
    TIME_LIMIT、HardToKill 上限、Plating 阈值等。每回合跟踪其 Amount；
    compact state 打印 `POWER:amount`——必读。回合计划要围绕计数器制定
    （竞速输出 vs 延时卡），不能只看攻击意图。
-3. **绝不把无法解释的致死当作"显示 bug"**。若在算术上足够的格挡下仍然致死，
+4. **绝不把无法解释的致死当作"显示 bug"**。若在算术上足够的格挡下仍然致死，
    原因是你还没研究的机制：下次尝试前先研究清楚。
-4. **档案可能是错的**。live state + 研究来源优先于档案里
+5. **档案可能是错的**。live state + 研究来源优先于档案里
    的一行摘要；发现错误当次会话即订正 references。
 
 每回合行动前检查：敌人全部 power/debuff/buff 及其层数、敌人意图、
@@ -191,9 +201,11 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
    结构（Summary 核心信息表格 / Run review 对局回顾 / What went well
    做得好的地方 / What went poorly 做得不好的地方 / Key moments 关键
    节点）。引用 run 日志时只写文件名，绝不写个人绝对路径。
-2. 对局中新观察到的游戏事实（卡牌/遗物/药水/能力/意图的效果）以条目形式
-   直接写入 references/game/ 下对应文件及其 `_zh` 中文版——中英内容必须
-   完全对应。memory 只记对局感悟与过程，不记游戏基础数据。
+2. 对局中新观察到的游戏事实（卡牌/遗物/药水/能力/意图的效果）直接折入
+   references/game/ 下对应的 *.json 及其 `_zh` 双语对——key = live 游戏
+   id、`"curated": true`、同会话中英内容完全对应——随后运行
+   `python3 scripts/build_game_reference_json.py --check`，提交前必须
+   exit 0。memory 只记对局感悟与过程，不记游戏基础数据。
 3. 将本局 memory 记录及其 `_zh` 中文版提交进仓库——memory 已纳入版本控制。
 4. 若用户已停止游玩：解除看门狗武装（见「运行时约定」）。
 5. **阶段性反思**：`memory/overview.md` 顶部设有 `# 阶段性反思`
@@ -266,15 +278,24 @@ references/ — 查阅知识：
 - `references/README_zh.md` — 知识索引（中文版）
 - `references/bridge/commands.md` — CLI 用法、动作与状态参考、日志目录契约
 - `references/bridge/protocol.md` — 线协议 v1（本机 TCP 上的 JSON Lines）
-- `references/game/characters_zh.md` — 可玩角色、初始配置、流派
-- `references/game/cards_zh.md` — 卡牌
-- `references/game/potions_zh.md` — 药水效果
-- `references/game/powers_zh.md` — 能力/力量
-- `references/game/relics_zh.md` — 遗物效果
-- `references/game/intents_zh.md` — 敌人意图解读
-- `references/game/monsters_zh.md` — 敌人招式表与被动
-- `references/game/events_zh.md` — 事件房与已知分支
-- `references/game/afflictions_zh.md` — 状态与负面效果
+- `references/game/characters.json` + `characters_zh.json` — 可玩角色、
+  初始配置、流派
+- `references/game/cards.json` + `cards_zh.json` — 卡牌
+- `references/game/potions.json` + `potions_zh.json` — 药水效果
+- `references/game/powers.json` + `powers_zh.json` — 能力/力量
+- `references/game/relics.json` + `relics_zh.json` — 遗物效果
+- `references/game/intents.json` + `intents_zh.json` — 敌人意图解读
+- `references/game/monsters.json` + `monsters_zh.json` — 敌人招式表与被动
+  （招式嵌套在各怪物条目下）
+- `references/game/events.json` + `events_zh.json` — 事件房与已知分支
+  （选项嵌套在各事件条目下）
+- `references/game/afflictions.json` + `afflictions_zh.json` — 状态与
+  负面效果
+- JSON 参考库：条目以 live 游戏 id 为 key；任何 id 用
+  `python3 bridge/spirectl.py lookup <key>` 解析（flag：`--json/--lang/`
+  `--domain/--all`；miss 时自动查 spire-codex.com 并折入 `curated:false`
+  存根，需精修为 `curated:true`，双语）。markdown 孪生文件（game/*.md）
+  在 live 验证通过前保留，之后退役——引用一律指向 JSON 文件。
 
 memory/ — 对局记忆（已纳入版本控制）：
 

@@ -37,7 +37,7 @@ no fallback). Alert logging fires only while ARMED:
     python3 bridge/spirectl.py doctor
     python3 bridge/spirectl.py watchdog enable|disable|status
     python3 bridge/spirectl.py launch
-    python3 bridge/spirectl.py state [--json]
+    python3 bridge/spirectl.py state [--json] [--no-ref-tags]
 
 State notes:
 
@@ -51,16 +51,80 @@ State notes:
   FIRST while `visited=false`; unvisited boon starts are re-injected at the
   head of `available_map_points` with `act_start_boon: true`. The compact
   view prints `ACT-START BOON ROOM UNVISITED: ...` while that holds.
-- Enemy intents: labels are live loc strings; loc leaks like
-  `intents:FORMAT_EMPTY` are replaced server-side with the intent type, and
-  the compact view falls back to `Type(move_id)` (e.g. `Buff(PREPARE_MOVE)`).
-  `--json` adds `damage`/`hits`/`class`/`type` per intent.
+- Enemy intents are structured (mod >= 0.2.0, protocol v1.1 additive):
+  every intent carries `type`/`class`/`label` plus `damage`/
+  `total_damage`/`hits`/`base_damage` (Attack intents), `card_count`
+  (Status intents), and `description` — full schema in
+  references/bridge/protocol.md. Loc leaks like `intents:FORMAT_EMPTY` are
+  replaced server-side with the intent type. The compact view always prints
+  `move=<move_id>` per monster (label content irrelevant — the structured
+  fields are the source of truth), renders intent bits as `atk:8` /
+  `multi:7x2` / `status:2c` / lowercase intent type, a move-graph section
+  per alive monster (state_log, cycle via `follow_up_id`, branch weights,
+  `current=`), a history tail (last 6 of `combat.history`), pile counts
+  plus `play=N`, relic counters (`HAPPY_FLOWER:2`), and event option
+  descriptions (<=80 chars).
+- `--json` exposes the rest: full `move_graph` (intents for EVERY move in
+  the machine, random/conditional branch detail), pile id-arrays
+  (`draw_card_ids`/`discard_card_ids`/`exhaust_card_ids`/`play_card_ids`;
+  `+` suffix marks an upgraded copy — strip before lookup), `combat.history[]`
+  (last 20 `{kind,text}` entries, excluded from the fingerprint), encounter
+  fields (`encounter_id`/`should_give_rewards`/`min_gold_reward`/
+  `max_gold_reward`/`hittable_enemy_combat_ids`/
+  `escaped_creature_combat_ids`), `run.seed`/`game_mode`/`modifiers`, relic
+  `counter`/`stack_count`/`is_used_up`, potion `rarity`/`usage`, event
+  option `description`/`event_id`/`relic_id`.
+- Compact auto-reference tags (default on when references/game/*.json
+  exists): a resolvable move_id gets a ` [MOVE_ID: <=60-char summary]`
+  snippet after the intent. Opt out per call with `--no-ref-tags`
+  (state/act/batch/wait) or session-wide with env `SPIREBRIDGE_REF_TAGS=0`.
+  Env `SPIREBRIDGE_REF_LANG=en|zh` picks the language for auto tags and is
+  the default for `lookup --lang`.
+- Resolve every unfamiliar move_id/power_id/relic_id/card_id/potion_id/event
+  id on the wire via `spirectl lookup <key>` before it informs a decision.
+  The reference DB is references/game/*.json + *_zh.json (key = live game
+  id); markdown twins are pending retirement — cite the JSON files.
 - AllEnemies/AnyPlayer potions must be sent via `use_potion` WITHOUT
   `target_combat_id` (AnyEnemy potions may pass one); a stray target is
   ignored and logged.
-    python3 bridge/spirectl.py act <action> [--args '{"k":v}'] [--wait|--wait-play] [--stall-timeout 3] [--json]
-    python3 bridge/spirectl.py batch --acts '[{"action":"play","args":{"card_index":2}},{"action":"end_turn"}]' [--stall-timeout 3]
-    python3 bridge/spirectl.py wait [--quiet 3.0] [--interval 0.2]
+
+Lookup (reference resolution):
+
+    python3 bridge/spirectl.py lookup <key> [--json] [--lang en|zh] [--domain D] [--all]
+
+- `<key>` = a live game id exactly as state emits it — e.g. `GLOMP_MOVE`,
+  `RAVENOUS_POWER`, `BURNING_BLOOD`,
+  `NEOW.pages.INITIAL.options.NEOWS_TALISMAN`, `SingleAttackIntent`,
+  `STUNNED`. Resolution reads references/game/*.json (or *_zh.json) via a
+  fail-loud ladder: exact key (top-level, aliases, flattened
+  monsters[*].moves[*] and events[*].options[*]) → event-option textKey →
+  case-insensitive → upgrade-suffix probes (`X+`→`X`; bare `STRIKE` lists
+  the `STRIKE_*` family).
+- Flags: `--json` prints the raw entry; `--lang en|zh` selects the EN or ZH
+  file pair (default: env `SPIREBRIDGE_REF_LANG`, else `en`); `--domain D`
+  restricts to move|power|relic|card|potion|event|affliction|intent|
+  character|monster; `--all` prints every domain match (bare keys otherwise
+  resolve by domain priority: move → power → relic → card → potion →
+  event_option/event → affliction/status_card → intent_class/intent_type →
+  character → monster; conflicts list the rest in a footer).
+- Miss pipeline (never silent): a key absent from the JSON DB falls through
+  to https://spire-codex.com research (URL pattern
+  `https://spire-codex.com/{category}/{lowercase_id}`; categories:
+  cards/relics/monsters/powers/potions/events/characters/reference). A
+  codex hit is folded into the matching references/game/*.json + *_zh.json
+  pair as a `curated:false` stub and returned; refine it (perplexity-search
+  / decomp facts), set `curated:true` bilingual, then re-run
+  `python3 scripts/build_game_reference_json.py --check`. If codex has no
+  page, lookup exits 1 with a loud perplexity-search research trigger —
+  a lookup miss is a research trigger, never permission to guess.
+- Coverage gate: `python3 scripts/extract_live_ids.py --logs "$SPIREBRIDGE_LOG_DIR"`
+  harvests live ids from run logs;
+  `python3 scripts/build_game_reference_json.py --check` must exit 0
+  (every live id resolvable, EN+ZH descriptions non-empty) before commits.
+
+    python3 bridge/spirectl.py act <action> [--args '{"k":v}'] [--wait|--wait-play] [--stall-timeout 3] [--json] [--no-ref-tags]
+    python3 bridge/spirectl.py batch --acts '[{"action":"play","args":{"card_index":2}},{"action":"end_turn"}]' [--stall-timeout 3] [--no-ref-tags]
+    python3 bridge/spirectl.py wait [--quiet 3.0] [--interval 0.2] [--no-ref-tags]
     python3 bridge/spirectl.py profile [--log /abs/folder/run-<ts>-<hash>.log] [--budget 30]
     python3 bridge/spirectl.py sl [--json]
     python3 bridge/spirectl.py stop

@@ -99,14 +99,18 @@ Violation → move narrative content out of the table cells into that run's
 
 ### 4. references/game/ is static reference material
 
-Files: `slay-spire-2-copilot/references/game/*.md` — EN and `_zh` pairs for
-cards, relics, powers, potions, afflictions, monsters, events, intents, and
-characters.
+Files: `slay-spire-2-copilot/references/game/*.json` + `*_zh.json` — EN and
+`_zh` pairs for cards, relics, powers, potions, afflictions, monsters, events,
+intents, and characters. (Markdown twins `*.md` remain on disk until live
+verification retires them; docs cite the JSON.)
 
-Rule: these are static reference docs consulted mid-run. They may be edited
-during a run, but only with static descriptive content (a relic's effect, a
-monster's behavior, a card's wording). They must not contain run records,
-dates, or session notes.
+Rule: static reference data — keys = live game ids, values = complete
+descriptions. Entries may gain facts during a run, but must never contain run
+records, dates, or session notes. `play_notes` holds static strategy only.
+`curated`/`source` fields are allowed. Note: `spirectl lookup` auto-folds
+spire-codex.com stubs marked `curated:false` — those must be refined to
+`curated:true` (bilingual, EN+ZH aligned) before they count as curated
+content.
 
 Violation → delete the run-specific content; it belongs in `memory/runs/`,
 not here.

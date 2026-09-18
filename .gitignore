@@ -23,3 +23,7 @@ slay-spire-2-copilot/proposal.md
 
 # Local working files.
 /todo.md
+
+# SpireBridge JSON-pipeline live-id cache (scripts/extract_live_ids.py output)
+scripts/.cache/
+slay-spire-2-copilot/scripts/.cache/

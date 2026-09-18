@@ -127,7 +127,11 @@ Repeat until the run ends or the user stops you. Every spirectl call carries
 `SPIREBRIDGE_LOG_DIR=<abs-folder>`:
 
 1. `... state` — compact state (use `--json` only for fields the compact view
-   omits). Routing decisions: `run.map.rows[]` in the JSON state carries the
+   omits). Compact always prints `move=<move_id>` per monster, structured
+   intent bits (`atk:8` / `multi:7x2` / `status:2c` / lowercase type), and a
+   move-graph section per alive monster (state_log, cycle, branch weights,
+   `current=`) — resolve any id for its full entry via
+   `python3 bridge/spirectl.py lookup <id>`. Routing decisions: `run.map.rows[]` in the JSON state carries the
    full act map (every point's `point_type` + `children` connectivity) —
    weigh elite/rest/shop/boss paths from it, not just the current row.
    **Route draft at act start (hard rule)**:
@@ -193,21 +197,30 @@ Failures here come from key mechanics missing from decisions, not from weak
 decks. Every fight is played mechanic-first:
 
 1. **Before the first turn of every combat against an unfamiliar enemy, and
-   every elite/boss without exception**: read that enemy's full entry in
-   `references/game/monsters.md` — move cycle, every passive Power, every
-   debuff/buff it applies. Every power/intent the live state shows must be
-   one you can explain from references. Any unknown → perplexity-search →
-   fold the answer into references EN+ZH → only then play.
-2. **Counter-class powers are kill timers, not flavor**: SANDPIT (devour at
+   every elite/boss without exception**: resolve every unfamiliar
+   move_id/power_id/relic_id via `python3 bridge/spirectl.py lookup <id>`
+   (or read references/game/monsters.json / powers.json directly) — move
+   cycle, every passive Power, every debuff/buff it applies. Every
+   power/intent the live state shows must be one you can explain from
+   references. Any unknown → perplexity-search → fold the answer into
+   references EN+ZH → only then play.
+2. **No identifier guessing**: every move_id, power_id, relic_id, card_id,
+   potion_id, and event id in live state that is not already in working
+   memory MUST be resolved with `spirectl lookup` before it informs a
+   decision. Deriving effects from archive memory without a lookup is
+   forbidden; a lookup miss is a loud research trigger (codex fallback runs
+   automatically; if codex also misses, use perplexity-search then fold the
+   fact into the JSON pair), never permission to guess.
+3. **Counter-class powers are kill timers, not flavor**: SANDPIT (devour at
    0 — block does not save you), RINGING (1 card/turn), ESCAPE_ARTIST,
    HATCH, TIME_LIMIT, HardToKill caps, Plating thresholds. Track their
    Amount every turn; the compact state prints `POWER:amount` — read it.
    Build the turn plan around the counter (damage race vs extension cards),
    not just around incoming attack intents.
-3. **Never dismiss unexplained lethal as a "display bug".** If something
+4. **Never dismiss unexplained lethal as a "display bug".** If something
    kills you through mathematically sufficient block, the mechanic you
    haven't researched is the cause: research it before the next attempt.
-4. Archive data can be wrong. Live state + researched sources outrank
+5. Archive data can be wrong. Live state + researched sources outrank
    one-line reference summaries; correct references the same session the
    wrongness is discovered.
 
@@ -240,9 +253,12 @@ When the run ends (game_over screen, or abandon):
    run log by file name only —
    never personal absolute paths.
 2. Fold newly observed game facts (card/relic/potion/power/intent effects)
-   into the matching references/game/ file and its `_zh` twin as plain
-   entries — the English and Chinese files must stay content-aligned. Memory
-   holds play insights and run process only, never game base data.
+   into the matching references/game/*.json and its `_zh` twin directly as
+   entries keyed by live game id with `"curated": true` — English and
+   Chinese stay content-aligned in the same session — then run
+   `python3 scripts/build_game_reference_json.py --check`; it must exit 0
+   before any commit. Memory holds play insights and run process only,
+   never game base data.
 3. Commit the run memory note and its `_zh` twin to the repo — memory is
    version-controlled.
 4. If the user has stopped playing: disarm the watchdog (see "Runtime
@@ -337,16 +353,24 @@ references/ — consult knowledge:
   log-directory contract
 - `references/bridge/protocol.md` — wire protocol v1 (JSON Lines over TCP on
   localhost)
-- `references/game/characters.md` — playable characters, starters, archetypes
-- `references/game/cards.md` — cards
-- `references/game/potions.md` — potion effects
-- `references/game/powers.md` — powers
-- `references/game/relics.md` — relic effects
-- `references/game/intents.md` — reading enemy intents
-- `references/game/monsters.md` — enemy move tables and passives
-- `references/game/events.md` — event rooms and known branches
-- `references/game/afflictions.md` — statuses and debuffs
-- `references/game/*_zh.md` — Chinese twins of the game knowledge files
+- `references/game/characters.json` + `characters_zh.json` — playable
+  characters, starters, archetypes
+- `references/game/cards.json` + `cards_zh.json` — cards
+- `references/game/potions.json` + `potions_zh.json` — potion effects
+- `references/game/powers.json` + `powers_zh.json` — powers
+- `references/game/relics.json` + `relics_zh.json` — relic effects
+- `references/game/intents.json` + `intents_zh.json` — reading enemy intents
+- `references/game/monsters.json` + `monsters_zh.json` — enemy move tables
+  and passives (moves nested under each monster)
+- `references/game/events.json` + `events_zh.json` — event rooms and known
+  branches (options nested under each event)
+- `references/game/afflictions.json` + `afflictions_zh.json` — statuses and
+  debuffs
+- JSON reference DB: entries are keyed by live game ids; resolve any id with
+  `python3 bridge/spirectl.py lookup <key>` (flags `--json/--lang/--domain/--all`;
+  miss path researches spire-codex.com and folds a `curated:false` stub —
+  refine to `curated:true`, bilingual). The markdown twins (game/*.md) stay
+  until live verification passes, then retire — cite the JSON files.
 
 memory/ — run memory (version-controlled):
 

@@ -56,7 +56,7 @@ Spire 2 via Claude Code or Codex"。
         scripts/                           （shell 脚本：mod 构建安装、看门狗）
         mod/SpireBridge/                   （游戏内通讯 mod 源码）
         references/bridge/                 （CLI 速查、线协议）
-        references/game/                   （角色、卡牌、能力、遗物、药水、状态、意图、怪物、事件）
+        references/game/                   （九对 EN+ZH JSON：characters/cards/powers/relics/potions/afflictions/intents/monsters/events，key 为 live game id；markdown 孪生文件在验证通过后退役）
         memory/                            （对局记忆：user guide、每局记录）
 
 skill 符号链接：`~/.claude/skills/slay-spire-2-copilot` → 上述 skill 文件夹。
