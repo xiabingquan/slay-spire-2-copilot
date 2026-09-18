@@ -56,7 +56,7 @@ Act ancients (from act sources): Overgrowth = Neow (removed unless `UnlockState.
 - INFESTED_AUTOMATON: Study → add 1 random Power card from your character pool to deck; TouchCore → add 1 random character-pool card filtered by EnergyCost (decomp delegate on `c.EnergyCost`) to deck.
 - LOST_WISP: Search → +60 Gold; Claim → add Decay curse + LostWisp relic.
 - POTION_COURIER (Act >0): GrabPotions / Ransack → potion rewards (FoulPotions var 3).
-- PUNCH_OFF (TotalFloor ≥ 6): Nab → add Injury curse + reward; TakeThem → fight PunchOffEventEncounter.
+- PUNCH_OFF (TotalFloor ≥ 6): Nab → add Injury curse + reward; TakeThem → fight PunchOffEventEncounter. LIVE wedge (run-37 floor 7, (7,0) Unknown): `AfterEventStarted` auto-fires `PunchEachOther` cinematic BEFORE any option surfaces; under FastMode=Instant its particle spawns stay null (`Parameter "particles" is null` in a growing error loop) → game main thread infinite-loops, bridge handshake dies, options never appear. Left-spine Act1 geometry (6,0)Elite→(7,0) forces this room. Mitigation: SpeedHooks no longer forces Instant (mod picks Fast/Normal); if the wedge recurs, check godot.log for the PunchEachOther counter growing across a 3s window — that is crash-class SL, not routine.
 - RANWID_THE_ELDER (Act >0; all players Gold ≥ 100, ≥1 relic, ≥1 potion): GiveGold → pay 100 Gold, obtain a relic; GivePotion → relic; GiveRelic → remove a relic, obtain another.
 - REFLECTIONS: TouchAMirror → downgrade then upgrade a card (net re-roll of upgrade); Shatter → add card + BadLuck curse.
 - RELIC_TRADER (Act >0; all players ≥5 valid relics): Top/Middle/Bottom → trade (remove owned relic, obtain new one of that slot).

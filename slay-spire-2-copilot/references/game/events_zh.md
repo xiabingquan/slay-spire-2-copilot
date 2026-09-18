@@ -59,7 +59,7 @@
 - INFESTED_AUTOMATON（被寄生的自动机械）：Study → 向牌库添加 1 张角色池随机能力牌；TouchCore → 向牌库添加 1 张按能量费用过滤（decomp 对 `c.EnergyCost` 的委托）的角色池随机卡。
 - LOST_WISP（迷失鬼火）：Search → +60 金币；Claim → 加入 Decay 诅咒 + LostWisp 遗物。
 - POTION_COURIER（药水快递员；Act >0）：GrabPotions / Ransack → 药水奖励（FoulPotions 变量 3）。
-- PUNCH_OFF（重拳出击；TotalFloor ≥ 6）：Nab → 加入 Injury 诅咒 + 奖励；TakeThem → 战斗 PunchOffEventEncounter。
+- PUNCH_OFF（重拳出击；TotalFloor ≥ 6）：Nab → 加入 Injury 诅咒 + 奖励；TakeThem → 战斗 PunchOffEventEncounter。**LIVE 死锁**（对局 37 第 7 层，(7,0) Unknown）：`AfterEventStarted` 在任何选项出现**之前**自动触发 `PunchEachOther` 开场动画；`FastMode=Instant` 下粒子生成为 null（`Parameter "particles" is null` 报错循环持续增长）→ 游戏主线程无限空转、bridge 握手死亡、选项永不出现。Act1 左脊线几何 (6,0)精英→(7,0) 强制经过此房。缓解：SpeedHooks 不再强制 Instant（mod 选择 Fast/Normal）；若死锁复发，对 godot.log 中 PunchEachOther 计数做 3 秒双采样——增长即崩溃级 SL，非常规 SL。
 - RANWID_THE_ELDER（长者兰伟德；Act >0；所有玩家金币 ≥ 100、≥1 件遗物、≥1 瓶药水）：GiveGold → 支付 100 金币，获得遗物；GivePotion → 给予药水换遗物；GiveRelic → 移除一件遗物，获得另一件。
 - REFLECTIONS（镜中倒影）：TouchAMirror → 对一张牌降级再升级；Shatter → 加牌 + BadLuck 诅咒。
 - RELIC_TRADER（遗物交换商；Act >0；所有玩家 ≥5 件有效遗物）：Top/Middle/Bottom → 交易（移除持有的该槽遗物，获得新的该槽遗物）。

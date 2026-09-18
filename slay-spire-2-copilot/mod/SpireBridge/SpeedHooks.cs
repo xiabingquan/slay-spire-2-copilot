@@ -7,8 +7,12 @@ using MegaCrit.Sts2.Core.Settings;
 namespace SpireCopilot.Bridge;
 
 // Game-side speed levers for the bridge decision loop. Applied on hello and
-// start_run: FastMode=Instant + FTUE off; NonInteractiveMode short-circuits
-// remaining Cmd.Wait and combat-pause gates.
+// start_run: FTUE off + NonInteractiveMode short-circuits remaining Cmd.Wait
+// and combat-pause gates. FastMode is forced to a NON-Instant value:
+// FastMode=Instant wedges PunchOff-class event cinematics — PunchEachOther's
+// particle spawns stay null under Instant and the async loop spins forever
+// (run-37, floor 7 PunchOff hard-wedge, reproduced on relaunch). Prefs may
+// already hold Instant from earlier sessions, so overwrite explicitly.
 public static class SpeedHooks
 {
     private static bool _loggedSignature;
@@ -23,11 +27,16 @@ public static class SpeedHooks
                 BridgeMod.LogInfo($"speed hooks deferred ({reason}): SaveManager not ready");
                 return;
             }
-            saves.PrefsSave.FastMode = FastModeType.Instant;
+            string fastBefore = saves.PrefsSave.FastMode.ToString();
+            saves.PrefsSave.FastMode = PickNonInstantFastMode();
             saves.SetFtuesEnabled(false);
-            bool nim = ApplyNonInteractive();
+            // NIM must stay OFF: PunchOff.PunchEachOther's particle spawns are
+            // gated on animation waits that NonInteractiveMode short-circuits —
+            // with nim=true the cinematic null-loops even at FastMode=Fast
+            // (run-37 live test: fast_mode=Fast->Fast nim=true still wedged).
+            bool nim = ApplyNonInteractiveOff();
             BridgeMod.LogInfo(
-                $"speed hooks applied ({reason}): fast_mode={saves.PrefsSave.FastMode} ftue_off=true nim={nim}");
+                $"speed hooks applied ({reason}): fast_mode={fastBefore}->{saves.PrefsSave.FastMode} ftue_off=true nim_off={nim}");
         }
         catch (Exception e)
         {
@@ -35,12 +44,44 @@ public static class SpeedHooks
         }
     }
 
+    // Prefer Fast, then Normal, then any non-Instant enum member. Never Instant:
+    // event cinematics (PunchOff.PunchEachOther) infinite-loop on null particles.
+    private static FastModeType PickNonInstantFastMode()
+    {
+        foreach (string name in new[] { "Fast", "Normal", "Default", "Slow" })
+        {
+            try
+            {
+                FastModeType parsed = (FastModeType)Enum.Parse(typeof(FastModeType), name);
+                if (parsed.ToString() != "Instant")
+                {
+                    return parsed;
+                }
+            }
+            catch (Exception)
+            {
+                // name not in this build's enum — try the next candidate
+            }
+        }
+        foreach (FastModeType value in Enum.GetValues(typeof(FastModeType)))
+        {
+            if (value.ToString() != "Instant")
+            {
+                return value;
+            }
+        }
+        // Only reachable if the enum is Instant-only; leave whatever is set.
+        return FastModeType.Instant;
+    }
+
     public static void ApplyIfNeeded(string reason)
     {
         try
         {
             SaveManager? saves = SaveManager.Instance;
-            if (saves?.PrefsSave != null && saves.PrefsSave.FastMode == FastModeType.Instant && NimActive() == true)
+            if (saves?.PrefsSave != null
+                && saves.PrefsSave.FastMode.ToString() != "Instant"
+                && NimActive() == false)
             {
                 return;
             }
@@ -90,13 +131,13 @@ public static class SpeedHooks
         }
     }
 
-    private static bool ApplyNonInteractive()
+    private static bool ApplyNonInteractiveOff()
     {
         Type? nim = FindNonInteractiveMode();
         if (nim == null)
         {
-            BridgeMod.LogErr("speed hooks: NonInteractiveMode type not found in sts2 assembly");
-            return false;
+            // Type missing = NIM cannot be active; treat as off.
+            return true;
         }
         const BindingFlags F = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static;
         if (!_loggedSignature)
@@ -112,29 +153,36 @@ public static class SpeedHooks
             PropertyInfo? prop = nim.GetProperty(name, F);
             if (prop != null && prop.CanWrite && prop.PropertyType == funcBool)
             {
-                prop.SetValue(null, (Func<bool>)(() => true));
-                BridgeMod.LogInfo($"speed hooks: NonInteractiveMode.{name} => true");
-                return NimActive() || prop.GetValue(null) != null;
+                prop.SetValue(null, (Func<bool>)(() => false));
+                BridgeMod.LogInfo($"speed hooks: NonInteractiveMode.{name} => false");
+                break;
             }
             FieldInfo? field = nim.GetField(name, F);
             if (field != null && field.FieldType == funcBool)
             {
-                field.SetValue(null, (Func<bool>)(() => true));
-                BridgeMod.LogInfo($"speed hooks: NonInteractiveMode.{name} => true");
-                return NimActive() || field.GetValue(null) != null;
+                field.SetValue(null, (Func<bool>)(() => false));
+                BridgeMod.LogInfo($"speed hooks: NonInteractiveMode.{name} => false");
+                break;
             }
         }
-        // Last resort: any writable static bool that gates IsActive.
+        // Belt-and-braces: force any Active/Enabled static bool false too.
         foreach (FieldInfo field in nim.GetFields(F).Where(f => f.FieldType == typeof(bool) && !f.IsInitOnly))
         {
             if (field.Name.Contains("Active", StringComparison.OrdinalIgnoreCase)
                 || field.Name.Contains("Enabled", StringComparison.OrdinalIgnoreCase))
             {
-                field.SetValue(null, true);
-                BridgeMod.LogInfo($"speed hooks: NonInteractiveMode.{field.Name} = true");
+                try
+                {
+                    field.SetValue(null, false);
+                    BridgeMod.LogInfo($"speed hooks: NonInteractiveMode.{field.Name} = false");
+                }
+                catch (Exception)
+                {
+                    // backing field may reject direct set; the delegate above is primary
+                }
             }
         }
-        return NimActive();
+        return NimActive() == false;
     }
 
     private static Type? FindNonInteractiveMode()
