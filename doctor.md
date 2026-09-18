@@ -79,14 +79,23 @@ recorded. They must not be modified while a run is in progress.
 Violation → revert the mid-run edit; surface the proposed change to the user
 instead of keeping it.
 
-#### 3c. overview.md is post-run and meta-only
+#### 3c. overview.md is post-run; the run table is meta-only
 
-`memory/overview.md` is updated only after a run ends, and records only the
-run's meta information (the overview table — character, outcome, scoring).
-No narrative, no lessons.
+`memory/overview.md` is updated only after a run ends. Its run table records
+only meta information — 对局序号 (chronological run number), character, date,
+ascension, floor, outcome, SL count, and a one-line outcome/death remark.
+No narrative and no lessons inside the table cells.
 
-Violation → move narrative content into that run's `memory/runs/` note; keep
-`overview.md` down to the meta table.
+Exception — `# 阶段性反思`: this top-level section holds phased reflections,
+one `## 反思 (yyyy-mm-dd)` subsection each. Reflection content (gains, losses,
+structured review) lives only there, never in the run table. Cadence and
+source material are defined in SKILL.md / SKILL_zh.md ("Run end" step 5):
+the first reflection covers all runs recorded so far; each later one covers
+the 20 runs since the previous reflection.
+
+Violation → move narrative content out of the table cells into that run's
+`memory/runs/` note (or, if it is reflection material, into the matching
+`## 反思` subsection); keep table cells down to meta.
 
 ### 4. references/game/ is static reference material
 

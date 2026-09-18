@@ -247,6 +247,19 @@ When the run ends (game_over screen, or abandon):
    version-controlled.
 4. If the user has stopped playing: disarm the watchdog (see "Runtime
    conventions").
+5. **Phased reflection**: `memory/overview.md` carries a top-level
+   `# 阶段性反思` section. Each reflection is one `## 反思 (yyyy-mm-dd)`
+   subsection there. Cadence: the **first** reflection covers **all runs
+   recorded so far**; every reflection after that covers the **20 runs**
+   since the previous one (so the second covers runs 36–55, the third
+   56–75, and so on — fire it whenever the cumulative run count reaches
+   that boundary). Source material is the run notes under `memory/runs/` —
+   read the notes for the covered runs, then reflect on gains and losses in
+   structured form (markdown tables, ordered/unordered lists). Reflection is
+   the one place in `overview.md` that may carry lessons; the run table
+   itself stays meta-only. The overview table also carries a leading
+   **对局序号** column numbering runs chronologically from 1 (newest run at
+   the top still shows the highest number).
 
 ## Self-iteration
 

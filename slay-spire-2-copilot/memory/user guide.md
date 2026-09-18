@@ -84,14 +84,33 @@ one or two sentences covering the run's biggest gain and biggest loss:
 Every run must also be recorded in `memory/overview.md`, following these
 rules:
 
-- Column order: 角色 | 日期 | **进阶** | 到达楼层 | 胜负 | SL 次数 | 备注
+- Column order: **对局序号** | 角色 | 日期 | **进阶** | 到达楼层 | 胜负 | SL 次数 | 备注
+- The **对局序号** column numbers runs chronologically from 1; the newest run
+  sits at the TOP of the table and carries the highest number
 - The 进阶 (Ascension) column holds a **bare number only** (0, 1, 2, …) —
   the ascension level the run was actually played at
 - **Newest run goes at the TOP of the table** (reverse chronological
   order); when appending a new run, insert its row at the top — never at
   the bottom
+- The 备注 cell stays meta: one line of outcome/death cause. Narrative and
+  lessons go in the run's memory/runs/ note, or in the `# 阶段性反思`
+  section — never in the table cells
 - The ascension recorded in the run note's Summary table, the memory
   remark, and the overview row must all match
+
+## Phased reflection (阶段性反思)
+
+`memory/overview.md` carries a top-level `# 阶段性反思` section; each
+reflection is one `## 反思 (yyyy-mm-dd)` subsection under it.
+
+- **First reflection**: covers ALL runs recorded so far
+- **Every reflection after that**: covers the 20 runs since the previous one
+  (second covers runs 36–55, third 56–75, …) — fire it when the cumulative
+  run count reaches that boundary
+- Source material: the run notes under memory/runs/ for the covered runs —
+  read them, then reflect on gains and losses in structured form (markdown
+  tables, ordered/unordered lists)
+- This is the only place in overview.md where lessons may appear
 
 ## SL count
 
