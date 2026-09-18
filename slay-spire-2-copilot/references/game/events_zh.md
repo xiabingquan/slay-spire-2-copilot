@@ -73,7 +73,7 @@
 - SPIRIT_GRAFTER（灵魂嫁接者）：LetItIn → 回复 25 + 加入 Metamorphosis 卡；Rejection → 升级 + 受到 10 点伤害。run-15 实测：12 HP 接纳后到 57（+45，references 记 +25——Metamorphosis 拾取附加效果或 A1 加成待核）。run-28 实测：53 HP 接纳后到 78（+25 精确——本实例档案值成立；run-15 的 +45 仍为未解变异）；Metamorphosis 入牌库（效果仍未知——见 cards_zh.md METAMORPHOSIS 条）。
 - ROOM_FULL_OF_CHEESE（满屋芝士；Act 索引 < 2）：Gorge → 加牌；Search → 受到 14 点不可挡挡伤害，获得 ChosenCheese 遗物。（run-28 live 注已并入上方 SPIRIT_GRAFTER 条目段——另见 relics_zh.md 天选芝士条。）run-28 实测：Search 税精确 −14（事件时 HP 读数吻合）；其后每次战斗胜利天选芝士 +1 Max HP 触发。
 - STONE_OF_ALL_TIME（永恒之石；Act 1；所有玩家 ≥1 瓶药水）：Lift → +10 最大 HP（饮用药水路径）；Push → 6 点伤害 + 附魔（+8 Vigorous 变量）。
-- SUNKEN_STATUE（沉没雕像）：GrabSword → SwordOfStone 遗物；DiveIntoWater → +111 金币，受到 7 点伤害。run-26 A1 实测：DiveIntoWater 实付 **+108 金**（41→149），非表值 +111 —— A1 金币值按 ~108 计，7 伤税精确。
+- SUNKEN_STATUE（沉没雕像）：GrabSword → SwordOfStone 遗物；DiveIntoWater → +111 金币，受到 7 点伤害。run-26 A1 实测：DiveIntoWater 实付 **+108 金**（41→149）。run-32 A1 实测：实付 **+119 金**（47→166）——A1 金币值按浮动 ~108–119 计，7 伤税精确。GrabSword/SwordOfStone 档案仍未变身完成（run-25 注记：4/5 计数未满）——潜水是可靠价值线。
 - THE_FUTURE_OF_POTIONS（药水的未来；2026-09-17 run-12 实测，Act 2）：三个选项
   "放入 稀有 / 罕见 / 普通 药水" — 所选药水被消耗；奖励 = 1 次本职业卡池选卡
   （实测：放入普通 Speed Potion → 死灵池 WISP / INVOKE / NEGATIVE_PULSE 三选一）。
@@ -82,7 +82,7 @@
 - SYMBIOTE（共生体；Act >0）：Approach → 对 1 张攻击牌附魔 Corrupted——Corrupted 附魔：有源攻击伤害 ×1.5，但打出时其拥有者受到 2 点不可格挡无来源伤害；KillWithFire → 变形 1 张选定牌。**run-23 A1 实测（2026-09-18）**：Corrupted 的 deck_select 池**排除已带其它附魔的牌**——Bludgeon（已带 TriBoomerang 的 Instinct）未被展示；池内只有未附魔攻击（Strikes/Bash/Spite/Unrelenting/Headbutt/Ashen/Hemo/Feed）。本局选择：Ashen Strike（消耗堆成长 ×1.5 + 每次打出 2 自伤反哺 Rupture/Spite/自成型黏土）。选择后 proceed 确认。
 - TABLET_OF_TRUTH（真理石板）：Smash → 回复 20。Decipher → 递增的最大 HP 阶梯（run-20 A1 实测 2026-09-18）：各级代价 −3/−6/−12 Max HP（翻倍；loc 键 DECIPHER_1/2/3，每级选项"继续解读"），每级均可"放弃"；**任何已完成级别与放弃均未观察到奖励**——实测为纯最大 HP 消耗事件；原一行摘要"失去 3 最大 HP + 升级路径"判定为错误，除非另有来源确认奖励路径，否则应选 Smash。run-20 三级+放弃共付 21 Max HP（85→64）换零收益。
 - THE_ARCHITECT（建筑师；Act3 Boss 节点后的剧情事件）——**EA 结局屏**：到达本事件即代表第三幕 Boss 已被击破、当前 EA 版本所有已实装流程内容全部通关。游戏处于抢先体验阶段，建筑师 Boss 本体尚未实装；PROCEED → HP 0 是 EA 占位收束。机制：对白行走器——每行仅一个 回应/继续 选项（textKey THE_ARCHITECT.dialogue.N）；铁甲战士线为 威胁 → 继续 → PROCEED；PROCEED 将玩家 HP 置 0 → game_over（floor 48）。反编译备注（TheArchitect.cs）：WinRun() 仅播放攻击特效（玩家按 Score 输出伤害数字；Architect '反击'为特效——AnimArchitectAttackIfNecessary 未发出任何 CreatureCmd.Damage）随后 SetLocalPlayerReady() 切章同步；TheArchitectEventEncounter 只生成 Architect 占位体（9999 HP、NOTHING_MOVE 循环、HiddenIntent）——与"Boss 未实装"一致。铁甲战士对白：3 次访问档位，全部 EndAttackers=Both；访问档位由档案 TotalWins/Wins 经 LoadDialogue() 选取。
-- THIS_OR_THAT（这个还是那个？）：Plain → 受到 6 点伤害 + 金币；Ornate → 获得遗物 + 加入 Clumsy 诅咒。run-29 实测：Plain 精确 −6HP 并 +64 金（70→134）。
+- THIS_OR_THAT（这个还是那个？）：Plain → 受到 6 点伤害 + 金币；Ornate → 获得遗物 + 加入 Clumsy 诅咒。run-29 实测：Plain 精确 −6HP 并 +64 金（70→134）。run-31 实测：+44 金。run-32 实测：+43 金（166→209）——A1 金币值浮动 ~43–64；6 伤税每次精确。
 - TINKER_TIME（打造时间）：选择卡牌类型 + 附加效果；附加效果含 12 伤害 / 8 格挡 / 2 Weak / 2 Vulnerable / 3 段暴力；加入 MadScience 卡。
 - TRASH_HEAP（垃圾堆；所有玩家 HP > 5）：DiveIn → 8 点伤害 + 遗物；Grab → +100 金币 + 加牌。
 - TRIAL（审判）：Accept/Reject 后按证人分支——MerchantGuilty：Regret 诅咒 + 遗物；MerchantInnocent：Shame 诅咒 + 升级；NobleGuilty：回复；NobleInnocent：Regret + 金币；NondescriptGuilty：Doubt + 奖励；NondescriptInnocent：Doubt + 变形。

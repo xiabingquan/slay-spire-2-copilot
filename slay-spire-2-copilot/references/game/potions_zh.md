@@ -89,3 +89,4 @@ Potion 类均已覆盖；数值取各类 `CanonicalVars` 基础值。括号内�
 - 速度药水 Speed Potion（普通档，战斗）：**+5 敏捷战斗增益**——run-30 实弹：DEXTERITY_POWER 1→6 伴随 SPEED_POTION_POWER:5 计数；**不是抽牌药水**（与下方 Swift Potion 区分）；观察到次回合过期（战斗增益类，回合数封顶——按同回合/短窗价值处理）。
 - 清晰药水 Clarity（战斗）：**立刻抽 1 张，且后续 3 个回合开始各多抽 1 张**（perplexity 2026-09-18 + run-30 实弹：CLARITY_POWER:3 计数出现，使用时抽 1，次回合计数 3→2）。
 - 铁心 HeartOfIron（药水）：对玩家施加 **PLATING_POWER 7**——时机见 powers.md 玩家镀层条目（战斗中途使用在玩家侧回合结束时给挡）。
+- run-32 实弹（A1，2026-09-18，随机种子）：**Blood Potion 在 80 Max 时回血精确 +16 HP**（30→46，Boss 战 T7——20% Max 公式确认）。**Skill Potion 池 Act1 Boss T6 实弹**：开出 PrimalForce / **Impervious** / Offering——选 Impervious，生成牌免费（cost=0），给出 **28 挡**（基础 30 − 当时 Dex 税 2）；卡牌选择类药水生成的牌本回合免费，即使印刷费用 2–3。**Colorless Potion 池 Boss T8 实弹**：开出 Finesse / **Eternal Armor** / Bolas——选 Eternal Armor，免费（印刷 3 费豁免），对玩家给出 **PLATING_POWER 9**（回合结束 9 挡，之后每回合 −1——对属性吸取 Boss 的结构性反 Dex 税挡类）。火药水 20 伤实弹（海洋混混收头）。药槽满 @Control@ 死按钮类本局未出现——3/3 药槽下卡牌奖励按钮仍可领取。
