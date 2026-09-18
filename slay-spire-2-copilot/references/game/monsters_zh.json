@@ -6856,6 +6856,147 @@
     "play_notes": "",
     "source": "md:monsters.md:L176"
   },
+  "INFESTED_PRISM": {
+    "acts": [],
+    "aliases": [
+      "Infested Prism"
+    ],
+    "curated": true,
+    "cycle": [
+      "JAB_MOVE",
+      "RADIATE_MOVE",
+      "WHIRLWIND_MOVE",
+      "PULSATE_MOVE"
+    ],
+    "description": "感染棱柱（Act2 精英）：基础 HP 161（A 171+）；run-41 A1 live 161/161。周期 突刺→辐射→旋风→脉动。VITAL_SPARK 反制类：玩家技能牌开局被 Tainted(N) — 打出污染牌使本回合受到的攻击伤害 +N（敌方回合结束移除）；脉动令棱柱 Spark +2（升级计时器）。纪律：关键回合只打攻击与能力牌；自伤技能（Brand）仍属技能类照样计税。须在第二次脉动前击杀。",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 171
+      },
+      "base": 161,
+      "max": null,
+      "notes": ""
+    },
+    "id": "INFESTED_PRISM",
+    "is_boss": false,
+    "is_elite": true,
+    "kind": "monster",
+    "moves": {
+      "JAB_MOVE": {
+        "aliases": [
+          "Jab",
+          "JAB"
+        ],
+        "curated": true,
+        "description": "突刺：单体攻击；伤害 15（A:17）。run-41 A1 live：34 HP 入场 T1 实测 15。",
+        "effect": "Jab: Attack; damage 15 A:17",
+        "follow_up_id": null,
+        "id": "JAB_MOVE",
+        "intents": [
+          {
+            "base_damage": 15,
+            "base_damage_ascension": {
+              "ascension": 17
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "INFESTED_PRISM",
+        "name": "Jab",
+        "play_notes": "run-41：周期首攻；与 VITAL_SPARK 对玩家技能牌的污染税叠加计算。",
+        "source": "codex-api:/monsters/INFESTED_PRISM#JAB"
+      },
+      "PULSATE_MOVE": {
+        "aliases": [
+          "Pulsate",
+          "PULSATE"
+        ],
+        "curated": true,
+        "description": "脉动：攻击+Buff+防御；伤害 8（A:10）、自身 20 挡，并使棱柱 VITAL_SPARK +2（run-36/41 周期数据）。仅当能竞速压制 spark 上涨时才算自由窗；否则此后技能税更重。",
+        "effect": "Pulsate: Attack + Buff + Defend; damage 8 A:10; block 20; VITAL_SPARK 2 (self)",
+        "follow_up_id": null,
+        "id": "PULSATE_MOVE",
+        "intents": [
+          {
+            "base_damage": 8,
+            "base_damage_ascension": {
+              "ascension": 10
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Buff + Defend"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "INFESTED_PRISM",
+        "name": "Pulsate",
+        "play_notes": "run-41：位于旋风之后；+2 spark 是本战升级计时器 — 第二次脉动前须爆发。",
+        "source": "codex-api:/monsters/INFESTED_PRISM#PULSATE"
+      },
+      "RADIATE_MOVE": {
+        "aliases": [
+          "Radiate",
+          "RADIATE"
+        ],
+        "curated": true,
+        "description": "辐射：攻击+防御；伤害 11（A:13）并自身获得 11 格挡。run-41 live：玩家侧 TAINTED 税叠加后 intent 显示为 atk:13[base11]；挡由棱柱自身结算。",
+        "effect": "Radiate: Attack + Defend; damage 11 A:13; block 11",
+        "follow_up_id": null,
+        "id": "RADIATE_MOVE",
+        "intents": [
+          {
+            "base_damage": 11,
+            "base_damage_ascension": {
+              "ascension": 13
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Defend"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "INFESTED_PRISM",
+        "name": "Radiate",
+        "play_notes": "run-41：history 确认先伤后自身挡；自身 11 挡参与竞速配速。",
+        "source": "codex-api:/monsters/INFESTED_PRISM#RADIATE"
+      },
+      "WHIRLWIND_MOVE": {
+        "aliases": [
+          "Whirlwind",
+          "WHIRLWIND"
+        ],
+        "curated": true,
+        "description": "旋风：多段攻击；伤害 5×3（A:6/段）。run-41 live：玩家 TAINTED 4 时显示为 9×3=27 — 按段加税，是该局死亡的致命线。",
+        "effect": "Whirlwind: Attack; damage 5x3 A:6",
+        "follow_up_id": null,
+        "id": "WHIRLWIND_MOVE",
+        "intents": [
+          {
+            "base_damage": 5,
+            "base_damage_ascension": {
+              "ascension": 6
+            },
+            "class": "MultiAttackIntent",
+            "hits": 3,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "INFESTED_PRISM",
+        "name": "Whirlwind",
+        "play_notes": "run-41 死因：污染技能税 2→4 把 base 5×3 通胀为 9×3；挡值计算必须用含税数字。",
+        "source": "codex-api:/monsters/INFESTED_PRISM#WHIRLWIND"
+      }
+    },
+    "name": "Infested Prism",
+    "play_notes": "run-41 死亡剩 83/161：34/80 入场（<50 闸门），零技能线执行到位但技能类挡牌脊线自我加税，旋风 5×3→9×3=27；挡墙后剩 1 HP，次回合开始的 Inferno tick 收掉。run-36 以 血墙/放血→Inferno 同帧 T3 击杀；两局一致结论：本战是与 Spark 升级赛跑的入场 HP 竞速。",
+    "source": "codex-api:/monsters/INFESTED_PRISM",
+    "type": "Elite"
+  },
   "IRONCLAD": {
     "acts": [],
     "curated": true,
@@ -11661,6 +11802,147 @@
     "passives": [],
     "source": "curated:characters.json cross-ref"
   },
+  "SKULKING_COLONY": {
+    "acts": [],
+    "aliases": [
+      "Skulking Colony"
+    ],
+    "curated": true,
+    "cycle": [
+      "ZOOM_MOVE",
+      "ZOOM_MOVE_2_MOVE",
+      "INERTIA_MOVE",
+      "PIERCING_STABS_MOVE"
+    ],
+    "description": "鬼祟珊瑚群（Act1 精英）：基础 HP 75（A 80+）；run-41 A1 live 75/75。HARDENED_SHELL 反制类：每回合 HP 损失封顶 Amount（run-41 为 20），超出作废不累计 — 配速到每回合恰好 20（75 HP → 最少 4 回合）。周期 急速(14)→急速2(14)→惯性(9+自身力量2)→穿刺(live 9×2)。教条：惯性回合倾泻，穿刺回合全力格挡；run-41 live 中 PS 30 被壳精确削到 20。",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 80
+      },
+      "base": 75,
+      "max": null,
+      "notes": ""
+    },
+    "id": "SKULKING_COLONY",
+    "is_boss": false,
+    "is_elite": true,
+    "kind": "monster",
+    "moves": {
+      "INERTIA_MOVE": {
+        "aliases": [
+          "Inertia",
+          "INERTIA"
+        ],
+        "curated": true,
+        "description": "惯性：攻击+Buff；伤害 9（A:11）并自身力量 +2。竞速计时器 — 力量叠加让后续每次命中更致命；所谓自由窗仅指挡不跨回合。",
+        "effect": "Inertia: Attack + Buff; damage 9 A:11; STRENGTH 2 (self)",
+        "follow_up_id": null,
+        "id": "INERTIA_MOVE",
+        "intents": [
+          {
+            "base_damage": 9,
+            "base_damage_ascension": {
+              "ascension": 11
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SKULKING_COLONY",
+        "name": "Inertia",
+        "play_notes": "run-41 教条：本回合倾泻伤害，随后全力格挡穿刺回合。",
+        "source": "codex-api:/monsters/SKULKING_COLONY#INERTIA"
+      },
+      "PIERCING_STABS_MOVE": {
+        "aliases": [
+          "Piercing Stabs",
+          "PIERCING_STABS"
+        ],
+        "curated": true,
+        "description": "穿刺：多段攻击；run-41 A1 live intent 9×2[base7] — 每段受力量加成。教条：本战的全力格挡回合；run-41 耸肩+防御挡下 13/18。",
+        "effect": "Piercing Stabs: Attack; damage 7x2 A:8",
+        "follow_up_id": null,
+        "id": "PIERCING_STABS_MOVE",
+        "intents": [
+          {
+            "base_damage": 7,
+            "base_damage_ascension": {
+              "ascension": 8
+            },
+            "class": "MultiAttackIntent",
+            "hits": 2,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SKULKING_COLONY",
+        "name": "Piercing Stabs",
+        "play_notes": "run-41：峰值回合来伤 18；因 44 HP 入场可吸收漏伤而保留药水。",
+        "source": "codex-api:/monsters/SKULKING_COLONY#PIERCING_STABS"
+      },
+      "ZOOM_MOVE": {
+        "aliases": [
+          "Zoom",
+          "ZOOM"
+        ],
+        "curated": true,
+        "description": "急速：单体攻击；伤害 14 级（run-41 A1 live intent atk:14）。",
+        "effect": "Zoom: Attack; damage 14 A:16",
+        "follow_up_id": null,
+        "id": "ZOOM_MOVE",
+        "intents": [
+          {
+            "base_damage": 14,
+            "base_damage_ascension": {
+              "ascension": 16
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SKULKING_COLONY",
+        "name": "Zoom",
+        "play_notes": "run-41：(7,6) 精英首招；硬化甲壳把玩家回合伤害封顶 20。",
+        "source": "codex-api:/monsters/SKULKING_COLONY#ZOOM"
+      },
+      "ZOOM_MOVE_2_MOVE": {
+        "aliases": [
+          "Zoom Move 2",
+          "ZOOM_MOVE_2"
+        ],
+        "curated": true,
+        "description": "急速（第二槽）：与 ZOOM_MOVE 同级 14 单体攻击；周期不同槽，cannot-repeat 防止连续两次急速。",
+        "effect": "Zoom Move 2: Attack; damage 14 A:16",
+        "follow_up_id": null,
+        "id": "ZOOM_MOVE_2_MOVE",
+        "intents": [
+          {
+            "base_damage": 14,
+            "base_damage_ascension": {
+              "ascension": 16
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SKULKING_COLONY",
+        "name": "Zoom Move 2",
+        "play_notes": "run-41：周期 ZOOM→ZOOM_2→INERTIA→PIERCING_STABS；该次击杀中两次急速占据第 1-2 回合。",
+        "source": "codex-api:/monsters/SKULKING_COLONY#ZOOM_MOVE_2"
+      }
+    },
+    "name": "Skulking Colony",
+    "play_notes": "run-41 T5 击杀：战栗易伤窗喂上限高效命中；药水 0/3 未动 — 燃血 + 手牌挡覆盖漏伤；奖励 怀表+苦无+狱火 定义了之后整局。",
+    "source": "codex-api:/monsters/SKULKING_COLONY",
+    "type": "Elite"
+  },
   "SLUDGE_SPINNER": {
     "acts": [
       "Act1"
@@ -13669,6 +13951,141 @@
     "play_notes": "",
     "source": "md:monsters.md:L59"
   },
+  "TERROR_EEL": {
+    "acts": [],
+    "aliases": [
+      "Terror Eel"
+    ],
+    "curated": true,
+    "cycle": [
+      "CRASH_MOVE",
+      "THRASH_MOVE",
+      "STUN_MOVE",
+      "TERROR_MOVE"
+    ],
+    "description": "骇鳗（精英类，run-41 为 Act1 精英②）：基础 HP 140（A 150+）；run-41 live 140/140。SHRIEK 反制类 Amount 70：主人 HP≤Amount 时受到未格挡伤害即被眩晕（STUNNED）、power 消耗、自身镀甲剥离 — 即击杀窗。周期 坠击(16)→鞭挞(4×2)→眩晕→terrorize（玩家 99 易伤，无攻击=自由窗）→循环。教条（run-36 T4 击杀、run-41 T4 复现）：括号上方爆发，以未格挡命中跨过 70，在眩晕+terror 窗倾泻。",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 150
+      },
+      "base": 140,
+      "max": null,
+      "notes": ""
+    },
+    "id": "TERROR_EEL",
+    "is_boss": false,
+    "is_elite": true,
+    "kind": "monster",
+    "moves": {
+      "CRASH_MOVE": {
+        "aliases": [
+          "Crash",
+          "CRASH"
+        ],
+        "curated": true,
+        "description": "坠击：单体攻击；伤害 16（A:18）。周期首招 — run-41 T1 故意不挡，为 SHRIEK 括号线做铺垫。",
+        "effect": "Crash: Attack; damage 16 A:18",
+        "follow_up_id": null,
+        "id": "CRASH_MOVE",
+        "intents": [
+          {
+            "base_damage": 16,
+            "base_damage_ascension": {
+              "ascension": 18
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TERROR_EEL",
+        "name": "Crash",
+        "play_notes": "run-41：T1 故意承伤，同时在弹珠易伤下倾泻 PS+打击。",
+        "source": "codex-api:/monsters/TERROR_EEL#CRASH"
+      },
+      "STUN_MOVE": {
+        "aliases": [
+          "Stun",
+          "STUN"
+        ],
+        "curated": true,
+        "description": "眩晕：鳗鱼本回合跳过行动。run-41 触发条件：未格挡伤害跨过 SHRIEK HP 括号（约 70）— 镀甲剥离、power 消耗。",
+        "effect": "Stun: Stun",
+        "follow_up_id": null,
+        "id": "STUN_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Stun"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TERROR_EEL",
+        "name": "Stun",
+        "play_notes": "run-41 live：打击 10 精确落在 70 → 同一次读取即 STUNNED；重锤 13 + Heart of Iron 镀甲填满窗口。",
+        "source": "codex-api:/monsters/TERROR_EEL#STUN"
+      },
+      "TERROR_MOVE": {
+        "aliases": [
+          "Terrorize",
+          "TERROR"
+        ],
+        "curated": true,
+        "description": " terrorize：减益类；对玩家施加 99 层易伤（run-41 live：玩家 powers 显示长易伤）— 该回合无攻击伤害，对玩家是自由伤害窗。",
+        "effect": "Terrorize: Debuff; VULNERABLE 99 (player)",
+        "follow_up_id": null,
+        "id": "TERROR_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TERROR_EEL",
+        "name": "Terrorize",
+        "play_notes": "run-41：无情猛攻 22 + Inferno tick 6 + FREE_ATTACK_POWER 的 PS 在此窗完成击杀；99 易伤没有等到后续攻击回合。",
+        "source": "codex-api:/monsters/TERROR_EEL#TERROR"
+      },
+      "THRASH_MOVE": {
+        "aliases": [
+          "Thrash",
+          "THRASH"
+        ],
+        "curated": true,
+        "description": "鞭挞：多段攻击；4×2 级（A:5/段）— run-41 在 Vigor/力量叠加后 live intent 显示为 multi:3×3；live intent 优先于档案表。",
+        "effect": "Thrash: Attack + Buff; damage 3x3 A:4; VIGOR 6 (self)",
+        "follow_up_id": null,
+        "id": "THRASH_MOVE",
+        "intents": [
+          {
+            "base_damage": 3,
+            "base_damage_ascension": {
+              "ascension": 4
+            },
+            "class": "MultiAttackIntent",
+            "hits": 3,
+            "type": "Attack + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TERROR_EEL",
+        "name": "Thrash",
+        "play_notes": "run-41：紧邻自由窗的回合；击杀优先级仍在跨 SHRIEK 括号，而非格挡本招。",
+        "source": "codex-api:/monsters/TERROR_EEL#THRASH"
+      }
+    },
+    "name": "Terror Eel",
+    "play_notes": "run-41：打击精确落在 70 → 眩晕 live；FREE_ATTACK_POWER 让该回合手牌中所有攻击 0 费（不只是下一张）— 此订正入本条与 powers。",
+    "source": "codex-api:/monsters/TERROR_EEL",
+    "type": "Elite"
+  },
   "THIEVING_HOPPER": {
     "acts": [
       "Act2"
@@ -13715,6 +14132,141 @@
     "kind": "monster",
     "name": "地道虫",
     "source": "; run-40 live fold 2026-09-18"
+  },
+  "TWO_TAILED_RAT": {
+    "acts": [],
+    "aliases": [
+      "Two-Tailed Rat"
+    ],
+    "curated": true,
+    "cycle": [
+      "SCRATCH_MOVE",
+      "DISEASE_BITE_MOVE",
+      "SCREECH_MOVE",
+      "CALL_FOR_BACKUP_MOVE"
+    ],
+    "description": "双尾鼠（普通怪）：HP 17-21（A 18-22）；run-41 Act1 三只 17/21/18。各鼠相位错开的周期：抓挠(8)→疾病之咬(6)→尖叫（状态虚弱）→呼叫支援（召唤）。分支表带 no-repeat 权重 — 判断召唤是否临近须看 live move_graph。run-41 订正：该家族召唤体在召唤者死亡后仍然存留。",
+    "hp": {
+      "ascension": {
+        "max": 22,
+        "min": 18
+      },
+      "base": 17,
+      "max": 21,
+      "notes": ""
+    },
+    "id": "TWO_TAILED_RAT",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "CALL_FOR_BACKUP_MOVE": {
+        "aliases": [
+          "Call for Backup",
+          "CALL_FOR_BACKUP"
+        ],
+        "curated": true,
+        "description": "呼叫支援：召唤类；额外召唤一只双尾鼠。run-41 live 订正：击杀召唤者不会令该家族已有召唤消失 — kill-master-despawns 规则属于其他怪物家族；召出的鼠需正常击杀。",
+        "effect": "Call for Backup: Summon",
+        "follow_up_id": null,
+        "id": "CALL_FOR_BACKUP_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Summon"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TWO_TAILED_RAT",
+        "name": "Call for Backup",
+        "play_notes": "run-41 教条订正：集火召唤者仍有节奏价值，但须把召唤体当作正常战斗计入 HP 预算。",
+        "source": "codex-api:/monsters/TWO_TAILED_RAT#CALL_FOR_BACKUP"
+      },
+      "DISEASE_BITE_MOVE": {
+        "aliases": [
+          "Disease Bite",
+          "DISEASE_BITE"
+        ],
+        "curated": true,
+        "description": "疾病之咬：单体攻击；伤害 6（A:7）。分支表的 no-repeat 规则决定后续招式。",
+        "effect": "Disease Bite: Attack; damage 6 A:7",
+        "follow_up_id": null,
+        "id": "DISEASE_BITE_MOVE",
+        "intents": [
+          {
+            "base_damage": 6,
+            "base_damage_ascension": {
+              "ascension": 7
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TWO_TAILED_RAT",
+        "name": "Disease Bite",
+        "play_notes": "run-41：分支权重显示三只鼠下一次 roll 的 CALL_FOR_BACKUP w=0 — T1 无召唤威胁。",
+        "source": "codex-api:/monsters/TWO_TAILED_RAT#DISEASE_BITE"
+      },
+      "SCRATCH_MOVE": {
+        "aliases": [
+          "Scratch",
+          "SCRATCH"
+        ],
+        "curated": true,
+        "description": "抓挠：单体攻击；伤害 8（A:9）。",
+        "effect": "Scratch: Attack; damage 8 A:9",
+        "follow_up_id": null,
+        "id": "SCRATCH_MOVE",
+        "intents": [
+          {
+            "base_damage": 8,
+            "base_damage_ascension": {
+              "ascension": 9
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TWO_TAILED_RAT",
+        "name": "Scratch",
+        "play_notes": "run-41：各鼠相位错开的 SCRATCH→DISEASE_BITE→SCREECH→CALL_FOR_BACKUP 周期。",
+        "source": "codex-api:/monsters/TWO_TAILED_RAT#SCRATCH"
+      },
+      "SCREECH_MOVE": {
+        "aliases": [
+          "Screech",
+          "SCREECH"
+        ],
+        "curated": true,
+        "description": "尖叫：状态类减益；对玩家施加 1-2 层虚弱（run-41 live：命中后 FRAIL_POWER:1）。格挡不能阻止减益施加。",
+        "effect": "Screech: Debuff; FRAIL 1 (player)",
+        "follow_up_id": null,
+        "id": "SCREECH_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TWO_TAILED_RAT",
+        "name": "Screech",
+        "play_notes": "run-41：次回合格挡时虚弱税把防御 5→3 live 削减。",
+        "source": "codex-api:/monsters/TWO_TAILED_RAT#SCREECH"
+      }
+    },
+    "name": "Two-Tailed Rat",
+    "play_notes": "run-41 T1：弹珠易伤窗 PS+打击带走 17 HP 那只；耸肩精确挡下剩余抓挠；最后一只倒下时 kill-master-despawns 并未生效。",
+    "source": "codex-api:/monsters/TWO_TAILED_RAT",
+    "type": "Normal"
   },
   "TerrorEel": {
     "acts": [],

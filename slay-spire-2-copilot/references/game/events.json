@@ -1977,6 +1977,22 @@
         "source": "md:events.md + census live textKeys",
         "zh_description": "事件 OROBAS 的选项 `ELECTRIC_SHRYMP`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
       },
+      "OROBAS.pages.INITIAL.options.GLASS_EYE": {
+        "aliases": [
+          "GLASS_EYE",
+          "Glass Eye"
+        ],
+        "curated": true,
+        "description": "gain 2 common + 2 uncommon + 1 rare random cards from your class pool (Orobas full-pool decode, run-39). Card-flood option — dilution-heavy; run-39 passed it for Touch of Orobas (starter relic → ancient, Ironclad Burning Blood → BlackBlood heal 12/combat).",
+        "event_id": "OROBAS",
+        "id": "OROBAS.pages.INITIAL.options.GLASS_EYE",
+        "kind": "event_option",
+        "name": "Glass Eye",
+        "page": "INITIAL",
+        "play_notes": "run-39: full-pool decode listed GLASS_EYE among ten options; Touch of Orobas won the pick on Act2 HP-economy grounds (BlackBlood 12/combat live-confirmed that run).",
+        "source": "md:events.md + run-39 full-pool decode",
+        "zh_description": "从本职业卡池随机获得 2 普通 + 2 罕见 + 1 稀有卡牌（欧洛巴斯全池解码，run-39）。灌牌类选项 — 稀释代价高；run-39 改选欧洛巴斯之触（初始遗物→远古版，战士燃血→黑暗之血每战回12）。"
+      },
       "OROBAS.pages.INITIAL.options.RADIANT_PEARL": {
         "aliases": [
           "RADIANT_PEARL",

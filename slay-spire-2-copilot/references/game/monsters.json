@@ -7113,6 +7113,147 @@
     },
     "zh_name": "猎人杀手"
   },
+  "INFESTED_PRISM": {
+    "acts": [],
+    "aliases": [
+      "Infested Prism"
+    ],
+    "curated": true,
+    "cycle": [
+      "JAB_MOVE",
+      "RADIATE_MOVE",
+      "WHIRLWIND_MOVE",
+      "PULSATE_MOVE"
+    ],
+    "description": "Infested Prism (Act2 Elite): HP 161 base (A 171+); run-41 live 161/161 at A1. Cycle JAB→RADIATE→WHIRLWIND→PULSATE. VITAL_SPARK counter-class: player Skill cards are Tainted(N) at combat start — playing a Tainted card adds +N to incoming attack damage for the turn (removed end of enemy side); Pulsate raises the prism's Spark +2 (escalation timer). Discipline: attacks and Power cards only on key turns; self-damage skills (Brand) are still skill-class and tax. Kill before the second Pulsate.",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 171
+      },
+      "base": 161,
+      "max": null,
+      "notes": ""
+    },
+    "id": "INFESTED_PRISM",
+    "is_boss": false,
+    "is_elite": true,
+    "kind": "monster",
+    "moves": {
+      "JAB_MOVE": {
+        "aliases": [
+          "Jab",
+          "JAB"
+        ],
+        "curated": true,
+        "description": "Jab: single Attack; damage 15 (A:17). Run-41 live at A1: 15 on T1 at 34 HP entry.",
+        "effect": "Jab: Attack; damage 15 A:17",
+        "follow_up_id": null,
+        "id": "JAB_MOVE",
+        "intents": [
+          {
+            "base_damage": 15,
+            "base_damage_ascension": {
+              "ascension": 17
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "INFESTED_PRISM",
+        "name": "Jab",
+        "play_notes": "run-41: opening attack of the cycle; pairs with VITAL_SPARK tainted-skill tax on player block cards.",
+        "source": "codex-api:/monsters/INFESTED_PRISM#JAB"
+      },
+      "PULSATE_MOVE": {
+        "aliases": [
+          "Pulsate",
+          "PULSATE"
+        ],
+        "curated": true,
+        "description": "Pulsate: Attack + Buff + Defend; damage 8 (A:10), self-block 20, and raises the prism's VITAL_SPARK by 2 (run-36/41 cycle data). Free-ish window only if the spark raise can be raced; otherwise skills tax harder after it.",
+        "effect": "Pulsate: Attack + Buff + Defend; damage 8 A:10; block 20; VITAL_SPARK 2 (self)",
+        "follow_up_id": null,
+        "id": "PULSATE_MOVE",
+        "intents": [
+          {
+            "base_damage": 8,
+            "base_damage_ascension": {
+              "ascension": 10
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Buff + Defend"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "INFESTED_PRISM",
+        "name": "Pulsate",
+        "play_notes": "run-41: cycle position after Whirlwind; the +2 spark raise is the fight's escalation timer — burst before the second Pulsate.",
+        "source": "codex-api:/monsters/INFESTED_PRISM#PULSATE"
+      },
+      "RADIATE_MOVE": {
+        "aliases": [
+          "Radiate",
+          "RADIATE"
+        ],
+        "curated": true,
+        "description": "Radiate: Attack + Defend; damage 11 (A:13) and self-block 11. Run-41 live: intent displayed atk:13[base11] once TAINTED tax stacked on the player side; block component resolved on the prism itself.",
+        "effect": "Radiate: Attack + Defend; damage 11 A:13; block 11",
+        "follow_up_id": null,
+        "id": "RADIATE_MOVE",
+        "intents": [
+          {
+            "base_damage": 11,
+            "base_damage_ascension": {
+              "ascension": 13
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Defend"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "INFESTED_PRISM",
+        "name": "Radiate",
+        "play_notes": "run-41: damage-then-self-block order confirmed in history; the 11 self-block paces race damage.",
+        "source": "codex-api:/monsters/INFESTED_PRISM#RADIATE"
+      },
+      "WHIRLWIND_MOVE": {
+        "aliases": [
+          "Whirlwind",
+          "WHIRLWIND"
+        ],
+        "curated": true,
+        "description": "Whirlwind: multi Attack; damage 5x3 (A:6/hit). Run-41 live: with player TAINTED 4 the displayed intent inflated to 9x3=27 — per-hit tax stacking, the lethal line of that death.",
+        "effect": "Whirlwind: Attack; damage 5x3 A:6",
+        "follow_up_id": null,
+        "id": "WHIRLWIND_MOVE",
+        "intents": [
+          {
+            "base_damage": 5,
+            "base_damage_ascension": {
+              "ascension": 6
+            },
+            "class": "MultiAttackIntent",
+            "hits": 3,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "INFESTED_PRISM",
+        "name": "Whirlwind",
+        "play_notes": "run-41 death cause: base 5x3 became 9x3 through tainted-skill tax stacking 2→4; block math must use the taxed number.",
+        "source": "codex-api:/monsters/INFESTED_PRISM#WHIRLWIND"
+      }
+    },
+    "name": "Infested Prism",
+    "play_notes": "run-41 death at 83/161: entered 34/80 (<50 gate), zero-skill line held but skill-class block spine self-taxed Whirlwind 5x3→9x3=27; 1 HP after the block wall, Inferno turn-start tick killed at next turn start. Run-36 killed it T3 with BloodWall/Hemo→Inferno same-frame; both runs agree the fight is an HP-entry race against Spark escalation.",
+    "source": "codex-api:/monsters/INFESTED_PRISM",
+    "type": "Elite"
+  },
   "IRONCLAD": {
     "acts": [],
     "aliases": [
@@ -12151,6 +12292,147 @@
     "source": "curated:characters.json cross-ref",
     "zh_name": "静默猎手"
   },
+  "SKULKING_COLONY": {
+    "acts": [],
+    "aliases": [
+      "Skulking Colony"
+    ],
+    "curated": true,
+    "cycle": [
+      "ZOOM_MOVE",
+      "ZOOM_MOVE_2_MOVE",
+      "INERTIA_MOVE",
+      "PIERCING_STABS_MOVE"
+    ],
+    "description": "Skulking Colony (Act1 Elite): HP 75 base (A 80+); run-41 live 75/75 at A1. HARDENED_SHELL counter-class: HP loss per turn capped at Amount (20 run-41), excess discarded not banked — pace damage to fill exactly 20/turn (75 HP → 4-turn minimum). Cycle ZOOM(14)→ZOOM_2(14)→INERTIA(9+self Str2)→PIERCING_STABS(9x2 live). Doctrine: dump on Inertia turn, full-block Piercing Stabs turn; PS 30 raw shelled to exactly 20 live run-41.",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 80
+      },
+      "base": 75,
+      "max": null,
+      "notes": ""
+    },
+    "id": "SKULKING_COLONY",
+    "is_boss": false,
+    "is_elite": true,
+    "kind": "monster",
+    "moves": {
+      "INERTIA_MOVE": {
+        "aliases": [
+          "Inertia",
+          "INERTIA"
+        ],
+        "curated": true,
+        "description": "Inertia: Attack + Buff; damage 9 (A:11) and self-STRENGTH +2. Race timer — Str stacks make every later hit deadlier; free window only in the sense that block-carry value is nil between turns.",
+        "effect": "Inertia: Attack + Buff; damage 9 A:11; STRENGTH 2 (self)",
+        "follow_up_id": null,
+        "id": "INERTIA_MOVE",
+        "intents": [
+          {
+            "base_damage": 9,
+            "base_damage_ascension": {
+              "ascension": 11
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SKULKING_COLONY",
+        "name": "Inertia",
+        "play_notes": "run-41 doctrine: dump damage on this turn, then full-block the following Piercing Stabs turn.",
+        "source": "codex-api:/monsters/SKULKING_COLONY#INERTIA"
+      },
+      "PIERCING_STABS_MOVE": {
+        "aliases": [
+          "Piercing Stabs",
+          "PIERCING_STABS"
+        ],
+        "curated": true,
+        "description": "Piercing Stabs: multi Attack; live A1 intent 9x2[base7] (run-41) — Str stacks scale per hit. Doctrine: the full-block turn of the fight; Shrug+Defend covered 13/18 in run-41.",
+        "effect": "Piercing Stabs: Attack; damage 7x2 A:8",
+        "follow_up_id": null,
+        "id": "PIERCING_STABS_MOVE",
+        "intents": [
+          {
+            "base_damage": 7,
+            "base_damage_ascension": {
+              "ascension": 8
+            },
+            "class": "MultiAttackIntent",
+            "hits": 2,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SKULKING_COLONY",
+        "name": "Piercing Stabs",
+        "play_notes": "run-41: 18 incoming at fight HP peak; potions reserved because 44-HP entry could absorb the leak.",
+        "source": "codex-api:/monsters/SKULKING_COLONY#PIERCING_STABS"
+      },
+      "ZOOM_MOVE": {
+        "aliases": [
+          "Zoom",
+          "ZOOM"
+        ],
+        "curated": true,
+        "description": "Zoom: single Attack; damage 14-class (live intent atk:14 at A1, run-41).",
+        "effect": "Zoom: Attack; damage 14 A:16",
+        "follow_up_id": null,
+        "id": "ZOOM_MOVE",
+        "intents": [
+          {
+            "base_damage": 14,
+            "base_damage_ascension": {
+              "ascension": 16
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SKULKING_COLONY",
+        "name": "Zoom",
+        "play_notes": "run-41: first move of the fight on the (7,6) elite; Hardened Shell caps the player's return damage at 20/turn.",
+        "source": "codex-api:/monsters/SKULKING_COLONY#ZOOM"
+      },
+      "ZOOM_MOVE_2_MOVE": {
+        "aliases": [
+          "Zoom Move 2",
+          "ZOOM_MOVE_2"
+        ],
+        "curated": true,
+        "description": "Zoom (second slot): same 14-class single Attack as ZOOM_MOVE; different cycle slot, cannot-repeat prevents two consecutive Zooms.",
+        "effect": "Zoom Move 2: Attack; damage 14 A:16",
+        "follow_up_id": null,
+        "id": "ZOOM_MOVE_2_MOVE",
+        "intents": [
+          {
+            "base_damage": 14,
+            "base_damage_ascension": {
+              "ascension": 16
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SKULKING_COLONY",
+        "name": "Zoom Move 2",
+        "play_notes": "run-41: cycle ZOOM→ZOOM_2→INERTIA→PIERCING_STABS; both Zooms ran back-to-back turns 1-2 on that kill.",
+        "source": "codex-api:/monsters/SKULKING_COLONY#ZOOM_MOVE_2"
+      }
+    },
+    "name": "Skulking Colony",
+    "play_notes": "run-41 T5 kill: Tremble vuln windows fed cap-efficient hits; potions 0/3 spent — Burning Blood + in-hand block covered the leaks; rewards Pocketwatch+Kunai+Inferno defined the rest of the run.",
+    "source": "codex-api:/monsters/SKULKING_COLONY",
+    "type": "Elite"
+  },
   "SLUDGE_SPINNER": {
     "acts": [
       "Act1"
@@ -14250,6 +14532,141 @@
     },
     "zh_name": "刺蟾"
   },
+  "TERROR_EEL": {
+    "acts": [],
+    "aliases": [
+      "Terror Eel"
+    ],
+    "curated": true,
+    "cycle": [
+      "CRASH_MOVE",
+      "THRASH_MOVE",
+      "STUN_MOVE",
+      "TERROR_MOVE"
+    ],
+    "description": "Terror Eel (Act2/Act1 elite-class, run-41 Act1 Elite②): HP 140 base (A 150+); run-41 live 140/140. SHRIEK counter-class Amount 70: unblocked damage while owner HP≤Amount stuns the eel (STUNNED), consumes the power, strips its Plating — the kill window. Cycle CRASH(16)→THRASH(4x2)→STUN→TERROR(player Vuln 99, no attack = free window)→loop. Doctrine (run-36 T4 kill, run-41 T4 repeat): burst above the bracket, cross 70 with an unblocked hit, dump on the stun+terror windows.",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 150
+      },
+      "base": 140,
+      "max": null,
+      "notes": ""
+    },
+    "id": "TERROR_EEL",
+    "is_boss": false,
+    "is_elite": true,
+    "kind": "monster",
+    "moves": {
+      "CRASH_MOVE": {
+        "aliases": [
+          "Crash",
+          "CRASH"
+        ],
+        "curated": true,
+        "description": "Crash: single Attack; damage 16 (A:18). Cycle opener — run-41 took it unblocked on T1 while setting the SHRIEK bracket play.",
+        "effect": "Crash: Attack; damage 16 A:18",
+        "follow_up_id": null,
+        "id": "CRASH_MOVE",
+        "intents": [
+          {
+            "base_damage": 16,
+            "base_damage_ascension": {
+              "ascension": 18
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TERROR_EEL",
+        "name": "Crash",
+        "play_notes": "run-41: T1 deliberate take while dumping PS+Strike through Marbles vuln.",
+        "source": "codex-api:/monsters/TERROR_EEL#CRASH"
+      },
+      "STUN_MOVE": {
+        "aliases": [
+          "Stun",
+          "STUN"
+        ],
+        "curated": true,
+        "description": "Stunned: the eel skips its action this turn. Fired run-41 when an unblocked hit crossed the SHRIEK HP bracket (~70) — Plating stripped, power consumed.",
+        "effect": "Stun: Stun",
+        "follow_up_id": null,
+        "id": "STUN_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Stun"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TERROR_EEL",
+        "name": "Stun",
+        "play_notes": "run-41 live: strike dealt 10 landing exactly at 70 → STUNNED same read; Bash 13 + Heart of Iron Plating filled the window.",
+        "source": "codex-api:/monsters/TERROR_EEL#STUN"
+      },
+      "TERROR_MOVE": {
+        "aliases": [
+          "Terrorize",
+          "TERROR"
+        ],
+        "curated": true,
+        "description": "Terrorize: Debuff-class; applies Vulnerable 99 to the player (run-41 live: player powers showed the long vuln) — no attack damage that turn, so it is a free damage window for the player.",
+        "effect": "Terrorize: Debuff; VULNERABLE 99 (player)",
+        "follow_up_id": null,
+        "id": "TERROR_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TERROR_EEL",
+        "name": "Terrorize",
+        "play_notes": "run-41: Unrelenting 22 + Inferno tick 6 + FREE_ATTACK_POWER PS closed the kill on this window; the 99 vuln never got a following attack turn.",
+        "source": "codex-api:/monsters/TERROR_EEL#TERROR"
+      },
+      "THRASH_MOVE": {
+        "aliases": [
+          "Thrash",
+          "THRASH"
+        ],
+        "curated": true,
+        "description": "Thrash: multi Attack; 4x2-class (A:5/hit) — run-41 live intent showed multi:3x3 when a Vigor/Str stack had landed; live intents outrank the archive table.",
+        "effect": "Thrash: Attack + Buff; damage 3x3 A:4; VIGOR 6 (self)",
+        "follow_up_id": null,
+        "id": "THRASH_MOVE",
+        "intents": [
+          {
+            "base_damage": 3,
+            "base_damage_ascension": {
+              "ascension": 4
+            },
+            "class": "MultiAttackIntent",
+            "hits": 3,
+            "type": "Attack + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TERROR_EEL",
+        "name": "Thrash",
+        "play_notes": "run-41: free-window adjacent turn; kill priority stayed on crossing the SHRIEK bracket, not on blocking this.",
+        "source": "codex-api:/monsters/TERROR_EEL#THRASH"
+      }
+    },
+    "name": "Terror Eel",
+    "play_notes": "run-41: strike landed exactly at 70 → stun live; FREE_ATTACK_POWER makes ALL attacks in hand cost 0 that turn (not just the next one) — live correction folded here and in powers.",
+    "source": "codex-api:/monsters/TERROR_EEL",
+    "type": "Elite"
+  },
   "THIEVING_HOPPER": {
     "acts": [
       "Act2"
@@ -14297,6 +14714,141 @@
     "kind": "monster",
     "name": "Tunneler",
     "source": "; run-40 live fold 2026-09-18"
+  },
+  "TWO_TAILED_RAT": {
+    "acts": [],
+    "aliases": [
+      "Two-Tailed Rat"
+    ],
+    "curated": true,
+    "cycle": [
+      "SCRATCH_MOVE",
+      "DISEASE_BITE_MOVE",
+      "SCREECH_MOVE",
+      "CALL_FOR_BACKUP_MOVE"
+    ],
+    "description": "Two-Tailed Rat (Act2/Act1 normal): HP 17-21 (A 18-22); run-41 Act1 fought a trio 17/21/18. Cycle per rat at different phases: SCRATCH(8)→DISEASE_BITE(6)→SCREECH(Status Frail)→CALL_FOR_BACKUP(Summon). Branch tables carry cannot-repeat weights — check the live move_graph before assuming a summon is imminent. Run-41 correction: summons in this family persist after the summoner's death.",
+    "hp": {
+      "ascension": {
+        "max": 22,
+        "min": 18
+      },
+      "base": 17,
+      "max": 21,
+      "notes": ""
+    },
+    "id": "TWO_TAILED_RAT",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "CALL_FOR_BACKUP_MOVE": {
+        "aliases": [
+          "Call for Backup",
+          "CALL_FOR_BACKUP"
+        ],
+        "curated": true,
+        "description": "Call for Backup: Summon-class; summons an additional Two-Tailed Rat. Run-41 live correction: killing the summoner does NOT despawn existing summons in this family — the kill-master-despawns rule belongs to other monster families; summoned rats must be killed normally.",
+        "effect": "Call for Backup: Summon",
+        "follow_up_id": null,
+        "id": "CALL_FOR_BACKUP_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Summon"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TWO_TAILED_RAT",
+        "name": "Call for Backup",
+        "play_notes": "run-41 doctrine correction: focus-kill the summoner still matters for tempo, but budget HP for the summoned add as a normal fight.",
+        "source": "codex-api:/monsters/TWO_TAILED_RAT#CALL_FOR_BACKUP"
+      },
+      "DISEASE_BITE_MOVE": {
+        "aliases": [
+          "Disease Bite",
+          "DISEASE_BITE"
+        ],
+        "curated": true,
+        "description": "Disease Bite: single Attack; damage 6 (A:7). No-repeat branch table governs which move follows.",
+        "effect": "Disease Bite: Attack; damage 6 A:7",
+        "follow_up_id": null,
+        "id": "DISEASE_BITE_MOVE",
+        "intents": [
+          {
+            "base_damage": 6,
+            "base_damage_ascension": {
+              "ascension": 7
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TWO_TAILED_RAT",
+        "name": "Disease Bite",
+        "play_notes": "run-41: branch weights showed CALL_FOR_BACKUP w=0 on the immediate next roll for all three rats — no summon threat on T1.",
+        "source": "codex-api:/monsters/TWO_TAILED_RAT#DISEASE_BITE"
+      },
+      "SCRATCH_MOVE": {
+        "aliases": [
+          "Scratch",
+          "SCRATCH"
+        ],
+        "curated": true,
+        "description": "Scratch: single Attack; damage 8 (A:9).",
+        "effect": "Scratch: Attack; damage 8 A:9",
+        "follow_up_id": null,
+        "id": "SCRATCH_MOVE",
+        "intents": [
+          {
+            "base_damage": 8,
+            "base_damage_ascension": {
+              "ascension": 9
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TWO_TAILED_RAT",
+        "name": "Scratch",
+        "play_notes": "run-41: cycle SCRATCH→DISEASE_BITE→SCREECH→CALL_FOR_BACKUP at varying phases per rat.",
+        "source": "codex-api:/monsters/TWO_TAILED_RAT#SCRATCH"
+      },
+      "SCREECH_MOVE": {
+        "aliases": [
+          "Screech",
+          "SCREECH"
+        ],
+        "curated": true,
+        "description": "Screech: Status-class debuff; applies Frail 1-2 to the player (run-41 live: FRAIL_POWER:1 after the hit). Block does not prevent the debuff application.",
+        "effect": "Screech: Debuff; FRAIL 1 (player)",
+        "follow_up_id": null,
+        "id": "SCREECH_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TWO_TAILED_RAT",
+        "name": "Screech",
+        "play_notes": "run-41: Frail tax cut Defend 5→3 live the following block turn.",
+        "source": "codex-api:/monsters/TWO_TAILED_RAT#SCREECH"
+      }
+    },
+    "name": "Two-Tailed Rat",
+    "play_notes": "run-41 T1: PS+Strike killed the 17-HP rat on the Marbles vuln window; Shrug covered the remaining Scratch exactly; kill-master-despawns did not apply when the last rat fell.",
+    "source": "codex-api:/monsters/TWO_TAILED_RAT",
+    "type": "Normal"
   },
   "TerrorEel": {
     "acts": [],
