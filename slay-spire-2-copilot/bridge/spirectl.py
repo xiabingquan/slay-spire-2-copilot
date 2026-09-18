@@ -482,15 +482,849 @@ def fmt_power(p):
     return f"{pid}:{amt}" if amt is not None else pid
 
 
+# ---------------------------------------------------------------------------
+# JSON reference DB — references/game/*.json + *_zh.json (key = live game id)
+# ---------------------------------------------------------------------------
+
+REF_DIR = REPO_ROOT / "references" / "game"
+
+# Domain priority for bare-key resolution (first match wins; --all overrides).
+REF_DOMAIN_FILES = [
+    ("move", "monsters"),        # flattened from monsters[*].moves[*]
+    ("power", "powers"),
+    ("relic", "relics"),
+    ("card", "cards"),
+    ("potion", "potions"),
+    ("event_option", "events"),  # flattened from events[*].options[*]
+    ("event", "events"),
+    ("affliction", "afflictions"),
+    ("status_card", "afflictions"),
+    ("intent_class", "intents"),
+    ("intent_type", "intents"),
+    ("character", "characters"),
+    ("monster", "monsters"),
+]
+
+# spire-codex.com URL patterns: https://spire-codex.com/{category}/{lowercase_id}
+# (underscores work unencoded; category chosen by id shape).
+CODEX_BASE = "https://spire-codex.com"
+
+_REF_INDEX_CACHE = {}
+
+
+def load_reference_index(lang="en"):
+    """Load references/game/*.json (or *_zh.json) into {key: (domain, entry)}.
+
+    Flattens nested keys: monsters[*].moves[*] -> move domain,
+    events[*].options[*] -> event_option. Registers entry['id'], every
+    aliases[] element, and id case-variants. Cached per lang.
+    """
+    if lang in _REF_INDEX_CACHE:
+        return _REF_INDEX_CACHE[lang]
+    index = {}
+    suffix = "_zh.json" if lang == "zh" else ".json"
+    if not REF_DIR.is_dir():
+        print(
+            f"lookup: reference dir missing: {REF_DIR} — "
+            "generate it with scripts/build_game_reference_json.py",
+            file=sys.stderr,
+        )
+        _REF_INDEX_CACHE[lang] = index
+        return index
+
+    def register(key, domain, entry):
+        if not key or not isinstance(key, str):
+            return
+        if key not in index:
+            index[key] = (domain, entry)
+
+    for domain, stem in REF_DOMAIN_FILES:
+        path = REF_DIR / f"{stem}{suffix}"
+        if not path.exists():
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as exc:
+            print(f"lookup: failed to read {path.name}: {exc}", file=sys.stderr)
+            continue
+        if not isinstance(data, dict):
+            continue
+        for key, entry in data.items():
+            if not isinstance(entry, dict):
+                continue
+            entry_kind = entry.get("kind") or domain
+            register(key, entry_kind, entry)
+            register(entry.get("id"), entry_kind, entry)
+            for alias in entry.get("aliases") or []:
+                if isinstance(alias, str):
+                    register(alias, entry_kind, entry)
+            register(key.upper(), entry_kind, entry)
+            moves = entry.get("moves")
+            if isinstance(moves, dict):
+                for move_key, move_entry in moves.items():
+                    if not isinstance(move_entry, dict):
+                        continue
+                    register(move_key, "move", move_entry)
+                    register(move_entry.get("id"), "move", move_entry)
+                    for alias in move_entry.get("aliases") or []:
+                        if isinstance(alias, str):
+                            register(alias, "move", move_entry)
+            options = entry.get("options")
+            if isinstance(options, dict):
+                for opt_key, opt_entry in options.items():
+                    if not isinstance(opt_entry, dict):
+                        continue
+                    register(opt_key, "event_option", opt_entry)
+                    register(opt_entry.get("id"), "event_option", opt_entry)
+                    for alias in opt_entry.get("aliases") or []:
+                        if isinstance(alias, str):
+                            register(alias, "event_option", opt_entry)
+    _REF_INDEX_CACHE[lang] = index
+    return index
+
+
+def lookup_reference(key, lang="en", domain=None, match_all=False):
+    """Resolve a live game id against the JSON reference DB.
+
+    Resolution ladder: exact key -> event textKey / prefix before '.pages.'
+    -> case-insensitive -> suffix probes (X+ -> X; STRIKE family).
+    Returns list of (domain, entry); empty list = loud miss.
+    """
+    if not key:
+        return []
+    index = load_reference_index(lang)
+    candidates = []
+    seen = set()
+
+    def consider(k):
+        if not k or not isinstance(k, str) or k in seen:
+            return
+        seen.add(k)
+        hit = index.get(k)
+        if hit is None:
+            return
+        if domain and hit[0] != domain and not hit[0].startswith(domain):
+            return
+        candidates.append(hit)
+
+    consider(key)
+    if ".pages." in key:
+        consider(key.split(".pages.", 1)[0])
+    if "." in key:
+        consider(key.split(".")[0])
+    if not candidates:
+        lowered = key.lower()
+        for k in index:
+            if k.lower() == lowered:
+                consider(k)
+    if not candidates and key.endswith("+"):
+        consider(key[:-1])
+    if not candidates and key.startswith("STRIKE"):
+        for k in index:
+            if k.startswith("STRIKE"):
+                consider(k)
+    if not candidates and not domain:
+        for k in index:
+            if k.endswith(key) or key.endswith(k):
+                consider(k)
+                if not match_all and candidates:
+                    break
+    return candidates if match_all else candidates[:1]
+
+
+def ref_tags_enabled(explicit=None):
+    """True when compact auto-lookup tags should render."""
+    if explicit is not None:
+        return explicit
+    env = os.environ.get("SPIREBRIDGE_REF_TAGS", "").strip().lower()
+    if env in ("0", "false", "off", "no"):
+        return False
+    return bool(load_reference_index(os.environ.get("SPIREBRIDGE_REF_LANG", "en")))
+
+
+def format_intent_bits(intents, move_id=None):
+    """Build compact intent descriptors from structured intent dicts."""
+    bits = []
+    for it in intents or []:
+        label = strip_bbcode(it.get("label") or "") or None
+        dmg = it.get("damage")
+        hits = it.get("hits")
+        card_count = it.get("card_count")
+        itype = (it.get("type") or "").strip()
+        iclass = it.get("class") or ""
+        if dmg is not None and isinstance(hits, int) and hits > 1:
+            desc = f"multi:{dmg}x{hits}"
+        elif dmg is not None:
+            total = it.get("total_damage")
+            desc = f"atk:{dmg}"
+            if total is not None and total != dmg:
+                desc += f"(tot{total})"
+        elif card_count is not None:
+            desc = f"status:{card_count}c"
+        elif itype:
+            desc = itype.lower()
+            if label and label.lower() not in desc and not label.replace(".", "").isdigit():
+                desc = f"{desc}:{label}"
+        elif label:
+            desc = label
+        else:
+            desc = (iclass.lower() or "unknown")
+        if "FORMAT_EMPTY" in desc:
+            desc = (itype or iclass or "unknown").lower()
+            if move_id:
+                desc = f"{desc}({move_id})"
+        base = it.get("base_damage")
+        if base is not None and dmg is not None and base != dmg:
+            desc += f"[base{base}]"
+        bits.append(desc)
+    return bits
+
+
+CODEX_API = "https://spire-codex.com/api"
+_CODEX_MOVE_INDEX = None
+_CODEX_API_CACHE = {}
+
+
+def codex_api_get(path, timeout=10.0):
+    """GET a spire-codex.com API path, return parsed JSON or None.
+
+    Cache-first: every successful payload is kept per-process so a burst of
+    lookups on the same monster/index does not re-hit the network.
+    """
+    if path in _CODEX_API_CACHE:
+        return _CODEX_API_CACHE[path]
+    import urllib.request
+
+    url = CODEX_API + path
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "spirectl-lookup/0.2 (+spire-copilot-bridge)",
+            "Accept": "application/json",
+        },
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            data = json.loads(resp.read().decode("utf-8", errors="replace"))
+    except Exception:
+        return None
+    if isinstance(data, dict) and data.get("detail") and len(data) == 1:
+        return None
+    _CODEX_API_CACHE[path] = data
+    return data
+
+
+def codex_move_index():
+    """Build {live_move_id: (monster_dict, move_dict)} from /api/monsters.
+
+    API move ids carry no _MOVE suffix (SEA_KICK) while live state emits
+    SEA_KICK_MOVE — both shapes are registered. Cached per process; the full
+    monster list (~115 entries) is fetched once.
+    """
+    global _CODEX_MOVE_INDEX
+    if _CODEX_MOVE_INDEX is not None:
+        return _CODEX_MOVE_INDEX
+    index = {}
+    data = codex_api_get("/monsters")
+    if isinstance(data, list):
+        for monster in data:
+            if not isinstance(monster, dict):
+                continue
+            for move in monster.get("moves") or []:
+                if not isinstance(move, dict):
+                    continue
+                mid = move.get("id")
+                if not mid:
+                    continue
+                index[mid] = (monster, move)
+                index[f"{mid}_MOVE"] = (monster, move)
+    _CODEX_MOVE_INDEX = index
+    return index
+
+
+def codex_search(kind_path, query, timeout=10.0):
+    """Query the codex search endpoint, e.g. /powers?search=ravenous."""
+    import urllib.parse
+
+    q = urllib.parse.quote(query)
+    data = codex_api_get(f"/{kind_path}?search={q}", timeout=timeout)
+    return data if isinstance(data, list) else []
+
+
+def strip_codex_markup(text):
+    """Remove codex inline markup like [green]6[/green] / [sine]...[/sine]."""
+    if not isinstance(text, str):
+        return ""
+    return BBCODE_RE.sub("", text).strip()
+
+
+def _format_damage(damage):
+    """Render codex damage dict: {'normal':11,'ascension':13,'hit_count':4}."""
+    if damage is None:
+        return None
+    if isinstance(damage, (int, float)):
+        return str(damage)
+    if not isinstance(damage, dict):
+        return str(damage)
+    normal = damage.get("normal")
+    asc = damage.get("ascension")
+    hits = damage.get("hit_count")
+    parts = []
+    if hits:
+        parts.append(f"{normal}x{hits}")
+    elif normal is not None:
+        parts.append(str(normal))
+    if asc is not None:
+        parts.append(f"A:{asc}")
+    return " ".join(parts) or None
+
+
+def describe_move_from_api(monster, move):
+    """Build effect/play text for one codex move entry."""
+    bits = []
+    intent = move.get("intent")
+    if intent:
+        bits.append(str(intent))
+    dmg = _format_damage(move.get("damage"))
+    if dmg:
+        bits.append(f"damage {dmg}")
+    if move.get("block") is not None:
+        bits.append(f"block {move['block']}")
+    if move.get("heal") is not None:
+        bits.append(f"heal {move['heal']}")
+    for power in move.get("powers") or []:
+        if not isinstance(power, dict):
+            continue
+        pid = power.get("power_id") or power.get("id") or "?"
+        amt = power.get("amount")
+        target = power.get("target")
+        ptxt = pid if amt is None else f"{pid} {amt}"
+        if target:
+            ptxt += f" ({target})"
+        bits.append(ptxt)
+    effect = move.get("name") or move.get("id") or "move"
+    if bits:
+        effect = f"{effect}: " + "; ".join(bits)
+    return effect
+
+
+def build_monster_entry_from_api(monster, live_key=None):
+    """Full monsters.json entry from a codex monster payload (live-id keys)."""
+    api_id = monster.get("id") or ""
+    moves = {}
+    cycle = []
+    for move in monster.get("moves") or []:
+        if not isinstance(move, dict):
+            continue
+        api_move_id = move.get("id")
+        if not api_move_id:
+            continue
+        live_move_id = f"{api_move_id}_MOVE"
+        cycle.append(live_move_id)
+        moves[live_move_id] = {
+            "id": live_move_id,
+            "kind": "move",
+            "monster_id": api_id,
+            "name": move.get("name") or api_move_id,
+            "intents": [
+                {
+                    "class": (
+                        "SingleAttackIntent" if (move.get("damage") or {}).get("hit_count") in (None, 1)
+                        else "MultiAttackIntent"
+                    ) if move.get("damage") else None,
+                    "type": move.get("intent"),
+                    "base_damage": (move.get("damage") or {}).get("normal") if isinstance(move.get("damage"), dict) else None,
+                    "base_damage_ascension": {"ascension": (move.get("damage") or {}).get("ascension")} if isinstance(move.get("damage"), dict) and (move.get("damage") or {}).get("ascension") is not None else None,
+                    "hits": (move.get("damage") or {}).get("hit_count") if isinstance(move.get("damage"), dict) else None,
+                }
+            ],
+            "effect": describe_move_from_api(monster, move),
+            "follow_up_id": f"{cycle[-2]}_MOVE" if False else None,
+            "play_notes": "",
+            "aliases": [move.get("name") or api_move_id, api_move_id],
+            "curated": False,
+            "needs_zh": True,
+            "source": f"codex-api:/monsters/{api_id}#{api_move_id}",
+        }
+        # Drop null intent-class field
+        if moves[live_move_id]["intents"][0].get("class") is None:
+            moves[live_move_id]["intents"][0].pop("class", None)
+    hp = {
+        "base": monster.get("min_hp"),
+        "max": monster.get("max_hp"),
+        "notes": "",
+    }
+    if monster.get("min_hp_ascension") is not None:
+        hp["ascension"] = {"min": monster.get("min_hp_ascension"), "max": monster.get("max_hp_ascension")}
+    entry = {
+        "id": api_id,
+        "kind": "monster",
+        "name": monster.get("name") or api_id,
+        "type": monster.get("type"),
+        "acts": [],
+        "hp": hp,
+        "is_boss": (monster.get("type") or "").lower() == "boss",
+        "is_elite": (monster.get("type") or "").lower() == "elite",
+        "cycle": cycle,
+        "moves": moves,
+        "aliases": [monster.get("name") or api_id],
+        "description": (
+            f"{monster.get('name') or api_id} ({monster.get('type') or 'monster'}): "
+            f"HP {monster.get('min_hp')}-{monster.get('max_hp')} "
+            f"(A {monster.get('min_hp_ascension')}-{monster.get('max_hp_ascension')}); "
+            f"cycle {' → '.join(cycle) if cycle else 'unknown'}"
+        ),
+        "play_notes": "",
+        "curated": False,
+        "needs_zh": True,
+        "source": f"codex-api:/monsters/{api_id}",
+    }
+    return entry
+
+
+def fold_monster_entry(entry, live_key=None):
+    """Merge a monster entry into monsters.json + monsters_zh.json."""
+    api_id = entry.get("id")
+    target_key = api_id
+    for lang in ("en", "zh"):
+        suffix = "_zh.json" if lang == "zh" else ".json"
+        path = REF_DIR / f"monsters{suffix}"
+        data = {}
+        if path.exists():
+            try:
+                loaded = json.loads(path.read_text(encoding="utf-8"))
+                if isinstance(loaded, dict):
+                    data = loaded
+            except (OSError, json.JSONDecodeError):
+                data = {}
+        existing = data.get(target_key)
+        if isinstance(existing, dict) and existing.get("curated") is True:
+            # Keep curated monster; still merge uncurated live-key aliases
+            continue
+        zh_entry = dict(entry)
+        if lang == "zh":
+            zh_entry["needs_zh"] = True
+        data[target_key] = zh_entry
+        REF_DIR.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    _REF_INDEX_CACHE.clear()
+
+
+def fold_entry_into_reference(domain_stem, key, entry, lang="en"):
+    """Write/merge one entry into references/game/<stem>.json (+ _zh.json)."""
+    suffix = "_zh.json" if lang == "zh" else ".json"
+    path = REF_DIR / f"{domain_stem}{suffix}"
+    data = {}
+    if path.exists():
+        try:
+            loaded = json.loads(path.read_text(encoding="utf-8"))
+            if isinstance(loaded, dict):
+                data = loaded
+        except (OSError, json.JSONDecodeError):
+            data = {}
+    existing = data.get(key)
+    if isinstance(existing, dict) and existing.get("curated") is True:
+        return path, False
+    data[key] = entry
+    REF_DIR.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    return path, True
+
+
+def codex_candidate_urls(key):
+    """Build spire-codex.com HTML candidate URLs (last-resort fallback)."""
+    slug = key.lower().replace(" ", "_")
+    candidates = []
+    if "_MOVE" in key:
+        stem = slug
+        for suffix in ("_move",):
+            if stem.endswith(suffix):
+                stem = stem[: -len(suffix)]
+        candidates.extend([f"{CODEX_BASE}/monsters/{slug}", f"{CODEX_BASE}/monsters/{stem}"])
+    elif key.endswith("_POWER"):
+        candidates.append(f"{CODEX_BASE}/powers/{slug}")
+    elif key.endswith("_POTION") or "POTION" in key:
+        candidates.append(f"{CODEX_BASE}/potions/{slug}")
+    elif ".pages." in key:
+        event = key.split(".pages.", 1)[0].lower()
+        candidates.append(f"{CODEX_BASE}/events/{event}")
+    elif key.isupper() or "_" in key:
+        for category in ("relics", "cards", "potions", "powers", "events", "monsters", "characters"):
+            candidates.append(f"{CODEX_BASE}/{category}/{slug}")
+    else:
+        for category in ("reference", "powers", "monsters", "cards"):
+            candidates.append(f"{CODEX_BASE}/{category}/{slug}")
+    deduped = []
+    seen = set()
+    for url in candidates:
+        if url not in seen:
+            seen.add(url)
+            deduped.append(url)
+    return deduped[:8]
+
+
+def fetch_codex_text(url, timeout=12.0):
+    """Best-effort HTML fetch, returned as plain text (last-resort fallback)."""
+    import html as html_mod
+    import re as re_mod
+    import urllib.request
+
+    req = urllib.request.Request(
+        url,
+        headers={"User-Agent": "spirectl-lookup/0.2 (+spire-copilot-bridge)"},
+    )
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        raw = resp.read().decode("utf-8", errors="replace")
+    raw = re_mod.sub(r"(?is)<(script|style)[^>]*>.*?</\1>", " ", raw)
+    raw = re_mod.sub(r"(?is)<br\s*/?>|</p>|</div>|</li>|</h[1-6]>", "\n", raw)
+    text = re_mod.sub(r"(?s)<[^>]+>", " ", raw)
+    text = html_mod.unescape(text)
+    text = re_mod.sub(r"[ \t]+", " ", text)
+    text = re_mod.sub(r"\n\s*\n+", "\n", text)
+    return text.strip()
+
+
+def research_and_fold(key, domain_guess=None):
+    """Lookup-miss fallback: spire-codex.com API first, HTML last.
+
+    Returns (entry, source) when research produced data, else (None, None).
+    Folded entries carry key = the LIVE id (state's shape); API ids land in
+    aliases. Entries are curated:false — agent curation completes them.
+    """
+    source = None
+    kind = domain_guess
+    entry = None
+
+    # ---------- API-first per domain ----------
+    # Power ids: live shape has _POWER suffix; API ids usually don't.
+    power_queries = [key]
+    if key.endswith("_POWER"):
+        power_queries.append(key[: -len("_POWER")])
+    power_queries.append(key.replace("_", " ").lower())
+
+    api_candidates = []
+    if kind == "move" or "_MOVE" in key:
+        index = codex_move_index()
+        hit = index.get(key) or index.get(key.replace("_MOVE", ""))
+        if hit:
+            monster, move = hit
+            entry = build_monster_entry_from_api(monster)
+            source = f"codex-api:/monsters/{monster.get('id')}"
+            kind = "move"
+    if entry is None and (kind == "monster" or (kind is None and key.isupper())):
+        data = codex_api_get(f"/monsters/{key.lower()}")
+        if data is None:
+            results = codex_search("monsters", key.replace("_", " ").lower())
+            data = results[0] if results else None
+        if isinstance(data, dict) and data.get("id"):
+            entry = build_monster_entry_from_api(data)
+            source = f"codex-api:/monsters/{data.get('id')}"
+            kind = "monster"
+    if entry is None and (kind in ("relic", None) or key.endswith("_PEARL") or key.isupper()):
+        data = codex_api_get(f"/relics/{key.lower()}")
+        if data is None:
+            results = codex_search("relics", key.replace("_", " ").lower())
+            data = results[0] if results else None
+        if isinstance(data, dict) and data.get("id"):
+            description = strip_codex_markup(data.get("description") or data.get("description_raw") or "")
+            entry = {
+                "id": key,
+                "kind": "relic",
+                "name": data.get("name") or key,
+                "rarity": data.get("rarity_key") or data.get("rarity"),
+                "character": data.get("pool"),
+                "description": description,
+                "aliases": [data.get("name"), data.get("id")],
+                "play_notes": "",
+                "curated": False,
+                "needs_zh": True,
+                "source": f"codex-api:/relics/{data.get('id')}",
+            }
+            source = entry["source"]
+            kind = "relic"
+    if entry is None and (kind in ("card", None) or key.endswith("_STRIKE") or key.endswith("_IRONCLAD")):
+        data = codex_api_get(f"/cards/{key.lower()}")
+        if data is None:
+            results = codex_search("cards", key.replace("_", " ").lower())
+            data = results[0] if results else None
+        if isinstance(data, dict) and data.get("id"):
+            description = strip_codex_markup(data.get("description") or data.get("description_raw") or "")
+            entry = {
+                "id": key,
+                "kind": "card",
+                "name": data.get("name") or key,
+                "cost": data.get("cost"),
+                "card_type": data.get("type_key") or data.get("type"),
+                "rarity": data.get("rarity_key") or data.get("rarity"),
+                "target_type": data.get("target"),
+                "character_pool": data.get("color"),
+                "description": description,
+                "aliases": [data.get("name"), data.get("id")],
+                "play_notes": "",
+                "curated": False,
+                "needs_zh": True,
+                "source": f"codex-api:/cards/{data.get('id')}",
+            }
+            source = entry["source"]
+            kind = "card"
+    if entry is None and (kind in ("potion", None) or key.endswith("_POTION") or "POTION" in key):
+        data = codex_api_get(f"/potions/{key.lower()}")
+        if data is None:
+            results = codex_search("potions", key.replace("_", " ").lower())
+            data = results[0] if results else None
+        if isinstance(data, dict) and data.get("id"):
+            description = strip_codex_markup(data.get("description") or data.get("description_raw") or "")
+            entry = {
+                "id": key,
+                "kind": "potion",
+                "name": data.get("name") or key,
+                "rarity": data.get("rarity_key") or data.get("rarity"),
+                "description": description,
+                "aliases": [data.get("name"), data.get("id")],
+                "play_notes": "",
+                "curated": False,
+                "needs_zh": True,
+                "source": f"codex-api:/potions/{data.get('id')}",
+            }
+            source = entry["source"]
+            kind = "potion"
+    if entry is None and kind in ("power", None):
+        data = None
+        for query in power_queries:
+            data = codex_api_get(f"/powers/{query.lower()}")
+            if data is not None:
+                break
+        if data is None:
+            for query in power_queries:
+                results = codex_search("powers", query.replace("_", " ").lower())
+                if results:
+                    data = results[0]
+                    break
+        if isinstance(data, dict) and data.get("id"):
+            description = strip_codex_markup(data.get("description") or data.get("description_raw") or "")
+            entry = {
+                "id": key,
+                "kind": "power",
+                "name": data.get("name") or key,
+                "power_type": data.get("type"),
+                "stack_type": data.get("stack_type"),
+                "counter_class": (data.get("stack_type") == "Counter"),
+                "description": description,
+                "aliases": [data.get("name"), data.get("id"), key.replace("_POWER", "")],
+                "play_notes": "",
+                "curated": False,
+                "needs_zh": True,
+                "source": f"codex-api:/powers/{data.get('id')}",
+            }
+            source = entry["source"]
+            kind = "power"
+    if entry is None and (kind in ("event", "event_option", None) or ".pages." in key):
+        event_id = key.split(".pages.", 1)[0] if ".pages." in key else key
+        data = codex_api_get(f"/events/{event_id.lower()}")
+        if data is None:
+            results = codex_search("events", event_id.replace("_", " ").lower())
+            data = results[0] if results else None
+        if isinstance(data, dict) and data.get("id"):
+            description = strip_codex_markup(data.get("description") or "")
+            options_blob = data.get("options") or data.get("pages") or []
+            entry = {
+                "id": event_id,
+                "kind": "event",
+                "name": data.get("name") or event_id,
+                "acts": [data.get("act")] if data.get("act") else [],
+                "description": description,
+                "option_summary": json.dumps(options_blob, ensure_ascii=False)[:600] if options_blob else "",
+                "aliases": [data.get("name"), data.get("id")],
+                "play_notes": "",
+                "curated": False,
+                "needs_zh": True,
+                "source": f"codex-api:/events/{data.get('id')}",
+                "options": {},
+            }
+            # Fold the specific event_option key when the miss was an option.
+            if ".pages." in key:
+                option_entry = {
+                    "id": key,
+                    "kind": "event_option",
+                    "event_id": event_id,
+                    "title": key.rsplit(".", 1)[-1].replace("_", " ").title(),
+                    "description": description,
+                    "aliases": [key.rsplit(".", 1)[-1]],
+                    "play_notes": "",
+                    "curated": False,
+                    "needs_zh": True,
+                    "source": f"codex-api:/events/{data.get('id')}",
+                }
+                entry["options"][key] = option_entry
+            source = entry["source"]
+            kind = kind or "event"
+
+    # ---------- HTML last resort ----------
+    if entry is None:
+        urls = codex_candidate_urls(key)
+        best_text = ""
+        best_url = None
+        for url in urls:
+            try:
+                text = fetch_codex_text(url)
+            except Exception:
+                continue
+            if not text or len(text) < 80:
+                continue
+            human = key.replace("_", " ").lower()
+            if key.lower() not in text.lower() and human not in text.lower():
+                continue
+            best_text = text
+            best_url = url
+            break
+        if not best_text:
+            return None, None
+        nav_markers = (
+            "spire codex", "compendium", "card library", "relic collection",
+            "potion lab", "jump back in", "pages you open", "stats", "rankings",
+            "tier list", "leaderboard", "submit a run", "browse runs", "tools",
+            "companion apps", "steam mod", "art exporter", "overlay",
+            "knowledge demon bot", "sign in", "cookie", "press .",
+        )
+        human = key.replace("_", " ").lower()
+        lines = [ln.strip() for ln in best_text.splitlines() if ln.strip()]
+        body = []
+        total = 0
+        started = False
+        for ln in lines:
+            low = ln.lower()
+            if not started:
+                if key.lower() in low or human in low:
+                    started = True
+                else:
+                    continue
+            if any(m in low for m in nav_markers) and len(ln) < 60:
+                continue
+            if low.startswith("http"):
+                continue
+            body.append(ln)
+            total += len(ln)
+            if total > 600:
+                break
+        if not body:
+            body = [ln for ln in lines if not any(m in ln.lower() for m in nav_markers)][:8]
+        description = " ".join(body)[:700]
+        # Infer kind/stem from the HTML URL category — fail-loud when the
+        # category is unrecognizable instead of folding into a random domain.
+        url_kind = None
+        url_stem = None
+        safe_url = best_url or ""
+        for cat, knd in (
+            ("relics", "relic"), ("cards", "card"), ("powers", "power"),
+            ("potions", "potion"), ("events", "event"), ("monsters", "monster"),
+            ("characters", "character"),
+        ):
+            if f"/{cat}/" in safe_url:
+                url_kind, url_stem = knd, cat
+                break
+        kind = url_kind or kind
+        if not kind or kind == "unknown":
+            return None, None
+        entry = {
+            "id": key,
+            "kind": kind,
+            "name": key,
+            "description": description,
+            "aliases": [],
+            "play_notes": "",
+            "curated": False,
+            "needs_zh": True,
+            "source": f"codex-html:{best_url}",
+        }
+        source = entry["source"]
+
+    # ---------- Fold ----------
+    stem = {
+        "move": "monsters",
+        "monster": "monsters",
+        "power": "powers",
+        "relic": "relics",
+        "card": "cards",
+        "potion": "potions",
+        "event": "events",
+        "event_option": "events",
+        "affliction": "afflictions",
+        "status_card": "afflictions",
+        "intent_class": "intents",
+        "intent_type": "intents",
+        "character": "characters",
+    }.get(kind or "", "relics")
+
+    if stem == "monsters" and isinstance(entry, dict) and entry.get("kind") == "monster" and entry.get("moves"):
+        fold_monster_entry(entry, live_key=key)
+        return entry, source
+    if stem == "monsters" and "_MOVE" in key:
+        # Move-level stub nested under generic host (rare fallback path).
+        path = REF_DIR / "monsters.json"
+        data = {}
+        if path.exists():
+            try:
+                loaded = json.loads(path.read_text(encoding="utf-8"))
+                if isinstance(loaded, dict):
+                    data = loaded
+            except (OSError, json.JSONDecodeError):
+                data = {}
+        generic = data.get("generic")
+        if not isinstance(generic, dict):
+            generic = {"id": "generic", "kind": "monster", "name": "generic", "description": "synthetic host for move stubs", "aliases": [], "play_notes": "", "curated": False, "needs_zh": True, "source": "synthetic", "moves": {}}
+        moves = generic.get("moves")
+        if not isinstance(moves, dict):
+            moves = {}
+        stub = dict(entry)
+        stub["kind"] = "move"
+        if key not in moves or moves.get(key, {}).get("curated") is not True:
+            moves[key] = stub
+        generic["moves"] = moves
+        data["generic"] = generic
+        path.write_text(json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        _REF_INDEX_CACHE.clear()
+        return stub, source
+    if stem == "events" and isinstance(entry, dict) and entry.get("kind") == "event":
+        event_id = entry.get("id")
+        for lang in ("en", "zh"):
+            suffix = "_zh.json" if lang == "zh" else ".json"
+            path = REF_DIR / f"events{suffix}"
+            data = {}
+            if path.exists():
+                try:
+                    loaded = json.loads(path.read_text(encoding="utf-8"))
+                    if isinstance(loaded, dict):
+                        data = loaded
+                except (OSError, json.JSONDecodeError):
+                    data = {}
+            existing = data.get(event_id)
+            if isinstance(existing, dict) and existing.get("curated") is True:
+                continue
+            payload = json.loads(json.dumps(entry))
+            if lang == "zh":
+                payload["needs_zh"] = True
+            data[event_id] = payload
+            path.write_text(json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        _REF_INDEX_CACHE.clear()
+        return entry, source
+    fold_entry_into_reference(stem, key, entry, lang="en")
+    zh_entry = json.loads(json.dumps(entry))
+    zh_entry["needs_zh"] = True
+    fold_entry_into_reference(stem, key, zh_entry, lang="zh")
+    _REF_INDEX_CACHE.clear()
+    return entry, source
+
+
 def render_compact(state):
     """Render a bridge state snapshot as compact human-readable lines.
 
-    Args:
-        state: Bridge state snapshot dict.
-
-    Returns:
-        Multi-line string summarizing screen, run, player, combat, options.
+    Always prints move_id for monsters (dropping it on numeric intent labels
+    was the root cause of "intent=11" information loss). Structured intent
+    fields (damage/hits/base_damage/card_count) take priority over the label
+    string; reference-DB snippets append when available.
     """
+    use_tags = ref_tags_enabled(None)
+    ref_index = load_reference_index(os.environ.get("SPIREBRIDGE_REF_LANG", "en")) if use_tags else {}
     lines = []
     run = state.get("run") or {}
     player = state.get("player") or {}
@@ -505,6 +1339,8 @@ def render_compact(state):
         parts.append(f"room={run.get('room_type')}")
         if run.get("ascension") is not None:
             parts.append(f"asc={run.get('ascension')}")
+        if run.get("seed"):
+            parts.append(f"seed={run.get('seed')}")
         if run.get("map_coord"):
             c = run["map_coord"]
             parts.append(f"pos=({c.get('row')},{c.get('col')})")
@@ -534,7 +1370,14 @@ def render_compact(state):
             lines.append("player powers: " + ", ".join(fmt_power(p) for p in me["powers"]))
         relics = player.get("relics") or []
         if relics:
-            lines.append("relics: " + ", ".join(r.get("id", "?") for r in relics))
+            relic_bits = []
+            for r in relics:
+                rid = r.get("id", "?")
+                counter = r.get("counter")
+                if counter is not None:
+                    rid = f"{rid}:{counter}"
+                relic_bits.append(rid)
+            lines.append("relics: " + ", ".join(relic_bits))
         potions = [p for p in (player.get("potions") or []) if p]
         if potions:
             lines.append("potions: " + ", ".join(f"[{p['index']}]{p.get('id')}" for p in potions))
@@ -543,6 +1386,7 @@ def render_compact(state):
             f"combat round={combat.get('round')} side={combat.get('current_side')} "
             f"phase={combat.get('turn_phase')} energy={combat.get('energy')}/{combat.get('max_energy')}"
         )
+        graph_lines = []
         for c in combat.get("creatures") or []:
             mark = "*" if c.get("is_player") else "-"
             line = (
@@ -552,33 +1396,78 @@ def render_compact(state):
             powers = c.get("powers") or []
             if powers:
                 line += " powers=[" + ",".join(fmt_power(p) for p in powers) + "]"
+            # move_id prints unconditionally — identity must never be dropped.
+            move = c.get("move_id")
+            if move:
+                line += f" move={move}"
             intents = c.get("intents") or []
             if intents:
-                move = c.get("move_id")
-                bits = []
-                for it in intents:
-                    label = strip_bbcode(it.get("label") or it.get("type"))
-                    dmg = it.get("damage")
-                    hits = it.get("hits")
-                    desc = label or it.get("class")
-                    # Loc leaks like intents:FORMAT_EMPTY carry no decision
-                    # value — fall back to intent class/type + the monster's
-                    # current move id so the intent is still readable.
-                    if not desc or "FORMAT_EMPTY" in str(desc):
-                        desc = it.get("type") or it.get("class") or "unknown"
-                        if move:
-                            desc = f"{desc}({move})"
-                    if dmg is not None:
-                        desc = f"{desc} dmg={dmg}"
-                    if hits is not None:
-                        desc = f"{desc}x{hits}"
-                    bits.append(str(desc))
-                line += " intent=" + "; ".join(bits)
+                line += " intent=" + "; ".join(format_intent_bits(intents, move_id=move))
+            if move and ref_index:
+                hit = ref_index.get(move) or ref_index.get(str(move).upper())
+                if hit:
+                    entry = hit[1]
+                    snippet = entry.get("effect") or entry.get("description") or entry.get("play_notes") or ""
+                    snippet = " ".join(str(snippet).split())[:60]
+                    if snippet:
+                        line += f" [{move}: {snippet}]"
             lines.append(line)
+            graph = c.get("move_graph")
+            if graph and not c.get("is_player"):
+                gbits = [f"id{c.get('combat_id')} {c.get('name')}"]
+                log = graph.get("state_log") or []
+                if log:
+                    gbits.append("log=[" + ",".join(str(x) for x in log) + "]")
+                current = graph.get("current_move_id")
+                if current:
+                    gbits.append(f"current={current}")
+                states = graph.get("states") or []
+                follow_map = {
+                    s.get("id"): s.get("follow_up_id")
+                    for s in states
+                    if s.get("kind") == "move" and s.get("follow_up_id")
+                }
+                if current and follow_map:
+                    cycle = [current]
+                    nxt = follow_map.get(current)
+                    seen_cycle = {current}
+                    while nxt and nxt not in seen_cycle and len(cycle) < 12:
+                        cycle.append(nxt)
+                        seen_cycle.add(nxt)
+                        nxt = follow_map.get(nxt)
+                    if len(cycle) > 1:
+                        gbits.append("cycle=" + "→".join(str(x) for x in cycle))
+                for s in states:
+                    if s.get("kind") == "random_branch":
+                        rbits = []
+                        for b in s.get("branches") or []:
+                            w = b.get("effective_weight", b.get("weight"))
+                            wtxt = f" w={w:.2f}" if isinstance(w, (int, float)) else ""
+                            rbits.append(f"{b.get('state_id')}{wtxt}")
+                        gbits.append(f"branch@{s.get('id')}: " + " ".join(rbits))
+                    elif s.get("kind") == "conditional_branch":
+                        cbits = []
+                        for b in s.get("branches") or []:
+                            met = b.get("condition_met")
+                            tag = "[ok]" if met is True else "[no]" if met is False else ""
+                            cbits.append(f"{b.get('state_id')}{tag}")
+                        gbits.append(f"cond@{s.get('id')}: " + " ".join(cbits))
+                graph_lines.append("  " + " ".join(gbits))
+        if graph_lines:
+            lines.append("move graphs:")
+            lines.extend(graph_lines)
+        history = combat.get("history") or []
+        if history:
+            tail = history[-6:]
+            lines.append("history: " + " | ".join(
+                str(h.get("text") or h.get("kind")) for h in tail
+            ))
         piles = combat.get("piles") or {}
+        play_count = piles.get("play_count")
+        play_s = f" play={play_count}" if play_count is not None else ""
         lines.append(
             f"piles draw={piles.get('draw_count')} discard={piles.get('discard_count')} "
-            f"exhaust={piles.get('exhaust_count')}"
+            f"exhaust={piles.get('exhaust_count')}{play_s}"
         )
         for card in piles.get("hand") or []:
             playable = "ok" if card.get("can_play") else f"no({card.get('unplayable_reason')})"
@@ -591,7 +1480,12 @@ def render_compact(state):
     if options:
         lines.append("options:")
         for opt in options:
-            lines.append(f" [{opt.get('index')}] {opt.get('kind')}:{opt.get('id')} {opt.get('name') or ''}")
+            desc = opt.get("description")
+            desc_s = ""
+            if desc:
+                flat = " ".join(str(desc).split())[:80]
+                desc_s = f" — {flat}"
+            lines.append(f" [{opt.get('index')}] {opt.get('kind')}:{opt.get('id')} {opt.get('name') or ''}{desc_s}")
     actions = state.get("available_actions") or []
     if actions:
         summaries = []
@@ -605,6 +1499,112 @@ def render_compact(state):
         lines.append("actions: " + ", ".join(summaries))
     lines.append(f"fingerprint={state.get('fingerprint')}")
     return "\n".join(lines)
+
+
+def _print_lookup_entry(domain, entry, key, extra=None):
+    """Human-readable lookup output; --json uses the raw entry instead."""
+    print(f"key={entry.get('id') or key} kind={entry.get('kind') or domain} domain={domain}")
+    if entry.get("name"):
+        print(f"name={entry['name']}")
+    if entry.get("description"):
+        print(f"description: {entry['description']}")
+    if entry.get("effect"):
+        print(f"effect: {entry['effect']}")
+    for field in (
+        "cost", "card_type", "rarity", "target_type", "character_pool", "upgrade",
+        "power_type", "stack_type", "counter_class", "host_of_affliction",
+        "hp", "acts", "is_boss", "is_elite", "cycle", "passives",
+        "base_damage", "hits", "status_card", "status_count",
+        "label_semantics", "state_fields", "decision_rule", "member_classes",
+        "intent_type", "follow_up_id", "display_note", "event_id", "title",
+        "gates", "option_summary", "usage", "character", "aliases",
+    ):
+        if field in entry and entry[field] not in (None, "", [], {}):
+            print(f"{field}: {json.dumps(entry[field], ensure_ascii=False)}")
+    if entry.get("play_notes"):
+        print(f"play_notes: {entry['play_notes']}")
+    if entry.get("source"):
+        print(f"source: {entry['source']}")
+    if entry.get("needs_zh"):
+        print("needs_zh: true (Chinese description pending curation)")
+    if entry.get("curated") is False:
+        print("curated: false (auto-folded — refine before relying on it)")
+    if extra:
+        print(extra)
+
+
+def cmd_lookup(args):
+    """Resolve a live game id to its complete reference JSON entry.
+
+    Miss path (per user directive 2026-09-18): fall back to spire-codex.com
+    research — fetch candidate pages, fold a minimal entry into the matching
+    references/game/*.json + _zh.json pair (curated:false), and return it.
+    When codex has no page either, exit 1 with a loud web-research trigger
+    (agent doctrine: perplexity-search → fold into JSON EN+ZH → re-run).
+    """
+    key = args.key
+    lang = args.lang or os.environ.get("SPIREBRIDGE_REF_LANG", "en")
+    matches = lookup_reference(key, lang=lang, domain=args.domain, match_all=args.all)
+    if matches:
+        domains = []
+        for domain, entry in matches:
+            domains.append(domain)
+            if args.json:
+                print(json.dumps(entry, ensure_ascii=False, indent=2))
+            else:
+                _print_lookup_entry(domain, entry, key)
+                print("---")
+        if not args.all and len(matches) == 1 and len(domains) == 1:
+            return 0
+        others = [d for d in domains]
+        if others:
+            print(f"(domains matched: {', '.join(others)} — use --all for every entry)")
+        return 0
+
+    # ---- miss: research fallback ----
+    print(
+        f"lookup: no entry for '{key}' in references/game/*.json — "
+        "attempting spire-codex.com research fallback",
+        file=sys.stderr,
+    )
+    domain_guess = None
+    if args.domain:
+        domain_guess = args.domain
+    elif key.endswith("_MOVE") or "_MOVE_" in key:
+        domain_guess = "move"
+    elif key.endswith("_POWER"):
+        domain_guess = "power"
+    elif key.endswith("_POTION"):
+        domain_guess = "potion"
+    elif ".pages." in key:
+        domain_guess = "event_option"
+    elif key.endswith("_CURSE"):
+        domain_guess = "affliction"
+    entry, url = research_and_fold(key, domain_guess=domain_guess)
+    if entry:
+        print(f"lookup: researched via {url} — folded into references/game (curated:false, needs_zh:true)")
+        if args.json:
+            print(json.dumps(entry, ensure_ascii=False, indent=2))
+        else:
+            _print_lookup_entry(domain_guess or entry.get("kind"), entry, key, extra=f"folded_from: {url}")
+        print(
+            "next: refine the entry (and its _zh.json twin) with perplexity-search/"
+            "decomp facts, set curated:true, then re-run "
+            "scripts/build_game_reference_json.py --check",
+            file=sys.stderr,
+        )
+        return 0
+    candidates = ", ".join(codex_candidate_urls(key))
+    print(
+        f"lookup: MISS — '{key}' not in references/game/*.json and no spire-codex.com page matched.\n"
+        f"  codex candidates tried: {candidates}\n"
+        f"  next: research '{key}' via perplexity-search (or spire-codex.com browser search),\n"
+        f"  fold the result into the matching <domain>.json + <domain>_zh.json (key='{key}',\n"
+        f"  curated:true), then re-run build_game_reference_json.py --check. "
+        "A lookup miss is a research trigger — never permission to guess.",
+        file=sys.stderr,
+    )
+    return 1
 
 
 def cmd_doctor(args):
@@ -1062,6 +2062,31 @@ def steam_fully_ready():
     return helper
 
 
+def focus_game_window():
+    """Move the game window onto this session's terminal display (cosmetic).
+
+    User preference 2026-09-18: the game must pop up on the screen of the
+    Claude Code session that launched it, not on the work display. Delegates
+    to scripts/focus-game-window.sh (AppleScript, windowed-mode game).
+    Never raises — a failed window move must not block launch recovery.
+    """
+    script = REPO_ROOT / "scripts" / "focus-game-window.sh"
+    if not script.exists():
+        return
+    try:
+        result = subprocess.run(
+            ["bash", str(script)], capture_output=True, text=True, timeout=25
+        )
+        msg = (result.stdout or "").strip()
+        if msg:
+            print(msg)
+        err = (result.stderr or "").strip()
+        if result.returncode != 0 and err:
+            print(f"focus-game-window: {err}")
+    except (subprocess.TimeoutExpired, OSError) as exc:
+        print(f"focus-game-window: skipped ({exc})")
+
+
 def cmd_launch(args):
     """Launch the game via Steam and wait for the bridge handshake.
 
@@ -1106,6 +2131,7 @@ def cmd_launch(args):
                 if hello.get("type") != "hello_ok":
                     continue
                 print(f"bridge up: game={hello.get('game_version')} mod={hello.get('mod_version')}")
+                focus_game_window()
                 return 0
         except (ConnectionError, OSError, json.JSONDecodeError):
             continue
@@ -1199,6 +2225,8 @@ def main(argv=None):
 
     p_state = sub.add_parser("state", help="read current game state")
     p_state.add_argument("--json", action="store_true", help="print full JSON instead of compact text")
+    p_state.add_argument("--no-ref-tags", action="store_true",
+                         help="disable compact auto-lookup snippets from references/game JSON")
 
     p_act = sub.add_parser("act", help="send one action to the game")
     p_act.add_argument("action", help="action name, e.g. play / end_turn / choose / map_select")
@@ -1212,6 +2240,8 @@ def main(argv=None):
     p_act.add_argument("--stall-timeout", type=float, default=3.0,
                        help="declare STALL and return if the fingerprint freezes this long "
                             "(polling continues while state keeps changing — no deadline)")
+    p_act.add_argument("--no-ref-tags", action="store_true",
+                       help="disable compact auto-lookup snippets from references/game JSON")
 
     p_batch = sub.add_parser("batch", help="run a JSON array of acts sequentially with settle between")
     p_batch.add_argument("--acts", required=True,
@@ -1222,12 +2252,16 @@ def main(argv=None):
     p_batch.add_argument("--no-wait-final", dest="wait_final", action="store_false")
     p_batch.add_argument("--stall-timeout", type=float, default=3.0,
                          help="declare STALL and abort the batch if the fingerprint freezes this long")
+    p_batch.add_argument("--no-ref-tags", action="store_true",
+                         help="disable compact auto-lookup snippets from references/game JSON")
 
     p_wait = sub.add_parser("wait", help="poll for a state fingerprint change; returns quickly when idle")
     p_wait.add_argument("--quiet", type=float, default=3.0,
                         help="return current state after this many seconds without a fingerprint change")
     p_wait.add_argument("--interval", type=float, default=0.2)
     p_wait.add_argument("--json", action="store_true")
+    p_wait.add_argument("--no-ref-tags", action="store_true",
+                        help="disable compact auto-lookup snippets from references/game JSON")
 
     p_profile = sub.add_parser("profile", help="summarize run-log timing: rtt/settle/client gaps")
     p_profile.add_argument("--log", help="run log path (default: current run)")
@@ -1242,9 +2276,25 @@ def main(argv=None):
     p_sl.add_argument("--menu-timeout", type=float, default=45.0)
     p_sl.add_argument("--stall-timeout", type=float, default=3.0)
 
+    p_lookup = sub.add_parser(
+        "lookup",
+        help="resolve a live game id to its complete reference JSON entry "
+             "(miss path researches spire-codex.com and folds findings into the JSON DB)",
+    )
+    p_lookup.add_argument("key", help="live game id, e.g. GLOMP_MOVE / RAVENOUS_POWER / BURNING_BLOOD / NEOW.pages.INITIAL.options.NEOWS_TALISMAN")
+    p_lookup.add_argument("--json", action="store_true", help="print the raw JSON entry")
+    p_lookup.add_argument("--lang", choices=("en", "zh"),
+                          default=os.environ.get("SPIREBRIDGE_REF_LANG", "en"))
+    p_lookup.add_argument("--domain",
+                          help="restrict search: move|power|relic|card|potion|event|affliction|intent|character|monster")
+    p_lookup.add_argument("--all", action="store_true", help="print every domain match")
+
     sub.add_parser("stop", help="gracefully stop the game (quiet quit -> TERM -> KILL)")
 
     args = parser.parse_args(argv)
+    # Compact ref-tag opt-out: one env switch honored by render_compact.
+    if getattr(args, "no_ref_tags", False):
+        os.environ["SPIREBRIDGE_REF_TAGS"] = "0"
     handlers = {
         "doctor": cmd_doctor,
         "watchdog": cmd_watchdog,
@@ -1256,6 +2306,7 @@ def main(argv=None):
         "launch": cmd_launch,
         "sl": cmd_sl,
         "stop": cmd_stop,
+        "lookup": cmd_lookup,
     }
     try:
         return handlers[args.cmd](args)
