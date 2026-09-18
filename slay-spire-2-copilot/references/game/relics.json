@@ -1,4 +1,20 @@
 {
+  "ADROIT": {
+    "aliases": [
+      "Kifuda",
+      "KIFUDA"
+    ],
+    "character": "shared",
+    "curated": true,
+    "description": "Upon pickup, Enchant up to 3 cards with Adroit.",
+    "id": "ADROIT",
+    "kind": "relic",
+    "name": "Kifuda",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Shop",
+    "source": "codex-api:/relics/KIFUDA"
+  },
   "AKABEKO": {
     "aliases": [
       "Akabeko"
@@ -3990,6 +4006,22 @@
     "source": "md:relics.md:L260; md:relics_zh.md:L260",
     "zh_description": "拾取时，选择 1 张攻击牌附魔 Momentum 5。",
     "zh_name": "拳刃"
+  },
+  "RADIANT": {
+    "aliases": [
+      "Radiant Pearl",
+      "RADIANT_PEARL"
+    ],
+    "character": "shared",
+    "curated": true,
+    "description": "At the start of each combat, add 1 Luminesce into your Hand.",
+    "id": "RADIANT",
+    "kind": "relic",
+    "name": "Radiant Pearl",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Ancient",
+    "source": "codex-api:/relics/RADIANT_PEARL"
   },
   "RADIANT_PEARL": {
     "aliases": [

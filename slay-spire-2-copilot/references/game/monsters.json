@@ -4202,6 +4202,91 @@
     "source": "curated:characters.json cross-ref",
     "zh_name": "故障机器人"
   },
+  "DEVOTED_SCULPTOR": {
+    "acts": [],
+    "aliases": [
+      "Devoted Sculptor"
+    ],
+    "curated": true,
+    "cycle": [
+      "FORBIDDEN_INCANTATION_MOVE",
+      "SAVAGE_MOVE"
+    ],
+    "description": "Devoted Sculptor (Normal): HP 162-None (A 172-None); cycle FORBIDDEN_INCANTATION_MOVE → SAVAGE_MOVE",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 172
+      },
+      "base": 162,
+      "max": null,
+      "notes": ""
+    },
+    "id": "DEVOTED_SCULPTOR",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "FORBIDDEN_INCANTATION_MOVE": {
+        "aliases": [
+          "Forbidden Incantation",
+          "FORBIDDEN_INCANTATION"
+        ],
+        "curated": true,
+        "effect": "Forbidden Incantation: Buff",
+        "follow_up_id": null,
+        "id": "FORBIDDEN_INCANTATION_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DEVOTED_SCULPTOR",
+        "name": "Forbidden Incantation",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DEVOTED_SCULPTOR#FORBIDDEN_INCANTATION",
+        "description": "Forbidden Incantation: opener move (debuff/ritual-setup class) observed T1 run-44 (2,6); DevotedSculptor carries RITUAL_POWER:9 — Strength escalates ~+9/turn thereafter."
+      },
+      "SAVAGE_MOVE": {
+        "aliases": [
+          "Savage",
+          "SAVAGE"
+        ],
+        "curated": true,
+        "effect": "Savage: Attack; damage 12 A:15",
+        "follow_up_id": null,
+        "id": "SAVAGE_MOVE",
+        "intents": [
+          {
+            "base_damage": 12,
+            "base_damage_ascension": {
+              "ascension": 15
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DEVOTED_SCULPTOR",
+        "name": "Savage",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DEVOTED_SCULPTOR#SAVAGE",
+        "description": "Savage: Attack; damage 12 A:15 — live run-44 T4 intent 22 at base12+Str18 (Ritual stacks); Weak Potion shaves per-hit."
+      }
+    },
+    "name": "Devoted Sculptor",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/DEVOTED_SCULPTOR",
+    "type": "Normal"
+  },
   "DampCultist": {
     "acts": [
       "Act1",
@@ -5973,6 +6058,153 @@
     "play_notes": "run-39 live: SUCK +3 Str/instance on unblocked attack hits; full-block attack turns = dormancy. Race doctrine: kill inside 2 turns or block every attack intent.",
     "source": "codex-api + run-39 live T2 kill + powers SUCK doctrine; run-40 live fold 2026-09-18"
   },
+  "FROG_KNIGHT": {
+    "acts": [],
+    "aliases": [
+      "FROG_KNIGHT",
+      "Frog Knight",
+      "青蛙骑士"
+    ],
+    "curated": true,
+    "cycle": [
+      "TONGUE_LASH_MOVE",
+      "STRIKE_DOWN_EVIL_MOVE",
+      "FOR_THE_QUEEN_MOVE",
+      "HALF_HEALTH",
+      "BEETLE_CHARGE_MOVE"
+    ],
+    "description": "Act3 normal monster (run-44 floor 46 — run-33's killer, revenge-killed T6). PLATING live 15: side-turn start -1 stack (not holder turn 1); end of holder side turn gain Amount Block — chip plating block each turn. LIVE CYCLE from move_graph: TONGUE_LASH (13 A:14 + FRAIL 2 on player) -> STRIKE_DOWN_EVIL (21 A:23) -> FOR_THE_QUEEN (Buff +5 Str self) -> HALF_HEALTH conditional_branch -> BEETLE_CHARGE (35 A:40) -> loops. HALF_HEALTH LIVE (run-44): branch resolved BACK to TONGUE_LASH while HP was above 50% (170/191) — at >50% the Beetle Charge segment appears skipped; killed T6 before observing the below-50% branch. Doctrine: pace plating 15/turn, compute live block vs intent under Frail 2, burst FOR_THE_QUEEN turns, watch HP crossing 95.5 for the branch.",
+    "hp": {
+      "base": 191,
+      "notes": "191 live run-44 Act3 (12,6); codex A:199",
+      "ascension": {
+        "min": 199,
+        "max": null
+      }
+    },
+    "id": "FROG_KNIGHT",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "BEETLE_CHARGE_MOVE": {
+        "aliases": [
+          "Beetle Charge",
+          "BEETLE_CHARGE"
+        ],
+        "curated": true,
+        "effect": "Beetle Charge: Attack; damage 35 A:40",
+        "follow_up_id": null,
+        "id": "BEETLE_CHARGE_MOVE",
+        "intents": [
+          {
+            "base_damage": 35,
+            "base_damage_ascension": {
+              "ascension": 40
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "FROG_KNIGHT",
+        "name": "Beetle Charge",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/FROG_KNIGHT#BEETLE_CHARGE",
+        "description": "Beetle Charge: Attack; damage 35 A:40 — codex value; NOT observed live run-44 (HALF_HEALTH branch skipped it while HP >50%)."
+      },
+      "FOR_THE_QUEEN_MOVE": {
+        "aliases": [
+          "For the Queen",
+          "FOR_THE_QUEEN"
+        ],
+        "curated": true,
+        "effect": "For the Queen: Buff; STRENGTH 5 (self)",
+        "follow_up_id": null,
+        "id": "FOR_THE_QUEEN_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "FROG_KNIGHT",
+        "name": "For the Queen",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/FROG_KNIGHT#FOR_THE_QUEEN",
+        "description": "For the Queen: Buff; STRENGTH 5 (self) — live run-44 (12,6); free turn for the player, burst window."
+      },
+      "STRIKE_DOWN_EVIL_MOVE": {
+        "aliases": [
+          "Strike Down Evil",
+          "STRIKE_DOWN_EVIL"
+        ],
+        "curated": true,
+        "effect": "Strike Down Evil: Attack; damage 21 A:23",
+        "follow_up_id": null,
+        "id": "STRIKE_DOWN_EVIL_MOVE",
+        "intents": [
+          {
+            "base_damage": 21,
+            "base_damage_ascension": {
+              "ascension": 23
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "FROG_KNIGHT",
+        "name": "Strike Down Evil",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/FROG_KNIGHT#STRIKE_DOWN_EVIL",
+        "description": "Strike Down Evil: Attack; damage 21 A:23 — live run-44 (12,6)."
+      },
+      "TONGUE_LASH_MOVE": {
+        "aliases": [
+          "Tongue Lash",
+          "TONGUE_LASH"
+        ],
+        "curated": true,
+        "effect": "Tongue Lash: Attack + Debuff; damage 13 A:14; FRAIL 2 (player)",
+        "follow_up_id": null,
+        "id": "TONGUE_LASH_MOVE",
+        "intents": [
+          {
+            "base_damage": 13,
+            "base_damage_ascension": {
+              "ascension": 14
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "FROG_KNIGHT",
+        "name": "Tongue Lash",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/FROG_KNIGHT#TONGUE_LASH",
+        "description": "Tongue Lash: Attack + Debuff; damage 13 A:14 + FRAIL 2 (player) — live run-44 (12,6); Frail weakens player block cards ~2 turns."
+      }
+    },
+    "name": "Frog Knight",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "run-44 live (full move_graph JSON + T6 kill) + codex FROG_KNIGHT",
+    "type": "Normal",
+    "zh_name": "青蛙骑士",
+    "source_zh": "run-44 live（完整 move_graph JSON + T6 击杀）+ codex FROG_KNIGHT"
+  },
   "FUZZY_WURM_CRAWLER": {
     "acts": [],
     "aliases": [
@@ -6892,6 +7124,123 @@
       "INHALE": "增益 +7 力量。循环：酸液 → 吸气 → 酸液…"
     },
     "zh_name": "毛绒伏地虫"
+  },
+  "GREMLIN_MERC": {
+    "acts": [],
+    "aliases": [
+      "Gremlin Merc"
+    ],
+    "curated": true,
+    "cycle": [
+      "GIMME_MOVE",
+      "DOUBLE_SMASH_MOVE",
+      "HEHE_MOVE"
+    ],
+    "description": "Gremlin Merc (Normal): HP 47-49 (A 51-53); cycle GIMME_MOVE → DOUBLE_SMASH_MOVE → HEHE_MOVE",
+    "hp": {
+      "ascension": {
+        "max": 53,
+        "min": 51
+      },
+      "base": 47,
+      "max": 49,
+      "notes": ""
+    },
+    "id": "GREMLIN_MERC",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "DOUBLE_SMASH_MOVE": {
+        "aliases": [
+          "Double Smash",
+          "DOUBLE_SMASH"
+        ],
+        "curated": true,
+        "effect": "Double Smash: Attack + Debuff; damage 6x2 A:7; WEAK 2 (player)",
+        "follow_up_id": null,
+        "id": "DOUBLE_SMASH_MOVE",
+        "intents": [
+          {
+            "base_damage": 6,
+            "base_damage_ascension": {
+              "ascension": 7
+            },
+            "class": "MultiAttackIntent",
+            "hits": 2,
+            "type": "Attack + Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "GREMLIN_MERC",
+        "name": "Double Smash",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/GREMLIN_MERC#DOUBLE_SMASH",
+        "description": "Double Smash: GremlinMerc move — live id from run logs; effect not yet decoded (codex stub, research pending). Do not plan around it."
+      },
+      "GIMME_MOVE": {
+        "aliases": [
+          "Gimme",
+          "GIMME"
+        ],
+        "curated": true,
+        "effect": "Gimme: Attack; damage 7x2 A:8",
+        "follow_up_id": null,
+        "id": "GIMME_MOVE",
+        "intents": [
+          {
+            "base_damage": 7,
+            "base_damage_ascension": {
+              "ascension": 8
+            },
+            "class": "MultiAttackIntent",
+            "hits": 2,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "GREMLIN_MERC",
+        "name": "Gimme",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/GREMLIN_MERC#GIMME",
+        "description": "Gimme: GremlinMerc move — live id from run logs; effect not yet decoded (codex stub, research pending). Do not plan around it."
+      },
+      "HEHE_MOVE": {
+        "aliases": [
+          "Hehe",
+          "HEHE"
+        ],
+        "curated": true,
+        "effect": "Hehe: Attack + Buff; damage 8 A:9; STRENGTH 2 (self)",
+        "follow_up_id": null,
+        "id": "HEHE_MOVE",
+        "intents": [
+          {
+            "base_damage": 8,
+            "base_damage_ascension": {
+              "ascension": 9
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "GREMLIN_MERC",
+        "name": "Hehe",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/GREMLIN_MERC#HEHE",
+        "description": "Hehe: GremlinMerc move — live id from run logs; effect not yet decoded (codex stub, research pending). Do not plan around it."
+      }
+    },
+    "name": "Gremlin Merc",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/GREMLIN_MERC",
+    "type": "Normal"
   },
   "GasBomb": {
     "acts": [
@@ -9780,6 +10129,146 @@
       "WEB_CANNON_MOVE": "单次攻击 9 (A:10) + 2 Frail；"
     },
     "zh_name": "泥虫之祖"
+  },
+  "MECHA_KNIGHT": {
+    "acts": [],
+    "aliases": [
+      "Mecha Knight"
+    ],
+    "curated": true,
+    "cycle": [
+      "CHARGE_MOVE",
+      "FLAMETHROWER_MOVE",
+      "WINDUP_MOVE",
+      "HEAVY_CLEAVE_MOVE"
+    ],
+    "description": "Mecha Knight (Elite): HP 300-None (A 320-None); cycle CHARGE_MOVE → FLAMETHROWER_MOVE → WINDUP_MOVE → HEAVY_CLEAVE_MOVE",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 320
+      },
+      "base": 300,
+      "max": null,
+      "notes": ""
+    },
+    "id": "MECHA_KNIGHT",
+    "is_boss": false,
+    "is_elite": true,
+    "kind": "monster",
+    "moves": {
+      "CHARGE_MOVE": {
+        "aliases": [
+          "Charge",
+          "CHARGE"
+        ],
+        "curated": true,
+        "effect": "Charge: Attack; damage 25 A:30",
+        "follow_up_id": null,
+        "id": "CHARGE_MOVE",
+        "intents": [
+          {
+            "base_damage": 25,
+            "base_damage_ascension": {
+              "ascension": 30
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "MECHA_KNIGHT",
+        "name": "Charge",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/MECHA_KNIGHT#CHARGE",
+        "description": "Charge: Attack; live run-44 (10,6) T1 intent 18 — the codex base-3 A:4 note was mistranscribed from another monster's move; live 18 authoritative."
+      },
+      "FLAMETHROWER_MOVE": {
+        "aliases": [
+          "Flamethrower",
+          "FLAMETHROWER"
+        ],
+        "curated": true,
+        "effect": "Flamethrower: Status",
+        "follow_up_id": null,
+        "id": "FLAMETHROWER_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Status"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "MECHA_KNIGHT",
+        "name": "Flamethrower",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/MECHA_KNIGHT#FLAMETHROWER",
+        "description": "Flamethrower: Status — injects 4 BURN status cards into the player deck/discard (unplayable, tick HP at turn end); live run-44 T2 intent status:4c."
+      },
+      "HEAVY_CLEAVE_MOVE": {
+        "aliases": [
+          "Heavy Cleave",
+          "HEAVY_CLEAVE"
+        ],
+        "curated": true,
+        "effect": "Heavy Cleave: Attack; damage 35 A:40",
+        "follow_up_id": null,
+        "id": "HEAVY_CLEAVE_MOVE",
+        "intents": [
+          {
+            "base_damage": 35,
+            "base_damage_ascension": {
+              "ascension": 40
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "MECHA_KNIGHT",
+        "name": "Heavy Cleave",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/MECHA_KNIGHT#HEAVY_CLEAVE",
+        "description": "Heavy Cleave: Attack; damage 35 A:40 — live run-44 T4 intent 40 at base35+Str5."
+      },
+      "WINDUP_MOVE": {
+        "aliases": [
+          "Windup",
+          "WINDUP"
+        ],
+        "curated": true,
+        "effect": "Windup: Defend + Buff; block 15; STRENGTH 5 (self)",
+        "follow_up_id": null,
+        "id": "WINDUP_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Defend + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "MECHA_KNIGHT",
+        "name": "Windup",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/MECHA_KNIGHT#WINDUP",
+        "description": "Windup: Defend + Buff; block 15 self + STRENGTH 5 self — live run-44 T3; next cycle move HEAVY_CLEAVE benefits from the Strength."
+      }
+    },
+    "name": "Mecha Knight",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/MECHA_KNIGHT",
+    "type": "Elite"
   },
   "MagiKnight": {
     "acts": [],
@@ -12670,6 +13159,120 @@
     "zh_description": "红宝石劫掠者小队（Act1 RubyRaidersNormal）：刺客 KILLSHOT 10（A:11，18-23 HP）；斧手 SWING_1/2 单段 5+5 格挡（A:6）、BIG_SWING 12（A:13，20-22 HP）；暴徒 BEAT 7（A:8）、ROAR 自身+3 力量（30-33 HP）；弩手 FIRE 14（A:16）、RELOAD 防御（18-21 HP）；追踪手 TRACK 减益 2 脆弱、HOUNDS 多段 1x8（A:9，21-25 HP）。优先击杀暴徒/弩手的高伤意图。",
     "zh_name": "红宝石劫掠者"
   },
+  "SCROLL_OF_BITING": {
+    "acts": [],
+    "aliases": [
+      "Scroll of Biting"
+    ],
+    "curated": true,
+    "cycle": [
+      "CHOMP_MOVE",
+      "CHEW_MOVE",
+      "MORE_TEETH_MOVE"
+    ],
+    "description": "Scroll of Biting (Normal): HP 30-37 (A 33-39); cycle CHOMP_MOVE → CHEW_MOVE → MORE_TEETH_MOVE",
+    "hp": {
+      "ascension": {
+        "max": 39,
+        "min": 33
+      },
+      "base": 30,
+      "max": 37,
+      "notes": ""
+    },
+    "id": "SCROLL_OF_BITING",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "CHEW_MOVE": {
+        "aliases": [
+          "Chew",
+          "CHEW"
+        ],
+        "curated": true,
+        "effect": "Chew: Attack; damage 5x2 A:6",
+        "follow_up_id": null,
+        "id": "CHEW_MOVE",
+        "intents": [
+          {
+            "base_damage": 5,
+            "base_damage_ascension": {
+              "ascension": 6
+            },
+            "class": "MultiAttackIntent",
+            "hits": 2,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SCROLL_OF_BITING",
+        "name": "Chew",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SCROLL_OF_BITING#CHEW",
+        "description": "Chew: Attack multi; damage 5x2 A:6/hit — live run-44 (5,6); PAPER_CUTS tax fires per unblocked attacker."
+      },
+      "CHOMP_MOVE": {
+        "aliases": [
+          "Chomp",
+          "CHOMP"
+        ],
+        "curated": true,
+        "effect": "Chomp: Attack; damage 14 A:16",
+        "follow_up_id": null,
+        "id": "CHOMP_MOVE",
+        "intents": [
+          {
+            "base_damage": 14,
+            "base_damage_ascension": {
+              "ascension": 16
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SCROLL_OF_BITING",
+        "name": "Chomp",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SCROLL_OF_BITING#CHOMP",
+        "description": "Chomp: Attack; damage 14 A:16 — live run-44 (5,6) intents 14, cut to 10 under Weak5."
+      },
+      "MORE_TEETH_MOVE": {
+        "aliases": [
+          "More Teeth",
+          "MORE_TEETH"
+        ],
+        "curated": true,
+        "effect": "More Teeth: Buff; STRENGTH 2 (self)",
+        "follow_up_id": null,
+        "id": "MORE_TEETH_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SCROLL_OF_BITING",
+        "name": "More Teeth",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SCROLL_OF_BITING#MORE_TEETH",
+        "description": "More Teeth: Buff; STRENGTH 2 (self) — live run-44 (5,6)."
+      }
+    },
+    "name": "Scroll of Biting",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/SCROLL_OF_BITING",
+    "type": "Normal"
+  },
   "SEAPUNK": {
     "acts": [
       "Act1"
@@ -13055,6 +13658,146 @@
     "source": "codex-api:/monsters/SKULKING_COLONY",
     "type": "Elite"
   },
+  "SLIMED_BERSERKER": {
+    "acts": [],
+    "aliases": [
+      "Slimed Berserker"
+    ],
+    "curated": true,
+    "cycle": [
+      "VOMIT_ICHOR_MOVE",
+      "LEECHING_HUG_MOVE",
+      "SMOTHER_MOVE",
+      "FURIOUS_PUMMELING_MOVE"
+    ],
+    "description": "Slimed Berserker (Normal): HP 261-None (A 281-None); cycle VOMIT_ICHOR_MOVE → LEECHING_HUG_MOVE → SMOTHER_MOVE → FURIOUS_PUMMELING_MOVE",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 281
+      },
+      "base": 261,
+      "max": null,
+      "notes": ""
+    },
+    "id": "SLIMED_BERSERKER",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "FURIOUS_PUMMELING_MOVE": {
+        "aliases": [
+          "Furious Pummeling",
+          "FURIOUS_PUMMELING"
+        ],
+        "curated": true,
+        "effect": "Furious Pummeling: Attack; damage 4x4 A:5",
+        "follow_up_id": null,
+        "id": "FURIOUS_PUMMELING_MOVE",
+        "intents": [
+          {
+            "base_damage": 4,
+            "base_damage_ascension": {
+              "ascension": 5
+            },
+            "class": "MultiAttackIntent",
+            "hits": 4,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SLIMED_BERSERKER",
+        "name": "Furious Pummeling",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SLIMED_BERSERKER#FURIOUS_PUMMELING",
+        "description": "Furious Pummeling: Attack; damage 4x4 A:5/hit — live run-44 (4,5) T2."
+      },
+      "LEECHING_HUG_MOVE": {
+        "aliases": [
+          "Leeching Hug",
+          "LEECHING_HUG"
+        ],
+        "curated": true,
+        "effect": "Leeching Hug: Debuff + Buff; WEAK 3 (player); STRENGTH 3 (self)",
+        "follow_up_id": null,
+        "id": "LEECHING_HUG_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Debuff + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SLIMED_BERSERKER",
+        "name": "Leeching Hug",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SLIMED_BERSERKER#LEECHING_HUG",
+        "description": "Leeching Hug: Debuff + Buff; WEAK 3 (player) + STRENGTH 3 (self) — live run-44 (4,5) T3."
+      },
+      "SMOTHER_MOVE": {
+        "aliases": [
+          "Smother",
+          "SMOTHER"
+        ],
+        "curated": true,
+        "effect": "Smother: Attack; damage 30 A:33",
+        "follow_up_id": null,
+        "id": "SMOTHER_MOVE",
+        "intents": [
+          {
+            "base_damage": 30,
+            "base_damage_ascension": {
+              "ascension": 33
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SLIMED_BERSERKER",
+        "name": "Smother",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SLIMED_BERSERKER#SMOTHER",
+        "description": "Smother: Attack; damage 30 A:33 — live run-44 (4,5) T4."
+      },
+      "VOMIT_ICHOR_MOVE": {
+        "aliases": [
+          "Vomit Ichor",
+          "VOMIT_ICHOR"
+        ],
+        "curated": true,
+        "effect": "Vomit Ichor: Status",
+        "follow_up_id": null,
+        "id": "VOMIT_ICHOR_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Status"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SLIMED_BERSERKER",
+        "name": "Vomit Ichor",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SLIMED_BERSERKER#VOMIT_ICHOR",
+        "description": "Vomit Ichor: Status — injects 10 SLIMED status cards into the player's discard (unplayable status tax); live run-44 (4,5) T1 intent status:10c."
+      }
+    },
+    "name": "Slimed Berserker",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/SLIMED_BERSERKER",
+    "type": "Normal"
+  },
   "SLUDGE_SPINNER": {
     "acts": [
       "Act1"
@@ -13168,6 +13911,123 @@
     "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "source": "codex-api + run-43 live",
     "type": "Normal"
+  },
+  "SOUL_NEXUS": {
+    "acts": [],
+    "aliases": [
+      "Soul Nexus"
+    ],
+    "curated": true,
+    "cycle": [
+      "SOUL_BURN_MOVE",
+      "MAELSTROM_MOVE",
+      "DRAIN_LIFE_MOVE"
+    ],
+    "description": "Soul Nexus (Elite): HP 234-None (A 254-None); cycle SOUL_BURN_MOVE → MAELSTROM_MOVE → DRAIN_LIFE_MOVE",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 254
+      },
+      "base": 234,
+      "max": null,
+      "notes": ""
+    },
+    "id": "SOUL_NEXUS",
+    "is_boss": false,
+    "is_elite": true,
+    "kind": "monster",
+    "moves": {
+      "DRAIN_LIFE_MOVE": {
+        "aliases": [
+          "Drain Life",
+          "DRAIN_LIFE"
+        ],
+        "curated": true,
+        "effect": "Drain Life: Attack + Debuff; damage 18 A:19; VULNERABLE 2 (player); WEAK 2 (player)",
+        "follow_up_id": null,
+        "id": "DRAIN_LIFE_MOVE",
+        "intents": [
+          {
+            "base_damage": 18,
+            "base_damage_ascension": {
+              "ascension": 19
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SOUL_NEXUS",
+        "name": "Drain Life",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SOUL_NEXUS#DRAIN_LIFE",
+        "description": "Drain Life: Attack + Debuff; damage 18 A:19 + FRAIL 2 (player) + WEAK 2 (player) — live run-44 RAND branch result."
+      },
+      "MAELSTROM_MOVE": {
+        "aliases": [
+          "Maelstrom",
+          "MAELSTROM"
+        ],
+        "curated": true,
+        "effect": "Maelstrom: Attack; damage 6x4 A:7",
+        "follow_up_id": null,
+        "id": "MAELSTROM_MOVE",
+        "intents": [
+          {
+            "base_damage": 6,
+            "base_damage_ascension": {
+              "ascension": 7
+            },
+            "class": "MultiAttackIntent",
+            "hits": 4,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SOUL_NEXUS",
+        "name": "Maelstrom",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SOUL_NEXUS#MAELSTROM",
+        "description": "Maelstrom: Attack multi; damage 6x4 A:7/hit — live run-44 RAND branch result."
+      },
+      "SOUL_BURN_MOVE": {
+        "aliases": [
+          "Soul Burn",
+          "SOUL_BURN"
+        ],
+        "curated": true,
+        "effect": "Soul Burn: Attack; damage 29 A:31",
+        "follow_up_id": null,
+        "id": "SOUL_BURN_MOVE",
+        "intents": [
+          {
+            "base_damage": 29,
+            "base_damage_ascension": {
+              "ascension": 31
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SOUL_NEXUS",
+        "name": "Soul Burn",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SOUL_NEXUS#SOUL_BURN",
+        "description": "Soul Burn: Attack; damage 29 A:31 — live run-44 (8,6) T1; followed by RAND branch (Maelstrom/Drain Life 50/50 live)."
+      }
+    },
+    "name": "Soul Nexus",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/SOUL_NEXUS",
+    "type": "Elite"
   },
   "SPINY_TOAD": {
     "acts": [
@@ -15382,6 +16242,260 @@
     "source": "codex-api:/monsters/TERROR_EEL",
     "type": "Elite"
   },
+  "THE_INSATIABLE": {
+    "acts": [],
+    "aliases": [
+      "The Insatiable"
+    ],
+    "curated": true,
+    "cycle": [
+      "LIQUIFY_GROUND_MOVE",
+      "THRASH_MOVE",
+      "THRASH_MOVE_2_MOVE",
+      "LUNGING_BITE_MOVE",
+      "SALIVATE_MOVE"
+    ],
+    "description": "The Insatiable (Boss): HP 321-None (A 341-None); cycle LIQUIFY_GROUND_MOVE → THRASH_MOVE → THRASH_MOVE_2_MOVE → LUNGING_BITE_MOVE → SALIVATE_MOVE",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 341
+      },
+      "base": 321,
+      "max": null,
+      "notes": ""
+    },
+    "id": "THE_INSATIABLE",
+    "is_boss": true,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "LIQUIFY_GROUND_MOVE": {
+        "aliases": [
+          "Liquify Ground",
+          "LIQUIFY_GROUND"
+        ],
+        "curated": true,
+        "effect": "Liquify Ground: Buff + Status",
+        "follow_up_id": null,
+        "id": "LIQUIFY_GROUND_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Buff + Status"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "THE_INSATIABLE",
+        "name": "Liquify Ground",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/THE_INSATIABLE#LIQUIFY_GROUND",
+        "description": "Liquefy Ground: TheInsatiable cycle move (ground-hazard class) — run-44 Act2 boss fight; see SANDPIT doctrine in monster description."
+      },
+      "LUNGING_BITE_MOVE": {
+        "aliases": [
+          "Lunging Bite",
+          "LUNGING_BITE"
+        ],
+        "curated": true,
+        "effect": "Lunging Bite: Attack; damage 28 A:31",
+        "follow_up_id": null,
+        "id": "LUNGING_BITE_MOVE",
+        "intents": [
+          {
+            "base_damage": 28,
+            "base_damage_ascension": {
+              "ascension": 31
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "THE_INSATIABLE",
+        "name": "Lunging Bite",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/THE_INSATIABLE#LUNGING_BITE",
+        "description": "Lunging Bite: Attack class TheInsatiable cycle move — run-44 Act2 boss fight; see SANDPIT doctrine in monster description."
+      },
+      "SALIVATE_MOVE": {
+        "aliases": [
+          "Salivate",
+          "SALIVATE"
+        ],
+        "curated": true,
+        "effect": "Salivate: Buff; STRENGTH 2 (self)",
+        "follow_up_id": null,
+        "id": "SALIVATE_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "THE_INSATIABLE",
+        "name": "Salivate",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/THE_INSATIABLE#SALIVATE",
+        "description": "Salivate: TheInsatiable cycle move (status/debuff class opener) — Act2 boss run-44 (Act2 boss T7 kill); see monster description for the SANDPIT devour-timer doctrine."
+      },
+      "THRASH_MOVE": {
+        "aliases": [
+          "Thrash",
+          "THRASH"
+        ],
+        "curated": true,
+        "effect": "Thrash: Attack; damage 8x2 A:9",
+        "follow_up_id": null,
+        "id": "THRASH_MOVE",
+        "intents": [
+          {
+            "base_damage": 8,
+            "base_damage_ascension": {
+              "ascension": 9
+            },
+            "class": "MultiAttackIntent",
+            "hits": 2,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "THE_INSATIABLE",
+        "name": "Thrash",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/THE_INSATIABLE#THRASH",
+        "description": "Thrash: Attack class TheInsatiable cycle move — run-44 Act2 boss fight; see SANDPIT doctrine in monster description."
+      },
+      "THRASH_MOVE_2_MOVE": {
+        "aliases": [
+          "Thrash Move 2",
+          "THRASH_MOVE_2"
+        ],
+        "curated": true,
+        "effect": "Thrash Move 2: Attack; damage 8x2 A:9",
+        "follow_up_id": null,
+        "id": "THRASH_MOVE_2_MOVE",
+        "intents": [
+          {
+            "base_damage": 8,
+            "base_damage_ascension": {
+              "ascension": 9
+            },
+            "class": "MultiAttackIntent",
+            "hits": 2,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "THE_INSATIABLE",
+        "name": "Thrash Move 2",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/THE_INSATIABLE#THRASH_MOVE_2",
+        "description": "Thrash 2: Attack class TheInsatiable cycle move — run-44 Act2 boss fight; see SANDPIT doctrine in monster description."
+      }
+    },
+    "name": "The Insatiable",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/THE_INSATIABLE",
+    "type": "Boss"
+  },
+  "THE_LOST": {
+    "acts": [],
+    "aliases": [
+      "The Lost"
+    ],
+    "curated": true,
+    "cycle": [
+      "DEBILITATING_SMOG_MOVE",
+      "EYE_LASERS_MOVE"
+    ],
+    "description": "The Lost (Normal): HP 93-None (A 99-None); cycle DEBILITATING_SMOG_MOVE → EYE_LASERS_MOVE",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 99
+      },
+      "base": 93,
+      "max": null,
+      "notes": ""
+    },
+    "id": "THE_LOST",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "DEBILITATING_SMOG_MOVE": {
+        "aliases": [
+          "Debilitating Smog",
+          "DEBILITATING_SMOG"
+        ],
+        "curated": true,
+        "effect": "Debilitating Smog: Debuff + Buff; STRENGTH 2 (self)",
+        "follow_up_id": null,
+        "id": "DEBILITATING_SMOG_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Debuff + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "THE_LOST",
+        "name": "Debilitating Smog",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/THE_LOST#DEBILITATING_SMOG",
+        "description": "Debilitating Smog: Debuff + Buff; STRENGTH 2 (self) — live run-44 (3,6) T1; cycle then EYE_LASERS."
+      },
+      "EYE_LASERS_MOVE": {
+        "aliases": [
+          "Eye Lasers",
+          "EYE_LASERS"
+        ],
+        "curated": true,
+        "effect": "Eye Lasers: Attack; damage 4x2 A:5",
+        "follow_up_id": null,
+        "id": "EYE_LASERS_MOVE",
+        "intents": [
+          {
+            "base_damage": 4,
+            "base_damage_ascension": {
+              "ascension": 5
+            },
+            "class": "MultiAttackIntent",
+            "hits": 2,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "THE_LOST",
+        "name": "Eye Lasers",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/THE_LOST#EYE_LASERS",
+        "description": "Eye Lasers: Attack multi; damage 11x2 A:12/hit — live run-44 displayed 6x2 at base4+Str2 under Weak; POSSESS_STRENGTH refunds on kill."
+      }
+    },
+    "name": "The Lost",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/THE_LOST",
+    "type": "Normal"
+  },
   "THIEVING_HOPPER": {
     "acts": [
       "Act2"
@@ -15421,6 +16535,192 @@
     "kind": "monster",
     "name": "Toadpole",
     "source": "; run-40 live fold 2026-09-18"
+  },
+  "TORCH_HEAD_AMALGAM": {
+    "acts": [],
+    "aliases": [
+      "TORCH_HEAD_AMALGAM",
+      "Torch Head Amalgam",
+      "火炬头聚合体"
+    ],
+    "curated": true,
+    "cycle": [
+      "TACKLE_MOVE",
+      "TACKLE_2_MOVE",
+      "BEAM_MOVE",
+      "TACKLE_3_MOVE",
+      "TACKLE_4_MOVE"
+    ],
+    "description": "Act3 Boss add (MINION:1 marked). LIVE CYCLE (run-44): TACKLE 18 (codex said base 3 A:4 — live 18 authoritative) -> TACKLE_2 18 -> BEAM multi base 8x3 (live display 12x3 under player Vuln amp) -> TACKLE_3 14 (A:15) -> TACKLE_4 14 (A:15), loops. Queen's Burn Bright grants +1 Str per her loop turn — left alive it escalates 18 to 22 to 36-class Beam. THREAT-SOURCE DOCTRINE (run-44 live): during Queen's Burn Bright loop TorchHead carries 100% of incoming — correct FIRST kill despite MINION (pressure drops to zero even though combat continues). Run-44 attempt-2 killed it T6 via PS+ One-Two doubled 47+8 at 55/199; Queen's loop resolved the same turn.",
+    "hp": {
+      "base": 199,
+      "notes": "199 live run-44; codex A:211",
+      "ascension": {
+        "min": 211,
+        "max": null
+      }
+    },
+    "id": "TORCH_HEAD_AMALGAM",
+    "is_boss": true,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "BEAM_MOVE": {
+        "aliases": [
+          "Beam",
+          "BEAM"
+        ],
+        "curated": true,
+        "effect": "Beam: Attack; damage 8x3 A:8",
+        "follow_up_id": null,
+        "id": "BEAM_MOVE",
+        "intents": [
+          {
+            "base_damage": 8,
+            "base_damage_ascension": {
+              "ascension": 8
+            },
+            "class": "MultiAttackIntent",
+            "hits": 3,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TORCH_HEAD_AMALGAM",
+        "name": "Beam",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/TORCH_HEAD_AMALGAM#BEAM",
+        "description": "Beam: Attack multi; base 8x3 (live run-44 displayed 12x3 under player Vuln amp; stale archive note said 3x3) — A:6/hit per codex."
+      },
+      "TACKLE_2_MOVE": {
+        "aliases": [
+          "Tackle 2",
+          "TACKLE_2"
+        ],
+        "curated": true,
+        "effect": "Tackle 2: Attack; damage 18 A:19",
+        "follow_up_id": null,
+        "id": "TACKLE_2_MOVE",
+        "intents": [
+          {
+            "base_damage": 18,
+            "base_damage_ascension": {
+              "ascension": 19
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TORCH_HEAD_AMALGAM",
+        "name": "Tackle 2",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/TORCH_HEAD_AMALGAM#TACKLE_2",
+        "description": "Tackle 2: Attack; damage 18 A:19 — live run-44."
+      },
+      "TACKLE_3_MOVE": {
+        "aliases": [
+          "Tackle 3",
+          "TACKLE_3"
+        ],
+        "curated": true,
+        "effect": "Tackle 3: Attack; damage 14 A:15",
+        "follow_up_id": null,
+        "id": "TACKLE_3_MOVE",
+        "intents": [
+          {
+            "base_damage": 14,
+            "base_damage_ascension": {
+              "ascension": 15
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TORCH_HEAD_AMALGAM",
+        "name": "Tackle 3",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/TORCH_HEAD_AMALGAM#TACKLE_3",
+        "description": "Tackle 3: Attack; damage 14 A:15 — live run-44."
+      },
+      "TACKLE_4_MOVE": {
+        "aliases": [
+          "Tackle 4",
+          "TACKLE_4"
+        ],
+        "curated": true,
+        "effect": "Tackle 4: Attack; damage 14 A:15",
+        "follow_up_id": null,
+        "id": "TACKLE_4_MOVE",
+        "intents": [
+          {
+            "base_damage": 14,
+            "base_damage_ascension": {
+              "ascension": 15
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TORCH_HEAD_AMALGAM",
+        "name": "Tackle 4",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/TORCH_HEAD_AMALGAM#TACKLE_4",
+        "description": "Tackle 4: Attack; damage 14 A:15 — live run-44."
+      },
+      "TACKLE_MOVE": {
+        "aliases": [
+          "Tackle",
+          "TACKLE"
+        ],
+        "curated": true,
+        "effect": "Tackle: Attack; damage 18 A:19",
+        "follow_up_id": null,
+        "id": "TACKLE_MOVE",
+        "intents": [
+          {
+            "base_damage": 18,
+            "base_damage_ascension": {
+              "ascension": 19
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TORCH_HEAD_AMALGAM",
+        "name": "Tackle",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/TORCH_HEAD_AMALGAM#TACKLE",
+        "description": "Tackle: Attack; live run-44 T1 intent 18 — codex base-3 A:4 note mistranscribed; live 18 authoritative."
+      }
+    },
+    "name": "Torch Head Amalgam",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "run-44 boss live + codex TORCH_HEAD_AMALGAM",
+    "type": "Boss",
+    "zh_name": "火炬头聚合体",
+    "passives": [
+      {
+        "power_id": "MINION_POWER",
+        "amount": 1,
+        "counter_class": false,
+        "description": "death does not end combat; see MINION threat-source qualifier"
+      }
+    ],
+    "source_zh": "run-44 Boss 战 live + codex TORCH_HEAD_AMALGAM"
   },
   "TUNNELER": {
     "curated": true,
@@ -19415,5 +20715,47 @@
     "source": "generator:synthesized",
     "zh_description": "共享/未归属的 live 招式 id。当没有怪物条目认领时 lookup 在此解析——折叠进对应怪物条目前以 live state 的意图字段为权威。",
     "zh_name": "共享招式"
+  },
+  "QUEEN": {
+    "id": "QUEEN",
+    "kind": "monster",
+    "aliases": [
+      "QUEEN",
+      "Queen",
+      "女王"
+    ],
+    "name": "Queen",
+    "zh_name": "女王",
+    "is_boss": true,
+    "is_elite": false,
+    "hp": {
+      "base": 400,
+      "notes": "400 live run-44; codex A:419",
+      "ascension": {
+        "min": 419,
+        "max": null
+      }
+    },
+    "cycle": [
+      "PUPPET_STRINGS_MOVE",
+      "YOU_ARE_MINE_MOVE",
+      "BURN_BRIGHT_FOR_ME_MOVE",
+      "ENRAGE_MOVE",
+      "OFF_WITH_YOUR_HEAD_MOVE",
+      "EXECUTION_MOVE"
+    ],
+    "passives": [
+      {
+        "power_id": "CHAINS_OF_BINDING_POWER",
+        "amount": 3,
+        "counter_class": true,
+        "description": "placed on the PLAYER via Puppet Strings"
+      }
+    ],
+    "source": "run-44 boss live (two attempts full cycle) + codex QUEEN",
+    "source_zh": "run-44 Boss 战 live（两周目全循环）+ codex QUEEN",
+    "description": "Act3 Boss (run-44 floor 48). Master of the Queen+TorchHead fight — win condition = Queen HP 0 (TorchHead is MINION-marked; its death does not end combat). LIVE CYCLE: PUPPET_STRINGS (ChainsOfBinding 3 on player) -> YOU_ARE_MINE (99 Frail/Weak/Vuln on player; lands turn 2 EVERY run, unavoidable; Weak decrements 1/turn, near-permanent soft-lock) -> conditional branch (BURN_BRIGHT_FOR_ME_BRANCH / YOURE_MINE_NOW_BRANCH) -> while branch unresolved she loops BURN_BRIGHT_FOR_ME (block 20 self + TorchHead +1 Str; zero incoming from her) -> after branch resolves: ENRAGE (+2 Str self) -> OFF_WITH_YOUR_HEAD (base 3 x5; live 5x5 at Str2, 10x5 at Str4 through player Vuln amp) -> EXECUTION (single 15 A:18; live 19 at Str2) -> ENRAGE loop, +2 Str each cycle. KILL DOCTRINE (run-44 live, two attempts): (1) TorchHead is the only threat during the Burn Bright loop — kill the add first, incoming drops to zero; (2) You Are Mine cuts attack cards to ~25% for ~99 turns — the race is Weak-immune damage: powers (Echo-doubled Inferno 12/tick), relic ticks (Letter Opener 5 per 3 skills), poison (Snakebite 10/turn); (3) after branch resolves she becomes the attacker — block economy must outpace her escalating Str cycle; (4) Chains of Binding throttles plays — play every bridge-ok card. Run-44 attempt-2 died at Queen 174/400 with engines ticking — winnable if the Weak-immune package sequences from T3 instead of T7+.",
+    "curated": true,
+    "needs_zh": false
   }
 }

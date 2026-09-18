@@ -1,4 +1,20 @@
 {
+  "ADROIT": {
+    "aliases": [
+      "Kifuda",
+      "KIFUDA"
+    ],
+    "character": "shared",
+    "curated": true,
+    "description": "ADROIT（live id：run-43/44 商店 Kifuda 类商品关联；效果未解码 — codex 存根，研究待办）。教条：未解码遗物在商店不购买（run-44 以 221g 跳过 Kifuda 即此教条）。",
+    "id": "ADROIT",
+    "kind": "relic",
+    "name": "Kifuda",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Shop",
+    "source": "codex-api:/relics/KIFUDA"
+  },
   "AKABEKO": {
     "aliases": [
       "Akabeko"
@@ -3574,6 +3590,22 @@
     "play_notes": "",
     "rarity": "Shop",
     "source": "md:relics.md:L260; md:relics_zh.md:L260"
+  },
+  "RADIANT": {
+    "aliases": [
+      "Radiant Pearl",
+      "RADIANT_PEARL"
+    ],
+    "character": "shared",
+    "curated": true,
+    "description": "RADIANT（live id；效果未解码 — codex 存根，研究待办）。未解码 = lookup 落空的研究触发，不得据名字猜测效果。",
+    "id": "RADIANT",
+    "kind": "relic",
+    "name": "Radiant Pearl",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Ancient",
+    "source": "codex-api:/relics/RADIANT_PEARL"
   },
   "RADIANT_PEARL": {
     "aliases": [

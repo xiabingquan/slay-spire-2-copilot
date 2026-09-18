@@ -443,8 +443,8 @@
       "ChainsOfBindingPower"
     ],
     "counter_class": true,
-    "curated": false,
-    "description": "持有者阵营回合内 抽牌时，最多 Amount 张牌被附加 Bound（本回合已附加数达到 Amount 后停止）。 power 生效期间每回合只能打出 1 张 Bound 牌；持有者阵营回合结束时清除 所有 Bound。出牌排序备注：每回合约 2 次有效出牌后，后续出牌请求服务端返回 ok=True 但结算为空（第 3/4 张无伤害）——连锁下按真实伤害落点计数，勿以 ok=True 计数。",
+    "curated": true,
+    "description": "束缚之链（女王 Boss 能力，傀儡线施加于玩家）：持有者阵营回合内抽牌时，最多 Amount 张牌被附加 Bound（本回合已附加数达 Amount 后停止）；生效期间每回合只能打出 1 张 Bound 牌；持有者阵营回合结束时清除所有 Bound。LIVE 规则（run-44 Boss 战，用户纠正后固化）：桥每回合打印每张牌的 ok/no(None) — Bound 牌显示为 no(None)；凡标 ok 的牌均可打且必须全部打出。档案中早期备注「约 2 次有效出牌后第 3/4 张结算为空」已过时作废 — run-44 二周目 T1 单回合三次有效出牌全部落点（连环拳 + 回响双打完美打击 + 血墙）。任何规划教条不得让桥标 ok 的牌留在手里；live 信号优先于档案摘要。lookup 触发器：此 power 落在玩家身上 — 必须在傀儡线落地当回合解析。",
     "host_of_affliction": true,
     "id": "CHAINS_OF_BINDING_POWER",
     "kind": "power",
@@ -452,7 +452,7 @@
     "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L86; md:powers_zh.md:L74",
+    "source": "powers.md + run-44 Boss 战 live（魂缚教条战中修正）",
     "stack_type": "Counter"
   },
   "CHILD_OF_THE_STARS_POWER": {
@@ -1045,8 +1045,8 @@
       "EchoFormPower"
     ],
     "counter_class": false,
-    "curated": false,
-    "description": "持有者每回合打出的第一张 牌计为打出 2 次（ModifyCardPlayCount 对每回合首次系列 play 翻倍）。",
+    "curated": true,
+    "description": "回响形态：在其被打出的下一回合起，每回合第一张打出的牌结算翻倍。LIVE（run-44）：翻倍作用于能力牌的层数施加 — 回响当回合首牌打出狱火时获得 INFERNO_POWER 6+6=12 层（每次失血触发 12 点弱化免疫 AoE）；连环拳被双打获得 ONE_TWO_PUNCH_POWER:2（接下来两次攻击双打）；刀刃之舞双打生成 8 张刀刃；血墙双打获得 13+13=26 挡但 2 点自伤 HP 也付两次。虚无：回合结束未打出即消耗。",
     "host_of_affliction": false,
     "id": "ECHO_FORM_POWER",
     "kind": "power",
@@ -1054,7 +1054,7 @@
     "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L484; md:powers_zh.md:L427",
+    "source": "powers.md + run-44 live（狱火 6 至 12 层翻倍首证）",
     "stack_type": "Counter"
   },
   "ENERGY_NEXT_TURN_POWER": {
@@ -2031,7 +2031,7 @@
     ],
     "counter_class": false,
     "curated": true,
-    "description": "召唤物身上的单层增益标记（run-38 实时 KinFollower×2）：其死亡不触发战斗结束致命逻辑（OwnerIsSecondaryEnemy）。本体-随从教条（run-38 Boss + LivingFog 档案）：被标随从不是胜利条件——击杀本体（未标记的 Boss/召唤者）才结束战斗；随从死亡免费但与胜利无关。竞速本体期间可用 AoE（Pacts End 类）顺带削随从。",
+    "description": "Minion 标记（召唤物/随从）：其死亡不触发战斗结束逻辑（OwnerIsSecondaryEnemy）— 击杀未标记的主体才结束战斗。LIVE 限定条件（run-44 女王 Boss）：当被标记随从是整场战斗的唯一威胁源时，它就是正确的首杀目标。火炬头聚合体（MINION:1）承担全部攻击输出，女王困在「为我燃烧」循环（自封挡 + 给随从加力，本人零输出）；T6 击杀火炬头后压力归零，女王循环同回合解算为个人攻击循环。教条：主体本身是威胁时主体优先成立；当被标记随从是唯一来袭时先杀随从（战斗继续但压力停止），再竞速主体。",
     "host_of_affliction": false,
     "id": "MINION_POWER",
     "kind": "power",
@@ -2039,7 +2039,7 @@
     "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L68; md:powers_zh.md:L60",
+    "source": "powers.md + run-44 女王战 live",
     "stack_type": "Single",
     "zh_description": "召唤物身上的单层增益标记（run-38 实时 KinFollower×2）：其死亡不触发战斗结束致命逻辑（OwnerIsSecondaryEnemy）。本体-随从教条（run-38 Boss + LivingFog 档案）：被标随从不是胜利条件——击杀本体（未标记的 Boss/召唤者）才结束战斗；随从死亡免费但与胜利无关。竞速本体期间可用 AoE（Pacts End 类）顺带削随从。"
   },

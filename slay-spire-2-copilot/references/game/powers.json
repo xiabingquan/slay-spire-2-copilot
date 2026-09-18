@@ -499,8 +499,8 @@
       "ChainsOfBindingPower"
     ],
     "counter_class": true,
-    "curated": false,
-    "description": "on drawing cards during owner's side turn, afflict up to Amount cards with Bound (per-turn afflicted count capped at Amount). While this power is active only 1 Bound card may be played per turn; all Bound afflictions clear at end of owner's side turn. Sequencing note: beyond roughly 2 effective card-plays per turn, further play-requests returned ok=True server-side but resolved as no-ops (3rd/4th plays dealt no damage) — count real damage landings, not ok=True, when sequencing under Chains.",
+    "curated": true,
+    "description": "Chains of Binding (QUEEN boss power, placed on the player by Puppet Strings): on drawing cards during the owner's side turn, afflict up to Amount cards with Bound (per-turn count capped at Amount). While active only 1 Bound card may be played per turn; all Bound afflictions clear at end of owner's side turn. LIVE RULE (run-44 boss, user-corrected): the bridge prints per-card ok/no(None) every turn — Bound cards appear as no(None); every card marked ok is genuinely playable and MUST be played. An earlier archive note claiming beyond-2-effective-plays no-ops is OBSOLETE — run-44 attempt-2 T1 landed three effective plays in one turn (One-Two Punch + doubled Perfected Strike + Blood Wall all resolved). No planning doctrine may leave a bridge-ok card unplayed; live signals outrank archive summaries. Lookup trigger: this power arrives on the PLAYER — resolve it the turn Puppet Strings lands.",
     "host_of_affliction": true,
     "id": "CHAINS_OF_BINDING_POWER",
     "kind": "power",
@@ -508,7 +508,7 @@
     "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L86; md:powers_zh.md:L74",
+    "source": "powers.md + run-44 boss live (Queen fight, Chains doctrine corrected mid-fight)",
     "stack_type": "Counter",
     "zh_description": "持有者阵营回合内 抽牌时，最多 Amount 张牌被附加 Bound（本回合已附加数达到 Amount 后停止）。 power 生效期间每回合只能打出 1 张 Bound 牌；持有者阵营回合结束时清除 所有 Bound。出牌排序备注：每回合约 2 次有效出牌后，后续出牌请求服务端返回 ok=True 但结算为空（第 3/4 张无伤害）——连锁下按真实伤害落点计数，勿以 ok=True 计数。",
     "zh_name": "束缚之链"
@@ -1165,8 +1165,8 @@
       "EchoFormPower"
     ],
     "counter_class": false,
-    "curated": false,
-    "description": "first card owner plays each turn is played twice (ModifyCardPlayCount doubles the first-in-series play each turn).",
+    "curated": true,
+    "description": "ECHO_FORM: doubles the resolution of the FIRST card played each turn AFTER the turn it is played. LIVE (run-44): doubling applies to POWER cards' stack application — Inferno as the doubled card granted INFERNO_POWER 6+6=12 stacks (Weak-immune 12 AoE per HP-loss tick); One-Two Punch doubled grants ONE_TWO_PUNCH_POWER:2 (next TWO attacks double); Blade Dance doubled generated 8 shivs; Blood Wall doubled granted 13+13=26 block but the 2 HP self-cost was also paid twice. Ethereal: unplayed at end of turn it exhausts.",
     "host_of_affliction": false,
     "id": "ECHO_FORM_POWER",
     "kind": "power",
@@ -1174,7 +1174,7 @@
     "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L484; md:powers_zh.md:L427",
+    "source": "powers.md + run-44 live (Inferno 6 to 12 stack double first confirmed)",
     "stack_type": "Counter",
     "zh_description": "持有者每回合打出的第一张 牌计为打出 2 次（ModifyCardPlayCount 对每回合首次系列 play 翻倍）。",
     "zh_name": "回响形态"
@@ -2258,7 +2258,7 @@
     ],
     "counter_class": false,
     "curated": true,
-    "description": "Buff Single marker on summoned helpers (run-38 live KinFollower ×2): its death does NOT trigger combat-end fatal logic (OwnerIsSecondaryEnemy). MASTER-MINION DOCTRINE (run-38 boss + LivingFog archive): the marked adds are not the win condition — kill the master (unmarked boss/summoner) to end combat; add deaths are free but irrelevant to victory. AoE (Pacts End-class) may chip adds while racing the master.",
+    "description": "Minion marker on summoned/marked helpers: its death does NOT trigger combat-end (OwnerIsSecondaryEnemy) — kill the unmarked master to end combat. LIVE QUALIFIER (run-44 Queen boss): the marked add CAN be the correct first kill when it is the fight's sole threat source. TorchHead Amalgam (MINION:1) carried every attack while Queen looped Burn Bright (self-block + add-strength, zero incoming from her); killing TorchHead T6 removed all incoming and Queen's loop resolved into her personal attack cycle the same turn. Doctrine: kill master first when the master is the threat; when a marked add is the only incoming, kill the add first, then race the master.",
     "host_of_affliction": false,
     "id": "MINION_POWER",
     "kind": "power",
@@ -2266,7 +2266,7 @@
     "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L68; md:powers_zh.md:L60",
+    "source": "powers.md + run-44 Queen fight live",
     "stack_type": "Single",
     "zh_description": "召唤物身上的单层增益标记（run-38 实时 KinFollower×2）：其死亡不触发战斗结束致命逻辑（OwnerIsSecondaryEnemy）。本体-随从教条（run-38 Boss + LivingFog 档案）：被标随从不是胜利条件——击杀本体（未标记的 Boss/召唤者）才结束战斗；随从死亡免费但与胜利无关。竞速本体期间可用 AoE（Pacts End 类）顺带削随从。",
     "zh_name": "仆从"

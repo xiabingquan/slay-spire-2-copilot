@@ -4050,6 +4050,91 @@
     "passives": [],
     "source": "curated:characters.json cross-ref"
   },
+  "DEVOTED_SCULPTOR": {
+    "acts": [],
+    "aliases": [
+      "Devoted Sculptor"
+    ],
+    "curated": true,
+    "cycle": [
+      "FORBIDDEN_INCANTATION_MOVE",
+      "SAVAGE_MOVE"
+    ],
+    "description": "虔诚雕刻师（run-44 Act3 (2,6) T5 击杀）：RITUAL_POWER:9 — 每回合力量递增约 +9；循环 FORBIDDEN_INCANTATION（起手）→ SAVAGE（基础12+力量，随仪式递增；Weak 药水按次削减）。教条：速杀，Savage 意图每回合膨胀；有 Weak 药就开。",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 172
+      },
+      "base": 162,
+      "max": null,
+      "notes": ""
+    },
+    "id": "DEVOTED_SCULPTOR",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "FORBIDDEN_INCANTATION_MOVE": {
+        "aliases": [
+          "Forbidden Incantation",
+          "FORBIDDEN_INCANTATION"
+        ],
+        "curated": true,
+        "effect": "Forbidden Incantation: Buff",
+        "follow_up_id": null,
+        "id": "FORBIDDEN_INCANTATION_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DEVOTED_SCULPTOR",
+        "name": "Forbidden Incantation",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DEVOTED_SCULPTOR#FORBIDDEN_INCANTATION + run-44 live",
+        "description": "禁忌咒语：起手招（debuff/仪式启动类），run-44 (2,6) T1 观察；虔诚雕刻师带 RITUAL_POWER:9 — 此后力量约每回合 +9 递增。"
+      },
+      "SAVAGE_MOVE": {
+        "aliases": [
+          "Savage",
+          "SAVAGE"
+        ],
+        "curated": true,
+        "effect": "Savage: Attack; damage 12 A:15",
+        "follow_up_id": null,
+        "id": "SAVAGE_MOVE",
+        "intents": [
+          {
+            "base_damage": 12,
+            "base_damage_ascension": {
+              "ascension": 15
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DEVOTED_SCULPTOR",
+        "name": "Savage",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DEVOTED_SCULPTOR#SAVAGE + run-44 live",
+        "description": "野蛮：攻击；伤害 12 A:15 — run-44 T4 live 意图 22（基础12+力量18，仪式叠层）；Weak 药水按次削减。"
+      }
+    },
+    "name": "Devoted Sculptor",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/DEVOTED_SCULPTOR",
+    "type": "Normal"
+  },
   "DampCultist": {
     "acts": [
       "Act1",
@@ -5774,6 +5859,153 @@
     "play_notes": "run-39 live：SUCK 无挡攻击命中 +3 力量/实例；完全格挡攻击回合=休眠。竞速教条：2 回合内击杀或格挡每个攻击意图。",
     "source": "codex-api + run-39 live T2 击杀 + powers SUCK 教条; run-40 live fold 2026-09-18"
   },
+  "FROG_KNIGHT": {
+    "acts": [],
+    "aliases": [
+      "FROG_KNIGHT",
+      "Frog Knight",
+      "青蛙骑士"
+    ],
+    "curated": true,
+    "cycle": [
+      "TONGUE_LASH_MOVE",
+      "STRIKE_DOWN_EVIL_MOVE",
+      "FOR_THE_QUEEN_MOVE",
+      "HALF_HEALTH",
+      "BEETLE_CHARGE_MOVE"
+    ],
+    "description": "Act3 普通怪（run-44 (12,6) 46 层 — run-33 的杀手，本局 T6 复仇击杀）。镀甲 live 15：持有者侧回合开始 -1 层（持有者第 1 回合除外）；持有者侧回合结束获得 Amount 挡 — 每回合凿掉镀甲挡。LIVE 循环（move_graph）：舌鞭（13 A:14 + 对玩家虚弱2）→ 裁决（21 A:23）→ 为女王（自身 +5 力）→ HALF_HEALTH 条件分支 → 甲虫冲锋（35 A:40）→ 循环。HALF_HEALTH LIVE（run-44）：HP 在 50% 以上（170/191）时分支解算回到舌鞭 — >50% 时甲虫冲锋段疑似被跳过；本局 T6 击杀发生在观察到 <50% 分支之前。教条：按 15/回合配速凿镀甲；虚弱2 下按 live 意图数字算挡；「为女王」回合全力输出；HP 过 95.5 半血线警惕分支。",
+    "hp": {
+      "base": 191,
+      "notes": "191 live run-44 Act3 (12,6); codex A:199",
+      "ascension": {
+        "min": 199,
+        "max": null
+      }
+    },
+    "id": "FROG_KNIGHT",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "BEETLE_CHARGE_MOVE": {
+        "aliases": [
+          "Beetle Charge",
+          "BEETLE_CHARGE"
+        ],
+        "curated": true,
+        "effect": "Beetle Charge: Attack; damage 35 A:40",
+        "follow_up_id": null,
+        "id": "BEETLE_CHARGE_MOVE",
+        "intents": [
+          {
+            "base_damage": 35,
+            "base_damage_ascension": {
+              "ascension": 40
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "FROG_KNIGHT",
+        "name": "Beetle Charge",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/FROG_KNIGHT#BEETLE_CHARGE",
+        "description": "甲虫冲锋：攻击；伤害 35 A:40 — codex 值；run-44 live 未观察到（HP>50% 时 HALF_HEALTH 分支跳过该段）。"
+      },
+      "FOR_THE_QUEEN_MOVE": {
+        "aliases": [
+          "For the Queen",
+          "FOR_THE_QUEEN"
+        ],
+        "curated": true,
+        "effect": "For the Queen: Buff; STRENGTH 5 (self)",
+        "follow_up_id": null,
+        "id": "FOR_THE_QUEEN_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "FROG_KNIGHT",
+        "name": "For the Queen",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/FROG_KNIGHT#FOR_THE_QUEEN",
+        "description": "为女王：增益；自身力量 5 — run-44 (12,6) live；玩家的免费回合，输出窗。"
+      },
+      "STRIKE_DOWN_EVIL_MOVE": {
+        "aliases": [
+          "Strike Down Evil",
+          "STRIKE_DOWN_EVIL"
+        ],
+        "curated": true,
+        "effect": "Strike Down Evil: Attack; damage 21 A:23",
+        "follow_up_id": null,
+        "id": "STRIKE_DOWN_EVIL_MOVE",
+        "intents": [
+          {
+            "base_damage": 21,
+            "base_damage_ascension": {
+              "ascension": 23
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "FROG_KNIGHT",
+        "name": "Strike Down Evil",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/FROG_KNIGHT#STRIKE_DOWN_EVIL",
+        "description": "裁决：攻击；伤害 21 A:23 — run-44 (12,6) live。"
+      },
+      "TONGUE_LASH_MOVE": {
+        "aliases": [
+          "Tongue Lash",
+          "TONGUE_LASH"
+        ],
+        "curated": true,
+        "effect": "Tongue Lash: Attack + Debuff; damage 13 A:14; FRAIL 2 (player)",
+        "follow_up_id": null,
+        "id": "TONGUE_LASH_MOVE",
+        "intents": [
+          {
+            "base_damage": 13,
+            "base_damage_ascension": {
+              "ascension": 14
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "FROG_KNIGHT",
+        "name": "Tongue Lash",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/FROG_KNIGHT#TONGUE_LASH",
+        "description": "舌鞭：攻击+debuff；伤害 13 A:14 + 对玩家虚弱（Frail）2 — run-44 (12,6) live；虚弱削弱玩家挡牌约 2 回合。"
+      }
+    },
+    "name": "Frog Knight",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "run-44 live（完整 move_graph JSON + T6 击杀）+ codex FROG_KNIGHT",
+    "type": "Normal",
+    "zh_name": "青蛙骑士",
+    "source_zh": "run-44 live（完整 move_graph JSON + T6 击杀）+ codex FROG_KNIGHT"
+  },
   "FUZZY_WURM_CRAWLER": {
     "acts": [],
     "aliases": [
@@ -6644,6 +6876,123 @@
     "play_notes": "",
     "source": "md:monsters.md:L28",
     "zh_description": "Act1 怪物（run-38 实时：56 HP，显示 毛绒伏地虫）。循环 FIRST_ACID_GOOP（单体 4 A:6）→ INHALE（自身 +7 力量——实时：一次吸气后 STR:7，下一发酸液意图 11[base4]）→ ACID_GOOP（单体 4 A:6）→ 循环。INHALE +7 力 = 陡峭成长计时器——≤3 回合内在第二次吸气前击杀（run-38：T1 Bash+Strike，T2 自由窗 3×Strike，T3 第二次吸气循环前击杀）。"
+  },
+  "GREMLIN_MERC": {
+    "acts": [],
+    "aliases": [
+      "Gremlin Merc"
+    ],
+    "curated": true,
+    "cycle": [
+      "GIMME_MOVE",
+      "DOUBLE_SMASH_MOVE",
+      "HEHE_MOVE"
+    ],
+    "description": "贪婪地精（live id 见 run log；招式效果未解码 — codex 存根，研究待办）。教条：未解码机制 = lookup 落空即研究触发，不得据名字猜测。",
+    "hp": {
+      "ascension": {
+        "max": 53,
+        "min": 51
+      },
+      "base": 47,
+      "max": 49,
+      "notes": ""
+    },
+    "id": "GREMLIN_MERC",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "DOUBLE_SMASH_MOVE": {
+        "aliases": [
+          "Double Smash",
+          "DOUBLE_SMASH"
+        ],
+        "curated": true,
+        "effect": "Double Smash: Attack + Debuff; damage 6x2 A:7; WEAK 2 (player)",
+        "follow_up_id": null,
+        "id": "DOUBLE_SMASH_MOVE",
+        "intents": [
+          {
+            "base_damage": 6,
+            "base_damage_ascension": {
+              "ascension": 7
+            },
+            "class": "MultiAttackIntent",
+            "hits": 2,
+            "type": "Attack + Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "GREMLIN_MERC",
+        "name": "Double Smash",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/GREMLIN_MERC#DOUBLE_SMASH + run-44 live",
+        "description": "双重粉碎：贪婪地精招式 — run log 中的 live id；效果尚未解码（codex 存根，研究待办）。不得据此制定计划。"
+      },
+      "GIMME_MOVE": {
+        "aliases": [
+          "Gimme",
+          "GIMME"
+        ],
+        "curated": true,
+        "effect": "Gimme: Attack; damage 7x2 A:8",
+        "follow_up_id": null,
+        "id": "GIMME_MOVE",
+        "intents": [
+          {
+            "base_damage": 7,
+            "base_damage_ascension": {
+              "ascension": 8
+            },
+            "class": "MultiAttackIntent",
+            "hits": 2,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "GREMLIN_MERC",
+        "name": "Gimme",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/GREMLIN_MERC#GIMME + run-44 live",
+        "description": "Gimme：贪婪地精招式 — run log 中的 live id；效果尚未解码（codex 存根，研究待办）。不得据此制定计划。"
+      },
+      "HEHE_MOVE": {
+        "aliases": [
+          "Hehe",
+          "HEHE"
+        ],
+        "curated": true,
+        "effect": "Hehe: Attack + Buff; damage 8 A:9; STRENGTH 2 (self)",
+        "follow_up_id": null,
+        "id": "HEHE_MOVE",
+        "intents": [
+          {
+            "base_damage": 8,
+            "base_damage_ascension": {
+              "ascension": 9
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "GREMLIN_MERC",
+        "name": "Hehe",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/GREMLIN_MERC#HEHE + run-44 live",
+        "description": "Hehe：贪婪地精招式 — run log 中的 live id；效果尚未解码（codex 存根，研究待办）。不得据此制定计划。"
+      }
+    },
+    "name": "Gremlin Merc",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/GREMLIN_MERC",
+    "type": "Normal"
   },
   "GasBomb": {
     "acts": [
@@ -9393,6 +9742,146 @@
     ],
     "play_notes": "",
     "source": "md:monsters.md:L167"
+  },
+  "MECHA_KNIGHT": {
+    "acts": [],
+    "aliases": [
+      "Mecha Knight"
+    ],
+    "curated": true,
+    "cycle": [
+      "CHARGE_MOVE",
+      "FLAMETHROWER_MOVE",
+      "WINDUP_MOVE",
+      "HEAVY_CLEAVE_MOVE"
+    ],
+    "description": "机甲骑士 精英（run-44 Act3 (10,6) T5 击杀，300hp）：ARTIFACT_POWER 起始 3（弹珠袋类开战 debuff 先剥层；束缚药水一次申请消耗 2 层——虚弱+易伤双申请各自归零一层）。循环 冲锋18 → 火焰喷射（注入4张BURN状态牌）→ 蓄力（自封15挡+力量5）→ 重斩（基础35+力量）。教条：Artifact 用多段 debuff 申请剥离；蓄力回合全力输出；重斩回合按 live 意图数字（基础+已叠力量）算挡。",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 320
+      },
+      "base": 300,
+      "max": null,
+      "notes": ""
+    },
+    "id": "MECHA_KNIGHT",
+    "is_boss": false,
+    "is_elite": true,
+    "kind": "monster",
+    "moves": {
+      "CHARGE_MOVE": {
+        "aliases": [
+          "Charge",
+          "CHARGE"
+        ],
+        "curated": true,
+        "effect": "Charge: Attack; damage 25 A:30",
+        "follow_up_id": null,
+        "id": "CHARGE_MOVE",
+        "intents": [
+          {
+            "base_damage": 25,
+            "base_damage_ascension": {
+              "ascension": 30
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "MECHA_KNIGHT",
+        "name": "Charge",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/MECHA_KNIGHT#CHARGE + run-44 live",
+        "description": "冲锋：攻击；run-44 (10,6) T1 live 意图 18 — codex 的基础3 A:4 备注系他怪招式误抄；以 live 18 为准。"
+      },
+      "FLAMETHROWER_MOVE": {
+        "aliases": [
+          "Flamethrower",
+          "FLAMETHROWER"
+        ],
+        "curated": true,
+        "effect": "Flamethrower: Status",
+        "follow_up_id": null,
+        "id": "FLAMETHROWER_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Status"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "MECHA_KNIGHT",
+        "name": "Flamethrower",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/MECHA_KNIGHT#FLAMETHROWER + run-44 live",
+        "description": "火焰喷射：状态 — 向玩家牌库/弃牌堆注入 4 张 BURN 状态牌（不可打出，回合结束 tick 扣血）；run-44 T2 live 意图 status:4c。"
+      },
+      "HEAVY_CLEAVE_MOVE": {
+        "aliases": [
+          "Heavy Cleave",
+          "HEAVY_CLEAVE"
+        ],
+        "curated": true,
+        "effect": "Heavy Cleave: Attack; damage 35 A:40",
+        "follow_up_id": null,
+        "id": "HEAVY_CLEAVE_MOVE",
+        "intents": [
+          {
+            "base_damage": 35,
+            "base_damage_ascension": {
+              "ascension": 40
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "MECHA_KNIGHT",
+        "name": "Heavy Cleave",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/MECHA_KNIGHT#HEAVY_CLEAVE + run-44 live",
+        "description": "重斩：攻击；伤害 35 A:40 — run-44 T4 live 意图 40（基础35+力量5）。"
+      },
+      "WINDUP_MOVE": {
+        "aliases": [
+          "Windup",
+          "WINDUP"
+        ],
+        "curated": true,
+        "effect": "Windup: Defend + Buff; block 15; STRENGTH 5 (self)",
+        "follow_up_id": null,
+        "id": "WINDUP_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Defend + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "MECHA_KNIGHT",
+        "name": "Windup",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/MECHA_KNIGHT#WINDUP + run-44 live",
+        "description": "蓄力：防御+增益；自身 15 挡 + 力量 5 — run-44 T3 live；下一循环招重斩吃到该力量。"
+      }
+    },
+    "name": "Mecha Knight",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/MECHA_KNIGHT",
+    "type": "Elite"
   },
   "MagiKnight": {
     "acts": [],
@@ -12165,6 +12654,120 @@
     "play_notes": "",
     "source": "md:monsters.md:L32"
   },
+  "SCROLL_OF_BITING": {
+    "acts": [],
+    "aliases": [
+      "Scroll of Biting"
+    ],
+    "curated": true,
+    "cycle": [
+      "CHOMP_MOVE",
+      "CHEW_MOVE",
+      "MORE_TEETH_MOVE"
+    ],
+    "description": "咬人卷轴（run-44 Act3 (5,6) 四体战 T5 击杀）：PAPER_CUTS_POWER:2 — 每个造成未格挡伤害的攻击者回合结算 -2 Max HP；**全封任一攻击者 = 该攻击者零税**。循环：咬噬14 / 咀嚼5x2 / 更多牙齿（自身力量2）随机分支。教条：攻击回合必须算清全封线（虚弱削弱挡牌要按 live 数字算）；税优先于输出的场景极少，Max HP 损失是长期税。",
+    "hp": {
+      "ascension": {
+        "max": 39,
+        "min": 33
+      },
+      "base": 30,
+      "max": 37,
+      "notes": ""
+    },
+    "id": "SCROLL_OF_BITING",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "CHEW_MOVE": {
+        "aliases": [
+          "Chew",
+          "CHEW"
+        ],
+        "curated": true,
+        "effect": "Chew: Attack; damage 5x2 A:6",
+        "follow_up_id": null,
+        "id": "CHEW_MOVE",
+        "intents": [
+          {
+            "base_damage": 5,
+            "base_damage_ascension": {
+              "ascension": 6
+            },
+            "class": "MultiAttackIntent",
+            "hits": 2,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SCROLL_OF_BITING",
+        "name": "Chew",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SCROLL_OF_BITING#CHEW + run-44 live",
+        "description": "咀嚼：多段攻击；伤害 5x2 A:6/段 — run-44 (5,6) live；PAPER_CUTS 税按每个未被格挡的攻击者结算。"
+      },
+      "CHOMP_MOVE": {
+        "aliases": [
+          "Chomp",
+          "CHOMP"
+        ],
+        "curated": true,
+        "effect": "Chomp: Attack; damage 14 A:16",
+        "follow_up_id": null,
+        "id": "CHOMP_MOVE",
+        "intents": [
+          {
+            "base_damage": 14,
+            "base_damage_ascension": {
+              "ascension": 16
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SCROLL_OF_BITING",
+        "name": "Chomp",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SCROLL_OF_BITING#CHOMP + run-44 live",
+        "description": "咬噬：攻击；伤害 14 A:16 — run-44 (5,6) live 意图 14，弱5 下砍至 10。"
+      },
+      "MORE_TEETH_MOVE": {
+        "aliases": [
+          "More Teeth",
+          "MORE_TEETH"
+        ],
+        "curated": true,
+        "effect": "More Teeth: Buff; STRENGTH 2 (self)",
+        "follow_up_id": null,
+        "id": "MORE_TEETH_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SCROLL_OF_BITING",
+        "name": "More Teeth",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SCROLL_OF_BITING#MORE_TEETH + run-44 live",
+        "description": "更多牙齿：增益；自身力量 2 — run-44 (5,6) live。"
+      }
+    },
+    "name": "Scroll of Biting",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/SCROLL_OF_BITING",
+    "type": "Normal"
+  },
   "SEAPUNK": {
     "acts": [
       "Act1"
@@ -12544,6 +13147,146 @@
     "source": "codex-api:/monsters/SKULKING_COLONY",
     "type": "Elite"
   },
+  "SLIMED_BERSERKER": {
+    "acts": [],
+    "aliases": [
+      "Slimed Berserker"
+    ],
+    "curated": true,
+    "cycle": [
+      "VOMIT_ICHOR_MOVE",
+      "LEECHING_HUG_MOVE",
+      "SMOTHER_MOVE",
+      "FURIOUS_PUMMELING_MOVE"
+    ],
+    "description": "史莱姆狂战士（run-44 Act3 (4,5) T5 击杀，261hp）：循环 胆汁（注入10张SLIMED）→ 狂怒连击 4x4 → 吸血拥抱（玩家虚弱3+自身力量3）→ 闷杀30。教条：状态税战的解法是抽牌/引擎而非清状态；闷杀回合要挡；长战配速靠每回合固定输出。",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 281
+      },
+      "base": 261,
+      "max": null,
+      "notes": ""
+    },
+    "id": "SLIMED_BERSERKER",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "FURIOUS_PUMMELING_MOVE": {
+        "aliases": [
+          "Furious Pummeling",
+          "FURIOUS_PUMMELING"
+        ],
+        "curated": true,
+        "effect": "Furious Pummeling: Attack; damage 4x4 A:5",
+        "follow_up_id": null,
+        "id": "FURIOUS_PUMMELING_MOVE",
+        "intents": [
+          {
+            "base_damage": 4,
+            "base_damage_ascension": {
+              "ascension": 5
+            },
+            "class": "MultiAttackIntent",
+            "hits": 4,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SLIMED_BERSERKER",
+        "name": "Furious Pummeling",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SLIMED_BERSERKER#FURIOUS_PUMMELING + run-44 live",
+        "description": "狂怒连击：多段攻击；伤害 4x4 A:5/段 — run-44 (4,5) T2 live。"
+      },
+      "LEECHING_HUG_MOVE": {
+        "aliases": [
+          "Leeching Hug",
+          "LEECHING_HUG"
+        ],
+        "curated": true,
+        "effect": "Leeching Hug: Debuff + Buff; WEAK 3 (player); STRENGTH 3 (self)",
+        "follow_up_id": null,
+        "id": "LEECHING_HUG_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Debuff + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SLIMED_BERSERKER",
+        "name": "Leeching Hug",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SLIMED_BERSERKER#LEECHING_HUG + run-44 live",
+        "description": "吸血拥抱：debuff+增益；对玩家虚弱 3 + 自身力量 3 — run-44 (4,5) T3 live。"
+      },
+      "SMOTHER_MOVE": {
+        "aliases": [
+          "Smother",
+          "SMOTHER"
+        ],
+        "curated": true,
+        "effect": "Smother: Attack; damage 30 A:33",
+        "follow_up_id": null,
+        "id": "SMOTHER_MOVE",
+        "intents": [
+          {
+            "base_damage": 30,
+            "base_damage_ascension": {
+              "ascension": 33
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SLIMED_BERSERKER",
+        "name": "Smother",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SLIMED_BERSERKER#SMOTHER + run-44 live",
+        "description": "闷杀：攻击；伤害 30 A:33 — run-44 (4,5) T4 live。"
+      },
+      "VOMIT_ICHOR_MOVE": {
+        "aliases": [
+          "Vomit Ichor",
+          "VOMIT_ICHOR"
+        ],
+        "curated": true,
+        "effect": "Vomit Ichor: Status",
+        "follow_up_id": null,
+        "id": "VOMIT_ICHOR_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Status"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SLIMED_BERSERKER",
+        "name": "Vomit Ichor",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SLIMED_BERSERKER#VOMIT_ICHOR + run-44 live",
+        "description": "呕吐胆汁：状态 — 向玩家弃牌堆注入 10 张 SLIMED 状态牌（不可打出的状态税）；run-44 (4,5) T1 live 意图 status:10c。"
+      }
+    },
+    "name": "Slimed Berserker",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/SLIMED_BERSERKER",
+    "type": "Normal"
+  },
   "SLUDGE_SPINNER": {
     "acts": [
       "Act1"
@@ -12656,6 +13399,123 @@
     "play_notes": "对局43 live",
     "source": "codex-api + 对局43 live",
     "type": "Normal"
+  },
+  "SOUL_NEXUS": {
+    "acts": [],
+    "aliases": [
+      "Soul Nexus"
+    ],
+    "curated": true,
+    "cycle": [
+      "SOUL_BURN_MOVE",
+      "MAELSTROM_MOVE",
+      "DRAIN_LIFE_MOVE"
+    ],
+    "description": "灵魂枢纽 精英（run-44 Act3 (8,6) T5 击杀，234hp）：循环 灵魂燃烧29 → RAND 分支（大漩涡 6x4 / 吸取生命 18+虚弱2+弱2 各半 live）。教条：两分支都要预设计算；吸取生命的双 debuff 落地后按削弱后的输出/挡牌重新估回合数；无随从单体战。",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 254
+      },
+      "base": 234,
+      "max": null,
+      "notes": ""
+    },
+    "id": "SOUL_NEXUS",
+    "is_boss": false,
+    "is_elite": true,
+    "kind": "monster",
+    "moves": {
+      "DRAIN_LIFE_MOVE": {
+        "aliases": [
+          "Drain Life",
+          "DRAIN_LIFE"
+        ],
+        "curated": true,
+        "effect": "Drain Life: Attack + Debuff; damage 18 A:19; VULNERABLE 2 (player); WEAK 2 (player)",
+        "follow_up_id": null,
+        "id": "DRAIN_LIFE_MOVE",
+        "intents": [
+          {
+            "base_damage": 18,
+            "base_damage_ascension": {
+              "ascension": 19
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SOUL_NEXUS",
+        "name": "Drain Life",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SOUL_NEXUS#DRAIN_LIFE + run-44 live",
+        "description": "吸取生命：攻击+debuff；伤害 18 A:19 + 对玩家虚弱 2 + 虚弱（Weak）2 — run-44 live RAND 分支结果。"
+      },
+      "MAELSTROM_MOVE": {
+        "aliases": [
+          "Maelstrom",
+          "MAELSTROM"
+        ],
+        "curated": true,
+        "effect": "Maelstrom: Attack; damage 6x4 A:7",
+        "follow_up_id": null,
+        "id": "MAELSTROM_MOVE",
+        "intents": [
+          {
+            "base_damage": 6,
+            "base_damage_ascension": {
+              "ascension": 7
+            },
+            "class": "MultiAttackIntent",
+            "hits": 4,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SOUL_NEXUS",
+        "name": "Maelstrom",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SOUL_NEXUS#MAELSTROM + run-44 live",
+        "description": "大漩涡：多段攻击；伤害 6x4 A:7/段 — run-44 live RAND 分支结果。"
+      },
+      "SOUL_BURN_MOVE": {
+        "aliases": [
+          "Soul Burn",
+          "SOUL_BURN"
+        ],
+        "curated": true,
+        "effect": "Soul Burn: Attack; damage 29 A:31",
+        "follow_up_id": null,
+        "id": "SOUL_BURN_MOVE",
+        "intents": [
+          {
+            "base_damage": 29,
+            "base_damage_ascension": {
+              "ascension": 31
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SOUL_NEXUS",
+        "name": "Soul Burn",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SOUL_NEXUS#SOUL_BURN + run-44 live",
+        "description": "灵魂燃烧：攻击；伤害 29 A:31 — run-44 (8,6) T1 live；其后为 RAND 分支（大漩涡/吸取生命 live 各半）。"
+      }
+    },
+    "name": "Soul Nexus",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/SOUL_NEXUS",
+    "type": "Elite"
   },
   "SPINY_TOAD": {
     "acts": [
@@ -14780,6 +15640,260 @@
     "source": "codex-api:/monsters/TERROR_EEL",
     "type": "Elite"
   },
+  "THE_INSATIABLE": {
+    "acts": [],
+    "aliases": [
+      "The Insatiable"
+    ],
+    "curated": true,
+    "cycle": [
+      "LIQUIFY_GROUND_MOVE",
+      "THRASH_MOVE",
+      "THRASH_MOVE_2_MOVE",
+      "LUNGING_BITE_MOVE",
+      "SALIVATE_MOVE"
+    ],
+    "description": "无厌沙虫 Act2 Boss（run-44 T7 击杀，321hp）：**沙坑吞噬计时器** — SANDPIT counter 每个敌方回合 -1，归零时无视 HP/挡直接吞噬；FranticEscapes（恐慌逃生）是 **+1 延时卡**，在 counter=1 时打出（run-16/20/22/35 档案错误「绝不打出 FE」已作废）。教条：逐回合读 POWER:amount；FE 是救命牌不是死牌；吞没前竞速击杀。",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 341
+      },
+      "base": 321,
+      "max": null,
+      "notes": ""
+    },
+    "id": "THE_INSATIABLE",
+    "is_boss": true,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "LIQUIFY_GROUND_MOVE": {
+        "aliases": [
+          "Liquify Ground",
+          "LIQUIFY_GROUND"
+        ],
+        "curated": true,
+        "effect": "Liquify Ground: Buff + Status",
+        "follow_up_id": null,
+        "id": "LIQUIFY_GROUND_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Buff + Status"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "THE_INSATIABLE",
+        "name": "Liquify Ground",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/THE_INSATIABLE#LIQUIFY_GROUND + run-44 live",
+        "description": "液化大地：无厌沙虫循环招（地面危害类）— run-44 Act2 Boss 战；沙坑教条见怪物主描述。"
+      },
+      "LUNGING_BITE_MOVE": {
+        "aliases": [
+          "Lunging Bite",
+          "LUNGING_BITE"
+        ],
+        "curated": true,
+        "effect": "Lunging Bite: Attack; damage 28 A:31",
+        "follow_up_id": null,
+        "id": "LUNGING_BITE_MOVE",
+        "intents": [
+          {
+            "base_damage": 28,
+            "base_damage_ascension": {
+              "ascension": 31
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "THE_INSATIABLE",
+        "name": "Lunging Bite",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/THE_INSATIABLE#LUNGING_BITE + run-44 live",
+        "description": "突进撕咬：攻击类无厌沙虫循环招 — run-44 Act2 Boss 战；沙坑教条见怪物主描述。"
+      },
+      "SALIVATE_MOVE": {
+        "aliases": [
+          "Salivate",
+          "SALIVATE"
+        ],
+        "curated": true,
+        "effect": "Salivate: Buff; STRENGTH 2 (self)",
+        "follow_up_id": null,
+        "id": "SALIVATE_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "THE_INSATIABLE",
+        "name": "Salivate",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/THE_INSATIABLE#SALIVATE + run-44 live",
+        "description": "流涎：无厌沙虫循环招（状态/debuff 类起手）— run-44 Act2 Boss T7 击杀；沙坑吞噬计时器教条见怪物主描述。"
+      },
+      "THRASH_MOVE": {
+        "aliases": [
+          "Thrash",
+          "THRASH"
+        ],
+        "curated": true,
+        "effect": "Thrash: Attack; damage 8x2 A:9",
+        "follow_up_id": null,
+        "id": "THRASH_MOVE",
+        "intents": [
+          {
+            "base_damage": 8,
+            "base_damage_ascension": {
+              "ascension": 9
+            },
+            "class": "MultiAttackIntent",
+            "hits": 2,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "THE_INSATIABLE",
+        "name": "Thrash",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/THE_INSATIABLE#THRASH + run-44 live",
+        "description": "翻搅：攻击类无厌沙虫循环招 — run-44 Act2 Boss 战；沙坑教条见怪物主描述。"
+      },
+      "THRASH_MOVE_2_MOVE": {
+        "aliases": [
+          "Thrash Move 2",
+          "THRASH_MOVE_2"
+        ],
+        "curated": true,
+        "effect": "Thrash Move 2: Attack; damage 8x2 A:9",
+        "follow_up_id": null,
+        "id": "THRASH_MOVE_2_MOVE",
+        "intents": [
+          {
+            "base_damage": 8,
+            "base_damage_ascension": {
+              "ascension": 9
+            },
+            "class": "MultiAttackIntent",
+            "hits": 2,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "THE_INSATIABLE",
+        "name": "Thrash Move 2",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/THE_INSATIABLE#THRASH_MOVE_2 + run-44 live",
+        "description": "翻搅2：攻击类无厌沙虫循环招 — run-44 Act2 Boss 战；沙坑教条见怪物主描述。"
+      }
+    },
+    "name": "The Insatiable",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/THE_INSATIABLE",
+    "type": "Boss"
+  },
+  "THE_LOST": {
+    "acts": [],
+    "aliases": [
+      "The Lost"
+    ],
+    "curated": true,
+    "cycle": [
+      "DEBILITATING_SMOG_MOVE",
+      "EYE_LASERS_MOVE"
+    ],
+    "description": "失落之物（run-44 Act3 (3,6) 双敌战 T7 击杀，93hp）：POSSESS_STRENGTH — 持有者回合偷取玩家力量（持有者+2/回合，玩家显示为负）；**击杀持有者等量归还**。循环 衰弱毒雾（自身力量2）→ 眼激光 11x2。教条：与 ForgottenThing（偷敏捷）同场时按偷取对挡/输出的伤害排序击杀；击杀即归还是竞速正反馈。",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 99
+      },
+      "base": 93,
+      "max": null,
+      "notes": ""
+    },
+    "id": "THE_LOST",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "DEBILITATING_SMOG_MOVE": {
+        "aliases": [
+          "Debilitating Smog",
+          "DEBILITATING_SMOG"
+        ],
+        "curated": true,
+        "effect": "Debilitating Smog: Debuff + Buff; STRENGTH 2 (self)",
+        "follow_up_id": null,
+        "id": "DEBILITATING_SMOG_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Debuff + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "THE_LOST",
+        "name": "Debilitating Smog",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/THE_LOST#DEBILITATING_SMOG + run-44 live",
+        "description": "衰弱毒雾：debuff+增益；自身力量 2 — run-44 (3,6) T1 live；其后循环接眼激光。"
+      },
+      "EYE_LASERS_MOVE": {
+        "aliases": [
+          "Eye Lasers",
+          "EYE_LASERS"
+        ],
+        "curated": true,
+        "effect": "Eye Lasers: Attack; damage 4x2 A:5",
+        "follow_up_id": null,
+        "id": "EYE_LASERS_MOVE",
+        "intents": [
+          {
+            "base_damage": 4,
+            "base_damage_ascension": {
+              "ascension": 5
+            },
+            "class": "MultiAttackIntent",
+            "hits": 2,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "THE_LOST",
+        "name": "Eye Lasers",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/THE_LOST#EYE_LASERS + run-44 live",
+        "description": "眼激光：多段攻击；伤害 11x2 A:12/段 — run-44 live 显示 6x2（基础4+力量2，弱化削减下）；击杀 POSSESS_STRENGTH 持有者归还被偷力量。"
+      }
+    },
+    "name": "The Lost",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/THE_LOST",
+    "type": "Normal"
+  },
   "THIEVING_HOPPER": {
     "acts": [
       "Act2"
@@ -14818,6 +15932,192 @@
     "kind": "monster",
     "name": "蟾蜍蝌蚪",
     "source": "; run-40 live fold 2026-09-18"
+  },
+  "TORCH_HEAD_AMALGAM": {
+    "acts": [],
+    "aliases": [
+      "TORCH_HEAD_AMALGAM",
+      "Torch Head Amalgam",
+      "火炬头聚合体"
+    ],
+    "curated": true,
+    "cycle": [
+      "TACKLE_MOVE",
+      "TACKLE_2_MOVE",
+      "BEAM_MOVE",
+      "TACKLE_3_MOVE",
+      "TACKLE_4_MOVE"
+    ],
+    "description": "Act3 Boss 随从（MINION:1 标记）。LIVE 循环（run-44）：冲锋 18（codex 记基础 3 A:4 — live 18 为准）→ 冲锋2 18 → 光束多段基础 8x3（玩家易伤放大下 live 显示 12x3）→ 冲锋3 14（A:15）→ 冲锋4 14（A:15），循环。女王「为我燃烧」每循环回合给它 +1 力 — 放任不管会从 18 升至 22 再至光束 36 级。威胁源教条（run-44 live）：女王自封循环期间火炬头承担 100% 来袭 — 尽管带 MINION（死亡不结束战斗），它就是正确首杀（压力归零）。run-44 二周目 T6 以 PS+ 连环拳双打 47+8 在其 55/199 时击杀；女王循环同回合解算。",
+    "hp": {
+      "base": 199,
+      "notes": "199 live run-44; codex A:211",
+      "ascension": {
+        "min": 211,
+        "max": null
+      }
+    },
+    "id": "TORCH_HEAD_AMALGAM",
+    "is_boss": true,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "BEAM_MOVE": {
+        "aliases": [
+          "Beam",
+          "BEAM"
+        ],
+        "curated": true,
+        "effect": "Beam: Attack; damage 8x3 A:8",
+        "follow_up_id": null,
+        "id": "BEAM_MOVE",
+        "intents": [
+          {
+            "base_damage": 8,
+            "base_damage_ascension": {
+              "ascension": 8
+            },
+            "class": "MultiAttackIntent",
+            "hits": 3,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TORCH_HEAD_AMALGAM",
+        "name": "Beam",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/TORCH_HEAD_AMALGAM#BEAM + run-44 live",
+        "description": "光束：多段攻击；基础 8x3（run-44 live 在玩家易伤放大下显示 12x3；档案旧备注 3x3 已过时）— codex A:6/段。"
+      },
+      "TACKLE_2_MOVE": {
+        "aliases": [
+          "Tackle 2",
+          "TACKLE_2"
+        ],
+        "curated": true,
+        "effect": "Tackle 2: Attack; damage 18 A:19",
+        "follow_up_id": null,
+        "id": "TACKLE_2_MOVE",
+        "intents": [
+          {
+            "base_damage": 18,
+            "base_damage_ascension": {
+              "ascension": 19
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TORCH_HEAD_AMALGAM",
+        "name": "Tackle 2",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/TORCH_HEAD_AMALGAM#TACKLE_2 + run-44 live",
+        "description": "冲锋2：攻击；伤害 18 A:19 — run-44 live。"
+      },
+      "TACKLE_3_MOVE": {
+        "aliases": [
+          "Tackle 3",
+          "TACKLE_3"
+        ],
+        "curated": true,
+        "effect": "Tackle 3: Attack; damage 14 A:15",
+        "follow_up_id": null,
+        "id": "TACKLE_3_MOVE",
+        "intents": [
+          {
+            "base_damage": 14,
+            "base_damage_ascension": {
+              "ascension": 15
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TORCH_HEAD_AMALGAM",
+        "name": "Tackle 3",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/TORCH_HEAD_AMALGAM#TACKLE_3 + run-44 live",
+        "description": "冲锋3：攻击；伤害 14 A:15 — run-44 live。"
+      },
+      "TACKLE_4_MOVE": {
+        "aliases": [
+          "Tackle 4",
+          "TACKLE_4"
+        ],
+        "curated": true,
+        "effect": "Tackle 4: Attack; damage 14 A:15",
+        "follow_up_id": null,
+        "id": "TACKLE_4_MOVE",
+        "intents": [
+          {
+            "base_damage": 14,
+            "base_damage_ascension": {
+              "ascension": 15
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TORCH_HEAD_AMALGAM",
+        "name": "Tackle 4",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/TORCH_HEAD_AMALGAM#TACKLE_4 + run-44 live",
+        "description": "冲锋4：攻击；伤害 14 A:15 — run-44 live。"
+      },
+      "TACKLE_MOVE": {
+        "aliases": [
+          "Tackle",
+          "TACKLE"
+        ],
+        "curated": true,
+        "effect": "Tackle: Attack; damage 18 A:19",
+        "follow_up_id": null,
+        "id": "TACKLE_MOVE",
+        "intents": [
+          {
+            "base_damage": 18,
+            "base_damage_ascension": {
+              "ascension": 19
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TORCH_HEAD_AMALGAM",
+        "name": "Tackle",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/TORCH_HEAD_AMALGAM#TACKLE + run-44 live",
+        "description": "冲锋：攻击；run-44 T1 live 意图 18 — codex 基础3 A:4 系误抄；以 live 18 为准。"
+      }
+    },
+    "name": "Torch Head Amalgam",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "run-44 Boss 战 live + codex TORCH_HEAD_AMALGAM",
+    "type": "Boss",
+    "zh_name": "火炬头聚合体",
+    "passives": [
+      {
+        "power_id": "MINION_POWER",
+        "amount": 1,
+        "counter_class": false,
+        "description": "death does not end combat; see MINION threat-source qualifier"
+      }
+    ],
+    "source_zh": "run-44 Boss 战 live + codex TORCH_HEAD_AMALGAM"
   },
   "TUNNELER": {
     "curated": true,
@@ -18692,5 +19992,47 @@
     "passives": [],
     "play_notes": "",
     "source": "generator:synthesized"
+  },
+  "QUEEN": {
+    "id": "QUEEN",
+    "kind": "monster",
+    "aliases": [
+      "QUEEN",
+      "Queen",
+      "女王"
+    ],
+    "name": "Queen",
+    "zh_name": "女王",
+    "is_boss": true,
+    "is_elite": false,
+    "hp": {
+      "base": 400,
+      "notes": "400 live run-44; codex A:419",
+      "ascension": {
+        "min": 419,
+        "max": null
+      }
+    },
+    "cycle": [
+      "PUPPET_STRINGS_MOVE",
+      "YOU_ARE_MINE_MOVE",
+      "BURN_BRIGHT_FOR_ME_MOVE",
+      "ENRAGE_MOVE",
+      "OFF_WITH_YOUR_HEAD_MOVE",
+      "EXECUTION_MOVE"
+    ],
+    "passives": [
+      {
+        "power_id": "CHAINS_OF_BINDING_POWER",
+        "amount": 3,
+        "counter_class": true,
+        "description": "placed on the PLAYER via Puppet Strings"
+      }
+    ],
+    "source": "run-44 Boss 战 live（两周目全循环）+ codex QUEEN",
+    "source_zh": "run-44 Boss 战 live（两周目全循环）+ codex QUEEN",
+    "description": "Act3 Boss（run-44，48 层）。女王+火炬头双体战的主体 — 胜利条件 = 女王 HP 归零（火炬头带 MINION 标记，其死亡不结束战斗）。LIVE 循环：傀儡线（对玩家施加束缚链3）→ 你是我的（对玩家 99 虚弱/脆弱/易伤；每局 T2 必落，不可回避；虚弱每回合 -1，近永久软锁）→ 条件分支（为我燃烧分支 / 你是我的现在分支）→ 分支未解算期间循环「为我燃烧」（自封 20 挡 + 火炬头 +1 力；她本人零输出）→ 分支解算后：暴怒（自身 +2 力）→ 斩首（基础 3 x5；live：Str2 时 5x5，Str4 且我方易伤放大时 10x5）→ 处决（单次 15 A:18；Str2 时 live 19）→ 回暴怒循环，每轮 +2 力。击杀教条（run-44 两周目验证）：(1) 自封循环期间火炬头是唯一威胁 — 先杀随从，来袭归零；(2) 你是我的使攻击牌约 25% 效力持续约 99 回合 — 竞速靠弱化免疫伤害：能力牌（回响双打狱火 12/tick）、遗物 tick（信函开启每 3 技能 5）、毒（蛇咬 10/回合）；(3) 分支解算后她成为攻击者 — 挡经济须跑赢递增力量循环；(4) 束缚链限制出牌 — 桥标 ok 的牌全部打出。run-44 二周目死于女王 174/400、引擎仍在转 — 弱化免疫组合若从 T3 开始排序即为胜局。",
+    "curated": true,
+    "needs_zh": false
   }
 }
