@@ -55,18 +55,19 @@
   "BLESSING_OF_THE_FORGE": {
     "aliases": [
       "Blessing of the Forge",
-      "BlessingoftheForge"
+      "BLESSING_OF_THE_FORGE",
+      "锻造祝福"
     ],
     "curated": true,
-    "description": "为本场战斗升级手牌中所有可升级卡（战斗内限定——战斗后还原，Armaments 同类）。run-38 实时：致命意图 Boss 回合确认 Defend 5→8（8+8=16 挡对 17 来袭）；熔岩拳 10→14 同理。在手牌密度最高/来袭致命的回合使用——不是永久牌库投资。",
+    "description": "本场战斗升级手牌中所有可升级牌（武装级，战后还原）。在手牌密度最高/致命意图回合使用。对局43 Act2 (4,0) live：5 张攻击手牌升级——铁斩波+2/+2、双打击+2、剑柄+1/抽2、打击+3，用在 19 伤 POUNCE 回合。对局43 RANSACK 事件稀有药水即为此（正确领取——对局42 曾跳过领取屏）。",
     "display_name": "Blessing of the Forge",
     "id": "BLESSING_OF_THE_FORGE",
     "kind": "potion",
-    "name": "熔炉的祝福",
+    "name": "锻造祝福",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "对局43 live",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L17; md:potions_zh.md:L17",
+    "source": "potions.md + 对局38/43 live",
     "target": "self",
     "usage": "combat",
     "zh_description": "为本场战斗升级手牌中所有可升级卡（战斗内限定——战斗后还原，Armaments 同类）。run-38 实时：致命意图 Boss 回合确认 Defend 5→8（8+8=16 挡对 17 来袭）；熔岩拳 10→14 同理。在手牌密度最高/来袭致命的回合使用——不是永久牌库投资。"
@@ -236,36 +237,38 @@
   "DEXTERITY_POTION": {
     "aliases": [
       "Dexterity Potion",
-      "DexterityPotion"
+      "DEXTERITY_POTION",
+      "敏捷药水"
     ],
     "curated": true,
-    "description": "本场战斗 +2 敏捷。",
+    "description": "本场战斗 +2 敏捷（卡牌挡 +2，与滑石叠加）。对局43 live：滑石1+药2=3 总计；Defend 6+3=9、坚毅 8+3=11、终极防御 13+3=16——16≥15 单卡眩晕碗虫石 HEADBUTT。对局39 注记：敏捷+Defend×2=14 差 15 一点——下眩晕结论前必须用 live 总挡对意图数字精算。",
     "display_name": "Dexterity Potion",
     "id": "DEXTERITY_POTION",
     "kind": "potion",
     "name": "敏捷药水",
     "needs_zh": false,
-    "play_notes": "run-39 live：使用后+2 敏捷；Dex 下防御 5→7 live。碗虫 T4：Dex+双防=14 挡 vs HEADBUTT 15（差 1 未能触发 IMBALANCED 完全格挡眩晕）。",
+    "play_notes": "对局43 live",
     "rarity": "Common",
-    "source": "md:potions.md:L27; md:potions_zh.md:L27; codex:potions/DEXTERITY_POTION",
+    "source": "potions.md + 对局39/43 live",
     "target": "any player",
     "usage": "combat"
   },
   "DISTILLED_CHAOS": {
     "aliases": [
       "Distilled Chaos",
-      "DistilledChaos"
+      "DISTILLED_CHAOS",
+      "蒸馏混沌"
     ],
-    "curated": false,
-    "description": "打出抽牌堆顶的 3 张牌。",
+    "curated": true,
+    "description": "打出抽牌堆顶 3 张牌。方差类——费用/目标不可控。对局43 Act2 商店 (5,0) live 价格 102金（未买）。",
     "display_name": "Distilled Chaos",
     "id": "DISTILLED_CHAOS",
     "kind": "potion",
-    "name": "精炼混沌",
+    "name": "蒸馏混沌",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "对局43 live",
     "rarity": "Rare",
-    "source": "md:potions.md:L28; md:potions_zh.md:L28; codex:potions/DISTILLED_CHAOS",
+    "source": "potions.md + 对局43 商店",
     "target": "self",
     "usage": "combat"
   },
@@ -468,18 +471,19 @@
   "FOUL_POTION": {
     "aliases": [
       "Foul Potion",
-      "FoulPotion"
+      "FOUL_POTION",
+      "污浊药水"
     ],
     "curated": true,
-    "description": "战斗中：对每个非宠物生物（包括你自己）造成 12 伤害（低 HP 下自杀级；自伤触发 Rupture）。商人房间：获得 100 金。伪商人事件：触发伪商人战斗 — 绝不要在那使用。run-42 事件（药水信使）提供 x3；13HP 时战斗使用即自杀 — 改选稀有药路线。",
+    "description": "战斗中：对所有非宠物生物（含自己）造成 12 伤（AoE12+自伤12；HP<15 时是自杀级；自伤触发 Rupture）。在商人房：获得 100金。FakeMerchant 事件中使用会触发战斗——绝不能在那用。POTION_COURIER 事件提供 ×3（对局42 13HP 拒绝；对局43 44HP 仍拒绝——桥拒绝战斗外 use_potion，商人房换金线目前 agent 不可达）。",
     "display_name": "Foul Potion",
     "id": "FOUL_POTION",
     "kind": "potion",
     "name": "污浊药水",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "对局43 live",
     "rarity": "Event",
-    "source": "md:potions.md:L41; md:potions_zh.md:L40",
+    "source": "potions.md + 对局42/43 live",
     "target": "anytime",
     "usage": "Event"
   },
@@ -903,18 +907,19 @@
   "SHACKLING_POTION": {
     "aliases": [
       "Shackling Potion",
-      "ShacklingPotion"
+      "SHACKLING_POTION",
+      "枷锁药水"
     ],
-    "curated": false,
-    "description": "对全体敌人施加 ShacklingPotionPower 7——临时 −7 力量，其回合结束时失去。",
+    "curated": true,
+    "description": "对所有敌人施加 ShacklingPotionPower 7——临时 −7 力量，其回合末消失。对局43 两家商店都出现（Act1 尾部 99金 / Act2 (5,0) 95金）；药槽满或金币已投遗物——未买。Boss 闸门级：每段多段意图按击 −7。",
     "display_name": "Shackling Potion",
     "id": "SHACKLING_POTION",
     "kind": "potion",
-    "name": "镣铐药水",
+    "name": "枷锁药水",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "对局43 live",
     "rarity": "Rare",
-    "source": "md:potions.md:L64; md:potions_zh.md:L64",
+    "source": "potions.md + 对局43 商店",
     "target": "ALL enemies",
     "usage": "combat"
   },
@@ -973,6 +978,21 @@
     "target": "any player",
     "usage": "combat"
   },
+  "SOLDIER_STEW": {
+    "aliases": [
+      "Soldier's Stew",
+      "SOLDIERS_STEW"
+    ],
+    "curated": false,
+    "description": "All cards containing Strike gain 1 Replay this combat.",
+    "id": "SOLDIER_STEW",
+    "kind": "potion",
+    "name": "Soldier's Stew",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "codex-api:/potions/SOLDIERS_STEW"
+  },
   "SOLDIER_S_STEW": {
     "aliases": [
       "SOLDIERS_STEW",
@@ -995,17 +1015,19 @@
   "SPEED_POTION": {
     "aliases": [
       "Speed Potion",
-      "SpeedPotion"
+      "SPEED_POTION",
+      "速度药水"
     ],
     "curated": true,
-    "description": "本回合获得 SpeedPotionPower +5 敏捷；回合结束失去这 5 敏捷（临时）。run-41 live：buff 下防御 5→10、耸肩 8→13；单回合爆发挡 — 须用在致命意图落地的那个回合，不要提前喝。",
+    "description": "当回合 +5 敏捷，回合末失去。单回合爆发挡——花在致命意图落地的那回合，不要提前。对局43 Act1 Boss T10 live：敏捷 1→6，但手牌没有挡牌，爆发当回合未兑现（原计划挡 SCREAM 13，结果 Beckon 税先到）。教训：速度药只有在手上有挡牌可放大时才有价值。",
     "display_name": "Speed Potion",
     "id": "SPEED_POTION",
     "kind": "potion",
     "name": "速度药水",
-    "play_notes": "",
+    "needs_zh": false,
+    "play_notes": "对局43 live",
     "rarity": "Common",
-    "source": "md:potions.md:L69; md:potions_zh.md:L69",
+    "source": "potions.md + 对局41/43 live",
     "target": "any player",
     "usage": "combat"
   },
@@ -1081,18 +1103,19 @@
   "SWIFT_POTION": {
     "aliases": [
       "Swift Potion",
-      "SwiftPotion"
+      "SWIFT_POTION",
+      "迅捷药水"
     ],
-    "curated": false,
-    "description": "抽 3 张牌。",
+    "curated": true,
+    "description": "抽 3 张牌。对局43 Boss 奖励获得；在 Act2 (1,1) 碗虫战 T1 使用，想挖挡牌凑 IMBALANCED 眩晕阈值——抽上来的是攻击牌（剑柄/双打击/打击），当回合眩晕线落空。",
     "display_name": "Swift Potion",
     "id": "SWIFT_POTION",
     "kind": "potion",
     "name": "迅捷药水",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "对局43 live",
     "rarity": "Common",
-    "source": "md:potions.md:L73; md:potions_zh.md:L73; codex:potions/SWIFT_POTION",
+    "source": "potions.md + 对局43 live",
     "target": "any player",
     "usage": "combat"
   },
@@ -1135,18 +1158,19 @@
   "WEAK_POTION": {
     "aliases": [
       "Weak Potion",
-      "WeakPotion"
+      "WEAK_POTION",
+      "弱化药水"
     ],
-    "curated": false,
-    "description": "施加 3 层 Weak。",
+    "curated": true,
+    "description": "对目标施加 3 层虚弱（攻击 −25%，持续3回合）。对局43 Act1 Boss 灵魂异鱼 T7 live：玩家带易伤时 DE_GAS 意图 24→18，6 点削减 + 6 挡把 24 漏伤压到 12。Boss 闸门储备教条：花在 live 意图最高的一回合，身后保留一瓶治疗类药水。",
     "display_name": "Weak Potion",
     "id": "WEAK_POTION",
     "kind": "potion",
-    "name": "虚弱药水",
+    "name": "弱化药水",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "对局43 live",
     "rarity": "Common",
-    "source": "md:potions.md:L76; md:potions_zh.md:L76; codex:potions/WEAK_POTION",
+    "source": "potions.md + 对局43 live",
     "target": "any enemy",
     "usage": "combat"
   }

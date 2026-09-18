@@ -301,19 +301,21 @@
   "BIIIG_HUG": {
     "aliases": [
       "Biiig Hug",
-      "BiiigHug"
+      "BiiigHug",
+      "BIIIG_HUG",
+      "大大拥抱"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, remove 4 cards; whenever you shuffle your draw pile, add 1 Soot to it.",
+    "curated": true,
+    "description": "Ancient relic (Tezcatara boon): on pickup remove 4 cards from deck; on every shuffle add 1 Soot card to draw pile.",
     "id": "BIIIG_HUG",
     "kind": "relic",
     "name": "Biiig Hug",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L145; md:relics_zh.md:L145",
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
     "zh_description": "拾取时，移除 4 张牌；每次洗抽牌堆时向其中加入 1 张 Soot。",
     "zh_name": "大～抱抱"
   },
@@ -485,19 +487,20 @@
   "BOOK_OF_FIVE_RINGS": {
     "aliases": [
       "Book of Five Rings",
-      "BookOfFiveRings"
+      "BOOK_OF_FIVE_RINGS",
+      "五轮书"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "every 5 cards added to your deck, heal 20 HP.",
+    "curated": true,
+    "description": "every 5 cards added to your deck, heal 20 HP. Shop (5,0) Act2 live price 196g run-43 (unaffordable). Anti-thinning relic - pays out only in card-add-heavy routes.",
     "id": "BOOK_OF_FIVE_RINGS",
     "kind": "relic",
     "name": "Book of Five Rings",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "rarity": "Common",
-    "source": "md:relics.md:L22; md:relics_zh.md:L22",
+    "source": "relics.md + run-43 shop live",
     "zh_description": "每向牌库加入 5 张牌，回复 20 HP。",
     "zh_name": "五轮书"
   },
@@ -594,6 +597,25 @@
     "source": "md:relics.md:L242; md:relics_zh.md:L242",
     "zh_description": "第 1 回合开始，失去 2 点能量；第 2 回合起，每回合 +1 最大能量。",
     "zh_name": "面包"
+  },
+  "BRIGHT_FLAME": {
+    "aliases": [
+      "Storybook",
+      "STORYBOOK",
+      "Brightest Flame",
+      "BRIGHT_FLAME",
+      "至亮之焰"
+    ],
+    "character": "shared",
+    "curated": true,
+    "description": "Card-grant payload of the Tezcatara STORYBOOK boon - added to deck on pickup; card effect not live-verified run-43.",
+    "id": "BRIGHT_FLAME",
+    "kind": "relic",
+    "name": "Brightest Flame",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Ancient",
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
   },
   "BRILLIANT_SCARF": {
     "aliases": [
@@ -1122,19 +1144,20 @@
   "DINGY_RUG": {
     "aliases": [
       "Dingy Rug",
-      "DingyRug"
+      "DINGY_RUG",
+      "破地毯"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "card rewards can now contain Colorless cards.",
+    "curated": true,
+    "description": "card rewards can now contain Colorless cards. Shop (5,0) Act2 live price 208g run-43 (unaffordable). Dilutes class-pool rewards - low priority unless hunting specific Colorless tools.",
     "id": "DINGY_RUG",
     "kind": "relic",
     "name": "Dingy Rug",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "rarity": "Shop",
-    "source": "md:relics.md:L247; md:relics_zh.md:L247",
+    "source": "relics.md + run-43 shop live",
     "zh_description": "卡牌奖励现在可包含无色牌。",
     "zh_name": "肮脏地毯"
   },
@@ -1950,19 +1973,21 @@
   "GOLDEN_COMPASS": {
     "aliases": [
       "Golden Compass",
-      "GoldenCompass"
+      "GoldenCompass",
+      "GOLDEN_COMPASS",
+      "黄金罗盘"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, replace the Act 2 map with a single special path.",
+    "curated": true,
+    "description": "Ancient relic (Tezcatara boon): on pickup, regenerate the current act's map (RunManager.GenerateMap for current act index).",
     "id": "GOLDEN_COMPASS",
     "kind": "relic",
     "name": "Golden Compass",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L169; md:relics_zh.md:L169",
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
     "zh_description": "拾取时，用一条特殊路径替换第二章地图。",
     "zh_name": "黄金罗盘"
   },
@@ -2757,19 +2782,20 @@
   "MEAL_TICKET": {
     "aliases": [
       "Meal Ticket",
-      "MealTicket"
+      "MEAL_TICKET",
+      "餐券"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "on entering a MerchantRoom, heal 15 HP; only obtainable before the Act-3 treasure chest.",
+    "curated": true,
+    "description": "on entering a MerchantRoom, heal 15 HP; only obtainable before the Act-3 treasure chest. Shop prices live run-43: 187g Act1 (14,2) / not offered Act2 (5,0). HP-economy relic tied to shop spines.",
     "id": "MEAL_TICKET",
     "kind": "relic",
     "name": "Meal Ticket",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "rarity": "Common",
-    "source": "md:relics.md:L32; md:relics_zh.md:L32",
+    "source": "relics.md + run-43 shop screens",
     "zh_description": "进入商店房间（MerchantRoom）时，回复 15 HP；仅可在第三幕宝箱前获得。",
     "zh_name": "餐券"
   },
@@ -3154,38 +3180,42 @@
   "NUTRITIOUS_SOUP": {
     "aliases": [
       "Event boon-relic decodes",
-      "NutritiousSoup"
+      "NutritiousSoup",
+      "Nutritious Soup",
+      "NUTRITIOUS_SOUP",
+      "营养汤"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "Upon pickup, Enchant all Strikes in your Deck with Tezcatara's Ember.",
+    "curated": true,
+    "description": "Ancient relic (Tezcatara boon): on pickup enchant every Basic Strike-tagged card with Tezcatara's Ember - cost reduced to 0, gains Eternal keyword, +3 damage on powered attacks.",
     "id": "NUTRITIOUS_SOUP",
     "kind": "relic",
-    "name": "Event boon-relic decodes",
+    "name": "Nutritious Soup",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L315; md:relics_zh.md:L191; codex:relics/NUTRITIOUS_SOUP",
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
     "zh_description": "拾取时，为牌库中所有带 Strike 标签的基础牌附魔 Tezcatara's Ember（Ember = **0 费 / +3 伤 / Eternal**——附魔期间基础 Strike 每战免费 +3 结算）。",
     "zh_name": "营养汤"
   },
   "ODDLY_SMOOTH_STONE": {
     "aliases": [
       "Oddly Smooth Stone",
-      "OddlySmoothStone"
+      "ODDLY_SMOOTH_STONE",
+      "滑石"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "Start each combat with 1 Dexterity.",
+    "curated": true,
+    "description": "start each combat with 1 Dexterity (card-block values +1 all fight). Shop (14,2) Act1 live price 191g run-43 - bought as the Act1-tail gold sink with Tremble (243/244=99.6% sunk). Stacks additively with Dex potions in-combat.",
     "id": "ODDLY_SMOOTH_STONE",
     "kind": "relic",
     "name": "Oddly Smooth Stone",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "rarity": "Common",
-    "source": "md:relics.md:L33; md:relics_zh.md:L33; codex:relics/ODDLY_SMOOTH_STONE",
+    "source": "relics.md + run-43 shop live",
     "zh_description": "战斗开始，获得 1 点敏捷。",
     "zh_name": "意外光滑的石头"
   },
@@ -3229,19 +3259,21 @@
   },
   "ORICHALCUM": {
     "aliases": [
-      "Orichalcum"
+      "Orichalcum",
+      "ORICHALCUM",
+      "橙铜"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "end of turn, if you have no Block, gain 6 Block.",
+    "curated": true,
+    "description": "end of turn, if you have no Block, gain 6 Block. Passive safety net on attack-heavy hands; with OddlySmoothStone +1 Dex the passive stays 6 (relic block is not card block). Live run-43: repeatedly covered 6 of 15-24 incoming on no-block-card turns.",
     "id": "ORICHALCUM",
     "kind": "relic",
     "name": "Orichalcum",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "rarity": "Uncommon",
-    "source": "md:relics.md:L66; md:relics_zh.md:L66",
+    "source": "relics.md + run-43 live",
     "zh_description": "回合结束时，若没有格挡，获得 6 格挡。",
     "zh_name": "奥利哈钢"
   },
@@ -3922,19 +3954,21 @@
   "PUMPKIN_CANDLE": {
     "aliases": [
       "Pumpkin Candle",
-      "PumpkinCandle"
+      "PumpkinCandle",
+      "PUMPKIN_CANDLE",
+      "南瓜蜡烛"
     ],
     "character": null,
     "counter_shown": true,
-    "curated": false,
-    "description": "+1 max Energy each turn; extinguishes after 5 combats; Rest Sites gain a Kindle option that adds 5 combats. Burnout occurs at exactly the 5th combat; KINDLE appears as a third rest-site button (HEAL/SMITH/KINDLE); re-lighting costs the rest action — when HP-crisis forces HEAL at every rest the candle stays dead into the boss fight.",
+    "curated": true,
+    "description": "Ancient relic (Tezcatara boon): +1 Max Energy while KindleCount>0; -1 per combat end; rest sites add a Kindle option that restores +5. Counter visible.",
     "id": "PUMPKIN_CANDLE",
     "kind": "relic",
     "name": "Pumpkin Candle",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L210; md:relics_zh.md:L210",
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
     "zh_description": "每回合 +1 最大能量；5 场战斗后熄灭；休息点获得 Kindle 选项（+5 场战斗）。第 5 战准时燃尽；KINDLE 作为营火第三按钮（HEAL/SMITH/KINDLE）出现；复燃消耗当次营火行动 —— HP 危机迫使每次营火都 HEAL 时蜡烛在 Boss 战前保持熄灭。",
     "zh_name": "南瓜蜡烛"
   },
@@ -4111,19 +4145,20 @@
   "RINGING_TRIANGLE": {
     "aliases": [
       "Ringing Triangle",
-      "RingingTriangle"
+      "RINGING_TRIANGLE",
+      "铃三角"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "you retain your hand on the first turn of combat.",
+    "curated": true,
+    "description": "you retain your hand on the first turn of combat. Shop (14,2) Act1 live price 202g run-43 (not bought - OddlySmoothStone+Tremble 243g sunk instead; per-turn Dex valued over T1-only consistency). Do NOT confuse with the RINGING counter-class power from run-13 (1 card/turn) - different thing.",
     "id": "RINGING_TRIANGLE",
     "kind": "relic",
     "name": "Ringing Triangle",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "rarity": "Shop",
-    "source": "md:relics.md:L261; md:relics_zh.md:L261",
+    "source": "relics.md + run-43 shop live",
     "zh_description": "战斗首回合保留手牌。",
     "zh_name": "三角铃鼓"
   },
@@ -4357,19 +4392,21 @@
   "SEAL_OF_GOLD": {
     "aliases": [
       "Seal of Gold",
-      "SealOfGold"
+      "SealOfGold",
+      "SEAL_OF_GOLD",
+      "黄金封印"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "at start of turn, if you have ≥5 Gold, spend 5 Gold and gain 1 Energy.",
+    "curated": true,
+    "description": "Ancient relic (Tezcatara boon): at start of your turn if gold>=5, gain 1 Energy and lose 5 gold.",
     "id": "SEAL_OF_GOLD",
     "kind": "relic",
     "name": "Seal of Gold",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L217; md:relics_zh.md:L217",
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
     "zh_description": "回合开始时，若金币 ≥5，花费 5 金币并获得 1 点能量。",
     "zh_name": "黄金印"
   },
@@ -4658,19 +4695,20 @@
   "STONE_CALENDAR": {
     "aliases": [
       "Stone Calendar",
-      "StoneCalendar"
+      "STONE_CALENDAR",
+      "石日历"
     ],
     "character": null,
     "counter_shown": true,
-    "curated": false,
-    "description": "at end of turn 7, deal 52 damage to ALL enemies.",
+    "curated": true,
+    "description": "at end of turn 7, deal 52 damage to ALL enemies (counter ticks per combat, resets next fight). Live run-43 x2: LouseProgenitor killed from 36 HP at end of our T7 (calendar fired before enemy T7 acted); also observed NOT firing on T6 - the trigger is end of turn 7 specifically. Intangible 1-2 caps this 52 to 1 per instance - do not count on it during FADE windows.",
     "id": "STONE_CALENDAR",
     "kind": "relic",
     "name": "Stone Calendar",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "rarity": "Rare",
-    "source": "md:relics.md:L128; md:relics_zh.md:L128",
+    "source": "relics.md + run-43 live kill",
     "zh_description": "第 7 回合结束时，对所有敌人造成 52 点伤害。",
     "zh_name": "历石"
   },
@@ -4714,19 +4752,21 @@
   },
   "STORYBOOK": {
     "aliases": [
-      "Storybook"
+      "Storybook",
+      "STORYBOOK",
+      "故事书"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, add 1 Brightest Flame to deck.",
+    "curated": true,
+    "description": "Ancient relic (Tezcatara boon): on pickup, add 1 Brightest Flame to your deck.",
     "id": "STORYBOOK",
     "kind": "relic",
     "name": "Storybook",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L227; md:relics_zh.md:L227",
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
     "zh_description": "拾取时，向牌库加入 1 张 Brightest Flame。",
     "zh_name": "故事书"
   },
@@ -4996,19 +5036,21 @@
   "TOASTY_MITTENS": {
     "aliases": [
       "Toasty Mittens",
-      "ToastyMittens"
+      "ToastyMittens",
+      "TOASTY_MITTENS",
+      "暖和手套"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "each turn before hand draw, exhaust the top card of draw pile and gain 1 Strength. +1 Strength every turn without exception; the exhaust also fires FeelNoPain when deployed (exhaust source counts for FnP). **Anti-synergy with Headbutt**: Mittens exhausts draw-pile TOP at the start of your next turn — a Headbutt-retrieved card on top gets eaten before you draw it.",
+    "curated": true,
+    "description": "Ancient relic (Tezcatara boon): before hand draw each combat, exhaust 1 card from draw pile (turn 1 skips Innate) and gain 1 Strength.",
     "id": "TOASTY_MITTENS",
     "kind": "relic",
     "name": "Toasty Mittens",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L230; md:relics_zh.md:L230",
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
     "zh_description": "每回合抽牌前，消耗抽牌堆顶牌并获得 1 点力量。每回合 +1 力零例外；消耗顶牌在无痛部署时同步触发 FnP（消耗源计入无痛）。**与 Headbutt 取回反协同**：取回件置于抽牌堆顶后会被 Mittens 下回合开始时消耗。",
     "zh_name": "烘焙手套"
   },
@@ -5085,19 +5127,21 @@
   "TOY_BOX": {
     "aliases": [
       "Toy Box",
-      "ToyBox"
+      "ToyBox",
+      "TOY_BOX",
+      "玩具盒"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, gain 4 Wax relics; every 3 combats, the left-most Wax relic melts away.",
+    "curated": true,
+    "description": "Ancient relic (Tezcatara boon): on pickup gain 4 Wax relics; every 3 combats the left-most Wax relic melts away.",
     "id": "TOY_BOX",
     "kind": "relic",
     "name": "Toy Box",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L232; md:relics_zh.md:L232",
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
     "zh_description": "拾取时，获得 4 件蜡质遗物；每 3 场战斗，最左侧蜡质遗物融化消失。",
     "zh_name": "玩具盒"
   },
@@ -5311,19 +5355,21 @@
   "VERY_HOT_COCOA": {
     "aliases": [
       "Very Hot Cocoa",
-      "VeryHotCocoa"
+      "VeryHotCocoa",
+      "VERY_HOT_COCOA",
+      "极热可可"
     ],
     "character": null,
     "counter_shown": false,
     "curated": true,
-    "description": "Start each combat with additional +4 Energy (T1 only). Ancient-class boon relic (Tezcatara Act2 start room; Lantern-stacking verified). LIVE run-40: stacks additively with Venerable Tea Set (+2 after rest) and Lantern (+1) — elite T1 energy=10/3 observed after rest at (7,2).",
+    "description": "Ancient relic (Tezcatara boon): +4 Energy on turn 1 of every combat (AfterSideTurnStart, TurnNumber<=1).",
     "id": "VERY_HOT_COCOA",
     "kind": "relic",
     "name": "Very Hot Cocoa",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L235; md:relics_zh.md:L235; codex:relics/VERY_HOT_COCOA; run-40 live fold 2026-09-18",
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
     "zh_description": "第 1 回合开始，获得 +4 能量。",
     "zh_name": "烫嘴可可"
   },
@@ -5405,19 +5451,21 @@
   },
   "WHETSTONE": {
     "aliases": [
-      "Whetstone"
+      "Whetstone",
+      "WHETSTONE",
+      "磨刀石"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, upgrade 2 random Attack cards in your deck. Upgrade targets are Attack-tagged (e.g. Bash → Bash+ 10 damage / 3 Vulnerable; MoltenFist → MoltenFist+ 14 damage).",
+    "curated": true,
+    "description": "on pickup, upgrade 2 random Attack cards in your deck. Shop (5,0) Act2 live price 151g run-43 (not bought - Barricade taken at 150g instead). Random targets - value depends on attack density.",
     "id": "WHETSTONE",
     "kind": "relic",
     "name": "Whetstone",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "rarity": "Common",
-    "source": "md:relics.md:L45; md:relics_zh.md:L45",
+    "source": "relics.md + run-43 shop live",
     "zh_description": "拾取时，升级牌库中 2 张随机攻击牌。升级目标为攻击标签（如 Bash→Bash+ 10 伤/3 易伤；MoltenFist→MoltenFist+ 14 伤）。",
     "zh_name": "磨刀石"
   },
@@ -5481,19 +5529,20 @@
   "WINGED_BOOTS": {
     "aliases": [
       "Winged Boots",
-      "WingedBoots"
+      "WINGED_BOOTS",
+      "羽翼之靴"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "you may ignore map path restrictions 3 times. LIVE (run-36): `map_select` to ANY map coordinate succeeds regardless of `available_map_points` — a full teleport, not just child-picking. Used (14,3)→(12,6) shop then (12,6)→(15,3) boss, skipping an elite corridor; 2 of 3 charges consumed.",
+    "curated": true,
+    "description": "3 charges: when choosing the next floor's room, ignore current route connectivity (any point on the next row). Neow Act1 live run-43 pick over Pommelander(+1 card upgrade) and SilverCrucible(3 upgraded rewards / empty first chest). Doctrine: reserve for rest/shop geometry escapes and pre-boss emergency jumps; charges unused all run-43 (draft geometry held) - unused charges are not a loss if the draft was correct.",
     "id": "WINGED_BOOTS",
     "kind": "relic",
     "name": "Winged Boots",
     "needs_zh": false,
-    "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L238; md:relics_zh.md:L238",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
+    "rarity": "Uncommon",
+    "source": "run-43 Neow live",
     "zh_description": "选择行进房间时可忽略路径限制 3 次。LIVE（对局 36）：`map_select` 指向**任意**地图坐标均可成功，无视 `available_map_points` 列表——是完全传送，不限于子节点选择。实用例：(14,3)→(12,6) 商店，再 (12,6)→(15,3) Boss 门，跳过精英走廊；3 跳消耗 2 跳。",
     "zh_name": "羽翼之靴"
   },
@@ -5557,19 +5606,20 @@
   "YUMMY_COOKIE": {
     "aliases": [
       "Yummy Cookie",
-      "YummyCookie"
+      "YUMMY_COOKIE",
+      "美味饼干"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, upgrade 4 chosen cards. Upgrades are permanent deck upgrades (deck_select overlay — choose each card then proceed to confirm); Rupture upgraded to Amount 2 this way grants +2 Strength on every subsequent Bloodletting/Breakthrough self-damage.",
+    "curated": true,
+    "description": "Ancient relic (Tezcatara boon): on pickup, upgrade 4 chosen cards permanently. Live run-43.",
     "id": "YUMMY_COOKIE",
     "kind": "relic",
     "name": "Yummy Cookie",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "rarity": "Ancient",
-    "source": "md:relics.md:L239; md:relics_zh.md:L239",
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
     "zh_description": "拾取时，升级 4 张选定牌。升级为永久牌库升级（deck_select 叠层——逐张 choose 后 proceed 确认）；该方式升级的 Rupture+ Amount 2 此后每次 Bloodletting/Breakthrough 自伤 +2 力量。",
     "zh_name": "美味饼干"
   }

@@ -772,48 +772,46 @@
       "Act2"
     ],
     "aliases": [
-      "BowlbugRock"
+      "BowlbugRock",
+      "BOWLBUG_ROCK",
+      "盛碗虫（石）"
     ],
     "curated": true,
     "cycle": [
       "HEADBUTT_MOVE",
       "POST_HEADBUTT"
     ],
-    "description": "Act2，对局40 live 48 HP（A 46-49）。IMBALANCED:1——物主的攻击被完全格挡时眩晕。头槌 基础15（对局40 A1：红面具弱化1后显示11；力量叠层会抬高）。教条：其攻击回合用血墙16级挡 = 免费眩晕窗；部分格挡不触发眩晕。对局40 live：T1 眩晕触发（血墙16≥弱化后11），三人组 T4 清场。",
+    "description": "Act2，live A1 47-48HP。IMBALANCED:1——其攻击被完全格挡时眩晕（部分格挡不触发）。HEADBUTT 单体 15（A:16 级）。教条：其攻击回合需要 ≥ 来伤的格挡（基础15；敏捷加成后所需挡牌更少——对局43：终极防御13+敏捷3=16 单卡眩晕；对局39 注记：敏捷+Defend×2=14 差一点）。眩晕窗 = 清理随从（丝/卵）的回合。对局43 以 18 挡 vs 15 再次实证眩晕。",
     "hp": {
-      "ascension": {
-        "max": 49,
-        "min": 46
-      },
-      "base": 45,
-      "notes": "run-39 live 45/45；codex 45-48（A 46-49）"
+      "base": 48,
+      "notes": "live 47-48 A1 对局42/43"
     },
     "id": "BOWLBUG_ROCK",
     "is_boss": false,
     "kind": "monster",
     "name": "盛碗虫（石）",
-    "play_notes": "run-39 live：IMBALANCED 仅在挡≥来袭时触发（HEADBUTT 需 15）；血墙 16 级卡牌是教条工具。配对杀序：眩晕窗清 Egg，再竞速 Rock。",
-    "source": "codex-api + run-39 live IMBALANCED 击晕; run-40 live fold 2026-09-18"
+    "needs_zh": false,
+    "play_notes": "对局43 live",
+    "source": "对局39/40/43 live"
   },
   "BOWLBUG_SILK": {
-    "acts": [],
+    "acts": [
+      "Act2"
+    ],
     "aliases": [
-      "Bowlbug (Silk)"
+      "BowlbugSilk",
+      "BOWLBUG_SILK",
+      "盛碗虫（丝）"
     ],
     "curated": true,
     "cycle": [
-      "THRASH_MOVE",
-      "TOXIC_SPIT_MOVE"
+      "TOXIC_SPIT_MOVE",
+      "THRASH_MOVE"
     ],
-    "description": "Act2 普通怪，对局40 live 42 HP（codex 40-43，A 41-44）。循环 THRASH（多段 4x2）→ TOXIC_SPIT（玩家弱化 1）。与石碗虫、卵碗虫组成三人组。击杀顺序：石碗虫眩晕窗内先清卵。",
+    "description": "Act2 碗虫变体，对局43 实测 43HP。TOXIC_SPIT = 仅 debuff（玩家 Weak 1，0 伤，免费窗）；THRASH = 多段 4x2（A:5/击）。无 HardToKill/Plating，纯血量。优先与石碗虫一同处理：石虫 IMBALANCED 眩晕窗就是清理本体的回合。",
     "hp": {
-      "ascension": {
-        "max": 44,
-        "min": 41
-      },
-      "base": 40,
-      "max": 43,
-      "notes": ""
+      "base": 43,
+      "notes": "live 43/43 A1 对局43"
     },
     "id": "BOWLBUG_SILK",
     "is_boss": false,
@@ -831,8 +829,8 @@
     },
     "name": "盛碗虫（丝）",
     "needs_zh": false,
-    "play_notes": "",
-    "source": "codex-api:/monsters/BOWLBUG_SILK; run-40 live fold 2026-09-18",
+    "play_notes": "对局43 live",
+    "source": "codex + 对局43 live",
     "type": "Normal"
   },
   "BYGONE_EFFIGY": {
@@ -5182,12 +5180,32 @@
     "source": "; run-40 live fold 2026-09-18"
   },
   "EXOSKELETON": {
+    "acts": [
+      "Act2"
+    ],
+    "aliases": [
+      "Exoskeleton",
+      "EXOSKELETON",
+      "外骨骼虫"
+    ],
     "curated": true,
-    "description": "Act2 普通怪，24-28 HP（A 25-29）；对局40 见到三人组 25-28 与四人组 24-28。HARD_TO_KILL:9——每次伤害实例的 HP 损失上限 9，超出部分弃掉（不保留）。节奏教条：狱火/突破类 9 实例命中满值；重锤 32 浪费 23。招式：SKITTER 多段 1x3、MANDIBLES 单击 8（A:9）、ENRAGE Buff 力量+2。对局40 live：红面具弱化把撕咬 1x3→0x3、大颚 8→6；靠突破/狱火 9 实例节奏 + 集火打击清场。",
+    "cycle": [
+      "SKITTER_MOVE",
+      "MANDIBLES_MOVE",
+      "ENRAGE_MOVE"
+    ],
+    "description": "Act2 普通怪，对局43 三只实测 24/26/25HP。HARD_TO_KILL:9 = 每次伤害实例上限 9（溢出作废，不存银行）——与按回合上限不同：要打多段 ≤9 的小伤（TwinStrike 5x2 全额；单发 32 伤的重锤浪费 23）。招式：SKITTER 多段 1x3（随力量膨胀，力量2 时见 3x3）、MANDIBLES 单体8（A:9，力量下 10+）、ENRAGE 自身力量+2（免费窗）。教条：按当前血量定击杀顺序，ENRAGE 回合倾泻，对最低血量的虫子打 Feed Fatal 拿 MaxHP。对局43 在 4HP 的虫子上打出 Feed Fatal。",
+    "hp": {
+      "base": 25,
+      "notes": "live 三只 24/25/26 A1 对局43"
+    },
     "id": "EXOSKELETON",
+    "is_boss": false,
     "kind": "monster",
     "name": "外骨骼虫",
-    "source": "; run-40 live fold 2026-09-18"
+    "needs_zh": false,
+    "play_notes": "对局43 live",
+    "source": "对局40/41/43 live"
   },
   "Entomancer": {
     "acts": [],
@@ -8407,6 +8425,119 @@
     "name": "活雾",
     "play_notes": "run-39 live：SUPER_GAS_BLAST=8 伤级（档案 census 残条误导）；Smoggy 每回合一技能使攻击链成为出牌模式；杀主令随从消亡（kill-master-despawns-summons 教条 live 确认）。",
     "source": "codex-api + run-39 live T4 击杀 + census SUPER_GAS_BLAST 解析"
+  },
+  "LOUSE_PROGENITOR": {
+    "acts": [
+      "Act2"
+    ],
+    "aliases": [
+      "LouseProgenitor",
+      "LOUSE_PROGENITOR",
+      "虱虫之祖"
+    ],
+    "curated": true,
+    "cycle": [
+      "WEB_CANNON_MOVE",
+      "CURL_AND_GROW_MOVE",
+      "POUNCE_MOVE"
+    ],
+    "description": "Act2，对局43 A1 实测 136HP（档案表值 134-136/A1 138-141——live 为准）。对局43 实测循环：WEB_CANNON（单体9 A:10 + Frail 2；意图随其力量膨胀，观测到 14-24）→ CURL_AND_GROW（防御+增益：自身 14 挡 + 力量5——免费窗，倾泻回合）→ POUNCE（单体14 A:16；叠力量后 live 意图 19-24）。受击回合仍有 CurlUp 类后置挡。每次 Curl +5 力量——两次 Curl 后 POUNCE 是 24 级，挡位计算必须用力量膨胀后的数字。对局43 中石日历第7回合 52 伤在它 36HP 时完成击杀。",
+    "hp": {
+      "base": 136,
+      "notes": "live 136/136 A1 对局43；档案 A 138-141"
+    },
+    "id": "LOUSE_PROGENITOR",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "CURL_AND_GROW_MOVE": {
+        "aliases": [
+          "Curl and Grow",
+          "CURL_AND_GROW"
+        ],
+        "curated": true,
+        "description": "Curl and Grow：防御+增益——获得 14 格挡 + 自身 5 力量。免费伤害窗。",
+        "effect": "Curl and Grow: Defend + Buff; block 14; STRENGTH 5 (self)",
+        "follow_up_id": null,
+        "id": "CURL_AND_GROW_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Defend + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "LOUSE_PROGENITOR",
+        "name": "Curl and Grow",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/LOUSE_PROGENITOR#CURL_AND_GROW"
+      },
+      "POUNCE_MOVE": {
+        "aliases": [
+          "Pounce",
+          "POUNCE"
+        ],
+        "curated": true,
+        "description": "Pounce：单体攻击14（A:16）；叠力量后 live 意图 19-24（基础14+力量）。",
+        "effect": "Pounce: Attack; damage 14 A:16",
+        "follow_up_id": null,
+        "id": "POUNCE_MOVE",
+        "intents": [
+          {
+            "base_damage": 14,
+            "base_damage_ascension": {
+              "ascension": 16
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "LOUSE_PROGENITOR",
+        "name": "Pounce",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/LOUSE_PROGENITOR#POUNCE"
+      },
+      "WEB_CANNON_MOVE": {
+        "aliases": [
+          "Web Cannon",
+          "WEB_CANNON"
+        ],
+        "curated": true,
+        "description": "Web Cannon：单体攻击9（A:10）+ 给玩家 Frail 2；live 意图随拥有者力量膨胀（对局43 见 14-24）。",
+        "effect": "Web Cannon: Attack + Debuff; damage 9 A:10; FRAIL 2 (player)",
+        "follow_up_id": null,
+        "id": "WEB_CANNON_MOVE",
+        "intents": [
+          {
+            "base_damage": 9,
+            "base_damage_ascension": {
+              "ascension": 10
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "LOUSE_PROGENITOR",
+        "name": "Web Cannon",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/LOUSE_PROGENITOR#WEB_CANNON"
+      }
+    },
+    "name": "虱虫之祖",
+    "needs_zh": false,
+    "play_notes": "对局43 live",
+    "source": "codex-api + 对局43 live",
+    "type": "Normal"
   },
   "LagavulinMatriarch": {
     "acts": [
@@ -12442,6 +12573,90 @@
     "play_notes": "run-39 live：OIL_SPRAY 的 Weak 1 在敌方回合落地（我方同回合技能不受影响）；RAGE 力量+3 是成长钟——竞速不磨。",
     "source": "run-39 live T2 击杀 + 档案/codex 融合"
   },
+  "SLUMBERING_BEETLE": {
+    "acts": [
+      "Act2"
+    ],
+    "aliases": [
+      "SlumberingBeetle",
+      "SLUMBERING_BEETLE",
+      "熟睡甲虫"
+    ],
+    "curated": true,
+    "cycle": [
+      "SNORE_MOVE",
+      "ROLL_OUT_MOVE"
+    ],
+    "description": "Act2 普通怪，对局43 实测 86HP。PLATING:15 = 战斗开始与自身回合末各获得 15 格挡，回合开始 −1 层。SLUMBER:3 = 受到未格挡伤害与自身回合末各递减 1，归零醒来后循环 SNORE（睡眠）→ ROLL_OUT（单体16 A:18 + 自身力量2）。教条：睡着时 0 威胁，先杀其他敌人；任何穿透格挡的伤害都会削 Slumber，微量输出也会唤醒它。醒后 ROLL_OUT 16-18+/回合是本战最大意图。对局43 死因之一：玩家 6HP 时甲虫醒来，ROLL_OUT 穿挡击杀。",
+    "hp": {
+      "base": 86,
+      "notes": "live 86/86 A1 对局43"
+    },
+    "id": "SLUMBERING_BEETLE",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "ROLL_OUT_MOVE": {
+        "aliases": [
+          "Roll Out",
+          "ROLL_OUT"
+        ],
+        "curated": true,
+        "description": "Roll Out：单体攻击16（A:18）+ 自身力量2。对局43 力量2 时 live 意图 18；这是醒来后的威胁。",
+        "effect": "Roll Out: Attack + Buff; damage 16 A:18; STRENGTH 2 (self)",
+        "follow_up_id": null,
+        "id": "ROLL_OUT_MOVE",
+        "intents": [
+          {
+            "base_damage": 16,
+            "base_damage_ascension": {
+              "ascension": 18
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SLUMBERING_BEETLE",
+        "name": "Roll Out",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SLUMBERING_BEETLE#ROLL_OUT"
+      },
+      "SNORE_MOVE": {
+        "aliases": [
+          "Snore",
+          "SNORE"
+        ],
+        "curated": true,
+        "description": "Snore：睡眠——拥有者不攻击；沉睡层数在拥有者回合末递减。",
+        "effect": "Snore: Sleep",
+        "follow_up_id": null,
+        "id": "SNORE_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Sleep"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SLUMBERING_BEETLE",
+        "name": "Snore",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SLUMBERING_BEETLE#SNORE"
+      }
+    },
+    "name": "熟睡甲虫",
+    "needs_zh": false,
+    "play_notes": "对局43 live",
+    "source": "codex-api + 对局43 live",
+    "type": "Normal"
+  },
   "SPINY_TOAD": {
     "acts": [
       "Act2"
@@ -13860,24 +14075,33 @@
     "source": "curated:monsters.md GremlinMerc SurprisePower"
   },
   "SoulFysh": {
-    "acts": [],
+    "acts": [
+      "Act1"
+    ],
     "aliases": [
       "SoulFysh",
       "Soulfysh",
+      "SOUL_FYSH",
       "灵魂异鱼"
     ],
-    "curated": false,
-    "cycle": [],
-    "description": "BECKON 状态 ×2 → DE_GAS 单次 16 (A:17) → GAZE 单次 7 (A:8) → FADE Intangible 2 → SCREAM 单次 13 (A:15) + 3 Vulnerable → 循环。",
+    "curated": true,
+    "cycle": [
+      "BECKON_MOVE",
+      "DE_GAS_MOVE",
+      "GAZE_MOVE",
+      "FADE_MOVE",
+      "SCREAM_MOVE"
+    ],
+    "description": "Act1 Boss。对局43 A1 实测 211HP，T11 以 27/80 击杀。循环 BECKON（状态×2，注入 BECKON 状态牌）→ DE_GAS 单体16（A:17，玩家带易伤时 live 意图 16-24）→ GAZE 单体7（A:8）+1 状态牌 → FADE 给自身 INTANGIBLE 2（敌方回合末递减；FADE 所在我方回合仍是全额伤害窗，虚无在敌方回合才生效）→ SCREAM 单体13（A:15）+ 给玩家易伤3 → 循环。教条：BECKON/GAZE 免费窗倾泻；虚无期每次伤害实例上限1（石日历52伤同样被压成1）；回合结束仍留在手牌的 BECKON 状态牌每张造成 6 无视格挡伤害——必须当回合打出（1费，target=None 仍可打）或排出。对局43 因 3 张未打出的 Beckon 白付 18HP。",
     "display_names": [
       "SoulFysh"
     ],
     "hp": {
-      "base": null,
-      "notes": null
+      "base": 211,
+      "notes": "Act1 Boss live 211/211 A1 对局43"
     },
     "id": "SoulFysh",
-    "is_boss": false,
+    "is_boss": true,
     "kind": "monster",
     "moves": {
       "BECKON_MOVE": {
@@ -13992,11 +14216,11 @@
         "status_count": null
       }
     },
-    "name": "SoulFysh",
+    "name": "灵魂异鱼",
     "needs_zh": false,
     "passives": [],
-    "play_notes": "",
-    "source": "md:monsters.md:L109"
+    "play_notes": "对局43 T11 击杀实证",
+    "source": "对局43 live + cards.json BECKON + powers INTANGIBLE"
   },
   "SoulNexus": {
     "acts": [],

@@ -731,21 +731,22 @@
   "BARRICADE": {
     "aliases": [
       "Barricade",
+      "BARRICADE",
       "壁垒"
     ],
     "card_type": "power",
     "character_pool": "IRONCLAD",
     "cost": "3",
-    "curated": false,
-    "description": "your Block is not removed at the start of your turn. Upgrade: cost 2.",
+    "curated": true,
+    "description": "cost 3 power: gain BARRICADE_POWER - owner's Block is NOT cleared at turn end (ShouldClearBlock false). Block accumulates every turn (Orichalcum 6/turn + all block cards stack into a wall). Shop (5,0) Act2 live price 150g run-43. Run-2 death cause was 'Barricade never resolved' - when it lands early with block density it is an archetype win condition; at 3 cost it needs energy support (Pyre+) or a free window.",
     "id": "BARRICADE",
     "keywords": [],
     "kind": "card",
     "name": "Barricade",
     "needs_zh": false,
-    "play_notes": "",
-    "rarity": "rare",
-    "source": "md:cards.md:L21; md:cards_zh.md",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
+    "rarity": "uncommon",
+    "source": "run-2 autopsy + run-43 shop live",
     "target_type": null,
     "upgrade": "cost 2.",
     "zh_description": "3，能力，稀有，回合开始格挡不再被移除。升级：费用 2。",
@@ -894,21 +895,22 @@
   "BECKON": {
     "aliases": [
       "Beckon",
+      "BECKON",
       "招引"
     ],
     "card_type": "status",
     "character_pool": "STATUS",
     "cost": "1",
-    "curated": false,
-    "description": "in hand at end of turn lose 6 HP (unblockable). No upgrade.",
+    "curated": true,
+    "description": "status card injected by SoulFysh BECKON_MOVE (2 per cast). In hand at end of turn: lose 6 HP unblockable PER CARD. Play cost 1 with target=None - playing it removes the EoT tax (it has no other effect); exhaust also works. Run-43 lesson: 3 Beckons left in hand at EoT = 18 unblockable HP lost; 'target=None ok' cards ARE playable - the 1-cost dump is always cheaper than the tax.",
     "id": "BECKON",
     "keywords": [],
     "kind": "card",
     "name": "Beckon",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "rarity": "status",
-    "source": "md:cards.md:L569; md:cards_zh.md",
+    "source": "cards.md L569 + run-43 live",
     "target_type": null,
     "upgrade": null,
     "zh_description": "1，状态，状态，回合结束仍在手牌则失去 6 HP（无视格挡）。无升级。",
@@ -4385,13 +4387,14 @@
   "EVIL_EYE": {
     "aliases": [
       "Evil Eye",
+      "EVIL_EYE",
       "邪眼"
     ],
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
-    "description": "Exhaust, gain 8 Block; if you Exhausted a card this turn, gain the Block twice (16 total). Upgrade: +3 Block. Evil Eye's own Exhaust does NOT count for the double trigger — another card must be exhausted earlier the same turn (Tremble/Offering/Bloodletting-with-exhaust etc.); played alone it grants 8, played after a prior Exhaust it grants 16. Build anomaly: EvilEye's own disposal does NOT increment the exhaust pile count — the card lands in discard (discard +1, exhaust unchanged); treat EvilEye self-disposal as discard-class for exhaust-pile accounting; the double-block condition still fires correctly off PRIOR exhausts (TOXIC/TrueGrit/Purity plays); FnP/Juggernaut do not proc off EvilEye itself.",
+    "curated": true,
+    "description": "Exhaust, gain 8 Block; if another card was Exhausted this turn, gain the Block twice (16). Own exhaust does NOT count for the double trigger; build anomaly: own disposal lands in discard (exhaust pile unchanged) but the double-block condition still fires off PRIOR exhausts. Shop (5,0) Act2 live price 79g run-43 (not bought - Barricade taken instead at 150g).",
     "id": "EVIL_EYE",
     "keywords": [
       "Exhaust"
@@ -4399,9 +4402,9 @@
     "kind": "card",
     "name": "Evil Eye",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "rarity": "uncommon",
-    "source": "md:cards.md:L47; md:cards_zh.md",
+    "source": "cards.md + run-43 shop live",
     "target_type": null,
     "upgrade": "+3 Block. Evil Eye's own Exhaust does NOT count for the double trigger — another card must be exhausted earlier the same turn (Tremble/Offering/Bloodletting-with-exhaust etc.); played alone it grants 8, played after a prior Exhaust it grants 16. Build anomaly: EvilEye's own disposal does NOT increment the exhaust pile count — the card lands in discard (discard +1, exhaust unchanged); treat EvilEye self-disposal as discard-class for exhaust-pile accounting; the double-block condition still fires correctly off PRIOR exhausts (TOXIC/TrueGrit/Purity plays); FnP/Juggernaut do not proc off EvilEye itself.",
     "zh_description": "1，技能，罕见，消耗，获得 8 格挡；本回合若消耗过卡牌则格挡触发两次（共 16）。升级：+3 格挡。邪眼自身的消耗不计入双倍触发——须本回合先消耗过其他牌（战栗/供奉等）才有 16 挡；单独打出仅 8 挡。构筑异常：邪眼自身离手未增加消耗堆计数——state 弃牌堆 +1、消耗堆不变（本 build 按弃牌类记账）；双倍条件仍正确响应先前消耗（TOXIC/坚毅/纯净打出后 16 挡）；FnP/势不可当均未因邪眼自身触发。",
@@ -4599,13 +4602,14 @@
   "FEED": {
     "aliases": [
       "Feed",
+      "FEED",
       "狂宴"
     ],
     "card_type": "attack",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
-    "description": "Exhaust, deal 10 damage; if Fatal gain 3 Max HP. Upgrade: +2 damage, +1 Max HP.",
+    "curated": true,
+    "description": "Exhaust, deal 10 damage; if Fatal gain 3 Max HP (upgrade +2 dmg / +4 MaxHP). MaxHP gain also raises current HP by the same amount (live run-43: 38->42/88 on Fatal, 80->84 then 84->88). 1-cost HP-economy engine: Act2 trash fights offer frequent Fatals. Live run-43 x2 Fatals in one Act.",
     "id": "FEED",
     "keywords": [
       "Exhaust"
@@ -4613,9 +4617,9 @@
     "kind": "card",
     "name": "Feed",
     "needs_zh": false,
-    "play_notes": "",
-    "rarity": "rare",
-    "source": "md:cards.md:L49; md:cards_zh.md",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
+    "rarity": "common",
+    "source": "cards.md + run-43 live x2 Fatal",
     "target_type": null,
     "upgrade": "+2 damage, +1 Max HP.",
     "zh_description": "1，攻击，稀有，消耗，造成 10 点伤害；击杀则最大 HP +3。升级：伤害 +2、最大 HP +1。",
@@ -5138,13 +5142,14 @@
   "FORGOTTEN_RITUAL": {
     "aliases": [
       "Forgotten Ritual",
+      "FORGOTTEN_RITUAL",
       "被遗忘的仪式"
     ],
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "1",
     "curated": true,
-    "description": "Cost 1 skill: Exhaust; if you Exhausted a card this turn (another card — own exhaust does NOT count), gain 3 Energy. Upgrade: gain 4. Under Corruption: cost 0 — play any skill first (auto-exhausts) then Ritual 0c -> +3 Energy net engine (live run-42 T3 HunterKiller + Act2-boss T1: e 1->4). Own exhaust never satisfies own condition (Evil Eye-class).",
+    "description": "Exhaust; if another card was Exhausted this turn, gain 3 Energy (upgrade 4). Own exhaust does NOT count (EvilEye-class). Synergy spine: TrueGrit/AshenStrike/Tremble/Feed exhaust first, Ritual refunds +3e. Variance tax live run-43: TrueGrit's random exhaust ate the Ritual itself on its debut turn - treat random exhaust as a threat to engine pieces, not only a thinning tool.",
     "id": "FORGOTTEN_RITUAL",
     "keywords": [
       "Exhaust"
@@ -5152,9 +5157,9 @@
     "kind": "card",
     "name": "Forgotten Ritual",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "rarity": "uncommon",
-    "source": "md:cards.md:L54; md:cards_zh.md",
+    "source": "cards.md + run-42 engine + run-43 variance",
     "target_type": null,
     "upgrade": "gain 4 Energy. Its own Exhaust does NOT satisfy its own condition (EvilEye-class) — played alone, energy went 6→5 (paid 1, no +3). Another card must be exhausted FIRST the same turn (Brand/Slimed-class) for the +3 to fire.",
     "zh_description": "1，技能，罕见，消耗，本回合若消耗过卡牌则获得 3 能量。升级：获得 4 能量。自身 Exhaust 不满足自身条件（EvilEye 同类）—— 单独打出能量 6→5（付 1 费无 +3）。需同回合**先**有其他牌被消耗（Brand/Slimed 类）+3 才触发。",
@@ -6019,7 +6024,7 @@
     "id": "HEADBUTT",
     "kind": "card",
     "name": "Headbutt",
-    "needs_zh": false,
+    "needs_zh": true,
     "play_notes": "",
     "rarity": "Common",
     "source": "codex-api:/cards/HEADBUTT",
@@ -11135,6 +11140,24 @@
     "zh_description": "1，攻击，普通，打击标签，造成 9 点伤害；获得 1 颗星。升级：伤害 +1、星星 +1。",
     "zh_name": "太阳打击"
   },
+  "SOLDIER_STEW": {
+    "aliases": [
+      "Soldier's Stew",
+      "SOLDIER_STEW",
+      "SOLDIERS_STEW",
+      "士兵炖汤"
+    ],
+    "curated": true,
+    "description": "All cards containing 'Strike' in the name gain 1 Replay this combat (each Strike-tagged card resolves twice when played). Live run-43: TwinStrike 5+5+5+5=20 per play, Strike 6+6=12, under Weak each replayed hit still landed. Fight-defining on Ravenous packs (one kill -> double stun window) and boss races. Not a Strike-tag relic substitute - replay is combat-scoped potion effect.",
+    "id": "SOLDIER_STEW",
+    "kind": "potion",
+    "name": "Soldier's Stew",
+    "needs_zh": false,
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
+    "rarity": "Rare",
+    "source": "codex-api + run-43 live replay confirmed",
+    "usage": "combat"
+  },
   "SOOT": {
     "aliases": [
       "Soot",
@@ -11635,25 +11658,22 @@
   "STOMP": {
     "aliases": [
       "Stomp",
-      "踩踏"
+      "STOMP",
+      "践踏"
     ],
-    "card_type": "attack",
-    "character_pool": "IRONCLAD",
+    "card_type": "Attack",
+    "character_pool": "ironclad",
     "cost": "3",
-    "curated": false,
-    "description": "deal 12 damage to ALL enemies. Upgrade: +3 damage.",
+    "curated": true,
+    "description": "Deal 12 damage to ALL enemies. Costs 1 less for each Attack played this turn - in an attack-dense hand (Bloodletting-funded) it approaches 0-1 cost for 12 AoE. Codex fold run-43; not yet live-verified in hand.",
     "id": "STOMP",
-    "keywords": [],
     "kind": "card",
     "name": "Stomp",
     "needs_zh": false,
-    "play_notes": "",
-    "rarity": "uncommon",
-    "source": "md:cards.md:L87; md:cards_zh.md",
-    "target_type": "AllEnemies",
-    "upgrade": "+3 damage.",
-    "zh_description": "3，攻击，罕见，对所有敌人造成 12 点伤害。升级：伤害 +3。",
-    "zh_name": "踩踏"
+    "play_notes": "codex fold run-43, pending live",
+    "rarity": "Uncommon",
+    "source": "codex-api:/cards/STOMP",
+    "target_type": "AllEnemies"
   },
   "STONE_ARMOR": {
     "aliases": [

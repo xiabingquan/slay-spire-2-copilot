@@ -671,21 +671,22 @@
   "BARRICADE": {
     "aliases": [
       "Barricade",
+      "BARRICADE",
       "壁垒"
     ],
     "card_type": "power",
     "character_pool": "IRONCLAD",
     "cost": "3",
-    "curated": false,
-    "description": "3，能力，稀有，回合开始格挡不再被移除。升级：费用 2。",
+    "curated": true,
+    "description": "3费 power：获得 BARRICADE_POWER——拥有者的格挡不再回合末清空。格挡逐回合累积（橙铜每回合6 + 所有挡牌堆叠成墙）。对局43 Act2 商店 (5,0) live 价格 150金。对局2 死因是「Barricade 从未结算」——在挡密度足够时早落地即架构胜利条件；3 费需要能量支持（Pyre+）或免费窗。",
     "id": "BARRICADE",
     "keywords": [],
     "kind": "card",
     "name": "壁垒",
     "needs_zh": false,
-    "play_notes": "",
-    "rarity": "rare",
-    "source": "md:cards.md:L21; md:cards_zh.md",
+    "play_notes": "对局43 live",
+    "rarity": "uncommon",
+    "source": "对局2 复盘 + 对局43 商店 live",
     "target_type": null,
     "upgrade": "cost 2."
   },
@@ -820,21 +821,22 @@
   "BECKON": {
     "aliases": [
       "Beckon",
+      "BECKON",
       "招引"
     ],
     "card_type": "status",
     "character_pool": "STATUS",
     "cost": "1",
-    "curated": false,
-    "description": "1，状态，状态，回合结束仍在手牌则失去 6 HP（无视格挡）。无升级。",
+    "curated": true,
+    "description": "灵魂异鱼 BECKON_MOVE 注入的状态牌（每次 2 张）。回合结束仍在手牌：每张失去 6 HP（无视格挡）。打出费用 1、target=None——打出即可免除回合末税（无其他效果）；排出同样有效。对局43 教训：3 张 Beckon 留在手牌 = 白付 18 无视格挡 HP；「target=None ok」的牌是可打出的——1 费打出永远比交税便宜。",
     "id": "BECKON",
     "keywords": [],
     "kind": "card",
     "name": "招引",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "对局43 live",
     "rarity": "status",
-    "source": "md:cards.md:L569; md:cards_zh.md",
+    "source": "cards.md + 对局43 live",
     "target_type": null,
     "upgrade": null
   },
@@ -4016,13 +4018,14 @@
   "EVIL_EYE": {
     "aliases": [
       "Evil Eye",
+      "EVIL_EYE",
       "邪眼"
     ],
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
-    "description": "1，技能，罕见，消耗，获得 8 格挡；本回合若消耗过卡牌则格挡触发两次（共 16）。升级：+3 格挡。邪眼自身的消耗不计入双倍触发——须本回合先消耗过其他牌（战栗/供奉等）才有 16 挡；单独打出仅 8 挡。构筑异常：邪眼自身离手未增加消耗堆计数——state 弃牌堆 +1、消耗堆不变（本 build 按弃牌类记账）；双倍条件仍正确响应先前消耗（TOXIC/坚毅/纯净打出后 16 挡）；FnP/势不可当均未因邪眼自身触发。",
+    "curated": true,
+    "description": "消耗，获得8格挡；若本回合已有其他牌被排出，格挡翻倍（16）。自身排出不触发翻倍；构筑异常：自身处置落入弃牌堆（排出堆不变），但翻倍条件仍由先前的排出触发。对局43 Act2 商店 (5,0) live 价格 79金（未买——150金买了 Barricade）。",
     "id": "EVIL_EYE",
     "keywords": [
       "Exhaust"
@@ -4030,9 +4033,9 @@
     "kind": "card",
     "name": "邪眼",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "对局43 live",
     "rarity": "uncommon",
-    "source": "md:cards.md:L47; md:cards_zh.md",
+    "source": "cards.md + 对局43 商店 live",
     "target_type": null,
     "upgrade": "+3 Block. Evil Eye's own Exhaust does NOT count for the double trigger — another card must be exhausted earlier the same turn (Tremble/Offering/Bloodletting-with-exhaust etc.); played alone it grants 8, played after a prior Exhaust it grants 16. Build anomaly: EvilEye's own disposal does NOT increment the exhaust pile count — the card lands in discard (discard +1, exhaust unchanged); treat EvilEye self-disposal as discard-class for exhaust-pile accounting; the double-block condition still fires correctly off PRIOR exhausts (TOXIC/TrueGrit/Purity plays); FnP/Juggernaut do not proc off EvilEye itself."
   },
@@ -4212,13 +4215,14 @@
   "FEED": {
     "aliases": [
       "Feed",
+      "FEED",
       "狂宴"
     ],
     "card_type": "attack",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
-    "description": "1，攻击，稀有，消耗，造成 10 点伤害；击杀则最大 HP +3。升级：伤害 +2、最大 HP +1。",
+    "curated": true,
+    "description": "消耗，造成10伤；击杀则 +3 MaxHP（升级 +2伤/+4MaxHP）。MaxHP 增益同步增加当前 HP（对局43 live：Fatal 时 38→42/88；本局 80→84→88 两次 Fatal）。1费 HP 经济引擎：Act2 小怪战 Fatal 机会密集。",
     "id": "FEED",
     "keywords": [
       "Exhaust"
@@ -4226,9 +4230,9 @@
     "kind": "card",
     "name": "狂宴",
     "needs_zh": false,
-    "play_notes": "",
-    "rarity": "rare",
-    "source": "md:cards.md:L49; md:cards_zh.md",
+    "play_notes": "对局43 live 两次 Fatal",
+    "rarity": "common",
+    "source": "cards.md + 对局43 live",
     "target_type": null,
     "upgrade": "+2 damage, +1 Max HP."
   },
@@ -4706,13 +4710,14 @@
   "FORGOTTEN_RITUAL": {
     "aliases": [
       "Forgotten Ritual",
+      "FORGOTTEN_RITUAL",
       "被遗忘的仪式"
     ],
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "1",
     "curated": true,
-    "description": "费用 1 技能：消耗；本回合若已消耗过其他牌（自身消耗不算），获得 3 能量。升级：获得 4。Corruption 下 0 费 — 先打任意技能（自动消耗）再打 Ritual 0c → 净 +3 能引擎（run-42 T3 猎人杀手 + Act2 Boss T1 live：能量 1→4）。自身消耗不满足自身条件（Evil Eye 级）。",
+    "description": "消耗；若本回合已有其他牌被排出，获得 3 能量（升级4）。自身的排出不算（EvilEye 类）。协同脊：坚毅/AshenStrike/Tremble/狂宴先排出，仪式 +3 费返还。对局43 方差税：坚毅的随机排出于仪式首秀回合就吃掉了仪式本身——随机排出是引擎件的威胁，不只是瘦身工具。",
     "id": "FORGOTTEN_RITUAL",
     "keywords": [
       "Exhaust"
@@ -4720,9 +4725,9 @@
     "kind": "card",
     "name": "被遗忘的仪式",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "对局43 live",
     "rarity": "uncommon",
-    "source": "md:cards.md:L54; md:cards_zh.md",
+    "source": "cards.md + 对局42引擎 + 对局43方差",
     "target_type": null,
     "upgrade": "gain 4 Energy. Its own Exhaust does NOT satisfy its own condition (EvilEye-class) — played alone, energy went 6→5 (paid 1, no +3). Another card must be exhausted FIRST the same turn (Brand/Slimed-class) for the +3 to fire."
   },
@@ -10203,6 +10208,24 @@
     "target_type": null,
     "upgrade": "+1 damage, +1 Star."
   },
+  "SOLDIER_STEW": {
+    "aliases": [
+      "Soldier's Stew",
+      "SOLDIER_STEW",
+      "SOLDIERS_STEW",
+      "士兵炖汤"
+    ],
+    "curated": true,
+    "description": "本场战斗所有名称含「Strike」的牌获得 1 次 Replay（每张 Strike 类牌打出时结算两次）。对局43 live：TwinStrike 每次 5+5+5+5=20，Strike 6+6=12，Weak 下每次 replay 命中仍落地。在 Ravenous 战（一杀→双眩晕窗）与 Boss 竞速中是战斗定义级药水。注意：replay 是药水战斗范围效果，不能替代 Strike 标签遗物。",
+    "id": "SOLDIER_STEW",
+    "kind": "potion",
+    "name": "士兵炖汤",
+    "needs_zh": false,
+    "play_notes": "对局43 live replay 实证",
+    "rarity": "Rare",
+    "source": "codex-api + 对局43 live",
+    "usage": "combat"
+  },
   "SOOT": {
     "aliases": [
       "Soot",
@@ -10661,23 +10684,22 @@
   "STOMP": {
     "aliases": [
       "Stomp",
-      "踩踏"
+      "STOMP",
+      "践踏"
     ],
-    "card_type": "attack",
-    "character_pool": "IRONCLAD",
+    "card_type": "Attack",
+    "character_pool": "ironclad",
     "cost": "3",
-    "curated": false,
-    "description": "3，攻击，罕见，对所有敌人造成 12 点伤害。升级：伤害 +3。",
+    "curated": true,
+    "description": "对所有敌人造成12伤。本回合每打出一张攻击牌费用 −1——在攻击密集手牌（放血供能）中可降至 0-1 费打 12 AoE。对局43 codex 折叠；尚未在手牌中 live 验证。",
     "id": "STOMP",
-    "keywords": [],
     "kind": "card",
-    "name": "踩踏",
+    "name": "践踏",
     "needs_zh": false,
-    "play_notes": "",
-    "rarity": "uncommon",
-    "source": "md:cards.md:L87; md:cards_zh.md",
-    "target_type": "AllEnemies",
-    "upgrade": "+3 damage."
+    "play_notes": "对局43 codex 折叠，待 live",
+    "rarity": "Uncommon",
+    "source": "codex-api:/cards/STOMP",
+    "target_type": "AllEnemies"
   },
   "STONE_ARMOR": {
     "aliases": [

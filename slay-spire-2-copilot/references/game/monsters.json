@@ -789,6 +789,7 @@
     ],
     "aliases": [
       "BowlbugRock",
+      "BOWLBUG_ROCK",
       "盛碗虫（石）"
     ],
     "curated": true,
@@ -796,41 +797,37 @@
       "HEADBUTT_MOVE",
       "POST_HEADBUTT"
     ],
-    "description": "Act2, 48 HP live run-40 (A 46-49). IMBALANCED:1 — when owner's attack is FULLY blocked, owner stunned. HEADBUTT 15 base (live run-40 at A1: 11 displayed after Red Mask Weak1; Str stacks raise it). Doctrine: Blood Wall 16-class block on its attack turns = free stun window; partial block does NOT stun. LIVE run-40: stun fired T1 (BW 16 ≥ Weak-cut 11), trio cleared T4.",
+    "description": "Act2, 47-48 HP live A1. IMBALANCED:1 - when owner's attack is FULLY blocked, owner is stunned (IsOffBalance); partial block does NOT stun. HEADBUTT single 15 live (A:16-class). Doctrine: need >= incoming block on its attack turn (15 base; Dex buffs lower the card count needed - run-43: UltimateDefend 13+Dex3=16 solo stun; run-39 note Dex+Defend x2=14 was one short). Stun window = cleanup turn for adds (silk/egg). Run-43 reconfirmed stun at 18 block vs 15.",
     "hp": {
-      "ascension": {
-        "max": 49,
-        "min": 46
-      },
-      "base": 45,
-      "notes": "live run-39 45/45; codex 45-48 (A 46-49)"
+      "base": 48,
+      "notes": "live 47-48 A1 run-42/43"
     },
     "id": "BOWLBUG_ROCK",
     "is_boss": false,
     "kind": "monster",
     "name": "Bowlbug (Rock)",
-    "play_notes": "run-39 live: IMBALANCED full-block stun fires only at ≥incoming block (15 for HEADBUTT); BloodWall 16-class cards are the doctrine instrument. Pair-kill order: clean Egg in the stun window, then race Rock.",
-    "source": "codex-api + run-39 live IMBALANCED stun; run-40 live fold 2026-09-18"
+    "needs_zh": false,
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
+    "source": "run-39/40/43 live"
   },
   "BOWLBUG_SILK": {
-    "acts": [],
+    "acts": [
+      "Act2"
+    ],
     "aliases": [
-      "Bowlbug (Silk)"
+      "BowlbugSilk",
+      "BOWLBUG_SILK",
+      "盛碗虫（丝）"
     ],
     "curated": true,
     "cycle": [
-      "THRASH_MOVE",
-      "TOXIC_SPIT_MOVE"
+      "TOXIC_SPIT_MOVE",
+      "THRASH_MOVE"
     ],
-    "description": "Act2 normal, 42 HP live run-40 (codex 40-43, A 41-44). Cycle THRASH (multi 4x2) → TOXIC_SPIT (debuff Weak 1 on player). Fights alongside BowlbugRock and BowlbugEgg as a trio. Kill order: Egg first in Rock stun windows.",
+    "description": "Act2 bowlbug variant, 43 HP live run-43. TOXIC_SPIT = debuff only (Weak 1 to player, 0 damage, free window); THRASH = multi 4x2 (A:5 per hit). No HardToKill/Plating - plain HP. Kill-first with the Rock sibling when possible: the Rock's IMBALANCED stun window is the cleanup turn for this add.",
     "hp": {
-      "ascension": {
-        "max": 44,
-        "min": 41
-      },
-      "base": 40,
-      "max": 43,
-      "notes": ""
+      "base": 43,
+      "notes": "live 43/43 A1 run-43"
     },
     "id": "BOWLBUG_SILK",
     "is_boss": false,
@@ -848,8 +845,8 @@
     },
     "name": "Bowlbug (Silk)",
     "needs_zh": false,
-    "play_notes": "",
-    "source": "codex-api:/monsters/BOWLBUG_SILK; run-40 live fold 2026-09-18",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
+    "source": "codex + run-43 live",
     "type": "Normal"
   },
   "BYGONE_EFFIGY": {
@@ -885,6 +882,7 @@
           "SLASHES"
         ],
         "curated": false,
+        "description": "Slashes: single attack 13 (A:15) — live 23-class at Str 6+ after WAKE +10.",
         "effect": "Slashes: Attack; damage 13 A:15",
         "follow_up_id": null,
         "id": "SLASHES_MOVE",
@@ -905,7 +903,6 @@
         "needs_zh": false,
         "play_notes": "",
         "source": "codex-api:/monsters/BYGONE_EFFIGY#SLASHES",
-        "description": "Slashes: single attack 13 (A:15) — live 23-class at Str 6+ after WAKE +10.",
         "zh_description": "Slashes: single attack 13 (A:15) — live 23-class at Str 6+ after WAKE +10."
       },
       "SLEEP_MOVE": {
@@ -914,6 +911,7 @@
           "SLEEP"
         ],
         "curated": false,
+        "description": "Sleep: sleep-state move at fight start (intent=sleep) — free window; A1 spawn has NO Plating/stun-flip (run-38/42 live).",
         "effect": "Sleep: Sleep",
         "follow_up_id": null,
         "id": "SLEEP_MOVE",
@@ -931,7 +929,6 @@
         "needs_zh": false,
         "play_notes": "",
         "source": "codex-api:/monsters/BYGONE_EFFIGY#SLEEP",
-        "description": "Sleep: sleep-state move at fight start (intent=sleep) — free window; A1 spawn has NO Plating/stun-flip (run-38/42 live).",
         "zh_description": "Sleep: sleep-state move at fight start (intent=sleep) — free window; A1 spawn has NO Plating/stun-flip (run-38/42 live)."
       },
       "SLEEP_MOVE_2_MOVE": {
@@ -940,6 +937,7 @@
           "SLEEP_MOVE_2"
         ],
         "curated": false,
+        "description": "Sleep Move 2: sleep-class variant (codex cycle slot); not observed in run-42 live graph (SLEEP->WAKE->SLASHES).",
         "effect": "Sleep Move 2: Sleep",
         "follow_up_id": null,
         "id": "SLEEP_MOVE_2_MOVE",
@@ -957,7 +955,6 @@
         "needs_zh": false,
         "play_notes": "",
         "source": "codex-api:/monsters/BYGONE_EFFIGY#SLEEP_MOVE_2",
-        "description": "Sleep Move 2: sleep-class variant (codex cycle slot); not observed in run-42 live graph (SLEEP->WAKE->SLASHES).",
         "zh_description": "Sleep Move 2: sleep-class variant (codex cycle slot); not observed in run-42 live graph (SLEEP->WAKE->SLASHES)."
       },
       "WAKE_MOVE": {
@@ -966,6 +963,7 @@
           "WAKE"
         ],
         "curated": false,
+        "description": "Wake: Buff; STRENGTH 10 (self) — free window turn; fires on schedule after SLEEP.",
         "effect": "Wake: Buff; STRENGTH 10 (self)",
         "follow_up_id": null,
         "id": "WAKE_MOVE",
@@ -983,7 +981,6 @@
         "needs_zh": false,
         "play_notes": "",
         "source": "codex-api:/monsters/BYGONE_EFFIGY#WAKE",
-        "description": "Wake: Buff; STRENGTH 10 (self) — free window turn; fires on schedule after SLEEP.",
         "zh_description": "Wake: Buff; STRENGTH 10 (self) — free window turn; fires on schedule after SLEEP."
       }
     },
@@ -2505,6 +2502,7 @@
           "CHARGE_UP"
         ],
         "curated": false,
+        "description": "Charge Up: Buff; STRENGTH 2 (self).",
         "effect": "Charge Up: Buff; STRENGTH 2 (self)",
         "follow_up_id": null,
         "id": "CHARGE_UP_MOVE",
@@ -2522,7 +2520,6 @@
         "needs_zh": false,
         "play_notes": "",
         "source": "codex-api:/monsters/CUBEX_CONSTRUCT#CHARGE_UP",
-        "description": "Charge Up: Buff; STRENGTH 2 (self).",
         "zh_description": "Charge Up: Buff; STRENGTH 2 (self)."
       },
       "EXPEL_MOVE": {
@@ -2531,6 +2528,7 @@
           "EXPEL"
         ],
         "curated": false,
+        "description": "Expel: multi attack 5x2 (A:6 per hit).",
         "effect": "Expel: Attack; damage 5x2 A:6",
         "follow_up_id": null,
         "id": "EXPEL_MOVE",
@@ -2551,7 +2549,6 @@
         "needs_zh": false,
         "play_notes": "",
         "source": "codex-api:/monsters/CUBEX_CONSTRUCT#EXPEL",
-        "description": "Expel: multi attack 5x2 (A:6 per hit).",
         "zh_description": "Expel: multi attack 5x2 (A:6 per hit)."
       },
       "REPEATER_BLAST_MOVE": {
@@ -2560,6 +2557,7 @@
           "REPEATER_BLAST"
         ],
         "curated": false,
+        "description": "Repeater Blast: Attack + Buff; damage 7 (A:8); STRENGTH 2 (self).",
         "effect": "Repeater Blast: Attack + Buff; damage 7 A:8; STRENGTH 2 (self)",
         "follow_up_id": null,
         "id": "REPEATER_BLAST_MOVE",
@@ -2580,7 +2578,6 @@
         "needs_zh": false,
         "play_notes": "",
         "source": "codex-api:/monsters/CUBEX_CONSTRUCT#REPEATER_BLAST",
-        "description": "Repeater Blast: Attack + Buff; damage 7 (A:8); STRENGTH 2 (self).",
         "zh_description": "Repeater Blast: Attack + Buff; damage 7 (A:8); STRENGTH 2 (self)."
       },
       "REPEATER_BLAST_MOVE_2_MOVE": {
@@ -2589,6 +2586,7 @@
           "REPEATER_BLAST_MOVE_2"
         ],
         "curated": false,
+        "description": "Repeater Blast Move 2: Attack + Buff; damage 7 (A:8); STRENGTH 2 (self).",
         "effect": "Repeater Blast Move 2: Attack + Buff; damage 7 A:8; STRENGTH 2 (self)",
         "follow_up_id": null,
         "id": "REPEATER_BLAST_MOVE_2_MOVE",
@@ -2609,7 +2607,6 @@
         "needs_zh": false,
         "play_notes": "",
         "source": "codex-api:/monsters/CUBEX_CONSTRUCT#REPEATER_BLAST_MOVE_2",
-        "description": "Repeater Blast Move 2: Attack + Buff; damage 7 (A:8); STRENGTH 2 (self).",
         "zh_description": "Repeater Blast Move 2: Attack + Buff; damage 7 (A:8); STRENGTH 2 (self)."
       }
     },
@@ -5356,12 +5353,32 @@
     "source": "; run-40 live fold 2026-09-18"
   },
   "EXOSKELETON": {
+    "acts": [
+      "Act2"
+    ],
+    "aliases": [
+      "Exoskeleton",
+      "EXOSKELETON",
+      "外骨骼虫"
+    ],
     "curated": true,
-    "description": "Act2 normal, 24-28 HP (A 25-29); run-40 saw triples 25-28 and a quartet 24-28. HARD_TO_KILL:9 — damage received per instance capped at 9 HP-loss, excess discarded (not banked). Pacing doctrine: Inferno/Breakthrough-class 9-instance hits land full value; Bludgeon 32 wastes 23. Moves: SKITTER multi 1x3, MANDIBLES single 8 (A:9), ENRAGE buff +2 Str. LIVE run-40: Red Mask Weak cut Skitter 1x3→0x3 and Mandibles 8→6; cleared by Breakthrough/Inferno 9-instance pacing + focused Strikes.",
+    "cycle": [
+      "SKITTER_MOVE",
+      "MANDIBLES_MOVE",
+      "ENRAGE_MOVE"
+    ],
+    "description": "Act2 normal, live run-43 trio 24/26/25 HP. HARD_TO_KILL:9 = damage received per INSTANCE capped at 9 (excess discarded, not banked) - distinct from per-turn caps: pace MULTIPLE hits <=9 each (TwinStrike 5x2 full value; one 32-dmg Bludgeon wastes 23). Moves: SKITTER multi 1x3 (Str-inflates, 3x3 seen at Str2), MANDIBLES single 8 (A:9, Str-inflates to 10+), ENRAGE self +2 Strength (free window). Doctrine: kill-first order by current HP, use Enrage turns as dump windows, Feed Fatal for +MaxHP on the lowest-HP bug. Run-43 Feed Fatal on the 4-HP bug.",
+    "hp": {
+      "base": 25,
+      "notes": "live trio 24/25/26 A1 run-43"
+    },
     "id": "EXOSKELETON",
+    "is_boss": false,
     "kind": "monster",
     "name": "Exoskeleton",
-    "source": "; run-40 live fold 2026-09-18"
+    "needs_zh": false,
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
+    "source": "run-40/41/43 live"
   },
   "Entomancer": {
     "acts": [],
@@ -5988,6 +6005,7 @@
           "ACID_GOOP"
         ],
         "curated": false,
+        "description": "Acid Goop: single attack 4 (A:6).",
         "effect": "Acid Goop: Attack; damage 4 A:6",
         "follow_up_id": null,
         "id": "ACID_GOOP_MOVE",
@@ -6008,7 +6026,6 @@
         "needs_zh": false,
         "play_notes": "",
         "source": "codex-api:/monsters/FUZZY_WURM_CRAWLER#ACID_GOOP",
-        "description": "Acid Goop: single attack 4 (A:6).",
         "zh_description": "Acid Goop: single attack 4 (A:6)."
       },
       "FIRST_ACID_GOOP_MOVE": {
@@ -6017,6 +6034,7 @@
           "FIRST_ACID_GOOP"
         ],
         "curated": false,
+        "description": "First Acid Goop: single attack 4 (A:6) — fight-opening variant.",
         "effect": "First Acid Goop: Attack; damage 4 A:6",
         "follow_up_id": null,
         "id": "FIRST_ACID_GOOP_MOVE",
@@ -6037,7 +6055,6 @@
         "needs_zh": false,
         "play_notes": "",
         "source": "codex-api:/monsters/FUZZY_WURM_CRAWLER#FIRST_ACID_GOOP",
-        "description": "First Acid Goop: single attack 4 (A:6) — fight-opening variant.",
         "zh_description": "First Acid Goop: single attack 4 (A:6) — fight-opening variant."
       },
       "INHALE_MOVE": {
@@ -6046,6 +6063,7 @@
           "INHALE"
         ],
         "curated": false,
+        "description": "Inhale: Buff; STRENGTH 7 (self) — live run-38/42: STR:7 after one inhale; next acid intent 11-class; kill in <=3-4 turns before second inhale.",
         "effect": "Inhale: Buff; STRENGTH 7 (self)",
         "follow_up_id": null,
         "id": "INHALE_MOVE",
@@ -6063,7 +6081,6 @@
         "needs_zh": false,
         "play_notes": "",
         "source": "codex-api:/monsters/FUZZY_WURM_CRAWLER#INHALE",
-        "description": "Inhale: Buff; STRENGTH 7 (self) — live run-38/42: STR:7 after one inhale; next acid intent 11-class; kill in <=3-4 turns before second inhale.",
         "zh_description": "Inhale: Buff; STRENGTH 7 (self) — live run-38/42: STR:7 after one inhale; next acid intent 11-class; kill in <=3-4 turns before second inhale."
       }
     },
@@ -8750,6 +8767,119 @@
     "play_notes": "run-39 live: SUPER_GAS_BLAST = atk 8-class (archive census stub was misleading); Smoggy one-skill turns make attack chains the play pattern; master-kill despawns adds (kill-master-despawns-summons doctrine confirmed live).",
     "source": "codex-api + run-39 live T4 kill + census SUPER_GAS_BLAST resolution"
   },
+  "LOUSE_PROGENITOR": {
+    "acts": [
+      "Act2"
+    ],
+    "aliases": [
+      "LouseProgenitor",
+      "LOUSE_PROGENITOR",
+      "虱虫之祖"
+    ],
+    "curated": true,
+    "cycle": [
+      "WEB_CANNON_MOVE",
+      "CURL_AND_GROW_MOVE",
+      "POUNCE_MOVE"
+    ],
+    "description": "Act2, 136 HP live run-43 A1 (archive 134-136 base / A1 138-141 table drift - live wins). Cycle live run-43: WEB_CANNON (single 9 A:10 + Frail 2; live intent inflates with its Strength, 14-24 observed) -> CURL_AND_GROW (Defend+Buff: block 14 + self Strength 5 - FREE window, dump damage here) -> POUNCE (single 14 A:16; live intent 19-24 with Str stacks). CURL_UP-style post-damage block still applies on hit turns. Each Curl adds +5 Str - POUNCE after two Curls is 24-class; block math must use the Str-inflated number. Stone Calendar turn-7 52 AoE killed it at 36 HP in run-43.",
+    "hp": {
+      "base": 136,
+      "notes": "live 136/136 A1 run-43; archive A 138-141"
+    },
+    "id": "LOUSE_PROGENITOR",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "CURL_AND_GROW_MOVE": {
+        "aliases": [
+          "Curl and Grow",
+          "CURL_AND_GROW"
+        ],
+        "curated": true,
+        "description": "Curl and Grow: Defend+Buff - owner gains 14 Block + 5 Strength (self). Free damage window.",
+        "effect": "Curl and Grow: Defend + Buff; block 14; STRENGTH 5 (self)",
+        "follow_up_id": null,
+        "id": "CURL_AND_GROW_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Defend + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "LOUSE_PROGENITOR",
+        "name": "Curl and Grow",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/LOUSE_PROGENITOR#CURL_AND_GROW"
+      },
+      "POUNCE_MOVE": {
+        "aliases": [
+          "Pounce",
+          "POUNCE"
+        ],
+        "curated": true,
+        "description": "Pounce: single attack 14 (A:16); live intent 19-24 after Strength stacks (base14+Str).",
+        "effect": "Pounce: Attack; damage 14 A:16",
+        "follow_up_id": null,
+        "id": "POUNCE_MOVE",
+        "intents": [
+          {
+            "base_damage": 14,
+            "base_damage_ascension": {
+              "ascension": 16
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "LOUSE_PROGENITOR",
+        "name": "Pounce",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/LOUSE_PROGENITOR#POUNCE"
+      },
+      "WEB_CANNON_MOVE": {
+        "aliases": [
+          "Web Cannon",
+          "WEB_CANNON"
+        ],
+        "curated": true,
+        "description": "Web Cannon: single attack 9 (A:10) + Frail 2 to player; live intent inflates with owner Strength (14-24 seen run-43).",
+        "effect": "Web Cannon: Attack + Debuff; damage 9 A:10; FRAIL 2 (player)",
+        "follow_up_id": null,
+        "id": "WEB_CANNON_MOVE",
+        "intents": [
+          {
+            "base_damage": 9,
+            "base_damage_ascension": {
+              "ascension": 10
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "LOUSE_PROGENITOR",
+        "name": "Web Cannon",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/LOUSE_PROGENITOR#WEB_CANNON"
+      }
+    },
+    "name": "Louse Progenitor",
+    "needs_zh": false,
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
+    "source": "codex-api + run-43 live",
+    "type": "Normal"
+  },
   "LagavulinMatriarch": {
     "acts": [
       "Act1",
@@ -11073,6 +11203,7 @@
           "INFECT"
         ],
         "curated": false,
+        "description": "Infect: add 3 Infection status cards to each target's discard — Infection: unplayable cost -1; if in hand at end of turn take 3 dmg each (blockable, live run-38/42).",
         "effect": "Infect: Status",
         "follow_up_id": null,
         "id": "INFECT_MOVE",
@@ -11090,7 +11221,6 @@
         "needs_zh": false,
         "play_notes": "",
         "source": "codex-api:/monsters/PHROG_PARASITE#INFECT",
-        "description": "Infect: add 3 Infection status cards to each target's discard — Infection: unplayable cost -1; if in hand at end of turn take 3 dmg each (blockable, live run-38/42).",
         "zh_description": "Infect: add 3 Infection status cards to each target's discard — Infection: unplayable cost -1; if in hand at end of turn take 3 dmg each (blockable, live run-38/42)."
       },
       "LASH_MOVE": {
@@ -11099,6 +11229,7 @@
           "LASH"
         ],
         "curated": false,
+        "description": "Lash: attack in the INFECT->LASH cycle; run-42 live killed T4 before LASH resolved (archive nested base 4 A:5-class; verify live intent).",
         "effect": "Lash: Attack; damage 4x4 A:5",
         "follow_up_id": null,
         "id": "LASH_MOVE",
@@ -11119,7 +11250,6 @@
         "needs_zh": false,
         "play_notes": "",
         "source": "codex-api:/monsters/PHROG_PARASITE#LASH",
-        "description": "Lash: attack in the INFECT->LASH cycle; run-42 live killed T4 before LASH resolved (archive nested base 4 A:5-class; verify live intent).",
         "zh_description": "Lash: attack in the INFECT->LASH cycle; run-42 live killed T4 before LASH resolved (archive nested base 4 A:5-class; verify live intent)."
       }
     },
@@ -12955,6 +13085,90 @@
     "play_notes": "run-39 live: OIL_SPRAY Weak 1 lands on enemy turn (player's same-turn skills unaffected); RAGE Str+3 is the growth clock — race, don't grind.",
     "source": "run-39 live T2 kill + archive/codex blend"
   },
+  "SLUMBERING_BEETLE": {
+    "acts": [
+      "Act2"
+    ],
+    "aliases": [
+      "SlumberingBeetle",
+      "SLUMBERING_BEETLE",
+      "熟睡甲虫"
+    ],
+    "curated": true,
+    "cycle": [
+      "SNORE_MOVE",
+      "ROLL_OUT_MOVE"
+    ],
+    "description": "Act2 normal, 86 HP live run-43. PLATING:15 = +15 Block at combat start AND at end of owner's side turn, -1 stack per turn start. SLUMBER:3 = counter decrements on unblocked damage received AND at end of owner turn; at 0 owner wakes and cycles SNORE(sleep) -> ROLL_OUT (single 16 A:18 + self Strength 2). Doctrine: while it sleeps it is 0 threat - kill the other enemies first; each unblocked HP instance chips Slumber, so even chip damage wakes it. Once awake ROLL_OUT 16-18+ per turn is the fight's biggest intent. Run-43 death factor: woke mid-fight at player 6 HP and ROLL_OUT leaked through remaining block.",
+    "hp": {
+      "base": 86,
+      "notes": "live 86/86 A1 run-43"
+    },
+    "id": "SLUMBERING_BEETLE",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "ROLL_OUT_MOVE": {
+        "aliases": [
+          "Roll Out",
+          "ROLL_OUT"
+        ],
+        "curated": true,
+        "description": "Roll Out: single attack 16 (A:18) + self Strength 2. Live run-43 intent 18 at Str2; this is the post-wake threat.",
+        "effect": "Roll Out: Attack + Buff; damage 16 A:18; STRENGTH 2 (self)",
+        "follow_up_id": null,
+        "id": "ROLL_OUT_MOVE",
+        "intents": [
+          {
+            "base_damage": 16,
+            "base_damage_ascension": {
+              "ascension": 18
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SLUMBERING_BEETLE",
+        "name": "Roll Out",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SLUMBERING_BEETLE#ROLL_OUT"
+      },
+      "SNORE_MOVE": {
+        "aliases": [
+          "Snore",
+          "SNORE"
+        ],
+        "curated": true,
+        "description": "Snore: Sleep - owner does not attack; Slumber ticks down at end of owner turn.",
+        "effect": "Snore: Sleep",
+        "follow_up_id": null,
+        "id": "SNORE_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Sleep"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SLUMBERING_BEETLE",
+        "name": "Snore",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SLUMBERING_BEETLE#SNORE"
+      }
+    },
+    "name": "Slumbering Beetle",
+    "needs_zh": false,
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
+    "source": "codex-api + run-43 live",
+    "type": "Normal"
+  },
   "SPINY_TOAD": {
     "acts": [
       "Act2"
@@ -14434,24 +14648,33 @@
     "zh_name": "卑鄙地精"
   },
   "SoulFysh": {
-    "acts": [],
+    "acts": [
+      "Act1"
+    ],
     "aliases": [
       "SoulFysh",
       "Soulfysh",
+      "SOUL_FYSH",
       "灵魂异鱼"
     ],
-    "curated": false,
-    "cycle": [],
-    "description": "BECKON Status ×2 → DE_GAS single 16 (A:17) → GAZE single 7 (A:8) → FADE Intangible 2 → SCREAM single 13 (A:15) + 3 Vulnerable → repeat.",
+    "curated": true,
+    "cycle": [
+      "BECKON_MOVE",
+      "DE_GAS_MOVE",
+      "GAZE_MOVE",
+      "FADE_MOVE",
+      "SCREAM_MOVE"
+    ],
+    "description": "Act1 Boss. Live run-43 A1 211 HP, killed T11 at 27/80. Cycle BECKON(Status x2, injects BECKON status cards) -> DE_GAS single 16 (A:17, live intent 16-24 under player Vuln) -> GAZE single 7 (A:8) + 1 status card -> FADE applies INTANGIBLE 2 to self (ticks down end of owner turn; our T-of-FADE is still a full-damage window, intangible lands on enemy turn) -> SCREAM single 13 (A:15) + 3 Vulnerable to player -> repeat. Doctrine: dump on BECKON/GAZE free windows; account for Intangible 1-2 turns where every damage INSTANCE caps at 1 (Stone Calendar 52 also caps to 1); BECKON status cards in hand at end of turn deal 6 unblockable HP EACH - play them (1 cost, target=None still playable) or exhaust them same turn. Run-43 lost 18 HP to 3 unplayed Beckons.",
     "display_names": [
       "SoulFysh"
     ],
     "hp": {
-      "base": null,
-      "notes": null
+      "base": 211,
+      "notes": "Act1 Boss live 211/211 A1 run-43"
     },
     "id": "SoulFysh",
-    "is_boss": false,
+    "is_boss": true,
     "kind": "monster",
     "moves": {
       "BECKON_MOVE": {
@@ -14569,8 +14792,8 @@
     "name": "SoulFysh",
     "needs_zh": false,
     "passives": [],
-    "play_notes": "",
-    "source": "md:monsters.md:L109",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
+    "source": "run-43 live T11 kill + cards.json BECKON + powers INTANGIBLE",
     "zh_description": "BECKON 状态 ×2 → DE_GAS 单次 16 (A:17) → GAZE 单次 7 (A:8) → FADE Intangible 2 → SCREAM 单次 13 (A:15) + 3 Vulnerable → 循环。",
     "zh_moves": {
       "BECKON_MOVE": "状态 ×2 →",

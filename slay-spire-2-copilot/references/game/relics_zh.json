@@ -269,19 +269,21 @@
   "BIIIG_HUG": {
     "aliases": [
       "Biiig Hug",
-      "BiiigHug"
+      "BiiigHug",
+      "BIIIG_HUG",
+      "大大拥抱"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，移除 4 张牌；每次洗抽牌堆时向其中加入 1 张 Soot。",
+    "curated": true,
+    "description": "Ancient 遗物（Tezcatara 赐福）：拾取时移除牌库4张牌；每次洗牌向抽牌堆加入1张烟尘。",
     "id": "BIIIG_HUG",
     "kind": "relic",
-    "name": "大～抱抱",
+    "name": "大大拥抱",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L145; md:relics_zh.md:L145"
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
   },
   "BING_BONG": {
     "aliases": [
@@ -434,19 +436,20 @@
   "BOOK_OF_FIVE_RINGS": {
     "aliases": [
       "Book of Five Rings",
-      "BookOfFiveRings"
+      "BOOK_OF_FIVE_RINGS",
+      "五轮书"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "每向牌库加入 5 张牌，回复 20 HP。",
+    "curated": true,
+    "description": "牌库每增加 5 张牌，恢复 20HP。对局43 Act2 商店 (5,0) live 价格 196金（买不起）。反精简遗物——只在加牌密集的路线上回本。",
     "id": "BOOK_OF_FIVE_RINGS",
     "kind": "relic",
     "name": "五轮书",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "对局43 live",
     "rarity": "Common",
-    "source": "md:relics.md:L22; md:relics_zh.md:L22"
+    "source": "relics.md + 对局43 商店"
   },
   "BOOK_REPAIR_KNIFE": {
     "aliases": [
@@ -531,6 +534,25 @@
     "play_notes": "",
     "rarity": "Shop",
     "source": "md:relics.md:L242; md:relics_zh.md:L242"
+  },
+  "BRIGHT_FLAME": {
+    "aliases": [
+      "Storybook",
+      "STORYBOOK",
+      "Brightest Flame",
+      "BRIGHT_FLAME",
+      "至亮之焰"
+    ],
+    "character": "shared",
+    "curated": true,
+    "description": "Tezcatara 故事书赐福的卡牌载体——拾取时加入牌库；对局43 未 live 验证卡面效果。",
+    "id": "BRIGHT_FLAME",
+    "kind": "relic",
+    "name": "至亮之焰",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Ancient",
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
   },
   "BRILLIANT_SCARF": {
     "aliases": [
@@ -1003,19 +1025,20 @@
   "DINGY_RUG": {
     "aliases": [
       "Dingy Rug",
-      "DingyRug"
+      "DINGY_RUG",
+      "破地毯"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "卡牌奖励现在可包含无色牌。",
+    "curated": true,
+    "description": "卡牌奖励中可出现无色牌。对局43 Act2 商店 (5,0) live 价格 208金（买不起）。稀释职业池奖励——除非定向找无色工具，优先级低。",
     "id": "DINGY_RUG",
     "kind": "relic",
-    "name": "肮脏地毯",
+    "name": "破地毯",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "对局43 live",
     "rarity": "Shop",
-    "source": "md:relics.md:L247; md:relics_zh.md:L247"
+    "source": "relics.md + 对局43 商店"
   },
   "DISTINGUISHED_CAPE": {
     "aliases": [
@@ -1745,19 +1768,21 @@
   "GOLDEN_COMPASS": {
     "aliases": [
       "Golden Compass",
-      "GoldenCompass"
+      "GoldenCompass",
+      "GOLDEN_COMPASS",
+      "黄金罗盘"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，用一条特殊路径替换第二章地图。",
+    "curated": true,
+    "description": "Ancient 遗物（Tezcatara 赐福）：拾取时重新生成当前章节地图（按当前章节索引重掷）。",
     "id": "GOLDEN_COMPASS",
     "kind": "relic",
     "name": "黄金罗盘",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L169; md:relics_zh.md:L169"
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
   },
   "GOLDEN_PEARL": {
     "aliases": [
@@ -2467,19 +2492,20 @@
   "MEAL_TICKET": {
     "aliases": [
       "Meal Ticket",
-      "MealTicket"
+      "MEAL_TICKET",
+      "餐券"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "进入商店房间（MerchantRoom）时，回复 15 HP；仅可在第三幕宝箱前获得。",
+    "curated": true,
+    "description": "进入商人房时恢复 15HP；仅在 Act3 宝箱前可获得。对局43 live 价格：Act1 (14,2) 187金 / Act2 (5,0) 未刷出。与商店脊线绑定的 HP 经济遗物。",
     "id": "MEAL_TICKET",
     "kind": "relic",
     "name": "餐券",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "对局43 live",
     "rarity": "Common",
-    "source": "md:relics.md:L32; md:relics_zh.md:L32"
+    "source": "relics.md + 对局43 商店"
   },
   "MEAT_CLEAVER": {
     "aliases": [
@@ -2823,36 +2849,40 @@
   "NUTRITIOUS_SOUP": {
     "aliases": [
       "Event boon-relic decodes",
-      "NutritiousSoup"
+      "NutritiousSoup",
+      "Nutritious Soup",
+      "NUTRITIOUS_SOUP",
+      "营养汤"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，为牌库中所有带 Strike 标签的基础牌附魔 Tezcatara's Ember（Ember = **0 费 / +3 伤 / Eternal**——附魔期间基础 Strike 每战免费 +3 结算）。",
+    "curated": true,
+    "description": "Ancient 遗物（Tezcatara 赐福）：拾取时为所有基础 Strike 类牌附加特兹卡塔拉之烬——费用降为0、获得永恒关键词、受能攻击+3伤。",
     "id": "NUTRITIOUS_SOUP",
     "kind": "relic",
     "name": "营养汤",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L315; md:relics_zh.md:L191; codex:relics/NUTRITIOUS_SOUP"
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
   },
   "ODDLY_SMOOTH_STONE": {
     "aliases": [
       "Oddly Smooth Stone",
-      "OddlySmoothStone"
+      "ODDLY_SMOOTH_STONE",
+      "滑石"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始，获得 1 点敏捷。",
+    "curated": true,
+    "description": "每场战斗开始时 +1 敏捷（卡牌挡全程 +1）。对局43 Act1 尾部商店 (14,2) live 价格 191金——与 Tremble 一同作为 Act1 尾部沉淀口买入（243/244=99.6% 沉淀）。战斗中与敏捷药水加算叠加。",
     "id": "ODDLY_SMOOTH_STONE",
     "kind": "relic",
-    "name": "意外光滑的石头",
+    "name": "滑石",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "对局43 live",
     "rarity": "Common",
-    "source": "md:relics.md:L33; md:relics_zh.md:L33; codex:relics/ODDLY_SMOOTH_STONE"
+    "source": "relics.md + 对局43 商店 live"
   },
   "OLD_COIN": {
     "aliases": [
@@ -2890,19 +2920,21 @@
   },
   "ORICHALCUM": {
     "aliases": [
-      "Orichalcum"
+      "Orichalcum",
+      "ORICHALCUM",
+      "橙铜"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "回合结束时，若没有格挡，获得 6 格挡。",
+    "curated": true,
+    "description": "回合结束时若没有格挡，获得 6 格挡。攻击密集手牌的被动安全网；配合滑石 +1 敏捷时被动仍为 6（遗物挡不是卡牌挡）。对局43：多次在无挡手牌回合覆盖 15-24 来伤中的 6 点。",
     "id": "ORICHALCUM",
     "kind": "relic",
-    "name": "奥利哈钢",
+    "name": "橙铜",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "对局43 live",
     "rarity": "Uncommon",
-    "source": "md:relics.md:L66; md:relics_zh.md:L66"
+    "source": "relics.md + 对局43 live"
   },
   "ORNAMENTAL_FAN": {
     "aliases": [
@@ -3510,19 +3542,21 @@
   "PUMPKIN_CANDLE": {
     "aliases": [
       "Pumpkin Candle",
-      "PumpkinCandle"
+      "PumpkinCandle",
+      "PUMPKIN_CANDLE",
+      "南瓜蜡烛"
     ],
     "character": null,
     "counter_shown": true,
-    "curated": false,
-    "description": "每回合 +1 最大能量；5 场战斗后熄灭；休息点获得 Kindle 选项（+5 场战斗）。第 5 战准时燃尽；KINDLE 作为营火第三按钮（HEAL/SMITH/KINDLE）出现；复燃消耗当次营火行动 —— HP 危机迫使每次营火都 HEAL 时蜡烛在 Boss 战前保持熄灭。",
+    "curated": true,
+    "description": "Ancient 遗物（Tezcatara 赐福）：燃烧层数>0 时 +1 最大能量；每场战斗结束 −1 层；休息点新增点燃选项 +5 层。计数器可见。",
     "id": "PUMPKIN_CANDLE",
     "kind": "relic",
     "name": "南瓜蜡烛",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L210; md:relics_zh.md:L210"
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
   },
   "PUNCH_DAGGER": {
     "aliases": [
@@ -3680,19 +3714,20 @@
   "RINGING_TRIANGLE": {
     "aliases": [
       "Ringing Triangle",
-      "RingingTriangle"
+      "RINGING_TRIANGLE",
+      "铃三角"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "战斗首回合保留手牌。",
+    "curated": true,
+    "description": "战斗第 1 回合保留手牌。对局43 Act1 商店 (14,2) live 价格 202金（未买——243金沉淀了滑石+Tremble；每回合敏捷 > 仅 T1 的一致性）。切勿与对局13 的 RINGING counter-class power（每回合限1牌）混淆——完全不同的东西。",
     "id": "RINGING_TRIANGLE",
     "kind": "relic",
-    "name": "三角铃鼓",
+    "name": "铃三角",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "对局43 live",
     "rarity": "Shop",
-    "source": "md:relics.md:L261; md:relics_zh.md:L261"
+    "source": "relics.md + 对局43 商店"
   },
   "RING_OF_THE_DRAKE": {
     "aliases": [
@@ -3900,19 +3935,21 @@
   "SEAL_OF_GOLD": {
     "aliases": [
       "Seal of Gold",
-      "SealOfGold"
+      "SealOfGold",
+      "SEAL_OF_GOLD",
+      "黄金封印"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "回合开始时，若金币 ≥5，花费 5 金币并获得 1 点能量。",
+    "curated": true,
+    "description": "Ancient 遗物（Tezcatara 赐福）：回合开始时金币≥5 则 +1 能量并 −5 金。",
     "id": "SEAL_OF_GOLD",
     "kind": "relic",
-    "name": "黄金印",
+    "name": "黄金封印",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L217; md:relics_zh.md:L217"
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
   },
   "SEA_GLASS": {
     "aliases": [
@@ -4169,19 +4206,20 @@
   "STONE_CALENDAR": {
     "aliases": [
       "Stone Calendar",
-      "StoneCalendar"
+      "STONE_CALENDAR",
+      "石日历"
     ],
     "character": null,
     "counter_shown": true,
-    "curated": false,
-    "description": "第 7 回合结束时，对所有敌人造成 52 点伤害。",
+    "curated": true,
+    "description": "第 7 回合结束时，对所有敌人造成 52 伤（计数按战斗，下一场重置）。对局43 live 两次观测：虱虫之祖在第7回合末从 36HP 被击杀（日历在敌方 T7 行动前触发）；第 6 回合末确认不触发——触发点专指第 7 回合结束。虚无 1-2 层会把这 52 压成每实例 1——FADE 窗内不要指望它。",
     "id": "STONE_CALENDAR",
     "kind": "relic",
-    "name": "历石",
+    "name": "石日历",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "对局43 live 击杀实证",
     "rarity": "Rare",
-    "source": "md:relics.md:L128; md:relics_zh.md:L128"
+    "source": "relics.md + 对局43 live"
   },
   "STONE_CRACKER": {
     "aliases": [
@@ -4219,19 +4257,21 @@
   },
   "STORYBOOK": {
     "aliases": [
-      "Storybook"
+      "Storybook",
+      "STORYBOOK",
+      "故事书"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，向牌库加入 1 张 Brightest Flame。",
+    "curated": true,
+    "description": "Ancient 遗物（Tezcatara 赐福）：拾取时将1张至亮之焰加入牌库。",
     "id": "STORYBOOK",
     "kind": "relic",
     "name": "故事书",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L227; md:relics_zh.md:L227"
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
   },
   "STRAWBERRY": {
     "aliases": [
@@ -4471,19 +4511,21 @@
   "TOASTY_MITTENS": {
     "aliases": [
       "Toasty Mittens",
-      "ToastyMittens"
+      "ToastyMittens",
+      "TOASTY_MITTENS",
+      "暖和手套"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "每回合抽牌前，消耗抽牌堆顶牌并获得 1 点力量。每回合 +1 力零例外；消耗顶牌在无痛部署时同步触发 FnP（消耗源计入无痛）。**与 Headbutt 取回反协同**：取回件置于抽牌堆顶后会被 Mittens 下回合开始时消耗。",
+    "curated": true,
+    "description": "Ancient 遗物（Tezcatara 赐福）：每场战斗抽牌前消耗抽牌堆1张牌（第1回合跳过固有）并获得1力量。",
     "id": "TOASTY_MITTENS",
     "kind": "relic",
-    "name": "烘焙手套",
+    "name": "暖和手套",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L230; md:relics_zh.md:L230"
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
   },
   "TOOLBOX": {
     "aliases": [
@@ -4551,19 +4593,21 @@
   "TOY_BOX": {
     "aliases": [
       "Toy Box",
-      "ToyBox"
+      "ToyBox",
+      "TOY_BOX",
+      "玩具盒"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，获得 4 件蜡质遗物；每 3 场战斗，最左侧蜡质遗物融化消失。",
+    "curated": true,
+    "description": "Ancient 遗物（Tezcatara 赐福）：拾取时获得4件蜡制遗物；每3场战斗最左侧蜡制遗物融化。",
     "id": "TOY_BOX",
     "kind": "relic",
     "name": "玩具盒",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L232; md:relics_zh.md:L232"
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
   },
   "TRI_BOOMERANG": {
     "aliases": [
@@ -4753,19 +4797,21 @@
   "VERY_HOT_COCOA": {
     "aliases": [
       "Very Hot Cocoa",
-      "VeryHotCocoa"
+      "VeryHotCocoa",
+      "VERY_HOT_COCOA",
+      "极热可可"
     ],
     "character": null,
     "counter_shown": false,
     "curated": true,
-    "description": "每场战斗开始额外+4能量（仅第一回合）。Ancient 级赐福遗物（Act2 赐福房 Tezcatara；灯笼叠加已验证）。对局40 live：与 venerable 茶具（休息后+2）和灯笼（+1）加法叠加——(7,2) 休息后精英 T1 energy=10/3。",
+    "description": "Ancient 遗物（Tezcatara 赐福）：每场战斗第1回合 +4 能量（回合开始结算，TurnNumber≤1）。",
     "id": "VERY_HOT_COCOA",
     "kind": "relic",
-    "name": "烫嘴可可",
+    "name": "极热可可",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L235; md:relics_zh.md:L235; codex:relics/VERY_HOT_COCOA; run-40 live fold 2026-09-18"
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
   },
   "VEXING_PUZZLEBOX": {
     "aliases": [
@@ -4837,19 +4883,21 @@
   },
   "WHETSTONE": {
     "aliases": [
-      "Whetstone"
+      "Whetstone",
+      "WHETSTONE",
+      "磨刀石"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，升级牌库中 2 张随机攻击牌。升级目标为攻击标签（如 Bash→Bash+ 10 伤/3 易伤；MoltenFist→MoltenFist+ 14 伤）。",
+    "curated": true,
+    "description": "拾取时，随机升级牌库中 2 张攻击牌。对局43 Act2 商店 (5,0) live 价格 151金（未买——150金选了 Barricade）。目标随机——价值取决于攻击牌密度。",
     "id": "WHETSTONE",
     "kind": "relic",
     "name": "磨刀石",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "对局43 live",
     "rarity": "Common",
-    "source": "md:relics.md:L45; md:relics_zh.md:L45"
+    "source": "relics.md + 对局43 商店"
   },
   "WHISPERING_EARRING": {
     "aliases": [
@@ -4905,19 +4953,20 @@
   "WINGED_BOOTS": {
     "aliases": [
       "Winged Boots",
-      "WingedBoots"
+      "WINGED_BOOTS",
+      "羽翼之靴"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "选择行进房间时可忽略路径限制 3 次。LIVE（对局 36）：`map_select` 指向**任意**地图坐标均可成功，无视 `available_map_points` 列表——是完全传送，不限于子节点选择。实用例：(14,3)→(12,6) 商店，再 (12,6)→(15,3) Boss 门，跳过精英走廊；3 跳消耗 2 跳。",
+    "curated": true,
+    "description": "3 次充能：选择下一层房间时无视当前路线连通性（下一行任意点可达）。对局43 Act1 Neow live 之选（对比：橙塑香盒+1 升级 / 白银熔炉 3 次卡奖升级+首个宝箱为空）。教条：留给休息/商店几何逃生与 Boss 前紧急跳层；对局43 全程未消耗（草稿几何守住了）——草稿正确时未用掉的充能不是损失。",
     "id": "WINGED_BOOTS",
     "kind": "relic",
     "name": "羽翼之靴",
     "needs_zh": false,
-    "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L238; md:relics_zh.md:L238"
+    "play_notes": "对局43 live",
+    "rarity": "Uncommon",
+    "source": "对局43 Neow live"
   },
   "WING_CHARM": {
     "aliases": [
@@ -4973,18 +5022,19 @@
   "YUMMY_COOKIE": {
     "aliases": [
       "Yummy Cookie",
-      "YummyCookie"
+      "YUMMY_COOKIE",
+      "美味饼干"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，升级 4 张选定牌。升级为永久牌库升级（deck_select 叠层——逐张 choose 后 proceed 确认）；该方式升级的 Rupture+ Amount 2 此后每次 Bloodletting/Breakthrough 自伤 +2 力量。",
+    "curated": true,
+    "description": "Ancient 遗物（Tezcatara 赐福）：拾取时永久升级自选4张牌。对局43 live。",
     "id": "YUMMY_COOKIE",
     "kind": "relic",
     "name": "美味饼干",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "对局43 live",
     "rarity": "Ancient",
-    "source": "md:relics.md:L239; md:relics_zh.md:L239"
+    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
   }
 }

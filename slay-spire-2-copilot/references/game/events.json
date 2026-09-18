@@ -2224,53 +2224,39 @@
   "POTION_COURIER": {
     "aliases": [
       "Potion Courier",
-      "药水快递员"
+      "POTION_COURIER",
+      "药水信使"
     ],
-    "curated": false,
-    "description": "GrabPotions / Ransack → potion rewards (FoulPotions var 3).",
+    "curated": true,
+    "description": "GrabPotions = 3x FOUL_POTION (combat AoE12+self12; merchant-room use = +100g each - blocked for agents: bridge rejects use_potion outside combat). Ransack = 1 random rare potion via a rewards screen - CLAIM IT (choose the reward node) before proceeding; run-42 skipped the claim and lost the rare potion, run-43 claimed BLESSING_OF_THE_FORGE properly.",
     "id": "POTION_COURIER",
     "kind": "event",
     "name": "Potion Courier",
     "needs_zh": false,
     "options": {
       "POTION_COURIER.pages.INITIAL.options.GRAB_POTIONS": {
-        "aliases": [
-          "GRAB_POTIONS",
-          "Grab Potions"
-        ],
-        "curated": false,
-        "description": "GrabPotions / Ransack",
-        "event_id": "POTION_COURIER",
-        "id": "POTION_COURIER.pages.INITIAL.options.GRAB_POTIONS",
+        "curated": true,
+        "description": "Gain 3x Foul Potion.",
         "kind": "event_option",
         "name": "Grab Potions",
         "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 POTION_COURIER 的选项 `GRAB_POTIONS`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "zh_description": "获得3瓶污浊药水。",
+        "zh_name": "拿走这批药水"
       },
       "POTION_COURIER.pages.INITIAL.options.RANSACK": {
-        "aliases": [
-          "RANSACK",
-          "Ransack"
-        ],
-        "curated": false,
-        "description": "potion rewards (FoulPotions var 3).",
-        "event_id": "POTION_COURIER",
-        "id": "POTION_COURIER.pages.INITIAL.options.RANSACK",
+        "curated": true,
+        "description": "Gain 1 random rare potion (claim on the rewards screen!).",
         "kind": "event_option",
         "name": "Ransack",
         "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "药水奖励（FoulPotions 变量 3）",
-        "zh_name": "Ransack"
+        "zh_description": "获得1瓶随机罕见药水（务必在奖励屏领取！）。",
+        "zh_name": "洗劫"
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
+    "source": "run-42/43 live",
     "zh_description": "GrabPotions / Ransack → 药水奖励（FoulPotions 变量 3）。",
     "zh_name": "药水快递员"
   },
@@ -3638,10 +3624,11 @@
   "TEZCATARA": {
     "aliases": [
       "Tezcatara",
-      "选项"
+      "TEZCATARA",
+      "特兹卡塔拉"
     ],
     "curated": true,
-    "description": "Act2 (and later act) start boon room. Options seen live run-40: VERY_HOT_COCOA (+4e T1 every combat), BIIIG_HUG (remove 4 cards; +1 Soot on every draw-pile shuffle), SEAL_OF_GOLD (start of turn, if ≥5g spend 5g gain 1 Energy). Archive also lists YUMMY_COOKIE (upgrade 4), STORYBOOK (add Brightest Flame), NUTRITIOUS_SOUP, TOASTY_MITTENS, GOLDEN_COMPASS, PUMPKIN_CANDLE. LIVE run-40 pick: Very Hot Cocoa — no gold tax, no curse pollution, engine-online T1 every fight.",
+    "description": "Act2+ act-start boon room (act-heal fires at boon entry, not map transition - reconfirmed run-43 27->80). Options rotate per run. Live run-43 seed AYPP0CQ14G: YUMMY_COOKIE (upgrade 4 cards) / STORYBOOK (add Brightest Flame) / TOY_BOX (4 wax relics, leftmost melts every 3 combats). Run-40 seed had VERY_HOT_COCOA (+4e T1) / BIIIG_HUG (remove 4 + Soot on shuffle) / SEAL_OF_GOLD (5g -> 1e per turn). Run-43 pick: Yummy Cookie - permanent upgrades beat decaying wax and unknown-card pollution.",
     "id": "TEZCATARA",
     "kind": "event",
     "name": "Tezcatara",
@@ -3649,177 +3636,156 @@
     "options": {
       "TEZCATARA.pages.INITIAL.options.BIIIG_HUG": {
         "aliases": [
-          "BIIIG_HUG",
-          "Biiig Hug"
+          "Biiig Hug",
+          "BIIIG_HUG"
         ],
-        "curated": false,
-        "description": "Gain relic BIIIG_HUG (Biiig Hug): on pickup, remove 4 cards; whenever you shuffle your draw pile, add 1 Soot to it.",
+        "curated": true,
+        "description": "Gain Biiig Hug relic: on pickup remove 4 cards from your deck; on every shuffle add 1 Soot to your draw pile.",
         "event_id": "TEZCATARA",
         "id": "TEZCATARA.pages.INITIAL.options.BIIIG_HUG",
         "kind": "event_option",
         "name": "Biiig Hug",
         "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TEZCATARA 的选项 `BIIIG_HUG`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
+        "zh_description": "获得大大拥抱遗物：拾取时从牌库移除4张牌；每次洗牌向抽牌堆加入1张烟尘。",
+        "zh_name": "大大拥抱"
       },
       "TEZCATARA.pages.INITIAL.options.GOLDEN_COMPASS": {
         "aliases": [
-          "GOLDEN_COMPASS",
-          "Golden Compass"
+          "Golden Compass",
+          "GOLDEN_COMPASS"
         ],
-        "curated": false,
-        "description": "relic GoldenCompass: on pickup replace the Act 2 map with a single special path",
+        "curated": true,
+        "description": "Gain Golden Compass relic: on pickup, regenerate the current act's map (golden-path reroll).",
         "event_id": "TEZCATARA",
         "id": "TEZCATARA.pages.INITIAL.options.GOLDEN_COMPASS",
         "kind": "event_option",
         "name": "Golden Compass",
         "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TEZCATARA 的选项 `GOLDEN_COMPASS`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
+        "zh_description": "获得黄金罗盘遗物：拾取时重新生成当前章节地图（黄金路线重掷）。",
+        "zh_name": "黄金罗盘"
       },
       "TEZCATARA.pages.INITIAL.options.NUTRITIOUS_SOUP": {
         "aliases": [
-          "NUTRITIOUS_SOUP",
-          "Nutritious Soup"
+          "Nutritious Soup",
+          "NUTRITIOUS_SOUP"
         ],
-        "curated": false,
-        "description": "relic NutritiousSoup: on pickup enchant all Strike-tagged Basic cards with Tezcatara's Ember (Ember = **cost 0, +3 dmg, Eternal**)",
+        "curated": true,
+        "description": "Gain Nutritious Soup relic: on pickup, enchant every Basic Strike-tagged card with Tezcatara's Ember (cost 0, Eternal keyword, +3 damage on powered attacks).",
         "event_id": "TEZCATARA",
         "id": "TEZCATARA.pages.INITIAL.options.NUTRITIOUS_SOUP",
         "kind": "event_option",
         "name": "Nutritious Soup",
         "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TEZCATARA 的选项 `NUTRITIOUS_SOUP`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
+        "zh_description": "获得营养汤遗物：拾取时为所有基础 Strike 类牌附加特兹卡塔拉之烬（费用0、永恒关键词、受能攻击+3伤）。",
+        "zh_name": "营养汤"
       },
       "TEZCATARA.pages.INITIAL.options.PUMPKIN_CANDLE": {
         "aliases": [
-          "PUMPKIN_CANDLE",
-          "Pumpkin Candle"
+          "Pumpkin Candle",
+          "PUMPKIN_CANDLE"
         ],
-        "curated": false,
-        "description": "relic decode in relics.md (+1e/turn, extinguishes after 5 combats, KINDLE rest option — transient + rest-action tax)",
+        "curated": true,
+        "description": "Gain Pumpkin Candle relic: +1 Max Energy while its 5-count Kindle is active; -1 count per combat end; rest sites gain a Kindle option that restores +5.",
         "event_id": "TEZCATARA",
         "id": "TEZCATARA.pages.INITIAL.options.PUMPKIN_CANDLE",
         "kind": "event_option",
         "name": "Pumpkin Candle",
         "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TEZCATARA 的选项 `PUMPKIN_CANDLE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
+        "zh_description": "获得南瓜蜡烛遗物：5层燃烧期间 +1 最大能量；每场战斗结束 −1 层；休息点新增点燃选项回复 +5 层。",
+        "zh_name": "南瓜蜡烛"
       },
       "TEZCATARA.pages.INITIAL.options.SEAL_OF_GOLD": {
         "aliases": [
-          "SEAL_OF_GOLD",
-          "Seal Of Gold"
+          "Seal of Gold",
+          "SEAL_OF_GOLD"
         ],
-        "curated": false,
-        "description": "relic SealOfGold: at start of your turn, spend 5 Gold to gain 1 Energy (no effect if gold < 5",
+        "curated": true,
+        "description": "Gain Seal of Gold relic: at start of your turn, if you have >=5 gold, gain 1 Energy and lose 5 gold.",
         "event_id": "TEZCATARA",
         "id": "TEZCATARA.pages.INITIAL.options.SEAL_OF_GOLD",
         "kind": "event_option",
-        "name": "Seal Of Gold",
+        "name": "Seal of Gold",
         "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TEZCATARA 的选项 `SEAL_OF_GOLD`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
+        "zh_description": "获得黄金封印遗物：回合开始时若金币≥5，获得1能量并失去5金。",
+        "zh_name": "黄金封印"
       },
       "TEZCATARA.pages.INITIAL.options.STORYBOOK": {
-        "aliases": [
-          "STORYBOOK",
-          "Storybook"
-        ],
-        "curated": false,
-        "description": "add 1 Brightest Flame to your deck",
-        "event_id": "TEZCATARA",
-        "id": "TEZCATARA.pages.INITIAL.options.STORYBOOK",
+        "curated": true,
+        "description": "Add 1 Brightest Flame to your deck.",
         "kind": "event_option",
         "name": "Storybook",
         "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TEZCATARA 的选项 `STORYBOOK`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "zh_description": "将1张至亮之焰加入牌库。",
+        "zh_name": "故事书"
       },
       "TEZCATARA.pages.INITIAL.options.TOASTY_MITTENS": {
         "aliases": [
-          "TOASTY_MITTENS",
-          "Toasty Mittens"
+          "Toasty Mittens",
+          "TOASTY_MITTENS"
         ],
-        "curated": false,
-        "description": "relic ToastyMittens: each turn before hand draw, exhaust top card of draw pile + gain 1 Strength (passive Str engine",
+        "curated": true,
+        "description": "Gain Toasty Mittens relic: before hand draw each combat, exhaust a card from your draw pile (T1 skips Innate) and gain 1 Strength.",
         "event_id": "TEZCATARA",
         "id": "TEZCATARA.pages.INITIAL.options.TOASTY_MITTENS",
         "kind": "event_option",
         "name": "Toasty Mittens",
         "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TEZCATARA 的选项 `TOASTY_MITTENS`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
+        "zh_description": "获得暖和手套遗物：每场战斗抽牌前，从抽牌堆消耗1张牌（第1回合跳过固有牌）并获得1力量。",
+        "zh_name": "暖和手套"
       },
       "TEZCATARA.pages.INITIAL.options.TOY_BOX": {
-        "aliases": [
-          "TOY_BOX",
-          "Toy Box"
-        ],
-        "curated": false,
-        "description": "Gain relic TOY_BOX (Toy Box): on pickup, gain 4 Wax relics; every 3 combats, the left-most Wax relic melts away.",
-        "event_id": "TEZCATARA",
-        "id": "TEZCATARA.pages.INITIAL.options.TOY_BOX",
+        "curated": true,
+        "description": "Gain 4 Wax relics; leftmost melts every 3 combats.",
         "kind": "event_option",
         "name": "Toy Box",
         "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TEZCATARA 的选项 `TOY_BOX`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "zh_description": "获得4件蜡制遗物；每3场战斗最左侧融化。",
+        "zh_name": "玩具盒"
       },
       "TEZCATARA.pages.INITIAL.options.VERY_HOT_COCOA": {
         "aliases": [
-          "VERY_HOT_COCOA",
-          "Very Hot Cocoa"
+          "Very Hot Cocoa",
+          "VERY_HOT_COCOA"
         ],
-        "curated": false,
-        "description": "+4 energy turn 1 (Lantern-stacking verified).",
+        "curated": true,
+        "description": "Gain Very Hot Cocoa relic: +4 Energy on turn 1 of every combat.",
         "event_id": "TEZCATARA",
         "id": "TEZCATARA.pages.INITIAL.options.VERY_HOT_COCOA",
         "kind": "event_option",
         "name": "Very Hot Cocoa",
         "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TEZCATARA 的选项 `VERY_HOT_COCOA`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
+        "zh_description": "获得极热可可遗物：每场战斗第1回合 +4 能量。",
+        "zh_name": "热可可"
       },
       "TEZCATARA.pages.INITIAL.options.YUMMY_COOKIE": {
-        "aliases": [
-          "YUMMY_COOKIE",
-          "Yummy Cookie"
-        ],
-        "curated": false,
-        "description": "gain relic YummyCookie and upgrade 4 cards of your choice (deck_select overlay: choose cards then proceed to confirm)",
-        "event_id": "TEZCATARA",
-        "id": "TEZCATARA.pages.INITIAL.options.YUMMY_COOKIE",
+        "curated": true,
+        "description": "Upgrade 4 chosen cards permanently.",
         "kind": "event_option",
         "name": "Yummy Cookie",
         "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TEZCATARA 的选项 `YUMMY_COOKIE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "zh_description": "永久升级自选4张牌。",
+        "zh_name": "美味饼干"
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md; run-40 live fold 2026-09-18",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
+    "source": "run-40/43 live",
     "zh_description": "YUMMY_COOKIE 美味饼干 → 获得 YummyCookie 遗物并自选升级 4 张牌（deck_select 浮层：选择后 proceed 确认）；STORYBOOK 故事书 → 向牌库加入 1 张 Brightest Flame；SEAL_OF_GOLD 黄金印 → SealOfGold 遗物：回合开始花 5 金获得 1 能量（金不足 5 时无效；一处来源写 3，5 为多源印证值）。**祝福池其余选项**：NUTRITIOUS_SOUP 营养汤 → NutritiousSoup 遗物：拾取时为所有带 Strike 标签的基础牌附魔 Tezcatara's Ember（Ember = **0 费、+3 伤害、Eternal**）；TOASTY_MITTENS 烘焙手套 → ToastyMittens 遗物：每回合抽牌前消耗抽牌堆顶牌并获得 1 力量（被动力量引擎，消耗同时瘦牌；与 Headbutt 取回反协同）；GOLDEN_COMPASS 黄金罗盘 → GoldenCompass 遗物：拾取时以一条特殊路径替换第二章地图；PUMPKIN_CANDLE 南瓜蜡烛 → 遗物解码见 relics_zh.md（+1 能/回合、5 战后熄灭、休息点 KINDLE 选项——短暂性+休息点行动税）；VERY_HOT_COCOA 烫嘴可可 → 第 1 回合 +4 能量（与灯笼叠加 8 能已验证）。",
     "zh_name": "选项"
   },
@@ -4174,10 +4140,11 @@
   "TRASH_HEAP": {
     "aliases": [
       "Trash Heap",
+      "TRASH_HEAP",
       "垃圾堆"
     ],
-    "curated": false,
-    "description": "DiveIn → 8 damage + relic; Grab → +100 Gold + add card.",
+    "curated": true,
+    "description": "DiveIn = lose 8 HP, gain a forgotten (removed-content) relic - reported pool DarkstonePeriapt / DreamCatcher / HandDrill / MawBank / TheBoot (mediocre). Grab = +100 Gold + a forgotten card - reported pool Caltrops / Distraction / Outmaneuver / Clash / DualWield / Entrench / HelloWorld / Rebound / Stack / RipAndTear. Run-43 at 44 HP before an elite corridor took GRAB (HP-economy doctrine: do not pay 8 HP for a mediocre relic pool; 100g sank at the tail shop fork). Caltrops (3 Thorns power, 1c) came from this pool and carried two fights.",
     "id": "TRASH_HEAP",
     "kind": "event",
     "name": "Trash Heap",
@@ -4185,42 +4152,33 @@
     "options": {
       "TRASH_HEAP.pages.INITIAL.options.DIVE_IN": {
         "aliases": [
-          "DIVE_IN",
-          "Dive In"
+          "DIVE_IN"
         ],
-        "curated": false,
-        "description": "8 damage + relic",
-        "event_id": "TRASH_HEAP",
-        "id": "TRASH_HEAP.pages.INITIAL.options.DIVE_IN",
+        "curated": true,
+        "description": "Lose 8 HP; gain 1 forgotten relic (mediocre pool).",
         "kind": "event_option",
         "name": "Dive In",
         "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "8 点伤害 + 遗物；Grab → +100 金币 + 加牌",
-        "zh_name": "Dive In"
+        "zh_description": "失去8HP；获得1件旧日遗物（池平庸）。",
+        "zh_name": "扎进垃圾堆"
       },
       "TRASH_HEAP.pages.INITIAL.options.GRAB": {
         "aliases": [
-          "GRAB",
-          "Grab"
+          "GRAB"
         ],
-        "curated": false,
-        "description": "+100 Gold + add card.",
-        "event_id": "TRASH_HEAP",
-        "id": "TRASH_HEAP.pages.INITIAL.options.GRAB",
+        "curated": true,
+        "description": "+100 Gold; add 1 forgotten card (Caltrops-class live run-43).",
         "kind": "event_option",
         "name": "Grab",
         "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TRASH_HEAP 的选项 `GRAB`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "zh_description": "+100金；加入1张旧日卡牌（对局43 live 得铁蒺藜）。",
+        "zh_name": "随便拿点垃圾"
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
+    "source": "perplexity pools 2026-09 + run-43 live",
     "zh_description": "DiveIn → 8 点伤害 + 遗物；Grab → +100 金币 + 加牌。",
     "zh_name": "垃圾堆"
   },

@@ -61,18 +61,19 @@
   "BLESSING_OF_THE_FORGE": {
     "aliases": [
       "Blessing of the Forge",
-      "BlessingoftheForge"
+      "BLESSING_OF_THE_FORGE",
+      "锻造祝福"
     ],
     "curated": true,
-    "description": "Upgrade every upgradable card in your hand for the combat (combat-scoped — reverts after combat, Armaments-class). LIVE run-38: Defend 5→8 confirmed live on a lethal-intent boss turn (8+8=16 block vs 17 incoming); Molten Fist 10→14 likewise. Spend on the turn hand density is highest / incoming is lethal — not a permanent deck investment.",
+    "description": "Upgrade every upgradable card in your hand for THIS combat (Armaments-class, reverts after). Spend on highest hand-density / lethal-intent turns. Live run-43 Act2 (4,0): 5-card attack hand upgraded IronWave+2/+2, TwinStrike+2, Pommel+1/draw2, Strike+3 - used on a 19-intent POUNCE turn. Also the RANSACK event rare-potion roll run-43 (claimed properly - run-42 had skipped the claim screen).",
     "display_name": "Blessing of the Forge",
     "id": "BLESSING_OF_THE_FORGE",
     "kind": "potion",
     "name": "Blessing of the Forge",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L17; md:potions_zh.md:L17",
+    "source": "potions.md + run-38/43 live",
     "target": "self",
     "usage": "combat",
     "zh_description": "为本场战斗升级手牌中所有可升级卡（战斗内限定——战斗后还原，Armaments 同类）。run-38 实时：致命意图 Boss 回合确认 Defend 5→8（8+8=16 挡对 17 来袭）；熔岩拳 10→14 同理。在手牌密度最高/来袭致命的回合使用——不是永久牌库投资。",
@@ -261,18 +262,19 @@
   "DEXTERITY_POTION": {
     "aliases": [
       "Dexterity Potion",
-      "DexterityPotion"
+      "DEXTERITY_POTION",
+      "敏捷药水"
     ],
     "curated": true,
-    "description": "Gain 2 Dexterity.",
+    "description": "Gain 2 Dexterity for the combat (card-block +2, stacks with OddlySmoothStone). Live run-43: Dex1+2=3 total; Defend 6+3=9, TrueGrit 8+3=11, UltimateDefend 13+3=16 - 16>=15 solo-stunned BowlbugRock HEADBUTT. Bowlbug doctrine note run-39: Dex+Defend x2=14 was one short of 15 - always compute the live total vs the intent number before concluding stun is impossible.",
     "display_name": "Dexterity Potion",
     "id": "DEXTERITY_POTION",
     "kind": "potion",
     "name": "Dexterity Potion",
     "needs_zh": false,
-    "play_notes": "run-39 live: +2 Dexterity on use; Defend 5→7 live under Dex. Bowlbug T4: Dex+Defend×2 = 14 block vs HEADBUTT 15 (one short of IMBALANCED full-block stun).",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "rarity": "Common",
-    "source": "md:potions.md:L27; md:potions_zh.md:L27; codex:potions/DEXTERITY_POTION",
+    "source": "potions.md + run-39/43 live",
     "target": "any player",
     "usage": "combat",
     "zh_description": "本场战斗 +2 敏捷。",
@@ -281,18 +283,19 @@
   "DISTILLED_CHAOS": {
     "aliases": [
       "Distilled Chaos",
-      "DistilledChaos"
+      "DISTILLED_CHAOS",
+      "蒸馏混沌"
     ],
-    "curated": false,
-    "description": "Play the top 3 cards of your Draw Pile.",
+    "curated": true,
+    "description": "Play the top 3 cards of your Draw Pile. Variance-class - cost/targets uncontrolled. Shop (5,0) Act2 live price 102g run-43 (not bought).",
     "display_name": "Distilled Chaos",
     "id": "DISTILLED_CHAOS",
     "kind": "potion",
     "name": "Distilled Chaos",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "rarity": "Rare",
-    "source": "md:potions.md:L28; md:potions_zh.md:L28; codex:potions/DISTILLED_CHAOS",
+    "source": "potions.md + run-43 shop live",
     "target": "self",
     "usage": "combat",
     "zh_description": "打出抽牌堆顶的 3 张牌。",
@@ -519,18 +522,19 @@
   "FOUL_POTION": {
     "aliases": [
       "Foul Potion",
-      "FoulPotion"
+      "FOUL_POTION",
+      "污浊药水"
     ],
     "curated": true,
-    "description": "In combat: deal 12 damage to EVERY non-pet creature INCLUDING you (suicide-class at low HP; self-damage triggers Rupture). In a Merchant room: gain 100 Gold. In FakeMerchant event: starts the FakeMerchant fight — never use there. Run-42 event (Potion Courier) offered x3; at 13 HP combat use was suicide — declined for a rare potion line instead.",
+    "description": "In combat: deal 12 damage to EVERY non-pet creature INCLUDING you (AoE 12 + self 12; suicide-class below ~15 HP; self-damage triggers Rupture). In a Merchant room: gain 100 Gold. In FakeMerchant event it starts the fight - never use there. POTION_COURIER event offers x3 (run-42 declined at 13 HP; run-43 at 44 HP still declined - bridge rejects use_potion outside combat, so the merchant-gold line is not agent-reachable yet).",
     "display_name": "Foul Potion",
     "id": "FOUL_POTION",
     "kind": "potion",
     "name": "Foul Potion",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "rarity": "Event",
-    "source": "md:potions.md:L41; md:potions_zh.md:L40",
+    "source": "potions.md + run-42/43 live",
     "target": "anytime",
     "usage": "Event",
     "zh_description": "战斗中——对每个非宠物生物（含你自己）造成 12 点伤害；商人房间——获得 100 金币；FakeMerchant 事件——触发伪商人战斗。战斗用法=同窗 AoE 工具——12 伤可直接带走 12 HP 千足虫段并铺垫 Thunderclap 收头；自伤触发 Rupture（按 Amount +力）。伪商人房绝不可用（战斗条款）——留给真商人房 +100 金是经济线。",
@@ -1002,18 +1006,19 @@
   "SHACKLING_POTION": {
     "aliases": [
       "Shackling Potion",
-      "ShacklingPotion"
+      "SHACKLING_POTION",
+      "枷锁药水"
     ],
-    "curated": false,
-    "description": "apply ShacklingPotionPower 7 to ALL enemies — temporary −7 Strength, lost at end of their turn.",
+    "curated": true,
+    "description": "apply ShacklingPotionPower 7 to ALL enemies - temporary -7 Strength, lost at end of their turn. Seen in both run-43 shops (99g Act1-tail / 95g Act2 (5,0)); potion slots were full or gold spent on relics - not bought. Boss-gate class: cuts every multi-hit intent by 7 per hit.",
     "display_name": "Shackling Potion",
     "id": "SHACKLING_POTION",
     "kind": "potion",
     "name": "Shackling Potion",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "rarity": "Rare",
-    "source": "md:potions.md:L64; md:potions_zh.md:L64",
+    "source": "potions.md + run-43 shop screens",
     "target": "ALL enemies",
     "usage": "combat",
     "zh_description": "对全体敌人施加 ShacklingPotionPower 7——临时 −7 力量，其回合结束时失去。",
@@ -1079,6 +1084,21 @@
     "zh_description": "抽 7 张；随机化手牌中所有非 X 费卡牌的费用。",
     "zh_name": "异蛇之油"
   },
+  "SOLDIER_STEW": {
+    "aliases": [
+      "Soldier's Stew",
+      "SOLDIERS_STEW"
+    ],
+    "curated": false,
+    "description": "All cards containing Strike gain 1 Replay this combat.",
+    "id": "SOLDIER_STEW",
+    "kind": "potion",
+    "name": "Soldier's Stew",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Rare",
+    "source": "codex-api:/potions/SOLDIERS_STEW"
+  },
   "SOLDIER_S_STEW": {
     "aliases": [
       "SOLDIERS_STEW",
@@ -1103,17 +1123,19 @@
   "SPEED_POTION": {
     "aliases": [
       "Speed Potion",
-      "SpeedPotion"
+      "SPEED_POTION",
+      "速度药水"
     ],
     "curated": true,
-    "description": "apply SpeedPotionPower +5 Dexterity for the current turn; lose the 5 Dexterity at end of turn (temporary). Run-41 live: Defend 5→10 and Shrug 8→13 under the buff; one-turn burst block — spend it on the turn the lethal intent lands, not earlier.",
+    "description": "apply +5 Dexterity for the current turn only; lose it end of turn. One-turn burst block - spend on the turn the lethal intent lands, not earlier. Live run-43 Act1 Boss T10: Dex 1->6 under Speed, but hand had no block cards so the burst went unused that turn (planned for SCREAM 13; Beckon tax hit instead). Lesson: Speed Potion pays only when block CARDS are in hand to amplify.",
     "display_name": "Speed Potion",
     "id": "SPEED_POTION",
     "kind": "potion",
     "name": "Speed Potion",
-    "play_notes": "",
+    "needs_zh": false,
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "rarity": "Common",
-    "source": "md:potions.md:L69; md:potions_zh.md:L69",
+    "source": "potions.md + run-41/43 live",
     "target": "any player",
     "usage": "combat",
     "zh_description": "获得 SpeedPotionPower +5 敏捷——本回合结束时失去 5 敏捷（临时敏捷）。",
@@ -1197,18 +1219,19 @@
   "SWIFT_POTION": {
     "aliases": [
       "Swift Potion",
-      "SwiftPotion"
+      "SWIFT_POTION",
+      "迅捷药水"
     ],
-    "curated": false,
-    "description": "Draw 3 cards.",
+    "curated": true,
+    "description": "Draw 3 cards. Boss-reward roll run-43; spent T1 of the Act2 (1,1) Bowlbug fight digging for block to reach IMBALANCED stun threshold - drew attacks instead (Pommel/TwinStrike/Strike), stun line missed that turn.",
     "display_name": "Swift Potion",
     "id": "SWIFT_POTION",
     "kind": "potion",
     "name": "Swift Potion",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "rarity": "Common",
-    "source": "md:potions.md:L73; md:potions_zh.md:L73; codex:potions/SWIFT_POTION",
+    "source": "potions.md + run-43 live",
     "target": "any player",
     "usage": "combat",
     "zh_description": "抽 3 张牌。",
@@ -1257,18 +1280,19 @@
   "WEAK_POTION": {
     "aliases": [
       "Weak Potion",
-      "WeakPotion"
+      "WEAK_POTION",
+      "弱化药水"
     ],
-    "curated": false,
-    "description": "Apply 3 Weak.",
+    "curated": true,
+    "description": "Apply 3 Weak to the target (attacks -25% for 3 turns). Live run-43 Act1 Boss SoulFysh T7: DE_GAS intent 24->18 on a player-Vuln turn - the 6-point cut plus 6 block turned a 24-leak into 12. Boss-gate reserve doctrine: spend on the highest live intent, keep a heal-class potion behind it.",
     "display_name": "Weak Potion",
     "id": "WEAK_POTION",
     "kind": "potion",
     "name": "Weak Potion",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "rarity": "Common",
-    "source": "md:potions.md:L76; md:potions_zh.md:L76; codex:potions/WEAK_POTION",
+    "source": "potions.md + run-43 live",
     "target": "any enemy",
     "usage": "combat",
     "zh_description": "施加 3 层 Weak。",
