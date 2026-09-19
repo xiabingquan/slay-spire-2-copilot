@@ -148,6 +148,13 @@ Lookup (reference resolution):
   Subsequent `act`/`batch`/`sl` calls refuse while the stop flag exists —
   clear with `rm <stop flag>` after the gap is fixed.
 
+- **Window visuals may lag bridge state**: after screen transitions (menu
+  overlays, error popups, reward teardown) the rendered window can briefly
+  show a stale/ghost layer while the bridge state payload is already correct.
+  Bridge `state` is the single authority — diagnose from a fresh
+  `state`/`state --json` read, never from screenshots; visual recovery is
+  cosmetic (window manager), not a state problem.
+
 Action notes:
 
 - `timeline_sync` (main menu only, no args): runs the Timeline reveal drain
