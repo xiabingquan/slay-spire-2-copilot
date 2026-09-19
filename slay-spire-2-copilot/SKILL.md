@@ -61,12 +61,15 @@ Execute in order; all of the following are the skill's own work:
 2. **Read memory** (before anything else). Memory under memory/ is
    version-controlled and serves as a standing play reference for the whole
    session:
-   - Mandatory before each run:
-     - the Summary sections of all recorded runs (memory/runs/*.md — core
-       facts plus the biggest gain/loss of each past run)
-     - the accumulated key playstyles for the character about to play
-       (gleaned from that character's run notes, <character>_*.md)
-   - Optional: read full earlier run notes as needed.
+   - **Mandatory before each run: `memory/overview.md` only** (table + stats
+     + phased reflections — the standing cross-run picture). Full per-run
+     notes are NOT required at session start.
+   - **On demand**: when a specific past run matters for a decision, read
+     that single note under memory/runs/ — files are named with the run
+     number prefix (e.g. `51_IRONCLAD_...md`) matching the 对局序号 column
+     in overview.md; look the number up there first, then open the file.
+   - Per-character playstyle notes: consult on demand the same way
+     (filter runs/ by character prefix when needed).
    - During play: memory may be consulted at any time — past summaries and
      character playstyle notes are live reference for in-run decisions.
 
@@ -82,6 +85,11 @@ Execute in order; all of the following are the skill's own work:
      and waits for the bridge). The first modded launch shows a one-time
      in-game mod warning; the user clicks accept inside the game — the only
      thing the user ever does beyond invoking the skill.
+   - Window placement (policy 2026-09-19): every graceful stop (`spirectl
+     stop` / `sl`) records the game window's current screen+position; the
+     next launch RESTORES the window to that record. No record or failed
+     restore → fallback: launching terminal's screen + fixed offset
+     (2026-09-18 preference). Cosmetic only — never blocks launch.
 
 4. **Handshake check**: confirm the versions in doctor output. Game version
    drift versus the mod's min_game_version is a hard stop: report it
@@ -243,10 +251,11 @@ gitignored (harness runtime only).
 
 When the run ends (game_over screen, or abandon):
 
-1. Write this run's memory note to memory/runs/<character>_<YYYYmmdd-HHMMSS>_<hash8>.md
-   (character id first, then the run log's timestamp and hash, lowercase,
-   underscore-separated) and its Chinese twin
-   memory/runs/<character>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md — the two files
+1. Write this run's memory note to memory/runs/<run-number>_<CHARACTER>_<YYYYmmdd-HHMMSS>_<hash8>.md
+   (run number = the 对局序号 this run will carry in overview.md — newest
+   number + 1; then character id, run log timestamp and hash, underscore-
+   separated) and its Chinese twin
+   memory/runs/<run-number>_<CHARACTER>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md — the two files
    must stay content-aligned. Both follow memory/user guide.md and the
    section structure of memory/template.md (Summary table of core run facts /
    Run review / What went well / What went poorly / Key moments). Cite the
@@ -396,6 +405,7 @@ memory/ — run memory (version-controlled):
 - `memory/user guide.md` — user-written guidance for what agents should record
 - `memory/template.md` — section template for per-run memory notes
 - `memory/runs/` — one note per run plus a `_zh` Chinese twin, named
-  <character>_<YYYYmmdd-HHMMSS>_<hash8>.md / <character>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md
+  <run-number>_<CHARACTER>_<YYYYmmdd-HHMMSS>_<hash8>.md / _zh.md — the run
+  number prefix equals the 对局序号 in memory/overview.md (lookup key)
 
 - `SKILL_zh.md` — Chinese version of this skill doc

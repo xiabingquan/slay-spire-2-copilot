@@ -12,6 +12,47 @@ set -u
 GAME_PROCESS="Slay the Spire 2"
 OFFSET_X=50
 OFFSET_Y=80
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+STATE_DIR="$SCRIPT_DIR/.cache"
+STATE_FILE="$STATE_DIR/game-window-pos"
+
+# --record: capture the CURRENT game window position to the state file.
+# Invoked before every graceful game stop (spirectl stop / sl) so relaunches
+# can return the window to its previous screen+position. macOS window
+# coordinates are global across displays — x,y implicitly encode which
+# screen. Cosmetic only: any failure just skips the record.
+if [ "${1:-}" = "--record" ]; then
+  RPOS=$(osascript -e "tell application \"System Events\" to tell process \"$GAME_PROCESS\" to get position of window 1" 2>/dev/null || true)
+  RX=$(echo "$RPOS" | awk -F', ' '{print $1}' | tr -d ' ')
+  RY=$(echo "$RPOS" | awk -F', ' '{print $2}' | tr -d ' ')
+  if [ -n "${RX:-}" ] && [ -n "${RY:-}" ] && [[ "$RX" =~ ^-?[0-9]+$ && "$RY" =~ ^-?[0-9]+$ ]]; then
+    mkdir -p "$STATE_DIR" 2>/dev/null || true
+    printf '%s,%s\n' "$RX" "$RY" > "$STATE_FILE" 2>/dev/null || true
+    echo "focus-game-window: recorded game window position {$RX,$RY}"
+  else
+    echo "focus-game-window: could not read game window position; record skipped"
+  fi
+  exit 0
+fi
+
+# Restore-first (user directive 2026-09-19): when a last-position record
+# exists, relaunches return the game window to that exact screen+position.
+# No record / invalid record / window unmovable → fall through to the
+# terminal-relative placement below (2026-09-18 preference).
+if [ -f "$STATE_FILE" ]; then
+  SX=$(head -1 "$STATE_FILE" 2>/dev/null | awk -F',' '{print $1}' | tr -d ' ')
+  SY=$(head -1 "$STATE_FILE" 2>/dev/null | awk -F',' '{print $2}' | tr -d ' ')
+  if [[ "${SX:-}" =~ ^-?[0-9]+$ && "${SY:-}" =~ ^-?[0-9]+$ ]]; then
+    for _ in 1 2 3; do
+      if osascript -e "tell application \"System Events\" to tell process \"$GAME_PROCESS\" to set position of window 1 to {$SX, $SY}" >/dev/null 2>&1; then
+        echo "focus-game-window: restored $GAME_PROCESS to last position {$SX,$SY}"
+        exit 0
+      fi
+      sleep 2
+    done
+    echo "focus-game-window: restore to {$SX,$SY} failed; falling back to terminal-relative placement"
+  fi
+fi
 
 # System Events process names for known terminal apps.
 normalize_app() {

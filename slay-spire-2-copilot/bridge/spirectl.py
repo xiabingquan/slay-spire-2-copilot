@@ -330,6 +330,9 @@ def cmd_stop(args):
     if not game_process_running():
         print("game not running")
         return 0
+    # Capture the window's current screen+position before tearing the
+    # process down — relaunches restore to this record (2026-09-19 policy).
+    record_game_window_pos()
     subprocess.run(
         ["osascript", "-e", 'tell application "Slay the Spire 2" to quit'],
         capture_output=True,
@@ -2187,12 +2190,15 @@ def steam_fully_ready():
 
 
 def focus_game_window():
-    """Move the game window onto this session's terminal display (cosmetic).
+    """Place the game window after launch (cosmetic, never raises).
 
-    User preference 2026-09-18: the game must pop up on the screen of the
-    Claude Code session that launched it, not on the work display. Delegates
-    to scripts/focus-game-window.sh (AppleScript, windowed-mode game).
-    Never raises — a failed window move must not block launch recovery.
+    Policy 2026-09-19 (supersedes the 2026-09-18 terminal-relative default):
+    relaunches RESTORE the game window to its last recorded screen+position —
+    scripts/focus-game-window.sh keeps a record written on every graceful
+    stop (see record_game_window_pos) and prefers restoring to it at launch.
+    Fallback when no record exists or the window cannot be moved: place the
+    window on the launching session's terminal display + fixed offset
+    (2026-09-18 preference). A failed move must never block launch recovery.
     """
     script = REPO_ROOT / "scripts" / "focus-game-window.sh"
     if not script.exists():
@@ -2209,6 +2215,32 @@ def focus_game_window():
             print(f"focus-game-window: {err}")
     except (subprocess.TimeoutExpired, OSError) as exc:
         print(f"focus-game-window: skipped ({exc})")
+
+
+def record_game_window_pos():
+    """Record the CURRENT game window position for later restore (cosmetic).
+
+    Called on graceful stop paths (cmd_stop — which cmd_sl also routes
+    through) while the window still exists. Writes
+    scripts/.cache/game-window-pos via focus-game-window.sh --record.
+    Never raises — a failed record only means the next launch falls back to
+    terminal-relative placement.
+    """
+    script = REPO_ROOT / "scripts" / "focus-game-window.sh"
+    if not script.exists():
+        return
+    try:
+        result = subprocess.run(
+            ["bash", str(script), "--record"], capture_output=True, text=True, timeout=20
+        )
+        msg = (result.stdout or "").strip()
+        if msg:
+            print(msg)
+        err = (result.stderr or "").strip()
+        if result.returncode != 0 and err:
+            print(f"record-game-window-pos: {err}")
+    except (subprocess.TimeoutExpired, OSError) as exc:
+        print(f"record-game-window-pos: skipped ({exc})")
 
 
 def cmd_launch(args):

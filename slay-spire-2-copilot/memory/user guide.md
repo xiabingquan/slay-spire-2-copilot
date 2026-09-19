@@ -127,16 +127,19 @@ fresh `start_run` begins a new count. For runs recorded before this rule
 existed, mark the overview cell 未记录 unless a memory note already documents
 the number.
 
-## When to consult memory
+## When to consult memory (rule revised 2026-09-19)
 
 Memory is consulted throughout the whole play process — it is a standing
 reference for the game, not only a session-start artifact:
 
-- Mandatory before each run: the Summary sections of all recorded runs, plus
-  the accumulated key playstyles of the character about to play
-- Optional before the run: full earlier run records, as needed
-- Any time during play: consult past summaries and character notes mid-run —
-  e.g. to compare with previous runs when facing a decision
+- **Mandatory at session/run start: `overview.md` only** — the table, stats
+  and phased reflections give the standing cross-run picture; full per-run
+  notes are generally NOT needed at start
+- **On demand**: to read one run's complete record, open that single note —
+  files carry a run-number prefix (`51_IRONCLAD_...`) equal to the 对局序号
+  column in overview.md; look the number up there, then read the file
+- Any time during play: consult specific run notes or character accumulations
+  mid-run when a decision would benefit from them
 
 ## Experience is advisory, not advisory pattern (user directive 2026-09-19)
 
