@@ -74,7 +74,7 @@ State notes:
   `escaped_creature_combat_ids`), `run.seed`/`game_mode`/`modifiers`, relic
   `counter`/`stack_count`/`is_used_up`, potion `rarity`/`usage`, event
   option `description`/`event_id`/`relic_id`.
-- Compact auto-reference tags (default on when references/game/*.json
+- Compact auto-reference tags (default on when spirectl_lib/data/*.json
   exists): a resolvable move_id gets a ` [MOVE_ID: <=60-char summary]`
   snippet after the intent. Opt out per call with `--no-ref-tags`
   (state/act/batch/wait) or session-wide with env `SPIREBRIDGE_REF_TAGS=0`.
@@ -82,7 +82,7 @@ State notes:
   the default for `lookup --lang`.
 - Resolve every unfamiliar move_id/power_id/relic_id/card_id/potion_id/event
   id on the wire via `spirectl lookup <key>` before it informs a decision.
-  The reference DB is references/game/*.json + *_zh.json (key = live game
+  The reference DB is spirectl_lib/data/*.json + *_zh.json (key = live game
   id); markdown twins are pending retirement — cite the JSON files.
 - AllEnemies/AnyPlayer potions must be sent via `use_potion` WITHOUT
   `target_combat_id` (AnyEnemy potions may pass one); a stray target is
@@ -95,7 +95,7 @@ Lookup (reference resolution):
 - `<key>` = a live game id exactly as state emits it — e.g. `GLOMP_MOVE`,
   `RAVENOUS_POWER`, `BURNING_BLOOD`,
   `NEOW.pages.INITIAL.options.NEOWS_TALISMAN`, `SingleAttackIntent`,
-  `STUNNED`. Resolution reads references/game/*.json (or *_zh.json) via a
+  `STUNNED`. Resolution reads spirectl_lib/data/*.json (or *_zh.json) via a
   fail-loud ladder: exact key (top-level, aliases, flattened
   monsters[*].moves[*] and events[*].options[*]) → event-option textKey →
   case-insensitive → upgrade-suffix probes (`X+`→`X`; bare `STRIKE` lists
@@ -111,7 +111,7 @@ Lookup (reference resolution):
   to https://spire-codex.com research (URL pattern
   `https://spire-codex.com/{category}/{lowercase_id}`; categories:
   cards/relics/monsters/powers/potions/events/characters/reference). A
-  codex hit is folded into the matching references/game/*.json + *_zh.json
+  codex hit is folded into the matching spirectl_lib/data/*.json + *_zh.json
   pair as a `curated:false` stub and returned; refine it (perplexity-search
   / decomp facts), set `curated:true` bilingual, then re-run
   `python3 scripts/build_game_reference_json.py --check`. If codex has no

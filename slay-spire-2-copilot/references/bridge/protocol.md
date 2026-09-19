@@ -157,7 +157,7 @@ Structured since ModVersion 0.2.0 — field names are exact:
   fail-soft omitted)
 - `total_damage` — damage x hits for multi-hit attacks
 - `hits` — repeat count (Single = 1)
-- `base_damage` — raw pre-hook damage (for comparison against references/game/intents.json)
+- `base_damage` — raw pre-hook damage (for comparison against spirectl_lib/data/intents.json)
 - `card_count` — Status intents: cards applied
 - `description` — full resolved intent description (fail-soft omitted)
 
@@ -186,7 +186,7 @@ Structured since ModVersion 0.2.0 — field names are exact:
 applier_name?}` — `type` = PowerType (Buff/Debuff/...), `stack_type` =
 stacking rule, applier_* = who applied it. Power descriptions are NOT on the
 wire; resolve `power_id` via `spirectl lookup` against
-references/game/powers.json.
+spirectl_lib/data/powers.json.
 
 ### piles (combat)
 

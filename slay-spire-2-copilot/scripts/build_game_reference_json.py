@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build references/game JSON DB — thin entry over the refbuild package.
+"""Build spirectl_lib/data JSON DB — thin entry over the refbuild package.
 
 Usage (unchanged):
   python3 scripts/build_game_reference_json.py            # overlay refresh + write

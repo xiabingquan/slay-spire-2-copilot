@@ -611,7 +611,7 @@ def cmd_lookup(args):
     """Resolve a live game id to its complete reference JSON entry.
 
     Miss path: fall back to spire-codex.com research — fetch candidate pages,
-    fold a minimal entry into the matching references/game/*.json + _zh.json
+    fold a minimal entry into the matching spirectl_lib/data/*.json + _zh.json
     pair (curated:false), and return it. When codex has no page either,
     exit 1 with a loud web-research trigger (agent doctrine: perplexity-search
     -> fold into JSON EN+ZH -> re-run).
@@ -643,14 +643,14 @@ def cmd_lookup(args):
 
     # ---- miss: research fallback ----
     print(
-        f"lookup: no entry for '{key}' in references/game/*.json — "
+        f"lookup: no entry for '{key}' in spirectl_lib/data/*.json — "
         "attempting spire-codex.com research fallback",
         file=sys.stderr,
     )
     domain_guess = refs.guess_domain(key, args.domain)
     entry, url = refs.research_and_fold(key, domain_guess=domain_guess)
     if entry:
-        print(f"lookup: researched via {url} — folded into references/game (curated:false, needs_zh:true)")
+        print(f"lookup: researched via {url} — folded into spirectl_lib/data (curated:false, needs_zh:true)")
         if args.json:
             print(json.dumps(entry, ensure_ascii=False, indent=2))
         else:
@@ -664,7 +664,7 @@ def cmd_lookup(args):
         return 0
     candidates = ", ".join(refs.codex_candidate_urls(key))
     print(
-        f"lookup: MISS — '{key}' not in references/game/*.json and no spire-codex.com page matched.\n"
+        f"lookup: MISS — '{key}' not in spirectl_lib/data/*.json and no spire-codex.com page matched.\n"
         f"  codex candidates tried: {candidates}\n"
         f"  next: research '{key}' via perplexity-search (or spire-codex.com browser search),\n"
         f"  fold the result into the matching <domain>.json + <domain>_zh.json (key='{key}',\n"

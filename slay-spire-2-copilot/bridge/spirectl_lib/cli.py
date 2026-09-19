@@ -28,7 +28,7 @@ def build_parser():
     p_state = sub.add_parser("state", help="read current game state")
     p_state.add_argument("--json", action="store_true", help="print full JSON instead of compact text")
     p_state.add_argument("--no-ref-tags", action="store_true",
-                         help="disable compact auto-lookup snippets from references/game JSON")
+                         help="disable compact auto-lookup snippets from spirectl_lib/data JSON")
 
     p_act = sub.add_parser("act", help="send one action to the game")
     p_act.add_argument("action", help="action name, e.g. play / end_turn / choose / map_select")
@@ -43,7 +43,7 @@ def build_parser():
                        help="declare STALL and return if the fingerprint freezes this long "
                             "(polling continues while state keeps changing — no deadline)")
     p_act.add_argument("--no-ref-tags", action="store_true",
-                       help="disable compact auto-lookup snippets from references/game JSON")
+                       help="disable compact auto-lookup snippets from spirectl_lib/data JSON")
 
     p_batch = sub.add_parser("batch", help="run a JSON array of acts sequentially with settle between")
     p_batch.add_argument("--acts", required=True,
@@ -55,7 +55,7 @@ def build_parser():
     p_batch.add_argument("--stall-timeout", type=float, default=3.0,
                          help="declare STALL and abort the batch if the fingerprint freezes this long")
     p_batch.add_argument("--no-ref-tags", action="store_true",
-                         help="disable compact auto-lookup snippets from references/game JSON")
+                         help="disable compact auto-lookup snippets from spirectl_lib/data JSON")
 
     p_wait = sub.add_parser("wait", help="poll for a state fingerprint change; returns quickly when idle")
     p_wait.add_argument("--quiet", type=float, default=3.0,
@@ -63,7 +63,7 @@ def build_parser():
     p_wait.add_argument("--interval", type=float, default=0.2)
     p_wait.add_argument("--json", action="store_true")
     p_wait.add_argument("--no-ref-tags", action="store_true",
-                        help="disable compact auto-lookup snippets from references/game JSON")
+                        help="disable compact auto-lookup snippets from spirectl_lib/data JSON")
 
     p_profile = sub.add_parser("profile", help="summarize run-log timing: rtt/settle/client gaps")
     p_profile.add_argument("--log", help="run log path (default: current run)")

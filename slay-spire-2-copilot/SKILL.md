@@ -212,7 +212,7 @@ decks. Every fight is played mechanic-first:
 1. **Before the first turn of every combat against an unfamiliar enemy, and
    every elite/boss without exception**: resolve every unfamiliar
    move_id/power_id/relic_id via `python3 bridge/spirectl.py lookup <id>`
-   (or read references/game/monsters.json / powers.json directly) — move
+   (or read spirectl_lib/data/monsters.json / powers.json directly) — move
    cycle, every passive Power, every debuff/buff it applies. Every
    power/intent the live state shows must be one you can explain from
    references. Any unknown → perplexity-search → fold the answer into
@@ -267,7 +267,7 @@ When the run ends (game_over screen, or abandon):
    run log by file name only —
    never personal absolute paths.
 2. Fold newly observed game facts (card/relic/potion/power/intent effects)
-   into the matching references/game/*.json and its `_zh` twin directly as
+   into the matching spirectl_lib/data/*.json and its `_zh` twin directly as
    entries keyed by live game id with `"curated": true` — English and
    Chinese stay content-aligned in the same session — then run
    `python3 scripts/build_game_reference_json.py --check`; it must exit 0
@@ -386,18 +386,18 @@ references/ — consult knowledge:
   log-directory contract
 - `references/bridge/protocol.md` — wire protocol v1 (JSON Lines over TCP on
   localhost)
-- `references/game/characters.json` + `characters_zh.json` — playable
+- `spirectl_lib/data/characters.json` + `characters_zh.json` — playable
   characters, starters, archetypes
-- `references/game/cards.json` + `cards_zh.json` — cards
-- `references/game/potions.json` + `potions_zh.json` — potion effects
-- `references/game/powers.json` + `powers_zh.json` — powers
-- `references/game/relics.json` + `relics_zh.json` — relic effects
-- `references/game/intents.json` + `intents_zh.json` — reading enemy intents
-- `references/game/monsters.json` + `monsters_zh.json` — enemy move tables
+- `spirectl_lib/data/cards.json` + `cards_zh.json` — cards
+- `spirectl_lib/data/potions.json` + `potions_zh.json` — potion effects
+- `spirectl_lib/data/powers.json` + `powers_zh.json` — powers
+- `spirectl_lib/data/relics.json` + `relics_zh.json` — relic effects
+- `spirectl_lib/data/intents.json` + `intents_zh.json` — reading enemy intents
+- `spirectl_lib/data/monsters.json` + `monsters_zh.json` — enemy move tables
   and passives (moves nested under each monster)
-- `references/game/events.json` + `events_zh.json` — event rooms and known
+- `spirectl_lib/data/events.json` + `events_zh.json` — event rooms and known
   branches (options nested under each event)
-- `references/game/afflictions.json` + `afflictions_zh.json` — statuses and
+- `spirectl_lib/data/afflictions.json` + `afflictions_zh.json` — statuses and
   debuffs
 - JSON reference DB: entries are keyed by live game ids; resolve any id with
   `python3 bridge/spirectl.py lookup <key>` (flags `--json/--lang/--domain/--all`;

@@ -162,7 +162,7 @@ memory 记录里。
 
 1. **每场与不熟悉敌人的战斗首回合前，以及每场精英/Boss 战无例外**：
    先用 `python3 bridge/spirectl.py lookup <id>` 解析每一个不熟悉的
-   move_id/power_id/relic_id（或直接读 references/game/monsters.json /
+   move_id/power_id/relic_id（或直接读 spirectl_lib/data/monsters.json /
    powers.json）——招式循环、每一个被动 Power、施加的每一个
    debuff/buff。live state 显示的每个 power/意图都必须能用参考解释；
    任何未知 → perplexity-search → 折入 references 双语 → 再出牌。
@@ -206,7 +206,7 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
    做得好的地方 / What went poorly 做得不好的地方 / Key moments 关键
    节点）。引用 run 日志时只写文件名，绝不写个人绝对路径。
 2. 对局中新观察到的游戏事实（卡牌/遗物/药水/能力/意图的效果）直接折入
-   references/game/ 下对应的 *.json 及其 `_zh` 双语对——key = live 游戏
+   spirectl_lib/data/ 下对应的 *.json 及其 `_zh` 双语对——key = live 游戏
    id、`"curated": true`、同会话中英内容完全对应——随后运行
    `python3 scripts/build_game_reference_json.py --check`，提交前必须
    exit 0。memory 只记对局感悟与过程，不记游戏基础数据。
@@ -282,18 +282,18 @@ references/ — 查阅知识：
 - `references/README_zh.md` — 知识索引（中文版）
 - `references/bridge/commands.md` — CLI 用法、动作与状态参考、日志目录契约
 - `references/bridge/protocol.md` — 线协议 v1（本机 TCP 上的 JSON Lines）
-- `references/game/characters.json` + `characters_zh.json` — 可玩角色、
+- `spirectl_lib/data/characters.json` + `characters_zh.json` — 可玩角色、
   初始配置、流派
-- `references/game/cards.json` + `cards_zh.json` — 卡牌
-- `references/game/potions.json` + `potions_zh.json` — 药水效果
-- `references/game/powers.json` + `powers_zh.json` — 能力/力量
-- `references/game/relics.json` + `relics_zh.json` — 遗物效果
-- `references/game/intents.json` + `intents_zh.json` — 敌人意图解读
-- `references/game/monsters.json` + `monsters_zh.json` — 敌人招式表与被动
+- `spirectl_lib/data/cards.json` + `cards_zh.json` — 卡牌
+- `spirectl_lib/data/potions.json` + `potions_zh.json` — 药水效果
+- `spirectl_lib/data/powers.json` + `powers_zh.json` — 能力/力量
+- `spirectl_lib/data/relics.json` + `relics_zh.json` — 遗物效果
+- `spirectl_lib/data/intents.json` + `intents_zh.json` — 敌人意图解读
+- `spirectl_lib/data/monsters.json` + `monsters_zh.json` — 敌人招式表与被动
   （招式嵌套在各怪物条目下）
-- `references/game/events.json` + `events_zh.json` — 事件房与已知分支
+- `spirectl_lib/data/events.json` + `events_zh.json` — 事件房与已知分支
   （选项嵌套在各事件条目下）
-- `references/game/afflictions.json` + `afflictions_zh.json` — 状态与
+- `spirectl_lib/data/afflictions.json` + `afflictions_zh.json` — 状态与
   负面效果
 - JSON 参考库：条目以 live 游戏 id 为 key；任何 id 用
   `python3 bridge/spirectl.py lookup <key>` 解析（flag：`--json/--lang/`

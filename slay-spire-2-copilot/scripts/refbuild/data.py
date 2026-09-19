@@ -1,4 +1,4 @@
-"""Static curation data for the references/game JSON store.
+"""Static curation data for the spirectl_lib/data JSON store.
 
 Hand-curated extras, curated monster move tables, zh/move text fixups, and the
 creature display-name map — pure data, no logic.

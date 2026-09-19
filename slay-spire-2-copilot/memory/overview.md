@@ -463,4 +463,4 @@
 
 ---
 
-相关文件：memory/runs/<character>_<timestamp>_<hash>.md（英文）+ _zh.md（中文孪生）；游戏机制数据在 references/game/（EN/ZH，仅静态数据）。
+相关文件：memory/runs/<character>_<timestamp>_<hash>.md（英文）+ _zh.md（中文孪生）；游戏机制数据在 spirectl_lib/data/（EN/ZH，仅静态数据）。

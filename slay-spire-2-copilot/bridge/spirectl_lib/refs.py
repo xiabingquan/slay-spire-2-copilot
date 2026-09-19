@@ -1,4 +1,4 @@
-"""JSON reference DB lookup (references/game/*.json) and spire-codex.com research."""
+"""JSON reference DB lookup (spirectl_lib/data/*.json) and spire-codex.com research."""
 import json
 import sys
 
@@ -72,7 +72,7 @@ def _write_json_dict(path, data):
 
 
 def load_reference_index(lang="en"):
-    """Load references/game/*.json (or *_zh.json) into {key: (domain, entry)}.
+    """Load spirectl_lib/data/*.json (or *_zh.json) into {key: (domain, entry)}.
 
     Flattens nested keys: monsters[*].moves[*] -> move domain,
     events[*].options[*] -> event_option. Registers entry['id'], every
@@ -392,7 +392,7 @@ def fold_monster_entry(entry):
 
 
 def fold_entry_into_reference(domain_stem, key, entry, lang="en"):
-    """Write/merge one entry into references/game/<stem>.json (+ _zh.json).
+    """Write/merge one entry into spirectl_lib/data/<stem>.json (+ _zh.json).
 
     Returns:
         Tuple (path, written); written is False when an existing curated
@@ -698,7 +698,7 @@ def _research_html(key, kind):
 
 
 def _fold_researched(key, kind, entry, source):
-    """Persist a researched entry into references/game and return it.
+    """Persist a researched entry into spirectl_lib/data and return it.
 
     Monster entries fold via fold_monster_entry; move misses land as stubs
     under a synthetic generic host; events fold EN+ZH in one pass; everything

@@ -1,1 +1,1 @@
-"""refbuild — references/game JSON store build, curation overlays, and check."""
+"""refbuild — spirectl_lib/data JSON store build, curation overlays, and check."""

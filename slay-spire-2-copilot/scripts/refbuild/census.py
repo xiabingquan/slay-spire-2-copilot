@@ -82,7 +82,7 @@ def run_check(all_en: dict, all_zh: dict, live_ids: dict) -> int:
     total = sum(len(live_ids.get(d) or []) for d in HARD_CENSUS_DOMAINS)
     print(f"hard-domain live ids: {total}; misses: {len(misses)}")
     if misses:
-        print("\nMISSING-ID TABLE (live id -> not resolvable in references/game/*.json)")
+        print("\nMISSING-ID TABLE (live id -> not resolvable in spirectl_lib/data/*.json)")
         print(f"{'domain':<20} live_id")
         for domain, lid in misses:
             print(f"{domain:<20} {lid}")

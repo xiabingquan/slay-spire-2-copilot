@@ -1,6 +1,6 @@
 """Build orchestration: --check gate, or overlay refresh of the JSON store.
 
-The references/game JSON files are the durable source of truth (markdown
+The spirectl_lib/data JSON files are the durable source of truth (markdown
 twins retired). Generate mode is an overlay pass: codex enrichment +
 curated extras + zh twin fill + move/zh fixups applied ON TOP of the
 existing store — keys are never dropped, curated:true entries never
@@ -63,7 +63,7 @@ def _propagate_affliction_hosts(en: dict):
 
 def main(argv=None) -> int:
     """Parse CLI args and run check or overlay-build. Returns exit code."""
-    parser = argparse.ArgumentParser(description="Build references/game JSON DB")
+    parser = argparse.ArgumentParser(description="Build spirectl_lib/data JSON DB")
     parser.add_argument("--live-ids", default=str(DEFAULT_LIVE_IDS))
     parser.add_argument("--out-dir", default=str(DEFAULT_OUT_DIR))
     parser.add_argument("--check", action="store_true",

@@ -21,7 +21,7 @@ GAME_LOG = Path(
 # REPO_ROOT is the skill folder (<repo>/slay-spire-2-copilot): config.py sits
 # at bridge/spirectl/config.py, so three parents up.
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-REF_DIR = REPO_ROOT / "references" / "game"
+REF_DIR = Path(__file__).resolve().parent / "data"
 CODEX_BASE = "https://spire-codex.com"
 CODEX_API = "https://spire-codex.com/api"
 

@@ -13,7 +13,7 @@ Ask the agent in the current session to execute this checklist, e.g.:
 The agent goes through each check below and, for every violation:
 
 - **relocates or deletes** content that clearly breaks a rule — e.g. run
-  residue inside `references/game/` is deleted, run memory found outside
+  residue inside `spirectl_lib/data/` is deleted, run memory found outside
   `memory/runs/` is moved into the matching runs note;
 - **reports, without touching**, anything ambiguous (frozen-file edits,
   borderline README wording) so the user decides.
@@ -27,7 +27,7 @@ The agent goes through each check below and, for every violation:
   directory, a reference doc mentions a date, etc.
 
 Do not run it mid-run for reorganization; mid-run the only applicable check is
-that additions to `references/game/` stay static (check 4).
+that additions to `spirectl_lib/data/` stay static (check 4).
 
 ## Checks
 
@@ -119,9 +119,9 @@ Violation → move narrative content out of the table cells into that run's
 `## 反思` subsection); rewrite 备注 cells that fail the format down to
 simplest outcome facts; fix column/row-order violations in place.
 
-### 4. references/game/ is static reference material
+### 4. spirectl_lib/data/ is static reference material
 
-Files: `slay-spire-2-copilot/references/game/*.json` + `*_zh.json` — EN and
+Files: `slay-spire-2-copilot/spirectl_lib/data/*.json` + `*_zh.json` — EN and
 `_zh` pairs for cards, relics, powers, potions, afflictions, monsters, events,
 intents, and characters. (Markdown twins `*.md` remain on disk until live
 verification retires them; docs cite the JSON.)

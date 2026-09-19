@@ -1,9 +1,9 @@
-"""Paths and domain lists for the references/game JSON store."""
+"""Paths and domain lists for the spirectl_lib/data JSON store."""
 from pathlib import Path
 
 SKILL_ROOT = Path(__file__).resolve().parent.parent.parent
 DEFAULT_LIVE_IDS = SKILL_ROOT / "scripts" / ".cache" / "live_ids.json"
-DEFAULT_OUT_DIR = SKILL_ROOT / "references" / "game"
+DEFAULT_OUT_DIR = SKILL_ROOT / "bridge" / "spirectl_lib" / "data"
 CODEX_CACHE = SKILL_ROOT / "scripts" / ".cache" / "codex"
 
 DOMAINS = [
