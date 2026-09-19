@@ -68,7 +68,7 @@ public static class ScreenOptions
                 "relic_choice" => RelicChoiceOptions(screenNode),
                 "card_choice" or "deck_select" => CardHolderOptions(screenNode),
                 "hand_select" => ScreenDetect.HandSelectOptions(player, screenNode),
-                "rewards" => RewardButtonOptions(screenNode),
+                "rewards" => RewardButtonOptions(player, screenNode),
                 "event" => EventOptions(screenNode),
                 "treasure" => TreasureOptions(screenNode),
                 "rest" => RestOptions(screenNode),
@@ -270,7 +270,52 @@ public static class ScreenOptions
         return options;
     }
 
-    private static List<Dictionary<string, object?>> RewardButtonOptions(Node? screenNode)
+    // Reward model probe (proposal 3): resolve the underlying reward object
+    // via reflection (Reward / PotionReward members) instead of trusting raw
+    // node names like @Control@30026. Potion rewards with full potion slots
+    // are unclaimable — surface that as claimable:false, and choose fail-louds.
+    internal static (string? RewardKind, string? ResolvedId, bool Claimable, string? Reason)
+        ProbeReward(NRewardButton button, Player? player)
+    {
+        object? reward = null;
+        try
+        {
+            Type bt = button.GetType();
+            reward = bt.GetProperty("PotionReward")?.GetValue(button);
+            reward ??= bt.GetProperty("Reward")?.GetValue(button);
+        }
+        catch (Exception)
+        {
+            // reflection miss: fall back to node-name identity
+        }
+        string? kind = reward?.GetType().Name;
+        string? resolved = reward != null ? GameProbe.ProbeModelId(reward) : null;
+        bool potionReward = (kind ?? "").Contains("Potion", StringComparison.OrdinalIgnoreCase);
+        if (potionReward && player != null)
+        {
+            var slots = player.PotionSlots;
+            bool anySlot = slots != null && slots.Count > 0;
+            bool full = anySlot;
+            if (anySlot)
+            {
+                foreach (var s in slots)
+                {
+                    if (s == null)
+                    {
+                        full = false;
+                        break;
+                    }
+                }
+            }
+            if (full)
+            {
+                return (kind, resolved, false, "potion slots full");
+            }
+        }
+        return (kind, resolved, true, null);
+    }
+
+    private static List<Dictionary<string, object?>> RewardButtonOptions(Player? player, Node? screenNode)
     {
         var options = new List<Dictionary<string, object?>>();
         if (screenNode == null)
@@ -282,13 +327,25 @@ public static class ScreenOptions
             .ToList();
         for (int i = 0; i < buttons.Count; i++)
         {
-            options.Add(new Dictionary<string, object?>
+            (string? kind, string? resolved, bool claimable, string? reason) = ProbeReward(buttons[i], player);
+            string nodeName = buttons[i].Name.ToString();
+            var dto = new Dictionary<string, object?>
             {
                 ["kind"] = "reward",
                 ["index"] = i,
-                ["id"] = buttons[i].Name.ToString(),
-                ["name"] = buttons[i].Name.ToString(),
-            });
+                ["id"] = resolved ?? nodeName,
+                ["name"] = resolved ?? nodeName,
+            };
+            if (kind != null)
+            {
+                dto["reward_kind"] = kind;
+            }
+            if (!claimable)
+            {
+                dto["claimable"] = false;
+                dto["reason"] = reason;
+            }
+            options.Add(dto);
         }
         return options;
     }

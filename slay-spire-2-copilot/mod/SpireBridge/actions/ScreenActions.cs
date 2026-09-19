@@ -264,7 +264,30 @@ public static class ScreenActions
                 return ClickAt<NEventOptionButton>(eventRoom, index, "choose event option", "event options",
                     b => b.Option is { IsLocked: false });
             case NRewardsScreen rewardsScreen:
-                return ClickAt<NRewardButton>(rewardsScreen, index, "choose reward", "reward buttons");
+            {
+                // Fail-loud on unclaimable rewards (proposal 3): a potion
+                // reward with full potion slots must not silently no-op.
+                List<NRewardButton> rewardButtons = UiHelper.FindAll<NRewardButton>(rewardsScreen)
+                    .Where(b => b.Visible && b.IsEnabled)
+                    .ToList();
+                if (index < 0 || index >= rewardButtons.Count)
+                {
+                    return (false, $"index {index} out of range ({rewardButtons.Count} reward buttons)");
+                }
+                NRewardButton rewardTarget = rewardButtons[index];
+                (string? rKind, string? rId, bool claimable, string? reason) =
+                    ScreenOptions.ProbeReward(rewardTarget, TryGetCombatOrRunPlayer());
+                if (!claimable)
+                {
+                    InfoCompleteness.FlagDuringAction(
+                        $"reward choose refused: index={index} id={rId ?? rewardTarget.Name.ToString()} kind={rKind} — {reason}");
+                    return (false,
+                        $"choose refused: reward {index} ({rId ?? rewardTarget.Name.ToString()}, kind={rKind ?? "?"}) — {reason} (fail-loud; claim after freeing a slot)");
+                }
+                ActionExecutor.Fire(() => UiHelper.Click(rewardTarget), "choose reward");
+                return (true, $"submitted choose reward index {index}"
+                    + (rId != null ? $" (id={rId}" + (rKind != null ? $", kind={rKind})" : ")") : ""));
+            }
             case NTreasureRoom treasureRoom:
             {
                 // Index space must match ScreenOptions.TreasureOptions: chest (if
@@ -385,6 +408,26 @@ public static class ScreenActions
     // keyword matchers fail; the visible button IS the designed exit — it
     // QueueFreeSafely() closes the popup. Never click anything Send-named
     // (bug-report submission stays a user decision).
+
+    // Player for reward claimability: rewards screens appear outside combat,
+    // so resolve from run state when combat is not in progress.
+    private static Player? TryGetCombatOrRunPlayer()
+    {
+        if (ActionExecutor.TryGetCombatPlayer(out Player? combatPlayer, out _, out _))
+        {
+            return combatPlayer;
+        }
+        try
+        {
+            MegaCrit.Sts2.Core.Runs.RunState? run = MegaCrit.Sts2.Core.Runs.RunManager.Instance.DebugOnlyGetState();
+            return run == null ? null : MegaCrit.Sts2.Core.Context.LocalContext.GetMe(run.Players);
+        }
+        catch (Exception)
+        {
+            return null;
+        }
+    }
+
     private static bool IsSendButton(NButton b) =>
         b.Name.ToString().Contains("Send", StringComparison.OrdinalIgnoreCase);
 
