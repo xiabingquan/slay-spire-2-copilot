@@ -79,8 +79,10 @@ Full card inventory by character pool — experience cells stay empty until fill
 | STOMP | Stomp |  |
 | STONE_ARMOR | Stone Armor |  |
 | STRIKE_IRONCLAD | Strike Ironclad |  |
+| SWORD_BOOMERANG | SWORD_BOOMERANG |  |
 | TANK | Tank |  |
 | TAUNT | Taunt |  |
+| TEAR_ASUNDER | TEAR_ASUNDER |  |
 | THRASH | Thrash |  |
 | THUNDERCLAP | Thunderclap |  |
 | TREMBLE | Tremble |  |
@@ -479,6 +481,7 @@ Full card inventory by character pool — experience cells stay empty until fill
 | CATASTROPHE | Catastrophe |  |
 | COORDINATE | Coordinate |  |
 | DARK_SHACKLES | Dark Shackles |  |
+| DISCOVERY | DISCOVERY |  |
 | DRAMATIC_ENTRANCE | Dramatic Entrance |  |
 | ENTROPY | Entropy |  |
 | EQUILIBRIUM | Equilibrium |  |
@@ -490,6 +493,7 @@ Full card inventory by character pool — experience cells stay empty until fill
 | GANG_UP | Gang Up |  |
 | GOLD_AXE | Gold Axe |  |
 | HAND_OF_GREED | Hand Of Greed |  |
+| HIDDEN_GEM | HIDDEN_GEM |  |
 | HUDDLE_UP | Huddle Up |  |
 | IMPATIENCE | Impatience |  |
 | INTERCEPT | Intercept |  |
@@ -511,6 +515,7 @@ Full card inventory by character pool — experience cells stay empty until fill
 | PROWESS | Prowess |  |
 | PURITY | Purity |  |
 | RALLY | Rally |  |
+| REND | REND |  |
 | RESTLESSNESS | Restlessness |  |
 | ROLLING_BOULDER | Rolling Boulder |  |
 | SALVO | Salvo |  |
@@ -524,6 +529,7 @@ Full card inventory by character pool — experience cells stay empty until fill
 | TAG_TEAM | Tag Team |  |
 | THE_BOMB | The Bomb |  |
 | THE_GAMBIT | The Gambit |  |
+| THINKING_AHEAD | THINKING_AHEAD |  |
 | THRUMMING_HATCHET | Thrumming Hatchet |  |
 | ULTIMATE_DEFEND | Ultimate Defend |  |
 | ULTIMATE_STRIKE | Ultimate Strike |  |
@@ -556,13 +562,7 @@ Full card inventory by character pool — experience cells stay empty until fill
 
 | id | name | experience |
 |---|---|---|
-| DISCOVERY | DISCOVERY |  |
-| HIDDEN_GEM | HIDDEN_GEM |  |
-| REND | REND |  |
 | SOLDIER_STEW | Soldier's Stew |  |
-| SWORD_BOOMERANG | SWORD_BOOMERANG |  |
-| TEAR_ASUNDER | TEAR_ASUNDER |  |
-| THINKING_AHEAD | THINKING_AHEAD |  |
 
 # EVENT
 

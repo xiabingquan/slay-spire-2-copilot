@@ -2,6 +2,33 @@
 
 Full event inventory by act — experience cells stay empty until filled. Event data: `spirectl lookup <id>`.
 
+# Act 1
+
+| id | name | experience |
+|---|---|---|
+| PUNCH_OFF | Punch Off |  |
+| SAPPHIRE_SEED | Sapphire Seed |  |
+| WELLSPRING | Wellspring |  |
+
+# Act 2
+
+| id | name | experience |
+|---|---|---|
+| DARV | Darv / Act2 boon room |  |
+| OROBAS | Orobas |  |
+| PAEL | Pael |  |
+| TEZCATARA | Tezcatara |  |
+| THE_LANTERN_KEY | The Lantern Key |  |
+| THE_LEGENDS_WERE_TRUE | The Legends Were True |  |
+
+# Act 3
+
+| id | name | experience |
+|---|---|---|
+| BATTLEWORN_DUMMY | Battleworn Dummy |  |
+| NONUPEIPE | Nonupeipe |  |
+| THE_ARCHITECT | The Architect |  |
+
 # Underdocks
 
 | id | name | experience |
@@ -15,14 +42,12 @@ Full event inventory by act — experience cells stay empty until filled. Event 
 | ABYSSAL_BATHS | Abyssal Baths |  |
 | AMALGAMATOR | Amalgamator |  |
 | AROMA_OF_CHAOS | Aroma Of Chaos |  |
-| BATTLEWORN_DUMMY | Battleworn Dummy |  |
 | BRAIN_LEECH | Brain Leech |  |
 | BUGSLAYER | Bugslayer |  |
 | BYRDONIS_NEST | Byrdonis Nest |  |
 | COLORFUL_PHILOSOPHERS | Colorful Philosophers |  |
 | COLOSSAL_FLOWER | Colossal Flower |  |
 | CRYSTAL_SPHERE | Crystal Sphere |  |
-| DARV | Darv / Act2 boon room |  |
 | DENSE_VEGETATION | Dense Vegetation |  |
 | DOLL_ROOM | Doll Room |  |
 | DOORS_OF_LIGHT_AND_DARK | Doors Of Light And Dark |  |
@@ -38,18 +63,13 @@ Full event inventory by act — experience cells stay empty until filled. Event 
 | LUMINOUS_CHOIR | Luminous Choir |  |
 | MORPHIC_GROVE | Morphic Grove |  |
 | NEOW | Neow |  |
-| NONUPEIPE | Nonupeipe |  |
-| OROBAS | Orobas |  |
-| PAEL | Pael |  |
 | POTION_COURIER | Potion Courier |  |
 | PROCEED | Proceed |  |
-| PUNCH_OFF | Punch Off |  |
 | RANWID_THE_ELDER | Ranwid The Elder |  |
 | REFLECTIONS | Reflections |  |
 | RELIC_TRADER | Relic Trader |  |
 | ROOM_FULL_OF_CHEESE | Room Full Of Cheese |  |
 | ROUND_TEA_PARTY | Round Tea Party |  |
-| SAPPHIRE_SEED | Sapphire Seed |  |
 | SELF_HELP_BOOK | Self Help Book |  |
 | SLIPPERY_BRIDGE | Slippery Bridge |  |
 | SPIRALING_WHIRLPOOL | Spiraling Whirlpool |  |
@@ -62,11 +82,7 @@ Full event inventory by act — experience cells stay empty until filled. Event 
 | TABLET_OF_TRUTH | Tablet Of Truth |  |
 | TANX | Tanx |  |
 | TEA_MASTER | Tea Master |  |
-| TEZCATARA | Tezcatara |  |
-| THE_ARCHITECT | The Architect |  |
 | THE_FUTURE_OF_POTIONS | The Future Of Potions |  |
-| THE_LANTERN_KEY | The Lantern Key |  |
-| THE_LEGENDS_WERE_TRUE | The Legends Were True |  |
 | THIS_OR_THAT | This Or That |  |
 | TINKER_TIME | Tinker Time |  |
 | TRASH_HEAP | Trash Heap |  |
@@ -77,7 +93,6 @@ Full event inventory by act — experience cells stay empty until filled. Event 
 | WAR_HISTORIAN_REPY | War Historian Repy |  |
 | WATERLOGGED_SCRIPTORIUM | Waterlogged Scriptorium |  |
 | WELCOME_TO_WONGOS | Welcome To Wongos |  |
-| WELLSPRING | Wellspring |  |
 | WHISPERING_HOLLOW | Whispering Hollow |  |
 | WOOD_CARVINGS | Wood Carvings |  |
 | ZEN_WEAVER | Zen Weaver |  |

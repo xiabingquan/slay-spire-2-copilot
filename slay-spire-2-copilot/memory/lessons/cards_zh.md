@@ -79,8 +79,10 @@
 | STOMP | 践踏 |  |
 | STONE_ARMOR | 岩石铠甲 |  |
 | STRIKE_IRONCLAD | 打击 |  |
+| SWORD_BOOMERANG | SWORD_BOOMERANG |  |
 | TANK | 肉盾 |  |
 | TAUNT | 嘲讽 |  |
+| TEAR_ASUNDER | TEAR_ASUNDER |  |
 | THRASH | Thrash |  |
 | THUNDERCLAP | 闪电霹雳 |  |
 | TREMBLE | 战栗 |  |
@@ -479,6 +481,7 @@
 | CATASTROPHE | 灾变 |  |
 | COORDINATE | 协同 |  |
 | DARK_SHACKLES | 黑暗镣铐 |  |
+| DISCOVERY | DISCOVERY |  |
 | DRAMATIC_ENTRANCE | 戏剧登场 |  |
 | ENTROPY | 熵 |  |
 | EQUILIBRIUM | 均衡 |  |
@@ -490,6 +493,7 @@
 | GANG_UP | 围殴 |  |
 | GOLD_AXE | 金斧 |  |
 | HAND_OF_GREED | 贪婪之手 |  |
+| HIDDEN_GEM | HIDDEN_GEM |  |
 | HUDDLE_UP | 聚拢 |  |
 | IMPATIENCE | 急躁 |  |
 | INTERCEPT | 拦截 |  |
@@ -511,6 +515,7 @@
 | PROWESS | 敏锐 |  |
 | PURITY | 纯净 |  |
 | RALLY | 集结 |  |
+| REND | REND |  |
 | RESTLESSNESS | 焦躁 |  |
 | ROLLING_BOULDER | 滚石 |  |
 | SALVO | 齐射 |  |
@@ -524,6 +529,7 @@
 | TAG_TEAM | 组队作战 |  |
 | THE_BOMB | 炸弹 |  |
 | THE_GAMBIT | 赌局 |  |
+| THINKING_AHEAD | THINKING_AHEAD |  |
 | THRUMMING_HATCHET | 低鸣战斧 |  |
 | ULTIMATE_DEFEND | 究极防御 |  |
 | ULTIMATE_STRIKE | 终极打击 |  |
@@ -632,10 +638,4 @@
 
 | id | 名称 | 经验 |
 |---|---|---|
-| DISCOVERY | DISCOVERY |  |
-| HIDDEN_GEM | HIDDEN_GEM |  |
-| REND | REND |  |
 | SOLDIER_STEW | 士兵炖汤 |  |
-| SWORD_BOOMERANG | SWORD_BOOMERANG |  |
-| TEAR_ASUNDER | TEAR_ASUNDER |  |
-| THINKING_AHEAD | THINKING_AHEAD |  |

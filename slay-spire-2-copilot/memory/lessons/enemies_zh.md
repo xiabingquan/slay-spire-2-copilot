@@ -1,4 +1,4 @@
-# 敌人（lessons)
+# 敌人（lessons）
 
 普通敌人/精英/Boss 分节、章内按 Act 分目——经验列待填。敌人数据：`spirectl lookup <id>`。
 
@@ -8,21 +8,46 @@
 
 | id | 名称 | 经验 |
 |---|---|---|
+| BygoneEffigy | 旧日雕像 |  |
+| Byrdonis | 多尼斯异鸟 |  |
+| CoralCluster | 鬼祟珊瑚群 |  |
+| GREMLIN_MERC | 地精佣兵 |  |
 | PHANTASMAL_GARDENER | 花园幽灵鳗 |  |
+| PhrogParasite | 异蛙寄生虫 |  |
+| SkulkingColony | 鬼祟珊瑚群 |  |
+| SlitheringStrangler | 蛇行扼杀者 |  |
+| TERROR_EEL | Terror Eel |  |
+
+## Act 2
+
+| id | 名称 | 经验 |
+|---|---|---|
+| DECIMILLIPEDE | 残杀千足虫 |  |
+| DECIMILLIPEDE_SEGMENT_MIDDLE | 残杀千足虫 |  |
+| ENTOMANCER | 蜂群术士 |  |
+| HunterKiller | 猎人杀手 |  |
+| InfestedPrism | 感染棱柱 |  |
+| SPINY_TOAD | 棘刺蟾蜍 |  |
+| TERROR_EEL | Terror Eel |  |
+
+## Act 3
+
+| id | 名称 | 经验 |
+|---|---|---|
+| MECHA_KNIGHT | Mecha Knight |  |
+| SLIMED_BERSERKER | Slimed Berserker |  |
 
 ## 未标注
 
 | id | 名称 | 经验 |
 |---|---|---|
-| BYGONE_EFFIGY | Bygone Effigy |  |
 | DECIMILLIPEDE_SEGMENT_BACK | Decimillipede Segment (Back) |  |
-| DECIMILLIPEDE_SEGMENT_MIDDLE | 残杀千足虫 |  |
-| INFESTED_PRISM | 感染棱柱 |  |
-| MECHA_KNIGHT | Mecha Knight |  |
-| PHROG_PARASITE | Phrog Parasite |  |
-| SKULKING_COLONY | Skulking Colony |  |
+| DecimillipedeSegmentFront | 残杀千足虫节段 |  |
+| FlailKnight | 连枷骑士 |  |
+| MagiKnight | 魔法骑士 |  |
 | SOUL_NEXUS | Soul Nexus |  |
-| TERROR_EEL | Terror Eel |  |
+| SpectralKnight | 幽灵骑士 |  |
+| Wriggler | 扭动虫 |  |
 
 # Boss
 
@@ -30,40 +55,42 @@
 
 | id | 名称 | 经验 |
 |---|---|---|
-| CoralCluster | 鬼祟珊瑚群 |  |
+| CeremonialBeast | 仪式兽 |  |
+| KinPriest | 同族神官 |  |
 | LAGAVULIN_MATRIARCH | 乐加维林族母 |  |
-| LagavulinMatriarch | LagavulinMatriarch |  |
-| SkulkingColony | 鬼祟珊瑚群 |  |
 | SoulFysh | 灵魂异鱼 |  |
+| Vantom | 墨影幻灵 |  |
 | WATERFALL_GIANT | 瀑布巨兽 |  |
+
+## Act 2
+
+| id | 名称 | 经验 |
+|---|---|---|
+| Crusher | 碾碎爪 |  |
+| KnowledgeDemon | 知识恶魔 |  |
+| TheInsatiable | 无厌沙虫 |  |
 
 ## Act 3
 
 | id | 名称 | 经验 |
 |---|---|---|
+| Queen | 火炬头聚合体 |  |
 | TEST_SUBJECT | 实验体 |  |
+| TORCH_HEAD_AMALGAM | Torch Head Amalgam |  |
 
 ## Act 4
 
 | id | 名称 | 经验 |
 |---|---|---|
-| LagavulinMatriarch | LagavulinMatriarch |  |
+| LAGAVULIN_MATRIARCH | 乐加维林族母 |  |
 
 ## 未标注
 
 | id | 名称 | 经验 |
 |---|---|---|
 | Aeonglass | Aeonglass |  |
-| CEREMONIAL_BEAST | Ceremonial Beast |  |
-| Crusher | 碾碎爪 |  |
-| KNOWLEDGE_DEMON | 知识恶魔 |  |
-| QUEEN | Queen |  |
-| Queen | 火炬头聚合体 |  |
+| KinFollower | 同族信徒 |  |
 | Rocket | 火箭 |  |
-| THE_INSATIABLE | 无厌沙虫 |  |
-| TORCH_HEAD_AMALGAM | Torch Head Amalgam |  |
-| TestSubject | 多阶段 |  |
-| TheInsatiable | 无厌沙虫 |  |
 
 # 普通敌人
 
@@ -71,19 +98,28 @@
 
 | id | 名称 | 经验 |
 |---|---|---|
+| AxeRubyRaider | 红宝石劫掠者·斧手 |  |
 | CALCIFIED_CULTIST | 钙化邪教徒 |  |
+| CUBEX_CONSTRUCT | 立柱构造体（Cubex） |  |
 | DampCultist | 潮湿邪教徒 |  |
 | FAT_GREMLIN | 胖地精 |  |
 | FOSSIL_STALKER | 化石追踪者 |  |
-| GREMLIN_MERC | 地精佣兵 |  |
+| FuzzyWurmCrawler | 毛绒伏地虫 |  |
 | HAUNTED_SHIP | 幽灵船 |  |
+| Inklet | 墨宝 |  |
 | LIVING_FOG | 活雾 |  |
+| Mawler | 蛮兽 |  |
 | MysteriousKnight | 神秘骑士 |  |
 | PUNCH_CONSTRUCT | 拳击构装体 |  |
+| RubyRaiders | 红宝石劫掠者 |  |
 | SEAPUNK | 海洋混混 |  |
 | SEWER_CLAM | 下水道蚌 |  |
 | SLUDGE_SPINNER | 淤泥旋螺 |  |
-| SNEAKY_GREMLIN | 卑鄙地精 |  |
+| ShrinkerBeetle | 缩小甲虫 |  |
+| SnappingJaxfruit | 闪光贾克斯果 |  |
+| SneakyGremlin | 卑鄙地精 |  |
+| TOADPOLE | 蟾蜍蝌蚪 |  |
+| TWO_TAILED_RAT | Two-Tailed Rat |  |
 
 ## Act 2
 
@@ -96,20 +132,25 @@
 | BOWLBUG_SILK | 盛碗虫（丝） |  |
 | CALCIFIED_CULTIST | 钙化邪教徒 |  |
 | DampCultist | 潮湿邪教徒 |  |
-| EXOSKELETON | 外骨骼虫 |  |
-| FatGremlin | 胖地精 |  |
+| Exoskeleton | 外骨骼虫 |  |
+| FAT_GREMLIN | 胖地精 |  |
 | GasBomb | 气态炸弹 |  |
 | LEAF_SLIME_M | Leaf Slime (M) |  |
 | LEAF_SLIME_S | Leaf Slime (S) |  |
 | LOUSE_PROGENITOR | 虱虫之祖 |  |
 | Larvae | 幼虫 |  |
+| MITE | 异螨 |  |
 | MysteriousKnight | 神秘骑士 |  |
+| Ovicopter | 直飞产卵虫 |  |
 | PaelsSoldier | 佩尔的士兵 |  |
 | SLUMBERING_BEETLE | 熟睡甲虫 |  |
-| SPINY_TOAD | 棘刺蟾蜍 |  |
 | SneakyGremlin | 卑鄙地精 |  |
+| THE_OBSCURA | 胧光怪（本体 THE_OBSCURA） |  |
 | THIEVING_HOPPER | 偷窃草蜢 |  |
+| TOADPOLE | 蟾蜍蝌蚪 |  |
+| TUNNELER | 地道虫 |  |
 | TWIG_SLIME_M | Twig Slime (M) |  |
+| TWO_TAILED_RAT | Two-Tailed Rat |  |
 
 ## Act 3
 
@@ -119,126 +160,72 @@
 | Axebot | 巨斧机器人 |  |
 | BattleFriendV2 | 战斗好伙伴V2 |  |
 | BattleFriendV3 | 战斗好伙伴V3.0 |  |
+| BattlewornDummy | 战痕训练假人 |  |
+| DEVOTED_SCULPTOR | Devoted Sculptor |  |
 | FABRICATOR | 组装师 |  |
+| FROG_KNIGHT | Frog Knight |  |
+| Ovicopter | 直飞产卵虫 |  |
+| ScrollOfBiting | 咬人卷轴 |  |
+| ShrinkerBeetle | 缩小甲虫 |  |
+| THE_LOST | The Lost |  |
+
+## Act 4
+
+| id | 名称 | 经验 |
+|---|---|---|
+| FuzzyWurmCrawler | 毛绒伏地虫 |  |
 
 ## 未标注
 
 | id | 名称 | 经验 |
 |---|---|---|
+| ARCHITECT | The Architect |  |
 | AssassinRubyRaider | 红宝石劫掠者系 |  |
-| AxeRubyRaider | 红宝石劫掠者·斧手 |  |
+| BYRDPIP | Byrdpip |  |
 | BattleFriendV1 | 战斗好伙伴 |  |
-| BattlewornDummy | 战痕训练假人 |  |
-| BowlbugEgg | 盛碗虫卵 |  |
 | BowlbugNectar | 盛碗虫 |  |
-| BowlbugRock | 盛碗虫 |  |
-| BowlbugSilk | 盛碗虫 |  |
 | BruteRubyRaider | 红宝石劫掠者系 |  |
-| BygoneEffigy | 旧日雕像 |  |
-| Byrdonis | 多尼斯异鸟 |  |
-| CORPSE_SLUG | 尸体蛞蝓 |  |
-| CUBEX_CONSTRUCT | 立柱构造体（Cubex） |  |
-| CeremonialBeast | 仪式兽 |  |
 | Chomper | 啃咬机 |  |
 | Coral | 鬼祟珊瑚群 |  |
 | CorpseSlug | 海洋混混 |  |
 | CrossbowRubyRaider | 红宝石劫掠者系 |  |
-| CubexConstruct | 立柱构造体 |  |
-| DAMP_CULTIST | Damp Cultist |  |
-| DECIMILLIPEDE | 残杀千足虫 |  |
 | DEFECT | 故障机器人（玩家） |  |
-| DEVOTED_SCULPTOR | Devoted Sculptor |  |
-| Decimillipede | 残杀千足虫 |  |
-| DecimillipedeSegmentBack | 残杀千足虫节段 |  |
-| DecimillipedeSegmentFront | 残杀千足虫节段 |  |
-| DecimillipedeSegmentMiddle | 残杀千足虫节段 |  |
-| DevotedSculptor | 精英 |  |
-| ENTOMANCER | 蜂群术士 |  |
 | EYE_WITH_TEETH | Eye with Teeth |  |
-| Entomancer | 蜂群术士 |  |
-| Exoskeleton | 外骨骼虫 |  |
-| EyeWithTeeth | 由雾菇召唤 |  |
-| FROG_KNIGHT | Frog Knight |  |
-| FUZZY_WURM_CRAWLER | Fuzzy Wurm Crawler |  |
-| FlailKnight | 连枷骑士 |  |
+| FAKE_MERCHANT_MONSTER | The Merchant??? |  |
 | Flyconid | 飞蝇菌子 |  |
 | Fogmog | 雾菇 |  |
 | ForgottenThing | 遗忘之物 |  |
-| FossilStalker | 化石追踪者 |  |
-| FrogKnight | 青蛙骑士 |  |
-| FuzzyWurmCrawler | 毛绒伏地虫 |  |
+| GUARDBOT | Guardbot |  |
 | GlobeHead | 电球头 |  |
-| GremlinMerc | 地精佣兵 |  |
-| HUNTER_KILLER | Hunter Killer |  |
-| HauntedShip | 幽灵船 |  |
-| Headbutt | 取回浮层 |  |
-| HunterKiller | 猎人杀手 |  |
 | IRONCLAD | 铁甲战士（玩家） |  |
-| InfestedPrism | 感染棱柱 |  |
-| Inklet | 墨宝 |  |
 | KaiserCrab | 皇蟹 |  |
-| KinFollower | 同族信徒 |  |
-| KinPriest | 同族神官 |  |
-| KnowledgeDemon | 知识恶魔 |  |
-| LeafSlimeM | 树叶史莱姆 |  |
-| LeafSlimeS | 树叶史莱姆 |  |
-| LivingFog | 活雾 |  |
 | LivingShield | 活体盾 |  |
 | LostThing | 失落之物 |  |
-| LouseProgenitor | 泥虫之祖 |  |
-| MITE | 异螨 |  |
-| MagiKnight | 魔法骑士 |  |
-| Mawler | 蛮兽 |  |
 | MechKnight | 机甲骑士 |  |
 | Myte | 异螨 |  |
 | NECROBINDER | 亡灵契约师（玩家） |  |
+| NOISEBOT | Noisebot |  |
 | Nibbit | 小啃兽 |  |
 | Obscura | 胧光怪 |  |
 | Osty | 奥斯提 |  |
-| Ovicopter | 直飞产卵虫 |  |
 | OwlMagistrate | 猫头鹰法官 |  |
-| Parafright | 召唤 |  |
-| PhantasmalGardener | 花园幽灵鳗 |  |
-| PhrogParasite | 异蛙寄生虫 |  |
-| PunchConstruct | 拳击构装体 |  |
+| PAELS_LEGION | Pael's Legion |  |
+| Parafright | Parafright |  |
 | REGENT | 储君（玩家） |  |
-| RubyRaiders | 红宝石劫掠者 |  |
-| SCROLL_OF_BITING | Scroll of Biting |  |
 | SILENT | 静默猎手（玩家） |  |
-| SLIMED_BERSERKER | Slimed Berserker |  |
-| SLITHERING_STRANGLER | Slithering Strangler |  |
-| ScrollOfBiting | 咬人卷轴 |  |
-| SewerClam | 下水道蚌 |  |
-| ShrinkerBeetle | 缩小甲虫 |  |
+| STABBOT | Stabbot |  |
 | Skulking | 鬼祟珊瑚群 |  |
-| SlimedBerserker | SlimedBerserker |  |
-| SlitheringStrangler | 蛇行扼杀者 |  |
-| SludgeSpinner | 淤泥旋螺 |  |
-| SlumberingBeetle | 与 |  |
-| SnappingJaxfruit | 闪光贾克斯果 |  |
-| SoulNexus | SoulNexus |  |
-| SpectralKnight | 幽灵骑士 |  |
-| SpinyToad | 刺蟾 |  |
-| THE_LOST | The Lost |  |
-| THE_OBSCURA | 胧光怪（本体 THE_OBSCURA） |  |
-| TOADPOLE | 蟾蜍蝌蚪 |  |
-| TUNNELER | 地道虫 |  |
-| TWO_TAILED_RAT | Two-Tailed Rat |  |
-| TerrorEel | 骇鳗 |  |
-| TheObscura | TheObscura |  |
-| ThievingHopper | 偷窃跳虫 |  |
-| Toadpole | 蟾蜍蝌蚪 |  |
+| THE_ADVERSARY_MK_ONE | The Adversary Mk 1 |  |
+| THE_ADVERSARY_MK_THREE | The Adversary Mk 3 |  |
+| THE_ADVERSARY_MK_TWO | The Adversary Mk 2 |  |
+| THE_FORGOTTEN | The Forgotten |  |
+| TURRET_OPERATOR | Turret Operator |  |
 | TorchHeadAggregate | 火炬头聚合体 |  |
-| ToughEgg | 召唤 |  |
+| ToughEgg | ToughEgg |  |
 | TowerGunner | 高塔炮手 |  |
 | TrackerRubyRaider | 红宝石劫掠者系 |  |
-| Tunneler | 地道虫 |  |
-| TwigSlimeM | TwigSlimeM |  |
 | TwigSlimeS | TwigSlimeS |  |
 | TwoTailedRats | 双尾鼠 |  |
-| Vantom | 墨影幻灵 |  |
 | VineShambler | 藤蔓妖 |  |
-| WaterfallGiant | 瀑布巨兽 |  |
-| Whirlwind | 实例订正 |  |
-| Wriggler | 扭动虫 |  |
+| ZAPBOT | Zapbot |  |
 | generic | 共享招式 |  |
