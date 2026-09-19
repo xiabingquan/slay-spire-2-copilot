@@ -1282,19 +1282,18 @@
   "ETERNAL_FEATHER": {
     "aliases": [
       "Eternal Feather",
-      "EternalFeather"
+      "ETERNAL_FEATHER"
     ],
-    "character": null,
-    "counter_shown": false,
+    "character": "shared",
     "curated": false,
-    "description": "进入休息点时，每 5 张牌回复 3 HP。进入休息点即结算，先于休息选项（如 25 张牌库 +15、~20-24 张 +12）。",
+    "description": "For every 5 cards in your Deck, heal 3 HP whenever you enter a Rest Site.",
     "id": "ETERNAL_FEATHER",
     "kind": "relic",
-    "name": "永恒羽毛",
-    "needs_zh": false,
+    "name": "Eternal Feather",
+    "needs_zh": true,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:relics.md:L52; md:relics_zh.md:L52"
+    "source": "codex-api:/relics/ETERNAL_FEATHER"
   },
   "FAKE_ANCHOR": {
     "aliases": [
@@ -1844,8 +1843,8 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始，获得 4 点镀甲（Plating）。",
+    "curated": true,
+    "description": "每场战斗开始时获得 4 层 Plating。LIVE run-54（2026-09-19，log run-20260919-155115-7b29144e.log）：每战开战 PLATING_POWER:4 落地；甲层随入账伤害实例递减（compact state powers 行可见）。",
     "id": "GORGET",
     "kind": "relic",
     "name": "护喉甲",
@@ -3238,19 +3237,18 @@
   "PARRYING_SHIELD": {
     "aliases": [
       "Parrying Shield",
-      "ParryingShield"
+      "PARRYING_SHIELD"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "回合结束时，若有至少 10 格挡，对随机敌人造成 6 点伤害。",
+    "character": "shared",
+    "curated": true,
+    "description": "回合结束时若挡值 ≥10，对随机敌人造成 6 点伤害。LIVE run-54：多次触发；该 6 伤按普通伤害实例结算（例：收掉 4HP 千足虫段并触发其 REATTACH 死亡状态循环——反伤既是击杀手段，也可能意外点燃敌方死亡触发机制）。",
     "id": "PARRYING_SHIELD",
     "kind": "relic",
-    "name": "招架盾",
+    "name": "Parrying Shield",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:relics.md:L70; md:relics_zh.md:L71"
+    "source": "codex-api:/relics/PARRYING_SHIELD"
   },
   "PEAR": {
     "aliases": [
@@ -3291,8 +3289,8 @@
     ],
     "character": null,
     "counter_shown": true,
-    "curated": false,
-    "description": "每打出的第 10 张攻击牌造成双倍伤害。",
+    "curated": true,
+    "description": "每第 10 张攻击牌造成双倍伤害。LIVE run-54 Act1 Boss Vantom T4：BLUDGEON+ 作为第 10 张攻击在易伤窗内结算 126 伤（42×1.5 易伤×2 笔尖——精确）。计数在 compact state 显示 PEN_NIB:n；把第 10 张攻击对准 Bludgeon 回合是可复用的窗口战术。",
     "id": "PEN_NIB",
     "kind": "relic",
     "name": "钢笔尖",
@@ -3862,19 +3860,18 @@
   "ROYAL_STAMP": {
     "aliases": [
       "Royal Stamp",
-      "RoyalStamp"
+      "ROYAL_STAMP"
     ],
-    "character": null,
-    "counter_shown": false,
+    "character": "shared",
     "curated": false,
-    "description": "拾取时，选择牌库中 1 张攻击或技能牌附魔 Royally Approved。",
+    "description": "Upon pickup, choose an Attack or Skill in your Deck to Enchant with Royally Approved.",
     "id": "ROYAL_STAMP",
     "kind": "relic",
-    "name": "王室印章",
-    "needs_zh": false,
+    "name": "Royal Stamp",
+    "needs_zh": true,
     "play_notes": "",
     "rarity": "Shop",
-    "source": "md:relics.md:L263; md:relics_zh.md:L263"
+    "source": "codex-api:/relics/ROYAL_STAMP"
   },
   "RUINED_HELMET": {
     "aliases": [
@@ -4728,8 +4725,8 @@
     ],
     "character": null,
     "counter_shown": true,
-    "curated": false,
-    "description": "每打出 10 张技能牌，获得 7 格挡。",
+    "curated": true,
+    "description": "每打出 10 张技能牌，获得 7 点格挡。LIVE run-54：计数在 compact state 显示为 TUNING_FORK:n；多场战斗中 10/10 触发（第 10 张技能同帧 +7 挡，如与 True Grit / Armaments 同回合）。",
     "id": "TUNING_FORK",
     "kind": "relic",
     "name": "音叉",
@@ -5049,19 +5046,18 @@
   "WING_CHARM": {
     "aliases": [
       "Wing Charm",
-      "WingCharm"
+      "WING_CHARM"
     ],
-    "character": null,
-    "counter_shown": false,
+    "character": "shared",
     "curated": false,
-    "description": "每份卡牌奖励中，1 张随机牌附魔 Swift 1。",
+    "description": "A random card in each card reward is Enchanted with Swift 1.",
     "id": "WING_CHARM",
     "kind": "relic",
-    "name": "羽翼护符",
-    "needs_zh": false,
+    "name": "Wing Charm",
+    "needs_zh": true,
     "play_notes": "",
     "rarity": "Shop",
-    "source": "md:relics.md:L270; md:relics_zh.md:L270"
+    "source": "codex-api:/relics/WING_CHARM"
   },
   "WONGOS_MYSTERY_TICKET": {
     "aliases": [

@@ -1428,21 +1428,18 @@
   "ETERNAL_FEATHER": {
     "aliases": [
       "Eternal Feather",
-      "EternalFeather"
+      "ETERNAL_FEATHER"
     ],
-    "character": null,
-    "counter_shown": false,
+    "character": "shared",
     "curated": false,
-    "description": "on entering a Rest Site, heal 3 HP per 5 cards in your deck. Heal applies BEFORE the rest-site action is chosen (e.g. +15 at 25-card deck, +12 at ~20-24 cards).",
+    "description": "For every 5 cards in your Deck, heal 3 HP whenever you enter a Rest Site.",
     "id": "ETERNAL_FEATHER",
     "kind": "relic",
     "name": "Eternal Feather",
-    "needs_zh": false,
+    "needs_zh": true,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:relics.md:L52; md:relics_zh.md:L52",
-    "zh_description": "进入休息点时，每 5 张牌回复 3 HP。进入休息点即结算，先于休息选项（如 25 张牌库 +15、~20-24 张 +12）。",
-    "zh_name": "永恒羽毛"
+    "source": "codex-api:/relics/ETERNAL_FEATHER"
   },
   "FAKE_ANCHOR": {
     "aliases": [
@@ -2055,8 +2052,8 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "At the start of each combat, gain 4 Plating.",
+    "curated": true,
+    "description": "At the start of each combat, gain 4 Plating. LIVE run-54 (2026-09-19, log run-20260919-155115-7b29144e.log): PLATING_POWER:4 applied combat-start every fight; plating charges decremented alongside incoming damage instances across fights (visible in compact state powers line).",
     "id": "GORGET",
     "kind": "relic",
     "name": "Gorget",
@@ -3609,21 +3606,18 @@
   "PARRYING_SHIELD": {
     "aliases": [
       "Parrying Shield",
-      "ParryingShield"
+      "PARRYING_SHIELD"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "end of turn, if you have ≥10 Block, deal 6 damage to a random enemy.",
+    "character": "shared",
+    "curated": true,
+    "description": "At end of turn, if you have >=10 Block, deal 6 damage to a random enemy. LIVE run-54: multiple procs; the 6-damage tick counts as a normal damage instance (e.g. it killed a 4-HP Decimillipede segment, triggering its REATTACH dead-state cycle — the proc can be a kill instrument AND can accidentally fire death-triggered enemy mechanics).",
     "id": "PARRYING_SHIELD",
     "kind": "relic",
     "name": "Parrying Shield",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:relics.md:L70; md:relics_zh.md:L71",
-    "zh_description": "回合结束时，若有至少 10 格挡，对随机敌人造成 6 点伤害。",
-    "zh_name": "招架盾"
+    "source": "codex-api:/relics/PARRYING_SHIELD"
   },
   "PEAR": {
     "aliases": [
@@ -3668,8 +3662,8 @@
     ],
     "character": null,
     "counter_shown": true,
-    "curated": false,
-    "description": "every 10th Attack card you play deals double damage.",
+    "curated": true,
+    "description": "Every 10th Attack card you play deals double damage. LIVE run-54 Vantom T4 (Act1 boss): Bludgeon+ as the 10th attack inside a Vulnerable window resolved 126 damage (42 x 1.5 Vuln x 2 Pen Nib — exact). Counter readable as PEN_NIB:n in compact state; planning the 10th attack onto the Bludgeon turn is a repeatable window tactic.",
     "id": "PEN_NIB",
     "kind": "relic",
     "name": "Pen Nib",
@@ -4301,21 +4295,18 @@
   "ROYAL_STAMP": {
     "aliases": [
       "Royal Stamp",
-      "RoyalStamp"
+      "ROYAL_STAMP"
     ],
-    "character": null,
-    "counter_shown": false,
+    "character": "shared",
     "curated": false,
-    "description": "on pickup, choose 1 Attack or Skill card to enchant with Royally Approved.",
+    "description": "Upon pickup, choose an Attack or Skill in your Deck to Enchant with Royally Approved.",
     "id": "ROYAL_STAMP",
     "kind": "relic",
     "name": "Royal Stamp",
-    "needs_zh": false,
+    "needs_zh": true,
     "play_notes": "",
     "rarity": "Shop",
-    "source": "md:relics.md:L263; md:relics_zh.md:L263",
-    "zh_description": "拾取时，选择牌库中 1 张攻击或技能牌附魔 Royally Approved。",
-    "zh_name": "王室印章"
+    "source": "codex-api:/relics/ROYAL_STAMP"
   },
   "RUINED_HELMET": {
     "aliases": [
@@ -5266,8 +5257,8 @@
     ],
     "character": null,
     "counter_shown": true,
-    "curated": false,
-    "description": "every 10 Skill cards played, gain 7 Block.",
+    "curated": true,
+    "description": "Every 10 Skill cards played, gain 7 Block. LIVE run-54: counter visible in compact state as TUNING_FORK:n; several 10/10 procs fired mid-fight (7 block lands same-frame as the 10th skill, e.g. alongside True Grit / Armaments plays).",
     "id": "TUNING_FORK",
     "kind": "relic",
     "name": "Tuning Fork",
@@ -5625,21 +5616,18 @@
   "WING_CHARM": {
     "aliases": [
       "Wing Charm",
-      "WingCharm"
+      "WING_CHARM"
     ],
-    "character": null,
-    "counter_shown": false,
+    "character": "shared",
     "curated": false,
-    "description": "in each card reward, 1 random card is enchanted with Swift 1.",
+    "description": "A random card in each card reward is Enchanted with Swift 1.",
     "id": "WING_CHARM",
     "kind": "relic",
     "name": "Wing Charm",
-    "needs_zh": false,
+    "needs_zh": true,
     "play_notes": "",
     "rarity": "Shop",
-    "source": "md:relics.md:L270; md:relics_zh.md:L270",
-    "zh_description": "每份卡牌奖励中，1 张随机牌附魔 Swift 1。",
-    "zh_name": "羽翼护符"
+    "source": "codex-api:/relics/WING_CHARM"
   },
   "WONGOS_MYSTERY_TICKET": {
     "aliases": [

@@ -4201,11 +4201,180 @@
   },
   "DECIMILLIPEDE": {
     "curated": true,
-    "description": "Act2 精英三段（前/中/后，对局40 live 44/42/46；A 难度略高）。各带 REATTACH:25——某段死亡时若仍有其他段存活则进入 DEAD（不可选中），在其回合结束重接回 +25；当所有段同窗全灭时永久淡出。同窗全体击杀是唯一胜利条件：杀掉最后一只活段会让全部 DEAD 段 +25 复活。绝不瞄准 0 HP 的 DEAD 段。招式：WRITHE 多段 5x2、CONSTRICT 单击 8 + 玩家绞勒 3（玩家回合结束未挡伤害/层，每次施放 +3 叠层，施放者死亡时移除）、BULK 单击 6 + 自身力量 +2。对局40 T7 清场：狱火+9 每回合 9 实例压三段；T6 三段 4/0/10 时玩家 2 HP，Unmovable 32 级挡线撑住；T7 tick 杀一段，打击在另一段已 DEAD 时收掉最后活段 → 淡出获胜，8/95。",
+    "description": "Act2 精英三段（前/中/后，对局40 live 44/42/46；A 难度略高）。各带 REATTACH:25——某段死亡时若仍有其他段存活则进入 DEAD（不可选中），在其回合结束重接回 +25；当所有段同窗全灭时永久淡出。同窗全体击杀是唯一胜利条件：杀掉最后一只活段会让全部 DEAD 段 +25 复活。绝不瞄准 0 HP 的 DEAD 段。招式：WRITHE 多段 5x2、CONSTRICT 单击 8 + 玩家绞勒 3（玩家回合结束未挡伤害/层，每次施放 +3 叠层，施放者死亡时移除）、BULK 单击 6 + 自身力量 +2。对局40 T7 清场：狱火+9 每回合 9 实例压三段；T6 三段 4/0/10 时玩家 2 HP，Unmovable 32 级挡线撑住；T7 tick 杀一段，打击在另一段已 DEAD 时收掉最后活段 → 淡出获胜，8/95。 LIVE run-54（2026-09-19，log run-20260919-155115-7b29144e.log）：虱虫之祖战后 31HP 入场；T1 BLUDGEON+ 把一段压到 4HP（按铺伤条令留活）；PARRYING_SHIELD 回合末 6 伤直接击杀该段 -> DEAD 状态挂出 REATTACH heal 意图——兄弟段存活时本应在其回合末 +25 复活。T4 阵亡：余段 Bulk 每循环 +2 力叠加，入账（8+10+7×2 级）在 7HP 处超过全手挡线（~19+甲）。参考建议：AoE 或回合末 tick 类手段是 REATTACH 的天然答案；无此类手段时接近满血入场是参考标准。",
     "id": "DECIMILLIPEDE",
     "kind": "monster",
     "name": "残杀千足虫",
     "source": "; run-40 live fold 2026-09-18"
+  },
+  "DECIMILLIPEDE_SEGMENT_BACK": {
+    "acts": [],
+    "aliases": [
+      "Decimillipede Segment (Back)"
+    ],
+    "curated": true,
+    "cycle": [
+      "WRITHE_MOVE",
+      "BULK_MOVE",
+      "CONSTRICT_MOVE",
+      "DEAD_MOVE",
+      "REATTACH_MOVE"
+    ],
+    "description": "千足虫后段（Act2 精英三段之一，run-54 live 40-46HP A1）。REATTACH:25 同窗清场条令见 DECIMILLIPEDE 母条目。moves：BULK 6+自身力量2；CONSTRICT 8+玩家束缚3；WRITHE 5×2（随力量膨胀）；DEAD/REATTACH 为死亡-复活状态机。",
+    "hp": {
+      "ascension": {
+        "max": 52,
+        "min": 46
+      },
+      "base": 40,
+      "max": 46,
+      "notes": ""
+    },
+    "id": "DECIMILLIPEDE_SEGMENT_BACK",
+    "is_boss": false,
+    "is_elite": true,
+    "kind": "monster",
+    "moves": {
+      "BULK_MOVE": {
+        "aliases": [
+          "Bulk",
+          "BULK"
+        ],
+        "curated": false,
+        "effect": "Bulk: Attack + Buff; damage 6 A:7; STRENGTH 2 (self)",
+        "follow_up_id": null,
+        "id": "BULK_MOVE",
+        "intents": [
+          {
+            "base_damage": 6,
+            "base_damage_ascension": {
+              "ascension": 7
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DECIMILLIPEDE_SEGMENT_BACK",
+        "name": "Bulk",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#BULK",
+        "description": "Bulk：单体攻击 6（A:7）+ 自身 +2 力量。"
+      },
+      "CONSTRICT_MOVE": {
+        "aliases": [
+          "Constrict",
+          "CONSTRICT"
+        ],
+        "curated": false,
+        "effect": "Constrict: Attack + Debuff; damage 8 A:9; WEAK 1 (player)",
+        "follow_up_id": null,
+        "id": "CONSTRICT_MOVE",
+        "intents": [
+          {
+            "base_damage": 8,
+            "base_damage_ascension": {
+              "ascension": 9
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DECIMILLIPEDE_SEGMENT_BACK",
+        "name": "Constrict",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#CONSTRICT",
+        "description": "Constrict：单体攻击 8（A:9）+ 对玩家施加 ConstrictPower 3（回合末未挡伤害/层，每次施放 +3，施放者死亡时移除）。"
+      },
+      "DEAD_MOVE": {
+        "aliases": [
+          "Dead",
+          "DEAD"
+        ],
+        "curated": false,
+        "effect": "Dead: Unknown",
+        "follow_up_id": null,
+        "id": "DEAD_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Unknown"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DECIMILLIPEDE_SEGMENT_BACK",
+        "name": "Dead",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#DEAD",
+        "description": "Dead 状态：兄弟段存活时死亡进入——不可选中、不移出战斗；回合末 +25 复活，除非同窗全部死亡（则永久淡出）。"
+      },
+      "REATTACH_MOVE": {
+        "aliases": [
+          "Reattach",
+          "REATTACH"
+        ],
+        "curated": false,
+        "effect": "Reattach: Heal",
+        "follow_up_id": null,
+        "id": "REATTACH_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Heal"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DECIMILLIPEDE_SEGMENT_BACK",
+        "name": "Reattach",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#REATTACH",
+        "description": "Reattach：治疗——DEAD 状态段在兄弟存活时回合末 +25 复活回到战斗。"
+      },
+      "WRITHE_MOVE": {
+        "aliases": [
+          "Writhe",
+          "WRITHE"
+        ],
+        "curated": false,
+        "effect": "Writhe: Attack; damage 5x2 A:6",
+        "follow_up_id": null,
+        "id": "WRITHE_MOVE",
+        "intents": [
+          {
+            "base_damage": 5,
+            "base_damage_ascension": {
+              "ascension": 6
+            },
+            "class": "MultiAttackIntent",
+            "hits": 2,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DECIMILLIPEDE_SEGMENT_BACK",
+        "name": "Writhe",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#WRITHE",
+        "description": "Writhe：多段攻击 5（A:6）×2——随段力量膨胀（run-54 力量2 时见 7×2）。"
+      }
+    },
+    "name": "Decimillipede Segment (Back)",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK",
+    "type": "Elite"
   },
   "DEFECT": {
     "acts": [],

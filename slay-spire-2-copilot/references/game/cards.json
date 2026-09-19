@@ -2979,27 +2979,21 @@
   "DARK_EMBRACE": {
     "aliases": [
       "Dark Embrace",
-      "黑暗之拥"
+      "DARK_EMBRACE"
     ],
-    "card_type": "power",
-    "character_pool": "IRONCLAD",
-    "cost": "2",
+    "card_type": "Power",
+    "character_pool": "ironclad",
+    "cost": 2,
     "curated": false,
-    "description": "Exhaust, whenever a card is Exhausted draw 1 card. Upgrade: cost 1.",
+    "description": "Whenever a card is Exhausted,\ndraw 1 card.",
     "id": "DARK_EMBRACE",
-    "keywords": [
-      "Exhaust"
-    ],
     "kind": "card",
     "name": "Dark Embrace",
-    "needs_zh": false,
+    "needs_zh": true,
     "play_notes": "",
-    "rarity": "rare",
-    "source": "md:cards.md:L40; md:cards_zh.md",
-    "target_type": null,
-    "upgrade": "cost 1.",
-    "zh_description": "2，能力，稀有，消耗，每次有卡牌被消耗时抽 1 张牌。升级：费用 1。",
-    "zh_name": "黑暗之拥"
+    "rarity": "Rare",
+    "source": "codex-api:/cards/DARK_EMBRACE",
+    "target_type": "Self"
   },
   "DARK_SHACKLES": {
     "aliases": [
@@ -3659,29 +3653,15 @@
     "zh_name": "挽歌"
   },
   "DISCOVERY": {
-    "aliases": [
-      "Discovery",
-      "发现"
-    ],
-    "card_type": "skill",
-    "character_pool": "COLORLESS",
-    "cost": "1",
+    "aliases": [],
     "curated": false,
-    "description": "Exhaust, choose 1 of 3 random class cards; add it to your hand, free this turn. Upgrade: removes Exhaust.",
+    "description": "Card Library Relic Collection Potion Lab Enchantments Powers Keywords The Run Characters Bestiary Encounters Events Ancients Merchant Systems & Meta Custom Mode Mechanics Unlockables Reference Timeline Images Reference Badges Compare Characters Guides Aggregate data Runs Steam Mod Art Exporter Overlay (Overwolf) Knowledge Demon bot Build with the data Developers API About Project Support Patreon Ko-fi Feedback Email Elsewhere Discord GitHub Privacy Terms Live Search cards, relics, monsters... . main EN Spire Codex is now on Overwolf. Get the in-game overlay with live card lookups and one-click run uploads. Learn more →",
     "id": "DISCOVERY",
-    "keywords": [
-      "Exhaust"
-    ],
     "kind": "card",
-    "name": "Discovery",
-    "needs_zh": false,
+    "name": "DISCOVERY",
+    "needs_zh": true,
     "play_notes": "",
-    "rarity": "uncommon",
-    "source": "md:cards.md:L482; md:cards_zh.md",
-    "target_type": null,
-    "upgrade": "removes Exhaust.",
-    "zh_description": "1，技能，罕见，消耗，从 3 张职业池随机牌中选择 1 张加入手牌；本回合免费。升级：移除消耗。",
-    "zh_name": "发现"
+    "source": "codex-html:https://spire-codex.com/cards/discovery"
   },
   "DISINTEGRATION": {
     "aliases": [
@@ -6242,29 +6222,15 @@
     "zh_name": "隐秘匕首"
   },
   "HIDDEN_GEM": {
-    "aliases": [
-      "Hidden Gem",
-      "隐藏宝石"
-    ],
-    "card_type": "skill",
-    "character_pool": "COLORLESS",
-    "cost": "1",
+    "aliases": [],
     "curated": false,
-    "description": "Unplayable keyword present in class data; grant 2 Replays to a card in your draw pile (prefers Attack/Skill/Power). Upgrade: grant 3 Replays.",
+    "description": "Card Library Relic Collection Potion Lab Enchantments Powers Keywords The Run Characters Bestiary Encounters Events Ancients Merchant Systems & Meta Custom Mode Mechanics Unlockables Reference Timeline Images Reference Badges Compare Characters Guides Aggregate data Runs Steam Mod Art Exporter Overlay (Overwolf) Knowledge Demon bot Build with the data Developers API About Project Support Patreon Ko-fi Feedback Email Elsewhere Discord GitHub Privacy Terms Live Search cards, relics, monsters... . main EN Spire Codex is now on Overwolf. Get the in-game overlay with live card lookups and one-click run uploads. Learn more →",
     "id": "HIDDEN_GEM",
-    "keywords": [
-      "Unplayable"
-    ],
     "kind": "card",
-    "name": "Hidden Gem",
-    "needs_zh": false,
+    "name": "HIDDEN_GEM",
+    "needs_zh": true,
     "play_notes": "",
-    "rarity": "rare",
-    "source": "md:cards.md:L494; md:cards_zh.md",
-    "target_type": null,
-    "upgrade": "grant 3 Replays.",
-    "zh_description": "1，技能，稀有，类数据含无法打出关键词；为抽牌堆 1 张牌附加 2 次重放（优先攻击/技能/能力）。升级：3 次重放。",
-    "zh_name": "隐藏宝石"
+    "source": "codex-html:https://spire-codex.com/cards/hidden_gem"
   },
   "HIGH_FIVE": {
     "aliases": [
@@ -8386,26 +8352,22 @@
   },
   "ONE_TWO_PUNCH": {
     "aliases": [
-      "One Two Punch",
-      "连环拳"
+      "One-Two Punch",
+      "ONE_TWO_PUNCH"
     ],
-    "card_type": "skill",
-    "character_pool": "IRONCLAD",
-    "cost": "1",
+    "card_type": "Skill",
+    "character_pool": "ironclad",
+    "cost": 1,
     "curated": false,
-    "description": "the next Attack you play this turn is played an extra time. Upgrade: extra 2 Attacks. Upgraded ONE_TWO_PUNCH adds the next attack 2 extra times (3 total resolutions — Strike×3 can wipe 21-48 HP adds in one play); Dominate Strength math: on a 0-Vuln target grants roughly +1~2 Strength (applying 1 Vuln), on a target already carrying Vuln stacks the Strength gain equals the post-application stack count — Bash (2 Vuln) then DOMINATE = ~+3 Strength.",
+    "description": "This turn, your next Attack is played an extra time.",
     "id": "ONE_TWO_PUNCH",
-    "keywords": [],
     "kind": "card",
-    "name": "One Two Punch",
-    "needs_zh": false,
+    "name": "One-Two Punch",
+    "needs_zh": true,
     "play_notes": "",
-    "rarity": "rare",
-    "source": "md:cards.md:L71; md:cards_zh.md",
-    "target_type": null,
-    "upgrade": "extra 2 Attacks. Upgraded ONE_TWO_PUNCH adds the next attack 2 extra times (3 total resolutions — Strike×3 can wipe 21-48 HP adds in one play); Dominate Strength math: on a 0-Vuln target grants roughly +1~2 Strength (applying 1 Vuln), on a target already carrying Vuln stacks the Strength gain equals the post-application stack count — Bash (2 Vuln) then DOMINATE = ~+3 Strength.",
-    "zh_description": "1，技能，稀有，本回合你打出的下一张攻击牌额外打出一次。升级：额外 2 次。 升级版 ONE_TWO_PUNCH 使下一张攻击牌额外打出 2 次（共 3 次结算——单次 Strike×3 可清掉 21-48 HP 召唤物）；DOMINATE 力量算式：对 0 易伤目标约 +1~2 力量（施加 1 层易伤时），对已带易伤层数的目标，力量获取=施加后层数——Bash（2 易伤）→ DOMINATE ≈ +3 力量。",
-    "zh_name": "连环拳"
+    "rarity": "Rare",
+    "source": "codex-api:/cards/ONE_TWO_PUNCH",
+    "target_type": "Self"
   },
   "ORBIT": {
     "aliases": [
@@ -9850,27 +9812,15 @@
     "zh_name": "休憩"
   },
   "REND": {
-    "aliases": [
-      "Rend",
-      "撕裂"
-    ],
-    "card_type": "attack",
-    "character_pool": "COLORLESS",
-    "cost": "2",
+    "aliases": [],
     "curated": false,
-    "description": "deal damage = 15 + 5 per debuff power on the target. Upgrade: +3 base, +3 per debuff.",
+    "description": "Card Library Relic Collection Potion Lab Enchantments Powers Keywords The Run Characters Bestiary Encounters Events Ancients Merchant Systems & Meta Custom Mode Mechanics Unlockables Reference Timeline Images Reference Badges Compare Characters Guides Aggregate data Runs Steam Mod Art Exporter Overlay (Overwolf) Knowledge Demon bot Build with the data Developers API About Project Support Patreon Ko-fi Feedback Email Elsewhere Discord GitHub Privacy Terms Live Search cards, relics, monsters... . main EN Spire Codex is now on Overwolf. Get the in-game overlay with live card lookups and one-click run uploads. Learn more →",
     "id": "REND",
-    "keywords": [],
     "kind": "card",
-    "name": "Rend",
-    "needs_zh": false,
+    "name": "REND",
+    "needs_zh": true,
     "play_notes": "",
-    "rarity": "rare",
-    "source": "md:cards.md:L517; md:cards_zh.md",
-    "target_type": null,
-    "upgrade": "+3 base, +3 per debuff.",
-    "zh_description": "2，攻击，稀有，伤害 = 15 + 目标每层减益 5 点。升级：基础 +3、每层 +3。",
-    "zh_name": "撕裂"
+    "source": "codex-html:https://spire-codex.com/cards/rend"
   },
   "RESONANCE": {
     "aliases": [
@@ -11590,25 +11540,21 @@
   "STAMPEDE": {
     "aliases": [
       "Stampede",
-      "惊逃"
+      "STAMPEDE"
     ],
-    "card_type": "power",
-    "character_pool": "IRONCLAD",
-    "cost": "2",
+    "card_type": "Power",
+    "character_pool": "ironclad",
+    "cost": 2,
     "curated": false,
-    "description": "at the post-play phase auto-play 1 random Attack from your hand. Upgrade: cost 1.",
+    "description": "At the end of your turn, 1 random Attack in your Hand is played against a random enemy.",
     "id": "STAMPEDE",
-    "keywords": [],
     "kind": "card",
     "name": "Stampede",
-    "needs_zh": false,
+    "needs_zh": true,
     "play_notes": "",
-    "rarity": "uncommon",
-    "source": "md:cards.md:L85; md:cards_zh.md",
-    "target_type": null,
-    "upgrade": "cost 1.",
-    "zh_description": "2，能力，罕见，后打出阶段自动打出手中 1 张随机攻击牌。升级：费用 1。",
-    "zh_name": "惊逃"
+    "rarity": "Uncommon",
+    "source": "codex-api:/cards/STAMPEDE",
+    "target_type": "Self"
   },
   "STARDUST": {
     "aliases": [
@@ -12156,27 +12102,15 @@
     "zh_name": "扫视凝光"
   },
   "SWORD_BOOMERANG": {
-    "aliases": [
-      "Sword Boomerang",
-      "飞剑回旋镖"
-    ],
-    "card_type": "attack",
-    "character_pool": "IRONCLAD",
-    "cost": "1",
+    "aliases": [],
     "curated": false,
-    "description": "deal 3 damage to a random enemy 3 times. Upgrade: 4 hits.",
+    "description": "Sword Boomerang - Card - Slay the Spire 2 (sts2) | Spire Codex Card Library Relic Collection Potion Lab Enchantments Powers Keywords The Run Characters Bestiary Encounters Events Ancients Merchant Systems & Meta Custom Mode Mechanics Unlockables Reference Timeline Images Reference Badges Compare Characters Guides Aggregate data Runs Steam Mod Art Exporter Overlay (Overwolf) Knowledge Demon bot Build with the data Developers API About Project Support Patreon Ko-fi Feedback Email Elsewhere Discord GitHub Privacy Terms Live Search cards, relics, monsters... . main EN Spire Codex is now on Overwolf. Get the in-game overlay with live card lookups and one-click run uploads. Learn more →",
     "id": "SWORD_BOOMERANG",
-    "keywords": [],
     "kind": "card",
-    "name": "Sword Boomerang",
-    "needs_zh": false,
+    "name": "SWORD_BOOMERANG",
+    "needs_zh": true,
     "play_notes": "",
-    "rarity": "common",
-    "source": "md:cards.md:L90; md:cards_zh.md",
-    "target_type": "RandomEnemy",
-    "upgrade": "4 hits.",
-    "zh_description": "1，攻击，普通，对随机敌人造成 3 点伤害 ×3 次。升级：4 次。",
-    "zh_name": "飞剑回旋镖"
+    "source": "codex-html:https://spire-codex.com/cards/sword_boomerang"
   },
   "SWORD_SAGE": {
     "aliases": [
@@ -12341,27 +12275,15 @@
     "zh_name": "嘲讽"
   },
   "TEAR_ASUNDER": {
-    "aliases": [
-      "Tear Asunder",
-      "扯碎"
-    ],
-    "card_type": "attack",
-    "character_pool": "IRONCLAD",
-    "cost": "2",
+    "aliases": [],
     "curated": false,
-    "description": "deal 5 damage 1 time, plus 1 hit for each time you have received unblocked damage this combat. Upgrade: +2 damage. LIVE (run-36 boss mid-fight): single resolution landed 40 damage — the \"times\" growth formula confirmed; extreme value in long fights where unblocked hits accumulate.",
+    "description": "Card Library Relic Collection Potion Lab Enchantments Powers Keywords The Run Characters Bestiary Encounters Events Ancients Merchant Systems & Meta Custom Mode Mechanics Unlockables Reference Timeline Images Reference Badges Compare Characters Guides Aggregate data Runs Steam Mod Art Exporter Overlay (Overwolf) Knowledge Demon bot Build with the data Developers API About Project Support Patreon Ko-fi Feedback Email Elsewhere Discord GitHub Privacy Terms Live Search cards, relics, monsters... . main EN Spire Codex is now on Overwolf. Get the in-game overlay with live card lookups and one-click run uploads. Learn more →",
     "id": "TEAR_ASUNDER",
-    "keywords": [],
     "kind": "card",
-    "name": "Tear Asunder",
-    "needs_zh": false,
+    "name": "TEAR_ASUNDER",
+    "needs_zh": true,
     "play_notes": "",
-    "rarity": "rare",
-    "source": "md:cards.md:L93; md:cards_zh.md",
-    "target_type": null,
-    "upgrade": "+2 damage. LIVE (run-36 boss mid-fight): single resolution landed 40 damage — the \"times\" growth formula confirmed; extreme value in long fights where unblocked hits accumulate.",
-    "zh_description": "2，攻击，稀有，造成 5 点伤害 1 次，本场战斗每受到过一次无视格挡的伤害追加 1 次命中。升级：伤害 +2。LIVE（对局 36 Boss 战中盘）：单次结算 40 伤——「次数」成长公式确认；受伤多的长战价值极高。",
-    "zh_name": "扯碎"
+    "source": "codex-html:https://spire-codex.com/cards/tear_asunder"
   },
   "TEMPEST": {
     "aliases": [
@@ -12575,29 +12497,15 @@
     "zh_name": "铁匠"
   },
   "THINKING_AHEAD": {
-    "aliases": [
-      "Thinking Ahead",
-      "提前思考"
-    ],
-    "card_type": "skill",
-    "character_pool": "COLORLESS",
-    "cost": "0",
+    "aliases": [],
     "curated": false,
-    "description": "Exhaust, draw 2 cards; put a card from your hand on top of your draw pile. Upgrade: removes Exhaust.",
+    "description": "Thinking Ahead - Card - Slay the Spire 2 (sts2) | Spire Codex Card Library Relic Collection Potion Lab Enchantments Powers Keywords The Run Characters Bestiary Encounters Events Ancients Merchant Systems & Meta Custom Mode Mechanics Unlockables Reference Timeline Images Reference Badges Compare Characters Guides Aggregate data Runs Steam Mod Art Exporter Overlay (Overwolf) Knowledge Demon bot Build with the data Developers API About Project Support Patreon Ko-fi Feedback Email Elsewhere Discord GitHub Privacy Terms Live Search cards, relics, monsters... . main EN Spire Codex is now on Overwolf. Get the in-game overlay with live card lookups and one-click run uploads. Learn more →",
     "id": "THINKING_AHEAD",
-    "keywords": [
-      "Exhaust"
-    ],
     "kind": "card",
-    "name": "Thinking Ahead",
-    "needs_zh": false,
+    "name": "THINKING_AHEAD",
+    "needs_zh": true,
     "play_notes": "",
-    "rarity": "uncommon",
-    "source": "md:cards.md:L531; md:cards_zh.md",
-    "target_type": null,
-    "upgrade": "removes Exhaust.",
-    "zh_description": "0，技能，罕见，消耗，抽 2 张牌；将手牌 1 张牌放到抽牌堆顶。升级：移除消耗。",
-    "zh_name": "提前思考"
+    "source": "codex-html:https://spire-codex.com/cards/thinking_ahead"
   },
   "THRASH": {
     "aliases": [

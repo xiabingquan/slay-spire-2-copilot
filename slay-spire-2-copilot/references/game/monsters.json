@@ -4342,11 +4342,180 @@
   },
   "DECIMILLIPEDE": {
     "curated": true,
-    "description": "Act2 Elite trio (Front/Middle/Back segments, 44/42/46 live run-40; A slightly higher). REATTACH:25 each — segment dying while another is alive enters DEAD (untargetable), reattaches +25 at end of its turn; when ALL are dead simultaneously they fade out permanently. Same-window mass-kill is the only win: killing the last live segment revives all DEAD ones +25 each. Never aim at 0-HP DEAD segments. Moves: WRITHE multi 5x2, CONSTRICT single 8 + player Constrict 3 (end-of-player-turn unblocked damage/stack, stacks +3 per cast, removed when applier dies), BULK single 6 + self +2 Str. LIVE run-40 T7 clear: Inferno+9 tick 9-instance/turn pressured all three; T6 all at 4/0/10 with player 2 HP held by 32-class Unmovable block; T7 tick killed one, Strike closed the last live segment while another was already DEAD → fade-out win at 8/95.",
+    "description": "Act2 Elite trio (Front/Middle/Back segments, 44/42/46 live run-40; A slightly higher). REATTACH:25 each — segment dying while another is alive enters DEAD (untargetable), reattaches +25 at end of its turn; when ALL are dead simultaneously they fade out permanently. Same-window mass-kill is the only win: killing the last live segment revives all DEAD ones +25 each. Never aim at 0-HP DEAD segments. Moves: WRITHE multi 5x2, CONSTRICT single 8 + player Constrict 3 (end-of-player-turn unblocked damage/stack, stacks +3 per cast, removed when applier dies), BULK single 6 + self +2 Str. LIVE run-40 T7 clear: Inferno+9 tick 9-instance/turn pressured all three; T6 all at 4/0/10 with player 2 HP held by 32-class Unmovable block; T7 tick killed one, Strike closed the last live segment while another was already DEAD → fade-out win at 8/95. LIVE run-54 (2026-09-19, log run-20260919-155115-7b29144e.log): entered at 31HP after Louse Progenitor; T1 Bludgeon+ put one segment to 4HP (alive, per spread doctrine); Parrying Shield end-of-turn 6 then KILLED that segment outright -> DEAD state with REATTACH heal intent; it would have revived +25 at end of its turn while siblings lived. Death T4: remaining segments Bulk-stacked +2 Str each cycle; incoming (8+10+7x2 class) exceeded full-hand block (~19+plating) at 7HP. Advisory: AoE or end-of-turn-tick instruments are the natural REATTACH answer; without one, near-full HP entry is the reference bar.",
     "id": "DECIMILLIPEDE",
     "kind": "monster",
     "name": "Decimillipede",
     "source": "; run-40 live fold 2026-09-18"
+  },
+  "DECIMILLIPEDE_SEGMENT_BACK": {
+    "acts": [],
+    "aliases": [
+      "Decimillipede Segment (Back)"
+    ],
+    "curated": true,
+    "cycle": [
+      "WRITHE_MOVE",
+      "BULK_MOVE",
+      "CONSTRICT_MOVE",
+      "DEAD_MOVE",
+      "REATTACH_MOVE"
+    ],
+    "description": "Decimillipede Segment (Back) (Elite): HP 40-46 (A 46-52); cycle WRITHE_MOVE → BULK_MOVE → CONSTRICT_MOVE → DEAD_MOVE → REATTACH_MOVE",
+    "hp": {
+      "ascension": {
+        "max": 52,
+        "min": 46
+      },
+      "base": 40,
+      "max": 46,
+      "notes": ""
+    },
+    "id": "DECIMILLIPEDE_SEGMENT_BACK",
+    "is_boss": false,
+    "is_elite": true,
+    "kind": "monster",
+    "moves": {
+      "BULK_MOVE": {
+        "aliases": [
+          "Bulk",
+          "BULK"
+        ],
+        "curated": false,
+        "effect": "Bulk: Attack + Buff; damage 6 A:7; STRENGTH 2 (self)",
+        "follow_up_id": null,
+        "id": "BULK_MOVE",
+        "intents": [
+          {
+            "base_damage": 6,
+            "base_damage_ascension": {
+              "ascension": 7
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DECIMILLIPEDE_SEGMENT_BACK",
+        "name": "Bulk",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#BULK",
+        "description": "Bulk: single attack 6 (A:7) + self +2 Strength. Each Bulk stacks +2 Str on the segment — Writhe/Constrict intents inflate by 2 per stack (7x2 / 10-class seen run-44-series and run-54 live)."
+      },
+      "CONSTRICT_MOVE": {
+        "aliases": [
+          "Constrict",
+          "CONSTRICT"
+        ],
+        "curated": false,
+        "effect": "Constrict: Attack + Debuff; damage 8 A:9; WEAK 1 (player)",
+        "follow_up_id": null,
+        "id": "CONSTRICT_MOVE",
+        "intents": [
+          {
+            "base_damage": 8,
+            "base_damage_ascension": {
+              "ascension": 9
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DECIMILLIPEDE_SEGMENT_BACK",
+        "name": "Constrict",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#CONSTRICT",
+        "description": "Constrict: single attack 8 (A:9) + applies ConstrictPower 3 on the player (end-of-player-turn unblocked damage per stack; stacks +3 per cast; removed when applier dies; blockable by remaining block)."
+      },
+      "DEAD_MOVE": {
+        "aliases": [
+          "Dead",
+          "DEAD"
+        ],
+        "curated": false,
+        "effect": "Dead: Unknown",
+        "follow_up_id": null,
+        "id": "DEAD_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Unknown"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DECIMILLIPEDE_SEGMENT_BACK",
+        "name": "Dead",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#DEAD",
+        "description": "Dead state: entered when the segment dies while another REATTACH segment is alive — untargetable, not removed from combat; reattaches +25 HP at end of its turn unless ALL segments are dead the same window (then fade-out permanently). Never aim attacks at a 0-HP DEAD segment."
+      },
+      "REATTACH_MOVE": {
+        "aliases": [
+          "Reattach",
+          "REATTACH"
+        ],
+        "curated": false,
+        "effect": "Reattach: Heal",
+        "follow_up_id": null,
+        "id": "REATTACH_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Heal"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DECIMILLIPEDE_SEGMENT_BACK",
+        "name": "Reattach",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#REATTACH",
+        "description": "Reattach: heal — DEAD-state segment heals Amount (25) at end of its turn and returns to live combat while siblings live. Fatal-only-when-all-dead rule governs the fade-out."
+      },
+      "WRITHE_MOVE": {
+        "aliases": [
+          "Writhe",
+          "WRITHE"
+        ],
+        "curated": false,
+        "effect": "Writhe: Attack; damage 5x2 A:6",
+        "follow_up_id": null,
+        "id": "WRITHE_MOVE",
+        "intents": [
+          {
+            "base_damage": 5,
+            "base_damage_ascension": {
+              "ascension": 6
+            },
+            "class": "MultiAttackIntent",
+            "hits": 2,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DECIMILLIPEDE_SEGMENT_BACK",
+        "name": "Writhe",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#WRITHE",
+        "description": "Writhe: multi attack 5 (A:6) x2 — inflates with segment Strength (7x2 seen at Str 2 run-54 live)."
+      }
+    },
+    "name": "Decimillipede Segment (Back)",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK",
+    "type": "Elite"
   },
   "DEFECT": {
     "acts": [],

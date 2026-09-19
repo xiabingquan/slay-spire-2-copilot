@@ -35,22 +35,15 @@
     "usage": "combat"
   },
   "BEETLE_JUICE": {
-    "aliases": [
-      "Beetle Juice",
-      "BeetleJuice"
-    ],
+    "aliases": [],
     "curated": false,
-    "description": "对目标施加 ShrinkPower 4 层。ShrinkPower：拥有者攻击伤害 ×0.7（−30%）；拥有者回合结束移除 1 层；层数为负数时为无限持续、不衰减。4 层 = 其 4 个回合内攻击伤害 −30%。",
-    "display_name": "Beetle Juice",
+    "description": "Beetle Juice - Potion - Slay the Spire 2 (sts2) | Spire Codex ← Back to Potions ◆ Rare · shared · Potion Beetle Juice Enemy's attacks deal 30% less damage for the next 4 turns. On this page Community Description Relations Synergy Version history Community performance Live aggregate across community-submitted runs. Filter by bracket to see how it holds up at higher levels of play. All A10 A10 >30% WR A10 >50% WR A10 >75% WR All players Solo 2P 3P 4P Win rate 40.6 % 2.4k of 5.9k wins Pick rate 0.3 % 5,905 picks Codex Score C 60 Average Codex Elo — revealed preference Win rate by character Silent 46 % · 1.3k Ironclad 41.3 % · 1.3k",
     "id": "BEETLE_JUICE",
     "kind": "potion",
-    "name": "甲虫汁",
-    "needs_zh": false,
+    "name": "BEETLE_JUICE",
+    "needs_zh": true,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:potions.md:L16; md:potions_zh.md:L16",
-    "target": "any enemy",
-    "usage": "combat"
+    "source": "codex-html:https://spire-codex.com/potions/beetle_juice"
   },
   "BLESSING_OF_THE_FORGE": {
     "aliases": [
@@ -941,7 +934,7 @@
     "kind": "potion",
     "name": "技巧药水",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-54 live 观测选项（2026-09-19）：旧日雕像战给 HAVOC / BLOODLETTING / BURNING_POTION…（BURNING_PACT）；同局更早战斗给 BATTLE_TRANCE 类组合。0 费生成的 Bloodletting = 当回合净 +2 能量（组合启动器）；True Grit 副本（更早对局）= 7 挡 + 随机手牌消耗（run-53 注记适用）。",
     "rarity": "Common",
     "source": "md:potions.md:L66; md:potions_zh.md:L66; run-40 live fold 2026-09-18",
     "target": "self",
