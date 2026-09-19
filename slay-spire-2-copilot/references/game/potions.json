@@ -246,14 +246,14 @@
       "CureAll"
     ],
     "curated": true,
-    "description": "gain 1 Energy; draw 2 cards. Despite the name this is NOT a heal — burst/dig class potion; run-41 live confirmed +1e and 2 draws on a boss kill turn. Any archive note claiming healing is wrong.",
+    "description": "gain 1 Energy; draw 2 cards. Despite the name this is NOT a heal — burst/dig class potion; run-41 live confirmed +1e and 2 draws on a boss kill turn. Any archive note claiming healing is wrong. Live run-51: did NOT clear DISINTEGRATION_POWER (power-class tax). Treat as card/status-debuff cleanse; budget HP against power-class taxes instead of counting on this potion.",
     "display_name": "Cure All",
     "id": "CURE_ALL",
     "kind": "potion",
     "name": "Cure All",
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L26; md:potions_zh.md:L26",
+    "source": "run-51 live fold 2026-09-19",
     "target": "any player",
     "usage": "combat",
     "zh_description": "获得 1 能量；抽 2 张牌。名称像治疗但**不是治疗**——爆发/挖牌类（+1能+抽2）；任何「CureAll 治疗」注记均为错误。",
@@ -884,25 +884,11 @@
     "zh_name": "灾厄药水"
   },
   "POTION_SHAPED_ROCK": {
-    "aliases": [
-      "POTION-SHAPED_ROCK",
-      "Potion-Shaped Rock",
-      "Potion-ShapedRock"
-    ],
-    "curated": false,
-    "description": "Deal 15 damage.",
-    "display_name": "Potion-Shaped Rock",
-    "id": "POTION_SHAPED_ROCK",
-    "kind": "potion",
     "name": "Potion-Shaped Rock",
-    "needs_zh": false,
-    "play_notes": "",
+    "description": "Combat-use: dealt 15 damage to the target live (run-51 vs KnowledgeDemon). Procured at combat start by Petrified Toad. Not a heal.",
     "rarity": "Token",
-    "source": "md:potions.md:L59; md:potions_zh.md:L59; codex:potions/POTION_SHAPED_ROCK",
-    "target": "any enemy",
-    "usage": "combat",
-    "zh_description": "造成 15 点伤害。",
-    "zh_name": "药水形状的石头"
+    "source": "run-51 live fold 2026-09-19",
+    "curated": true
   },
   "POT_OF_GHOULS": {
     "aliases": [

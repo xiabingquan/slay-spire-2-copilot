@@ -8845,6 +8845,44 @@
     },
     "zh_name": "墨宝"
   },
+  "KNOWLEDGE_DEMON": {
+    "name": "Knowledge Demon",
+    "description": "Act2 Boss ~379 HP (A 399+). Cycle CURSE_OF_KNOWLEDGE -> SLAP -> KNOWLEDGE_OVERWHELMING -> PONDER -> branch. Live run-51: engines tick through but Ponder heal-cycle demands burst windows every ~4 turns; double-tax (Disintegration + heal cycle) outpaced a 34-card deck when key block turns slipped.",
+    "hp": {
+      "base": 379
+    },
+    "cycle": [
+      "CURSE_OF_KNOWLEDGE_MOVE",
+      "SLAP_MOVE",
+      "KNOWLEDGE_OVERWHELMING_MOVE",
+      "PONDER_MOVE"
+    ],
+    "moves": {
+      "CURSE_OF_KNOWLEDGE_MOVE": {
+        "name": "Curse of Knowledge",
+        "description": "Debuff turn; player chooses one curse card via overlay (no skip): Disintegration (power tax class) / Mind Rot (draw-cut power) / Sloth (status card, Sloth 3). Live run-51 pick rationale: protect draw for boss race; Disintegration tax later proved cure-immune — weigh HP budget over draw when choosing."
+      },
+      "SLAP_MOVE": {
+        "name": "Slap",
+        "description": "Single attack 13-class (A:15+) + Frail-class debuff; escalates with boss Strength (17-19 observed with Str buffs). Mangle缴械 neuters it to 0-class same turn."
+      },
+      "KNOWLEDGE_OVERWHELMING_MOVE": {
+        "name": "Knowledge Overwhelming",
+        "description": "Multi attack 8x3 (A:9/hit) = 24 incoming baseline; full-block or Mangle-class Str-strip advised on this turn — run-51 lost this turn to an unplayed block card."
+      },
+      "PONDER_MOVE": {
+        "name": "Ponder",
+        "description": "Attack 11 + self-heal 30 + self Strength +2. Boss heal means burst dumped on this turn gets partly undone — live run-51 advisory: schedule biggest Vuln-window bursts on non-Ponder turns."
+      }
+    },
+    "aliases": [
+      "Knowledge Demon",
+      "知识恶魔"
+    ],
+    "is_boss": true,
+    "source": "run-51 live fold 2026-09-19 + codex",
+    "curated": true
+  },
   "KaiserCrab": {
     "acts": [],
     "aliases": [
@@ -17174,7 +17212,7 @@
     "is_boss": false,
     "kind": "monster",
     "name": "Thieving Hopper",
-    "play_notes": "run-39 live: escape clock is real — plan ≤5 turn kill. THIEVERY steals a deck card T1 (priority non-?) — recoverable after combat. Flutter burns per hit; multi-hit commands chew stacks. Demon Form + Inferno chip won the race despite Flutter mitigation.",
+    "play_notes": "run-39 live: escape clock is real — plan ≤5 turn kill. THIEVERY steals a deck card T1 (priority non-?) — recoverable after combat. Flutter burns per hit; multi-hit commands chew stacks. Demon Form + Inferno chip won the race despite Flutter mitigation. | run-51 live: stolen deck card returns after the reward-claim flow settles — combat-end immediate state read may still show it missing; verify after rewards. Escape-clock race won at counter 2 with PS finish.",
     "source": "codex-api + run-39 live T5 race kill"
   },
   "TOADPOLE": {
@@ -21452,5 +21490,18 @@
     "source": "generator:synthesized",
     "zh_description": "共享/未归属的 live 招式 id。当没有怪物条目认领时 lookup 在此解析——折叠进对应怪物条目前以 live state 的意图字段为权威。",
     "zh_name": "共享招式"
+  },
+  "THE_OBSCURA": {
+    "name": "The Obscura",
+    "description": "Act2 123 HP live run-51 (胧光怪). Summon-class master: ILLUSION spawns PARAFRIGHT-class minions that REVIVE to full after death — killing adds is a damage sink; master-first only, master death ends combat. Cycle RAND: PIERCING_GAZE 10 / SAIL (self+allies +3 Str) / HARDENING_STRIKE 6+self block 6. Mangle缴械 neutered SAIL-escalated intents effectively.",
+    "hp": {
+      "base": 123
+    },
+    "aliases": [
+      "THE_OBSCURA",
+      "胧光怪"
+    ],
+    "source": "run-51 live fold 2026-09-19",
+    "curated": true
   }
 }

@@ -223,14 +223,14 @@
       "CureAll"
     ],
     "curated": true,
-    "description": "获得 1 能量；抽 2 张牌。名不副实——并非治疗药水，而是爆发/过牌类；run-41 在 Boss 击杀回合 live 确认 +1e 与抽 2。任何声称其治疗的档案注记均为错误。",
+    "description": "获得 1 能量；抽 2 张牌。名不副实——并非治疗药水，而是爆发/过牌类；run-41 在 Boss 击杀回合 live 确认 +1e 与抽 2。任何声称其治疗的档案注记均为错误。 run-51 live：无法清除 DISINTEGRATION_POWER（Power 类税）。按卡牌/状态类 debuff 清除理解；Power 类税请按 HP 预算，不计入本药抵扣。",
     "display_name": "Cure All",
     "id": "CURE_ALL",
     "kind": "potion",
-    "name": "痊愈药水",
+    "name": "万灵药",
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L26; md:potions_zh.md:L26",
+    "source": "run-51 live fold 2026-09-19",
     "target": "any player",
     "usage": "combat"
   },
@@ -797,23 +797,11 @@
     "usage": "combat"
   },
   "POTION_SHAPED_ROCK": {
-    "aliases": [
-      "POTION-SHAPED_ROCK",
-      "Potion-Shaped Rock",
-      "Potion-ShapedRock"
-    ],
-    "curated": false,
-    "description": "造成 15 点伤害。",
-    "display_name": "Potion-Shaped Rock",
-    "id": "POTION_SHAPED_ROCK",
-    "kind": "potion",
-    "name": "药水形状的石头",
-    "needs_zh": false,
-    "play_notes": "",
+    "name": "岩石形状药水",
+    "description": "战斗中使用：对目标造成 15 伤（run-51 对知识恶魔 live）。石化蟾蜍每战开始产出。非治疗类。",
     "rarity": "Token",
-    "source": "md:potions.md:L59; md:potions_zh.md:L59; codex:potions/POTION_SHAPED_ROCK",
-    "target": "any enemy",
-    "usage": "combat"
+    "source": "run-51 live fold 2026-09-19",
+    "curated": true
   },
   "POT_OF_GHOULS": {
     "aliases": [

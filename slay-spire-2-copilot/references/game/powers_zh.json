@@ -1433,8 +1433,8 @@
       "GigantificationPower"
     ],
     "counter_class": false,
-    "curated": false,
-    "description": "持有者下一张攻击 ×3 伤害； 该攻击结算后 -1 层。",
+    "curated": true,
+    "description": "持有者下一张攻击 ×3 伤害； 该攻击结算后 -1 层。 | run-51 live：巨化 BREAKTHROUGH（全体）对三敌战打出 19/13/29 级 AoE——巨化把 AoE 攻击牌放大到横扫级。",
     "host_of_affliction": false,
     "id": "GIGANTIFICATION_POWER",
     "kind": "power",

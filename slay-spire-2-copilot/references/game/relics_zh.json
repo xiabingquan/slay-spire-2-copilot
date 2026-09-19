@@ -342,15 +342,15 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "精英被击败时额外掉落一件遗物。",
+    "curated": true,
+    "description": "精英战额外 +1 遗物。run-51 live：Act2 两精英各掉双遗物。",
     "id": "BLACK_STAR",
     "kind": "relic",
     "name": "黑星",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L146; md:relics_zh.md:L146"
+    "source": "run-51 live fold 2026-09-19"
   },
   "BLESSED_ANTLER": {
     "aliases": [
@@ -832,14 +832,14 @@
     "character": null,
     "counter_shown": false,
     "curated": true,
-    "description": "战斗胜利结算时 +1 最大生命且 +1 当前生命。满屋芝士 Search 选项（−14 无挡生命）事件遗物。run-40 live：最大 86→94；run-46 live：胜局滚动 16 次（MaxHP 80→97 净值，含华夫饼 +7 与 Feed Fatal，扣除卷轴战 Paper Cuts 税）。与燃烧之血每战 +6、Feed Fatal +3 MaxHP 加法叠加。",
+    "description": "run-51 live：每战触发；全局 MaxHP 80→88（含其他来源）——HP 经济轨，与百分比休息复利。",
     "id": "CHOSEN_CHEESE",
     "kind": "relic",
     "name": "天选芝士",
     "needs_zh": false,
     "play_notes": "run-46 live：16 次胜利滚动；与燃烧之血+华夫饼+Feed Fatal 构成 HP 铁路；Paper Cuts 税（Act3 卷轴战）是唯一观测漏点——全挡回合零 MaxHP 损失。",
     "rarity": "Event",
-    "source": "md:relics.md:L276; md:relics_zh.md:L276; run-40 live fold 2026-09-18"
+    "source": "run-51 live fold 2026-09-19"
   },
   "CIRCLET": {
     "aliases": [
@@ -2663,15 +2663,15 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "向牌库加入的攻击牌会被升级。",
+    "curated": true,
+    "description": "攻击牌入手即升级。run-51 live：自动升级 5 次（PS#2/AshenStrike/TwinStrike/DISMANTLE/BREAKTHROUGH）。",
     "id": "MOLTEN_EGG",
     "kind": "relic",
-    "name": "熔火之蛋",
+    "name": "熔火蛋",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
-    "source": "md:relics.md:L115; md:relics_zh.md:L115"
+    "source": "run-51 live fold 2026-09-19"
   },
   "MR_STRUGGLES": {
     "aliases": [
@@ -3325,15 +3325,15 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始，获得 1 瓶药水形状的石头。",
+    "curated": true,
+    "description": "战斗开始：获得岩石形状药水（使用=对目标 15 伤，run-51 live）——每战 +1 伤害选项，非治疗。",
     "id": "PETRIFIED_TOAD",
     "kind": "relic",
     "name": "石化蟾蜍",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:relics.md:L74; md:relics_zh.md:L75"
+    "source": "run-51 live fold 2026-09-19"
   },
   "PHIAL_HOLSTER": {
     "aliases": [

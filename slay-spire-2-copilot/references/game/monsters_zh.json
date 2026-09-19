@@ -8562,6 +8562,44 @@
     "play_notes": "",
     "source": "md:monsters.md:L23"
   },
+  "KNOWLEDGE_DEMON": {
+    "name": "知识恶魔",
+    "description": "Act2 Boss ~379HP（A 399+）。周期 知识诅咒→掌掴→淹没知识→沉思→分支。run-51 live：引擎 tick 有效，但 Ponder 自愈循环要求约每 4 回合一次爆发窗；双税（解体+自愈循环）在关键挡回合失误时压垮 34 张牌库。",
+    "hp": {
+      "base": 379
+    },
+    "cycle": [
+      "CURSE_OF_KNOWLEDGE_MOVE",
+      "SLAP_MOVE",
+      "KNOWLEDGE_OVERWHELMING_MOVE",
+      "PONDER_MOVE"
+    ],
+    "moves": {
+      "CURSE_OF_KNOWLEDGE_MOVE": {
+        "name": "知识诅咒",
+        "description": "Debuff 回合；覆盖层二选一诅咒牌（无 skip）：解体（Power 税类）/ 心智腐烂（抽牌削减）/ 怠惰（状态牌 Sloth 3）。run-51 参考：为竞速保抽牌选解体，live 后续证实治疗药无法解税——选择时 HP 预算优先于抽牌偏好。"
+      },
+      "SLAP_MOVE": {
+        "name": "掌掴",
+        "description": "单体攻击 13 级（A:15+）+ 虚弱类 debuff；随 Boss 力量膨胀（实测带力量时 17–19）。Mangle 缴械当回合可将其削至 0 级。"
+      },
+      "KNOWLEDGE_OVERWHELMING_MOVE": {
+        "name": "淹没知识",
+        "description": "多段攻击 8×3（A:9/击）= 基线 24 来袭；建议全挡或剥力量——run-51 因一张挡牌未落地在此回合失血崩线。"
+      },
+      "PONDER_MOVE": {
+        "name": "沉思",
+        "description": "攻击 11 + 自愈 30 + 自身力量 +2。治疗会抵消本回合爆发——run-51 建议：最大易伤窗爆发安排在非 Ponder 回合。"
+      }
+    },
+    "aliases": [
+      "Knowledge Demon",
+      "知识恶魔"
+    ],
+    "is_boss": true,
+    "source": "run-51 live fold 2026-09-19 + codex",
+    "curated": true
+  },
   "KaiserCrab": {
     "acts": [],
     "aliases": [
@@ -16573,7 +16611,7 @@
     "is_boss": false,
     "kind": "monster",
     "name": "偷窃草蜢",
-    "play_notes": "run-39 live：逃跑钟真实存在——规划 ≤5 回合击杀。THIEVERY T1 偷牌库牌（战后可恢复）。Flutter 每命中烧层；多段指令最快。Demon Form+Inferno 削血在 Flutter 减伤下仍赢竞速。",
+    "play_notes": "run-39 live：逃跑钟真实存在——规划 ≤5 回合击杀。THIEVERY T1 偷牌库牌（战后可恢复）。Flutter 每命中烧层；多段指令最快。Demon Form+Inferno 削血在 Flutter 减伤下仍赢竞速。 | run-51 live：被偷牌在领奖流程 settle 后回库——战斗结束即时读数可能仍显示缺失，领奖后再核验。逃跑钟 counter 2 时 PS 收头获胜。",
     "source": "codex-api + run-39 live T5 竞速击杀"
   },
   "TOADPOLE": {
@@ -20731,5 +20769,18 @@
     "passives": [],
     "play_notes": "",
     "source": "generator:synthesized"
+  },
+  "THE_OBSCURA": {
+    "name": "胧光怪（本体 THE_OBSCURA）",
+    "description": "Act2 123HP（run-51 live）。召唤型本体：ILLUSION 召唤寄生惧魔类随从，随从死亡满血复活——杀随从是伤害沉没，只打本体；本体亡战斗终。周期 RAND：穿刺凝视 10 / 呐喊（自身与队友+3力量）/ 硬化打击 6+自身挡6。Mangle 缴械对呐喊膨胀后的意图线有效。",
+    "hp": {
+      "base": 123
+    },
+    "aliases": [
+      "THE_OBSCURA",
+      "胧光怪"
+    ],
+    "source": "run-51 live fold 2026-09-19",
+    "curated": true
   }
 }

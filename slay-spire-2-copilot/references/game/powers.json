@@ -1598,8 +1598,8 @@
       "GigantificationPower"
     ],
     "counter_class": false,
-    "curated": false,
-    "description": "one owner's Attack per activation deals x3 damage; 1 stack consumed after that attack resolves.",
+    "curated": true,
+    "description": "one owner's Attack per activation deals x3 damage; 1 stack consumed after that attack resolves. | run-51 live: gigantified BREAKTHROUGH (AllEnemies) dealt 19/13/29-class AoE on a three-add fight — gigantification multiplies AoE attack cards to sweep-class damage.",
     "host_of_affliction": false,
     "id": "GIGANTIFICATION_POWER",
     "kind": "power",
