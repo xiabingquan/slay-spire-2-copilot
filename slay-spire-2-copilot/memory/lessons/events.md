@@ -81,7 +81,7 @@ Experience is written as Markdown unordered-list items (`- item`); entries disti
 | SUNKEN_STATUE | Sunken Statue |  |
 | SUNKEN_TREASURY | Sunken Treasury |  |
 | SYMBIOTE | Symbiote |  |
-| TABLET_OF_TRUTH | Tablet Of Truth |  |
+| TABLET_OF_TRUTH | Tablet Of Truth | - (2026-09-18) Tablet-of-Truth-class cost events: never pick blind while stage costs are undecoded (old lesson: -21 Max HP for nothing) |
 | TANX | Tanx |  |
 | TEA_MASTER | Tea Master |  |
 | THE_FUTURE_OF_POTIONS | The Future Of Potions |  |
@@ -100,3 +100,9 @@ Experience is written as Markdown unordered-list items (`- item`); entries disti
 | ZEN_WEAVER | Zen Weaver |  |
 | 宾邦 | Bing Bong (event option) |  |
 | 抱抱先生 | Mr. Struggles (event option) |  |
+
+# General principles
+
+- (2026-09-18) Blind event walks have killed runs: a one-line data stub = unknown mechanics — lookup unresolved options before choosing
+- (2026-09-19) Stale archive remarks must be falsified against this run's live data before use
+- (2026-09-18) The boon room is each act's first decision — the missing-boon bug is fixed; never skip it while rushing

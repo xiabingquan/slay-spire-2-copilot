@@ -67,7 +67,7 @@ Execute in order; all of the following are the skill's own work:
    version-controlled and serves as a standing play reference for the whole
    session:
    - **Mandatory before each run: `memory/overview.md` only** (table + stats
-     + phased reflections — the standing cross-run picture). Full per-run
+     — the standing cross-run picture; reflections live in lessons). Full per-run
      notes are NOT required at session start.
    - **On demand**: when a specific past run matters for a decision, read
      that single note under memory/runs/ — files are named with the run
@@ -262,8 +262,7 @@ When the run ends (game_over screen, or abandon):
    separated) and its Chinese twin
    memory/runs/<run-number-4-digit-padded>_<CHARACTER>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md — the two files
    must stay content-aligned. Both follow memory/user_guide.md and the
-   section structure of memory/template.md (Summary table of core run facts /
-   Run overview / What went well / What went poorly / Key moments). Cite the
+   section structure of memory/template.md (formats defined there). Cite the
    run log by file name only —
    never personal absolute paths.
 2. Fold newly observed game STRUCTURE (card/relic/potion/power/intent
@@ -278,19 +277,15 @@ When the run ends (game_over screen, or abandon):
    version-controlled.
 4. If the user has stopped playing: disarm the watchdog (see "Runtime
    conventions").
-5. **Phased reflection**: `memory/overview.md` carries a top-level
-   `# 阶段性反思` section. Each reflection is one `## 反思 (yyyy-mm-dd)`
-   subsection there. Cadence: the **first** reflection covers **all runs
-   recorded so far**; every reflection after that covers the **20 runs**
-   since the previous one (so the second covers runs 36–55, the third
-   56–75, and so on — fire it whenever the cumulative run count reaches
-   that boundary). Source material is the run notes under `memory/runs/` —
-   read the notes for the covered runs, then reflect on gains and losses in
-   structured form (markdown tables, ordered/unordered lists). Reflection is
-   the one place in `overview.md` that may carry lessons; the run table
-   itself stays meta-only. The overview table also carries a leading
-   **对局序号** column numbering runs chronologically from 1 (newest run at
-   the top still shows the highest number).
+5. **Phased reflection**: reflection content never enters `overview.md` —
+   it is written directly into the matching `memory/lessons/*.md` category
+   files as dated unordered-list items (each entry carries its date).
+   Cadence: the **first** reflection covers **all runs recorded so far**;
+   every reflection after that covers the **20 runs** since the previous one
+   (second covers 36–55, third 56–75, … — fire when the cumulative run count
+   reaches that boundary). Source material is the run notes under
+   `memory/runs/`. overview.md holds only overall run results (its table
+   with the leading **对局序号** column, newest run on top).
 
 ## Info-incomplete contract (user directive 2026-09-19)
 

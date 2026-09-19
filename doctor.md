@@ -110,12 +110,9 @@ Diagnostics for the table:
   lessons, run-XXX cross-references, card/relic names, shop-sink
   percentages, mechanics commentary — any of these inside a cell.
 
-Exception — `# 阶段性反思`: this top-level section holds phased reflections,
-one `## 反思 (yyyy-mm-dd)` subsection each. Reflection content (gains, losses,
-structured review) lives only there, never in the run table. Cadence and
-source material are defined in SKILL.md / SKILL_zh.md ("Run end" step 5):
-the first reflection covers all runs recorded so far; each later one covers
-the 20 runs since the previous reflection.
+Phased reflections do NOT live in overview.md: reflection output is written
+into memory/lessons/ category files as dated unordered-list items
+(user_guide.md 写入时机); overview.md holds only overall run results.
 
 Violation → move narrative content out of the table cells into that run's
 `memory/runs/` note (or, if it is reflection material, into the matching

@@ -13,7 +13,7 @@ Experience is written as Markdown unordered-list items (`- item`); entries disti
 | BygoneEffigy | BygoneEffigy |  |
 | Byrdonis | Byrdonis |  |
 | CoralCluster | Coral Cluster |  |
-| GREMLIN_MERC | Gremlin Merc |  |
+| GREMLIN_MERC | Gremlin Merc | - (2026-09-19) GremlinMerc-class (THIEVERY gold steal): corridor fights are not exempt from entry-HP reference lines; theft does not change the plan |
 | PHANTASMAL_GARDENER | Phantasmal Gardener |  |
 | PhrogParasite | PhrogParasite |  |
 | SkulkingColony | Skulking Colony |  |
@@ -24,13 +24,15 @@ Experience is written as Markdown unordered-list items (`- item`); entries disti
 
 | id | name | experience |
 |---|---|---|
-| DECIMILLIPEDE | Decimillipede |  |
+| DECIMILLIPEDE | Decimillipede | - (2026-09-18) three segments zero in the same window; leave low-HP segments alive<br>- (2026-09-19) Never enter the centipede fight low without AoE — same-window clears need AoE or multi-point same-turn output |
 | DECIMILLIPEDE_SEGMENT_MIDDLE | Decimillipede Segment (Middle) |  |
-| ENTOMANCER | Entomancer |  |
+| ENTOMANCER | Entomancer | - (2026-09-18) kill before the pheromone-upgrade turn; HIVE stacking is the race timer |
 | HunterKiller | HunterKiller |  |
-| InfestedPrism | InfestedPrism |  |
+| InfestedPrism | InfestedPrism | - (2026-09-18) Infested Prism: VitalSpark zero-skill policy; Rage-class power-tagged cards are taxed as skills here — live intents win |
 | SPINY_TOAD | Spiny Toad |  |
 | TERROR_EEL | Terror Eel |  |
+
+- (2026-09-19) Phrog Parasite (INFESTED): the wave is the real fight (Infection dilution + Strength stacking); without AoE prepare at boss level
 
 ## Act 3
 
@@ -57,26 +59,30 @@ Experience is written as Markdown unordered-list items (`- item`); entries disti
 
 | id | name | experience |
 |---|---|---|
-| CeremonialBeast | CeremonialBeast |  |
+| CeremonialBeast | CeremonialBeast | - (2026-09-18) Ceremonial Beast: Plow threshold stun window measures ~150 (old table value 160 was wrong) |
 | KinPriest | KinPriest |  |
-| LAGAVULIN_MATRIARCH | Lagavulin Matriarch |  |
-| SoulFysh | SoulFysh |  |
+| LAGAVULIN_MATRIARCH | Lagavulin Matriarch | - (2026-09-18) unblocked damage strips plating -> the wake-up stun window is the kill window |
+| SoulFysh | SoulFysh | - (2026-09-19) Beckon status-card tax: every status card played saves tax |
 | Vantom | Vantom |  |
 | WATERFALL_GIANT | Waterfall Giant |  |
+
+- (2026-09-18) Matriarch/CeremonialBeast/SoulFysh class: kills are routine — tax management is the fight; name your engine's per-turn self-damage tax before entering
 
 ## Act 2
 
 | id | name | experience |
 |---|---|---|
-| Crusher | Crusher |  |
-| KnowledgeDemon | KnowledgeDemon |  |
-| TheInsatiable | TheInsatiable |  |
+| Crusher | Crusher | - (2026-09-18) Rocket first; budget block against post-rage inflated intent numbers (CrabRage's big sourceless block is breakable) |
+| KnowledgeDemon | KnowledgeDemon | - (2026-09-19) dual-tax race (Disintegration + Ponder heal); Cure All does NOT clear power-class taxes — do the tax math on paper first<br>- (2026-09-19) Known sandworm mechanics still died to process debt — single-card discipline is the precondition |
+| TheInsatiable | TheInsatiable | - (2026-09-18) FranticEscape is a +1 delay card, NOT forbidden (old archive ban was wrong and killed three runs); the sandpit devour clock stays controllable |
+
+- (2026-09-19) Stat-drain bosses: the free window is a timer — the race package (>=2 self-damage fuel + energy/big-hit potions + plating-class block) must land inside it
 
 ## Act 3
 
 | id | name | experience |
 |---|---|---|
-| Queen | Queen |  |
+| Queen | Queen | - (2026-09-19) + TorchHead: threat-source first — when the add is the only threat, it IS the correct first kill; under 99-Weak only Weak-immune damage sources matter |
 | TEST_SUBJECT | Test Subject |  |
 | TORCH_HEAD_AMALGAM | Torch Head Amalgam |  |
 
@@ -143,7 +149,7 @@ Experience is written as Markdown unordered-list items (`- item`); entries disti
 | Larvae | Larvae |  |
 | MITE | Aberrant Mite |  |
 | MysteriousKnight | Mysterious Knight |  |
-| Ovicopter | Ovicopter |  |
+| Ovicopter | Ovicopter | - (2026-09-18) master first — eggs die with the master |
 | PaelsSoldier | Pael's Soldier |  |
 | SLUMBERING_BEETLE | Slumbering Beetle |  |
 | SneakyGremlin | Sneaky Gremlin |  |

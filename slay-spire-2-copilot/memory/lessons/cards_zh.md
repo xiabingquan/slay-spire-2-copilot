@@ -72,7 +72,7 @@
 | RAGE | 怒火 |  |
 | RAMPAGE | 暴走 |  |
 | RUPTURE | 撕裂 |  |
-| SECOND_WIND | 重振精神 |  |
+| SECOND_WIND | 重振精神 | - (2026-09-18) 消耗类挡牌（无痛/重振精神/坚毅类）比基础防御更可靠 |
 | SETUP_STRIKE | 预备打击 |  |
 | SHRUG_IT_OFF | 耸肩无视 |  |
 | SPITE | 怨恨 |  |
@@ -95,6 +95,11 @@
 | UPPERCUT | 升龙拳 |  |
 | VICIOUS | 凶恶 |  |
 | WHIRLWIND | 旋风斩 |  |
+
+- (2026-09-19) 0 费挡引擎牌（Rage 类）价值高于边际伤害牌；技能税环境（Vital Spark 类）按技能对待 power 标签牌，以 live 为准
+- (2026-09-19) 攻击类挡（IronWave 类）在链税/技能税局是唯一可持续挡源
+- (2026-09-19) 状态稀释战（Infection/诅咒环境）消耗密度优先——Burning Pact 类被 Pillage 压过是反例教训；Whirlwind 类 AoE 是多体/波次战的结构性答案
+- (2026-09-19) X 费牌（Whirlwind/串刺类）按当前全部能量结算
 
 # SILENT
 

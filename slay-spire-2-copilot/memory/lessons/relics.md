@@ -93,7 +93,7 @@ Experience is written as Markdown unordered-list items (`- item`); entries disti
 | GAME_PIECE | Game Piece |  |
 | GHOST_SEED | Ghost Seed |  |
 | GIRYA | Girya |  |
-| GLAM | Glam |  |
+| GLAM | Glam | - (2026-09-19) Orihalcum (empty-block floor) and Glam-class enchants insure bad hand shapes |
 | GLASS_EYE | Glass Eye |  |
 | GLITTER | Glitter |  |
 | GNARLED_HAMMER | Gnarled Hammer |  |
@@ -116,7 +116,7 @@ Experience is written as Markdown unordered-list items (`- item`); entries disti
 | KALEIDOSCOPE | Kaleidoscope |  |
 | KUNAI | Kunai |  |
 | KUSARIGAMA | Kusarigama |  |
-| LANTERN | Lantern |  |
+| LANTERN | Lantern | - (2026-09-18) Combat-class relics (Marbles/RedMask/Lantern/OvenGlove class) outweigh plain stat relics |
 | LARGE_CAPSULE | Large Capsule |  |
 | LASTING_CANDY | Lasting Candy |  |
 | LAVA_LAMP | Lava Lamp |  |
@@ -265,6 +265,9 @@ Experience is written as Markdown unordered-list items (`- item`); entries disti
 | WONGOS_MYSTERY_TICKET | Wongo's Mystery Ticket |  |
 | WONGO_CUSTOMER_APPRECIATION_BADGE | Wongo Customer Appreciation Badge |  |
 | YUMMY_COOKIE | Yummy Cookie |  |
+
+- (2026-09-18) Gold-class relics pay off only on shop-spine routes
+- (2026-09-19) PenNib-class counter relics turn boss bursts from luck into planning
 
 # DEFECT
 

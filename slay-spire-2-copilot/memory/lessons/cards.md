@@ -55,7 +55,7 @@ Experience is written as Markdown unordered-list items (`- item`); entries disti
 | INFERNAL_BLADE | Infernal Blade |  |
 | INFERNO | Inferno |  |
 | INFLAME | Inflame |  |
-| IRON_WAVE | Iron Wave |  |
+| IRON_WAVE | Iron Wave | - (2026-09-19) Attack-class block (IronWave class) is the only sustainable block source in chain/skill-tax fights |
 | JUGGERNAUT | Juggernaut |  |
 | JUGGLING | Juggling |  |
 | MANGLE | Mangle |  |
@@ -69,7 +69,7 @@ Experience is written as Markdown unordered-list items (`- item`); entries disti
 | POMMEL_STRIKE | Pommel Strike |  |
 | PRIMAL_FORCE | Primal Force |  |
 | PYRE | Pyre |  |
-| RAGE | Rage |  |
+| RAGE | Rage | - (2026-09-19) 0-cost block engine cards (Rage class) beat marginal damage; skill-tax environments tax power-tagged cards as skills — live beats tags |
 | RAMPAGE | Rampage |  |
 | RUPTURE | Rupture |  |
 | SECOND_WIND | Second Wind |  |
@@ -95,6 +95,10 @@ Experience is written as Markdown unordered-list items (`- item`); entries disti
 | UPPERCUT | Uppercut |  |
 | VICIOUS | Vicious |  |
 | WHIRLWIND | Whirlwind |  |
+
+- (2026-09-18) Consumable block cards (FeelNoPain/SecondWind/TrueGrit class) outperform plain Defend-class cards
+- (2026-09-19) Status-dilution fights prioritize exhaust density — BurningPact losing to Pillage is the counter-lesson; Whirlwind-class AoE is the structural answer to multi-body/wave fights
+- (2026-09-19) X-cost cards (Whirlwind/Skewer class) resolve at current total energy
 
 # SILENT
 

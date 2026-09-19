@@ -13,9 +13,9 @@
 | BygoneEffigy | 旧日雕像 |  |
 | Byrdonis | 多尼斯异鸟 |  |
 | CoralCluster | 鬼祟珊瑚群 |  |
-| GREMLIN_MERC | 地精佣兵 |  |
+| GREMLIN_MERC | 地精佣兵 | - (2026-09-19) 地精佣兵类（THIEVERY 偷金）：走廊战不豁免入场 HP 参考线；偷金不改打法 |
 | PHANTASMAL_GARDENER | 花园幽灵鳗 |  |
-| PhrogParasite | 异蛙寄生虫 |  |
+| PhrogParasite | 异蛙寄生虫 | - (2026-09-19) 波次才是真战斗（感染稀释+力量叠层）；无 AoE 时按 Boss 级备战 |
 | SkulkingColony | 鬼祟珊瑚群 |  |
 | SlitheringStrangler | 蛇行扼杀者 |  |
 | TERROR_EEL | Terror Eel |  |
@@ -24,11 +24,11 @@
 
 | id | 名称 | 经验 |
 |---|---|---|
-| DECIMILLIPEDE | 残杀千足虫 |  |
+| DECIMILLIPEDE | 残杀千足虫 | - (2026-09-18) 三段同窗归零；低血段留活<br>- (2026-09-19) 千足虫无 AoE 勿低血入场——同窗清场需要 AoE/同回合多点输出 |
 | DECIMILLIPEDE_SEGMENT_MIDDLE | 残杀千足虫 |  |
-| ENTOMANCER | 蜂群术士 |  |
+| ENTOMANCER | 蜂群术士 | - (2026-09-18) 信息素升级回合前击杀；HIVE 滚层是竞速计时器 |
 | HunterKiller | 猎人杀手 |  |
-| InfestedPrism | 感染棱柱 |  |
+| InfestedPrism | 感染棱柱 | - (2026-09-18) Vital Spark 零技能策略；Rage 类 power 标签牌在此环境按技能计税，以 live 意图为准 |
 | SPINY_TOAD | 棘刺蟾蜍 |  |
 | TERROR_EEL | Terror Eel |  |
 
@@ -57,10 +57,10 @@
 
 | id | 名称 | 经验 |
 |---|---|---|
-| CeremonialBeast | 仪式兽 |  |
+| CeremonialBeast | 仪式兽 | - (2026-09-18) Plow 阈值眩晕窗实测约 150（旧表值 160 为错） |
 | KinPriest | 同族神官 |  |
-| LAGAVULIN_MATRIARCH | 乐加维林族母 |  |
-| SoulFysh | 灵魂异鱼 |  |
+| LAGAVULIN_MATRIARCH | 乐加维林族母 | - (2026-09-18) 未格挡伤害剥镀甲 → 唤醒眩晕窗是主要击杀窗<br>- (2026-09-18) 乐加维林族母/仪式兽/灵魂异鱼类：击杀已常态化，税管理才是课题——进 Boss 前点名本局引擎每回合自伤税额 |
+| SoulFysh | 灵魂异鱼 | - (2026-09-19) Beckon 状态牌税：每张状态牌打出即省税 |
 | Vantom | 墨影幻灵 |  |
 | WATERFALL_GIANT | 瀑布巨兽 |  |
 
@@ -68,9 +68,11 @@
 
 | id | 名称 | 经验 |
 |---|---|---|
-| Crusher | 碾碎爪 |  |
-| KnowledgeDemon | 知识恶魔 |  |
-| TheInsatiable | 无厌沙虫 |  |
+| Crusher | 碾碎爪 | - (2026-09-18) 火箭优先击杀；蟹怒后按膨胀意图数字算挡（CrabRage 大额无源挡可击碎） |
+| KnowledgeDemon | 知识恶魔 | - (2026-09-19) 双税竞速（解体税 + Ponder 治疗）；Power 类税 Cure All 无效，不为其留药位；先做税额纸上计算 |
+| TheInsatiable | 无厌沙虫 | - (2026-09-18) FranticEscape 是 +1 延时卡而非禁手（旧档案禁手说法为错，曾三次致命）；沙坑吞噬钟全程可受控<br>- (2026-09-19) 沙虫机制已知仍可能死于过程债——单卡纪律是该战前提 |
+
+- (2026-09-19) 属性吸取类 Boss：免费窗是计时器——竞速包（≥2 自伤燃料 + 能量/大伤药 + 镀甲类挡）必须在窗内砸完
 
 ## Act 3
 
@@ -143,7 +145,7 @@
 | Larvae | 幼虫 |  |
 | MITE | 异螨 |  |
 | MysteriousKnight | 神秘骑士 |  |
-| Ovicopter | 直飞产卵虫 |  |
+| Ovicopter | 直飞产卵虫 | - (2026-09-18) 母体优先——母体死幼虫同步消亡 |
 | PaelsSoldier | 佩尔的士兵 |  |
 | SLUMBERING_BEETLE | 熟睡甲虫 |  |
 | SneakyGremlin | 卑鄙地精 |  |
@@ -222,7 +224,7 @@
 | THE_ADVERSARY_MK_TWO | The Adversary Mk 2 |  |
 | THE_FORGOTTEN | The Forgotten |  |
 | TURRET_OPERATOR | Turret Operator |  |
-| TorchHeadAggregate | 火炬头聚合体 |  |
+| TorchHeadAggregate | 火炬头聚合体 | - (2026-09-19) 女王 + 火炬头：威胁源优先——当随从是唯一威胁源时它就是正确首杀目标；99 弱化环境下只有弱化免疫伤害源有意义 |
 | ToughEgg | ToughEgg |  |
 | TowerGunner | 高塔炮手 |  |
 | TrackerRubyRaider | 红宝石劫掠者系 |  |
