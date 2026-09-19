@@ -1,496 +1,333 @@
 {
   "Attack": {
     "aliases": [],
-    "curated": false,
-    "description": "IntentType enum value `Attack`. Member intent classes: SingleAttackIntent, MultiAttackIntent.",
+    "detail": {
+      "member_classes": [
+        "SingleAttackIntent",
+        "MultiAttackIntent"
+      ]
+    },
     "id": "Attack",
     "kind": "intent_type",
-    "member_classes": [
-      "SingleAttackIntent",
-      "MultiAttackIntent"
-    ],
-    "name": "Attack",
-    "play_notes": "Incoming single attack — the label number is the live damage preview (Strength/Weak/Vulnerable already applied, floored at 0). Compare damage vs your Block + HP; Weak on the attacker cuts it (x0.75 per stack)."
+    "name": "Attack"
   },
   "Buff": {
     "aliases": [],
-    "curated": false,
-    "description": "IntentType enum value `Buff`. Member intent classes: BuffIntent.",
+    "detail": {
+      "member_classes": [
+        "BuffIntent"
+      ]
+    },
     "id": "Buff",
     "kind": "intent_type",
-    "member_classes": [
-      "BuffIntent"
-    ],
-    "name": "Buff",
-    "play_notes": "Enemy self/allied buff this turn (Strength, Ritual, stances, some summons). Free damage window if you can race the ramp — check monsters.json move effect for the exact buff before ignoring."
+    "name": "Buff"
   },
   "BuffIntent": {
     "aliases": [
       "Buff"
     ],
-    "curated": false,
-    "decision_rule": "Enemy self/allied buff this turn (Strength, Ritual, stances, some summons). Free damage window if you can race the ramp — check monsters.json move effect for the exact buff before ignoring.",
-    "description": "enemy buffs itself / allies (Strength, Ritual, stances, summons in some moves). Label is FORMAT_EMPTY in loc → bridge replaces with the intent type; compact shows `Buff` or `Buff(move_id)` (e.g. `Buff(PREPARE_MOVE)`).",
+    "detail": {
+      "intent_type": "Buff"
+    },
     "id": "BuffIntent",
-    "intent_type": "Buff",
     "kind": "intent_class",
-    "label_semantics": "enemy buffs itself / allies (Strength, Ritual, stances, summons in some moves). Label is FORMAT_EMPTY in loc → bridge replaces with the intent type; compact shows `Buff` or `Buff(move_id)` (e.g. `Buff(PREPARE_MOVE)`).",
-    "name": "BuffIntent",
-    "play_notes": "Enemy self/allied buff this turn (Strength, Ritual, stances, some summons). Free damage window if you can race the ramp — check monsters.json move effect for the exact buff before ignoring.",
-    "state_fields": [
-      "type",
-      "class",
-      "label",
-      "description"
-    ]
+    "name": "BuffIntent"
   },
   "CardDebuff": {
     "aliases": [],
-    "curated": false,
-    "description": "IntentType enum value `CardDebuff`. Member intent classes: CardDebuffIntent.",
+    "detail": {
+      "member_classes": [
+        "CardDebuffIntent"
+      ]
+    },
     "id": "CardDebuff",
     "kind": "intent_type",
-    "member_classes": [
-      "CardDebuffIntent"
-    ],
-    "name": "CardDebuff",
-    "play_notes": "Injects status/curse cards into player piles (sometimes combined with attack on the same move). Treat as deck pollution unless the move table also lists an attack — then plan block for the attack half."
+    "name": "CardDebuff"
   },
   "CardDebuffIntent": {
     "aliases": [
       "CardDebuff"
     ],
-    "curated": false,
-    "decision_rule": "Injects status/curse cards into player piles (sometimes combined with attack on the same move). Treat as deck pollution unless the move table also lists an attack — then plan block for the attack half.",
-    "description": "injects status/curse cards into the player's piles (often combined with an attack on the same move). Label is FORMAT_EMPTY → compact falls back to `CardDebuff(move_id)`. Treat as deck pollution incoming, not damage — unless the move also carries an attack (see combined labels below).",
+    "detail": {
+      "intent_type": "CardDebuff"
+    },
     "id": "CardDebuffIntent",
-    "intent_type": "CardDebuff",
     "kind": "intent_class",
-    "label_semantics": "injects status/curse cards into the player's piles (often combined with an attack on the same move). Label is FORMAT_EMPTY → compact falls back to `CardDebuff(move_id)`. Treat as deck pollution incoming, not damage — unless the move also carries an attack (see combined labels below).",
-    "name": "CardDebuffIntent",
-    "play_notes": "Injects status/curse cards into player piles (sometimes combined with attack on the same move). Treat as deck pollution unless the move table also lists an attack — then plan block for the attack half.",
-    "state_fields": [
-      "type",
-      "class",
-      "label",
-      "description"
-    ]
+    "name": "CardDebuffIntent"
   },
   "DeathBlow": {
     "aliases": [],
-    "curated": false,
-    "description": "IntentType enum value `DeathBlow`. Member intent classes: DeathBlowIntent.",
+    "detail": {
+      "member_classes": [
+        "DeathBlowIntent"
+      ]
+    },
     "id": "DeathBlow",
     "kind": "intent_type",
-    "member_classes": [
-      "DeathBlowIntent"
-    ],
-    "name": "DeathBlow",
-    "play_notes": "Lethal-styled single attack (DeathBlow icon). Same math as SingleAttackIntent — treat as ordinary attack damage; block or kill."
+    "name": "DeathBlow"
   },
   "DeathBlowIntent": {
     "aliases": [
       "DeathBlow"
     ],
-    "curated": false,
-    "decision_rule": "Lethal-styled single attack (DeathBlow icon). Same math as SingleAttackIntent — treat as ordinary attack damage; block or kill.",
-    "description": "SingleAttackIntent subclass with death-blow icon — a lethal-styled attack; label is still the damage number.",
+    "detail": {
+      "intent_type": "DeathBlow"
+    },
     "id": "DeathBlowIntent",
-    "intent_type": "DeathBlow",
     "kind": "intent_class",
-    "label_semantics": "SingleAttackIntent subclass with death-blow icon — a lethal-styled attack; label is still the damage number.",
-    "name": "DeathBlowIntent",
-    "play_notes": "Lethal-styled single attack (DeathBlow icon). Same math as SingleAttackIntent — treat as ordinary attack damage; block or kill.",
-    "state_fields": [
-      "type",
-      "class",
-      "label",
-      "damage",
-      "total_damage",
-      "hits",
-      "base_damage",
-      "description"
-    ]
+    "name": "DeathBlowIntent"
   },
   "Debuff": {
     "aliases": [],
-    "curated": false,
-    "description": "IntentType enum value `Debuff`. Member intent classes: DebuffIntent.",
+    "detail": {
+      "member_classes": [
+        "DebuffIntent"
+      ]
+    },
     "id": "Debuff",
     "kind": "intent_type",
-    "member_classes": [
-      "DebuffIntent"
-    ],
-    "name": "Debuff",
-    "play_notes": "Enemy applies debuffs (Vulnerable/Weak/Frail/Poison/card afflictions). No direct damage — often a setup turn; Artifact blocks one visible debuff application; plan burst timing around the debuff window."
+    "name": "Debuff"
   },
   "DebuffIntent": {
     "aliases": [
       "Debuff"
     ],
-    "curated": false,
-    "decision_rule": "Enemy applies debuffs (Vulnerable/Weak/Frail/Poison/card afflictions). No direct damage — often a setup turn; Artifact blocks one visible debuff application; plan burst timing around the debuff window.",
-    "description": "enemy applies debuffs (Vulnerable, Weak, Poison, Frail, card afflictions, etc.). Compact shows `Debuff`, or `DebuffStrong` when constructed with strong=true.",
+    "detail": {
+      "intent_type": "Debuff"
+    },
     "id": "DebuffIntent",
-    "intent_type": "Debuff",
     "kind": "intent_class",
-    "label_semantics": "enemy applies debuffs (Vulnerable, Weak, Poison, Frail, card afflictions, etc.). Compact shows `Debuff`, or `DebuffStrong` when constructed with strong=true.",
-    "name": "DebuffIntent",
-    "play_notes": "Enemy applies debuffs (Vulnerable/Weak/Frail/Poison/card afflictions). No direct damage — often a setup turn; Artifact blocks one visible debuff application; plan burst timing around the debuff window.",
-    "state_fields": [
-      "type",
-      "class",
-      "label",
-      "description"
-    ]
+    "name": "DebuffIntent"
   },
   "DebuffStrong": {
     "aliases": [],
-    "curated": false,
-    "description": "IntentType enum value `DebuffStrong`. Member intent classes: DebuffIntent.",
+    "detail": {
+      "member_classes": [
+        "DebuffIntent"
+      ]
+    },
     "id": "DebuffStrong",
     "kind": "intent_type",
-    "member_classes": [
-      "DebuffIntent"
-    ],
-    "name": "DebuffStrong",
-    "play_notes": "Enemy applies debuffs (Vulnerable/Weak/Frail/Poison/card afflictions). No direct damage — often a setup turn; Artifact blocks one visible debuff application; plan burst timing around the debuff window."
+    "name": "DebuffStrong"
   },
   "Defend": {
     "aliases": [],
-    "curated": false,
-    "description": "IntentType enum value `Defend`. Member intent classes: DefendIntent.",
+    "detail": {
+      "member_classes": [
+        "DefendIntent"
+      ]
+    },
     "id": "Defend",
     "kind": "intent_type",
-    "member_classes": [
-      "DefendIntent"
-    ],
-    "name": "Defend",
-    "play_notes": "Enemy gains Block this turn — a low-threat turn; pile damage now or prepare Vulnerable for after the block decays."
+    "name": "Defend"
   },
   "DefendIntent": {
     "aliases": [
       "Defend"
     ],
-    "curated": false,
-    "decision_rule": "Enemy gains Block this turn — a low-threat turn; pile damage now or prepare Vulnerable for after the block decays.",
-    "description": "enemy gains Block this turn. Compact shows `Defend`.",
+    "detail": {
+      "intent_type": "Defend"
+    },
     "id": "DefendIntent",
-    "intent_type": "Defend",
     "kind": "intent_class",
-    "label_semantics": "enemy gains Block this turn. Compact shows `Defend`.",
-    "name": "DefendIntent",
-    "play_notes": "Enemy gains Block this turn — a low-threat turn; pile damage now or prepare Vulnerable for after the block decays.",
-    "state_fields": [
-      "type",
-      "class",
-      "label",
-      "description"
-    ]
+    "name": "DefendIntent"
   },
   "Escape": {
     "aliases": [],
-    "curated": false,
-    "description": "IntentType enum value `Escape`. Member intent classes: EscapeIntent.",
+    "detail": {
+      "member_classes": [
+        "EscapeIntent"
+      ]
+    },
     "id": "Escape",
     "kind": "intent_type",
-    "member_classes": [
-      "EscapeIntent"
-    ],
-    "name": "Escape",
-    "play_notes": "Enemy flees combat this turn — kill it NOW or it escapes at current HP (often unrewarded). Flutter/escape-timer counters can flip this intent if resolved first."
+    "name": "Escape"
   },
   "EscapeIntent": {
     "aliases": [
       "Escape"
     ],
-    "curated": false,
-    "decision_rule": "Enemy flees combat this turn — kill it NOW or it escapes at current HP (often unrewarded). Flutter/escape-timer counters can flip this intent if resolved first.",
-    "description": "enemy flees combat this turn. Compact shows `Escape`.",
+    "detail": {
+      "intent_type": "Escape"
+    },
     "id": "EscapeIntent",
-    "intent_type": "Escape",
     "kind": "intent_class",
-    "label_semantics": "enemy flees combat this turn. Compact shows `Escape`.",
-    "name": "EscapeIntent",
-    "play_notes": "Enemy flees combat this turn — kill it NOW or it escapes at current HP (often unrewarded). Flutter/escape-timer counters can flip this intent if resolved first.",
-    "state_fields": [
-      "type",
-      "class",
-      "label",
-      "description"
-    ]
+    "name": "EscapeIntent"
   },
   "Heal": {
     "aliases": [],
-    "curated": false,
-    "description": "IntentType enum value `Heal`. Member intent classes: HealIntent.",
+    "detail": {
+      "member_classes": [
+        "HealIntent"
+      ]
+    },
     "id": "Heal",
     "kind": "intent_type",
-    "member_classes": [
-      "HealIntent"
-    ],
-    "name": "Heal",
-    "play_notes": "Enemy heals (also revive moves like REVIVE_MOVE). Kill-pressure turn: race the heal or re-apply kill-window conditions."
+    "name": "Heal"
   },
   "HealIntent": {
     "aliases": [
       "Heal"
     ],
-    "curated": false,
-    "decision_rule": "Enemy heals (also revive moves like REVIVE_MOVE). Kill-pressure turn: race the heal or re-apply kill-window conditions.",
-    "description": "enemy heals (also used by revive moves, e.g. IllusionPower REVIVE_MOVE). Compact shows `Heal`.",
+    "detail": {
+      "intent_type": "Heal"
+    },
     "id": "HealIntent",
-    "intent_type": "Heal",
     "kind": "intent_class",
-    "label_semantics": "enemy heals (also used by revive moves, e.g. IllusionPower REVIVE_MOVE). Compact shows `Heal`.",
-    "name": "HealIntent",
-    "play_notes": "Enemy heals (also revive moves like REVIVE_MOVE). Kill-pressure turn: race the heal or re-apply kill-window conditions.",
-    "state_fields": [
-      "type",
-      "class",
-      "label",
-      "description"
-    ]
+    "name": "HealIntent"
   },
   "Hidden": {
     "aliases": [],
-    "curated": false,
-    "description": "IntentType enum value `Hidden`. Member intent classes: HiddenIntent.",
+    "detail": {
+      "member_classes": [
+        "HiddenIntent"
+      ]
+    },
     "id": "Hidden",
     "kind": "intent_type",
-    "member_classes": [
-      "HiddenIntent"
-    ],
-    "name": "Hidden",
-    "play_notes": "No sprite, no hover tip — action fully hidden. Play safe: keep block/economy; check monsters.json for hidden-move pools (e.g. burrowed BELOW_MOVE)."
+    "name": "Hidden"
   },
   "HiddenIntent": {
     "aliases": [
       "Hidden"
     ],
-    "curated": false,
-    "decision_rule": "No sprite, no hover tip — action fully hidden. Play safe: keep block/economy; check monsters.json for hidden-move pools (e.g. burrowed BELOW_MOVE).",
-    "description": "no sprite, no hover tip — action fully hidden. Compact shows `Hidden`.",
+    "detail": {
+      "intent_type": "Hidden"
+    },
     "id": "HiddenIntent",
-    "intent_type": "Hidden",
     "kind": "intent_class",
-    "label_semantics": "no sprite, no hover tip — action fully hidden. Compact shows `Hidden`.",
-    "name": "HiddenIntent",
-    "play_notes": "No sprite, no hover tip — action fully hidden. Play safe: keep block/economy; check monsters.json for hidden-move pools (e.g. burrowed BELOW_MOVE).",
-    "state_fields": [
-      "type",
-      "class",
-      "label",
-      "description"
-    ]
+    "name": "HiddenIntent"
   },
   "MultiAttackIntent": {
     "aliases": [
       "Attack"
     ],
-    "curated": false,
-    "decision_rule": "Incoming multi-hit attack — label shows per-hit x hits; total = per-hit x hits. Block absorbs EACH hit separately, so high Block is twice as effective here. Weak cuts the per-hit number.",
-    "description": "attack Repeats times. Label = FORMAT_DAMAGE_MULTI with Damage + Repeat → compact shows per-hit × hits, e.g. `3×7` (7 hits of 3; total = per-hit × hits). Same live-preview rule for the per-hit number.",
+    "detail": {
+      "intent_type": "Attack"
+    },
     "id": "MultiAttackIntent",
-    "intent_type": "Attack",
     "kind": "intent_class",
-    "label_semantics": "attack Repeats times. Label = FORMAT_DAMAGE_MULTI with Damage + Repeat → compact shows per-hit × hits, e.g. `3×7` (7 hits of 3; total = per-hit × hits). Same live-preview rule for the per-hit number.",
-    "name": "MultiAttackIntent",
-    "play_notes": "Incoming multi-hit attack — label shows per-hit x hits; total = per-hit x hits. Block absorbs EACH hit separately, so high Block is twice as effective here. Weak cuts the per-hit number.",
-    "state_fields": [
-      "type",
-      "class",
-      "label",
-      "damage",
-      "total_damage",
-      "hits",
-      "base_damage",
-      "description"
-    ]
+    "name": "MultiAttackIntent"
   },
   "SingleAttackIntent": {
     "aliases": [
       "Attack"
     ],
-    "curated": false,
-    "decision_rule": "Incoming single attack — the label number is the live damage preview (Strength/Weak/Vulnerable already applied, floored at 0). Compare damage vs your Block + HP; Weak on the attacker cuts it (x0.75 per stack).",
-    "description": "attack once. Label = FORMAT_DAMAGE_SINGLE → compact shows the damage number, e.g. `8`. The number is the game's live damage preview (`GetSingleDamage` runs damage hooks, floored at 0) — it already includes Strength/Weak/Vulnerable-style modifiers, not the raw move value.",
+    "detail": {
+      "intent_type": "Attack"
+    },
     "id": "SingleAttackIntent",
-    "intent_type": "Attack",
     "kind": "intent_class",
-    "label_semantics": "attack once. Label = FORMAT_DAMAGE_SINGLE → compact shows the damage number, e.g. `8`. The number is the game's live damage preview (`GetSingleDamage` runs damage hooks, floored at 0) — it already includes Strength/Weak/Vulnerable-style modifiers, not the raw move value.",
-    "name": "SingleAttackIntent",
-    "play_notes": "Incoming single attack — the label number is the live damage preview (Strength/Weak/Vulnerable already applied, floored at 0). Compare damage vs your Block + HP; Weak on the attacker cuts it (x0.75 per stack).",
-    "state_fields": [
-      "type",
-      "class",
-      "label",
-      "damage",
-      "total_damage",
-      "hits",
-      "base_damage",
-      "description"
-    ]
+    "name": "SingleAttackIntent"
   },
   "Sleep": {
     "aliases": [],
-    "curated": false,
-    "description": "IntentType enum value `Sleep`. Member intent classes: SleepIntent.",
+    "detail": {
+      "member_classes": [
+        "SleepIntent"
+      ]
+    },
     "id": "Sleep",
     "kind": "intent_type",
-    "member_classes": [
-      "SleepIntent"
-    ],
-    "name": "Sleep",
-    "play_notes": "Enemy sleeps/skips action (AsleepPower/SlumberPower stances). Free damage window — but unblocked card damage wakes sleepers (strips Plating + Asleep, flips to Stun); decide deliberately between free hits and controlled wake-stun."
+    "name": "Sleep"
   },
   "SleepIntent": {
     "aliases": [
       "Sleep"
     ],
-    "curated": false,
-    "decision_rule": "Enemy sleeps/skips action (AsleepPower/SlumberPower stances). Free damage window — but unblocked card damage wakes sleepers (strips Plating + Asleep, flips to Stun); decide deliberately between free hits and controlled wake-stun.",
-    "description": "enemy sleeps / skips action (AsleepPower / SlumberPower stances). Compact shows `Sleep`.",
+    "detail": {
+      "intent_type": "Sleep"
+    },
     "id": "SleepIntent",
-    "intent_type": "Sleep",
     "kind": "intent_class",
-    "label_semantics": "enemy sleeps / skips action (AsleepPower / SlumberPower stances). Compact shows `Sleep`.",
-    "name": "SleepIntent",
-    "play_notes": "Enemy sleeps/skips action (AsleepPower/SlumberPower stances). Free damage window — but unblocked card damage wakes sleepers (strips Plating + Asleep, flips to Stun); decide deliberately between free hits and controlled wake-stun.",
-    "state_fields": [
-      "type",
-      "class",
-      "label",
-      "description"
-    ]
+    "name": "SleepIntent"
   },
   "StatusCard": {
     "aliases": [],
-    "curated": false,
-    "description": "IntentType enum value `StatusCard`. Member intent classes: StatusIntent.",
+    "detail": {
+      "member_classes": [
+        "StatusIntent"
+      ]
+    },
     "id": "StatusCard",
     "kind": "intent_type",
-    "member_classes": [
-      "StatusIntent"
-    ],
-    "name": "StatusCard",
-    "play_notes": "Adds status/curse cards to player piles — card_count = number of cards. No direct damage; deck pollution incoming. Thin with exhaust/draw tools; status cards are usually unplayable clog."
+    "name": "StatusCard"
   },
   "StatusIntent": {
     "aliases": [
       "StatusCard"
     ],
-    "curated": false,
-    "decision_rule": "Adds status/curse cards to player piles — card_count = number of cards. No direct damage; deck pollution incoming. Thin with exhaust/draw tools; status cards are usually unplayable clog.",
-    "description": "adds `count` status cards to the player's piles, no direct damage. Label = FORMAT_STATUS_CARD_COUNT → compact shows the card count.",
+    "detail": {
+      "intent_type": "StatusCard"
+    },
     "id": "StatusIntent",
-    "intent_type": "StatusCard",
     "kind": "intent_class",
-    "label_semantics": "adds `count` status cards to the player's piles, no direct damage. Label = FORMAT_STATUS_CARD_COUNT → compact shows the card count.",
-    "name": "StatusIntent",
-    "play_notes": "Adds status/curse cards to player piles — card_count = number of cards. No direct damage; deck pollution incoming. Thin with exhaust/draw tools; status cards are usually unplayable clog.",
-    "state_fields": [
-      "type",
-      "class",
-      "label",
-      "card_count",
-      "description"
-    ]
+    "name": "StatusIntent"
   },
   "Stun": {
     "aliases": [],
-    "curated": false,
-    "description": "IntentType enum value `Stun`. Member intent classes: StunIntent.",
+    "detail": {
+      "member_classes": [
+        "StunIntent"
+      ]
+    },
     "id": "Stun",
     "kind": "intent_type",
-    "member_classes": [
-      "StunIntent"
-    ],
-    "name": "Stun",
-    "play_notes": "Enemy stunned/skips action this turn (burrow break, wake-up stuns, Imbalanced). Pure free-damage window — spend it."
+    "name": "Stun"
   },
   "StunIntent": {
     "aliases": [
       "Stun"
     ],
-    "curated": false,
-    "decision_rule": "Enemy stunned/skips action this turn (burrow break, wake-up stuns, Imbalanced). Pure free-damage window — spend it.",
-    "description": "enemy is stunned / skips action this turn (Burrowed break, wake-up stuns, Imbalanced, etc.). Compact shows `Stun`.",
+    "detail": {
+      "intent_type": "Stun"
+    },
     "id": "StunIntent",
-    "intent_type": "Stun",
     "kind": "intent_class",
-    "label_semantics": "enemy is stunned / skips action this turn (Burrowed break, wake-up stuns, Imbalanced, etc.). Compact shows `Stun`.",
-    "name": "StunIntent",
-    "play_notes": "Enemy stunned/skips action this turn (burrow break, wake-up stuns, Imbalanced). Pure free-damage window — spend it.",
-    "state_fields": [
-      "type",
-      "class",
-      "label",
-      "description"
-    ]
+    "name": "StunIntent"
   },
   "Summon": {
     "aliases": [],
-    "curated": false,
-    "description": "IntentType enum value `Summon`. Member intent classes: SummonIntent.",
+    "detail": {
+      "member_classes": [
+        "SummonIntent"
+      ]
+    },
     "id": "Summon",
     "kind": "intent_type",
-    "member_classes": [
-      "SummonIntent"
-    ],
-    "name": "Summon",
-    "play_notes": "Enemy summons adds this turn. Master-minion doctrine usually applies: killing the summoner despawns/clears adds; check the monster entry before switching targets."
+    "name": "Summon"
   },
   "SummonIntent": {
     "aliases": [
       "Summon"
     ],
-    "curated": false,
-    "decision_rule": "Enemy summons adds this turn. Master-minion doctrine usually applies: killing the summoner despawns/clears adds; check the monster entry before switching targets.",
-    "description": "enemy summons adds this turn. Compact shows `Summon`.",
+    "detail": {
+      "intent_type": "Summon"
+    },
     "id": "SummonIntent",
-    "intent_type": "Summon",
     "kind": "intent_class",
-    "label_semantics": "enemy summons adds this turn. Compact shows `Summon`.",
-    "name": "SummonIntent",
-    "play_notes": "Enemy summons adds this turn. Master-minion doctrine usually applies: killing the summoner despawns/clears adds; check the monster entry before switching targets.",
-    "state_fields": [
-      "type",
-      "class",
-      "label",
-      "description"
-    ]
+    "name": "SummonIntent"
   },
   "Unknown": {
     "aliases": [],
-    "curated": false,
-    "description": "IntentType enum value `Unknown`. Member intent classes: UnknownIntent.",
+    "detail": {
+      "member_classes": [
+        "UnknownIntent"
+      ]
+    },
     "id": "Unknown",
     "kind": "intent_type",
-    "member_classes": [
-      "UnknownIntent"
-    ],
-    "name": "Unknown",
-    "play_notes": "Action not yet revealed. Treat as unknown threat — keep defensive posture and consult the monster move table."
+    "name": "Unknown"
   },
   "UnknownIntent": {
     "aliases": [
       "Unknown"
     ],
-    "curated": false,
-    "decision_rule": "Action not yet revealed. Treat as unknown threat — keep defensive posture and consult the monster move table.",
-    "description": "action not yet revealed; revealed later or after conditions. Compact shows `Unknown`.",
+    "detail": {
+      "intent_type": "Unknown"
+    },
     "id": "UnknownIntent",
-    "intent_type": "Unknown",
     "kind": "intent_class",
-    "label_semantics": "action not yet revealed; revealed later or after conditions. Compact shows `Unknown`.",
-    "name": "UnknownIntent",
-    "play_notes": "Action not yet revealed. Treat as unknown threat — keep defensive posture and consult the monster move table.",
-    "state_fields": [
-      "type",
-      "class",
-      "label",
-      "description"
-    ]
+    "name": "UnknownIntent"
   }
 }

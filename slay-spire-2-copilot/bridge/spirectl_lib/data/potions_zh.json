@@ -3,123 +3,112 @@
     "aliases": [
       "Ashwater"
     ],
-    "curated": false,
-    "description": "消耗手牌中任意数量的卡牌。",
-    "display_name": "Ashwater",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "ASHWATER",
     "kind": "potion",
-    "name": "灰水",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "self",
-    "usage": "combat"
+    "name": "灰水"
   },
   "ATTACK_POTION": {
     "aliases": [
       "Attack Potion",
       "AttackPotion"
     ],
-    "curated": true,
-    "description": "从角色卡池生成 3 张不同攻击牌中选 1 张（可跳过）；加入手牌，本回合免费。 run-53 live 2026-09-19：打开 card_choice（3选1生成攻击牌，可跳过）；选中牌本回合免费加入手牌。live 选项 BODY_SLAM/THRASH/WHIRLWIND；能量4时选 Whirlwind 成为致死回合的生存仪器（32 AoE 清场）。",
-    "display_name": "Attack Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "ATTACK_POTION",
     "kind": "potion",
-    "name": "攻击药水",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "self",
-    "usage": "combat"
+    "name": "攻击药水"
   },
   "BEETLE_JUICE": {
-    "aliases": [],
-    "curated": false,
-    "description": "获得 2 点力量和 2 点敏捷。",
+    "aliases": [
+      "Beetle Juice"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": null,
+      "usage": null
+    },
     "id": "BEETLE_JUICE",
     "kind": "potion",
-    "name": "BEETLE_JUICE",
-    "play_notes": ""
+    "name": "BEETLE_JUICE"
   },
   "BLESSING_OF_THE_FORGE": {
     "aliases": [
       "Blessing of the Forge",
-      "BLESSING_OF_THE_FORGE",
       "锻造祝福"
     ],
-    "curated": true,
-    "description": "本场战斗升级手牌中所有可升级牌（武装级，战后还原）。在手牌密度最高/致命意图回合使用。对局43 Act2 (4,0) live：5 张攻击手牌升级——铁斩波+2/+2、双打击+2、剑柄+1/抽2、打击+3，用在 19 伤 POUNCE 回合。对局43 RANSACK 事件稀有药水即为此（正确领取——对局42 曾跳过领取屏）。",
-    "display_name": "Blessing of the Forge",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "BLESSING_OF_THE_FORGE",
     "kind": "potion",
-    "name": "锻造祝福",
-    "play_notes": "对局43 live",
-    "rarity": "Uncommon",
-    "target": "self",
-    "usage": "combat"
+    "name": "锻造祝福"
   },
   "BLOCK_POTION": {
     "aliases": [
       "Block Potion",
       "BlockPotion"
     ],
-    "curated": true,
-    "description": "使用时获得12格挡。致命意图回合与 Boss 闸门的非常规储备药水。对局40 live：千足虫 T4 使用——12 + 邪眼16（Unmovable 翻倍）=28 对 32 来袭于 34HP。药水源格挡不被 Unmovable 翻倍（仅卡牌挡）。",
-    "display_name": "Block Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "BLOCK_POTION",
     "kind": "potion",
-    "name": "封锁药水",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "any player",
-    "usage": "combat"
+    "name": "封锁药水"
   },
   "BLOOD_POTION": {
     "aliases": [
+      "Blood Potion",
       "BloodPotion",
-      "BLOOD_POTION",
       "血药水"
     ],
-    "curated": true,
-    "description": "Common, anytime: heal 20% of Max HP (run-49 live 80 Max→+16; run-57 95-class Max→+19). Corridor sustain — drink BEFORE the lethal-class turn, not after. run-57: spent mid-Decimillipede at incoming-28-class window, raised 46→65 buffer for the multi-turn grind.",
-    "display_name": "Blood Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "anytime"
+    },
     "id": "BLOOD_POTION",
     "kind": "potion",
-    "name": "血药水",
-    "play_notes": "run-49 live：Entomancer 战中 HP 23→39（80 的 20% = 16）。走廊续航类——在致死回合之前喝，不是之后。",
-    "rarity": "Common",
-    "target": "any player",
-    "usage": "anytime"
+    "name": "血药水"
   },
   "BONE_BREW": {
     "aliases": [
       "Bone Brew",
       "BoneBrew"
     ],
-    "curated": false,
-    "description": "Summon Osty，数值 15。",
-    "display_name": "Bone Brew",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "BONE_BREW",
     "kind": "potion",
-    "name": "骨头酿",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "self",
-    "usage": "combat"
+    "name": "骨头酿"
   },
   "BOTTLED_POTENTIAL": {
     "aliases": [
       "Bottled Potential",
       "BottledPotential"
     ],
-    "curated": false,
-    "description": "将手牌移入抽牌堆，洗牌，抽 5 张。",
-    "display_name": "Bottled Potential",
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "BOTTLED_POTENTIAL",
     "kind": "potion",
-    "name": "瓶装潜能",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "any player",
-    "usage": "combat"
+    "name": "瓶装潜能"
   },
   "CLARITY": {
     "aliases": [
@@ -127,337 +116,292 @@
       "Clarity Extract",
       "ClarityExtract"
     ],
-    "curated": false,
-    "description": "抽 1 张；获得 ClarityPower 3——接下来 3 回合开始时各多抽 1 张（每次己方回合开始递减）。",
-    "display_name": "Clarity Extract",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "CLARITY",
     "kind": "potion",
-    "name": "明晰提取物",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "any player",
-    "usage": "combat"
+    "name": "明晰提取物"
   },
   "COLORLESS_POTION": {
     "aliases": [
       "Colorless Potion",
       "ColorlessPotion"
     ],
-    "curated": false,
-    "description": "从无色卡池生成 3 张不同卡牌中选 1 张（可跳过）；加入手牌，本回合免费。",
-    "display_name": "Colorless Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "COLORLESS_POTION",
     "kind": "potion",
-    "name": "无色药水",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "self",
-    "usage": "combat"
+    "name": "无色药水"
   },
   "COSMIC_CONCOCTION": {
     "aliases": [
       "Cosmic Concoction",
       "CosmicConcoction"
     ],
-    "curated": false,
-    "description": "向手牌加入 3 张不同的升级版无色池卡牌。",
-    "display_name": "Cosmic Concoction",
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "COSMIC_CONCOCTION",
     "kind": "potion",
-    "name": "宇宙药剂",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "self",
-    "usage": "combat"
+    "name": "宇宙药剂"
   },
   "CUNNING_POTION": {
     "aliases": [
       "Cunning Potion",
       "CunningPotion"
     ],
-    "curated": false,
-    "description": "向手牌加入 3 张升级版 Shiv。",
-    "display_name": "Cunning Potion",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "CUNNING_POTION",
     "kind": "potion",
-    "name": "狡诈药水",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "self",
-    "usage": "combat"
+    "name": "狡诈药水"
   },
   "CURE_ALL": {
     "aliases": [
       "Cure All",
       "CureAll"
     ],
-    "curated": true,
-    "description": "解除玩家身上减益类异常。**不解 Power 类税**——live run-52 再确认：Act1 Boss T8 对 RINGING_POWER 使用零效果（浪费）；run-51 的原始订正成立。检查目标税 id：`_POWER` 后缀 ⇒ 预期无效。",
-    "display_name": "Cure All",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "CURE_ALL",
     "kind": "potion",
-    "name": "万灵药",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "any player",
-    "usage": "combat"
+    "name": "万灵药"
   },
   "DEXTERITY_POTION": {
     "aliases": [
       "Dexterity Potion",
-      "DEXTERITY_POTION",
       "敏捷药水"
     ],
-    "curated": true,
-    "description": "本场战斗 +2 敏捷（卡牌挡 +2，与滑石叠加）。对局43 live：滑石1+药2=3 总计；Defend 6+3=9、坚毅 8+3=11、终极防御 13+3=16——16≥15 单卡眩晕碗虫石 HEADBUTT。对局39 注记：敏捷+Defend×2=14 差 15 一点——下眩晕结论前必须用 live 总挡对意图数字精算。",
-    "display_name": "Dexterity Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "DEXTERITY_POTION",
     "kind": "potion",
-    "name": "敏捷药水",
-    "play_notes": "对局43 live",
-    "rarity": "Common",
-    "target": "any player",
-    "usage": "combat"
+    "name": "敏捷药水"
   },
   "DISTILLED_CHAOS": {
     "aliases": [
       "Distilled Chaos",
-      "DISTILLED_CHAOS",
       "蒸馏混沌"
     ],
-    "curated": true,
-    "description": "打出抽牌堆顶 3 张牌。方差类——费用/目标不可控。对局43 Act2 商店 (5,0) live 价格 102金（未买）。",
-    "display_name": "Distilled Chaos",
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "DISTILLED_CHAOS",
     "kind": "potion",
-    "name": "蒸馏混沌",
-    "play_notes": "对局43 live",
-    "rarity": "Rare",
-    "target": "self",
-    "usage": "combat"
+    "name": "蒸馏混沌"
   },
   "DROPLET_OF_PRECOGNITION": {
     "aliases": [
       "Droplet of Precognition",
       "DropletofPrecognition"
     ],
-    "curated": false,
-    "description": "从抽牌堆选 1 张牌加入手牌。",
-    "display_name": "Droplet of Precognition",
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "DROPLET_OF_PRECOGNITION",
     "kind": "potion",
-    "name": "预知之滴",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "self",
-    "usage": "combat"
+    "name": "预知之滴"
   },
   "DUPLICATOR": {
     "aliases": [
       "Duplicator"
     ],
-    "curated": true,
-    "description": "施加 DuplicationPower 1 — 本场战斗下一张打出的牌额外再打 1 次；回合结束移除。run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log)：击杀回合 Pommel Strike 9 结算两次（18）；药水不算 RINGING 类计数的\"牌\"（run-48 规则成立）。",
-    "display_name": "Duplicator",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "DUPLICATOR",
     "kind": "potion",
-    "name": "复制药水",
-    "play_notes": "run-48 live 2026-09-19：RINGING 下复制器+上勾拳 48 伤——药水不算卡规则 live。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "rarity": "Uncommon",
-    "target": "self",
-    "usage": "combat"
+    "name": "复制药水"
   },
   "ENERGY_POTION": {
     "aliases": [
       "Energy Potion",
       "EnergyPotion"
     ],
-    "curated": false,
-    "description": "获得 2 能量。",
-    "display_name": "Energy Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "ENERGY_POTION",
     "kind": "potion",
-    "name": "能量药水",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "any player",
-    "usage": "combat"
+    "name": "能量药水"
   },
   "ENTROPIC_BREW": {
     "aliases": [
       "Entropic Brew",
       "EntropicBrew"
     ],
-    "curated": false,
-    "description": "用随机药水填满所有空药水栏。",
-    "display_name": "Entropic Brew",
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "anytime"
+    },
     "id": "ENTROPIC_BREW",
     "kind": "potion",
-    "name": "混沌药水",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "self",
-    "usage": "anytime"
+    "name": "混沌药水"
   },
   "ESSENCE_OF_DARKNESS": {
     "aliases": [
       "Essence of Darkness",
       "EssenceofDarkness"
     ],
-    "curated": false,
-    "description": "每个充能球槽引导 1 个暗球。",
-    "display_name": "Essence of Darkness",
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "ESSENCE_OF_DARKNESS",
     "kind": "potion",
-    "name": "黑暗精华",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "self",
-    "usage": "combat"
+    "name": "黑暗精华"
   },
   "EXPLOSIVE_AMPOULE": {
     "aliases": [
       "Explosive Ampoule",
       "ExplosiveAmpoule"
     ],
-    "curated": false,
-    "description": "对全体敌人造成 10 点伤害（自动多目标，不要发送目标 id）。",
-    "display_name": "Explosive Ampoule",
+    "detail": {
+      "rarity": "Common",
+      "target": "ALL enemies",
+      "usage": "combat"
+    },
     "id": "EXPLOSIVE_AMPOULE",
     "kind": "potion",
-    "name": "爆炸安瓿",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "ALL enemies",
-    "usage": "combat"
+    "name": "爆炸安瓿"
   },
   "FAIRY_IN_A_BOTTLE": {
     "aliases": [
       "Fairy in a Bottle",
       "FairyinaBottle"
     ],
-    "curated": true,
-    "description": "受到致死伤害时以 30% Max HP 复活（live run-52：战斗中被深红斗篷税致死时 24/80）并消耗药水。任意致死来源均可触发——包括不可格挡自伤税，不限敌方攻击。Boss 走廊储备价值：一旦在走廊战消耗，终局即无复活缓冲（run-52 教训）。",
-    "display_name": "Fairy in a Bottle",
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "auto"
+    },
     "id": "FAIRY_IN_A_BOTTLE",
     "kind": "potion",
-    "name": "瓶中精灵",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "self",
-    "usage": "auto"
+    "name": "瓶中精灵"
   },
   "FIRE_POTION": {
     "aliases": [
       "Fire Potion",
       "FirePotion"
     ],
-    "curated": true,
-    "description": "造成 20 点伤害 — 无属性：不吃易伤或 SLOW 叠层加成。run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log)：对弹珠袋易伤下的无厌沙虫精确 20 确认；瓶伤不计入易伤/Slow 窗口数学。",
-    "display_name": "Fire Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any enemy",
+      "usage": "combat"
+    },
     "id": "FIRE_POTION",
     "kind": "potion",
-    "name": "火焰药水",
-    "play_notes": "run-48 live 2026-09-19：易伤2+Slow 显示下平坦 20——确认不吃增幅。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "rarity": "Common",
-    "target": "any enemy",
-    "usage": "combat"
+    "name": "火焰药水"
   },
   "FLEX_POTION": {
     "aliases": [
       "Flex Potion",
       "FlexPotion"
     ],
-    "curated": true,
-    "description": "本回合获得 +5 力量（临时，回合末过期）。",
-    "display_name": "Flex Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "FLEX_POTION",
     "kind": "potion",
-    "name": "肌肉药水",
-    "play_notes": "run-49 live：STR +5 当回合生效（powers 显示 STRENGTH_POWER + FLEX_POTION_POWER:5）；Setup Strike 后置 +3 叠加至 11 后回合末双双过期（11→3，Inflame 基础保留）。",
-    "rarity": "Common",
-    "target": "any player",
-    "usage": "combat"
+    "name": "肌肉药水"
   },
   "FOCUS_POTION": {
     "aliases": [
       "Focus Potion",
       "FocusPotion"
     ],
-    "curated": false,
-    "description": "+2 专注（Focus）。",
-    "display_name": "Focus Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "FOCUS_POTION",
     "kind": "potion",
-    "name": "集中药水",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "self",
-    "usage": "combat"
+    "name": "集中药水"
   },
   "FORTIFIER": {
     "aliases": [
       "Fortifier"
     ],
-    "curated": false,
-    "description": "获得等同当前格挡 2 倍的格挡（格挡变为 3 倍）。",
-    "display_name": "Fortifier",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "FORTIFIER",
     "kind": "potion",
-    "name": "固化药水",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "any player",
-    "usage": "combat"
+    "name": "固化药水"
   },
   "FOUL_POTION": {
     "aliases": [
       "Foul Potion",
-      "FOUL_POTION",
       "污浊药水"
     ],
-    "curated": true,
-    "description": "战斗中：对所有非宠物生物（含自己）造成 12 伤（AoE12+自伤12；HP<15 时是自杀级；自伤触发 Rupture）。在商人房：获得 100金。FakeMerchant 事件中使用会触发战斗——绝不能在那用。POTION_COURIER 事件提供 ×3（对局42 13HP 拒绝；对局43 44HP 仍拒绝——桥拒绝战斗外 use_potion，商人房换金线目前 agent 不可达）。",
-    "display_name": "Foul Potion",
+    "detail": {
+      "rarity": "Event",
+      "target": "anytime",
+      "usage": "Event"
+    },
     "id": "FOUL_POTION",
     "kind": "potion",
-    "name": "污浊药水",
-    "play_notes": "对局43 live",
-    "rarity": "Event",
-    "target": "anytime",
-    "usage": "Event"
+    "name": "污浊药水"
   },
   "FRUIT_JUICE": {
     "aliases": [
       "Fruit Juice",
       "FruitJuice"
     ],
-    "curated": false,
-    "description": "+5 最大 HP。",
-    "display_name": "Fruit Juice",
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "anytime"
+    },
     "id": "FRUIT_JUICE",
     "kind": "potion",
-    "name": "果汁",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "any player",
-    "usage": "anytime"
+    "name": "果汁"
   },
   "FYSH_OIL": {
     "aliases": [
       "Fysh Oil",
       "FyshOil"
     ],
-    "curated": true,
-    "description": "本场战斗 +1 力量 +1 敏捷。使用后同帧 STRENGTH_POWER +1 与 DEXTERITY_POWER:1；敏捷 +1 使后续卡牌挡值各 +1（Defend 5→6 级）同战生效。使用时机存在异文：另有解码记为「随时/自身」、同样立刻 +1/+1——按 build 核实时机。 run-53 live 2026-09-19：整场战斗 +1 力量 +1 敏捷——本局作为 Boss 储备保留，走廊战未花。",
-    "display_name": "Fysh Oil",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "FYSH_OIL",
     "kind": "potion",
-    "name": "异鱼之油",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "any player",
-    "usage": "combat"
+    "name": "异鱼之油"
   },
   "GAMBLER_S_BREW": {
     "aliases": [
@@ -465,84 +409,74 @@
       "Gambler's Brew",
       "GamblersBrew"
     ],
-    "curated": false,
-    "description": "弃置任意数量手牌，然后抽取等量牌。",
-    "display_name": "Gambler's Brew",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "GAMBLER_S_BREW",
     "kind": "potion",
-    "name": "赌徒特酿",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "self",
-    "usage": "combat"
+    "name": "赌徒特酿"
   },
   "GHOST_IN_A_JAR": {
     "aliases": [
       "Ghost in a Jar",
       "GhostinaJar"
     ],
-    "curated": false,
-    "description": "+1 层 Intangible。",
-    "display_name": "Ghost in a Jar",
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "GHOST_IN_A_JAR",
     "kind": "potion",
-    "name": "罐装幽灵",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "any player",
-    "usage": "combat"
+    "name": "罐装幽灵"
   },
   "GIGANTIFICATION_POTION": {
     "aliases": [
+      "Gigantification Potion",
       "GigantificationPotion",
-      "GIGANTIFICATION_POTION",
       "巨化药水",
       "超巨化药水"
     ],
-    "curated": true,
-    "description": "Rare: apply GigantificationPower 1 — next Attack card this combat deals ×3 damage, consumed by that attack. LIVE run-57: Bludgeon 32 ×3 = 96 on Terror Eel T1 (Act1 Elite①) — crossed SHRIEK:70 in one hit, stun window opened, fight won T3 zero-damage. Boss/elite burst-class reserve.",
-    "display_name": "Gigantification Potion",
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "GIGANTIFICATION_POTION",
     "kind": "potion",
-    "name": "巨化药水",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "any player",
-    "usage": "combat"
+    "name": "巨化药水"
   },
   "GLOWWATER_POTION": {
     "aliases": [
+      "Glowwater Potion",
       "GlowwaterPotion",
-      "GLOWWATER_POTION",
       "发光水"
     ],
-    "curated": true,
-    "description": "Event potion (Drowning Beacon bottle branch): Exhaust your hand, draw 10 cards. LIVE run-57: exhausted 5-card hand then drew the full remaining deck (9 cards) same turn — hand-cycle bomb for status-dilution fights; pairs with exhaust-spine (FNP procs on the exhaust).",
-    "display_name": "Glowwater Potion",
+    "detail": {
+      "rarity": "Event",
+      "target": "combat",
+      "usage": "Event"
+    },
     "id": "GLOWWATER_POTION",
     "kind": "potion",
-    "name": "发光水",
-    "play_notes": "",
-    "rarity": "Event",
-    "target": "combat",
-    "usage": "Event"
+    "name": "发光水"
   },
   "HEART_OF_IRON": {
     "aliases": [
+      "Heart of Iron",
       "HeartOfIron",
-      "HEART_OF_IRON",
       "铁心药水"
     ],
-    "curated": true,
-    "description": "Uncommon: gain 7 Plating (combat). LIVE run-57: Skulking Colony Piercing Stabs turn — Heart of Iron +7 plating on top of 1-2 plating + double Defend = 18-total-block exact cover vs 9x2 intent (run-41 doctrine class).",
-    "display_name": "Heart of Iron",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "HEART_OF_IRON",
     "kind": "potion",
-    "name": "铁心药水",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "any player",
-    "usage": "combat"
+    "name": "铁心药水"
   },
   "KING_S_COURAGE": {
     "aliases": [
@@ -550,64 +484,56 @@
       "King's Courage",
       "KingsCourage"
     ],
-    "curated": false,
-    "description": "Forge 15。",
-    "display_name": "King's Courage",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "KING_S_COURAGE",
     "kind": "potion",
-    "name": "王之勇气",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "any player",
-    "usage": "combat"
+    "name": "王之勇气"
   },
   "LIQUID_BRONZE": {
     "aliases": [
       "Liquid Bronze",
       "LiquidBronze"
     ],
-    "curated": false,
-    "description": "+3 点荆棘。",
-    "display_name": "Liquid Bronze",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "LIQUID_BRONZE",
     "kind": "potion",
-    "name": "流动铜液",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "any player",
-    "usage": "combat"
+    "name": "流动铜液"
   },
   "LIQUID_MEMORIES": {
     "aliases": [
       "Liquid Memories",
       "LiquidMemories"
     ],
-    "curated": false,
-    "description": "从弃牌堆选 1 张牌加入手牌，本回合免费。弃牌堆为空时不可用——空弃牌堆打出时药水被消耗但**无选牌界面、无任何效果**（完全空耗）。使用前先确认 piles。",
-    "display_name": "Liquid Memories",
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "LIQUID_MEMORIES",
     "kind": "potion",
-    "name": "液态记忆",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "self",
-    "usage": "combat"
+    "name": "液态记忆"
   },
   "LUCKY_TONIC": {
     "aliases": [
       "Lucky Tonic",
       "LuckyTonic"
     ],
-    "curated": false,
-    "description": "+1 层 Buffer。",
-    "display_name": "Lucky Tonic",
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "LUCKY_TONIC",
     "kind": "potion",
-    "name": "幸运补剂",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "any player",
-    "usage": "combat"
+    "name": "幸运补剂"
   },
   "MAZALETH_S_GIFT": {
     "aliases": [
@@ -615,263 +541,241 @@
       "Mazaleth's Gift",
       "MazalethsGift"
     ],
-    "curated": false,
-    "description": "+1 层 Ritual。",
-    "display_name": "Mazaleth's Gift",
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "MAZALETH_S_GIFT",
     "kind": "potion",
-    "name": "马萨雷斯的赠礼",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "any player",
-    "usage": "combat"
+    "name": "马萨雷斯的赠礼"
   },
   "OROBIC_ACID": {
     "aliases": [
       "Orobic Acid",
       "OrobicAcid"
     ],
-    "curated": true,
-    "description": "从角色卡池随机攻击、技能、能力牌各 1 张加入手牌；3 张本回合均免费。run-48 盛碗虫爆炸回合 live：产出 PACTS_END（0 费 17 全体，条件 exhaust≥3——exhaust 0 时 whiff，打出还吃尖刺风险）+ EXPECT_A_FIGHT（2 费技能，手牌每张攻击 +1 费，NO_ENERGY_GAIN 锁）+ 免费残酷副本——23 伤挡闸回合上**零挡类技能**。不要把大试管酸算作挡牌保险；它是方差燃料。",
-    "display_name": "Orobic Acid",
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "OROBIC_ACID",
     "kind": "potion",
-    "name": "欧洛巴斯之酸",
-    "play_notes": "run-48 live 2026-09-19：爆炸挡闸回合挡牌需求 whiff——方差燃料而非保险。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "rarity": "Rare",
-    "target": "self",
-    "usage": "combat"
+    "name": "欧洛巴斯之酸"
   },
   "POISON_POTION": {
     "aliases": [
       "Poison Potion",
       "PoisonPotion"
     ],
-    "curated": false,
-    "description": "施加 6 层中毒。",
-    "display_name": "Poison Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any enemy",
+      "usage": "combat"
+    },
     "id": "POISON_POTION",
     "kind": "potion",
-    "name": "毒药水",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "any enemy",
-    "usage": "combat"
+    "name": "毒药水"
   },
   "POTION_OF_BINDING": {
     "aliases": [
       "Potion of Binding",
       "PotionofBinding"
     ],
-    "curated": false,
-    "description": "对全体敌人施加 1 层 Weak 与 1 层 Vulnerable。",
-    "display_name": "Potion of Binding",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "ALL enemies",
+      "usage": "combat"
+    },
     "id": "POTION_OF_BINDING",
     "kind": "potion",
-    "name": "缚魂药水",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "ALL enemies",
-    "usage": "combat"
+    "name": "缚魂药水"
   },
   "POTION_OF_CAPACITY": {
     "aliases": [
       "Potion of Capacity",
       "PotionofCapacity"
     ],
-    "curated": false,
-    "description": "+2 个充能球槽。",
-    "display_name": "Potion of Capacity",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "POTION_OF_CAPACITY",
     "kind": "potion",
-    "name": "扩容药水",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "self",
-    "usage": "combat"
+    "name": "扩容药水"
   },
   "POTION_OF_DOOM": {
     "aliases": [
       "Potion of Doom",
       "PotionofDoom"
     ],
-    "curated": false,
-    "description": "施加 33 层 Doom。",
-    "display_name": "Potion of Doom",
+    "detail": {
+      "rarity": "Common",
+      "target": "any enemy",
+      "usage": "combat"
+    },
     "id": "POTION_OF_DOOM",
     "kind": "potion",
-    "name": "灾厄药水",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "any enemy",
-    "usage": "combat"
+    "name": "灾厄药水"
   },
   "POTION_SHAPED_ROCK": {
-    "curated": true,
-    "description": "战斗中使用：对目标造成 15 伤（run-51 对知识恶魔 live）。石化蟾蜍每战开始产出。非治疗类。",
-    "name": "岩石形状药水",
-    "rarity": "Token"
+    "aliases": [
+      "POTION_SHAPED_ROCK",
+      "Potion-Shaped Rock"
+    ],
+    "detail": {
+      "rarity": "Token",
+      "target": null,
+      "usage": null
+    },
+    "id": "POTION_SHAPED_ROCK",
+    "kind": "potion",
+    "name": "岩石形状药水"
   },
   "POT_OF_GHOULS": {
     "aliases": [
       "Pot of Ghouls",
       "PotofGhouls"
     ],
-    "curated": false,
-    "description": "向手牌加入 2 张 Soul。",
-    "display_name": "Pot of Ghouls",
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "POT_OF_GHOULS",
     "kind": "potion",
-    "name": "尸鬼瓮",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "self",
-    "usage": "combat"
+    "name": "尸鬼瓮"
   },
   "POWDERED_DEMISE": {
     "aliases": [
+      "Powdered Demise",
       "PowderedDemise",
-      "POWDERED_DEMISE",
       "灭世粉"
     ],
-    "curated": true,
-    "description": "Uncommon: apply DemisePower 9 to target — target takes 9 unblockable unpowered damage at end of each of its turns. Kill-timer class (run-41 4-HP exoskeleton EoT kill; run-57 Entomancer race chip 9/turn through the T5 kill).",
-    "display_name": "Powdered Demise",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any enemy",
+      "usage": "combat"
+    },
     "id": "POWDERED_DEMISE",
     "kind": "potion",
-    "name": "灭世粉",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "any enemy",
-    "usage": "combat"
+    "name": "灭世粉"
   },
   "POWER_POTION": {
     "aliases": [
+      "Power Potion",
       "PowerPotion",
-      "POWER_POTION",
       "能力药水"
     ],
-    "curated": true,
-    "description": "Common, combat: opens choose-one-power overlay; the chosen power is generated as a 0-cost card into hand — must be played manually. LIVE run-57 Decimillipede T7 options: VICIOUS / HELLRAISER / RUPTURE — picked RUPTURE (references-known run-56 win spine) over undocumented options; Rupture card played, Breakthrough self-damage proc'd +1 Str same turn (Str −2→−1 live).",
-    "display_name": "Power Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "POWER_POTION",
     "kind": "potion",
-    "name": "能力药水",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "self",
-    "usage": "combat"
+    "name": "能力药水"
   },
   "RADIANT_TINCTURE": {
     "aliases": [
       "Radiant Tincture",
       "RadiantTincture"
     ],
-    "curated": false,
-    "description": "立即获得 1 能量；获得 RadiancePower 3——接下来 3 次能量重置时各 +1 能量。",
-    "display_name": "Radiant Tincture",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "RADIANT_TINCTURE",
     "kind": "potion",
-    "name": "明耀酊剂",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "any player",
-    "usage": "combat"
+    "name": "明耀酊剂"
   },
   "REGEN_POTION": {
     "aliases": [
+      "Regen Potion",
       "RegenPotion",
-      "REGEN_POTION",
       "再生药水"
     ],
-    "curated": true,
-    "description": "Uncommon: gain 5 Regen — heal 5 at start of each of your turns, stacks decrement. Doctrine (run-48 live): HP-rail potions are for the attrition fight itself; run-57 spent mid-Decimillipede — rail ticked +5/turn across the T3-T5 same-window setup turns.",
-    "display_name": "Regen Potion",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "REGEN_POTION",
     "kind": "potion",
-    "name": "再生药水",
-    "play_notes": "run-48 live 2026-09-19：15 HP 于猎人杀手战中打出；轨道约 4 跳后战中耗尽。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "rarity": "Uncommon",
-    "target": "any player",
-    "usage": "combat"
+    "name": "再生药水"
   },
   "SHACKLING_POTION": {
     "aliases": [
       "Shackling Potion",
-      "SHACKLING_POTION",
       "枷锁药水"
     ],
-    "curated": true,
-    "description": "对所有敌人施加 ShacklingPotionPower 7——临时 −7 力量，其回合末消失。对局43 两家商店都出现（Act1 尾部 99金 / Act2 (5,0) 95金）；药槽满或金币已投遗物——未买。Boss 闸门级：每段多段意图按击 −7。",
-    "display_name": "Shackling Potion",
+    "detail": {
+      "rarity": "Rare",
+      "target": "ALL enemies",
+      "usage": "combat"
+    },
     "id": "SHACKLING_POTION",
     "kind": "potion",
-    "name": "枷锁药水",
-    "play_notes": "对局43 live",
-    "rarity": "Rare",
-    "target": "ALL enemies",
-    "usage": "combat"
+    "name": "枷锁药水"
   },
   "SHIP_IN_A_BOTTLE": {
     "aliases": [
       "Ship in a Bottle",
       "ShipinaBottle"
     ],
-    "curated": false,
-    "description": "获得 10 格挡；获得 BlockNextTurnPower 10——你的格挡首次被清除时再次获得 10 格挡（仅一次）。",
-    "display_name": "Ship in a Bottle",
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "SHIP_IN_A_BOTTLE",
     "kind": "potion",
-    "name": "瓶中船",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "any player",
-    "usage": "combat"
+    "name": "瓶中船"
   },
   "SKILL_POTION": {
     "aliases": [
       "Skill Potion",
       "SkillPotion"
     ],
-    "curated": true,
-    "description": "打开三选一技能 card_choice 覆盖层（live run-52 选项：BATTLE_TRANCE / STOKE / EVIL_EYE）。与能力药水相同，选中技能以 0 费卡生成进手牌、须自行打出。EVIL_EYE lookup 备注：8 格挡，仅当同回合此前已消耗过其他牌时翻倍至 16。",
-    "display_name": "Skill Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "SKILL_POTION",
     "kind": "potion",
-    "name": "技巧药水",
-    "play_notes": "run-54 live 观测选项（2026-09-19）：旧日雕像战给 HAVOC / BLOODLETTING / BURNING_POTION…（BURNING_PACT）；同局更早战斗给 BATTLE_TRANCE 类组合。0 费生成的 Bloodletting = 当回合净 +2 能量（组合启动器）；True Grit 副本（更早对局）= 7 挡 + 随机手牌消耗（run-53 注记适用）。",
-    "rarity": "Common",
-    "target": "self",
-    "usage": "combat"
+    "name": "技巧药水"
   },
   "SNECKO_OIL": {
     "aliases": [
       "Snecko Oil",
       "SneckoOil"
     ],
-    "curated": false,
-    "description": "抽 7 张；随机化手牌中所有非 X 费卡牌的费用。",
-    "display_name": "Snecko Oil",
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "SNECKO_OIL",
     "kind": "potion",
-    "name": "异蛇之油",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "any player",
-    "usage": "combat"
+    "name": "异蛇之油"
   },
   "SOLDIER_STEW": {
     "aliases": [
-      "Soldier's Stew",
-      "SOLDIERS_STEW"
+      "SOLDIERS_STEW",
+      "Soldier's Stew"
     ],
-    "curated": false,
-    "description": "All cards containing Strike gain 1 Replay this combat.",
+    "detail": {
+      "rarity": "Rare",
+      "target": null,
+      "usage": null
+    },
     "id": "SOLDIER_STEW",
     "kind": "potion",
-    "name": "Soldier's Stew",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Soldier's Stew"
   },
   "SOLDIER_S_STEW": {
     "aliases": [
@@ -879,160 +783,141 @@
       "Soldier's Stew",
       "SoldiersStew"
     ],
-    "curated": false,
-    "description": "本场战斗内你战斗牌堆中所有含 Strike 标签的卡牌 +1 次 Replay。Replay 表现为用药时对各张卡的一次性充能 —— 用药时已在手牌/抽牌堆中的打击牌打出时额外结算一次；战斗后期才抽到的打击只结算一次。",
-    "display_name": "Soldier's Stew",
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "SOLDIER_S_STEW",
     "kind": "potion",
-    "name": "士兵炖汤",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "any player",
-    "usage": "combat"
+    "name": "士兵炖汤"
   },
   "SPEED_POTION": {
     "aliases": [
       "Speed Potion",
-      "SPEED_POTION",
       "速度药水"
     ],
-    "curated": true,
-    "description": "当回合 +5 敏捷，回合末失去。单回合爆发挡——花在致命意图落地的那回合，不要提前。对局43 Act1 Boss T10 live：敏捷 1→6，但手牌没有挡牌，爆发当回合未兑现（原计划挡 SCREAM 13，结果 Beckon 税先到）。教训：速度药只有在手上有挡牌可放大时才有价值。",
-    "display_name": "Speed Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "SPEED_POTION",
     "kind": "potion",
-    "name": "速度药水",
-    "play_notes": "run-49 反例 live：棘刺蟾蜍 SPIKE_EXPLOSION 23 面前抽到零挡手牌——药水无法使用（无挡牌可放大）。run-43 教条逐字重演：Speed Potion 只有手牌有挡牌时才回本。",
-    "rarity": "Common",
-    "target": "any player",
-    "usage": "combat"
+    "name": "速度药水"
   },
   "STABLE": {
     "aliases": [
-      "Stable Serum",
-      "STABLE_SERUM"
+      "STABLE_SERUM",
+      "Stable Serum"
     ],
-    "curated": true,
-    "description": "稳定血清：手牌保留2回合（回合结束留在手牌）。罕见。对局40 live：Act2 全程腰带储备；保留不提供格挡——其本身不是致命意图的答案。",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": null,
+      "usage": null
+    },
     "id": "STABLE",
     "kind": "potion",
-    "name": "Stable Serum",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Stable Serum"
   },
   "STABLE_SERUM": {
     "aliases": [
-      "StableSerum",
       "STABLE_SERUM",
+      "StableSerum",
       "稳定血清"
     ],
-    "curated": true,
-    "description": "Uncommon: RetainHandPower 2 — your hand is not flushed at end of turn for the next 2 turns (cards stay; next draws add to hand). LIVE run-57: T4 hand grew to 7 cards (retained 5 + draws) — Bludgeon retained into the kill turn vs aberrant mite; \"retain does not add block — not a lethal-intent answer by itself\" note holds.",
-    "display_name": "Stable Serum",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "STABLE_SERUM",
     "kind": "potion",
-    "name": "稳定血清",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "any player",
-    "usage": "combat"
+    "name": "稳定血清"
   },
   "STAR_POTION": {
     "aliases": [
       "Star Potion",
       "StarPotion"
     ],
-    "curated": false,
-    "description": "+3 点星星（★）。",
-    "display_name": "Star Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "STAR_POTION",
     "kind": "potion",
-    "name": "星星药水",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "self",
-    "usage": "combat"
+    "name": "星星药水"
   },
   "STRENGTH_POTION": {
     "aliases": [
       "Strength Potion",
       "StrengthPotion"
     ],
-    "curated": false,
-    "description": "本场战斗 +2 力量。",
-    "display_name": "Strength Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "STRENGTH_POTION",
     "kind": "potion",
-    "name": "力量药水",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "any player",
-    "usage": "combat"
+    "name": "力量药水"
   },
   "SWIFT_POTION": {
     "aliases": [
       "Swift Potion",
-      "SWIFT_POTION",
       "迅捷药水"
     ],
-    "curated": true,
-    "description": "抽 3 张牌。对局43 Boss 奖励获得；在 Act2 (1,1) 碗虫战 T1 使用，想挖挡牌凑 IMBALANCED 眩晕阈值——抽上来的是攻击牌（剑柄/双打击/打击），当回合眩晕线落空。",
-    "display_name": "Swift Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "SWIFT_POTION",
     "kind": "potion",
-    "name": "迅捷药水",
-    "play_notes": "对局43 live",
-    "rarity": "Common",
-    "target": "any player",
-    "usage": "combat"
+    "name": "迅捷药水"
   },
   "TOUCH_OF_INSANITY": {
     "aliases": [
       "Touch of Insanity",
       "TouchofInsanity"
     ],
-    "curated": true,
-    "description": "选择 1 张消耗能量或星费的手牌；本场战斗剩余时间内它费用为 0。用法：hand_select 覆盖层 choose(index) 后 proceed。run-42 旧日雕像：Bash 全战变 0 费 — 击杀窗内每次抽到即免费 Bash+易伤。",
-    "display_name": "Touch of Insanity",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "TOUCH_OF_INSANITY",
     "kind": "potion",
-    "name": "癫狂之触",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "self",
-    "usage": "combat"
+    "name": "癫狂之触"
   },
   "VULNERABLE_POTION": {
     "aliases": [
       "Vulnerable Potion",
       "VulnerablePotion"
     ],
-    "curated": false,
-    "description": "施加 3 层 Vulnerable。",
-    "display_name": "Vulnerable Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any enemy",
+      "usage": "combat"
+    },
     "id": "VULNERABLE_POTION",
     "kind": "potion",
-    "name": "易伤药水",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "any enemy",
-    "usage": "combat"
+    "name": "易伤药水"
   },
   "WEAK_POTION": {
     "aliases": [
+      "Weak Potion",
       "WeakPotion",
-      "WEAK_POTION",
       "弱化药水"
     ],
-    "curated": true,
-    "description": "Uncommon: apply Weak to target (per-hit attack reduction class). LIVE run-57: Boss The Insatiable — Weak 3 landed, displayed intent 28→21-class cuts on Lunging Bite; Uppercut-style Weak cuts also live on mite/bees-class multi-hits (per-hit reduction, not total).",
-    "display_name": "Weak Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any enemy",
+      "usage": "combat"
+    },
     "id": "WEAK_POTION",
     "kind": "potion",
-    "name": "弱化药水",
-    "play_notes": "对局43 live",
-    "rarity": "Common",
-    "target": "any enemy",
-    "usage": "combat"
+    "name": "弱化药水"
   }
 }

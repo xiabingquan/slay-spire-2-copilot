@@ -1,64 +1,72 @@
 """Build orchestration: --check gate, or overlay refresh of the JSON store.
 
-The spirectl_lib/data JSON files are the durable source of truth. EN and ZH
-twins share one schema per entry; Chinese text lives only in ZH files.
-Generate mode is an overlay pass: codex enrichment + curated extras + zh
-twin creation + move/zh fixups applied ON TOP of the existing store — keys
-are never dropped, curated:true entries never overwritten, existing ZH
-entries never regenerated.
+spirectl_lib/data is the programmatic source of truth (schema:
+spirectl_lib/schema.py). Generate mode is an overlay pass — codex structure
+fills + curated structured overlays + zh twin maintenance; keys are never
+dropped, existing values never overwritten.
 """
 import argparse
+import copy
 import json
 import sys
 from pathlib import Path
 
-from . import census, codex, fixups
+from . import census, codex
 from .config import DOMAINS, DEFAULT_LIVE_IDS, DEFAULT_OUT_DIR
 from .data import CURATED_MOVES
-from .merge import apply_extras, envelope, fill_zh_twins, load_existing, sync_schemas
-from .textutil import humanize
+from .merge import apply_extras, fill_zh_twins, load_existing, sync_twins
+from spirectl_lib.refs import new_entry, move_entry  # noqa: E402
 
 
 def _apply_curated_moves(en: dict):
-    """Fill missing/uncurated monster move entries from CURATED_MOVES tables."""
+    """Fill missing monster move records from structured CURATED_MOVES."""
     for mon_key, move_map in CURATED_MOVES.items():
-        mon = (en.get("monsters") or {}).get(mon_key)
-        if mon is None:
+        e = en.get("monsters", {}).get(mon_key)
+        if not isinstance(e, dict):
             continue
-        moves = dict(mon.get("moves") or {})
-        for mk, (mid, mname, mdesc, mintent, bdmg, basc, hits) in move_map.items():
-            prev = moves.get(mk)
-            if prev is not None and (prev.get("description") or "").strip() \
-                    and not prev.get("description", "").startswith(mid):
+        det = e.setdefault("detail", {})
+        moves = det.setdefault("moves", {})
+        cycle = list(det.get("cycle") or [])
+        for mk, tup in move_map.items():
+            mid, mname, mintent, bdmg, basc, hits_n = tup
+            if mk in moves:
                 continue
-            moves[mk] = envelope(
-                mid, "move", mname, mdesc,
-                aliases=[humanize(mid.replace("_MOVE", ""))],
-                play_notes="",
-                monster_id=mon_key,
-                intents=[mintent] if mintent else [],
-                base_damage=bdmg,
-                base_damage_ascension=basc,
-                hits=hits,
-                status_count=None,
-                display_note=None,
-            )
-        mon["moves"] = moves
-        mon.setdefault("cycle", [])
-        if mon_key == "SEAPUNK" and not mon["cycle"]:
-            mon["cycle"] = ["SEA_KICK_MOVE", "SPINNING_KICK_MOVE",
-                            "BUBBLE_BURP_MOVE"]
+            intents = []
+            if mintent:
+                cls_map = {"Attack": "SingleAttackIntent", "MultiAttack": "MultiAttackIntent",
+                           "Buff": "BuffIntent", "Debuff": "DebuffIntent", "Defend": "DefendIntent"}
+                cls = cls_map.get(str(mintent).split("Intent")[0] + "Intent" if False else "",
+                                  "SingleAttackIntent" if mintent == "Attack" else (
+                                  "MultiAttackIntent" if mintent == "MultiAttack" else (
+                                  "BuffIntent" if mintent == "Buff" else (
+                                  "DebuffIntent" if mintent == "Debuff" else (
+                                  "DefendIntent" if mintent == "Defend" else "UnknownIntent")))))
+                it = {"class": cls, "type": "Attack" if "Attack" in cls else (mintent or "")}
+                if bdmg is not None:
+                    it.update({"base_damage": bdmg, "hits": hits_n or 1})
+                    if basc is not None:
+                        it["base_damage_ascension"] = basc
+                intents.append(it)
+            moves[mk] = move_entry(mid, mon_key, name=mname, intents=intents,
+                                   base_damage=bdmg, base_damage_ascension=basc, hits=hits_n)
+            if mk not in cycle and len(cycle) < 12:
+                cycle.append(mk)
+        det["cycle"] = cycle[:12]
 
 
 def _propagate_affliction_hosts(en: dict):
-    """Set power host_of_affliction flags derived from affliction entries."""
-    for aff in en.get("afflictions", {}).values():
-        host = aff.get("host_power_id")
-        if host and host in en.get("powers", {}):
-            en["powers"][host]["host_of_affliction"] = True
-            keys = set(en["powers"][host].get("affliction_keys") or [])
-            keys.add(aff["id"])
-            en["powers"][host]["affliction_keys"] = sorted(keys)
+    """Set power detail.host_of_affliction / affliction_keys from afflictions."""
+    for aff in (en.get("afflictions") or {}).values():
+        if not isinstance(aff, dict):
+            continue
+        host = (aff.get("detail") or {}).get("host_power_id")
+        powers = en.get("powers") or {}
+        if host and host in powers and isinstance(powers[host], dict):
+            det = powers[host].setdefault("detail", {})
+            det["host_of_affliction"] = True
+            keys = set(det.get("affliction_keys") or [])
+            keys.add(aff.get("id"))
+            det["affliction_keys"] = sorted(keys)
 
 
 def main(argv=None) -> int:
@@ -67,7 +75,7 @@ def main(argv=None) -> int:
     parser.add_argument("--live-ids", default=str(DEFAULT_LIVE_IDS))
     parser.add_argument("--out-dir", default=str(DEFAULT_OUT_DIR))
     parser.add_argument("--check", action="store_true",
-                        help="coverage gate only (reads existing JSON output)")
+                        help="coverage/schema gate only (reads existing JSON)")
     parser.add_argument("--no-codex", action="store_true",
                         help="skip spire-codex.com enrichment")
     parser.add_argument("--codex-refresh", action="store_true",
@@ -80,8 +88,7 @@ def main(argv=None) -> int:
     if live_path.exists():
         live_ids = json.loads(live_path.read_text(encoding="utf-8"))
     else:
-        print(f"build_game_reference_json: WARN live-ids missing ({live_path})",
-              file=sys.stderr)
+        print(f"build_game_reference_json: WARN live-ids missing ({live_path})", file=sys.stderr)
 
     if args.check:
         all_en = {d: load_existing(out_dir / f"{d}.json") for d in DOMAINS}
@@ -95,30 +102,21 @@ def main(argv=None) -> int:
     if not args.no_codex:
         hits = codex.fold_codex(en, live_ids, refresh=args.codex_refresh)
         print(f"  codex fold: {hits} API hits (cache: {codex.CODEX_CACHE})")
-    fixups.apply_move_fixups(en, zh)
     _propagate_affliction_hosts(en)
     _apply_curated_moves(en)
-
     for domain in DOMAINS:
         fill_zh_twins(en[domain], zh[domain])
         apply_extras(domain, en[domain], zh[domain])
         if domain == "monsters":
             _apply_curated_moves(en)
-
-    fixups.apply_post_fixups(en, zh)
-    for domain in DOMAINS:
-        fill_zh_twins(en[domain], zh[domain])
-        sync_schemas(en[domain], zh[domain])
+        sync_twins(en[domain], zh[domain])
 
     for domain in DOMAINS:
         en_path = out_dir / f"{domain}.json"
         zh_path = out_dir / f"{domain}_zh.json"
-        en_path.write_text(json.dumps(en[domain], ensure_ascii=False, indent=2,
-                                      sort_keys=True) + "\n", encoding="utf-8")
-        zh_path.write_text(json.dumps(zh[domain], ensure_ascii=False, indent=2,
-                                      sort_keys=True) + "\n", encoding="utf-8")
-        print(f"  wrote {en_path.name} ({len(en[domain])}) + {zh_path.name} "
-              f"({len(zh[domain])})")
+        en_path.write_text(json.dumps(en[domain], ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        zh_path.write_text(json.dumps(zh[domain], ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        print(f"  wrote {en_path.name} ({len(en[domain])}) + {zh_path.name} ({len(zh[domain])})")
 
     all_en = {d: load_existing(out_dir / f"{d}.json") for d in DOMAINS}
     all_zh = {d: load_existing(out_dir / f"{d}_zh.json") for d in DOMAINS}

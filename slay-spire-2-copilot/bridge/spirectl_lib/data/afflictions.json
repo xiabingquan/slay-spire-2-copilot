@@ -4,376 +4,347 @@
       "Ascenders Bane",
       "天阶诅咒"
     ],
-    "curated": false,
-    "description": "unplayable, Ethereal, Eternal — cannot be removed normally.",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "ASCENDERS_BANE",
     "kind": "curse",
-    "name": "Ascenders Bane",
-    "play_notes": ""
+    "name": "Ascenders Bane"
   },
   "BOUND": {
     "aliases": [
       "Bound",
       "束缚"
     ],
-    "curated": false,
-    "description": "host = CHAINS_OF_BINDING_POWER — afflicted cards are drawn up to the power's Amount per turn; only 1 Bound card may be played per turn; all Bound clears at end of your turn.",
-    "host_power_id": "CHAINS_OF_BINDING_POWER",
+    "detail": {
+      "host_power_id": "CHAINS_OF_BINDING_POWER"
+    },
     "id": "BOUND",
     "kind": "affliction",
-    "name": "Bound",
-    "play_notes": ""
+    "name": "Bound"
   },
   "CLUMSY": {
     "aliases": [
       "Clumsy",
       "笨拙"
     ],
-    "curated": false,
-    "description": "unplayable, Ethereal.",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "CLUMSY",
     "kind": "curse",
-    "name": "Clumsy",
-    "play_notes": ""
+    "name": "Clumsy"
   },
   "COMPACT": {
     "aliases": [
       "Compact",
       "压缩"
     ],
-    "curated": false,
-    "description": "hand Status cards become Fuel + Block (card text).",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "COMPACT",
     "kind": "status_card",
-    "name": "Compact",
-    "play_notes": ""
+    "name": "Compact"
   },
   "CURSE_OF_THE_BELL": {
     "aliases": [
       "Curse Of The Bell",
       "钟之诅咒"
     ],
-    "curated": false,
-    "description": "unplayable, Eternal.",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "CURSE_OF_THE_BELL",
     "kind": "curse",
-    "name": "Curse Of The Bell",
-    "play_notes": ""
+    "name": "Curse Of The Bell"
   },
   "DAZED": {
     "aliases": [
       "Dazed",
       "眩晕"
     ],
-    "curated": false,
-    "description": "unplayable, Ethereal — vanishes if unplayed at end of turn. (PersonalHivePower injects Dazed cards into the attacker's draw pile.)",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "DAZED",
     "kind": "status_card",
-    "name": "Dazed",
-    "play_notes": ""
+    "name": "Dazed"
   },
   "DECAY": {
     "aliases": [
       "Decay",
       "腐化"
     ],
-    "curated": false,
-    "description": "unplayable; if still in hand at end of turn, deals 2 unpowered damage to its owner (DamageVar 2).",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "DECAY",
     "kind": "curse",
-    "name": "Decay",
-    "play_notes": ""
+    "name": "Decay"
   },
   "DISINTEGRATION": {
     "aliases": [
       "Disintegration",
       "崩解"
     ],
-    "curated": false,
-    "description": "cost -1, not generated in combat; when chosen, applies DISINTEGRATION_POWER 6 — lose 6 HP at end of your turn (unpowered), persistent while the power lasts.",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "DISINTEGRATION",
     "kind": "status_card",
-    "name": "Disintegration",
-    "play_notes": ""
+    "name": "Disintegration"
   },
   "DOUBT": {
     "aliases": [
       "Doubt",
       "猜疑"
     ],
-    "curated": false,
-    "description": "unplayable; if still in hand at end of turn, applies 1 WEAK_POWER to its owner (first application skips its next duration tick).",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "DOUBT",
     "kind": "curse",
-    "name": "Doubt",
-    "play_notes": ""
+    "name": "Doubt"
   },
   "ENTANGLED": {
     "aliases": [
       "Entangled",
       "缠绕"
     ],
-    "curated": false,
-    "description": "host = TANGLED_POWER — Attack cards get Entangled; Entangled cards cost +Amount Energy; clears at end of your turn.",
-    "host_power_id": "TANGLED_POWER",
+    "detail": {
+      "host_power_id": "TANGLED_POWER"
+    },
     "id": "ENTANGLED",
     "kind": "affliction",
-    "name": "Entangled",
-    "play_notes": ""
+    "name": "Entangled"
   },
   "FLAK_CANNON": {
     "aliases": [
       "Flak Cannon",
       "散射炮"
     ],
-    "curated": false,
-    "description": "exhausts all Status cards, dealing damage per card removed.",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "FLAK_CANNON",
     "kind": "status_card",
-    "name": "Flak Cannon",
-    "play_notes": ""
+    "name": "Flak Cannon"
   },
   "GALVANIZED": {
     "aliases": [
       "Galvanized",
       "电镀"
     ],
-    "curated": false,
-    "description": "host = GALVANIC_POWER (stackable) — Power cards get Galvanized (Amount); playing a Galvanized card deals Amount unpowered damage to its owner.",
-    "host_power_id": "GALVANIC_POWER",
+    "detail": {
+      "host_power_id": "GALVANIC_POWER"
+    },
     "id": "GALVANIZED",
     "kind": "affliction",
-    "name": "Galvanized",
-    "play_notes": ""
+    "name": "Galvanized"
   },
   "HEXED": {
     "aliases": [
       "Hexed",
       "诅咒"
     ],
-    "curated": false,
-    "description": "host = HEX_POWER — Hexed cards gain Ethereal keyword while the power exists; clears when the applier dies or the power is removed.",
-    "host_power_id": "HEX_POWER",
+    "detail": {
+      "host_power_id": "HEX_POWER"
+    },
     "id": "HEXED",
     "kind": "affliction",
-    "name": "Hexed",
-    "play_notes": ""
+    "name": "Hexed"
   },
   "INJURY": {
     "aliases": [
       "Injury",
       "损伤"
     ],
-    "curated": false,
-    "description": "unplayable.",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "INJURY",
     "kind": "curse",
-    "name": "Injury",
-    "play_notes": ""
+    "name": "Injury"
   },
   "ITERATION": {
     "aliases": [
       "Iteration",
       "迭代"
     ],
-    "curated": false,
-    "description": "ITERATION_POWER — extra draw the first time you draw a Status card each turn.",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "ITERATION",
     "kind": "status_card",
-    "name": "Iteration",
-    "play_notes": ""
+    "name": "Iteration"
   },
   "MIND_ROT": {
     "aliases": [
       "Mind Rot",
       "脑蚀"
     ],
-    "curated": false,
-    "description": "cost -1; when chosen, applies MIND_ROT_POWER 1 — draw 1 fewer card per turn.",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "MIND_ROT",
     "kind": "status_card",
-    "name": "Mind Rot",
-    "play_notes": ""
+    "name": "Mind Rot"
   },
   "NORMALITY": {
     "aliases": [
       "Normality",
       "常态"
     ],
-    "curated": false,
-    "description": "unplayable; while it is in your hand, after you have played 3 cards this turn you can play no more cards (limit 3 plays/turn).",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "NORMALITY",
     "kind": "curse",
-    "name": "Normality",
-    "play_notes": ""
+    "name": "Normality"
   },
   "REGRET": {
     "aliases": [
       "Regret",
       "悔恨"
     ],
-    "curated": false,
-    "description": "unplayable; at end of turn, if in hand, deals unblockable unpowered damage to owner equal to the number of cards in hand (counted at turn end).",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "REGRET",
     "kind": "curse",
-    "name": "Regret",
-    "play_notes": ""
+    "name": "Regret"
   },
   "RINGING": {
     "aliases": [
       "Ringing",
       "耳鸣"
     ],
-    "curated": false,
-    "description": "host = RINGING_POWER — a Ringing card is unplayable once any card has been played this turn; clears at end of your turn.",
-    "host_power_id": "RINGING_POWER",
+    "detail": {
+      "host_power_id": "RINGING_POWER"
+    },
     "id": "RINGING",
     "kind": "affliction",
-    "name": "Ringing",
-    "play_notes": ""
+    "name": "Ringing"
   },
   "ROCKET_PUNCH": {
     "aliases": [
       "Rocket Punch",
       "火箭飞拳"
     ],
-    "curated": false,
-    "description": "becomes free when a Status card is created.",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "ROCKET_PUNCH",
     "kind": "status_card",
-    "name": "Rocket Punch",
-    "play_notes": ""
+    "name": "Rocket Punch"
   },
   "SLIMED": {
     "aliases": [
       "Slimed",
       "黏液"
     ],
-    "curated": false,
-    "description": "cost 1; on play draw 1 card, Exhausts.",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "SLIMED",
     "kind": "status_card",
-    "name": "Slimed",
-    "play_notes": ""
+    "name": "Slimed"
   },
   "SLOTH": {
     "aliases": [
       "Sloth",
       "怠惰"
     ],
-    "curated": false,
-    "description": "cost -1; when chosen, applies SLOTH_POWER 3 — play at most 3 cards per turn (counter resets at your turn start; display shows cards played this turn).",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "SLOTH",
     "kind": "status_card",
-    "name": "Sloth",
-    "play_notes": ""
+    "name": "Sloth"
   },
   "SMOG": {
     "aliases": [
       "Smog",
       "烟雾"
     ],
-    "curated": false,
-    "description": "host = SMOGGY_POWER — Skill cards get Smog after you play a Skill; Smog cards are unplayable while the power exists; clears at end of your turn.",
-    "host_power_id": "SMOGGY_POWER",
+    "detail": {
+      "host_power_id": "SMOGGY_POWER"
+    },
     "id": "SMOG",
     "kind": "affliction",
-    "name": "Smog",
-    "play_notes": ""
+    "name": "Smog"
   },
   "SMOKESTACK": {
     "aliases": [
       "Smokestack",
       "烟囱"
     ],
-    "curated": false,
-    "description": "SMOKESTACK_POWER — damages all enemies when a Status card is created.",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "SMOKESTACK",
     "kind": "status_card",
-    "name": "Smokestack",
-    "play_notes": ""
+    "name": "Smokestack"
   },
   "TAINTED": {
     "aliases": [
       "Tainted",
       "污染"
     ],
-    "curated": false,
-    "description": "host = TAINTED_POWER — attacks against the power owner deal +Amount damage; the power itself is removed at end of Enemy side turn. (VitalSparkPower afflicts player Skill cards with Tainted and applies TaintedPower when a Tainted card is played.)",
-    "host_power_id": "TAINTED_POWER",
+    "detail": {
+      "host_power_id": "TAINTED_POWER"
+    },
     "id": "TAINTED",
     "kind": "affliction",
-    "name": "Tainted",
-    "play_notes": ""
+    "name": "Tainted"
   },
   "TOXIC": {
     "aliases": [
       "Toxic",
       "剧毒"
     ],
-    "curated": false,
-    "description": "cost 1, Exhausts; if still in hand at end of turn, deals 5 unpowered damage to its owner (DamageVar 5).",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "TOXIC",
     "kind": "status_card",
-    "name": "Toxic",
-    "play_notes": ""
+    "name": "Toxic"
   },
   "TRASH_TO_TREASURE": {
     "aliases": [
       "Trash To Treasure",
       "化废为宝"
     ],
-    "curated": false,
-    "description": "TRASH_TO_TREASURE_POWER — channels a random Orb when a Status card is created.",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "TRASH_TO_TREASURE",
     "kind": "status_card",
-    "name": "Trash To Treasure",
-    "play_notes": ""
+    "name": "Trash To Treasure"
   },
   "WASTE_AWAY": {
     "aliases": [
       "Waste Away",
       "衰朽"
     ],
-    "curated": false,
-    "description": "cost -1; when chosen, applies WASTE_AWAY_POWER 1 — max Energy reduced by 1.",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "WASTE_AWAY",
     "kind": "status_card",
-    "name": "Waste Away",
-    "play_notes": ""
+    "name": "Waste Away"
   },
   "WOUND": {
     "aliases": [
       "Wound",
       "创伤"
     ],
-    "curated": false,
-    "description": "unplayable; pure deck clog. 3 Wounds in hand through end of turn dealt ZERO HP damage — no Infection-class EOT tax; the \"pure deck clog\" classification holds.",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "WOUND",
     "kind": "status_card",
-    "name": "Wound",
-    "play_notes": ""
+    "name": "Wound"
   }
 }

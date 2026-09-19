@@ -266,12 +266,13 @@ When the run ends (game_over screen, or abandon):
    Run overview / What went well / What went poorly / Key moments). Cite the
    run log by file name only —
    never personal absolute paths.
-2. Fold newly observed game facts (card/relic/potion/power/intent effects)
-   into the matching spirectl_lib/data/*.json and its `_zh` twin directly as
-   entries keyed by live game id with `"curated": true` — English and
-   Chinese stay content-aligned in the same session — then run
-   `python3 scripts/build_game_reference_json.py --check`; it must exit 0
-   before any commit. Memory holds play insights and run process only,
+2. Fold newly observed game STRUCTURE (card/relic/potion/power/intent
+   mechanics as structured fields) into the matching spirectl_lib/data/*.json
+   and its `_zh` twin, entries keyed by live game id — schema is
+   bridge/spirectl_lib/schema.py (envelope + per-kind detail; codex is the
+   authoritative structure source, prose doctrine goes to memory/lessons) —
+   then run `python3 scripts/build_game_reference_json.py --check`; it must
+   exit 0 before any commit. Memory holds play insights and run process only,
    never game base data.
 3. Commit the run memory note and its `_zh` twin to the repo — memory is
    version-controlled.
@@ -398,11 +399,12 @@ bridge/ — tooling docs and game data:
   branches (options nested under each event)
 - `bridge/spirectl_lib/data/afflictions.json` + `afflictions_zh.json` — statuses and
   debuffs
-- JSON reference DB: entries are keyed by live game ids; resolve any id with
-  `python3 bridge/spirectl.py lookup <key>` (flags `--json/--lang/--domain/--all`;
-  miss path researches spire-codex.com and folds a `curated:false` stub —
-  refine to `curated:true`, bilingual). The markdown twins (game/*.md) stay
-  until live verification passes, then retire — cite the JSON files.
+- JSON reference DB: purely programmatic store (envelope + per-kind detail,
+  schema: bridge/spirectl_lib/schema.py); entries keyed by live game ids;
+  resolve any id with `python3 bridge/spirectl.py lookup <key>` (flags
+  `--json/--lang/--domain/--all`; miss path folds STRUCTURE from
+  spire-codex.com directly — codex is authoritative). Doctrine/prose lives in
+  memory/lessons, never in the data store.
 
 memory/ — run memory (version-controlled):
 

@@ -1,116 +1,150 @@
 {
   "ACCELERANT_POWER": {
     "aliases": [
+      "ACCELERANT",
+      "Accelerant",
       "AccelerantPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "inert marker powers — no hooks of their own; queried by specific cards (Shiv / SovereignBlade / TheHunt success marker / theft logic) or by Poison trigger-count math (Accelerant).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ACCELERANT_POWER",
     "kind": "power",
-    "name": "Accelerant",
-    "play_notes": "",
-    "power_type": null,
-    "stack_type": null
+    "name": "Accelerant"
   },
   "ACCURACY_POWER": {
     "aliases": [
+      "ACCURACY",
+      "Accuracy",
       "AccuracyPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "+Amount attack damage on owner's Shiv-tagged attacks (ModifyDamageAdditive; only cards with CardTag.Shiv).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ACCURACY_POWER",
     "kind": "power",
-    "name": "Accuracy",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Accuracy"
   },
   "ADAPTABLE_POWER": {
     "aliases": [
       "ADAPTABLE",
+      "Adaptable",
       "AdaptablePower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "Buff on TestSubject-class bosses: self-revive — death prevents combat end and creature removal until revive logic completes (monster-hosted state machine; buffs retained; RESPAWN_MOVE intent carries heal + PAINFUL_STABS + NEMESIS class buffs). REVIVE_BRANCH markers surface live via conditional-branch fallback reflection. LIVE run-46: phase-1 cleared to 0 HP → combat continued → RESPAWN intent live → EA ending chain after final phase.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "ADAPTABLE_POWER",
     "kind": "power",
-    "name": "Adaptable",
-    "play_notes": "实验体类 Boss 的 Buff：自体复活——死亡不结束战斗、不移除生物，直至复活逻辑完成（怪物侧状态机；buff 保留）。REVIVE_BRANCH 标记经条件分支回退反射 live 浮现。run-46 live：一阶段清至 0HP → RESPAWN_MOVE 意图（治疗+PAINFUL_STABS 1+NEMESIS 1）→ 终阶段后 EA 结局链。 | run-46 live: ADAPTABLE→RESPAWN end-to-end — combat continued at 0 HP until revive resolved; REVIVE_BRANCH surfaced via fallback reflection.",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Adaptable"
   },
   "AFTERIMAGE_POWER": {
     "aliases": [
       "AFTERIMAGE",
+      "Afterimage",
       "AfterimagePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "after owner plays a card, owner gains Amount Block.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "AFTERIMAGE_POWER",
     "kind": "power",
-    "name": "Afterimage",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Afterimage"
   },
   "AGGRESSION_POWER": {
     "aliases": [
       "AGGRESSION",
+      "Aggression",
       "AggressionPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at start of owner's side turn, take Amount Attack cards from discard, move them to hand and Upgrade each (if upgradable).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "AGGRESSION_POWER",
     "kind": "power",
-    "name": "Aggression",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Aggression"
+  },
+  "ANTICIPATE": {
+    "aliases": [
+      "ANTICIPATE",
+      "Temporary Dexterity"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "ANTICIPATE",
+    "kind": "power",
+    "name": "Temporary Dexterity"
   },
   "ARSENAL_POWER": {
     "aliases": [
+      "ARSENAL",
+      "Arsenal",
       "ArsenalPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "on cards generated for combat, applies +Amount STRENGTH (hosted by generating effect).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ARSENAL_POWER",
     "kind": "power",
-    "name": "Arsenal",
-    "play_notes": "",
-    "power_type": null,
-    "stack_type": "Counter"
+    "name": "Arsenal"
   },
   "ARTIFACT_POWER": {
     "aliases": [
       "ARTIFACT",
+      "Artifact",
       "ArtifactPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "each incoming visible Debuff-type power application to owner is set to 0 amount, then 1 Artifact stack is consumed. Invisible/internal debuffs are not blocked.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ARTIFACT_POWER",
     "kind": "power",
-    "name": "Artifact",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Artifact"
   },
   "ASLEEP": {
-    "curated": true,
-    "description": "Counter-class: owner sleeps — if owner takes unblocked damage ≠0, owner wakes (removes own Plating if any, stuns self into WakeUpMove, removes Asleep). At end of owner side turn Asleep decrements 1; at 0 wakes via WakeUpMove; when Asleep≤1 at turn end Plating is removed. LIVE runs 39+40: LagavulinMatriarch wake fired both times from small unblocked damage through Plating block (run-40: Pommel 9 + Strike 6 broke 12 block to 3 unblocked → strip+stun same turn).",
+    "aliases": [
+      "Asleep"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ASLEEP",
     "kind": "power",
     "name": "Asleep"
@@ -120,1262 +154,1593 @@
       "ASLEEP",
       "AsleepPower"
     ],
-    "counter_class": true,
-    "curated": false,
-    "description": "owner sleeps — if owner takes unblocked damage != 0, owner wakes (removes own Plating if any, stuns self into WakeUpMove, removes Asleep). At end of owner's side turn, Asleep decrements 1; when it hits 0, owner wakes via WakeUpMove. When Asleep <= 1 at turn end, Plating is removed.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ASLEEP_POWER",
     "kind": "power",
-    "name": "Asleep",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Asleep"
   },
   "AUTOMATION_POWER": {
     "aliases": [
+      "AUTOMATION",
+      "Automation",
       "AutomationPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "every 10th card drawn by owner grants Amount Energy (counter `BaseCards` 10, then resets to 10).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "AUTOMATION_POWER",
     "kind": "power",
-    "name": "Automation",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Automation"
   },
   "BACK_ATTACK_LEFT_POWER": {
     "aliases": [
       "BACK_ATTACK_LEFT",
+      "Back Attack",
       "BackAttackLeftPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "Inert facing marker (Buff, Single) consumed by SURROUNDED_POWER flank checks — the claw carrying this marker hits a Surrounded owner at x1.5 when the owner faces the opposite direction. No hooks of its own.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "BACK_ATTACK_LEFT_POWER",
     "kind": "power",
-    "name": "Back Attack Left",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Back Attack Left"
   },
   "BACK_ATTACK_RIGHT_POWER": {
     "aliases": [
       "BACK_ATTACK_RIGHT",
+      "Back Attack",
       "BackAttackRightPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "Inert facing marker (Buff, Single) consumed by SURROUNDED_POWER flank checks — the claw carrying this marker hits a Surrounded owner at x1.5 when the owner faces the opposite direction. No hooks of its own.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "BACK_ATTACK_RIGHT_POWER",
     "kind": "power",
-    "name": "Back Attack Right",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Back Attack Right"
   },
   "BARRICADE_POWER": {
     "aliases": [
       "BARRICADE",
+      "Barricade",
       "BarricadePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner's Block is not cleared at turn (ShouldClearBlock always false for owner).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "BARRICADE_POWER",
     "kind": "power",
-    "name": "Barricade",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Barricade"
   },
   "BATTLEWORN_DUMMY_TIME_LIMIT_POWER": {
     "aliases": [
       "BATTLEWORN_DUMMY_TIME_LIMIT",
-      "BattlewornDummyTimeLimitPower"
+      "BattlewornDummyTimeLimitPower",
+      "Time Limit"
     ],
-    "counter_class": true,
-    "curated": false,
-    "description": "decrements at end of owner's side turn; at 1, dummy escapes (event encounter logic).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "BATTLEWORN_DUMMY_TIME_LIMIT_POWER",
     "kind": "power",
-    "name": "Battleworn Dummy Time Limit",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Battleworn Dummy Time Limit"
   },
   "BEACON_OF_HOPE_POWER": {
     "aliases": [
+      "BEACON_OF_HOPE",
+      "Beacon of Hope",
       "BeaconOfHopePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "the first time owner gains Block on owner's side turn, all allies gain floor-half of that Block amount (amount * 0.5, only if >= 1); triggers once per instance.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "BEACON_OF_HOPE_POWER",
     "kind": "power",
-    "name": "Beacon Of Hope",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Beacon Of Hope"
   },
   "BIASED_COGNITION_POWER": {
     "aliases": [
+      "BIASED_COGNITION",
+      "Biased Cognition",
       "BiasedCognitionPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at start of owner's side turn, apply -Amount FOCUS_POWER to owner.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "BIASED_COGNITION_POWER",
     "kind": "power",
-    "name": "Biased Cognition",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Biased Cognition"
   },
   "BLACK_HOLE_POWER": {
     "aliases": [
+      "BLACK_HOLE",
+      "Black Hole",
       "BlackHolePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "when owner's player spends Stars on a card (last in series) or gains Stars, deal damage to all hittable enemies (amount hosted by DynamicVars).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "BLACK_HOLE_POWER",
     "kind": "power",
-    "name": "Black Hole",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Black Hole"
   },
   "BLOCK_NEXT_TURN_POWER": {
     "aliases": [
       "BLOCK_NEXT_TURN",
+      "Block Next Turn",
       "BlockNextTurnPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "when owner's Block is cleared, gain Amount Block once and remove the power.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "BLOCK_NEXT_TURN_POWER",
     "kind": "power",
-    "name": "Block Next Turn",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Block Next Turn"
   },
   "BLUR_POWER": {
     "aliases": [
+      "BLUR",
+      "Blur",
       "BlurPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner's Block is not cleared at turn start; decrements 1 at start of owner's side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "BLUR_POWER",
     "kind": "power",
-    "name": "Blur",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Blur"
   },
   "BORROWED_TIME_POWER": {
     "aliases": [
+      "BORROWED_TIME",
+      "Borrowed Time",
       "BorrowedTimePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "all owner's cards cost +Amount Energy. Removed at end of owner's side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "BORROWED_TIME_POWER",
     "kind": "power",
-    "name": "Borrowed Time",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Borrowed Time"
   },
   "BUFFER_POWER": {
     "aliases": [
       "BUFFER",
+      "Buffer",
       "BufferPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "next Amount HP-loss events that would deal HP loss to owner deal 0 instead (consumed 1 per prevented loss; late hook, so other reducers apply first).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "BUFFER_POWER",
     "kind": "power",
-    "name": "Buffer",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Buffer"
   },
   "BURROWED_POWER": {
     "aliases": [
       "BURROWED",
+      "Burrowed",
       "BurrowedPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner cannot be targeted/hit — CORRECTION: burrowed creatures CAN be attacked; card damage applies to their Block as normal (Bash/Strike/SPITE all landed). AfterBlockBroken fires when the Block breaks: DIZZY stun + Burrowed removed + all remaining Block cleared, cancelling the burrow attack (BELOW intent). Break the block to cancel the attack; do not avoid attacking burrowed foes. Original archive line: owner cannot be targeted/hit (ShouldAllowHitting false for owner); if owner's Block breaks, owner is stunned into dizzy move and Burrowed is removed; on removal owner loses all Block (999999999).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "BURROWED_POWER",
     "kind": "power",
-    "name": "Burrowed",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Burrowed"
   },
   "BURST_POWER": {
     "aliases": [
+      "BURST",
+      "Burst",
       "BurstPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner's next Amount Skill plays count twice (ModifyCardPlayCount +1 per Skill); 1 stack consumed per Skill played; removed at end of owner's side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "BURST_POWER",
     "kind": "power",
-    "name": "Burst",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Burst"
   },
   "CALAMITY_POWER": {
     "aliases": [
+      "CALAMITY",
+      "Calamity",
       "CalamityPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "after owner plays an Attack, add Amount random class-pool cards to owner's hand (card generation hosted by source).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CALAMITY_POWER",
     "kind": "power",
-    "name": "Calamity",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Calamity"
   },
   "CALCIFY_POWER": {
     "aliases": [
+      "CALCIFY",
+      "Calcify",
       "CalcifyPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "+Amount attack damage on owner's attacks (ModifyDamageAdditive; trigger hosted by source).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CALCIFY_POWER",
     "kind": "power",
-    "name": "Calcify",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Calcify"
   },
   "CALL_OF_THE_VOID_POWER": {
     "aliases": [
+      "CALL_OF_THE_VOID",
+      "Call of the Void",
       "CallOfTheVoidPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "before owner's hand draw, add Distinct cards (with keyword application) to owner's hand — source-hosted draw pollution.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CALL_OF_THE_VOID_POWER",
     "kind": "power",
-    "name": "Call Of The Void",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Call Of The Void"
   },
   "CHAINS_OF_BINDING_POWER": {
-    "affliction_keys": [
-      "BOUND"
-    ],
     "aliases": [
       "CHAINS_OF_BINDING",
+      "Chains of Binding",
       "ChainsOfBindingPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "Chains of Binding (QUEEN boss power, placed on the player by Puppet Strings): on drawing cards during the owner's side turn, afflict up to Amount cards with Bound (per-turn count capped at Amount). While active only 1 Bound card may be played per turn; all Bound afflictions clear at end of owner's side turn. LIVE RULE (run-44 boss, user-corrected): the bridge prints per-card ok/no(None) every turn — Bound cards appear as no(None); every card marked ok is genuinely playable and MUST be played. An earlier archive note claiming beyond-2-effective-plays no-ops is OBSOLETE — run-44 attempt-2 T1 landed three effective plays in one turn (One-Two Punch + doubled Perfected Strike + Blood Wall all resolved). No planning doctrine may leave a bridge-ok card unplayed; live signals outrank archive summaries. Lookup trigger: this power arrives on the PLAYER — resolve it the turn Puppet Strings lands.",
-    "host_of_affliction": true,
+    "detail": {
+      "affliction_keys": [
+        "BOUND"
+      ],
+      "counter_class": true,
+      "host_of_affliction": true,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "CHAINS_OF_BINDING_POWER",
     "kind": "power",
-    "name": "Chains Of Binding",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Chains Of Binding"
   },
   "CHILD_OF_THE_STARS_POWER": {
     "aliases": [
       "CHILD_OF_THE_STARS",
+      "Child of the Stars",
       "ChildOfTheStarsPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "when owner's player spends Stars, owner gains Amount * stars-spent Block.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CHILD_OF_THE_STARS_POWER",
     "kind": "power",
-    "name": "Child Of The Stars",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Child Of The Stars"
   },
   "CLARITY_POWER": {
     "aliases": [
       "CLARITY",
+      "Clarity",
       "ClarityPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "+1 hand draw at the start of each of owner's next Amount turns; decrements at each of those turn starts.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CLARITY_POWER",
     "kind": "power",
-    "name": "Clarity",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Clarity"
   },
   "COLOSSUS_POWER": {
     "aliases": [
       "COLOSSUS",
+      "Colossus",
       "ColossusPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "attacks against owner from a dealer that has VULNERABLE_POWER deal x0.5 (DamageDecrease 0.5); decrements 1 at end of Enemy side turn — LIVE run-48: counter consumed after one enemy turn unless the power card is replayed (online T4 Exoskeleton, gone T5). Condition = attacker carries Vuln, not the player. LIVE run-48 HunterKiller: Puncture 5x3→2x3 (Weak+Colossus) and 7x3→3x3 (Tremble-Vuln+Colossus) — both turns 0 chip through 9-15 block. Dead card without a Vuln applicator in the deck; S-tier defense with Uppercut/Bash/Tremble package.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "COLOSSUS_POWER",
     "kind": "power",
-    "name": "Colossus",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log) | run-48 live 2026-09-19: Puncture halved twice vs Vuln'd HunterKiller; counter decrement consumed after one enemy turn confirmed. [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Colossus"
   },
   "CONFUSED_POWER": {
     "aliases": [
+      "CONFUSED",
+      "Confused",
       "ConfusedPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "every card drawn by owner (canonical cost >= 0) gets its combat cost rerolled to a random int in 0..3 (`Rng.CombatEnergyCosts.NextInt(4)`).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
     "id": "CONFUSED_POWER",
     "kind": "power",
-    "name": "Confused",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Single"
+    "name": "Confused"
   },
   "CONQUEROR_POWER": {
     "aliases": [
       "CONQUEROR",
+      "Conqueror",
       "ConquerorPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "SovereignBlade attacks against owner deal x2 damage. Decrements at end of owner's side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "CONQUEROR_POWER",
     "kind": "power",
-    "name": "Conqueror",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Conqueror"
   },
   "CONSTRICT_POWER": {
     "aliases": [
       "CONSTRICT",
+      "Constrict",
       "ConstrictPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "Debuff Counter on player (run-38 live): end of player turn take Amount unpowered damage per stack; LIVE STACKING — each CONSTRICT move cast adds +3 (SlitheringStrangler T1 applied 3, T3 cast → :6); blockable (remaining block absorbs the tick); removed when applier dies. Counter-class kill timer: 3→6→9 escalation — kill applier inside 2-3 cycles.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "CONSTRICT_POWER",
     "kind": "power",
-    "name": "Constrict",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Constrict"
   },
   "CONSUMING_SHADOW_POWER": {
     "aliases": [
+      "CONSUMING_SHADOW",
+      "Consuming Shadow",
       "ConsumingShadowPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at end of owner's side turn, if owner's player has orbs, evoke the last orb Amount times.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CONSUMING_SHADOW_POWER",
     "kind": "power",
-    "name": "Consuming Shadow",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Consuming Shadow"
   },
   "COOLANT_POWER": {
     "aliases": [
+      "COOLANT",
+      "Coolant",
       "CoolantPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at start of owner's side turn, gain (number of distinct orb types in queue) * Amount Block.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "COOLANT_POWER",
     "kind": "power",
-    "name": "Coolant",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Coolant"
+  },
+  "COORDINATE": {
+    "aliases": [
+      "COORDINATE",
+      "Temporary Strength"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "COORDINATE",
+    "kind": "power",
+    "name": "Temporary Strength"
   },
   "CORROSIVE_WAVE_POWER": {
     "aliases": [
+      "CORROSIVE_WAVE",
+      "Corrosive Wave",
       "CorrosiveWavePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "on card draw hooks, applies Amount POISON to all hittable enemies (source-hosted trigger; see monster move).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CORROSIVE_WAVE_POWER",
     "kind": "power",
-    "name": "Corrosive Wave",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Corrosive Wave"
   },
   "CORRUPTION_POWER": {
     "aliases": [
+      "CORRUPTION",
+      "Corruption",
       "CorruptionPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner's Skill cards cost 0 and Exhaust when played.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "CORRUPTION_POWER",
     "kind": "power",
-    "name": "Corruption",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Corruption"
   },
   "COUNTDOWN_POWER": {
     "aliases": [
+      "COUNTDOWN",
+      "Countdown",
       "CountdownPower"
     ],
-    "counter_class": true,
-    "curated": false,
-    "description": "at start of owner's side turn, applies DOOM-related countdown (Apply<DoomPower> to owner — kill clock; see monster card text for displayed number).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "COUNTDOWN_POWER",
     "kind": "power",
-    "name": "Countdown",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Countdown"
   },
   "COVERED_POWER": {
     "aliases": [
+      "COVERED",
+      "Covered",
       "CoveredPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "attacks against owner deal x0 while the covering applier lives; removed at end of Enemy side turn or when applier dies.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "COVERED_POWER",
     "kind": "power",
-    "name": "Covered",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Covered"
   },
   "CRAB_RAGE_POWER": {
     "aliases": [
       "CRAB_RAGE",
+      "Crab Rage",
       "CrabRagePower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "on death of another creature on owner's side, the surviving owner gains +6 Strength and 99 unpowered Block, then this power removes itself. (KaiserCrab claws; CanonicalVars Strength 6 / Block 99 Unpowered.) LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log): the +6 Strength persists, but the 99 Block is UNPOWERED and expired by the following player turn (Crusher showed block 0 next turn). Phase-2 wall is a one-turn spike — survive that turn and the block is gone.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "CRAB_RAGE_POWER",
     "kind": "power",
-    "live_notes": "LIVE run-56: KaiserCrab both bodies have CRAB_RAGE. When triggered, grants +Strength and massive Block to the crab body.",
-    "name": "Crab Rage",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Crab Rage"
   },
   "CREATIVE_AI_POWER": {
     "aliases": [
+      "CREATIVE_AI",
+      "Creative AI",
       "CreativeAiPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "before owner's hand draw, add Amount distinct Power cards to hand.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CREATIVE_AI_POWER",
     "kind": "power",
-    "name": "Creative Ai",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Creative Ai"
   },
   "CRIMSON_MANTLE_POWER": {
-    "curated": true,
-    "description": "At start of owner's side turn, owner loses 1 HP (unblockable) and gains Amount Block (card CRIMSON_MANTLE: 8 base, 10 upgraded). The turn-start HP loss fires same-turn HP-loss triggers (Rupture, Self-Forming Clay, Centennial Puzzle class) and counts for Spite/Inferno-style 'lost HP this turn' conditions.",
+    "aliases": [
+      "CRIMSON_MANTLE",
+      "Crimson Mantle"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CRIMSON_MANTLE_POWER",
     "kind": "power",
-    "name": "Crimson Mantle",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Crimson Mantle"
   },
   "CRUELTY_POWER": {
-    "curated": true,
-    "description": "owner's attacks deal +Amount% damage to Vulnerable targets (Amount=25 base; run-41 live CRUELTY_POWER:25). Multiplies on top of Vulnerable's ×1.5 — a 32-base Bludgeon resolved 37 on a vuln target live run-41; PS 20-class resolved 25-30 with Strike Dummy tags. Permanent for the combat once played (power card).",
+    "aliases": [
+      "CRUELTY",
+      "Cruelty"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CRUELTY_POWER",
     "kind": "power",
-    "name": "Cruelty",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Cruelty"
+  },
+  "CRUSH_UNDER": {
+    "aliases": [
+      "CRUSH_UNDER",
+      "Temporary Strength Down"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "CRUSH_UNDER",
+    "kind": "power",
+    "name": "Temporary Strength Down"
   },
   "CURIOUS_POWER": {
     "aliases": [
+      "CURIOUS",
+      "Curious",
       "CuriousPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner's Power cards with cost > 0 cost Amount less (min 0).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CURIOUS_POWER",
     "kind": "power",
-    "name": "Curious",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Curious"
   },
   "CURL_UP_POWER": {
     "aliases": [
       "CURL_UP",
+      "Curl Up",
       "CurlUpPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "post-damage block grant: after damage lands on the owner, owner gains Amount Block (run-42 live order: 6 damage landed THEN +14 block appeared - not pre-block). Live run-43 LouseProgenitor CURL_UP 14 with the same post-damage order on hit turns.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CURL_UP_POWER",
     "kind": "power",
-    "name": "Curl Up",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Curl Up"
   },
   "DAMPEN_POWER": {
     "aliases": [
       "DAMPEN",
+      "Dampen",
       "DampenPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "on apply, every upgraded card in the owner's deck is downgraded; the prior upgrade levels are stored in internal data keyed per applier (casters set grows when re-applied). Observed on Act3 MagiKnight — the downgrade persists while the power exists.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "None-stack"
+    },
     "id": "DAMPEN_POWER",
     "kind": "power",
-    "name": "Dampen",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "None-stack"
+    "name": "Dampen"
   },
   "DANSE_MACABRE_POWER": {
     "aliases": [
       "DANSE_MACABRE",
+      "Danse Macabre",
       "DanseMacabrePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "before owner plays a card, owner gains Amount Block (source-hosted trigger).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "DANSE_MACABRE_POWER",
     "kind": "power",
-    "name": "Danse Macabre",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Danse Macabre"
   },
   "DARK_EMBRACE_POWER": {
     "aliases": [
       "DARK_EMBRACE",
+      "Dark Embrace",
       "DarkEmbracePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "draw Amount cards whenever an owner's card is Exhausted; Ethereal-triggered exhausts batch their draws to end of owner's side turn (Amount * ethereal count).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "DARK_EMBRACE_POWER",
     "kind": "power",
-    "name": "Dark Embrace",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Dark Embrace"
+  },
+  "DARK_SHACKLES": {
+    "aliases": [
+      "DARK_SHACKLES",
+      "Temporary Strength Down"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "DARK_SHACKLES",
+    "kind": "power",
+    "name": "Temporary Strength Down"
+  },
+  "DEBILITATE": {
+    "aliases": [
+      "DEBILITATE",
+      "Debilitate"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "DEBILITATE",
+    "kind": "power",
+    "name": "Debilitate"
   },
   "DEMESNE_POWER": {
     "aliases": [
       "DEMESNE",
+      "Demesne",
       "DemesnePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "+Amount hand draw per turn AND +Amount max Energy.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "DEMESNE_POWER",
     "kind": "power",
-    "name": "Demesne",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Demesne"
   },
   "DEMISE_POWER": {
     "aliases": [
       "DEMISE",
+      "Demise",
       "DemisePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at end of owner's side turn, deal Amount unblockable unpowered damage to owner.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "DEMISE_POWER",
     "kind": "power",
-    "name": "Demise",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Demise"
   },
   "DEMON_FORM_POWER": {
     "aliases": [
       "DEMON_FORM",
+      "Demon Form",
       "DemonFormPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "at start of owner's side turn, apply +Amount STRENGTH_POWER to owner. Long-fight strength engine; card form seen in run-43 Act1-boss reward (not picked - Feed taken for MaxHP economy instead).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "DEMON_FORM_POWER",
     "kind": "power",
-    "name": "Demon Form",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Demon Form"
   },
   "DEVOUR_LIFE_POWER": {
     "aliases": [
+      "DEVOUR_LIFE",
+      "Devour Life",
       "DevourLifePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "on card-play hooks, OstyCmd.Summon (Amount) — pet summon trigger hosted by source card.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "DEVOUR_LIFE_POWER",
     "kind": "power",
-    "name": "Devour Life",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Devour Life"
   },
   "DEXTERITY_POWER": {
     "aliases": [
       "DEXTERITY",
+      "Dexterity",
       "DexterityPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "+Amount Block on every block-gaining card/monster move of the owner.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "DEXTERITY_POWER",
     "kind": "power",
-    "name": "Dexterity",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Dexterity"
   },
   "DIAMOND_DIADEM_POWER": {
     "aliases": [
+      "DIAMOND_DIADEM",
+      "Diamond Diadem",
       "DiamondDiademPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "attacks against owner deal x0.5; removed at end of Enemy side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "DIAMOND_DIADEM_POWER",
     "kind": "power",
-    "name": "Diamond Diadem",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Diamond Diadem"
   },
   "DIE_FOR_YOU_POWER": {
     "aliases": [
       "DIE_FOR_YOU",
+      "Die for You",
       "DieForYouPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "Member of the DIE_FOR_YOU_POWER family. combat does not end on owner death; owner removed from combat; revive handled by pet logic (see character cards).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "DIE_FOR_YOU_POWER",
     "kind": "power",
-    "name": "Die For You",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Die For You"
   },
   "DISINTEGRATION": {
     "aliases": [
+      "Disintegration",
       "DisintegrationPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "see afflictions.md — KnowledgeDemon choice card applies DISINTEGRATION_POWER 6.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "DISINTEGRATION",
     "kind": "power",
-    "name": "Disintegration",
-    "play_notes": "",
-    "power_type": null,
-    "stack_type": null
+    "name": "Disintegration"
   },
   "DISINTEGRATION_POWER": {
     "aliases": [
       "DISINTEGRATION",
       "DisintegrationPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at end of owner's side turn (late), deal Amount unpowered damage to owner.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "DISINTEGRATION_POWER",
     "kind": "power",
-    "name": "Disintegration",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Disintegration"
   },
   "DOOM_POWER": {
     "aliases": [
       "DOOM",
+      "Doom",
       "DoomPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at end of owner's side turn, if owner CurrentHp <= Amount, owner is killed (Doom kill, special VFX; all doomed creatures on that side die together).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "DOOM_POWER",
     "kind": "power",
-    "name": "Doom",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Doom"
   },
   "DOUBLE_DAMAGE_POWER": {
     "aliases": [
+      "DOUBLE_DAMAGE",
+      "Double Damage",
       "DoubleDamagePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner's attack damage dealt multiplied by x2 while stacks > 0; decrements at end of owner's side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "DOUBLE_DAMAGE_POWER",
     "kind": "power",
-    "name": "Double Damage",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Double Damage"
   },
   "DRAW_CARDS_NEXT_TURN_POWER": {
     "aliases": [
       "DRAW_CARDS_NEXT_TURN",
+      "Draw Cards Next Turn",
       "DrawCardsNextTurnPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "+Amount hand draw at the start of owner's next turn only, then removed.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "DRAW_CARDS_NEXT_TURN_POWER",
     "kind": "power",
-    "name": "Draw Cards Next Turn",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Draw Cards Next Turn"
   },
   "DUPLICATION_POWER": {
     "aliases": [
       "DUPLICATION",
+      "Duplication",
       "DuplicationPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner's next Amount card plays count twice (any card type); 1 stack consumed per card played; removed at end of owner's side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "DUPLICATION_POWER",
     "kind": "power",
-    "name": "Duplication",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Duplication"
+  },
+  "DYING_STAR": {
+    "aliases": [
+      "DYING_STAR",
+      "Temporary Strength Down"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "DYING_STAR",
+    "kind": "power",
+    "name": "Temporary Strength Down"
   },
   "ECHO_FORM_POWER": {
     "aliases": [
+      "ECHO_FORM",
+      "Echo Form",
       "EchoFormPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "ECHO_FORM: doubles the resolution of the FIRST card played each turn AFTER the turn it is played. LIVE (run-44): doubling applies to POWER cards' stack application — Inferno as the doubled card granted INFERNO_POWER 6+6=12 stacks (Weak-immune 12 AoE per HP-loss tick); One-Two Punch doubled grants ONE_TWO_PUNCH_POWER:2 (next TWO attacks double); Blade Dance doubled generated 8 shivs; Blood Wall doubled granted 13+13=26 block but the 2 HP self-cost was also paid twice. Ethereal: unplayed at end of turn it exhausts.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ECHO_FORM_POWER",
     "kind": "power",
-    "name": "Echo Form",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Echo Form"
   },
   "ENERGY_NEXT_TURN_POWER": {
     "aliases": [
       "ENERGY_NEXT_TURN",
+      "Energy Next Turn",
       "EnergyNextTurnPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at next energy reset, gain Amount Energy, then removed.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ENERGY_NEXT_TURN_POWER",
     "kind": "power",
-    "name": "Energy Next Turn",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Energy Next Turn"
+  },
+  "ENFEEBLING_TOUCH": {
+    "aliases": [
+      "ENFEEBLING_TOUCH",
+      "Temporary Strength Down"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "ENFEEBLING_TOUCH",
+    "kind": "power",
+    "name": "Temporary Strength Down"
   },
   "ENRAGE_POWER": {
     "aliases": [
       "ENRAGE",
+      "Enrage",
       "EnragePower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "Buff counter: whenever a Skill card is played (by anyone), owner gains +Amount Strength. Zero-skill discipline: attacks + powers only while live — Bloodletting/Defend/SecondWind/Ritual/Dominate/Havoc-class Skills all feed the owner. LIVE run-46: TestSubject ENRAGE:2 fed +2 Str by a Bloodletting slip T3 (Bite 20→33 by mid-fight) — same failure class as run-44's TAINTED slip at InfestedPrism; lesson: re-read the live powers print every turn, don't carry the zero-skill list from fight start.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ENRAGE_POWER",
     "kind": "power",
-    "name": "Enrage",
-    "play_notes": "Buff 计数：任何人打出技能牌时持有者获得 +Amount 力量。零技能纪律：此 power 存续期间仅打攻击+能力牌——放血/防御/SW/仪式/主宰/Havoc 类技能都会喂养持有者。run-46 live：实验体 ENRAGE:2 被 T3 放血失误喂 +2 力量（Bite 中局 20→33）——与 run-44 TAINTED 失误同类；每回合从 live powers 打印重读，不要从开战时点背负零技能清单。 | run-46 live: Enrage fed by Bloodletting slip (+2 Str, Bite 20→33) — zero-skill re-read-per-turn lesson; same failure class as run-44 TAINTED slip.",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Enrage"
+  },
+  "ENTROPY": {
+    "aliases": [
+      "ENTROPY",
+      "Entropy"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "ENTROPY",
+    "kind": "power",
+    "name": "Entropy"
   },
   "ENVENOM_POWER": {
     "aliases": [
+      "ENVENOM",
+      "Envenom",
       "EnvenomPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "when owner's powered attack deals unblocked damage > 0, apply Amount POISON to the target.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ENVENOM_POWER",
     "kind": "power",
-    "name": "Envenom",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Envenom"
   },
   "ESCAPE_ARTIST_POWER": {
     "aliases": [
       "ESCAPE_ARTIST",
+      "Escape Artist",
       "EscapeArtistPower"
     ],
-    "counter_class": true,
-    "curated": false,
-    "description": "visual escape timer — decrements at end of owner's side turn while Amount > 1; at Amount == 1 starts pulsing (ThievingHopper escape imminent; escape action hosted by monster move).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ESCAPE_ARTIST_POWER",
     "kind": "power",
-    "name": "Escape Artist",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Escape Artist"
   },
   "FAN_OF_KNIVES_POWER": {
     "aliases": [
+      "FAN_OF_KNIVES",
+      "Fan of Knives",
       "FanOfKnivesPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "Inert marker power (Buff, Counter) — no hooks of its own; queried by Shiv-tagged cards (Shiv-family effects read it, e.g. Shiv hitting ALL enemies while Fan of Knives is active).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FAN_OF_KNIVES_POWER",
     "kind": "power",
-    "name": "Fan of Knives",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Fan of Knives"
   },
   "FASTEN_POWER": {
     "aliases": [
       "FASTEN",
+      "Fasten",
       "FastenPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "+Amount Block on owner's block gains (ModifyBlockAdditive, card/move-sourced block only).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FASTEN_POWER",
     "kind": "power",
-    "name": "Fasten",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Fasten"
+  },
+  "FEEDING_FRENZY": {
+    "aliases": [
+      "FEEDING_FRENZY",
+      "Temporary Strength"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FEEDING_FRENZY",
+    "kind": "power",
+    "name": "Temporary Strength"
   },
   "FEEL_NO_PAIN_POWER": {
     "aliases": [
       "FEEL_NO_PAIN",
+      "Feel No Pain",
       "FeelNoPainPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "whenever an owner's card is Exhausted, owner gains Amount Block.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FEEL_NO_PAIN_POWER",
     "kind": "power",
-    "name": "Feel No Pain",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Feel No Pain"
+  },
+  "FERAL": {
+    "aliases": [
+      "FERAL",
+      "Feral"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FERAL",
+    "kind": "power",
+    "name": "Feral"
   },
   "FLAME_BARRIER_POWER": {
     "aliases": [
       "FLAME_BARRIER",
+      "Flame Barrier",
       "FlameBarrierPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "when owner is hit by a powered attack, dealer takes Amount unpowered damage. Removed at end of the opposing side's turn (not owner's).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FLAME_BARRIER_POWER",
     "kind": "power",
-    "name": "Flame Barrier",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Flame Barrier"
   },
   "FLANKING_POWER": {
     "aliases": [
+      "FLANKING",
+      "Flanking",
       "FlankingPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "attacks against owner from anyone except the applier deal xAmount damage. Removed at end of owner's side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "FLANKING_POWER",
     "kind": "power",
-    "name": "Flanking",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Flanking"
+  },
+  "FLEX_POTION": {
+    "aliases": [
+      "FLEX_POTION",
+      "Temporary Strength"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FLEX_POTION",
+    "kind": "power",
+    "name": "Temporary Strength"
   },
   "FLEX_POTION_POWER": {
-    "curated": true,
-    "description": "Temporary Strength subclass: grants +Amount Strength on apply (Flex Potion = +5); the same amount is reverted at end of owner's side turn. Type shows Buff when positive. Does not persist to next turn — use the same-turn burst window.",
+    "aliases": [],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FLEX_POTION_POWER",
     "kind": "power",
-    "name": "Flex Potion Power",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Flex Potion Power"
   },
   "FLUTTER_POWER": {
     "aliases": [
       "FLUTTER",
+      "Flutter",
       "FlutterPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "Evasion stacks: incoming attack damage against the owner is heavily mitigated while stacks remain; each time the owner is hit by an attack, 1 stack is consumed (live run-39 ThievingHopper: Strike planned 15 landed 7 at FLUTTER 5, stack decremented to 4 on the hit; Pommel 15→11 at Flutter 3; Bash 21→10 at Flutter 4). Multi-hit same-command attacks consume one stack per hit instance — Whirlwind-class pierce chews Flutter fastest. Roughly half-damage mitigation at high stacks; treat as a race-window reducer, not immunity.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FLUTTER_POWER",
     "kind": "power",
-    "name": "Flutter",
-    "play_notes": "run-39 live: Flutter mitigates each attack hit then decrements 1/hit. Plan kill math at ~50% damage while stacks are high; prefer multi-hit commands to burn stacks.",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Flutter"
+  },
+  "FOCUSED_STRIKE": {
+    "aliases": [
+      "FOCUSED_STRIKE",
+      "Temporary Focus"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FOCUSED_STRIKE",
+    "kind": "power",
+    "name": "Temporary Focus"
   },
   "FOCUS_POWER": {
     "aliases": [
+      "FOCUS",
+      "Focus",
       "FocusPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "orb passive/evoke values of owner get Math.Max(value + Amount, 0) — scales orb effects, floors at 0.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FOCUS_POWER",
     "kind": "power",
-    "name": "Focus",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Focus"
   },
   "FORBIDDEN_GRIMOIRE_POWER": {
     "aliases": [
+      "FORBIDDEN_GRIMOIRE",
+      "Forbidden Grimoire",
       "ForbiddenGrimoirePower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "Source-hosted utility power (Buff, Counter) — combat-end / pre-play logic hosted by the source card; see the hosting card text for exact trigger.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FORBIDDEN_GRIMOIRE_POWER",
     "kind": "power",
-    "name": "Forbidden Grimoire",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Forbidden Grimoire"
   },
   "FOREGONE_CONCLUSION_POWER": {
     "aliases": [
+      "FOREGONE_CONCLUSION",
+      "Foregone Conclusion",
       "ForegoneConclusionPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "before owner's hand draw, shuffle if necessary and move a selected draw-pile card to hand.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FOREGONE_CONCLUSION_POWER",
     "kind": "power",
-    "name": "Foregone Conclusion",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Foregone Conclusion"
   },
   "FRAIL_POWER": {
     "aliases": [
       "FRAIL",
+      "Frail",
       "FrailPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "Block owner gains from cards/monster moves is multiplied by x0.75. Ticks down 1 at end of Enemy side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "FRAIL_POWER",
     "kind": "power",
-    "name": "Frail",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Frail"
   },
   "FREE_ATTACK_POWER": {
     "aliases": [
       "FREE_ATTACK",
+      "Free Attack",
       "FreeAttackPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "owner's Attack cards cost 0 while stacks last; run-41 live correction: ALL attack cards in hand showed cost=0 after Unrelenting fired (Strike×4 and PS all playable at 0e), with stacks consumed per attack played — not a single-next-attack buff.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FREE_ATTACK_POWER",
     "kind": "power",
-    "name": "Free Attack",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Free Attack"
   },
   "FREE_POWER_POWER": {
     "aliases": [
+      "FREE_POWER",
+      "Free Power",
       "FreePowerPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner's Power cards in hand/play cost 0; 1 stack consumed per Power played.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FREE_POWER_POWER",
     "kind": "power",
-    "name": "Free Power",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Free Power"
   },
   "FREE_SKILL_POWER": {
     "aliases": [
+      "FREE_SKILL",
+      "Free Skill",
       "FreeSkillPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner's Skill cards in hand/play cost 0; 1 stack consumed per Skill played.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FREE_SKILL_POWER",
     "kind": "power",
-    "name": "Free Skill",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Free Skill"
   },
   "FRIENDSHIP_POWER": {
     "aliases": [
+      "FRIENDSHIP",
+      "Friendship",
       "FriendshipPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "+Amount max Energy.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FRIENDSHIP_POWER",
     "kind": "power",
-    "name": "Friendship",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Friendship"
   },
   "FURNACE_POWER": {
     "aliases": [
+      "FURNACE",
+      "Furnace",
       "FurnacePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at start of owner's side turn, Forge Amount (upgrade Amount cards via forge logic).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FURNACE_POWER",
     "kind": "power",
-    "name": "Furnace",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Furnace"
   },
   "GALVANIC_POWER": {
-    "affliction_keys": [
-      "GALVANIZED"
-    ],
     "aliases": [
       "GALVANIC",
+      "Galvanic",
       "GalvanicPower"
     ],
-    "counter_class": true,
-    "curated": false,
-    "description": "at combat start and when Power cards enter combat, afflict player Power cards with Galvanized (Amount). Playing a Galvanized card deals Amount unpowered damage to its owner.",
-    "host_of_affliction": true,
+    "detail": {
+      "affliction_keys": [
+        "GALVANIZED"
+      ],
+      "counter_class": true,
+      "host_of_affliction": true,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "GALVANIC_POWER",
     "kind": "power",
-    "name": "Galvanic",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Galvanic"
   },
   "GENESIS_POWER": {
     "aliases": [
+      "GENESIS",
+      "Genesis",
       "GenesisPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at each energy reset, gain Amount Stars.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "GENESIS_POWER",
     "kind": "power",
-    "name": "Genesis",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Genesis"
   },
   "GIGANTIFICATION_POWER": {
     "aliases": [
+      "GIGANTIFICATION",
+      "Gigantification",
       "GigantificationPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "one owner's Attack per activation deals x3 damage; 1 stack consumed after that attack resolves. | run-51 live: gigantified BREAKTHROUGH (AllEnemies) dealt 19/13/29-class AoE on a three-add fight — gigantification multiplies AoE attack cards to sweep-class damage.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "GIGANTIFICATION_POWER",
     "kind": "power",
-    "name": "Gigantification",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Gigantification"
   },
   "GRAVITY_POWER": {
     "aliases": [
+      "GRAVITY",
+      "Gravity",
       "GravityPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "each card owner plays deals Amount unpowered damage to all hittable enemies; power removed at end of owner's side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "GRAVITY_POWER",
     "kind": "power",
-    "name": "Gravity",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Gravity"
   },
   "GUARDED_POWER": {
     "aliases": [
+      "GUARDED",
+      "Guarded",
       "GuardedPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "attacks against owner deal x0.5; removed when applier dies.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "GUARDED_POWER",
     "kind": "power",
-    "name": "Guarded",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Guarded"
+  },
+  "HAILSTORM": {
+    "aliases": [
+      "HAILSTORM",
+      "Hailstorm"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "HAILSTORM",
+    "kind": "power",
+    "name": "Hailstorm"
   },
   "HAMMER_TIME_POWER": {
     "aliases": [
+      "HAMMER_TIME",
+      "Hammer Time",
       "HammerTimePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "when any other player forges, all other living players also Forge that amount (Hammer Time relay).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "HAMMER_TIME_POWER",
     "kind": "power",
-    "name": "Hammer Time",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Hammer Time"
   },
   "HANG_POWER": {
     "aliases": [
+      "HANG",
+      "Hang",
       "HangPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "the Hang card's attack against owner deals xAmount damage.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "HANG_POWER",
     "kind": "power",
-    "name": "Hang",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Hang"
   },
   "HARDENED_SHELL_POWER": {
     "aliases": [
       "HARDENED_SHELL",
+      "Hardened Shell",
       "HardenedShellPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "HP loss to owner per turn is capped at Amount minus damage already received this turn (tracker resets at turn start).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "HARDENED_SHELL_POWER",
     "kind": "power",
-    "name": "Hardened Shell",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Hardened Shell"
   },
   "HARD_TO_KILL": {
-    "curated": true,
-    "description": "Counter-class: owner's damage received per instance is capped at Amount HP-loss (ModifyDamageCap = Amount); excess on a hit is discarded, not banked. LIVE run-40 Exoskeleton Amount=9: Breakthrough/Inferno 9-instance hits land full value; Bludgeon 32 wastes 23 against these targets — pace multi-instance small hits, avoid single large-instance attacks.",
+    "aliases": [
+      "Hard to Kill"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "HARD_TO_KILL",
     "kind": "power",
     "name": "Hard To Kill"
@@ -1385,148 +1750,198 @@
       "HARD_TO_KILL",
       "HardToKillPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "owner's damage received per INSTANCE capped at Amount (ModifyDamageCap); excess on that hit discarded, not banked. Exoskeleton Amount=9 live run-41/43: pace MULTIPLE hits <=Amount (TwinStrike 5x2 each hit full; one huge hit wastes the excess). Distinct from per-turn caps (HARDENED_SHELL) - this is per-hit.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "HARD_TO_KILL_POWER",
     "kind": "power",
-    "name": "Hard To Kill",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Hard To Kill"
   },
   "HATCH_POWER": {
     "aliases": [
       "HATCH",
+      "Hatch",
       "HatchPower"
     ],
-    "counter_class": true,
-    "curated": false,
-    "description": "decrements at end of owner's side turn (hatch timer; hatch action hosted by monster/relic).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "HATCH_POWER",
     "kind": "power",
-    "name": "Hatch",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Hatch"
   },
   "HAUNT_POWER": {
     "aliases": [
+      "HAUNT",
+      "Haunt",
       "HauntPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "after owner plays a Soul card, deal damage to a random enemy (amount hosted by source).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "HAUNT_POWER",
     "kind": "power",
-    "name": "Haunt",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Haunt"
   },
   "HEIST_POWER": {
     "aliases": [
       "HEIST",
+      "Heist",
       "HeistPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "if owner (thief) dies before cashing out, stolen Gold reward (Amount) is granted back to base.Target player.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "HEIST_POWER",
     "kind": "power",
-    "name": "Heist",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Heist"
+  },
+  "HELICAL_DART": {
+    "aliases": [
+      "HELICAL_DART",
+      "Temporary Dexterity"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "HELICAL_DART",
+    "kind": "power",
+    "name": "Temporary Dexterity"
   },
   "HELLO_WORLD_POWER": {
     "aliases": [
+      "HELLO_WORLD",
+      "Hello World",
       "HelloWorldPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "before owner's hand draw (AmountOnTurnStart >= 1), add distinct unlocked cards to hand.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "HELLO_WORLD_POWER",
     "kind": "power",
-    "name": "Hello World",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Hello World"
   },
   "HELLRAISER_POWER": {
     "aliases": [
       "HELLRAISER",
+      "Hellraiser",
       "HellraiserPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "Strike-tagged cards drawn by owner can auto-play (infinite-autoplay cap 9) with bonus VFX; data resets at end of owner's side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "HELLRAISER_POWER",
     "kind": "power",
-    "name": "Hellraiser",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Hellraiser"
   },
   "HEX_POWER": {
-    "affliction_keys": [
-      "HEXED"
-    ],
     "aliases": [
       "HEX",
+      "Hex",
       "HexPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "afflict all owner's cards (and new ones) with Hexed; Hexed cards gain the Ethereal keyword while this power exists. Removed when the applier dies; clears Hexed on removal.",
-    "host_of_affliction": true,
+    "detail": {
+      "affliction_keys": [
+        "HEXED"
+      ],
+      "counter_class": false,
+      "host_of_affliction": true,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
     "id": "HEX_POWER",
     "kind": "power",
-    "name": "Hex",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Single"
+    "name": "Hex"
   },
   "HIGH_VOLTAGE_POWER": {
     "aliases": [
+      "HIGH_VOLTAGE",
+      "High Voltage",
       "HighVoltagePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at end of owner's side turn, apply +Amount STRENGTH_POWER to owner.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "HIGH_VOLTAGE_POWER",
     "kind": "power",
-    "name": "High Voltage",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "High Voltage"
+  },
+  "HOTFIX": {
+    "aliases": [
+      "HOTFIX",
+      "Temporary Focus"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "HOTFIX",
+    "kind": "power",
+    "name": "Temporary Focus"
   },
   "ILLUSION_POWER": {
     "aliases": [
       "ILLUSION",
+      "Illusion",
       "IllusionPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "on death, keeps its buffs (debuffs removed unless non-temporary), queues REVIVE_MOVE with HealIntent which heals owner to full (MaxHp - CurrentHp). Applies MINION_POWER on apply if missing. Reviving owner is untargetable until revive resolves.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "ILLUSION_POWER",
     "kind": "power",
-    "name": "Illusion",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Illusion"
   },
   "IMBALANCED": {
-    "curated": true,
-    "description": "When owner's attack is FULLY blocked, owner is stunned (BowlbugRock sets IsOffBalance instead). Partial block does NOT stun. LIVE run-40: Red Mask Weak cut HEADBUTT 15→11 displayed; Blood Wall 16 ≥ 11 → STUNNED same enemy turn; trio fight cleaned inside stun windows.",
+    "aliases": [
+      "Imbalanced"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
     "id": "IMBALANCED",
     "kind": "power",
     "name": "Imbalanced"
@@ -1536,600 +1951,766 @@
       "IMBALANCED",
       "ImbalancedPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "when owner's attack is fully blocked, owner is stunned (BowlbugRock family sets IsOffBalance). Partial block does NOT trigger. Threshold = the attack's live intent value (15-class HEADBUTT). Live run-43: 18 block vs 15 stunned; 8 block vs 15 did not (leaked 7 + died to the add's hit the same turn).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
     "id": "IMBALANCED_POWER",
     "kind": "power",
-    "name": "Imbalanced",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "power_type": "Debuff",
-    "stack_type": "Single"
+    "name": "Imbalanced"
   },
   "IMPROVEMENT_POWER": {
     "aliases": [
+      "IMPROVEMENT",
+      "Improvement",
       "ImprovementPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at combat end, Upgrade Amount random upgradable cards in owner's deck.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "IMPROVEMENT_POWER",
     "kind": "power",
-    "name": "Improvement",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Improvement"
   },
   "INFERNO_POWER": {
-    "curated": true,
-    "description": "At start of owner's side turn, owner loses 1 HP (unblockable); whenever owner loses HP during owner's side turn, deal Amount unpowered damage to ALL hittable enemies (card INFERNO: Amount 6 base, 9 upgraded). Self-damage cards (Bloodletting, Blood Wall, Breakthrough, Hemokinesis) and any same-turn HP loss fire the AoE once per loss event. Kills through enemy turns only if the loss happens on owner's own turn.",
+    "aliases": [
+      "INFERNO",
+      "Inferno"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "INFERNO_POWER",
     "kind": "power",
-    "name": "Inferno",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Inferno"
   },
   "INFESTED_POWER": {
     "aliases": [
       "INFESTED",
+      "Infested",
       "InfestedPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "on owner's death, spawns 4 Wriggler monsters (StartStunned = true) on the owner's side; combat end is blocked until the spawn resolves.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "INFESTED_POWER",
     "kind": "power",
-    "name": "Infested",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Infested"
   },
   "INFINITE_BLADES_POWER": {
     "aliases": [
+      "INFINITE_BLADES",
+      "Infinite Blades",
       "InfiniteBladesPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "before owner's hand draw, create Amount Shiv cards in hand.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "INFINITE_BLADES_POWER",
     "kind": "power",
-    "name": "Infinite Blades",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Infinite Blades"
   },
   "INTANGIBLE_POWER": {
     "aliases": [
       "INTANGIBLE",
+      "Intangible",
       "IntangiblePower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "damage AND HP loss received by owner capped at 1 per INSTANCE; ticks down at end of owner's side turn. Multi-hit cards deal 1 per hit (best rate during the window); one big hit wastes everything above 1. Relic AoE like Stone Calendar 52 is also capped to 1 while stacks remain. Live run-43: SoulFysh FADE applied 2, ticked to 1 end of the same enemy turn - our next turn still faced Intangible 1.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "INTANGIBLE_POWER",
     "kind": "power",
-    "name": "Intangible",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Intangible"
   },
   "INTERCEPT_POWER": {
     "aliases": [
+      "INTERCEPT",
+      "Intercept",
       "InterceptPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner takes (covered-creatures-count + 1) x attack damage multiplier — used with CoveredPower flanking logic; removed at end of Enemy side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "INTERCEPT_POWER",
     "kind": "power",
-    "name": "Intercept",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Intercept"
   },
   "ITERATION_POWER": {
     "aliases": [
+      "ITERATION",
+      "Iteration",
       "IterationPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "draw Amount cards the first time owner draws a Status card each turn (AfterCardDrawn, source-hosted gating).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ITERATION_POWER",
     "kind": "power",
-    "name": "Iteration",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Iteration"
   },
   "JUGGERNAUT_POWER": {
     "aliases": [
       "JUGGERNAUT",
+      "Juggernaut",
       "JuggernautPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "whenever owner gains >0 Block, deal Amount unpowered damage to a random hittable enemy.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "JUGGERNAUT_POWER",
     "kind": "power",
-    "name": "Juggernaut",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Juggernaut"
   },
   "JUGGLING_POWER": {
-    "curated": true,
-    "description": "The 3rd Attack card owner plays each turn is copied into owner's hand (card JUGGLING). The copy enters hand — it is not auto-played and still costs energy unless discounted.",
+    "aliases": [
+      "JUGGLING",
+      "Juggling"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "JUGGLING_POWER",
     "kind": "power",
-    "name": "Juggling",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Juggling"
   },
   "KNOCKDOWN_POWER": {
     "aliases": [
+      "KNOCKDOWN",
+      "Knockdown",
       "KnockdownPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "attacks against owner from anyone except the applier deal xAmount damage. Removed at end of owner's side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "KNOCKDOWN_POWER",
     "kind": "power",
-    "name": "Knockdown",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Knockdown"
   },
   "LEADERSHIP_POWER": {
     "aliases": [
+      "LEADERSHIP",
+      "Leadership",
       "LeadershipPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "+Amount attack damage on owner's attacks (ModifyDamageAdditive; trigger hosted by source).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "LEADERSHIP_POWER",
     "kind": "power",
-    "name": "Leadership",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Leadership"
   },
   "LETHALITY_POWER": {
     "aliases": [
+      "LETHALITY",
+      "Lethality",
       "LethalityPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner's card-sourced attack damage dealt multiplied by x(1 + Amount/100) — i.e. +Amount% while the card is being played from Play pile (hosted modifier; see card text for trigger).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "LETHALITY_POWER",
     "kind": "power",
-    "name": "Lethality",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Lethality"
   },
   "LIGHTNING_ROD_POWER": {
     "aliases": [
+      "LIGHTNING_ROD",
+      "Lightning Rod",
       "LightningRodPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at energy reset, Channel 1 Lightning orb, then decrement 1.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "LIGHTNING_ROD_POWER",
     "kind": "power",
-    "name": "Lightning Rod",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Lightning Rod"
+  },
+  "LOOP": {
+    "aliases": [
+      "LOOP",
+      "Loop"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "LOOP",
+    "kind": "power",
+    "name": "Loop"
   },
   "MACHINE_LEARNING_POWER": {
     "aliases": [
+      "MACHINE_LEARNING",
+      "Machine Learning",
       "MachineLearningPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "+Amount hand draw every turn (permanent while power lasts).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "MACHINE_LEARNING_POWER",
     "kind": "power",
-    "name": "Machine Learning",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Machine Learning"
   },
   "MAGIC_BOMB_POWER": {
     "aliases": [
+      "MAGIC_BOMB",
+      "Magic Bomb",
       "MagicBombPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at end of owner's side turn, if applier still alive, deal Amount unpowered damage to owner, then remove the power. Removed also if applier dies.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "MAGIC_BOMB_POWER",
     "kind": "power",
-    "name": "Magic Bomb",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Magic Bomb"
+  },
+  "MANGLE": {
+    "aliases": [
+      "MANGLE",
+      "Temporary Strength Down"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "MANGLE",
+    "kind": "power",
+    "name": "Temporary Strength Down"
   },
   "MASTER_PLANNER_POWER": {
     "aliases": [
+      "MASTER_PLANNER",
+      "Master Planner",
       "MasterPlannerPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "after owner plays a Skill, that Skill gains the Sly keyword.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "MASTER_PLANNER_POWER",
     "kind": "power",
-    "name": "Master Planner",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Master Planner"
   },
   "MAYHEM_POWER": {
     "aliases": [
+      "MAYHEM",
+      "Mayhem",
       "MayhemPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at start of owner's pre-play phase, auto-play Amount cards from top of draw pile (not exhausted).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "MAYHEM_POWER",
     "kind": "power",
-    "name": "Mayhem",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Mayhem"
   },
   "MIND_ROT_POWER": {
     "aliases": [
       "MIND_ROT",
+      "Mind Rot",
       "MindRotPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner's hand draw each turn reduced by Amount (floored at 0): ModifyHandDraw = max(0, count - Amount).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "MIND_ROT_POWER",
     "kind": "power",
-    "name": "Mind Rot",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Mind Rot"
   },
   "MINION_POWER": {
     "aliases": [
       "MINION",
+      "Minion",
       "MinionPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "Minion marker on summoned/marked helpers: its death does NOT trigger combat-end (OwnerIsSecondaryEnemy) — kill the unmarked master to end combat. LIVE QUALIFIER (run-44 Queen boss): the marked add CAN be the correct first kill when it is the fight's sole threat source. TorchHead Amalgam (MINION:1) carried every attack while Queen looped Burn Bright (self-block + add-strength, zero incoming from her); killing TorchHead T6 removed all incoming and Queen's loop resolved into her personal attack cycle the same turn. Doctrine: kill master first when the master is the threat; when a marked add is the only incoming, kill the add first, then race the master.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "MINION_POWER",
     "kind": "power",
-    "name": "Minion",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Minion"
   },
   "MONARCHS_GAZE_POWER": {
     "aliases": [
+      "MONARCHS_GAZE",
+      "Monarch's Gaze",
       "MonarchsGazePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "when owner's powered attack hits, apply Amount MONARCHS_GAZE_STRENGTH_DOWN_POWER to the target (strength-down engine hosted on target).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "MONARCHS_GAZE_POWER",
     "kind": "power",
-    "name": "Monarchs Gaze",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Monarchs Gaze"
+  },
+  "MONARCHS_GAZE_STRENGTH_DOWN": {
+    "aliases": [
+      "MONARCHS_GAZE_STRENGTH_DOWN",
+      "Temporary Strength Down"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "MONARCHS_GAZE_STRENGTH_DOWN",
+    "kind": "power",
+    "name": "Temporary Strength Down"
   },
   "MONARCHS_GAZE_STRENGTH_DOWN_POWER": {
     "aliases": [
       "MonarchsGazePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "strength-down marker applied by MonarchsGaze; paired debuff logic hosted by Monarch cards.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "MONARCHS_GAZE_STRENGTH_DOWN_POWER",
     "kind": "power",
-    "name": "Monarchs Gaze",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Monarchs Gaze"
   },
   "MONOLOGUE_POWER": {
     "aliases": [
       "MONOLOGUE",
+      "Monologue",
       "MonologuePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "card-play strength engine — tracks StrengthApplied; applies/revokes STRENGTH per cards played (hosted by source card; display shows accumulated Strength).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "MONOLOGUE_POWER",
     "kind": "power",
-    "name": "Monologue",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Monologue"
   },
   "NECRO_MASTERY_POWER": {
     "aliases": [
+      "NECRO_MASTERY",
+      "Necro Mastery",
       "NecroMasteryPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "when the owner's Osty pet loses HP, deal (HP lost * Amount) unblockable unpowered damage to all hittable enemies.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "NECRO_MASTERY_POWER",
     "kind": "power",
-    "name": "Necro Mastery",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Necro Mastery"
+  },
+  "NEMESIS": {
+    "aliases": [
+      "NEMESIS",
+      "Nemesis"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "NEMESIS",
+    "kind": "power",
+    "name": "Nemesis"
   },
   "NEUROSURGE_POWER": {
     "aliases": [
+      "NEUROSURGE",
+      "Neurosurge",
       "NeurosurgePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at start of owner's side turn, apply Amount DOOM to owner.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "NEUROSURGE_POWER",
     "kind": "power",
-    "name": "Neurosurge",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Neurosurge"
   },
   "NIGHTMARE_POWER": {
     "aliases": [
+      "NIGHTMARE",
+      "Nightmare",
       "NightmarePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "before owner's hand draw, add Amount clones of the selected card to hand (clones are affliction-cleared).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "NIGHTMARE_POWER",
     "kind": "power",
-    "name": "Nightmare",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Nightmare"
   },
   "NOSTALGIA_POWER": {
     "aliases": [
+      "NOSTALGIA",
+      "Nostalgia",
       "NostalgiaPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "modifies played-card result pile/position (hosted by source card text).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "NOSTALGIA_POWER",
     "kind": "power",
-    "name": "Nostalgia",
-    "play_notes": "",
-    "power_type": null,
-    "stack_type": "Counter"
+    "name": "Nostalgia"
   },
   "NOXIOUS_FUMES_POWER": {
     "aliases": [
+      "NOXIOUS_FUMES",
+      "Noxious Fumes",
       "NoxiousFumesPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at start of owner's side turn, apply Amount POISON to all hittable enemies.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "NOXIOUS_FUMES_POWER",
     "kind": "power",
-    "name": "Noxious Fumes",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Noxious Fumes"
+  },
+  "NO_BLOCK": {
+    "aliases": [
+      "NO_BLOCK",
+      "No Block"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "NO_BLOCK",
+    "kind": "power",
+    "name": "No Block"
   },
   "NO_DRAW_POWER": {
     "aliases": [
       "NO_DRAW",
+      "No Draw",
       "NoDrawPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "non-hand draws (card-effect draws) by owner are blocked for the rest of the turn. Removed at end of owner's side turn. Initial hand draw is not blocked.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
     "id": "NO_DRAW_POWER",
     "kind": "power",
-    "name": "No Draw",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Single"
+    "name": "No Draw"
   },
   "NO_ENERGY_GAIN_POWER": {
     "aliases": [
       "NO_ENERGY_GAIN",
+      "No Energy Gain",
       "NoEnergyGainPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "energy gains for owner this turn are set to 0. Removed at end of owner's side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
     "id": "NO_ENERGY_GAIN_POWER",
     "kind": "power",
-    "name": "No Energy Gain",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Single"
+    "name": "No Energy Gain"
   },
   "OBLIVION_POWER": {
     "aliases": [
+      "OBLIVION",
+      "Oblivion",
       "OblivionPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "each card the applier's player plays this turn applies Amount DOOM to owner. Removed at end of Player side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "OBLIVION_POWER",
     "kind": "power",
-    "name": "Oblivion",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Oblivion"
   },
   "ONE_TWO_PUNCH_POWER": {
     "aliases": [
       "ONE_TWO_PUNCH",
+      "One-Two Punch",
       "OneTwoPunchPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "owner's next Amount Attack plays count twice; 1 stack consumed per Attack played; removed at end of owner's side turn. LIVE run-47 FossilStalker T1: card granted free via Skill Potion; doubled Bash played twice on the same target — first hit 8 (base), second hit 12 (8 under the Vuln the first Bash applied); Vuln stacks reached 4 from the double application. Race doctrine: OneTwoPunch + energy-fuel + Bash/Molten chain kills SUCK-class elites T1 before their attack intent fires.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ONE_TWO_PUNCH_POWER",
     "kind": "power",
-    "name": "One Two Punch",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "One Two Punch"
   },
   "ORBIT_POWER": {
     "aliases": [
+      "ORBIT",
+      "Orbit",
       "OrbitPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "every 4 Energy owner spends on cards triggers GainEnergy(Amount) per trigger (threshold 4).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ORBIT_POWER",
     "kind": "power",
-    "name": "Orbit",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Orbit"
   },
   "OUTBREAK_POWER": {
     "aliases": [
+      "OUTBREAK",
+      "Outbreak",
       "OutbreakPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "every 3rd time owner applies POISON to anyone (Amount-change > 0), deal Amount unpowered damage to all hittable enemies; internal counter resets modulo 3.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "OUTBREAK_POWER",
     "kind": "power",
-    "name": "Outbreak",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Outbreak"
   },
   "PAGESTORM_POWER": {
     "aliases": [
+      "PAGESTORM",
+      "Pagestorm",
       "PagestormPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "whenever owner draws an Ethereal card, draw Amount more.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PAGESTORM_POWER",
     "kind": "power",
-    "name": "Pagestorm",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Pagestorm"
   },
   "PAINFUL_STABS_POWER": {
     "aliases": [
+      "PAINFUL_STABS",
+      "Painful Stabs",
       "PainfulStabsPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "see stances — SKITTISH_POWER (Buff, Counter): if owner has not gained Block this turn and takes card-sourced attack damage, owner gains Amount Block (once per turn flag; flag resets at end of opposing side's turn).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PAINFUL_STABS_POWER",
     "kind": "power",
-    "name": "Painful Stabs",
-    "play_notes": "",
-    "power_type": null,
-    "stack_type": null
+    "name": "Painful Stabs"
   },
   "PALE_BLUE_DOT_POWER": {
-    "curated": true,
-    "description": "If owner played 5 or more cards last turn, owner draws Amount additional cards this turn (card PALE_BLUE_DOT, Regent pool: draw 1 base, 2 upgraded).",
+    "aliases": [
+      "PALE_BLUE_DOT",
+      "Pale Blue Dot"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PALE_BLUE_DOT_POWER",
     "kind": "power",
-    "name": "Pale Blue Dot",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Pale Blue Dot"
   },
   "PANACHE_POWER": {
     "aliases": [
       "PANACHE",
+      "Panache",
       "PanachePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "every 5th card owner plays deals Amount unpowered damage to ALL hittable enemies (`CardsLeft` starts at 5, decrements per card played after the first, resets to 5 on proc and at turn end).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PANACHE_POWER",
     "kind": "power",
-    "name": "Panache",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Panache"
   },
   "PAPER_CUTS_POWER": {
     "aliases": [
       "PAPER_CUTS",
+      "Paper Cuts",
       "PaperCutsPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "when owner's powered attack deals unblocked damage > 0 to a player, that player loses Amount max HP. Amount 2 exact — each leaking ScrollOfBiting-class attacker costs −2 MaxHP per turn when unblocked; **full-block turns cost ZERO MaxHP** (51 block vs 44 incoming produced no tax) — the counterplay is block completeness per attacker, not average block. Related pairing decode: **Inferno's own turn-start HP loss triggers Rupture** (Inferno + Rupture Amount 2 deployed = +2 Str per turn passive) **and satisfies Spite's \"lost HP this turn\" condition** (Spite double-fires on Inferno-deployed fights).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PAPER_CUTS_POWER",
     "kind": "power",
-    "live_notes": "LIVE run-56: ScrollOfBiting passive. Amount 2 — unblockable HP tax per trigger.",
-    "name": "Paper Cuts",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Paper Cuts"
   },
   "PARRY_POWER": {
     "aliases": [
       "PARRY",
+      "Parry",
       "ParryPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "Inert marker power (Buff, Counter) — no hooks of its own; queried by specific cards (SovereignBlade family parry logic).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PARRY_POWER",
     "kind": "power",
-    "name": "Parry",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Parry"
   },
   "PERSONAL_HIVE": {
-    "curated": true,
-    "description": "Whenever owner is hit by a powered ATTACK CARD, attacker gets Amount Dazed added to draw pile at random position. PHEROMONE_SPIT increments Amount + grants Strength same read. LIVE run-40: Inferno POWER damage does NOT tax Hive (Hive held :1 across Inferno ticks; tax fires only on powered attack CARD hits); zero-attack skill-only turns hold Hive dormant.",
+    "aliases": [
+      "Personal Hive"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PERSONAL_HIVE",
     "kind": "power",
     "name": "Personal Hive"
@@ -2139,234 +2720,280 @@
       "PERSONAL_HIVE",
       "PersonalHivePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "whenever the owner is hit by a powered attack, the attacker gets Amount Dazed added to their draw pile at a random position. PHEROMONE_SPIT (Entomancer) increments Amount by 1 and grants Strength on the same buff. Stacks visible as `PERSONAL_HIVE_POWER:n`; after the spit n=2, so every powered-attack card costs 2 Dazed — multi-hit attacks are taxed per hit. Kill the Entomancer before the buff turn, or the bees intent rises with Strength on top of the doubled Dazed tax.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PERSONAL_HIVE_POWER",
     "kind": "power",
-    "name": "Personal Hive",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Personal Hive"
   },
   "PHANTOM_BLADES_POWER": {
     "aliases": [
+      "PHANTOM_BLADES",
+      "Phantom Blades",
       "PhantomBladesPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "+Amount attack damage on owner's attacks; also grants Retain to owner's cards on apply/enter-combat.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PHANTOM_BLADES_POWER",
     "kind": "power",
-    "name": "Phantom Blades",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Phantom Blades"
   },
   "PIERCING_WAIL_POWER": {
-    "curated": true,
-    "description": "Temporary Strength subclass (negative): applies -Amount Strength to affected enemies on apply; the same amount is reverted at end of each affected enemy's side turn. Type shows Debuff when the granted amount is negative.",
+    "aliases": [
+      "PIERCING_WAIL",
+      "Temporary Strength Down"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "PIERCING_WAIL_POWER",
     "kind": "power",
-    "name": "Piercing Wail",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Piercing Wail"
   },
   "PILLAR_OF_CREATION_POWER": {
     "aliases": [
+      "PILLAR_OF_CREATION",
+      "Pillar of Creation",
       "PillarOfCreationPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "gains owner Amount Block (trigger hosted by source card/relic).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PILLAR_OF_CREATION_POWER",
     "kind": "power",
-    "name": "Pillar Of Creation",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Pillar Of Creation"
   },
   "PLATING_POWER": {
     "aliases": [
       "PLATING",
+      "Plating",
       "PlatingPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "at start of owner's side turn (not turn 1 for the holder) owner loses 1 stack; at end of owner's side turn owner gains Amount Block. Enemies with Plating also gain Amount Block at combat start. Exact-cover math: current block + end-of-turn plating vs enemy intent. Live run-43: Slumbering Beetle PLATING 15, block 15->14->13 as stacks decremented, refreshed every its turn end.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PLATING_POWER",
     "kind": "power",
-    "name": "Plating",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Plating"
   },
   "PLOW_POWER": {
     "aliases": [
       "PLOW",
+      "Plow",
       "PlowPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "if owner takes unblocked damage while CurrentHp <= Amount, owner is stunned (temporary-strength powers on owner are consumed — decomp clears TemporaryStrengthPower instances). LIVE run-48 Ceremonial Beast: Amount=150 applied T1 via STAMP; unblocked BT 17 + Inferno proc 6 crossing 150 on T4 fired STUNNED same frame — boss Str 4 consumed, PLOW 22 attack cancelled, move graph flipped to DIZZY/stun branch. Threshold is the live Amount (150 per run-23 correction), not archive 160.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "PLOW_POWER",
     "kind": "power",
-    "name": "Plow",
-    "play_notes": "run-48 live 2026-09-19: stun window fired on Ceremonial Beast T4 at threshold 150; temp-Str consumed live. [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Plow"
   },
   "POISON": {
     "aliases": [
+      "Poison",
       "PoisonPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at start of owner's side turn, deals Amount unblockable unpowered damage to owner, then decrements 1; repeats per trigger. Trigger count = min(stacks, 1 + sum of opposing AccelerantPower amounts).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "POISON",
     "kind": "power",
-    "name": "Poison",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Poison"
   },
   "POSSESS_SPEED_POWER": {
     "aliases": [
       "POSSESS_SPEED",
+      "Possess Speed",
       "PossessSpeedPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "On the holder's turn the holder steals player Dexterity (each holder gains +2 of the stolen stat per steal). Stolen stats return to the player same-resolution on holder death — kill holders to reclaim. Carried by ForgottenThing (遗忘之物).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "POSSESS_SPEED_POWER",
     "kind": "power",
-    "name": "Possess Speed",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Possess Speed"
   },
   "POSSESS_STRENGTH_POWER": {
     "aliases": [
       "POSSESS_STRENGTH",
+      "Possess Strength",
       "PossessStrengthPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "On the holder's turn the holder steals player Strength (each holder gains +2 of the stolen stat per steal; player Strength display empties as it is stolen). Stolen stats return to the player same-resolution on holder death — kill holders to reclaim. Carried by LostThing (失落之物).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "POSSESS_STRENGTH_POWER",
     "kind": "power",
-    "name": "Possess Strength",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Possess Strength"
+  },
+  "PREP_TIME": {
+    "aliases": [
+      "PREP_TIME",
+      "Prep Time"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "PREP_TIME",
+    "kind": "power",
+    "name": "Prep Time"
   },
   "PYRE_POWER": {
     "aliases": [
       "PYRE",
+      "Pyre",
       "PyrePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "Gain [energy:1] at the start of each turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PYRE_POWER",
     "kind": "power",
-    "name": "Pyre",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Pyre"
   },
   "RADIANCE_POWER": {
     "aliases": [
       "RADIANCE",
+      "Radiance",
       "RadiancePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at energy reset, gain Energy equal to DynamicVars.Energy (set by applier), then decrement.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "RADIANCE_POWER",
     "kind": "power",
-    "name": "Radiance",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Radiance"
   },
   "RAGE_POWER": {
     "aliases": [
       "RAGE",
+      "Rage",
       "RagePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "whenever owner plays an Attack card, owner gains Amount Block. Power removed at end of owner's side turn. LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log): amount 3 per Rage play; +3 Block per Attack card played that turn. Ornamental Fan (+4/3 attacks) stacks with it into a ~13/turn attack-density block line.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "RAGE_POWER",
     "kind": "power",
-    "name": "Rage",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Rage"
   },
   "RAMPART_POWER": {
     "aliases": [
       "RAMPART",
+      "Rampart",
       "RampartPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "at start of Player side turn, each living TurretOperator enemy gains Amount Block.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "RAMPART_POWER",
     "kind": "power",
-    "live_notes": "LIVE run-56: LivingShield passive Amount 25. At start of Player side turn, each living TurretOperator ally gains 25 Block. Kill LivingShield first.",
-    "name": "Rampart",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Rampart"
   },
   "RAVENOUS_POWER": {
     "aliases": [
       "RAVENOUS",
+      "Ravenous",
       "RavenousPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "when another creature on owner's side dies and owner lives, owner is stunned into a devour move and gains +Amount Strength. Kill-window doctrine (CorpseSlug/SEAPUNK-class): one kill per turn converts each ally death into a free stun window on survivors — run-41 live: PS one-shot the 26-HP slug on the T1 Marbles vuln window, survivor stunned +Str4, Strike closed it in the stun turn, zero damage taken.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "RAVENOUS_POWER",
     "kind": "power",
-    "name": "Ravenous",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Ravenous"
   },
   "REAPER_FORM_POWER": {
     "aliases": [
+      "REAPER_FORM",
+      "Reaper Form",
       "ReaperFormPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "when owner (or owner's pet) deals attack damage > 0, apply DOOM = total damage * Amount to the target.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "REAPER_FORM_POWER",
     "kind": "power",
-    "name": "Reaper Form",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Reaper Form"
   },
   "REATTACH": {
-    "curated": true,
-    "description": "On death, if any other segment with Reattach is still alive, owner enters DEAD state (untargetable, not removed) and reattaches at end of its turn healing Amount HP. Death is fatal only when ALL other segments are dead simultaneously. LIVE run-40: same-window clear doctrine — spread damage, never solo-kill while others live (killing the last live segment revives all DEAD ones +Amount each); Inferno 9-instance ticks paced the trio; final Strike on the last 1hp live segment won the fade-out.",
+    "aliases": [
+      "Reattach"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "REATTACH",
     "kind": "power",
     "name": "Reattach"
@@ -2376,320 +3003,432 @@
       "REATTACH",
       "ReattachPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "on death, if any other segment with Reattach is still alive, the segment enters a dead state (not removed from combat, untargetable) and at end of its turn reattaches — healing Amount HP. Death is fatal only when ALL other segments are dead. Buffs persist through death. LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log): fade-out win confirmed — when the last live segment died while the other two sat in DEAD state, combat ended immediately (Whirlwind+multi-attack same-window). Killing a live segment while DEAD siblings exist re-triggers their +25 reattach; same-window mass-kill is the only clean win.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "REATTACH_POWER",
     "kind": "power",
-    "name": "Reattach",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Reattach"
   },
   "REBOUND_POWER": {
     "aliases": [
+      "REBOUND",
+      "Rebound",
       "ReboundPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "played-card result pile/position modified (card returns per card text); decrements at end of owner's side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "REBOUND_POWER",
     "kind": "power",
-    "name": "Rebound",
-    "play_notes": "",
-    "power_type": null,
-    "stack_type": "Counter"
+    "name": "Rebound"
+  },
+  "REFLECT": {
+    "aliases": [
+      "REFLECT",
+      "Reflect"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "REFLECT",
+    "kind": "power",
+    "name": "Reflect"
   },
   "REGEN_POWER": {
     "aliases": [
       "REGEN",
+      "Regen",
       "RegenPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at end of owner's side turn, heal Amount HP, then decrement 1.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "REGEN_POWER",
     "kind": "power",
-    "name": "Regen",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Regen"
   },
   "REPTILE_TRINKET_POWER": {
-    "curated": true,
-    "description": "Temporary Strength subclass: whenever owner uses a potion, gain +Amount Strength this turn (relic REPTILE_TRINKET: +3); reverted at end of owner's side turn. Fires on any potion use — stacks same-turn with potion-native Strength effects.",
+    "aliases": [
+      "REPTILE_TRINKET",
+      "Temporary Strength"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "REPTILE_TRINKET_POWER",
     "kind": "power",
-    "name": "Reptile Trinket",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Reptile Trinket"
   },
   "RETAIN_HAND_POWER": {
     "aliases": [
       "RETAIN_HAND",
+      "Retain Hand",
       "RetainHandPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner's hand is not flushed at turn end (ShouldFlush false); decrements at end of owner's side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "RETAIN_HAND_POWER",
     "kind": "power",
-    "name": "Retain Hand",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Retain Hand"
   },
   "RINGING_POWER": {
-    "affliction_keys": [
-      "RINGING"
-    ],
     "aliases": [
       "RINGING",
+      "Ringing",
       "RingingPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "on apply, afflict all owner's cards with Ringing; new cards entering combat also get it. A Ringing card is unplayable once any card has been played by owner this turn. Power removes itself at end of owner side turn (clearing all Ringing). LIVE run-48 Ceremonial Beast: bridge enforced the limit — first card ok, all others no(None); potions are NOT cards (Duplicator + Uppercut resolved 48 dmg on a RINGING turn). Archive '2 effective plays' folklore is dead — trust bridge ok/no.",
-    "host_of_affliction": true,
+    "detail": {
+      "affliction_keys": [
+        "RINGING"
+      ],
+      "counter_class": true,
+      "host_of_affliction": true,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
     "id": "RINGING_POWER",
     "kind": "power",
-    "name": "Ringing",
-    "play_notes": "run-48 live 2026-09-19: bridge no(None) on all post-first cards during RINGING; potion+card burst legal same turn. [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "power_type": "Debuff",
-    "stack_type": "Single"
+    "name": "Ringing"
   },
   "RITUAL_POWER": {
     "aliases": [
       "RITUAL",
+      "Ritual",
       "RitualPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at end of owner's side turn, apply +Amount STRENGTH_POWER to owner (skips the very turn it was applied if applied by an enemy during that enemy's turn).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "RITUAL_POWER",
     "kind": "power",
-    "name": "Ritual",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Ritual"
+  },
+  "ROLLING_BOULDER": {
+    "aliases": [
+      "ROLLING_BOULDER",
+      "Rolling Boulder"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "ROLLING_BOULDER",
+    "kind": "power",
+    "name": "Rolling Boulder"
   },
   "ROYALTIES_POWER": {
     "aliases": [
+      "ROYALTIES",
+      "Royalties",
       "RoyaltiesPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "Source-hosted utility power (Buff, Counter) — trigger logic hosted by the source card; see the hosting card text.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ROYALTIES_POWER",
     "kind": "power",
-    "name": "Royalties",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Royalties"
   },
   "RUPTURE_POWER": {
     "aliases": [
       "RUPTURE",
+      "Rupture",
       "RupturePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "when owner takes unblocked damage during owner's side turn from a card source, that card's post-play resolution applies +Amount STRENGTH to owner (per-card tracking).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "RUPTURE_POWER",
     "kind": "power",
-    "name": "Rupture",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Rupture"
   },
   "SANDPIT_POWER": {
     "aliases": [
       "SANDPIT",
+      "Sandpit",
       "SandpitPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "The Insatiable's kill timer — **starts at 4**, decrements by 1 at start of Enemy side turn (late); **at 0 the player is instantly devoured regardless of HP/Block** (unblockable kill — previously misattributed to an intent-display bug). The boss injects **6 FranticEscape** cards into the player deck at fight start; playing one **+1 Sandpit Amount** (and permanently +1's that card's own cost) — hold them for counter 1–2 as emergency extensions, do NOT hoard unplayed and do NOT spam early. Fight plan: damage race first (block does not stop the devour), track Sandpit Amount every turn. run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log): boss-print starts at 4; FE extensions live 1->2->3; devour timer is the fight's win condition — race the HP, extend with FE at counter 1-2.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SANDPIT_POWER",
     "kind": "power",
-    "name": "Sandpit",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Sandpit"
   },
   "SEEKING_EDGE_POWER": {
     "aliases": [
+      "SEEKING_EDGE",
+      "Seeking Edge",
       "SeekingEdgePower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "Inert marker power (Buff, Counter) — no hooks of its own; queried by SovereignBlade-family cards.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SEEKING_EDGE_POWER",
     "kind": "power",
-    "name": "Seeking Edge",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Seeking Edge"
   },
   "SELF_FORMING_CLAY_POWER": {
     "aliases": [
       "SELF_FORMING_CLAY",
+      "Self-Forming Clay",
       "SelfFormingClayPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "when owner's Block is cleared, gain Amount Block once and remove the power.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SELF_FORMING_CLAY_POWER",
     "kind": "power",
-    "name": "Self Forming Clay",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Self Forming Clay"
   },
   "SENTRY_MODE_POWER": {
     "aliases": [
+      "SENTRY_MODE",
+      "Sentry Mode",
       "SentryModePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "before owner's hand draw, add Amount SweepingGaze cards to hand.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SENTRY_MODE_POWER",
     "kind": "power",
-    "name": "Sentry Mode",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Sentry Mode"
   },
   "SERPENT_FORM_POWER": {
     "aliases": [
+      "SERPENT_FORM",
+      "Serpent Form",
       "SerpentFormPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "each card owner plays deals Amount unpowered damage to a random enemy (per-card amount tracked at play time).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SERPENT_FORM_POWER",
     "kind": "power",
-    "name": "Serpent Form",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Serpent Form"
   },
   "SETUP_STRIKE_POWER": {
-    "curated": true,
-    "description": "Temporary Strength subclass: +Amount Strength for the rest of the current turn (card SETUP_STRIKE: +2 base, +3 upgraded); reverted at end of owner's side turn.",
+    "aliases": [
+      "SETUP_STRIKE",
+      "Temporary Strength"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SETUP_STRIKE_POWER",
     "kind": "power",
-    "name": "Setup Strike",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Setup Strike"
+  },
+  "SHACKLING_POTION": {
+    "aliases": [
+      "SHACKLING_POTION",
+      "Temporary Strength Down"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "SHACKLING_POTION",
+    "kind": "power",
+    "name": "Temporary Strength Down"
   },
   "SHADOWMELD_POWER": {
     "aliases": [
+      "SHADOWMELD",
+      "Shadowmeld",
       "ShadowmeldPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner's Block gains multiplied by 2^Amount; power removed at end of owner's side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SHADOWMELD_POWER",
     "kind": "power",
-    "name": "Shadowmeld",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Shadowmeld"
+  },
+  "SHADOW_STEP": {
+    "aliases": [
+      "SHADOW_STEP",
+      "Shadow Step"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SHADOW_STEP",
+    "kind": "power",
+    "name": "Shadow Step"
   },
   "SHRIEK_POWER": {
     "aliases": [
       "SHRIEK",
+      "Shriek",
       "ShriekPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "if owner takes unblocked damage while CurrentHp <= Amount, owner is stunned into TerrorEel terror state and the power removes itself. The stun fires on an unblocked hit that crosses the HP bracket (observed window 68–74 HP; exact Amount not surfaced in state) — hits above the threshold do nothing, so burst the eel under the bracket THEN hit unblocked. LIVE run-47 TerrorEel elite T7: stun fired on an unblocked Strike landing eel at 68 HP (SHRIEK:70 bracket); eel move=STUNNED, Vigor-scaled CRASH 22 cancelled same turn at player HP 16. FREE_ATTACK_POWER did NOT appear in player powers this instance — strikes still cost 1 and energy was consumed normally (live correction to run-41 archive note; stun itself fired correctly).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "SHRIEK_POWER",
     "kind": "power",
-    "name": "Shriek",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Shriek"
   },
   "SHRINK_POWER": {
     "aliases": [
       "SHRINK",
+      "Shrink",
       "ShrinkPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner's attack damage dealt multiplied by x0.75 (`DamageDecrease` 30 → (100-30)/100). Decrements 1 at end of owner's side turn; removed if applier dies. Visual: owner scales to 0.5.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "SHRINK_POWER",
     "kind": "power",
-    "name": "Shrink",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Shrink"
   },
   "SHROUD_POWER": {
     "aliases": [
+      "SHROUD",
+      "Shroud",
       "ShroudPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "gains owner Amount Block (triggered by power amount changes — hosted by source card/relic).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SHROUD_POWER",
     "kind": "power",
-    "name": "Shroud",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Shroud"
   },
   "SIC_EM_POWER": {
     "aliases": [
+      "SIC_EM",
+      "Sic 'Em",
       "SicEmPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "when the applier's Osty pet damages owner, summon Amount Osty for the pet's player. Removed at end of owner's side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "SIC_EM_POWER",
     "kind": "power",
-    "name": "Sic Em",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Sic Em"
   },
   "SIGNAL_BOOST_POWER": {
     "aliases": [
+      "SIGNAL_BOOST",
+      "Signal Boost",
       "SignalBoostPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner's next Amount Power plays count twice; 1 stack consumed per Power played.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SIGNAL_BOOST_POWER",
     "kind": "power",
-    "name": "Signal Boost",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Signal Boost"
   },
   "SKITTISH": {
-    "curated": true,
-    "description": "If owner gained no Block this turn and took card-sourced attack damage, owner gains Amount Block (once per turn; flag resets end of opposing side turn). LIVE run-40 eel quartet: Breakthrough AllEnemies attack consumed Skittish on all four same command (each +6 after the AoE resolved); subsequent same-turn attacks dealt full damage — AoE pierce doctrine holds.",
+    "aliases": [
+      "Skittish"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SKITTISH",
     "kind": "power",
     "name": "Skittish"
@@ -2699,682 +3438,853 @@
       "SKITTISH",
       "SkittishPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "if the owner gained no Block this turn and took card-sourced attack damage, the owner gains Amount Block (once per turn; flag resets at end of the opposing side's turn). Mirror of the same-named entry in powers_zh.md. run-53 live 2026-09-19: garden eel quartet each spawned SKITTISH:6; first attack card per eel granted +6 Block AFTER that attack resolved (7-dmg strike → eel 6 block). Multi-hit single command pierces (all hits before block) — Whirlwind X=4 wiped the quartet through Skittish.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SKITTISH_POWER",
     "kind": "power",
-    "name": "Skittish",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Skittish"
   },
   "SLEIGHT_OF_FLESH_POWER": {
-    "curated": true,
-    "description": "Whenever owner applies a non-temporary debuff to an enemy, deal Amount unpowered damage to that enemy (card SLEIGHT_OF_FLESH, Necrobinder: 9 base, 13 upgraded). Temporary-stat debuffs do not proc it.",
+    "aliases": [
+      "SLEIGHT_OF_FLESH",
+      "Sleight of Flesh"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SLEIGHT_OF_FLESH_POWER",
     "kind": "power",
-    "name": "Sleight of Flesh",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Sleight of Flesh"
   },
   "SLIPPERY_POWER": {
     "aliases": [
       "SLIPPERY",
+      "Slippery",
       "SlipperyPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "any HP loss to owner that would be >= 1 is reduced to exactly 1; 1 stack consumed per hit that deals >= 1 unblocked damage.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SLIPPERY_POWER",
     "kind": "power",
-    "live_notes": "LIVE run-56: Ink Phantom Act1 Boss Slippery:8. Each hit on the body consumes 1 charge and caps damage at the charge remaining. Run-42 doctrine confirmed.",
-    "name": "Slippery",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Slippery"
   },
   "SLOTH_POWER": {
-    "counter_class": true,
-    "curated": true,
-    "description": "Debuff counter: owner may play at most Amount cards per turn (counter resets at owner's turn start; display shows cards played this turn). Applied at Amount 3 by KnowledgeDemon CURSE_OF_KNOWLEDGE choice card SLOTH. Kill-window semantics: the cap IS the fight constraint — burst plans needing >Amount plays/turn are dead under Sloth; plan 3-play lines (Bloodletting+Whirlwind counts 2 plays). LIVE run-46: picked Sloth over Disintegration at HP 38 vs 106-HP KnowledgeDemon — 3-play cap beat 13/turn tax escalation; Fiend Fire+Ashes 2-play close the same fight.",
+    "aliases": [
+      "SLOTH",
+      "Sloth"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "SLOTH_POWER",
     "kind": "power",
-    "name": "Sloth",
-    "play_notes": "减益计数：持有者每回合最多出 Amount 张牌（回合开始重置计数；显示为本回合已出牌数）。由知识恶魔 CURSE_OF_KNOWLEDGE 选择牌 SLOTH 以 Amount 3 施加。击杀窗语义：上限即战斗约束——需要超过 Amount 张出牌的爆发计划在怠惰下失效；按 3 张出牌线规划（如 放血+旋风 计 2 张）。run-46 live：HP38 时选怠惰弃崩解——3 张上限胜过 13/回合税升级。 | run-46 live: Sloth 3-plays/turn cap from KnowledgeDemon curse; beat Disintegration tax escalation at HP 38; 2-play FF+Ashes line closed the fight under the cap.",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Sloth"
   },
   "SLOW_POWER": {
     "aliases": [
       "SLOW",
+      "Slow",
       "SlowPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "attack damage received by owner is multiplied by x(1 + 0.1 * cards the player has played this turn). `SlowAmount` +1 per card played; resets to 0 at start of owner's side turn. Display amount = SlowAmount * 10.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "SLOW_POWER",
     "kind": "power",
-    "live_notes": "LIVE run-56: Eldritch Statue elite. SLOW_POWER counter — attack intents scale with remaining counter.",
-    "name": "Slow",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Slow"
   },
   "SLUMBER_POWER": {
     "aliases": [
       "SLUMBER",
+      "Slumber",
       "SlumberPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "counter decrements on unblocked damage received AND at end of owner's side turn; at 0, owner wakes (Slumbering Beetle -> ROLL_OUT cycle). Sleeping owner is 0 threat; any HP-leaking chip accelerates the wake. Live run-43: Slumber 3 -> 2 -> 1 -> wake mid-fight; ROLL_OUT then killed the player at 6 HP.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SLUMBER_POWER",
     "kind": "power",
-    "name": "Slumber",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Slumber"
   },
   "SMOGGY_POWER": {
-    "affliction_keys": [
-      "SMOG"
-    ],
     "aliases": [
       "SMOGGY",
+      "Smoggy",
       "SmoggyPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "after owner plays a Skill, afflict all unafflicted Skill cards with Smog; new Skills entering combat after a Skill was played this turn also get it. Smog cards are unplayable while this power exists. Smog afflictions clear at end of owner's side turn.",
-    "host_of_affliction": true,
+    "detail": {
+      "affliction_keys": [
+        "SMOG"
+      ],
+      "counter_class": false,
+      "host_of_affliction": true,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
     "id": "SMOGGY_POWER",
     "kind": "power",
-    "name": "Smoggy",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Single"
+    "name": "Smoggy"
+  },
+  "SMOKESTACK": {
+    "aliases": [
+      "SMOKESTACK",
+      "Smokestack"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SMOKESTACK",
+    "kind": "power",
+    "name": "Smokestack"
   },
   "SNEAKY_POWER": {
     "aliases": [
+      "SNEAKY",
+      "Sneaky",
       "SneakyPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner gains Amount Block (fast VFX; trigger hosted by source card).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SNEAKY_POWER",
     "kind": "power",
-    "name": "Sneaky",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Sneaky"
   },
   "SOAR_POWER": {
     "aliases": [
       "SOAR",
+      "Soar",
       "SoarPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "while active, damage the owner receives from powered attacks is multiplied by ×0.5 (CanonicalVars DamageDecrease 50 / 100). OwlMagistrate applies it via JUDICIAL_FLIGHT and removes it on VERDICT — its big hit turn is the window where it takes full damage.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "SOAR_POWER",
     "kind": "power",
-    "name": "Soar",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Soar"
   },
   "SPECTRUM_SHIFT_POWER": {
     "aliases": [
+      "SPECTRUM_SHIFT",
+      "Spectrum Shift",
       "SpectrumShiftPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "before owner's hand draw, add Amount distinct Colorless-pool cards to hand.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SPECTRUM_SHIFT_POWER",
     "kind": "power",
-    "name": "Spectrum Shift",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Spectrum Shift"
   },
   "SPEEDSTER_POWER": {
-    "curated": true,
-    "description": "Whenever owner draws a card outside the normal hand draw, deal Amount unpowered damage to ALL hittable enemies (card SPEEDSTER, Silent pool: Amount 2 base, Innate; upgraded value per card text).",
+    "aliases": [
+      "SPEEDSTER",
+      "Speedster"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SPEEDSTER_POWER",
     "kind": "power",
-    "name": "Speedster",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Speedster"
+  },
+  "SPEED_POTION": {
+    "aliases": [
+      "SPEED_POTION",
+      "Temporary Dexterity"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SPEED_POTION",
+    "kind": "power",
+    "name": "Temporary Dexterity"
   },
   "SPEED_POTION_POWER": {
-    "curated": true,
-    "description": "Temporary Dexterity subclass: +Amount Dexterity on apply (Speed Potion = +5); reverted at end of owner's side turn. NOT a draw potion (distinct from Swift Potion) — treat as same-turn block value; the Dex boost expires by next turn.",
+    "aliases": [],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SPEED_POTION_POWER",
     "kind": "power",
-    "name": "Speed Potion Power",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Speed Potion Power"
   },
   "SPINNER_POWER": {
     "aliases": [
+      "SPINNER",
+      "Spinner",
       "SpinnerPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at energy reset, Channel Amount Glass orbs.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SPINNER_POWER",
     "kind": "power",
-    "name": "Spinner",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Spinner"
   },
   "SPIRIT_OF_ASH_POWER": {
     "aliases": [
+      "SPIRIT_OF_ASH",
+      "Spirit of Ash",
       "SpiritOfAshPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "before owner plays a card, owner gains Amount Block (source-hosted trigger).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SPIRIT_OF_ASH_POWER",
     "kind": "power",
-    "name": "Spirit Of Ash",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Spirit Of Ash"
   },
   "STAMPEDE_POWER": {
     "aliases": [
       "STAMPEDE",
+      "Stampede",
       "StampedePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at end of owner's auto post-play phase, auto-play Amount Attack cards from hand.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "STAMPEDE_POWER",
     "kind": "power",
-    "name": "Stampede",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Stampede"
   },
   "STAR_NEXT_TURN_POWER": {
     "aliases": [
       "STAR_NEXT_TURN",
+      "Star Next Turn",
       "StarNextTurnPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at next energy reset, gain Amount Stars, then removed.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "STAR_NEXT_TURN_POWER",
     "kind": "power",
-    "name": "Star Next Turn",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Star Next Turn"
   },
   "STEAM_ERUPTION_POWER": {
     "aliases": [
       "STEAM_ERUPTION",
+      "Steam Eruption",
       "SteamEruptionPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "owner death handler — combat does not end on owner death; buffs retained for follow-up encounter logic. LIVE run-47 Waterfall Giant: stacks +3 every enemy turn from 15 base (observed 15→18→21→24→27→30→33→36→39→42 over T1–T11); EXPLODE deathblow on body death = current Steam amount as the dummy EXPLODE_MOVE attack (live atk:42 at Steam 42).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "STEAM_ERUPTION_POWER",
     "kind": "power",
-    "name": "Steam Eruption",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Steam Eruption"
   },
   "STOCK_POWER": {
     "aliases": [
       "STOCK",
+      "Stock",
       "StockPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "on owner's death (Amount > 0), spawns an Axebot in the same slot with StockAmount = Amount - 1 (next robot variant chain); combat does not end during spawn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "STOCK_POWER",
     "kind": "power",
-    "name": "Stock",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Stock"
   },
   "STORM_POWER": {
     "aliases": [
+      "STORM",
+      "Storm",
       "StormPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "each Power card owner plays Channels Amount Lightning orbs.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "STORM_POWER",
     "kind": "power",
-    "name": "Storm",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Storm"
   },
   "STRANGLE_POWER": {
     "aliases": [
+      "STRANGLE",
+      "Strangle",
       "StranglePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "each card the applier's player plays this turn deals Amount unblockable unpowered damage to owner. Removed at end of owner's side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "STRANGLE_POWER",
     "kind": "power",
-    "name": "Strangle",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Strangle"
   },
   "STRATAGEM_POWER": {
     "aliases": [
       "STRATAGEM",
+      "Stratagem",
       "StratagemPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "on shuffle, selected draw-pile cards move to hand (selection prefs hosted by source).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "STRATAGEM_POWER",
     "kind": "power",
-    "name": "Stratagem",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Stratagem"
   },
   "STRENGTH_POWER": {
     "aliases": [
       "STRENGTH",
+      "Strength",
       "StrengthPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "+Amount attack damage on every attack the owner deals (added per hit; multi-hit scales per hit).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "STRENGTH_POWER",
     "kind": "power",
-    "name": "Strength",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Strength"
   },
   "SUBROUTINE_POWER": {
     "aliases": [
+      "SUBROUTINE",
+      "Subroutine",
       "SubroutinePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "Power-card play tracking — trigger hosted by source card (see card text).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SUBROUTINE_POWER",
     "kind": "power",
-    "name": "Subroutine",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Subroutine"
   },
   "SUCK_POWER": {
-    "curated": true,
-    "description": "After owner's powered attack deals unblocked damage to any target, owner gains +Amount Strength per successful hit instance (FossilStalker passive: +3). Full-block attack turns keep SUCK dormant — blocking attack-intent turns prevents the Strength ramp.",
+    "aliases": [
+      "SUCK",
+      "Suck"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SUCK_POWER",
     "kind": "power",
-    "name": "Suck",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Suck"
   },
   "SUMMON_NEXT_TURN_POWER": {
     "aliases": [
       "SUMMON_NEXT_TURN",
+      "Summon Next Turn",
       "SummonNextTurnPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at start of owner player's turn, summon Amount Osty pets, then remove the power.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SUMMON_NEXT_TURN_POWER",
     "kind": "power",
-    "name": "Summon Next Turn",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Summon Next Turn"
   },
   "SURPRISE_POWER": {
     "aliases": [
       "SURPRISE",
+      "Surprise",
       "SurprisePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner death handler — combat does not end until the surprise-spawn logic resolves (CreatureCmd.Add of next monster).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "SURPRISE_POWER",
     "kind": "power",
-    "name": "Surprise",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Surprise"
   },
   "SURROUNDED_POWER": {
     "aliases": [
       "SURROUNDED",
+      "Surrounded",
       "SurroundedPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "positioning state; attack damage to owner is multiplied by x1.5 when the attacker carries the matching BACK_ATTACK_LEFT_POWER / BACK_ATTACK_RIGHT_POWER marker for the owner's facing. Markers themselves are inert Single Buffs. Facing rule (decomp): the owner's facing flips whenever the player plays a card or potion targeting a creature whose BACK_ATTACK marker matches the opposite direction — targeting a claw turns the owner toward it, exposing the other claw as the ×1.5 flanker. On flank-creature death, facing re-targets to the remaining marker-bearer if all survivors share one marker side. LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log): facing flips on EVERY card/potion play targeting a creature — targeting Crusher dropped THRASH 18→12, the next Bash on Rocket flipped it back to 18 the same turn. Plan one flank side per turn; mixed-target turns pay the ×1.5 tax repeatedly.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
     "id": "SURROUNDED_POWER",
     "kind": "power",
-    "live_notes": "LIVE run-56: player-side debuff from KaiserCrab fight. Applied by Rocket slot — indicates dual-body surround state.",
-    "name": "Surrounded",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Single"
+    "name": "Surrounded"
   },
   "SWIPE_POWER": {
-    "curated": true,
-    "description": "Owner holds 1 stolen deck card (ThievingHopper THIEVERY_MOVE priority: non-Imbued Uncommon → Common/Rare/Event → Basic/Quest → Ancient/Imbued); on owner's death the stolen card returns to the victim's deck and an extra card reward is granted. Lucky Fysh pays +15 Gold on the silent deck-add.",
+    "aliases": [
+      "SWIPE",
+      "Swipe"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "SWIPE_POWER",
     "kind": "power",
-    "name": "Swipe",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Swipe"
   },
   "SWORD_SAGE_POWER": {
     "aliases": [
+      "SWORD_SAGE",
+      "Sword Sage",
       "SwordSagePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "Member of the SWORD_SAGE_POWER family. adds Amount replay counters to Sovereign Blade-family cards (BaseReplayCount); removed when power leaves.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SWORD_SAGE_POWER",
     "kind": "power",
-    "name": "Sword Sage",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Sword Sage"
+  },
+  "SYNCHRONIZE": {
+    "aliases": [
+      "SYNCHRONIZE",
+      "Temporary Focus"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SYNCHRONIZE",
+    "kind": "power",
+    "name": "Temporary Focus"
+  },
+  "TAG_TEAM": {
+    "aliases": [
+      "TAG_TEAM",
+      "Tag Team"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "TAG_TEAM",
+    "kind": "power",
+    "name": "Tag Team"
   },
   "TAINTED_POWER": {
-    "affliction_keys": [
-      "TAINTED"
-    ],
     "aliases": [
       "TAINTED",
+      "Tainted",
       "TaintedPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "player-side debuff from VITAL_SPARK: incoming attack damage +Amount for the turn; removed at end of the enemy side's turn. Run-41 live: each tainted skill play added +2 (stacked 2→4 across a turn), inflating displayed enemy intents per-hit (Whirlwind base 5x3 showed 9x3 at stack 4). Does NOT persist into the next turn — the tax is same-turn only.",
-    "host_of_affliction": true,
+    "detail": {
+      "affliction_keys": [
+        "TAINTED"
+      ],
+      "counter_class": false,
+      "host_of_affliction": true,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "TAINTED_POWER",
     "kind": "power",
-    "name": "Tainted",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Tainted"
   },
   "TANGLED_POWER": {
-    "affliction_keys": [
-      "ENTANGLED"
-    ],
     "aliases": [
       "TANGLED",
+      "Tangled",
       "TangledPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "on apply, afflict all owner's Attack cards with Entangled; new Attacks entering combat also get it. Entangled cards cost +Amount Energy. Power removes itself at end of owner's side turn.",
-    "host_of_affliction": true,
+    "detail": {
+      "affliction_keys": [
+        "ENTANGLED"
+      ],
+      "counter_class": false,
+      "host_of_affliction": true,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "TANGLED_POWER",
     "kind": "power",
-    "name": "Tangled",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Tangled"
   },
   "TANK_POWER": {
     "aliases": [
+      "TANK",
+      "Tank",
       "TankPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner's outgoing attack damage x2 (applies GuardedPower on apply per decomp interaction with guarded targets).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "TANK_POWER",
     "kind": "power",
-    "name": "Tank",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Tank"
   },
   "TENDER_POWER": {
     "aliases": [
       "TENDER",
+      "Tender",
       "TenderPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "while active, EVERY card played drains player Strength −1 and Dexterity −1 each play within the turn; all Tender drains restore in batches on the applier's cycle (run-48 live: −1/−3-class mid-turn drains followed by +3/+5 restores on HunterKiller's phases — net oscillates, baseline returns). Not a buff; mid-turn stat tax. LIVE run-48 death-class note: kill-chain damage math MUST re-read player powers after every card — pre-drain Str values left HunterKiller at 13/121 instead of dead. Displayed per-card numbers are post-tax — re-read state after each play. LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log): per-card −1 Str/−1 Dex drains and batch +5 restores both observed; kill-chain math re-read player powers after every card — HunterKiller killed at T3 with 0 HP lost when the re-read rule held.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "TENDER_POWER",
     "kind": "power",
-    "name": "Tender",
-    "play_notes": "run-48 live 2026-09-19: drain/restore oscillation confirmed on HunterKiller; −3 Str mid-chain cost the kill. [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Tender"
   },
   "TERRITORIAL_POWER": {
     "aliases": [
       "TERRITORIAL",
+      "Territorial",
       "TerritorialPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "Buff Counter on owner (run-38 live Byrdonis): at end of owner side turn, +Amount Strength (Amount=1 base; live STR climbed one step per turn — SWOOP 17→19 across two enemy turns). Growth kill-timer: every turn delayed adds +Amount to all owner attacks.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "TERRITORIAL_POWER",
     "kind": "power",
-    "name": "Territorial",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Territorial"
   },
   "THE_BOMB_POWER": {
     "aliases": [
+      "THE_BOMB",
+      "The Bomb",
       "TheBombPower"
     ],
-    "counter_class": true,
-    "curated": false,
-    "description": "decrements at end of owner's side turn while Amount > 1; at Amount <= 1, deals DynamicVars.Damage (default DamageVar 40 unpowered) to ALL hittable enemies, then removed.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "THE_BOMB_POWER",
     "kind": "power",
-    "name": "The Bomb",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "The Bomb"
   },
   "THE_GAMBIT_POWER": {
     "aliases": [
       "THE_GAMBIT",
+      "The Gambit",
       "TheGambitPower"
     ],
-    "counter_class": true,
-    "curated": false,
-    "description": "if owner takes unblocked powered-attack damage > 0, owner is killed (power removed as it fires). Duration: the power **persists beyond the turn THE_GAMBIT was played** until the clause fires — observed still present on turn 8 after a turn-6 play, when unblocked chip killed the player at 32 HP. Do not pick THE_GAMBIT without a plan to fully block every remaining attack in the fight.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
     "id": "THE_GAMBIT_POWER",
     "kind": "power",
-    "name": "The Gambit",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Single"
+    "name": "The Gambit"
   },
   "THE_HUNT_POWER": {
     "aliases": [
+      "THE_HUNT",
+      "The Hunt",
       "TheHuntPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "Inert success-marker power (Buff, Counter) — no hooks of its own; queried by TheHunt card logic.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "THE_HUNT_POWER",
     "kind": "power",
-    "name": "The Hunt",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "The Hunt"
   },
   "THE_SEALED_THRONE_POWER": {
     "aliases": [
+      "THE_SEALED_THRONE",
+      "The Sealed Throne",
       "TheSealedThronePower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "Source-hosted utility power (Buff, Counter) — combat-end / pre-play logic hosted by the source card; see the hosting card text.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "THE_SEALED_THRONE_POWER",
     "kind": "power",
-    "name": "The Sealed Throne",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "The Sealed Throne"
   },
   "THIEVERY_POWER": {
     "aliases": [
       "THIEVERY",
+      "Thievery",
       "ThieveryPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "Thievery logic marker (Buff, Counter) — queried by theft logic; GremlinMerc's version steals 20 Gold from the player on its turn. No hooks of its own.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "THIEVERY_POWER",
     "kind": "power",
-    "name": "Thievery",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Thievery"
   },
   "THORNS_POWER": {
     "aliases": [
       "THORNS",
+      "Thorns",
       "ThornsPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "when owner is hit by a powered attack (or Omnislice), dealer takes Amount unpowered damage.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "THORNS_POWER",
     "kind": "power",
-    "name": "Thorns",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Thorns"
   },
   "THUNDER_POWER": {
     "aliases": [
+      "THUNDER",
+      "Thunder",
       "ThunderPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "when owner's player evokes a Lightning orb, deal Amount unpowered damage to the evoke targets.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "THUNDER_POWER",
     "kind": "power",
-    "name": "Thunder",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Thunder"
   },
   "TOOLS_OF_THE_TRADE_POWER": {
     "aliases": [
       "TOOLS_OF_THE_TRADE",
+      "Tools of the Trade",
       "ToolsOfTheTradePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "+Amount hand draw per turn; at owner's turn start, select Amount cards from hand to discard.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "TOOLS_OF_THE_TRADE_POWER",
     "kind": "power",
-    "name": "Tools Of The Trade",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Tools Of The Trade"
   },
   "TORIC_TOUGHNESS_POWER": {
     "aliases": [
       "TORIC_TOUGHNESS",
+      "Toric Toughness",
       "ToricToughnessPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "when owner's Block is cleared, gain DynamicVars.Block Block, then decrement 1.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "TORIC_TOUGHNESS_POWER",
     "kind": "power",
-    "name": "Toric Toughness",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Toric Toughness"
   },
   "TRACKING_POWER": {
     "aliases": [
+      "TRACKING",
+      "Tracking",
       "TrackingPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner's (or owner's pets') attack damage against a target with WEAK_POWER multiplied by Amount (x-value from stacks).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "TRACKING_POWER",
     "kind": "power",
-    "name": "Tracking",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Tracking"
+  },
+  "TRASH_TO_TREASURE": {
+    "aliases": [
+      "TRASH_TO_TREASURE",
+      "Trash to Treasure"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "TRASH_TO_TREASURE",
+    "kind": "power",
+    "name": "Trash to Treasure"
   },
   "TYRANNY_POWER": {
     "aliases": [
       "TYRANNY",
+      "Tyranny",
       "TyrannyPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "+Amount hand draw per turn; at owner's turn start, select Amount cards from hand to Exhaust.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "TYRANNY_POWER",
     "kind": "power",
-    "name": "Tyranny",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Tyranny"
   },
   "UNMOVABLE": {
-    "curated": true,
-    "description": "The first Amount times you gain Block from a card each turn, double the gain. LIVE run-40 values (Amount=1 power card, doubles first 2 card-block gains/turn): Blood Wall 16→32, Evil Eye 8→16, Ultimate Defend 11→22, Shrug It Off 8→16, Armaments 5→10, Defend 5→10. Potion block is not card-sourced (Block Potion 12 stayed 12).",
+    "aliases": [
+      "Unmovable"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "UNMOVABLE",
     "kind": "power",
     "name": "Unmovable"
@@ -3384,187 +4294,202 @@
       "UNMOVABLE",
       "UnmovablePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "The first 2 times you gain Block from a card each turn, double the amount gained.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "UNMOVABLE_POWER",
     "kind": "power",
-    "name": "Unmovable",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Unmovable"
   },
   "VEILPIERCER_POWER": {
     "aliases": [
+      "VEILPIERCER",
+      "Veilpiercer",
       "VeilpiercerPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner's Ethereal cards in hand/play cost 0; 1 stack consumed per Ethereal card played.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "VEILPIERCER_POWER",
     "kind": "power",
-    "name": "Veilpiercer",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Veilpiercer"
   },
   "VICIOUS_POWER": {
     "aliases": [
       "VICIOUS",
+      "Vicious",
       "ViciousPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "whenever owner applies VULNERABLE_POWER to anyone (amount > 0), draw Amount cards.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "VICIOUS_POWER",
     "kind": "power",
-    "name": "Vicious",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Vicious"
   },
   "VIGOR_POWER": {
     "aliases": [
       "VIGOR",
+      "Vigor",
       "VigorPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "+Amount attack damage on the owner's next attack (ModifyDamageAdditive; consumed by that attack). run-53 live 2026-09-19: Terror Eel Vigor:6 displayed next CRASH as 22[base16] and was consumed by that attack — +Amount applies to the owner next attack only.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "VIGOR_POWER",
     "kind": "power",
-    "name": "Vigor",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Vigor"
   },
   "VITAL_SPARK_POWER": {
     "aliases": [
       "VITAL_SPARK",
+      "Vital Spark",
       "VitalSparkPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "counter-class on the enemy: player Skill cards are afflicted Tainted(Amount) at combat start; playing a Tainted card applies TAINTED_POWER Amount to the player — incoming attack damage +Amount that turn (removed end of enemy side). Amount can rise mid-fight (Pulsate +2 on Infested Prism). Run-41 live: Brand (self-damage skill) still counted — zero-skill discipline means attacks AND powers only; Blood Wall/Second Wind/Defend/Shrug all tax. LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log): cards with card_type 'power' are NOT automatically safe — RAGE applied TAINTED:2 when played. Inflame was clean. Verify each card live; RADIATE intent display shows the tax same-turn (11→13).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "VITAL_SPARK_POWER",
     "kind": "power",
-    "name": "Vital Spark",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Vital Spark"
   },
   "VOID_FORM_POWER": {
     "aliases": [
+      "VOID_FORM",
+      "Void Form",
       "VoidFormPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "owner's cards (and Star costs) in hand/play cost 0 up to Amount non-autoplay cards played per turn; counter resets at turn start.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "VOID_FORM_POWER",
     "kind": "power",
-    "name": "Void Form",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Void Form"
   },
   "VULNERABLE_POWER": {
     "aliases": [
       "VULNERABLE",
+      "Vulnerable",
       "VulnerablePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "attack damage received by owner is multiplied by x1.5 (`DamageIncrease` 1.5). Paper Phrog / CrueltyPower / DebilitatePower can modify that multiplier. Ticks down 1 at end of Enemy side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "VULNERABLE_POWER",
     "kind": "power",
-    "name": "Vulnerable",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Vulnerable"
   },
   "WASTE_AWAY_POWER": {
     "aliases": [
       "WASTE_AWAY",
+      "Waste Away",
       "WasteAwayPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "Gain 1 less Energy per turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "WASTE_AWAY_POWER",
     "kind": "power",
-    "name": "Waste Away",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Waste Away"
   },
   "WEAK_POWER": {
     "aliases": [
       "WEAK",
+      "Weak",
       "WeakPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "attack damage dealt by owner is multiplied by x0.75 (`DamageDecrease` 0.75). Paper Krane / DebilitatePower can modify the multiplier. Ticks down 1 at end of Enemy side turn.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "WEAK_POWER",
     "kind": "power",
-    "name": "Weak",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Weak"
   },
   "WELL_LAID_PLANS_POWER": {
     "aliases": [
+      "WELL_LAID_PLANS",
+      "Well-Laid Plans",
       "WellLaidPlansPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "end-of-turn hand flush selection logic (retained-card choice; BeforeFlushLate).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "WELL_LAID_PLANS_POWER",
     "kind": "power",
-    "name": "Well Laid Plans",
-    "play_notes": "",
-    "power_type": null,
-    "stack_type": "Counter"
+    "name": "Well Laid Plans"
   },
   "WITHERING_PRESENCE_POWER": {
     "aliases": [
       "WITHERING_PRESENCE",
+      "Withering Presence",
       "WitheringPresencePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "every 6th card the target player plays adds a Wither curse/status card to their hand (`CardsLeft` 6 → 0 then add Wither).",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "WITHERING_PRESENCE_POWER",
     "kind": "power",
-    "name": "Withering Presence",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Withering Presence"
   },
   "WRAITH_FORM_POWER": {
     "aliases": [
+      "WRAITH_FORM",
+      "Wraith Form",
       "WraithFormPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "at start of owner's side turn, apply -Amount DEXTERITY_POWER to owner.",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "WRAITH_FORM_POWER",
     "kind": "power",
-    "name": "Wraith Form",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Wraith Form"
   }
 }

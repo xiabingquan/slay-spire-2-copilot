@@ -126,17 +126,17 @@ simplest outcome facts; fix column/row-order violations in place.
 
 Files: `slay-spire-2-copilot/spirectl_lib/data/*.json` + `*_zh.json` — EN and
 `_zh` pairs for cards, relics, powers, potions, afflictions, monsters, events,
-intents, and characters. (Markdown twins `*.md` remain on disk until live
-verification retires them; docs cite the JSON.)
+intents, and characters. (Schema: `bridge/spirectl_lib/schema.py`.)
 
-Rule: static reference data — keys = live game ids, values = complete
-descriptions. Entries may gain facts during a run, but must never contain run
-records, dates, or session notes. `play_notes` holds static strategy only.
-`curated` marks agent-verified entries (`false` = auto-folded stub, refine
-before relying). Note: `spirectl lookup` auto-folds
-spire-codex.com stubs marked `curated:false` — those must be refined to
-`curated:true` (bilingual, EN+ZH aligned) before they count as curated
-content.
+Rule: purely programmatic reference data — humans never read these files.
+Every entry is `id / kind / name / aliases / detail`; the per-kind `detail`
+shapes are defined as dataclasses in `bridge/spirectl_lib/schema.py` and
+enforced strictly by `--check` (no defaults; missing/extra/mistyped keys
+hard-fail). spire-codex.com is the authoritative structure source: lookup
+misses fold structure in directly. Prose (descriptions, play notes,
+doctrine) never lives here — it belongs in memory/lessons and run notes.
+EN and ZH twins share id/kind/aliases/detail; only `name` differs by
+language. Entries must never contain run records, dates, or session notes.
 
 Violation → delete the run-specific content; it belongs in `memory/runs/`,
 not here.

@@ -1,1996 +1,1872 @@
 {
   "ADROIT": {
     "aliases": [
-      "Kifuda",
-      "KIFUDA"
+      "KIFUDA",
+      "Kifuda"
     ],
-    "character": "shared",
-    "curated": true,
-    "description": "ADROIT（live id：run-43/44 商店 Kifuda 类商品关联；效果未解码 — codex 存根，研究待办）。教条：未解码遗物在商店不购买（run-44 以 221g 跳过 Kifuda 即此教条）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Shop"
+    },
     "id": "ADROIT",
     "kind": "relic",
-    "name": "Kifuda",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Kifuda"
   },
   "AKABEKO": {
     "aliases": [
       "Akabeko"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "第 1 回合开始，获得 8 点 Vigor。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "AKABEKO",
     "kind": "relic",
-    "name": "赤牛",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "赤牛"
   },
   "ALCHEMICAL_COFFER": {
     "aliases": [
       "Alchemical Coffer",
       "AlchemicalCoffer"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，获得 4 个装满随机药水的药水栏。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "ALCHEMICAL_COFFER",
     "kind": "relic",
-    "name": "炼金箱",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "炼金箱"
   },
   "AMETHYST_AUBERGINE": {
     "aliases": [
       "Amethyst Aubergine",
       "AmethystAubergine"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "战斗奖励额外 +15 金（最终章 Boss 除外）。run-41 live：每场战斗奖励在基础金币上 +15 — 与宝箱金共同支撑了 Act2 商店#1 的 255 金 100% 沉淀。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "AMETHYST_AUBERGINE",
     "kind": "relic",
-    "name": "紫水晶茄子",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "紫水晶茄子"
   },
   "ANCHOR": {
     "aliases": [
       "Anchor"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始，获得 10 格挡。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "ANCHOR",
     "kind": "relic",
-    "name": "锚",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "锚"
   },
   "ARCANE_SCROLL": {
     "aliases": [
       "Arcane Scroll",
       "ArcaneScroll"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，获得 1 张随机稀有卡牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "ARCANE_SCROLL",
     "kind": "relic",
-    "name": "奥术卷轴",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "奥术卷轴"
   },
   "ARCHAIC_TOOTH": {
     "aliases": [
       "Archaic Tooth",
       "ArchaicTooth"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，将你的初始牌变为远古版本。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "ARCHAIC_TOOTH",
     "kind": "relic",
-    "name": "古老牙齿",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "古老牙齿"
   },
   "ART_OF_WAR": {
     "aliases": [
       "Art of War",
       "ArtOfWar"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "若上回合未打出任何攻击牌，第 2 回合起回合开始获得 1 点能量。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "ART_OF_WAR",
     "kind": "relic",
-    "name": "孙子兵法",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "孙子兵法"
   },
   "ASTROLABE": {
     "aliases": [
       "Astrolabe"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，变化 3 张选定牌，然后升级它们。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "ASTROLABE",
     "kind": "relic",
-    "name": "星盘",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "星盘"
   },
   "BAG_OF_MARBLES": {
     "aliases": [
       "Bag of Marbles",
       "BagOfMarbles"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "战斗开始（第 1 回合）对所有敌人施加 1 层易伤。run-1 脊线遗物（弹珠袋×拆卸教条）。run-46 live：Act2 (2,0) 商店 169g 购入——与红面具（T1 全体弱化）组成自动易伤/弱化包，每场战斗变成 T1 竞速窗；与 Bash/熔融之拳/主宰易伤包叠加支撑拆卸双击线。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "BAG_OF_MARBLES",
     "kind": "relic",
-    "name": "弹珠袋",
-    "play_notes": "run-46 live：弹珠袋+红面具自动包=本局脊线；购买点 99% 金币沉淀。",
-    "rarity": "Common"
+    "name": "弹珠袋"
   },
   "BAG_OF_PREPARATION": {
     "aliases": [
       "Bag of Preparation",
       "BagOfPreparation"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "第 1 回合，抽牌阶段额外抽 2 张牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "BAG_OF_PREPARATION",
     "kind": "relic",
-    "live_notes": "LIVE run-56：每场战斗开局额外抽 2 张牌。引擎提前上线。",
-    "name": "准备背包",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "准备背包"
   },
   "BEATING_REMNANT": {
     "aliases": [
       "Beating Remnant",
       "BeatingRemnant"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "单回合失去的 HP 不超过 20。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "BEATING_REMNANT",
     "kind": "relic",
-    "name": "律动残余",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "律动残余"
   },
   "BEAUTIFUL_BRACELET": {
     "aliases": [
       "Beautiful Bracelet",
       "BeautifulBracelet"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，选择牌库中 3 张牌附魔 Swift 3。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "BEAUTIFUL_BRACELET",
     "kind": "relic",
-    "name": "华美手镯",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "华美手镯"
   },
   "BELLOWS": {
     "aliases": [
       "Bellows"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "第 1 回合开始，升级手牌中所有卡牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "BELLOWS",
     "kind": "relic",
-    "name": "风箱",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "风箱"
   },
   "BELT_BUCKLE": {
     "aliases": [
       "Belt Buckle",
       "BeltBuckle"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "没有药水时，额外 +2 点敏捷（战斗内）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "BELT_BUCKLE",
     "kind": "relic",
-    "name": "腰带扣",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "腰带扣"
   },
   "BIG_HAT": {
     "aliases": [
       "Big Hat",
       "BigHat"
     ],
-    "character": "Necrobinder",
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始，从你的卡池中向手牌加入 2 张随机虚无（Ethereal）牌。",
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "BIG_HAT",
     "kind": "relic",
-    "name": "大帽子",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "大帽子"
   },
   "BIG_MUSHROOM": {
     "aliases": [
       "Big Mushroom",
       "BigMushroom"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "拾取时，+20 最大 HP；第 1 回合，抽牌阶段额外少抽 2 张牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "BIG_MUSHROOM",
     "kind": "relic",
-    "live_notes": "LIVE run-56：蘑菇事件选择。拾起时 +20 最大生命值；第 1 回合少抽 2 张牌（节奏代价）。",
-    "name": "大蘑菇",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "大蘑菇"
   },
   "BIIIG_HUG": {
     "aliases": [
       "Biiig Hug",
       "BiiigHug",
-      "BIIIG_HUG",
       "大大拥抱"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "Ancient 遗物（Tezcatara 赐福）：拾取时移除牌库4张牌；每次洗牌向抽牌堆加入1张烟尘。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "BIIIG_HUG",
     "kind": "relic",
-    "name": "大大拥抱",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "大大拥抱"
   },
   "BING_BONG": {
     "aliases": [
       "Bing Bong",
       "BingBong"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每次向牌库加入卡牌时，额外加一份拷贝。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "BING_BONG",
     "kind": "relic",
-    "name": "宾邦",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "宾邦"
   },
   "BLACK_BLOOD": {
     "aliases": [
-      "BlackBlood",
       "Black Blood",
+      "BlackBlood",
       "黑暗之血"
     ],
-    "character": "IRONCLAD",
-    "curated": true,
-    "description": "每场战斗结束后回复 12 HP（IRONCLAD 初始遗物燃烧之血的升级形态；燃烧之血回 6）。经 TOUCH_OF_OROBAS 换装获得，换装同时替换掉燃烧之血。",
+    "detail": {
+      "character": "IRONCLAD",
+      "counter_shown": null,
+      "rarity": "Ancient"
+    },
     "id": "BLACK_BLOOD",
     "kind": "relic",
-    "name": "黑暗之血",
-    "play_notes": "run-49 live：战后回血 12 八次确认（61→73 / 65→77 / 2→14 级）。被动 HP 轨翻倍；HP 经济死亡类的系统性解。run-39 同事件先例成立。",
-    "rarity": "Ancient"
+    "name": "黑暗之血"
   },
   "BLACK_STAR": {
     "aliases": [
       "Black Star",
       "BlackStar"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "精英战额外 +1 遗物。run-51 live：Act2 两精英各掉双遗物。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "BLACK_STAR",
     "kind": "relic",
-    "name": "黑星",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "黑星"
   },
   "BLESSED_ANTLER": {
     "aliases": [
       "Blessed Antler",
       "BlessedAntler"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每回合 +1 最大能量；战斗开始，向抽牌堆洗入 3 张 Dazed。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "BLESSED_ANTLER",
     "kind": "relic",
-    "name": "赐福鹿角",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "赐福鹿角"
   },
   "BLOOD_SOAKED_ROSE": {
     "aliases": [
       "Blood-Soaked Rose",
       "BloodSoakedRose"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每回合 +1 最大能量；拾取时，向牌库加入 1 张 Enthralled。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "BLOOD_SOAKED_ROSE",
     "kind": "relic",
-    "name": "血染玫瑰",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "血染玫瑰"
   },
   "BLOOD_VIAL": {
     "aliases": [
       "Blood Vial",
       "BloodVial"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "每场战斗开始时回复2点HP。对局40 live：每战触发（战斗开始读取时HP+2）；与燃烧之血战后+6、天选芝士+1/+1 同 HP 经济轨叠加。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "BLOOD_VIAL",
     "kind": "relic",
-    "name": "血瓶",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "血瓶"
   },
   "BONE_FLUTE": {
     "aliases": [
       "Bone Flute",
       "BoneFlute"
     ],
-    "character": "Necrobinder",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Osty 每次攻击时，获得 2 格挡。",
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "BONE_FLUTE",
     "kind": "relic",
-    "name": "骨笛",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "骨笛"
   },
   "BONE_TEA": {
     "aliases": [
       "Bone Tea",
       "BoneTea"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "接下来 1 场战斗：第 1 回合开始，升级手牌中所有卡牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "BONE_TEA",
     "kind": "relic",
-    "name": "骨茶",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "骨茶"
   },
   "BOOKMARK": {
     "aliases": [
       "Bookmark"
     ],
-    "character": "Necrobinder",
-    "counter_shown": false,
-    "curated": false,
-    "description": "回合结束时，随机一张被保留的手牌费用 −1 直至打出。",
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "BOOKMARK",
     "kind": "relic",
-    "name": "书签",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "书签"
   },
   "BOOK_OF_FIVE_RINGS": {
     "aliases": [
+      "Book of Five Rings",
       "BookOfFiveRINGS",
-      "BOOK_OF_FIVE_RINGS",
-      "五轮书",
-      "五轮之书"
+      "五轮之书",
+      "五轮书"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "Every 5 cards added to your deck, heal 20 HP (counter resets on payout). Anti-thinning relic — pays on card-add-heavy routes. LIVE run-57: two payouts (counter hit 5 twice — mid-Act1 Armaments add + mid-Act2 adds); heals landed at 68/86 pre-Elite② and mid-Act2 shop window.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "BOOK_OF_FIVE_RINGS",
     "kind": "relic",
-    "name": "五轮之书",
-    "play_notes": "对局43 live",
-    "rarity": "Common"
+    "name": "五轮之书"
   },
   "BOOK_REPAIR_KNIFE": {
     "aliases": [
       "Book Repair Knife",
       "BookRepairKnife"
     ],
-    "character": "Necrobinder",
-    "counter_shown": false,
-    "curated": false,
-    "description": "非 Minion 敌人死于 Doom 时，按每个此类生物回复 3 HP。",
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "BOOK_REPAIR_KNIFE",
     "kind": "relic",
-    "name": "修书小刀",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "修书小刀"
   },
   "BOOMING_CONCH": {
     "aliases": [
       "Booming Conch",
       "BoomingConch"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "精英战第 1 回合开始，额外抽 2 张牌并获得 1 点能量。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "BOOMING_CONCH",
     "kind": "relic",
-    "live_notes": "LIVE run-56：Neow 选择。精英战开局抽 +2 张牌并获得 1 能量。",
-    "name": "轰鸣海螺",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "轰鸣海螺"
   },
   "BOUND_PHYLACTERY": {
     "aliases": [
       "Bound Phylactery",
       "BoundPhylactery"
     ],
-    "character": "Necrobinder",
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始，Summon 1 个 Osty；第 2 回合起每回合开始，Summon 1 个 Osty。",
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
     "id": "BOUND_PHYLACTERY",
     "kind": "relic",
-    "name": "缚魂命匣",
-    "play_notes": "",
-    "rarity": "Starter"
+    "name": "缚魂命匣"
   },
   "BOWLER_HAT": {
     "aliases": [
+      "Bowler Hat",
       "BowlerHat",
-      "BOWLER_HAT",
       "礼帽"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "Gold gained ×1.25. Only obtainable before Act-3 treasure chest; never sold in shops. LIVE run-57: Act2 chest + elite bounties scaled visibly (chest +43-class vs 30-class baseline).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "BOWLER_HAT",
     "kind": "relic",
-    "name": "礼帽",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "礼帽"
   },
   "BREAD": {
     "aliases": [
       "Bread"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "第 1 回合开始，失去 2 点能量；第 2 回合起，每回合 +1 最大能量。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "BREAD",
     "kind": "relic",
-    "name": "面包",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "面包"
   },
   "BRIGHT_FLAME": {
     "aliases": [
-      "Storybook",
-      "STORYBOOK",
       "Brightest Flame",
-      "BRIGHT_FLAME",
+      "STORYBOOK",
+      "Storybook",
       "至亮之焰"
     ],
-    "character": "shared",
-    "curated": true,
-    "description": "Tezcatara 故事书赐福的卡牌载体——拾取时加入牌库；对局43 未 live 验证卡面效果。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Ancient"
+    },
     "id": "BRIGHT_FLAME",
     "kind": "relic",
-    "name": "至亮之焰",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "至亮之焰"
   },
   "BRILLIANT_SCARF": {
     "aliases": [
       "Brilliant Scarf",
       "BrilliantScarf"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每回合从手牌打出的第 5 张牌免费。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "BRILLIANT_SCARF",
     "kind": "relic",
-    "name": "艳丽围巾",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "艳丽围巾"
   },
   "BRIMSTONE": {
     "aliases": [
       "Brimstone"
     ],
-    "character": "Ironclad",
-    "counter_shown": false,
-    "curated": false,
-    "description": "回合开始，获得 2 点力量，所有敌人获得 1 点力量。",
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "BRIMSTONE",
     "kind": "relic",
-    "name": "硫磺",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "硫磺"
   },
   "BRONZE_SCALES": {
     "aliases": [
       "Bronze Scales",
       "BronzeScales"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "战斗开始，获得 3 点荆棘。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "BRONZE_SCALES",
     "kind": "relic",
-    "live_notes": "LIVE run-56：每场战斗开始时 +3 荆棘。荆棘伤害穿挡。",
-    "name": "铜质鳞片",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "铜质鳞片"
   },
   "BURNING_BLOOD": {
     "aliases": [
       "Burning Blood",
       "BurningBlood"
     ],
-    "character": "Ironclad",
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗胜利时，回复 6 HP。",
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
     "id": "BURNING_BLOOD",
     "kind": "relic",
-    "name": "燃烧之血",
-    "play_notes": "",
-    "rarity": "Starter"
+    "name": "燃烧之血"
   },
   "BURNING_STICKS": {
     "aliases": [
       "Burning Sticks",
       "BurningSticks"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每场战斗首次消耗一张技能牌时，将其一份拷贝加入手牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "BURNING_STICKS",
     "kind": "relic",
-    "name": "燃烧木棍",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "燃烧木棍"
   },
   "BYRDPIP": {
     "aliases": [
       "Byrdpip"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，获得卡牌 Byrd Swoop；战斗中有 Byrdpip 伴随。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "BYRDPIP",
     "kind": "relic",
-    "name": "异鸟宝宝",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "异鸟宝宝"
   },
   "CALLING_BELL": {
     "aliases": [
       "Calling Bell",
       "CallingBell"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，获得 1 张独特诅咒和 3 件遗物。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "CALLING_BELL",
     "kind": "relic",
-    "name": "召唤铃铛",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "召唤铃铛"
   },
   "CANDELABRA": {
     "aliases": [
       "Candelabra"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "第 2 回合开始，获得 2 点能量。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "CANDELABRA",
     "kind": "relic",
-    "name": "烛台",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "烛台"
   },
   "CAPTAINS_WHEEL": {
     "aliases": [
       "Captain's Wheel",
       "CaptainsWheel"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "第 3 回合开始，获得 18 格挡。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "CAPTAINS_WHEEL",
     "kind": "relic",
-    "name": "舵盘",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "舵盘"
   },
   "CAULDRON": {
     "aliases": [
       "Cauldron"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，酿造 5 瓶随机药水。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "CAULDRON",
     "kind": "relic",
-    "name": "大锅",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "大锅"
   },
   "CENTENNIAL_PUZZLE": {
     "aliases": [
       "Centennial Puzzle",
       "CentennialPuzzle"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "每场战斗首次失去 HP 时，抽 3 张牌。任意掉血 tick 均触发——猩红披风回合开始 −1 / 放血 / 祭品类；披风部署后等效「T1 后战斗开始抽 3」。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "CENTENNIAL_PUZZLE",
     "kind": "relic",
-    "live_notes": "LIVE run-56：每场战斗首次失去 HP 时抽 3 张牌。与自伤引擎协同（Hemokinesis/Bloodletting/BloodWall 触发）。",
-    "name": "百年积木",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "百年积木"
   },
   "CHANDELIER": {
     "aliases": [
       "Chandelier"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "第 3 回合开始，获得 3 点能量。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "CHANDELIER",
     "kind": "relic",
-    "name": "吊灯",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "吊灯"
   },
   "CHARONS_ASHES": {
     "aliases": [
       "Charon's Ashes",
       "CharonsAshes"
     ],
-    "character": "Ironclad",
-    "counter_shown": false,
-    "curated": false,
-    "description": "每次消耗卡牌时，对所有敌人造成 3 点伤害。",
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "CHARONS_ASHES",
     "kind": "relic",
-    "name": "卡戎之灰",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "卡戎之灰"
   },
   "CHEMICAL_X": {
     "aliases": [
       "Chemical X",
       "ChemicalX"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "X 费卡牌的效果增强 2 点。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "CHEMICAL_X",
     "kind": "relic",
-    "name": "化学物X",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "化学物X"
   },
   "CHOICES_PARADOX": {
     "aliases": [
       "Choices Paradox",
       "ChoicesParadox"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "第 1 回合开始，从 5 张随机卡中选 1 张加入手牌；这 5 张牌均获得 Retain。语义：为本战斗手牌添加（带 Retain），每战 T1 新五选一——**非**永久入牌库。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "CHOICES_PARADOX",
     "kind": "relic",
-    "name": "选择悖论",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "选择悖论"
   },
   "CHOSEN_CHEESE": {
     "aliases": [
       "ChosenCheese",
-      "CHOSEN_CHEESE",
+      "The Chosen Cheese",
       "天选芝士"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "Event relic (ROOM_FULL_OF_CHEESE SEARCH branch, −14 HP on pickup run-57): +1 Max HP at the end of every combat (live run-51/57 class — stacks with Burning Blood heal and Feed Fatals). run-57: HP-rail component 80→97 combined with Feed; picking it at 46/95 HP-class cost was paid back across Act2 fights.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "CHOSEN_CHEESE",
     "kind": "relic",
-    "name": "天选芝士",
-    "play_notes": "run-46 live：16 次胜利滚动；与燃烧之血+华夫饼+Feed Fatal 构成 HP 铁路；Paper Cuts 税（Act3 卷轴战）是唯一观测漏点——全挡回合零 MaxHP 损失。",
-    "rarity": "Event"
+    "name": "天选芝士"
   },
   "CIRCLET": {
     "aliases": [
       "Circlet"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "无效果。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "None"
+    },
     "id": "CIRCLET",
     "kind": "relic",
-    "name": "头环",
-    "play_notes": "",
-    "rarity": "None"
+    "name": "头环"
   },
   "CLAWS": {
     "aliases": [
       "Claws"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，将至多 6 张牌变为 Maul。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "CLAWS",
     "kind": "relic",
-    "name": "利爪",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "利爪"
   },
   "CLOAK_CLASP": {
     "aliases": [
       "Cloak Clasp",
       "CloakClasp"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "回合结束，按手牌张数每张获得 1 格挡。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "CLOAK_CLASP",
     "kind": "relic",
-    "name": "斗篷扣",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "斗篷扣"
   },
   "CRACKED_CORE": {
     "aliases": [
       "Cracked Core",
       "CrackedCore"
     ],
-    "character": "Defect",
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始（第 1 回合），引导 1 个闪电球。",
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
     "id": "CRACKED_CORE",
     "kind": "relic",
-    "name": "破损核心",
-    "play_notes": "",
-    "rarity": "Starter"
+    "name": "破损核心"
   },
   "CROSSBOW": {
     "aliases": [
       "Crossbow"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每回合开始，向手牌加入 1 张随机攻击牌；本回合免费。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "CROSSBOW",
     "kind": "relic",
-    "name": "十字弓",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "十字弓"
   },
   "CURSED_PEARL": {
     "aliases": [
       "Cursed Pearl",
       "CursedPearl"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，向牌库加入 1 张 Greed 并获得 333 金币。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "CURSED_PEARL",
     "kind": "relic",
-    "name": "诅咒珍珠",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "诅咒珍珠"
   },
   "DARKSTONE_PERIAPT": {
     "aliases": [
       "Darkstone Periapt",
       "DarkstonePeriapt"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每次向牌库加入诅咒时，+6 最大 HP。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "DARKSTONE_PERIAPT",
     "kind": "relic",
-    "name": "黑石护符",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "黑石护符"
   },
   "DATA_DISK": {
     "aliases": [
       "Data Disk",
       "DataDisk"
     ],
-    "character": "Defect",
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始，获得 1 点 Focus。",
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "DATA_DISK",
     "kind": "relic",
-    "name": "数据磁盘",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "数据磁盘"
   },
   "DAUGHTER_OF_THE_WIND": {
     "aliases": [
       "Daughter of the Wind",
       "DaughterOfTheWind"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "每次打出攻击牌时，获得 1 格挡。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "DAUGHTER_OF_THE_WIND",
     "kind": "relic",
-    "live_notes": "LIVE run-56：玩偶房选择。每打出一张攻击牌获得 1 挡。与攻击密集牌组构成被动挡引擎。",
-    "name": "风的女儿",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "风的女儿"
   },
   "DAUGHTER_OF_WIND": {
     "aliases": [
-      "Daughter of the Wind",
-      "DAUGHTER_OF_THE_WIND"
+      "DAUGHTER_OF_THE_WIND",
+      "Daughter of the Wind"
     ],
-    "character": "shared",
-    "curated": false,
-    "description": "每打出一张攻击牌，获得 1 点格挡。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Event"
+    },
     "id": "DAUGHTER_OF_WIND",
     "kind": "relic",
-    "name": "Daughter of the Wind",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Daughter of the Wind"
   },
   "DELICATE_FROND": {
     "aliases": [
       "Delicate Frond",
       "DelicateFrond"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始，用随机药水填满所有空药水栏。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "DELICATE_FROND",
     "kind": "relic",
-    "name": "娇嫩蕨草",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "娇嫩蕨草"
   },
   "DEMON_TONGUE": {
     "aliases": [
       "Demon Tongue",
       "DemonTongue"
     ],
-    "character": "Ironclad",
-    "counter_shown": false,
-    "curated": false,
-    "description": "每场战斗在自己回合首次失去未格挡 HP 时，回复等量 HP。",
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "DEMON_TONGUE",
     "kind": "relic",
-    "name": "恶魔之舌",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "恶魔之舌"
   },
   "DIAMOND_DIADEM": {
     "aliases": [
       "Diamond Diadem",
       "DiamondDiadem"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "回合结束时，若本回合打出的牌 ≤2 张，受到的攻击伤害减半，持续至敌方回合结束。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "DIAMOND_DIADEM",
     "kind": "relic",
-    "name": "钻石头冠",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "钻石头冠"
   },
   "DINGY_RUG": {
     "aliases": [
       "Dingy Rug",
-      "DINGY_RUG",
       "破地毯"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "卡牌奖励中可出现无色牌。对局43 Act2 商店 (5,0) live 价格 208金（买不起）。稀释职业池奖励——除非定向找无色工具，优先级低。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "DINGY_RUG",
     "kind": "relic",
-    "name": "破地毯",
-    "play_notes": "对局43 live",
-    "rarity": "Shop"
+    "name": "破地毯"
   },
   "DISTINGUISHED_CAPE": {
     "aliases": [
       "Distinguished Cape",
       "DistinguishedCape"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，−9 最大 HP；向牌库加入 3 张 Apparition。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "DISTINGUISHED_CAPE",
     "kind": "relic",
-    "name": "卓越斗篷",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "卓越斗篷"
   },
   "DIVINE_DESTINY": {
     "aliases": [
       "Divine Destiny",
       "DivineDestiny"
     ],
-    "character": "Regent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "第 1 回合开始，获得 6 点星星（★）。",
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
     "id": "DIVINE_DESTINY",
     "kind": "relic",
-    "name": "天命所归",
-    "play_notes": "",
-    "rarity": "Starter"
+    "name": "天命所归"
   },
   "DIVINE_RIGHT": {
     "aliases": [
       "Divine Right",
       "DivineRight"
     ],
-    "character": "Regent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "进入战斗房间时，获得 3 点星星（★）。",
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
     "id": "DIVINE_RIGHT",
     "kind": "relic",
-    "name": "天赋君权",
-    "play_notes": "",
-    "rarity": "Starter"
+    "name": "天赋君权"
   },
   "DOLLYS_MIRROR": {
     "aliases": [
       "Dolly's Mirror",
       "DollysMirror"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，获得牌库中一张选定牌的拷贝。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "DOLLYS_MIRROR",
     "kind": "relic",
-    "name": "多利之镜",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "多利之镜"
   },
   "DRAGON_FRUIT": {
     "aliases": [
       "Dragon Fruit",
       "DragonFruit"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每次获得金币时，+1 最大 HP。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "DRAGON_FRUIT",
     "kind": "relic",
-    "name": "火龙果",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "火龙果"
   },
   "DREAM_CATCHER": {
     "aliases": [
       "Dream Catcher",
       "DreamCatcher"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "在休息点休息时，可以向牌库加入一张牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "DREAM_CATCHER",
     "kind": "relic",
-    "name": "捕梦网",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "捕梦网"
   },
   "DRIFTWOOD": {
     "aliases": [
       "Driftwood"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每份卡牌奖励可重掷一次。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "DRIFTWOOD",
     "kind": "relic",
-    "name": "浮木",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "浮木"
   },
   "DUSTY_TOME": {
     "aliases": [
       "Dusty Tome",
       "DustyTome"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "事件遗物（DARV 赐福房，run-42 Act2 开局）：向牌库授予 腐化+（升级版腐化，费用 2）。腐化+：消耗；你的技能牌费用变为 0，打出时被消耗。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "DUSTY_TOME",
     "kind": "relic",
-    "name": "尘封魔典",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "尘封魔典"
   },
   "ECTOPLASM": {
     "aliases": [
       "Ectoplasm"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每回合 +1 最大能量；金币获取变为 0。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "ECTOPLASM",
     "kind": "relic",
-    "name": "灵体外质",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "灵体外质"
   },
   "ELECTRIC_SHRYMP": {
     "aliases": [
       "Electric Shrymp",
       "ElectricShrymp"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，选择 1 张技能牌附魔 Imbued。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "ELECTRIC_SHRYMP",
     "kind": "relic",
-    "name": "放电异虾",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "放电异虾"
   },
   "EMBER_TEA": {
     "aliases": [
       "Ember Tea",
       "EmberTea"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "接下来 5 场战斗开始时，获得 2 点力量。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "EMBER_TEA",
     "kind": "relic",
-    "name": "余烬茶",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "余烬茶"
   },
   "EMOTION_CHIP": {
     "aliases": [
       "Emotion Chip",
       "EmotionChip"
     ],
-    "character": "Defect",
-    "counter_shown": false,
-    "curated": false,
-    "description": "若上回合失去过 HP，回合开始时触发所有充能球的被动。",
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "EMOTION_CHIP",
     "kind": "relic",
-    "name": "情感芯片",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "情感芯片"
   },
   "EMPTY_CAGE": {
     "aliases": [
       "Empty Cage",
       "EmptyCage"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，从牌库移除 2 张牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "EMPTY_CAGE",
     "kind": "relic",
-    "name": "空鸟笼",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "空鸟笼"
   },
   "ETERNAL_FEATHER": {
     "aliases": [
-      "Eternal Feather",
-      "ETERNAL_FEATHER"
+      "Eternal Feather"
     ],
-    "character": "shared",
-    "curated": false,
-    "description": "每次休息时，额外回复 5 点生命值。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Uncommon"
+    },
     "id": "ETERNAL_FEATHER",
     "kind": "relic",
-    "name": "Eternal Feather",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Eternal Feather"
   },
   "FAKE_ANCHOR": {
     "aliases": [
+      "Anchor???",
       "Fake Anchor",
       "FakeAnchor"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始，获得 4 格挡。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FAKE_ANCHOR",
     "kind": "relic",
-    "name": "锚？？？",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "锚？？？"
   },
   "FAKE_BLOOD_VIAL": {
     "aliases": [
+      "Blood Vial???",
       "Fake Blood Vial",
       "FakeBloodVial"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "第 1 回合开始，回复 1 HP。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FAKE_BLOOD_VIAL",
     "kind": "relic",
-    "name": "小血瓶？？？",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "小血瓶？？？"
   },
   "FAKE_HAPPY_FLOWER": {
     "aliases": [
       "Fake Happy Flower",
-      "FakeHappyFlower"
+      "FakeHappyFlower",
+      "Happy Flower???"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每第 5 回合开始，获得 1 点能量。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FAKE_HAPPY_FLOWER",
     "kind": "relic",
-    "name": "开心小花？？？",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "开心小花？？？"
   },
   "FAKE_LEES_WAFFLE": {
     "aliases": [
       "Fake Lee's Waffle",
-      "FakeLeesWaffle"
+      "FakeLeesWaffle",
+      "Lee's Waffle???"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，回复最大 HP 的 10%（下取整）。伪商人标价约 56 金。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FAKE_LEES_WAFFLE",
     "kind": "relic",
-    "name": "李家华夫饼？？？",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "李家华夫饼？？？"
   },
   "FAKE_MANGO": {
     "aliases": [
       "Fake Mango",
-      "FakeMango"
+      "FakeMango",
+      "Mango???"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，+3 最大 HP（当前与最大各 +3）。伪商人标价约 43 金。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FAKE_MANGO",
     "kind": "relic",
-    "name": "芒果？？？",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "芒果？？？"
   },
   "FAKE_MERCHANTS_RUG": {
     "aliases": [
       "Fake Merchant's Rug",
-      "FakeMerchantsRug"
+      "FakeMerchantsRug",
+      "The Merchant's Rug???"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "无效果。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FAKE_MERCHANTS_RUG",
     "kind": "relic",
-    "name": "商人的地毯？？？",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "商人的地毯？？？"
   },
   "FAKE_ORICHALCUM": {
     "aliases": [
       "Fake Orichalcum",
-      "FakeOrichalcum"
+      "FakeOrichalcum",
+      "Orichalcum???"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "回合结束时，若没有格挡，获得 3 格挡。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FAKE_ORICHALCUM",
     "kind": "relic",
-    "name": "奥利哈钢？？？",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "奥利哈钢？？？"
   },
   "FAKE_SNECKO_EYE": {
     "aliases": [
       "Fake Snecko Eye",
-      "FakeSneckoEye"
+      "FakeSneckoEye",
+      "Snecko Eye???"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始时处于 Confused。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FAKE_SNECKO_EYE",
     "kind": "relic",
-    "name": "异蛇之眼？？？",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "异蛇之眼？？？"
   },
   "FAKE_STRIKE_DUMMY": {
     "aliases": [
       "Fake Strike Dummy",
-      "FakeStrikeDummy"
+      "FakeStrikeDummy",
+      "Strike Dummy???"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "名称含 Strike 标签的攻击牌额外造成 1 点伤害。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FAKE_STRIKE_DUMMY",
     "kind": "relic",
-    "name": "打击木偶？？？",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "打击木偶？？？"
   },
   "FAKE_VENERABLE_TEA_SET": {
     "aliases": [
       "Fake Venerable Tea Set",
-      "FakeVenerableTeaSet"
+      "FakeVenerableTeaSet",
+      "Venerable Tea Set???"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "进入休息点时，下一场战斗开始额外 +1 能量。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FAKE_VENERABLE_TEA_SET",
     "kind": "relic",
-    "name": "古茶具套装？？？",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "古茶具套装？？？"
   },
   "FENCING_MANUAL": {
     "aliases": [
       "Fencing Manual",
       "FencingManual"
     ],
-    "character": "Regent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "第 1 回合开始，Forge 10。",
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "FENCING_MANUAL",
     "kind": "relic",
-    "name": "击剑指南",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "击剑指南"
   },
   "FESTIVE_POPPER": {
     "aliases": [
       "Festive Popper",
       "FestivePopper"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "第 1 回合开始，对所有敌人造成 9 点伤害。预削已在多类遭遇确认（啃咬机、千足虫各段、皇蟹双爪开战各 −9）。 LIVE run-47：全对局每战 T1 9 伤 AoE 确认，包括 Act1 Boss（从蝌蚪到瀑布巨兽）——可靠的预削遗物。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "FESTIVE_POPPER",
     "kind": "relic",
-    "name": "节日拉炮",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "节日拉炮"
   },
   "FIDDLE": {
     "aliases": [
       "Fiddle"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每回合抽牌阶段额外抽 2 张牌；回合内不能再抽牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "FIDDLE",
     "kind": "relic",
-    "name": "小提琴",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "小提琴"
   },
   "FISHING_ROD": {
     "aliases": [
       "Fishing Rod",
       "FishingRod"
     ],
-    "character": null,
-    "counter_shown": true,
-    "curated": false,
-    "description": "每 3 场普通敌人战斗，升级牌库中 1 张随机牌。计数只统计 Monster 房间战斗——普通怪战第 3/6/9 场触发升级；精英战不推进计数。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Ancient"
+    },
     "id": "FISHING_ROD",
     "kind": "relic",
-    "name": "钓鱼竿",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "钓鱼竿"
   },
   "FORGOTTEN_SOUL": {
     "aliases": [
       "Forgotten Soul",
       "ForgottenSoul"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每次消耗卡牌时，对随机敌人造成 1 点伤害。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FORGOTTEN_SOUL",
     "kind": "relic",
-    "name": "遗忘之魂",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "遗忘之魂"
   },
   "FRAGRANT_MUSHROOM": {
     "aliases": [
       "Fragrant Mushroom",
       "FragrantMushroom"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，失去 15 HP 并升级牌库中 2 张随机牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FRAGRANT_MUSHROOM",
     "kind": "relic",
-    "name": "芳香蘑菇",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "芳香蘑菇"
   },
   "FRESNEL_LENS": {
     "aliases": [
       "Fresnel Lens",
       "FresnelLens"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "获得格挡的卡牌加入牌库时，为其附魔 Nimble 2。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FRESNEL_LENS",
     "kind": "relic",
-    "name": "菲涅耳透镜",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "菲涅耳透镜"
   },
   "FROZEN_EGG": {
     "aliases": [
       "Frozen Egg",
       "FrozenEgg"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "向牌库加入的能力（Power）牌会被升级。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "FROZEN_EGG",
     "kind": "relic",
-    "name": "冻结之蛋",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "冻结之蛋"
   },
   "FUNERARY_MASK": {
     "aliases": [
       "Funerary Mask",
       "FuneraryMask"
     ],
-    "character": "Necrobinder",
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始，向抽牌堆洗入 3 张 Soul。",
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "FUNERARY_MASK",
     "kind": "relic",
-    "name": "葬礼面具",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "葬礼面具"
   },
   "FUR_COAT": {
     "aliases": [
       "Fur Coat",
       "FurCoat"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "Act3 赐福房遗物（NONUPEIPE 事件）：随机标记 7 场战斗，标记战斗敌人仅 1HP。run-46 live：在钻石头冠（≤2 张出牌伤害减半）与艳丽围巾（第 5 张免费）之间选择——7 场近免战对中血线 Act3 期望值最高。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "FUR_COAT",
     "kind": "relic",
-    "name": "皮草大衣",
-    "play_notes": "run-46 live pick rationale: pacing relief > conditional defense > card-engine extension at Act3 entry.",
-    "rarity": "Ancient"
+    "name": "皮草大衣"
   },
   "GALACTIC_DUST": {
     "aliases": [
       "Galactic Dust",
       "GalacticDust"
     ],
-    "character": "Regent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "每消耗 10 点星星，获得 10 格挡。",
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "GALACTIC_DUST",
     "kind": "relic",
-    "name": "星系尘埃",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "星系尘埃"
   },
   "GAMBLING_CHIP": {
     "aliases": [
+      "Gambling Chip",
       "GamblingChip",
-      "GAMBLING_CHIP",
       "赌博筹码"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "Rare: at combat start, discard any number of cards then draw that many (mulligan via hand_select overlay: choose cards → proceed). LIVE run-57: mulligan dumped skill-class cards vs Infested Prism (zero-skill discipline); dumped Uppercut vs trio fight for block-class redraw. Combat-start overlay appears before play phase — play calls fail-loud until resolved.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "GAMBLING_CHIP",
     "kind": "relic",
-    "name": "赌博筹码",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "赌博筹码"
   },
   "GAME_PIECE": {
     "aliases": [
       "Game Piece",
       "GamePiece"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "每当你打出一张能力牌，抽 1 张牌。 run-53 live 2026-09-19：观测到的每次能力牌打出均触发抽1（Rupture、Vicious、Inflame、Pyre）——同帧 state 可见新手牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "GAME_PIECE",
     "kind": "relic",
-    "name": "棋子",
-    "play_notes": "run-49 live：Inflame/Vicious/Unmovable/FNP 每次打出后均观察到抽牌事件；与能力类引擎天然成套。",
-    "rarity": "Rare"
+    "name": "棋子"
   },
   "GHOST_SEED": {
     "aliases": [
       "Ghost Seed",
       "GhostSeed"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "打击与防御牌获得虚无 — 未打出的拷贝在你的回合末被消耗。run-42 live：Boss 战未打出的打击/防御回合末消耗（history \"exhausted STRIKE_IRONCLAD/DEFEND_IRONCLAD\"）；被动清堵；与 Corruption/FNP 消耗收益协同。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "GHOST_SEED",
     "kind": "relic",
-    "name": "幽灵种子",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "幽灵种子"
   },
   "GIRYA": {
     "aliases": [
       "Girya"
     ],
-    "character": null,
-    "counter_shown": true,
-    "curated": false,
-    "description": "休息点获得 Lift 选项（最多 3 次）；战斗开始，获得等同 Lift 次数的力量。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Rare"
+    },
     "id": "GIRYA",
     "kind": "relic",
-    "name": "壶铃",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "壶铃"
   },
   "GLAM": {
     "aliases": [
       "Glam",
+      "GlamEnchant",
       "华彩"
     ],
-    "character": "shared",
-    "curated": true,
-    "description": "卡牌附魔：每场战斗中该牌首次打出时，效果免费重放一次（结算两次，能量只付一次）；同战斗内后续打出恢复正常。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": null
+    },
     "id": "GLAM",
     "kind": "enchant",
-    "name": "华彩",
-    "play_notes": "run-49 live 过程注：Glam 重放（第二次结算）在首次效果完整结算后触发，包括 Headbutt 的回收 choose。回收 choose 后立即提交下一个 act 可能吞掉重放窗口（2 次观察）。Glam Headbutt 的回收 choose 之后，若双结算重要，先 settle 重读再发下一 act。重放伤害 live 观测：9+9 / 12+12 / 13+13 / 15+15 / 22+5 级。",
-    "rarity": null
+    "name": "华彩"
   },
   "GLASS_EYE": {
     "aliases": [
       "Glass Eye",
       "GlassEye"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，获得 2 张普通、2 张罕见、1 张稀有卡牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "GLASS_EYE",
     "kind": "relic",
-    "name": "玻璃眼珠",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "玻璃眼珠"
   },
   "GLITTER": {
     "aliases": [
       "Glitter"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "全部卡牌奖励附魔华彩 Glam（每场战斗首次打出免费重放一次——见 GLAM）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "GLITTER",
     "kind": "relic",
-    "name": "亮片",
-    "play_notes": "全局长期附魔引擎；附魔效果见 GLAM。",
-    "rarity": "Ancient"
+    "name": "亮片"
   },
   "GNARLED_HAMMER": {
     "aliases": [
       "Gnarled Hammer",
       "GnarledHammer"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，为至多 3 张攻击牌附魔 Sharp 3。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "GNARLED_HAMMER",
     "kind": "relic",
-    "name": "扭曲锤子",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "扭曲锤子"
   },
   "GOLDEN_COMPASS": {
     "aliases": [
       "Golden Compass",
       "GoldenCompass",
-      "GOLDEN_COMPASS",
       "黄金罗盘"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "Ancient 遗物（Tezcatara 赐福）：拾取时重新生成当前章节地图（按当前章节索引重掷）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "GOLDEN_COMPASS",
     "kind": "relic",
-    "name": "黄金罗盘",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "黄金罗盘"
   },
   "GOLDEN_PEARL": {
     "aliases": [
       "Golden Pearl",
       "GoldenPearl"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，获得 150 金币。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "GOLDEN_PEARL",
     "kind": "relic",
-    "name": "金色珍珠",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "金色珍珠"
   },
   "GOLD_PLATED_CABLES": {
     "aliases": [
       "Gold-Plated Cables",
       "GoldPlatedCables"
     ],
-    "character": "Defect",
-    "counter_shown": false,
-    "curated": false,
-    "description": "最右侧的充能球额外触发 1 次被动。",
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "GOLD_PLATED_CABLES",
     "kind": "relic",
-    "name": "镀金缆线",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "镀金缆线"
   },
   "GORGET": {
     "aliases": [
       "Gorget",
-      "GORGET",
       "颈甲"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "Common: at the start of each combat, gain 4 Plating (rolling block — plating grants Amount block at end of each of your side turns, stacks decrement at your turn start; plating block stacks with card block for same-window cover math). LIVE run-57: Gorget+Defend+Shrug lines routinely built 14-22 block covers; IMBALANCED stun vs Bowlbug Rock fired on 16-total-block vs 15-intent.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "GORGET",
     "kind": "relic",
-    "name": "颈甲",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "颈甲"
   },
   "GREMLIN_HORN": {
     "aliases": [
       "Gremlin Horn",
       "GremlinHorn"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "敌人死亡时，获得 1 点能量并抽 1 张牌。run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log)：产卵虫卵群击杀当场赔付 +2 能量（能量打印 6/3）— 击杀链为同回合补刀攻击供能；每次死亡立即单独结算赔付。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "GREMLIN_HORN",
     "kind": "relic",
-    "name": "贪魔之角",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "贪魔之角"
   },
   "HAND_DRILL": {
     "aliases": [
       "Hand Drill",
       "HandDrill"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每次击破敌方格挡时，对该敌人施加 2 层 Vulnerable。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "HAND_DRILL",
     "kind": "relic",
-    "name": "手钻",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "手钻"
   },
   "HAPPY_FLOWER": {
     "aliases": [
       "Happy Flower",
       "HappyFlower"
     ],
-    "character": null,
-    "counter_shown": true,
-    "curated": true,
-    "description": "每 3 回合获得 1 点能量（计数器遗物）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Common"
+    },
     "id": "HAPPY_FLOWER",
     "kind": "relic",
-    "name": "开心小花",
-    "play_notes": "run-49 live：Act2 精英 (12,1) 掉落，计数 :0→:1→:2 随战斗回合推进显示；能量在计数归零回合到账。",
-    "rarity": "Common"
+    "name": "开心小花"
   },
   "HEFTY_TABLET": {
     "aliases": [
       "Hefty Tablet",
       "HeftyTablet"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，从 3 张稀有牌中选 1 张加入牌库，并加入 1 张 Injury。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "HEFTY_TABLET",
     "kind": "relic",
-    "name": "沉重石板",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "沉重石板"
   },
   "HELICAL_DART": {
     "aliases": [
       "Helical Dart",
       "HelicalDart"
     ],
-    "character": "Silent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "每次打出带 Shiv 标签的牌时，本回合获得 1 点敏捷。",
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "HELICAL_DART",
     "kind": "relic",
-    "name": "螺线飞镖",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "螺线飞镖"
   },
   "HISTORY_COURSE": {
     "aliases": [
       "History Course",
       "HistoryCourse"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "第 2 回合起，回合开始时自动打出你上一回合打出的最后一张攻击或技能牌的拷贝。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "HISTORY_COURSE",
     "kind": "relic",
-    "name": "历史课",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "历史课"
   },
   "HORN_CLEAT": {
     "aliases": [
       "Horn Cleat",
       "HornCleat"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "第 2 回合开始，获得 14 格挡。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "HORN_CLEAT",
     "kind": "relic",
-    "name": "船夹板",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "船夹板"
   },
   "ICE_CREAM": {
     "aliases": [
       "Ice Cream",
       "IceCream"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "能量在回合之间保留（仅第 1 回合重置）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "ICE_CREAM",
     "kind": "relic",
-    "name": "冰淇淋",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "冰淇淋"
   },
   "INFUSED_CORE": {
     "aliases": [
       "Infused Core",
       "InfusedCore"
     ],
-    "character": "Defect",
-    "counter_shown": false,
-    "curated": false,
-    "description": "第 1 回合开始，引导 3 个闪电球；闪电球伤害 +1。",
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
     "id": "INFUSED_CORE",
     "kind": "relic",
-    "name": "注能核心",
-    "play_notes": "",
-    "rarity": "Starter"
+    "name": "注能核心"
   },
   "INTIMIDATING_HELMET": {
     "aliases": [
       "Intimidating Helmet",
       "IntimidatingHelmet"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每次打出 2 能量及以上的卡牌时，获得 4 格挡。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "INTIMIDATING_HELMET",
     "kind": "relic",
-    "name": "骇人头盔",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "骇人头盔"
   },
   "IRON_CLUB": {
     "aliases": [
       "Iron Club",
       "IronClub"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每打出 4 张牌，抽 1 张牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "IRON_CLUB",
     "kind": "relic",
-    "name": "铁棒",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "铁棒"
   },
   "IVORY_TILE": {
     "aliases": [
       "Ivory Tile",
       "IvoryTile"
     ],
-    "character": "Necrobinder",
-    "counter_shown": false,
-    "curated": false,
-    "description": "每次打出 3 能量及以上的卡牌时，获得 1 点能量。",
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "IVORY_TILE",
     "kind": "relic",
-    "name": "象牙麻将牌",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "象牙麻将牌"
   },
   "JEWELED_MASK": {
     "aliases": [
       "Jeweled Mask",
       "JeweledMask"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始，将抽牌堆中一张随机能力牌放入手牌；本场战斗免费。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "JEWELED_MASK",
     "kind": "relic",
-    "name": "宝石面具",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "宝石面具"
   },
   "JEWELRY_BOX": {
     "aliases": [
       "Jewelry Box",
       "JewelryBox"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，向牌库加入 1 张 Apotheosis。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "JEWELRY_BOX",
     "kind": "relic",
-    "name": "珠宝盒",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "珠宝盒"
   },
   "JOSS_PAPER": {
     "aliases": [
       "Joss Paper",
       "JossPaper"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "每消耗 5 张牌，抽 1 张牌（计数 JOSS_PAPER:n；虚灵回合末消耗在回合结束计入；触发后清零重计）。run-38 实时：Offering/Ritual/Tremble/MoltenFist 消耗推进计数；:5 时 Boss 战中触发抽 1；触发后计数清零。消耗包牌组的被动抽牌引擎。 LIVE run-52：第二阵风消耗推进计数（SW 消耗一张 Defend 后 relics 行打印 JOSS_PAPER :0→:1）；与消耗挡包直接成组。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "JOSS_PAPER",
     "kind": "relic",
-    "name": "金纸",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "金纸"
   },
   "JUZU_BRACELET": {
     "aliases": [
       "Juzu Bracelet",
       "JuzuBracelet"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "未知（?）房间不再刷新怪物战斗 — 只出事件/宝箱。run-40 + run-42 live：拾取后未知房间均出事件/宝箱；精英类型房间不受影响。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "JUZU_BRACELET",
     "kind": "relic",
-    "name": "寿数手环",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "寿数手环"
   },
   "KALEIDOSCOPE": {
     "aliases": [
       "Kaleidoscope"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "拾取时，获得来自其他角色卡池的 2 份卡牌奖励。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "KALEIDOSCOPE",
     "kind": "relic",
-    "name": "万花筒",
-    "play_notes": "跨角色奖励稀释 IRONCLAD 原型协同（自伤→力量引擎）；方差型选择。2026-09-19 Neow 选项 live 校验。",
-    "rarity": "Ancient"
+    "name": "万花筒"
   },
   "KIFUDA": {
     "aliases": [
       "Kifuda"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，为至多 3 张牌附魔 Adroit 3。",
+    "detail": {
+      "character": null,
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "KIFUDA",
     "kind": "relic",
-    "name": "木札",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "木札"
   },
   "KUNAI": {
     "aliases": [
       "Kunai"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "同一回合每打出 3 张攻击牌，获得 1 敏捷。run-41 live：该遗物敏捷为战斗内有效 — 外骨骼虫战中次回合边界即消失；下一回合的挡值计算不得默认其存续。与锁镰在同一 3 攻击回合触发。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "KUNAI",
     "kind": "relic",
-    "name": "苦无",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "苦无"
   },
   "KUSARIGAMA": {
     "aliases": [
       "Kusarigama"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "同一回合每打出 3 张攻击牌，对随机敌人造成 6 点伤害。run-41 live：鳗鱼群 T1 第三次攻击线上触发 — 6 点落在与攻击链不同的目标上，对群怪战有软化价值。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "KUSARIGAMA",
     "kind": "relic",
-    "name": "锁镰",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "锁镰"
   },
   "LANTERN": {
     "aliases": [
       "Lantern"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "每场战斗开始时 +1 能量（仅 T1）。run-41 live：Boss T1 显示容量 4/3 — PS+双打击 或 Inferno+Brand+重锤+打击 线均可全打；可与跃升、佩尔之肉叠加。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "LANTERN",
     "kind": "relic",
-    "name": "灯笼",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "灯笼"
   },
   "LARGE_CAPSULE": {
     "aliases": [
       "Large Capsule",
       "LargeCapsule"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，获得 2 件随机遗物；向牌库加入 1 张 Strike 和 1 张 Defend。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "LARGE_CAPSULE",
     "kind": "relic",
-    "name": "巨大扭蛋",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "巨大扭蛋"
   },
   "LASTING_CANDY": {
     "aliases": [
-      "Lasting Candy"
+      "Lasting Candy",
+      "永恒糖果"
     ],
-    "curated": true,
-    "description": "首战之后每隔一场战斗，战斗卡牌奖励 +1 个能力（Power）类选项（奖励屏 3 选变 4 选）。仅可在 Act3 宝箱前获得。LIVE run-45：遗物堆叠显示计数 :0/:1 交替；观察到两次四选一奖励——分别递送势不可当（精英奖励）与第二张狱火（战斗奖励）。Power 注入经济件。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Uncommon"
+    },
     "id": "LASTING_CANDY",
     "kind": "relic",
     "name": "永恒糖果"
@@ -2000,2576 +1876,2398 @@
       "Lava Lamp",
       "LavaLamp"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗结束时，若战斗中未受伤，升级所有卡牌奖励。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "LAVA_LAMP",
     "kind": "relic",
-    "name": "熔岩灯",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "熔岩灯"
   },
   "LAVA_ROCK": {
     "aliases": [
       "Lava Rock",
       "LavaRock"
     ],
-    "character": null,
-    "counter_shown": true,
-    "curated": false,
-    "description": "Boss 战奖励额外掉落 2 件遗物（一次）。章节标签视为软性——Act2 Boss 奖励屏同样观察到 +2 遗物按钮（同类 WONGOS 门槛偏差）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Ancient"
+    },
     "id": "LAVA_ROCK",
     "kind": "relic",
-    "name": "熔岩石",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "熔岩石"
   },
   "LEAD_PAPERWEIGHT": {
     "aliases": [
       "Lead Paperweight",
       "LeadPaperweight"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，从 2 张无色牌中选 1 张加入牌库。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "LEAD_PAPERWEIGHT",
     "kind": "relic",
-    "name": "铅制镇纸",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "铅制镇纸"
   },
   "LEAFY_POULTICE": {
     "aliases": [
       "Leafy Poultice",
       "LeafyPoultice"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，变化 1 张 Strike 和 1 张 Defend；失去 12 最大 HP。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "LEAFY_POULTICE",
     "kind": "relic",
-    "name": "树叶药膏",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "树叶药膏"
   },
   "LEES_WAFFLE": {
     "aliases": [
       "Lee's Waffle",
       "LeesWaffle"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，+7 最大 HP 并回满 HP。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "LEES_WAFFLE",
     "kind": "relic",
-    "name": "李家华夫饼",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "李家华夫饼"
   },
   "LETTER_OPENER": {
     "aliases": [
       "Letter Opener",
       "LetterOpener"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "单回合每打出 3 张技能牌，对所有敌人造成 5 点伤害。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "LETTER_OPENER",
     "kind": "relic",
-    "name": "开信刀",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "开信刀"
   },
   "LIZARD_TAIL": {
     "aliases": [
       "Lizard Tail",
       "LizardTail"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "HP 将降至 0 时，改为回复至最大 HP 的 50%（一次）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "LIZARD_TAIL",
     "kind": "relic",
-    "name": "蜥蜴尾巴",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "蜥蜴尾巴"
   },
   "LOOMING_FRUIT": {
     "aliases": [
       "Looming Fruit",
       "LoomingFruit"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "拾取时，+31 最大 HP。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "LOOMING_FRUIT",
     "kind": "relic",
-    "live_notes": "LIVE run-56：Act3 NONUPEIPE 事件选择。拾起时 +31 最大生命值。与芝士/狂宴/大蘑菇/草莓叠层 HP 80→160。",
-    "name": "布质果实",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "布质果实"
   },
   "LORDS_PARASOL": {
     "aliases": [
       "Lord's Parasol",
       "LordsParasol"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "进入商人房间时，立刻购入商人的全部库存。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "LORDS_PARASOL",
     "kind": "relic",
-    "name": "领主阳伞",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "领主阳伞"
   },
   "LOST_COFFER": {
     "aliases": [
       "Lost Coffer",
       "LostCoffer"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，获得 1 份卡牌奖励和 1 瓶随机药水。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "LOST_COFFER",
     "kind": "relic",
-    "name": "失物盒",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "失物盒"
   },
   "LOST_WISP": {
     "aliases": [
       "Lost Wisp",
       "LostWisp"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "每当你打出一张能力牌，对所有敌人造成 8 点伤害。事件遗物（迷失鬼火事件「抓住」选项：加入 Decay 诅咒 + 此遗物）。run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log)：Inferno/Vicious/Barricade 出牌均触发，全对局数十次；无属性 8 点独立 AoE — HARD_TO_KILL 单次 9 上限下全额 8 结算；能力牌充足的牌库中 Decay 诅咒成为 Inferno proc 燃料（EoT 2 自伤同回合触发 Inferno）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "LOST_WISP",
     "kind": "relic",
-    "name": "迷失鬼火",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "迷失鬼火"
   },
   "LUCKY_FYSH": {
     "aliases": [
       "Lucky Fysh",
       "LuckyFysh"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每次向牌库加入卡牌时，获得 15 金币。触发源：商店购卡、卡牌奖励领取、SwipePower 偷牌在偷窃草蜢死亡时归还（静默入库同样 +15）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "LUCKY_FYSH",
     "kind": "relic",
-    "name": "招财异鱼",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "招财异鱼"
   },
   "LUNAR_PASTRY": {
     "aliases": [
       "Lunar Pastry",
       "LunarPastry"
     ],
-    "character": "Regent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "回合结束，获得 1 点星星（★）。",
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "LUNAR_PASTRY",
     "kind": "relic",
-    "name": "月亮糕点",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "月亮糕点"
   },
   "MANGO": {
     "aliases": [
       "Mango"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，+14 最大 HP。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "MANGO",
     "kind": "relic",
-    "name": "芒果",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "芒果"
   },
   "MASSIVE_SCROLL": {
     "aliases": [
       "Massive Scroll",
       "MassiveScroll"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，从 3 张多人模式卡中选 1 张加入牌库。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "MASSIVE_SCROLL",
     "kind": "relic",
-    "name": "巨大卷轴",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "巨大卷轴"
   },
   "MAW_BANK": {
     "aliases": [
       "Maw Bank",
       "MawBank"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每次上一层楼，获得 12 金币；在商店花费金币后失效。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "MAW_BANK",
     "kind": "relic",
-    "name": "巨口储蓄罐",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "巨口储蓄罐"
   },
   "MEAL_TICKET": {
     "aliases": [
       "Meal Ticket",
-      "MEAL_TICKET",
       "餐券"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "进入商人房时恢复 15HP；仅在 Act3 宝箱前可获得。对局43 live 价格：Act1 (14,2) 187金 / Act2 (5,0) 未刷出。与商店脊线绑定的 HP 经济遗物。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "MEAL_TICKET",
     "kind": "relic",
-    "name": "餐券",
-    "play_notes": "对局43 live",
-    "rarity": "Common"
+    "name": "餐券"
   },
   "MEAT_CLEAVER": {
     "aliases": [
       "Meat Cleaver",
       "MeatCleaver"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "休息点获得 Cook 选项——**Cook = 永久移除牌库 2 张牌并获得 9 最大 HP**。低 HP 时 Cook 与 HEAL 的张力真实存在（HEAL 恢复当前生存力，Cook 为后期复利牌库+MaxHP）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "MEAT_CLEAVER",
     "kind": "relic",
-    "name": "切肉刀",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "切肉刀"
   },
   "MEAT_ON_THE_BONE": {
     "aliases": [
       "Meat on the Bone",
       "MeatOnTheBone"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗胜利时，若 HP ≤ 最大 HP 的 50%，回复 12 HP。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "MEAT_ON_THE_BONE",
     "kind": "relic",
-    "name": "带骨肉",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "带骨肉"
   },
   "MEMBERSHIP_CARD": {
     "aliases": [
       "Membership Card",
       "MembershipCard"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "商人价格 ×0.50。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "MEMBERSHIP_CARD",
     "kind": "relic",
-    "name": "会员卡",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "会员卡"
   },
   "MERCURY_HOURGLASS": {
     "aliases": [
       "Mercury Hourglass",
       "MercuryHourglass"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "回合开始，对所有敌人造成 3 点伤害。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "MERCURY_HOURGLASS",
     "kind": "relic",
-    "name": "水银沙漏",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "水银沙漏"
   },
   "METRONOME": {
     "aliases": [
       "Metronome"
     ],
-    "character": "Defect",
-    "counter_shown": false,
-    "curated": false,
-    "description": "每场战斗累计首次引导 7 个充能球时，对所有敌人造成 30 点伤害。",
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "METRONOME",
     "kind": "relic",
-    "name": "节拍器",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "节拍器"
   },
   "MINIATURE_CANNON": {
     "aliases": [
+      "Miniature Cannon",
       "MiniatureCannon",
-      "MINIATURE_CANNON",
       "迷你加农炮"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "Uncommon: upgraded Attack cards deal +3 damage. LIVE run-57: Bludgeon+ (42 base) + Sharp-2 enchant + Cannon +3 = 47-class unbuffed hits; under vuln ×1.5 → 70-class; Act1 Gigantification ×3 window hit 96 pre-upgrade.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "MINIATURE_CANNON",
     "kind": "relic",
-    "name": "迷你加农炮",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "迷你加农炮"
   },
   "MINIATURE_TENT": {
     "aliases": [
       "Miniature Tent",
       "MiniatureTent"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "休息点可以选择任意数量的选项。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "MINIATURE_TENT",
     "kind": "relic",
-    "name": "微型帐篷",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "微型帐篷"
   },
   "MINI_REGENT": {
     "aliases": [
       "Mini Regent",
       "MiniRegent"
     ],
-    "character": "Regent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "每回合首次消耗星星时，获得 1 点力量。",
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "MINI_REGENT",
     "kind": "relic",
-    "name": "迷你储君",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "迷你储君"
   },
   "MOLTEN_EGG": {
     "aliases": [
       "Molten Egg",
       "MoltenEgg"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "攻击牌入手即升级。run-51 live：自动升级 5 次（PS#2/AshenStrike/TwinStrike/DISMANTLE/BREAKTHROUGH）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "MOLTEN_EGG",
     "kind": "relic",
-    "name": "熔火蛋",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "熔火蛋"
   },
   "MR_STRUGGLES": {
     "aliases": [
       "Mr. Struggles",
       "MrStruggles"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "回合开始，对所有敌人造成等同当前回合数的伤害。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "MR_STRUGGLES",
     "kind": "relic",
-    "name": "抱抱先生",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "抱抱先生"
   },
   "MUMMIFIED_HAND": {
     "aliases": [
       "Mummified Hand",
       "MummifiedHand"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每次打出能力牌时，手牌中一张随机牌本回合免费。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "MUMMIFIED_HAND",
     "kind": "relic",
-    "name": "干瘪之手",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "干瘪之手"
   },
   "MUSIC_BOX": {
     "aliases": [
       "Music Box",
       "MusicBox"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每回合打出的第一张攻击牌在手牌中生成一份虚无拷贝。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "MUSIC_BOX",
     "kind": "relic",
-    "name": "音乐盒",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "音乐盒"
   },
   "MYSTIC_LIGHTER": {
     "aliases": [
       "Mystic Lighter",
       "MysticLighter"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "附魔的攻击牌额外造成 9 点伤害。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "MYSTIC_LIGHTER",
     "kind": "relic",
-    "name": "神秘打火机",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "神秘打火机"
   },
   "NEOW": {
     "aliases": [
-      "Arcane Scroll",
-      "ARCANE_SCROLL"
+      "ARCANE_SCROLL",
+      "Arcane Scroll"
     ],
-    "character": "shared",
-    "curated": true,
-    "description": "Upon pickup, obtain a random Rare Card to add to your Deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Ancient"
+    },
     "id": "NEOW",
     "kind": "relic",
-    "name": "Arcane Scroll",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Arcane Scroll"
   },
   "NEOWS_BONES": {
     "aliases": [
       "Neow's Bones",
       "NeowsBones"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，获得 2 件随机 Neow 遗物；向牌库加入 1 张随机诅咒。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "NEOWS_BONES",
     "kind": "relic",
-    "name": "涅奥骨骰",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "涅奥骨骰"
   },
   "NEOWS_TALISMAN": {
     "aliases": [
       "Neow's Talisman",
       "NeowsTalisman"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "拾取时，升级 1 张打击和 1 张防御。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "NEOWS_TALISMAN",
     "kind": "relic",
-    "name": "涅奥的护符",
-    "play_notes": "确定但上限低：打击 6→9 / 防御 5→8 级收益；若基础牌中期被删则价值衰减。2026-09-19 Neow 选项 live 校验。",
-    "rarity": "Ancient"
+    "name": "涅奥的护符"
   },
   "NEOWS_TORMENT": {
     "aliases": [
       "Neow's Torment",
       "NeowsTorment"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，向牌库加入 1 张 Neow's Fury。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "NEOWS_TORMENT",
     "kind": "relic",
-    "name": "涅奥的苦痛",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "涅奥的苦痛"
   },
   "NEW_LEAF": {
     "aliases": [
       "New Leaf",
       "NewLeaf"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，变化 1 张选定牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "NEW_LEAF",
     "kind": "relic",
-    "name": "新叶",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "新叶"
   },
   "NIMBLE": {
     "aliases": [
-      "Fresnel Lens",
-      "FRESNEL_LENS"
+      "FRESNEL_LENS",
+      "Fresnel Lens"
     ],
-    "character": "shared",
-    "curated": true,
-    "description": "附魔关键词（Nimble N）：附于入手的挡类卡牌——菲涅耳透镜（淹水灯塔事件）为此类牌附魔 Nimble 2。Nimble 具体机制未 live 解码——观测到前视为未知，不围绕其规划。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Event"
+    },
     "id": "NIMBLE",
     "kind": "relic",
-    "name": "Fresnel Lens",
-    "play_notes": " | run-46 会话：机制未解，攀爬选项（−13MaxHP）在 HP66 拒绝——档案未知不付确定 HP 税（run-20 教训）。",
-    "rarity": "Event"
+    "name": "Fresnel Lens"
   },
   "NINJA_SCROLL": {
     "aliases": [
       "Ninja Scroll",
       "NinjaScroll"
     ],
-    "character": "Silent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始（第 1 回合），向手牌加入 3 张 Shiv。",
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "NINJA_SCROLL",
     "kind": "relic",
-    "name": "忍术卷轴",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "忍术卷轴"
   },
   "NUNCHAKU": {
     "aliases": [
       "Nunchaku"
     ],
-    "character": null,
-    "counter_shown": true,
-    "curated": true,
-    "description": "每打出 10 张攻击牌，获得 1 点能量（计数显示 NUNCHAKU:n，触发后清零重计）。run-38 实时：:10 触发 → 同回合 +1 能量（能量显示 4/3）；Anger/Pacts End 0 费攻击免费推进计数。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Uncommon"
+    },
     "id": "NUNCHAKU",
     "kind": "relic",
-    "name": "双截棍",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "双截棍"
   },
   "NUTRITIOUS_OYSTER": {
     "aliases": [
       "Nutritious Oyster",
       "NutritiousOyster"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，+11 最大 HP。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "NUTRITIOUS_OYSTER",
     "kind": "relic",
-    "name": "营养牡蛎",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "营养牡蛎"
   },
   "NUTRITIOUS_SOUP": {
     "aliases": [
       "Event boon-relic decodes",
-      "NutritiousSoup",
       "Nutritious Soup",
-      "NUTRITIOUS_SOUP",
+      "NutritiousSoup",
       "营养汤"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "Ancient 遗物（Tezcatara 赐福）：拾取时为所有基础 Strike 类牌附加特兹卡塔拉之烬——费用降为0、获得永恒关键词、受能攻击+3伤。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "NUTRITIOUS_SOUP",
     "kind": "relic",
-    "name": "营养汤",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "营养汤"
   },
   "ODDLY_SMOOTH_STONE": {
     "aliases": [
+      "Oddly Smooth Stone",
       "OddlySmoothStone",
-      "ODDLY_SMOOTH_STONE",
-      "滑石",
-      "奇异光滑石"
+      "奇异光滑石",
+      "滑石"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "Common: start each combat with 1 Dexterity (card-block values +1 all fight). LIVE run-57: Defend 5→6, Shrug 8→9, SW per-exhaust 5→6 class throughout; stacks with Dex sources additively.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "ODDLY_SMOOTH_STONE",
     "kind": "relic",
-    "name": "奇异光滑石",
-    "play_notes": "对局43 live",
-    "rarity": "Common"
+    "name": "奇异光滑石"
   },
   "OLD_COIN": {
     "aliases": [
       "Old Coin",
       "OldCoin"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，获得 300 金币。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "OLD_COIN",
     "kind": "relic",
-    "name": "古钱币",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "古钱币"
   },
   "ORANGE_DOUGH": {
     "aliases": [
       "Orange Dough",
       "OrangeDough"
     ],
-    "character": "Regent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始，向手牌加入 2 张随机无色牌。",
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "ORANGE_DOUGH",
     "kind": "relic",
-    "name": "橙色团块",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "橙色团块"
   },
   "ORICHALCUM": {
     "aliases": [
       "Orichalcum",
-      "ORICHALCUM",
       "橙铜"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "回合结束时若没有格挡，获得 6 格挡。攻击密集手牌的被动安全网；配合滑石 +1 敏捷时被动仍为 6（遗物挡不是卡牌挡）。对局43：多次在无挡手牌回合覆盖 15-24 来伤中的 6 点。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "ORICHALCUM",
     "kind": "relic",
-    "name": "橙铜",
-    "play_notes": "对局43 live",
-    "rarity": "Uncommon"
+    "name": "橙铜"
   },
   "ORNAMENTAL_FAN": {
     "aliases": [
+      "Ornamental Fan",
       "OrnamentalFan",
-      "ORNAMENTAL_FAN",
       "装饰折扇"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "Every 3 Attack cards played in one turn, gain 4 Block (counter resets each turn; +4 resolves on the 3rd attack). LIVE run-57 reconfirmed across combats (Fan counter visible; +4 printed after 3rd attack; T4 millipede 3-attack line banked Fan+plating cover).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "ORNAMENTAL_FAN",
     "kind": "relic",
-    "name": "装饰折扇",
-    "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：每回合第 3 张攻击牌 +4 挡——与 Rage 叠加为加法；3 攻击以上回合稳定 +4，2 攻击回合无收益。",
-    "rarity": "Uncommon"
+    "name": "装饰折扇"
   },
   "ORRERY": {
     "aliases": [
       "Orrery"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，获得 5 份卡牌奖励。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "ORRERY",
     "kind": "relic",
-    "name": "星系仪",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "星系仪"
   },
   "PAELS_BLOOD": {
     "aliases": [
       "Pael's Blood",
       "PaelsBlood"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每回合抽牌阶段额外抽 1 张牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PAELS_BLOOD",
     "kind": "relic",
-    "name": "佩尔之血",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "佩尔之血"
   },
   "PAELS_CLAW": {
     "aliases": [
       "Pael's Claw",
       "PaelsClaw"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，为牌库中所有 Defend 标签牌附魔 Goopy（附带 Exhaust）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PAELS_CLAW",
     "kind": "relic",
-    "name": "佩尔之爪",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "佩尔之爪"
   },
   "PAELS_EYE": {
     "aliases": [
       "Pael's Eye",
       "PaelsEye"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每场战斗首次未打出任何牌就结束回合时，消耗手牌并获得一个额外回合。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PAELS_EYE",
     "kind": "relic",
-    "name": "佩尔之眼",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "佩尔之眼"
   },
   "PAELS_FLESH": {
     "aliases": [
       "Pael's Flesh",
       "PaelsFlesh"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "Act2 佩尔赐福遗物：每场战斗自第 3 回合起，回合开始额外获得 1 能量。run-41 live：未打出跃升时 T3+ 能量已显示 4/4 — 与跃升（+1）及灯笼（仅 T1）叠加，第 3 回合起保底 4-5 能量。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PAELS_FLESH",
     "kind": "relic",
-    "name": "佩尔之肉",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "佩尔之肉"
   },
   "PAELS_GROWTH": {
     "aliases": [
       "Pael's Growth",
       "PaelsGrowth"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，选择 1 张牌附魔 Clone 4；休息点获得 Clone 选项。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PAELS_GROWTH",
     "kind": "relic",
-    "name": "佩尔的增生组织",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "佩尔的增生组织"
   },
   "PAELS_HORN": {
     "aliases": [
       "Pael's Horn",
       "PaelsHorn"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，向牌库加入 2 张 Relax。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PAELS_HORN",
     "kind": "relic",
-    "name": "佩尔之角",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "佩尔之角"
   },
   "PAELS_LEGION": {
     "aliases": [
       "Pael's Legion",
       "PaelsLegion"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "卡牌获得的格挡翻倍；卡牌为你提供格挡后，该遗物沉睡 2 回合，期间格挡不翻倍。LIVE 节奏（对局 36）：**并非每战斗一次**——翻倍→休眠约 2 回合→再翻倍，整场战斗循环。实测：Impervious 30+敏捷在苏醒回合结算 46 与 62 多次；Defend+ 苏醒回合 8→16 级翻倍。events.md 旧文「每战斗首次挡牌翻倍」为**错误**——本条休眠节奏为准。 run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log)：清醒回合与 VAMBRACE 乘法 ×2 叠加；BARRICADE 在场时翻倍挡跨回合持久 — 无 Barricade 时银行挡照常衰减（Ovicopter T2：64 挡回合因 Barricade 未上手而消失）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PAELS_LEGION",
     "kind": "relic",
-    "name": "佩尔的士兵",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "佩尔的士兵"
   },
   "PAELS_TEARS": {
     "aliases": [
       "Pael's Tears",
       "PaelsTears"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "回合结束时若有未花费的能量，下回合开始获得 2 点能量。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PAELS_TEARS",
     "kind": "relic",
-    "name": "佩尔之泪",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "佩尔之泪"
   },
   "PAELS_TOOTH": {
     "aliases": [
       "Pael's Tooth",
       "PaelsTooth"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，移除 5 张选定牌；每场战斗后随机加回 1 张被移除的牌并升级。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PAELS_TOOTH",
     "kind": "relic",
-    "name": "佩尔之牙",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "佩尔之牙"
   },
   "PAELS_WING": {
     "aliases": [
       "Pael's Wing",
       "PaelsWing"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "卡牌奖励获得献祭（Sacrifice）选项；每献祭 2 次，获得 1 件遗物。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PAELS_WING",
     "kind": "relic",
-    "name": "佩尔之翼",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "佩尔之翼"
   },
   "PANDORAS_BOX": {
     "aliases": [
       "Pandora's Box",
       "PandorasBox"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，变化牌库中所有 Strike 和 Defend。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PANDORAS_BOX",
     "kind": "relic",
-    "name": "潘多拉魔盒",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "潘多拉魔盒"
   },
   "PANTOGRAPH": {
     "aliases": [
       "Pantograph"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "Boss 战开始时，回复 25 HP。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "PANTOGRAPH",
     "kind": "relic",
-    "name": "缩放仪",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "缩放仪"
   },
   "PAPER_KRANE": {
     "aliases": [
       "Paper Krane",
       "PaperKrane"
     ],
-    "character": "Silent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "带 Weak 的敌人对你造成的伤害 −40%（原 −25%）。",
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "PAPER_KRANE",
     "kind": "relic",
-    "name": "纸鹤",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "纸鹤"
   },
   "PAPER_PHROG": {
     "aliases": [
       "Paper Phrog",
       "PaperPhrog"
     ],
-    "character": "Ironclad",
-    "counter_shown": false,
-    "curated": true,
-    "description": "带 Vulnerable 的敌人受到的攻击伤害 +75%（原 +50%）。与残酷能力（+25%）加法叠加 → 易伤目标受到攻击伤害 +100%（×2.0）。牌库无残酷时：易伤目标命中值=（基础+力量）×1.75 精确——**力量在乘区内而非乘区后加**。纸蛙单独=×1.75；×2.0 需残酷加法叠层。商店标价约 196 金。 run-53 live 2026-09-19：公式确认——易伤目标上 Strike（基础6+力量6）精确打出 21 =（基础+力量）×1.75；力量在乘数之内。",
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "PAPER_PHROG",
     "kind": "relic",
-    "name": "纸蛙",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "纸蛙"
   },
   "PARRYING_SHIELD": {
     "aliases": [
-      "Parrying Shield",
-      "PARRYING_SHIELD"
+      "Parrying Shield"
     ],
-    "character": "shared",
-    "curated": true,
-    "description": "回合结束时若挡值 ≥10，对随机敌人造成 6 点伤害。LIVE run-54：多次触发；该 6 伤按普通伤害实例结算（例：收掉 4HP 千足虫段并触发其 REATTACH 死亡状态循环——反伤既是击杀手段，也可能意外点燃敌方死亡触发机制）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Uncommon"
+    },
     "id": "PARRYING_SHIELD",
     "kind": "relic",
-    "name": "Parrying Shield",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Parrying Shield"
   },
   "PEAR": {
     "aliases": [
       "Pear"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，+10 最大 HP。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "PEAR",
     "kind": "relic",
-    "name": "梨子",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "梨子"
   },
   "PENDULUM": {
     "aliases": [
       "Pendulum"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每第 3 回合开始，抽 1 张牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "PENDULUM",
     "kind": "relic",
-    "name": "摆动球",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "摆动球"
   },
   "PEN_NIB": {
     "aliases": [
       "Pen Nib",
       "PenNib"
     ],
-    "character": null,
-    "counter_shown": true,
-    "curated": true,
-    "description": "每第 10 张攻击牌造成双倍伤害。LIVE run-54 Act1 Boss Vantom T4：BLUDGEON+ 作为第 10 张攻击在易伤窗内结算 126 伤（42×1.5 易伤×2 笔尖——精确）。计数在 compact state 显示 PEN_NIB:n；把第 10 张攻击对准 Bludgeon 回合是可复用的窗口战术。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Uncommon"
+    },
     "id": "PEN_NIB",
     "kind": "relic",
-    "name": "钢笔尖",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "钢笔尖"
   },
   "PERMAFROST": {
     "aliases": [
       "Permafrost"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "每场战斗首次打出能力牌时，获得 7 格挡。效果已归档；run-38 牌组无能力牌（Feel No Pain/Stone Armor 类均跳过）——本局遗物全程未激活。牌组进能力牌后价值解锁。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "PERMAFROST",
     "kind": "relic",
-    "name": "永冻冰晶",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "永冻冰晶"
   },
   "PETRIFIED_TOAD": {
     "aliases": [
       "Petrified Toad",
       "PetrifiedToad"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "战斗开始：获得岩石形状药水（使用=对目标 15 伤，run-51 live）——每战 +1 伤害选项，非治疗。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "PETRIFIED_TOAD",
     "kind": "relic",
-    "name": "石化蟾蜍",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "石化蟾蜍"
   },
   "PHIAL_HOLSTER": {
     "aliases": [
       "Phial Holster",
       "PhialHolster"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "拾取时，+1 个药水栏并获得 2 瓶随机药水。 LIVE run-47 Neow 选项（药瓶皮套/PHIAL_HOLSTER）：入手时 +1 药水栏位 + 2 瓶随机药水（roll 到 SKILL_POTION + POWER_POTION）；本章中段加入第 4 瓶（ATTACK_POTION）时确认 holster 容量为 4。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PHIAL_HOLSTER",
     "kind": "relic",
-    "name": "药瓶皮套",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "药瓶皮套"
   },
   "PHILOSOPHERS_STONE": {
     "aliases": [
       "Philosopher's Stone",
       "PhilosophersStone"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每回合 +1 最大能量；所有敌人战斗开始时 +1 点力量。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PHILOSOPHERS_STONE",
     "kind": "relic",
-    "name": "贤者之石",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "贤者之石"
   },
   "PHYLACTERY_UNBOUND": {
     "aliases": [
       "Phylactery Unbound",
       "PhylacteryUnbound"
     ],
-    "character": "Necrobinder",
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始，Summon 5 个 Osty；每回合开始，Summon 2 个 Osty。",
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
     "id": "PHYLACTERY_UNBOUND",
     "kind": "relic",
-    "name": "无界命匣",
-    "play_notes": "",
-    "rarity": "Starter"
+    "name": "无界命匣"
   },
   "PLANISPHERE": {
     "aliases": [
       "Planisphere"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "进入问号房间时，回复 5 HP。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "PLANISPHERE",
     "kind": "relic",
-    "name": "活动星图",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "活动星图"
   },
   "POCKETWATCH": {
     "aliases": [
       "Pocketwatch"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "上回合打出 ≤3 张牌时，第 2 回合起手牌额外抽 3 张。run-41 纪律：T1 刻意只打 3 张（如 Inferno+Brand+重锤）给怀表上弦 — 精英与 Act1 Boss 的 T2 8 张手牌交付了 Inferno+PS+跃升线；多打第 4 张会让下一整回合失去加成。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "POCKETWATCH",
     "kind": "relic",
-    "name": "怀表",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "怀表"
   },
   "POLLINOUS_CORE": {
     "aliases": [
       "Pollinous Core",
       "PollinousCore"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每第 4 回合，抽牌阶段额外抽 2 张牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "POLLINOUS_CORE",
     "kind": "relic",
-    "name": "花粉核心",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "花粉核心"
   },
   "POMANDER": {
     "aliases": [
       "Pomander"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，升级 1 张选定牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "POMANDER",
     "kind": "relic",
-    "name": "橙型香盒",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "橙型香盒"
   },
   "POTION_BELT": {
     "aliases": [
       "Potion Belt",
       "PotionBelt"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "药水栏位 +1。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "POTION_BELT",
     "kind": "relic",
-    "name": "药水腰带",
-    "play_notes": "run-49 live：Act2 宝箱 (8,2) 获得；belt 容量扩大后商店双药水+精英掉落可共存（Blood/Skill/Speed 类实测同时在栏）。",
-    "rarity": "Common"
+    "name": "药水腰带"
   },
   "POWER_CELL": {
     "aliases": [
       "Power Cell",
       "PowerCell"
     ],
-    "character": "Defect",
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始（第 1 回合），从抽牌堆将 2 张零费牌加入手牌。",
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "POWER_CELL",
     "kind": "relic",
-    "name": "能量电池",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "能量电池"
   },
   "PRAYER_WHEEL": {
     "aliases": [
       "Prayer Wheel",
       "PrayerWheel"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "普通敌人战斗奖励额外掉落 1 份卡牌奖励。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "PRAYER_WHEEL",
     "kind": "relic",
-    "name": "转经轮",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "转经轮"
   },
   "PRECARIOUS_SHEARS": {
     "aliases": [
       "Precarious Shears",
       "PrecariousShears"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，移除 2 张牌并失去 16 HP。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PRECARIOUS_SHEARS",
     "kind": "relic",
-    "name": "松动羊毛剪",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "松动羊毛剪"
   },
   "PRECISE_SCISSORS": {
     "aliases": [
       "Precise Scissors",
       "PreciseScissors"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，从牌库移除 1 张牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PRECISE_SCISSORS",
     "kind": "relic",
-    "name": "精准剪刀",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "精准剪刀"
   },
   "PRESERVED_FOG": {
     "aliases": [
       "Preserved Fog",
       "PreservedFog"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，移除 3 张牌；向牌库加入 1 张 Folly。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PRESERVED_FOG",
     "kind": "relic",
-    "name": "腌制活雾",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "腌制活雾"
   },
   "PRISMATIC_GEM": {
     "aliases": [
+      "Prismatic Gem",
       "PrismaticGem",
-      "PRISMATIC_GEM",
       "棱彩宝石"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "Ancient (OROBOAS Act2 boon pool, run-57 pick): +1 max Energy each turn; card rewards include other characters' cards (cross-class pool live — Kingly Kick/Thunderclap/Crush Under offers appeared run-57). LIVE run-57: energy display 4/4 base became the run standard; 6/4 with Venerable Tea Set rest-proc at Act2 Boss T1 (Bludgeon+KinglyKick 74-dmg opening).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PRISMATIC_GEM",
     "kind": "relic",
-    "name": "棱彩宝石",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "棱彩宝石"
   },
   "PUMPKIN_CANDLE": {
     "aliases": [
       "Pumpkin Candle",
       "PumpkinCandle",
-      "PUMPKIN_CANDLE",
       "南瓜蜡烛"
     ],
-    "character": null,
-    "counter_shown": true,
-    "curated": true,
-    "description": "Ancient 遗物（Tezcatara 赐福）：燃烧层数>0 时 +1 最大能量；每场战斗结束 −1 层；休息点新增点燃选项 +5 层。计数器可见。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Ancient"
+    },
     "id": "PUMPKIN_CANDLE",
     "kind": "relic",
-    "name": "南瓜蜡烛",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "南瓜蜡烛"
   },
   "PUNCH_DAGGER": {
     "aliases": [
       "Punch Dagger",
       "PunchDagger"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，选择 1 张攻击牌附魔 Momentum 5。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "PUNCH_DAGGER",
     "kind": "relic",
-    "name": "拳刃",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "拳刃"
   },
   "RADIANT": {
     "aliases": [
-      "Radiant Pearl",
-      "RADIANT_PEARL"
+      "RADIANT_PEARL",
+      "Radiant Pearl"
     ],
-    "character": "shared",
-    "curated": true,
-    "description": "RADIANT（live id；效果未解码 — codex 存根，研究待办）。未解码 = lookup 落空的研究触发，不得据名字猜测效果。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Ancient"
+    },
     "id": "RADIANT",
     "kind": "relic",
-    "name": "Radiant Pearl",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Radiant Pearl"
   },
   "RADIANT_PEARL": {
     "aliases": [
       "Radiant Pearl",
       "RadiantPearl"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "第 1 回合开始，向手牌加入 1 张 Luminesce。",
+    "detail": {
+      "character": null,
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "RADIANT_PEARL",
     "kind": "relic",
-    "name": "发光珍珠",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "发光珍珠"
   },
   "RAGE": {
     "aliases": [
-      "Sling of Courage",
-      "SLING_OF_COURAGE"
+      "SLING_OF_COURAGE",
+      "Sling of Courage"
     ],
-    "character": "shared",
-    "curated": true,
-    "description": "查找碰撞载体（run-46 会话）：relic 域 RAGE 键交叉搜索误折叠——实际内容为 Sling of Courage（商店遗物：每场精英战开局 +2 力量）。战士 RAGE 是卡牌非遗物。run-46 Act2 商店见 74-78g 级标价。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Shop"
+    },
     "id": "RAGE",
     "kind": "relic",
-    "name": "Sling of Courage",
-    "play_notes": " | run-46 会话：Sling of Courage 的碰撞键载体；卡牌域 RAGE 为战士技能攻击牌，独立条目。",
-    "rarity": "Shop"
+    "name": "Sling of Courage"
   },
   "RAINBOW_RING": {
     "aliases": [
       "Rainbow Ring",
       "RainbowRing"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "单回合首次打出攻击、技能、能力各一张时，获得 1 点力量和 1 点敏捷。 run-53 live 2026-09-19：同回合首次打出攻击+技能+能力各一张时 +1 力量 +1 敏捷——桥历史确认 Inflame(能力)+Bloodletting(技能)+Strike(攻击) 回合与 Bash+Inflame+Bloodletting 回合均触发（玩家 powers 同帧 STR+1 DEX+1）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "RAINBOW_RING",
     "kind": "relic",
-    "name": "彩虹戒指",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "彩虹戒指"
   },
   "RAZOR_TOOTH": {
     "aliases": [
       "Razor Tooth",
       "RazorTooth"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "每次打出攻击或技能牌时，本场战斗内将其升级。语义 run-48 live 精修：**按单卡实例**——触发打出仍按基础值结算；该副本此后本战打出才用升级值。后抽到的新副本仍先按基础值打（run-48 Strike：Whetstone 升级过的副本首击 9，未升级副本首击 6 之后才升级）。**不是**全局卡牌类型升级。战中实例：Shrug 首打 8 → 后打 12 级；突破首打 9 → 后打 13；放血副本带升级时能量显示 6/3。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "RAZOR_TOOTH",
     "kind": "relic",
-    "name": "剃刀牙",
-    "play_notes": "run-48 live 2026-09-19：按实例语义确认——新副本先打基础值；Whetstone 升级副本与 Razor 升级副本相互独立。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "rarity": "Rare"
+    "name": "剃刀牙"
   },
   "RED_MASK": {
     "aliases": [
       "Red Mask",
       "RedMask"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "战斗开始（第一回合）对所有敌人施加1层弱化。对局38+40 live：T1 每个敌人均可见弱化；对多段招式按 hit 削减攻击意图（外骨骼虫撕咬1x3→0x3；蜂群术士蜜蜂3x7→2x7；石碗虫头槌15→11；乐加维林族母 T1 沉睡未受益）。弱化在其回合结束递减。对局40 Act2 Shop#1 162 金买入——之后每战兑现。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "RED_MASK",
     "kind": "relic",
-    "name": "红面具",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "红面具"
   },
   "RED_SKULL": {
     "aliases": [
       "Red Skull",
       "RedSkull"
     ],
-    "character": "Ironclad",
-    "counter_shown": false,
-    "curated": true,
-    "description": "当 HP <= 最大 HP 的 50% 时，你拥有 +3 力量。run-42 live 触发：38/80 级入场时力量线 +3（显示与其他力量来源合并 — 以 live powers 行为准）。把危险 HP 区变成竞速窗；与低 HP 入场战配合。 LIVE run-52：(8,6) 商店购入后连续四战触发——多尼斯异鸟（39HP 入场，力量经 Setup 链驱动 T4 击杀）、缩小甲虫成对战、双小啃兽、Act1 Boss（Plow 竞速 T3–T7 期间 +3 力量生效，(15,6) 休息把 HP 抬过阈值后暂时退出，Boss 战 T3 于 28HP 再次入窗）。",
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "RED_SKULL",
     "kind": "relic",
-    "name": "红头骨",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "红头骨"
   },
   "REGALITE": {
     "aliases": [
       "Regalite"
     ],
-    "character": "Regent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "每次创造卡牌时，获得 2 格挡。",
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "REGALITE",
     "kind": "relic",
-    "name": "君王矿石",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "君王矿石"
   },
   "REGAL_PILLOW": {
     "aliases": [
       "Regal Pillow",
       "RegalPillow"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "休息点治疗量 +15（与基础百分比治疗及加湿器类叠加）。run-46 live：三次休息均 +43 级（23→66、33→76、54 级→近满）——预 Boss/预精英休息几何在枕头下加倍兑现。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "REGAL_PILLOW",
     "kind": "relic",
-    "name": "皇家枕头",
-    "play_notes": "run-46 live：(6,6)/(8,4)/(13,4) 三次 +43 级治疗；草稿休息几何教条加倍兑现。",
-    "rarity": "Common"
+    "name": "皇家枕头"
   },
   "REPTILE_TRINKET": {
     "aliases": [
       "Reptile Trinket",
       "ReptileTrinket"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每次使用药水时，本回合获得 3 点力量。任意药水使用均触发（Dex/血/Flex/攻击类）——以独立 power（REPTILE_TRINKET_POWER:3）与药水原生效果同回合叠加（如 Flex +5 + 饰品 +3 = 单回合 +8 力爆发窗）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "REPTILE_TRINKET",
     "kind": "relic",
-    "name": "爬行动物饰品",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "爬行动物饰品"
   },
   "RINGING_TRIANGLE": {
     "aliases": [
       "Ringing Triangle",
-      "RINGING_TRIANGLE",
       "铃三角"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "战斗第 1 回合保留手牌。对局43 Act1 商店 (14,2) live 价格 202金（未买——243金沉淀了滑石+Tremble；每回合敏捷 > 仅 T1 的一致性）。切勿与对局13 的 RINGING counter-class power（每回合限1牌）混淆——完全不同的东西。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "RINGING_TRIANGLE",
     "kind": "relic",
-    "name": "铃三角",
-    "play_notes": "对局43 live",
-    "rarity": "Shop"
+    "name": "铃三角"
   },
   "RING_OF_THE_DRAKE": {
     "aliases": [
       "Ring of the Drake",
       "RingOfTheDrake"
     ],
-    "character": "Silent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "第 1-3 回合，抽牌阶段额外抽 2 张牌。",
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
     "id": "RING_OF_THE_DRAKE",
     "kind": "relic",
-    "name": "长蛇戒指",
-    "play_notes": "",
-    "rarity": "Starter"
+    "name": "长蛇戒指"
   },
   "RING_OF_THE_SNAKE": {
     "aliases": [
       "Ring of the Snake",
       "RingOfTheSnake"
     ],
-    "character": "Silent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "第 1 回合，抽牌阶段额外抽 2 张牌。",
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
     "id": "RING_OF_THE_SNAKE",
     "kind": "relic",
-    "name": "蛇之戒指",
-    "play_notes": "",
-    "rarity": "Starter"
+    "name": "蛇之戒指"
   },
   "RIPPLE_BASIN": {
     "aliases": [
       "Ripple Basin",
       "RippleBasin"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "回合结束时，若本回合未打出任何攻击牌，获得 4 格挡。run-42 live：在纯能力回合触发（如对感染棱柱的 残酷+Inferno+Corruption 回合 → +4 挡）；与卡牌格挡叠加；低 HP 下\"无攻击回合\"纪律是真实生存杠杆。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "RIPPLE_BASIN",
     "kind": "relic",
-    "name": "波纹水盆",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "波纹水盆"
   },
   "ROYAL_POISON": {
     "aliases": [
       "Royal Poison",
       "RoyalPoison"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "第 1 回合开始，失去 4 HP。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "ROYAL_POISON",
     "kind": "relic",
-    "name": "王室猛毒",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "王室猛毒"
   },
   "ROYAL_STAMP": {
     "aliases": [
-      "Royal Stamp",
-      "ROYAL_STAMP"
+      "Royal Stamp"
     ],
-    "character": "shared",
-    "curated": false,
-    "description": "每当你在商店购买物品时，获得 10 金币。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Shop"
+    },
     "id": "ROYAL_STAMP",
     "kind": "relic",
-    "name": "Royal Stamp",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Royal Stamp"
   },
   "RUINED_HELMET": {
     "aliases": [
       "Ruined Helmet",
       "RuinedHelmet"
     ],
-    "character": "Ironclad",
-    "counter_shown": false,
-    "curated": false,
-    "description": "每场战斗首次获得力量时，获得量翻倍。",
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "RUINED_HELMET",
     "kind": "relic",
-    "name": "损毁头盔",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "损毁头盔"
   },
   "RUNIC_CAPACITOR": {
     "aliases": [
       "Runic Capacitor",
       "RunicCapacitor"
     ],
-    "character": "Defect",
-    "counter_shown": false,
-    "curated": false,
-    "description": "第 1 回合开始，额外 +3 充能球槽。",
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "RUNIC_CAPACITOR",
     "kind": "relic",
-    "name": "符文电容器",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "符文电容器"
   },
   "RUNIC_PYRAMID": {
     "aliases": [
       "Runic Pyramid",
       "RunicPyramid"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "回合结束不再弃置手牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "RUNIC_PYRAMID",
     "kind": "relic",
-    "name": "符文金字塔",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "符文金字塔"
   },
   "SAI": {
     "aliases": [
       "Sai"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每回合开始，获得 7 格挡。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SAI",
     "kind": "relic",
-    "name": "钗",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "钗"
   },
   "SAND_CASTLE": {
     "aliases": [
       "Sand Castle",
       "SandCastle"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，升级牌库中 6 张随机牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SAND_CASTLE",
     "kind": "relic",
-    "name": "沙堡",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "沙堡"
   },
   "SCREAMING_FLAGON": {
     "aliases": [
       "Screaming Flagon",
       "ScreamingFlagon"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "回合结束时手牌为空，对所有敌人造成 20 点伤害。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "SCREAMING_FLAGON",
     "kind": "relic",
-    "name": "尖叫酒壶",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "尖叫酒壶"
   },
   "SCROLL_BOXES": {
     "aliases": [
       "Scroll Boxes",
       "ScrollBoxes"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，从 2 捆卡牌包中选 1 捆加入牌库。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SCROLL_BOXES",
     "kind": "relic",
-    "name": "卷轴箱",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "卷轴箱"
   },
   "SEAL_OF_GOLD": {
     "aliases": [
       "Seal of Gold",
       "SealOfGold",
-      "SEAL_OF_GOLD",
       "黄金封印"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "Ancient 遗物（Tezcatara 赐福）：回合开始时金币≥5 则 +1 能量并 −5 金。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SEAL_OF_GOLD",
     "kind": "relic",
-    "name": "黄金封印",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "黄金封印"
   },
   "SEA_GLASS": {
     "aliases": [
       "Sea Glass",
       "SeaGlass"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，查看另一角色的 15 张牌（5 普通、5 罕见、5 稀有）；选择任意数量加入牌库。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SEA_GLASS",
     "kind": "relic",
-    "name": "海玻璃",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "海玻璃"
   },
   "SELF_FORMING_CLAY": {
     "aliases": [
       "Self-Forming Clay",
       "SelfFormingClay"
     ],
-    "character": "Ironclad",
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗中每次失去 HP 时，下回合开始获得 3 格挡。",
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "SELF_FORMING_CLAY",
     "kind": "relic",
-    "name": "自成型黏土",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "自成型黏土"
   },
   "SERE_TALON": {
     "aliases": [
       "Sere Talon",
       "SereTalon"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，向牌库加入 2 张随机诅咒和 3 张 Wish。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SERE_TALON",
     "kind": "relic",
-    "name": "原初之爪",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "原初之爪"
   },
   "SHARP": {
     "aliases": [
-      "Gnarled Hammer",
-      "GNARLED_HAMMER"
+      "GNARLED_HAMMER",
+      "Gnarled Hammer"
     ],
-    "character": "shared",
-    "curated": true,
-    "description": "SHARP 是附魔关键词而非单件遗物效果：Sharp N = 被附魔卡牌 +N 攻击伤害（run-48 live：自助指南选项「读下封底」为一张攻击牌附魔锋利 2——Bludgeon+ 基础读数 42+2=44 live，44×1.5 易伤 = 旧日雕像战 51 伤）。遗物 GNARLED_HAMMER（商店稀有度）入手时为至多 3 张攻击牌附魔锋利 3。附魔伤害加在基础值上、**先于**易伤/残酷乘数。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Shop"
+    },
     "id": "SHARP",
     "kind": "relic",
-    "name": "Sharp (Enchant keyword) / Gnarled Hammer carrier relic",
-    "play_notes": "run-48 live fold 2026-09-19: Sharp 2 on Bludgeon = 44 base (42+2) live; SELF_HELP_BOOK READ_THE_BACK is the grant source. [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "rarity": "Shop"
+    "name": "Sharp (Enchant keyword) / Gnarled Hammer carrier relic"
   },
   "SHOVEL": {
     "aliases": [
       "Shovel"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "休息点获得 DIG 挖掘选项，可得随机遗物。run-42 live bridge 备注：DIG 按钮出现在休息 UI（button DIG / actions rest(index=2)）但服务端 rest(index=2) 解析为 HEAL（HP 31→55，未给遗物）— bridge/mod 休息动作映射缺口；在 bridge 接线前视 DIG 为不可用。游戏侧遗物效果文本不变。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "SHOVEL",
     "kind": "relic",
-    "name": "铲子",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "铲子"
   },
   "SHURIKEN": {
     "aliases": [
       "Shuriken"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "单回合每打出 3 张攻击牌，获得 1 点力量。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "SHURIKEN",
     "kind": "relic",
-    "name": "手里剑",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "手里剑"
   },
   "SIGNET_RING": {
     "aliases": [
       "Signet Ring",
       "SignetRing"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，获得 999 金币。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SIGNET_RING",
     "kind": "relic",
-    "name": "图章戒指",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "图章戒指"
   },
   "SILKEN_TRESS": {
     "aliases": [
       "Silken Tress",
       "SilkenTress"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "拾取时失去全部金币；本局第一次卡牌奖励中的所有牌附魔 Glam（华彩）。run-55 live 规则：Glam 附魔牌在每场战斗首次打出时双结算，其后打出单结算（Glam 耸肩无视：该战首次打出 16 挡 + 抽 2；后续打出 8 挡 + 抽 1）。refine run-49「首打双结算」备注：双结算挂在附魔牌的首次打出上，而非战斗第 1 回合。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SILKEN_TRESS",
     "kind": "relic",
-    "name": "华美发束",
-    "play_notes": "代价仅为金币（无诅咒牌、无 Max HP 税），经济延迟有限（约一个前期商店购买项）。回报是一张带 Glam 的前期脊线牌——引擎牌每战双结算，全局长期生效。尼奥诅咒池位；2026-09-19 选项文案 live 校验。",
-    "rarity": "Ancient"
+    "name": "华美发束"
   },
   "SILVER_CRUCIBLE": {
     "aliases": [
       "Silver Crucible",
       "SilverCrucible"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "看到的前 3 份卡牌奖励为升级版；打开的第一个宝箱为空。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SILVER_CRUCIBLE",
     "kind": "relic",
-    "name": "白银熔炉",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "白银熔炉"
   },
   "SLING_OF_COURAGE": {
     "aliases": [
       "Sling of Courage",
       "SlingOfCourage"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "精英战开始时，获得 2 点力量。",
+    "detail": {
+      "character": null,
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "SLING_OF_COURAGE",
     "kind": "relic",
-    "name": "勇气投石索",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "勇气投石索"
   },
   "SMALL_CAPSULE": {
     "aliases": [
       "Small Capsule",
       "SmallCapsule"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，获得 1 件随机遗物。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SMALL_CAPSULE",
     "kind": "relic",
-    "name": "小型扭蛋",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "小型扭蛋"
   },
   "SNECKO_EYE": {
     "aliases": [
       "Snecko Eye",
       "SneckoEye"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每回合抽牌阶段额外抽 2 张牌；战斗开始时处于 Confused。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SNECKO_EYE",
     "kind": "relic",
-    "name": "异蛇之眼",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "异蛇之眼"
   },
   "SNECKO_SKULL": {
     "aliases": [
       "Snecko Skull",
       "SneckoSkull"
     ],
-    "character": "Silent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "你施加的中毒层数 +1。",
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "SNECKO_SKULL",
     "kind": "relic",
-    "name": "异蛇头骨",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "异蛇头骨"
   },
   "SOZU": {
     "aliases": [
       "Sozu"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每回合 +1 最大能量；不再能获得药水。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SOZU",
     "kind": "relic",
-    "name": "添水",
-    "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：Act2 DARV 赐福——永久每回合 +1 能量；不再获得药水。与灯笼+1、茶具休息后+2、Happy Flower 每3回合+1 叠加 → Boss T1 开局 7/4。HP 栏由 Burning Blood+Blood Vial+休息几何+LIFT Max HP 覆盖。",
-    "rarity": "Ancient"
+    "name": "添水"
   },
   "SPARKLING_ROUGE": {
     "aliases": [
       "Sparkling Rouge",
       "SparklingRouge"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "第 3 回合开始，获得 1 点力量和 1 点敏捷。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "SPARKLING_ROUGE",
     "kind": "relic",
-    "name": "闪亮口红",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "闪亮口红"
   },
   "SPIKED_GAUNTLETS": {
     "aliases": [
       "Spiked Gauntlets",
       "SpikedGauntlets"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每回合 +1 最大能量；能力牌费用 +1。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SPIKED_GAUNTLETS",
     "kind": "relic",
-    "name": "带刺手甲",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "带刺手甲"
   },
   "STONE_CALENDAR": {
     "aliases": [
       "Stone Calendar",
-      "STONE_CALENDAR",
       "石日历"
     ],
-    "character": null,
-    "counter_shown": true,
-    "curated": true,
-    "description": "第 7 回合结束时，对所有敌人造成 52 伤（计数按战斗，下一场重置）。对局43 live 两次观测：虱虫之祖在第7回合末从 36HP 被击杀（日历在敌方 T7 行动前触发）；第 6 回合末确认不触发——触发点专指第 7 回合结束。虚无 1-2 层会把这 52 压成每实例 1——FADE 窗内不要指望它。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Rare"
+    },
     "id": "STONE_CALENDAR",
     "kind": "relic",
-    "name": "石日历",
-    "play_notes": "对局43 live 击杀实证",
-    "rarity": "Rare"
+    "name": "石日历"
   },
   "STONE_CRACKER": {
     "aliases": [
       "Stone Cracker",
       "StoneCracker"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始，将抽牌堆中 2 张随机牌升级（本场战斗内）。命中示例：Bash→Bash+（易伤 2→3）、TrueGrit→TrueGrit+（随机消耗→**选择式消耗叠层**——升级形态即选择式消耗版）、Spite→Spite+（掉血回合 2→3 击）、Impervious→Impervious+（挡 30→40）、Hemokinesis→Hemokinesis+（伤 15→20）、旋风斩 5→8/击、防御 5→8、打击 6→9、双重打击 5→7/击、剑柄打击 9→10。升级仅战斗内有效且卡面不显示 + 标记，以实机伤害数字为准。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "STONE_CRACKER",
     "kind": "relic",
-    "name": "碎石钻",
-    "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：战内升级在卡面无标记——以 live 伤害数字为准（牌库 Bludgeon+ 已是升级版；随机命中多落在打击/防御上）。",
-    "rarity": "Uncommon"
+    "name": "碎石钻"
   },
   "STONE_HUMIDIFIER": {
     "aliases": [
       "Stone Humidifier",
       "StoneHumidifier"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每次在休息点休息时，+5 最大 HP。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "STONE_HUMIDIFIER",
     "kind": "relic",
-    "name": "石炉加湿器",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "石炉加湿器"
   },
   "STORYBOOK": {
     "aliases": [
-      "Storybook",
       "STORYBOOK",
+      "Storybook",
       "故事书"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "Ancient 遗物（Tezcatara 赐福）：拾取时将1张至亮之焰加入牌库。",
+    "detail": {
+      "character": null,
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "STORYBOOK",
     "kind": "relic",
-    "name": "故事书",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "故事书"
   },
   "STRAWBERRY": {
     "aliases": [
       "Strawberry"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "拾取时，+7 最大 HP。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "STRAWBERRY",
     "kind": "relic",
-    "live_notes": "LIVE run-56：拾起时 +7 最大生命值。MaxHP 叠层包组件。",
-    "name": "草莓",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "草莓"
   },
   "STRIKE_DUMMY": {
     "aliases": [
       "Strike Dummy",
       "StrikeDummy"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "常见遗物：Strike 标签攻击牌 +3 伤，加成在易伤倍率前计入基础值。run-46 live：组装师 Strike 19（基础+力量+假人先入基础再乘易伤）；实验体 Str4+易伤下 13 级。事件 Strike 牌加成未确认。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "STRIKE_DUMMY",
     "kind": "relic",
-    "name": "打击木偶",
-    "play_notes": "run-46 live: base-feed formula confirmed — dummy +3 lands before ×1.5 Vuln multipliers.",
-    "rarity": "Common"
+    "name": "打击木偶"
   },
   "STURDY_CLAMP": {
     "aliases": [
       "Sturdy Clamp",
       "SturdyClamp"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "稀有商店遗物：至多 10 挡跨回合保留（部分壁垒）。run-46 live：Act3 (5,5) 商店 289g 购入（合计沉淀 337/340），购时 HP 8/94——技能挡被 Enrage/VitalSpark 征税时的结构性对策。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "STURDY_CLAMP",
     "kind": "relic",
-    "name": "坚固钳子",
-    "play_notes": "run-46 live: bought at HP 8/94; pairs with Meal Ticket shop-heal as the HP-economy recovery package.",
-    "rarity": "Rare"
+    "name": "坚固钳子"
   },
   "SWORD_OF_JADE": {
     "aliases": [
       "Sword of Jade",
       "SwordOfJade"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始，获得 3 点力量。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "SWORD_OF_JADE",
     "kind": "relic",
-    "name": "玉之剑",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "玉之剑"
   },
   "SWORD_OF_STONE": {
     "aliases": [
       "Sword of Stone",
       "SwordOfStone"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "击败 5 个精英后，变身为玉之剑。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "SWORD_OF_STONE",
     "kind": "relic",
-    "name": "石之剑",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "石之剑"
   },
   "SYMBIOTIC_VIRUS": {
     "aliases": [
       "Symbiotic Virus",
       "SymbioticVirus"
     ],
-    "character": "Defect",
-    "counter_shown": false,
-    "curated": false,
-    "description": "第 1 回合开始，引导 1 个暗球。",
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "SYMBIOTIC_VIRUS",
     "kind": "relic",
-    "name": "共生病毒",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "共生病毒"
   },
   "TANXS_WHISTLE": {
     "aliases": [
       "Tanx's Whistle",
       "TanxsWhistle"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，向牌库加入 1 张 Whistle。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "TANXS_WHISTLE",
     "kind": "relic",
-    "name": "坦克斯的哨子",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "坦克斯的哨子"
   },
   "TEA_OF_DISCOURTESY": {
     "aliases": [
       "Tea of Discourtesy",
       "TeaOfDiscourtesy"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "接下来 1 场战斗开始时，向抽牌堆洗入 2 张 Dazed。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "TEA_OF_DISCOURTESY",
     "kind": "relic",
-    "name": "无礼之茶",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "无礼之茶"
   },
   "THE_ABACUS": {
     "aliases": [
       "The Abacus",
       "TheAbacus"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每次洗抽牌堆时，获得 6 格挡。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "THE_ABACUS",
     "kind": "relic",
-    "name": "算盘",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "算盘"
   },
   "THE_BOOT": {
     "aliases": [
       "The Boot",
       "TheBoot"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "你对敌人造成的 1-4 点未格挡攻击伤害提升为 5 点。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "THE_BOOT",
     "kind": "relic",
-    "name": "发条靴",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "发条靴"
   },
   "THE_COURIER": {
     "aliases": [
       "The Courier",
       "TheCourier"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "商人价格 ×0.80；商人库存不再耗尽。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "THE_COURIER",
     "kind": "relic",
-    "name": "送货员",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "送货员"
   },
   "THROWING_AXE": {
     "aliases": [
       "Throwing Axe",
       "ThrowingAxe"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每场战斗打出的第一张牌额外再打出一次。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "THROWING_AXE",
     "kind": "relic",
-    "name": "投斧",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "投斧"
   },
   "TINGSHA": {
     "aliases": [
       "Tingsha"
     ],
-    "character": "Silent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "回合内每弃 1 张牌，对随机敌人造成 3 点伤害。",
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "TINGSHA",
     "kind": "relic",
-    "name": "铜钹",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "铜钹"
   },
   "TINY_MAILBOX": {
     "aliases": [
       "Tiny Mailbox",
       "TinyMailbox"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "在休息点休息时，获得 2 瓶随机药水。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "TINY_MAILBOX",
     "kind": "relic",
-    "name": "小邮箱",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "小邮箱"
   },
   "TOASTY_MITTENS": {
     "aliases": [
       "Toasty Mittens",
       "ToastyMittens",
-      "TOASTY_MITTENS",
       "暖和手套"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "Ancient 遗物（Tezcatara 赐福）：每场战斗抽牌前消耗抽牌堆1张牌（第1回合跳过固有）并获得1力量。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "TOASTY_MITTENS",
     "kind": "relic",
-    "name": "暖和手套",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "暖和手套"
   },
   "TOOLBOX": {
     "aliases": [
       "Toolbox"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "第 1 回合开始，从 3 张随机无色牌中选 1 张加入手牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "TOOLBOX",
     "kind": "relic",
-    "name": "工具箱",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "工具箱"
   },
   "TOUCH_OF_OROBAS": {
     "aliases": [
-      "TouchOfOrobas"
+      "Touch of Orobas",
+      "TouchOfOrobas",
+      "欧洛巴斯之触"
     ],
-    "curated": true,
-    "description": "欧洛巴斯 Act2 赐福选项：将 IRONCLAD 初始遗物燃烧之血替换为远古版黑暗之血（每战回 12 替代回 6）。标记换装行为；回血本体记在 BLACK_BLOOD。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Ancient"
+    },
     "id": "TOUCH_OF_OROBAS",
     "kind": "relic",
-    "name": "欧洛巴斯之触",
-    "play_notes": "run-49 live：Act2 赐福房选中；遗物栏显示 BLACK_BLOOD + TOUCH_OF_OROBAS 标记；+12/战同局验证。run-39 先例。另注：进入赐福房时转场治疗将玩家回满 80（run-49：29→80）——转场回血与换装相互独立。",
-    "rarity": "Ancient"
+    "name": "欧洛巴斯之触"
   },
   "TOUGH_BANDAGES": {
     "aliases": [
       "Tough Bandages",
       "ToughBandages"
     ],
-    "character": "Silent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "回合内每弃 1 张牌，获得 3 格挡。",
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "TOUGH_BANDAGES",
     "kind": "relic",
-    "name": "结实绷带",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "结实绷带"
   },
   "TOXIC_EGG": {
     "aliases": [
       "Toxic Egg",
       "ToxicEgg"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "向牌库加入的技能牌会被升级。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "TOXIC_EGG",
     "kind": "relic",
-    "name": "毒素之蛋",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "毒素之蛋"
   },
   "TOY_BOX": {
     "aliases": [
       "Toy Box",
       "ToyBox",
-      "TOY_BOX",
       "玩具盒"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "Ancient 遗物（Tezcatara 赐福）：拾取时获得4件蜡制遗物；每3场战斗最左侧蜡制遗物融化。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "TOY_BOX",
     "kind": "relic",
-    "name": "玩具盒",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "玩具盒"
   },
   "TRI_BOOMERANG": {
     "aliases": [
       "Tri-Boomerang",
       "TriBoomerang"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，选择 3 张攻击牌附魔 Instinct 1。Instinct 附魔（反编译）：有源攻击伤害 ×2（乘法，先于 Vulnerable 等其他乘区结算）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "TRI_BOOMERANG",
     "kind": "relic",
-    "name": "三刃回旋镖",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "三刃回旋镖"
   },
   "TUNGSTEN_ROD": {
     "aliases": [
       "Tungsten Rod",
       "TungstenRod"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每次将失去 HP 时，少失去 1 点。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "TUNGSTEN_ROD",
     "kind": "relic",
-    "name": "钨合金棍",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "钨合金棍"
   },
   "TUNING_FORK": {
     "aliases": [
       "Tuning Fork",
       "TuningFork"
     ],
-    "character": null,
-    "counter_shown": true,
-    "curated": true,
-    "description": "每打出 10 张技能牌，获得 7 点格挡。LIVE run-54：计数在 compact state 显示为 TUNING_FORK:n；多场战斗中 10/10 触发（第 10 张技能同帧 +7 挡，如与 True Grit / Armaments 同回合）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Uncommon"
+    },
     "id": "TUNING_FORK",
     "kind": "relic",
-    "name": "音叉",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "音叉"
   },
   "TWISTED_FUNNEL": {
     "aliases": [
       "Twisted Funnel",
       "TwistedFunnel"
     ],
-    "character": "Silent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始（第 1 回合），对所有敌人施加 4 层中毒。",
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "TWISTED_FUNNEL",
     "kind": "relic",
-    "name": "扭曲漏斗",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "扭曲漏斗"
   },
   "UNCEASING_TOP": {
     "aliases": [
       "Unceasing Top",
       "UnceasingTop"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "回合内手牌为空时，抽 1 张牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "UNCEASING_TOP",
     "kind": "relic",
-    "name": "不休陀螺",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "不休陀螺"
   },
   "UNDYING_SIGIL": {
     "aliases": [
       "Undying Sigil",
       "UndyingSigil"
     ],
-    "character": "Necrobinder",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Doom 不低于其当前 HP 的敌人对你造成的伤害 −50%；这些敌人的 Doom 在其回合开始时触发而非回合结束。",
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "UNDYING_SIGIL",
     "kind": "relic",
-    "name": "不死符文",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "不死符文"
   },
   "UNSETTLING_LAMP": {
     "aliases": [
       "Unsettling Lamp",
       "UnsettlingLamp"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每场战斗首次打出对敌施加减益的卡牌时，减益效果翻倍。数值示例：Uppercut+（基础 2 弱/2 易伤）作为首张 debuff 牌翻倍至 **4 弱/4 易伤**；首 debuff 翻倍作用于打出时的*战内当前值*——被 StoneCracker 先行升级的 Tremble+（7 级）翻倍可到 8 易伤，高于基础 3×2=6。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "UNSETTLING_LAMP",
     "kind": "relic",
-    "name": "不安油灯",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "不安油灯"
   },
   "VAJRA": {
     "aliases": [
       "Vajra"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "战斗开始，获得 1 点力量。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "VAJRA",
     "kind": "relic",
-    "live_notes": "LIVE run-56：Act1 商店购入 75g。每场战斗开始时 +1 力量。",
-    "name": "金刚杵",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "金刚杵"
   },
   "VAMBRACE": {
     "aliases": [
       "Vambrace"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "每场战斗中首次从卡牌获得格挡时，该格挡量翻倍（仅卡牌授予的挡；遗物/Fan 挡不计）。run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log)：与 PAELS_LEGION 乘法叠加 — Defend 5→20（Legion 清醒 ×2 × Vambrace ×2）、BloodWall 16→64 live 确认；仅每战第一张挡牌翻倍，后续按面值。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "VAMBRACE",
     "kind": "relic",
-    "name": "臂铠",
-    "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：每战首张挡牌翻倍——Defend 5→10 确认；Impervious 虚弱税前 30→60，虚弱2下结算 52、纯虚弱2结算 22（虚弱税作用于翻倍后的值）。Rage/装饰折扇的挡非卡牌授予，不占用 Vambrace 槽。",
-    "rarity": "Uncommon"
+    "name": "臂铠"
   },
   "VELVET_CHOKER": {
     "aliases": [
       "Velvet Choker",
       "VelvetChoker"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每回合 +1 最大能量；每回合最多打出 6 张牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "VELVET_CHOKER",
     "kind": "relic",
-    "name": "天鹅绒颈圈",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "天鹅绒颈圈"
   },
   "VENERABLE_TEA_SET": {
     "aliases": [
+      "Venerable Tea Set",
       "VenerableTeaSet",
-      "VENERABLE_TEA_SET",
       "古茶具套装"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "On entering a Rest Site, the next combat starts with +2 Energy (T1 only). LIVE run-57: procced at (14,5) rest → Act2 Boss T1 energy 6/4 with Prismatic Gem; also Act1 boss-class fights after rests. Shop-buy run-57 (13,5) 189g.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "VENERABLE_TEA_SET",
     "kind": "relic",
-    "name": "古茶具套装",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "古茶具套装"
   },
   "VERY_HOT_COCOA": {
     "aliases": [
       "Very Hot Cocoa",
       "VeryHotCocoa",
-      "VERY_HOT_COCOA",
       "极热可可"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "Ancient 遗物（Tezcatara 赐福）：每场战斗第1回合 +4 能量（回合开始结算，TurnNumber≤1）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "VERY_HOT_COCOA",
     "kind": "relic",
-    "name": "极热可可",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "极热可可"
   },
   "VEXING_PUZZLEBOX": {
     "aliases": [
       "Vexing Puzzlebox",
       "VexingPuzzlebox"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "第 1 回合开始时，从你的职业牌池随机添加 1 张牌到手牌；本回合免费。run-42 掉落：Juggling/Whirlwind/Mangle/Stoke/Bloodletting/Anger/Evil Eye/Brand/One-Two Punch/Armaments 均以 0c 出现 — 添加的牌该场战斗留在牌堆中；Vital Spark 下生成牌**可带 Tainted 到场**（run-42 One-Two Punch 打出收 +2 税）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "VEXING_PUZZLEBOX",
     "kind": "relic",
-    "name": "烦人机关盒",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "烦人机关盒"
   },
   "VITRUVIAN_MINION": {
     "aliases": [
       "Vitruvian Minion",
       "VitruvianMinion"
     ],
-    "character": "Regent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "名称含 Minion 标签的卡牌伤害翻倍、格挡翻倍。",
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "VITRUVIAN_MINION",
     "kind": "relic",
-    "name": "维特鲁威仆从",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "维特鲁威仆从"
   },
   "WAR_HAMMER": {
     "aliases": [
       "War Hammer",
       "WarHammer"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每次击败精英时，升级牌库中 4 张随机牌。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "WAR_HAMMER",
     "kind": "relic",
-    "name": "战锤",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "战锤"
   },
   "WAR_PAINT": {
     "aliases": [
       "War Paint",
       "WarPaint"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "拾取时，升级牌库中 2 张随机技能牌**拷贝**（并非同类全部拷贝 — run-42 live：一张防御获得 8 格挡，另一张仍为 5；已升级拷贝在休息点锻造列表中隐藏）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "WAR_PAINT",
     "kind": "relic",
-    "name": "战纹涂料",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "战纹涂料"
   },
   "WHETSTONE": {
     "aliases": [
       "Whetstone",
-      "WHETSTONE",
       "磨刀石"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "拾取时，随机升级牌库中 2 张攻击牌。对局43 Act2 商店 (5,0) live 价格 151金（未买——150金选了 Barricade）。目标随机——价值取决于攻击牌密度。 LIVE run-47：入手升级可通过伤害数字观察——打击基础 6 在磨刀石后结算 9（2 张随机攻击牌被升级）；牌库 JSON 仅显示基础 id，升级状态只能靠伤害推断。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "WHETSTONE",
     "kind": "relic",
-    "name": "磨刀石",
-    "play_notes": "对局43 live",
-    "rarity": "Common"
+    "name": "磨刀石"
   },
   "WHISPERING_EARRING": {
     "aliases": [
       "Whispering Earring",
       "WhisperingEarring"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "每回合 +1 最大能量；Vakuu 代你打出第一回合（至多 13 张牌）。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "WHISPERING_EARRING",
     "kind": "relic",
-    "name": "低语耳环",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "低语耳环"
   },
   "WHITE_BEAST_STATUE": {
     "aliases": [
       "White Beast Statue",
       "WhiteBeastStatue"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "药水总是出现在战斗奖励中。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "WHITE_BEAST_STATUE",
     "kind": "relic",
-    "name": "白兽雕像",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "白兽雕像"
   },
   "WHITE_STAR": {
     "aliases": [
       "White Star",
       "WhiteStar"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "精英战斗奖励额外掉落 1 份稀有卡牌奖励。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "WHITE_STAR",
     "kind": "relic",
-    "name": "白星",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "白星"
   },
   "WIND_DAUGHTER": {
     "aliases": [
-      "Daughter of the Wind",
-      "DAUGHTER_OF_THE_WIND"
+      "DAUGHTER_OF_THE_WIND",
+      "Daughter of the Wind"
     ],
-    "character": "shared",
-    "curated": false,
-    "description": "每打出一张攻击牌，获得 1 点格挡。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Event"
+    },
     "id": "WIND_DAUGHTER",
     "kind": "relic",
-    "name": "Daughter of the Wind",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Daughter of the Wind"
   },
   "WINGED_BOOTS": {
     "aliases": [
       "Winged Boots",
-      "WINGED_BOOTS",
       "羽翼之靴"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "3 次充能：选择下一层房间时无视当前路线连通性（下一行任意点可达）。对局43 Act1 Neow live 之选（对比：橙塑香盒+1 升级 / 白银熔炉 3 次卡奖升级+首个宝箱为空）。教条：留给休息/商店几何逃生与 Boss 前紧急跳层；对局43 全程未消耗（草稿几何守住了）——草稿正确时未用掉的充能不是损失。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "WINGED_BOOTS",
     "kind": "relic",
-    "name": "羽翼之靴",
-    "play_notes": "对局43 live",
-    "rarity": "Uncommon"
+    "name": "羽翼之靴"
   },
   "WING_CHARM": {
     "aliases": [
-      "Wing Charm",
-      "WING_CHARM"
+      "Wing Charm"
     ],
-    "character": "shared",
-    "curated": false,
-    "description": "战斗开始时获得 2 点敏捷。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Shop"
+    },
     "id": "WING_CHARM",
     "kind": "relic",
-    "name": "Wing Charm",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Wing Charm"
   },
   "WONGOS_MYSTERY_TICKET": {
     "aliases": [
       "Wongo's Mystery Ticket",
       "WongosMysteryTicket"
     ],
-    "character": null,
-    "counter_shown": true,
-    "curated": false,
-    "description": "完成 5 场战斗后，下一场战斗奖励额外获得 3 件遗物。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Event"
+    },
     "id": "WONGOS_MYSTERY_TICKET",
     "kind": "relic",
-    "name": "旺购神秘券",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "旺购神秘券"
   },
   "WONGO_CUSTOMER_APPRECIATION_BADGE": {
     "aliases": [
       "Wongo Customer Appreciation Badge",
       "WongoCustomerAppreciationBadge"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "无效果。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "WONGO_CUSTOMER_APPRECIATION_BADGE",
     "kind": "relic",
-    "name": "旺购客户感恩徽章",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "旺购客户感恩徽章"
   },
   "YUMMY_COOKIE": {
     "aliases": [
       "Yummy Cookie",
-      "YUMMY_COOKIE",
       "美味饼干"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "Ancient 遗物（Tezcatara 赐福）：拾取时永久升级自选4张牌。对局43 live。",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "YUMMY_COOKIE",
     "kind": "relic",
-    "name": "美味饼干",
-    "play_notes": "对局43 live",
-    "rarity": "Ancient"
+    "name": "美味饼干"
   }
 }

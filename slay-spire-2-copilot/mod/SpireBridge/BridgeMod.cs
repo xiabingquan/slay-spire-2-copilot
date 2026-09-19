@@ -13,7 +13,7 @@ namespace SpireCopilot.Bridge;
 public static class BridgeMod
 {
     public const string ModId = "spire-copilot-bridge";
-    public const string ModVersion = "0.4.5";
+    public const string ModVersion = "0.4.6";
     public const int ProtocolVersion = 1;
     public const int DefaultPort = 17612;
 
