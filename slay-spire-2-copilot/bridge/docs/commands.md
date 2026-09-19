@@ -55,7 +55,7 @@ State notes:
   every intent carries `type`/`class`/`label` plus `damage`/
   `total_damage`/`hits`/`base_damage` (Attack intents), `card_count`
   (Status intents), and `description` — full schema in
-  references/bridge/protocol.md. Loc leaks like `intents:FORMAT_EMPTY` are
+  bridge/docs/protocol.md. Loc leaks like `intents:FORMAT_EMPTY` are
   replaced server-side with the intent type. The compact view always prints
   `move=<move_id>` per monster (label content irrelevant — the structured
   fields are the source of truth), renders intent bits as `atk:8` /

@@ -379,25 +379,24 @@ information-contract gaps only.
 Consult the following files as needed for decisions and troubleshooting (paths
 are relative to this skill folder):
 
-references/ — consult knowledge:
+bridge/ — tooling docs and game data:
 
-- `references/README.md` — knowledge index
-- `references/bridge/commands.md` — CLI usage, action/state reference,
+- `bridge/docs/commands.md` — CLI usage, action/state reference,
   log-directory contract
-- `references/bridge/protocol.md` — wire protocol v1 (JSON Lines over TCP on
+- `bridge/docs/protocol.md` — wire protocol v1 (JSON Lines over TCP on
   localhost)
-- `spirectl_lib/data/characters.json` + `characters_zh.json` — playable
+- `bridge/spirectl_lib/data/characters.json` + `characters_zh.json` — playable
   characters, starters, archetypes
-- `spirectl_lib/data/cards.json` + `cards_zh.json` — cards
-- `spirectl_lib/data/potions.json` + `potions_zh.json` — potion effects
-- `spirectl_lib/data/powers.json` + `powers_zh.json` — powers
-- `spirectl_lib/data/relics.json` + `relics_zh.json` — relic effects
-- `spirectl_lib/data/intents.json` + `intents_zh.json` — reading enemy intents
-- `spirectl_lib/data/monsters.json` + `monsters_zh.json` — enemy move tables
+- `bridge/spirectl_lib/data/cards.json` + `cards_zh.json` — cards
+- `bridge/spirectl_lib/data/potions.json` + `potions_zh.json` — potion effects
+- `bridge/spirectl_lib/data/powers.json` + `powers_zh.json` — powers
+- `bridge/spirectl_lib/data/relics.json` + `relics_zh.json` — relic effects
+- `bridge/spirectl_lib/data/intents.json` + `intents_zh.json` — reading enemy intents
+- `bridge/spirectl_lib/data/monsters.json` + `monsters_zh.json` — enemy move tables
   and passives (moves nested under each monster)
-- `spirectl_lib/data/events.json` + `events_zh.json` — event rooms and known
+- `bridge/spirectl_lib/data/events.json` + `events_zh.json` — event rooms and known
   branches (options nested under each event)
-- `spirectl_lib/data/afflictions.json` + `afflictions_zh.json` — statuses and
+- `bridge/spirectl_lib/data/afflictions.json` + `afflictions_zh.json` — statuses and
   debuffs
 - JSON reference DB: entries are keyed by live game ids; resolve any id with
   `python3 bridge/spirectl.py lookup <key>` (flags `--json/--lang/--domain/--all`;

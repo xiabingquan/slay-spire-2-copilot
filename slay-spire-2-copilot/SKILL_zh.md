@@ -277,23 +277,22 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
 
 决策与排查时按需查阅以下文件（路径均相对本 skill 文件夹）：
 
-references/ — 查阅知识：
+bridge/ — 工具文档与游戏数据：
 
-- `references/README_zh.md` — 知识索引（中文版）
-- `references/bridge/commands.md` — CLI 用法、动作与状态参考、日志目录契约
-- `references/bridge/protocol.md` — 线协议 v1（本机 TCP 上的 JSON Lines）
-- `spirectl_lib/data/characters.json` + `characters_zh.json` — 可玩角色、
+- `bridge/docs/commands.md` — CLI 用法、动作与状态参考、日志目录契约
+- `bridge/docs/protocol.md` — 线协议 v1（本机 TCP 上的 JSON Lines）
+- `bridge/spirectl_lib/data/characters.json` + `characters_zh.json` — 可玩角色、
   初始配置、流派
-- `spirectl_lib/data/cards.json` + `cards_zh.json` — 卡牌
-- `spirectl_lib/data/potions.json` + `potions_zh.json` — 药水效果
-- `spirectl_lib/data/powers.json` + `powers_zh.json` — 能力/力量
-- `spirectl_lib/data/relics.json` + `relics_zh.json` — 遗物效果
-- `spirectl_lib/data/intents.json` + `intents_zh.json` — 敌人意图解读
-- `spirectl_lib/data/monsters.json` + `monsters_zh.json` — 敌人招式表与被动
+- `bridge/spirectl_lib/data/cards.json` + `cards_zh.json` — 卡牌
+- `bridge/spirectl_lib/data/potions.json` + `potions_zh.json` — 药水效果
+- `bridge/spirectl_lib/data/powers.json` + `powers_zh.json` — 能力/力量
+- `bridge/spirectl_lib/data/relics.json` + `relics_zh.json` — 遗物效果
+- `bridge/spirectl_lib/data/intents.json` + `intents_zh.json` — 敌人意图解读
+- `bridge/spirectl_lib/data/monsters.json` + `monsters_zh.json` — 敌人招式表与被动
   （招式嵌套在各怪物条目下）
-- `spirectl_lib/data/events.json` + `events_zh.json` — 事件房与已知分支
+- `bridge/spirectl_lib/data/events.json` + `events_zh.json` — 事件房与已知分支
   （选项嵌套在各事件条目下）
-- `spirectl_lib/data/afflictions.json` + `afflictions_zh.json` — 状态与
+- `bridge/spirectl_lib/data/afflictions.json` + `afflictions_zh.json` — 状态与
   负面效果
 - JSON 参考库：条目以 live 游戏 id 为 key；任何 id 用
   `python3 bridge/spirectl.py lookup <key>` 解析（flag：`--json/--lang/`

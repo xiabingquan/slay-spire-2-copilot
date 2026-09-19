@@ -57,20 +57,20 @@ Run logs are written to the given folder as `run-20260916-013052-a3f9c012.log`
       .gitignore
       slay-spire-2-copilot/                (skill folder — all runtime files)
         SKILL.md                           (skill definition / invocation contract)
-        bridge/                            (spirectl.py CLI)
+        bridge/                            (spirectl.py CLI + spirectl_lib/ package)
+          docs/                            (CLI cheat sheet, wire protocol)
+          spirectl_lib/data/               (characters/cards/powers/relics/potions/afflictions/intents/monsters/events — EN+ZH JSON pairs keyed by live game ids, identical EN/ZH schema)
         scripts/                           (shell scripts: mod install, watchdog)
         mod/SpireBridge/                   (in-game communication mod source)
-        references/bridge/                 (CLI cheat sheet, wire protocol)
-        spirectl_lib/data/                   (characters/cards/powers/relics/potions/afflictions/intents/monsters/events — EN+ZH JSON pairs keyed by live game ids; markdown twins retired after verification)
         memory/                            (run memory: user guide, per-run notes)
 
 Skill symlink: `~/.claude/skills/slay-spire-2-copilot` → the skill folder above.
 
 Doc health check: [doctor.md](doctor.md) at the repo root is a
 documentation-organization checklist — README stays a project overview;
-`mod/` and `bridge/` stay code-only; run memory is written only under
-`memory/runs/`; `spirectl_lib/data/` keeps static material only; docs carry no
-user-conversation content (comments, requests, improvement asks); docs don't
+`mod/` and `bridge/` hold code plus their fixed companions (`bridge/docs/`
+tooling docs, `bridge/spirectl_lib/data/` static game data); run memory is
+written only under `memory/runs/`; docs carry no user-conversation content (comments, requests, improvement asks); docs don't
 mix languages (Chinese docs stay Chinese, English docs stay English). How to
 run: have the agent execute the checklist (e.g. "run doctor.md") and fix
 violations. When to run: after each run ends, before committing documentation

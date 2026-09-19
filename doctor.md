@@ -39,7 +39,7 @@ Rule: the READMEs describe what the project is, how the repository is laid
 out, and how to load the skill. They must not contain skill-run content — no
 play narratives, run dates, per-run outcomes, lessons learned, or experience
 notes. That material belongs in the skill's `memory/` (check 3) or, if static,
-in `references/`.
+in code-adjacent homes (`bridge/docs/`, `bridge/spirectl_lib/data/`).
 
 Violation → move the material into the appropriate `memory/runs/` note (or
 drop it if it duplicates one) and restore overview-only wording.
@@ -49,23 +49,26 @@ drop it if it duplicates one) and restore overview-only wording.
 Paths: `slay-spire-2-copilot/mod/`, `slay-spire-2-copilot/bridge/`
 
 Rule: these are code directories — the in-game communication mod and the
-`spirectl` CLI. They must not hold documentation or any other non-code
-content: no stray `.md` notes, design write-ups, or run logs.
+`spirectl` CLI. Canonical companions only: `bridge/docs/` (tool usage and
+protocol) and `bridge/spirectl_lib/data/` (game reference data). No other
+non-code content: no stray `.md` notes, design write-ups, or run logs.
 
 Violation → delete if redundant; otherwise relocate: bridge/mod development
-notes → `references/bridge/` or `proposal.md`; run narratives →
+notes → `bridge/docs/` or `proposal.md`; run narratives →
 `memory/runs/`.
 
-### 3. memory/ and references/ have separate duties
+### 3. memory/ and code-adjacent docs have separate duties
 
-`memory/` records what happened in runs; `references/` holds material the
-agent consults while playing. Content never crosses between them.
+`memory/` records what happened in runs; code-adjacent homes hold material
+the agent consults while playing — `bridge/docs/` (tooling usage/protocol)
+and `bridge/spirectl_lib/data/` (game reference data). Content never
+crosses between them.
 
 #### 3a. Per-run memory lives only in memory/runs/
 
 All run memory is written to the run's own markdown file(s) under
 `slay-spire-2-copilot/memory/runs/` — and nowhere else. Not in
-`references/`, not in `SKILL.md`, not in the READMEs, not in `mod/`,
+`bridge/docs/`, not in `SKILL.md`, not in the READMEs, not in `mod/`,
 `bridge/`, or `scripts/`.
 
 Violation → move the content into the matching `memory/runs/` note, then
@@ -144,7 +147,7 @@ Rule: documentation must not record anything from user conversations — the
 user's comments, requests, improvement asks, or any paraphrase of what was
 said in a session. Docs describe the project, the game, and what happened in
 runs; they never describe the dialogue that produced them. This holds
-everywhere: READMEs, SKILL docs, `memory/`, `references/`.
+everywhere: READMEs, SKILL docs, `memory/`, `bridge/docs/`.
 
 Violation → strip the conversational framing. Keep an underlying fact only if
 it already belongs under that doc's duty (checks 1–4); delete pure dialogue

@@ -216,7 +216,7 @@ spirectl_lib/data/powers.json.
   `.pages.`), and `relic_id` when the option grants a relic.
 
 Full reference entries for any id on the wire: `spirectl lookup <key>`
-(references/bridge/commands.md).
+(bridge/docs/commands.md).
 
 ## Actions v1
 
