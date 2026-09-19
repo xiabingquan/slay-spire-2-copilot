@@ -6,15 +6,28 @@ Every run writes one bilingual pair under `memory/runs/`:
 
 How to fill this template (applies to every section):
 
-- Prose sections use Markdown unordered lists only (`- item`). No paragraphs,
-  no numbered lists.
-- Each prose section holds at most 5 bullets. When more exist, DROP the
-  weaker ones — never merge items into combined bullets. Concise only: keep
-  the strongest items with forward reference value for future runs.
-- The two tables (Summary facts, Run overview) are fixed format: fill the
-  cells, never free-write around them.
-- Bullet lines marked `e.g.` are format examples — replace them with this
-  run's content, matching the same granularity.
+- All content sections are fixed tables — fill the cells, never free-write
+  around them. The only list in a run note is Summary's two gain/loss bullets.
+- Each table holds at most 7 data rows. When more exist, DROP the weaker
+  ones — never merge rows to combine items. Concise only: keep the strongest
+  items with forward reference value for future runs.
+- What went well / What went poorly / Key moments share one 类型 enum:
+  - 决策 — route, shop buys, in-combat choices, potion timing (incl. acting
+    before verifying available information)
+  - 卡牌 — single-card picks and in-fight performance
+  - 遗物 — relic acquisition and value delivered
+  - 构筑 — deck/engine shape and synergy (card×relic×character), incl.
+    deck preparedness for known mechanics
+  - 过程 — execution discipline and tooling (one card per call, full state
+    re-reads, fail-loud hits, SL usage; incl. available info unused against
+    discipline)
+  - 客观 — non-decision factors: draws, drops, map geometry, economy luck
+- System-side gaps (incomplete state info, mechanics that contradict the
+  data/skill) are defects of skill/mod/data — fix them there when found;
+  never record them as run factors.
+- Cells marked `e.g.` are format examples — replace them with this run's
+  content, matching the same granularity. Type cells may only use the enum
+  words above.
 
 ## Summary
 
@@ -31,8 +44,8 @@ Core facts table (fill every row):
 | Seed | e.g. E77FN3DSSY |
 | SL count | e.g. 0 |
 
-Then exactly two bullets — the run's single biggest gain and single biggest
-loss:
+Then exactly two unordered-list bullets — the run's single biggest gain and
+single biggest loss:
 
 - e.g. Biggest gain: Act1 A2 spine fully cleared — all three elites killed per archive doctrine, boss fell T11.
 - e.g. Biggest loss: died Act2 Boss KaiserCrab T8 — Crusher STR ramp met an exhausted block package.
@@ -40,7 +53,7 @@ loss:
 ## Run overview
 
 Act-by-act FACTS ONLY. No analysis, no lessons, no mechanics commentary —
-those belong in the sections below. Fixed table, one row per Act reached
+those belong in the tables below. Fixed table, one row per Act reached
 (later Act rows stay `—` until reached). Names come from live state /
 references; live Chinese names are fine.
 
@@ -62,29 +75,37 @@ cross-run index table (对局序号 rows) described in the user guide.
 
 ## What went well
 
-Unordered list, at most 5 items — unexpectedly powerful plays worth
-repeating; decisions AND objective factors.
+Plays and outcomes worth repeating — decisions and objective factors. Prefer
+items with forward reference value for future runs over routine good
+outcomes. 代价/收益 column = the gain (numbers first). 下次参考 = how to
+reuse it next run.
 
-- e.g. Decision: route draft executed 1:1 — shop sink 275g before Elite①, 80/80 entry HP.
-- e.g. Card×relic: Vambrace first-block doubling live-verified across four fights (Defend 5→10).
-- e.g. Objective: draws stayed smooth all act — engine online by T2 in every fight.
+| # | 类型 | 内容 | 代价/收益 | 下次参考 |
+|---|---|---|---|---|
+| 1 | e.g. 决策 | e.g. 路线草稿 1:1 执行 | e.g. 商店沉淀 275g；Elite① 以 80/80 入场 | e.g. 沉淀口继续放在精英走廊之前 |
+| 2 | e.g. 遗物 | e.g. Vambrace 首挡翻倍入手并兑现 | e.g. live：Defend 5→10（四场战斗） | e.g. 挡引擎遗物优先于边际攻击牌 |
+| 3 | e.g. 客观 | e.g. 全程抽牌顺畅 | e.g. 每战 T2 前引擎上线 | e.g. —（客观因素仅作参考） |
 
 ## What went poorly
 
-Unordered list, at most 5 items — decision-level reflections and objective
-losses; each item states what to reconsider next run.
+Decision-level reflections and objective losses. 代价/收益 column = the
+cost. 下次参考 = one advisory line for next run (never a binding pattern).
 
-- e.g. Decision: chained bash calls drifted indices — unplanned Whirlwind fired in the centipede fight.
-- e.g. Build gap: no AoE vs INFESTED wave — deck shape lost the fight, not map geometry.
-- e.g. Objective: 120g stranded — the last act shop sat off the chosen spine.
+| # | 类型 | 内容 | 代价/收益 | 下次参考 |
+|---|---|---|---|---|
+| 1 | e.g. 过程 | e.g. 链式 bash 调用 | e.g. 千足虫战误触 Whirlwind | e.g. 一调用一动作，调用间重读 state |
+| 2 | e.g. 构筑 | e.g. 单体向牌组撞 INFESTED 波次 | e.g. 波次战败，对局结束 | e.g. 波次类精英进草稿构筑检查点 |
+| 3 | e.g. 决策 | e.g. 信息未核实即进战斗 | e.g. 多付税，HP 白损 | e.g. 进战前完成 lookup/档案核对 |
 
 ## Key moments
 
-Unordered list, at most 5 items — the turning points of THIS run. One line
-each, format `ActN (地点/楼层) — 事件：后果`. Cover the kinds that changed
-the run's course:
+The run's turning points — HP-costly decisions, engine relics, key cards,
+run-ending fights. Rows are chronological by 时机. 时机 format:
+`ActN (地点/楼层)` + optional turn for elite/boss fights. 代价/收益 = the
+consequence (HP swing, engine online, run over).
 
-- e.g. HP-costly decision: Act2 (9,1) — entered Prism elite at 34 HP, skipping the rest node: died T4 to tax stacking.
-- e.g. Engine relic: Act2 (2,1) shop — bought Vambrace 232g: first-block doubling completed the block engine.
-- e.g. Key card: Act2 (12,1) shop — bought Fiend Fire 147g: hand-scaled burst answered every multi-elite window.
-- e.g. Run-ending fight: Act2 Boss (15,3) T8 — KaiserCrab Crusher STR 8 turn: 28 damage met 5 block.
+| # | 时机 | 类型 | 内容 | 代价/收益 | 下次参考 |
+|---|---|---|---|---|---|
+| 1 | e.g. Act2 (2,1) 商店 | e.g. 遗物 | e.g. 232g 买下 Vambrace | e.g. 首挡翻倍，挡引擎成型 | e.g. 挡引擎遗物优先于边际攻击牌 |
+| 2 | e.g. Act2 (9,1) Elite | e.g. 决策 | e.g. 34HP 入场棱柱、跳过休息 | e.g. T4 死亡，对局结束 | e.g. 税/波次类精英前休息是硬参考线 |
+| 3 | e.g. Act2 Boss (15,3) T8 | e.g. 构筑 | e.g. 力量 8 回合 28 伤 vs 5 挡 | e.g. 挡密度缺口暴露，阵亡 | e.g. 力量爬升型 Boss 需弱化免疫挡循环 |
