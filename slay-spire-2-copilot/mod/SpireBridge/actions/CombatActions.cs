@@ -342,9 +342,48 @@ public static class CombatActions
         {
             return (false, "use_potion requires potion_index");
         }
-        if (!ActionExecutor.TryGetCombatPlayer(out Player? player, out CombatState combat, out _))
+        bool inCombat = ActionExecutor.TryGetCombatPlayer(out Player? player, out CombatState combat, out _);
+        if (!inCombat)
         {
-            return (false, "not in an active combat");
+            // Out-of-combat use (proposal 4): allowed only for potions whose
+            // model usage tag is anytime — usage=combat/unknown fail-louds.
+            // The game itself remains the final validator of the enqueue.
+            Player? runPlayer = null;
+            try
+            {
+                MegaCrit.Sts2.Core.Runs.RunState? runState =
+                    MegaCrit.Sts2.Core.Runs.RunManager.Instance.DebugOnlyGetState();
+                runPlayer = runState == null ? null : LocalContext.GetMe(runState.Players);
+            }
+            catch (Exception)
+            {
+                runPlayer = null;
+            }
+            if (runPlayer == null)
+            {
+                return (false, "no active run — use_potion needs combat or a live run");
+            }
+            if (potionIndex < 0 || potionIndex >= runPlayer.PotionSlots.Count
+                || runPlayer.PotionSlots[potionIndex] == null)
+            {
+                return (false, $"potion_index {potionIndex} is empty or out of range");
+            }
+            PotionModel oocPotion = runPlayer.PotionSlots[potionIndex]!;
+            string usage = "";
+            try { usage = oocPotion.Usage.ToString().ToLowerInvariant(); } catch (Exception) { }
+            if (!usage.Contains("anytime"))
+            {
+                return usage.Contains("combat")
+                    ? (false, $"potion {oocPotion.Id.Entry} usage={usage} — combat only; fail-loud outside combat")
+                    : (false, $"potion {oocPotion.Id.Entry} usage='{usage}' not recognized as anytime — fail-loud outside combat (no guessing)");
+            }
+            if (args.TryGetProperty("target_combat_id", out _))
+            {
+                return (false, "omit target_combat_id out of combat — anytime potions take no creature target");
+            }
+            PotionModel oocRef = oocPotion;
+            ActionExecutor.Fire(() => { oocRef.EnqueueManualUse(null); return Task.CompletedTask; }, "use potion (out of combat)");
+            return (true, $"submitted use_potion {oocPotion.Id.Entry} (out of combat, usage={usage})");
         }
         Player playerRef = player!;
         if (potionIndex < 0 || potionIndex >= playerRef.PotionSlots.Count || playerRef.PotionSlots[potionIndex] == null)
