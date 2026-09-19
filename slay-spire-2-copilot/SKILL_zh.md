@@ -65,7 +65,7 @@ Spire 2 via Claude Code or Codex"。
    `SPIREBRIDGE_LOG_DIR=<绝对文件夹> python3 bridge/spirectl.py doctor`
    - doctor 报 mod 文件 MISSING，或已安装 dll 早于 mod/SpireBridge 下任一源码
      `*.{cs,csproj,json}`（首次运行，或上次安装后代码有改动）→ 执行
-     `bash scripts/install-mod.sh`（dotnet 构建并将 spire-copilot-bridge 拷入游戏
+     `bash scripts/install_mod.sh`（dotnet 构建并将 spire-copilot-bridge 拷入游戏
      mods 目录），然后重跑 doctor。
    - 游戏进程未运行 → `spirectl launch`（经 Steam 启动游戏并等待桥接）。首次带
      mod 启动时游戏内会出现一次 mod 警告，用户在游戏内点击接受——这是除发起
@@ -86,7 +86,7 @@ game_over——都要接管：读取状态并推进。game_over 时 `act start_r
 
 持续游玩是指令：每局结束后（写完本局 memory 记录）立即开始下一局。绝不死锁：若某个
 action 循环而状态不变，诊断界面（补上服务端缺失的支持），重建 mod
-（`bash scripts/install-mod.sh`），重启并继续。出牌决策保留在 AI 客户端——仅在
+（`bash scripts/install_mod.sh`），重启并继续。出牌决策保留在 AI 客户端——仅在
 AI 选定战术后，才允许机械式批量下发 action。
 
 ### 角色轮换
@@ -225,7 +225,7 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
 ## 自我迭代
 
 - 工具缺陷（spirectl/mod/协议问题）：在当前分支的本仓库内修复；C# 有改动则重建
-  mod（`bash scripts/install-mod.sh`），doctor 验证，然后在本局 memory 记录
+  mod（`bash scripts/install_mod.sh`），doctor 验证，然后在本局 memory 记录
   （memory/runs/）里写明原因与修复。以 [fix] 或 [feature] 性质提交。
 - 策略文档被实战证伪：改正文档，并记录到本局 memory 记录。
 - 游戏补丁破坏 hook（doctor 握手正常但 state 字段缺失/错误）：必要时反编译游戏
@@ -254,7 +254,7 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
   `run-20260916-013052-a3f9c012.log`）。
 - `doctor` 打印 `[0] run log dir: ... | SPIREBRIDGE_LOG_DIR=set|unset`；出现
   unset 时先修复再继续。
-- 外部看门狗（crontab 中的 `scripts/watchdog-external.sh`）从**它自己的环境**读取
+- 外部看门狗（crontab 中的 `scripts/watchdog_external.sh`）从**它自己的环境**读取
   `SPIREBRIDGE_LOG_DIR`——若要跟踪本会话日志，需在 crontab 行 export 同一文件夹；
   变量未设置时它跳过日志新鲜度检查（同样无回退）。
 - 看门狗仅在武装状态下运行检查并产生告警记录；用户停止游玩时解除武装，使其

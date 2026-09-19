@@ -83,7 +83,7 @@ Execute in order; all of the following are the skill's own work:
    `SPIREBRIDGE_LOG_DIR=<abs-folder> python3 bridge/spirectl.py doctor`
    - doctor reports mod files MISSING, or the installed dll is older than any
      source under mod/SpireBridge `*.{cs,csproj,json}` (first run, or code
-     changed since the last install) → run `bash scripts/install-mod.sh`
+     changed since the last install) → run `bash scripts/install_mod.sh`
      (dotnet build; copies spire-copilot-bridge into the game's mods folder),
      then re-run doctor.
    - Game process not running → `spirectl launch` (starts the game via Steam
@@ -115,7 +115,7 @@ and begins a new run; a new run file is derived in the log folder.
 Continuous play is the mandate: after every run ends (run memory written),
 start the next run immediately. Never deadlock: if an action loops without a
 state change, diagnose the screen (implement the missing server-side support),
-rebuild the mod (`bash scripts/install-mod.sh`), relaunch, and resume. Card-play
+rebuild the mod (`bash scripts/install_mod.sh`), relaunch, and resume. Card-play
 decisions stay in the AI client — mechanical act-dumps are allowed only after
 the AI has chosen the tactic.
 
@@ -300,7 +300,7 @@ When the bridge reports incomplete info (`INFO-INCOMPLETE` / `info_complete=fals
   session. Instead:
   1. Find the **root cause** (StateBuilder reflection miss? unsupported screen type? mod/game
      version drift? missing protocol field?).
-  2. Fix it (client/mod code; rebuild with `bash scripts/install-mod.sh` when C# changed).
+  2. Fix it (client/mod code; rebuild with `bash scripts/install_mod.sh` when C# changed).
   3. **Feishu-notify** the user: what broke, what was changed.
   4. **Continue the SAME run** — in-game menu path to main menu then `act continue_run`
      (see "SL restore path"); relaunch the game process only if it actually crashed.
@@ -313,7 +313,7 @@ information-contract gaps only.
 ## Self-iteration
 
 - Tool defect (spirectl/mod/protocol issue): fix the code in this repo on the
-  current branch; if C# changed, rebuild the mod (`bash scripts/install-mod.sh`)
+  current branch; if C# changed, rebuild the mod (`bash scripts/install_mod.sh`)
   and verify with doctor, then note the cause and fix in the current run's
   memory note (memory/runs/). Commit with nature [fix] or [feature].
 - Strategy doc proven wrong in play: correct the doc and note it in the run
@@ -352,7 +352,7 @@ information-contract gaps only.
   `run-20260916-013052-a3f9c012.log`).
 - `doctor` prints `[0] run log dir: ... | SPIREBRIDGE_LOG_DIR=set|unset`;
   on unset, fix first, then continue.
-- The external watchdog (crontab `scripts/watchdog-external.sh`) reads
+- The external watchdog (crontab `scripts/watchdog_external.sh`) reads
   `SPIREBRIDGE_LOG_DIR` from **its own environment** — export the same folder
   on the crontab line to track this session's logs; when the variable is unset
   it skips the log-age check (no fallback there either).

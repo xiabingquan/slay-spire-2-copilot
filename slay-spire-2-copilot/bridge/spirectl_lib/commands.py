@@ -119,7 +119,7 @@ def cmd_doctor(args):
     print(f"[1] mod files: {'OK' if dll.exists() and manifest.exists() else 'MISSING'} ({mod_dir})")
     if not dll.exists() or not manifest.exists():
         ok = False
-        print("     fix: run scripts/install-mod.sh")
+        print("     fix: run scripts/install_mod.sh")
     pids = gamectl.game_process_pids()
     game_running = bool(pids)
     print(f"[2] game process: {'running pid=' + pids[0] if game_running else 'not running'}")

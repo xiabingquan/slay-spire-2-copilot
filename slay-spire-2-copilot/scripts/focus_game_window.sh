@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# focus-game-window.sh — move the Slay the Spire 2 window onto the display
+# focus_game_window.sh — move the Slay the Spire 2 window onto the display
 # where this session's terminal window lives.
 #
 # User preference 2026-09-18: the game must NOT pop up on the work screen;
@@ -28,9 +28,9 @@ if [ "${1:-}" = "--record" ]; then
   if [ -n "${RX:-}" ] && [ -n "${RY:-}" ] && [[ "$RX" =~ ^-?[0-9]+$ && "$RY" =~ ^-?[0-9]+$ ]]; then
     mkdir -p "$STATE_DIR" 2>/dev/null || true
     printf '%s,%s\n' "$RX" "$RY" > "$STATE_FILE" 2>/dev/null || true
-    echo "focus-game-window: recorded game window position {$RX,$RY}"
+    echo "focus_game_window: recorded game window position {$RX,$RY}"
   else
-    echo "focus-game-window: could not read game window position; record skipped"
+    echo "focus_game_window: could not read game window position; record skipped"
   fi
   exit 0
 fi
@@ -45,12 +45,12 @@ if [ -f "$STATE_FILE" ]; then
   if [[ "${SX:-}" =~ ^-?[0-9]+$ && "${SY:-}" =~ ^-?[0-9]+$ ]]; then
     for _ in 1 2 3; do
       if osascript -e "tell application \"System Events\" to tell process \"$GAME_PROCESS\" to set position of window 1 to {$SX, $SY}" >/dev/null 2>&1; then
-        echo "focus-game-window: restored $GAME_PROCESS to last position {$SX,$SY}"
+        echo "focus_game_window: restored $GAME_PROCESS to last position {$SX,$SY}"
         exit 0
       fi
       sleep 2
     done
-    echo "focus-game-window: restore to {$SX,$SY} failed; falling back to terminal-relative placement"
+    echo "focus_game_window: restore to {$SX,$SY} failed; falling back to terminal-relative placement"
   fi
 fi
 
@@ -93,7 +93,7 @@ terminal_app_from_env() {
 
 APP=$(terminal_app_from_tree || terminal_app_from_env || true)
 if [ -z "${APP:-}" ]; then
-  echo "focus-game-window: no terminal app detected; skipping"
+  echo "focus_game_window: no terminal app detected; skipping"
   exit 0
 fi
 
@@ -101,7 +101,7 @@ POS=$(osascript -e "tell application \"System Events\" to tell process \"$APP\" 
 TX=$(echo "$POS" | awk -F', ' '{print $1}' | tr -d ' ')
 TY=$(echo "$POS" | awk -F', ' '{print $2}' | tr -d ' ')
 if [ -z "${TX:-}" ] || [ -z "${TY:-}" ] || ! [[ "$TX" =~ ^-?[0-9]+$ && "$TY" =~ ^-?[0-9]+$ ]]; then
-  echo "focus-game-window: could not read $APP window position; skipping"
+  echo "focus_game_window: could not read $APP window position; skipping"
   exit 0
 fi
 
@@ -112,11 +112,11 @@ GY=$((TY + OFFSET_Y))
 # retry briefly before giving up.
 for _ in 1 2 3; do
   if osascript -e "tell application \"System Events\" to tell process \"$GAME_PROCESS\" to set position of window 1 to {$GX, $GY}" >/dev/null 2>&1; then
-    echo "focus-game-window: moved $GAME_PROCESS to {$GX,$GY} (session terminal $APP at {$TX,$TY})"
+    echo "focus_game_window: moved $GAME_PROCESS to {$GX,$GY} (session terminal $APP at {$TX,$TY})"
     exit 0
   fi
   sleep 2
 done
 
-echo "focus-game-window: could not move $GAME_PROCESS window (missing window or Accessibility permission); skipped"
+echo "focus_game_window: could not move $GAME_PROCESS window (missing window or Accessibility permission); skipped"
 exit 0

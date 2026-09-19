@@ -58,7 +58,7 @@ def steam_fully_ready():
 
 
 def _run_window_script(argv, label):
-    """Run scripts/focus-game-window.sh and echo its output; never raise.
+    """Run scripts/focus_game_window.sh and echo its output; never raise.
 
     Args:
         argv: Full argument list for subprocess.run.
@@ -77,30 +77,30 @@ def _run_window_script(argv, label):
 
 
 def focus_game_window():
-    """Place the game window after launch via focus-game-window.sh (cosmetic).
+    """Place the game window after launch via focus_game_window.sh (cosmetic).
 
     Relaunches restore the window to its last recorded screen+position when a
     record exists (written by record_game_window_pos on graceful stops);
     otherwise the script falls back to terminal-display placement. A failed
     move must never block launch recovery.
     """
-    script = REPO_ROOT / "scripts" / "focus-game-window.sh"
+    script = REPO_ROOT / "scripts" / "focus_game_window.sh"
     if not script.exists():
         return
-    _run_window_script(["bash", str(script)], "focus-game-window")
+    _run_window_script(["bash", str(script)], "focus_game_window")
 
 
 def record_game_window_pos():
     """Record the CURRENT game window position for later restore (cosmetic).
 
     Called on graceful stop paths while the window still exists; writes the
-    position cache via focus-game-window.sh --record. A failed record only
+    position cache via focus_game_window.sh --record. A failed record only
     means the next launch falls back to terminal-relative placement.
     """
-    script = REPO_ROOT / "scripts" / "focus-game-window.sh"
+    script = REPO_ROOT / "scripts" / "focus_game_window.sh"
     if not script.exists():
         return
-    _run_window_script(["bash", str(script), "--record"], "record-game-window-pos")
+    _run_window_script(["bash", str(script), "--record"], "record_game_window_pos")
 
 
 def stop_game():
