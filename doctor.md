@@ -198,7 +198,12 @@ language. Entries must never contain run records, dates, or session notes.
 Data edits land only with `python3 scripts/build_game_reference_json.py
 --check` exiting 0. An entry whose `name` still equals its `id` is an
 incomplete display name — lookup works; fill it from codex/aliases when the
-entry is next touched (tracked as cosmetic, not a hard failure).
+entry is next touched (tracked as cosmetic, not a hard failure). ZH `name`
+values are web-sourced canonical names (codex / wikis) — a fabricated
+translation is a violation. Elite/boss entries are never thin one-line
+summaries: complete move cycles, every passive Power with amount/threshold,
+every applied status with values (kill-window doctrine still goes to
+memory/lessons, not into the data).
 
 Violation → delete the run-specific content; it belongs in `memory/runs/`,
 not here.

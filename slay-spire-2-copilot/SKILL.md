@@ -94,7 +94,8 @@ Execute in order; all of the following are the skill's own work:
      stop` / `sl`) records the game window's current screen+position; the
      next launch RESTORES the window to that record. No record or failed
      restore → fallback: launching terminal's screen + fixed offset
-     (2026-09-18 preference). Cosmetic only — never blocks launch.
+     (2026-09-18 preference). Cosmetic only — never blocks launch. The game
+     may run fullscreen or windowed — mode is not constrained.
 
 4. **Handshake check**: confirm the versions in doctor output. Game version
    drift versus the mod's min_game_version is a hard stop: report it
@@ -133,6 +134,15 @@ IRONCLAD, SILENT, DEFECT, NECROBINDER, REGENT. Use
 matches button names / character-id substrings and skips locked characters.
 Record the character used in each run's memory note and run log;
 character-specific observations belong in that run's memory note.
+
+Modded-profile facts: runs live on the game's **modded save profile**
+(`.../modded/profile1/`), separate from the user's vanilla profile and
+starting near-fresh — a locked roster there is **by design, not a defect**.
+Never copy or merge vanilla save progress into the modded namespace; never
+flag the lock as a bug. Character unlocks are Timeline-epoch-gated, not
+run-count-gated: `start_run` drains the Timeline automatically; if a
+character is unexpectedly locked, run `spirectl act timeline_sync` at the
+main menu and re-check.
 
 ### Game loop
 
@@ -273,7 +283,12 @@ When the run ends (game_over screen, or abandon):
    authoritative structure source, prose doctrine goes to memory/lessons) —
    then run `python3 scripts/build_game_reference_json.py --check`; it must
    exit 0 before any commit. Memory holds play insights and run process only,
-   never game base data.
+   never game base data. Elite/boss entries get the full treatment: complete
+   move cycles with numbers, every passive Power with amount/threshold, every
+   applied status with values — thin one-line summaries are not enough for
+   these classes; kill-window play doctrine goes to memory/lessons, not into
+   the data store. ZH `name` values are web-sourced canonical names (codex /
+   wikis) — never fabricated translations.
 3. Update `memory/overview.md`: insert one row at the TOP of the run table,
    then recount the `## 统计` crosstabs (战绩总览 / 进阶进度) from the table.
 4. Distill this run's forward-valuable experience into the matching
@@ -294,24 +309,32 @@ When the run ends (game_over screen, or abandon):
    `memory/runs/`. overview.md holds only overall run results (its table
    with the leading **对局序号** column, newest run on top).
 
-## Info-incomplete contract
+## Info-incomplete & anomaly contract
 
-When the bridge reports incomplete info (`INFO-INCOMPLETE` / `info_complete=false`):
+Any phenomenon that does not match expectations — bridge `INFO-INCOMPLETE` /
+`info_complete=false`, printed state ≠ applied effect, silent no-ops,
+deadlocks, unexplained combat outcomes — follows one contract:
 
 - **Transient** (immediate re-read shows `info_complete`): auto-recover and continue — no special flow.
-- **Persistent** (re-read still false, or an info-contract hard-stop): do NOT hard-stop the
-  session. Instead:
-  1. Find the **root cause** (StateBuilder reflection miss? unsupported screen type? mod/game
-     version drift? missing protocol field?).
-  2. Fix it (client/mod code; rebuild with `bash scripts/install_mod.sh` when C# changed).
-  3. **Feishu-notify** the user: what broke, what was changed.
-  4. **Continue the SAME run** — in-game menu path to main menu then `act continue_run`
-     (see "SL restore path"); relaunch the game process only if it actually crashed.
-     **Never `start_run` to replace a wedged run.**
+- **Everything else**: do NOT hard-stop the session and do NOT start a new
+  run. Instead:
+  1. **Root-cause it**: mod defect (StateBuilder reflection miss? reward
+     mapping ghost nodes? unsupported screen type? version drift?) /
+     strategy error (against memory doctrine?) / mechanic misunderstanding
+     (resolve via lookup/perplexity?) / process debt (stale indices?
+     batched calls?).
+  2. Fix it (client/mod code; rebuild with `bash scripts/install_mod.sh` when
+     C# changed; strategy/mechanic findings fold into data/lessons per their
+     zoning).
+  3. When the fix needs the mod loaded: **SL restore path** (in-game menu →
+     main menu → `act continue_run`) — **continue the SAME run; never
+     `start_run` to replace it.**
+  4. **Feishu-notify** the user: what broke, root cause, what was changed.
   5. Record the cause and fix in the current run's memory note.
 
-This does not replace fail-loud (illegal act submits still reject immediately); it covers
-information-contract gaps only.
+Fail-loud still governs illegal act submits (immediate `ok=false`
+rejection); this contract governs what happens after an anomaly appears —
+the two do not conflict.
 
 ## Self-iteration
 
@@ -324,6 +347,10 @@ information-contract gaps only.
 - Game patch broke hooks (doctor handshake ok but state fields missing/wrong):
   decompile the game assembly if needed, adapt the mod, and note the fix in
   the run memory.
+- Mod features that touch progression/unlocks: **parity rule** — replay
+  normal-play flows through the game's own UI/commands; never hard-grant
+  roster or unlocks; repair steps may only write save states the game
+  itself would write for earned progress (no extra buffs, no detriments).
 
 ## Notes
 
@@ -376,6 +403,14 @@ information-contract gaps only.
   game crash (process gone) justifies `spirectl launch`; `spirectl sl`'s
   stop→launch flow is superseded by this rule and must not be used for
   routine SLs.
+- **Hard-wedge exception (crash-class only)**: the game process alive but
+  the main thread stuck in an internal loop — bridge handshake dead,
+  `state` returns `screen=?`, AND the in-game pause menu physically
+  unprocessable — means the in-game SL path does not exist in that moment.
+  Only this class, or a mod DLL rebuild (mods load at game boot, so a
+  rebuild needs one process restart), justifies `spirectl sl` stop→launch.
+  Routine wedges (slow state, stuck overlay, illegal action) still use the
+  in-game menu path. Always report which class you are in and why.
 
 ## References
 

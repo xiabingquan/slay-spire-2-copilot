@@ -73,7 +73,8 @@ Spire 2 via Claude Code or Codex"。
    - 窗口落位（策略 2026-09-19）：每次优雅停止（`spirectl stop` / `sl`）
      都会记录游戏窗口当前的屏幕+位置；下一次启动将窗口还原到该记录。无
      记录或还原失败 → 回退方案：启动终端所在屏幕 + 固定偏移（2026-09-18
-     偏好）。仅外观问题——绝不阻塞启动。
+     偏好）。仅外观问题——绝不阻塞启动。游戏全屏或窗口模式运行均可——
+     不约束显示模式。
 
 4. **握手校验**：确认 doctor 输出中的版本。游戏版本与 mod 的 min_game_version
    漂移属硬性中止项：如实报告，不要自行发挥。
@@ -104,6 +105,13 @@ IRONCLAD、SILENT、DEFECT、NECROBINDER、REGENT。使用
 `act start_run --args '{"character":"SILENT"}'` 等；菜单自动化按按钮名/角色 id
 子串匹配，自动跳过未解锁角色。在本局 memory 记录与运行日志中记录每局所用角色；角色专属观察写在该局的
 memory 记录里。
+
+modded 存档事实：对局运行在游戏的 **modded 存档配置**（`.../modded/profile1/`）
+上，与用户的原版配置分离、近似全新开档——该配置上的锁定阵容是**设计如此，
+不是缺陷**。绝不将原版存档进度拷贝/合并进 modded 命名空间，绝不把锁定
+当作 bug 上报。角色解锁由 Timeline 纪元揭示门控，而非局数门控：
+`start_run` 会自动排干 Timeline；若角色意外处于锁定态，在主菜单执行
+`spirectl act timeline_sync` 后复查。
 
 ### 游戏循环
 
@@ -215,7 +223,11 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
    key = live 游戏 id，schema 见 bridge/spirectl_lib/schema.py（信封 +
    按 kind 的 detail；codex 为权威结构源，散文教条归 memory/lessons）——
    随后运行 `python3 scripts/build_game_reference_json.py --check`，提交前
-   必须 exit 0。memory 只记对局感悟与过程，不记游戏基础数据。
+   必须 exit 0。memory 只记对局感悟与过程，不记游戏基础数据。精英/Boss
+   条目按完整规格处理：完整招式循环与数值、每个被动 Power 的层数/阈值、
+   每个施加状态的数值——这两类绝不接受一行式摘要；击杀窗等打法教条写
+   memory/lessons，不进数据存储。`_zh` 的 `name` 取联网核实的官方向译名
+   （codex/图鉴）——绝不臆想翻译。
 3. 更新 `memory/overview.md`：对局表**顶部**插入一行，随后按表格重新核算
    `## 统计` 交叉表（战绩总览 / 进阶进度）。
 4. 将本局前向价值经验沉淀进 `memory/lessons/` 对应分类文件——能与条目
@@ -231,6 +243,26 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
    overview.md 只放整体对局结果（含 **对局序号** 列的表格，最新局置顶、
    序号最大）。
 
+## 信息不完整与异常契约
+
+任何不符合预期的现象——bridge 报 `INFO-INCOMPLETE` / `info_complete=false`、
+打印状态 ≠ 实际生效、静默 no-op、死锁、无法解释的战斗结果——统一走同一契约：
+
+- **瞬态**（立即重读即见 `info_complete`）：自动恢复继续，无需专门流程。
+- **其余一切**：**绝不硬停会话，绝不新开一局**。流程：
+  1. **根因定位**：mod 缺陷（StateBuilder 反射遗漏？奖励映射幽灵节点？
+     不支持的界面类型？版本漂移？）/ 策略错误（对照 memory 教条）/
+     机制误解（lookup/perplexity 解析）/ 过程债（陈旧下标？批量调用？）。
+  2. 修正（客户端/mod 代码；C# 有改动则 `bash scripts/install_mod.sh`
+     重建；策略/机制结论按分层折入 data/lessons）。
+  3. 修正需要 mod 生效时：走 **SL 恢复路径**（游戏内菜单 → 主菜单 →
+     `act continue_run`）——**续同一局，绝不 `start_run` 替换**。
+  4. **飞书通知**用户：现象、根因、修正内容。
+  5. 全程记入当局 run memory 记录。
+
+fail-loud 仍管辖非法 action 提交（立即 `ok=false` 拒绝）；本契约管辖异常
+出现之后的处理——两者不冲突。
+
 ## 自我迭代
 
 - 工具缺陷（spirectl/mod/协议问题）：在当前分支的本仓库内修复；C# 有改动则重建
@@ -239,6 +271,9 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
 - 策略文档被实战证伪：改正文档，并记录到本局 memory 记录。
 - 游戏补丁破坏 hook（doctor 握手正常但 state 字段缺失/错误）：必要时反编译游戏
   程序集，适配 mod，并将修复记录进本局 memory 记录。
+- 触及进度/解锁的 mod 功能：**parity 规则**——一切通过游戏自身 UI/命令的
+  正常游玩流程重放实现；绝不硬授予阵容或解锁；修复步骤只能写游戏在
+  正常获得进度时自己会写的状态（不加 buff，不加 detriment）。
 
 ## 注意事项
 
@@ -281,6 +316,12 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
   主菜单 → `act continue_run`。只有游戏进程真正崩溃（进程已不存在）才允许
   `spirectl launch`；`spirectl sl` 的 stop→launch 流程被本规则取代，不得用于
   常规 SL。
+- **硬卡死例外（仅限崩溃级）**：游戏进程存活但主线程卡死在内部循环——
+  bridge 握手超时、`state` 返回 `screen=?`、且游戏内暂停菜单物理上无法
+  操作——意味着该时刻游戏内 SL 路径不存在。仅此级别，或 mod DLL 重建
+  （mod 在游戏启动时加载，重建需要一次进程重启），才允许 `spirectl sl`
+  stop→launch。常规卡顿（state 变慢、界面覆盖层卡住、非法动作）仍走
+  游戏内菜单路径。每次都要报告你处于哪一级、为什么。
 
 ## 参考文档
 
