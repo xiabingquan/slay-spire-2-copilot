@@ -201,7 +201,7 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
    memory/runs/<角色>_<YYYYmmdd-HHMMSS>_<hash8>.md（角色 id 在前，后接
    run 日志的时间戳与哈希，小写、下划线分隔）及其对应的中文版
    memory/runs/<角色>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md——两者内容必须完全
-   对应。均遵循 memory/user guide.md 的要点与 memory/template.md 的章节
+   对应。均遵循 memory/user_guide.md 的要点与 memory/template.md 的章节
    结构（Summary 核心信息表格 / Run overview 对局概况表 / What went well
    做得好的地方 / What went poorly 做得不好的地方 / Key moments 关键
    节点）。引用 run 日志时只写文件名，绝不写个人绝对路径。
@@ -302,7 +302,7 @@ bridge/ — 工具文档与游戏数据：
 
 memory/ — 对局记忆（已纳入版本控制）：
 
-- `memory/user guide.md` — 用户手写的记忆要点（agent 记录时的参考）
+- `memory/user_guide.md` — 用户手写的记忆要点（agent 记录时的参考）
 - `memory/template.md` — 每局 memory 记录的章节模板
 - `memory/runs/` — 每局一条记录及其 `_zh` 中文版，文件名
   <角色>_<YYYYmmdd-HHMMSS>_<hash8>.md / <角色>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md

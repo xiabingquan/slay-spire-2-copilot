@@ -74,9 +74,9 @@ All run memory is written to the run's own markdown file(s) under
 Violation → move the content into the matching `memory/runs/` note, then
 remove it from the wrong location.
 
-#### 3b. template.md and user guide.md are frozen mid-run
+#### 3b. template.md and user_guide.md are frozen mid-run
 
-`memory/template.md` and `memory/user guide.md` define how run notes are
+`memory/template.md` and `memory/user_guide.md` define how run notes are
 recorded. They must not be modified while a run is in progress.
 
 Violation → revert the mid-run edit; surface the proposed change to the user

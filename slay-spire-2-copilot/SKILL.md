@@ -261,7 +261,7 @@ When the run ends (game_over screen, or abandon):
    number + 1; then character id, run log timestamp and hash, underscore-
    separated) and its Chinese twin
    memory/runs/<run-number-4-digit-padded>_<CHARACTER>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md — the two files
-   must stay content-aligned. Both follow memory/user guide.md and the
+   must stay content-aligned. Both follow memory/user_guide.md and the
    section structure of memory/template.md (Summary table of core run facts /
    Run overview / What went well / What went poorly / Key moments). Cite the
    run log by file name only —
@@ -406,7 +406,7 @@ bridge/ — tooling docs and game data:
 
 memory/ — run memory (version-controlled):
 
-- `memory/user guide.md` — user-written guidance for what agents should record
+- `memory/user_guide.md` — user-written guidance for what agents should record
 - `memory/template.md` — section template for per-run memory notes
 - `memory/runs/` — one note per run plus a `_zh` Chinese twin, named
   <run-number-4-digit-padded>_<CHARACTER>_<YYYYmmdd-HHMMSS>_<hash8>.md / _zh.md — the run
