@@ -1,59 +1,244 @@
-# 敌人对策（lessons）
+# Enemies (lessons)
 
-跨局沉淀的敌人教条——普通敌人/精英/Boss 分节，章内按 Act 二级分目；建议性措辞，招式与数值 lookup `spirectl_lib/data/monsters.json`。
+Class sections (common/elite/boss) with act subsections — experience cells stay empty until filled. Monster data: `spirectl lookup <id>`.
 
-# 普通敌人
-
-## Act 1
-
-- 棘刺蟾蜍类（THORNS + SPIKE 爆发）：低血走廊杀手——16HP 级入场 + 零挡手 = 极高死亡率；走廊战不豁免入场 HP 参考线
-- 异蛙寄生虫（INFESTED）：本体击杀只是开始，扭动虫波次（感染稀释 + 力量叠层）才是真战斗——无 AoE/消耗手段时按 Boss 级备战
-
-## Act 2
-
-- 地精佣兵类（THIEVERY 偷金）：偷金不改打法，按意图算挡即可；勿因掉金心态打乱节奏
-- 碗虫组/熟睡甲虫类（ROLL_OUT）：睡醒窗口是免费输出回合；配速按醒来后的爆发意图预留挡
-
-## Act 3
-
-- 暂无沉淀——首次遭遇后按「战前 lookup + live 意图」推进
-
-# 精英
+# Elites
 
 ## Act 1
 
-- 乐加维林族母：未格挡伤害剥镀甲 → 唤醒眩晕窗；唤醒窗内是主要击杀窗
-- 仪式兽（Plow 类）：阈值眩晕窗（live 验证约 150 档，lookup PLOW 类 power 确认）；RINGING 类税 Cure All 无效，按 Power 税管理
-- 旧日雕像（Slow 类）：Slow 张数配速——burrow 循环前收头
-- 骇鳗（SHRIEK 眩晕跨界）：跨界血线附近的眩晕取消是有价值的免费窗
+| id | name | experience |
+|---|---|---|
+| PHANTASMAL_GARDENER | Phantasmal Gardener |  |
 
-## Act 2
+## Unlabelled
 
-- 蜂群术士：信息素升级回合前击杀；HIVE 滚层是竞速计时器——爆发窗在 T1 易伤
-- 感染棱柱（Vital Spark 零技能）：零技能策略——只打攻击+能力件；自伤引擎 tick 必须计入该战生存预算
-- 残杀千足虫（三段 REATTACH）：三段同窗清场教条——无 AoE/同窗输出时勿低血入场；段力量叠加拉长战局即消耗战
-- 异蛙寄生虫波次：见「普通敌人 Act 1」——精英级遭遇时波次要求更硬
+| id | name | experience |
+|---|---|---|
+| BYGONE_EFFIGY | Bygone Effigy |  |
+| DECIMILLIPEDE_SEGMENT_BACK | Decimillipede Segment (Back) |  |
+| DECIMILLIPEDE_SEGMENT_MIDDLE | Decimillipede Segment (Middle) |  |
+| INFESTED_PRISM | Infested Prism |  |
+| MECHA_KNIGHT | Mecha Knight |  |
+| PHROG_PARASITE | Phrog Parasite |  |
+| SKULKING_COLONY | Skulking Colony |  |
+| SOUL_NEXUS | Soul Nexus |  |
+| TERROR_EEL | Terror Eel |  |
 
-## Act 3
-
-- 灵魂枢纽/机甲骑士类：暂无沉淀——战前 lookup + 意图数字推进
-
-# Boss
+# Bosses
 
 ## Act 1
 
-- 墨影幻灵（Slippery 泄层）：充能层在时每个攻击实例恰 1 伤（live 验证）——按攻击频次泄层，泄尽后进入全伤爆发窗
-- 瀑布巨兽（EXPLODE 类）：Boss 战后/阶段末的挡值银行要求——击杀拉闸前备好 EXPLODE 意图的挡值数字
-- 灵魂异鱼（Beckon 状态牌税）：状态牌税按张数计 HP——每张 Beckon 类牌打出即省税
-- 同族神官（母体-随从战）：母体与随从的击杀次序按威胁源与税结构定，参考 enemies 与 live 意图
-
-## Act 2
-
-- 皇蟹（双体：火箭 + Crusher）：火箭优先击杀（LASER 计时器竞速）；Crusher 蟹怒（+6 力量、大额无源挡）后按膨胀意图算挡需求
-- 无厌沙虫（Sandpit 计时器）：FE（FranticEscape）是 +1 延时卡而非禁手——吞噬钟全程可受控；伤害竞速与挡源预算分开算
-- 知识恶魔（双税竞速）：解体税 + Ponder 治疗循环——竞速窗伤害预算 vs 每回合税额先做纸上计算；Power 类税 Cure All 无效，不为其留药位
+| id | name | experience |
+|---|---|---|
+| CoralCluster | Coral Cluster |  |
+| LAGAVULIN_MATRIARCH | Lagavulin Matriarch |  |
+| LagavulinMatriarch | LagavulinMatriarch |  |
+| SkulkingColony | Skulking Colony |  |
+| SoulFysh | SoulFysh |  |
+| WATERFALL_GIANT | Waterfall Giant |  |
 
 ## Act 3
 
-- 女王 + 火炬头：威胁源优先——当随从是唯一威胁源时它就是正确首杀目标；99 弱化环境下只有弱化免疫伤害源（Power/遗物 tick/毒）有意义
-- 实验体类（ADAPTABLE 自体复活）：死亡不结束战斗直至复活逻辑完成——击杀窗口按复活意图规划，或先拆引擎件
+| id | name | experience |
+|---|---|---|
+| TEST_SUBJECT | Test Subject |  |
+
+## Act 4
+
+| id | name | experience |
+|---|---|---|
+| LagavulinMatriarch | LagavulinMatriarch |  |
+
+## Unlabelled
+
+| id | name | experience |
+|---|---|---|
+| Aeonglass | Aeonglass |  |
+| CEREMONIAL_BEAST | Ceremonial Beast |  |
+| Crusher | Crusher |  |
+| KNOWLEDGE_DEMON | Knowledge Demon |  |
+| QUEEN | Queen |  |
+| Queen | Queen |  |
+| Rocket | Rocket |  |
+| THE_INSATIABLE | The Insatiable |  |
+| TORCH_HEAD_AMALGAM | Torch Head Amalgam |  |
+| TestSubject | TestSubject |  |
+| TheInsatiable | TheInsatiable |  |
+
+# Common enemies
+
+## Act 1
+
+| id | name | experience |
+|---|---|---|
+| CALCIFIED_CULTIST | Calcified Cultist |  |
+| DampCultist | Damp Cultist |  |
+| FAT_GREMLIN | Fat Gremlin |  |
+| FOSSIL_STALKER | Fossil Stalker |  |
+| GREMLIN_MERC | Gremlin Merc |  |
+| HAUNTED_SHIP | Haunted Ship |  |
+| LIVING_FOG | Living Fog |  |
+| MysteriousKnight | Mysterious Knight |  |
+| PUNCH_CONSTRUCT | Punch Construct |  |
+| SEAPUNK | Seapunk |  |
+| SEWER_CLAM | Sewer Clam |  |
+| SLUDGE_SPINNER | Sludge Spinner |  |
+| SNEAKY_GREMLIN | Sneaky Gremlin |  |
+
+## Act 2
+
+| id | name | experience |
+|---|---|---|
+| Assembler | Assembler |  |
+| Axebot | Axebot |  |
+| BOWLBUG_EGG | Bowlbug (Egg) |  |
+| BOWLBUG_ROCK | Bowlbug (Rock) |  |
+| BOWLBUG_SILK | Bowlbug (Silk) |  |
+| CALCIFIED_CULTIST | Calcified Cultist |  |
+| DampCultist | Damp Cultist |  |
+| EXOSKELETON | Exoskeleton |  |
+| FatGremlin | Fat Gremlin |  |
+| GasBomb | Gas Bomb |  |
+| LEAF_SLIME_M | Leaf Slime (M) |  |
+| LEAF_SLIME_S | Leaf Slime (S) |  |
+| LOUSE_PROGENITOR | Louse Progenitor |  |
+| Larvae | Larvae |  |
+| MysteriousKnight | Mysterious Knight |  |
+| PaelsSoldier | Pael's Soldier |  |
+| SLUMBERING_BEETLE | Slumbering Beetle |  |
+| SPINY_TOAD | Spiny Toad |  |
+| SneakyGremlin | Sneaky Gremlin |  |
+| THIEVING_HOPPER | Thieving Hopper |  |
+| TWIG_SLIME_M | Twig Slime (M) |  |
+
+## Act 3
+
+| id | name | experience |
+|---|---|---|
+| Assembler | Assembler |  |
+| Axebot | Axebot |  |
+| BattleFriendV2 | Battle Friend V2.0 |  |
+| BattleFriendV3 | Battle Friend V3.0 |  |
+| FABRICATOR | Fabricator |  |
+
+## Unlabelled
+
+| id | name | experience |
+|---|---|---|
+| AssassinRubyRaider | AssassinRubyRaider |  |
+| AxeRubyRaider | AxeRubyRaider |  |
+| BattleFriendV1 | BattleFriendV1 |  |
+| BattlewornDummy | BattlewornDummy |  |
+| BowlbugEgg | BowlbugEgg |  |
+| BowlbugNectar | BowlbugNectar |  |
+| BowlbugRock | BowlbugRock |  |
+| BowlbugSilk | BowlbugSilk |  |
+| BruteRubyRaider | BruteRubyRaider |  |
+| BygoneEffigy | BygoneEffigy |  |
+| Byrdonis | Byrdonis |  |
+| CORPSE_SLUG | Corpse Slug |  |
+| CUBEX_CONSTRUCT | Cubex Construct |  |
+| CeremonialBeast | CeremonialBeast |  |
+| Chomper | Chomper |  |
+| Coral | Coral |  |
+| CorpseSlug | CorpseSlug |  |
+| CrossbowRubyRaider | CrossbowRubyRaider |  |
+| CubexConstruct | CubexConstruct |  |
+| DAMP_CULTIST | Damp Cultist |  |
+| DECIMILLIPEDE | Decimillipede |  |
+| DEFECT | Defect (player) |  |
+| DEVOTED_SCULPTOR | Devoted Sculptor |  |
+| Decimillipede | Decimillipede |  |
+| DecimillipedeSegmentBack | DecimillipedeSegmentBack |  |
+| DecimillipedeSegmentFront | DecimillipedeSegmentFront |  |
+| DecimillipedeSegmentMiddle | DecimillipedeSegmentMiddle |  |
+| DevotedSculptor | DevotedSculptor |  |
+| ENTOMANCER | Entomancer |  |
+| EYE_WITH_TEETH | Eye with Teeth |  |
+| Entomancer | Entomancer |  |
+| Exoskeleton | Exoskeleton |  |
+| EyeWithTeeth | EyeWithTeeth |  |
+| FROG_KNIGHT | Frog Knight |  |
+| FUZZY_WURM_CRAWLER | Fuzzy Wurm Crawler |  |
+| FlailKnight | FlailKnight |  |
+| Flyconid | Flyconid |  |
+| Fogmog | Fogmog |  |
+| ForgottenThing | ForgottenThing |  |
+| FossilStalker | FossilStalker |  |
+| FrogKnight | FrogKnight |  |
+| FuzzyWurmCrawler | FuzzyWurmCrawler |  |
+| GlobeHead | GlobeHead |  |
+| GremlinMerc | GremlinMerc |  |
+| HUNTER_KILLER | Hunter Killer |  |
+| HauntedShip | HauntedShip |  |
+| Headbutt | Headbutt |  |
+| HunterKiller | HunterKiller |  |
+| IRONCLAD | Ironclad (player) |  |
+| InfestedPrism | InfestedPrism |  |
+| Inklet | Inklet |  |
+| KaiserCrab | KaiserCrab |  |
+| KinFollower | KinFollower |  |
+| KinPriest | KinPriest |  |
+| KnowledgeDemon | KnowledgeDemon |  |
+| LeafSlimeM | LeafSlimeM |  |
+| LeafSlimeS | LeafSlimeS |  |
+| LivingFog | LivingFog |  |
+| LivingShield | LivingShield |  |
+| LostThing | LostThing |  |
+| LouseProgenitor | LouseProgenitor |  |
+| MITE | Aberrant Mite |  |
+| MagiKnight | MagiKnight |  |
+| Mawler | Mawler |  |
+| MechKnight | MechKnight |  |
+| Myte | Myte |  |
+| NECROBINDER | Necrobinder (player) |  |
+| Nibbit | Nibbit |  |
+| Obscura | Obscura |  |
+| Osty | Osty |  |
+| Ovicopter | Ovicopter |  |
+| OwlMagistrate | OwlMagistrate |  |
+| Parafright | Parafright |  |
+| PhantasmalGardener | PhantasmalGardener |  |
+| PhrogParasite | PhrogParasite |  |
+| PunchConstruct | PunchConstruct |  |
+| REGENT | Regent (player) |  |
+| RubyRaiders | RubyRaiders |  |
+| SCROLL_OF_BITING | Scroll of Biting |  |
+| SILENT | Silent (player) |  |
+| SLIMED_BERSERKER | Slimed Berserker |  |
+| SLITHERING_STRANGLER | Slithering Strangler |  |
+| ScrollOfBiting | ScrollOfBiting |  |
+| SewerClam | SewerClam |  |
+| ShrinkerBeetle | ShrinkerBeetle |  |
+| Skulking | Skulking |  |
+| SlimedBerserker | SlimedBerserker |  |
+| SlitheringStrangler | SlitheringStrangler |  |
+| SludgeSpinner | SludgeSpinner |  |
+| SlumberingBeetle | SlumberingBeetle |  |
+| SnappingJaxfruit | SnappingJaxfruit |  |
+| SoulNexus | SoulNexus |  |
+| SpectralKnight | SpectralKnight |  |
+| SpinyToad | SpinyToad |  |
+| THE_LOST | The Lost |  |
+| THE_OBSCURA | The Obscura |  |
+| TOADPOLE | Toadpole |  |
+| TUNNELER | Tunneler |  |
+| TWO_TAILED_RAT | Two-Tailed Rat |  |
+| TerrorEel | TerrorEel |  |
+| TheObscura | TheObscura |  |
+| ThievingHopper | ThievingHopper |  |
+| Toadpole | Toadpole |  |
+| TorchHeadAggregate | TorchHeadAggregate |  |
+| ToughEgg | ToughEgg |  |
+| TowerGunner | TowerGunner |  |
+| TrackerRubyRaider | TrackerRubyRaider |  |
+| Tunneler | Tunneler |  |
+| TwigSlimeM | TwigSlimeM |  |
+| TwigSlimeS | TwigSlimeS |  |
+| TwoTailedRats | TwoTailedRats |  |
+| Vantom | Vantom |  |
+| VineShambler | VineShambler |  |
+| WaterfallGiant | WaterfallGiant |  |
+| Whirlwind | Whirlwind |  |
+| Wriggler | Wriggler |  |
+| generic | Generic shared moves |  |

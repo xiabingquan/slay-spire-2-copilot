@@ -1,26 +1,85 @@
-# 事件房选择（lessons）
+# Events (lessons)
 
-跨局沉淀的事件选择经验——按 Act 分节；建议性措辞，事件与选项数据 lookup `spirectl_lib/data/events.json`。
+Full event inventory by act — experience cells stay empty until filled. Event data: `spirectl lookup <id>`.
 
-# Act 1
+# Underdocks
 
-- Neow/章首赐福（boon 房）评估建议：
-  - 经济类（珍珠/金币类）供养后续商店沉淀——适合商店在脊线上的路线
-  - 卡包/三选一类：按当前构筑缺口选，勿为「可能有用」破坏已成型脊线
-  - 诅咒/代价类：对照诅咒代价池与自身删牌位评估，未解码条目先 lookup 再选
-- 三选一类事件（卷轴箱/铅镇纸/羊毛剪等）：带 HP 代价的选项对照当前血线与前方休息几何——「付出 16HP 删 2 张」在无休息脊线上可能是死价
-- 未解码事件选项不盲选：data 中无条目或描述为空 = 先 research 再决定（lookup miss 是研究触发器）
+| id | name | experience |
+|---|---|---|
+| GLOWING_WATER | Drowning Beacon |  |
 
-# Act 2
+# Unlabelled
 
-- DARV 类章首赐福：能量类（如 Sozu +1 能/回合）适合爆发竞速构筑，代价（药水线关闭）要按无药 HP 预算评估；删牌/变化类适合稀释牌组
-- 事件经济项（LIFT 换 MaxHP、金币换属性类）：MaxHP 是硬通货——血线健康时优先，低血时先解决生存
-
-# Act 3
-
-- 暂无沉淀——事件以 lookup data + live 屏选项描述为准
-
-# 通用原则
-
-- 事件屏的 live 选项 description 是权威；data 条目作机制参考，两者不一致时以 live 为准并考虑订正 data
-- boon 房是每章第一个决策面——不要因赶路跳过（地图 available_map_points 有时不列起点，注意 state 的 act_start_room 字段）
+| id | name | experience |
+|---|---|---|
+| ABYSSAL_BATHS | Abyssal Baths |  |
+| AMALGAMATOR | Amalgamator |  |
+| AROMA_OF_CHAOS | Aroma Of Chaos |  |
+| BATTLEWORN_DUMMY | Battleworn Dummy |  |
+| BRAIN_LEECH | Brain Leech |  |
+| BUGSLAYER | Bugslayer |  |
+| BYRDONIS_NEST | Byrdonis Nest |  |
+| COLORFUL_PHILOSOPHERS | Colorful Philosophers |  |
+| COLOSSAL_FLOWER | Colossal Flower |  |
+| CRYSTAL_SPHERE | Crystal Sphere |  |
+| DARV | Darv / Act2 boon room |  |
+| DENSE_VEGETATION | Dense Vegetation |  |
+| DOLL_ROOM | Doll Room |  |
+| DOORS_OF_LIGHT_AND_DARK | Doors Of Light And Dark |  |
+| DROWNING_BEACON | Drowning Beacon |  |
+| ENDLESS_CONVEYOR | Endless Conveyor |  |
+| FAKE_MERCHANT | Fake Merchant |  |
+| FIELD_OF_MAN_SIZED_HOLES | Field Of Man Sized Holes |  |
+| GRAVE_OF_THE_FORGOTTEN | Grave Of The Forgotten |  |
+| HUNGRY_FOR_MUSHROOMS | Hungry For Mushrooms |  |
+| INFESTED_AUTOMATON | Infested Automaton |  |
+| JUNGLE_MAZE_ADVENTURE | Jungle Maze Adventure |  |
+| LOST_WISP | Lost Wisp |  |
+| LUMINOUS_CHOIR | Luminous Choir |  |
+| MORPHIC_GROVE | Morphic Grove |  |
+| NEOW | Neow |  |
+| NONUPEIPE | Nonupeipe |  |
+| OROBAS | Orobas |  |
+| PAEL | Pael |  |
+| POTION_COURIER | Potion Courier |  |
+| PROCEED | Proceed |  |
+| PUNCH_OFF | Punch Off |  |
+| RANWID_THE_ELDER | Ranwid The Elder |  |
+| REFLECTIONS | Reflections |  |
+| RELIC_TRADER | Relic Trader |  |
+| ROOM_FULL_OF_CHEESE | Room Full Of Cheese |  |
+| ROUND_TEA_PARTY | Round Tea Party |  |
+| SAPPHIRE_SEED | Sapphire Seed |  |
+| SELF_HELP_BOOK | Self Help Book |  |
+| SLIPPERY_BRIDGE | Slippery Bridge |  |
+| SPIRALING_WHIRLPOOL | Spiraling Whirlpool |  |
+| SPIRIT_GRAFTER | Spirit Grafter |  |
+| STEADY | Steady (enchant) |  |
+| STONE_OF_ALL_TIME | Stone Of All Time |  |
+| SUNKEN_STATUE | Sunken Statue |  |
+| SUNKEN_TREASURY | Sunken Treasury |  |
+| SYMBIOTE | Symbiote |  |
+| TABLET_OF_TRUTH | Tablet Of Truth |  |
+| TANX | Tanx |  |
+| TEA_MASTER | Tea Master |  |
+| TEZCATARA | Tezcatara |  |
+| THE_ARCHITECT | The Architect |  |
+| THE_FUTURE_OF_POTIONS | The Future Of Potions |  |
+| THE_LANTERN_KEY | The Lantern Key |  |
+| THE_LEGENDS_WERE_TRUE | The Legends Were True |  |
+| THIS_OR_THAT | This Or That |  |
+| TINKER_TIME | Tinker Time |  |
+| TRASH_HEAP | Trash Heap |  |
+| TRIAL | Trial |  |
+| UNREST_SITE | Unrest Site |  |
+| VAKUU | Vakuu |  |
+| VORTEX | Vortex / Spiral (enchant) |  |
+| WAR_HISTORIAN_REPY | War Historian Repy |  |
+| WATERLOGGED_SCRIPTORIUM | Waterlogged Scriptorium |  |
+| WELCOME_TO_WONGOS | Welcome To Wongos |  |
+| WELLSPRING | Wellspring |  |
+| WHISPERING_HOLLOW | Whispering Hollow |  |
+| WOOD_CARVINGS | Wood Carvings |  |
+| ZEN_WEAVER | Zen Weaver |  |
+| 宾邦 | Bing Bong (event option) |  |
+| 抱抱先生 | Mr. Struggles (event option) |  |
