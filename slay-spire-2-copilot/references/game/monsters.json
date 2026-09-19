@@ -7437,7 +7437,7 @@
       "ACID_MOVE",
       "INHALE"
     ],
-    "description": "Fuzzy Wurm Crawler (毛绒伏地虫), Act1: 48-56 HP live. Cycle FIRST_ACID_GOOP (single 4 A:6) → INHALE (self +7 Strength) → ACID_GOOP (single 4 + current Str) → repeat. **Inhale STACKS**: LIVE run-52 — first Inhale STR 7, second Inhale STR 14, AcidGoop intent then 18[base4]. Kill within 3-4 turns before the second Inhale compounds; 'STR:7 after one inhale' from runs-38/42 is the first-stack value only.",
+    "description": "毛绒伏地虫 Act1, 48-56 HP live. Cycle FIRST_ACID_GOOP (single 4 A:6) → INHALE (self +7 Strength, STACKS) → ACID_GOOP (4+Str) → repeat. Kill within 3-4 turns before second Inhale compounds (run-52/55 live: killed T3 both times before second inhale; single-inhale acid intent 11-class).",
     "display_names": [
       "FuzzyWurmCrawler",
       "毛绒伏地虫"
@@ -8862,13 +8862,13 @@
       "Inklet",
       "墨宝"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "JAB_MOVE",
       "WHIRLWIND_MOVE",
       "PIERCING_GAZE_MOVE"
     ],
-    "description": "JAB_MOVE = single attack 3 (A:4); WHIRLWIND_MOVE = multi attack 2 (A:3) ×3; PIERCING_GAZE_MOVE = single attack 10 (A:11). Passive SlipperyPower: while charges remain, HP lost per hit is capped at 1; each unblocked hit ≥1 consumes 1 charge.",
+    "description": "Act1 hallway '墨宝', 8-17 HP live (run-55 trio 17/12/13). SLIPPERY_POWER:1 each on spawn: any HP loss >=1 reduced to exactly 1; each unblocked hit >=1 consumes 1 charge — first hit per body is chip, second is full damage. JAB single attack 3 (A:4, live intent atk:3 — archive 15-class entries belong to other monsters). WHIRLWIND multi 2x3 (A:3/hit, live intent multi:2x3). PIERCING_GAZE single attack 10 (A:11). Cycle JAB→RAND→(PIERCING_GAZE|WHIRLWIND) per graph. Doctrine: spread one hit per body to strip charges, then focus-fire bodies whose attacks land that turn (run-55: 3 Strikes killed the 12hp Whirlwind inklet T1).",
     "display_names": [
       "Inklet",
       "墨宝"
@@ -12893,7 +12893,7 @@
     ],
     "curated": true,
     "cycle": [],
-    "description": "Act1 elite (run-38 live A1: 64 HP, display 异蛙寄生虫). INFESTED_POWER 4 (on spawn): on death spawns 4 Wrigglers (StartStunned=true); combat cannot end while this power owner is alive — spawn wave continues the fight (run-38 live: parasite T2-burst to 9, T3 Anger-9 exact kill, 4 Wrigglers spawned same frame, wave cleared by T8). INFECT = add 3 Infection status cards to each target discard (Infection: unplayable, cost −1; if in hand at end of turn take 3 damage each — LIVE: blockable, remaining block absorbs the tick). LASH (this monster) = multi 4 (A:5) x4 — distinct from single-class LASH entries. Doctrine: burst parasite on free/elect windows (double-potion turn run-38: 37 dmg), then clear stunned wave 2-tap/body; Infection cards blockable but clog hands — kill-timer through hand dilution.",
+    "description": "Act1 elite, 61-68 HP. INFESTED_POWER on spawn (amount 4): death spawns 4 Wrigglers same frame; combat end blocked until wave resolves. INFECT = +3 Infection cards per target discard (unplayable cost -1; if in hand at end of turn take 3 damage each — LIVE run-55: blockable, block absorbs the tick). Cycle INFECT→LASH. LASH live run-55: multi 4x4 (A:5/hit class); Weak Potion cut live intent to 3x4 (WEAK_POWER:3, ~25% per hit). Doctrine: burst body on vuln windows (run-55: body dead T4 under Bash+), then wave grind — wave is the real fight, plan AoE/kill-clock BEFORE entering.",
     "display_names": [
       "PhrogParasite",
       "异蛙寄生虫"
@@ -15151,7 +15151,7 @@
       "CHOMP",
       "STOMP_MOVE"
     ],
-    "description": "Act1 monster (run-38 live: 40/44 HP pair). SHRINKER = debuff applies SHRINK_POWER −1 to the player (negative = while beetle lives): player attack damage ×0.70 (live floor math: Bash 8→5, Strike 6→4); removed when applier dies — kill-timer class. Cycle SHRINKER → RAND branch (TACKLE w1.00) ; sibling leaf-slime cycles GOOP(Status×1)/STICKY(Status×2)/CLUMP(8 A:9) per nested entries. SHINK live note: powers.json archive line said ×0.75 but DamageDecrease-30 formula = ×0.70 — live floor values confirmed ×0.70. LIVE run-52: Shrink ×0.70 floor math reconfirmed (upgraded strike 12→8-9, base 9→6); SHRINK lifted live the moment the beetle died (SHRINK_POWER vanished from the player powers line — applier-death removal held); Chomp intent atk:7 live this fight; pair-partner Fuzzy Wurm 56 HP.",
+    "description": "缩小甲虫 Act1, 39-44 HP live (run-55: 39). SHRINKER = debuff SHRINK_POWER −1 on player: player attack damage ×0.70 (live run-55: Bash 8→5 floor; archive ×0.75 line superseded). Removed when beetle dies — kill-timer class. CHOMP live run-55 intent atk:7 (archive 15-class entries belong to other contexts — live intents are authority). STOMP single 15 (A:17) class. Cycle SHRINKER→CHOMP→STOMP. Doctrine: dump full-damage attacks on the pre-shrink turn; every later attack turn pays ×0.70 until the kill.",
     "display_names": [
       "ShrinkerBeetle",
       "缩小甲虫"
@@ -20837,13 +20837,13 @@
       "Wriggler",
       "扭动虫"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "NASTY_BITE_MOVE",
       "WRIGGLE_MOVE",
       "SPAWNED_MOVE"
     ],
-    "description": "SPAWNED_MOVE = stun (their spawn turn does nothing); NASTY_BITE_MOVE = single attack 6 (A:7); WRIGGLE_MOVE = buff +2 Strength. Cycle NASTY_BITE ↔ WRIGGLE.",
+    "description": "Phrog Parasite wave body, 17-21 HP live (run-55 spawn: 21/19/17/20). SPAWNED_MOVE = stun on spawn turn. NASTY_BITE single attack 6 (A:7) — LIVE run-55: intent scales with Strength (6→8→10→12→14 as wriggles stack +2 Str each). WRIGGLE = +2 Strength self + status card. Cycle NASTY_BITE↔WRIGGLE, phase-offset per body. Doctrine: kill bite-phases first; str-stack makes every later bite the run's kill timer — run-55 died to the last wave body at 3/21 for 14 through 8 block.",
     "display_names": [
       "Wriggler",
       "扭动虫"

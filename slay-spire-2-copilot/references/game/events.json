@@ -2687,8 +2687,8 @@
       "Sapphire Seed",
       "蓝宝石种子"
     ],
-    "curated": false,
-    "description": "Eat → heal 9 + upgrade; Plant → Enchant Sown.",
+    "curated": true,
+    "description": "Act1 event. Options: EAT (heal 9 + upgrade a card — deck_select then proceed to confirm; run-55 live: Bash→Bash+) / PLANT (enchant a card with Sow — Sow is a Retain attack 8 AoE class; enchant effect archive thin). Both positive; EAT is the known-value pick when a key card wants upgrading.",
     "id": "SAPPHIRE_SEED",
     "kind": "event",
     "name": "Sapphire Seed",
@@ -4579,8 +4579,8 @@
       "Wellspring",
       "泉水"
     ],
-    "curated": false,
-    "description": "Bottle → potion reward; Bathe → remove cards (curses var 1 — Guilty add handler exists).",
+    "curated": true,
+    "description": "Act1 event. Options: BOTTLE (gain 1 random potion — free, positive) / BATHE (remove 1 card from deck, add 1 Guilt curse — curse-cost). Policy: never take curse-cost without cause; run-55 live: Bottle rolled Weak Potion.",
     "id": "WELLSPRING",
     "kind": "event",
     "name": "Wellspring",

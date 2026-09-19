@@ -2613,8 +2613,8 @@
       "Sapphire Seed",
       "蓝宝石种子"
     ],
-    "curated": false,
-    "description": "Eat → 回复 9 + 升级；Plant → 附魔 Sown。",
+    "curated": true,
+    "description": "Act1 事件。选项：吃下（回 9 生命 + 升级一张牌——deck_select 后 proceed 确认；run-55 live：Bash→Bash+）/ 种植培育（给一张牌附魔播种——Sow 为保留类 8 伤 AoE 攻击；附魔效果档案单行）。两项均正面；关键牌需要升级时吃下是已知价值选项。",
     "id": "SAPPHIRE_SEED",
     "kind": "event",
     "name": "蓝宝石种子",
@@ -4453,8 +4453,8 @@
       "Wellspring",
       "泉水"
     ],
-    "curated": false,
-    "description": "Bottle → 药水奖励；Bathe → 移除卡牌（curses 变量 1——存在 Guilty 追加处理器）。",
+    "curated": true,
+    "description": "Act1 事件。选项：装瓶（获得 1 瓶随机药水——无代价正面）/ 沐浴（从牌组移除 1 张牌，添加 1 张愧疚咒牌——诅咒代价）。策略参考：无特殊理由不接诅咒代价；run-55 live：装瓶掷出 Weak 药。",
     "id": "WELLSPRING",
     "kind": "event",
     "name": "泉水",

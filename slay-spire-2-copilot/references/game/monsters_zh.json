@@ -7200,7 +7200,7 @@
       "ACID_MOVE",
       "INHALE"
     ],
-    "description": "Fuzzy Wurm Crawler（毛绒伏地虫），Act1：run-52 live 48-56 HP。循环 FIRST_ACID_GOOP（单体 4 A:6）→ INHALE（自身 +7 力量）→ ACID_GOOP（单体 4+当前力量）→ 重复。**Inhale 叠层**：LIVE run-52——首次 Inhale STR 7，第二次 Inhale STR 14，AcidGoop 意图随升至 18[base4]。建议 3-4 回合内击杀，避免第二次 Inhale 复利；run-38/42 的「一次 Inhale 后 STR:7」仅为第一层数值。",
+    "description": "毛绒伏地虫 Act1，live 48-56 HP。循环 FIRST_ACID_GOOP（单段 4 A:6）→ INHALE（自身 +7 力，可叠层）→ ACID_GOOP（4+力）→ 循环。建议 3-4 回合内击杀，赶在二次吸气复利前（run-52/55 live：两局均 T3 杀、二次吸气前收头；单次吸气后 acid 意图 11 级）。",
     "display_names": [
       "FuzzyWurmCrawler",
       "毛绒伏地虫"
@@ -8586,13 +8586,13 @@
       "Inklet",
       "墨宝"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "JAB_MOVE",
       "WHIRLWIND_MOVE",
       "PIERCING_GAZE_MOVE"
     ],
-    "description": "JAB_MOVE = 单次攻击 3 (A:4)；WHIRLWIND_MOVE = 多段攻击 2 (A:3) ×3；PIERCING_GAZE_MOVE = 单次攻击 10 (A:11)。被动 SlipperyPower：充能未耗尽时每次受击 HP 损失上限 1；每次未格挡命中 ≥1 消耗 1 层充能。",
+    "description": "Act1 走廊「墨宝」，live 8-17 HP（run-55 三只 17/12/13）。各自出场带 SLIPPERY_POWER:1：任何 >=1 的 HP 损失降为恰好 1；每次未格挡命中 >=1 消耗 1 层——每只首次命中是削皮，第二次起全额。JAB 单段 3（A:4，live 意图 atk:3——档案 15 级条目属于其他怪物）。WHIRLWIND 多段 2×3（A:3/段，live 意图 multi:2x3）。PIERCING_GAZE 单段 10（A:11）。循环 JAB→RAND→(PIERCING_GAZE|WHIRLWIND)。教条：每只先垫一击剥充能，再集火当回合会攻击的躯体（run-55：3 张打击 T1 杀 12HP 旋风墨宝）。",
     "display_names": [
       "Inklet",
       "墨宝"
@@ -12434,7 +12434,7 @@
     ],
     "curated": true,
     "cycle": [],
-    "description": "Act1 精英（run-38 A1 实时：64 HP，显示 异蛙寄生虫）。INFESTED_POWER 4（出场施加）：死亡时生成 4 只 Wriggler（StartStunned=true）；该 power 持有者存活时战斗无法结束——召唤波延续战斗（run-38 实时：寄生虫 T2 爆发到 9，T3 Anger-9 精确击杀，4 只扭动虫同帧生成，T8 前波次清完）。INFECT = 向每个目标弃牌堆加 3 张 Infection 状态牌（不可打出，cost −1；回合末在手每张受 3 伤——实时：可被格挡，剩余挡吸收 tick）。LASH（本怪）= 多段 4 (A:5) ×4——与单体类 LASH 条目不同。教条：在自由/自选窗爆发寄生虫（run-38 双药回合 37 伤），然后两点一体清眩晕波；Infection 牌可挡但堵塞手牌——通过手牌稀释起击杀计时器作用。",
+    "description": "Act1 精英，61-68 HP。出场 INFESTED_POWER（4 层）：死亡同帧生成 4 只扭动虫；波次结算前战斗结束被阻塞。INFECT = 每目标弃牌堆 +3 张 Infection（不可打出 cost -1；回合末在手每张受 3 伤——run-55 live：可格挡，挡吸收 tick）。循环 INFECT→LASH。LASH run-55 live：多段 4×4（A:5/段级）；Weak 药把 live 意图砍到 3×4（WEAK_POWER:3，约 −25%/段）。教条：易伤窗爆发本体（run-55 本体 T4 死于 Bash+ 窗），波次才是真正的战斗——进场前备好 AoE/击杀钟。",
     "display_names": [
       "PhrogParasite",
       "异蛙寄生虫"
@@ -14633,7 +14633,7 @@
       "CHOMP",
       "STOMP_MOVE"
     ],
-    "description": "Act1 怪物（run-38 实时：成对 40/44 HP）。SHRINKER = 减益对玩家施加 SHRINK_POWER −1（负数=甲虫存活期间）：玩家攻击伤害 ×0.70（实时向下取整：Bash 8→5、Strike 6→4）；施加者死亡时移除——击杀计时器类。循环 SHRINKER → RAND 分支（TACKLE w1.00）；同场树叶史莱姆按嵌套条目走 GOOP(Status×1)/STICKY(Status×2)/CLUMP(8 A:9)。SHINK 实时注记：powers.json 档案行写 ×0.75 但 DamageDecrease-30 公式 = ×0.70——实时向下取整值确认 ×0.70。 LIVE run-52：Shrink ×0.70 取整数学再确认（升级打击 12→8-9、基础 9→6）；甲虫死亡瞬间 SHRINK 解除（玩家 powers 行 SHRINK_POWER 消失——施加者死亡规则成立）；本战 Chomp 意图 atk:7 live；同伴毛绒伏地虫 56 HP。",
+    "description": "缩小甲虫 Act1，live 39-44 HP（run-55：39）。SHRINKER = 对玩家施加 SHRINK_POWER −1：玩家攻击伤害 ×0.70（run-55 live：Bash 8→5 地板；档案 ×0.75 行作废）。甲虫死亡时解除——击杀钟类。CHOMP run-55 live 意图 atk:7（档案 15 级条目属于其他语境——live 意图为权威）。STOMP 单段 15（A:17）级。循环 SHRINKER→CHOMP→STOMP。教条：缩小落地前的回合全力打满伤害；之后每个攻击回合都付 ×0.70 直到击杀。",
     "display_names": [
       "ShrinkerBeetle",
       "缩小甲虫"
@@ -20125,13 +20125,13 @@
       "Wriggler",
       "扭动虫"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "NASTY_BITE_MOVE",
       "WRIGGLE_MOVE",
       "SPAWNED_MOVE"
     ],
-    "description": "SPAWNED_MOVE = 眩晕（出场回合不动）；NASTY_BITE_MOVE = 单次攻击 6 (A:7)；WRIGGLE_MOVE = 增益 +2 力量。循环 NASTY_BITE ↔ WRIGGLE。",
+    "description": "异蛙寄生虫波次躯体，live 17-21 HP（run-55 生成：21/19/17/20）。SPAWNED_MOVE = 出场回合眩晕。NASTY_BITE 单段攻击 6（A:7）——run-55 live：意图随力量缩放（wriggle 每次 +2 力，咬伤 6→8→10→12→14）。WRIGGLE = 自身 +2 力量 + 状态牌。循环 NASTY_BITE↔WRIGGLE，各躯体相位错开。教条：优先杀咬击相位；力量叠层让每次后续咬击成为本局击杀钟——run-55 死于波次末虫 3/21 的 14 伤穿 8 挡。",
     "display_names": [
       "Wriggler",
       "扭动虫"

@@ -4134,14 +4134,15 @@
     "character": null,
     "counter_shown": false,
     "curated": true,
-    "description": "拾取时失去全部金币；首份卡牌奖励中的所有牌附魔华彩 Glam（每场战斗首次打出免费重放一次——见 GLAM）。",
+    "description": "拾取时失去全部金币；本局第一次卡牌奖励中的所有牌附魔 Glam（华彩）。run-55 live 规则：Glam 附魔牌在每场战斗首次打出时双结算，其后打出单结算（Glam 耸肩无视：该战首次打出 16 挡 + 抽 2；后续打出 8 挡 + 抽 1）。refine run-49「首打双结算」备注：双结算挂在附魔牌的首次打出上，而非战斗第 1 回合。",
     "id": "SILKEN_TRESS",
     "kind": "relic",
     "name": "华美发束",
     "needs_zh": false,
     "play_notes": "代价仅为金币（无诅咒牌、无 Max HP 税），经济延迟有限（约一个前期商店购买项）。回报是一张带 Glam 的前期脊线牌——引擎牌每战双结算，全局长期生效。尼奥诅咒池位；2026-09-19 选项文案 live 校验。",
     "rarity": "Ancient",
-    "source": "perplexity-search 2026-09-19（gamerblurb Glam explained；spire-codex.com/enchantments/glam；mobalytics enchantments guide）+ 本局 Neow 屏 live 校验 F9S4BGVMFD"
+    "source": "perplexity-search 2026-09-19（gamerblurb Glam explained；spire-codex.com/enchantments/glam；mobalytics enchantments guide）+ 本局 Neow 屏 live 校验 F9S4BGVMFD",
+    "zh_description": "拾取时失去全部金币；本局第一次卡牌奖励中的所有牌附魔 Glam（华彩）。run-55 live 规则：Glam 附魔牌在每场战斗首次打出时双结算，其后打出单结算（Glam 耸肩无视：该战首次打出 16 挡 + 抽 2；后续打出 8 挡 + 抽 1）。refine run-49「首打双结算」备注：双结算挂在附魔牌的首次打出上，而非战斗第 1 回合。"
   },
   "SILVER_CRUCIBLE": {
     "aliases": [

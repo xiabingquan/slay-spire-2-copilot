@@ -8625,25 +8625,24 @@
     "upgrade": "+1 damage. DIVINE_RIGHT's AfterRoomEntered +3 Stars count as \"Stars gained this turn\" — turn-1 ShiningStrike (+2★) → RADIATE deals 5×3 = 15 AoE for 0 Energy in every combat."
   },
   "RAGE": {
-    "aliases": [
-      "Rage",
-      "狂怒"
-    ],
+    "id": "RAGE",
+    "name": "怒火",
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "0",
-    "curated": false,
-    "description": "0，技能，罕见，本回合每次打出攻击牌获得 3 格挡。升级：获得 5 格挡。",
-    "id": "RAGE",
-    "keywords": [],
-    "kind": "card",
-    "name": "狂怒",
-    "needs_zh": false,
-    "play_notes": "",
     "rarity": "uncommon",
-    "source": "md:cards.md:L78; md:cards_zh.md",
     "target_type": null,
-    "upgrade": "gain 5 Block."
+    "keywords": [],
+    "upgrade": "每次攻击触发的格挡 3→5。",
+    "description": "0费技能。本回合你每打出一张攻击牌，获得 3 格挡。升级：每次攻击 5 格挡。攻击回合挡引擎：恰好奖励 IRONCLAD 本来就想要的攻击倾泻回合；在不牺牲输出的前提下缓解「致命回合手牌偏攻击、无挡」死因。2026-09-19 run-55 经 perplexity 研究（spire-codex + wiki 来源）；此前 lookup 仅命中 SludgeSpinner 怪物招式 RAGE_MOVE。",
+    "aliases": [
+      "Rage"
+    ],
+    "curated": true,
+    "kind": "card",
+    "needs_zh": false,
+    "play_notes": "攻击密集回合先打 Rage 再打攻击牌；0 费不与输出争能量。",
+    "source": "perplexity-search 2026-09-19 (slaythespiretwo.com wiki, spire-codex.com/cards/rage, sts2.untapped.gg)"
   },
   "RAINBOW": {
     "aliases": [

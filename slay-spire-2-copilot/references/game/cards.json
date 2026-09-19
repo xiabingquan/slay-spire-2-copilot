@@ -9409,27 +9409,24 @@
     "zh_name": "辐射"
   },
   "RAGE": {
-    "aliases": [
-      "Rage",
-      "狂怒"
-    ],
+    "id": "RAGE",
+    "name": "Rage",
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "0",
-    "curated": false,
-    "description": "this turn whenever you play an Attack gain 3 Block. Upgrade: gain 5 Block.",
-    "id": "RAGE",
-    "keywords": [],
-    "kind": "card",
-    "name": "Rage",
-    "needs_zh": false,
-    "play_notes": "",
     "rarity": "uncommon",
-    "source": "md:cards.md:L78; md:cards_zh.md",
     "target_type": null,
-    "upgrade": "gain 5 Block.",
-    "zh_description": "0，技能，罕见，本回合每次打出攻击牌获得 3 格挡。升级：获得 5 格挡。",
-    "zh_name": "狂怒"
+    "keywords": [],
+    "upgrade": "Block per Attack 3→5.",
+    "description": "0-cost skill. Whenever you play an Attack this turn, gain 3 Block. Upgrade: 5 Block per Attack. Attack-turn block engine: rewards exactly the attack-spam turns IRONCLAD already wants; mitigates the 'lethal turn attack-heavy hand, no block' death mode without sacrificing offense. Researched 2026-09-19 run-55 via perplexity (spire-codex + wiki sources); lookup previously resolved only to SludgeSpinner monster move RAGE_MOVE.",
+    "aliases": [
+      "怒火"
+    ],
+    "curated": true,
+    "kind": "card",
+    "needs_zh": false,
+    "play_notes": "Play BEFORE attacks on attack-heavy turns; 0 cost so it never competes with damage energy.",
+    "source": "perplexity-search 2026-09-19 (slaythespiretwo.com wiki, spire-codex.com/cards/rage, sts2.untapped.gg)"
   },
   "RAINBOW": {
     "aliases": [
