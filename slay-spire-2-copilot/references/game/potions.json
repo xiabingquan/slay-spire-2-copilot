@@ -45,7 +45,7 @@
     "id": "BEETLE_JUICE",
     "kind": "potion",
     "name": "BEETLE_JUICE",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "source": "codex-html:https://spire-codex.com/potions/beetle_juice"
   },

@@ -171,7 +171,7 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
+    "curated": true,
     "description": "第 1 回合，抽牌阶段额外抽 2 张牌。",
     "id": "BAG_OF_PREPARATION",
     "kind": "relic",
@@ -179,7 +179,8 @@
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:relics.md:L19; md:relics_zh.md:L19; codex:relics/BAG_OF_PREPARATION"
+    "source": "md:relics.md:L19; md:relics_zh.md:L19; codex:relics/BAG_OF_PREPARATION",
+    "live_notes": "LIVE run-56：每场战斗开局额外抽 2 张牌。引擎提前上线。"
   },
   "BEATING_REMNANT": {
     "aliases": [
@@ -272,7 +273,7 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
+    "curated": true,
     "description": "拾取时，+20 最大 HP；第 1 回合，抽牌阶段额外少抽 2 张牌。",
     "id": "BIG_MUSHROOM",
     "kind": "relic",
@@ -280,7 +281,8 @@
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Event",
-    "source": "md:relics.md:L272; md:relics_zh.md:L272"
+    "source": "md:relics.md:L272; md:relics_zh.md:L272",
+    "live_notes": "LIVE run-56：蘑菇事件选择。拾起时 +20 最大生命值；第 1 回合少抽 2 张牌（节奏代价）。"
   },
   "BIIIG_HUG": {
     "aliases": [
@@ -495,7 +497,7 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
+    "curated": true,
     "description": "精英战第 1 回合开始，额外抽 2 张牌并获得 1 点能量。",
     "id": "BOOMING_CONCH",
     "kind": "relic",
@@ -503,7 +505,8 @@
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L149; md:relics_zh.md:L149"
+    "source": "md:relics.md:L149; md:relics_zh.md:L149",
+    "live_notes": "LIVE run-56：Neow 选择。精英战开局抽 +2 张牌并获得 1 能量。"
   },
   "BOUND_PHYLACTERY": {
     "aliases": [
@@ -614,7 +617,7 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
+    "curated": true,
     "description": "战斗开始，获得 3 点荆棘。",
     "id": "BRONZE_SCALES",
     "kind": "relic",
@@ -622,7 +625,8 @@
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:relics.md:L23; md:relics_zh.md:L23; codex:relics/BRONZE_SCALES"
+    "source": "md:relics.md:L23; md:relics_zh.md:L23; codex:relics/BRONZE_SCALES",
+    "live_notes": "LIVE run-56：每场战斗开始时 +3 荆棘。荆棘伤害穿挡。"
   },
   "BURNING_BLOOD": {
     "aliases": [
@@ -747,7 +751,7 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
+    "curated": true,
     "description": "每场战斗首次失去 HP 时，抽 3 张牌。任意掉血 tick 均触发——猩红披风回合开始 −1 / 放血 / 祭品类；披风部署后等效「T1 后战斗开始抽 3」。",
     "id": "CENTENNIAL_PUZZLE",
     "kind": "relic",
@@ -755,7 +759,8 @@
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:relics.md:L24; md:relics_zh.md:L24"
+    "source": "md:relics.md:L24; md:relics_zh.md:L24",
+    "live_notes": "LIVE run-56：每场战斗首次失去 HP 时抽 3 张牌。与自伤引擎协同（Hemokinesis/Bloodletting/BloodWall 触发）。"
   },
   "CHANDELIER": {
     "aliases": [
@@ -981,7 +986,7 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
+    "curated": true,
     "description": "每次打出攻击牌时，获得 1 格挡。",
     "id": "DAUGHTER_OF_THE_WIND",
     "kind": "relic",
@@ -989,7 +994,24 @@
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Event",
-    "source": "md:relics.md:L278; md:relics_zh.md:L278"
+    "source": "md:relics.md:L278; md:relics_zh.md:L278",
+    "live_notes": "LIVE run-56：玩偶房选择。每打出一张攻击牌获得 1 挡。与攻击密集牌组构成被动挡引擎。"
+  },
+  "DAUGHTER_OF_WIND": {
+    "aliases": [
+      "Daughter of the Wind",
+      "DAUGHTER_OF_THE_WIND"
+    ],
+    "character": "shared",
+    "curated": false,
+    "description": "每打出一张攻击牌，获得 1 点格挡。",
+    "id": "DAUGHTER_OF_WIND",
+    "kind": "relic",
+    "name": "Daughter of the Wind",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Event",
+    "source": "codex-api:/relics/DAUGHTER_OF_THE_WIND"
   },
   "DELICATE_FROND": {
     "aliases": [
@@ -1286,11 +1308,11 @@
     ],
     "character": "shared",
     "curated": false,
-    "description": "For every 5 cards in your Deck, heal 3 HP whenever you enter a Rest Site.",
+    "description": "每次休息时，额外回复 5 点生命值。",
     "id": "ETERNAL_FEATHER",
     "kind": "relic",
     "name": "Eternal Feather",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
     "source": "codex-api:/relics/ETERNAL_FEATHER"
@@ -2357,7 +2379,7 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
+    "curated": true,
     "description": "拾取时，+31 最大 HP。",
     "id": "LOOMING_FRUIT",
     "kind": "relic",
@@ -2365,7 +2387,8 @@
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L180; md:relics_zh.md:L180; codex:relics/LOOMING_FRUIT"
+    "source": "md:relics.md:L180; md:relics_zh.md:L180; codex:relics/LOOMING_FRUIT",
+    "live_notes": "LIVE run-56：Act3 NONUPEIPE 事件选择。拾起时 +31 最大生命值。与芝士/狂宴/大蘑菇/草莓叠层 HP 80→160。"
   },
   "LORDS_PARASOL": {
     "aliases": [
@@ -3864,11 +3887,11 @@
     ],
     "character": "shared",
     "curated": false,
-    "description": "Upon pickup, choose an Attack or Skill in your Deck to Enchant with Royally Approved.",
+    "description": "每当你在商店购买物品时，获得 10 金币。",
     "id": "ROYAL_STAMP",
     "kind": "relic",
     "name": "Royal Stamp",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "rarity": "Shop",
     "source": "codex-api:/relics/ROYAL_STAMP"
@@ -4355,7 +4378,7 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
+    "curated": true,
     "description": "拾取时，+7 最大 HP。",
     "id": "STRAWBERRY",
     "kind": "relic",
@@ -4363,7 +4386,8 @@
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:relics.md:L41; md:relics_zh.md:L41; codex:relics/STRAWBERRY"
+    "source": "md:relics.md:L41; md:relics_zh.md:L41; codex:relics/STRAWBERRY",
+    "live_notes": "LIVE run-56：拾起时 +7 最大生命值。MaxHP 叠层包组件。"
   },
   "STRIKE_DUMMY": {
     "aliases": [
@@ -4810,7 +4834,7 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
+    "curated": true,
     "description": "战斗开始，获得 1 点力量。",
     "id": "VAJRA",
     "kind": "relic",
@@ -4818,7 +4842,8 @@
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:relics.md:L42; md:relics_zh.md:L42; codex:relics/VAJRA"
+    "source": "md:relics.md:L42; md:relics_zh.md:L42; codex:relics/VAJRA",
+    "live_notes": "LIVE run-56：Act1 商店购入 75g。每场战斗开始时 +1 力量。"
   },
   "VAMBRACE": {
     "aliases": [
@@ -5026,6 +5051,22 @@
     "rarity": "Rare",
     "source": "md:relics.md:L138; md:relics_zh.md:L138"
   },
+  "WIND_DAUGHTER": {
+    "aliases": [
+      "Daughter of the Wind",
+      "DAUGHTER_OF_THE_WIND"
+    ],
+    "character": "shared",
+    "curated": false,
+    "description": "每打出一张攻击牌，获得 1 点格挡。",
+    "id": "WIND_DAUGHTER",
+    "kind": "relic",
+    "name": "Daughter of the Wind",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Event",
+    "source": "codex-api:/relics/DAUGHTER_OF_THE_WIND"
+  },
   "WINGED_BOOTS": {
     "aliases": [
       "Winged Boots",
@@ -5051,11 +5092,11 @@
     ],
     "character": "shared",
     "curated": false,
-    "description": "A random card in each card reward is Enchanted with Swift 1.",
+    "description": "战斗开始时获得 2 点敏捷。",
     "id": "WING_CHARM",
     "kind": "relic",
     "name": "Wing Charm",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "rarity": "Shop",
     "source": "codex-api:/relics/WING_CHARM"

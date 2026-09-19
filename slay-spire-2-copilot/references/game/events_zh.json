@@ -649,7 +649,7 @@
       "Doll Room",
       "玩偶室"
     ],
-    "curated": false,
+    "curated": true,
     "description": "ChooseRandom → 获得玩偶遗物；TakeSomeTime → 5 点不可格挡伤害；Examine → 15 点不可格挡伤害。",
     "id": "DOLL_ROOM",
     "kind": "event",
@@ -728,7 +728,8 @@
       }
     },
     "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "source": "md:events.md; md:events_zh.md",
+    "live_notes": "LIVE run-56：选项 = 随机(1 尊玩偶遗物) / 慢慢来(−5HP，2 选 1) / 仔细检查(−15HP，3 选 1)。选慢慢来 → 风之女。"
   },
   "DOORS_OF_LIGHT_AND_DARK": {
     "aliases": [
@@ -1004,7 +1005,7 @@
       "Hungry For Mushrooms",
       "蘑菇饥渴"
     ],
-    "curated": false,
+    "curated": true,
     "description": "BigMushroom → BigMushroom 遗物；FragrantMushroom → FragrantMushroom 遗物。",
     "id": "HUNGRY_FOR_MUSHROOMS",
     "kind": "event",
@@ -1048,7 +1049,8 @@
       }
     },
     "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "source": "md:events.md; md:events_zh.md",
+    "live_notes": "LIVE run-56：选项 = 大蘑菇(+20MaxHP，T1 抽牌−2) / 芳香蘑菇(−15HP，随机升级 2 张)。选大蘑菇。"
   },
   "INFESTED_AUTOMATON": {
     "aliases": [
@@ -1310,7 +1312,7 @@
       "Neow",
       "尼奥"
     ],
-    "curated": false,
+    "curated": true,
     "description": "无 modifier 的对局 → 3 个选项 = 2 件随机正面遗物 + 1 件随机诅咒代价遗物。正面池：ArcaneScroll、BoomingConch、FishingRod、GoldenPearl、Kaleidoscope、LeadPaperweight、LostCoffer、MassiveScroll、NeowsTorment、NewLeaf、PhialHolster、PreciseScissors、ScrollBoxes、WingedBoots；另有三组独立 XOR 追加：LavaRock XOR SmallCapsule（诅咒为 LargeCapsule 时跳过）、NutritiousOyster XOR StoneHumidifier、NeowsTalisman XOR Pomander。诅咒池：CursedPearl、HeftyTablet、LargeCapsule、LeafyPoultice、NeowsBones、PrecariousShears、SilkenTress、SilverCrucible。冲突项从正面池剔除：CursedPearl−GoldenPearl、HeftyTablet−ArcaneScroll、LeafyPoultice−NewLeaf、PrecariousShears−PreciseScissors。每件遗物另经 `IsAllowedAtNeow` 过滤。对局存在 modifier 时，Neow 改为依次提供各 modifier 的 `GenerateNeowOption`。",
     "id": "NEOW",
     "kind": "event",
@@ -1778,7 +1780,8 @@
       }
     },
     "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "source": "md:events.md; md:events_zh.md",
+    "live_notes": "LIVE run-56：选项 = 金色珍珠(150g) / 轰鸣海螺(精英抽2+1能) / 华美发束(失金换 Glam 附魔)。选轰鸣海螺——引擎价值>金币。"
   },
   "NONUPEIPE": {
     "curated": true,

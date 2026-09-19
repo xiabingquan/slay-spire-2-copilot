@@ -752,7 +752,7 @@
       "CrabRagePower"
     ],
     "counter_class": false,
-    "curated": false,
+    "curated": true,
     "description": "on death of another creature on owner's side, the surviving owner gains +6 Strength and 99 unpowered Block, then this power removes itself. (KaiserCrab claws; CanonicalVars Strength 6 / Block 99 Unpowered.)",
     "host_of_affliction": false,
     "id": "CRAB_RAGE_POWER",
@@ -764,7 +764,8 @@
     "source": "md:powers.md:L378; md:powers_zh.md:L333",
     "stack_type": "Single",
     "zh_description": "同侧另一生物死亡时，存活的持有者获得 +6 力量与 99 无来源格挡，随后该能力自行移除。（皇蟹双爪；CanonicalVars Strength 6 / Block 99 Unpowered。）",
-    "zh_name": "蟹怒"
+    "zh_name": "蟹怒",
+    "live_notes": "LIVE run-56: KaiserCrab both bodies have CRAB_RAGE. When triggered, grants +Strength and massive Block to the crab body."
   },
   "CREATIVE_AI_POWER": {
     "aliases": [
@@ -2615,7 +2616,7 @@
       "PaperCutsPower"
     ],
     "counter_class": false,
-    "curated": false,
+    "curated": true,
     "description": "when owner's powered attack deals unblocked damage > 0 to a player, that player loses Amount max HP. Amount 2 exact — each leaking ScrollOfBiting-class attacker costs −2 MaxHP per turn when unblocked; **full-block turns cost ZERO MaxHP** (51 block vs 44 incoming produced no tax) — the counterplay is block completeness per attacker, not average block. Related pairing decode: **Inferno's own turn-start HP loss triggers Rupture** (Inferno + Rupture Amount 2 deployed = +2 Str per turn passive) **and satisfies Spite's \"lost HP this turn\" condition** (Spite double-fires on Inferno-deployed fights).",
     "host_of_affliction": false,
     "id": "PAPER_CUTS_POWER",
@@ -2627,7 +2628,8 @@
     "source": "md:powers.md:L323; md:powers_zh.md:L292",
     "stack_type": "Counter",
     "zh_description": "持有者的攻击对玩家造成未格挡伤害 > 0 时，该玩家失去 Amount 点最大 HP。Amount 2 精确——每漏挡一路咬人卷轴类攻击者每回合 −2 MaxHP；**全挡回合零 MaxHP 税**（51 挡对 44 来袭零税）——对策是每个攻击者的挡完整性而非平均挡值。关联配对解码：**Inferno 自身开回合 HP 损失触发 Rupture**（Inferno+Rupture Amount2 同部署 = 每回合被动 +2 力量）**且满足 Spite「本回合掉血」条件**（部署 Inferno 的战斗 Spite 常态双击）。",
-    "zh_name": "Paper Cuts"
+    "zh_name": "Paper Cuts",
+    "live_notes": "LIVE run-56: ScrollOfBiting passive. Amount 2 — unblockable HP tax per trigger."
   },
   "PARRY_POWER": {
     "aliases": [
@@ -2884,7 +2886,7 @@
       "RampartPower"
     ],
     "counter_class": false,
-    "curated": false,
+    "curated": true,
     "description": "at start of Player side turn, each living TurretOperator enemy gains Amount Block.",
     "host_of_affliction": false,
     "id": "RAMPART_POWER",
@@ -2896,7 +2898,8 @@
     "source": "md:powers.md:L211; md:powers_zh.md:L188",
     "stack_type": "Counter",
     "zh_description": "玩家阵营回合开始时，每名存活的 TurretOperator 敌人获得 Amount 格挡。",
-    "zh_name": "Rampart"
+    "zh_name": "Rampart",
+    "live_notes": "LIVE run-56: LivingShield passive Amount 25. At start of Player side turn, each living TurretOperator ally gains 25 Block. Kill LivingShield first."
   },
   "RAVENOUS_POWER": {
     "aliases": [
@@ -3378,7 +3381,7 @@
       "SlipperyPower"
     ],
     "counter_class": false,
-    "curated": false,
+    "curated": true,
     "description": "any HP loss to owner that would be >= 1 is reduced to exactly 1; 1 stack consumed per hit that deals >= 1 unblocked damage.",
     "host_of_affliction": false,
     "id": "SLIPPERY_POWER",
@@ -3390,7 +3393,8 @@
     "source": "md:powers.md:L347; md:powers_zh.md:L308",
     "stack_type": "Counter",
     "zh_description": "对持有者任何 >= 1 的 HP 损失 降为恰好 1；每次造成 >= 1 未格挡伤害的命中消耗 1 层。",
-    "zh_name": "湿滑"
+    "zh_name": "湿滑",
+    "live_notes": "LIVE run-56: Ink Phantom Act1 Boss Slippery:8. Each hit on the body consumes 1 charge and caps damage at the charge remaining. Run-42 doctrine confirmed."
   },
   "SLOTH_POWER": {
     "counter_class": true,
@@ -3410,7 +3414,7 @@
       "SlowPower"
     ],
     "counter_class": false,
-    "curated": false,
+    "curated": true,
     "description": "attack damage received by owner is multiplied by x(1 + 0.1 * cards the player has played this turn). `SlowAmount` +1 per card played; resets to 0 at start of owner's side turn. Display amount = SlowAmount * 10.",
     "host_of_affliction": false,
     "id": "SLOW_POWER",
@@ -3422,7 +3426,8 @@
     "source": "md:powers.md:L64; md:powers_zh.md:L57",
     "stack_type": "Counter",
     "zh_description": "持有者受到的攻击伤害 × (1 + 0.1 × 本回合玩家已打出的卡牌数)。`SlowAmount` 每打出一张牌 +1， 持有者阵营回合开始时归零。显示层数 = SlowAmount × 10。",
-    "zh_name": "缓速"
+    "zh_name": "缓速",
+    "live_notes": "LIVE run-56: Eldritch Statue elite. SLOW_POWER counter — attack intents scale with remaining counter."
   },
   "SLUMBER_POWER": {
     "aliases": [
@@ -3816,7 +3821,7 @@
       "SurroundedPower"
     ],
     "counter_class": false,
-    "curated": false,
+    "curated": true,
     "description": "positioning state; attack damage to owner is multiplied by x1.5 when the attacker carries the matching BACK_ATTACK_LEFT_POWER / BACK_ATTACK_RIGHT_POWER marker for the owner's facing. Markers themselves are inert Single Buffs. Facing rule (decomp): the owner's facing flips whenever the player plays a card or potion targeting a creature whose BACK_ATTACK marker matches the opposite direction — targeting a claw turns the owner toward it, exposing the other claw as the ×1.5 flanker. On flank-creature death, facing re-targets to the remaining marker-bearer if all survivors share one marker side.",
     "host_of_affliction": false,
     "id": "SURROUNDED_POWER",
@@ -3828,7 +3833,8 @@
     "source": "md:powers.md:L74; md:powers_zh.md:L64",
     "stack_type": "Single",
     "zh_description": "站位状态；当攻击者带有与 持有者朝向匹配的 BACK_ATTACK_LEFT_POWER / BACK_ATTACK_RIGHT_POWER 标记时，对持有者的攻击伤害 ×1.5。标记本身为惰性 Single Buff。朝向规则 （反编译）：玩家打出指向某生物的卡牌/药水、且该生物的 BACK_ATTACK 标记 与当前朝向相反时，持有者朝向翻转——即指向某爪即面向该爪，另一只爪成为 ×1.5 的侧击者。侧击生物死亡时，若存活方标记同侧，朝向重定向至该标记 持有者。",
-    "zh_name": "被夹击"
+    "zh_name": "被夹击",
+    "live_notes": "LIVE run-56: player-side debuff from KaiserCrab fight. Applied by Rocket slot — indicates dual-body surround state."
   },
   "SWIPE_POWER": {
     "curated": true,

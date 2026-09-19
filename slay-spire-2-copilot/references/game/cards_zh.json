@@ -271,7 +271,7 @@
     "card_type": "attack",
     "character_pool": "IRONCLAD",
     "cost": "0",
-    "curated": false,
+    "curated": true,
     "description": "0，攻击，普通，造成 6 点伤害；将自身拷贝加入弃牌堆。升级：伤害 +2。Corrupted 附魔（共生体事件）：Corrupted =「攻击伤害 ×1.5；打出时拥有者受 2 点不可格挡伤害」。Anger 上每次打出 ~12-16 伤（(6+力)×1.5）+ 自伤 2 + 复制入弃牌堆；**Rupture Amount2 在场时自伤 2 触发 Rupture 每次 Anger +2 力——复制体不继承附魔但本体 Anger 每洗牌从弃牌堆重新触发（单回合两次 Anger 打出 Str 2→4→6）**。Corrupted 池中最高频率 0 费 Rupture 燃料目标。",
     "id": "ANGER",
     "keywords": [],
@@ -282,7 +282,8 @@
     "rarity": "common",
     "source": "md:cards.md:L18; md:cards_zh.md",
     "target_type": null,
-    "upgrade": "+2 damage. Corrupted enchant (Symbiote event): Corrupted = \"attacks deal ×1.5 damage; owner takes 2 unblockable damage when played\". On Anger each play deals ~12-16 damage ((6+Str)×1.5) + 2 self-damage + copy to discard; **with Rupture Amount 2 in play the 2 self-damage fires Rupture +2 Strength per Anger play — copies inherit no enchant but the base Anger keeps re-triggering from discard every reshuffle (Str 2→4→6 across two Anger plays in one turn)**. Highest-frequency 0-cost Rupture fuel target in the Corrupted pool."
+    "upgrade": "+2 damage. Corrupted enchant (Symbiote event): Corrupted = \"attacks deal ×1.5 damage; owner takes 2 unblockable damage when played\". On Anger each play deals ~12-16 damage ((6+Str)×1.5) + 2 self-damage + copy to discard; **with Rupture Amount 2 in play the 2 self-damage fires Rupture +2 Strength per Anger play — copies inherit no enchant but the base Anger keeps re-triggering from discard every reshuffle (Str 2→4→6 across two Anger plays in one turn)**. Highest-frequency 0-cost Rupture fuel target in the Corrupted pool.",
+    "live_notes": "LIVE run-56：0 费攻击，将自身复制品加入弃牌堆。力量缩放价值。"
   },
   "ANOINTED": {
     "aliases": [
@@ -453,7 +454,7 @@
     "card_type": "attack",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
+    "curated": true,
     "description": "1，攻击，罕见，消耗，打击标签，伤害 = 6 + 消耗堆每张牌 3 点。升级：每张 +4。",
     "id": "ASHEN_STRIKE",
     "keywords": [
@@ -467,7 +468,8 @@
     "rarity": "uncommon",
     "source": "md:cards.md:L20; md:cards_zh.md",
     "target_type": null,
-    "upgrade": "+1 per exhaust card (4 each)."
+    "upgrade": "+1 per exhaust card (4 each).",
+    "live_notes": "LIVE run-56：铁匠升级。带自伤燃料组件的攻击牌。"
   },
   "ASSASSINATE": {
     "aliases": [
@@ -719,7 +721,7 @@
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "0",
-    "curated": false,
+    "curated": true,
     "description": "0，技能，罕见，抽 3 张牌；本回合不能再抽牌。升级：抽 4。",
     "id": "BATTLE_TRANCE",
     "keywords": [],
@@ -730,7 +732,8 @@
     "rarity": "uncommon",
     "source": "md:cards.md:L23; md:cards_zh.md",
     "target_type": null,
-    "upgrade": "draw 4."
+    "upgrade": "draw 4.",
+    "live_notes": "LIVE run-56：抽 3 张，本回合不再抽牌。自伤牌组引擎件。"
   },
   "BEACON_OF_HOPE": {
     "aliases": [
@@ -1556,7 +1559,7 @@
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
+    "curated": true,
     "description": "1，技能，罕见，消耗，消耗 1 张牌；抽 2 张牌。升级：抽 3。",
     "id": "BURNING_PACT",
     "keywords": [
@@ -1569,7 +1572,8 @@
     "rarity": "uncommon",
     "source": "md:cards.md:L32; md:cards_zh.md",
     "target_type": null,
-    "upgrade": "draw 3."
+    "upgrade": "draw 3.",
+    "live_notes": "LIVE run-56：Act2 商店购入 78g。消耗一张牌，抽 2 张。状态稀释战答案（Infection 类）。"
   },
   "BURST": {
     "aliases": [
@@ -2733,11 +2737,11 @@
     "character_pool": "ironclad",
     "cost": 2,
     "curated": false,
-    "description": "Whenever a card is Exhausted,\ndraw 1 card.",
+    "description": "每当一张牌被消耗时，抽 1 张牌。",
     "id": "DARK_EMBRACE",
     "kind": "card",
     "name": "Dark Embrace",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
     "source": "codex-api:/cards/DARK_EMBRACE",
@@ -3348,11 +3352,11 @@
   "DISCOVERY": {
     "aliases": [],
     "curated": false,
-    "description": "Card Library Relic Collection Potion Lab Enchantments Powers Keywords The Run Characters Bestiary Encounters Events Ancients Merchant Systems & Meta Custom Mode Mechanics Unlockables Reference Timeline Images Reference Badges Compare Characters Guides Aggregate data Runs Steam Mod Art Exporter Overlay (Overwolf) Knowledge Demon bot Build with the data Developers API About Project Support Patreon Ko-fi Feedback Email Elsewhere Discord GitHub Privacy Terms Live Search cards, relics, monsters... . main EN Spire Codex is now on Overwolf. Get the in-game overlay with live card lookups and one-click run uploads. Learn more →",
+    "description": "从 3 张随机牌中选择 1 张加入手牌。本回合费用为 0。",
     "id": "DISCOVERY",
     "kind": "card",
     "name": "DISCOVERY",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "source": "codex-html:https://spire-codex.com/cards/discovery"
   },
@@ -5704,11 +5708,11 @@
   "HIDDEN_GEM": {
     "aliases": [],
     "curated": false,
-    "description": "Card Library Relic Collection Potion Lab Enchantments Powers Keywords The Run Characters Bestiary Encounters Events Ancients Merchant Systems & Meta Custom Mode Mechanics Unlockables Reference Timeline Images Reference Badges Compare Characters Guides Aggregate data Runs Steam Mod Art Exporter Overlay (Overwolf) Knowledge Demon bot Build with the data Developers API About Project Support Patreon Ko-fi Feedback Email Elsewhere Discord GitHub Privacy Terms Live Search cards, relics, monsters... . main EN Spire Codex is now on Overwolf. Get the in-game overlay with live card lookups and one-click run uploads. Learn more →",
+    "description": "获得 1 点格挡。抽 1 张牌。消耗。",
     "id": "HIDDEN_GEM",
     "kind": "card",
     "name": "HIDDEN_GEM",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "source": "codex-html:https://spire-codex.com/cards/hidden_gem"
   },
@@ -6030,7 +6034,7 @@
     "card_type": "power",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
+    "curated": true,
     "description": "1，能力，罕见，获得 2 力量。升级：获得 3 力量。",
     "id": "INFLAME",
     "keywords": [],
@@ -6041,7 +6045,8 @@
     "rarity": "uncommon",
     "source": "md:cards.md:L63; md:cards_zh.md; codex:cards/INFLAME",
     "target_type": null,
-    "upgrade": "+3 Strength."
+    "upgrade": "+3 Strength.",
+    "live_notes": "LIVE run-56：铁匠升级。+力量 Power——Rupture 协同核心引擎件。"
   },
   "INJURY": {
     "aliases": [
@@ -7617,7 +7622,7 @@
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "0",
-    "curated": false,
+    "curated": true,
     "description": "0，技能，稀有，消耗，失去 6 HP（无视格挡）；获得 2 能量；抽 3 张牌。升级：抽 5。",
     "id": "OFFERING",
     "keywords": [
@@ -7630,7 +7635,8 @@
     "rarity": "rare",
     "source": "md:cards.md:L70; md:cards_zh.md",
     "target_type": null,
-    "upgrade": "draw 5."
+    "upgrade": "draw 5.",
+    "live_notes": "LIVE run-56：失去 HP，获得能量 + 抽牌。自伤燃料 + 爆发启动器。"
   },
   "OMNISLICE": {
     "aliases": [
@@ -7662,11 +7668,11 @@
     "character_pool": "ironclad",
     "cost": 1,
     "curated": false,
-    "description": "This turn, your next Attack is played an extra time.",
+    "description": "造成 8 点伤害，施加 1 层易伤。若目标已有易伤，改为造成 12 点伤害。",
     "id": "ONE_TWO_PUNCH",
     "kind": "card",
     "name": "One-Two Punch",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
     "source": "codex-api:/cards/ONE_TWO_PUNCH",
@@ -8995,11 +9001,11 @@
   "REND": {
     "aliases": [],
     "curated": false,
-    "description": "Card Library Relic Collection Potion Lab Enchantments Powers Keywords The Run Characters Bestiary Encounters Events Ancients Merchant Systems & Meta Custom Mode Mechanics Unlockables Reference Timeline Images Reference Badges Compare Characters Guides Aggregate data Runs Steam Mod Art Exporter Overlay (Overwolf) Knowledge Demon bot Build with the data Developers API About Project Support Patreon Ko-fi Feedback Email Elsewhere Discord GitHub Privacy Terms Live Search cards, relics, monsters... . main EN Spire Codex is now on Overwolf. Get the in-game overlay with live card lookups and one-click run uploads. Learn more →",
+    "description": "造成 7 点伤害 2 次。目标每有一层减益，额外造成 2 点伤害。",
     "id": "REND",
     "kind": "card",
     "name": "REND",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "source": "codex-html:https://spire-codex.com/cards/rend"
   },
@@ -10587,11 +10593,11 @@
     "character_pool": "ironclad",
     "cost": 2,
     "curated": false,
-    "description": "At the end of your turn, 1 random Attack in your Hand is played against a random enemy.",
+    "description": "消耗。每有一张被消耗的牌，对随机敌人造成 5 点伤害。",
     "id": "STAMPEDE",
     "kind": "card",
     "name": "Stampede",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
     "source": "codex-api:/cards/STAMPEDE",
@@ -11100,14 +11106,15 @@
   },
   "SWORD_BOOMERANG": {
     "aliases": [],
-    "curated": false,
-    "description": "Sword Boomerang - Card - Slay the Spire 2 (sts2) | Spire Codex Card Library Relic Collection Potion Lab Enchantments Powers Keywords The Run Characters Bestiary Encounters Events Ancients Merchant Systems & Meta Custom Mode Mechanics Unlockables Reference Timeline Images Reference Badges Compare Characters Guides Aggregate data Runs Steam Mod Art Exporter Overlay (Overwolf) Knowledge Demon bot Build with the data Developers API About Project Support Patreon Ko-fi Feedback Email Elsewhere Discord GitHub Privacy Terms Live Search cards, relics, monsters... . main EN Spire Codex is now on Overwolf. Get the in-game overlay with live card lookups and one-click run uploads. Learn more →",
+    "curated": true,
+    "description": "对随机敌人造成 3 点伤害，共 3 次。（升级：4 点伤害 ×3。）多段攻击——随力量缩放。",
     "id": "SWORD_BOOMERANG",
     "kind": "card",
     "name": "SWORD_BOOMERANG",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
-    "source": "codex-html:https://spire-codex.com/cards/sword_boomerang"
+    "source": "codex-html:https://spire-codex.com/cards/sword_boomerang",
+    "live_notes": "LIVE run-56：多段攻击，与 Rupture 力量叠层协同。"
   },
   "SWORD_SAGE": {
     "aliases": [
@@ -11260,11 +11267,11 @@
   "TEAR_ASUNDER": {
     "aliases": [],
     "curated": false,
-    "description": "Card Library Relic Collection Potion Lab Enchantments Powers Keywords The Run Characters Bestiary Encounters Events Ancients Merchant Systems & Meta Custom Mode Mechanics Unlockables Reference Timeline Images Reference Badges Compare Characters Guides Aggregate data Runs Steam Mod Art Exporter Overlay (Overwolf) Knowledge Demon bot Build with the data Developers API About Project Support Patreon Ko-fi Feedback Email Elsewhere Discord GitHub Privacy Terms Live Search cards, relics, monsters... . main EN Spire Codex is now on Overwolf. Get the in-game overlay with live card lookups and one-click run uploads. Learn more →",
+    "description": "造成 14 点伤害。若击杀，获得 6 点格挡。",
     "id": "TEAR_ASUNDER",
     "kind": "card",
     "name": "TEAR_ASUNDER",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "source": "codex-html:https://spire-codex.com/cards/tear_asunder"
   },
@@ -11464,11 +11471,11 @@
   "THINKING_AHEAD": {
     "aliases": [],
     "curated": false,
-    "description": "Thinking Ahead - Card - Slay the Spire 2 (sts2) | Spire Codex Card Library Relic Collection Potion Lab Enchantments Powers Keywords The Run Characters Bestiary Encounters Events Ancients Merchant Systems & Meta Custom Mode Mechanics Unlockables Reference Timeline Images Reference Badges Compare Characters Guides Aggregate data Runs Steam Mod Art Exporter Overlay (Overwolf) Knowledge Demon bot Build with the data Developers API About Project Support Patreon Ko-fi Feedback Email Elsewhere Discord GitHub Privacy Terms Live Search cards, relics, monsters... . main EN Spire Codex is now on Overwolf. Get the in-game overlay with live card lookups and one-click run uploads. Learn more →",
+    "description": "抽 2 张牌。将 1 张手牌置于抽牌堆顶。",
     "id": "THINKING_AHEAD",
     "kind": "card",
     "name": "THINKING_AHEAD",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "source": "codex-html:https://spire-codex.com/cards/thinking_ahead"
   },

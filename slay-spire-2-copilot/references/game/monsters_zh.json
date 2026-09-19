@@ -4241,6 +4241,7 @@
           "BULK"
         ],
         "curated": false,
+        "description": "Bulk：单体攻击 6（A:7）+ 自身 +2 力量。",
         "effect": "Bulk: Attack + Buff; damage 6 A:7; STRENGTH 2 (self)",
         "follow_up_id": null,
         "id": "BULK_MOVE",
@@ -4260,8 +4261,7 @@
         "name": "Bulk",
         "needs_zh": true,
         "play_notes": "",
-        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#BULK",
-        "description": "Bulk：单体攻击 6（A:7）+ 自身 +2 力量。"
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#BULK"
       },
       "CONSTRICT_MOVE": {
         "aliases": [
@@ -4269,6 +4269,7 @@
           "CONSTRICT"
         ],
         "curated": false,
+        "description": "Constrict：单体攻击 8（A:9）+ 对玩家施加 ConstrictPower 3（回合末未挡伤害/层，每次施放 +3，施放者死亡时移除）。",
         "effect": "Constrict: Attack + Debuff; damage 8 A:9; WEAK 1 (player)",
         "follow_up_id": null,
         "id": "CONSTRICT_MOVE",
@@ -4288,8 +4289,7 @@
         "name": "Constrict",
         "needs_zh": true,
         "play_notes": "",
-        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#CONSTRICT",
-        "description": "Constrict：单体攻击 8（A:9）+ 对玩家施加 ConstrictPower 3（回合末未挡伤害/层，每次施放 +3，施放者死亡时移除）。"
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#CONSTRICT"
       },
       "DEAD_MOVE": {
         "aliases": [
@@ -4297,6 +4297,7 @@
           "DEAD"
         ],
         "curated": false,
+        "description": "Dead 状态：兄弟段存活时死亡进入——不可选中、不移出战斗；回合末 +25 复活，除非同窗全部死亡（则永久淡出）。",
         "effect": "Dead: Unknown",
         "follow_up_id": null,
         "id": "DEAD_MOVE",
@@ -4313,8 +4314,7 @@
         "name": "Dead",
         "needs_zh": true,
         "play_notes": "",
-        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#DEAD",
-        "description": "Dead 状态：兄弟段存活时死亡进入——不可选中、不移出战斗；回合末 +25 复活，除非同窗全部死亡（则永久淡出）。"
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#DEAD"
       },
       "REATTACH_MOVE": {
         "aliases": [
@@ -4322,6 +4322,7 @@
           "REATTACH"
         ],
         "curated": false,
+        "description": "Reattach：治疗——DEAD 状态段在兄弟存活时回合末 +25 复活回到战斗。",
         "effect": "Reattach: Heal",
         "follow_up_id": null,
         "id": "REATTACH_MOVE",
@@ -4338,8 +4339,7 @@
         "name": "Reattach",
         "needs_zh": true,
         "play_notes": "",
-        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#REATTACH",
-        "description": "Reattach：治疗——DEAD 状态段在兄弟存活时回合末 +25 复活回到战斗。"
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#REATTACH"
       },
       "WRITHE_MOVE": {
         "aliases": [
@@ -4347,6 +4347,7 @@
           "WRITHE"
         ],
         "curated": false,
+        "description": "Writhe：多段攻击 5（A:6）×2——随段力量膨胀（run-54 力量2 时见 7×2）。",
         "effect": "Writhe: Attack; damage 5x2 A:6",
         "follow_up_id": null,
         "id": "WRITHE_MOVE",
@@ -4366,8 +4367,7 @@
         "name": "Writhe",
         "needs_zh": true,
         "play_notes": "",
-        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#WRITHE",
-        "description": "Writhe：多段攻击 5（A:6）×2——随段力量膨胀（run-54 力量2 时见 7×2）。"
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#WRITHE"
       }
     },
     "name": "Decimillipede Segment (Back)",
@@ -8776,7 +8776,7 @@
       "Kaisercrab",
       "皇蟹"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [],
     "description": "槽位 crusher + rocket，无本体目标。遭遇生成 Crusher（crusher 槽）+ Rocket（rocket 槽）。玩家侧被动 SurroundedPower；每只爪各带 BackAttackLeftPower/BackAttackRightPower（朝向标记）+ CrabRagePower。",
     "display_names": [
@@ -8842,7 +8842,8 @@
       }
     ],
     "play_notes": "",
-    "source": "md:monsters.md:L67"
+    "source": "md:monsters.md:L67",
+    "live_notes": "LIVE run-56 A1：Act2 Boss。碾碎爪 209 + 火箭 199。T9 击杀（先火箭后本体）。玩家侧 SURROUNDED_POWER；双体 CRAB_RAGE_POWER。战终 HP 15/96。"
   },
   "KinFollower": {
     "acts": [],
@@ -10253,7 +10254,7 @@
       "Livingshield",
       "活体盾"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [],
     "description": "被动 RAMPART_POWER 25——玩家阵营回合开始时，每名存活的 TurretOperator 系盟友（如高塔炮手）获得 25 格挡。必须先杀它，否则炮手格挡每回合回满。",
     "display_names": [
@@ -10279,7 +10280,8 @@
       }
     ],
     "play_notes": "",
-    "source": "md:monsters.md:L98"
+    "source": "md:monsters.md:L98",
+    "live_notes": "LIVE run-56：Act3 走廊。RAMPART_POWER 25——每回合初给高塔炮手喂 25 挡。优先击杀活体盾切断挡引擎。"
   },
   "LostThing": {
     "acts": [],
@@ -12760,7 +12762,7 @@
       "Queen",
       "女王"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "S_MOVE",
       "PUPPET_STRINGS_MOVE",
@@ -12994,7 +12996,8 @@
       }
     ],
     "play_notes": "",
-    "source": "md:monsters.md:L80"
+    "source": "md:monsters.md:L80",
+    "live_notes": "LIVE run-56 A1：Act3 Boss 400HP。火炬头 T6 后本体 T9 击杀。run-44 威胁源优先教条确认。"
   },
   "REGENT": {
     "acts": [],
@@ -14095,6 +14098,120 @@
     "source": "codex-api:/monsters/SLIMED_BERSERKER",
     "type": "Normal"
   },
+  "SLITHERING_STRANGLER": {
+    "acts": [],
+    "aliases": [
+      "Slithering Strangler"
+    ],
+    "curated": false,
+    "cycle": [
+      "CONSTRICT_MOVE",
+      "THWACK_MOVE",
+      "LASH_MOVE"
+    ],
+    "description": "Slithering Strangler (Normal): HP 53-55 (A 54-56); cycle CONSTRICT_MOVE → THWACK_MOVE → LASH_MOVE",
+    "hp": {
+      "ascension": {
+        "max": 56,
+        "min": 54
+      },
+      "base": 53,
+      "max": 55,
+      "notes": ""
+    },
+    "id": "SLITHERING_STRANGLER",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "CONSTRICT_MOVE": {
+        "aliases": [
+          "Constrict",
+          "CONSTRICT"
+        ],
+        "curated": true,
+        "effect": "Constrict: Debuff; CONSTRICT 3 (player)",
+        "follow_up_id": null,
+        "id": "CONSTRICT_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SLITHERING_STRANGLER",
+        "name": "Constrict",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SLITHERING_STRANGLER#CONSTRICT",
+        "description": "束缚：减益；对玩家施加 CONSTRICT 3（每回合受到伤害递增）"
+      },
+      "LASH_MOVE": {
+        "aliases": [
+          "Lash",
+          "LASH"
+        ],
+        "curated": true,
+        "effect": "Lash: Attack; damage 12 A:13",
+        "follow_up_id": null,
+        "id": "LASH_MOVE",
+        "intents": [
+          {
+            "base_damage": 12,
+            "base_damage_ascension": {
+              "ascension": 13
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SLITHERING_STRANGLER",
+        "name": "Lash",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SLITHERING_STRANGLER#LASH",
+        "description": "鞭挞：攻击；伤害 12（进阶1:13）"
+      },
+      "THWACK_MOVE": {
+        "aliases": [
+          "Thwack",
+          "THWACK"
+        ],
+        "curated": true,
+        "effect": "Thwack: Attack + Defend; damage 7 A:8; block 5",
+        "follow_up_id": null,
+        "id": "THWACK_MOVE",
+        "intents": [
+          {
+            "base_damage": 7,
+            "base_damage_ascension": {
+              "ascension": 8
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Defend"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SLITHERING_STRANGLER",
+        "name": "Thwack",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SLITHERING_STRANGLER#THWACK",
+        "description": "重击：攻击+防御；伤害 7（进阶1:8）+ 挡 5"
+      }
+    },
+    "name": "Slithering Strangler",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/SLITHERING_STRANGLER",
+    "type": "Normal"
+  },
   "SLUDGE_SPINNER": {
     "acts": [
       "Act1"
@@ -14381,7 +14498,7 @@
       "Scrollofbiting",
       "咬人卷轴"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [],
     "description": "出场被动 PaperCutsPower 2；CHOMP = 单次 14 (A:16)；CHEW = 多段 5 (A:6) ×2；MORE_TEETH = 增益 自身 +2 力量。PaperCutsPower：持有者的有源攻击造成未格挡伤害时，对玩家追加纸割伤害（见 powers_zh.md）。",
     "display_names": [
@@ -14559,7 +14676,8 @@
       }
     ],
     "play_notes": "",
-    "source": "md:monsters.md:L104"
+    "source": "md:monsters.md:L104",
+    "live_notes": "LIVE run-56：Act3 走廊。PAPER_CUTS_POWER 2（穿挡 HP 税）。CHOMP/CHEW/MORE_TEETH 循环。三体战。"
   },
   "SewerClam": {
     "acts": [],
@@ -18335,7 +18453,7 @@
       "Torchheadaggregate",
       "火炬头聚合体"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "S_MOVE"
     ],
@@ -18363,7 +18481,8 @@
       }
     ],
     "play_notes": "",
-    "source": "md:monsters.md:L95"
+    "source": "md:monsters.md:L95",
+    "live_notes": "LIVE run-56 A1：Act3 Boss 爪牙 199HP。MINION_POWER + 力量爬层。Boss 战 T6 击杀。"
   },
   "ToughEgg": {
     "acts": [],
@@ -18482,7 +18601,7 @@
       "存活时盾使用",
       "高塔炮手"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [],
     "description": "出场自带 25 格挡；意图 3×5 多段（15）。活体盾存活期间，其格挡在玩家回合开始时刷新。",
     "display_names": [
@@ -18501,7 +18620,8 @@
     "needs_zh": false,
     "passives": [],
     "play_notes": "",
-    "source": "md:monsters.md:L99"
+    "source": "md:monsters.md:L99",
+    "live_notes": "LIVE run-56：Act3 走廊。开局 25 挡；UNLOAD 多段攻击。活体盾存活时 RAMPART 每回合刷新挡。"
   },
   "TrackerRubyRaider": {
     "acts": [],

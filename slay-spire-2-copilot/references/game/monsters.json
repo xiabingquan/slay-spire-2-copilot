@@ -4382,6 +4382,7 @@
           "BULK"
         ],
         "curated": false,
+        "description": "Bulk: single attack 6 (A:7) + self +2 Strength. Each Bulk stacks +2 Str on the segment — Writhe/Constrict intents inflate by 2 per stack (7x2 / 10-class seen run-44-series and run-54 live).",
         "effect": "Bulk: Attack + Buff; damage 6 A:7; STRENGTH 2 (self)",
         "follow_up_id": null,
         "id": "BULK_MOVE",
@@ -4401,8 +4402,7 @@
         "name": "Bulk",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#BULK",
-        "description": "Bulk: single attack 6 (A:7) + self +2 Strength. Each Bulk stacks +2 Str on the segment — Writhe/Constrict intents inflate by 2 per stack (7x2 / 10-class seen run-44-series and run-54 live)."
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#BULK"
       },
       "CONSTRICT_MOVE": {
         "aliases": [
@@ -4410,6 +4410,7 @@
           "CONSTRICT"
         ],
         "curated": false,
+        "description": "Constrict: single attack 8 (A:9) + applies ConstrictPower 3 on the player (end-of-player-turn unblocked damage per stack; stacks +3 per cast; removed when applier dies; blockable by remaining block).",
         "effect": "Constrict: Attack + Debuff; damage 8 A:9; WEAK 1 (player)",
         "follow_up_id": null,
         "id": "CONSTRICT_MOVE",
@@ -4429,8 +4430,7 @@
         "name": "Constrict",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#CONSTRICT",
-        "description": "Constrict: single attack 8 (A:9) + applies ConstrictPower 3 on the player (end-of-player-turn unblocked damage per stack; stacks +3 per cast; removed when applier dies; blockable by remaining block)."
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#CONSTRICT"
       },
       "DEAD_MOVE": {
         "aliases": [
@@ -4438,6 +4438,7 @@
           "DEAD"
         ],
         "curated": false,
+        "description": "Dead state: entered when the segment dies while another REATTACH segment is alive — untargetable, not removed from combat; reattaches +25 HP at end of its turn unless ALL segments are dead the same window (then fade-out permanently). Never aim attacks at a 0-HP DEAD segment.",
         "effect": "Dead: Unknown",
         "follow_up_id": null,
         "id": "DEAD_MOVE",
@@ -4454,8 +4455,7 @@
         "name": "Dead",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#DEAD",
-        "description": "Dead state: entered when the segment dies while another REATTACH segment is alive — untargetable, not removed from combat; reattaches +25 HP at end of its turn unless ALL segments are dead the same window (then fade-out permanently). Never aim attacks at a 0-HP DEAD segment."
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#DEAD"
       },
       "REATTACH_MOVE": {
         "aliases": [
@@ -4463,6 +4463,7 @@
           "REATTACH"
         ],
         "curated": false,
+        "description": "Reattach: heal — DEAD-state segment heals Amount (25) at end of its turn and returns to live combat while siblings live. Fatal-only-when-all-dead rule governs the fade-out.",
         "effect": "Reattach: Heal",
         "follow_up_id": null,
         "id": "REATTACH_MOVE",
@@ -4479,8 +4480,7 @@
         "name": "Reattach",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#REATTACH",
-        "description": "Reattach: heal — DEAD-state segment heals Amount (25) at end of its turn and returns to live combat while siblings live. Fatal-only-when-all-dead rule governs the fade-out."
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#REATTACH"
       },
       "WRITHE_MOVE": {
         "aliases": [
@@ -4488,6 +4488,7 @@
           "WRITHE"
         ],
         "curated": false,
+        "description": "Writhe: multi attack 5 (A:6) x2 — inflates with segment Strength (7x2 seen at Str 2 run-54 live).",
         "effect": "Writhe: Attack; damage 5x2 A:6",
         "follow_up_id": null,
         "id": "WRITHE_MOVE",
@@ -4507,8 +4508,7 @@
         "name": "Writhe",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#WRITHE",
-        "description": "Writhe: multi attack 5 (A:6) x2 — inflates with segment Strength (7x2 seen at Str 2 run-54 live)."
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK#WRITHE"
       }
     },
     "name": "Decimillipede Segment (Back)",
@@ -9059,7 +9059,7 @@
       "Kaisercrab",
       "皇蟹"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [],
     "description": "slots crusher + rocket; no body target. Encounter spawns Crusher (crusher slot) + Rocket (rocket slot). Player-side passive SurroundedPower; each claw carries its own BackAttackLeftPower/BackAttackRightPower (facing markers) + CrabRagePower.",
     "display_names": [
@@ -9127,7 +9127,8 @@
     "play_notes": "",
     "source": "md:monsters.md:L67",
     "zh_description": "槽位 crusher + rocket，无本体目标。遭遇生成 Crusher（crusher 槽）+ Rocket（rocket 槽）。玩家侧被动 SurroundedPower；每只爪各带 BackAttackLeftPower/BackAttackRightPower（朝向标记）+ CrabRagePower。",
-    "zh_name": "皇蟹"
+    "zh_name": "皇蟹",
+    "live_notes": "LIVE run-56 A1: Act2 Boss. Crusher 209 + Rocket 199. Killed T9 (rocket first, then crusher). SURROUNDED_POWER on player; CRAB_RAGE_POWER on both bodies. HP 15/96 at end — self-harm tax nearly fatal."
   },
   "KinFollower": {
     "acts": [],
@@ -10619,7 +10620,7 @@
       "Livingshield",
       "活体盾"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [],
     "description": "passive RAMPART_POWER 25 — at start of Player side turn each living TurretOperator-type ally (e.g. TowerGunner) gains 25 Block. Kill it first or the gunner's block regenerates every turn.",
     "display_names": [
@@ -10647,7 +10648,8 @@
     "play_notes": "",
     "source": "md:monsters.md:L98",
     "zh_description": "被动 RAMPART_POWER 25——玩家阵营回合开始时，每名存活的 TurretOperator 系盟友（如高塔炮手）获得 25 格挡。必须先杀它，否则炮手格挡每回合回满。",
-    "zh_name": "活体盾"
+    "zh_name": "活体盾",
+    "live_notes": "LIVE run-56: Act3 hallway. RAMPART_POWER 25 — feeds Block to TowerGunner each player-turn start. Kill LivingShield first to cut the block engine."
   },
   "LostThing": {
     "acts": [],
@@ -13234,7 +13236,7 @@
       "Queen",
       "女王"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "S_MOVE",
       "PUPPET_STRINGS_MOVE",
@@ -13479,7 +13481,8 @@
       "PUPPET_STRINGS_MOVE": "卡牌减益——",
       "YOU_ARE_MINE_MOVE": "减益——99 Frail/Weak/Vulnerable；"
     },
-    "zh_name": "火炬头聚合体"
+    "zh_name": "火炬头聚合体",
+    "live_notes": "LIVE run-56 A1: Act3 Boss 400HP. Killed T9 after Torchhead T6. Run-44 doctrine confirmed: minion (Torchhead) first, then Queen. PUPPET_STRINGS chains debuff on player."
   },
   "REGENT": {
     "acts": [],
@@ -14601,6 +14604,120 @@
     "source": "codex-api:/monsters/SLIMED_BERSERKER",
     "type": "Normal"
   },
+  "SLITHERING_STRANGLER": {
+    "acts": [],
+    "aliases": [
+      "Slithering Strangler"
+    ],
+    "curated": false,
+    "cycle": [
+      "CONSTRICT_MOVE",
+      "THWACK_MOVE",
+      "LASH_MOVE"
+    ],
+    "description": "Slithering Strangler (Normal): HP 53-55 (A 54-56); cycle CONSTRICT_MOVE → THWACK_MOVE → LASH_MOVE",
+    "hp": {
+      "ascension": {
+        "max": 56,
+        "min": 54
+      },
+      "base": 53,
+      "max": 55,
+      "notes": ""
+    },
+    "id": "SLITHERING_STRANGLER",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "CONSTRICT_MOVE": {
+        "aliases": [
+          "Constrict",
+          "CONSTRICT"
+        ],
+        "curated": true,
+        "effect": "Constrict: Debuff; CONSTRICT 3 (player)",
+        "follow_up_id": null,
+        "id": "CONSTRICT_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SLITHERING_STRANGLER",
+        "name": "Constrict",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SLITHERING_STRANGLER#CONSTRICT",
+        "description": "Constrict: Debuff; CONSTRICT 3 (player)"
+      },
+      "LASH_MOVE": {
+        "aliases": [
+          "Lash",
+          "LASH"
+        ],
+        "curated": true,
+        "effect": "Lash: Attack; damage 12 A:13",
+        "follow_up_id": null,
+        "id": "LASH_MOVE",
+        "intents": [
+          {
+            "base_damage": 12,
+            "base_damage_ascension": {
+              "ascension": 13
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SLITHERING_STRANGLER",
+        "name": "Lash",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SLITHERING_STRANGLER#LASH",
+        "description": "Lash: Attack; damage 12 A:13"
+      },
+      "THWACK_MOVE": {
+        "aliases": [
+          "Thwack",
+          "THWACK"
+        ],
+        "curated": true,
+        "effect": "Thwack: Attack + Defend; damage 7 A:8; block 5",
+        "follow_up_id": null,
+        "id": "THWACK_MOVE",
+        "intents": [
+          {
+            "base_damage": 7,
+            "base_damage_ascension": {
+              "ascension": 8
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Defend"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "SLITHERING_STRANGLER",
+        "name": "Thwack",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/SLITHERING_STRANGLER#THWACK",
+        "description": "Thwack: Attack + Defend; damage 7 A:8; block 5"
+      }
+    },
+    "name": "Slithering Strangler",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/SLITHERING_STRANGLER",
+    "type": "Normal"
+  },
   "SLUDGE_SPINNER": {
     "acts": [
       "Act1"
@@ -14889,7 +15006,7 @@
       "Scrollofbiting",
       "咬人卷轴"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [],
     "description": "spawn passive PaperCutsPower 2; CHOMP = single 14 (A:16); CHEW = multi 5 (A:6) ×2; MORE_TEETH = buff self +2 Strength. PaperCutsPower: owner's powered attacks that deal unblocked damage trigger extra paper-cut damage to the player (see powers.md).",
     "display_names": [
@@ -15075,7 +15192,8 @@
       "MORE_TEETH": "增益 自身 +2 力量。PaperCutsPower：持有者的有源攻击造成未格挡伤害时，对玩家追加纸割伤害（见 powers_zh.md）。",
       "PAPER_CUTS_POWER_MOVE": "2；"
     },
-    "zh_name": "咬人卷轴"
+    "zh_name": "咬人卷轴",
+    "live_notes": "LIVE run-56: Act3 hallway. PAPER_CUTS_POWER 2 (unblockable HP tax). CHOMP/CHEW/MORE_TEETH cycle. 3-body fight."
   },
   "SewerClam": {
     "acts": [],
@@ -18981,7 +19099,7 @@
       "Torchheadaggregate",
       "火炬头聚合体"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "S_MOVE"
     ],
@@ -19011,7 +19129,8 @@
     "play_notes": "",
     "source": "md:monsters.md:L95",
     "zh_description": "MinionPower + 力量成长 （观察 +2/回合）；意图区间 18 → 12×3 → 16×3 → 24（多段攻击循环）。独立战斗目标——存活时女王战不会结束。",
-    "zh_name": "火炬头聚合体"
+    "zh_name": "火炬头聚合体",
+    "live_notes": "LIVE run-56 A1: Act3 Boss minion 199HP. MINION_POWER + Strength ramp. Killed T6 of boss fight. Threat-source priority doctrine from run-44 held."
   },
   "ToughEgg": {
     "acts": [],
@@ -19136,7 +19255,7 @@
       "存活时盾使用",
       "高塔炮手"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [],
     "description": "starts with 25 Block; intent 3×5 multi attack (15). RAMPART-fed block refreshes each player-turn start while LivingShield lives.",
     "display_names": [
@@ -19157,7 +19276,8 @@
     "play_notes": "",
     "source": "md:monsters.md:L99",
     "zh_description": "出场自带 25 格挡；意图 3×5 多段（15）。活体盾存活期间，其格挡在玩家回合开始时刷新。",
-    "zh_name": "高塔炮手"
+    "zh_name": "高塔炮手",
+    "live_notes": "LIVE run-56: Act3 hallway. Starts with 25 Block; UNLOAD multi-attack. Block refreshed by LivingShield RAMPART while shield alive."
   },
   "TrackerRubyRaider": {
     "acts": [],

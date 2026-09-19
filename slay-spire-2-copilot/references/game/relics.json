@@ -189,7 +189,7 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
+    "curated": true,
     "description": "At the start of each combat, draw 2 additional cards.",
     "id": "BAG_OF_PREPARATION",
     "kind": "relic",
@@ -199,7 +199,8 @@
     "rarity": "Common",
     "source": "md:relics.md:L19; md:relics_zh.md:L19; codex:relics/BAG_OF_PREPARATION",
     "zh_description": "第 1 回合，抽牌阶段额外抽 2 张牌。",
-    "zh_name": "准备背包"
+    "zh_name": "准备背包",
+    "live_notes": "LIVE run-56: combat start draw +2 additional cards. Engine-online faster every fight."
   },
   "BEATING_REMNANT": {
     "aliases": [
@@ -302,7 +303,7 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
+    "curated": true,
     "description": "on pickup, +20 Max HP; turn 1, hand draw −2 cards.",
     "id": "BIG_MUSHROOM",
     "kind": "relic",
@@ -312,7 +313,8 @@
     "rarity": "Event",
     "source": "md:relics.md:L272; md:relics_zh.md:L272",
     "zh_description": "拾取时，+20 最大 HP；第 1 回合，抽牌阶段额外少抽 2 张牌。",
-    "zh_name": "大蘑菇"
+    "zh_name": "大蘑菇",
+    "live_notes": "LIVE run-56: Mushroom event pick. +20 MaxHP on pickup; turn 1 draw −2 cards (tempo cost in every subsequent fight)."
   },
   "BIIIG_HUG": {
     "aliases": [
@@ -549,7 +551,7 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
+    "curated": true,
     "description": "at start of elite combats (turn 1), hand draw +2 cards and gain 1 Energy.",
     "id": "BOOMING_CONCH",
     "kind": "relic",
@@ -559,7 +561,8 @@
     "rarity": "Ancient",
     "source": "md:relics.md:L149; md:relics_zh.md:L149",
     "zh_description": "精英战第 1 回合开始，额外抽 2 张牌并获得 1 点能量。",
-    "zh_name": "轰鸣海螺"
+    "zh_name": "轰鸣海螺",
+    "live_notes": "LIVE run-56: Neow pick. Elite combat start draw +2 cards + gain 1 Energy. Confirmed every elite fight in the run."
   },
   "BOUND_PHYLACTERY": {
     "aliases": [
@@ -680,7 +683,7 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
+    "curated": true,
     "description": "Start each combat with 3 Thorns.",
     "id": "BRONZE_SCALES",
     "kind": "relic",
@@ -690,7 +693,8 @@
     "rarity": "Common",
     "source": "md:relics.md:L23; md:relics_zh.md:L23; codex:relics/BRONZE_SCALES",
     "zh_description": "战斗开始，获得 3 点荆棘。",
-    "zh_name": "铜质鳞片"
+    "zh_name": "铜质鳞片",
+    "live_notes": "LIVE run-56: Start each combat with 3 Thorns. Thorns damage is block-piercing."
   },
   "BURNING_BLOOD": {
     "aliases": [
@@ -829,7 +833,7 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
+    "curated": true,
     "description": "first time each combat you lose HP, draw 3 cards. Any HP-loss tick triggers it — CrimsonMantle turn-start −1 / BloodWall / Bloodletting / Offering class; with Mantle deployed it is effectively \"draw 3 at combat start after T1\".",
     "id": "CENTENNIAL_PUZZLE",
     "kind": "relic",
@@ -839,7 +843,8 @@
     "rarity": "Common",
     "source": "md:relics.md:L24; md:relics_zh.md:L24",
     "zh_description": "每场战斗首次失去 HP 时，抽 3 张牌。任意掉血 tick 均触发——猩红披风回合开始 −1 / 放血 / 祭品类；披风部署后等效「T1 后战斗开始抽 3」。",
-    "zh_name": "百年积木"
+    "zh_name": "百年积木",
+    "live_notes": "LIVE run-56: first time each combat you lose HP, draw 3 cards. Synergizes with self-harm engine (Hemokinesis/Bloodletting/BloodWall trigger it)."
   },
   "CHANDELIER": {
     "aliases": [
@@ -1091,7 +1096,7 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
+    "curated": true,
     "description": "whenever you play an Attack card, gain 1 Block.",
     "id": "DAUGHTER_OF_THE_WIND",
     "kind": "relic",
@@ -1101,7 +1106,24 @@
     "rarity": "Event",
     "source": "md:relics.md:L278; md:relics_zh.md:L278",
     "zh_description": "每次打出攻击牌时，获得 1 格挡。",
-    "zh_name": "风的女儿"
+    "zh_name": "风的女儿",
+    "live_notes": "LIVE run-56: Doll room pick. Whenever you play an Attack card, gain 1 Block. Passive block engine synergy with attack-heavy deck."
+  },
+  "DAUGHTER_OF_WIND": {
+    "aliases": [
+      "Daughter of the Wind",
+      "DAUGHTER_OF_THE_WIND"
+    ],
+    "character": "shared",
+    "curated": false,
+    "description": "Whenever you play an Attack, gain 1 Block.",
+    "id": "DAUGHTER_OF_WIND",
+    "kind": "relic",
+    "name": "Daughter of the Wind",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Event",
+    "source": "codex-api:/relics/DAUGHTER_OF_THE_WIND"
   },
   "DELICATE_FROND": {
     "aliases": [
@@ -1436,7 +1458,7 @@
     "id": "ETERNAL_FEATHER",
     "kind": "relic",
     "name": "Eternal Feather",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
     "source": "codex-api:/relics/ETERNAL_FEATHER"
@@ -2625,7 +2647,7 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
+    "curated": true,
     "description": "Upon pickup, raise your Max HP by 31.",
     "id": "LOOMING_FRUIT",
     "kind": "relic",
@@ -2635,7 +2657,8 @@
     "rarity": "Ancient",
     "source": "md:relics.md:L180; md:relics_zh.md:L180; codex:relics/LOOMING_FRUIT",
     "zh_description": "拾取时，+31 最大 HP。",
-    "zh_name": "布质果实"
+    "zh_name": "布质果实",
+    "live_notes": "LIVE run-56: Act3 NONUPEIPE event pick. +31 MaxHP on pickup. Combined with CHOSEN_CHEESE+FEED+BIG_MUSHROOM+STRAWBERRY took HP 80→160."
   },
   "LORDS_PARASOL": {
     "aliases": [
@@ -4303,7 +4326,7 @@
     "id": "ROYAL_STAMP",
     "kind": "relic",
     "name": "Royal Stamp",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "rarity": "Shop",
     "source": "codex-api:/relics/ROYAL_STAMP"
@@ -4843,7 +4866,7 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
+    "curated": true,
     "description": "Upon pickup, raise your Max HP by 7.",
     "id": "STRAWBERRY",
     "kind": "relic",
@@ -4853,7 +4876,8 @@
     "rarity": "Common",
     "source": "md:relics.md:L41; md:relics_zh.md:L41; codex:relics/STRAWBERRY",
     "zh_description": "拾取时，+7 最大 HP。",
-    "zh_name": "草莓"
+    "zh_name": "草莓",
+    "live_notes": "LIVE run-56: +7 MaxHP on pickup. Part of the MaxHP stacking package."
   },
   "STRIKE_DUMMY": {
     "aliases": [
@@ -5351,7 +5375,7 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
+    "curated": true,
     "description": "Start each combat with 1 Strength.",
     "id": "VAJRA",
     "kind": "relic",
@@ -5361,7 +5385,8 @@
     "rarity": "Common",
     "source": "md:relics.md:L42; md:relics_zh.md:L42; codex:relics/VAJRA",
     "zh_description": "战斗开始，获得 1 点力量。",
-    "zh_name": "金刚杵"
+    "zh_name": "金刚杵",
+    "live_notes": "LIVE run-56: Act1 shop purchase 75g. Start each combat with 1 Strength. Passive strength for self-harm engine."
   },
   "VAMBRACE": {
     "aliases": [
@@ -5593,6 +5618,22 @@
     "zh_description": "精英战斗奖励额外掉落 1 份稀有卡牌奖励。",
     "zh_name": "白星"
   },
+  "WIND_DAUGHTER": {
+    "aliases": [
+      "Daughter of the Wind",
+      "DAUGHTER_OF_THE_WIND"
+    ],
+    "character": "shared",
+    "curated": false,
+    "description": "Whenever you play an Attack, gain 1 Block.",
+    "id": "WIND_DAUGHTER",
+    "kind": "relic",
+    "name": "Daughter of the Wind",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Event",
+    "source": "codex-api:/relics/DAUGHTER_OF_THE_WIND"
+  },
   "WINGED_BOOTS": {
     "aliases": [
       "Winged Boots",
@@ -5624,7 +5665,7 @@
     "id": "WING_CHARM",
     "kind": "relic",
     "name": "Wing Charm",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "rarity": "Shop",
     "source": "codex-api:/relics/WING_CHARM"

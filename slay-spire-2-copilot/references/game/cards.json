@@ -295,7 +295,7 @@
     "card_type": "attack",
     "character_pool": "IRONCLAD",
     "cost": "0",
-    "curated": false,
+    "curated": true,
     "description": "deal 6 damage; add a copy of this card to your discard pile. Upgrade: +2 damage. Corrupted enchant (Symbiote event): Corrupted = \"attacks deal ×1.5 damage; owner takes 2 unblockable damage when played\". On Anger each play deals ~12-16 damage ((6+Str)×1.5) + 2 self-damage + copy to discard; **with Rupture Amount 2 in play the 2 self-damage fires Rupture +2 Strength per Anger play — copies inherit no enchant but the base Anger keeps re-triggering from discard every reshuffle (Str 2→4→6 across two Anger plays in one turn)**. Highest-frequency 0-cost Rupture fuel target in the Corrupted pool.",
     "id": "ANGER",
     "keywords": [],
@@ -308,7 +308,8 @@
     "target_type": null,
     "upgrade": "+2 damage. Corrupted enchant (Symbiote event): Corrupted = \"attacks deal ×1.5 damage; owner takes 2 unblockable damage when played\". On Anger each play deals ~12-16 damage ((6+Str)×1.5) + 2 self-damage + copy to discard; **with Rupture Amount 2 in play the 2 self-damage fires Rupture +2 Strength per Anger play — copies inherit no enchant but the base Anger keeps re-triggering from discard every reshuffle (Str 2→4→6 across two Anger plays in one turn)**. Highest-frequency 0-cost Rupture fuel target in the Corrupted pool.",
     "zh_description": "0，攻击，普通，造成 6 点伤害；将自身拷贝加入弃牌堆。升级：伤害 +2。Corrupted 附魔（共生体事件）：Corrupted =「攻击伤害 ×1.5；打出时拥有者受 2 点不可格挡伤害」。Anger 上每次打出 ~12-16 伤（(6+力)×1.5）+ 自伤 2 + 复制入弃牌堆；**Rupture Amount2 在场时自伤 2 触发 Rupture 每次 Anger +2 力——复制体不继承附魔但本体 Anger 每洗牌从弃牌堆重新触发（单回合两次 Anger 打出 Str 2→4→6）**。Corrupted 池中最高频率 0 费 Rupture 燃料目标。",
-    "zh_name": "愤怒"
+    "zh_name": "愤怒",
+    "live_notes": "LIVE run-56: 0-cost attack, adds copy of itself to discard. Strength-scaling value."
   },
   "ANOINTED": {
     "aliases": [
@@ -493,7 +494,7 @@
     "card_type": "attack",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
+    "curated": true,
     "description": "Exhaust, Strike-tagged, deal damage = 6 + 3 for each card in your exhaust pile. Upgrade: +1 per exhaust card (4 each).",
     "id": "ASHEN_STRIKE",
     "keywords": [
@@ -509,7 +510,8 @@
     "target_type": null,
     "upgrade": "+1 per exhaust card (4 each).",
     "zh_description": "1，攻击，罕见，消耗，打击标签，伤害 = 6 + 消耗堆每张牌 3 点。升级：每张 +4。",
-    "zh_name": "灰烬打击"
+    "zh_name": "灰烬打击",
+    "live_notes": "LIVE run-56: upgraded via smith. Attack with self-harm fuel component."
   },
   "ASSASSINATE": {
     "aliases": [
@@ -783,7 +785,7 @@
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "0",
-    "curated": false,
+    "curated": true,
     "description": "draw 3 cards; you cannot draw additional cards this turn. Upgrade: draw 4.",
     "id": "BATTLE_TRANCE",
     "keywords": [],
@@ -796,7 +798,8 @@
     "target_type": null,
     "upgrade": "draw 4.",
     "zh_description": "0，技能，罕见，抽 3 张牌；本回合不能再抽牌。升级：抽 4。",
-    "zh_name": "战斗专注"
+    "zh_name": "战斗专注",
+    "live_notes": "LIVE run-56: draw 3, no more draws this turn. Engine piece for self-harm deck."
   },
   "BEACON_OF_HOPE": {
     "aliases": [
@@ -1698,7 +1701,7 @@
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
+    "curated": true,
     "description": "Exhaust, exhaust a card; draw 2 cards. Upgrade: draw 3.",
     "id": "BURNING_PACT",
     "keywords": [
@@ -1713,7 +1716,8 @@
     "target_type": null,
     "upgrade": "draw 3.",
     "zh_description": "1，技能，罕见，消耗，消耗 1 张牌；抽 2 张牌。升级：抽 3。",
-    "zh_name": "燃烧契约"
+    "zh_name": "燃烧契约",
+    "live_notes": "LIVE run-56: Act2 shop purchase 78g. Exhaust a card, draw 2. Status dilution answer (Infection-class fights)."
   },
   "BURST": {
     "aliases": [
@@ -2989,7 +2993,7 @@
     "id": "DARK_EMBRACE",
     "kind": "card",
     "name": "Dark Embrace",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
     "source": "codex-api:/cards/DARK_EMBRACE",
@@ -3659,7 +3663,7 @@
     "id": "DISCOVERY",
     "kind": "card",
     "name": "DISCOVERY",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "source": "codex-html:https://spire-codex.com/cards/discovery"
   },
@@ -6228,7 +6232,7 @@
     "id": "HIDDEN_GEM",
     "kind": "card",
     "name": "HIDDEN_GEM",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "source": "codex-html:https://spire-codex.com/cards/hidden_gem"
   },
@@ -6578,7 +6582,7 @@
     "card_type": "power",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
+    "curated": true,
     "description": "Gain 2 Strength.",
     "id": "INFLAME",
     "keywords": [],
@@ -6591,7 +6595,8 @@
     "target_type": null,
     "upgrade": "+3 Strength.",
     "zh_description": "1，能力，罕见，获得 2 力量。升级：获得 3 力量。",
-    "zh_name": "燃烧"
+    "zh_name": "燃烧",
+    "live_notes": "LIVE run-56: upgraded via smith. +Strength power — core engine piece for Rupture synergy."
   },
   "INJURY": {
     "aliases": [
@@ -8310,7 +8315,7 @@
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "0",
-    "curated": false,
+    "curated": true,
     "description": "Exhaust, lose 6 HP (unblockable); gain 2 Energy; draw 3 cards. Upgrade: draw 5.",
     "id": "OFFERING",
     "keywords": [
@@ -8325,7 +8330,8 @@
     "target_type": null,
     "upgrade": "draw 5.",
     "zh_description": "0，技能，稀有，消耗，失去 6 HP（无视格挡）；获得 2 能量；抽 3 张牌。升级：抽 5。",
-    "zh_name": "祭品"
+    "zh_name": "祭品",
+    "live_notes": "LIVE run-56: lose HP, gain energy + draw. Self-harm fuel + burst enabler."
   },
   "OMNISLICE": {
     "aliases": [
@@ -8363,7 +8369,7 @@
     "id": "ONE_TWO_PUNCH",
     "kind": "card",
     "name": "One-Two Punch",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
     "source": "codex-api:/cards/ONE_TWO_PUNCH",
@@ -9815,7 +9821,7 @@
     "id": "REND",
     "kind": "card",
     "name": "REND",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "source": "codex-html:https://spire-codex.com/cards/rend"
   },
@@ -11547,7 +11553,7 @@
     "id": "STAMPEDE",
     "kind": "card",
     "name": "Stampede",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
     "source": "codex-api:/cards/STAMPEDE",
@@ -12100,14 +12106,15 @@
   },
   "SWORD_BOOMERANG": {
     "aliases": [],
-    "curated": false,
-    "description": "Sword Boomerang - Card - Slay the Spire 2 (sts2) | Spire Codex Card Library Relic Collection Potion Lab Enchantments Powers Keywords The Run Characters Bestiary Encounters Events Ancients Merchant Systems & Meta Custom Mode Mechanics Unlockables Reference Timeline Images Reference Badges Compare Characters Guides Aggregate data Runs Steam Mod Art Exporter Overlay (Overwolf) Knowledge Demon bot Build with the data Developers API About Project Support Patreon Ko-fi Feedback Email Elsewhere Discord GitHub Privacy Terms Live Search cards, relics, monsters... . main EN Spire Codex is now on Overwolf. Get the in-game overlay with live card lookups and one-click run uploads. Learn more →",
+    "curated": true,
+    "description": "Deal 3 damage to a random enemy 3 times. (Upgraded: 4 damage ×3.) Multi-hit attack — scales with Strength.",
     "id": "SWORD_BOOMERANG",
     "kind": "card",
     "name": "SWORD_BOOMERANG",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
-    "source": "codex-html:https://spire-codex.com/cards/sword_boomerang"
+    "source": "codex-html:https://spire-codex.com/cards/sword_boomerang",
+    "live_notes": "LIVE run-56: multi-hit attack, good synergy with Rupture strength stacks."
   },
   "SWORD_SAGE": {
     "aliases": [
@@ -12278,7 +12285,7 @@
     "id": "TEAR_ASUNDER",
     "kind": "card",
     "name": "TEAR_ASUNDER",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "source": "codex-html:https://spire-codex.com/cards/tear_asunder"
   },
@@ -12500,7 +12507,7 @@
     "id": "THINKING_AHEAD",
     "kind": "card",
     "name": "THINKING_AHEAD",
-    "needs_zh": true,
+    "needs_zh": false,
     "play_notes": "",
     "source": "codex-html:https://spire-codex.com/cards/thinking_ahead"
   },

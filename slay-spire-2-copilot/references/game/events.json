@@ -671,7 +671,7 @@
       "Doll Room",
       "玩偶室"
     ],
-    "curated": false,
+    "curated": true,
     "description": "ChooseRandom → obtain a doll relic; TakeSomeTime → 5 unblockable damage; Examine → 15 unblockable damage.",
     "id": "DOLL_ROOM",
     "kind": "event",
@@ -752,7 +752,8 @@
     "play_notes": "",
     "source": "md:events.md; md:events_zh.md",
     "zh_description": "ChooseRandom → 获得玩偶遗物；TakeSomeTime → 5 点不可格挡伤害；Examine → 15 点不可格挡伤害。",
-    "zh_name": "玩偶室"
+    "zh_name": "玩偶室",
+    "live_notes": "LIVE run-56: options = Random(pick 1 doll relic) / TakeSomeTime(−5HP, choose 1 of 2) / Examine(−15HP, choose 1 of 3). Picked TakeSomeTime → DaughterOfTheWind."
   },
   "DOORS_OF_LIGHT_AND_DARK": {
     "aliases": [
@@ -1040,7 +1041,7 @@
       "Hungry For Mushrooms",
       "蘑菇饥渴"
     ],
-    "curated": false,
+    "curated": true,
     "description": "BigMushroom → BigMushroom relic; FragrantMushroom → FragrantMushroom relic.",
     "id": "HUNGRY_FOR_MUSHROOMS",
     "kind": "event",
@@ -1086,7 +1087,8 @@
     "play_notes": "",
     "source": "md:events.md; md:events_zh.md",
     "zh_description": "BigMushroom → BigMushroom 遗物；FragrantMushroom → FragrantMushroom 遗物。",
-    "zh_name": "蘑菇饥渴"
+    "zh_name": "蘑菇饥渴",
+    "live_notes": "LIVE run-56: options = BigMushroom(+20MaxHP, T1 draw −2) / FragrantMushroom(−15HP, upgrade 2 random). Picked BigMushroom."
   },
   "INFESTED_AUTOMATON": {
     "aliases": [
@@ -1358,7 +1360,7 @@
       "Neow",
       "尼奥"
     ],
-    "curated": false,
+    "curated": true,
     "description": "no-modifier run → 3 options = 2 random positive relics + 1 random curse-cost relic. Positive pool: ArcaneScroll, BoomingConch, FishingRod, GoldenPearl, Kaleidoscope, LeadPaperweight, LostCoffer, MassiveScroll, NeowsTorment, NewLeaf, PhialHolster, PreciseScissors, ScrollBoxes, WingedBoots; plus one XOR extra pair rolled independently: LavaRock XOR SmallCapsule (skipped if the curse relic is LargeCapsule), NutritiousOyster XOR StoneHumidifier, NeowsTalisman XOR Pomander. Curse pool: CursedPearl, HeftyTablet, LargeCapsule, LeafyPoultice, NeowsBones, PrecariousShears, SilkenTress, SilverCrucible. Conflicts removed from the positive pool: CursedPearl−GoldenPearl, HeftyTablet−ArcaneScroll, LeafyPoultice−NewLeaf, PrecariousShears−PreciseScissors. Each relic also filtered by `IsAllowedAtNeow`. With run modifiers active, Neow instead offers each modifier's `GenerateNeowOption` in sequence.",
     "id": "NEOW",
     "kind": "event",
@@ -1828,7 +1830,8 @@
     "play_notes": "",
     "source": "md:events.md; md:events_zh.md",
     "zh_description": "无 modifier 的对局 → 3 个选项 = 2 件随机正面遗物 + 1 件随机诅咒代价遗物。正面池：ArcaneScroll、BoomingConch、FishingRod、GoldenPearl、Kaleidoscope、LeadPaperweight、LostCoffer、MassiveScroll、NeowsTorment、NewLeaf、PhialHolster、PreciseScissors、ScrollBoxes、WingedBoots；另有三组独立 XOR 追加：LavaRock XOR SmallCapsule（诅咒为 LargeCapsule 时跳过）、NutritiousOyster XOR StoneHumidifier、NeowsTalisman XOR Pomander。诅咒池：CursedPearl、HeftyTablet、LargeCapsule、LeafyPoultice、NeowsBones、PrecariousShears、SilkenTress、SilverCrucible。冲突项从正面池剔除：CursedPearl−GoldenPearl、HeftyTablet−ArcaneScroll、LeafyPoultice−NewLeaf、PrecariousShears−PreciseScissors。每件遗物另经 `IsAllowedAtNeow` 过滤。对局存在 modifier 时，Neow 改为依次提供各 modifier 的 `GenerateNeowOption`。",
-    "zh_name": "尼奥"
+    "zh_name": "尼奥",
+    "live_notes": "LIVE run-56: options = GoldenPearl(150g) / BoomingConch(elite draw2+1energy) / SilkenTress(lose gold, Glam enchant). Picked BoomingConch — engine value > gold."
   },
   "NONUPEIPE": {
     "aliases": [

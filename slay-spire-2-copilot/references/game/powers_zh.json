@@ -671,7 +671,7 @@
       "CrabRagePower"
     ],
     "counter_class": false,
-    "curated": false,
+    "curated": true,
     "description": "同侧另一生物死亡时，存活的持有者获得 +6 力量与 99 无来源格挡，随后该能力自行移除。（皇蟹双爪；CanonicalVars Strength 6 / Block 99 Unpowered。）",
     "host_of_affliction": false,
     "id": "CRAB_RAGE_POWER",
@@ -681,7 +681,8 @@
     "play_notes": "",
     "power_type": "Buff",
     "source": "md:powers.md:L378; md:powers_zh.md:L333",
-    "stack_type": "Single"
+    "stack_type": "Single",
+    "live_notes": "LIVE run-56：皇蟹双体均有 CRAB_RAGE。触发时给蟹体 +力量 + 大量挡。"
   },
   "CREATIVE_AI_POWER": {
     "aliases": [
@@ -2354,7 +2355,7 @@
       "PaperCutsPower"
     ],
     "counter_class": false,
-    "curated": false,
+    "curated": true,
     "description": "持有者的攻击对玩家造成未格挡伤害 > 0 时，该玩家失去 Amount 点最大 HP。Amount 2 精确——每漏挡一路咬人卷轴类攻击者每回合 −2 MaxHP；**全挡回合零 MaxHP 税**（51 挡对 44 来袭零税）——对策是每个攻击者的挡完整性而非平均挡值。关联配对解码：**Inferno 自身开回合 HP 损失触发 Rupture**（Inferno+Rupture Amount2 同部署 = 每回合被动 +2 力量）**且满足 Spite「本回合掉血」条件**（部署 Inferno 的战斗 Spite 常态双击）。",
     "host_of_affliction": false,
     "id": "PAPER_CUTS_POWER",
@@ -2364,7 +2365,8 @@
     "play_notes": "",
     "power_type": "Buff",
     "source": "md:powers.md:L323; md:powers_zh.md:L292",
-    "stack_type": "Counter"
+    "stack_type": "Counter",
+    "live_notes": "LIVE run-56：咬人卷轴被动。Amount 2——穿挡 HP 税。"
   },
   "PARRY_POWER": {
     "counter_class": false,
@@ -2589,7 +2591,7 @@
       "RampartPower"
     ],
     "counter_class": false,
-    "curated": false,
+    "curated": true,
     "description": "玩家阵营回合开始时，每名存活的 TurretOperator 敌人获得 Amount 格挡。",
     "host_of_affliction": false,
     "id": "RAMPART_POWER",
@@ -2599,7 +2601,8 @@
     "play_notes": "",
     "power_type": "Buff",
     "source": "md:powers.md:L211; md:powers_zh.md:L188",
-    "stack_type": "Counter"
+    "stack_type": "Counter",
+    "live_notes": "LIVE run-56：活体盾被动 Amount 25。玩家回合初每存活炮台类随从获得 25 挡。优先击杀活体盾。"
   },
   "RAVENOUS_POWER": {
     "counter_class": true,
@@ -3031,7 +3034,7 @@
       "SlipperyPower"
     ],
     "counter_class": false,
-    "curated": false,
+    "curated": true,
     "description": "对持有者任何 >= 1 的 HP 损失 降为恰好 1；每次造成 >= 1 未格挡伤害的命中消耗 1 层。",
     "host_of_affliction": false,
     "id": "SLIPPERY_POWER",
@@ -3041,7 +3044,8 @@
     "play_notes": "",
     "power_type": "Buff",
     "source": "md:powers.md:L347; md:powers_zh.md:L308",
-    "stack_type": "Counter"
+    "stack_type": "Counter",
+    "live_notes": "LIVE run-56：墨影幻灵 Act1 Boss Slippery:8。每次命中消耗 1 层充能，伤害上限为剩余充能。run-42 教条确认。"
   },
   "SLOTH_POWER": {
     "counter_class": true,
@@ -3062,7 +3066,7 @@
       "SlowPower"
     ],
     "counter_class": false,
-    "curated": false,
+    "curated": true,
     "description": "持有者受到的攻击伤害 × (1 + 0.1 × 本回合玩家已打出的卡牌数)。`SlowAmount` 每打出一张牌 +1， 持有者阵营回合开始时归零。显示层数 = SlowAmount × 10。",
     "host_of_affliction": false,
     "id": "SLOW_POWER",
@@ -3072,7 +3076,8 @@
     "play_notes": "",
     "power_type": "Debuff",
     "source": "md:powers.md:L64; md:powers_zh.md:L57",
-    "stack_type": "Counter"
+    "stack_type": "Counter",
+    "live_notes": "LIVE run-56：旧日雕像精英。SLOW_POWER 计数器——攻击意图随剩余计数缩放。"
   },
   "SLUMBER_POWER": {
     "aliases": [
@@ -3433,7 +3438,7 @@
       "SurroundedPower"
     ],
     "counter_class": false,
-    "curated": false,
+    "curated": true,
     "description": "站位状态；当攻击者带有与 持有者朝向匹配的 BACK_ATTACK_LEFT_POWER / BACK_ATTACK_RIGHT_POWER 标记时，对持有者的攻击伤害 ×1.5。标记本身为惰性 Single Buff。朝向规则 （反编译）：玩家打出指向某生物的卡牌/药水、且该生物的 BACK_ATTACK 标记 与当前朝向相反时，持有者朝向翻转——即指向某爪即面向该爪，另一只爪成为 ×1.5 的侧击者。侧击生物死亡时，若存活方标记同侧，朝向重定向至该标记 持有者。",
     "host_of_affliction": false,
     "id": "SURROUNDED_POWER",
@@ -3443,7 +3448,8 @@
     "play_notes": "",
     "power_type": "Debuff",
     "source": "md:powers.md:L74; md:powers_zh.md:L64",
-    "stack_type": "Single"
+    "stack_type": "Single",
+    "live_notes": "LIVE run-56：皇蟹战玩家侧 debuff。由火箭槽位施加——双体包围状态标记。"
   },
   "SWIPE_POWER": {
     "curated": true,
