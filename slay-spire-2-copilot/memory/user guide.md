@@ -136,7 +136,7 @@ reference for the game, not only a session-start artifact:
   and phased reflections give the standing cross-run picture; full per-run
   notes are generally NOT needed at start
 - **On demand**: to read one run's complete record, open that single note —
-  files carry a run-number prefix (`51_IRONCLAD_...`) equal to the 对局序号
+  files carry a run-number prefix (`0051_IRONCLAD_...`) equal to the 对局序号
   column in overview.md; look the number up there, then read the file
 - Any time during play: consult specific run notes or character accumulations
   mid-run when a decision would benefit from them

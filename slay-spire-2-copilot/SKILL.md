@@ -66,7 +66,7 @@ Execute in order; all of the following are the skill's own work:
      notes are NOT required at session start.
    - **On demand**: when a specific past run matters for a decision, read
      that single note under memory/runs/ — files are named with the run
-     number prefix (e.g. `51_IRONCLAD_...md`) matching the 对局序号 column
+     number prefix (e.g. `0051_IRONCLAD_....md`) matching the 对局序号 column
      in overview.md; look the number up there first, then open the file.
    - Per-character playstyle notes: consult on demand the same way
      (filter runs/ by character prefix when needed).
@@ -251,11 +251,11 @@ gitignored (harness runtime only).
 
 When the run ends (game_over screen, or abandon):
 
-1. Write this run's memory note to memory/runs/<run-number>_<CHARACTER>_<YYYYmmdd-HHMMSS>_<hash8>.md
+1. Write this run's memory note to memory/runs/<run-number-4-digit-padded>_<CHARACTER>_<YYYYmmdd-HHMMSS>_<hash8>.md
    (run number = the 对局序号 this run will carry in overview.md — newest
    number + 1; then character id, run log timestamp and hash, underscore-
    separated) and its Chinese twin
-   memory/runs/<run-number>_<CHARACTER>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md — the two files
+   memory/runs/<run-number-4-digit-padded>_<CHARACTER>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md — the two files
    must stay content-aligned. Both follow memory/user guide.md and the
    section structure of memory/template.md (Summary table of core run facts /
    Run review / What went well / What went poorly / Key moments). Cite the
@@ -405,7 +405,7 @@ memory/ — run memory (version-controlled):
 - `memory/user guide.md` — user-written guidance for what agents should record
 - `memory/template.md` — section template for per-run memory notes
 - `memory/runs/` — one note per run plus a `_zh` Chinese twin, named
-  <run-number>_<CHARACTER>_<YYYYmmdd-HHMMSS>_<hash8>.md / _zh.md — the run
+  <run-number-4-digit-padded>_<CHARACTER>_<YYYYmmdd-HHMMSS>_<hash8>.md / _zh.md — the run
   number prefix equals the 对局序号 in memory/overview.md (lookup key)
 
 - `SKILL_zh.md` — Chinese version of this skill doc
