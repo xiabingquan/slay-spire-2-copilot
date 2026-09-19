@@ -3674,13 +3674,13 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "每次打出攻击或技能牌时，本场战斗内将其升级。语义：触发升级的那次打出仍按**基础值**结算，该牌此后本战打出才用升级值（如 Rage 首打 Amount 3/后打 5、Defend 首打 5/后打 8；速度药水敏捷回合的后打 Defend 读数 13 = 基础5+升级3+敏捷5）。",
+    "curated": true,
+    "description": "每次打出攻击或技能牌时，本场战斗内将其升级。语义 run-48 live 精修：**按单卡实例**——触发打出仍按基础值结算；该副本此后本战打出才用升级值。后抽到的新副本仍先按基础值打（run-48 Strike：Whetstone 升级过的副本首击 9，未升级副本首击 6 之后才升级）。**不是**全局卡牌类型升级。战中实例：Shrug 首打 8 → 后打 12 级；突破首打 9 → 后打 13；放血副本带升级时能量显示 6/3。",
     "id": "RAZOR_TOOTH",
     "kind": "relic",
     "name": "剃刀牙",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-48 live 2026-09-19：按实例语义确认——新副本先打基础值；Whetstone 升级副本与 Razor 升级副本相互独立。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
     "rarity": "Rare",
     "source": "md:relics.md:L124; md:relics_zh.md:L124"
   },
@@ -4059,6 +4059,22 @@
     "play_notes": "",
     "rarity": "Ancient",
     "source": "md:relics.md:L218; md:relics_zh.md:L218"
+  },
+  "SHARP": {
+    "aliases": [
+      "Gnarled Hammer",
+      "GNARLED_HAMMER"
+    ],
+    "character": "shared",
+    "curated": true,
+    "description": "SHARP 是附魔关键词而非单件遗物效果：Sharp N = 被附魔卡牌 +N 攻击伤害（run-48 live：自助指南选项「读下封底」为一张攻击牌附魔锋利 2——Bludgeon+ 基础读数 42+2=44 live，44×1.5 易伤 = 旧日雕像战 51 伤）。遗物 GNARLED_HAMMER（商店稀有度）入手时为至多 3 张攻击牌附魔锋利 3。附魔伤害加在基础值上、**先于**易伤/残酷乘数。",
+    "id": "SHARP",
+    "kind": "relic",
+    "name": "Sharp (Enchant keyword) / Gnarled Hammer carrier relic",
+    "needs_zh": false,
+    "play_notes": "run-48 live fold 2026-09-19: Sharp 2 on Bludgeon = 44 base (42+2) live; SELF_HELP_BOOK READ_THE_BACK is the grant source. [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
+    "rarity": "Shop",
+    "source": "codex-api:/relics/GNARLED_HAMMER"
   },
   "SHOVEL": {
     "aliases": [

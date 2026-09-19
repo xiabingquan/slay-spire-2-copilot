@@ -2274,6 +2274,201 @@
     "play_notes": "",
     "source": "curated:census run-37 CALCIFIED_CULTIST model_id + monsters.md cultists"
   },
+  "CEREMONIAL_BEAST": {
+    "acts": [],
+    "aliases": [
+      "Ceremonial Beast"
+    ],
+    "curated": true,
+    "cycle": [
+      "STAMP_MOVE",
+      "PLOW_MOVE",
+      "STUN_MOVE",
+      "BEAST_CRY_MOVE",
+      "STOMP_MOVE",
+      "CRUSH_MOVE"
+    ],
+    "description": "仪式兽（Act1 Boss）：HP 252（run-48 A1 实测；codex 基础 252 / A 262+）。档案六段循环 STAMP→PLOW→STUN→BEAST_CRY→STOMP→CRUSH；run-48 live 阶段行为：T1 STAMP（Buff：自身 PLOW_POWER 150——免费窗），随后 PLOW 作为攻击循环反复（基础 18 A:20 + 自身 +2 力——弱化/叠力下意图 13→22 爬升）直至眩晕窗触发；被晕后循环恢复 BEAST_CRY→STOMP→CRUSH。STUN 眩晕窗教条（run-23 阈值订正 150 非 160）：CurrentHp ≤ PLOW Amount 时受到无挡伤害 → 眩晕并**消耗其临时力量**（run-48：Str 4 当场清空，PLOW 22 取消）。BEAST_CRY = 对玩家 RINGING 1（每回合 1 张牌——桥强制执行；药水不算卡，RINGING 下可复制器+炸弹卡打出）。STOMP 15 A:17；CRUSH 17 A:19 + 自身 +3 力。弱化免疫伤害（狱火 tick）+ 眩晕窗竞速为击杀线；run-48 T7 以 46/80 击杀（复制器+上勾拳单回合 48 伤）。",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 262
+      },
+      "base": 252,
+      "max": null,
+      "notes": ""
+    },
+    "id": "CEREMONIAL_BEAST",
+    "is_boss": true,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "BEAST_CRY_MOVE": {
+        "aliases": [
+          "Beast Cry",
+          "BEAST_CRY"
+        ],
+        "curated": true,
+        "effect": "Beast Cry：减益——对玩家 RINGING 1（每回合限 1 张牌直至 Boss 侧回合结束；桥强制 ok/no）。",
+        "follow_up_id": null,
+        "id": "BEAST_CRY_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "CEREMONIAL_BEAST",
+        "name": "Beast Cry",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#BEAST_CRY",
+        "description": "Beast Cry：减益——对玩家 RINGING 1（每回合限 1 张牌直至 Boss 侧回合结束；桥强制 ok/no）。"
+      },
+      "CRUSH_MOVE": {
+        "aliases": [
+          "Crush",
+          "CRUSH"
+        ],
+        "curated": true,
+        "effect": "Crush：单体攻击 17（A:19）+ 自身 +3 力量。",
+        "follow_up_id": null,
+        "id": "CRUSH_MOVE",
+        "intents": [
+          {
+            "base_damage": 17,
+            "base_damage_ascension": {
+              "ascension": 19
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "CEREMONIAL_BEAST",
+        "name": "Crush",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#CRUSH",
+        "description": "Crush：单体攻击 17（A:19）+ 自身 +3 力量。"
+      },
+      "PLOW_MOVE": {
+        "aliases": [
+          "Plow",
+          "PLOW"
+        ],
+        "curated": true,
+        "effect": "Plow：单体攻击 18（A:20）+ 自身 +2 力量；run-48 live 意图随力量堆叠 13→22 爬升；弱化按次削减。",
+        "follow_up_id": null,
+        "id": "PLOW_MOVE",
+        "intents": [
+          {
+            "base_damage": 18,
+            "base_damage_ascension": {
+              "ascension": 20
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "CEREMONIAL_BEAST",
+        "name": "Plow",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#PLOW",
+        "description": "Plow：单体攻击 18（A:20）+ 自身 +2 力量；run-48 live 意图随力量堆叠 13→22 爬升；弱化按次削减。"
+      },
+      "STAMP_MOVE": {
+        "aliases": [
+          "Stamp",
+          "STAMP"
+        ],
+        "curated": true,
+        "effect": "Stamp：增益——自身获得 PLOW_POWER 150（免费伤害窗回合；run-48 T1 无伤害意图）。",
+        "follow_up_id": null,
+        "id": "STAMP_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "CEREMONIAL_BEAST",
+        "name": "Stamp",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#STAMP",
+        "description": "Stamp：增益——自身获得 PLOW_POWER 150（免费伤害窗回合；run-48 T1 无伤害意图）。"
+      },
+      "STOMP_MOVE": {
+        "aliases": [
+          "Stomp",
+          "STOMP"
+        ],
+        "curated": true,
+        "effect": "Stomp：单体攻击 15（A:17）。",
+        "follow_up_id": null,
+        "id": "STOMP_MOVE",
+        "intents": [
+          {
+            "base_damage": 15,
+            "base_damage_ascension": {
+              "ascension": 17
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "CEREMONIAL_BEAST",
+        "name": "Stomp",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#STOMP",
+        "description": "Stomp：单体攻击 15（A:17）。"
+      },
+      "STUN_MOVE": {
+        "aliases": [
+          "Stun",
+          "STUN"
+        ],
+        "curated": true,
+        "effect": "Stun：眩晕态招式——档案循环中位于 PLOW 之后；run-48 live：眩晕以 STUNNED 状态在 PLOW_POWER 阈值被越过时触发（未触发路径上并非固定循环槽；被晕后循环从 BEAST_CRY 恢复）。",
+        "follow_up_id": null,
+        "id": "STUN_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Stun"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "CEREMONIAL_BEAST",
+        "name": "Stun",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#STUN",
+        "description": "Stun：眩晕态招式——档案循环中位于 PLOW 之后；run-48 live：眩晕以 STUNNED 状态在 PLOW_POWER 阈值被越过时触发（未触发路径上并非固定循环槽；被晕后循环从 BEAST_CRY 恢复）。"
+      }
+    },
+    "name": "Ceremonial Beast",
+    "needs_zh": false,
+    "play_notes": "run-48 live 2026-09-19：T7 击杀；PLOW_POWER:150 眩晕窗 T4 触发；RINGING 回合桥对非首卡全部 no(None)。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
+    "source": "codex-api:/monsters/CEREMONIAL_BEAST",
+    "type": "Boss"
+  },
   "CORPSE_SLUG": {
     "acts": [],
     "aliases": [
@@ -4055,6 +4250,7 @@
           "DARK_STRIKE"
         ],
         "curated": false,
+        "description": "单段攻击基础 1（随力量 live 放大：run-45 Str5 时 6、Str10 时 11）——念咒后的循环伤害招。",
         "effect": "Dark Strike: Attack; damage 1 A:3",
         "follow_up_id": null,
         "id": "DARK_STRIKE_MOVE",
@@ -4074,8 +4270,7 @@
         "name": "Dark Strike",
         "needs_zh": true,
         "play_notes": "",
-        "source": "codex-api:/monsters/DAMP_CULTIST#DARK_STRIKE",
-        "description": "单段攻击基础 1（随力量 live 放大：run-45 Str5 时 6、Str10 时 11）——念咒后的循环伤害招。"
+        "source": "codex-api:/monsters/DAMP_CULTIST#DARK_STRIKE"
       },
       "INCANTATION_MOVE": {
         "aliases": [
@@ -4083,6 +4278,7 @@
           "INCANTATION"
         ],
         "curated": false,
+        "description": "增益——对自身施加 RITUAL_POWER（量 live 浮动：run-45 观察 2-5）；Ritual 在主人回合末转为 +力量。",
         "effect": "Incantation: Buff; RITUAL 5 (self)",
         "follow_up_id": null,
         "id": "INCANTATION_MOVE",
@@ -4099,8 +4295,7 @@
         "name": "Incantation",
         "needs_zh": true,
         "play_notes": "",
-        "source": "codex-api:/monsters/DAMP_CULTIST#INCANTATION",
-        "description": "增益——对自身施加 RITUAL_POWER（量 live 浮动：run-45 观察 2-5）；Ritual 在主人回合末转为 +力量。"
+        "source": "codex-api:/monsters/DAMP_CULTIST#INCANTATION"
       }
     },
     "name": "Damp Cultist",
@@ -5377,6 +5572,58 @@
     "play_notes": "对局43 live",
     "source": "对局40/41/43 live"
   },
+  "EYE_WITH_TEETH": {
+    "acts": [],
+    "aliases": [
+      "Eye with Teeth"
+    ],
+    "curated": true,
+    "cycle": [
+      "DISTRACT_MOVE"
+    ],
+    "description": "利齿之眼（雾菇召唤随从）：HP 6。ILLUSION_POWER + MINION_POWER run-48 live：出场回合 SPAWNED_MOVE 被晕（无动作）；次回合起行动（DISTRACT = 状态类堵塞）。MINION：其死亡不结束战斗——击杀未标记的母体（雾菇）才结束；run-48 live：母体死亡同帧令眼球离场且 REVIVE_MOVE 排队（战斗结束后复活语义无意义）。ILLUSION_POWER 文本：死亡时排队为其 owner 复活回满——两种读法都指向雾菇优先击杀。",
+    "hp": {
+      "base": 6,
+      "max": null,
+      "notes": ""
+    },
+    "id": "EYE_WITH_TEETH",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "DISTRACT_MOVE": {
+        "aliases": [
+          "Distract",
+          "DISTRACT"
+        ],
+        "curated": true,
+        "effect": "Distract：状态类招式——向玩家施加状态堵塞（低威胁）；眼球是雾菇的 6 HP MINION 随从——母体优先击杀次序。",
+        "follow_up_id": null,
+        "id": "DISTRACT_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Status"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "EYE_WITH_TEETH",
+        "name": "Distract",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/EYE_WITH_TEETH#DISTRACT",
+        "description": "Distract：状态类招式——向玩家施加状态堵塞（低威胁）；眼球是雾菇的 6 HP MINION 随从——母体优先击杀次序。"
+      }
+    },
+    "name": "Eye with Teeth",
+    "needs_zh": false,
+    "play_notes": "run-48 live 2026-09-19：雾菇战——母体死亡随从离场确认；6 HP DISTRACT 随从，母体优先次序成立。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
+    "source": "codex-api:/monsters/EYE_WITH_TEETH",
+    "type": "Normal"
+  },
   "Entomancer": {
     "acts": [],
     "aliases": [
@@ -5897,6 +6144,51 @@
     ],
     "play_notes": "",
     "source": "md:monsters.md:L30"
+  },
+  "FABRICATOR": {
+    "acts": [
+      "Act3"
+    ],
+    "aliases": [
+      "FABRICATOR",
+      "组装师"
+    ],
+    "curated": true,
+    "cycle": [
+      "FABRICATE_MOVE",
+      "FABRICATING_STRIKE_MOVE",
+      "DISINTEGRATE_MOVE"
+    ],
+    "description": "Act3 普通级（run-46 live (12,5) 150HP）：循环 FABRICATE（召唤）→ 分支 RAND FABRICATE/FABRICATING_STRIKE（18伤+召唤）→ DISINTEGRATE（11）。MINION 召唤物：噪音机器人（status 类）与电击机器人（ZAP 14-18+HIGH_VOLTAGE+力量）。kill-master 教条：组装师死亡时全部 MINION_POWER 召唤物消亡。HATCH 类倒计时按回合末递减非伤害驱动。",
+    "hp": {
+      "base": "150（run-46 live (12,5) A1）",
+      "notes": "普通级；召唤 MINION 波次"
+    },
+    "id": "FABRICATOR",
+    "is_boss": false,
+    "kind": "monster",
+    "name": "组装师",
+    "play_notes": "run-46 live：T3 杀母体——Strike Dummy 加成 Strike 穿易伤结算 19（基础+力量+假人先入基础）；双噪音+双电击同帧消亡。"
+  },
+  "FAT_GREMLIN": {
+    "acts": [
+      "Act1"
+    ],
+    "curated": true,
+    "cycle": [
+      "SPAWNED_MOVE",
+      "FLEE_MOVE"
+    ],
+    "description": "GremlinMerc SURPRISE 刷怪（run-45 live）：14HP + HEIST_POWER:40（行动时偷 40 金）。入场 SPAWNED 晕一回合；循环 FLEE（逃跑意图）——抢在逃跑结算前击杀。狱火类 tick 在晕窗内可削血。",
+    "hp": {
+      "base": 14,
+      "notes": "run-45 spawn live 14/14"
+    },
+    "id": "FAT_GREMLIN",
+    "is_boss": false,
+    "kind": "monster",
+    "name": "胖地精",
+    "source": "run-45 live"
   },
   "FOSSIL_STALKER": {
     "acts": [
@@ -7424,6 +7716,120 @@
     "play_notes": "run-39 live：HAUNT=免费窗（纯 debuff）；倾泻伤害。T3 STOMP 12 级来袭——击杀或全挡。Dazed 为 Ethereal（回合末自消）——牌库污染仅回合内。",
     "source": "run-39 live T3 击杀 + codex move 片段"
   },
+  "HUNTER_KILLER": {
+    "acts": [],
+    "aliases": [
+      "Hunter Killer"
+    ],
+    "curated": true,
+    "cycle": [
+      "TENDERIZING_GOOP_MOVE",
+      "BITE_MOVE",
+      "PUNCTURE_MOVE"
+    ],
+    "description": "猎人杀手（Act2 普通节点，精英级威胁）：HP 121（run-48 A1 实测；A 126+）。循环 TENDERIZING_GOOP（对玩家 Debuff TENDER 1——按出牌抽力量/敏捷、其循环阶段返还；见 TENDER_POWER）→ RAND 分支 BITE（单体 17 级 live，基础 13-17，随力量膨胀）/ PUNCTURE（多段 7x3 A:8，随力量膨胀；run-48 live 意图：弱化下 5x3、无弱化 7x3）。教条：Colossus × 攻击者带易伤可把穿刺减半（run-48 两次 live：5x3→2x3、7x3→3×3，零掉血回合）；低血时穿刺/撕咬回合必须挡闸；TENDER 抽取下**每张牌后重读 player powers**——run-48 因击杀链用了抽取前力量值而死（链停在 13/121，BITE 穿 8 挡 9 伤精确致死）。再生药水 HP 轨在本战内耗尽；右侧脊线从章节开局到本节点无商店。",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 126
+      },
+      "base": 121,
+      "max": null,
+      "notes": ""
+    },
+    "id": "HUNTER_KILLER",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "BITE_MOVE": {
+        "aliases": [
+          "Bite",
+          "BITE"
+        ],
+        "curated": true,
+        "effect": "撕咬（猎人杀手语境）：单体攻击 13-17 级 live（A 15 级）；随力量膨胀；run-48 无弱化意图 17——挡闸回合。",
+        "follow_up_id": null,
+        "id": "BITE_MOVE",
+        "intents": [
+          {
+            "base_damage": 17,
+            "base_damage_ascension": {
+              "ascension": 19
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "HUNTER_KILLER",
+        "name": "Bite",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/HUNTER_KILLER#BITE",
+        "description": "撕咬（猎人杀手语境）：单体攻击 13-17 级 live（A 15 级）；随力量膨胀；run-48 无弱化意图 17——挡闸回合。"
+      },
+      "PUNCTURE_MOVE": {
+        "aliases": [
+          "Puncture",
+          "PUNCTURE"
+        ],
+        "curated": true,
+        "effect": "穿刺：多段攻击 7×3（A:8/段）；随力量膨胀；攻击者带易伤时巨像 live 减半（run-48 5×3→2×3、7×3→3×3）；按巨像在场与否以减半值或全值配挡。",
+        "follow_up_id": null,
+        "id": "PUNCTURE_MOVE",
+        "intents": [
+          {
+            "base_damage": 7,
+            "base_damage_ascension": {
+              "ascension": 8
+            },
+            "class": "MultiAttackIntent",
+            "hits": 3,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "HUNTER_KILLER",
+        "name": "Puncture",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/HUNTER_KILLER#PUNCTURE",
+        "description": "穿刺：多段攻击 7×3（A:8/段）；随力量膨胀；攻击者带易伤时巨像 live 减半（run-48 5×3→2×3、7×3→3×3）；按巨像在场与否以减半值或全值配挡。"
+      },
+      "TENDERIZING_GOOP_MOVE": {
+        "aliases": [
+          "Tenderizing Goop",
+          "TENDERIZING_GOOP"
+        ],
+        "curated": true,
+        "effect": "Tenderizing Goop：减益——对玩家 TENDER 1（回合内按出牌抽力量/敏捷，随施加者循环返还；run-48 击杀链税）。",
+        "follow_up_id": null,
+        "id": "TENDERIZING_GOOP_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "HUNTER_KILLER",
+        "name": "Tenderizing Goop",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/HUNTER_KILLER#TENDERIZING_GOOP",
+        "description": "Tenderizing Goop：减益——对玩家 TENDER 1（回合内按出牌抽力量/敏捷，随施加者循环返还；run-48 击杀链税）。"
+      }
+    },
+    "name": "Hunter Killer",
+    "needs_zh": false,
+    "play_notes": "run-48 live 2026-09-19：死亡现场——game_over 时杀手 13/121；Colossus×易伤两次 live 减半穿刺；TENDER 链中 −3 力是击杀链失败点。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
+    "source": "codex-api:/monsters/HUNTER_KILLER",
+    "type": "Normal"
+  },
   "HauntedShip": {
     "acts": [],
     "aliases": [
@@ -8831,6 +9237,182 @@
     "name": "乐加维林族母",
     "play_notes": "run-39 live T9 击杀：先打唤醒窗（3 挡外→剥 PLATING:12+眩晕）；Colossus live 减半 SLASH/DISEMBOWEL；契约→仪式 4 能爆发回合；SLASH 21(力量2) 吃虚弱药水降至 15；T8 爆炸安瓿；力量 7 时 Hemo+打击收头。入场 57/80，战毕 9/80。",
     "source": "codex-api + run-39 live T9 击杀 + powers ASLEEP 教条; run-40 live fold 2026-09-18"
+  },
+  "LEAF_SLIME_M": {
+    "acts": [
+      "Act2"
+    ],
+    "aliases": [
+      "Leaf Slime (M)",
+      "Leaf Slime M"
+    ],
+    "curated": true,
+    "cycle": [
+      "CLUMP_SHOT_MOVE",
+      "STICKY_SHOT_MOVE"
+    ],
+    "description": "树叶史莱姆（中），Act2 普通：HP 32-35（A 33-36）run-48 实测 35。循环 CLUMP_SHOT → STICKY_SHOT。CLUMP_SHOT = 单体 8（A:9）；STICKY_SHOT = 状态 ×2 黏液牌入弃牌堆。run-48 四只史莱姆包中两只中型均以 Sticky Shot 开场（T1 零伤）——打包配速的免费窗回合。",
+    "hp": {
+      "ascension": {
+        "max": 36,
+        "min": 33
+      },
+      "base": 32,
+      "max": 35,
+      "notes": ""
+    },
+    "id": "LEAF_SLIME_M",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "CLUMP_SHOT_MOVE": {
+        "aliases": [
+          "Clump Shot",
+          "CLUMP_SHOT"
+        ],
+        "curated": true,
+        "effect": "团块射击：单体攻击 8（A:9）。",
+        "follow_up_id": null,
+        "id": "CLUMP_SHOT_MOVE",
+        "intents": [
+          {
+            "base_damage": 8,
+            "base_damage_ascension": {
+              "ascension": 9
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "LEAF_SLIME_M",
+        "name": "Clump Shot",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/LEAF_SLIME_M#CLUMP_SHOT",
+        "description": "团块射击：单体攻击 8（A:9）。"
+      },
+      "STICKY_SHOT_MOVE": {
+        "aliases": [
+          "Sticky Shot",
+          "STICKY_SHOT"
+        ],
+        "curated": true,
+        "effect": "黏液射击：状态 ×2——黏液牌入玩家弃牌堆；无 HP 伤害。",
+        "follow_up_id": null,
+        "id": "STICKY_SHOT_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Status"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "LEAF_SLIME_M",
+        "name": "Sticky Shot",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/LEAF_SLIME_M#STICKY_SHOT",
+        "description": "黏液射击：状态 ×2——黏液牌入玩家弃牌堆；无 HP 伤害。"
+      }
+    },
+    "name": "Leaf Slime (M)",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/LEAF_SLIME_M",
+    "type": "Normal"
+  },
+  "LEAF_SLIME_S": {
+    "acts": [
+      "Act2"
+    ],
+    "aliases": [
+      "Leaf Slime (S)",
+      "Leaf Slime S"
+    ],
+    "curated": true,
+    "cycle": [
+      "TACKLE_MOVE",
+      "GOOP_MOVE"
+    ],
+    "description": "树叶史莱姆（小），Act2 普通：HP 11-15（A 12-16）run-48 实测 12。循环 TACKLE → RAND GOOP（高权重）。TACKLE = 单体 3（A:4）；GOOP（树叶变体）= 状态 ×1 级（加状态牌）——尸蛞蝓 GOOP 的衰弱 2 是**不同 move id 行为**；以所属怪物条目为准。低威胁随从：多敌配速线内顺手清理。",
+    "hp": {
+      "ascension": {
+        "max": 16,
+        "min": 12
+      },
+      "base": 11,
+      "max": 15,
+      "notes": ""
+    },
+    "id": "LEAF_SLIME_S",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "GOOP_MOVE": {
+        "aliases": [
+          "Goop",
+          "GOOP"
+        ],
+        "curated": true,
+        "effect": "粘液（树叶史莱姆小变体）：状态 ×1 级——加状态牌；与尸蛞蝓 GOOP 衰弱 2 行为不同（move 上下文不同）。",
+        "follow_up_id": null,
+        "id": "GOOP_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Status"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "LEAF_SLIME_S",
+        "name": "Goop",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/LEAF_SLIME_S#GOOP",
+        "description": "粘液（树叶史莱姆小变体）：状态 ×1 级——加状态牌；与尸蛞蝓 GOOP 衰弱 2 行为不同（move 上下文不同）。"
+      },
+      "TACKLE_MOVE": {
+        "aliases": [
+          "Tackle",
+          "TACKLE"
+        ],
+        "curated": true,
+        "effect": "冲撞：单体攻击 3（A:4）；红面具弱化 live 削至 2 级。",
+        "follow_up_id": null,
+        "id": "TACKLE_MOVE",
+        "intents": [
+          {
+            "base_damage": 3,
+            "base_damage_ascension": {
+              "ascension": 4
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "LEAF_SLIME_S",
+        "name": "Tackle",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/LEAF_SLIME_S#TACKLE",
+        "description": "冲撞：单体攻击 3（A:4）；红面具弱化 live 削至 2 级。"
+      }
+    },
+    "name": "Leaf Slime (S)",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/LEAF_SLIME_S",
+    "type": "Normal"
   },
   "LIVING_FOG": {
     "acts": [
@@ -13524,6 +14106,26 @@
     "source": "codex-api + 对局43 live",
     "type": "Normal"
   },
+  "SNEAKY_GREMLIN": {
+    "acts": [
+      "Act1"
+    ],
+    "curated": true,
+    "cycle": [
+      "SPAWNED_MOVE",
+      "TACKLE_MOVE"
+    ],
+    "description": "GremlinMerc SURPRISE 刷怪（run-45 live）：13HP，入场 SPAWNED 晕一回合，随后 TACKLE 循环。任意两击可杀——晕窗倾泻。",
+    "hp": {
+      "base": 13,
+      "notes": "run-45 spawn live 13/13"
+    },
+    "id": "SNEAKY_GREMLIN",
+    "is_boss": false,
+    "kind": "monster",
+    "name": "卑鄙地精",
+    "source": "run-45 live"
+  },
   "SOUL_NEXUS": {
     "acts": [],
     "aliases": [
@@ -15764,6 +16366,36 @@
     "source": "codex-api:/monsters/TERROR_EEL",
     "type": "Elite"
   },
+  "TEST_SUBJECT": {
+    "acts": [
+      "Act3"
+    ],
+    "aliases": [
+      "TEST_SUBJECT",
+      "实验体",
+      "Test Subject #C11"
+    ],
+    "curated": true,
+    "cycle": [
+      "BITE_MOVE",
+      "SKULL_BASH_MOVE",
+      "MULTI_CLAW_MOVE",
+      "PHASE3_LACERATE_MOVE",
+      "BIG_POUNCE_MOVE",
+      "BURNING_GROWL_MOVE",
+      "RESPAWN_MOVE"
+    ],
+    "description": "Act3 Boss（实验体 #C 系；run-46 live #C11 100HP A1）：循环 Bite（13/20 级，随 Enrage 力量膨胀，技能失误后中局 live 20→33）→ Skull Bash（14+玩家易伤1）→ MultiClaw（10×3）→ Phase3 Lacerate（10×3）→ BigPounce（45）→ BurningGrowl → Respawn。ADAPTABLE 自体复活：死亡不结束战斗至 RESPAWN_MOVE 完成（复活意图：治疗+PAINFUL_STABS 1+NEMESIS 1）。ENRAGE：任何人打技能牌 +力量——零技能纪律（仅攻击+能力）。REVIVE_BRANCH 标记经条件分支回退反射 live 浮现。",
+    "hp": {
+      "base": "100（run-46 live #C11 A1）",
+      "notes": "ADAPTABLE 复活多阶段"
+    },
+    "id": "TEST_SUBJECT",
+    "is_boss": true,
+    "kind": "monster",
+    "name": "实验体",
+    "play_notes": "run-46 live：一阶段 T3 Whirlwind 33 清 → RESPAWN 意图 live → 建筑师 EA PROCEED 链 = 局胜。Enrage 被放血失误喂养（Bite 20→33）——每回合重读零技能清单教训。"
+  },
   "THE_INSATIABLE": {
     "acts": [],
     "aliases": [
@@ -16250,6 +16882,94 @@
     "kind": "monster",
     "name": "地道虫",
     "source": "; run-40 live fold 2026-09-18"
+  },
+  "TWIG_SLIME_M": {
+    "acts": [
+      "Act2"
+    ],
+    "aliases": [
+      "Twig Slime (M)",
+      "Twig Slime M"
+    ],
+    "curated": true,
+    "cycle": [
+      "POKEY_POUNCE_MOVE",
+      "STICKY_SHOT_MOVE"
+    ],
+    "description": "树枝史莱姆（中），Act2 普通：HP 26-28（A 27-29）run-48 实测 28。循环 STICKY_SHOT（状态 ×2——黏液牌入弃牌堆）→ RAND 分支 POKEY_POUNCE（高权重）/ STICKY_SHOT。POKEY_POUNCE = 单体 11（A:12）——击杀计时器：在其扑击结算前的玩家回合击杀扑击取消（run-48：T1 配速到 4 HP，T2 扑击前补刀）。弱化（红面具）把扑击 11→8 级 live 削减。",
+    "hp": {
+      "ascension": {
+        "max": 29,
+        "min": 27
+      },
+      "base": 26,
+      "max": 28,
+      "notes": ""
+    },
+    "id": "TWIG_SLIME_M",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "POKEY_POUNCE_MOVE": {
+        "aliases": [
+          "Pokey Pounce",
+          "POKEY_POUNCE"
+        ],
+        "curated": true,
+        "effect": "扑击：单体攻击 11（A:12）；击杀计时器——在扑击回合结算前击杀树枝史莱姆（中）取消；弱化 live 削减 11→8 级。",
+        "follow_up_id": null,
+        "id": "POKEY_POUNCE_MOVE",
+        "intents": [
+          {
+            "base_damage": 11,
+            "base_damage_ascension": {
+              "ascension": 12
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TWIG_SLIME_M",
+        "name": "Pokey Pounce",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/TWIG_SLIME_M#POKEY_POUNCE",
+        "description": "扑击：单体攻击 11（A:12）；击杀计时器——在扑击回合结算前击杀树枝史莱姆（中）取消；弱化 live 削减 11→8 级。"
+      },
+      "STICKY_SHOT_MOVE": {
+        "aliases": [
+          "Sticky Shot",
+          "STICKY_SHOT"
+        ],
+        "curated": true,
+        "effect": "黏液射击：状态 ×2——向玩家弃牌堆加入黏液状态牌；该回合无 HP 伤害（免费伤害窗）。",
+        "follow_up_id": null,
+        "id": "STICKY_SHOT_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Status"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TWIG_SLIME_M",
+        "name": "Sticky Shot",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/TWIG_SLIME_M#STICKY_SHOT",
+        "description": "黏液射击：状态 ×2——向玩家弃牌堆加入黏液状态牌；该回合无 HP 伤害（免费伤害窗）。"
+      }
+    },
+    "name": "Twig Slime (M)",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/TWIG_SLIME_M",
+    "type": "Normal"
   },
   "TWO_TAILED_RAT": {
     "acts": [],
@@ -20116,100 +20836,5 @@
     "passives": [],
     "play_notes": "",
     "source": "generator:synthesized"
-  },
-  "SNEAKY_GREMLIN": {
-    "id": "SNEAKY_GREMLIN",
-    "name": "卑鄙地精",
-    "kind": "monster",
-    "acts": [
-      "Act1"
-    ],
-    "is_boss": false,
-    "curated": true,
-    "hp": {
-      "base": 13,
-      "notes": "run-45 spawn live 13/13"
-    },
-    "cycle": [
-      "SPAWNED_MOVE",
-      "TACKLE_MOVE"
-    ],
-    "description": "GremlinMerc SURPRISE 刷怪（run-45 live）：13HP，入场 SPAWNED 晕一回合，随后 TACKLE 循环。任意两击可杀——晕窗倾泻。",
-    "source": "run-45 live"
-  },
-  "FAT_GREMLIN": {
-    "id": "FAT_GREMLIN",
-    "name": "胖地精",
-    "kind": "monster",
-    "acts": [
-      "Act1"
-    ],
-    "is_boss": false,
-    "curated": true,
-    "hp": {
-      "base": 14,
-      "notes": "run-45 spawn live 14/14"
-    },
-    "cycle": [
-      "SPAWNED_MOVE",
-      "FLEE_MOVE"
-    ],
-    "description": "GremlinMerc SURPRISE 刷怪（run-45 live）：14HP + HEIST_POWER:40（行动时偷 40 金）。入场 SPAWNED 晕一回合；循环 FLEE（逃跑意图）——抢在逃跑结算前击杀。狱火类 tick 在晕窗内可削血。",
-    "source": "run-45 live"
-  },
-  "TEST_SUBJECT": {
-    "id": "TEST_SUBJECT",
-    "kind": "monster",
-    "name": "实验体",
-    "aliases": [
-      "TEST_SUBJECT",
-      "实验体",
-      "Test Subject #C11"
-    ],
-    "acts": [
-      "Act3"
-    ],
-    "is_boss": true,
-    "curated": true,
-    "hp": {
-      "base": "100（run-46 live #C11 A1）",
-      "notes": "ADAPTABLE 复活多阶段"
-    },
-    "cycle": [
-      "BITE_MOVE",
-      "SKULL_BASH_MOVE",
-      "MULTI_CLAW_MOVE",
-      "PHASE3_LACERATE_MOVE",
-      "BIG_POUNCE_MOVE",
-      "BURNING_GROWL_MOVE",
-      "RESPAWN_MOVE"
-    ],
-    "description": "Act3 Boss（实验体 #C 系；run-46 live #C11 100HP A1）：循环 Bite（13/20 级，随 Enrage 力量膨胀，技能失误后中局 live 20→33）→ Skull Bash（14+玩家易伤1）→ MultiClaw（10×3）→ Phase3 Lacerate（10×3）→ BigPounce（45）→ BurningGrowl → Respawn。ADAPTABLE 自体复活：死亡不结束战斗至 RESPAWN_MOVE 完成（复活意图：治疗+PAINFUL_STABS 1+NEMESIS 1）。ENRAGE：任何人打技能牌 +力量——零技能纪律（仅攻击+能力）。REVIVE_BRANCH 标记经条件分支回退反射 live 浮现。",
-    "play_notes": "run-46 live：一阶段 T3 Whirlwind 33 清 → RESPAWN 意图 live → 建筑师 EA PROCEED 链 = 局胜。Enrage 被放血失误喂养（Bite 20→33）——每回合重读零技能清单教训。"
-  },
-  "FABRICATOR": {
-    "id": "FABRICATOR",
-    "kind": "monster",
-    "name": "组装师",
-    "aliases": [
-      "FABRICATOR",
-      "组装师"
-    ],
-    "acts": [
-      "Act3"
-    ],
-    "is_boss": false,
-    "curated": true,
-    "hp": {
-      "base": "150（run-46 live (12,5) A1）",
-      "notes": "普通级；召唤 MINION 波次"
-    },
-    "cycle": [
-      "FABRICATE_MOVE",
-      "FABRICATING_STRIKE_MOVE",
-      "DISINTEGRATE_MOVE"
-    ],
-    "description": "Act3 普通级（run-46 live (12,5) 150HP）：循环 FABRICATE（召唤）→ 分支 RAND FABRICATE/FABRICATING_STRIKE（18伤+召唤）→ DISINTEGRATE（11）。MINION 召唤物：噪音机器人（status 类）与电击机器人（ZAP 14-18+HIGH_VOLTAGE+力量）。kill-master 教条：组装师死亡时全部 MINION_POWER 召唤物消亡。HATCH 类倒计时按回合末递减非伤害驱动。",
-    "play_notes": "run-46 live：T3 杀母体——Strike Dummy 加成 Strike 穿易伤结算 19（基础+力量+假人先入基础）；双噪音+双电击同帧消亡。"
   }
 }

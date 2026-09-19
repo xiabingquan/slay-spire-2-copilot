@@ -2359,6 +2359,201 @@
     "source": "curated:census run-37 CALCIFIED_CULTIST model_id + monsters.md cultists",
     "zh_name": "钙化邪教徒"
   },
+  "CEREMONIAL_BEAST": {
+    "acts": [],
+    "aliases": [
+      "Ceremonial Beast"
+    ],
+    "curated": true,
+    "cycle": [
+      "STAMP_MOVE",
+      "PLOW_MOVE",
+      "STUN_MOVE",
+      "BEAST_CRY_MOVE",
+      "STOMP_MOVE",
+      "CRUSH_MOVE"
+    ],
+    "description": "Ceremonial Beast (Boss, Act1): HP 252 live run-48 A1 (codex 252 base / A 262+). Archive 6-move cycle STAMP→PLOW→STUN→BEAST_CRY→STOMP→CRUSH; LIVE run-48 phase behavior: STAMP T1 (Buff: PLOW_POWER 150 self — free window), then PLOW repeated as its attack loop (18 base A:20 + self +2 Str each — intent climbed 13→22 under Weak/Str stacking) until the stun window fired; post-stun the cycle resumed BEAST_CRY→STOMP→CRUSH. STUN_POWER window doctrine (run-23 threshold correction 150 not 160): unblocked damage while CurrentHp <= PLOW Amount stuns owner and CONSUMES its temporary-strength powers (run-48: Str 4 stripped live, PLOW 22 cancelled). BEAST_CRY = RINGING 1 on player (1-card/turn — bridge enforces; potions are NOT cards so Duplicator+bomb-card plays under RINGING). STOMP 15 A:17; CRUSH 17 A:19 + self +3 Str. Weak-immune damage (Inferno procs) + stun-window race is the kill line; run-48 killed it T7 at 46/80 after a 48-dmg Duplicator+Uppercut turn.",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 262
+      },
+      "base": 252,
+      "max": null,
+      "notes": ""
+    },
+    "id": "CEREMONIAL_BEAST",
+    "is_boss": true,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "BEAST_CRY_MOVE": {
+        "aliases": [
+          "Beast Cry",
+          "BEAST_CRY"
+        ],
+        "curated": true,
+        "effect": "Beast Cry: Debuff — RINGING 1 on player (1-card/turn limit until end of boss side turn; bridge enforces ok/no).",
+        "follow_up_id": null,
+        "id": "BEAST_CRY_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "CEREMONIAL_BEAST",
+        "name": "Beast Cry",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#BEAST_CRY",
+        "description": "Beast Cry: Debuff — RINGING 1 on player (1-card/turn limit until end of boss side turn; bridge enforces ok/no)."
+      },
+      "CRUSH_MOVE": {
+        "aliases": [
+          "Crush",
+          "CRUSH"
+        ],
+        "curated": true,
+        "effect": "Crush: single attack 17 (A:19) + self +3 Strength.",
+        "follow_up_id": null,
+        "id": "CRUSH_MOVE",
+        "intents": [
+          {
+            "base_damage": 17,
+            "base_damage_ascension": {
+              "ascension": 19
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "CEREMONIAL_BEAST",
+        "name": "Crush",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#CRUSH",
+        "description": "Crush: single attack 17 (A:19) + self +3 Strength."
+      },
+      "PLOW_MOVE": {
+        "aliases": [
+          "Plow",
+          "PLOW"
+        ],
+        "curated": true,
+        "effect": "Plow: single attack 18 (A:20) + self +2 Strength; live run-48 intents climbed 13→22 as Territorial-style Str stacked; Weak cuts per-hit.",
+        "follow_up_id": null,
+        "id": "PLOW_MOVE",
+        "intents": [
+          {
+            "base_damage": 18,
+            "base_damage_ascension": {
+              "ascension": 20
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "CEREMONIAL_BEAST",
+        "name": "Plow",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#PLOW",
+        "description": "Plow: single attack 18 (A:20) + self +2 Strength; live run-48 intents climbed 13→22 as Territorial-style Str stacked; Weak cuts per-hit."
+      },
+      "STAMP_MOVE": {
+        "aliases": [
+          "Stamp",
+          "STAMP"
+        ],
+        "curated": true,
+        "effect": "Stamp: Buff — applies PLOW_POWER 150 to self (free-damage window turn; run-48 T1 no incoming).",
+        "follow_up_id": null,
+        "id": "STAMP_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "CEREMONIAL_BEAST",
+        "name": "Stamp",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#STAMP",
+        "description": "Stamp: Buff — applies PLOW_POWER 150 to self (free-damage window turn; run-48 T1 no incoming)."
+      },
+      "STOMP_MOVE": {
+        "aliases": [
+          "Stomp",
+          "STOMP"
+        ],
+        "curated": true,
+        "effect": "Stomp: single attack 15 (A:17).",
+        "follow_up_id": null,
+        "id": "STOMP_MOVE",
+        "intents": [
+          {
+            "base_damage": 15,
+            "base_damage_ascension": {
+              "ascension": 17
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "CEREMONIAL_BEAST",
+        "name": "Stomp",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#STOMP",
+        "description": "Stomp: single attack 15 (A:17)."
+      },
+      "STUN_MOVE": {
+        "aliases": [
+          "Stun",
+          "STUN"
+        ],
+        "curated": true,
+        "effect": "Stun: stun-state move — appears in archive cycle after PLOW; LIVE run-48: the stun fired as STUNNED state when PLOW_POWER threshold was crossed (not a scheduled cycle slot on the un-stunned path; post-stun cycle resumed at BEAST_CRY).",
+        "follow_up_id": null,
+        "id": "STUN_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Stun"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "CEREMONIAL_BEAST",
+        "name": "Stun",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#STUN",
+        "description": "Stun: stun-state move — appears in archive cycle after PLOW; LIVE run-48: the stun fired as STUNNED state when PLOW_POWER threshold was crossed (not a scheduled cycle slot on the un-stunned path; post-stun cycle resumed at BEAST_CRY)."
+      }
+    },
+    "name": "Ceremonial Beast",
+    "needs_zh": false,
+    "play_notes": "run-48 live 2026-09-19 (log run-20260919-095135-c4b014e2.log): killed T7; PLOW_POWER:150 stun fired T4; RINGING turns bridge-enforced no(None) on all but first card. [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
+    "source": "codex-api:/monsters/CEREMONIAL_BEAST",
+    "type": "Boss"
+  },
   "CORPSE_SLUG": {
     "acts": [],
     "aliases": [
@@ -4203,6 +4398,7 @@
           "DARK_STRIKE"
         ],
         "curated": false,
+        "description": "single attack base 1 (live-scaled by Strength: run-45 6 at Str5, 11 at Str10) — cycle damage move after Incantation.",
         "effect": "Dark Strike: Attack; damage 1 A:3",
         "follow_up_id": null,
         "id": "DARK_STRIKE_MOVE",
@@ -4222,8 +4418,7 @@
         "name": "Dark Strike",
         "needs_zh": true,
         "play_notes": "",
-        "source": "codex-api:/monsters/DAMP_CULTIST#DARK_STRIKE",
-        "description": "single attack base 1 (live-scaled by Strength: run-45 6 at Str5, 11 at Str10) — cycle damage move after Incantation."
+        "source": "codex-api:/monsters/DAMP_CULTIST#DARK_STRIKE"
       },
       "INCANTATION_MOVE": {
         "aliases": [
@@ -4231,6 +4426,7 @@
           "INCANTATION"
         ],
         "curated": false,
+        "description": "Buff — applies RITUAL_POWER to self (amount live-varies: 2-5 observed run-45); Ritual -> +Str at end of owner turn.",
         "effect": "Incantation: Buff; RITUAL 5 (self)",
         "follow_up_id": null,
         "id": "INCANTATION_MOVE",
@@ -4247,8 +4443,7 @@
         "name": "Incantation",
         "needs_zh": true,
         "play_notes": "",
-        "source": "codex-api:/monsters/DAMP_CULTIST#INCANTATION",
-        "description": "Buff — applies RITUAL_POWER to self (amount live-varies: 2-5 observed run-45); Ritual -> +Str at end of owner turn."
+        "source": "codex-api:/monsters/DAMP_CULTIST#INCANTATION"
       }
     },
     "name": "Damp Cultist",
@@ -5550,6 +5745,58 @@
     "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
     "source": "run-40/41/43 live"
   },
+  "EYE_WITH_TEETH": {
+    "acts": [],
+    "aliases": [
+      "Eye with Teeth"
+    ],
+    "curated": true,
+    "cycle": [
+      "DISTRACT_MOVE"
+    ],
+    "description": "Eye with Teeth (Fogmog summon add): HP 6. ILLUSION_POWER + MINION_POWER live run-48: spawn turn = SPAWNED_MOVE stun (no action); acts from the following turn (DISTRACT = status-class clog). MINION: its death does not end combat — kill the unmarked master (Fogmog) to end; LIVE run-48: master death despawned the Eye same frame with REVIVE_MOVE queued (ILLUSION revive semantics moot post-combat). ILLUSION_POWER text: on death queues REVIVE heal-to-full on its owner — either reading means Fogmog-first kill order.",
+    "hp": {
+      "base": 6,
+      "max": null,
+      "notes": ""
+    },
+    "id": "EYE_WITH_TEETH",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "DISTRACT_MOVE": {
+        "aliases": [
+          "Distract",
+          "DISTRACT"
+        ],
+        "curated": true,
+        "effect": "Distract: Status-class move — status clog to player (low threat); Eye is 6-HP MINION add of Fogmog — master-first kill order.",
+        "follow_up_id": null,
+        "id": "DISTRACT_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Status"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "EYE_WITH_TEETH",
+        "name": "Distract",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/EYE_WITH_TEETH#DISTRACT",
+        "description": "Distract: Status-class move — status clog to player (low threat); Eye is 6-HP MINION add of Fogmog — master-first kill order."
+      }
+    },
+    "name": "Eye with Teeth",
+    "needs_zh": false,
+    "play_notes": "run-48 live 2026-09-19: Fogmog fight — despawn-on-master-death confirmed; 6 HP DISTRACT add, master-first order held. [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
+    "source": "codex-api:/monsters/EYE_WITH_TEETH",
+    "type": "Normal"
+  },
   "Entomancer": {
     "acts": [],
     "aliases": [
@@ -6095,6 +6342,53 @@
       "REVIVE_MOVE": "（治疗意图）并回复至满最大 HP，复活期间不可被选中，随后恢复招式循环。幻象死亡后保留增益。"
     },
     "zh_name": "由雾菇召唤"
+  },
+  "FABRICATOR": {
+    "acts": [
+      "Act3"
+    ],
+    "aliases": [
+      "FABRICATOR",
+      "Fabricator",
+      "组装师"
+    ],
+    "curated": true,
+    "cycle": [
+      "FABRICATE_MOVE",
+      "FABRICATING_STRIKE_MOVE",
+      "DISINTEGRATE_MOVE"
+    ],
+    "description": "Act3 normal-class (run-46 live (12,5) 150 HP): cycle FABRICATE(summon) → fabricateBranch RAND FABRICATE/FABRICATING_STRIKE(18 dmg + summon) → DISINTEGRATE(11). MINION summons: NoiseBot (status:2c-class) and ShockBot (ZAP 14-18 + HIGH_VOLTAGE + Str). Kill-master doctrine: ALL MINION_POWER summons despawn when the Fabricator dies. HATCH/countdown class decrements EoT, not damage-driven.",
+    "hp": {
+      "base": "150 (live run-46 (12,5) A1)",
+      "notes": "normal-class; summons MINION waves"
+    },
+    "id": "FABRICATOR",
+    "is_boss": false,
+    "kind": "monster",
+    "name": "Fabricator",
+    "needs_zh": false,
+    "play_notes": "run-46 live: mother killed T3 — Strike Dummy-boosted Strike resolved 19 through Vuln (base+Str+dummy fed pre-multiplier); two NoiseBots + two ShockBots despawned same resolution."
+  },
+  "FAT_GREMLIN": {
+    "acts": [
+      "Act1"
+    ],
+    "curated": true,
+    "cycle": [
+      "SPAWNED_MOVE",
+      "FLEE_MOVE"
+    ],
+    "description": "GremlinMerc SURPRISE spawn (run-45 live): 14 hp + HEIST_POWER:40 (steals 40 Gold if it acts). Enters SPAWNED stun one turn; cycle FLEE (escape intent) — kill before escape resolves. Inferno-class ticks chip it while stunned.",
+    "hp": {
+      "base": 14,
+      "notes": "run-45 spawn live 14/14"
+    },
+    "id": "FAT_GREMLIN",
+    "is_boss": false,
+    "kind": "monster",
+    "name": "Fat Gremlin",
+    "source": "run-45 live"
   },
   "FOSSIL_STALKER": {
     "acts": [
@@ -7687,6 +7981,120 @@
     "play_notes": "run-39 live: HAUNT = free window (debuff only); dump damage there. STOMP 12-class incoming on T3 — kill or full-block before it. Dazed cards are Ethereal (vanish EoT) — deck pollution is turn-scoped.",
     "source": "run-39 live T3 kill + codex move fragments"
   },
+  "HUNTER_KILLER": {
+    "acts": [],
+    "aliases": [
+      "Hunter Killer"
+    ],
+    "curated": true,
+    "cycle": [
+      "TENDERIZING_GOOP_MOVE",
+      "BITE_MOVE",
+      "PUNCTURE_MOVE"
+    ],
+    "description": "Hunter Killer (Act2 normal node, elite-class threat): HP 121 live run-48 A1 (A 126+). Cycle TENDERIZING_GOOP (Debuff TENDER 1 on player — per-play Str/Dex drain, restores on its cycle; see TENDER_POWER) → RAND branch BITE (single 17-class live, base 13-17, Str-inflates) / PUNCTURE (multi 7x3 A:8, Str-inflates; run-48 live intents 5x3 under Weak, 7x3 uncut). Doctrine: Colossus × Vuln-on-attacker halves Puncture live (5x3→2x3, 7x3→3x3 run-48 twice, 0-chip turns); block-gate every Puncture/Bite turn at low HP; Tender drain re-read player powers EVERY card — run-48 died when chain math used pre-drain Str (kill chain stopped at 13/121, BITE 9-through-8-block exact lethal). Regen-potion HP rail spent inside this fight; no shop between act start and this node on the right spine.",
+    "hp": {
+      "ascension": {
+        "max": null,
+        "min": 126
+      },
+      "base": 121,
+      "max": null,
+      "notes": ""
+    },
+    "id": "HUNTER_KILLER",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "BITE_MOVE": {
+        "aliases": [
+          "Bite",
+          "BITE"
+        ],
+        "curated": true,
+        "effect": "Bite (Hunter Killer context): single attack 13-17 class live (A 15-class); Str-inflates; run-48 uncut intent 17 — block-gate turn.",
+        "follow_up_id": null,
+        "id": "BITE_MOVE",
+        "intents": [
+          {
+            "base_damage": 17,
+            "base_damage_ascension": {
+              "ascension": 19
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "HUNTER_KILLER",
+        "name": "Bite",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/HUNTER_KILLER#BITE",
+        "description": "Bite (Hunter Killer context): single attack 13-17 class live (A 15-class); Str-inflates; run-48 uncut intent 17 — block-gate turn."
+      },
+      "PUNCTURE_MOVE": {
+        "aliases": [
+          "Puncture",
+          "PUNCTURE"
+        ],
+        "curated": true,
+        "effect": "Puncture: multi attack 7×3 (A:8/hit); Str-inflates; Colossus×Vuln-on-attacker halves live (5×3→2×3, 7×3→3×3 run-48); pace block to the halved or full value per Colossus state.",
+        "follow_up_id": null,
+        "id": "PUNCTURE_MOVE",
+        "intents": [
+          {
+            "base_damage": 7,
+            "base_damage_ascension": {
+              "ascension": 8
+            },
+            "class": "MultiAttackIntent",
+            "hits": 3,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "HUNTER_KILLER",
+        "name": "Puncture",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/HUNTER_KILLER#PUNCTURE",
+        "description": "Puncture: multi attack 7×3 (A:8/hit); Str-inflates; Colossus×Vuln-on-attacker halves live (5×3→2×3, 7×3→3×3 run-48); pace block to the halved or full value per Colossus state."
+      },
+      "TENDERIZING_GOOP_MOVE": {
+        "aliases": [
+          "Tenderizing Goop",
+          "TENDERIZING_GOOP"
+        ],
+        "curated": true,
+        "effect": "Tenderizing Goop: Debuff — TENDER 1 on player (per-card Str/Dex drain within turn, restores on applier cycle; run-48 kill-chain tax).",
+        "follow_up_id": null,
+        "id": "TENDERIZING_GOOP_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "HUNTER_KILLER",
+        "name": "Tenderizing Goop",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/HUNTER_KILLER#TENDERIZING_GOOP",
+        "description": "Tenderizing Goop: Debuff — TENDER 1 on player (per-card Str/Dex drain within turn, restores on applier cycle; run-48 kill-chain tax)."
+      }
+    },
+    "name": "Hunter Killer",
+    "needs_zh": false,
+    "play_notes": "run-48 live 2026-09-19: death site — killer 13/121 at game_over; Colossus×Vuln halved Puncture twice live; Tender −3 Str mid-chain was the kill-chain failure. [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
+    "source": "codex-api:/monsters/HUNTER_KILLER",
+    "type": "Normal"
+  },
   "HauntedShip": {
     "acts": [],
     "aliases": [
@@ -9171,6 +9579,182 @@
     "name": "Lagavulin Matriarch",
     "play_notes": "run-39 live kill T9: wake-window doctrine first (3 unblocked → strip PLATING:12 + stun); Colossus live-halved SLASH/DISEMBOWEL intents; Pact→Ritual 4-energy burst turn; Weak Potion on SLASH 21(Str2)→15; Explosive Ampoule T8; Hemo+Strike closed at Str 7. Player entered boss at 57/80, finished at 9/80.",
     "source": "codex-api + run-39 live T9 kill + powers ASLEEP doctrine; run-40 live fold 2026-09-18"
+  },
+  "LEAF_SLIME_M": {
+    "acts": [
+      "Act2"
+    ],
+    "aliases": [
+      "Leaf Slime (M)",
+      "Leaf Slime M"
+    ],
+    "curated": true,
+    "cycle": [
+      "CLUMP_SHOT_MOVE",
+      "STICKY_SHOT_MOVE"
+    ],
+    "description": "Leaf Slime (M), Act2 normal: HP 32-35 (A 33-36) live run-48 35. Cycle CLUMP_SHOT → STICKY_SHOT. CLUMP_SHOT = single 8 (A:9); STICKY_SHOT = status ×2 Slimed-to-discard. In the run-48 4-slime pack both mediums opened on Sticky Shot (no T1 damage) — free-window turn for pack pacing.",
+    "hp": {
+      "ascension": {
+        "max": 36,
+        "min": 33
+      },
+      "base": 32,
+      "max": 35,
+      "notes": ""
+    },
+    "id": "LEAF_SLIME_M",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "CLUMP_SHOT_MOVE": {
+        "aliases": [
+          "Clump Shot",
+          "CLUMP_SHOT"
+        ],
+        "curated": true,
+        "effect": "Clump Shot: single attack 8 (A:9).",
+        "follow_up_id": null,
+        "id": "CLUMP_SHOT_MOVE",
+        "intents": [
+          {
+            "base_damage": 8,
+            "base_damage_ascension": {
+              "ascension": 9
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "LEAF_SLIME_M",
+        "name": "Clump Shot",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/LEAF_SLIME_M#CLUMP_SHOT",
+        "description": "Clump Shot: single attack 8 (A:9)."
+      },
+      "STICKY_SHOT_MOVE": {
+        "aliases": [
+          "Sticky Shot",
+          "STICKY_SHOT"
+        ],
+        "curated": true,
+        "effect": "Sticky Shot: Status ×2 — Slimed cards to player discard; no HP damage.",
+        "follow_up_id": null,
+        "id": "STICKY_SHOT_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Status"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "LEAF_SLIME_M",
+        "name": "Sticky Shot",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/LEAF_SLIME_M#STICKY_SHOT",
+        "description": "Sticky Shot: Status ×2 — Slimed cards to player discard; no HP damage."
+      }
+    },
+    "name": "Leaf Slime (M)",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/LEAF_SLIME_M",
+    "type": "Normal"
+  },
+  "LEAF_SLIME_S": {
+    "acts": [
+      "Act2"
+    ],
+    "aliases": [
+      "Leaf Slime (S)",
+      "Leaf Slime S"
+    ],
+    "curated": true,
+    "cycle": [
+      "TACKLE_MOVE",
+      "GOOP_MOVE"
+    ],
+    "description": "Leaf Slime (S), Act2 normal: HP 11-15 (A 12-16) live run-48 12. Cycle TACKLE → RAND GOOP (w high). TACKLE = single 3 (A:4); GOOP (leaf variant) = Status ×1 class (adds status cards) — corpse-slug GOOP Frail 2 is a DIFFERENT move id behavior; check owning monster. Low-threat add: clean inside multi-enemy pacing lines.",
+    "hp": {
+      "ascension": {
+        "max": 16,
+        "min": 12
+      },
+      "base": 11,
+      "max": 15,
+      "notes": ""
+    },
+    "id": "LEAF_SLIME_S",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "GOOP_MOVE": {
+        "aliases": [
+          "Goop",
+          "GOOP"
+        ],
+        "curated": true,
+        "effect": "Goop (Leaf Slime S variant): Status ×1 class — adds status cards; distinct from CorpseSlug GOOP Frail-2 behavior (different move context).",
+        "follow_up_id": null,
+        "id": "GOOP_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Status"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "LEAF_SLIME_S",
+        "name": "Goop",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/LEAF_SLIME_S#GOOP",
+        "description": "Goop (Leaf Slime S variant): Status ×1 class — adds status cards; distinct from CorpseSlug GOOP Frail-2 behavior (different move context)."
+      },
+      "TACKLE_MOVE": {
+        "aliases": [
+          "Tackle",
+          "TACKLE"
+        ],
+        "curated": true,
+        "effect": "Tackle: single attack 3 (A:4); Red Mask Weak cuts to 2-class live.",
+        "follow_up_id": null,
+        "id": "TACKLE_MOVE",
+        "intents": [
+          {
+            "base_damage": 3,
+            "base_damage_ascension": {
+              "ascension": 4
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "LEAF_SLIME_S",
+        "name": "Tackle",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/LEAF_SLIME_S#TACKLE",
+        "description": "Tackle: single attack 3 (A:4); Red Mask Weak cuts to 2-class live."
+      }
+    },
+    "name": "Leaf Slime (S)",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/LEAF_SLIME_S",
+    "type": "Normal"
   },
   "LIVING_FOG": {
     "acts": [
@@ -14036,6 +14620,26 @@
     "source": "codex-api + run-43 live",
     "type": "Normal"
   },
+  "SNEAKY_GREMLIN": {
+    "acts": [
+      "Act1"
+    ],
+    "curated": true,
+    "cycle": [
+      "SPAWNED_MOVE",
+      "TACKLE_MOVE"
+    ],
+    "description": "GremlinMerc SURPRISE spawn (run-45 live): 13 hp, enters SPAWNED stun one turn, then TACKLE cycle. Dies to any 2-hit sequence — dump on the stun turn.",
+    "hp": {
+      "base": 13,
+      "notes": "run-45 spawn live 13/13"
+    },
+    "id": "SNEAKY_GREMLIN",
+    "is_boss": false,
+    "kind": "monster",
+    "name": "Sneaky Gremlin",
+    "source": "run-45 live"
+  },
   "SOUL_NEXUS": {
     "acts": [],
     "aliases": [
@@ -16366,6 +16970,39 @@
     "source": "codex-api:/monsters/TERROR_EEL",
     "type": "Elite"
   },
+  "TEST_SUBJECT": {
+    "acts": [
+      "Act3"
+    ],
+    "aliases": [
+      "TEST_SUBJECT",
+      "TestSubject",
+      "实验体",
+      "Test Subject #C11",
+      "Test Subject #C14"
+    ],
+    "curated": true,
+    "cycle": [
+      "BITE_MOVE",
+      "SKULL_BASH_MOVE",
+      "MULTI_CLAW_MOVE",
+      "PHASE3_LACERATE_MOVE",
+      "BIG_POUNCE_MOVE",
+      "BURNING_GROWL_MOVE",
+      "RESPAWN_MOVE"
+    ],
+    "description": "Act3 Boss (Test Subject #C-class; run-46 live #C11, 100 HP A1): cycle BITE(13/20-class, inflates with Enrage Str; live 20→33 mid-fight after skill slips) → SKULL_BASH(14 + player Vuln1) → MULTI_CLAW(10×3) → PHASE3_LACERATE(10×3) → BIG_POUNCE(45) → BURNING_GROWL → RESPAWN. ADAPTABLE_POWER self-revive: death prevents combat end until RESPAWN_MOVE completes (respawn intent: heal + PAINFUL_STABS 1 + NEMESIS 1). ENRAGE_POWER: +Amount Str whenever anyone plays a Skill — zero-skill discipline (attacks + powers only). REVIVE_BRANCH markers (MULTI_CLAW[ok]/PHASE3_LACERATE[no]) surfaced live via conditional-branch fallback reflection.",
+    "hp": {
+      "base": "100 (live run-46 #C11 A1)",
+      "notes": "multi-phase via ADAPTABLE revive"
+    },
+    "id": "TEST_SUBJECT",
+    "is_boss": true,
+    "kind": "monster",
+    "name": "Test Subject",
+    "needs_zh": false,
+    "play_notes": "run-46 live: phase-1 cleared T3 (Whirlwind 33-clear) → RESPAWN intent live → THE_ARCHITECT EA PROCEED chain = run won. ENRAGE fed by Bloodletting slip (+2 Str, Bite 20→33) — zero-skill re-read-per-turn lesson."
+  },
   "THE_INSATIABLE": {
     "acts": [],
     "aliases": [
@@ -16853,6 +17490,94 @@
     "kind": "monster",
     "name": "Tunneler",
     "source": "; run-40 live fold 2026-09-18"
+  },
+  "TWIG_SLIME_M": {
+    "acts": [
+      "Act2"
+    ],
+    "aliases": [
+      "Twig Slime (M)",
+      "Twig Slime M"
+    ],
+    "curated": true,
+    "cycle": [
+      "POKEY_POUNCE_MOVE",
+      "STICKY_SHOT_MOVE"
+    ],
+    "description": "Twig Slime (M), Act2 normal: HP 26-28 (A 27-29) live run-48 28. Cycle STICKY_SHOT (status ×2 — Slimed cards to discard) → RAND branch POKEY_POUNCE (w high) / STICKY_SHOT. POKEY_POUNCE = single 11 (A:12) — kill-timer: cancel by killing Twig M on the player turn BEFORE its pounce resolves (run-48: paced to 4 HP T1, tapped T2 pre-pounce). Weak (Red Mask) cuts pounce 11→8-class live.",
+    "hp": {
+      "ascension": {
+        "max": 29,
+        "min": 27
+      },
+      "base": 26,
+      "max": 28,
+      "notes": ""
+    },
+    "id": "TWIG_SLIME_M",
+    "is_boss": false,
+    "is_elite": false,
+    "kind": "monster",
+    "moves": {
+      "POKEY_POUNCE_MOVE": {
+        "aliases": [
+          "Pokey Pounce",
+          "POKEY_POUNCE"
+        ],
+        "curated": true,
+        "effect": "Pokey Pounce: single attack 11 (A:12); kill-timer — cancel by killing Twig Slime M before its pounce turn resolves; Weak cuts live 11→8-class.",
+        "follow_up_id": null,
+        "id": "POKEY_POUNCE_MOVE",
+        "intents": [
+          {
+            "base_damage": 11,
+            "base_damage_ascension": {
+              "ascension": 12
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TWIG_SLIME_M",
+        "name": "Pokey Pounce",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/TWIG_SLIME_M#POKEY_POUNCE",
+        "description": "Pokey Pounce: single attack 11 (A:12); kill-timer — cancel by killing Twig Slime M before its pounce turn resolves; Weak cuts live 11→8-class."
+      },
+      "STICKY_SHOT_MOVE": {
+        "aliases": [
+          "Sticky Shot",
+          "STICKY_SHOT"
+        ],
+        "curated": true,
+        "effect": "Sticky Shot: Status ×2 — adds Slimed status cards to the player discard pile; no HP damage that turn (free damage window).",
+        "follow_up_id": null,
+        "id": "STICKY_SHOT_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Status"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "TWIG_SLIME_M",
+        "name": "Sticky Shot",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/TWIG_SLIME_M#STICKY_SHOT",
+        "description": "Sticky Shot: Status ×2 — adds Slimed status cards to the player discard pile; no HP damage that turn (free damage window)."
+      }
+    },
+    "name": "Twig Slime (M)",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/TWIG_SLIME_M",
+    "type": "Normal"
   },
   "TWO_TAILED_RAT": {
     "acts": [],
@@ -20839,105 +21564,5 @@
     "source": "generator:synthesized",
     "zh_description": "共享/未归属的 live 招式 id。当没有怪物条目认领时 lookup 在此解析——折叠进对应怪物条目前以 live state 的意图字段为权威。",
     "zh_name": "共享招式"
-  },
-  "SNEAKY_GREMLIN": {
-    "id": "SNEAKY_GREMLIN",
-    "name": "Sneaky Gremlin",
-    "kind": "monster",
-    "acts": [
-      "Act1"
-    ],
-    "is_boss": false,
-    "curated": true,
-    "hp": {
-      "base": 13,
-      "notes": "run-45 spawn live 13/13"
-    },
-    "cycle": [
-      "SPAWNED_MOVE",
-      "TACKLE_MOVE"
-    ],
-    "description": "GremlinMerc SURPRISE spawn (run-45 live): 13 hp, enters SPAWNED stun one turn, then TACKLE cycle. Dies to any 2-hit sequence — dump on the stun turn.",
-    "source": "run-45 live"
-  },
-  "FAT_GREMLIN": {
-    "id": "FAT_GREMLIN",
-    "name": "Fat Gremlin",
-    "kind": "monster",
-    "acts": [
-      "Act1"
-    ],
-    "is_boss": false,
-    "curated": true,
-    "hp": {
-      "base": 14,
-      "notes": "run-45 spawn live 14/14"
-    },
-    "cycle": [
-      "SPAWNED_MOVE",
-      "FLEE_MOVE"
-    ],
-    "description": "GremlinMerc SURPRISE spawn (run-45 live): 14 hp + HEIST_POWER:40 (steals 40 Gold if it acts). Enters SPAWNED stun one turn; cycle FLEE (escape intent) — kill before escape resolves. Inferno-class ticks chip it while stunned.",
-    "source": "run-45 live"
-  },
-  "TEST_SUBJECT": {
-    "id": "TEST_SUBJECT",
-    "kind": "monster",
-    "name": "Test Subject",
-    "aliases": [
-      "TEST_SUBJECT",
-      "TestSubject",
-      "实验体",
-      "Test Subject #C11",
-      "Test Subject #C14"
-    ],
-    "acts": [
-      "Act3"
-    ],
-    "is_boss": true,
-    "curated": true,
-    "needs_zh": false,
-    "hp": {
-      "base": "100 (live run-46 #C11 A1)",
-      "notes": "multi-phase via ADAPTABLE revive"
-    },
-    "cycle": [
-      "BITE_MOVE",
-      "SKULL_BASH_MOVE",
-      "MULTI_CLAW_MOVE",
-      "PHASE3_LACERATE_MOVE",
-      "BIG_POUNCE_MOVE",
-      "BURNING_GROWL_MOVE",
-      "RESPAWN_MOVE"
-    ],
-    "description": "Act3 Boss (Test Subject #C-class; run-46 live #C11, 100 HP A1): cycle BITE(13/20-class, inflates with Enrage Str; live 20→33 mid-fight after skill slips) → SKULL_BASH(14 + player Vuln1) → MULTI_CLAW(10×3) → PHASE3_LACERATE(10×3) → BIG_POUNCE(45) → BURNING_GROWL → RESPAWN. ADAPTABLE_POWER self-revive: death prevents combat end until RESPAWN_MOVE completes (respawn intent: heal + PAINFUL_STABS 1 + NEMESIS 1). ENRAGE_POWER: +Amount Str whenever anyone plays a Skill — zero-skill discipline (attacks + powers only). REVIVE_BRANCH markers (MULTI_CLAW[ok]/PHASE3_LACERATE[no]) surfaced live via conditional-branch fallback reflection.",
-    "play_notes": "run-46 live: phase-1 cleared T3 (Whirlwind 33-clear) → RESPAWN intent live → THE_ARCHITECT EA PROCEED chain = run won. ENRAGE fed by Bloodletting slip (+2 Str, Bite 20→33) — zero-skill re-read-per-turn lesson."
-  },
-  "FABRICATOR": {
-    "id": "FABRICATOR",
-    "kind": "monster",
-    "name": "Fabricator",
-    "aliases": [
-      "FABRICATOR",
-      "Fabricator",
-      "组装师"
-    ],
-    "acts": [
-      "Act3"
-    ],
-    "is_boss": false,
-    "curated": true,
-    "needs_zh": false,
-    "hp": {
-      "base": "150 (live run-46 (12,5) A1)",
-      "notes": "normal-class; summons MINION waves"
-    },
-    "cycle": [
-      "FABRICATE_MOVE",
-      "FABRICATING_STRIKE_MOVE",
-      "DISINTEGRATE_MOVE"
-    ],
-    "description": "Act3 normal-class (run-46 live (12,5) 150 HP): cycle FABRICATE(summon) → fabricateBranch RAND FABRICATE/FABRICATING_STRIKE(18 dmg + summon) → DISINTEGRATE(11). MINION summons: NoiseBot (status:2c-class) and ShockBot (ZAP 14-18 + HIGH_VOLTAGE + Str). Kill-master doctrine: ALL MINION_POWER summons despawn when the Fabricator dies. HATCH/countdown class decrements EoT, not damage-driven.",
-    "play_notes": "run-46 live: mother killed T3 — Strike Dummy-boosted Strike resolved 19 through Vuln (base+Str+dummy fed pre-multiplier); two NoiseBots + two ShockBots despawned same resolution."
   }
 }

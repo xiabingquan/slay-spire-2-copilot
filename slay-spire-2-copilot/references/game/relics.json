@@ -4092,13 +4092,13 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "whenever you play an Attack or Skill card, upgrade it for the rest of combat. Semantics: the play that triggers the upgrade still uses BASE values; that card type is upgraded for subsequent plays in the same combat (e.g. Rage Amount 3 first play / 5 later, Defend 5 first / 8 later; a later-play Defend with Speed-Potion Dex read 13 = 5 base + 3 upgrade + 5 Dex).",
+    "curated": true,
+    "description": "whenever you play an Attack or Skill card, upgrade it for the rest of combat. Semantics refined LIVE run-48: per-CARD-INSTANCE — the triggering play uses BASE values; THAT copy is upgraded for its own subsequent plays in the same combat. Fresh copies drawn later still play base first (run-48 Strikes: Whetstone-upgraded copy hit 9 first, un-upgraded copies hit 6 first then upgraded). NOT a global card-type upgrade. In-combat examples: Shrug 8 first play → 12-class later plays; Breakthrough 9 first → 13 later; Bloodletting+ energy display 6/3 when its copy carried the upgrade.",
     "id": "RAZOR_TOOTH",
     "kind": "relic",
     "name": "Razor Tooth",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-48 live 2026-09-19: per-instance semantics confirmed — fresh copies play base first; Whetstone-upgraded copies distinct from Razor-upgraded ones. [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
     "rarity": "Rare",
     "source": "md:relics.md:L124; md:relics_zh.md:L124",
     "zh_description": "每次打出攻击或技能牌时，本场战斗内将其升级。语义：触发升级的那次打出仍按**基础值**结算，该牌此后本战打出才用升级值（如 Rage 首打 Amount 3/后打 5、Defend 首打 5/后打 8；速度药水敏捷回合的后打 Defend 读数 13 = 基础5+升级3+敏捷5）。",
@@ -4522,6 +4522,22 @@
     "source": "md:relics.md:L218; md:relics_zh.md:L218",
     "zh_description": "拾取时，向牌库加入 2 张随机诅咒和 3 张 Wish。",
     "zh_name": "原初之爪"
+  },
+  "SHARP": {
+    "aliases": [
+      "Gnarled Hammer",
+      "GNARLED_HAMMER"
+    ],
+    "character": "shared",
+    "curated": true,
+    "description": "SHARP is an Enchant keyword, not a single relic effect: Sharp N = +N attack damage on the enchanted card (run-48 live: SELF_HELP_BOOK option READ_THE_BACK enchants an Attack with Sharp 2 — Bludgeon+ base read 42+2=44 live, 44×1.5 Vuln = 51 on Effigy). Relic GNARLED_HAMMER (Shop rarity) enchants up to 3 Attacks with Sharp 3 on pickup. Enchant damage adds to base BEFORE multipliers (Vuln/Cruelty).",
+    "id": "SHARP",
+    "kind": "relic",
+    "name": "Sharp (Enchant keyword) / Gnarled Hammer carrier relic",
+    "needs_zh": false,
+    "play_notes": "run-48 live fold 2026-09-19: Sharp 2 on Bludgeon = 44 base (42+2) live; SELF_HELP_BOOK READ_THE_BACK is the grant source. [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
+    "rarity": "Shop",
+    "source": "codex-api:/relics/GNARLED_HAMMER"
   },
   "SHOVEL": {
     "aliases": [
