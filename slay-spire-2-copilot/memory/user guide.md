@@ -176,3 +176,20 @@ value for FUTURE runs**.
   facts (mechanics learned the hard way, economy numbers, decision insights)
 - What survives: live-verified mechanics, cost/HP economy data, synergies,
   decision-quality observations, advisory suggestions for future situations
+
+## Play principles for future reference (user directive 2026-09-19)
+
+Advisory principles for future runs — adapt to live situation per run:
+
+- **HP is a premier resource, and its priority value shifts by turn/phase.**
+  Treat HP as the scarcest currency whose exchange rate changes over the
+  fight: early/low-threat turns HP is cheap to spend; razor turns and
+  boss-tax windows it is priceless. Weigh every HP payment against what
+  that specific turn buys (建议性 — live HP line, incoming intents and
+  remaining fight length decide the rate each turn).
+- **Early turns: engine-online is the top priority.** In the opening
+  turns of a fight, getting powers/engines equipped (Inferno, Vicious,
+  poison, Inflame-class, block engines) outranks marginal damage or
+  minor HP conservation — engines compound over the whole fight, early
+  chip damage does not. Spending early HP to land engine pieces is often
+  the right trade; the exact amount remains a live judgment.
