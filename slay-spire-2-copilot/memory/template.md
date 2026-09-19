@@ -8,8 +8,9 @@ How to fill this template (applies to every section):
 
 - Prose sections use Markdown unordered lists only (`- item`). No paragraphs,
   no numbered lists.
-- Each prose section holds at most 5 bullets. When more exist, merge or drop —
-  keep only what has forward reference value for future runs.
+- Each prose section holds at most 5 bullets. When more exist, DROP the
+  weaker ones — never merge items into combined bullets. Concise only: keep
+  the strongest items with forward reference value for future runs.
 - The two tables (Summary facts, Run overview) are fixed format: fill the
   cells, never free-write around them.
 - Bullet lines marked `e.g.` are format examples — replace them with this
