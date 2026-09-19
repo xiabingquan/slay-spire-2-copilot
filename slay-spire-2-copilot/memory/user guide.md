@@ -74,7 +74,7 @@ relics and cards that character wants:
 ## Summary contents
 
 In the Summary section of each run note, besides the core-facts table, write
-one or two sentences covering the run's biggest gain and biggest loss:
+exactly two bullets covering the run's biggest gain and biggest loss:
 
 - The single biggest win of the run
 - The single biggest loss of the run
