@@ -287,8 +287,8 @@
         ],
         "base_damage": null,
         "base_damage_ascension": null,
-        "curated": false,
-        "description": "codex: Roar; intent=Debuff; powers [{'power_id': 'VULNERABLE', 'target': 'player', 'amount': 3}] | archive: debuff — 3 Vulnerable to the player",
+        "curated": true,
+        "description": "Roar (RubyRaider Brute family): SELF +3 Strength — live run-52 BruteRubyRaider: powers line showed STRENGTH_POWER:3 on the Brute after Roar, player received NO Vulnerable. Monster-qualified: Mawler's Roar is the opposite (3 Vulnerable to player). Do not assume one shared ROAR id means one shared effect.",
         "display_note": null,
         "hits": null,
         "id": "ROAR_MOVE",
@@ -352,8 +352,8 @@
         ],
         "base_damage": null,
         "base_damage_ascension": null,
-        "curated": false,
-        "description": "`SANDPIT_POWER:amount` every turn. Intents:",
+        "curated": true,
+        "description": "Track (TrackerRubyRaider): debuff — applies 2 Frail to the player. LIVE run-52: FRAIL_POWER:2 landed on player, no damage instance; earlier SANDPIT-referencing stub fold was wrong (Sandpit belongs to the Act2 boss Insatiable only).",
         "display_note": null,
         "hits": null,
         "id": "TRACK_MOVE",
@@ -559,8 +559,8 @@
         ],
         "base_damage": null,
         "base_damage_ascension": null,
-        "curated": false,
-        "description": "codex: Roar; intent=Debuff; powers [{'power_id': 'VULNERABLE', 'target': 'player', 'amount': 3}] | archive: debuff — 3 Vulnerable to the player",
+        "curated": true,
+        "description": "Roar (RubyRaider Brute family): SELF +3 Strength — live run-52 BruteRubyRaider: powers line showed STRENGTH_POWER:3 on the Brute after Roar, player received NO Vulnerable. Monster-qualified: Mawler's Roar is the opposite (3 Vulnerable to player). Do not assume one shared ROAR id means one shared effect.",
         "display_note": null,
         "hits": null,
         "id": "ROAR_MOVE",
@@ -624,8 +624,8 @@
         ],
         "base_damage": null,
         "base_damage_ascension": null,
-        "curated": false,
-        "description": "`SANDPIT_POWER:amount` every turn. Intents:",
+        "curated": true,
+        "description": "Track (TrackerRubyRaider): debuff — applies 2 Frail to the player. LIVE run-52: FRAIL_POWER:2 landed on player, no damage instance; earlier SANDPIT-referencing stub fold was wrong (Sandpit belongs to the Act2 boss Insatiable only).",
         "display_note": null,
         "hits": null,
         "id": "TRACK_MOVE",
@@ -1914,8 +1914,8 @@
         ],
         "base_damage": null,
         "base_damage_ascension": null,
-        "curated": false,
-        "description": "codex: Roar; intent=Debuff; powers [{'power_id': 'VULNERABLE', 'target': 'player', 'amount': 3}] | archive: debuff — 3 Vulnerable to the player",
+        "curated": true,
+        "description": "Roar (RubyRaider Brute family): SELF +3 Strength — live run-52 BruteRubyRaider: powers line showed STRENGTH_POWER:3 on the Brute after Roar, player received NO Vulnerable. Monster-qualified: Mawler's Roar is the opposite (3 Vulnerable to player). Do not assume one shared ROAR id means one shared effect.",
         "display_note": null,
         "hits": null,
         "id": "ROAR_MOVE",
@@ -1979,8 +1979,8 @@
         ],
         "base_damage": null,
         "base_damage_ascension": null,
-        "curated": false,
-        "description": "`SANDPIT_POWER:amount` every turn. Intents:",
+        "curated": true,
+        "description": "Track (TrackerRubyRaider): debuff — applies 2 Frail to the player. LIVE run-52: FRAIL_POWER:2 landed on player, no damage instance; earlier SANDPIT-referencing stub fold was wrong (Sandpit belongs to the Act2 boss Insatiable only).",
         "display_note": null,
         "hits": null,
         "id": "TRACK_MOVE",
@@ -2373,7 +2373,7 @@
       "STOMP_MOVE",
       "CRUSH_MOVE"
     ],
-    "description": "Ceremonial Beast (Boss, Act1): HP 252 live run-48 A1 (codex 252 base / A 262+). Archive 6-move cycle STAMP→PLOW→STUN→BEAST_CRY→STOMP→CRUSH; LIVE run-48 phase behavior: STAMP T1 (Buff: PLOW_POWER 150 self — free window), then PLOW repeated as its attack loop (18 base A:20 + self +2 Str each — intent climbed 13→22 under Weak/Str stacking) until the stun window fired; post-stun the cycle resumed BEAST_CRY→STOMP→CRUSH. STUN_POWER window doctrine (run-23 threshold correction 150 not 160): unblocked damage while CurrentHp <= PLOW Amount stuns owner and CONSUMES its temporary-strength powers (run-48: Str 4 stripped live, PLOW 22 cancelled). BEAST_CRY = RINGING 1 on player (1-card/turn — bridge enforces; potions are NOT cards so Duplicator+bomb-card plays under RINGING). STOMP 15 A:17; CRUSH 17 A:19 + self +3 Str. Weak-immune damage (Inferno procs) + stun-window race is the kill line; run-48 killed it T7 at 46/80 after a 48-dmg Duplicator+Uppercut turn.",
+    "description": "Ceremonial Beast (Boss, Act1): HP 252 live run-48 A1 (codex 252 base / A 262+). Archive 6-move cycle STAMP→PLOW→STUN→BEAST_CRY→STOMP→CRUSH; LIVE run-48 phase behavior: STAMP T1 (Buff: PLOW_POWER 150 self — free window), then PLOW repeated as its attack loop (18 base A:20 + self +2 Str each — intent climbed 13→22 under Weak/Str stacking) until the stun window fired; post-stun the cycle resumed BEAST_CRY→STOMP→CRUSH. STUN_POWER window doctrine (run-23 threshold correction 150 not 160): unblocked damage while CurrentHp <= PLOW Amount stuns owner and CONSUMES its temporary-strength powers (run-48: Str 4 stripped live, PLOW 22 cancelled). BEAST_CRY = RINGING 1 on player (1-card/turn — bridge enforces; potions are NOT cards so Duplicator+bomb-card plays under RINGING). STOMP 15 A:17; CRUSH 17 A:19 + self +3 Str. Weak-immune damage (Inferno procs) + stun-window race is the kill line; run-48 killed it T7 at 46/80 after a 48-dmg Duplicator+Uppercut turn. LIVE run-52 (log run-20260919-142450-ebbc2192.log, A1 252 HP seed JQ5QDF7CYQ): stun-cross reconfirmed — Strike landing boss at 141 (≤150) fired move=STUNNED, stripped PLOW_POWER and the boss's accumulated temp Strength, Plow that turn cancelled; BEAST_CRY applied RINGING_POWER:1 live — bridge fail-loud gated every further play that turn as no(None) (1-card/turn enforcement, potions remain exempt); CURE_ALL did NOT cleanse RINGING (Power-class tax — run-51 rule reconfirmed live, potion wasted); RINGING expired end of boss side turn, multi-card plays returned T9; Plow loop intents live 18→20→22→24→26 as STR stacked +2 each cast; CRIMSON_MANTLE unblockable −1/turn tick killed the player at 1 HP on T9 before the kill hand resolved — engine-tax death class (runs 41/42/45). Beast remained alive at run ended 77/252 remaining.",
     "hp": {
       "ascension": {
         "max": null,
@@ -2394,7 +2394,7 @@
           "BEAST_CRY"
         ],
         "curated": true,
-        "description": "Beast Cry: Debuff — RINGING 1 on player (1-card/turn limit until end of boss side turn; bridge enforces ok/no).",
+        "description": "Beast Cry: Debuff — RINGING 1 on player (1-card/turn until end of boss side turn). LIVE run-52: RINGING_POWER:1 applied; bridge gated further plays that turn as no(None); CURE_ALL did NOT cleanse it (Power-class); expired end of boss side turn.",
         "effect": "Beast Cry: Debuff — RINGING 1 on player (1-card/turn limit until end of boss side turn; bridge enforces ok/no).",
         "follow_up_id": null,
         "id": "BEAST_CRY_MOVE",
@@ -2528,7 +2528,7 @@
           "STUN"
         ],
         "curated": true,
-        "description": "Stun: stun-state move — appears in archive cycle after PLOW; LIVE run-48: the stun fired as STUNNED state when PLOW_POWER threshold was crossed (not a scheduled cycle slot on the un-stunned path; post-stun cycle resumed at BEAST_CRY).",
+        "description": "Stun wakeup: fires when unblocked player damage lands boss at CurrentHp ≤ PLOW amount (live 150; a hit landing 153 did not stun in run-23, 145/141 did in runs-23/48/52). Consumes ALL boss temporary Strength (PLOW_POWER stripped live run-52 at 141) and cancels the boss's action that turn.",
         "effect": "Stun: stun-state move — appears in archive cycle after PLOW; LIVE run-48: the stun fired as STUNNED state when PLOW_POWER threshold was crossed (not a scheduled cycle slot on the un-stunned path; post-stun cycle resumed at BEAST_CRY).",
         "follow_up_id": null,
         "id": "STUN_MOVE",
@@ -2706,7 +2706,7 @@
       "Ceremonialbeast",
       "仪式兽"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "RINGING_POWER_MOVE",
       "HP_MOVE",
@@ -2716,7 +2716,7 @@
       "STOMP_MOVE",
       "CRUSH_MOVE"
     ],
-    "description": "STAMP_MOVE = buff — PlowPower 150 (A:160) on self; PLOW_MOVE = single attack 18 (A:20) + Buff, self-loop; STUN_MOVE = stun wakeup; BEAST_CRY_MOVE = debuff — RingingPower 1 on all players; STOMP_MOVE = single attack 15 (A:17); CRUSH_MOVE = single attack 17 (A:19) + self +3 Strength (A:4). Flow: STAMP → PLOW (loop) — PlowPower: when the owner takes unblocked damage and Current HP ≤ Plow amount, all Strength (incl. temporary) is removed and it is stunned → STUN → BEAST_CRY → STOMP → CRUSH → BEAST_CRY… **Plow amount correction**: decomp table says 150 base / A1 ToughEnemies 160, but the trigger behaves as **150** — a hit to 153 did NOT stun, a hit to 145 did. Plan the crossing hit for ≤150, not ≤160. Passive ticks (e.g. Inferno) can cross the threshold unblocked and auto-stun. RingingPower: all your cards gain the Ringing affliction — while it lasts you may only start 1 card play per turn; removed at end of your turn (cards un-afflicted then).",
+    "description": "STAMP_MOVE = buff — PlowPower 150 (A:160) on self; PLOW_MOVE = single attack 18 (A:20) + Buff, self-loop; STUN_MOVE = stun wakeup; BEAST_CRY_MOVE = debuff — RingingPower 1 on all players; STOMP_MOVE = single attack 15 (A:17); CRUSH_MOVE = single attack 17 (A:19) + self +3 Strength (A:4). Flow: STAMP → PLOW (loop) — PlowPower: when the owner takes unblocked damage and Current HP ≤ Plow amount, all Strength (incl. temporary) is removed and it is stunned → STUN → BEAST_CRY → STOMP → CRUSH → BEAST_CRY… **Plow amount correction**: decomp table says 150 base / A1 ToughEnemies 160, but the trigger behaves as **150** — a hit to 153 did NOT stun, a hit to 145 did. Plan the crossing hit for ≤150, not ≤160. Passive ticks (e.g. Inferno) can cross the threshold unblocked and auto-stun. RingingPower: all your cards gain the Ringing affliction — while it lasts you may only start 1 card play per turn; removed at end of your turn (cards un-afflicted then). LIVE run-52 (log run-20260919-142450-ebbc2192.log, A1 252 HP seed JQ5QDF7CYQ): stun-cross reconfirmed — Strike landing boss at 141 (≤150) fired move=STUNNED, stripped PLOW_POWER and the boss's accumulated temp Strength, Plow that turn cancelled; BEAST_CRY applied RINGING_POWER:1 live — bridge fail-loud gated every further play that turn as no(None) (1-card/turn enforcement, potions remain exempt); CURE_ALL did NOT cleanse RINGING (Power-class tax — run-51 rule reconfirmed live, potion wasted); RINGING expired end of boss side turn, multi-card plays returned T9; Plow loop intents live 18→20→22→24→26 as STR stacked +2 each cast; CRIMSON_MANTLE unblockable −1/turn tick killed the player at 1 HP on T9 before the kill hand resolved — engine-tax death class (runs 41/42/45). Beast remained alive at run ended 77/252 remaining.",
     "display_names": [
       "CeremonialBeast",
       "仪式兽"
@@ -2735,8 +2735,8 @@
         ],
         "base_damage": null,
         "base_damage_ascension": null,
-        "curated": false,
-        "description": "减益——对全体玩家",
+        "curated": true,
+        "description": "Beast Cry: Debuff — RINGING 1 on player (1-card/turn until end of boss side turn). LIVE run-52: RINGING_POWER:1 applied; bridge gated further plays that turn as no(None); CURE_ALL did NOT cleanse it (Power-class); expired end of boss side turn.",
         "display_note": null,
         "hits": null,
         "id": "BEAST_CRY_MOVE",
@@ -2952,8 +2952,8 @@
         ],
         "base_damage": null,
         "base_damage_ascension": null,
-        "curated": false,
-        "description": "stun wakeup",
+        "curated": true,
+        "description": "Stun wakeup: fires when unblocked player damage lands boss at CurrentHp ≤ PLOW amount (live 150; a hit landing 153 did not stun in run-23, 145/141 did in runs-23/48/52). Consumes ALL boss temporary Strength (PLOW_POWER stripped live run-52 at 141) and cancels the boss's action that turn.",
         "display_note": null,
         "hits": null,
         "id": "STUN_MOVE",
@@ -3737,8 +3737,8 @@
         ],
         "base_damage": null,
         "base_damage_ascension": null,
-        "curated": false,
-        "description": "codex: Roar; intent=Debuff; powers [{'power_id': 'VULNERABLE', 'target': 'player', 'amount': 3}] | archive: debuff — 3 Vulnerable to the player",
+        "curated": true,
+        "description": "Roar (RubyRaider Brute family): SELF +3 Strength — live run-52 BruteRubyRaider: powers line showed STRENGTH_POWER:3 on the Brute after Roar, player received NO Vulnerable. Monster-qualified: Mawler's Roar is the opposite (3 Vulnerable to player). Do not assume one shared ROAR id means one shared effect.",
         "display_note": null,
         "hits": null,
         "id": "ROAR_MOVE",
@@ -3802,8 +3802,8 @@
         ],
         "base_damage": null,
         "base_damage_ascension": null,
-        "curated": false,
-        "description": "`SANDPIT_POWER:amount` every turn. Intents:",
+        "curated": true,
+        "description": "Track (TrackerRubyRaider): debuff — applies 2 Frail to the player. LIVE run-52: FRAIL_POWER:2 landed on player, no damage instance; earlier SANDPIT-referencing stub fold was wrong (Sandpit belongs to the Act2 boss Insatiable only).",
         "display_note": null,
         "hits": null,
         "id": "TRACK_MOVE",
@@ -7268,7 +7268,7 @@
       "ACID_MOVE",
       "INHALE"
     ],
-    "description": "Act1 monster (run-38 live: 56 HP, display 毛绒伏地虫). Cycle FIRST_ACID_GOOP (single 4 A:6) → INHALE (self +7 Strength — LIVE: STR:7 after one inhale, next acid intent 11[base4]) → ACID_GOOP (single 4 A:6) → repeat. INHALE +7 Str = steep growth timer — kill in ≤3 turns before second inhale (run-38: Bash+Strike T1, 3×Strike free-window T2, kill T3 before second inhale cycle).",
+    "description": "Fuzzy Wurm Crawler (毛绒伏地虫), Act1: 48-56 HP live. Cycle FIRST_ACID_GOOP (single 4 A:6) → INHALE (self +7 Strength) → ACID_GOOP (single 4 + current Str) → repeat. **Inhale STACKS**: LIVE run-52 — first Inhale STR 7, second Inhale STR 14, AcidGoop intent then 18[base4]. Kill within 3-4 turns before the second Inhale compounds; 'STR:7 after one inhale' from runs-38/42 is the first-stack value only.",
     "display_names": [
       "FuzzyWurmCrawler",
       "毛绒伏地虫"
@@ -8846,42 +8846,42 @@
     "zh_name": "墨宝"
   },
   "KNOWLEDGE_DEMON": {
-    "name": "Knowledge Demon",
-    "description": "Act2 Boss ~379 HP (A 399+). Cycle CURSE_OF_KNOWLEDGE -> SLAP -> KNOWLEDGE_OVERWHELMING -> PONDER -> branch. Live run-51: engines tick through but Ponder heal-cycle demands burst windows every ~4 turns; double-tax (Disintegration + heal cycle) outpaced a 34-card deck when key block turns slipped.",
-    "hp": {
-      "base": 379
-    },
+    "aliases": [
+      "Knowledge Demon",
+      "知识恶魔"
+    ],
+    "curated": true,
     "cycle": [
       "CURSE_OF_KNOWLEDGE_MOVE",
       "SLAP_MOVE",
       "KNOWLEDGE_OVERWHELMING_MOVE",
       "PONDER_MOVE"
     ],
+    "description": "Act2 Boss ~379 HP (A 399+). Cycle CURSE_OF_KNOWLEDGE -> SLAP -> KNOWLEDGE_OVERWHELMING -> PONDER -> branch. Live run-51: engines tick through but Ponder heal-cycle demands burst windows every ~4 turns; double-tax (Disintegration + heal cycle) outpaced a 34-card deck when key block turns slipped.",
+    "hp": {
+      "base": 379
+    },
+    "is_boss": true,
     "moves": {
       "CURSE_OF_KNOWLEDGE_MOVE": {
-        "name": "Curse of Knowledge",
-        "description": "Debuff turn; player chooses one curse card via overlay (no skip): Disintegration (power tax class) / Mind Rot (draw-cut power) / Sloth (status card, Sloth 3). Live run-51 pick rationale: protect draw for boss race; Disintegration tax later proved cure-immune — weigh HP budget over draw when choosing."
-      },
-      "SLAP_MOVE": {
-        "name": "Slap",
-        "description": "Single attack 13-class (A:15+) + Frail-class debuff; escalates with boss Strength (17-19 observed with Str buffs). Mangle缴械 neuters it to 0-class same turn."
+        "description": "Debuff turn; player chooses one curse card via overlay (no skip): Disintegration (power tax class) / Mind Rot (draw-cut power) / Sloth (status card, Sloth 3). Live run-51 pick rationale: protect draw for boss race; Disintegration tax later proved cure-immune — weigh HP budget over draw when choosing.",
+        "name": "Curse of Knowledge"
       },
       "KNOWLEDGE_OVERWHELMING_MOVE": {
-        "name": "Knowledge Overwhelming",
-        "description": "Multi attack 8x3 (A:9/hit) = 24 incoming baseline; full-block or Mangle-class Str-strip advised on this turn — run-51 lost this turn to an unplayed block card."
+        "description": "Multi attack 8x3 (A:9/hit) = 24 incoming baseline; full-block or Mangle-class Str-strip advised on this turn — run-51 lost this turn to an unplayed block card.",
+        "name": "Knowledge Overwhelming"
       },
       "PONDER_MOVE": {
-        "name": "Ponder",
-        "description": "Attack 11 + self-heal 30 + self Strength +2. Boss heal means burst dumped on this turn gets partly undone — live run-51 advisory: schedule biggest Vuln-window bursts on non-Ponder turns."
+        "description": "Attack 11 + self-heal 30 + self Strength +2. Boss heal means burst dumped on this turn gets partly undone — live run-51 advisory: schedule biggest Vuln-window bursts on non-Ponder turns.",
+        "name": "Ponder"
+      },
+      "SLAP_MOVE": {
+        "description": "Single attack 13-class (A:15+) + Frail-class debuff; escalates with boss Strength (17-19 observed with Str buffs). Mangle缴械 neuters it to 0-class same turn.",
+        "name": "Slap"
       }
     },
-    "aliases": [
-      "Knowledge Demon",
-      "知识恶魔"
-    ],
-    "is_boss": true,
-    "source": "run-51 live fold 2026-09-19 + codex",
-    "curated": true
+    "name": "Knowledge Demon",
+    "source": "run-51 live fold 2026-09-19 + codex"
   },
   "KaiserCrab": {
     "acts": [],
@@ -11029,13 +11029,13 @@
       "Mawler",
       "蛮兽"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "RIP_AND_TEAR_MOVE",
       "ROAR_MOVE",
       "CLAW_MOVE"
     ],
-    "description": "RIP_AND_TEAR_MOVE = single attack 14 (A:16); ROAR_MOVE = debuff — 3 Vulnerable to the player; CLAW_MOVE = multi attack 4 (A:5) ×2.",
+    "description": "Mawler (蛮兽), Act1: 72 HP live run-52. Cycle CLAW (multi 4×2 live) → RAND (RIP_AND_TEAR single 14-class / ROAR). ROAR live run-52 = 3 VULNERABLE to the player (opposite of RubyRaider Brute's self-+3-Str Roar — monster-qualified). Chomp-class moves on this monster are NOT shared values with ScrollOfBiting.",
     "display_names": [
       "Mawler",
       "蛮兽"
@@ -13700,8 +13700,8 @@
         ],
         "base_damage": null,
         "base_damage_ascension": null,
-        "curated": false,
-        "description": "codex: Roar; intent=Debuff; powers [{'power_id': 'VULNERABLE', 'target': 'player', 'amount': 3}] | archive: debuff — 3 Vulnerable to the player",
+        "curated": true,
+        "description": "Roar (RubyRaider Brute family): SELF +3 Strength — live run-52 BruteRubyRaider: powers line showed STRENGTH_POWER:3 on the Brute after Roar, player received NO Vulnerable. Monster-qualified: Mawler's Roar is the opposite (3 Vulnerable to player). Do not assume one shared ROAR id means one shared effect.",
         "display_note": null,
         "hits": null,
         "id": "ROAR_MOVE",
@@ -13765,8 +13765,8 @@
         ],
         "base_damage": null,
         "base_damage_ascension": null,
-        "curated": false,
-        "description": "`SANDPIT_POWER:amount` every turn. Intents:",
+        "curated": true,
+        "description": "Track (TrackerRubyRaider): debuff — applies 2 Frail to the player. LIVE run-52: FRAIL_POWER:2 landed on player, no damage instance; earlier SANDPIT-referencing stub fold was wrong (Sandpit belongs to the Act2 boss Insatiable only).",
         "display_note": null,
         "hits": null,
         "id": "TRACK_MOVE",
@@ -14982,7 +14982,7 @@
       "CHOMP",
       "STOMP_MOVE"
     ],
-    "description": "Act1 monster (run-38 live: 40/44 HP pair). SHRINKER = debuff applies SHRINK_POWER −1 to the player (negative = while beetle lives): player attack damage ×0.70 (live floor math: Bash 8→5, Strike 6→4); removed when applier dies — kill-timer class. Cycle SHRINKER → RAND branch (TACKLE w1.00) ; sibling leaf-slime cycles GOOP(Status×1)/STICKY(Status×2)/CLUMP(8 A:9) per nested entries. SHINK live note: powers.json archive line said ×0.75 but DamageDecrease-30 formula = ×0.70 — live floor values confirmed ×0.70.",
+    "description": "Act1 monster (run-38 live: 40/44 HP pair). SHRINKER = debuff applies SHRINK_POWER −1 to the player (negative = while beetle lives): player attack damage ×0.70 (live floor math: Bash 8→5, Strike 6→4); removed when applier dies — kill-timer class. Cycle SHRINKER → RAND branch (TACKLE w1.00) ; sibling leaf-slime cycles GOOP(Status×1)/STICKY(Status×2)/CLUMP(8 A:9) per nested entries. SHINK live note: powers.json archive line said ×0.75 but DamageDecrease-30 formula = ×0.70 — live floor values confirmed ×0.70. LIVE run-52: Shrink ×0.70 floor math reconfirmed (upgraded strike 12→8-9, base 9→6); SHRINK lifted live the moment the beetle died (SHRINK_POWER vanished from the player powers line — applier-death removal held); Chomp intent atk:7 live this fight; pair-partner Fuzzy Wurm 56 HP.",
     "display_names": [
       "ShrinkerBeetle",
       "缩小甲虫"
@@ -15562,7 +15562,7 @@
     ],
     "curated": true,
     "cycle": [],
-    "description": "Act1 monster pair-partner (run-38 live: 53 HP, display 蛇行扼杀者). Cycle CONSTRICT → rand(THWACK w1.0 / LASH w1.0) → repeat. CONSTRICT = debuff: applies CONSTRICT_POWER 3 to the player — LIVE STACKING: each CONSTRICT move cast adds +3 stacks (T1 applied 3, T3 cast pushed :6); end of player turn take 3 damage per stack; removed when applier dies; blockable live. THWACK = single 7 A:8 + self Block; LASH = single 12 A:13 (this monster — distinct from eel-elite LASH 7-class). Kill-timer class 3→6→9; run-38 two-turn kill line Anger+Bash+Pommel (34 on Vuln) closed this 53-HP body after its 33-HP partner Jaxfruit fell; applier death lifts all stacks.",
+    "description": "Act1 monster pair-partner (run-38 live: 53 HP, display 蛇行扼杀者). Cycle CONSTRICT → rand(THWACK w1.0 / LASH w1.0) → repeat. CONSTRICT = debuff: applies CONSTRICT_POWER 3 to the player — LIVE STACKING: each CONSTRICT move cast adds +3 stacks (T1 applied 3, T3 cast pushed :6); end of player turn take 3 damage per stack; removed when applier dies; blockable live. THWACK = single 7 A:8 + self Block; LASH = single 12 A:13 (this monster — distinct from eel-elite LASH 7-class). Kill-timer class 3→6→9; run-38 two-turn kill line Anger+Bash+Pommel (34 on Vuln) closed this 53-HP body after its 33-HP partner Jaxfruit fell; applier death lifts all stacks. LIVE run-52: Constrict stacking held — T1 applied 3, T3 cast pushed :6; tick fires at END of the player turn (blockable — Blood Wall 16 ate Thwack 7 + tick 3 same turn); stacks lifted live when the Strangler died; THWACK intent 7 live; LASH intent 12 live (this monster, distinct from eel-elite Lash).",
     "display_names": [
       "SlitheringStrangler",
       "蛇行扼杀者"
@@ -16078,7 +16078,7 @@
     ],
     "curated": true,
     "cycle": [],
-    "description": "Act1 monster (run-38 live: 33 HP, live id SNAPPING_JAXFRUIT, display 闪光贾克斯果). ENERGY_ORB = single attack 3 (A:4) + self +2 Strength, REPEATS EVERY TURN — live STR 0→2 by T2, intent 2[base3]→3→5 as stacks grew. Growth kill-timer: +2 Str/turn unchecked escalates Orb toward lethal in ~4 turns. Kill first in its pair fight (partner 53HP SlitheringStrangler); run-38 line Setup+Strike×2 closed 33 in one T2 burst then ground the partner on Vuln.",
+    "description": "Act1 monster (run-38 live: 33 HP, live id SNAPPING_JAXFRUIT, display 闪光贾克斯果). ENERGY_ORB = single attack 3 (A:4) + self +2 Strength, REPEATS EVERY TURN — live STR 0→2 by T2, intent 2[base3]→3→5 as stacks grew. Growth kill-timer: +2 Str/turn unchecked escalates Orb toward lethal in ~4 turns. Kill first in its pair fight (partner 53HP SlitheringStrangler); run-38 line Setup+Strike×2 closed 33 in one T2 burst then ground the partner on Vuln. LIVE run-52: Energy Orb repeat held — T1 intent 3;self-buff, T2 intent 5[base3] after +2 Str, self STR 2 visible; kill-first doctrine in its pair fight executed (Setup+PS+Strike line, 1hp leftover cleaned T2 before second Orb).",
     "display_names": [
       "SnappingJaxfruit"
     ],
@@ -17182,6 +17182,19 @@
     "play_notes": "",
     "source": "codex-api:/monsters/THE_LOST",
     "type": "Normal"
+  },
+  "THE_OBSCURA": {
+    "aliases": [
+      "THE_OBSCURA",
+      "胧光怪"
+    ],
+    "curated": true,
+    "description": "Act2 123 HP live run-51 (胧光怪). Summon-class master: ILLUSION spawns PARAFRIGHT-class minions that REVIVE to full after death — killing adds is a damage sink; master-first only, master death ends combat. Cycle RAND: PIERCING_GAZE 10 / SAIL (self+allies +3 Str) / HARDENING_STRIKE 6+self block 6. Mangle缴械 neutered SAIL-escalated intents effectively.",
+    "hp": {
+      "base": 123
+    },
+    "name": "The Obscura",
+    "source": "run-51 live fold 2026-09-19"
   },
   "THIEVING_HOPPER": {
     "acts": [
@@ -19130,8 +19143,8 @@
         ],
         "base_damage": null,
         "base_damage_ascension": null,
-        "curated": false,
-        "description": "codex: Roar; intent=Debuff; powers [{'power_id': 'VULNERABLE', 'target': 'player', 'amount': 3}] | archive: debuff — 3 Vulnerable to the player",
+        "curated": true,
+        "description": "Roar (RubyRaider Brute family): SELF +3 Strength — live run-52 BruteRubyRaider: powers line showed STRENGTH_POWER:3 on the Brute after Roar, player received NO Vulnerable. Monster-qualified: Mawler's Roar is the opposite (3 Vulnerable to player). Do not assume one shared ROAR id means one shared effect.",
         "display_note": null,
         "hits": null,
         "id": "ROAR_MOVE",
@@ -19195,8 +19208,8 @@
         ],
         "base_damage": null,
         "base_damage_ascension": null,
-        "curated": false,
-        "description": "`SANDPIT_POWER:amount` every turn. Intents:",
+        "curated": true,
+        "description": "Track (TrackerRubyRaider): debuff — applies 2 Frail to the player. LIVE run-52: FRAIL_POWER:2 landed on player, no damage instance; earlier SANDPIT-referencing stub fold was wrong (Sandpit belongs to the Act2 boss Insatiable only).",
         "display_note": null,
         "hits": null,
         "id": "TRACK_MOVE",
@@ -21490,18 +21503,5 @@
     "source": "generator:synthesized",
     "zh_description": "共享/未归属的 live 招式 id。当没有怪物条目认领时 lookup 在此解析——折叠进对应怪物条目前以 live state 的意图字段为权威。",
     "zh_name": "共享招式"
-  },
-  "THE_OBSCURA": {
-    "name": "The Obscura",
-    "description": "Act2 123 HP live run-51 (胧光怪). Summon-class master: ILLUSION spawns PARAFRIGHT-class minions that REVIVE to full after death — killing adds is a damage sink; master-first only, master death ends combat. Cycle RAND: PIERCING_GAZE 10 / SAIL (self+allies +3 Str) / HARDENING_STRIKE 6+self block 6. Mangle缴械 neutered SAIL-escalated intents effectively.",
-    "hp": {
-      "base": 123
-    },
-    "aliases": [
-      "THE_OBSCURA",
-      "胧光怪"
-    ],
-    "source": "run-51 live fold 2026-09-19",
-    "curated": true
   }
 }

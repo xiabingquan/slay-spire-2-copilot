@@ -246,7 +246,7 @@
       "CureAll"
     ],
     "curated": true,
-    "description": "gain 1 Energy; draw 2 cards. Despite the name this is NOT a heal — burst/dig class potion; run-41 live confirmed +1e and 2 draws on a boss kill turn. Any archive note claiming healing is wrong. Live run-51: did NOT clear DISINTEGRATION_POWER (power-class tax). Treat as card/status-debuff cleanse; budget HP against power-class taxes instead of counting on this potion.",
+    "description": "Cures debuff-class afflictions on the player. **Does NOT cure Power-class taxes** — live run-52 reconfirmed: poured on RINGING_POWER at Act1 boss T8 with zero effect (wasted); run-51's original correction held. Check the target tax id: `_POWER` suffix ⇒ expect no cure.",
     "display_name": "Cure All",
     "id": "CURE_ALL",
     "kind": "potion",
@@ -256,7 +256,7 @@
     "source": "run-51 live fold 2026-09-19",
     "target": "any player",
     "usage": "combat",
-    "zh_description": "获得 1 能量；抽 2 张牌。名称像治疗但**不是治疗**——爆发/挖牌类（+1能+抽2）；任何「CureAll 治疗」注记均为错误。",
+    "zh_description": "解除玩家身上减益类异常。**不解 Power 类税**——live run-52 再确认：Act1 Boss T8 对 RINGING_POWER 使用零效果（浪费）；run-51 的原始订正成立。检查目标税 id：`_POWER` 后缀 ⇒ 预期无效。",
     "zh_name": "痊愈药水"
   },
   "DEXTERITY_POTION": {
@@ -425,8 +425,8 @@
       "Fairy in a Bottle",
       "FairyinaBottle"
     ],
-    "curated": false,
-    "description": "when you would die, this is discarded instead and you heal to 30% Max HP (minimum 1). Consumed when killed at HP 1 by start-of-turn self-damage — HP set to ~29.6% of Max, consistent with the 30%-Max rule; potion vanishes from belt same state read.",
+    "curated": true,
+    "description": "On lethal damage, revive at 30% of Max HP (live run-52: 24/80 from a Crimson Mantle tick death mid-combat) and the potion is consumed. Proc fires from ANY lethal source including unblockable self-damage ticks — not only enemy attacks. Boss-corridor reserve value: once spent in a hall fight the endgame has no revive buffer (run-52 lesson).",
     "display_name": "Fairy in a Bottle",
     "id": "FAIRY_IN_A_BOTTLE",
     "kind": "potion",
@@ -437,7 +437,7 @@
     "source": "md:potions.md:L35; md:potions_zh.md:L35",
     "target": "self",
     "usage": "auto",
-    "zh_description": "将死时改为弃掉此药水并回复至最大 HP 的 30%（最少 1 点）。在 HP 1 被回合开始自伤击杀时触发——HP 置为 Max 的 ~29.6%，与 30% Max 规则吻合；药水同帧从药槽消失。",
+    "zh_description": "受到致死伤害时以 30% Max HP 复活（live run-52：战斗中被深红斗篷税致死时 24/80）并消耗药水。任意致死来源均可触发——包括不可格挡自伤税，不限敌方攻击。Boss 走廊储备价值：一旦在走廊战消耗，终局即无复活缓冲（run-52 教训）。",
     "zh_name": "瓶中精灵"
   },
   "FIRE_POTION": {
@@ -884,11 +884,11 @@
     "zh_name": "灾厄药水"
   },
   "POTION_SHAPED_ROCK": {
-    "name": "Potion-Shaped Rock",
+    "curated": true,
     "description": "Combat-use: dealt 15 damage to the target live (run-51 vs KnowledgeDemon). Procured at combat start by Petrified Toad. Not a heal.",
+    "name": "Potion-Shaped Rock",
     "rarity": "Token",
-    "source": "run-51 live fold 2026-09-19",
-    "curated": true
+    "source": "run-51 live fold 2026-09-19"
   },
   "POT_OF_GHOULS": {
     "aliases": [
@@ -935,7 +935,7 @@
       "PowerPotion"
     ],
     "curated": true,
-    "description": "Choose 1 of 3 distinct Power cards from your character pool; add to hand, free this turn. run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log) process note: choose(index) returned ok and closed the overlay but the chosen card appeared in neither hand, deck, nor powers — potion consumed for nothing; treat as flaky, re-read state after pick before counting the card.",
+    "description": "Opens a choose-one-power card_choice overlay (live run-52 options: DEMON_FORM / STONE_ARMOR / STAMPEDE). The chosen power is GENERATED AS A 0-COST CARD INTO HAND — it must then be played like any card; it is not auto-applied. STAMPEDE picked run-52 = 0-cost card that applied STAMPEDE_POWER:1 (auto-play Amount attack cards from hand at end of post-play phase).",
     "display_name": "Power Potion",
     "id": "POWER_POTION",
     "kind": "potion",
@@ -946,7 +946,7 @@
     "source": "md:potions.md:L61; md:potions_zh.md:L61",
     "target": "self",
     "usage": "combat",
-    "zh_description": "从角色卡池生成 3 张不同能力牌中选 1 张（可跳过）；加入手牌，本回合免费。",
+    "zh_description": "打开三选一能力 card_choice 覆盖层（live run-52 选项：DEMON_FORM / STONE_ARMOR / STAMPEDE）。选中的能力**以 0 费卡形式生成进手牌**——须像普通卡一样打出，不会自动生效。run-52 选 STAMPEDE = 0 费卡打出后获得 STAMPEDE_POWER:1（自动后打出阶段从手牌自动打出 Amount 张攻击牌）。",
     "zh_name": "能力药水"
   },
   "RADIANT_TINCTURE": {
@@ -1036,7 +1036,7 @@
       "SkillPotion"
     ],
     "curated": true,
-    "description": "Choose 1 of 3 distinct Skill cards from your character card pool (may skip); add to hand, free this turn. Common. LIVE runs 38+40: run-38 picked Impervious (+30 block) vs elite SWOOP; run-40 card_choice offered SHRUG_IT_OFF / ONE_TWO_PUNCH / PRIMAL_FORCE — picked Shrug It Off (0-cost that turn, Unmovable doubled 8→16) vs Entomancer bees. Lethal-intent potion: spend when incoming exceeds hand block ceiling.",
+    "description": "Opens a choose-one-skill card_choice overlay (live run-52 options: BATTLE_TRANCE / STOKE / EVIL_EYE). Like Power Potion, the chosen skill is generated as a 0-cost card into hand and must be played. EVIL_EYE live-lookup note: 8 Block, doubles to 16 only if another card was Exhausted earlier the same turn.",
     "display_name": "Skill Potion",
     "id": "SKILL_POTION",
     "kind": "potion",
@@ -1047,7 +1047,7 @@
     "source": "md:potions.md:L66; md:potions_zh.md:L66; run-40 live fold 2026-09-18",
     "target": "self",
     "usage": "combat",
-    "zh_description": "从你的角色卡池 3 张不同技能牌中选 1（可跳过）；加入手牌，本回合免费。run-38 实时：card_choice 覆盖层给出 IMPERVOUS/TRUE_GRIT/PRIMAL_FORCE；选 Impervious——免费 +30 挡在 HP 24、零防御手牌的回合挡下精英 SWOOP 19。致命意图药水：当来袭超过手牌挡上限时使用。",
+    "zh_description": "打开三选一技能 card_choice 覆盖层（live run-52 选项：BATTLE_TRANCE / STOKE / EVIL_EYE）。与能力药水相同，选中技能以 0 费卡生成进手牌、须自行打出。EVIL_EYE lookup 备注：8 格挡，仅当同回合此前已消耗过其他牌时翻倍至 16。",
     "zh_name": "技能药水"
   },
   "SNECKO_OIL": {

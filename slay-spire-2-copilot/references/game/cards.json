@@ -2799,8 +2799,8 @@
     "card_type": "power",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
-    "description": "at start of your turn lose 1 HP (unblockable) and gain 8 Block. Upgrade: +2 Block.",
+    "curated": true,
+    "description": "At start of your turn lose 1 HP (unblockable) and gain 8 Block. Upgrade: +2 Block. LIVE run-52 boss fight: power applied as CRIMSON_MANTLE_POWER:8; the turn-start tick granted 8 Block AND — under an active Rupture — paid +2 Strength per turn (Rupture×2 stacking); **lethal class**: the unblockable −1 killed the player at 1 HP on boss T9 (engine-tax death, runs 41/42/45 class) — count this tax into any boss HP floor budget.",
     "id": "CRIMSON_MANTLE",
     "keywords": [],
     "kind": "card",
@@ -2811,7 +2811,7 @@
     "source": "md:cards.md:L38; md:cards_zh.md",
     "target_type": null,
     "upgrade": "+2 Block.",
-    "zh_description": "1，能力，稀有，回合开始失去 1 HP（无视格挡）并获得 8 格挡。升级：格挡 +2。",
+    "zh_description": "回合开始失去 1 点生命（不可格挡）并获得 8 点格挡。升级：格挡 +2。LIVE run-52 Boss 战：以 CRIMSON_MANTLE_POWER:8 落地；回合开始税给出 8 格挡，且在 Rupture 生效时每回合附赠 +2 力量（Rupture×2 叠层）；**致命类**：不可格挡 −1 在 Boss T9 于 1HP 处击杀玩家（引擎税死亡，run-41/42/45 类）——Boss 血线预算须计入此税。",
     "zh_name": "绯红披风"
   },
   "CRUELTY": {
@@ -8751,14 +8751,14 @@
     ],
     "kind": "card",
     "name": "Perfected Strike",
+    "needs_zh": false,
     "play_notes": "",
     "rarity": "common",
     "source": "md:cards.md:L73; md:cards_zh.md",
     "target_type": null,
     "upgrade": "+3 per Strike. LIVE (run-36): formula confirmed — with 7-9 Strike-tags in deck plus player Strength plus StrikeDummy +3 (Dummy applies before Vuln multiplier), resolves 23–30 class; TwinStrike copies each add a tag (+2 PS base each).",
     "zh_description": "2，攻击，普通，打击标签，伤害 = 6 + 你拥有的每张打击标签牌 2 点。升级：每张 3 点。LIVE（对局 36）：公式确认——牌组 7–9 张打击标签 + 玩家力量 + STRIKE_DUMMY +3（假人作用于易伤乘区之前）时结算 23–30 级；TwinStrike 拷贝各带一张标签（PS 基值每张 +2）。",
-    "zh_name": "完美打击",
-    "needs_zh": false
+    "zh_name": "完美打击"
   },
   "PHANTOM_BLADES": {
     "aliases": [
@@ -10092,8 +10092,8 @@
     "card_type": "power",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
-    "description": "when you lose HP on your turn from a card you played, gain 1 Strength. Upgrade: gain 2 Strength. **Power Amount STACKS across copies** — smith-upgraded Rupture (Amount 2) + a second un-upgraded Rupture card played later raises RUPTURE_POWER to 3; every subsequent self-damage event grants +3 Strength (Bloodletting 0e = +3 Str AND +2 Energy). Foul Potion combat self-damage also triggers Rupture (potion is not a \"card you played\" per the wording, but the HP loss counts — treat any same-turn HP loss as a trigger).",
+    "curated": true,
+    "description": "when you lose HP on your turn from a card you played, gain 1 Strength. Upgrade: gain 2 Strength. **Power Amount STACKS across copies** — smith-upgraded Rupture (Amount 2) + a second un-upgraded Rupture card played later raises RUPTURE_POWER to 3; every subsequent self-damage event grants +3 Strength (Bloodletting 0e = +3 Str AND +2 Energy). Foul Potion combat self-damage also triggers Rupture (potion is not a \"card you played\" per the wording, but the HP loss counts — treat any same-turn HP loss as a trigger). LIVE run-52 boss combat: second Rupture copy raised RUPTURE_POWER 1→2 the turn it was played; thereafter Crimson Mantle's −1 tick granted +2 Str/turn, Bloodletting −3 granted +2 (and +2 Energy), Blood Wall −2 granted +2, Breakthrough −1 granted +2 — the Amount-stacks rule paid out on every self-damage source in the deck.",
     "id": "RUPTURE",
     "keywords": [],
     "kind": "card",
@@ -10104,7 +10104,7 @@
     "source": "md:cards.md:L80; md:cards_zh.md",
     "target_type": null,
     "upgrade": "gain 2 Strength. **Power Amount STACKS across copies** — smith-upgraded Rupture (Amount 2) + a second un-upgraded Rupture card played later raises RUPTURE_POWER to 3; every subsequent self-damage event grants +3 Strength (Bloodletting 0e = +3 Str AND +2 Energy). Foul Potion combat self-damage also triggers Rupture (potion is not a \"card you played\" per the wording, but the HP loss counts — treat any same-turn HP loss as a trigger).",
-    "zh_description": "1，能力，罕见，你的回合内因打出卡牌而失去 HP 时获得 1 力量。升级：获得 2 力量。**能力 Amount 跨副本叠层**——锻造升级版（Amount 2）+后打出的未升级第二张使 RUPTURE_POWER 升至 3；其后每次自伤事件 +3 力量（Bloodletting 0 费 = +3 力 +2 能）。Foul Potion 战斗自伤也触发 Rupture（措辞上药水非「打出的卡牌」，但 HP 损失被计——同回合任意 HP 损失均按触发处理）。",
+    "zh_description": "1，能力，罕见，你的回合内因打出卡牌而失去 HP 时获得 1 力量。升级：获得 2 力量。**能力 Amount 跨副本叠层**——锻造升级版（Amount 2）+后打出的未升级第二张使 RUPTURE_POWER 升至 3；其后每次自伤事件 +3 力量（Bloodletting 0 费 = +3 力 +2 能）。Foul Potion 战斗自伤也触发 Rupture（措辞上药水非「打出的卡牌」，但 HP 损失被计——同回合任意 HP 损失均按触发处理）。 LIVE run-52 Boss 战：第二张 Rupture 打出当回合把 RUPTURE_POWER 从 1 抬至 2；其后深红斗篷 −1 税每回合 +2 力量、放血 −3 给 +2（并 +2 能量）、血墙 −2 给 +2、突破 −1 给 +2——Amount 叠层规则在牌组每个自伤源上兑现。",
     "zh_name": "撕裂"
   },
   "SACRIFICE": {

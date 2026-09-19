@@ -223,7 +223,7 @@
       "CureAll"
     ],
     "curated": true,
-    "description": "获得 1 能量；抽 2 张牌。名不副实——并非治疗药水，而是爆发/过牌类；run-41 在 Boss 击杀回合 live 确认 +1e 与抽 2。任何声称其治疗的档案注记均为错误。 run-51 live：无法清除 DISINTEGRATION_POWER（Power 类税）。按卡牌/状态类 debuff 清除理解；Power 类税请按 HP 预算，不计入本药抵扣。",
+    "description": "解除玩家身上减益类异常。**不解 Power 类税**——live run-52 再确认：Act1 Boss T8 对 RINGING_POWER 使用零效果（浪费）；run-51 的原始订正成立。检查目标税 id：`_POWER` 后缀 ⇒ 预期无效。",
     "display_name": "Cure All",
     "id": "CURE_ALL",
     "kind": "potion",
@@ -384,8 +384,8 @@
       "Fairy in a Bottle",
       "FairyinaBottle"
     ],
-    "curated": false,
-    "description": "将死时改为弃掉此药水并回复至最大 HP 的 30%（最少 1 点）。在 HP 1 被回合开始自伤击杀时触发——HP 置为 Max 的 ~29.6%，与 30% Max 规则吻合；药水同帧从药槽消失。",
+    "curated": true,
+    "description": "受到致死伤害时以 30% Max HP 复活（live run-52：战斗中被深红斗篷税致死时 24/80）并消耗药水。任意致死来源均可触发——包括不可格挡自伤税，不限敌方攻击。Boss 走廊储备价值：一旦在走廊战消耗，终局即无复活缓冲（run-52 教训）。",
     "display_name": "Fairy in a Bottle",
     "id": "FAIRY_IN_A_BOTTLE",
     "kind": "potion",
@@ -797,11 +797,11 @@
     "usage": "combat"
   },
   "POTION_SHAPED_ROCK": {
-    "name": "岩石形状药水",
+    "curated": true,
     "description": "战斗中使用：对目标造成 15 伤（run-51 对知识恶魔 live）。石化蟾蜍每战开始产出。非治疗类。",
+    "name": "岩石形状药水",
     "rarity": "Token",
-    "source": "run-51 live fold 2026-09-19",
-    "curated": true
+    "source": "run-51 live fold 2026-09-19"
   },
   "POT_OF_GHOULS": {
     "aliases": [
@@ -844,7 +844,7 @@
       "PowerPotion"
     ],
     "curated": true,
-    "description": "从你的角色牌池选择 3 张不同能力牌之一；加入手牌，本回合免费。run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log) 过程备注：choose(index) 返回 ok 并关闭覆盖层，但所选牌既不在手牌也不在牌库/能力栏 — 药水空耗；按 flaky 处理，选牌后必须重读 state 再计入。",
+    "description": "打开三选一能力 card_choice 覆盖层（live run-52 选项：DEMON_FORM / STONE_ARMOR / STAMPEDE）。选中的能力**以 0 费卡形式生成进手牌**——须像普通卡一样打出，不会自动生效。run-52 选 STAMPEDE = 0 费卡打出后获得 STAMPEDE_POWER:1（自动后打出阶段从手牌自动打出 Amount 张攻击牌）。",
     "display_name": "Power Potion",
     "id": "POWER_POTION",
     "kind": "potion",
@@ -935,7 +935,7 @@
       "SkillPotion"
     ],
     "curated": true,
-    "description": "从角色牌池选3张不同技能牌之一（可跳过）；加入手牌，本回合免费。普通。对局38+40 live：对局38 选坚不可摧（+30挡）对精英俯冲；对局40 card_choice 提供 耸肩没事/二连击/原始力量——选耸肩没事（当回合0费，Unmovable 把8翻倍至16）对蜂群术士蜜蜂。致命意图药水：来袭超过手牌挡上限时使用。",
+    "description": "打开三选一技能 card_choice 覆盖层（live run-52 选项：BATTLE_TRANCE / STOKE / EVIL_EYE）。与能力药水相同，选中技能以 0 费卡生成进手牌、须自行打出。EVIL_EYE lookup 备注：8 格挡，仅当同回合此前已消耗过其他牌时翻倍至 16。",
     "display_name": "Skill Potion",
     "id": "SKILL_POTION",
     "kind": "potion",

@@ -2563,8 +2563,8 @@
     "card_type": "power",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
-    "description": "1，能力，稀有，回合开始失去 1 HP（无视格挡）并获得 8 格挡。升级：格挡 +2。",
+    "curated": true,
+    "description": "回合开始失去 1 点生命（不可格挡）并获得 8 点格挡。升级：格挡 +2。LIVE run-52 Boss 战：以 CRIMSON_MANTLE_POWER:8 落地；回合开始税给出 8 格挡，且在 Rupture 生效时每回合附赠 +2 力量（Rupture×2 叠层）；**致命类**：不可格挡 −1 在 Boss T9 于 1HP 处击杀玩家（引擎税死亡，run-41/42/45 类）——Boss 血线预算须计入此税。",
     "id": "CRIMSON_MANTLE",
     "keywords": [],
     "kind": "card",
@@ -8019,12 +8019,12 @@
     ],
     "kind": "card",
     "name": "完美打击",
+    "needs_zh": false,
     "play_notes": "",
     "rarity": "common",
     "source": "md:cards.md:L73; md:cards_zh.md",
     "target_type": null,
-    "upgrade": "+3 per Strike. LIVE (run-36): formula confirmed — with 7-9 Strike-tags in deck plus player Strength plus StrikeDummy +3 (Dummy applies before Vuln multiplier), resolves 23–30 class; TwinStrike copies each add a tag (+2 PS base each).",
-    "needs_zh": false
+    "upgrade": "+3 per Strike. LIVE (run-36): formula confirmed — with 7-9 Strike-tags in deck plus player Strength plus StrikeDummy +3 (Dummy applies before Vuln multiplier), resolves 23–30 class; TwinStrike copies each add a tag (+2 PS base each)."
   },
   "PHANTOM_BLADES": {
     "aliases": [
@@ -9246,8 +9246,8 @@
     "card_type": "power",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
-    "description": "1，能力，罕见，你的回合内因打出卡牌而失去 HP 时获得 1 力量。升级：获得 2 力量。**能力 Amount 跨副本叠层**——锻造升级版（Amount 2）+后打出的未升级第二张使 RUPTURE_POWER 升至 3；其后每次自伤事件 +3 力量（Bloodletting 0 费 = +3 力 +2 能）。Foul Potion 战斗自伤也触发 Rupture（措辞上药水非「打出的卡牌」，但 HP 损失被计——同回合任意 HP 损失均按触发处理）。",
+    "curated": true,
+    "description": "1，能力，罕见，你的回合内因打出卡牌而失去 HP 时获得 1 力量。升级：获得 2 力量。**能力 Amount 跨副本叠层**——锻造升级版（Amount 2）+后打出的未升级第二张使 RUPTURE_POWER 升至 3；其后每次自伤事件 +3 力量（Bloodletting 0 费 = +3 力 +2 能）。Foul Potion 战斗自伤也触发 Rupture（措辞上药水非「打出的卡牌」，但 HP 损失被计——同回合任意 HP 损失均按触发处理）。 LIVE run-52 Boss 战：第二张 Rupture 打出当回合把 RUPTURE_POWER 从 1 抬至 2；其后深红斗篷 −1 税每回合 +2 力量、放血 −3 给 +2（并 +2 能量）、血墙 −2 给 +2、突破 −1 给 +2——Amount 叠层规则在牌组每个自伤源上兑现。",
     "id": "RUPTURE",
     "keywords": [],
     "kind": "card",
