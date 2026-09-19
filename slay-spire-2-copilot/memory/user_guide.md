@@ -5,71 +5,83 @@ recording run memory.
 
 ## What to cover when recording memory
 
-Start from these aspects:
+Start from these aspects — each maps to a lessons/ category file:
 
-- Character traits
-- Card traits
-- Relic traits
-- ... and similar game elements
+- Character traits → `memory/lessons/characters.md`
+- Card traits → `memory/lessons/cards.md`
+- Relic traits → `memory/lessons/relics.md`
+- Cross-element synergies (card×card, card×relic, …) → `memory/lessons/synergies.md`
+- Enemy doctrines, events, economy, combat principles → the matching
+  lessons file
 
-Pay special attention to the interactions among them:
+Pay special attention to interactions among elements — such synergies can
+make an entire deck powerful; they are the focus of recording.
 
-- Card × card combinations
-- Card × relic combinations
-- ... and similar cross-element synergies
-
-Such synergies can make an entire deck extremely powerful — they are the
-focus of recording.
+Mechanics facts (what a card/relic/enemy DOES) live in the programmatic
+store `bridge/spirectl_lib/data/`: resolve any id via
+`spirectl lookup <id>` — the store carries structured fields only
+(schema: `bridge/spirectl_lib/schema.py`, codex is the authoritative
+structure source). Doctrine, usage notes and prose never go into the store;
+they belong in lessons.
 
 ## Information awareness in review
 
-When reviewing a run, pay special attention to information awareness —
-information that was available but never utilized:
+Information questions route by nature — they are not a standalone run-note
+dimension:
 
-- e.g. the current floor's available map routes (all selectable paths shown
-  on the map)
-- ... and similar state information the bridge exposed but the run failed to
-  leverage
+- Information genuinely missing or unclear in state → skill/mod/data
+  defect: fix it where it lives (same session); never record it as a run
+  factor
+- Information available but unused (data/lookup, state fields, archive
+  notes) → classify by what failed:
+  - process: discipline violations — pre-fight lookup not done, state not
+    re-read before acting (goes in the run note's What went poorly table,
+    类型 = 过程)
+  - decision: acting before verifying available information (类型 = 决策)
+- Structured facts always resolve via lookup first; a lookup miss is a
+  research trigger — fold codex structure into data (schema-strict) —
+  never permission to guess
 
 ## Accumulating beneficial experience
 
-The core goal of run memory is to accumulate correct experience that supports
-decisions in later runs. Emphasize these two sections:
+The core goal of run memory is accumulating experience that supports later
+runs' decisions. The note format is fixed by `memory/template.md`:
+What went well / What went poorly / Key moments are tables —
+`# | [时机 |] 类型 | 内容 | 代价/收益 | 下次参考` — each at most 7 rows;
+over the cap, DROP the weaker rows, never merge rows to combine items.
+Type cells use the shared enum only:
 
-In "What went well", focus on unexpectedly powerful plays:
+- 决策 — route, shop buys, in-combat choices, potion timing (incl. acting
+  before verifying available information)
+- 卡牌 — single-card picks and in-fight performance
+- 遗物 — relic acquisition and value delivered
+- 构筑 — deck/engine shape and synergy (card×relic×character), incl.
+  deck preparedness for known mechanics
+- 过程 — execution discipline and tooling (one card per call, full state
+  re-reads, fail-loud hits, SL usage; incl. in-hand info unused against
+  discipline)
+- 客观 — non-decision factors: draws, drops, map geometry, economy luck
 
-- e.g. a card that played an unexpected role
-- e.g. a relic that delivered unexpected value
-- ... and similar positive outcomes worth repeating
-
-In "What went poorly", focus on decision-level reflections:
-
-- e.g. which card was picked (and why it underperformed)
-- e.g. which route was taken (and what it cost)
-- ... and similar choices to reconsider next run
+In "What went well", record plays and outcomes worth repeating — prefer
+items with forward reference value over routine good outcomes; the
+代价/收益 column holds the gain.
+In "What went poorly", record decision-level reflections and objective
+losses; 代价/收益 holds the cost, and 下次参考 is one advisory line for
+next run.
 
 ## Decisions and objective factors
 
-"What went well" and "What went poorly" are not limited to subjective
-decisions — they should objectively reflect both the decisions made and the
-run's circumstances:
-
-- Objective positives belong in "What went well" — e.g. draws were smooth
-  all run
-- Objective negatives belong in "What went poorly" — e.g. relic offerings
-  were poor, or draws never came together
-- Decision-level items (picks, routes) belong there as well, per the
-  previous section
+Both tables cover decisions AND objective factors — objective positives
+(e.g. smooth draws all run) go to What went well, objective negatives
+(e.g. poor relic offerings) to What went poorly; classify each row under
+the shared enum (决策 / 客观 / others as content dictates).
 
 ## Per-character core playstyles
 
-Accumulate the core playstyle of each distinct character, along with the key
-relics and cards that character wants:
-
-- The character's core playstyle — how it wins fights
-- Key relics the character is looking for
-- Key cards the character is looking for
-- ... and similar per-character build knowledge
+Character-level accumulation lives in `memory/lessons/characters.md` — one
+H1 heading per character; experience written as unordered bullets under
+each heading: win condition, key relics/cards the character wants, build
+spines. Run notes do not carry this standing knowledge; lessons is its home.
 
 ## Summary contents
 
@@ -78,6 +90,9 @@ exactly two bullets covering the run's biggest gain and biggest loss:
 
 - The single biggest win of the run
 - The single biggest loss of the run
+
+The facts-table format itself (fields incl. Date) is defined in
+`memory/template.md`.
 
 ## Overview table rules
 
@@ -128,7 +143,7 @@ fresh `start_run` begins a new count. For runs recorded before this rule
 existed, mark the overview cell 未记录 unless a memory note already documents
 the number.
 
-## When to consult memory (rule revised 2026-09-19)
+## When to consult memory
 
 Memory is consulted throughout the whole play process — it is a standing
 reference for the game, not only a session-start artifact:
@@ -136,26 +151,30 @@ reference for the game, not only a session-start artifact:
 - **Mandatory at session/run start: `overview.md` only** — the table, stats
   and phased reflections give the standing cross-run picture; full per-run
   notes are generally NOT needed at start
+- **`lessons/` is the standing experience layer** — consult mid-run whenever
+  a decision benefits: enemy doctrines (lessons/enemies.md), synergies
+  (lessons/synergies.md), character spines (lessons/characters.md), etc.
+  Mechanism numbers still resolve via `spirectl lookup <id>` first
 - **On demand**: to read one run's complete record, open that single note —
   files carry a run-number prefix (`0051_IRONCLAD_...`) equal to the 对局序号
   column in overview.md; look the number up there, then read the file
 - Any time during play: consult specific run notes or character accumulations
   mid-run when a decision would benefit from them
 
-## Experience is advisory, not advisory pattern (user directive 2026-09-19)
+## Experience is advisory, not binding
 
 When recording run memory, frame lessons for future runs as **suggestions /
-reference observations**, not as binding advisory patterns:
+reference observations**, not as binding patterns:
 
-- Wording: prefer "run-X observed… / 建议… / 参考…" over "强烈建议 / 强烈建议不要 / 参考经验 / 强烈建议"
+- Wording: prefer "建议… / 参考… / run-X observed…" over "强烈建议 / 强烈建议不要"
 - **All past runs are reference only.** Concrete in-run measures must be decided
   from the **current run's live state** (HP, deck, hand, enemy, map geometry),
-  not copied wholesale from earlier run notes
+  not copied wholesale from earlier run notes or lessons
 - Past experience is one input to the decision; live situation always wins
-- The same applies when consulting memory mid-run: read past notes as data,
-  then adapt — do not replay another run's script
+- The same applies when consulting memory mid-run: read past notes and
+  lessons as data, then adapt — do not replay another run's script
 
-## Phased reflection must cover frequent-death enemies (user directive 2026-09-19)
+## Phased reflection must cover frequent-death enemies
 
 In the 阶段性反思 section of `memory/overview.md`, in addition to existing
 gains/losses analysis:
@@ -165,9 +184,10 @@ gains/losses analysis:
 - For each: summarize the **root cause** of the deaths (mechanic misunderstanding?
   HP-entry math? draw/deck issue? process debt?)
 - Think through **countermeasures** — framed as advisory suggestions for future
-  runs (not binding advisory pattern), to be adapted per live situation
+  runs (not binding patterns), to be adapted per live situation; standing
+  conclusions graduate into `memory/lessons/enemies.md`
 
-## Only forward-valuable content in memory (user directive 2026-09-19)
+## Only forward-valuable content in memory
 
 Overarching rule for run notes and overview: **record only what has reference
 value for FUTURE runs**.
@@ -177,11 +197,13 @@ value for FUTURE runs**.
 - **Delete mod-fix/process-reload narrative** (版本号、重建、工具缺陷重载过程) —
   engineering log, not play reference
 - overview table 备注 and reflections: same standard — only future-valuable
-  facts (mechanics learned the hard way, economy numbers, decision insights)
-- What survives: live-verified mechanics, cost/HP economy data, synergies,
-  decision-quality observations, advisory suggestions for future situations
+  facts
+- What survives: verified mechanics as structured facts (live in
+  spirectl_lib/data via lookup), cost/HP economy data, synergies,
+  decision-quality observations, advisory suggestions — the latter groups
+  belong in lessons and run-note tables
 
-## Play principles for future reference (user directive 2026-09-19)
+## Play principles for future reference
 
 Advisory principles for future runs — adapt to live situation per run:
 
