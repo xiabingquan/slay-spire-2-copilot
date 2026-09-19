@@ -1,59 +1,59 @@
 # User guide
 
-Memory-writing guidance: where the formats are defined, what to record, and
-the standing directives for reflection timing / advisory framing / when to
-consult memory.
+Memory-writing guidance — four points: formats, when to write, when to
+consult, and remarks.
 
-## Formats
-
-Formats are not restated here — follow the designated documents:
+## 格式 Formats
 
 - Per-run notes (the EN+`_zh` pair under `memory/runs/`): format per
   `memory/template.md` — Summary facts table, Run overview act table, and
   the What went well / What went poorly / Key moments tables
 - Cross-run overview table, phased reflections, SL column: rules per
-  `memory/overview.md` itself (its 表格规则 block and 阶段性反思 section)
+  `memory/overview.md` itself (its 表格规则 block and `# 阶段性反思` section)
 
-## What to record
+## 写入时机 When to write
 
-- Forward value only: content that helps future runs' decisions — revenge
-  narrative and process/mod-fix logs never belong in memory
-- In the run-note tables: worth-repeating plays, decision-level losses, and
-  turning points — decisions and objective factors both
-- In `memory/lessons/`: standing cross-run experience — character spines,
-  enemy doctrines, synergies, events/economy/combat notes (one file per
-  category; experience cells filled as advisory bullets)
-- Mechanics facts are not recorded anywhere: resolve them via
-  `spirectl lookup <id>` — the data store is programmatic (codex
-  authoritative). System-side defects get fixed where they live; they are
-  never run factors
+- **Run note + overview row**: written immediately at every run end —
+  the note pair under `memory/runs/`, plus one row inserted at the TOP of
+  the overview.md table
+- **Phased reflection**: the first one covers ALL runs recorded so far;
+  every later one covers the 20 runs since the previous (36–55, 56–75, …) —
+  fire it when the cumulative run count reaches that boundary
+- **lessons/**: forward-valuable experience from the run is distilled into
+  the matching category file; standing conclusions from phased reflections
+  enter lessons the same way
 
-## Phased reflection timing (阶段性反思触发时机)
+## 查阅时机 When to consult
 
-- The **first** reflection covers ALL runs recorded so far
-- **Every reflection after that** covers the 20 runs since the previous one
-  (second covers runs 36–55, third 56–75, …) — fire it when the cumulative
-  run count reaches that boundary
+- **At session/run start — general experience**: read `overview.md`
+  (cross-run picture) plus the general lessons categories — combat
+  principles, synergies, character spines
+- **Before EVERY decision — that decision's past experience**: consult the
+  matching lessons file (and lookup for mechanics numbers) before acting:
+  - Relic pick → `lessons/relics.md` — does this relic have known tricks
+  - Route choice → `lessons/route.md`
+  - Event-room choice → `lessons/events.md`
+  - Shop / economy decision → `lessons/economy.md`
+  - Entering a fight → `lessons/enemies.md` (that enemy's doctrine) +
+    `spirectl lookup <id>` (mechanics: moves/intents/hp — structured facts)
+  - Card pick / build pivot → `lessons/cards.md`, `lessons/synergies.md`,
+    `lessons/characters.md`
+- **Single run note on demand**: file-name prefix equals the 对局序号 column
+  in overview.md — look the number up, then open the note
+- Principle: every decision starts with a lookup of prior experience; never
+  decide from impressions alone
 
-## Experience is advisory, not binding
+## 备注 Remarks
 
-- Wording: prefer 建议 / 参考 / run-X observed… over 强烈建议 / 强烈建议不要
-- **All past runs are reference only.** In-run measures must be decided from
-  the current run's live state (HP, deck, hand, enemy, map geometry), never
-  copied wholesale from earlier notes or lessons
-- Past experience is one input; the live situation always wins — when
-  consulting memory mid-run, read past notes as data and adapt, do not
+- Experience is advisory, not binding: word lessons as 建议 / 参考, never
+  as 强烈建议 / 强烈建议不要
+- All past runs are reference only — in-run measures follow the current
+  run's live state (HP, deck, hand, enemy, map geometry); live always wins.
+  When consulting mid-run, read past experience as data and adapt; never
   replay another run's script
-
-## When to consult memory
-
-- **Mandatory at session/run start: `overview.md` only** — the table, stats
-  and phased reflections give the standing cross-run picture; per-run notes
-  are generally not needed at start
-- **`lessons/` mid-run** whenever a decision benefits — enemy doctrines,
-  synergies, character spines; mechanism numbers resolve via
-  `spirectl lookup <id>` first
-- **Single run note on demand**: file names carry the 对局序号 prefix
-  (`0051_IRONCLAD_...`) matching the overview.md column — look the number
-  up there, then open the file
-- Any time during play when a decision would benefit from historical records
+- Only forward-valuable content is recorded or distilled: revenge narrative
+  and process/mod-fix logs never enter memory
+- Mechanics facts are not memorized anywhere: resolve via
+  `spirectl lookup <id>` (the data store is programmatic, codex
+  authoritative). System-side defects get fixed where they live — never as
+  run factors
