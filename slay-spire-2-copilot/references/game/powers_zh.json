@@ -3002,8 +3002,8 @@
       "SkittishPower"
     ],
     "counter_class": false,
-    "curated": false,
-    "description": "持有者本回合未获得过格挡且受到卡牌 来源的攻击伤害时，获得 Amount 格挡（每回合一次标记；标记在对方阵营 回合结束时重置）。",
+    "curated": true,
+    "description": "持有者本回合未获得过格挡且受到卡牌 来源的攻击伤害时，获得 Amount 格挡（每回合一次标记；标记在对方阵营 回合结束时重置）。 run-53 live 2026-09-19：花园幽灵鳗四件组各自 SKITTISH:6；每条鳗首张攻击牌结算后获得+6挡（7伤 strike→鳗6挡）。多段单指令穿透（全部命中先于挡结算）——Whirlwind X=4 穿 Skittish 清场。",
     "host_of_affliction": false,
     "id": "SKITTISH_POWER",
     "kind": "power",
@@ -3815,8 +3815,8 @@
       "VigorPower"
     ],
     "counter_class": false,
-    "curated": false,
-    "description": "持有者下一次攻击 +Amount 伤害 （ModifyDamageAdditive；该次攻击后消耗）。",
+    "curated": true,
+    "description": "持有者下一次攻击 +Amount 伤害 （ModifyDamageAdditive；该次攻击后消耗）。 run-53 live 2026-09-19：骇鳗 Vigor:6 使下一次 CRASH 显示 22[base16] 并被该攻击消耗——+Amount 仅作用于持有者下一次攻击。",
     "host_of_affliction": false,
     "id": "VIGOR_POWER",
     "kind": "power",

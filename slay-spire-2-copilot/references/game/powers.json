@@ -3348,8 +3348,8 @@
       "SkittishPower"
     ],
     "counter_class": false,
-    "curated": false,
-    "description": "if the owner gained no Block this turn and took card-sourced attack damage, the owner gains Amount Block (once per turn; flag resets at end of the opposing side's turn). Mirror of the same-named entry in powers_zh.md.",
+    "curated": true,
+    "description": "if the owner gained no Block this turn and took card-sourced attack damage, the owner gains Amount Block (once per turn; flag resets at end of the opposing side's turn). Mirror of the same-named entry in powers_zh.md. run-53 live 2026-09-19: garden eel quartet each spawned SKITTISH:6; first attack card per eel granted +6 Block AFTER that attack resolved (7-dmg strike → eel 6 block). Multi-hit single command pierces (all hits before block) — Whirlwind X=4 wiped the quartet through Skittish.",
     "host_of_affliction": false,
     "id": "SKITTISH_POWER",
     "kind": "power",
@@ -4245,8 +4245,8 @@
       "VigorPower"
     ],
     "counter_class": false,
-    "curated": false,
-    "description": "+Amount attack damage on the owner's next attack (ModifyDamageAdditive; consumed by that attack).",
+    "curated": true,
+    "description": "+Amount attack damage on the owner's next attack (ModifyDamageAdditive; consumed by that attack). run-53 live 2026-09-19: Terror Eel Vigor:6 displayed next CRASH as 22[base16] and was consumed by that attack — +Amount applies to the owner next attack only.",
     "host_of_affliction": false,
     "id": "VIGOR_POWER",
     "kind": "power",

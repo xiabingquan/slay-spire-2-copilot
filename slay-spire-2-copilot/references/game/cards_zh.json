@@ -1045,7 +1045,7 @@
     "character_pool": "IRONCLAD",
     "cost": "2",
     "curated": true,
-    "description": "失去 2 HP（无视格挡）；获得 16 格挡。自伤在同一打出中触发狱火「回合内失去 HP」的 AoE（run-36 双 Act2 精英击杀器械；run-41：外骨骼虫钳击回合的 16 挡墙）。升级 +4 挡。技能类 — 感染棱柱战的 Vital Spark 下会被污染计税。",
+    "description": "失去 2 HP（无视格挡）；获得 16 格挡。自伤在同一打出中触发狱火「回合内失去 HP」的 AoE（run-36 双 Act2 精英击杀器械；run-41：外骨骼虫钳击回合的 16 挡墙）。升级 +4 挡。技能类 — 感染棱柱战的 Vital Spark 下会被污染计税。 run-53 live 2026-09-19：-2HP 不可格挡 + 16 挡——花园幽灵鳗 T1 的 16 挡墙完整吸收 15 伤来袭包（Flail+Bite+Lash）余1挡；1-2HP 时自伤致死（不可作为生存线）。",
     "id": "BLOOD_WALL",
     "keywords": [],
     "kind": "card",
@@ -11816,8 +11816,8 @@
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
-    "description": "1，技能，普通，消耗，获得 7 格挡；消耗手牌中 1 张随机牌。升级：格挡 +2；改为自选消耗。",
+    "curated": true,
+    "description": "1，技能，普通，消耗，获得 7 格挡；消耗手牌中 1 张随机牌。升级：格挡 +2；改为自选消耗。 run-53 live 2026-09-19：7 挡 + 随机消耗手牌——地精佣兵 T2 刀口回合消耗掉一张防御（挡值计算须假设随机消耗可能吃掉你依赖的牌）。",
     "id": "TRUE_GRIT",
     "keywords": [
       "Exhaust"
@@ -12323,7 +12323,7 @@
     "character_pool": "IRONCLAD",
     "cost": "X",
     "curated": true,
-    "description": "X 费全体攻击：5 伤 ×X 次，X=当前全部能量（AllEnemies 省略 target）。run-46 live：放血+ 供能 X=6——组装师波次清场 + 实验体一阶段 T3 清 33HP（Str4 下 9×3+6 实测）；多段实例对 Intangible 类价值确认。",
+    "description": "X 费全体攻击：5 伤 ×X 次，X=当前全部能量（AllEnemies 省略 target）。run-46 live：放血+ 供能 X=6——组装师波次清场 + 实验体一阶段 T3 清 33HP（Str4 下 9×3+6 实测）；多段实例对 Intangible 类价值确认。 run-53 live 2026-09-19：X 按当前全部能量结算（记忆规则再确认）——攻击药水生成的免费副本在能量4时对全部敌人打出（5+力量3）×4=32，单指令清空四件组花园幽灵鳗（31/26/23/27）于 9HP 处。Skittish 无法拦截：单指令全部命中先于 Skittish 挡结算。",
     "id": "WHIRLWIND",
     "keywords": [
       "Strike-tagged"

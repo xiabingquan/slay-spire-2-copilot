@@ -3135,8 +3135,8 @@
       "Sunken Treasury",
       "淹水金库"
     ],
-    "curated": false,
-    "description": "FirstChest → +60 Gold; SecondChest → +333 Gold + Greed curse.",
+    "curated": true,
+    "description": "FirstChest → +60 Gold; SecondChest → +333 Gold + Greed curse. run-53 live 2026-09-19: FIRST_CHEST +61 gold vs SECOND_CHEST +357 gold + GREED curse card. Took 357+Greed with shop (8,5) as next-node sink (538g total, 96.3% spent); shop card_removal screen did NOT list GREED — curse not removable via merchant removal this build; Greed stayed in deck as a dead draw.",
     "id": "SUNKEN_TREASURY",
     "kind": "event",
     "name": "Sunken Treasury",

@@ -3047,8 +3047,8 @@
       "Sunken Treasury",
       "淹水金库"
     ],
-    "curated": false,
-    "description": "FirstChest → +60 金币；SecondChest → +333 金币 + Greed 诅咒。",
+    "curated": true,
+    "description": "FirstChest → +60 金币；SecondChest → +333 金币 + Greed 诅咒。 run-53 live 2026-09-19：FIRST_CHEST +61金 vs SECOND_CHEST +357金 + GREED 咒牌。选择 357+贪婪，下一节点商店 (8,5) 作沉淀口（总538金，花费96.3%）；商店删牌服务界面未列出 GREED——本版本商人删牌不可删咒牌；贪婪作为死抽留在牌组。",
     "id": "SUNKEN_TREASURY",
     "kind": "event",
     "name": "淹水金库",

@@ -2198,7 +2198,7 @@
       "INCANTATION_MOVE",
       "DARK_STRIKE_MOVE"
     ],
-    "description": "live model_id=CALCIFIED_CULTIST（38-41 HP）。循环：INCANTATION_MOVE（增益——RITUAL_POWER 自身 +2）→ DARK_STRIKE_MOVE（单段攻击 9，A:11）→ 循环。仪式每轮增益循环抬升力量——在滚雪球前击杀；竞速教条。",
+    "description": "live model_id=CALCIFIED_CULTIST（38-41 HP）。循环：INCANTATION_MOVE（增益——RITUAL_POWER 自身 +2）→ DARK_STRIKE_MOVE（单段攻击 9，A:11）→ 循环。仪式每轮增益循环抬升力量——在滚雪球前击杀；竞速教条。 run-53 live 2026-09-19：RITUAL_POWER:2 于 Incantation 回合结束时施加；其后意图显示力量加成数值；竞速教条成立（易伤下 T2 击杀，未让 Dark Strike 线复合）。",
     "hp": {
       "base": 40,
       "notes": "38-41 base"
@@ -7162,7 +7162,7 @@
       "DOUBLE_SMASH_MOVE",
       "HEHE_MOVE"
     ],
-    "description": "Act1 战斗。Power：SURPRISE:1 + THIEVERY:20。循环 Gimme(multi 7x2 live) → DoubleSmash(multi 6x2 + 虚弱2) → Hehe(atk 8 + 自身力量2)。THIEVERY:20 每回合偷玩家 20 金（run-45 live：217→197）。SURPRISE:1 死亡处理器：战斗不结束——刷出卑鄙地精（13HP）+ 胖地精（14HP，HEIST_POWER:40），两者 SPAWNED 晕一回合（免费输出窗）。胖地精循环 FLEE——run-45 在其 5HP 时抢在逃跑结算前击杀；HEIST 40 若其行动会偷 40 金。快杀佣兵（金钟），刷怪晕窗倾泻。",
+    "description": "Act1 战斗。Power：SURPRISE:1 + THIEVERY:20。循环 Gimme(multi 7x2 live) → DoubleSmash(multi 6x2 + 虚弱2) → Hehe(atk 8 + 自身力量2)。THIEVERY:20 每回合偷玩家 20 金（run-45 live：217→197）。SURPRISE:1 死亡处理器：战斗不结束——刷出卑鄙地精（13HP）+ 胖地精（14HP，HEIST_POWER:40），两者 SPAWNED 晕一回合（免费输出窗）。胖地精循环 FLEE——run-45 在其 5HP 时抢在逃跑结算前击杀；HEIST 40 若其行动会偷 40 金。快杀佣兵（金钟），刷怪晕窗倾泻。 run-53 live 2026-09-19（精英后走廊 (14,6)）：THIEVERY:20 每敌方回合偷金确认（T1–T2：163→143→123）；GIMME 7x2 无挡=14 live；DOUBLE_SMASH 6x2+Weak2 在12挡精确格挡后落地；HEHE 8+自身力量2 在玩家1HP且无8挡手牌线时收头。金币时钟为真——每存活一回合付出20金+来袭。",
     "hp": {
       "base": 47,
       "notes": "run-45 live 47/47 A1"
@@ -9360,7 +9360,7 @@
       "BLOAT_MOVE",
       "SUPER_GAS_BLAST_MOVE"
     ],
-    "description": "Act1 与气体炸弹随从战。循环 ADVANCED_GAS(8+Smoggy 1)→BLOAT(5+召唤 GasBomb 7hp MINION_POWER intent 8)→SUPER_GAS_BLAST(8 A:9——census 残条 live 解析为普通 8 伤攻击，不是大招)。SMOGGY：每回合打出首张技能牌后，其余技能牌全部禁打（no(None)，区别于 EnergyCostTooHigh）——每回合一技能纪律；回合末清除。GasBomb EXPLODE=死亡冲击约 36@A1（若炸弹死亡触发）——**杀主母**：run-39 live，主母死亡炸弹随召唤链消亡，爆炸从未触发。",
+    "description": "Act1 与气体炸弹随从战。循环 ADVANCED_GAS(8+Smoggy 1)→BLOAT(5+召唤 GasBomb 7hp MINION_POWER intent 8)→SUPER_GAS_BLAST(8 A:9——census 残条 live 解析为普通 8 伤攻击，不是大招)。SMOGGY：每回合打出首张技能牌后，其余技能牌全部禁打（no(None)，区别于 EnergyCostTooHigh）——每回合一技能纪律；回合末清除。GasBomb EXPLODE=死亡冲击约 36@A1（若炸弹死亡触发）——**杀主母**：run-39 live，主母死亡炸弹随召唤链消亡，爆炸从未触发。 run-53 live 2026-09-19：Smoggy 细则——T1 意图显示 carddebuff 但桥 `ok` 对技能仍成立，直到敌方回合后玩家身上出现 SMOGGY_POWER:1；每回合一技能纪律自 power 落地回合生效。母体死亡气弹消失再确认：气弹从未爆炸。",
     "hp": {
       "base": 80,
       "notes": "run-39 live 80/80"
@@ -11708,7 +11708,7 @@
       "BITE_MOVE",
       "LASH_MOVE"
     ],
-    "description": "Act1 精英四件套（4 只同 model_id PHANTASMAL_GARDENER）。live run-37：全员 SKITTISH_POWER:6——每回合首次命中该生物的攻击牌结算后 +6 挡；多段单指令规则：同一攻击指令内全部命中先于 Skittish 挡结算（Dismantle/FightMe 双击穿透）。四鳗同循环不同相位：FLAIL→ENLARGE→BITE→LASH。ENLARGE=Buff +2 力量；BITE=单击（live 5→7[base5]）；LASH=单击 7 档（live 7→9[base7]）；FLAIL=多段 1×3（live 随力量升至 3×3）。",
+    "description": "Act1 精英四件套（4 只同 model_id PHANTASMAL_GARDENER）。live run-37：全员 SKITTISH_POWER:6——每回合首次命中该生物的攻击牌结算后 +6 挡；多段单指令规则：同一攻击指令内全部命中先于 Skittish 挡结算（Dismantle/FightMe 双击穿透）。四鳗同循环不同相位：FLAIL→ENLARGE→BITE→LASH。ENLARGE=Buff +2 力量；BITE=单击（live 5→7[base5]）；LASH=单击 7 档（live 7→9[base7]）；FLAIL=多段 1×3（live 随力量升至 3×3）。 run-53 live 2026-09-19（精英#2 (13,6)）：A1 意图——FLAIL 多段 1x3 基础（鳗带 Str2 后 3x3）、BITE 基础5（Str2 后 7[base5]）、LASH 基础7（Str2 后 9[base7]）、ENLARGE 自身+2力量免费窗。Skittish:6 在每条鳗首张攻击牌后触发（7伤 Strike→鳗+6挡）。run-37 击杀顺序教条成立；新增清场线：攻击药水 Whirlwind X=4 = 32 AoE 单指令清四鳗于玩家 9HP 处。",
     "hp": {
       "base": "26-31 each",
       "notes": "live run-37 quartet 27/26/29/30"
@@ -11908,7 +11908,7 @@
       "FAST_PUNCH_MOVE",
       "STRONG_PUNCH_MOVE"
     ],
-    "description": "Act1 (13,2) 级战斗。ARTIFACT:1——首个可见 debuff 被清零并消耗 1 层抗性（run-39 live：颤栗打进抗性→'received -1 ARTIFACT_POWER'，易伤以 0 结算；层耗尽后后续 debuff 正常落地）。循环 READY(自身10挡)→FAST_PUNCH(多段 5×2+Frail 1)→STRONG_PUNCH(单次 14 A:16)，随机不可重复。教条：易伤窗前先用廉价 debuff（颤栗类）剥抗性；Molten Fist 在 0 易伤时施加 0 且不消耗抗性。",
+    "description": "Act1 (13,2) 级战斗。ARTIFACT:1——首个可见 debuff 被清零并消耗 1 层抗性（run-39 live：颤栗打进抗性→'received -1 ARTIFACT_POWER'，易伤以 0 结算；层耗尽后后续 debuff 正常落地）。循环 READY(自身10挡)→FAST_PUNCH(多段 5×2+Frail 1)→STRONG_PUNCH(单次 14 A:16)，随机不可重复。教条：易伤窗前先用廉价 debuff（颤栗类）剥抗性；Molten Fist 在 0 易伤时施加 0 且不消耗抗性。 run-53 live 2026-09-19：Artifact 剥离教条 live——Bash 打向 ARTIFACT:1 结算8伤、易伤落地为0、Artifact 层消耗；其后易伤窗正常。READY 免费窗 T1/T4；Bash（8+力量6）精确14于 READY 回合收束战斗。",
     "hp": {
       "ascension": {
         "max": null,
@@ -16176,7 +16176,7 @@
       "STUN_MOVE",
       "TERROR_MOVE"
     ],
-    "description": "骇鳗（精英类，run-41 为 Act1 精英②）：基础 HP 140（A 150+）；run-41 live 140/140。SHRIEK 反制类 Amount 70：主人 HP≤Amount 时受到未格挡伤害即被眩晕（STUNNED）、power 消耗、自身镀甲剥离 — 即击杀窗。周期 坠击(16)→鞭挞(4×2)→眩晕→terrorize（玩家 99 易伤，无攻击=自由窗）→循环。教条（run-36 T4 击杀、run-41 T4 复现）：括号上方爆发，以未格挡命中跨过 70，在眩晕+terror 窗倾泻。",
+    "description": "骇鳗（精英类，run-41 为 Act1 精英②）：基础 HP 140（A 150+）；run-41 live 140/140。SHRIEK 反制类 Amount 70：主人 HP≤Amount 时受到未格挡伤害即被眩晕（STUNNED）、power 消耗、自身镀甲剥离 — 即击杀窗。周期 坠击(16)→鞭挞(4×2)→眩晕→terrorize（玩家 99 易伤，无攻击=自由窗）→循环。教条（run-36 T4 击杀、run-41 T4 复现）：括号上方爆发，以未格挡命中跨过 70，在眩晕+terror 窗倾泻。 run-53 live 2026-09-19 再确认（精英#1 (11,5)）：SHRIEK:70 阈值——纸蛙加成 Strike 21：92→71 无眩晕（仍>70），71→50 同指令眩晕触发、SHRIEK 消耗；Thrash 增益的 Vigor:6 使 Crash 显示 22[base16] 并被该次攻击消耗。",
     "hp": {
       "ascension": {
         "max": null,
@@ -16629,7 +16629,7 @@
   },
   "TOADPOLE": {
     "curated": true,
-    "description": "Act2 普通怪，对局40 live 23-25 HP；在 Act2 走廊见到的 Act1 级杂兵。SPIKEN：自身尖刺2 Buff；尖刺=攻击者以攻击牌命中物主时受到等量无挡伤害。循环 尖刺→尖刺吐射（3x3）→回旋7。教条：在尖刺（Buff）窗输出；攻击带尖刺的蝌蚪每 hit 付费——对局40 live：在 Buff 窗链击杀两只，狱火能力伤害似乎不触发尖刺反伤（仅攻击牌命中触发）。",
+    "description": "Act2 普通怪，对局40 live 23-25 HP；在 Act2 走廊见到的 Act1 级杂兵。SPIKEN：自身尖刺2 Buff；尖刺=攻击者以攻击牌命中物主时受到等量无挡伤害。循环 尖刺→尖刺吐射（3x3）→回旋7。教条：在尖刺（Buff）窗输出；攻击带尖刺的蝌蚪每 hit 付费——对局40 live：在 Buff 窗链击杀两只，狱火能力伤害似乎不触发尖刺反伤（仅攻击牌命中触发）。 run-53 live 2026-09-19：Spiken 于其回合对自身施加 THORNS_POWER:2；Whirl 7 live；Spiken 窗=增益结算前（玩家回合先于敌方回合）可安全攻击；THORNS 落地后每张攻击牌命中付 2HP 税。",
     "id": "TOADPOLE",
     "kind": "monster",
     "name": "蟾蜍蝌蚪",

@@ -1139,7 +1139,7 @@
     "character_pool": "IRONCLAD",
     "cost": "2",
     "curated": true,
-    "description": "lose 2 HP (unblockable); gain 16 Block. The self-damage fires Inferno's 'whenever you lose HP on your turn' AoE on the same play (run-36 double Act2-elite kill instrument; run-41: 16-block wall on the Exoskeleton Clamp turn). Upgrade +4 Block. Skill-class — tainted under Vital Spark, taxes the prism fight.",
+    "description": "lose 2 HP (unblockable); gain 16 Block. The self-damage fires Inferno's 'whenever you lose HP on your turn' AoE on the same play (run-36 double Act2-elite kill instrument; run-41: 16-block wall on the Exoskeleton Clamp turn). Upgrade +4 Block. Skill-class — tainted under Vital Spark, taxes the prism fight. run-53 live 2026-09-19: -2 HP unblockable + 16 Block — on garden-eel T1 the 16-block wall absorbed the full 15-damage incoming package (Flail+Bite+Lash) with 1 block to spare; self-damage is lethal at 1-2 HP (unplayable as a survival line there).",
     "id": "BLOOD_WALL",
     "keywords": [],
     "kind": "card",
@@ -12890,8 +12890,8 @@
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
-    "description": "Exhaust, gain 7 Block; exhaust a random card in your hand. Upgrade: +2 Block; exhaust a card of your choice.",
+    "curated": true,
+    "description": "Exhaust, gain 7 Block; exhaust a random card in your hand. Upgrade: +2 Block; exhaust a card of your choice. run-53 live 2026-09-19: 7 Block + random hand exhaust — exhausted a Defend on the Gremlin Merc T2 razor turn (block math must assume the random exhaust may eat the card you counted on).",
     "id": "TRUE_GRIT",
     "keywords": [
       "Exhaust"
@@ -13443,7 +13443,7 @@
     "character_pool": "IRONCLAD",
     "cost": "X",
     "curated": true,
-    "description": "X-cost AllEnemies attack: deal 5 damage to ALL enemies X times; X = all current energy (omit target_combat_id — AllEnemies gate). LIVE run-46: Bloodletting+ powered X=6 line — (5+4Str)×6≈54-class vs Fabricator wave; possess-pair T1 X=4 dealt ~30 each; TestSubject phase-1 closed at T3 with X=6-class hits (9+9+9+6 live under Str4). Multi-instance value confirmed vs Intangible-class defenses; Weak-immune damage class (attack hits, Ashes procs on exhaust separately).",
+    "description": "X-cost AllEnemies attack: deal 5 damage to ALL enemies X times; X = all current energy (omit target_combat_id — AllEnemies gate). LIVE run-46: Bloodletting+ powered X=6 line — (5+4Str)×6≈54-class vs Fabricator wave; possess-pair T1 X=4 dealt ~30 each; TestSubject phase-1 closed at T3 with X=6-class hits (9+9+9+6 live under Str4). Multi-instance value confirmed vs Intangible-class defenses; Weak-immune damage class (attack hits, Ashes procs on exhaust separately). run-53 live 2026-09-19: X settles at CURRENT full energy (memory rule reconfirmed) — Attack-Potion-generated free copy at energy 4 dealt (5+Str3)×4=32 to ALL enemies, wiping the 4-eel Phantasmal Gardener quartet (31/26/23/27 hp) in one command from 9 HP. Skittish does not block it: all hits of one command resolve before Skittish block applies.",
     "id": "WHIRLWIND",
     "keywords": [
       "Strike-tagged"

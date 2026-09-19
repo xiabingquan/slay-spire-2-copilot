@@ -21,8 +21,8 @@
       "Attack Potion",
       "AttackPotion"
     ],
-    "curated": false,
-    "description": "从角色卡池生成 3 张不同攻击牌中选 1 张（可跳过）；加入手牌，本回合免费。",
+    "curated": true,
+    "description": "从角色卡池生成 3 张不同攻击牌中选 1 张（可跳过）；加入手牌，本回合免费。 run-53 live 2026-09-19：打开 card_choice（3选1生成攻击牌，可跳过）；选中牌本回合免费加入手牌。live 选项 BODY_SLAM/THRASH/WHIRLWIND；能量4时选 Whirlwind 成为致死回合的生存仪器（32 AoE 清场）。",
     "display_name": "Attack Potion",
     "id": "ATTACK_POTION",
     "kind": "potion",
@@ -510,8 +510,8 @@
       "Fysh Oil",
       "FyshOil"
     ],
-    "curated": false,
-    "description": "本场战斗 +1 力量 +1 敏捷。使用后同帧 STRENGTH_POWER +1 与 DEXTERITY_POWER:1；敏捷 +1 使后续卡牌挡值各 +1（Defend 5→6 级）同战生效。使用时机存在异文：另有解码记为「随时/自身」、同样立刻 +1/+1——按 build 核实时机。",
+    "curated": true,
+    "description": "本场战斗 +1 力量 +1 敏捷。使用后同帧 STRENGTH_POWER +1 与 DEXTERITY_POWER:1；敏捷 +1 使后续卡牌挡值各 +1（Defend 5→6 级）同战生效。使用时机存在异文：另有解码记为「随时/自身」、同样立刻 +1/+1——按 build 核实时机。 run-53 live 2026-09-19：整场战斗 +1 力量 +1 敏捷——本局作为 Boss 储备保留，走廊战未花。",
     "display_name": "Fysh Oil",
     "id": "FYSH_OIL",
     "kind": "potion",

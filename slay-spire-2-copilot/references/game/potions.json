@@ -23,8 +23,8 @@
       "Attack Potion",
       "AttackPotion"
     ],
-    "curated": false,
-    "description": "choose 1 of 3 distinct Attack cards generated from your character card pool (may skip); the card is added to hand and is free this turn.",
+    "curated": true,
+    "description": "choose 1 of 3 distinct Attack cards generated from your character card pool (may skip); the card is added to hand and is free this turn. run-53 live 2026-09-19: opens card_choice (choose 1 of 3 generated Attacks, may skip); picked card is added free-this-turn. Live offer BODY_SLAM/THRASH/WHIRLWIND; Whirlwind pick at energy 4 was the lethal-turn survival instrument (32 AoE wipe).",
     "display_name": "Attack Potion",
     "id": "ATTACK_POTION",
     "kind": "potion",
@@ -565,8 +565,8 @@
       "Fysh Oil",
       "FyshOil"
     ],
-    "curated": false,
-    "description": "+1 Strength and +1 Dexterity for the combat. STRENGTH_POWER +1 and DEXTERITY_POWER:1 appear same state read on use; Dex +1 raises subsequent card-block values by 1 each (Defend 5→6 class) same combat. Usage-timing variant attested: a later decode lists Fysh Oil as anytime/self with the same immediate +1/+1 — verify timing per build.",
+    "curated": true,
+    "description": "+1 Strength and +1 Dexterity for the combat. STRENGTH_POWER +1 and DEXTERITY_POWER:1 appear same state read on use; Dex +1 raises subsequent card-block values by 1 each (Defend 5→6 class) same combat. Usage-timing variant attested: a later decode lists Fysh Oil as anytime/self with the same immediate +1/+1 — verify timing per build. run-53 live 2026-09-19: +1 Str +1 Dex for the combat — held as boss-reserve this run, not spent in hall fights.",
     "display_name": "Fysh Oil",
     "id": "FYSH_OIL",
     "kind": "potion",

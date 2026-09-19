@@ -2282,7 +2282,7 @@
       "INCANTATION_MOVE",
       "DARK_STRIKE_MOVE"
     ],
-    "description": "Live model_id for 钙化邪教徒 (38-41 HP). Cycle: INCANTATION_MOVE (Buff — RITUAL_POWER self +2) → DARK_STRIKE_MOVE (single attack 9, A:11) → repeat. Ritual ramps Strength every buff cycle — burst before the ramp compounds; race doctrine.",
+    "description": "Live model_id for 钙化邪教徒 (38-41 HP). Cycle: INCANTATION_MOVE (Buff — RITUAL_POWER self +2) → DARK_STRIKE_MOVE (single attack 9, A:11) → repeat. Ritual ramps Strength every buff cycle — burst before the ramp compounds; race doctrine. run-53 live 2026-09-19: RITUAL_POWER:2 applied at end of the Incantation turn; subsequent intents show Strength-scaled values; burst-before-ramp doctrine held (killed T2 under vuln before Dark Strike lines compounded).",
     "hp": {
       "base": 40,
       "notes": "38-41 base"
@@ -7405,7 +7405,7 @@
       "DOUBLE_SMASH_MOVE",
       "HEHE_MOVE"
     ],
-    "description": "Act1 fight. Powers: SURPRISE:1 + THIEVERY:20. Cycle GIMME(multi 7x2 live) -> DOUBLE_SMASH(multi 6x2 + Weak 2) -> HEHE(atk 8 + self Str 2). THIEVERY:20 steals 20 Gold from the player on its turn (run-45 live: 217->197). SURPRISE:1 death handler: combat does NOT end — spawns SNEAKY_GREMLIN (13 hp) + FAT_GREMLIN (14 hp, HEIST_POWER:40) both in SPAWNED stun for one turn (free damage window). FAT_GREMLIN cycle FLEE — run-45 killed it at 5 hp before escape resolved; HEIST 40 would steal 40 gold if it acts. Kill Merc fast (gold clock), dump on the spawn stun turn.",
+    "description": "Act1 fight. Powers: SURPRISE:1 + THIEVERY:20. Cycle GIMME(multi 7x2 live) -> DOUBLE_SMASH(multi 6x2 + Weak 2) -> HEHE(atk 8 + self Str 2). THIEVERY:20 steals 20 Gold from the player on its turn (run-45 live: 217->197). SURPRISE:1 death handler: combat does NOT end — spawns SNEAKY_GREMLIN (13 hp) + FAT_GREMLIN (14 hp, HEIST_POWER:40) both in SPAWNED stun for one turn (free damage window). FAT_GREMLIN cycle FLEE — run-45 killed it at 5 hp before escape resolved; HEIST 40 would steal 40 gold if it acts. Kill Merc fast (gold clock), dump on the spawn stun turn. run-53 live 2026-09-19 (post-elite corridor (14,6)): THIEVERY:20 gold steal confirmed on enemy turns (163→143→123 across T1-T2); GIMME 7x2 live unblocked = 14; DOUBLE_SMASH 6x2 + Weak 2 landed after 12-block exact hold; HEHE 8 + self Str 2 delivered the kill at 1 player HP with no 8-block line available. Gold clock is real — every turn alive costs 20g plus incoming.",
     "hp": {
       "base": 47,
       "notes": "live run-45 47/47 at A1"
@@ -9696,7 +9696,7 @@
       "BLOAT_MOVE",
       "SUPER_GAS_BLAST_MOVE"
     ],
-    "description": "Act1 fight with Gas Bomb adds. Cycle ADVANCED_GAS(8+Smoggy 1)→BLOAT(5 + summon GasBomb 7hp MINION_POWER intent 8)→SUPER_GAS_BLAST(8 A:9 — census stub resolved live as plain 8-damage attack, NOT a nuke). SMOGGY: after first Skill played per turn, all other Skills become unplayable (no(None), distinct from EnergyCostTooHigh) — one-skill-per-turn discipline; clears EoT. GasBomb EXPLODE = deathblow ~36 at A1 if the bomb dies — KILL THE MASTER (LivingFog) instead: run-39 live, master death despawned the bomb, explosion never fired.",
+    "description": "Act1 fight with Gas Bomb adds. Cycle ADVANCED_GAS(8+Smoggy 1)→BLOAT(5 + summon GasBomb 7hp MINION_POWER intent 8)→SUPER_GAS_BLAST(8 A:9 — census stub resolved live as plain 8-damage attack, NOT a nuke). SMOGGY: after first Skill played per turn, all other Skills become unplayable (no(None), distinct from EnergyCostTooHigh) — one-skill-per-turn discipline; clears EoT. GasBomb EXPLODE = deathblow ~36 at A1 if the bomb dies — KILL THE MASTER (LivingFog) instead: run-39 live, master death despawned the bomb, explosion never fired. run-53 live 2026-09-19: Smoggy nuance — T1 intent showed carddebuff but bridge `ok` still held for Skills until SMOGGY_POWER:1 appeared on the player after the enemy turn; one-skill-per-turn discipline applies from the turn the power lands. Master-kill despawns Gas Bomb reconfirmed: bomb never exploded.",
     "hp": {
       "base": 80,
       "notes": "live run-39 80/80"
@@ -12150,7 +12150,7 @@
       "BITE_MOVE",
       "LASH_MOVE"
     ],
-    "description": "Act1 elite quartet (4 spawns, shared model_id PHANTASMAL_GARDENER). Live run-37: each spawns with SKITTISH_POWER:6 — every turn, the first attack card that hits this creature grants it 6 block AFTER that attack resolves; multi-hit single-attack-command rule: ALL hits in one command resolve BEFORE the Skittish block (Dismantle/FightMe double-hits pierce). Each eel runs the SAME 4-move cycle at a different phase: FLAIL_MOVE→ENLARGE_MOVE→BITE_MOVE→LASH_MOVE rotating. ENLARGE = Buff +2 Strength (self); BITE = single attack (live 5→7[base5] as Str climbs; codex table 13 A:15 — live wins); LASH = single 7-class (live 7→9[base7]); FLAIL = multi 1x3 (live 1x3→3x3 as Str climbs, base 1).",
+    "description": "Act1 elite quartet (4 spawns, shared model_id PHANTASMAL_GARDENER). Live run-37: each spawns with SKITTISH_POWER:6 — every turn, the first attack card that hits this creature grants it 6 block AFTER that attack resolves; multi-hit single-attack-command rule: ALL hits in one command resolve BEFORE the Skittish block (Dismantle/FightMe double-hits pierce). Each eel runs the SAME 4-move cycle at a different phase: FLAIL_MOVE→ENLARGE_MOVE→BITE_MOVE→LASH_MOVE rotating. ENLARGE = Buff +2 Strength (self); BITE = single attack (live 5→7[base5] as Str climbs; codex table 13 A:15 — live wins); LASH = single 7-class (live 7→9[base7]); FLAIL = multi 1x3 (live 1x3→3x3 as Str climbs, base 1). run-53 live 2026-09-19 (elite#2, (13,6)): A1 intents — FLAIL multi 1x3 base (3x3 once eel holds Str2), BITE base5 (7[base5] with Str2), LASH base7 (9[base7] with Str2), ENLARGE +2 self Str free window. Skittish:6 fired after first attack card per eel (7-dmg Strike → eel +6 block). Run-37 kill-order doctrine held; NEW wipe line: Attack-Potion Whirlwind X=4 = 32 AoE cleared all four in one command at 9 player HP.",
     "hp": {
       "base": "26-31 each",
       "notes": "live run-37 quartet 27/26/29/30"
@@ -12354,7 +12354,7 @@
       "FAST_PUNCH_MOVE",
       "STRONG_PUNCH_MOVE"
     ],
-    "description": "Act1 (13,2)-class fight. ARTIFACT:1 — first visible debuff application is zeroed and 1 Artifact stack consumed (run-39 live: Tremble into Artifact → 'received -1 ARTIFACT_POWER', Vuln landed as 0; stack gone, later debuffs land). Cycle READY(self block 10)→FAST_PUNCH(multi 5x2 + Frail 1)→STRONG_PUNCH(single 14 A:16), random-cannot-repeat between. Doctrine: strip Artifact with a cheap debuff (Tremble-class) BEFORE the Vuln window; Molten Fist at 0 Vuln applies 0 AND does not consume Artifact.",
+    "description": "Act1 (13,2)-class fight. ARTIFACT:1 — first visible debuff application is zeroed and 1 Artifact stack consumed (run-39 live: Tremble into Artifact → 'received -1 ARTIFACT_POWER', Vuln landed as 0; stack gone, later debuffs land). Cycle READY(self block 10)→FAST_PUNCH(multi 5x2 + Frail 1)→STRONG_PUNCH(single 14 A:16), random-cannot-repeat between. Doctrine: strip Artifact with a cheap debuff (Tremble-class) BEFORE the Vuln window; Molten Fist at 0 Vuln applies 0 AND does not consume Artifact. run-53 live 2026-09-19: Artifact strip doctrine live — Bash into ARTIFACT:1 dealt 8 damage, Vuln landed as 0, Artifact stack consumed; later Vuln windows normal. READY free window T1/T4; Bash (8+Str6) exact 14 closed the fight on a READY turn.",
     "hp": {
       "ascension": {
         "max": null,
@@ -16773,7 +16773,7 @@
       "STUN_MOVE",
       "TERROR_MOVE"
     ],
-    "description": "Terror Eel (Act2/Act1 elite-class, run-41 Act1 Elite②): HP 140 base (A 150+); run-41 live 140/140. SHRIEK counter-class Amount 70: unblocked damage while owner HP≤Amount stuns the eel (STUNNED), consumes the power, strips its Plating — the kill window. Cycle CRASH(16)→THRASH(4x2)→STUN→TERROR(player Vuln 99, no attack = free window)→loop. Doctrine (run-36 T4 kill, run-41 T4 repeat): burst above the bracket, cross 70 with an unblocked hit, dump on the stun+terror windows.",
+    "description": "Terror Eel (Act2/Act1 elite-class, run-41 Act1 Elite②): HP 140 base (A 150+); run-41 live 140/140. SHRIEK counter-class Amount 70: unblocked damage while owner HP≤Amount stuns the eel (STUNNED), consumes the power, strips its Plating — the kill window. Cycle CRASH(16)→THRASH(4x2)→STUN→TERROR(player Vuln 99, no attack = free window)→loop. Doctrine (run-36 T4 kill, run-41 T4 repeat): burst above the bracket, cross 70 with an unblocked hit, dump on the stun+terror windows. run-53 live 2026-09-19 reconfirm (elite#1 (11,5)): SHRIEK:70 bracket — Paper-Phrog Strike 21s: 92→71 no stun (still above 70), 71→50 stun fired same play, SHRIEK consumed; Vigor:6 from Thrash buff displayed Crash 22[base16] and was consumed on that attack.",
     "hp": {
       "ascension": {
         "max": null,
@@ -17230,7 +17230,7 @@
   },
   "TOADPOLE": {
     "curated": true,
-    "description": "Act2 normal, 23-25 HP live run-40; Act1-class trash seen in Act2 corridors. SPIKEN: self THORNS 2 buff; THORNS = dealer takes Amount unpowered damage when hitting the owner with a powered attack. Cycle SPIKEN→SPIKE_SPIT (3x3)→WHIRL 7. Doctrine: dump on SPIKEN (buff) windows; attacking a thorns-up toadpole costs HP per hit — LIVE run-40: killed both in the buff-window chain, Inferno power damage appeared not to recoil from THORNS (attack-card hits only).",
+    "description": "Act2 normal, 23-25 HP live run-40; Act1-class trash seen in Act2 corridors. SPIKEN: self THORNS 2 buff; THORNS = dealer takes Amount unpowered damage when hitting the owner with a powered attack. Cycle SPIKEN→SPIKE_SPIT (3x3)→WHIRL 7. Doctrine: dump on SPIKEN (buff) windows; attacking a thorns-up toadpole costs HP per hit — LIVE run-40: killed both in the buff-window chain, Inferno power damage appeared not to recoil from THORNS (attack-card hits only). run-53 live 2026-09-19: Spiken applied THORNS_POWER:2 to self on its turn; Whirl 7 live; Spiken window = attack BEFORE the buff resolves (player turn precedes enemy turn); after THORNS lands each attack card hit costs 2 HP tax.",
     "id": "TOADPOLE",
     "kind": "monster",
     "name": "Toadpole",
