@@ -6,18 +6,21 @@
       "The Defect",
       "故障机器人"
     ],
-    "card_pool": "DefectCardPool",
-    "curated": false,
-    "description": "75 HP, Neutral, blue. Starter relic: CRACKED_CORE — on turn 1, channel 1 Lightning orb (`BeforeSideTurnStart` while `TurnNumber <= 1`). Base orb slots: 3 (`BaseOrbSlotCount`). Starter deck (10): Strike ×4, Defend ×4, Zap, Dualcast. Card pool: DefectCardPool. `UnlocksAfterRunAs => Necrobinder`.",
-    "gold": 99,
-    "hp": 75,
+    "detail": {
+      "card_pool": "DefectCardPool",
+      "gold": 99,
+      "hp": {
+        "max": null,
+        "max_asc": null,
+        "min": null,
+        "min_asc": null
+      },
+      "starter_relic": "CRACKED_CORE",
+      "unlocks_after_run_as": "Necrobinder"
+    },
     "id": "DEFECT",
     "kind": "character",
-    "name": "Defect",
-    "play_notes": "",
-    "starter_deck": "Strike ×4, Defend ×4, Zap, Dualcast",
-    "starter_relic": "CRACKED_CORE",
-    "unlocks_after_run_as": "Necrobinder"
+    "name": "Defect"
   },
   "IRONCLAD": {
     "aliases": [
@@ -26,18 +29,21 @@
       "The Ironclad",
       "铁甲战士"
     ],
-    "card_pool": "IroncladCardPool",
-    "curated": false,
-    "description": "80 HP, Masculine, NameColor red. Starter relic: BURNING_BLOOD — heal 6 HP after combat victory (Black Blood, its starter-relic upgrade, heals 12). Starter deck (10): Strike ×5, Defend ×4, Bash. Card pool: IroncladCardPool. `UnlocksAfterRunAs => null` — always unlocked at the character-model level.",
-    "gold": 99,
-    "hp": 80,
+    "detail": {
+      "card_pool": "IroncladCardPool",
+      "gold": 99,
+      "hp": {
+        "max": null,
+        "max_asc": null,
+        "min": null,
+        "min_asc": null
+      },
+      "starter_relic": "BURNING_BLOOD",
+      "unlocks_after_run_as": null
+    },
     "id": "IRONCLAD",
     "kind": "character",
-    "name": "Ironclad",
-    "play_notes": "",
-    "starter_deck": "Strike ×5, Defend ×4, Bash",
-    "starter_relic": "BURNING_BLOOD",
-    "unlocks_after_run_as": null
+    "name": "Ironclad"
   },
   "NECROBINDER": {
     "aliases": [
@@ -46,18 +52,21 @@
       "The Necrobinder",
       "亡灵契约师"
     ],
-    "card_pool": "NecrobinderCardPool",
-    "curated": false,
-    "description": "66 HP, Feminine, purple. Starter relic: BOUND_PHYLACTERY — Summon Osty 1 at combat start (`BeforeCombatStart`); if Osty is gone on later turns, re-summons after energy reset (`AfterEnergyResetLate`, not on turn 1). SpawnsPets = true. Starter deck (10): Strike ×4, Defend ×4, Bodyguard, Unleash. Card pool: NecrobinderCardPool. `UnlocksAfterRunAs => Regent`.",
-    "gold": 99,
-    "hp": 66,
+    "detail": {
+      "card_pool": "NecrobinderCardPool",
+      "gold": 99,
+      "hp": {
+        "max": null,
+        "max_asc": null,
+        "min": null,
+        "min_asc": null
+      },
+      "starter_relic": "BOUND_PHYLACTERY",
+      "unlocks_after_run_as": "Regent"
+    },
     "id": "NECROBINDER",
     "kind": "character",
-    "name": "Necrobinder",
-    "play_notes": "",
-    "starter_deck": "Strike ×4, Defend ×4, Bodyguard, Unleash",
-    "starter_relic": "BOUND_PHYLACTERY",
-    "unlocks_after_run_as": "Regent"
+    "name": "Necrobinder"
   },
   "REGENT": {
     "aliases": [
@@ -66,18 +75,21 @@
       "The Regent",
       "储君"
     ],
-    "card_pool": "RegentCardPool",
-    "curated": false,
-    "description": "75 HP, Masculine, orange; star counter always shown (`ShouldAlwaysShowStarCounter`). Starter relic: DIVINE_RIGHT — +3 stars when entering a CombatRoom (`AfterRoomEntered`). Starter deck (10): Strike ×4, Defend ×4, FallingStar, Venerate. Card pool: RegentCardPool. `UnlocksAfterRunAs => Silent`.",
-    "gold": 99,
-    "hp": 75,
+    "detail": {
+      "card_pool": "RegentCardPool",
+      "gold": 99,
+      "hp": {
+        "max": null,
+        "max_asc": null,
+        "min": null,
+        "min_asc": null
+      },
+      "starter_relic": "DIVINE_RIGHT",
+      "unlocks_after_run_as": "Silent"
+    },
     "id": "REGENT",
     "kind": "character",
-    "name": "Regent",
-    "play_notes": "",
-    "starter_deck": "Strike ×4, Defend ×4, FallingStar, Venerate",
-    "starter_relic": "DIVINE_RIGHT",
-    "unlocks_after_run_as": "Silent"
+    "name": "Regent"
   },
   "SILENT": {
     "aliases": [
@@ -86,17 +98,20 @@
       "The Silent",
       "静默猎手"
     ],
-    "card_pool": "SilentCardPool",
-    "curated": false,
-    "description": "70 HP, Feminine, green. Starter relic: RING_OF_THE_SNAKE — +2 cards drawn on turn 1 only (`TurnNumber > 1` returns base draw). Starter deck (12): Strike ×5, Defend ×5, Neutralize, Survivor. Card pool: SilentCardPool. `UnlocksAfterRunAs => null` (code comment: any completed run unlocks her); roster access is gated by UnlockState below.",
-    "gold": 99,
-    "hp": 70,
+    "detail": {
+      "card_pool": "SilentCardPool",
+      "gold": 99,
+      "hp": {
+        "max": null,
+        "max_asc": null,
+        "min": null,
+        "min_asc": null
+      },
+      "starter_relic": "RING_OF_THE_SNAKE",
+      "unlocks_after_run_as": null
+    },
     "id": "SILENT",
     "kind": "character",
-    "name": "Silent",
-    "play_notes": "",
-    "starter_deck": "Strike ×5, Defend ×5, Neutralize, Survivor",
-    "starter_relic": "RING_OF_THE_SNAKE",
-    "unlocks_after_run_as": null
+    "name": "Silent"
   }
 }

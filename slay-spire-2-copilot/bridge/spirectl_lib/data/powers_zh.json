@@ -5,16 +5,16 @@
       "Accelerant",
       "AccelerantPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "自身无 hook——使对面 POISON 的触发 次数 +（对面 AccelerantPower 层数之和），不超过毒层数。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ACCELERANT_POWER",
     "kind": "power",
-    "name": "Accelerant",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Accelerant"
   },
   "ACCURACY_POWER": {
     "aliases": [
@@ -22,16 +22,16 @@
       "Accuracy",
       "AccuracyPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者带 Shiv 标签的攻击 +Amount 伤害（ModifyDamageAdditive，仅 CardTag.Shiv）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ACCURACY_POWER",
     "kind": "power",
-    "name": "精准",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "精准"
   },
   "ADAPTABLE_POWER": {
     "aliases": [
@@ -39,16 +39,16 @@
       "Adaptable",
       "AdaptablePower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "实验体类 Boss 的 Buff：自体复活——死亡不结束战斗、不移除生物，直至复活逻辑完成（怪物侧状态机；buff 保留；RESPAWN_MOVE 意图携带治疗+PAINFUL_STABS+NEMESIS 类 buff）。REVIVE_BRANCH 标记经条件分支回退反射 live 浮现。run-46 live：一阶段清至 0HP → 战斗续行 → RESPAWN 意图 live → 终阶段后 EA 结局链。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "ADAPTABLE_POWER",
     "kind": "power",
-    "name": "Adaptable",
-    "play_notes": "run-46 live: ADAPTABLE→RESPAWN end-to-end; combat continues at 0 HP until revive resolves. | run-46 live：ADAPTABLE→RESPAWN 端到端——0HP 战斗续行至复活解决；分支标记经回退反射浮现。",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Adaptable"
   },
   "AFTERIMAGE_POWER": {
     "aliases": [
@@ -56,16 +56,16 @@
       "Afterimage",
       "AfterimagePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者每打出一张牌，获得 Amount 格挡。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "AFTERIMAGE_POWER",
     "kind": "power",
-    "name": "余像",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "余像"
   },
   "AGGRESSION_POWER": {
     "aliases": [
@@ -73,30 +73,32 @@
       "Aggression",
       "AggressionPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者阵营回合开始时，从弃牌堆随机 取 Amount 张攻击牌置入手牌并各升级 1 次（可升级时）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "AGGRESSION_POWER",
     "kind": "power",
-    "name": "Aggression",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Aggression"
   },
   "ANTICIPATE": {
     "aliases": [
       "ANTICIPATE",
       "Temporary Dexterity"
     ],
-    "curated": false,
-    "description": "Gain Dexterity until the end of this turn.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ANTICIPATE",
     "kind": "power",
-    "name": "Temporary Dexterity",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Temporary Dexterity"
   },
   "ARSENAL_POWER": {
     "aliases": [
@@ -104,16 +106,16 @@
       "Arsenal",
       "ArsenalPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "战斗生成卡牌时施加 +Amount STRENGTH （由生成效果宿主触发）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ARSENAL_POWER",
     "kind": "power",
-    "name": "Arsenal",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Arsenal"
   },
   "ARTIFACT_POWER": {
     "aliases": [
@@ -121,44 +123,47 @@
       "Artifact",
       "ArtifactPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "对持有者施加的可见 Debuff 类 power 数值被置为 0，随后消耗 1 层人工制品。不可见/内部减益不被挡。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ARTIFACT_POWER",
     "kind": "power",
-    "name": "人工制品",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "人工制品"
   },
   "ASLEEP": {
     "aliases": [
       "Asleep"
     ],
-    "curated": true,
-    "description": "计数类：物主沉睡——若受到非零未挡伤害则醒来（移除自身镀甲若有、自眩晕进唤醒招、移除沉睡）。物主回合结束时沉睡减1；归零经唤醒招醒来；回合结束时沉睡≤1则镀甲被移除。对局39+40 live：乐加维林族母两次均由穿镀甲挡的小额未挡伤害触发唤醒（对局40：剑柄9+打击6 把12挡打穿至3未挡 → 同回合剥甲+眩晕）。",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ASLEEP",
     "kind": "power",
-    "name": "沉睡",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "沉睡"
   },
   "ASLEEP_POWER": {
     "aliases": [
       "ASLEEP",
       "AsleepPower"
     ],
-    "counter_class": true,
-    "curated": false,
-    "description": "持有者沉睡——若受到未格挡伤害 != 0，立即醒来（移除自身镀甲（如有）、击晕自己进入 WakeUpMove、移除 Asleep）。持有者阵营回合结束时 Asleep -1 层；归 0 时通过 WakeUpMove 醒来。Asleep <= 1 的回合结束时移除其镀甲。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ASLEEP_POWER",
     "kind": "power",
-    "name": "沉睡",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "沉睡"
   },
   "AUTOMATION_POWER": {
     "aliases": [
@@ -166,16 +171,16 @@
       "Automation",
       "AutomationPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者每抽第 10 张牌时获得 Amount 能量（计数 `BaseCards` 10，触发后重置为 10）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "AUTOMATION_POWER",
     "kind": "power",
-    "name": "Automation",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Automation"
   },
   "BACK_ATTACK_LEFT_POWER": {
     "aliases": [
@@ -183,16 +188,16 @@
       "Back Attack",
       "BackAttackLeftPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "惰性面向标记（Buff，Single），被 SURROUNDED_POWER 侧袭判定读取——持有该标记的爪在持有者面向反方向时对其 ×1.5。自身无钩子。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "BACK_ATTACK_LEFT_POWER",
     "kind": "power",
-    "name": "背袭·左",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "背袭·左"
   },
   "BACK_ATTACK_RIGHT_POWER": {
     "aliases": [
@@ -200,16 +205,16 @@
       "Back Attack",
       "BackAttackRightPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "惰性面向标记（Buff，Single），被 SURROUNDED_POWER 侧袭判定读取——持有该标记的爪在持有者面向反方向时对其 ×1.5。自身无钩子。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "BACK_ATTACK_RIGHT_POWER",
     "kind": "power",
-    "name": "背袭·右",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "背袭·右"
   },
   "BARRICADE_POWER": {
     "aliases": [
@@ -217,16 +222,16 @@
       "Barricade",
       "BarricadePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者的格挡不再于回合开始时 清空（ShouldClearBlock 恒 false）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "BARRICADE_POWER",
     "kind": "power",
-    "name": "壁垒",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "壁垒"
   },
   "BATTLEWORN_DUMMY_TIME_LIMIT_POWER": {
     "aliases": [
@@ -234,16 +239,16 @@
       "BattlewornDummyTimeLimitPower",
       "Time Limit"
     ],
-    "counter_class": true,
-    "curated": false,
-    "description": "持有者阵营回合 结束时 -1 层；归 1 时木偶逃脱（事件遭遇逻辑）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "BATTLEWORN_DUMMY_TIME_LIMIT_POWER",
     "kind": "power",
-    "name": "Battleworn Dummy Time Limit",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Battleworn Dummy Time Limit"
   },
   "BEACON_OF_HOPE_POWER": {
     "aliases": [
@@ -251,16 +256,16 @@
       "Beacon of Hope",
       "BeaconOfHopePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者在本方阵营回合内首次获得 格挡时，全体队友各获得该格挡量的一半（×0.5，<1 不触发）；每实例仅 触发一次。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "BEACON_OF_HOPE_POWER",
     "kind": "power",
-    "name": "Beacon Of Hope",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Beacon Of Hope"
   },
   "BIASED_COGNITION_POWER": {
     "aliases": [
@@ -268,16 +273,16 @@
       "Biased Cognition",
       "BiasedCognitionPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者阵营回合 开始时获得 -Amount FOCUS_POWER。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "BIASED_COGNITION_POWER",
     "kind": "power",
-    "name": "偏见认知",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "偏见认知"
   },
   "BLACK_HOLE_POWER": {
     "aliases": [
@@ -285,16 +290,16 @@
       "Black Hole",
       "BlackHolePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者玩家在卡牌上花费星辰（系列 最后一张）或获得星辰时，对所有可命中敌人造成伤害（数值由 DynamicVars 宿主设定）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "BLACK_HOLE_POWER",
     "kind": "power",
-    "name": "Black Hole",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Black Hole"
   },
   "BLOCK_NEXT_TURN_POWER": {
     "aliases": [
@@ -302,16 +307,16 @@
       "Block Next Turn",
       "BlockNextTurnPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者格挡被清空时，获得 Amount 格挡一次并移除该 power。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "BLOCK_NEXT_TURN_POWER",
     "kind": "power",
-    "name": "Block Next Turn",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Block Next Turn"
   },
   "BLUR_POWER": {
     "aliases": [
@@ -319,16 +324,16 @@
       "Blur",
       "BlurPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者格挡不清空；持有者阵营回合 开始时 -1 层。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "BLUR_POWER",
     "kind": "power",
-    "name": "模糊",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "模糊"
   },
   "BORROWED_TIME_POWER": {
     "aliases": [
@@ -336,16 +341,16 @@
       "Borrowed Time",
       "BorrowedTimePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者所有卡牌费用 +Amount。 持有者阵营回合结束时移除。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "BORROWED_TIME_POWER",
     "kind": "power",
-    "name": "Borrowed Time",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Borrowed Time"
   },
   "BUFFER_POWER": {
     "aliases": [
@@ -353,16 +358,16 @@
       "Buffer",
       "BufferPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "接下来 Amount 次会使持有者损失 HP 的事件改为损失 0（每次消耗 1 层；为 late hook，其他减伤先结算）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "BUFFER_POWER",
     "kind": "power",
-    "name": "缓冲",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "缓冲"
   },
   "BURROWED_POWER": {
     "aliases": [
@@ -370,16 +375,16 @@
       "Burrowed",
       "BurrowedPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者不可被选中/命中——**订正**： 潜地目标**可以被攻击**，卡牌伤害正常 作用于其格挡（Bash/Strike/SPITE 均生效）。格挡被打破时触发 AfterBlockBroken： DIZZY 眩晕 + Burrowed 移除 + 清空全部剩余格挡，潜地攻击（BELOW 意图）取消。 打碎挡层即可取消攻击；不要回避攻击潜地目标。 档案原文：持有者不可被选中/命中 （ShouldAllowHitting 对持有者 false）；持有者格挡被击破时，持有者被 击晕进入眩晕招式并移除 Burrowed；移除时持有者失去全部格挡 （999999999）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "BURROWED_POWER",
     "kind": "power",
-    "name": "钻地",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "钻地"
   },
   "BURST_POWER": {
     "aliases": [
@@ -387,16 +392,16 @@
       "Burst",
       "BurstPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者接下来 Amount 次技能牌打出 计为 2 次（ModifyCardPlayCount +1）；每打出 1 张技能牌消耗 1 层； 持有者阵营回合结束时移除。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "BURST_POWER",
     "kind": "power",
-    "name": "爆发",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "爆发"
   },
   "CALAMITY_POWER": {
     "aliases": [
@@ -404,16 +409,16 @@
       "Calamity",
       "CalamityPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者打出攻击牌后，向其手牌加入 Amount 张随机职业池卡牌（生成逻辑由宿主决定）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CALAMITY_POWER",
     "kind": "power",
-    "name": "Calamity",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Calamity"
   },
   "CALCIFY_POWER": {
     "aliases": [
@@ -421,16 +426,16 @@
       "Calcify",
       "CalcifyPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者攻击 +Amount 伤害 （ModifyDamageAdditive；触发由宿主决定）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CALCIFY_POWER",
     "kind": "power",
-    "name": "Calcify",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Calcify"
   },
   "CALL_OF_THE_VOID_POWER": {
     "aliases": [
@@ -438,36 +443,35 @@
       "Call of the Void",
       "CallOfTheVoidPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者手牌抽取前，向其手牌 加入 Distinct 卡（并附加关键词）——宿主驱动的牌组污染。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CALL_OF_THE_VOID_POWER",
     "kind": "power",
-    "name": "Call Of The Void",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Call Of The Void"
   },
   "CHAINS_OF_BINDING_POWER": {
-    "affliction_keys": [
-      "BOUND"
-    ],
     "aliases": [
       "CHAINS_OF_BINDING",
       "Chains of Binding",
       "ChainsOfBindingPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "束缚之链（女王 Boss 能力，傀儡线施加于玩家）：持有者阵营回合内抽牌时，最多 Amount 张牌被附加 Bound（本回合已附加数达 Amount 后停止）；生效期间每回合只能打出 1 张 Bound 牌；持有者阵营回合结束时清除所有 Bound。LIVE 规则（run-44 Boss 战，用户纠正后固化）：桥每回合打印每张牌的 ok/no(None) — Bound 牌显示为 no(None)；凡标 ok 的牌均可打且必须全部打出。档案中早期备注「约 2 次有效出牌后第 3/4 张结算为空」已过时作废 — run-44 二周目 T1 单回合三次有效出牌全部落点（连环拳 + 回响双打完美打击 + 血墙）。任何规划教条不得让桥标 ok 的牌留在手里；live 信号优先于档案摘要。lookup 触发器：此 power 落在玩家身上 — 必须在傀儡线落地当回合解析。",
-    "host_of_affliction": true,
+    "detail": {
+      "affliction_keys": [
+        "BOUND"
+      ],
+      "counter_class": true,
+      "host_of_affliction": true,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "CHAINS_OF_BINDING_POWER",
     "kind": "power",
-    "name": "束缚之链",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "束缚之链"
   },
   "CHILD_OF_THE_STARS_POWER": {
     "aliases": [
@@ -475,16 +479,16 @@
       "Child of the Stars",
       "ChildOfTheStarsPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者玩家花费星辰时获得 Amount × 花费星辰数 的格挡。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CHILD_OF_THE_STARS_POWER",
     "kind": "power",
-    "name": "Child Of The Stars",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Child Of The Stars"
   },
   "CLARITY_POWER": {
     "aliases": [
@@ -492,16 +496,16 @@
       "Clarity",
       "ClarityPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者接下来 Amount 个回合的回合开始 各 +1 抽牌；每个触发回合 -1 层。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CLARITY_POWER",
     "kind": "power",
-    "name": "Clarity",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Clarity"
   },
   "COLOSSUS_POWER": {
     "aliases": [
@@ -509,16 +513,16 @@
       "Colossus",
       "ColossusPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "对 owner 发起攻击的施加者若带有 VULNERABLE_POWER 则伤害 ×0.5（DamageDecrease 0.5）；敌方侧回合结束递减 1——run-48 live：一整个敌方回合后计数被消耗，除非重打 power 卡（T4 外骨骼虫战上线、T5 消失）。条件是**攻击者**带易伤，不是玩家。run-48 猎人杀手 live：穿刺 5x3→2x3（弱化+巨像）与 7x3→3x3（战栗易伤+巨像）——两回合 9-15 挡下零掉血。牌库无易伤施加源时是死卡；有上勾拳/猛击/战栗包时是 S 级防御。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "COLOSSUS_POWER",
     "kind": "power",
-    "name": "巨像",
-    "play_notes": "对局43 live | run-48 live 2026-09-19：对带易伤猎人杀手穿刺两次减半；计数一整个敌方回合后消耗确认。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "巨像"
   },
   "CONFUSED_POWER": {
     "aliases": [
@@ -526,16 +530,16 @@
       "Confused",
       "ConfusedPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者每次抽到的卡（原费用 >= 0）战斗内费用重掷为 0..3 的随机整数 （`Rng.CombatEnergyCosts.NextInt(4)`）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
     "id": "CONFUSED_POWER",
     "kind": "power",
-    "name": "混乱",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Single"
+    "name": "混乱"
   },
   "CONQUEROR_POWER": {
     "aliases": [
@@ -543,16 +547,16 @@
       "Conqueror",
       "ConquerorPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "SovereignBlade 对持有者的攻击伤害 ×2。持有者阵营回合结束时 -1 层。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "CONQUEROR_POWER",
     "kind": "power",
-    "name": "Conqueror",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Conqueror"
   },
   "CONSTRICT_POWER": {
     "aliases": [
@@ -560,16 +564,16 @@
       "Constrict",
       "ConstrictPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "玩家身上的减益计数（run-38 实时）：玩家回合结束按层数每层受 Amount 点伤害；实时叠加——每次 CONSTRICT 招式释放 +3（蛇行扼杀者 T1 施加 3，T3 释放 → :6）；可被格挡（剩余挡吸收 tick）；施加者死亡时移除。计数类击杀计时器：3→6→9 递增——在 2-3 个循环内击杀施加者。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "CONSTRICT_POWER",
     "kind": "power",
-    "name": "缩紧",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "缩紧"
   },
   "CONSUMING_SHADOW_POWER": {
     "aliases": [
@@ -577,16 +581,16 @@
       "Consuming Shadow",
       "ConsumingShadowPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者阵营回合结束时，若 持有者玩家有充能球，将最后一个球激发 Amount 次。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CONSUMING_SHADOW_POWER",
     "kind": "power",
-    "name": "Consuming Shadow",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Consuming Shadow"
   },
   "COOLANT_POWER": {
     "aliases": [
@@ -594,30 +598,32 @@
       "Coolant",
       "CoolantPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者阵营回合开始时，获得 （球队列中不同球种类数 × Amount）格挡。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "COOLANT_POWER",
     "kind": "power",
-    "name": "Coolant",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Coolant"
   },
   "COORDINATE": {
     "aliases": [
       "COORDINATE",
       "Temporary Strength"
     ],
-    "curated": false,
-    "description": "Gain Strength until the end of this turn.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "COORDINATE",
     "kind": "power",
-    "name": "Temporary Strength",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Temporary Strength"
   },
   "CORROSIVE_WAVE_POWER": {
     "aliases": [
@@ -625,16 +631,16 @@
       "Corrosive Wave",
       "CorrosiveWavePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "抽牌 hook 时对所有可命中敌人 施加 Amount 层 POISON（触发由怪物招式宿主决定）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CORROSIVE_WAVE_POWER",
     "kind": "power",
-    "name": "Corrosive Wave",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Corrosive Wave"
   },
   "CORRUPTION_POWER": {
     "aliases": [
@@ -642,16 +648,16 @@
       "Corruption",
       "CorruptionPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者的技能牌费用为 0，打出后 消耗（Exhaust）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "CORRUPTION_POWER",
     "kind": "power",
-    "name": "腐化",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "腐化"
   },
   "COUNTDOWN_POWER": {
     "aliases": [
@@ -659,16 +665,16 @@
       "Countdown",
       "CountdownPower"
     ],
-    "counter_class": true,
-    "curated": false,
-    "description": "持有者阵营回合开始时触发倒计时 逻辑（decomp 中 Apply<DoomPower> 到持有者——击杀钟；显示数值见怪物 卡面文案）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "COUNTDOWN_POWER",
     "kind": "power",
-    "name": "Countdown",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Countdown"
   },
   "COVERED_POWER": {
     "aliases": [
@@ -676,16 +682,16 @@
       "Covered",
       "CoveredPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "掩护者存活期间对持有者的 攻击伤害 ×0；敌方阵营回合结束或掩护者死亡时移除。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "COVERED_POWER",
     "kind": "power",
-    "name": "位于被掩护者",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "位于被掩护者"
   },
   "CRAB_RAGE_POWER": {
     "aliases": [
@@ -693,17 +699,16 @@
       "Crab Rage",
       "CrabRagePower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "同侧另一生物死亡时，存活的持有者获得 +6 力量与 99 无来源格挡，随后该能力自行移除。（皇蟹双爪；CanonicalVars Strength 6 / Block 99 Unpowered。） LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：+6 力量持续，但 99 挡为无源挡，下一玩家回合即消散（Claw 次回合 block=0）。二阶段挡墙是一回合尖峰——扛过那一回合挡即消失。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "CRAB_RAGE_POWER",
     "kind": "power",
-    "live_notes": "LIVE run-56：皇蟹双体均有 CRAB_RAGE。触发时给蟹体 +力量 + 大量挡。",
-    "name": "蟹怒",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "蟹怒"
   },
   "CREATIVE_AI_POWER": {
     "aliases": [
@@ -711,56 +716,64 @@
       "Creative AI",
       "CreativeAiPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者手牌抽取前，加入 Amount 张 不重复的 Power 牌。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CREATIVE_AI_POWER",
     "kind": "power",
-    "name": "Creative Ai",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Creative Ai"
   },
   "CRIMSON_MANTLE_POWER": {
     "aliases": [
       "CRIMSON_MANTLE",
       "Crimson Mantle"
     ],
-    "curated": true,
-    "description": "持有者阵营回合开始时失去 1 HP（无视格挡）并获得 Amount 格挡（卡牌 CRIMSON_MANTLE：基础 8、升级 10）。回合开始掉血可触发同回合失去-HP 触发器（撕裂/自成黏土/百年积木类），并满足怨恨/狱火类「本回合失去过 HP」条件。",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CRIMSON_MANTLE_POWER",
     "kind": "power",
-    "name": "猩红披风",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "猩红披风"
   },
   "CRUELTY_POWER": {
     "aliases": [
       "CRUELTY",
       "Cruelty"
     ],
-    "curated": true,
-    "description": "主人的攻击对易伤目标造成 +Amount% 伤害（基础 Amount=25；run-41 live CRUELTY_POWER:25）。在易伤 ×1.5 之上再乘 — run-41 live 中 32 基伤重锤对易伤目标结算 37；带打击假人 tag 的 PS 20 级结算 25-30。打出后整场战斗有效（能力牌）。",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CRUELTY_POWER",
     "kind": "power",
-    "name": "残忍",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "残忍"
   },
   "CRUSH_UNDER": {
     "aliases": [
       "CRUSH_UNDER",
       "Temporary Strength Down"
     ],
-    "curated": false,
-    "description": "Lose Strength until the end of this turn.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "CRUSH_UNDER",
     "kind": "power",
-    "name": "Temporary Strength Down",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Temporary Strength Down"
   },
   "CURIOUS_POWER": {
     "aliases": [
@@ -768,16 +781,16 @@
       "Curious",
       "CuriousPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者费用 > 0 的 Power 牌费用 -Amount （下限 0）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CURIOUS_POWER",
     "kind": "power",
-    "name": "Curious",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Curious"
   },
   "CURL_UP_POWER": {
     "aliases": [
@@ -785,16 +798,16 @@
       "Curl Up",
       "CurlUpPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "后置格挡授予：伤害落到拥有者身上之后，拥有者获得 Amount 格挡（对局42 live 顺序：6 伤先落地，然后才出现 +14 挡——不是前置挡）。对局43 虱虫之祖 CURL_UP 14 在受击回合呈现同样的后置顺序。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "CURL_UP_POWER",
     "kind": "power",
-    "name": "蜷缩",
-    "play_notes": "对局43 live",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "蜷缩"
   },
   "DAMPEN_POWER": {
     "aliases": [
@@ -802,16 +815,16 @@
       "Dampen",
       "DampenPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "施加时，持有者牌库中所有已升级卡牌被降级；原升级等级按施加者记录在内部数据中（重复施加会累加施加者集合）。Act3 魔法骑士使用——降级在能力存续期间持续。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "None-stack"
+    },
     "id": "DAMPEN_POWER",
     "kind": "power",
-    "name": "弱化",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "None-stack"
+    "name": "弱化"
   },
   "DANSE_MACABRE_POWER": {
     "aliases": [
@@ -819,16 +832,16 @@
       "Danse Macabre",
       "DanseMacabrePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者出牌前获得 Amount 格挡 （触发由宿主卡牌决定）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "DANSE_MACABRE_POWER",
     "kind": "power",
-    "name": "Danse Macabre",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Danse Macabre"
   },
   "DARK_EMBRACE_POWER": {
     "aliases": [
@@ -836,44 +849,48 @@
       "Dark Embrace",
       "DarkEmbracePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者的牌被消耗 （Exhaust）时抽 Amount 张牌；虚无触发的消耗在持有者阵营回合结束时 批量结算（Amount × 虚无触发次数）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "DARK_EMBRACE_POWER",
     "kind": "power",
-    "name": "黑暗之拥",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "黑暗之拥"
   },
   "DARK_SHACKLES": {
     "aliases": [
       "DARK_SHACKLES",
       "Temporary Strength Down"
     ],
-    "curated": false,
-    "description": "Lose Strength until the end of this turn.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "DARK_SHACKLES",
     "kind": "power",
-    "name": "Temporary Strength Down",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Temporary Strength Down"
   },
   "DEBILITATE": {
     "aliases": [
       "DEBILITATE",
       "Debilitate"
     ],
-    "curated": false,
-    "description": "Vulnerable and Weak are twice as effective for the next 2 turns.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "DEBILITATE",
     "kind": "power",
-    "name": "Debilitate",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Debilitate"
   },
   "DEMESNE_POWER": {
     "aliases": [
@@ -881,16 +898,16 @@
       "Demesne",
       "DemesnePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "每回合 +Amount 抽牌 且 +Amount 最大能量。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "DEMESNE_POWER",
     "kind": "power",
-    "name": "Demesne",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Demesne"
   },
   "DEMISE_POWER": {
     "aliases": [
@@ -898,16 +915,16 @@
       "Demise",
       "DemisePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者阵营回合结束时，持有者受到 Amount 点不可格挡、非攻击伤害。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "DEMISE_POWER",
     "kind": "power",
-    "name": "Demise",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Demise"
   },
   "DEMON_FORM_POWER": {
     "aliases": [
@@ -915,16 +932,16 @@
       "Demon Form",
       "DemonFormPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "拥有者回合开始时，给自身 +Amount 力量。长战力量引擎；对局43 Act1 Boss 奖励屏出现卡牌形态（未选——为 MaxHP 经济选了狂宴）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "DEMON_FORM_POWER",
     "kind": "power",
-    "name": "恶魔之形",
-    "play_notes": "对局43 奖励屏",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "恶魔之形"
   },
   "DEVOUR_LIFE_POWER": {
     "aliases": [
@@ -932,16 +949,16 @@
       "Devour Life",
       "DevourLifePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "出牌 hook 时触发 OstyCmd.Summon （Amount）——宠物召唤触发由宿主卡决定。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "DEVOUR_LIFE_POWER",
     "kind": "power",
-    "name": "Devour Life",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Devour Life"
   },
   "DEXTERITY_POWER": {
     "aliases": [
@@ -949,16 +966,16 @@
       "Dexterity",
       "DexterityPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者每次从卡牌/招式 获得格挡时 +Amount 格挡。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "DEXTERITY_POWER",
     "kind": "power",
-    "name": "敏捷",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "敏捷"
   },
   "DIAMOND_DIADEM_POWER": {
     "aliases": [
@@ -966,16 +983,16 @@
       "Diamond Diadem",
       "DiamondDiademPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "对持有者的攻击伤害 ×0.5；敌方 阵营回合结束时移除。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "DIAMOND_DIADEM_POWER",
     "kind": "power",
-    "name": "Diamond Diadem",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Diamond Diadem"
   },
   "DIE_FOR_YOU_POWER": {
     "aliases": [
@@ -983,48 +1000,48 @@
       "Die for You",
       "DieForYouPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "Osty 系死亡处理——持有者死亡时战斗 不结束，持有者移出战斗；复活由宠物逻辑处理（见角色卡）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "DIE_FOR_YOU_POWER",
     "kind": "power",
-    "name": "Die For You",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Die For You"
   },
   "DISINTEGRATION": {
     "aliases": [
       "Disintegration",
       "DisintegrationPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "见 afflictions.md——知识恶魔对白选项卡施加 DISINTEGRATION_POWER 6。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "DISINTEGRATION",
     "kind": "power",
-    "name": "卡牌施加",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "卡牌施加"
   },
   "DISINTEGRATION_POWER": {
     "aliases": [
       "DISINTEGRATION",
       "DisintegrationPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者阵营回合结束 （late）时，持有者受到 Amount 点非攻击伤害。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "DISINTEGRATION_POWER",
     "kind": "power",
-    "name": "崩解",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "崩解"
   },
   "DOOM_POWER": {
     "aliases": [
@@ -1032,16 +1049,16 @@
       "Doom",
       "DoomPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者阵营回合结束时，若 CurrentHp <= Amount 则直接被 Doom 击杀（特殊 VFX；同侧所有 doomed 生物一并结算）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "DOOM_POWER",
     "kind": "power",
-    "name": "末日",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "末日"
   },
   "DOUBLE_DAMAGE_POWER": {
     "aliases": [
@@ -1049,16 +1066,16 @@
       "Double Damage",
       "DoubleDamagePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者造成的攻击伤害 ×2； 持有者阵营回合结束时 -1 层。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "DOUBLE_DAMAGE_POWER",
     "kind": "power",
-    "name": "Double Damage",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Double Damage"
   },
   "DRAW_CARDS_NEXT_TURN_POWER": {
     "aliases": [
@@ -1066,16 +1083,16 @@
       "Draw Cards Next Turn",
       "DrawCardsNextTurnPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "仅在持有者下一回合开始时 +Amount 抽牌，随后移除。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "DRAW_CARDS_NEXT_TURN_POWER",
     "kind": "power",
-    "name": "Draw Cards Next Turn",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Draw Cards Next Turn"
   },
   "DUPLICATION_POWER": {
     "aliases": [
@@ -1083,30 +1100,32 @@
       "Duplication",
       "DuplicationPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者接下来 Amount 次任意 卡牌打出计为 2 次；每打出 1 张牌消耗 1 层；持有者阵营回合结束时移除。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "DUPLICATION_POWER",
     "kind": "power",
-    "name": "复制",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "复制"
   },
   "DYING_STAR": {
     "aliases": [
       "DYING_STAR",
       "Temporary Strength Down"
     ],
-    "curated": false,
-    "description": "Lose Strength until the end of this turn.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "DYING_STAR",
     "kind": "power",
-    "name": "Temporary Strength Down",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Temporary Strength Down"
   },
   "ECHO_FORM_POWER": {
     "aliases": [
@@ -1114,16 +1133,16 @@
       "Echo Form",
       "EchoFormPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "回响形态：在其被打出的下一回合起，每回合第一张打出的牌结算翻倍。LIVE（run-44）：翻倍作用于能力牌的层数施加 — 回响当回合首牌打出狱火时获得 INFERNO_POWER 6+6=12 层（每次失血触发 12 点弱化免疫 AoE）；连环拳被双打获得 ONE_TWO_PUNCH_POWER:2（接下来两次攻击双打）；刀刃之舞双打生成 8 张刀刃；血墙双打获得 13+13=26 挡但 2 点自伤 HP 也付两次。虚无：回合结束未打出即消耗。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ECHO_FORM_POWER",
     "kind": "power",
-    "name": "回响形态",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "回响形态"
   },
   "ENERGY_NEXT_TURN_POWER": {
     "aliases": [
@@ -1131,30 +1150,32 @@
       "Energy Next Turn",
       "EnergyNextTurnPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "下次能量重置时获得 Amount 能量， 随后移除。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ENERGY_NEXT_TURN_POWER",
     "kind": "power",
-    "name": "Energy Next Turn",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Energy Next Turn"
   },
   "ENFEEBLING_TOUCH": {
     "aliases": [
       "ENFEEBLING_TOUCH",
       "Temporary Strength Down"
     ],
-    "curated": false,
-    "description": "Lose Strength until the end of this turn.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "ENFEEBLING_TOUCH",
     "kind": "power",
-    "name": "Temporary Strength Down",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Temporary Strength Down"
   },
   "ENRAGE_POWER": {
     "aliases": [
@@ -1162,30 +1183,32 @@
       "Enrage",
       "EnragePower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "Buff 计数：任何人打出技能牌时持有者获得 +Amount 力量。零技能纪律：power 存续期间仅攻击+能力牌——放血/防御/SW/仪式/主宰/Havoc 类技能均喂养持有者。run-46 live：实验体 ENRAGE:2 被 T3 放血失误喂 +2 力量（Bite 中局 20→33）——与 run-44 感染棱柱 TAINTED 失误同类；教训：每回合从 live powers 打印重读零技能清单，不要从开战时点背负。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ENRAGE_POWER",
     "kind": "power",
-    "name": "暴怒",
-    "play_notes": "run-46 live: Enrage fed by Bloodletting slip — zero-skill re-read-per-turn lesson recorded. | run-46 live：Enrage 被放血失误喂养（Bite 20→33）——每回合重读 live powers 教训；与 run-44 TAINTED 同类。",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "暴怒"
   },
   "ENTROPY": {
     "aliases": [
       "ENTROPY",
       "Entropy"
     ],
-    "curated": false,
-    "description": "At the start of your turn, Transform 1 card in your Hand.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ENTROPY",
     "kind": "power",
-    "name": "Entropy",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Entropy"
   },
   "ENVENOM_POWER": {
     "aliases": [
@@ -1193,16 +1216,16 @@
       "Envenom",
       "EnvenomPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者的攻击造成未格挡伤害 > 0 时，对目标施加 Amount 层 POISON。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ENVENOM_POWER",
     "kind": "power",
-    "name": "中毒涂毒",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "中毒涂毒"
   },
   "ESCAPE_ARTIST_POWER": {
     "aliases": [
@@ -1210,16 +1233,16 @@
       "Escape Artist",
       "EscapeArtistPower"
     ],
-    "counter_class": true,
-    "curated": false,
-    "description": "逃跑倒计时视觉——持有者阵营 回合结束时 Amount > 1 则 -1 层；Amount == 1 时开始脉冲（ThievingHopper 即将逃跑；逃跑动作由怪物招式执行）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ESCAPE_ARTIST_POWER",
     "kind": "power",
-    "name": "Escape Artist",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Escape Artist"
   },
   "FAN_OF_KNIVES_POWER": {
     "aliases": [
@@ -1227,16 +1250,16 @@
       "Fan of Knives",
       "FanOfKnivesPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "惰性标记 power（Buff，Counter）——自身无钩子；由 Shiv 标签卡牌查询（如刀扇激活时 Shiv 类命中全体敌人）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FAN_OF_KNIVES_POWER",
     "kind": "power",
-    "name": "刀扇之力",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "刀扇之力"
   },
   "FASTEN_POWER": {
     "aliases": [
@@ -1244,30 +1267,32 @@
       "Fasten",
       "FastenPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者卡牌/招式来源的格挡 +Amount （ModifyBlockAdditive）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FASTEN_POWER",
     "kind": "power",
-    "name": "Fasten",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Fasten"
   },
   "FEEDING_FRENZY": {
     "aliases": [
       "FEEDING_FRENZY",
       "Temporary Strength"
     ],
-    "curated": false,
-    "description": "Gain Strength until the end of this turn.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FEEDING_FRENZY",
     "kind": "power",
-    "name": "Temporary Strength",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Temporary Strength"
   },
   "FEEL_NO_PAIN_POWER": {
     "aliases": [
@@ -1275,30 +1300,32 @@
       "Feel No Pain",
       "FeelNoPainPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者每消耗（Exhaust）一张 自己的牌，获得 Amount 格挡。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FEEL_NO_PAIN_POWER",
     "kind": "power",
-    "name": "无痛",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "无痛"
   },
   "FERAL": {
     "aliases": [
       "FERAL",
       "Feral"
     ],
-    "curated": false,
-    "description": "The first 2 times you play a 0[energy:1] Attack each turn, return it to your Hand.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FERAL",
     "kind": "power",
-    "name": "Feral",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Feral"
   },
   "FLAME_BARRIER_POWER": {
     "aliases": [
@@ -1306,16 +1333,16 @@
       "Flame Barrier",
       "FlameBarrierPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者被攻击命中时， 攻击者受到 Amount 点非攻击伤害。在对方阵营回合结束时移除（非持有者 回合）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FLAME_BARRIER_POWER",
     "kind": "power",
-    "name": "火焰屏障",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "火焰屏障"
   },
   "FLANKING_POWER": {
     "aliases": [
@@ -1323,39 +1350,45 @@
       "Flanking",
       "FlankingPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "除施加者外任何人对持有者的攻击 伤害 ×Amount。持有者阵营回合结束时移除。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "FLANKING_POWER",
     "kind": "power",
-    "name": "Flanking",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Flanking"
   },
   "FLEX_POTION": {
     "aliases": [
       "FLEX_POTION",
       "Temporary Strength"
     ],
-    "curated": false,
-    "description": "Gain Strength until the end of this turn.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FLEX_POTION",
     "kind": "power",
-    "name": "Temporary Strength",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Temporary Strength"
   },
   "FLEX_POTION_POWER": {
-    "curated": true,
-    "description": "临时力量子类：施加时获得 +Amount 力量（屈伸药水 = +5），持有者阵营回合结束时等量回退。数值为正显示 Buff。不跨回合——只在当回合爆发窗口内有效。",
+    "aliases": [],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FLEX_POTION_POWER",
     "kind": "power",
-    "name": "屈伸药水之力",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "屈伸药水之力"
   },
   "FLUTTER_POWER": {
     "aliases": [
@@ -1363,30 +1396,32 @@
       "Flutter",
       "FlutterPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "闪避层：持有者受攻击伤害被大幅减免；每次被攻击命中消耗 1 层（run-39 草蜢 live：FLUTTER 5 时打击预算 15 实落 7 并降至 4；Flutter 3 时 Pommel 15→11；Flutter 4 时 Bash 21→10）。同指令多段攻击每段命中各耗 1 层——Whirlwind 类穿透最快烧层。高层时约减半伤害；按竞速窗口减速器对待，不是无敌。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FLUTTER_POWER",
     "kind": "power",
-    "name": "闪避",
-    "play_notes": "run-39 live：Flutter 每次攻击命中后减伤并 −1 层。层高时按约五成伤害规划击杀数学；优先多段指令烧层。",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "闪避"
   },
   "FOCUSED_STRIKE": {
     "aliases": [
       "FOCUSED_STRIKE",
       "Temporary Focus"
     ],
-    "curated": false,
-    "description": "Gain Focus until the end of this turn.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FOCUSED_STRIKE",
     "kind": "power",
-    "name": "Temporary Focus",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Temporary Focus"
   },
   "FOCUS_POWER": {
     "aliases": [
@@ -1394,16 +1429,16 @@
       "Focus",
       "FocusPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者充能球被动/激发数值 变为 max(原值 + Amount, 0)。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FOCUS_POWER",
     "kind": "power",
-    "name": "专注",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "专注"
   },
   "FORBIDDEN_GRIMOIRE_POWER": {
     "aliases": [
@@ -1411,16 +1446,16 @@
       "Forbidden Grimoire",
       "ForbiddenGrimoirePower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "宿主型 utility power（Buff，Counter）——战斗结束/预打出逻辑由源卡牌承载；精确触发见宿主卡面。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FORBIDDEN_GRIMOIRE_POWER",
     "kind": "power",
-    "name": "禁忌魔典",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "禁忌魔典"
   },
   "FOREGONE_CONCLUSION_POWER": {
     "aliases": [
@@ -1428,16 +1463,16 @@
       "Foregone Conclusion",
       "ForegoneConclusionPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者手牌抽取前，必要时 洗牌并将选中的抽牌堆卡牌移入手牌。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FOREGONE_CONCLUSION_POWER",
     "kind": "power",
-    "name": "Foregone Conclusion",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Foregone Conclusion"
   },
   "FRAIL_POWER": {
     "aliases": [
@@ -1445,16 +1480,16 @@
       "Frail",
       "FrailPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者从卡牌/怪物招式获得的格挡 ×0.75。敌方阵营回合结束时 -1 层。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "FRAIL_POWER",
     "kind": "power",
-    "name": "脆弱",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "脆弱"
   },
   "FREE_ATTACK_POWER": {
     "aliases": [
@@ -1462,16 +1497,16 @@
       "Free Attack",
       "FreeAttackPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "层数存续期间主人所有攻击牌 0 费；run-41 live 订正：无情猛攻触发后手牌中所有攻击牌显示 cost=0（4 张打击与 PS 均 0 费可打），每打出一张攻击消耗一层 — 并非只作用于下一张攻击。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FREE_ATTACK_POWER",
     "kind": "power",
-    "name": "Free Attack",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Free Attack"
   },
   "FREE_POWER_POWER": {
     "aliases": [
@@ -1479,16 +1514,16 @@
       "Free Power",
       "FreePowerPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者手牌/打出区的 Power 牌费用为 0；每打出 1 张 Power 牌消耗 1 层。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FREE_POWER_POWER",
     "kind": "power",
-    "name": "Free Power",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Free Power"
   },
   "FREE_SKILL_POWER": {
     "aliases": [
@@ -1496,16 +1531,16 @@
       "Free Skill",
       "FreeSkillPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者手牌/打出区的技能牌费用为 0； 每打出 1 张技能牌消耗 1 层。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FREE_SKILL_POWER",
     "kind": "power",
-    "name": "Free Skill",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Free Skill"
   },
   "FRIENDSHIP_POWER": {
     "aliases": [
@@ -1513,16 +1548,16 @@
       "Friendship",
       "FriendshipPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "+Amount 最大能量。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FRIENDSHIP_POWER",
     "kind": "power",
-    "name": "Friendship",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Friendship"
   },
   "FURNACE_POWER": {
     "aliases": [
@@ -1530,36 +1565,35 @@
       "Furnace",
       "FurnacePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者阵营回合开始时锻造 Amount 次 （通过锻造逻辑升级 Amount 张牌）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "FURNACE_POWER",
     "kind": "power",
-    "name": "Furnace",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Furnace"
   },
   "GALVANIC_POWER": {
-    "affliction_keys": [
-      "GALVANIZED"
-    ],
     "aliases": [
       "GALVANIC",
       "Galvanic",
       "GalvanicPower"
     ],
-    "counter_class": true,
-    "curated": false,
-    "description": "战斗开始及 Power 牌 进入战斗时，给玩家的 Power 牌附加 Galvanized（Amount）。打出 Galvanized 牌时，其拥有者受到 Amount 点非攻击伤害。",
-    "host_of_affliction": true,
+    "detail": {
+      "affliction_keys": [
+        "GALVANIZED"
+      ],
+      "counter_class": true,
+      "host_of_affliction": true,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "GALVANIC_POWER",
     "kind": "power",
-    "name": "电镀",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "电镀"
   },
   "GENESIS_POWER": {
     "aliases": [
@@ -1567,16 +1601,16 @@
       "Genesis",
       "GenesisPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "每次能量重置时获得 Amount 星辰（Stars）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "GENESIS_POWER",
     "kind": "power",
-    "name": "Genesis",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Genesis"
   },
   "GIGANTIFICATION_POWER": {
     "aliases": [
@@ -1584,16 +1618,16 @@
       "Gigantification",
       "GigantificationPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "持有者下一张攻击 ×3 伤害； 该攻击结算后 -1 层。 | run-51 live：巨化 BREAKTHROUGH（全体）对三敌战打出 19/13/29 级 AoE——巨化把 AoE 攻击牌放大到横扫级。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "GIGANTIFICATION_POWER",
     "kind": "power",
-    "name": "Gigantification",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Gigantification"
   },
   "GRAVITY_POWER": {
     "aliases": [
@@ -1601,16 +1635,16 @@
       "Gravity",
       "GravityPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者每打出一张牌，对所有可命中敌人 造成 Amount 点非攻击伤害；持有者阵营回合结束时移除。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "GRAVITY_POWER",
     "kind": "power",
-    "name": "Gravity",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Gravity"
   },
   "GUARDED_POWER": {
     "aliases": [
@@ -1618,30 +1652,32 @@
       "Guarded",
       "GuardedPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "对持有者的攻击伤害 ×0.5；施加者死亡时 移除。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "GUARDED_POWER",
     "kind": "power",
-    "name": "Guarded",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Guarded"
   },
   "HAILSTORM": {
     "aliases": [
       "HAILSTORM",
       "Hailstorm"
     ],
-    "curated": false,
-    "description": "At the end of your turn, if you have Frost, deal 6 damage to ALL enemies.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "HAILSTORM",
     "kind": "power",
-    "name": "Hailstorm",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Hailstorm"
   },
   "HAMMER_TIME_POWER": {
     "aliases": [
@@ -1649,16 +1685,16 @@
       "Hammer Time",
       "HammerTimePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "其他玩家锻造时，其余存活玩家同样 锻造该数量（锤击联动）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "HAMMER_TIME_POWER",
     "kind": "power",
-    "name": "Hammer Time",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Hammer Time"
   },
   "HANG_POWER": {
     "aliases": [
@@ -1666,16 +1702,16 @@
       "Hang",
       "HangPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "Hang 卡对持有者的攻击伤害 ×Amount。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "HANG_POWER",
     "kind": "power",
-    "name": "Hang",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Hang"
   },
   "HARDENED_SHELL_POWER": {
     "aliases": [
@@ -1683,44 +1719,47 @@
       "Hardened Shell",
       "HardenedShellPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者每回合 HP 损失上限为 Amount 减去本回合已受伤害（计数回合开始重置）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "HARDENED_SHELL_POWER",
     "kind": "power",
-    "name": "Hardened Shell",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Hardened Shell"
   },
   "HARD_TO_KILL": {
     "aliases": [
       "Hard to Kill"
     ],
-    "curated": true,
-    "description": "计数类：物主每次伤害实例的 HP 损失上限为 Amount（ModifyDamageCap = Amount）；单次超出部分弃掉、不保留。对局40 live 外骨骼虫 Amount=9：突破/狱火 9 实例命中满值；重锤32 对该类目标浪费23——用多实例小额命中控速，避免单次大实例攻击。",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "HARD_TO_KILL",
     "kind": "power",
-    "name": "杀不死",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "杀不死"
   },
   "HARD_TO_KILL_POWER": {
     "aliases": [
       "HARD_TO_KILL",
       "HardToKillPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "拥有者每次受到的伤害实例上限 Amount，该次溢出作废（不存银行）。外骨骼虫 Amount=9（对局41/43 live）：打多段 ≤Amount 的小伤（TwinStrike 5x2 每段全额；单发大伤浪费溢出）。与按回合上限（HARDENED_SHELL）不同——这是按击。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "HARD_TO_KILL_POWER",
     "kind": "power",
-    "name": "难以击杀",
-    "play_notes": "对局43 live",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "难以击杀"
   },
   "HATCH_POWER": {
     "aliases": [
@@ -1728,16 +1767,16 @@
       "Hatch",
       "HatchPower"
     ],
-    "counter_class": true,
-    "curated": false,
-    "description": "持有者阵营回合结束时 -1 层（孵化计时； 孵化动作由怪物/遗物宿主执行）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "HATCH_POWER",
     "kind": "power",
-    "name": "Hatch",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Hatch"
   },
   "HAUNT_POWER": {
     "aliases": [
@@ -1745,16 +1784,16 @@
       "Haunt",
       "HauntPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者打出 Soul 卡后，对随机敌人造成 伤害（数值由宿主决定）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "HAUNT_POWER",
     "kind": "power",
-    "name": "Haunt",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Haunt"
   },
   "HEIST_POWER": {
     "aliases": [
@@ -1762,30 +1801,32 @@
       "Heist",
       "HeistPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者（窃贼）在结算前死亡时，被偷的 金币奖励（Amount）返还给 base.Target 玩家。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "HEIST_POWER",
     "kind": "power",
-    "name": "Heist",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Heist"
   },
   "HELICAL_DART": {
     "aliases": [
       "HELICAL_DART",
       "Temporary Dexterity"
     ],
-    "curated": false,
-    "description": "Gain Dexterity until the end of this turn.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "HELICAL_DART",
     "kind": "power",
-    "name": "Temporary Dexterity",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Temporary Dexterity"
   },
   "HELLO_WORLD_POWER": {
     "aliases": [
@@ -1793,16 +1834,16 @@
       "Hello World",
       "HelloWorldPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者手牌抽取前 （AmountOnTurnStart >= 1），加入不重复的已解锁卡牌。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "HELLO_WORLD_POWER",
     "kind": "power",
-    "name": "Hello World",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Hello World"
   },
   "HELLRAISER_POWER": {
     "aliases": [
@@ -1810,36 +1851,35 @@
       "Hellraiser",
       "HellraiserPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者抽到带 Strike 标签的牌时可 自动打出（无限自动打出上限 9，附带额外 VFX）；数据在持有者阵营回合 结束时重置。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "HELLRAISER_POWER",
     "kind": "power",
-    "name": "Hellraiser",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Hellraiser"
   },
   "HEX_POWER": {
-    "affliction_keys": [
-      "HEXED"
-    ],
     "aliases": [
       "HEX",
       "Hex",
       "HexPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "给持有者所有卡牌（及新牌）附加 Hexed；power 存在期间 Hexed 牌获得虚无（Ethereal）关键词。施加者死亡 时移除；移除时清除 Hexed。",
-    "host_of_affliction": true,
+    "detail": {
+      "affliction_keys": [
+        "HEXED"
+      ],
+      "counter_class": false,
+      "host_of_affliction": true,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
     "id": "HEX_POWER",
     "kind": "power",
-    "name": "诅咒",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Single"
+    "name": "诅咒"
   },
   "HIGH_VOLTAGE_POWER": {
     "aliases": [
@@ -1847,30 +1887,32 @@
       "High Voltage",
       "HighVoltagePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者阵营回合结束时获得 +Amount STRENGTH_POWER。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "HIGH_VOLTAGE_POWER",
     "kind": "power",
-    "name": "High Voltage",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "High Voltage"
   },
   "HOTFIX": {
     "aliases": [
       "HOTFIX",
       "Temporary Focus"
     ],
-    "curated": false,
-    "description": "Gain Focus until the end of this turn.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "HOTFIX",
     "kind": "power",
-    "name": "Temporary Focus",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Temporary Focus"
   },
   "ILLUSION_POWER": {
     "aliases": [
@@ -1878,44 +1920,47 @@
       "Illusion",
       "IllusionPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "死亡时保留增益（减益除非常驻类 外均移除），排入带 HealIntent 的 REVIVE_MOVE——回复至满血 （MaxHp - CurrentHp）。施加时若无 MINION_POWER 则补 1 层。复活期间 持有者不可被选中。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "ILLUSION_POWER",
     "kind": "power",
-    "name": "幻象",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "幻象"
   },
   "IMBALANCED": {
     "aliases": [
       "Imbalanced"
     ],
-    "curated": true,
-    "description": "物主的攻击被完全格挡时眩晕（石碗虫改为设置 IsOffBalance）。部分格挡不触发。对局40 live：红面具弱化把头槌 15→11 显示；血墙16≥11 → 同敌方回合眩晕；三人组在眩晕窗内清场。",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
     "id": "IMBALANCED",
     "kind": "power",
-    "name": "失衡",
-    "power_type": "Debuff",
-    "stack_type": "Single"
+    "name": "失衡"
   },
   "IMBALANCED_POWER": {
     "aliases": [
       "IMBALANCED",
       "ImbalancedPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "拥有者的攻击被完全格挡时，拥有者被眩晕（碗虫石系走 IsOffBalance）。部分格挡不触发。阈值 = 该攻击的 live 意图值（HEADBUTT 15 级）。对局43：18挡 vs 15 触发眩晕；8挡 vs 15 未触发（漏 7，同回合被随从补刀致死）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
     "id": "IMBALANCED_POWER",
     "kind": "power",
-    "name": "失衡",
-    "play_notes": "对局43 live",
-    "power_type": "Debuff",
-    "stack_type": "Single"
+    "name": "失衡"
   },
   "IMPROVEMENT_POWER": {
     "aliases": [
@@ -1923,29 +1968,32 @@
       "Improvement",
       "ImprovementPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "战斗结束时，随机升级持有者牌库中 Amount 张可升级卡牌。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "IMPROVEMENT_POWER",
     "kind": "power",
-    "name": "Improvement",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Improvement"
   },
   "INFERNO_POWER": {
     "aliases": [
       "INFERNO",
       "Inferno"
     ],
-    "curated": true,
-    "description": "持有者阵营回合开始时失去 1 HP（无视格挡）；持有者在自己回合内失去 HP 时，对所有可命中敌人造成 Amount 点非攻击伤害（卡牌 INFERNO：基础 6、升级 9）。自伤牌（放血/血墙/突破/放血术等）与任意同回合掉血每次事件触发一次 AoE。",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "INFERNO_POWER",
     "kind": "power",
-    "name": "狱火",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "狱火"
   },
   "INFESTED_POWER": {
     "aliases": [
@@ -1953,16 +2001,16 @@
       "Infested",
       "InfestedPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者死亡时在同侧生成 4 只 Wriggler（StartStunned = true）；生成结算完成前战斗结束判定被阻塞。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "INFESTED_POWER",
     "kind": "power",
-    "name": "寄生",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "寄生"
   },
   "INFINITE_BLADES_POWER": {
     "aliases": [
@@ -1970,16 +2018,16 @@
       "Infinite Blades",
       "InfiniteBladesPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者手牌抽取前，在手牌生成 Amount 张 Shiv。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "INFINITE_BLADES_POWER",
     "kind": "power",
-    "name": "Infinite Blades",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Infinite Blades"
   },
   "INTANGIBLE_POWER": {
     "aliases": [
@@ -1987,16 +2035,16 @@
       "Intangible",
       "IntangiblePower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "拥有者每次受到的伤害与 HP 流失实例上限 1；拥有者回合末递减。多段牌每段 1（窗内最优速率）；单发大伤超过 1 的部分全部作废。石日历 52 伤这类遗物 AoE 在层数存续时同样被压成 1。对局43：灵魂异鱼 FADE 施加 2 层，同一敌方回合末减为 1——下一我方回合仍面对虚无 1。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "INTANGIBLE_POWER",
     "kind": "power",
-    "name": "虚无",
-    "play_notes": "对局43 live",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "虚无"
   },
   "INTERCEPT_POWER": {
     "aliases": [
@@ -2004,16 +2052,16 @@
       "Intercept",
       "InterceptPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "对持有者的攻击伤害倍率 = （被掩护生物数 + 1）；与 CoveredPower 联动；敌方阵营回合结束时移除。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "INTERCEPT_POWER",
     "kind": "power",
-    "name": "Intercept",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Intercept"
   },
   "ITERATION_POWER": {
     "aliases": [
@@ -2021,16 +2069,16 @@
       "Iteration",
       "IterationPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者每回合首次抽到状态牌时抽 Amount 张牌（AfterCardDrawn，门控由宿主决定）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ITERATION_POWER",
     "kind": "power",
-    "name": "Iteration",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Iteration"
   },
   "JUGGERNAUT_POWER": {
     "aliases": [
@@ -2038,29 +2086,32 @@
       "Juggernaut",
       "JuggernautPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者每当获得 >0 格挡，对一名随机 可命中敌人造成 Amount 点非攻击伤害。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "JUGGERNAUT_POWER",
     "kind": "power",
-    "name": "Juggernaut",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Juggernaut"
   },
   "JUGGLING_POWER": {
     "aliases": [
       "JUGGLING",
       "Juggling"
     ],
-    "curated": true,
-    "description": "持有者每回合打出的第 3 张攻击牌会复制进手牌（卡牌 JUGGLING）。复制体进手而非自动打出，未被减费时仍耗能。",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "JUGGLING_POWER",
     "kind": "power",
-    "name": "戏法",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "戏法"
   },
   "KNOCKDOWN_POWER": {
     "aliases": [
@@ -2068,16 +2119,16 @@
       "Knockdown",
       "KnockdownPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "除施加者外任何人对持有者的攻击 伤害 ×Amount。持有者阵营回合结束时移除。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "KNOCKDOWN_POWER",
     "kind": "power",
-    "name": "Knockdown",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Knockdown"
   },
   "LEADERSHIP_POWER": {
     "aliases": [
@@ -2085,16 +2136,16 @@
       "Leadership",
       "LeadershipPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者攻击 +Amount 伤害 （ModifyDamageAdditive；触发由宿主决定）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "LEADERSHIP_POWER",
     "kind": "power",
-    "name": "Leadership",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Leadership"
   },
   "LETHALITY_POWER": {
     "aliases": [
@@ -2102,16 +2153,16 @@
       "Lethality",
       "LethalityPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者卡牌来源的攻击伤害 × (1 + Amount/100)（即 +Amount%；触发与生效窗口由宿主卡决定）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "LETHALITY_POWER",
     "kind": "power",
-    "name": "Lethality",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Lethality"
   },
   "LIGHTNING_ROD_POWER": {
     "aliases": [
@@ -2119,30 +2170,32 @@
       "Lightning Rod",
       "LightningRodPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "能量重置时引导 1 个闪电球，随后 -1 层。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "LIGHTNING_ROD_POWER",
     "kind": "power",
-    "name": "Lightning Rod",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Lightning Rod"
   },
   "LOOP": {
     "aliases": [
       "LOOP",
       "Loop"
     ],
-    "curated": false,
-    "description": "At the start of your turn, trigger the passive ability of your next Orb.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "LOOP",
     "kind": "power",
-    "name": "Loop",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Loop"
   },
   "MACHINE_LEARNING_POWER": {
     "aliases": [
@@ -2150,16 +2203,16 @@
       "Machine Learning",
       "MachineLearningPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "每回合 +Amount 抽牌（power 存续期间永久生效）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "MACHINE_LEARNING_POWER",
     "kind": "power",
-    "name": "Machine Learning",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Machine Learning"
   },
   "MAGIC_BOMB_POWER": {
     "aliases": [
@@ -2167,30 +2220,32 @@
       "Magic Bomb",
       "MagicBombPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者阵营回合结束时，若施加者 仍存活，持有者受到 Amount 点非攻击伤害，随后该 power 移除。施加者 死亡时同样移除。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "MAGIC_BOMB_POWER",
     "kind": "power",
-    "name": "Magic Bomb",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Magic Bomb"
   },
   "MANGLE": {
     "aliases": [
       "MANGLE",
       "Temporary Strength Down"
     ],
-    "curated": false,
-    "description": "Lose Strength until the end of this turn.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "MANGLE",
     "kind": "power",
-    "name": "Temporary Strength Down",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Temporary Strength Down"
   },
   "MASTER_PLANNER_POWER": {
     "aliases": [
@@ -2198,16 +2253,16 @@
       "Master Planner",
       "MasterPlannerPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者打出技能牌后，该牌获得 Sly 关键词。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "MASTER_PLANNER_POWER",
     "kind": "power",
-    "name": "Master Planner",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Master Planner"
   },
   "MAYHEM_POWER": {
     "aliases": [
@@ -2215,16 +2270,16 @@
       "Mayhem",
       "MayhemPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者预打出阶段开始时，从抽牌堆 顶自动打出 Amount 张牌（不消耗）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "MAYHEM_POWER",
     "kind": "power",
-    "name": "混乱",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "混乱"
   },
   "MIND_ROT_POWER": {
     "aliases": [
@@ -2232,16 +2287,16 @@
       "Mind Rot",
       "MindRotPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者每回合手牌抽取 -Amount （下限 0）：ModifyHandDraw = max(0, count - Amount)。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "MIND_ROT_POWER",
     "kind": "power",
-    "name": "脑蚀",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "脑蚀"
   },
   "MINION_POWER": {
     "aliases": [
@@ -2249,16 +2304,16 @@
       "Minion",
       "MinionPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "Minion 标记（召唤物/随从）：其死亡不触发战斗结束逻辑（OwnerIsSecondaryEnemy）— 击杀未标记的主体才结束战斗。LIVE 限定条件（run-44 女王 Boss）：当被标记随从是整场战斗的唯一威胁源时，它就是正确的首杀目标。火炬头聚合体（MINION:1）承担全部攻击输出，女王困在「为我燃烧」循环（自封挡 + 给随从加力，本人零输出）；T6 击杀火炬头后压力归零，女王循环同回合解算为个人攻击循环。教条：主体本身是威胁时主体优先成立；当被标记随从是唯一来袭时先杀随从（战斗继续但压力停止），再竞速主体。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "MINION_POWER",
     "kind": "power",
-    "name": "仆从",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "仆从"
   },
   "MONARCHS_GAZE_POWER": {
     "aliases": [
@@ -2266,45 +2321,47 @@
       "Monarch's Gaze",
       "MonarchsGazePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者的攻击命中时，对目标施加 Amount 层 MONARCHS_GAZE_STRENGTH_DOWN_POWER（力量削减引擎在目标上）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "MONARCHS_GAZE_POWER",
     "kind": "power",
-    "name": "Monarchs Gaze",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Monarchs Gaze"
   },
   "MONARCHS_GAZE_STRENGTH_DOWN": {
     "aliases": [
       "MONARCHS_GAZE_STRENGTH_DOWN",
       "Temporary Strength Down"
     ],
-    "curated": false,
-    "description": "Lose Strength until the end of this turn.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "MONARCHS_GAZE_STRENGTH_DOWN",
     "kind": "power",
-    "name": "Temporary Strength Down",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Temporary Strength Down"
   },
   "MONARCHS_GAZE_STRENGTH_DOWN_POWER": {
     "aliases": [
       "MonarchsGazePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "由 MonarchsGaze 施加的力量削减标记；配套减益逻辑由君主卡牌宿主。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "MONARCHS_GAZE_STRENGTH_DOWN_POWER",
     "kind": "power",
-    "name": "Monarchs Gaze",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Monarchs Gaze"
   },
   "MONOLOGUE_POWER": {
     "aliases": [
@@ -2312,16 +2369,16 @@
       "Monologue",
       "MonologuePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "出牌力量引擎——追踪 StrengthApplied， 按打出牌数施加/回退 STRENGTH（由宿主卡驱动；显示层数为累积力量）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "MONOLOGUE_POWER",
     "kind": "power",
-    "name": "Monologue",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Monologue"
   },
   "NECRO_MASTERY_POWER": {
     "aliases": [
@@ -2329,30 +2386,32 @@
       "Necro Mastery",
       "NecroMasteryPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者的 Osty 宠物失去 HP 时， 对所有可命中敌人造成（失去 HP × Amount）点不可格挡、非攻击伤害。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "NECRO_MASTERY_POWER",
     "kind": "power",
-    "name": "Necro Mastery",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Necro Mastery"
   },
   "NEMESIS": {
     "aliases": [
       "NEMESIS",
       "Nemesis"
     ],
-    "curated": false,
-    "description": "At the end of every other turn, gains Intangible 1.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "NEMESIS",
     "kind": "power",
-    "name": "Nemesis",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Nemesis"
   },
   "NEUROSURGE_POWER": {
     "aliases": [
@@ -2360,16 +2419,16 @@
       "Neurosurge",
       "NeurosurgePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者阵营回合开始时对持有者 施加 Amount 层 DOOM。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "NEUROSURGE_POWER",
     "kind": "power",
-    "name": "Neurosurge",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Neurosurge"
   },
   "NIGHTMARE_POWER": {
     "aliases": [
@@ -2377,16 +2436,16 @@
       "Nightmare",
       "NightmarePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者手牌抽取前，向手牌加入 Amount 张所选牌的复制（复制体清除减益附着）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "NIGHTMARE_POWER",
     "kind": "power",
-    "name": "噩梦",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "噩梦"
   },
   "NOSTALGIA_POWER": {
     "aliases": [
@@ -2394,16 +2453,16 @@
       "Nostalgia",
       "NostalgiaPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "修改打出牌的结算牌堆/位置（按宿主 卡面文案）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "NOSTALGIA_POWER",
     "kind": "power",
-    "name": "Nostalgia",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Nostalgia"
   },
   "NOXIOUS_FUMES_POWER": {
     "aliases": [
@@ -2411,30 +2470,32 @@
       "Noxious Fumes",
       "NoxiousFumesPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者阵营回合开始时 对所有可命中敌人施加 Amount 层 POISON。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "NOXIOUS_FUMES_POWER",
     "kind": "power",
-    "name": "恶臭气体",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "恶臭气体"
   },
   "NO_BLOCK": {
     "aliases": [
       "NO_BLOCK",
       "No Block"
     ],
-    "curated": false,
-    "description": "You cannot gain Block from cards for 2 turns.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "NO_BLOCK",
     "kind": "power",
-    "name": "No Block",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "No Block"
   },
   "NO_DRAW_POWER": {
     "aliases": [
@@ -2442,16 +2503,16 @@
       "No Draw",
       "NoDrawPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "本回合内持有者的非起手抽牌 （卡牌效果抽牌）被封锁。持有者阵营回合结束时移除。起手抽牌不受影响。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
     "id": "NO_DRAW_POWER",
     "kind": "power",
-    "name": "禁止抽牌",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Single"
+    "name": "禁止抽牌"
   },
   "NO_ENERGY_GAIN_POWER": {
     "aliases": [
@@ -2459,16 +2520,16 @@
       "No Energy Gain",
       "NoEnergyGainPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "本回合持有者获得的能量变为 0。 持有者阵营回合结束时移除。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
     "id": "NO_ENERGY_GAIN_POWER",
     "kind": "power",
-    "name": "No Energy Gain",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Single"
+    "name": "No Energy Gain"
   },
   "OBLIVION_POWER": {
     "aliases": [
@@ -2476,16 +2537,16 @@
       "Oblivion",
       "OblivionPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "施加者玩家每打出一张牌，对持有者 施加 Amount 层 DOOM。玩家阵营回合结束时移除。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "OBLIVION_POWER",
     "kind": "power",
-    "name": "Oblivion",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Oblivion"
   },
   "ONE_TWO_PUNCH_POWER": {
     "aliases": [
@@ -2493,16 +2554,16 @@
       "One-Two Punch",
       "OneTwoPunchPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "持有者接下来 Amount 次攻击牌 打出计为 2 次；每打出 1 张攻击牌消耗 1 层；持有者阵营回合结束时移除。 LIVE run-47 化石追踪者 T1：经技能药水免费获得；双打 Bash 在同一目标上结算两次——第一击 8（基础），第二击 12（第一击 Bash 施加的易伤下 8×1.5）；双次施加使易伤层数达 4。竞速教条：OneTwoPunch + 能量燃料 + Bash/熔融链可在 SUCK 类精英攻击意图出手前 T1 击杀。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ONE_TWO_PUNCH_POWER",
     "kind": "power",
-    "name": "One Two Punch",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "One Two Punch"
   },
   "ORBIT_POWER": {
     "aliases": [
@@ -2510,16 +2571,16 @@
       "Orbit",
       "OrbitPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者每通过卡牌花费 4 点能量，触发 获得 Amount 能量（阈值 4）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ORBIT_POWER",
     "kind": "power",
-    "name": "Orbit",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Orbit"
   },
   "OUTBREAK_POWER": {
     "aliases": [
@@ -2527,16 +2588,16 @@
       "Outbreak",
       "OutbreakPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者每次对他人施加 POISON（数值 变化 > 0）计 1 次；每第 3 次对所有可命中敌人造成 Amount 点非攻击 伤害；内部计数对 3 取模。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "OUTBREAK_POWER",
     "kind": "power",
-    "name": "Outbreak",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Outbreak"
   },
   "PAGESTORM_POWER": {
     "aliases": [
@@ -2544,16 +2605,16 @@
       "Pagestorm",
       "PagestormPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者每当抽到虚无（Ethereal）牌， 额外抽 Amount 张。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PAGESTORM_POWER",
     "kind": "power",
-    "name": "Pagestorm",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Pagestorm"
   },
   "PAINFUL_STABS_POWER": {
     "aliases": [
@@ -2561,29 +2622,32 @@
       "Painful Stabs",
       "PainfulStabsPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者攻击对玩家造成未格挡伤害 时，对该玩家施加 Wound 状态牌（逐次命中逻辑见 AfterAttack；持有者 死亡后 power 与生物按移除规则保留）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PAINFUL_STABS_POWER",
     "kind": "power",
-    "name": "Painful Stabs",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Painful Stabs"
   },
   "PALE_BLUE_DOT_POWER": {
     "aliases": [
       "PALE_BLUE_DOT",
       "Pale Blue Dot"
     ],
-    "curated": true,
-    "description": "若持有者上回合打出 ≥5 张牌，本回合额外抽 Amount 张（卡牌 PALE_BLUE_DOT，储君池：基础抽 1、升级抽 2）。",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PALE_BLUE_DOT_POWER",
     "kind": "power",
-    "name": "苍白蓝点",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "苍白蓝点"
   },
   "PANACHE_POWER": {
     "aliases": [
@@ -2591,16 +2655,16 @@
       "Panache",
       "PanachePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者每打出第 5 张牌，对所有 可命中敌人造成 Amount 点非攻击伤害（`CardsLeft` 初始 5，首张后递减， 触发及回合结束时重置为 5）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PANACHE_POWER",
     "kind": "power",
-    "name": "实例化",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "实例化"
   },
   "PAPER_CUTS_POWER": {
     "aliases": [
@@ -2608,17 +2672,16 @@
       "Paper Cuts",
       "PaperCutsPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "持有者的攻击对玩家造成未格挡伤害 > 0 时，该玩家失去 Amount 点最大 HP。Amount 2 精确——每漏挡一路咬人卷轴类攻击者每回合 −2 MaxHP；**全挡回合零 MaxHP 税**（51 挡对 44 来袭零税）——对策是每个攻击者的挡完整性而非平均挡值。关联配对解码：**Inferno 自身开回合 HP 损失触发 Rupture**（Inferno+Rupture Amount2 同部署 = 每回合被动 +2 力量）**且满足 Spite「本回合掉血」条件**（部署 Inferno 的战斗 Spite 常态双击）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PAPER_CUTS_POWER",
     "kind": "power",
-    "live_notes": "LIVE run-56：咬人卷轴被动。Amount 2——穿挡 HP 税。",
-    "name": "Paper Cuts",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Paper Cuts"
   },
   "PARRY_POWER": {
     "aliases": [
@@ -2626,44 +2689,47 @@
       "Parry",
       "ParryPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "惰性标记 power（Buff，Counter）——自身无钩子；由特定卡牌查询（SovereignBlade 家族招架逻辑）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PARRY_POWER",
     "kind": "power",
-    "name": "招架",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "招架"
   },
   "PERSONAL_HIVE": {
     "aliases": [
       "Personal Hive"
     ],
-    "curated": true,
-    "description": "物主被攻击牌命中时，攻击者抽牌堆随机位置获得 Amount 张眩晕。信息素喷吐同一次读取内增加 Amount 并赋予力量。对局40 live：狱火能力伤害不触发 Hive 税（狱火 tick 期间 Hive 保持 :1；税仅由攻击牌命中触发）；零攻击纯技能回合使 Hive 保持休眠。",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PERSONAL_HIVE",
     "kind": "power",
-    "name": "个人蜂巢",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "个人蜂巢"
   },
   "PERSONAL_HIVE_POWER": {
     "aliases": [
       "PERSONAL_HIVE",
       "PersonalHivePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "拥有者每次被 有源攻击命中时，攻击者的抽牌堆随机位置加入 Amount 张 Dazed。 PHEROMONE_SPIT（蜂群术士）在同一次增益中把 Amount +1 并赋予力量。 层数经 `PERSONAL_HIVE_POWER:n` 可见； 信息素后 n=2，每张有源攻击牌代价 2 张 Dazed——多段攻击按命中次数计税。 在 Buff 回合结束前击杀蜂群术士，否则蜂群意图在翻倍 Dazed 税之上还随力量上涨。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PERSONAL_HIVE_POWER",
     "kind": "power",
-    "name": "个人蜂巢",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "个人蜂巢"
   },
   "PHANTOM_BLADES_POWER": {
     "aliases": [
@@ -2671,29 +2737,32 @@
       "Phantom Blades",
       "PhantomBladesPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者攻击 +Amount 伤害；施加 及卡牌进入战斗时给持有者卡牌附加 Retain。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PHANTOM_BLADES_POWER",
     "kind": "power",
-    "name": "Phantom Blades",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Phantom Blades"
   },
   "PIERCING_WAIL_POWER": {
     "aliases": [
       "PIERCING_WAIL",
       "Temporary Strength Down"
     ],
-    "curated": true,
-    "description": "临时力量子类（负向）：施加时给受影响敌人 -Amount 力量，各敌人阵营回合结束时等量回退。数值为负时显示 Debuff。",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "PIERCING_WAIL_POWER",
     "kind": "power",
-    "name": "穿刺哀嚎",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "穿刺哀嚎"
   },
   "PILLAR_OF_CREATION_POWER": {
     "aliases": [
@@ -2701,16 +2770,16 @@
       "Pillar of Creation",
       "PillarOfCreationPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "为持有者提供 Amount 格挡 （触发由宿主卡牌/遗物决定）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PILLAR_OF_CREATION_POWER",
     "kind": "power",
-    "name": "Pillar Of Creation",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Pillar Of Creation"
   },
   "PLATING_POWER": {
     "aliases": [
@@ -2718,16 +2787,16 @@
       "Plating",
       "PlatingPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "拥有者回合开始时（持有者第1回合除外）−1 层；拥有者回合末获得 Amount 格挡。带镀甲的敌人战斗开始时也获得 Amount 格挡。精确覆盖算式：当前挡 + 回合末镀甲挡 vs 敌方意图。对局43：熟睡甲虫 PLATING 15，挡 15→14→13 随层递减，其每回合末刷新。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PLATING_POWER",
     "kind": "power",
-    "name": "镀甲",
-    "play_notes": "对局43 live",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "镀甲"
   },
   "PLOW_POWER": {
     "aliases": [
@@ -2735,32 +2804,32 @@
       "Plow",
       "PlowPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "owner 在 CurrentHp ≤ Amount 时受到无挡伤害则被眩晕（其临时力量 power 被消耗——decomp 清除 TemporaryStrengthPower 实例）。run-48 仪式兽 live：Amount=150 由 T1 STAMP 施加；T4 无挡突破 17 + 狱火 proc 6 越过 150 同帧触发 STUNNED——Boss Str 4 被消耗、PLOW 22 取消、招式图翻到眩晕分支。阈值取 live Amount（run-23 订正 150），非档案 160。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "PLOW_POWER",
     "kind": "power",
-    "name": "Plow",
-    "play_notes": "run-48 live 2026-09-19：仪式兽 T4 在 150 阈值触发眩晕窗；临时力量 live 消耗。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Plow"
   },
   "POISON": {
     "aliases": [
       "Poison",
       "PoisonPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者阵营回合开始时受到 Amount 点 不可格挡、非攻击来源伤害，随后 -1 层；按触发次数重复。触发次数 = min(层数, 1 + 对面 AccelerantPower 层数之和)。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "POISON",
     "kind": "power",
-    "name": "中毒",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "中毒"
   },
   "POSSESS_SPEED_POWER": {
     "aliases": [
@@ -2768,16 +2837,16 @@
       "Possess Speed",
       "PossessSpeedPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "持有者回合窃取玩家敏捷（每次偷取各持有者 +2 对应属性）。持有者死亡时被窃属性同帧归还玩家——击杀持有者即可收回。遗忘之物携带。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "POSSESS_SPEED_POWER",
     "kind": "power",
-    "name": "夺迅",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "夺迅"
   },
   "POSSESS_STRENGTH_POWER": {
     "aliases": [
@@ -2785,30 +2854,32 @@
       "Possess Strength",
       "PossessStrengthPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "持有者回合窃取玩家力量（每次偷取各持有者 +2 对应属性；玩家力量显示随窃取清空）。持有者死亡时被窃属性同帧归还玩家——击杀持有者即可收回。失落之物携带。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "POSSESS_STRENGTH_POWER",
     "kind": "power",
-    "name": "夺力",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "夺力"
   },
   "PREP_TIME": {
     "aliases": [
       "PREP_TIME",
       "Prep Time"
     ],
-    "curated": false,
-    "description": "At the start of your turn, gain 4 Vigor.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PREP_TIME",
     "kind": "power",
-    "name": "Prep Time",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Prep Time"
   },
   "PYRE_POWER": {
     "aliases": [
@@ -2816,16 +2887,16 @@
       "Pyre",
       "PyrePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "+Amount 最大能量。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "PYRE_POWER",
     "kind": "power",
-    "name": "Pyre",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Pyre"
   },
   "RADIANCE_POWER": {
     "aliases": [
@@ -2833,16 +2904,16 @@
       "Radiance",
       "RadiancePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "能量重置时获得 DynamicVars.Energy 点 能量（数值由施加者设定），随后 -1 层。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "RADIANCE_POWER",
     "kind": "power",
-    "name": "Radiance",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Radiance"
   },
   "RAGE_POWER": {
     "aliases": [
@@ -2850,16 +2921,16 @@
       "Rage",
       "RagePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者每当打出一张攻击牌，获得 Amount 格挡。持有者阵营回合结束时移除该 power。 LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：每次 Rage 数值 3；当回合每张攻击牌 +3 挡。与装饰折扇（3 攻击 +4）叠加为 ~13/回合的攻击密度挡线。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "RAGE_POWER",
     "kind": "power",
-    "name": "愤怒",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "愤怒"
   },
   "RAMPART_POWER": {
     "aliases": [
@@ -2867,17 +2938,16 @@
       "Rampart",
       "RampartPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "玩家阵营回合开始时，每名存活的 TurretOperator 敌人获得 Amount 格挡。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "RAMPART_POWER",
     "kind": "power",
-    "live_notes": "LIVE run-56：活体盾被动 Amount 25。玩家回合初每存活炮台类随从获得 25 挡。优先击杀活体盾。",
-    "name": "Rampart",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Rampart"
   },
   "RAVENOUS_POWER": {
     "aliases": [
@@ -2885,16 +2955,16 @@
       "Ravenous",
       "RavenousPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "同侧另一生物死亡且主人存活时，主人被眩晕进入吞噬招式并获得 +Amount 力量。击杀窗教条（CorpseSlug/SEAPUNK 类）：每回合一杀把队友死亡转化为幸存者的免费眩晕窗 — run-41 live：PS 在 T1 弹珠易伤窗一击带走 26 HP 蛞蝓，幸存者眩晕 +力量4，眩晕回合打击收掉，零伤害。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "RAVENOUS_POWER",
     "kind": "power",
-    "name": "贪婪",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "贪婪"
   },
   "REAPER_FORM_POWER": {
     "aliases": [
@@ -2902,44 +2972,47 @@
       "Reaper Form",
       "ReaperFormPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者（或其宠物）造成攻击伤害 > 0 时，对目标施加 DOOM = 总伤害 × Amount。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "REAPER_FORM_POWER",
     "kind": "power",
-    "name": "Reaper Form",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Reaper Form"
   },
   "REATTACH": {
     "aliases": [
       "Reattach"
     ],
-    "curated": true,
-    "description": "死亡时若其他带重接的段仍存活，物主进入 DEAD 状态（不可选中、不移出战斗）并在其回合结束重接、回复 Amount HP。仅当所有其他段同时死亡时才是真死。对局40 live：同窗清场教条——铺伤，其他段存活时绝不单杀（杀掉最后活段会让全部 DEAD 段各 +Amount 复活）；狱火 9 实例 tick 为三人组控速；最后对 1hp 活段的打击赢得淡出胜利。",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "REATTACH",
     "kind": "power",
-    "name": "重接",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "重接"
   },
   "REATTACH_POWER": {
     "aliases": [
       "REATTACH",
       "ReattachPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "死亡时，若仍有其他 带 Reattach 的体节存活，该体节进入死亡状态（不移出战斗、不可选中）， 并在其回合结束时重组——回复 Amount HP。仅当其他所有体节全部死亡时 其死亡才为致命。死亡期间增益保留。 LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：fade-out 胜确认——最后存活段死亡而其余两段处于 DEAD 态时战斗立即结束（Whirlwind+多段攻击同窗）。在 DEAD 兄弟存活时杀掉活段会触发其 +25 复活；同窗群杀是唯一干净胜法。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "REATTACH_POWER",
     "kind": "power",
-    "name": "重组",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "重组"
   },
   "REBOUND_POWER": {
     "aliases": [
@@ -2947,30 +3020,32 @@
       "Rebound",
       "ReboundPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "打出牌的结算牌堆/位置被修改（按卡面 文案回手等）；持有者阵营回合结束时 -1 层。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "REBOUND_POWER",
     "kind": "power",
-    "name": "Rebound",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Rebound"
   },
   "REFLECT": {
     "aliases": [
       "REFLECT",
       "Reflect"
     ],
-    "curated": false,
-    "description": "Blocked damage is reflected to your attacker.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "REFLECT",
     "kind": "power",
-    "name": "Reflect",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Reflect"
   },
   "REGEN_POWER": {
     "aliases": [
@@ -2978,29 +3053,32 @@
       "Regen",
       "RegenPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者阵营回合结束时回复 Amount HP，随后 -1 层。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "REGEN_POWER",
     "kind": "power",
-    "name": "再生",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "再生"
   },
   "REPTILE_TRINKET_POWER": {
     "aliases": [
       "REPTILE_TRINKET",
       "Temporary Strength"
     ],
-    "curated": true,
-    "description": "临时力量子类：持有者每次使用药水时本回合获得 +Amount 力量（遗物 REPTILE_TRINKET：+3），阵营回合结束时回退。任意药水使用均触发——可与药水自身的力量效果同回合叠加。",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "REPTILE_TRINKET_POWER",
     "kind": "power",
-    "name": "爬虫饰品",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "爬虫饰品"
   },
   "RETAIN_HAND_POWER": {
     "aliases": [
@@ -3008,36 +3086,35 @@
       "Retain Hand",
       "RetainHandPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者回合结束时手牌不被弃置 （ShouldFlush false）；持有者阵营回合结束时 -1 层。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "RETAIN_HAND_POWER",
     "kind": "power",
-    "name": "Retain Hand",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Retain Hand"
   },
   "RINGING_POWER": {
-    "affliction_keys": [
-      "RINGING"
-    ],
     "aliases": [
       "RINGING",
       "Ringing",
       "RingingPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "施加时给 owner 全部手牌上 Ringing；战斗中新入手的牌同样获得。Ringing 牌在 owner 本回合已打出过任意牌后不可再打。power 在 owner 侧回合结束时自清（Ringing 全消）。run-48 仪式兽 live：桥强制执行该限制——首张 ok，其余全部 no(None)；药水不算卡（RINGING 回合复制器+上勾拳结算 48 伤）。档案「约 2 次有效出牌」旧 folklore 已死——以桥 ok/no 为准。",
-    "host_of_affliction": true,
+    "detail": {
+      "affliction_keys": [
+        "RINGING"
+      ],
+      "counter_class": true,
+      "host_of_affliction": true,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
     "id": "RINGING_POWER",
     "kind": "power",
-    "name": "耳鸣",
-    "play_notes": "run-48 live 2026-09-19：RINGING 回合桥对首卡之后全部 no(None)；药水+卡牌同回合爆发合法。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "power_type": "Debuff",
-    "stack_type": "Single"
+    "name": "耳鸣"
   },
   "RITUAL_POWER": {
     "aliases": [
@@ -3045,30 +3122,32 @@
       "Ritual",
       "RitualPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者阵营回合结束时获得 +Amount STRENGTH_POWER（若由敌方在其回合施加，当回合跳过不触发）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "RITUAL_POWER",
     "kind": "power",
-    "name": "仪式",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "仪式"
   },
   "ROLLING_BOULDER": {
     "aliases": [
       "ROLLING_BOULDER",
       "Rolling Boulder"
     ],
-    "curated": false,
-    "description": "At the start of your turn, deal  damage to ALL enemies and increase this damage by 5.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ROLLING_BOULDER",
     "kind": "power",
-    "name": "Rolling Boulder",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Rolling Boulder"
   },
   "ROYALTIES_POWER": {
     "aliases": [
@@ -3076,16 +3155,16 @@
       "Royalties",
       "RoyaltiesPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "宿主型 utility power（Buff，Counter）——触发逻辑由源卡牌承载；见宿主卡面。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "ROYALTIES_POWER",
     "kind": "power",
-    "name": "王权",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "王权"
   },
   "RUPTURE_POWER": {
     "aliases": [
@@ -3093,16 +3172,16 @@
       "Rupture",
       "RupturePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者在本方阵营回合内受到来自 卡牌来源的未格挡伤害时，该卡牌的结算为持有者施加 +Amount STRENGTH （按卡追踪）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "RUPTURE_POWER",
     "kind": "power",
-    "name": "破灭",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "破灭"
   },
   "SANDPIT_POWER": {
     "aliases": [
@@ -3110,16 +3189,16 @@
       "Sandpit",
       "SandpitPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "The Insatiable 的击杀倒计时—— **初始 4 层**，敌方阵营回合开始（late）时 -1；**归 0 时玩家被直接吞噬， 无视 HP/格挡**（不可格挡的处决——此前被误判为 意图显示 bug）。Boss 开战时向玩家牌库注入 **6 张 FranticEscape**；打出 一张 **沙坑 Amount +1**（该牌自身费用永久 +1）——留到计数 1–2 时作紧急 延时用，既不可全程不打，也不可早早挥霍。战斗计划：输出竞速优先（格挡 拦不住吞噬），每回合跟踪沙坑层数。 run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log)：Boss 打印开局为 4；FE 延时 live 1→2→3；吞噬计时器是本战胜负手 — 竞速打血，counter 1-2 时用 FE 延时。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SANDPIT_POWER",
     "kind": "power",
-    "name": "沙坑",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "沙坑"
   },
   "SEEKING_EDGE_POWER": {
     "aliases": [
@@ -3127,16 +3206,16 @@
       "Seeking Edge",
       "SeekingEdgePower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "惰性标记 power（Buff，Counter）——自身无钩子；由 SovereignBlade 家族卡牌查询。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SEEKING_EDGE_POWER",
     "kind": "power",
-    "name": "寻隙锋",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "寻隙锋"
   },
   "SELF_FORMING_CLAY_POWER": {
     "aliases": [
@@ -3144,16 +3223,16 @@
       "Self-Forming Clay",
       "SelfFormingClayPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者格挡被 清空时，获得 Amount 格挡一次并移除该 power。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SELF_FORMING_CLAY_POWER",
     "kind": "power",
-    "name": "自成型黏土",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "自成型黏土"
   },
   "SENTRY_MODE_POWER": {
     "aliases": [
@@ -3161,16 +3240,16 @@
       "Sentry Mode",
       "SentryModePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者手牌抽取前，向手牌加入 Amount 张 SweepingGaze。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SENTRY_MODE_POWER",
     "kind": "power",
-    "name": "Sentry Mode",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Sentry Mode"
   },
   "SERPENT_FORM_POWER": {
     "aliases": [
@@ -3178,43 +3257,48 @@
       "Serpent Form",
       "SerpentFormPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者每打出一张牌，对一名随机 敌人造成 Amount 点非攻击伤害（按打出时记录的数值）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SERPENT_FORM_POWER",
     "kind": "power",
-    "name": "Serpent Form",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Serpent Form"
   },
   "SETUP_STRIKE_POWER": {
     "aliases": [
       "SETUP_STRIKE",
       "Temporary Strength"
     ],
-    "curated": true,
-    "description": "临时力量子类：本回合内 +Amount 力量（卡牌 SETUP_STRIKE：基础 +2、升级 +3），持有者阵营回合结束时回退。",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SETUP_STRIKE_POWER",
     "kind": "power",
-    "name": "预备打击",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "预备打击"
   },
   "SHACKLING_POTION": {
     "aliases": [
       "SHACKLING_POTION",
       "Temporary Strength Down"
     ],
-    "curated": false,
-    "description": "Lose Strength until the end of this turn.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "SHACKLING_POTION",
     "kind": "power",
-    "name": "Temporary Strength Down",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Temporary Strength Down"
   },
   "SHADOWMELD_POWER": {
     "aliases": [
@@ -3222,30 +3306,32 @@
       "Shadowmeld",
       "ShadowmeldPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者获得的格挡 ×2^Amount； 持有者阵营回合结束时移除。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SHADOWMELD_POWER",
     "kind": "power",
-    "name": "Shadowmeld",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Shadowmeld"
   },
   "SHADOW_STEP": {
     "aliases": [
       "SHADOW_STEP",
       "Shadow Step"
     ],
-    "curated": false,
-    "description": "For the next 2 turns after this one, Attacks deal double damage.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SHADOW_STEP",
     "kind": "power",
-    "name": "Shadow Step",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Shadow Step"
   },
   "SHRIEK_POWER": {
     "aliases": [
@@ -3253,16 +3339,16 @@
       "Shriek",
       "ShriekPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "持有者在 CurrentHp <= Amount 时受到未格挡伤害，则被击晕进入 TerrorEel 恐惧状态并自移除该 power。 击晕在未格挡伤害越过 HP 区间时触发（观测窗口 68–74 HP；确切 Amount 未在 state 暴露）——阈值以上的攻击无效果，战术=先把鳗鱼打进区间再用未格挡伤害触发。 LIVE run-47 骇鳗精英 T7：无挡 Strike 落在鳗鱼 68 HP（SHRIEK:70 括号内）触发眩晕；鳗鱼 move=STUNNED，Vigor 加成的 CRASH 22 在我方 16 HP 时同回合被取消。本实例 FREE_ATTACK_POWER 未出现在玩家 powers 中——打击仍 cost=1、能量照常消耗（对 run-41 档案备注的 live 修正；眩晕本身正确触发）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "SHRIEK_POWER",
     "kind": "power",
-    "name": "可为负",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "可为负"
   },
   "SHRINK_POWER": {
     "aliases": [
@@ -3270,16 +3356,16 @@
       "Shrink",
       "ShrinkPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者造成的攻击伤害 ×0.75（`DamageDecrease` 30 → (100-30)/100）。 持有者阵营回合结束时 -1 层；施加者死亡时移除。视觉：持有者缩至 0.5。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "SHRINK_POWER",
     "kind": "power",
-    "name": "缩小",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "缩小"
   },
   "SHROUD_POWER": {
     "aliases": [
@@ -3287,16 +3373,16 @@
       "Shroud",
       "ShroudPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "为持有者提供 Amount 格挡（触发由宿主 卡牌/遗物决定）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SHROUD_POWER",
     "kind": "power",
-    "name": "Shroud",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Shroud"
   },
   "SIC_EM_POWER": {
     "aliases": [
@@ -3304,16 +3390,16 @@
       "Sic 'Em",
       "SicEmPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "施加者的 Osty 宠物对持有者造成伤害 时，为宠物主人召唤 Amount 只 Osty。持有者阵营回合结束时移除。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "SIC_EM_POWER",
     "kind": "power",
-    "name": "Sic Em",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Sic Em"
   },
   "SIGNAL_BOOST_POWER": {
     "aliases": [
@@ -3321,57 +3407,63 @@
       "Signal Boost",
       "SignalBoostPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者接下来 Amount 次 Power 牌 打出计为 2 次；每打出 1 张 Power 牌消耗 1 层。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SIGNAL_BOOST_POWER",
     "kind": "power",
-    "name": "Signal Boost",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Signal Boost"
   },
   "SKITTISH": {
     "aliases": [
       "Skittish"
     ],
-    "curated": true,
-    "description": "物主本回合未获得格挡且受到卡牌攻击伤害时获得 Amount 挡（每回合一次；标记在对方回合结束重置）。对局40 live 鳗四件组：突破 AllEnemies 同一指令触发四只全部易惊（AoE 结算后各+6）；同回合后续攻击全额命中——AoE 穿透教条成立。",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SKITTISH",
     "kind": "power",
-    "name": "易惊",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "易惊"
   },
   "SKITTISH_POWER": {
     "aliases": [
       "SKITTISH",
       "SkittishPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "持有者本回合未获得过格挡且受到卡牌 来源的攻击伤害时，获得 Amount 格挡（每回合一次标记；标记在对方阵营 回合结束时重置）。 run-53 live 2026-09-19：花园幽灵鳗四件组各自 SKITTISH:6；每条鳗首张攻击牌结算后获得+6挡（7伤 strike→鳗6挡）。多段单指令穿透（全部命中先于挡结算）——Whirlwind X=4 穿 Skittish 清场。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SKITTISH_POWER",
     "kind": "power",
-    "name": "Skittish",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Skittish"
   },
   "SLEIGHT_OF_FLESH_POWER": {
     "aliases": [
       "SLEIGHT_OF_FLESH",
       "Sleight of Flesh"
     ],
-    "curated": true,
-    "description": "持有者每次对敌人施加非临时减益时，对该敌人造成 Amount 点非攻击伤害（卡牌 SLEIGHT_OF_FLESH，亡灵契约师：基础 9、升级 13）。临时属性类减益不触发。",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SLEIGHT_OF_FLESH_POWER",
     "kind": "power",
-    "name": "血肉戏法",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "血肉戏法"
   },
   "SLIPPERY_POWER": {
     "aliases": [
@@ -3379,32 +3471,32 @@
       "Slippery",
       "SlipperyPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "对持有者任何 >= 1 的 HP 损失 降为恰好 1；每次造成 >= 1 未格挡伤害的命中消耗 1 层。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SLIPPERY_POWER",
     "kind": "power",
-    "live_notes": "LIVE run-56：墨影幻灵 Act1 Boss Slippery:8。每次命中消耗 1 层充能，伤害上限为剩余充能。run-42 教条确认。",
-    "name": "湿滑",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "湿滑"
   },
   "SLOTH_POWER": {
     "aliases": [
       "SLOTH",
       "Sloth"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "减益计数：持有者每回合最多出 Amount 张牌（回合开始重置；显示为本回合已出牌数）。由知识恶魔 CURSE_OF_KNOWLEDGE 选择牌 SLOTH 以 Amount 3 施加。击杀窗语义：上限即战斗约束——需超过 Amount 张出牌的爆发线在怠惰下失效；按 3 张线规划（放血+旋风计 2 张）。run-46 live：HP38 对 106HP 知识恶魔选怠惰弃崩解——3 张上限胜过 13/回合税升级；同战 FF+Ashes 2 张线在上限内收头。",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "SLOTH_POWER",
     "kind": "power",
-    "name": "怠惰",
-    "play_notes": "run-46 live: Sloth 3-plays/turn cap from KnowledgeDemon curse; beat Disintegration tax at low HP. | run-46 live：知识恶魔怠惰 3 张/回合上限；HP38 时胜过崩解税升级；2 张 FF+Ashes 线在上限内收头。",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "怠惰"
   },
   "SLOW_POWER": {
     "aliases": [
@@ -3412,17 +3504,16 @@
       "Slow",
       "SlowPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "持有者受到的攻击伤害 × (1 + 0.1 × 本回合玩家已打出的卡牌数)。`SlowAmount` 每打出一张牌 +1， 持有者阵营回合开始时归零。显示层数 = SlowAmount × 10。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "SLOW_POWER",
     "kind": "power",
-    "live_notes": "LIVE run-56：旧日雕像精英。SLOW_POWER 计数器——攻击意图随剩余计数缩放。",
-    "name": "缓速",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "缓速"
   },
   "SLUMBER_POWER": {
     "aliases": [
@@ -3430,50 +3521,51 @@
       "Slumber",
       "SlumberPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "受到未格挡伤害时与拥有者回合末各递减 1；归零时醒来（熟睡甲虫 → ROLL_OUT 循环）。沉睡中 0 威胁；任何穿透格挡的微量伤害都会加速醒来。对局43：Slumber 3→2→1→ 中途醒来，ROLL_OUT 在玩家 6HP 时完成击杀。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SLUMBER_POWER",
     "kind": "power",
-    "name": "沉睡",
-    "play_notes": "对局43 live",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "沉睡"
   },
   "SMOGGY_POWER": {
-    "affliction_keys": [
-      "SMOG"
-    ],
     "aliases": [
       "SMOGGY",
       "Smoggy",
       "SmoggyPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者打出一张技能牌后，给所有 未附加减益的技能牌附加 Smog；本回合已打出过技能后进入战斗的新技能牌 同样附加。power 存在期间 Smog 牌不可打出。持有者阵营回合结束时清除 Smog。",
-    "host_of_affliction": true,
+    "detail": {
+      "affliction_keys": [
+        "SMOG"
+      ],
+      "counter_class": false,
+      "host_of_affliction": true,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
     "id": "SMOGGY_POWER",
     "kind": "power",
-    "name": "烟雾",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Single"
+    "name": "烟雾"
   },
   "SMOKESTACK": {
     "aliases": [
       "SMOKESTACK",
       "Smokestack"
     ],
-    "curated": false,
-    "description": "Whenever you create a Status, deal damage to ALL enemies.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SMOKESTACK",
     "kind": "power",
-    "name": "Smokestack",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Smokestack"
   },
   "SNEAKY_POWER": {
     "aliases": [
@@ -3481,16 +3573,16 @@
       "Sneaky",
       "SneakyPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "为持有者提供 Amount 格挡（触发由宿主 卡牌决定）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SNEAKY_POWER",
     "kind": "power",
-    "name": "Sneaky",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Sneaky"
   },
   "SOAR_POWER": {
     "aliases": [
@@ -3498,16 +3590,16 @@
       "Soar",
       "SoarPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者受到的攻击伤害 ×0.5 （`DamageDecrease` 50/100）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "SOAR_POWER",
     "kind": "power",
-    "name": "Soar",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Soar"
   },
   "SPECTRUM_SHIFT_POWER": {
     "aliases": [
@@ -3515,52 +3607,61 @@
       "Spectrum Shift",
       "SpectrumShiftPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者手牌抽取前，加入 Amount 张不重复的无色池卡牌。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SPECTRUM_SHIFT_POWER",
     "kind": "power",
-    "name": "Spectrum Shift",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Spectrum Shift"
   },
   "SPEEDSTER_POWER": {
     "aliases": [
       "SPEEDSTER",
       "Speedster"
     ],
-    "curated": true,
-    "description": "持有者每次在常规抽牌之外抽牌时，对所有可命中敌人造成 Amount 点非攻击伤害（卡牌 SPEEDSTER，静默池：基础 2、固有；升级数值见卡面）。",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SPEEDSTER_POWER",
     "kind": "power",
-    "name": "疾行者",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "疾行者"
   },
   "SPEED_POTION": {
     "aliases": [
       "SPEED_POTION",
       "Temporary Dexterity"
     ],
-    "curated": false,
-    "description": "Gain Dexterity until the end of this turn.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SPEED_POTION",
     "kind": "power",
-    "name": "Temporary Dexterity",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Temporary Dexterity"
   },
   "SPEED_POTION_POWER": {
-    "curated": true,
-    "description": "临时敏捷子类：施加时 +Amount 敏捷（速度药水 = +5），持有者阵营回合结束时回退。不是抽牌药水（区别于迅捷药水）——按同回合格挡价值使用；敏捷加成下回合即失效。",
+    "aliases": [],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SPEED_POTION_POWER",
     "kind": "power",
-    "name": "速度药水之力",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "速度药水之力"
   },
   "SPINNER_POWER": {
     "aliases": [
@@ -3568,16 +3669,16 @@
       "Spinner",
       "SpinnerPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "能量重置时引导 Amount 个玻璃球 （GlassOrb）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SPINNER_POWER",
     "kind": "power",
-    "name": "Spinner",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Spinner"
   },
   "SPIRIT_OF_ASH_POWER": {
     "aliases": [
@@ -3585,16 +3686,16 @@
       "Spirit of Ash",
       "SpiritOfAshPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者出牌前获得 Amount 格挡 （触发由宿主卡牌决定）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SPIRIT_OF_ASH_POWER",
     "kind": "power",
-    "name": "Spirit Of Ash",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Spirit Of Ash"
   },
   "STAMPEDE_POWER": {
     "aliases": [
@@ -3602,16 +3703,16 @@
       "Stampede",
       "StampedePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者自动后打出阶段时，从手牌自动 打出 Amount 张攻击牌。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "STAMPEDE_POWER",
     "kind": "power",
-    "name": "Stampede",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Stampede"
   },
   "STAR_NEXT_TURN_POWER": {
     "aliases": [
@@ -3619,16 +3720,16 @@
       "Star Next Turn",
       "StarNextTurnPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "下次能量重置时获得 Amount 星辰， 随后移除。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "STAR_NEXT_TURN_POWER",
     "kind": "power",
-    "name": "Star Next Turn",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Star Next Turn"
   },
   "STEAM_ERUPTION_POWER": {
     "aliases": [
@@ -3636,16 +3737,16 @@
       "Steam Eruption",
       "SteamEruptionPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "持有者死亡处理——死亡时战斗不 立即结束，增益保留供后续遭遇逻辑使用。 LIVE run-47 瀑布巨兽：每敌方回合 +3 层，基础 15（T1–T11 观察 15→18→21→24→27→30→33→36→39→42）；本体死亡时 EXPLODE 死亡打击 = 当前 Steam 量，作为假人 EXPLODE_MOVE 攻击结算（Steam 42 时 live atk:42）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "STEAM_ERUPTION_POWER",
     "kind": "power",
-    "name": "Steam Eruption",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Steam Eruption"
   },
   "STOCK_POWER": {
     "aliases": [
@@ -3653,16 +3754,16 @@
       "Stock",
       "StockPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者死亡（Amount > 0）时，在 同格生成 1 只 Axebot，其 StockAmount = Amount - 1（机器人形态链）； 生成期间战斗不结束。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "STOCK_POWER",
     "kind": "power",
-    "name": "储备",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "储备"
   },
   "STORM_POWER": {
     "aliases": [
@@ -3670,16 +3771,16 @@
       "Storm",
       "StormPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者每打出一张 Power 牌，引导 Amount 个闪电球。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "STORM_POWER",
     "kind": "power",
-    "name": "Storm",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Storm"
   },
   "STRANGLE_POWER": {
     "aliases": [
@@ -3687,16 +3788,16 @@
       "Strangle",
       "StranglePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "施加者玩家每打出一张牌，持有者 受到 Amount 点不可格挡、非攻击伤害。持有者阵营回合结束时移除。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "STRANGLE_POWER",
     "kind": "power",
-    "name": "Strangle",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Strangle"
   },
   "STRATAGEM_POWER": {
     "aliases": [
@@ -3704,16 +3805,16 @@
       "Stratagem",
       "StratagemPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "洗牌时按选择偏好将抽牌堆中的牌移入 手牌（选择逻辑由宿主决定）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "STRATAGEM_POWER",
     "kind": "power",
-    "name": "Stratagem",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Stratagem"
   },
   "STRENGTH_POWER": {
     "aliases": [
@@ -3721,16 +3822,16 @@
       "Strength",
       "StrengthPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者每次攻击命中 +Amount 伤害（多段逐段附加）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "STRENGTH_POWER",
     "kind": "power",
-    "name": "力量",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "力量"
   },
   "SUBROUTINE_POWER": {
     "aliases": [
@@ -3738,29 +3839,32 @@
       "Subroutine",
       "SubroutinePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "Power 牌打出追踪——触发逻辑由宿主 卡决定（见卡面文案）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SUBROUTINE_POWER",
     "kind": "power",
-    "name": "Subroutine",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Subroutine"
   },
   "SUCK_POWER": {
     "aliases": [
       "SUCK",
       "Suck"
     ],
-    "curated": true,
-    "description": "持有者的攻击牌对任意目标造成未格挡伤害后，按成功命中实例每段 +Amount 力量（化石追踪者被动：+3）。攻击意图被完全格挡的回合不触发——格挡攻击轮可阻止力量滚雪球。",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SUCK_POWER",
     "kind": "power",
-    "name": "汲取",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "汲取"
   },
   "SUMMON_NEXT_TURN_POWER": {
     "aliases": [
@@ -3768,16 +3872,16 @@
       "Summon Next Turn",
       "SummonNextTurnPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者玩家回合开始时召唤 Amount 只 Osty 宠物，随后移除该 power。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SUMMON_NEXT_TURN_POWER",
     "kind": "power",
-    "name": "Summon Next Turn",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Summon Next Turn"
   },
   "SURPRISE_POWER": {
     "aliases": [
@@ -3785,16 +3889,16 @@
       "Surprise",
       "SurprisePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者死亡处理——直至惊喜召唤逻辑 （CreatureCmd.Add 下一只怪物）完成前战斗不结束。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "SURPRISE_POWER",
     "kind": "power",
-    "name": "Surprise",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Surprise"
   },
   "SURROUNDED_POWER": {
     "aliases": [
@@ -3802,30 +3906,32 @@
       "Surrounded",
       "SurroundedPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "站位状态；当攻击者带有与 持有者朝向匹配的 BACK_ATTACK_LEFT_POWER / BACK_ATTACK_RIGHT_POWER 标记时，对持有者的攻击伤害 ×1.5。标记本身为惰性 Single Buff。朝向规则 （反编译）：玩家打出指向某生物的卡牌/药水、且该生物的 BACK_ATTACK 标记 与当前朝向相反时，持有者朝向翻转——即指向某爪即面向该爪，另一只爪成为 ×1.5 的侧击者。侧击生物死亡时，若存活方标记同侧，朝向重定向至该标记 持有者。 LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：每次指定生物的出牌/用药都会翻转朝向——打碾碎爪后 THRASH 18→12，下一打 Bash 火箭当回合又翻回 18。建议每回合锁定单一侧翼方向；混目标回合反复付 ×1.5 税。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
     "id": "SURROUNDED_POWER",
     "kind": "power",
-    "live_notes": "LIVE run-56：皇蟹战玩家侧 debuff。由火箭槽位施加——双体包围状态标记。",
-    "name": "被夹击",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Single"
+    "name": "被夹击"
   },
   "SWIPE_POWER": {
     "aliases": [
       "SWIPE",
       "Swipe"
     ],
-    "curated": true,
-    "description": "持有者控制 1 张被窃牌库卡（偷窃草蜢 THIEVERY_MOVE 优先级：非铭刻罕见 → 普通/稀有/事件 → 基础/任务 → 远古/铭刻）；持有者死亡时被窃牌归还受害者牌库并额外给一张卡牌奖励。幸运飞鱼在静默加牌时 +15 金。",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "SWIPE_POWER",
     "kind": "power",
-    "name": "夺取",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "夺取"
   },
   "SWORD_SAGE_POWER": {
     "aliases": [
@@ -3833,84 +3939,86 @@
       "Sword Sage",
       "SwordSagePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "为 Sovereign Blade 系卡牌添加 Amount 次重放计数（BaseReplayCount）；power 移除时回退。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SWORD_SAGE_POWER",
     "kind": "power",
-    "name": "Sword Sage",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Sword Sage"
   },
   "SYNCHRONIZE": {
     "aliases": [
       "SYNCHRONIZE",
       "Temporary Focus"
     ],
-    "curated": false,
-    "description": "Gain Focus until the end of this turn.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "SYNCHRONIZE",
     "kind": "power",
-    "name": "Temporary Focus",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Temporary Focus"
   },
   "TAG_TEAM": {
     "aliases": [
       "TAG_TEAM",
       "Tag Team"
     ],
-    "curated": false,
-    "description": "The next Attack another player plays on the enemy is played an extra time.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "TAG_TEAM",
     "kind": "power",
-    "name": "Tag Team",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "Tag Team"
   },
   "TAINTED_POWER": {
-    "affliction_keys": [
-      "TAINTED"
-    ],
     "aliases": [
       "TAINTED",
       "Tainted",
       "TaintedPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "来自 VITAL_SPARK 的玩家侧减益：本回合受到的攻击伤害 +Amount；敌方回合结束移除。run-41 live：每打一张污染技能 +2（单回合内 2→4 叠加），按段通胀敌方 intent 显示（旋风 base 5×3 在 4 层时显示 9×3）。不跨回合 — 税仅当回合有效。",
-    "host_of_affliction": true,
+    "detail": {
+      "affliction_keys": [
+        "TAINTED"
+      ],
+      "counter_class": false,
+      "host_of_affliction": true,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "TAINTED_POWER",
     "kind": "power",
-    "name": "污染",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "污染"
   },
   "TANGLED_POWER": {
-    "affliction_keys": [
-      "ENTANGLED"
-    ],
     "aliases": [
       "TANGLED",
       "Tangled",
       "TangledPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "施加时给持有者所有攻击牌附加 Entangled，新进入战斗的攻击牌同样附加。Entangled 牌费用 +Amount 能量。 power 在持有者阵营回合结束时自移除。",
-    "host_of_affliction": true,
+    "detail": {
+      "affliction_keys": [
+        "ENTANGLED"
+      ],
+      "counter_class": false,
+      "host_of_affliction": true,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "TANGLED_POWER",
     "kind": "power",
-    "name": "缠结",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "缠结"
   },
   "TANK_POWER": {
     "aliases": [
@@ -3918,16 +4026,16 @@
       "Tank",
       "TankPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者造成的攻击伤害 ×2（并按 decomp 与 GuardedPower 联动）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
     "id": "TANK_POWER",
     "kind": "power",
-    "name": "Tank",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Single"
+    "name": "Tank"
   },
   "TENDER_POWER": {
     "aliases": [
@@ -3935,16 +4043,16 @@
       "Tender",
       "TenderPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "激活期间每打出一张牌抽走玩家力量 −1 与敏捷 −1；所有 Tender 抽走在施加者循环阶段分批返还（run-48 live：回合中 −1/−3 级抽取后随猎人杀手阶段 +3/+5 返还——净值振荡，基线回归）。不是增益；回合中属性税。run-48 死亡级备注：击杀链伤害数学**必须每张牌后重读 player powers**——用抽取前力量值导致猎人杀手停在 13/121 而非死亡。面板数值按税后处理；每次出牌后重读 state。 LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：逐牌 −1 力/−1 敏抽取与批量 +5 回复均观测到；击杀链数学须每牌后重读玩家 powers——重读规则持守时猎人杀手 T3 零损击杀。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "TENDER_POWER",
     "kind": "power",
-    "name": "玩家侧",
-    "play_notes": "run-48 live 2026-09-19：猎人杀手战抽取/返还振荡确认；链中 −3 力断送击杀。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "玩家侧"
   },
   "TERRITORIAL_POWER": {
     "aliases": [
@@ -3952,16 +4060,16 @@
       "Territorial",
       "TerritorialPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "持有者身上的增益计数（run-38 实时 Byrdonis）：其阵营回合结束时 +Amount 力量（基础 Amount=1；实时 STR 每回合爬一级——SWOOP 两个敌方回合内 17→19）。成长击杀计时器：每拖一回合，其全部攻击 +Amount。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "TERRITORIAL_POWER",
     "kind": "power",
-    "name": "领域",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "领域"
   },
   "THE_BOMB_POWER": {
     "aliases": [
@@ -3969,16 +4077,16 @@
       "The Bomb",
       "TheBombPower"
     ],
-    "counter_class": true,
-    "curated": false,
-    "description": "持有者阵营回合结束时 Amount > 1 则 -1 层；Amount <= 1 时对所有可命中敌人造成 DynamicVars.Damage（默认 DamageVar 40，非攻击）伤害，随后移除。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "THE_BOMB_POWER",
     "kind": "power",
-    "name": "炸弹",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "炸弹"
   },
   "THE_GAMBIT_POWER": {
     "aliases": [
@@ -3986,16 +4094,16 @@
       "The Gambit",
       "TheGambitPower"
     ],
-    "counter_class": true,
-    "curated": false,
-    "description": "持有者受到未格挡的攻击伤害 > 0 时， 持有者立即死亡（触发时移除 power）。持续时间：该 power **会持续到打出 THE_GAMBIT 的回合之外**，直到条款触发为止——曾观察到第 6 回合打出、第 8 回合仍在，8 点未格挡擦伤让 32 HP 玩家直接清零。 没有\"此后每轮攻击伤害全部格挡\"的把握就不要选 THE_GAMBIT。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
     "id": "THE_GAMBIT_POWER",
     "kind": "power",
-    "name": "The Gambit",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Single"
+    "name": "The Gambit"
   },
   "THE_HUNT_POWER": {
     "aliases": [
@@ -4003,16 +4111,16 @@
       "The Hunt",
       "TheHuntPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "惰性成功标记 power（Buff，Counter）——自身无钩子；由 TheHunt 卡逻辑查询。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "THE_HUNT_POWER",
     "kind": "power",
-    "name": "狩猎",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "狩猎"
   },
   "THE_SEALED_THRONE_POWER": {
     "aliases": [
@@ -4020,16 +4128,16 @@
       "The Sealed Throne",
       "TheSealedThronePower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "宿主型 utility power（Buff，Counter）——战斗结束/预打出逻辑由源卡牌承载；见宿主卡面。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "THE_SEALED_THRONE_POWER",
     "kind": "power",
-    "name": "封印王座",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "封印王座"
   },
   "THIEVERY_POWER": {
     "aliases": [
@@ -4037,16 +4145,16 @@
       "Thievery",
       "ThieveryPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "盗窃逻辑标记（Buff，Counter）——由盗窃逻辑查询；地精佣兵版本在其回合窃取玩家 20 金。自身无钩子。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "THIEVERY_POWER",
     "kind": "power",
-    "name": "盗窃",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "盗窃"
   },
   "THORNS_POWER": {
     "aliases": [
@@ -4054,16 +4162,16 @@
       "Thorns",
       "ThornsPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者被攻击（或 Omnislice）命中 时，攻击者受到 Amount 点非攻击伤害。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "THORNS_POWER",
     "kind": "power",
-    "name": "荆棘",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "荆棘"
   },
   "THUNDER_POWER": {
     "aliases": [
@@ -4071,16 +4179,16 @@
       "Thunder",
       "ThunderPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者玩家激发闪电球时，对激发目标 造成 Amount 点非攻击伤害。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "THUNDER_POWER",
     "kind": "power",
-    "name": "Thunder",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Thunder"
   },
   "TOOLS_OF_THE_TRADE_POWER": {
     "aliases": [
@@ -4088,16 +4196,16 @@
       "Tools of the Trade",
       "ToolsOfTheTradePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "每回合 +Amount 抽牌；持有者 回合开始时从手牌选择 Amount 张弃掉。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "TOOLS_OF_THE_TRADE_POWER",
     "kind": "power",
-    "name": "Tools Of The Trade",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Tools Of The Trade"
   },
   "TORIC_TOUGHNESS_POWER": {
     "aliases": [
@@ -4105,16 +4213,16 @@
       "Toric Toughness",
       "ToricToughnessPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者格挡被清空时，获得 DynamicVars.Block 格挡，随后 -1 层。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "TORIC_TOUGHNESS_POWER",
     "kind": "power",
-    "name": "Toric Toughness",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Toric Toughness"
   },
   "TRACKING_POWER": {
     "aliases": [
@@ -4122,30 +4230,32 @@
       "Tracking",
       "TrackingPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者（或其宠物）对带有 WEAK_POWER 的目标造成的攻击伤害 ×Amount。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "TRACKING_POWER",
     "kind": "power",
-    "name": "Tracking",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Tracking"
   },
   "TRASH_TO_TREASURE": {
     "aliases": [
       "TRASH_TO_TREASURE",
       "Trash to Treasure"
     ],
-    "curated": false,
-    "description": "Whenever you create a Status, Channel 2 random Orbs.",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "TRASH_TO_TREASURE",
     "kind": "power",
-    "name": "Trash to Treasure",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Trash to Treasure"
   },
   "TYRANNY_POWER": {
     "aliases": [
@@ -4153,44 +4263,47 @@
       "Tyranny",
       "TyrannyPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "每回合 +Amount 抽牌；持有者回合开始时 从手牌选择 Amount 张消耗（Exhaust）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "TYRANNY_POWER",
     "kind": "power",
-    "name": "Tyranny",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Tyranny"
   },
   "UNMOVABLE": {
     "aliases": [
       "Unmovable"
     ],
-    "curated": true,
-    "description": "每回合前 Amount 次从卡牌获得格挡时翻倍。对局40 live 数值（Amount=1 能力牌，每回合前两次卡牌挡增益翻倍）：血墙16→32、邪眼8→16、究极防御11→22、耸肩8→16、武装5→10、防御5→10。药水源格挡不翻倍（封锁药水12仍为12）。",
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "UNMOVABLE",
     "kind": "power",
-    "name": "岿然不动",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "岿然不动"
   },
   "UNMOVABLE_POWER": {
     "aliases": [
       "UNMOVABLE",
       "UnmovablePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者获得的格挡 ×2。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "UNMOVABLE_POWER",
     "kind": "power",
-    "name": "Unmovable",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Unmovable"
   },
   "VEILPIERCER_POWER": {
     "aliases": [
@@ -4198,16 +4311,16 @@
       "Veilpiercer",
       "VeilpiercerPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者手牌/打出区的虚无（Ethereal） 牌费用为 0；每打出 1 张虚无牌消耗 1 层。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "VEILPIERCER_POWER",
     "kind": "power",
-    "name": "Veilpiercer",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Veilpiercer"
   },
   "VICIOUS_POWER": {
     "aliases": [
@@ -4215,16 +4328,16 @@
       "Vicious",
       "ViciousPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者每当对他人施加 VULNERABLE_POWER （数值 > 0），抽 Amount 张牌。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "VICIOUS_POWER",
     "kind": "power",
-    "name": "Vicious",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Vicious"
   },
   "VIGOR_POWER": {
     "aliases": [
@@ -4232,16 +4345,16 @@
       "Vigor",
       "VigorPower"
     ],
-    "counter_class": false,
-    "curated": true,
-    "description": "持有者下一次攻击 +Amount 伤害 （ModifyDamageAdditive；该次攻击后消耗）。 run-53 live 2026-09-19：骇鳗 Vigor:6 使下一次 CRASH 显示 22[base16] 并被该攻击消耗——+Amount 仅作用于持有者下一次攻击。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "VIGOR_POWER",
     "kind": "power",
-    "name": "活力",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "活力"
   },
   "VITAL_SPARK_POWER": {
     "aliases": [
@@ -4249,16 +4362,16 @@
       "Vital Spark",
       "VitalSparkPower"
     ],
-    "counter_class": true,
-    "curated": true,
-    "description": "敌方反制类：开局玩家技能牌被污染为 Tainted(Amount)；打出污染牌使玩家获得 TAINTED_POWER Amount — 本回合受到的攻击伤害 +Amount（敌方回合结束移除）。Amount 可在战斗中上升（棱柱脉动 +2）。run-41 live：Brand（自伤技能）照样计税 — 零技能纪律指只打攻击与能力牌；血墙/重振精神/防御/耸肩全部加税。 LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：card_type 显示 power 的牌并不自动安全——RAGE 打出即挂 TAINTED:2。Inflame 无税。逐张 live 验证；RADIATE 意图当回合即显示税（11→13）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "VITAL_SPARK_POWER",
     "kind": "power",
-    "name": "生命火花",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "生命火花"
   },
   "VOID_FORM_POWER": {
     "aliases": [
@@ -4266,16 +4379,16 @@
       "Void Form",
       "VoidFormPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "每回合持有者前 Amount 张非自动打出的 手牌（及星辰费用）费用为 0；回合开始重置计数。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "VOID_FORM_POWER",
     "kind": "power",
-    "name": "Void Form",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Void Form"
   },
   "VULNERABLE_POWER": {
     "aliases": [
@@ -4283,16 +4396,16 @@
       "Vulnerable",
       "VulnerablePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者受到的攻击伤害 ×1.5 （`DamageIncrease` 1.5）；Paper Phrog / CrueltyPower / DebilitatePower 可 修改该倍率。敌方阵营回合结束时 -1 层。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "VULNERABLE_POWER",
     "kind": "power",
-    "name": "易伤",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "易伤"
   },
   "WASTE_AWAY_POWER": {
     "aliases": [
@@ -4300,16 +4413,16 @@
       "Waste Away",
       "WasteAwayPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者最大能量 -Amount。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "WASTE_AWAY_POWER",
     "kind": "power",
-    "name": "衰朽",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "衰朽"
   },
   "WEAK_POWER": {
     "aliases": [
@@ -4317,16 +4430,16 @@
       "Weak",
       "WeakPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者造成的攻击伤害 ×0.75 （`DamageDecrease` 0.75）；Paper Krane / DebilitatePower 可修改倍率。 敌方阵营回合结束时 -1 层。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "WEAK_POWER",
     "kind": "power",
-    "name": "虚弱",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "虚弱"
   },
   "WELL_LAID_PLANS_POWER": {
     "aliases": [
@@ -4334,16 +4447,16 @@
       "Well-Laid Plans",
       "WellLaidPlansPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "回合结束手牌弃置时的选择逻辑 （保留手牌；BeforeFlushLate）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "WELL_LAID_PLANS_POWER",
     "kind": "power",
-    "name": "Well Laid Plans",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Well Laid Plans"
   },
   "WITHERING_PRESENCE_POWER": {
     "aliases": [
@@ -4351,16 +4464,16 @@
       "Withering Presence",
       "WitheringPresencePower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "目标玩家每打出第 6 张牌， 其手牌加入 1 张 Wither（`CardsLeft` 6 → 0 后加入）。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
     "id": "WITHERING_PRESENCE_POWER",
     "kind": "power",
-    "name": "Withering Presence",
-    "play_notes": "",
-    "power_type": "Buff",
-    "stack_type": "Counter"
+    "name": "Withering Presence"
   },
   "WRAITH_FORM_POWER": {
     "aliases": [
@@ -4368,15 +4481,15 @@
       "Wraith Form",
       "WraithFormPower"
     ],
-    "counter_class": false,
-    "curated": false,
-    "description": "持有者阵营回合开始时 获得 -Amount DEXTERITY_POWER。",
-    "host_of_affliction": false,
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
     "id": "WRAITH_FORM_POWER",
     "kind": "power",
-    "name": "幽灵形态",
-    "play_notes": "",
-    "power_type": "Debuff",
-    "stack_type": "Counter"
+    "name": "幽灵形态"
   }
 }

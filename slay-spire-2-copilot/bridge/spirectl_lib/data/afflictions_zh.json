@@ -4,376 +4,347 @@
       "Ascenders Bane",
       "天阶诅咒"
     ],
-    "curated": false,
-    "description": "不可打出，虚无，永恒（Eternal）——无法 正常移除。",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "ASCENDERS_BANE",
     "kind": "curse",
-    "name": "天阶诅咒",
-    "play_notes": ""
+    "name": "天阶诅咒"
   },
   "BOUND": {
     "aliases": [
       "Bound",
       "束缚"
     ],
-    "curated": false,
-    "description": "宿主 = CHAINS_OF_BINDING_POWER——每回合最多 Amount 张 被抽到的牌附加 Bound；每回合只能打出 1 张 Bound 牌；你的回合结束时 全部清除。",
-    "host_power_id": "CHAINS_OF_BINDING_POWER",
+    "detail": {
+      "host_power_id": "CHAINS_OF_BINDING_POWER"
+    },
     "id": "BOUND",
     "kind": "affliction",
-    "name": "束缚",
-    "play_notes": ""
+    "name": "束缚"
   },
   "CLUMSY": {
     "aliases": [
       "Clumsy",
       "笨拙"
     ],
-    "curated": false,
-    "description": "不可打出，虚无。",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "CLUMSY",
     "kind": "curse",
-    "name": "笨拙",
-    "play_notes": ""
+    "name": "笨拙"
   },
   "COMPACT": {
     "aliases": [
       "Compact",
       "压缩"
     ],
-    "curated": false,
-    "description": "手牌中的状态牌变为 Fuel 并获得格挡（卡面 文案）。",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "COMPACT",
     "kind": "status_card",
-    "name": "压缩",
-    "play_notes": ""
+    "name": "压缩"
   },
   "CURSE_OF_THE_BELL": {
     "aliases": [
       "Curse Of The Bell",
       "钟之诅咒"
     ],
-    "curated": false,
-    "description": "不可打出，永恒。",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "CURSE_OF_THE_BELL",
     "kind": "curse",
-    "name": "钟之诅咒",
-    "play_notes": ""
+    "name": "钟之诅咒"
   },
   "DAZED": {
     "aliases": [
       "Dazed",
       "眩晕"
     ],
-    "curated": false,
-    "description": "不可打出，虚无——回合结束未打出则消失。",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "DAZED",
     "kind": "status_card",
-    "name": "眩晕",
-    "play_notes": ""
+    "name": "眩晕"
   },
   "DECAY": {
     "aliases": [
       "Decay",
       "腐化"
     ],
-    "curated": false,
-    "description": "不可打出；回合结束仍在手牌时，对拥有者造成 2 点 非攻击伤害（DamageVar 2）。",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "DECAY",
     "kind": "curse",
-    "name": "腐化",
-    "play_notes": ""
+    "name": "腐化"
   },
   "DISINTEGRATION": {
     "aliases": [
       "Disintegration",
       "崩解"
     ],
-    "curated": false,
-    "description": "费用 -1，战斗中 不可生成；被选择时施加 DISINTEGRATION_POWER 6——你的回合结束时失去 6 HP（非攻击来源），power 存续期间持续生效。",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "DISINTEGRATION",
     "kind": "status_card",
-    "name": "崩解",
-    "play_notes": ""
+    "name": "崩解"
   },
   "DOUBT": {
     "aliases": [
       "Doubt",
       "猜疑"
     ],
-    "curated": false,
-    "description": "不可打出；回合结束仍在手牌时，对拥有者施加 1 层 WEAK_POWER（若其原本没有虚弱，该次施加跳过下一次持续时间递减）。",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "DOUBT",
     "kind": "curse",
-    "name": "猜疑",
-    "play_notes": ""
+    "name": "猜疑"
   },
   "ENTANGLED": {
     "aliases": [
       "Entangled",
       "缠绕"
     ],
-    "curated": false,
-    "description": "宿主 = TANGLED_POWER——攻击牌被附加 Entangled； Entangled 牌费用 +Amount 能量；你的回合结束时清除。",
-    "host_power_id": "TANGLED_POWER",
+    "detail": {
+      "host_power_id": "TANGLED_POWER"
+    },
     "id": "ENTANGLED",
     "kind": "affliction",
-    "name": "缠绕",
-    "play_notes": ""
+    "name": "缠绕"
   },
   "FLAK_CANNON": {
     "aliases": [
       "Flak Cannon",
       "散射炮"
     ],
-    "curated": false,
-    "description": "消耗所有状态牌，每张造成伤害。",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "FLAK_CANNON",
     "kind": "status_card",
-    "name": "散射炮",
-    "play_notes": ""
+    "name": "散射炮"
   },
   "GALVANIZED": {
     "aliases": [
       "Galvanized",
       "电镀"
     ],
-    "curated": false,
-    "description": "宿主 = GALVANIC_POWER——Power 牌被附加 Galvanized（Amount）；打出 Galvanized 牌时其拥有者受到 Amount 点 非攻击伤害。",
-    "host_power_id": "GALVANIC_POWER",
+    "detail": {
+      "host_power_id": "GALVANIC_POWER"
+    },
     "id": "GALVANIZED",
     "kind": "affliction",
-    "name": "电镀",
-    "play_notes": ""
+    "name": "电镀"
   },
   "HEXED": {
     "aliases": [
       "Hexed",
       "诅咒"
     ],
-    "curated": false,
-    "description": "宿主 = HEX_POWER——power 存在期间 Hexed 牌获得虚无 关键词；施加者死亡或 power 移除时清除。",
-    "host_power_id": "HEX_POWER",
+    "detail": {
+      "host_power_id": "HEX_POWER"
+    },
     "id": "HEXED",
     "kind": "affliction",
-    "name": "诅咒",
-    "play_notes": ""
+    "name": "诅咒"
   },
   "INJURY": {
     "aliases": [
       "Injury",
       "损伤"
     ],
-    "curated": false,
-    "description": "不可打出。",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "INJURY",
     "kind": "curse",
-    "name": "损伤",
-    "play_notes": ""
+    "name": "损伤"
   },
   "ITERATION": {
     "aliases": [
       "Iteration",
       "迭代"
     ],
-    "curated": false,
-    "description": "ITERATION_POWER——每回合首次抽到状态牌时额外抽牌。",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "ITERATION",
     "kind": "status_card",
-    "name": "迭代",
-    "play_notes": ""
+    "name": "迭代"
   },
   "MIND_ROT": {
     "aliases": [
       "Mind Rot",
       "脑蚀"
     ],
-    "curated": false,
-    "description": "费用 -1；被选择时施加 MIND_ROT_POWER 1——每回合少抽 1 张牌。",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "MIND_ROT",
     "kind": "status_card",
-    "name": "脑蚀",
-    "play_notes": ""
+    "name": "脑蚀"
   },
   "NORMALITY": {
     "aliases": [
       "Normality",
       "常态"
     ],
-    "curated": false,
-    "description": "不可打出；它在你手牌中时，你本回合打出第 3 张牌后 不能再打出任何牌（每回合上限 3 张）。",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "NORMALITY",
     "kind": "curse",
-    "name": "常态",
-    "play_notes": ""
+    "name": "常态"
   },
   "REGRET": {
     "aliases": [
       "Regret",
       "悔恨"
     ],
-    "curated": false,
-    "description": "不可打出；回合结束时若在手牌，对拥有者造成不可格挡 的非攻击伤害，数值 = 回合结束时的手牌数。",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "REGRET",
     "kind": "curse",
-    "name": "悔恨",
-    "play_notes": ""
+    "name": "悔恨"
   },
   "RINGING": {
     "aliases": [
       "Ringing",
       "耳鸣"
     ],
-    "curated": false,
-    "description": "宿主 = RINGING_POWER——本回合只要打出过任意一张牌， Ringing 牌即不可打出；你的回合结束时清除。",
-    "host_power_id": "RINGING_POWER",
+    "detail": {
+      "host_power_id": "RINGING_POWER"
+    },
     "id": "RINGING",
     "kind": "affliction",
-    "name": "耳鸣",
-    "play_notes": ""
+    "name": "耳鸣"
   },
   "ROCKET_PUNCH": {
     "aliases": [
       "Rocket Punch",
       "火箭飞拳"
     ],
-    "curated": false,
-    "description": "生成状态牌时变为免费。",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "ROCKET_PUNCH",
     "kind": "status_card",
-    "name": "火箭飞拳",
-    "play_notes": ""
+    "name": "火箭飞拳"
   },
   "SLIMED": {
     "aliases": [
       "Slimed",
       "黏液"
     ],
-    "curated": false,
-    "description": "费用 1；打出时抽 1 张牌，然后消耗（Exhaust）。 （PersonalHivePower 将 Dazed 牌加入攻击者的抽牌堆。）",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "SLIMED",
     "kind": "status_card",
-    "name": "黏液",
-    "play_notes": ""
+    "name": "黏液"
   },
   "SLOTH": {
     "aliases": [
       "Sloth",
       "怠惰"
     ],
-    "curated": false,
-    "description": "费用 -1；被选择时施加 SLOTH_POWER 3——每回合最多打出 3 张牌（计数回合开始重置；显示层数 为本回合已打出牌数）。",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "SLOTH",
     "kind": "status_card",
-    "name": "怠惰",
-    "play_notes": ""
+    "name": "怠惰"
   },
   "SMOG": {
     "aliases": [
       "Smog",
       "烟雾"
     ],
-    "curated": false,
-    "description": "宿主 = SMOGGY_POWER——你打出技能牌后技能牌被附加 Smog； power 存在期间 Smog 牌不可打出；你的回合结束时清除。",
-    "host_power_id": "SMOGGY_POWER",
+    "detail": {
+      "host_power_id": "SMOGGY_POWER"
+    },
     "id": "SMOG",
     "kind": "affliction",
-    "name": "烟雾",
-    "play_notes": ""
+    "name": "烟雾"
   },
   "SMOKESTACK": {
     "aliases": [
       "Smokestack",
       "烟囱"
     ],
-    "curated": false,
-    "description": "SMOKESTACK_POWER——生成状态牌时对所有敌人造成伤害。",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "SMOKESTACK",
     "kind": "status_card",
-    "name": "烟囱",
-    "play_notes": ""
+    "name": "烟囱"
   },
   "TAINTED": {
     "aliases": [
       "Tainted",
       "污染"
     ],
-    "curated": false,
-    "description": "宿主 = TAINTED_POWER——对 power 持有者的攻击伤害 +Amount；该 power 在敌方阵营回合结束时移除。 （VitalSparkPower 给玩家技能牌附加 Tainted，并在打出 Tainted 牌时施加 TaintedPower。）",
-    "host_power_id": "TAINTED_POWER",
+    "detail": {
+      "host_power_id": "TAINTED_POWER"
+    },
     "id": "TAINTED",
     "kind": "affliction",
-    "name": "污染",
-    "play_notes": ""
+    "name": "污染"
   },
   "TOXIC": {
     "aliases": [
       "Toxic",
       "剧毒"
     ],
-    "curated": false,
-    "description": "费用 1，消耗；回合结束仍在手牌时，对拥有者 造成 5 点非攻击伤害（DamageVar 5）。",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "TOXIC",
     "kind": "status_card",
-    "name": "剧毒",
-    "play_notes": ""
+    "name": "剧毒"
   },
   "TRASH_TO_TREASURE": {
     "aliases": [
       "Trash To Treasure",
       "化废为宝"
     ],
-    "curated": false,
-    "description": "TRASH_TO_TREASURE_POWER——生成状态牌时 引导随机充能球。",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "TRASH_TO_TREASURE",
     "kind": "status_card",
-    "name": "化废为宝",
-    "play_notes": ""
+    "name": "化废为宝"
   },
   "WASTE_AWAY": {
     "aliases": [
       "Waste Away",
       "衰朽"
     ],
-    "curated": false,
-    "description": "费用 -1；被选择时 施加 WASTE_AWAY_POWER 1——最大能量 -1。",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "WASTE_AWAY",
     "kind": "status_card",
-    "name": "衰朽",
-    "play_notes": ""
+    "name": "衰朽"
   },
   "WOUND": {
     "aliases": [
       "Wound",
       "创伤"
     ],
-    "curated": false,
-    "description": "不可打出；纯牌库堵塞物。3 张 Wound 在手过回合末 HP 零损——无 Infection 级回合末税；「纯堵塞物」定性成立。",
-    "host_power_id": null,
+    "detail": {
+      "host_power_id": null
+    },
     "id": "WOUND",
     "kind": "status_card",
-    "name": "创伤",
-    "play_notes": ""
+    "name": "创伤"
   }
 }

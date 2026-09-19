@@ -205,11 +205,12 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
    结构（Summary 核心信息表格 / Run overview 对局概况表 / What went well
    做得好的地方 / What went poorly 做得不好的地方 / Key moments 关键
    节点）。引用 run 日志时只写文件名，绝不写个人绝对路径。
-2. 对局中新观察到的游戏事实（卡牌/遗物/药水/能力/意图的效果）直接折入
-   spirectl_lib/data/ 下对应的 *.json 及其 `_zh` 双语对——key = live 游戏
-   id、`"curated": true`、同会话中英内容完全对应——随后运行
-   `python3 scripts/build_game_reference_json.py --check`，提交前必须
-   exit 0。memory 只记对局感悟与过程，不记游戏基础数据。
+2. 对局中新观察到的游戏**结构化事实**（卡牌/遗物/药水/能力/意图的机制
+   字段）直接折入 spirectl_lib/data/ 下对应的 *.json 及其 `_zh` 双语对——
+   key = live 游戏 id，schema 见 bridge/spirectl_lib/schema.py（信封 +
+   按 kind 的 detail；codex 为权威结构源，散文教条归 memory/lessons）——
+   随后运行 `python3 scripts/build_game_reference_json.py --check`，提交前
+   必须 exit 0。memory 只记对局感悟与过程，不记游戏基础数据。
 3. 将本局 memory 记录及其 `_zh` 中文版提交进仓库——memory 已纳入版本控制。
 4. 若用户已停止游玩：解除看门狗武装（见「运行时约定」）。
 5. **阶段性反思**：`memory/overview.md` 顶部设有 `# 阶段性反思`
@@ -294,11 +295,11 @@ bridge/ — 工具文档与游戏数据：
   （选项嵌套在各事件条目下）
 - `bridge/spirectl_lib/data/afflictions.json` + `afflictions_zh.json` — 状态与
   负面效果
-- JSON 参考库：条目以 live 游戏 id 为 key；任何 id 用
+- JSON 参考库：纯程序化存储（信封 + 按 kind 的 detail，schema 见
+  bridge/spirectl_lib/schema.py），条目以 live 游戏 id 为 key；任何 id 用
   `python3 bridge/spirectl.py lookup <key>` 解析（flag：`--json/--lang/`
-  `--domain/--all`；miss 时自动查 spire-codex.com 并折入 `curated:false`
-  存根，需精修为 `curated:true`，双语）。markdown 孪生文件（game/*.md）
-  在 live 验证通过前保留，之后退役——引用一律指向 JSON 文件。
+  `--domain/--all`；miss 时直接从 spire-codex.com 折入**结构**——codex 为
+  权威源）。教条/散文归 memory/lessons，绝不进数据存储。
 
 memory/ — 对局记忆（已纳入版本控制）：
 

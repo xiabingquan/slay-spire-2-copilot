@@ -3,76 +3,69 @@
     "aliases": [
       "Ashwater"
     ],
-    "curated": false,
-    "description": "exhaust any number of cards in your hand.",
-    "display_name": "Ashwater",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "ASHWATER",
     "kind": "potion",
-    "name": "Ashwater",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "self",
-    "usage": "combat"
+    "name": "Ashwater"
   },
   "ATTACK_POTION": {
     "aliases": [
       "Attack Potion",
       "AttackPotion"
     ],
-    "curated": true,
-    "description": "choose 1 of 3 distinct Attack cards generated from your character card pool (may skip); the card is added to hand and is free this turn. run-53 live 2026-09-19: opens card_choice (choose 1 of 3 generated Attacks, may skip); picked card is added free-this-turn. Live offer BODY_SLAM/THRASH/WHIRLWIND; Whirlwind pick at energy 4 was the lethal-turn survival instrument (32 AoE wipe).",
-    "display_name": "Attack Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "ATTACK_POTION",
     "kind": "potion",
-    "name": "Attack Potion",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "self",
-    "usage": "combat"
+    "name": "Attack Potion"
   },
   "BEETLE_JUICE": {
     "aliases": [
       "Beetle Juice"
     ],
-    "curated": false,
-    "description": "Beetle Juice - Potion - Slay the Spire 2 (sts2) | Spire Codex ← Back to Potions ◆ Rare · shared · Potion Beetle Juice Enemy's attacks deal 30% less damage for the next 4 turns. On this page Community Description Relations Synergy Version history Community performance Live aggregate across community-submitted runs. Filter by bracket to see how it holds up at higher levels of play. All A10 A10 >30% WR A10 >50% WR A10 >75% WR All players Solo 2P 3P 4P Win rate 40.6 % 2.4k of 5.9k wins Pick rate 0.3 % 5,905 picks Codex Score C 60 Average Codex Elo — revealed preference Win rate by character Silent 46 % · 1.3k Ironclad 41.3 % · 1.3k",
+    "detail": {
+      "rarity": "Rare",
+      "target": null,
+      "usage": null
+    },
     "id": "BEETLE_JUICE",
     "kind": "potion",
-    "name": "BEETLE_JUICE",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "BEETLE_JUICE"
   },
   "BLESSING_OF_THE_FORGE": {
     "aliases": [
       "Blessing of the Forge",
       "锻造祝福"
     ],
-    "curated": true,
-    "description": "Upgrade every upgradable card in your hand for THIS combat (Armaments-class, reverts after). Spend on highest hand-density / lethal-intent turns. Live run-43 Act2 (4,0): 5-card attack hand upgraded IronWave+2/+2, TwinStrike+2, Pommel+1/draw2, Strike+3 - used on a 19-intent POUNCE turn. Also the RANSACK event rare-potion roll run-43 (claimed properly - run-42 had skipped the claim screen).",
-    "display_name": "Blessing of the Forge",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "BLESSING_OF_THE_FORGE",
     "kind": "potion",
-    "name": "Blessing of the Forge",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Uncommon",
-    "target": "self",
-    "usage": "combat"
+    "name": "Blessing of the Forge"
   },
   "BLOCK_POTION": {
     "aliases": [
       "Block Potion",
       "BlockPotion"
     ],
-    "curated": true,
-    "description": "Gain 12 Block on use. Uncommon-class reserve potion for lethal-intent turns and boss gates. LIVE run-40: consumed Decimillipede T4 — 12 + Evil Eye 16 (Unmovable-doubled) = 28 vs 32 incoming at 34 HP. Potion-sourced block does NOT double with Unmovable (card-block only).",
-    "display_name": "Block Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "BLOCK_POTION",
     "kind": "potion",
-    "name": "Block Potion",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Block Potion"
   },
   "BLOOD_POTION": {
     "aliases": [
@@ -80,48 +73,42 @@
       "BloodPotion",
       "血药水"
     ],
-    "curated": true,
-    "description": "Common, anytime: heal 20% of Max HP (run-49 live 80 Max→+16; run-57 95-class Max→+19). Corridor sustain — drink BEFORE the lethal-class turn, not after. run-57: spent mid-Decimillipede at incoming-28-class window, raised 46→65 buffer for the multi-turn grind.",
-    "display_name": "Blood Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "anytime"
+    },
     "id": "BLOOD_POTION",
     "kind": "potion",
-    "name": "Blood Potion",
-    "play_notes": "Run-49 live: drank mid-Entomancer at HP 23→39 (20% of 80 = 16). Corridor sustain class — spend BEFORE the lethal turn, not after.",
-    "rarity": "Common",
-    "target": "any player",
-    "usage": "anytime"
+    "name": "Blood Potion"
   },
   "BONE_BREW": {
     "aliases": [
       "Bone Brew",
       "BoneBrew"
     ],
-    "curated": false,
-    "description": "Summon 15.",
-    "display_name": "Bone Brew",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "BONE_BREW",
     "kind": "potion",
-    "name": "Bone Brew",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "self",
-    "usage": "combat"
+    "name": "Bone Brew"
   },
   "BOTTLED_POTENTIAL": {
     "aliases": [
       "Bottled Potential",
       "BottledPotential"
     ],
-    "curated": false,
-    "description": "move your hand into the draw pile, shuffle the draw pile, draw 5.",
-    "display_name": "Bottled Potential",
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "BOTTLED_POTENTIAL",
     "kind": "potion",
-    "name": "Bottled Potential",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Bottled Potential"
   },
   "CLARITY": {
     "aliases": [
@@ -129,334 +116,292 @@
       "Clarity Extract",
       "ClarityExtract"
     ],
-    "curated": false,
-    "description": "draw 1; apply ClarityPower 3 — draw +1 card at the start of each of your next 3 turns (decrements at your turn start).",
-    "display_name": "Clarity Extract",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "CLARITY",
     "kind": "potion",
-    "name": "Clarity Extract",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Clarity Extract"
   },
   "COLORLESS_POTION": {
     "aliases": [
       "Colorless Potion",
       "ColorlessPotion"
     ],
-    "curated": false,
-    "description": "choose 1 of 3 distinct Colorless-pool cards (may skip); add to hand, free this turn.",
-    "display_name": "Colorless Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "COLORLESS_POTION",
     "kind": "potion",
-    "name": "Colorless Potion",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "self",
-    "usage": "combat"
+    "name": "Colorless Potion"
   },
   "COSMIC_CONCOCTION": {
     "aliases": [
       "Cosmic Concoction",
       "CosmicConcoction"
     ],
-    "curated": false,
-    "description": "add 3 distinct upgraded Colorless-pool cards to hand.",
-    "display_name": "Cosmic Concoction",
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "COSMIC_CONCOCTION",
     "kind": "potion",
-    "name": "Cosmic Concoction",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "self",
-    "usage": "combat"
+    "name": "Cosmic Concoction"
   },
   "CUNNING_POTION": {
     "aliases": [
       "Cunning Potion",
       "CunningPotion"
     ],
-    "curated": false,
-    "description": "Add 3 Upgraded Shivs into your Hand.",
-    "display_name": "Cunning Potion",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "CUNNING_POTION",
     "kind": "potion",
-    "name": "Cunning Potion",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "self",
-    "usage": "combat"
+    "name": "Cunning Potion"
   },
   "CURE_ALL": {
     "aliases": [
       "Cure All",
       "CureAll"
     ],
-    "curated": true,
-    "description": "Cures debuff-class afflictions on the player. **Does NOT cure Power-class taxes** — live run-52 reconfirmed: poured on RINGING_POWER at Act1 boss T8 with zero effect (wasted); run-51's original correction held. Check the target tax id: `_POWER` suffix ⇒ expect no cure.",
-    "display_name": "Cure All",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "CURE_ALL",
     "kind": "potion",
-    "name": "Cure All",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Cure All"
   },
   "DEXTERITY_POTION": {
     "aliases": [
       "Dexterity Potion",
       "敏捷药水"
     ],
-    "curated": true,
-    "description": "Gain 2 Dexterity for the combat (card-block +2, stacks with OddlySmoothStone). Live run-43: Dex1+2=3 total; Defend 6+3=9, TrueGrit 8+3=11, UltimateDefend 13+3=16 - 16>=15 solo-stunned BowlbugRock HEADBUTT. Bowlbug doctrine note run-39: Dex+Defend x2=14 was one short of 15 - always compute the live total vs the intent number before concluding stun is impossible.",
-    "display_name": "Dexterity Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "DEXTERITY_POTION",
     "kind": "potion",
-    "name": "Dexterity Potion",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Common",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Dexterity Potion"
   },
   "DISTILLED_CHAOS": {
     "aliases": [
       "Distilled Chaos",
       "蒸馏混沌"
     ],
-    "curated": true,
-    "description": "Play the top 3 cards of your Draw Pile. Variance-class - cost/targets uncontrolled. Shop (5,0) Act2 live price 102g run-43 (not bought).",
-    "display_name": "Distilled Chaos",
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "DISTILLED_CHAOS",
     "kind": "potion",
-    "name": "Distilled Chaos",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Rare",
-    "target": "self",
-    "usage": "combat"
+    "name": "Distilled Chaos"
   },
   "DROPLET_OF_PRECOGNITION": {
     "aliases": [
       "Droplet of Precognition",
       "DropletofPrecognition"
     ],
-    "curated": false,
-    "description": "choose 1 card from your draw pile; add it to hand.",
-    "display_name": "Droplet of Precognition",
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "DROPLET_OF_PRECOGNITION",
     "kind": "potion",
-    "name": "Droplet of Precognition",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "self",
-    "usage": "combat"
+    "name": "Droplet of Precognition"
   },
   "DUPLICATOR": {
     "aliases": [
       "Duplicator"
     ],
-    "curated": true,
-    "description": "Apply DuplicationPower 1 — the next card you play this combat is played 1 extra time; removed at end of turn. run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log): Pommel Strike 9 resolved twice (18) on a kill turn; potions are NOT cards for RINGING-class counters (run-48 rule held).",
-    "display_name": "Duplicator",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "DUPLICATOR",
     "kind": "potion",
-    "name": "Duplicator",
-    "play_notes": "run-48 live 2026-09-19: Duplicator+Uppercut 48 dmg under RINGING — potion-not-card rule live. [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "rarity": "Uncommon",
-    "target": "self",
-    "usage": "combat"
+    "name": "Duplicator"
   },
   "ENERGY_POTION": {
     "aliases": [
       "Energy Potion",
       "EnergyPotion"
     ],
-    "curated": false,
-    "description": "Gain [energy:2].",
-    "display_name": "Energy Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "ENERGY_POTION",
     "kind": "potion",
-    "name": "Energy Potion",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Energy Potion"
   },
   "ENTROPIC_BREW": {
     "aliases": [
       "Entropic Brew",
       "EntropicBrew"
     ],
-    "curated": false,
-    "description": "fill every empty potion slot with a random potion.",
-    "display_name": "Entropic Brew",
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "anytime"
+    },
     "id": "ENTROPIC_BREW",
     "kind": "potion",
-    "name": "Entropic Brew",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "self",
-    "usage": "anytime"
+    "name": "Entropic Brew"
   },
   "ESSENCE_OF_DARKNESS": {
     "aliases": [
       "Essence of Darkness",
       "EssenceofDarkness"
     ],
-    "curated": false,
-    "description": "channel 1 Dark orb per orb slot you have.",
-    "display_name": "Essence of Darkness",
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "ESSENCE_OF_DARKNESS",
     "kind": "potion",
-    "name": "Essence of Darkness",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "self",
-    "usage": "combat"
+    "name": "Essence of Darkness"
   },
   "EXPLOSIVE_AMPOULE": {
     "aliases": [
       "Explosive Ampoule",
       "ExplosiveAmpoule"
     ],
-    "curated": false,
-    "description": "deal 10 damage to ALL enemies (automatic multi-target; do not send a target id).",
-    "display_name": "Explosive Ampoule",
+    "detail": {
+      "rarity": "Common",
+      "target": "ALL enemies",
+      "usage": "combat"
+    },
     "id": "EXPLOSIVE_AMPOULE",
     "kind": "potion",
-    "name": "Explosive Ampoule",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "ALL enemies",
-    "usage": "combat"
+    "name": "Explosive Ampoule"
   },
   "FAIRY_IN_A_BOTTLE": {
     "aliases": [
       "Fairy in a Bottle",
       "FairyinaBottle"
     ],
-    "curated": true,
-    "description": "On lethal damage, revive at 30% of Max HP (live run-52: 24/80 from a Crimson Mantle tick death mid-combat) and the potion is consumed. Proc fires from ANY lethal source including unblockable self-damage ticks — not only enemy attacks. Boss-corridor reserve value: once spent in a hall fight the endgame has no revive buffer (run-52 lesson).",
-    "display_name": "Fairy in a Bottle",
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "auto"
+    },
     "id": "FAIRY_IN_A_BOTTLE",
     "kind": "potion",
-    "name": "Fairy in a Bottle",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "self",
-    "usage": "auto"
+    "name": "Fairy in a Bottle"
   },
   "FIRE_POTION": {
     "aliases": [
       "Fire Potion",
       "FirePotion"
     ],
-    "curated": true,
-    "description": "Deal 20 damage — typeless: NOT amplified by Vulnerable or SLOW stacks. run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log): exact 20 on Marbles-Vuln'd Insatiable confirmed; do not count potion damage in Vuln/Slow window math.",
-    "display_name": "Fire Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any enemy",
+      "usage": "combat"
+    },
     "id": "FIRE_POTION",
     "kind": "potion",
-    "name": "Fire Potion",
-    "play_notes": "run-48 live 2026-09-19: flat 20 under Vuln2+Slow display — un-amped confirmed. [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "rarity": "Common",
-    "target": "any enemy",
-    "usage": "combat"
+    "name": "Fire Potion"
   },
   "FLEX_POTION": {
     "aliases": [
       "Flex Potion",
       "FlexPotion"
     ],
-    "curated": true,
-    "description": "Gain +5 Strength for this turn only (temporary; expires end of turn).",
-    "display_name": "Flex Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "FLEX_POTION",
     "kind": "potion",
-    "name": "Flex Potion",
-    "play_notes": "Run-49 live: STR +5 applied same turn (powers showed STRENGTH_POWER + FLEX_POTION_POWER :5); Setup Strike's post-hit +3 stacked on top to 11 before expiry; both temp sources decremented end of turn (11→3 base Inflame held).",
-    "rarity": "Common",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Flex Potion"
   },
   "FOCUS_POTION": {
     "aliases": [
       "Focus Potion",
       "FocusPotion"
     ],
-    "curated": false,
-    "description": "Gain 2 Focus.",
-    "display_name": "Focus Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "FOCUS_POTION",
     "kind": "potion",
-    "name": "Focus Potion",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "self",
-    "usage": "combat"
+    "name": "Focus Potion"
   },
   "FORTIFIER": {
     "aliases": [
       "Fortifier"
     ],
-    "curated": false,
-    "description": "gain Block equal to 2× your current Block (your Block becomes 3×).",
-    "display_name": "Fortifier",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "FORTIFIER",
     "kind": "potion",
-    "name": "Fortifier",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Fortifier"
   },
   "FOUL_POTION": {
     "aliases": [
       "Foul Potion",
       "污浊药水"
     ],
-    "curated": true,
-    "description": "In combat: deal 12 damage to EVERY non-pet creature INCLUDING you (AoE 12 + self 12; suicide-class below ~15 HP; self-damage triggers Rupture). In a Merchant room: gain 100 Gold. In FakeMerchant event it starts the fight - never use there. POTION_COURIER event offers x3 (run-42 declined at 13 HP; run-43 at 44 HP still declined - bridge rejects use_potion outside combat, so the merchant-gold line is not agent-reachable yet).",
-    "display_name": "Foul Potion",
+    "detail": {
+      "rarity": "Event",
+      "target": "anytime",
+      "usage": "Event"
+    },
     "id": "FOUL_POTION",
     "kind": "potion",
-    "name": "Foul Potion",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Event",
-    "target": "anytime",
-    "usage": "Event"
+    "name": "Foul Potion"
   },
   "FRUIT_JUICE": {
     "aliases": [
       "Fruit Juice",
       "FruitJuice"
     ],
-    "curated": false,
-    "description": "Gain 5 Max HP.",
-    "display_name": "Fruit Juice",
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "anytime"
+    },
     "id": "FRUIT_JUICE",
     "kind": "potion",
-    "name": "Fruit Juice",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "any player",
-    "usage": "anytime"
+    "name": "Fruit Juice"
   },
   "FYSH_OIL": {
     "aliases": [
       "Fysh Oil",
       "FyshOil"
     ],
-    "curated": true,
-    "description": "+1 Strength and +1 Dexterity for the combat. STRENGTH_POWER +1 and DEXTERITY_POWER:1 appear same state read on use; Dex +1 raises subsequent card-block values by 1 each (Defend 5→6 class) same combat. Usage-timing variant attested: a later decode lists Fysh Oil as anytime/self with the same immediate +1/+1 — verify timing per build. run-53 live 2026-09-19: +1 Str +1 Dex for the combat — held as boss-reserve this run, not spent in hall fights.",
-    "display_name": "Fysh Oil",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "FYSH_OIL",
     "kind": "potion",
-    "name": "Fysh Oil",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Fysh Oil"
   },
   "GAMBLER_S_BREW": {
     "aliases": [
@@ -464,32 +409,28 @@
       "Gambler's Brew",
       "GamblersBrew"
     ],
-    "curated": false,
-    "description": "discard any number of hand cards, then draw that many.",
-    "display_name": "Gambler's Brew",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "GAMBLER_S_BREW",
     "kind": "potion",
-    "name": "Gambler's Brew",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "self",
-    "usage": "combat"
+    "name": "Gambler's Brew"
   },
   "GHOST_IN_A_JAR": {
     "aliases": [
       "Ghost in a Jar",
       "GhostinaJar"
     ],
-    "curated": false,
-    "description": "Gain 1 Intangible.",
-    "display_name": "Ghost in a Jar",
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "GHOST_IN_A_JAR",
     "kind": "potion",
-    "name": "Ghost in a Jar",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Ghost in a Jar"
   },
   "GIGANTIFICATION_POTION": {
     "aliases": [
@@ -498,16 +439,14 @@
       "巨化药水",
       "超巨化药水"
     ],
-    "curated": true,
-    "description": "Rare: apply GigantificationPower 1 — next Attack card this combat deals ×3 damage, consumed by that attack. LIVE run-57: Bludgeon 32 ×3 = 96 on Terror Eel T1 (Act1 Elite①) — crossed SHRIEK:70 in one hit, stun window opened, fight won T3 zero-damage. Boss/elite burst-class reserve.",
-    "display_name": "Gigantification Potion",
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "GIGANTIFICATION_POTION",
     "kind": "potion",
-    "name": "Gigantification Potion",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Gigantification Potion"
   },
   "GLOWWATER_POTION": {
     "aliases": [
@@ -515,16 +454,14 @@
       "GlowwaterPotion",
       "发光水"
     ],
-    "curated": true,
-    "description": "Event potion (Drowning Beacon bottle branch): Exhaust your hand, draw 10 cards. LIVE run-57: exhausted 5-card hand then drew the full remaining deck (9 cards) same turn — hand-cycle bomb for status-dilution fights; pairs with exhaust-spine (FNP procs on the exhaust).",
-    "display_name": "Glowwater Potion",
+    "detail": {
+      "rarity": "Event",
+      "target": "combat",
+      "usage": "Event"
+    },
     "id": "GLOWWATER_POTION",
     "kind": "potion",
-    "name": "Glowwater Potion",
-    "play_notes": "",
-    "rarity": "Event",
-    "target": "combat",
-    "usage": "Event"
+    "name": "Glowwater Potion"
   },
   "HEART_OF_IRON": {
     "aliases": [
@@ -532,16 +469,14 @@
       "HeartOfIron",
       "铁心药水"
     ],
-    "curated": true,
-    "description": "Uncommon: gain 7 Plating (combat). LIVE run-57: Skulking Colony Piercing Stabs turn — Heart of Iron +7 plating on top of 1-2 plating + double Defend = 18-total-block exact cover vs 9x2 intent (run-41 doctrine class).",
-    "display_name": "Heart of Iron",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "HEART_OF_IRON",
     "kind": "potion",
-    "name": "Heart of Iron",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Heart of Iron"
   },
   "KING_S_COURAGE": {
     "aliases": [
@@ -549,64 +484,56 @@
       "King's Courage",
       "KingsCourage"
     ],
-    "curated": false,
-    "description": "Forge 15.",
-    "display_name": "King's Courage",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "KING_S_COURAGE",
     "kind": "potion",
-    "name": "King's Courage",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "any player",
-    "usage": "combat"
+    "name": "King's Courage"
   },
   "LIQUID_BRONZE": {
     "aliases": [
       "Liquid Bronze",
       "LiquidBronze"
     ],
-    "curated": false,
-    "description": "Gain 3 Thorns.",
-    "display_name": "Liquid Bronze",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "LIQUID_BRONZE",
     "kind": "potion",
-    "name": "Liquid Bronze",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Liquid Bronze"
   },
   "LIQUID_MEMORIES": {
     "aliases": [
       "Liquid Memories",
       "LiquidMemories"
     ],
-    "curated": false,
-    "description": "choose 1 card from your discard pile; add it to hand and it is free this turn. Unusable when the discard pile is empty — played with an empty discard the potion is consumed with NO card_choice and no effect (total whiff). Check piles before use.",
-    "display_name": "Liquid Memories",
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "LIQUID_MEMORIES",
     "kind": "potion",
-    "name": "Liquid Memories",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "self",
-    "usage": "combat"
+    "name": "Liquid Memories"
   },
   "LUCKY_TONIC": {
     "aliases": [
       "Lucky Tonic",
       "LuckyTonic"
     ],
-    "curated": false,
-    "description": "Gain 1 Buffer.",
-    "display_name": "Lucky Tonic",
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "LUCKY_TONIC",
     "kind": "potion",
-    "name": "Lucky Tonic",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Lucky Tonic"
   },
   "MAZALETH_S_GIFT": {
     "aliases": [
@@ -614,122 +541,112 @@
       "Mazaleth's Gift",
       "MazalethsGift"
     ],
-    "curated": false,
-    "description": "Gain 1 Ritual.",
-    "display_name": "Mazaleth's Gift",
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "MAZALETH_S_GIFT",
     "kind": "potion",
-    "name": "Mazaleth's Gift",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Mazaleth's Gift"
   },
   "OROBIC_ACID": {
     "aliases": [
       "Orobic Acid",
       "OrobicAcid"
     ],
-    "curated": true,
-    "description": "add 1 random Attack, 1 random Skill, 1 random Power from your character card pool to hand; all 3 are free this turn. LIVE run-48 Spiny Toad EXPLOSION turn: generated PACTS_END (0c 17 AoE gated on exhaust>=3 — whiffed at exhaust 0, thorns-risk if played) + EXPECT_A_FIGHT (2c skill, +1e per attack in hand, NO_ENERGY_GAIN lock) + free CRUELTY copy — ZERO block-class skill rolled on a 23-dmg block-gate turn. Do not count Orobic Acid as block insurance; it is variance fuel.",
-    "display_name": "Orobic Acid",
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "OROBIC_ACID",
     "kind": "potion",
-    "name": "Orobic Acid",
-    "play_notes": "run-48 live 2026-09-19: whiffed on block need at EXPLOSION gate — variance fuel not insurance. [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "rarity": "Rare",
-    "target": "self",
-    "usage": "combat"
+    "name": "Orobic Acid"
   },
   "POISON_POTION": {
     "aliases": [
       "Poison Potion",
       "PoisonPotion"
     ],
-    "curated": false,
-    "description": "Apply 6 Poison.",
-    "display_name": "Poison Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any enemy",
+      "usage": "combat"
+    },
     "id": "POISON_POTION",
     "kind": "potion",
-    "name": "Poison Potion",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "any enemy",
-    "usage": "combat"
+    "name": "Poison Potion"
   },
   "POTION_OF_BINDING": {
     "aliases": [
       "Potion of Binding",
       "PotionofBinding"
     ],
-    "curated": false,
-    "description": "apply 1 Weak and 1 Vulnerable to ALL enemies.",
-    "display_name": "Potion of Binding",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "ALL enemies",
+      "usage": "combat"
+    },
     "id": "POTION_OF_BINDING",
     "kind": "potion",
-    "name": "Potion of Binding",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "ALL enemies",
-    "usage": "combat"
+    "name": "Potion of Binding"
   },
   "POTION_OF_CAPACITY": {
     "aliases": [
       "Potion of Capacity",
       "PotionofCapacity"
     ],
-    "curated": false,
-    "description": "Gain 2 Orb Slots.",
-    "display_name": "Potion of Capacity",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "POTION_OF_CAPACITY",
     "kind": "potion",
-    "name": "Potion of Capacity",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "self",
-    "usage": "combat"
+    "name": "Potion of Capacity"
   },
   "POTION_OF_DOOM": {
     "aliases": [
       "Potion of Doom",
       "PotionofDoom"
     ],
-    "curated": false,
-    "description": "Apply 33 Doom.",
-    "display_name": "Potion of Doom",
+    "detail": {
+      "rarity": "Common",
+      "target": "any enemy",
+      "usage": "combat"
+    },
     "id": "POTION_OF_DOOM",
     "kind": "potion",
-    "name": "Potion of Doom",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "any enemy",
-    "usage": "combat"
+    "name": "Potion of Doom"
   },
   "POTION_SHAPED_ROCK": {
     "aliases": [
       "POTION_SHAPED_ROCK",
       "Potion-Shaped Rock"
     ],
-    "curated": true,
-    "description": "Combat-use: dealt 15 damage to the target live (run-51 vs KnowledgeDemon). Procured at combat start by Petrified Toad. Not a heal.",
-    "name": "Potion-Shaped Rock",
-    "rarity": "Token"
+    "detail": {
+      "rarity": "Token",
+      "target": null,
+      "usage": null
+    },
+    "id": "POTION_SHAPED_ROCK",
+    "kind": "potion",
+    "name": "Potion-Shaped Rock"
   },
   "POT_OF_GHOULS": {
     "aliases": [
       "Pot of Ghouls",
       "PotofGhouls"
     ],
-    "curated": false,
-    "description": "Add 2 Souls into your Hand.",
-    "display_name": "Pot of Ghouls",
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "POT_OF_GHOULS",
     "kind": "potion",
-    "name": "Pot of Ghouls",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "self",
-    "usage": "combat"
+    "name": "Pot of Ghouls"
   },
   "POWDERED_DEMISE": {
     "aliases": [
@@ -737,16 +654,14 @@
       "PowderedDemise",
       "灭世粉"
     ],
-    "curated": true,
-    "description": "Uncommon: apply DemisePower 9 to target — target takes 9 unblockable unpowered damage at end of each of its turns. Kill-timer class (run-41 4-HP exoskeleton EoT kill; run-57 Entomancer race chip 9/turn through the T5 kill).",
-    "display_name": "Powdered Demise",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any enemy",
+      "usage": "combat"
+    },
     "id": "POWDERED_DEMISE",
     "kind": "potion",
-    "name": "Powdered Demise",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "any enemy",
-    "usage": "combat"
+    "name": "Powdered Demise"
   },
   "POWER_POTION": {
     "aliases": [
@@ -754,32 +669,28 @@
       "PowerPotion",
       "能力药水"
     ],
-    "curated": true,
-    "description": "Common, combat: opens choose-one-power overlay; the chosen power is generated as a 0-cost card into hand — must be played manually. LIVE run-57 Decimillipede T7 options: VICIOUS / HELLRAISER / RUPTURE — picked RUPTURE (references-known run-56 win spine) over undocumented options; Rupture card played, Breakthrough self-damage proc'd +1 Str same turn (Str −2→−1 live).",
-    "display_name": "Power Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "POWER_POTION",
     "kind": "potion",
-    "name": "Power Potion",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "self",
-    "usage": "combat"
+    "name": "Power Potion"
   },
   "RADIANT_TINCTURE": {
     "aliases": [
       "Radiant Tincture",
       "RadiantTincture"
     ],
-    "curated": false,
-    "description": "gain 1 Energy now; apply RadiancePower 3 — +1 Energy on each of your next 3 energy resets.",
-    "display_name": "Radiant Tincture",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "RADIANT_TINCTURE",
     "kind": "potion",
-    "name": "Radiant Tincture",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Radiant Tincture"
   },
   "REGEN_POTION": {
     "aliases": [
@@ -787,93 +698,84 @@
       "RegenPotion",
       "再生药水"
     ],
-    "curated": true,
-    "description": "Uncommon: gain 5 Regen — heal 5 at start of each of your turns, stacks decrement. Doctrine (run-48 live): HP-rail potions are for the attrition fight itself; run-57 spent mid-Decimillipede — rail ticked +5/turn across the T3-T5 same-window setup turns.",
-    "display_name": "Regen Potion",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "REGEN_POTION",
     "kind": "potion",
-    "name": "Regen Potion",
-    "play_notes": "run-48 live 2026-09-19: spent mid-HunterKiller at 15 HP; rail ran ~4 ticks then expired in-fight. [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "rarity": "Uncommon",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Regen Potion"
   },
   "SHACKLING_POTION": {
     "aliases": [
       "Shackling Potion",
       "枷锁药水"
     ],
-    "curated": true,
-    "description": "apply ShacklingPotionPower 7 to ALL enemies - temporary -7 Strength, lost at end of their turn. Seen in both run-43 shops (99g Act1-tail / 95g Act2 (5,0)); potion slots were full or gold spent on relics - not bought. Boss-gate class: cuts every multi-hit intent by 7 per hit.",
-    "display_name": "Shackling Potion",
+    "detail": {
+      "rarity": "Rare",
+      "target": "ALL enemies",
+      "usage": "combat"
+    },
     "id": "SHACKLING_POTION",
     "kind": "potion",
-    "name": "Shackling Potion",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Rare",
-    "target": "ALL enemies",
-    "usage": "combat"
+    "name": "Shackling Potion"
   },
   "SHIP_IN_A_BOTTLE": {
     "aliases": [
       "Ship in a Bottle",
       "ShipinaBottle"
     ],
-    "curated": false,
-    "description": "gain 10 Block; apply BlockNextTurnPower 10 — the first time your Block is cleared, gain 10 Block again (once).",
-    "display_name": "Ship in a Bottle",
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "SHIP_IN_A_BOTTLE",
     "kind": "potion",
-    "name": "Ship in a Bottle",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Ship in a Bottle"
   },
   "SKILL_POTION": {
     "aliases": [
       "Skill Potion",
       "SkillPotion"
     ],
-    "curated": true,
-    "description": "Opens a choose-one-skill card_choice overlay (live run-52 options: BATTLE_TRANCE / STOKE / EVIL_EYE). Like Power Potion, the chosen skill is generated as a 0-cost card into hand and must be played. EVIL_EYE live-lookup note: 8 Block, doubles to 16 only if another card was Exhausted earlier the same turn.",
-    "display_name": "Skill Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "SKILL_POTION",
     "kind": "potion",
-    "name": "Skill Potion",
-    "play_notes": "Run-54 live options observed (2026-09-19): Bygone Effigy fight offered HAVOC / BLOODLETTING / BURNING_PACT; earlier fight same run offered BATTLE_TRANCE-class set. Bloodletting generated as 0-cost = net +2 Energy that turn (combo enabler); True Grit copy (earlier run) = 7 block + random hand exhaust (run-53 note applies).",
-    "rarity": "Common",
-    "target": "self",
-    "usage": "combat"
+    "name": "Skill Potion"
   },
   "SNECKO_OIL": {
     "aliases": [
       "Snecko Oil",
       "SneckoOil"
     ],
-    "curated": false,
-    "description": "draw 7; randomize the cost of every non-X card currently in your hand.",
-    "display_name": "Snecko Oil",
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "SNECKO_OIL",
     "kind": "potion",
-    "name": "Snecko Oil",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Snecko Oil"
   },
   "SOLDIER_STEW": {
     "aliases": [
       "SOLDIERS_STEW",
       "Soldier's Stew"
     ],
-    "curated": false,
-    "description": "All cards containing Strike gain 1 Replay this combat.",
+    "detail": {
+      "rarity": "Rare",
+      "target": null,
+      "usage": null
+    },
     "id": "SOLDIER_STEW",
     "kind": "potion",
-    "name": "Soldier's Stew",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Soldier's Stew"
   },
   "SOLDIER_S_STEW": {
     "aliases": [
@@ -881,142 +783,127 @@
       "Soldier's Stew",
       "SoldiersStew"
     ],
-    "curated": false,
-    "description": "every card with the Strike tag in your combat piles gains +1 Replay for this combat. The Replay behaves as a one-shot charge per card at use-time — strikes already in hand/draw when the potion is drunk replay once when played; strikes drawn later in the same combat resolve a single time.",
-    "display_name": "Soldier's Stew",
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "SOLDIER_S_STEW",
     "kind": "potion",
-    "name": "Soldier's Stew",
-    "play_notes": "",
-    "rarity": "Rare",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Soldier's Stew"
   },
   "SPEED_POTION": {
     "aliases": [
       "Speed Potion",
       "速度药水"
     ],
-    "curated": true,
-    "description": "apply +5 Dexterity for the current turn only; lose it end of turn. One-turn burst block - spend on the turn the lethal intent lands, not earlier. Live run-43 Act1 Boss T10: Dex 1->6 under Speed, but hand had no block cards so the burst went unused that turn (planned for SCREAM 13; Beckon tax hit instead). Lesson: Speed Potion pays only when block CARDS are in hand to amplify.",
-    "display_name": "Speed Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "SPEED_POTION",
     "kind": "potion",
-    "name": "Speed Potion",
-    "play_notes": "Run-49 negative live: drawn vs Spiny Toad SPIKE_EXPLOSION 23 with a zero-block hand — potion unspendable (no block cards to amplify). Run-43 lesson repeated verbatim: Speed Potion pays only when block CARDS are in hand.",
-    "rarity": "Common",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Speed Potion"
   },
   "STABLE": {
     "aliases": [
       "STABLE_SERUM",
       "Stable Serum"
     ],
-    "curated": true,
-    "description": "Stable Serum: Retain your Hand for 2 turns (cards stay in hand end of turn). Uncommon. LIVE run-40: held as belt reserve through Act2; retain does not add block — not a lethal-intent answer by itself.",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": null,
+      "usage": null
+    },
     "id": "STABLE",
     "kind": "potion",
-    "name": "Stable Serum",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Stable Serum"
   },
   "STABLE_SERUM": {
     "aliases": [
-      "StableSerum",
       "STABLE_SERUM",
+      "StableSerum",
       "稳定血清"
     ],
-    "curated": true,
-    "description": "Uncommon: RetainHandPower 2 — your hand is not flushed at end of turn for the next 2 turns (cards stay; next draws add to hand). LIVE run-57: T4 hand grew to 7 cards (retained 5 + draws) — Bludgeon retained into the kill turn vs aberrant mite; \"retain does not add block — not a lethal-intent answer by itself\" note holds.",
-    "display_name": "Stable Serum",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "STABLE_SERUM",
     "kind": "potion",
-    "name": "Stable Serum",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Stable Serum"
   },
   "STAR_POTION": {
     "aliases": [
       "Star Potion",
       "StarPotion"
     ],
-    "curated": false,
-    "description": "Gain [star:3].",
-    "display_name": "Star Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "STAR_POTION",
     "kind": "potion",
-    "name": "Star Potion",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "self",
-    "usage": "combat"
+    "name": "Star Potion"
   },
   "STRENGTH_POTION": {
     "aliases": [
       "Strength Potion",
       "StrengthPotion"
     ],
-    "curated": false,
-    "description": "Gain 2 Strength.",
-    "display_name": "Strength Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "STRENGTH_POTION",
     "kind": "potion",
-    "name": "Strength Potion",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Strength Potion"
   },
   "SWIFT_POTION": {
     "aliases": [
       "Swift Potion",
       "迅捷药水"
     ],
-    "curated": true,
-    "description": "Draw 3 cards. Boss-reward roll run-43; spent T1 of the Act2 (1,1) Bowlbug fight digging for block to reach IMBALANCED stun threshold - drew attacks instead (Pommel/TwinStrike/Strike), stun line missed that turn.",
-    "display_name": "Swift Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "combat"
+    },
     "id": "SWIFT_POTION",
     "kind": "potion",
-    "name": "Swift Potion",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Common",
-    "target": "any player",
-    "usage": "combat"
+    "name": "Swift Potion"
   },
   "TOUCH_OF_INSANITY": {
     "aliases": [
       "Touch of Insanity",
       "TouchofInsanity"
     ],
-    "curated": true,
-    "description": "Choose 1 hand card that costs Energy or stars; it costs 0 for the rest of combat. Usage: hand_select overlay choose(index) THEN proceed. Live run-42 BygoneEffigy: Bash made 0-cost rest of combat — free Bash+Vuln every draw for the kill window.",
-    "display_name": "Touch of Insanity",
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
     "id": "TOUCH_OF_INSANITY",
     "kind": "potion",
-    "name": "Touch of Insanity",
-    "play_notes": "",
-    "rarity": "Uncommon",
-    "target": "self",
-    "usage": "combat"
+    "name": "Touch of Insanity"
   },
   "VULNERABLE_POTION": {
     "aliases": [
       "Vulnerable Potion",
       "VulnerablePotion"
     ],
-    "curated": false,
-    "description": "Apply 3 Vulnerable.",
-    "display_name": "Vulnerable Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any enemy",
+      "usage": "combat"
+    },
     "id": "VULNERABLE_POTION",
     "kind": "potion",
-    "name": "Vulnerable Potion",
-    "play_notes": "",
-    "rarity": "Common",
-    "target": "any enemy",
-    "usage": "combat"
+    "name": "Vulnerable Potion"
   },
   "WEAK_POTION": {
     "aliases": [
@@ -1024,15 +911,13 @@
       "WeakPotion",
       "弱化药水"
     ],
-    "curated": true,
-    "description": "Uncommon: apply Weak to target (per-hit attack reduction class). LIVE run-57: Boss The Insatiable — Weak 3 landed, displayed intent 28→21-class cuts on Lunging Bite; Uppercut-style Weak cuts also live on mite/bees-class multi-hits (per-hit reduction, not total).",
-    "display_name": "Weak Potion",
+    "detail": {
+      "rarity": "Common",
+      "target": "any enemy",
+      "usage": "combat"
+    },
     "id": "WEAK_POTION",
     "kind": "potion",
-    "name": "Weak Potion",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Common",
-    "target": "any enemy",
-    "usage": "combat"
+    "name": "Weak Potion"
   }
 }

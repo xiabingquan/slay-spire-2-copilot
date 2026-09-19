@@ -4,252 +4,234 @@
       "KIFUDA",
       "Kifuda"
     ],
-    "character": "shared",
-    "curated": true,
-    "description": "Upon pickup, Enchant up to 3 cards with Adroit.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Shop"
+    },
     "id": "ADROIT",
     "kind": "relic",
-    "name": "Kifuda",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Kifuda"
   },
   "AKABEKO": {
     "aliases": [
       "Akabeko"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "At the start of each combat, gain 8 Vigor.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "AKABEKO",
     "kind": "relic",
-    "name": "Akabeko",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Akabeko"
   },
   "ALCHEMICAL_COFFER": {
     "aliases": [
       "Alchemical Coffer",
       "AlchemicalCoffer"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, +4 potion slots filled with random potions.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "ALCHEMICAL_COFFER",
     "kind": "relic",
-    "name": "Alchemical Coffer",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Alchemical Coffer"
   },
   "AMETHYST_AUBERGINE": {
     "aliases": [
       "Amethyst Aubergine",
       "AmethystAubergine"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "combat rewards gain +15 Gold (not on the final-act boss). Run-41 live: every fight reward showed +15 on top of base gold — funded the 255g Act2 Shop#1 100% sink together with treasure gold.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "AMETHYST_AUBERGINE",
     "kind": "relic",
-    "name": "Amethyst Aubergine",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "Amethyst Aubergine"
   },
   "ANCHOR": {
     "aliases": [
       "Anchor"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Start each combat with 10 Block.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "ANCHOR",
     "kind": "relic",
-    "name": "Anchor",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "Anchor"
   },
   "ARCANE_SCROLL": {
     "aliases": [
       "Arcane Scroll",
       "ArcaneScroll"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Upon pickup, obtain a random Rare Card to add to your Deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "ARCANE_SCROLL",
     "kind": "relic",
-    "name": "Arcane Scroll",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Arcane Scroll"
   },
   "ARCHAIC_TOOTH": {
     "aliases": [
       "Archaic Tooth",
       "ArchaicTooth"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, transform your starter card into its ancient version.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "ARCHAIC_TOOTH",
     "kind": "relic",
-    "name": "Archaic Tooth",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Archaic Tooth"
   },
   "ART_OF_WAR": {
     "aliases": [
       "Art of War",
       "ArtOfWar"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "if you played no Attack cards last turn, start of turn 2+ gain 1 Energy.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "ART_OF_WAR",
     "kind": "relic",
-    "name": "Art of War",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Art of War"
   },
   "ASTROLABE": {
     "aliases": [
       "Astrolabe"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, transform 3 chosen cards, then upgrade them.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "ASTROLABE",
     "kind": "relic",
-    "name": "Astrolabe",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Astrolabe"
   },
   "BAG_OF_MARBLES": {
     "aliases": [
       "Bag of Marbles",
       "BagOfMarbles"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "At combat start (turn 1), apply 1 Vulnerable to ALL enemies. Run-1 spine relic (弹珠袋×DISMANTLE doctrine). LIVE run-46: purchased Act2 (2,0) shop 169g — paired with Red Mask (T1 all-WEAK) as the auto-Vuln/Weak package that turned every combat into a T1 race window; stacks with Bash/Molten Fist/Dominate Vuln package for Dismantle double-hit lines.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "BAG_OF_MARBLES",
     "kind": "relic",
-    "name": "Bag of Marbles",
-    "play_notes": "run-46 live: Marbles+Red Mask auto-package = run spine; 99% gold sunk at purchase point.",
-    "rarity": "Common"
+    "name": "Bag of Marbles"
   },
   "BAG_OF_PREPARATION": {
     "aliases": [
       "Bag of Preparation",
       "BagOfPreparation"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "At the start of each combat, draw 2 additional cards.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "BAG_OF_PREPARATION",
     "kind": "relic",
-    "live_notes": "LIVE run-56: combat start draw +2 additional cards. Engine-online faster every fight.",
-    "name": "Bag of Preparation",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "Bag of Preparation"
   },
   "BEATING_REMNANT": {
     "aliases": [
       "Beating Remnant",
       "BeatingRemnant"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "you cannot lose more than 20 HP in a single turn.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "BEATING_REMNANT",
     "kind": "relic",
-    "name": "Beating Remnant",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Beating Remnant"
   },
   "BEAUTIFUL_BRACELET": {
     "aliases": [
       "Beautiful Bracelet",
       "BeautifulBracelet"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, choose 3 cards in deck; enchant them with Swift 3.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "BEAUTIFUL_BRACELET",
     "kind": "relic",
-    "name": "Beautiful Bracelet",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Beautiful Bracelet"
   },
   "BELLOWS": {
     "aliases": [
       "Bellows"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at start of turn 1, upgrade all cards in hand.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "BELLOWS",
     "kind": "relic",
-    "name": "Bellows",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Bellows"
   },
   "BELT_BUCKLE": {
     "aliases": [
       "Belt Buckle",
       "BeltBuckle"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "while you have no potions, you have +2 Dexterity (combat).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "BELT_BUCKLE",
     "kind": "relic",
-    "name": "Belt Buckle",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Belt Buckle"
   },
   "BIG_HAT": {
     "aliases": [
       "Big Hat",
       "BigHat"
     ],
-    "character": "Necrobinder",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at combat start, add 2 random Ethereal cards from your card pool to hand.",
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "BIG_HAT",
     "kind": "relic",
-    "name": "Big Hat",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Big Hat"
   },
   "BIG_MUSHROOM": {
     "aliases": [
       "Big Mushroom",
       "BigMushroom"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "on pickup, +20 Max HP; turn 1, hand draw −2 cards.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "BIG_MUSHROOM",
     "kind": "relic",
-    "live_notes": "LIVE run-56: Mushroom event pick. +20 MaxHP on pickup; turn 1 draw −2 cards (tempo cost in every subsequent fight).",
-    "name": "Big Mushroom",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Big Mushroom"
   },
   "BIIIG_HUG": {
     "aliases": [
@@ -257,30 +239,28 @@
       "BiiigHug",
       "大大拥抱"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Ancient relic (Tezcatara boon): on pickup remove 4 cards from deck; on every shuffle add 1 Soot card to draw pile.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "BIIIG_HUG",
     "kind": "relic",
-    "name": "Biiig Hug",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Biiig Hug"
   },
   "BING_BONG": {
     "aliases": [
       "Bing Bong",
       "BingBong"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "whenever a card is added to your deck, add an additional copy.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "BING_BONG",
     "kind": "relic",
-    "name": "Bing Bong",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Bing Bong"
   },
   "BLACK_BLOOD": {
     "aliases": [
@@ -288,118 +268,111 @@
       "BlackBlood",
       "黑暗之血"
     ],
-    "character": "IRONCLAD",
-    "curated": true,
-    "description": "Heal 12 HP after every combat (IRONCLAD starter Burning Blood upgraded form; Burning Blood heals 6). Acquired via TOUCH_OF_OROBAS swap, which replaces Burning Blood.",
+    "detail": {
+      "character": "IRONCLAD",
+      "counter_shown": null,
+      "rarity": "Ancient"
+    },
     "id": "BLACK_BLOOD",
     "kind": "relic",
-    "name": "Black Blood",
-    "play_notes": "Run-49 live: heal 12 confirmed eight times post-combat (61→73, 65→77, 2→14 class). Doubles the passive HP rail; the systematic answer to the HP-economy death class. Run-39 first pick precedent held.",
-    "rarity": "Ancient"
+    "name": "Black Blood"
   },
   "BLACK_STAR": {
     "aliases": [
       "Black Star",
       "BlackStar"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Elite fights drop +1 relic. Run-51 live: both Act2 elites yielded two relics each.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "BLACK_STAR",
     "kind": "relic",
-    "name": "Black Star",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Black Star"
   },
   "BLESSED_ANTLER": {
     "aliases": [
       "Blessed Antler",
       "BlessedAntler"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "+1 max Energy each turn; at combat start, shuffle 3 Dazed into draw pile.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "BLESSED_ANTLER",
     "kind": "relic",
-    "name": "Blessed Antler",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Blessed Antler"
   },
   "BLOOD_SOAKED_ROSE": {
     "aliases": [
       "Blood-Soaked Rose",
       "BloodSoakedRose"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "+1 max Energy each turn; on pickup, add 1 Enthralled to deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "BLOOD_SOAKED_ROSE",
     "kind": "relic",
-    "name": "Blood-Soaked Rose",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Blood-Soaked Rose"
   },
   "BLOOD_VIAL": {
     "aliases": [
       "Blood Vial",
       "BloodVial"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "At the start of each combat, heal 2 HP. LIVE run-40: procced every combat (HP +2 on combat-start reads); stacks with Burning Blood end-of-combat +6 and Chosen Cheese +1/+1 on the HP economy rail.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "BLOOD_VIAL",
     "kind": "relic",
-    "name": "Blood Vial",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "Blood Vial"
   },
   "BONE_FLUTE": {
     "aliases": [
       "Bone Flute",
       "BoneFlute"
     ],
-    "character": "Necrobinder",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Whenever Osty attacks, gain 2 Block.",
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "BONE_FLUTE",
     "kind": "relic",
-    "name": "Bone Flute",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "Bone Flute"
   },
   "BONE_TEA": {
     "aliases": [
       "Bone Tea",
       "BoneTea"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "next 1 combat: at start of turn 1, upgrade all cards in hand.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "BONE_TEA",
     "kind": "relic",
-    "name": "Bone Tea",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Bone Tea"
   },
   "BOOKMARK": {
     "aliases": [
       "Bookmark"
     ],
-    "character": "Necrobinder",
-    "counter_shown": false,
-    "curated": false,
-    "description": "end of turn, a random Retained card in hand has cost −1 until played.",
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "BOOKMARK",
     "kind": "relic",
-    "name": "Bookmark",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Bookmark"
   },
   "BOOK_OF_FIVE_RINGS": {
     "aliases": [
@@ -408,61 +381,56 @@
       "五轮之书",
       "五轮书"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Every 5 cards added to your deck, heal 20 HP (counter resets on payout). Anti-thinning relic — pays on card-add-heavy routes. LIVE run-57: two payouts (counter hit 5 twice — mid-Act1 Armaments add + mid-Act2 adds); heals landed at 68/86 pre-Elite② and mid-Act2 shop window.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "BOOK_OF_FIVE_RINGS",
     "kind": "relic",
-    "name": "Book of Five Rings",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Common"
+    "name": "Book of Five Rings"
   },
   "BOOK_REPAIR_KNIFE": {
     "aliases": [
       "Book Repair Knife",
       "BookRepairKnife"
     ],
-    "character": "Necrobinder",
-    "counter_shown": false,
-    "curated": false,
-    "description": "when non-Minion enemies die to Doom, heal 3 HP per such creature.",
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "BOOK_REPAIR_KNIFE",
     "kind": "relic",
-    "name": "Book Repair Knife",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Book Repair Knife"
   },
   "BOOMING_CONCH": {
     "aliases": [
       "Booming Conch",
       "BoomingConch"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "at start of elite combats (turn 1), hand draw +2 cards and gain 1 Energy.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "BOOMING_CONCH",
     "kind": "relic",
-    "live_notes": "LIVE run-56: Neow pick. Elite combat start draw +2 cards + gain 1 Energy. Confirmed every elite fight in the run.",
-    "name": "Booming Conch",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Booming Conch"
   },
   "BOUND_PHYLACTERY": {
     "aliases": [
       "Bound Phylactery",
       "BoundPhylactery"
     ],
-    "character": "Necrobinder",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at combat start, Summon 1 Osty; at start of turns 2+, Summon 1 Osty.",
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
     "id": "BOUND_PHYLACTERY",
     "kind": "relic",
-    "name": "Bound Phylactery",
-    "play_notes": "",
-    "rarity": "Starter"
+    "name": "Bound Phylactery"
   },
   "BOWLER_HAT": {
     "aliases": [
@@ -470,29 +438,27 @@
       "BowlerHat",
       "礼帽"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Gold gained ×1.25. Only obtainable before Act-3 treasure chest; never sold in shops. LIVE run-57: Act2 chest + elite bounties scaled visibly (chest +43-class vs 30-class baseline).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "BOWLER_HAT",
     "kind": "relic",
-    "name": "Bowler Hat",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Bowler Hat"
   },
   "BREAD": {
     "aliases": [
       "Bread"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "turn 1 start, lose 2 Energy; turns 2+, +1 max Energy each turn.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "BREAD",
     "kind": "relic",
-    "name": "Bread",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Bread"
   },
   "BRIGHT_FLAME": {
     "aliases": [
@@ -501,236 +467,219 @@
       "Storybook",
       "至亮之焰"
     ],
-    "character": "shared",
-    "curated": true,
-    "description": "Card-grant payload of the Tezcatara STORYBOOK boon - added to deck on pickup; card effect not live-verified run-43.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Ancient"
+    },
     "id": "BRIGHT_FLAME",
     "kind": "relic",
-    "name": "Brightest Flame",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Brightest Flame"
   },
   "BRILLIANT_SCARF": {
     "aliases": [
       "Brilliant Scarf",
       "BrilliantScarf"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "the 5th card you play from hand each turn costs 0.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "BRILLIANT_SCARF",
     "kind": "relic",
-    "name": "Brilliant Scarf",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Brilliant Scarf"
   },
   "BRIMSTONE": {
     "aliases": [
       "Brimstone"
     ],
-    "character": "Ironclad",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at start of each turn, gain 2 Strength and ALL enemies gain 1 Strength.",
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "BRIMSTONE",
     "kind": "relic",
-    "name": "Brimstone",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Brimstone"
   },
   "BRONZE_SCALES": {
     "aliases": [
       "Bronze Scales",
       "BronzeScales"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Start each combat with 3 Thorns.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "BRONZE_SCALES",
     "kind": "relic",
-    "live_notes": "LIVE run-56: Start each combat with 3 Thorns. Thorns damage is block-piercing.",
-    "name": "Bronze Scales",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "Bronze Scales"
   },
   "BURNING_BLOOD": {
     "aliases": [
       "Burning Blood",
       "BurningBlood"
     ],
-    "character": "Ironclad",
-    "counter_shown": false,
-    "curated": false,
-    "description": "At the end of combat, heal 6 HP.",
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
     "id": "BURNING_BLOOD",
     "kind": "relic",
-    "name": "Burning Blood",
-    "play_notes": "",
-    "rarity": "Starter"
+    "name": "Burning Blood"
   },
   "BURNING_STICKS": {
     "aliases": [
       "Burning Sticks",
       "BurningSticks"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "first time each combat you exhaust a Skill, add a copy of it to your hand.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "BURNING_STICKS",
     "kind": "relic",
-    "name": "Burning Sticks",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Burning Sticks"
   },
   "BYRDPIP": {
     "aliases": [
       "Byrdpip"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, gain the Byrd Swoop card; accompanies you in battles.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "BYRDPIP",
     "kind": "relic",
-    "name": "Byrdpip",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Byrdpip"
   },
   "CALLING_BELL": {
     "aliases": [
       "Calling Bell",
       "CallingBell"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, gain 1 unique Curse and 3 relics.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "CALLING_BELL",
     "kind": "relic",
-    "name": "Calling Bell",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Calling Bell"
   },
   "CANDELABRA": {
     "aliases": [
       "Candelabra"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "At the start of your 2nd turn, gain [energy:2].",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "CANDELABRA",
     "kind": "relic",
-    "name": "Candelabra",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Candelabra"
   },
   "CAPTAINS_WHEEL": {
     "aliases": [
       "Captain's Wheel",
       "CaptainsWheel"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "At the start of your 3rd turn, gain 18 Block.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "CAPTAINS_WHEEL",
     "kind": "relic",
-    "name": "Captain's Wheel",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Captain's Wheel"
   },
   "CAULDRON": {
     "aliases": [
       "Cauldron"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Upon pickup, brews 5 random potions.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "CAULDRON",
     "kind": "relic",
-    "name": "Cauldron",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Cauldron"
   },
   "CENTENNIAL_PUZZLE": {
     "aliases": [
       "Centennial Puzzle",
       "CentennialPuzzle"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "first time each combat you lose HP, draw 3 cards. Any HP-loss tick triggers it — CrimsonMantle turn-start −1 / BloodWall / Bloodletting / Offering class; with Mantle deployed it is effectively \"draw 3 at combat start after T1\".",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "CENTENNIAL_PUZZLE",
     "kind": "relic",
-    "live_notes": "LIVE run-56: first time each combat you lose HP, draw 3 cards. Synergizes with self-harm engine (Hemokinesis/Bloodletting/BloodWall trigger it).",
-    "name": "Centennial Puzzle",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "Centennial Puzzle"
   },
   "CHANDELIER": {
     "aliases": [
       "Chandelier"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "At the start of your 3rd turn, gain [energy:3].",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "CHANDELIER",
     "kind": "relic",
-    "name": "Chandelier",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Chandelier"
   },
   "CHARONS_ASHES": {
     "aliases": [
       "Charon's Ashes",
       "CharonsAshes"
     ],
-    "character": "Ironclad",
-    "counter_shown": false,
-    "curated": false,
-    "description": "whenever you exhaust a card, deal 3 damage to ALL enemies.",
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "CHARONS_ASHES",
     "kind": "relic",
-    "name": "Charon's Ashes",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Charon's Ashes"
   },
   "CHEMICAL_X": {
     "aliases": [
       "Chemical X",
       "ChemicalX"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "the effects of your cost-X cards are increased by 2.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "CHEMICAL_X",
     "kind": "relic",
-    "name": "Chemical X",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Chemical X"
   },
   "CHOICES_PARADOX": {
     "aliases": [
       "Choices Paradox",
       "ChoicesParadox"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at start of turn 1, choose 1 of 5 random cards to add to hand; those cards gain Retain. Semantics: hand-add with Retain for that combat, new 5-option offer every combat T1 — NOT a permanent deck add.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "CHOICES_PARADOX",
     "kind": "relic",
-    "name": "Choices Paradox",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Choices Paradox"
   },
   "CHOSEN_CHEESE": {
     "aliases": [
@@ -738,428 +687,400 @@
       "The Chosen Cheese",
       "天选芝士"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Event relic (ROOM_FULL_OF_CHEESE SEARCH branch, −14 HP on pickup run-57): +1 Max HP at the end of every combat (live run-51/57 class — stacks with Burning Blood heal and Feed Fatals). run-57: HP-rail component 80→97 combined with Feed; picking it at 46/95 HP-class cost was paid back across Act2 fights.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "CHOSEN_CHEESE",
     "kind": "relic",
-    "name": "Chosen Cheese",
-    "play_notes": "run-46 live: 16 victory procs; HP-rail component with Burning Blood + Waffle + Feed Fatals; Paper-Cuts tax (Act3 scrolls) is the only observed leak — full-block turns cost zero MaxHP.",
-    "rarity": "Event"
+    "name": "Chosen Cheese"
   },
   "CIRCLET": {
     "aliases": [
       "Circlet"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "It's a circlet.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "None"
+    },
     "id": "CIRCLET",
     "kind": "relic",
-    "name": "Circlet",
-    "play_notes": "",
-    "rarity": "None"
+    "name": "Circlet"
   },
   "CLAWS": {
     "aliases": [
       "Claws"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, transform up to 6 cards into Maul.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "CLAWS",
     "kind": "relic",
-    "name": "Claws",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Claws"
   },
   "CLOAK_CLASP": {
     "aliases": [
       "Cloak Clasp",
       "CloakClasp"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "end of turn, gain 1 Block per card in hand.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "CLOAK_CLASP",
     "kind": "relic",
-    "name": "Cloak Clasp",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Cloak Clasp"
   },
   "CRACKED_CORE": {
     "aliases": [
       "Cracked Core",
       "CrackedCore"
     ],
-    "character": "Defect",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at combat start (turn 1), Channel 1 Lightning.",
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
     "id": "CRACKED_CORE",
     "kind": "relic",
-    "name": "Cracked Core",
-    "play_notes": "",
-    "rarity": "Starter"
+    "name": "Cracked Core"
   },
   "CROSSBOW": {
     "aliases": [
       "Crossbow"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at start of each turn, add 1 random Attack to hand; it is free this turn.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "CROSSBOW",
     "kind": "relic",
-    "name": "Crossbow",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Crossbow"
   },
   "CURSED_PEARL": {
     "aliases": [
       "Cursed Pearl",
       "CursedPearl"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, add 1 Greed to deck and gain 333 Gold.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "CURSED_PEARL",
     "kind": "relic",
-    "name": "Cursed Pearl",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Cursed Pearl"
   },
   "DARKSTONE_PERIAPT": {
     "aliases": [
       "Darkstone Periapt",
       "DarkstonePeriapt"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "whenever a Curse is added to your deck, +6 Max HP.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "DARKSTONE_PERIAPT",
     "kind": "relic",
-    "name": "Darkstone Periapt",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Darkstone Periapt"
   },
   "DATA_DISK": {
     "aliases": [
       "Data Disk",
       "DataDisk"
     ],
-    "character": "Defect",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Start each combat with 1 Focus.",
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "DATA_DISK",
     "kind": "relic",
-    "name": "Data Disk",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "Data Disk"
   },
   "DAUGHTER_OF_THE_WIND": {
     "aliases": [
       "Daughter of the Wind",
       "DaughterOfTheWind"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "whenever you play an Attack card, gain 1 Block.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "DAUGHTER_OF_THE_WIND",
     "kind": "relic",
-    "live_notes": "LIVE run-56: Doll room pick. Whenever you play an Attack card, gain 1 Block. Passive block engine synergy with attack-heavy deck.",
-    "name": "Daughter of the Wind",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Daughter of the Wind"
   },
   "DAUGHTER_OF_WIND": {
     "aliases": [
-      "Daughter of the Wind",
-      "DAUGHTER_OF_THE_WIND"
+      "DAUGHTER_OF_THE_WIND",
+      "Daughter of the Wind"
     ],
-    "character": "shared",
-    "curated": false,
-    "description": "Whenever you play an Attack, gain 1 Block.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Event"
+    },
     "id": "DAUGHTER_OF_WIND",
     "kind": "relic",
-    "name": "Daughter of the Wind",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Daughter of the Wind"
   },
   "DELICATE_FROND": {
     "aliases": [
       "Delicate Frond",
       "DelicateFrond"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at combat start, fill all empty potion slots with random potions.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "DELICATE_FROND",
     "kind": "relic",
-    "name": "Delicate Frond",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Delicate Frond"
   },
   "DEMON_TONGUE": {
     "aliases": [
       "Demon Tongue",
       "DemonTongue"
     ],
-    "character": "Ironclad",
-    "counter_shown": false,
-    "curated": false,
-    "description": "first time each combat you lose unblocked HP on your turn, heal HP equal to the amount lost.",
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "DEMON_TONGUE",
     "kind": "relic",
-    "name": "Demon Tongue",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Demon Tongue"
   },
   "DIAMOND_DIADEM": {
     "aliases": [
       "Diamond Diadem",
       "DiamondDiadem"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "end of turn, if you played ≤2 cards this turn, take half attack damage until end of enemy turn.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "DIAMOND_DIADEM",
     "kind": "relic",
-    "name": "Diamond Diadem",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Diamond Diadem"
   },
   "DINGY_RUG": {
     "aliases": [
       "Dingy Rug",
       "破地毯"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "card rewards can now contain Colorless cards. Shop (5,0) Act2 live price 208g run-43 (unaffordable). Dilutes class-pool rewards - low priority unless hunting specific Colorless tools.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "DINGY_RUG",
     "kind": "relic",
-    "name": "Dingy Rug",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Shop"
+    "name": "Dingy Rug"
   },
   "DISTINGUISHED_CAPE": {
     "aliases": [
       "Distinguished Cape",
       "DistinguishedCape"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, −9 Max HP; add 3 Apparition cards to deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "DISTINGUISHED_CAPE",
     "kind": "relic",
-    "name": "Distinguished Cape",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Distinguished Cape"
   },
   "DIVINE_DESTINY": {
     "aliases": [
       "Divine Destiny",
       "DivineDestiny"
     ],
-    "character": "Regent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "At the start of each combat, gain [star:6].",
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
     "id": "DIVINE_DESTINY",
     "kind": "relic",
-    "name": "Divine Destiny",
-    "play_notes": "",
-    "rarity": "Starter"
+    "name": "Divine Destiny"
   },
   "DIVINE_RIGHT": {
     "aliases": [
       "Divine Right",
       "DivineRight"
     ],
-    "character": "Regent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on entering a combat room, gain 3 Stars.",
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
     "id": "DIVINE_RIGHT",
     "kind": "relic",
-    "name": "Divine Right",
-    "play_notes": "",
-    "rarity": "Starter"
+    "name": "Divine Right"
   },
   "DOLLYS_MIRROR": {
     "aliases": [
       "Dolly's Mirror",
       "DollysMirror"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, gain a copy of a chosen card in your deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "DOLLYS_MIRROR",
     "kind": "relic",
-    "name": "Dolly's Mirror",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Dolly's Mirror"
   },
   "DRAGON_FRUIT": {
     "aliases": [
       "Dragon Fruit",
       "DragonFruit"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Whenever you gain Gold, raise your Max HP by 1.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "DRAGON_FRUIT",
     "kind": "relic",
-    "name": "Dragon Fruit",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Dragon Fruit"
   },
   "DREAM_CATCHER": {
     "aliases": [
       "Dream Catcher",
       "DreamCatcher"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "when Resting at a Rest Site, you may add a card to deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "DREAM_CATCHER",
     "kind": "relic",
-    "name": "Dream Catcher",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Dream Catcher"
   },
   "DRIFTWOOD": {
     "aliases": [
       "Driftwood"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "You may reroll each card reward once.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "DRIFTWOOD",
     "kind": "relic",
-    "name": "Driftwood",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Driftwood"
   },
   "DUSTY_TOME": {
     "aliases": [
       "Dusty Tome",
       "DustyTome"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Event-relic (DARV boon room, run-42 Act2 start): grants CORRUPTION+ (upgraded Corruption, cost 2) to deck. Corruption+: Exhaust; your Skills cost 0 and are Exhausted when played.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "DUSTY_TOME",
     "kind": "relic",
-    "name": "Dusty Tome",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Dusty Tome"
   },
   "ECTOPLASM": {
     "aliases": [
       "Ectoplasm"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "+1 max Energy each turn; Gold gained is set to 0.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "ECTOPLASM",
     "kind": "relic",
-    "name": "Ectoplasm",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Ectoplasm"
   },
   "ELECTRIC_SHRYMP": {
     "aliases": [
       "Electric Shrymp",
       "ElectricShrymp"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, choose 1 Skill card to enchant with Imbued.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "ELECTRIC_SHRYMP",
     "kind": "relic",
-    "name": "Electric Shrymp",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Electric Shrymp"
   },
   "EMBER_TEA": {
     "aliases": [
       "Ember Tea",
       "EmberTea"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at start of the next 5 combats, gain 2 Strength.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "EMBER_TEA",
     "kind": "relic",
-    "name": "Ember Tea",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Ember Tea"
   },
   "EMOTION_CHIP": {
     "aliases": [
       "Emotion Chip",
       "EmotionChip"
     ],
-    "character": "Defect",
-    "counter_shown": false,
-    "curated": false,
-    "description": "if you lost HP during the previous turn, at start of your turn trigger the passive of ALL Orbs.",
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "EMOTION_CHIP",
     "kind": "relic",
-    "name": "Emotion Chip",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Emotion Chip"
   },
   "EMPTY_CAGE": {
     "aliases": [
       "Empty Cage",
       "EmptyCage"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Upon pickup, remove 2 cards from your Deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "EMPTY_CAGE",
     "kind": "relic",
-    "name": "Empty Cage",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Empty Cage"
   },
   "ETERNAL_FEATHER": {
     "aliases": [
       "Eternal Feather"
     ],
-    "character": "shared",
-    "curated": false,
-    "description": "For every 5 cards in your Deck, heal 3 HP whenever you enter a Rest Site.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Uncommon"
+    },
     "id": "ETERNAL_FEATHER",
     "kind": "relic",
-    "name": "Eternal Feather",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Eternal Feather"
   },
   "FAKE_ANCHOR": {
     "aliases": [
@@ -1167,15 +1088,14 @@
       "Fake Anchor",
       "FakeAnchor"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Start each combat with 4 Block.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FAKE_ANCHOR",
     "kind": "relic",
-    "name": "Fake Anchor",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Fake Anchor"
   },
   "FAKE_BLOOD_VIAL": {
     "aliases": [
@@ -1183,15 +1103,14 @@
       "Fake Blood Vial",
       "FakeBloodVial"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "At the start of each combat, heal 1 HP.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FAKE_BLOOD_VIAL",
     "kind": "relic",
-    "name": "Fake Blood Vial",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Fake Blood Vial"
   },
   "FAKE_HAPPY_FLOWER": {
     "aliases": [
@@ -1199,15 +1118,14 @@
       "FakeHappyFlower",
       "Happy Flower???"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Every 5 turns, gain [energy:1].",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FAKE_HAPPY_FLOWER",
     "kind": "relic",
-    "name": "Fake Happy Flower",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Fake Happy Flower"
   },
   "FAKE_LEES_WAFFLE": {
     "aliases": [
@@ -1215,15 +1133,14 @@
       "FakeLeesWaffle",
       "Lee's Waffle???"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, heal 10% of Max HP (floor). Fake-merchant price ~56g.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FAKE_LEES_WAFFLE",
     "kind": "relic",
-    "name": "Fake Lee's Waffle",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Fake Lee's Waffle"
   },
   "FAKE_MANGO": {
     "aliases": [
@@ -1231,15 +1148,14 @@
       "FakeMango",
       "Mango???"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, +3 Max HP (+3 current and Max). Fake-merchant price ~43g.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FAKE_MANGO",
     "kind": "relic",
-    "name": "Fake Mango",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Fake Mango"
   },
   "FAKE_MERCHANTS_RUG": {
     "aliases": [
@@ -1247,15 +1163,14 @@
       "FakeMerchantsRug",
       "The Merchant's Rug???"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Poor imitation. Does nothing.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FAKE_MERCHANTS_RUG",
     "kind": "relic",
-    "name": "Fake Merchant's Rug",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Fake Merchant's Rug"
   },
   "FAKE_ORICHALCUM": {
     "aliases": [
@@ -1263,15 +1178,14 @@
       "FakeOrichalcum",
       "Orichalcum???"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "end of turn, if you have no Block, gain 3 Block.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FAKE_ORICHALCUM",
     "kind": "relic",
-    "name": "Fake Orichalcum",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Fake Orichalcum"
   },
   "FAKE_SNECKO_EYE": {
     "aliases": [
@@ -1279,15 +1193,14 @@
       "FakeSneckoEye",
       "Snecko Eye???"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Start each combat Confused.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FAKE_SNECKO_EYE",
     "kind": "relic",
-    "name": "Fake Snecko Eye",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Fake Snecko Eye"
   },
   "FAKE_STRIKE_DUMMY": {
     "aliases": [
@@ -1295,15 +1208,14 @@
       "FakeStrikeDummy",
       "Strike Dummy???"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Strike-tagged attack cards deal +1 damage.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FAKE_STRIKE_DUMMY",
     "kind": "relic",
-    "name": "Fake Strike Dummy",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Fake Strike Dummy"
   },
   "FAKE_VENERABLE_TEA_SET": {
     "aliases": [
@@ -1311,179 +1223,167 @@
       "FakeVenerableTeaSet",
       "Venerable Tea Set???"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on entering a Rest Site, the next combat starts with +1 Energy.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FAKE_VENERABLE_TEA_SET",
     "kind": "relic",
-    "name": "Fake Venerable Tea Set",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Fake Venerable Tea Set"
   },
   "FENCING_MANUAL": {
     "aliases": [
       "Fencing Manual",
       "FencingManual"
     ],
-    "character": "Regent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "At the start of each combat, Forge 10.",
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "FENCING_MANUAL",
     "kind": "relic",
-    "name": "Fencing Manual",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "Fencing Manual"
   },
   "FESTIVE_POPPER": {
     "aliases": [
       "Festive Popper",
       "FestivePopper"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "at start of turn 1, deal 9 damage to ALL enemies. Pre-chip confirmed across encounters (e.g. Chompers, millipede segments, KaiserCrab claws each −9 at combat start). LIVE run-47: 9-damage T1 AoE confirmed on every combat in the run including the Act1 Boss (Toadpoles through Waterfall Giant) — reliable pre-chip relic.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "FESTIVE_POPPER",
     "kind": "relic",
-    "name": "Festive Popper",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "Festive Popper"
   },
   "FIDDLE": {
     "aliases": [
       "Fiddle"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "hand draw +2 cards each turn; you cannot draw cards during your turn.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "FIDDLE",
     "kind": "relic",
-    "name": "Fiddle",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Fiddle"
   },
   "FISHING_ROD": {
     "aliases": [
       "Fishing Rod",
       "FishingRod"
     ],
-    "character": "shared",
-    "counter_shown": true,
-    "curated": false,
-    "description": "every 3 Monster combats, upgrade 1 random card in deck. Counter counts Monster-room combats only — upgrades fire after regular monster fights 3/6/9; elite-room fights do not advance the counter.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Ancient"
+    },
     "id": "FISHING_ROD",
     "kind": "relic",
-    "name": "Fishing Rod",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Fishing Rod"
   },
   "FORGOTTEN_SOUL": {
     "aliases": [
       "Forgotten Soul",
       "ForgottenSoul"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "whenever you exhaust a card, deal 1 damage to a random enemy.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FORGOTTEN_SOUL",
     "kind": "relic",
-    "name": "Forgotten Soul",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Forgotten Soul"
   },
   "FRAGRANT_MUSHROOM": {
     "aliases": [
       "Fragrant Mushroom",
       "FragrantMushroom"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, lose 15 HP and upgrade 2 random cards in deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FRAGRANT_MUSHROOM",
     "kind": "relic",
-    "name": "Fragrant Mushroom",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Fragrant Mushroom"
   },
   "FRESNEL_LENS": {
     "aliases": [
       "Fresnel Lens",
       "FresnelLens"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "cards that grant Block and are added to your deck are enchanted with Nimble 2.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "FRESNEL_LENS",
     "kind": "relic",
-    "name": "Fresnel Lens",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Fresnel Lens"
   },
   "FROZEN_EGG": {
     "aliases": [
       "Frozen Egg",
       "FrozenEgg"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Power cards added to your deck are created upgraded.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "FROZEN_EGG",
     "kind": "relic",
-    "name": "Frozen Egg",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Frozen Egg"
   },
   "FUNERARY_MASK": {
     "aliases": [
       "Funerary Mask",
       "FuneraryMask"
     ],
-    "character": "Necrobinder",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at combat start, shuffle 3 Soul cards into your draw pile.",
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "FUNERARY_MASK",
     "kind": "relic",
-    "name": "Funerary Mask",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Funerary Mask"
   },
   "FUR_COAT": {
     "aliases": [
       "Fur Coat",
       "FurCoat"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Act3/Act2 boon-room relic (NONUPEIPE event, option 3): randomly mark 7 combats; enemies in marked combats have only 1 HP. LIVE run-46: picked at Act3 boon over Diamond Diadem (≤2 plays = half damage) and Brilliant Scarf (5th card free) — 7 near-free fights is the highest-expected-value pick for a mid-HP Act3 entry.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "FUR_COAT",
     "kind": "relic",
-    "name": "Fur Coat",
-    "play_notes": "Act2/Act3 赐福房遗物（NONUPEIPE 事件选项 3）：随机标记 7 场战斗，被标记战斗中的敌人仅有 1 点生命。run-46 live：Act3 赐福在钻石头冠与艳丽围巾之间选择皮草大衣——对中等血线入 Act3 而言 7 场近乎免战是期望值最高的选择。",
-    "rarity": "Ancient"
+    "name": "Fur Coat"
   },
   "GALACTIC_DUST": {
     "aliases": [
       "Galactic Dust",
       "GalacticDust"
     ],
-    "character": "Regent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "For every 10 [star:1] spent, gain 10 Block.",
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "GALACTIC_DUST",
     "kind": "relic",
-    "name": "Galactic Dust",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Galactic Dust"
   },
   "GAMBLING_CHIP": {
     "aliases": [
@@ -1491,59 +1391,55 @@
       "GamblingChip",
       "赌博筹码"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Rare: at combat start, discard any number of cards then draw that many (mulligan via hand_select overlay: choose cards → proceed). LIVE run-57: mulligan dumped skill-class cards vs Infested Prism (zero-skill discipline); dumped Uppercut vs trio fight for block-class redraw. Combat-start overlay appears before play phase — play calls fail-loud until resolved.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "GAMBLING_CHIP",
     "kind": "relic",
-    "name": "Gambling Chip",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Gambling Chip"
   },
   "GAME_PIECE": {
     "aliases": [
       "Game Piece",
       "GamePiece"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Whenever you play a Power card, draw 1 card. run-53 live 2026-09-19: draw-1 fired on every Power-card play observed (Rupture, Vicious, Inflame, Pyre) — Game Piece draw visible as new hand card same state read.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "GAME_PIECE",
     "kind": "relic",
-    "name": "Game Piece",
-    "play_notes": "Run-49 live: draw event observed after every Inflame/Vicious/Unmovable/FNP play; natural pair with power-class engines.",
-    "rarity": "Rare"
+    "name": "Game Piece"
   },
   "GHOST_SEED": {
     "aliases": [
       "Ghost Seed",
       "GhostSeed"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Strike and Defend cards gain Ethereal — unplayed copies Exhaust at end of your turn. Live run-42: unplayed Strikes/Defends exhausted at turn end in boss fights (history \"exhausted STRIKE_IRONCLAD/DEFEND_IRONCLAD\"); passive clog-thinning; synergy with Corruption/FNP exhaust payoffs.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "GHOST_SEED",
     "kind": "relic",
-    "name": "Ghost Seed",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Ghost Seed"
   },
   "GIRYA": {
     "aliases": [
       "Girya"
     ],
-    "character": "shared",
-    "counter_shown": true,
-    "curated": false,
-    "description": "Rest Sites gain a Lift option (max 3 times); at combat start, gain Strength equal to times Lifted.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Rare"
+    },
     "id": "GIRYA",
     "kind": "relic",
-    "name": "Girya",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Girya"
   },
   "GLAM": {
     "aliases": [
@@ -1551,58 +1447,55 @@
       "GlamEnchant",
       "华彩"
     ],
-    "character": "shared",
-    "curated": true,
-    "description": "Card enchant: the first time the card is played in each combat, its effect resolves twice (one free replay; energy paid only once). Later plays that combat are normal.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": null
+    },
     "id": "GLAM",
     "kind": "enchant",
-    "name": "Glam",
-    "play_notes": "Run-49 live process note: Glam replay (second resolution) fires after the first resolution fully completes, INCLUDING Headbutt retrieval choose. If the next act is submitted immediately after the retrieval choose, the replay window can be skipped (2 observations). After retrieval choose on a Glam Headbutt, take a settle re-read before the next act when the double matters. Replay damage observed live every turn it fired: 9+9, 12+12, 13+13, 15+15, 22+5-class.",
-    "rarity": null
+    "name": "Glam"
   },
   "GLASS_EYE": {
     "aliases": [
       "Glass Eye",
       "GlassEye"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, gain 2 Common, 2 Uncommon and 1 Rare cards.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "GLASS_EYE",
     "kind": "relic",
-    "name": "Glass Eye",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Glass Eye"
   },
   "GLITTER": {
     "aliases": [
       "Glitter"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "All card rewards are enchanted with Glam (first play each combat replays free — see GLAM).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "GLITTER",
     "kind": "relic",
-    "name": "Glitter",
-    "play_notes": "Run-long enchant engine; see GLAM for the enchant effect.",
-    "rarity": "Ancient"
+    "name": "Glitter"
   },
   "GNARLED_HAMMER": {
     "aliases": [
       "Gnarled Hammer",
       "GnarledHammer"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, choose up to 3 Attack cards to enchant with Sharp 3.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "GNARLED_HAMMER",
     "kind": "relic",
-    "name": "Gnarled Hammer",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Gnarled Hammer"
   },
   "GOLDEN_COMPASS": {
     "aliases": [
@@ -1610,727 +1503,679 @@
       "GoldenCompass",
       "黄金罗盘"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Ancient relic (Tezcatara boon): on pickup, regenerate the current act's map (RunManager.GenerateMap for current act index).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "GOLDEN_COMPASS",
     "kind": "relic",
-    "name": "Golden Compass",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Golden Compass"
   },
   "GOLDEN_PEARL": {
     "aliases": [
       "Golden Pearl",
       "GoldenPearl"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Upon pickup, gain 150 Gold.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "GOLDEN_PEARL",
     "kind": "relic",
-    "name": "Golden Pearl",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Golden Pearl"
   },
   "GOLD_PLATED_CABLES": {
     "aliases": [
       "Gold-Plated Cables",
       "GoldPlatedCables"
     ],
-    "character": "Defect",
-    "counter_shown": false,
-    "curated": false,
-    "description": "your rightmost Orb triggers its passive 1 additional time.",
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "GOLD_PLATED_CABLES",
     "kind": "relic",
-    "name": "Gold-Plated Cables",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Gold-Plated Cables"
   },
   "GORGET": {
     "aliases": [
       "Gorget",
       "颈甲"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Common: at the start of each combat, gain 4 Plating (rolling block — plating grants Amount block at end of each of your side turns, stacks decrement at your turn start; plating block stacks with card block for same-window cover math). LIVE run-57: Gorget+Defend+Shrug lines routinely built 14-22 block covers; IMBALANCED stun vs Bowlbug Rock fired on 16-total-block vs 15-intent.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "GORGET",
     "kind": "relic",
-    "name": "Gorget",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "Gorget"
   },
   "GREMLIN_HORN": {
     "aliases": [
       "Gremlin Horn",
       "GremlinHorn"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "When an enemy dies, gain 1 Energy and draw 1 card. run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log): Ovicopter egg-clutch deaths refunded +2 energy mid-turn (energy print 6/3) — kill-chains fund cleanup attacks the same turn; each death resolves its own refund immediately.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "GREMLIN_HORN",
     "kind": "relic",
-    "name": "Gremlin Horn",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Gremlin Horn"
   },
   "HAND_DRILL": {
     "aliases": [
       "Hand Drill",
       "HandDrill"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "whenever you break an enemy's Block, apply 2 Vulnerable to that enemy.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "HAND_DRILL",
     "kind": "relic",
-    "name": "Hand Drill",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Hand Drill"
   },
   "HAPPY_FLOWER": {
     "aliases": [
       "Happy Flower",
       "HappyFlower"
     ],
-    "character": "shared",
-    "counter_shown": true,
-    "curated": true,
-    "description": "Every 3 turns, gain 1 Energy (counter relic).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Common"
+    },
     "id": "HAPPY_FLOWER",
     "kind": "relic",
-    "name": "Happy Flower",
-    "play_notes": "Run-49 live: Act2 elite (12,1) drop; counter displayed :0→:1→:2 across combat turns; energy arrives on the counter-reset turn.",
-    "rarity": "Common"
+    "name": "Happy Flower"
   },
   "HEFTY_TABLET": {
     "aliases": [
       "Hefty Tablet",
       "HeftyTablet"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, choose 1 of 3 Rare cards to add to deck, and add 1 Injury.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "HEFTY_TABLET",
     "kind": "relic",
-    "name": "Hefty Tablet",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Hefty Tablet"
   },
   "HELICAL_DART": {
     "aliases": [
       "Helical Dart",
       "HelicalDart"
     ],
-    "character": "Silent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "whenever you play a Shiv-tagged card, gain 1 Dexterity this turn.",
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "HELICAL_DART",
     "kind": "relic",
-    "name": "Helical Dart",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Helical Dart"
   },
   "HISTORY_COURSE": {
     "aliases": [
       "History Course",
       "HistoryCourse"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "from turn 2 onward, at start of turn auto-play a copy of the last Attack or Skill you played on your previous turn.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "HISTORY_COURSE",
     "kind": "relic",
-    "name": "History Course",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "History Course"
   },
   "HORN_CLEAT": {
     "aliases": [
       "Horn Cleat",
       "HornCleat"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "At the start of your 2nd turn, gain 14 Block.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "HORN_CLEAT",
     "kind": "relic",
-    "name": "Horn Cleat",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Horn Cleat"
   },
   "ICE_CREAM": {
     "aliases": [
       "Ice Cream",
       "IceCream"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Energy is not reset between turns (only reset on turn 1).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "ICE_CREAM",
     "kind": "relic",
-    "name": "Ice Cream",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Ice Cream"
   },
   "INFUSED_CORE": {
     "aliases": [
       "Infused Core",
       "InfusedCore"
     ],
-    "character": "Defect",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at start of turn 1, Channel 3 Lightning; Lightning orbs deal +1 damage.",
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
     "id": "INFUSED_CORE",
     "kind": "relic",
-    "name": "Infused Core",
-    "play_notes": "",
-    "rarity": "Starter"
+    "name": "Infused Core"
   },
   "INTIMIDATING_HELMET": {
     "aliases": [
       "Intimidating Helmet",
       "IntimidatingHelmet"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "whenever you play a card costing 2+ Energy, gain 4 Block.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "INTIMIDATING_HELMET",
     "kind": "relic",
-    "name": "Intimidating Helmet",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Intimidating Helmet"
   },
   "IRON_CLUB": {
     "aliases": [
       "Iron Club",
       "IronClub"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Every 4 cards you play, draw 1 card.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "IRON_CLUB",
     "kind": "relic",
-    "name": "Iron Club",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Iron Club"
   },
   "IVORY_TILE": {
     "aliases": [
       "Ivory Tile",
       "IvoryTile"
     ],
-    "character": "Necrobinder",
-    "counter_shown": false,
-    "curated": false,
-    "description": "whenever you play a card costing 3+ Energy, gain 1 Energy.",
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "IVORY_TILE",
     "kind": "relic",
-    "name": "Ivory Tile",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Ivory Tile"
   },
   "JEWELED_MASK": {
     "aliases": [
       "Jeweled Mask",
       "JeweledMask"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at combat start, move a random Power from draw pile to hand; free this combat.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "JEWELED_MASK",
     "kind": "relic",
-    "name": "Jeweled Mask",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Jeweled Mask"
   },
   "JEWELRY_BOX": {
     "aliases": [
       "Jewelry Box",
       "JewelryBox"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Upon pickup, add 1 Apotheosis to your Deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "JEWELRY_BOX",
     "kind": "relic",
-    "name": "Jewelry Box",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Jewelry Box"
   },
   "JOSS_PAPER": {
     "aliases": [
       "Joss Paper",
       "JossPaper"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Every 5 cards exhausted, draw 1 card (counter JOSS_PAPER:n; Ethereal end-of-turn exhausts counted at turn end; resets on proc). LIVE run-38: counter advanced on Offering/Ritual/Tremble/MoltenFist exhausts; proc at :5 drew 1 mid-boss-fight; counter reset to :0 after proc. Passive draw engine for exhaust-package decks. LIVE run-52: counter advanced live on Second Wind exhausts (JOSS_PAPER :0→:1 printed in the relics line after SW exhausted a Defend); pairs directly with consume-block packages.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "JOSS_PAPER",
     "kind": "relic",
-    "name": "Joss Paper",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Joss Paper"
   },
   "JUZU_BRACELET": {
     "aliases": [
       "Juzu Bracelet",
       "JuzuBracelet"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Unknown (?) rooms can no longer roll Monster combats — only events/treasures. Live run-40 + run-42: Unknown rooms rolled events/treasures after pickup; Elite-typed rooms unaffected.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "JUZU_BRACELET",
     "kind": "relic",
-    "name": "Juzu Bracelet",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "Juzu Bracelet"
   },
   "KALEIDOSCOPE": {
     "aliases": [
       "Kaleidoscope"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "On pickup, gain 2 card rewards drawn from OTHER characters' pools.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "KALEIDOSCOPE",
     "kind": "relic",
-    "name": "Kaleidoscope",
-    "play_notes": "Cross-character rewards dilute IRONCLAD archetype synergy (self-damage→Str engine); variance pick. Live-confirmed Neow option 2026-09-19.",
-    "rarity": "Ancient"
+    "name": "Kaleidoscope"
   },
   "KIFUDA": {
     "aliases": [
       "Kifuda"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, choose up to 3 cards to enchant with Adroit 3.",
+    "detail": {
+      "character": null,
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "KIFUDA",
     "kind": "relic",
-    "name": "Kifuda",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Kifuda"
   },
   "KUNAI": {
     "aliases": [
       "Kunai"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "every 3 Attack cards played in one turn, gain 1 Dexterity. Run-41 live: Dex from this relic is combat-scoped — the +1 vanished at the next turn boundary in the Exoskeleton fight; block values computed the following turn must not assume it persists. Fires on the same 3-attack turns as Kusarigama.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "KUNAI",
     "kind": "relic",
-    "name": "Kunai",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Kunai"
   },
   "KUSARIGAMA": {
     "aliases": [
       "Kusarigama"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "every 3 Attack cards played in one turn, deal 6 damage to a random enemy. Run-41 live: procced on the eel-quartet T1 third-attack line — the 6 landed on a different target than the attack chain, useful softening for pack fights.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "KUSARIGAMA",
     "kind": "relic",
-    "name": "Kusarigama",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Kusarigama"
   },
   "LANTERN": {
     "aliases": [
       "Lantern"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "start each combat with +1 Energy (T1 only). Run-41 live: boss T1 opened at 4/3 display capacity — PS+Strike+Strike or Inferno+Brand+Bash+Strike lines all fit; stacks with Pyre and Pael's Flesh.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "LANTERN",
     "kind": "relic",
-    "name": "Lantern",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "Lantern"
   },
   "LARGE_CAPSULE": {
     "aliases": [
       "Large Capsule",
       "LargeCapsule"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, gain 2 random relics; add 1 Strike and 1 Defend to deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "LARGE_CAPSULE",
     "kind": "relic",
-    "name": "Large Capsule",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Large Capsule"
   },
   "LASTING_CANDY": {
     "aliases": [
       "Lasting Candy",
       "永恒糖果"
     ],
-    "character": "shared",
-    "curated": true,
-    "description": "Every other combat after the first, combat card rewards gain 1 additional Power-class card option (reward screen shows 4 options instead of 3). Only obtainable before the Act-3 treasure chest. LIVE run-45: counter alternates :0/:1 on the relic stack display; two 4-option rewards observed — delivered JUGGERNAUT (elite reward) and a second INFERNO (fight reward). Power-injection economy piece.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Uncommon"
+    },
     "id": "LASTING_CANDY",
     "kind": "relic",
-    "name": "Lasting Candy",
-    "rarity": "Uncommon"
+    "name": "Lasting Candy"
   },
   "LAVA_LAMP": {
     "aliases": [
       "Lava Lamp",
       "LavaLamp"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at combat end, if you took no damage, upgrade all card rewards.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "LAVA_LAMP",
     "kind": "relic",
-    "name": "Lava Lamp",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Lava Lamp"
   },
   "LAVA_ROCK": {
     "aliases": [
       "Lava Rock",
       "LavaRock"
     ],
-    "character": "shared",
-    "counter_shown": true,
-    "curated": false,
-    "description": "boss combat rewards gain 2 additional relics (once). Act label is soft — +2-relic reward buttons also observed at an Act-2 boss reward screen (same class as WONGOS act-gate).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Ancient"
+    },
     "id": "LAVA_ROCK",
     "kind": "relic",
-    "name": "Lava Rock",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Lava Rock"
   },
   "LEAD_PAPERWEIGHT": {
     "aliases": [
       "Lead Paperweight",
       "LeadPaperweight"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, choose 1 of 2 Colorless cards to add to deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "LEAD_PAPERWEIGHT",
     "kind": "relic",
-    "name": "Lead Paperweight",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Lead Paperweight"
   },
   "LEAFY_POULTICE": {
     "aliases": [
       "Leafy Poultice",
       "LeafyPoultice"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, transform 1 Strike and 1 Defend; lose 12 Max HP.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "LEAFY_POULTICE",
     "kind": "relic",
-    "name": "Leafy Poultice",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Leafy Poultice"
   },
   "LEES_WAFFLE": {
     "aliases": [
       "Lee's Waffle",
       "LeesWaffle"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, +7 Max HP and heal all missing HP.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "LEES_WAFFLE",
     "kind": "relic",
-    "name": "Lee's Waffle",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Lee's Waffle"
   },
   "LETTER_OPENER": {
     "aliases": [
       "Letter Opener",
       "LetterOpener"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "every 3 Skill cards played in one turn, deal 5 damage to ALL enemies.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "LETTER_OPENER",
     "kind": "relic",
-    "name": "Letter Opener",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Letter Opener"
   },
   "LIZARD_TAIL": {
     "aliases": [
       "Lizard Tail",
       "LizardTail"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "when your HP would drop to 0, instead heal to 50% of Max HP (once).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "LIZARD_TAIL",
     "kind": "relic",
-    "name": "Lizard Tail",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Lizard Tail"
   },
   "LOOMING_FRUIT": {
     "aliases": [
       "Looming Fruit",
       "LoomingFruit"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Upon pickup, raise your Max HP by 31.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "LOOMING_FRUIT",
     "kind": "relic",
-    "live_notes": "LIVE run-56: Act3 NONUPEIPE event pick. +31 MaxHP on pickup. Combined with CHOSEN_CHEESE+FEED+BIG_MUSHROOM+STRAWBERRY took HP 80→160.",
-    "name": "Looming Fruit",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Looming Fruit"
   },
   "LORDS_PARASOL": {
     "aliases": [
       "Lord's Parasol",
       "LordsParasol"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on entering a MerchantRoom, immediately purchase the merchant's entire inventory.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "LORDS_PARASOL",
     "kind": "relic",
-    "name": "Lord's Parasol",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Lord's Parasol"
   },
   "LOST_COFFER": {
     "aliases": [
       "Lost Coffer",
       "LostCoffer"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, gain 1 card reward and 1 random potion.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "LOST_COFFER",
     "kind": "relic",
-    "name": "Lost Coffer",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Lost Coffer"
   },
   "LOST_WISP": {
     "aliases": [
       "Lost Wisp",
       "LostWisp"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Whenever you play a Power card, deal 8 damage to ALL enemies. Event relic (LOST_WISP event Claim option: adds Decay curse + this relic). run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log): fired on Inferno/Vicious/Barricade plays dozens of times; typeless 8-instance AoE — under HARD_TO_KILL cap-9 it resolves at full 8; Decay curse in a Power-rich deck becomes Inferno-proc fuel (EoT 2 self-damage fires Inferno same turn).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "LOST_WISP",
     "kind": "relic",
-    "name": "Lost Wisp",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Lost Wisp"
   },
   "LUCKY_FYSH": {
     "aliases": [
       "Lucky Fysh",
       "LuckyFysh"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "whenever a card is added to your deck, gain 15 Gold. Trigger sources: shop card buys, card-reward picks, SwipePower stolen-card return on ThievingHopper death (silent deck-add also pays +15).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "LUCKY_FYSH",
     "kind": "relic",
-    "name": "Lucky Fysh",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Lucky Fysh"
   },
   "LUNAR_PASTRY": {
     "aliases": [
       "Lunar Pastry",
       "LunarPastry"
     ],
-    "character": "Regent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "At the end of your turn, gain [star:1].",
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "LUNAR_PASTRY",
     "kind": "relic",
-    "name": "Lunar Pastry",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Lunar Pastry"
   },
   "MANGO": {
     "aliases": [
       "Mango"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Upon pickup, raise your Max HP by 14.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "MANGO",
     "kind": "relic",
-    "name": "Mango",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Mango"
   },
   "MASSIVE_SCROLL": {
     "aliases": [
       "Massive Scroll",
       "MassiveScroll"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, choose 1 of 3 Multiplayer cards to add to deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "MASSIVE_SCROLL",
     "kind": "relic",
-    "name": "Massive Scroll",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Massive Scroll"
   },
   "MAW_BANK": {
     "aliases": [
       "Maw Bank",
       "MawBank"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "whenever you climb a floor, gain 12 Gold; stops working after you spend Gold at a shop.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "MAW_BANK",
     "kind": "relic",
-    "name": "Maw Bank",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Maw Bank"
   },
   "MEAL_TICKET": {
     "aliases": [
       "Meal Ticket",
       "餐券"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "on entering a MerchantRoom, heal 15 HP; only obtainable before the Act-3 treasure chest. Shop prices live run-43: 187g Act1 (14,2) / not offered Act2 (5,0). HP-economy relic tied to shop spines.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "MEAL_TICKET",
     "kind": "relic",
-    "name": "Meal Ticket",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Common"
+    "name": "Meal Ticket"
   },
   "MEAT_CLEAVER": {
     "aliases": [
       "Meat Cleaver",
       "MeatCleaver"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Rest Sites gain a Cook option — **Cook = permanently remove 2 cards from your deck AND gain 9 Max HP**. Cook-vs-HEAL tension is real at low HP (HEAL restores current survivability, Cook compounds deck+MaxHP for later).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "MEAT_CLEAVER",
     "kind": "relic",
-    "name": "Meat Cleaver",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Meat Cleaver"
   },
   "MEAT_ON_THE_BONE": {
     "aliases": [
       "Meat on the Bone",
       "MeatOnTheBone"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at combat victory, if HP ≤ 50% of Max HP, heal 12 HP.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "MEAT_ON_THE_BONE",
     "kind": "relic",
-    "name": "Meat on the Bone",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Meat on the Bone"
   },
   "MEMBERSHIP_CARD": {
     "aliases": [
       "Membership Card",
       "MembershipCard"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "50% discount on all products!",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "MEMBERSHIP_CARD",
     "kind": "relic",
-    "name": "Membership Card",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Membership Card"
   },
   "MERCURY_HOURGLASS": {
     "aliases": [
       "Mercury Hourglass",
       "MercuryHourglass"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at start of your turn, deal 3 damage to ALL enemies.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "MERCURY_HOURGLASS",
     "kind": "relic",
-    "name": "Mercury Hourglass",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Mercury Hourglass"
   },
   "METRONOME": {
     "aliases": [
       "Metronome"
     ],
-    "character": "Defect",
-    "counter_shown": false,
-    "curated": false,
-    "description": "first time each combat you Channel 7 Orbs total, deal 30 damage to ALL enemies.",
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "METRONOME",
     "kind": "relic",
-    "name": "Metronome",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Metronome"
   },
   "MINIATURE_CANNON": {
     "aliases": [
@@ -2338,252 +2183,237 @@
       "MiniatureCannon",
       "迷你加农炮"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Uncommon: upgraded Attack cards deal +3 damage. LIVE run-57: Bludgeon+ (42 base) + Sharp-2 enchant + Cannon +3 = 47-class unbuffed hits; under vuln ×1.5 → 70-class; Act1 Gigantification ×3 window hit 96 pre-upgrade.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "MINIATURE_CANNON",
     "kind": "relic",
-    "name": "Miniature Cannon",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Miniature Cannon"
   },
   "MINIATURE_TENT": {
     "aliases": [
       "Miniature Tent",
       "MiniatureTent"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at Rest Sites, you may choose any number of options.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "MINIATURE_TENT",
     "kind": "relic",
-    "name": "Miniature Tent",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Miniature Tent"
   },
   "MINI_REGENT": {
     "aliases": [
       "Mini Regent",
       "MiniRegent"
     ],
-    "character": "Regent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "first time each turn you spend Stars, gain 1 Strength.",
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "MINI_REGENT",
     "kind": "relic",
-    "name": "Mini Regent",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Mini Regent"
   },
   "MOLTEN_EGG": {
     "aliases": [
       "Molten Egg",
       "MoltenEgg"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Attack cards enter the deck upgraded. Run-51 live: auto-upgraded 5 pickups (PS#2 / AshenStrike / TwinStrike / DISMANTLE / BREAKTHROUGH).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "MOLTEN_EGG",
     "kind": "relic",
-    "name": "Molten Egg",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Molten Egg"
   },
   "MR_STRUGGLES": {
     "aliases": [
       "Mr. Struggles",
       "MrStruggles"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at start of your turn, deal damage equal to the turn number to ALL enemies.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "MR_STRUGGLES",
     "kind": "relic",
-    "name": "Mr. Struggles",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Mr. Struggles"
   },
   "MUMMIFIED_HAND": {
     "aliases": [
       "Mummified Hand",
       "MummifiedHand"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "whenever you play a Power, a random card in hand becomes free this turn.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "MUMMIFIED_HAND",
     "kind": "relic",
-    "name": "Mummified Hand",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Mummified Hand"
   },
   "MUSIC_BOX": {
     "aliases": [
       "Music Box",
       "MusicBox"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "first Attack card played each turn creates an Ethereal copy in hand.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "MUSIC_BOX",
     "kind": "relic",
-    "name": "Music Box",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Music Box"
   },
   "MYSTIC_LIGHTER": {
     "aliases": [
       "Mystic Lighter",
       "MysticLighter"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Enchanted Attacks deal 9 additional damage.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "MYSTIC_LIGHTER",
     "kind": "relic",
-    "name": "Mystic Lighter",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Mystic Lighter"
   },
   "NEOW": {
     "aliases": [
-      "Arcane Scroll",
-      "ARCANE_SCROLL"
+      "ARCANE_SCROLL",
+      "Arcane Scroll"
     ],
-    "character": "shared",
-    "curated": true,
-    "description": "Upon pickup, obtain a random Rare Card to add to your Deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Ancient"
+    },
     "id": "NEOW",
     "kind": "relic",
-    "name": "Arcane Scroll",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Arcane Scroll"
   },
   "NEOWS_BONES": {
     "aliases": [
       "Neow's Bones",
       "NeowsBones"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, gain 2 random Neow relics; add 1 random Curse to deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "NEOWS_BONES",
     "kind": "relic",
-    "name": "Neow's Bones",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Neow's Bones"
   },
   "NEOWS_TALISMAN": {
     "aliases": [
       "Neow's Talisman",
       "NeowsTalisman"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "On pickup, upgrade 1 Strike and 1 Defend.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "NEOWS_TALISMAN",
     "kind": "relic",
-    "name": "Neow's Talisman",
-    "play_notes": "Certain but low ceiling: Strike 6→9 / Defend 5→8 class value; decays if starters are removed mid-run. Live-confirmed Neow option 2026-09-19.",
-    "rarity": "Ancient"
+    "name": "Neow's Talisman"
   },
   "NEOWS_TORMENT": {
     "aliases": [
       "Neow's Torment",
       "NeowsTorment"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Upon pickup, add 1 Neow's Fury to your Deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "NEOWS_TORMENT",
     "kind": "relic",
-    "name": "Neow's Torment",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Neow's Torment"
   },
   "NEW_LEAF": {
     "aliases": [
       "New Leaf",
       "NewLeaf"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Upon pickup, Transform 1 card.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "NEW_LEAF",
     "kind": "relic",
-    "name": "New Leaf",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "New Leaf"
   },
   "NIMBLE": {
     "aliases": [
-      "Fresnel Lens",
-      "FRESNEL_LENS"
+      "FRESNEL_LENS",
+      "Fresnel Lens"
     ],
-    "character": "shared",
-    "curated": true,
-    "description": "Enchant keyword (Nimble N): applied to Block-granting cards added to deck — Fresnel Lens (Drowning Beacon event) enchants such cards with Nimble 2. Exact mechanical effect NOT decoded live — treat as unknown until observed in combat; do not plan around it.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Event"
+    },
     "id": "NIMBLE",
     "kind": "relic",
-    "name": "Fresnel Lens",
-    "play_notes": " | run-46 session: Nimble effect undecoded — Drowning Beacon CLIMB (−13 MaxHP for Fresnel Lens) declined at HP 66; archive-unknown = don't pay certain HP tax for uncertain future value (run-20 lesson).",
-    "rarity": "Event"
+    "name": "Fresnel Lens"
   },
   "NINJA_SCROLL": {
     "aliases": [
       "Ninja Scroll",
       "NinjaScroll"
     ],
-    "character": "Silent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at combat start (turn 1), add 3 Shiv cards to hand.",
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "NINJA_SCROLL",
     "kind": "relic",
-    "name": "Ninja Scroll",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Ninja Scroll"
   },
   "NUNCHAKU": {
     "aliases": [
       "Nunchaku"
     ],
-    "character": "shared",
-    "counter_shown": true,
-    "curated": true,
-    "description": "Every 10 Attack cards played, gain 1 Energy (counter displayed as NUNCHAKU:n; resets on proc). LIVE run-38: proc fired at :10 → +1 Energy same turn (energy display 4/3); Anger/Pacts End 0-cost attacks advance the counter for free.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Uncommon"
+    },
     "id": "NUNCHAKU",
     "kind": "relic",
-    "name": "Nunchaku",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Nunchaku"
   },
   "NUTRITIOUS_OYSTER": {
     "aliases": [
       "Nutritious Oyster",
       "NutritiousOyster"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Upon pickup, raise your Max HP by 11.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "NUTRITIOUS_OYSTER",
     "kind": "relic",
-    "name": "Nutritious Oyster",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Nutritious Oyster"
   },
   "NUTRITIOUS_SOUP": {
     "aliases": [
@@ -2592,15 +2422,14 @@
       "NutritiousSoup",
       "营养汤"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Ancient relic (Tezcatara boon): on pickup enchant every Basic Strike-tagged card with Tezcatara's Ember - cost reduced to 0, gains Eternal keyword, +3 damage on powered attacks.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "NUTRITIOUS_SOUP",
     "kind": "relic",
-    "name": "Nutritious Soup",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Nutritious Soup"
   },
   "ODDLY_SMOOTH_STONE": {
     "aliases": [
@@ -2609,60 +2438,56 @@
       "奇异光滑石",
       "滑石"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Common: start each combat with 1 Dexterity (card-block values +1 all fight). LIVE run-57: Defend 5→6, Shrug 8→9, SW per-exhaust 5→6 class throughout; stacks with Dex sources additively.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "ODDLY_SMOOTH_STONE",
     "kind": "relic",
-    "name": "Oddly Smooth Stone",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Common"
+    "name": "Oddly Smooth Stone"
   },
   "OLD_COIN": {
     "aliases": [
       "Old Coin",
       "OldCoin"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Upon pickup, gain 300 Gold.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "OLD_COIN",
     "kind": "relic",
-    "name": "Old Coin",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Old Coin"
   },
   "ORANGE_DOUGH": {
     "aliases": [
       "Orange Dough",
       "OrangeDough"
     ],
-    "character": "Regent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at combat start, add 2 random Colorless cards to hand.",
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "ORANGE_DOUGH",
     "kind": "relic",
-    "name": "Orange Dough",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Orange Dough"
   },
   "ORICHALCUM": {
     "aliases": [
       "Orichalcum",
       "橙铜"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "end of turn, if you have no Block, gain 6 Block. Passive safety net on attack-heavy hands; with OddlySmoothStone +1 Dex the passive stays 6 (relic block is not card block). Live run-43: repeatedly covered 6 of 15-24 incoming on no-block-card turns.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "ORICHALCUM",
     "kind": "relic",
-    "name": "Orichalcum",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Uncommon"
+    "name": "Orichalcum"
   },
   "ORNAMENTAL_FAN": {
     "aliases": [
@@ -2670,515 +2495,481 @@
       "OrnamentalFan",
       "装饰折扇"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Every 3 Attack cards played in one turn, gain 4 Block (counter resets each turn; +4 resolves on the 3rd attack). LIVE run-57 reconfirmed across combats (Fan counter visible; +4 printed after 3rd attack; T4 millipede 3-attack line banked Fan+plating cover).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "ORNAMENTAL_FAN",
     "kind": "relic",
-    "name": "Ornamental Fan",
-    "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log): +4 Block on the 3rd Attack card each turn — stacks additively with Rage procs; attack-density turns (3+ attacks) banked 4 reliably, 2-attack turns banked nothing.",
-    "rarity": "Uncommon"
+    "name": "Ornamental Fan"
   },
   "ORRERY": {
     "aliases": [
       "Orrery"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Upon pickup, gain 5 card rewards.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "ORRERY",
     "kind": "relic",
-    "name": "Orrery",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Orrery"
   },
   "PAELS_BLOOD": {
     "aliases": [
       "Pael's Blood",
       "PaelsBlood"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "At the start of your turn, draw 1 additional card.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PAELS_BLOOD",
     "kind": "relic",
-    "name": "Pael's Blood",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Pael's Blood"
   },
   "PAELS_CLAW": {
     "aliases": [
       "Pael's Claw",
       "PaelsClaw"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, enchant all Defend-tagged cards in deck with Goopy (adds Exhaust).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PAELS_CLAW",
     "kind": "relic",
-    "name": "Pael's Claw",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Pael's Claw"
   },
   "PAELS_EYE": {
     "aliases": [
       "Pael's Eye",
       "PaelsEye"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "first time each combat you end your turn having played 0 cards, exhaust your hand and take an extra turn.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PAELS_EYE",
     "kind": "relic",
-    "name": "Pael's Eye",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Pael's Eye"
   },
   "PAELS_FLESH": {
     "aliases": [
       "Pael's Flesh",
       "PaelsFlesh"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Act2 Pael boon relic: from turn 3 of each combat onward, gain +1 Energy at the start of your turn. Run-41 live: T3+ energy showed 4/4 with Pyre uncast — stacks with Pyre (+1) and Lantern (T1 only) for a 4-5 energy floor from turn 3.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PAELS_FLESH",
     "kind": "relic",
-    "name": "Pael's Flesh",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Pael's Flesh"
   },
   "PAELS_GROWTH": {
     "aliases": [
       "Pael's Growth",
       "PaelsGrowth"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, choose 1 card to enchant with Clone 4; Rest Sites gain a Clone option.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PAELS_GROWTH",
     "kind": "relic",
-    "name": "Pael's Growth",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Pael's Growth"
   },
   "PAELS_HORN": {
     "aliases": [
       "Pael's Horn",
       "PaelsHorn"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Upon pickup, add 2 Relax to your Deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PAELS_HORN",
     "kind": "relic",
-    "name": "Pael's Horn",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Pael's Horn"
   },
   "PAELS_LEGION": {
     "aliases": [
       "Pael's Legion",
       "PaelsLegion"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Block gained from your cards is doubled; after a card grants you Block, the relic sleeps 2 turns during which Block is not doubled. LIVE cadence (run-36): NOT once-per-combat — double → sleep ~2 turns → double again, repeating all combat. Impervious 30+Dex resolved at 46 and 62 on Legion-awake turns in multiple combats; Defend+ doubled 8→16-class on awake turns. events.md's older \"first block-card each combat\" line is WRONG — this sleep-cadence entry is authoritative. run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log): stacks x2 multiplicatively with VAMBRACE on awake turns; with BARRICADE in play the doubled block persists between turns — without Barricade, banked block decays normally (Ovicopter T2: 64-block turn vanished when Barricade not yet drawn).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PAELS_LEGION",
     "kind": "relic",
-    "name": "Pael's Legion",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Pael's Legion"
   },
   "PAELS_TEARS": {
     "aliases": [
       "Pael's Tears",
       "PaelsTears"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "end of turn, if you have unspent Energy, start of next turn gain 2 Energy.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PAELS_TEARS",
     "kind": "relic",
-    "name": "Pael's Tears",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Pael's Tears"
   },
   "PAELS_TOOTH": {
     "aliases": [
       "Pael's Tooth",
       "PaelsTooth"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, remove 5 chosen cards; after each combat, add 1 random removed card back, upgraded.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PAELS_TOOTH",
     "kind": "relic",
-    "name": "Pael's Tooth",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Pael's Tooth"
   },
   "PAELS_WING": {
     "aliases": [
       "Pael's Wing",
       "PaelsWing"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "card rewards gain a Sacrifice option; every 2 sacrifices, gain 1 relic.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PAELS_WING",
     "kind": "relic",
-    "name": "Pael's Wing",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Pael's Wing"
   },
   "PANDORAS_BOX": {
     "aliases": [
       "Pandora's Box",
       "PandorasBox"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, transform ALL Strike and Defend cards in deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PANDORAS_BOX",
     "kind": "relic",
-    "name": "Pandora's Box",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Pandora's Box"
   },
   "PANTOGRAPH": {
     "aliases": [
       "Pantograph"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "At the start of each Boss combat, heal 25 HP.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "PANTOGRAPH",
     "kind": "relic",
-    "name": "Pantograph",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Pantograph"
   },
   "PAPER_KRANE": {
     "aliases": [
       "Paper Krane",
       "PaperKrane"
     ],
-    "character": "Silent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "enemies with Weak deal 40% less damage to you instead of 25%.",
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "PAPER_KRANE",
     "kind": "relic",
-    "name": "Paper Krane",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Paper Krane"
   },
   "PAPER_PHROG": {
     "aliases": [
       "Paper Phrog",
       "PaperPhrog"
     ],
-    "character": "Ironclad",
-    "counter_shown": false,
-    "curated": true,
-    "description": "enemies with Vulnerable take +75% attack damage instead of +50%. Stacks additively with Cruelty power (+25%) → Vulnerable target takes +100% attack damage (×2.0). WITHOUT Cruelty: Vuln-target hits = (base+Str)×1.75 exactly — Str is inside the multiplier, not added after. PaperPhrog alone = ×1.75; ×2.0 requires the Cruelty add-stack. Shop price ~196 gold. run-53 live 2026-09-19: formula confirmed — Strike (6 base + 6 Str) on Vulnerable target dealt exactly 21 = (base+Str)×1.75; Str is inside the multiplier.",
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "PAPER_PHROG",
     "kind": "relic",
-    "name": "Paper Phrog",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Paper Phrog"
   },
   "PARRYING_SHIELD": {
     "aliases": [
       "Parrying Shield"
     ],
-    "character": "shared",
-    "curated": true,
-    "description": "At end of turn, if you have >=10 Block, deal 6 damage to a random enemy. LIVE run-54: multiple procs; the 6-damage tick counts as a normal damage instance (e.g. it killed a 4-HP Decimillipede segment, triggering its REATTACH dead-state cycle — the proc can be a kill instrument AND can accidentally fire death-triggered enemy mechanics).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Uncommon"
+    },
     "id": "PARRYING_SHIELD",
     "kind": "relic",
-    "name": "Parrying Shield",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Parrying Shield"
   },
   "PEAR": {
     "aliases": [
       "Pear"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Upon pickup, raise your Max HP by 10.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "PEAR",
     "kind": "relic",
-    "name": "Pear",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Pear"
   },
   "PENDULUM": {
     "aliases": [
       "Pendulum"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Every 3 turns, draw 1 card.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "PENDULUM",
     "kind": "relic",
-    "name": "Pendulum",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "Pendulum"
   },
   "PEN_NIB": {
     "aliases": [
       "Pen Nib",
       "PenNib"
     ],
-    "character": "shared",
-    "counter_shown": true,
-    "curated": true,
-    "description": "Every 10th Attack card you play deals double damage. LIVE run-54 Vantom T4 (Act1 boss): Bludgeon+ as the 10th attack inside a Vulnerable window resolved 126 damage (42 x 1.5 Vuln x 2 Pen Nib — exact). Counter readable as PEN_NIB:n in compact state; planning the 10th attack onto the Bludgeon turn is a repeatable window tactic.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Uncommon"
+    },
     "id": "PEN_NIB",
     "kind": "relic",
-    "name": "Pen Nib",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Pen Nib"
   },
   "PERMAFROST": {
     "aliases": [
       "Permafrost"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "First time each combat you play a Power, gain 7 Block. Effect archived; run-38 deck contained no Power cards (Feel No Pain/Stone Armor-class skipped) — relic inactive all run. Value unlocks when a Power enters the deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "PERMAFROST",
     "kind": "relic",
-    "name": "Permafrost",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Permafrost"
   },
   "PETRIFIED_TOAD": {
     "aliases": [
       "Petrified Toad",
       "PetrifiedToad"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Combat start: procure Potion-Shaped Rock (combat-use = 15 damage to target, run-51 live) — +1 damage option per fight, not a heal.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "PETRIFIED_TOAD",
     "kind": "relic",
-    "name": "Petrified Toad",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Petrified Toad"
   },
   "PHIAL_HOLSTER": {
     "aliases": [
       "Phial Holster",
       "PhialHolster"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "on pickup, +1 potion slot and 2 random potions. LIVE run-47 Neow option (药瓶皮套/PHIAL_HOLSTER): on pickup +1 potion slot + 2 random potions (rolled SKILL_POTION + POWER_POTION); holster capacity confirmed as 4 when a 4th potion (ATTACK_POTION) was added mid-act.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PHIAL_HOLSTER",
     "kind": "relic",
-    "name": "Phial Holster",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Phial Holster"
   },
   "PHILOSOPHERS_STONE": {
     "aliases": [
       "Philosopher's Stone",
       "PhilosophersStone"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "+1 max Energy each turn; ALL enemies start combat with 1 Strength.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PHILOSOPHERS_STONE",
     "kind": "relic",
-    "name": "Philosopher's Stone",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Philosopher's Stone"
   },
   "PHYLACTERY_UNBOUND": {
     "aliases": [
       "Phylactery Unbound",
       "PhylacteryUnbound"
     ],
-    "character": "Necrobinder",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at combat start, Summon 5 Osty; at start of each turn, Summon 2 Osty.",
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
     "id": "PHYLACTERY_UNBOUND",
     "kind": "relic",
-    "name": "Phylactery Unbound",
-    "play_notes": "",
-    "rarity": "Starter"
+    "name": "Phylactery Unbound"
   },
   "PLANISPHERE": {
     "aliases": [
       "Planisphere"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Whenever you enter a ? room, heal 5 HP.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "PLANISPHERE",
     "kind": "relic",
-    "name": "Planisphere",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Planisphere"
   },
   "POCKETWATCH": {
     "aliases": [
       "Pocketwatch"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "if you played ≤3 cards last turn, turn 2+ hand draws +3 cards. Run-41 discipline: budget exactly 3 plays on T1 (e.g. Inferno+Brand+Bash) to arm the watch — the 8-card T2 hands delivered Inferno+PS+Pyre lines at two elites and the Act1 boss; a 4th play disarms it for a whole turn.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "POCKETWATCH",
     "kind": "relic",
-    "name": "Pocketwatch",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Pocketwatch"
   },
   "POLLINOUS_CORE": {
     "aliases": [
       "Pollinous Core",
       "PollinousCore"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Every 4 turns, draw 2 additional cards.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "POLLINOUS_CORE",
     "kind": "relic",
-    "name": "Pollinous Core",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Pollinous Core"
   },
   "POMANDER": {
     "aliases": [
       "Pomander"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Upon pickup, Upgrade a card.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "POMANDER",
     "kind": "relic",
-    "name": "Pomander",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Pomander"
   },
   "POTION_BELT": {
     "aliases": [
       "Potion Belt",
       "PotionBelt"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Upon pickup, gain 2 potion slots.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "POTION_BELT",
     "kind": "relic",
-    "name": "Potion Belt",
-    "play_notes": "Run-49 live: Act2 宝箱 (8,2) 获得；belt 容量扩大后商店购入双药水+精英掉落三药可共存（Blood/Skill/Speed 类实测同时在栏）。",
-    "rarity": "Common"
+    "name": "Potion Belt"
   },
   "POWER_CELL": {
     "aliases": [
       "Power Cell",
       "PowerCell"
     ],
-    "character": "Defect",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at combat start (turn 1), add 2 zero-cost cards from draw pile to hand.",
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "POWER_CELL",
     "kind": "relic",
-    "name": "Power Cell",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Power Cell"
   },
   "PRAYER_WHEEL": {
     "aliases": [
       "Prayer Wheel",
       "PrayerWheel"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Monster combat rewards gain 1 additional card reward.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "PRAYER_WHEEL",
     "kind": "relic",
-    "name": "Prayer Wheel",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Prayer Wheel"
   },
   "PRECARIOUS_SHEARS": {
     "aliases": [
       "Precarious Shears",
       "PrecariousShears"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, remove 2 cards and lose 16 HP.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PRECARIOUS_SHEARS",
     "kind": "relic",
-    "name": "Precarious Shears",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Precarious Shears"
   },
   "PRECISE_SCISSORS": {
     "aliases": [
       "Precise Scissors",
       "PreciseScissors"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Upon pickup, remove 1 card from your Deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PRECISE_SCISSORS",
     "kind": "relic",
-    "name": "Precise Scissors",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Precise Scissors"
   },
   "PRESERVED_FOG": {
     "aliases": [
       "Preserved Fog",
       "PreservedFog"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, remove 3 cards; add 1 Folly to deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PRESERVED_FOG",
     "kind": "relic",
-    "name": "Preserved Fog",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Preserved Fog"
   },
   "PRISMATIC_GEM": {
     "aliases": [
@@ -3186,15 +2977,14 @@
       "PrismaticGem",
       "棱彩宝石"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Ancient (OROBOAS Act2 boon pool, run-57 pick): +1 max Energy each turn; card rewards include other characters' cards (cross-class pool live — Kingly Kick/Thunderclap/Crush Under offers appeared run-57). LIVE run-57: energy display 4/4 base became the run standard; 6/4 with Venerable Tea Set rest-proc at Act2 Boss T1 (Bludgeon+KinglyKick 74-dmg opening).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "PRISMATIC_GEM",
     "kind": "relic",
-    "name": "Prismatic Gem",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Prismatic Gem"
   },
   "PUMPKIN_CANDLE": {
     "aliases": [
@@ -3202,369 +2992,347 @@
       "PumpkinCandle",
       "南瓜蜡烛"
     ],
-    "character": "shared",
-    "counter_shown": true,
-    "curated": true,
-    "description": "Ancient relic (Tezcatara boon): +1 Max Energy while KindleCount>0; -1 per combat end; rest sites add a Kindle option that restores +5. Counter visible.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Ancient"
+    },
     "id": "PUMPKIN_CANDLE",
     "kind": "relic",
-    "name": "Pumpkin Candle",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Pumpkin Candle"
   },
   "PUNCH_DAGGER": {
     "aliases": [
       "Punch Dagger",
       "PunchDagger"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, choose 1 Attack card to enchant with Momentum 5.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "PUNCH_DAGGER",
     "kind": "relic",
-    "name": "Punch Dagger",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Punch Dagger"
   },
   "RADIANT": {
     "aliases": [
       "RADIANT_PEARL",
       "Radiant Pearl"
     ],
-    "character": "shared",
-    "curated": true,
-    "description": "At the start of each combat, add 1 Luminesce into your Hand.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Ancient"
+    },
     "id": "RADIANT",
     "kind": "relic",
-    "name": "Radiant Pearl",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Radiant Pearl"
   },
   "RADIANT_PEARL": {
     "aliases": [
       "Radiant Pearl",
       "RadiantPearl"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "at start of turn 1, add 1 Luminesce to hand.",
+    "detail": {
+      "character": null,
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "RADIANT_PEARL",
     "kind": "relic",
-    "name": "Radiant Pearl",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Radiant Pearl"
   },
   "RAGE": {
     "aliases": [
       "SLING_OF_COURAGE",
       "Sling of Courage"
     ],
-    "character": "shared",
-    "curated": true,
-    "description": "Lookup-collision carrier (run-46 session): relic-domain key RAGE auto-folded cross-search — actual content is Sling of Courage (Shop relic: start each Elite combat with +2 Strength). Ironclad RAGE is a CARD, not a relic. Sling of Courage shop-priced 74-78g class seen run-46 Act2 shop.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Shop"
+    },
     "id": "RAGE",
     "kind": "relic",
-    "name": "Sling of Courage",
-    "play_notes": " | run-46 session: key-collision carrier for Sling of Courage; card-domain RAGE is the Ironclad skill-attack card, separate entry.",
-    "rarity": "Shop"
+    "name": "Sling of Courage"
   },
   "RAINBOW_RING": {
     "aliases": [
       "Rainbow Ring",
       "RainbowRing"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "first time each turn you play an Attack, a Skill and a Power, gain 1 Strength and 1 Dexterity. run-53 live 2026-09-19: first time each turn playing one Attack + one Skill + one Power grants +1 Strength and +1 Dexterity — bridge history confirmed proc on Inflame(Power)+Bloodletting(Skill)+Strike(Attack) turns and Bash+Inflame+Bloodletting turns (player powers STR+1 DEX+1 same read).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "RAINBOW_RING",
     "kind": "relic",
-    "name": "Rainbow Ring",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Rainbow Ring"
   },
   "RAZOR_TOOTH": {
     "aliases": [
       "Razor Tooth",
       "RazorTooth"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "whenever you play an Attack or Skill card, upgrade it for the rest of combat. Semantics refined LIVE run-48: per-CARD-INSTANCE — the triggering play uses BASE values; THAT copy is upgraded for its own subsequent plays in the same combat. Fresh copies drawn later still play base first (run-48 Strikes: Whetstone-upgraded copy hit 9 first, un-upgraded copies hit 6 first then upgraded). NOT a global card-type upgrade. In-combat examples: Shrug 8 first play → 12-class later plays; Breakthrough 9 first → 13 later; Bloodletting+ energy display 6/3 when its copy carried the upgrade.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "RAZOR_TOOTH",
     "kind": "relic",
-    "name": "Razor Tooth",
-    "play_notes": "run-48 live 2026-09-19: per-instance semantics confirmed — fresh copies play base first; Whetstone-upgraded copies distinct from Razor-upgraded ones. [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "rarity": "Rare"
+    "name": "Razor Tooth"
   },
   "RED_MASK": {
     "aliases": [
       "Red Mask",
       "RedMask"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "At combat start (turn 1), apply 1 Weak to ALL enemies. LIVE runs 38+40: Weak visible on every enemy T1; cuts attack intents PER-HIT for multi-hit moves (Exoskeleton Skitter 1x3→0x3; Entomancer bees 3x7→2x7; Bowlbug HEADBUTT 15→11; LagavulinMatriarch untouched T1 since ASLEEP). Weak decrements end of their side turn. Bought run-40 Act2 Shop#1 162g — delivered in every subsequent fight.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "RED_MASK",
     "kind": "relic",
-    "name": "Red Mask",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "Red Mask"
   },
   "RED_SKULL": {
     "aliases": [
       "Red Skull",
       "RedSkull"
     ],
-    "character": "Ironclad",
-    "counter_shown": false,
-    "curated": true,
-    "description": "While HP <= 50% of Max HP, you have +3 Strength. Live proc run-42: powers line showed STR +3 at 38/80-class entries (display merges with other Str sources — treat live powers line as authority). Turns danger-HP zones into race windows; pairs with HP-economy-low entry fights. LIVE run-52: windows fired in four consecutive fights after the (8,6) shop purchase — Byrdonis (39HP entry, str drove the T4 kill via Setup chains), ShrinkerBeetle pair, double Nibbit, and Act1 boss (str +3 active T3-T7 of the Plow race until the (15,6) rest lifted HP above the threshold, then the boss fight re-entered the window at 28HP T3).",
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "RED_SKULL",
     "kind": "relic",
-    "name": "Red Skull",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "Red Skull"
   },
   "REGALITE": {
     "aliases": [
       "Regalite"
     ],
-    "character": "Regent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "whenever you create a card, gain 2 Block.",
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "REGALITE",
     "kind": "relic",
-    "name": "Regalite",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Regalite"
   },
   "REGAL_PILLOW": {
     "aliases": [
       "Regal Pillow",
       "RegalPillow"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Rest Site heal amount increased by 15 HP (stacks with base %-heal and StoneHumidifier-class). LIVE run-46: three rests healed +43-class each (23→66, 33→76, 54-class→full-adjacent) — the pre-boss/pre-elite rest geometry paid double under Pillow.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "REGAL_PILLOW",
     "kind": "relic",
-    "name": "Regal Pillow",
-    "play_notes": "run-46 live: +43-class heals at (6,6)/(8,4)/(13,4) rests; draft rest-geometry doctrine paid double.",
-    "rarity": "Common"
+    "name": "Regal Pillow"
   },
   "REPTILE_TRINKET": {
     "aliases": [
       "Reptile Trinket",
       "ReptileTrinket"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "whenever you use a potion, gain 3 Strength this turn. +3 Str fires on any potion use (Dex/Blood/Flex/Attack-class) — lands same-turn as an own power (REPTILE_TRINKET_POWER:3) stacking with potion-native effects (e.g. Flex +5 + Trinket +3 = +8 Str burst window).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "REPTILE_TRINKET",
     "kind": "relic",
-    "name": "Reptile Trinket",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Reptile Trinket"
   },
   "RINGING_TRIANGLE": {
     "aliases": [
       "Ringing Triangle",
       "铃三角"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "you retain your hand on the first turn of combat. Shop (14,2) Act1 live price 202g run-43 (not bought - OddlySmoothStone+Tremble 243g sunk instead; per-turn Dex valued over T1-only consistency). Do NOT confuse with the RINGING counter-class power from run-13 (1 card/turn) - different thing.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "RINGING_TRIANGLE",
     "kind": "relic",
-    "name": "Ringing Triangle",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Shop"
+    "name": "Ringing Triangle"
   },
   "RING_OF_THE_DRAKE": {
     "aliases": [
       "Ring of the Drake",
       "RingOfTheDrake"
     ],
-    "character": "Silent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "At the start of your first 3 turns, draw 2 additional cards.",
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
     "id": "RING_OF_THE_DRAKE",
     "kind": "relic",
-    "name": "Ring of the Drake",
-    "play_notes": "",
-    "rarity": "Starter"
+    "name": "Ring of the Drake"
   },
   "RING_OF_THE_SNAKE": {
     "aliases": [
       "Ring of the Snake",
       "RingOfTheSnake"
     ],
-    "character": "Silent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "At the start of each combat, draw 2 additional cards.",
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
     "id": "RING_OF_THE_SNAKE",
     "kind": "relic",
-    "name": "Ring of the Snake",
-    "play_notes": "",
-    "rarity": "Starter"
+    "name": "Ring of the Snake"
   },
   "RIPPLE_BASIN": {
     "aliases": [
       "Ripple Basin",
       "RippleBasin"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "End of turn, if you played NO Attack cards this turn, gain 4 Block. Live run-42: fired on powers-only turns (e.g. Cruelty+Inferno+Corruption turn vs InfestedPrism -> +4 block); stacks with card block; no-attack discipline is a real survival lever at low HP.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "RIPPLE_BASIN",
     "kind": "relic",
-    "name": "Ripple Basin",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Ripple Basin"
   },
   "ROYAL_POISON": {
     "aliases": [
       "Royal Poison",
       "RoyalPoison"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "At the start of each combat, lose 4 HP.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "ROYAL_POISON",
     "kind": "relic",
-    "name": "Royal Poison",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Royal Poison"
   },
   "ROYAL_STAMP": {
     "aliases": [
       "Royal Stamp"
     ],
-    "character": "shared",
-    "curated": false,
-    "description": "Upon pickup, choose an Attack or Skill in your Deck to Enchant with Royally Approved.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Shop"
+    },
     "id": "ROYAL_STAMP",
     "kind": "relic",
-    "name": "Royal Stamp",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Royal Stamp"
   },
   "RUINED_HELMET": {
     "aliases": [
       "Ruined Helmet",
       "RuinedHelmet"
     ],
-    "character": "Ironclad",
-    "counter_shown": false,
-    "curated": false,
-    "description": "first time each combat you gain Strength, the amount gained is doubled.",
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "RUINED_HELMET",
     "kind": "relic",
-    "name": "Ruined Helmet",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Ruined Helmet"
   },
   "RUNIC_CAPACITOR": {
     "aliases": [
       "Runic Capacitor",
       "RunicCapacitor"
     ],
-    "character": "Defect",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Start each combat with 3 additional Orb Slots.",
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "RUNIC_CAPACITOR",
     "kind": "relic",
-    "name": "Runic Capacitor",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Runic Capacitor"
   },
   "RUNIC_PYRAMID": {
     "aliases": [
       "Runic Pyramid",
       "RunicPyramid"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "you no longer discard your hand at end of turn.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "RUNIC_PYRAMID",
     "kind": "relic",
-    "name": "Runic Pyramid",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Runic Pyramid"
   },
   "SAI": {
     "aliases": [
       "Sai"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "At the start of your turn, gain 7 Block.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SAI",
     "kind": "relic",
-    "name": "Sai",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Sai"
   },
   "SAND_CASTLE": {
     "aliases": [
       "Sand Castle",
       "SandCastle"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, upgrade 6 random cards in deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SAND_CASTLE",
     "kind": "relic",
-    "name": "Sand Castle",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Sand Castle"
   },
   "SCREAMING_FLAGON": {
     "aliases": [
       "Screaming Flagon",
       "ScreamingFlagon"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "end of turn, if your hand is empty, deal 20 damage to ALL enemies.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "SCREAMING_FLAGON",
     "kind": "relic",
-    "name": "Screaming Flagon",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Screaming Flagon"
   },
   "SCROLL_BOXES": {
     "aliases": [
       "Scroll Boxes",
       "ScrollBoxes"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, choose 1 of 2 card bundles to add to deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SCROLL_BOXES",
     "kind": "relic",
-    "name": "Scroll Boxes",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Scroll Boxes"
   },
   "SEAL_OF_GOLD": {
     "aliases": [
@@ -3572,521 +3340,486 @@
       "SealOfGold",
       "黄金封印"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Ancient relic (Tezcatara boon): at start of your turn if gold>=5, gain 1 Energy and lose 5 gold.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SEAL_OF_GOLD",
     "kind": "relic",
-    "name": "Seal of Gold",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Seal of Gold"
   },
   "SEA_GLASS": {
     "aliases": [
       "Sea Glass",
       "SeaGlass"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, see 15 cards from another character (5 Common, 5 Uncommon, 5 Rare); choose any number to add to deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SEA_GLASS",
     "kind": "relic",
-    "name": "Sea Glass",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Sea Glass"
   },
   "SELF_FORMING_CLAY": {
     "aliases": [
       "Self-Forming Clay",
       "SelfFormingClay"
     ],
-    "character": "Ironclad",
-    "counter_shown": false,
-    "curated": false,
-    "description": "whenever you lose HP in combat, gain 3 Block at start of next turn.",
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "SELF_FORMING_CLAY",
     "kind": "relic",
-    "name": "Self-Forming Clay",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Self-Forming Clay"
   },
   "SERE_TALON": {
     "aliases": [
       "Sere Talon",
       "SereTalon"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, add 2 random Curses and 3 Wish cards to deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SERE_TALON",
     "kind": "relic",
-    "name": "Sere Talon",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Sere Talon"
   },
   "SHARP": {
     "aliases": [
-      "Gnarled Hammer",
-      "GNARLED_HAMMER"
+      "GNARLED_HAMMER",
+      "Gnarled Hammer"
     ],
-    "character": "shared",
-    "curated": true,
-    "description": "SHARP is an Enchant keyword, not a single relic effect: Sharp N = +N attack damage on the enchanted card (run-48 live: SELF_HELP_BOOK option READ_THE_BACK enchants an Attack with Sharp 2 — Bludgeon+ base read 42+2=44 live, 44×1.5 Vuln = 51 on Effigy). Relic GNARLED_HAMMER (Shop rarity) enchants up to 3 Attacks with Sharp 3 on pickup. Enchant damage adds to base BEFORE multipliers (Vuln/Cruelty).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Shop"
+    },
     "id": "SHARP",
     "kind": "relic",
-    "name": "Sharp (Enchant keyword) / Gnarled Hammer carrier relic",
-    "play_notes": "run-48 live fold 2026-09-19: Sharp 2 on Bludgeon = 44 base (42+2) live; SELF_HELP_BOOK READ_THE_BACK is the grant source. [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "rarity": "Shop"
+    "name": "Sharp (Enchant keyword) / Gnarled Hammer carrier relic"
   },
   "SHOVEL": {
     "aliases": [
       "Shovel"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Rest Sites gain a DIG option that grants a random relic. Live run-42 bridge note: DIG button appears in rest UI (button DIG / actions rest(index=2)) but server-side rest(index=2) resolved as HEAL (HP 31->55, no relic granted) — bridge/mod rest-action mapping gap; treat DIG as unavailable until bridge wires it. Game-side relic effect text unchanged.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "SHOVEL",
     "kind": "relic",
-    "name": "Shovel",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Shovel"
   },
   "SHURIKEN": {
     "aliases": [
       "Shuriken"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "every 3 Attack cards played in one turn, gain 1 Strength.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "SHURIKEN",
     "kind": "relic",
-    "name": "Shuriken",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Shuriken"
   },
   "SIGNET_RING": {
     "aliases": [
       "Signet Ring",
       "SignetRing"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Upon pickup, gain 999 Gold.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SIGNET_RING",
     "kind": "relic",
-    "name": "Signet Ring",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Signet Ring"
   },
   "SILKEN_TRESS": {
     "aliases": [
       "Silken Tress",
       "SilkenTress"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Lose all Gold at pickup; all cards in the FIRST card reward of the run are Glam-enchanted. LIVE run-55 rule: the Glam-enchanted card DOUBLE-SETTLES on its first play each combat, single-settles on later plays (Glam Shrug It Off: 16 block + draw 2 on first play that combat; 8 block + draw 1 on subsequent plays). Refines run-49 'first-strike double settle' note: the double settle attaches to the enchanted card's first play, not to combat turn 1.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SILKEN_TRESS",
     "kind": "relic",
-    "name": "Silken Tress",
-    "play_notes": "Cost is gold only (no curse card, no Max HP tax). Bounded econ delay: one early-shop item. Payoff is a Glam'd early spine pick — engine cards double-cast every combat all run. Neow curse-pool slot; live-confirmed option text 2026-09-19.",
-    "rarity": "Ancient"
+    "name": "Silken Tress"
   },
   "SILVER_CRUCIBLE": {
     "aliases": [
       "Silver Crucible",
       "SilverCrucible"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "first 3 card rewards you see are upgraded; the first treasure chest you open is empty.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SILVER_CRUCIBLE",
     "kind": "relic",
-    "name": "Silver Crucible",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Silver Crucible"
   },
   "SLING_OF_COURAGE": {
     "aliases": [
       "Sling of Courage",
       "SlingOfCourage"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": false,
-    "description": "at start of elite combats, gain 2 Strength.",
+    "detail": {
+      "character": null,
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "SLING_OF_COURAGE",
     "kind": "relic",
-    "name": "Sling of Courage",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Sling of Courage"
   },
   "SMALL_CAPSULE": {
     "aliases": [
       "Small Capsule",
       "SmallCapsule"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Upon pickup, obtain a random Relic.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SMALL_CAPSULE",
     "kind": "relic",
-    "name": "Small Capsule",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Small Capsule"
   },
   "SNECKO_EYE": {
     "aliases": [
       "Snecko Eye",
       "SneckoEye"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "hand draw +2 cards each turn; at combat start, gain Confused.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SNECKO_EYE",
     "kind": "relic",
-    "name": "Snecko Eye",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Snecko Eye"
   },
   "SNECKO_SKULL": {
     "aliases": [
       "Snecko Skull",
       "SneckoSkull"
     ],
-    "character": "Silent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Whenever you apply Poison, apply an additional 1 Poison.",
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "SNECKO_SKULL",
     "kind": "relic",
-    "name": "Snecko Skull",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "Snecko Skull"
   },
   "SOZU": {
     "aliases": [
       "Sozu"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "+1 max Energy each turn; you can no longer procure potions.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SOZU",
     "kind": "relic",
-    "name": "Sozu",
-    "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log): boss-relic boon at Act2 DARV — +1 Energy every turn permanently; potions no longer obtainable. Stacks with Lantern +1, Tea Set +2 post-rest, Happy Flower +1/3turn → boss T1 opened at 7/4. HP rail covered by Burning Blood + Blood Vial + rests + LIFT Max HP.",
-    "rarity": "Ancient"
+    "name": "Sozu"
   },
   "SPARKLING_ROUGE": {
     "aliases": [
       "Sparkling Rouge",
       "SparklingRouge"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at start of turn 3, gain 1 Strength and 1 Dexterity.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "SPARKLING_ROUGE",
     "kind": "relic",
-    "name": "Sparkling Rouge",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Sparkling Rouge"
   },
   "SPIKED_GAUNTLETS": {
     "aliases": [
       "Spiked Gauntlets",
       "SpikedGauntlets"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "+1 max Energy each turn; Power cards cost +1 Energy.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "SPIKED_GAUNTLETS",
     "kind": "relic",
-    "name": "Spiked Gauntlets",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Spiked Gauntlets"
   },
   "STONE_CALENDAR": {
     "aliases": [
       "Stone Calendar",
       "石日历"
     ],
-    "character": "shared",
-    "counter_shown": true,
-    "curated": true,
-    "description": "at end of turn 7, deal 52 damage to ALL enemies (counter ticks per combat, resets next fight). Live run-43 x2: LouseProgenitor killed from 36 HP at end of our T7 (calendar fired before enemy T7 acted); also observed NOT firing on T6 - the trigger is end of turn 7 specifically. Intangible 1-2 caps this 52 to 1 per instance - do not count on it during FADE windows.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Rare"
+    },
     "id": "STONE_CALENDAR",
     "kind": "relic",
-    "name": "Stone Calendar",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Rare"
+    "name": "Stone Calendar"
   },
   "STONE_CRACKER": {
     "aliases": [
       "Stone Cracker",
       "StoneCracker"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at combat start, upgrade 2 random cards in your draw pile for the rest of combat. Hit-list examples: Bash→Bash+ (Vuln 2→3), TrueGrit→TrueGrit+ (random exhaust → **choice-exhaust overlay** — the upgraded form IS the choose-your-exhaust card), Spite→Spite+ (2→3 hits on HP-loss turns), Impervious→Impervious+ (Block 30→40), Hemokinesis→Hemokinesis+ (15→20), Whirlwind 5→8 per hit, Defend 5→8, Strike 6→9, Twin Strike 5→7 per hit, Pommel Strike 9→10. Upgrades are in-combat only and the card display does not mark them; read live damage numbers.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "STONE_CRACKER",
     "kind": "relic",
-    "name": "Stone Cracker",
-    "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log): in-combat upgrades are unmarked on card display — read live damage numbers (Bludgeon+ already upgraded in deck; random hits landed on strikes/defends most fights).",
-    "rarity": "Uncommon"
+    "name": "Stone Cracker"
   },
   "STONE_HUMIDIFIER": {
     "aliases": [
       "Stone Humidifier",
       "StoneHumidifier"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "whenever you Rest at a Rest Site, +5 Max HP.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "STONE_HUMIDIFIER",
     "kind": "relic",
-    "name": "Stone Humidifier",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Stone Humidifier"
   },
   "STORYBOOK": {
     "aliases": [
-      "Storybook",
       "STORYBOOK",
+      "Storybook",
       "故事书"
     ],
-    "character": null,
-    "counter_shown": false,
-    "curated": true,
-    "description": "Ancient relic (Tezcatara boon): on pickup, add 1 Brightest Flame to your deck.",
+    "detail": {
+      "character": null,
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "STORYBOOK",
     "kind": "relic",
-    "name": "Storybook",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Storybook"
   },
   "STRAWBERRY": {
     "aliases": [
       "Strawberry"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Upon pickup, raise your Max HP by 7.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "STRAWBERRY",
     "kind": "relic",
-    "live_notes": "LIVE run-56: +7 MaxHP on pickup. Part of the MaxHP stacking package.",
-    "name": "Strawberry",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "Strawberry"
   },
   "STRIKE_DUMMY": {
     "aliases": [
       "Strike Dummy",
       "StrikeDummy"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Common relic: Strike-tagged attack cards deal +3 damage; bonus applies BEFORE Vulnerable/multiplier stacking (base-feed). LIVE run-46: Strike resolved 19 on Fabricator mother (6 base +4 Str +3 dummy +3 Str? — live exact: base+Str+dummy fed pre-Vuln 1.5×); Strike 13-class on TestSubject under Str4+Vuln. Event Strike-tagged cards unconfirmed for the bonus.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "STRIKE_DUMMY",
     "kind": "relic",
-    "name": "Strike Dummy",
-    "play_notes": "常见遗物：带 Strike 标签的攻击牌 +3 伤害；加成在易伤/倍率叠乘前进入基础值。run-46 live：组装师母体 Strike 结算 19（基础+力量+假人先入基础再 ×易伤）；实验体战 Str4+易伤下 Strike 13 级。事件类 Strike 标签牌是否享受加成未确认。",
-    "rarity": "Common"
+    "name": "Strike Dummy"
   },
   "STURDY_CLAMP": {
     "aliases": [
       "Sturdy Clamp",
       "SturdyClamp"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Rare shop relic: up to 10 Block persists across turns (partial Barricade). LIVE run-46: purchased Act3 (5,5) shop 289g alongside Energy Potion 48 (337/340 sunk) at HP 8/94 post-Possess-crater — persistent 10-block buffer is the structural answer to the HP-economy wall when skill-based block is taxed by Enrage/Vital-Spark class powers.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "STURDY_CLAMP",
     "kind": "relic",
-    "name": "Sturdy Clamp",
-    "play_notes": "稀有商店遗物：至多 10 点格挡跨回合保留（部分壁垒效果）。run-46 live：Act3 (5,5) 商店 289g 购入（与能量药水 48 合计 337/340 沉淀），购买时 HP 8/94——当技能类挡牌被 Enrage/Vital Spark 类 power 征税时，常驻 10 挡缓冲是 HP 经济墙的结构性解。",
-    "rarity": "Rare"
+    "name": "Sturdy Clamp"
   },
   "SWORD_OF_JADE": {
     "aliases": [
       "Sword of Jade",
       "SwordOfJade"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Start each combat with 3 Strength.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "SWORD_OF_JADE",
     "kind": "relic",
-    "name": "Sword of Jade",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Sword of Jade"
   },
   "SWORD_OF_STONE": {
     "aliases": [
       "Sword of Stone",
       "SwordOfStone"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "after defeating 5 elites, transforms into Sword of Jade.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "SWORD_OF_STONE",
     "kind": "relic",
-    "name": "Sword of Stone",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Sword of Stone"
   },
   "SYMBIOTIC_VIRUS": {
     "aliases": [
       "Symbiotic Virus",
       "SymbioticVirus"
     ],
-    "character": "Defect",
-    "counter_shown": false,
-    "curated": false,
-    "description": "At the start of each combat, Channel 1 Dark.",
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "SYMBIOTIC_VIRUS",
     "kind": "relic",
-    "name": "Symbiotic Virus",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Symbiotic Virus"
   },
   "TANXS_WHISTLE": {
     "aliases": [
       "Tanx's Whistle",
       "TanxsWhistle"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Upon pickup, add 1 Whistle to your Deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "TANXS_WHISTLE",
     "kind": "relic",
-    "name": "Tanx's Whistle",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Tanx's Whistle"
   },
   "TEA_OF_DISCOURTESY": {
     "aliases": [
       "Tea of Discourtesy",
       "TeaOfDiscourtesy"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "next 1 combat start, shuffle 2 Dazed into your draw pile.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "TEA_OF_DISCOURTESY",
     "kind": "relic",
-    "name": "Tea of Discourtesy",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Tea of Discourtesy"
   },
   "THE_ABACUS": {
     "aliases": [
       "The Abacus",
       "TheAbacus"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "whenever you shuffle your draw pile, gain 6 Block.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "THE_ABACUS",
     "kind": "relic",
-    "name": "The Abacus",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "The Abacus"
   },
   "THE_BOOT": {
     "aliases": [
       "The Boot",
       "TheBoot"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "your attack damage to enemies of 1-4 unblocked HP is increased to 5.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "THE_BOOT",
     "kind": "relic",
-    "name": "The Boot",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "The Boot"
   },
   "THE_COURIER": {
     "aliases": [
       "The Courier",
       "TheCourier"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "merchant prices ×0.80; merchant stock never depletes.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "THE_COURIER",
     "kind": "relic",
-    "name": "The Courier",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "The Courier"
   },
   "THROWING_AXE": {
     "aliases": [
       "Throwing Axe",
       "ThrowingAxe"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "the first card you play each combat is played an extra time.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "THROWING_AXE",
     "kind": "relic",
-    "name": "Throwing Axe",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Throwing Axe"
   },
   "TINGSHA": {
     "aliases": [
       "Tingsha"
     ],
-    "character": "Silent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "for each card discarded during your turn, deal 3 damage to a random enemy.",
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "TINGSHA",
     "kind": "relic",
-    "name": "Tingsha",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Tingsha"
   },
   "TINY_MAILBOX": {
     "aliases": [
       "Tiny Mailbox",
       "TinyMailbox"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on Resting at a Rest Site, procure 2 random potions.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "TINY_MAILBOX",
     "kind": "relic",
-    "name": "Tiny Mailbox",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Tiny Mailbox"
   },
   "TOASTY_MITTENS": {
     "aliases": [
@@ -4094,29 +3827,27 @@
       "ToastyMittens",
       "暖和手套"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Ancient relic (Tezcatara boon): before hand draw each combat, exhaust 1 card from draw pile (turn 1 skips Innate) and gain 1 Strength.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "TOASTY_MITTENS",
     "kind": "relic",
-    "name": "Toasty Mittens",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Toasty Mittens"
   },
   "TOOLBOX": {
     "aliases": [
       "Toolbox"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at start of turn 1, choose 1 of 3 random Colorless cards to add to hand.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "TOOLBOX",
     "kind": "relic",
-    "name": "Toolbox",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Toolbox"
   },
   "TOUCH_OF_OROBAS": {
     "aliases": [
@@ -4124,44 +3855,42 @@
       "TouchOfOrobas",
       "欧洛巴斯之触"
     ],
-    "character": "shared",
-    "curated": true,
-    "description": "Orobas Act2 boon option: replaces IRONCLAD starter relic Burning Blood with its Ancient version Black Blood (heal 12/combat instead of 6). Marks the swap; the heal lives on BLACK_BLOOD.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Ancient"
+    },
     "id": "TOUCH_OF_OROBAS",
     "kind": "relic",
-    "name": "Touch of Orobas",
-    "play_notes": "Run-49 live: picked at Act2 boon; relic list showed BLACK_BLOOD + TOUCH_OF_OROBAS marker; +12/combat verified same run. Run-39 precedent. Also note: act transition full-healed the player to 80 on entering the boon room (run-49: 29→80) — act-start heal independent of the swap.",
-    "rarity": "Ancient"
+    "name": "Touch of Orobas"
   },
   "TOUGH_BANDAGES": {
     "aliases": [
       "Tough Bandages",
       "ToughBandages"
     ],
-    "character": "Silent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "for each card discarded during your turn, gain 3 Block.",
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "TOUGH_BANDAGES",
     "kind": "relic",
-    "name": "Tough Bandages",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Tough Bandages"
   },
   "TOXIC_EGG": {
     "aliases": [
       "Toxic Egg",
       "ToxicEgg"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Skill cards added to your deck are created upgraded.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "TOXIC_EGG",
     "kind": "relic",
-    "name": "Toxic Egg",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Toxic Egg"
   },
   "TOY_BOX": {
     "aliases": [
@@ -4169,164 +3898,152 @@
       "ToyBox",
       "玩具盒"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Ancient relic (Tezcatara boon): on pickup gain 4 Wax relics; every 3 combats the left-most Wax relic melts away.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "TOY_BOX",
     "kind": "relic",
-    "name": "Toy Box",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Toy Box"
   },
   "TRI_BOOMERANG": {
     "aliases": [
       "Tri-Boomerang",
       "TriBoomerang"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "on pickup, choose 3 Attack cards to enchant with Instinct 1. Instinct enchant (decomp): powered attack damage ×2 (multiplicative, applied before other multipliers such as Vulnerable).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "TRI_BOOMERANG",
     "kind": "relic",
-    "name": "Tri-Boomerang",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Tri-Boomerang"
   },
   "TUNGSTEN_ROD": {
     "aliases": [
       "Tungsten Rod",
       "TungstenRod"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "whenever you would lose HP, lose 1 less.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "TUNGSTEN_ROD",
     "kind": "relic",
-    "name": "Tungsten Rod",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Tungsten Rod"
   },
   "TUNING_FORK": {
     "aliases": [
       "Tuning Fork",
       "TuningFork"
     ],
-    "character": "shared",
-    "counter_shown": true,
-    "curated": true,
-    "description": "Every 10 Skill cards played, gain 7 Block. LIVE run-54: counter visible in compact state as TUNING_FORK:n; several 10/10 procs fired mid-fight (7 block lands same-frame as the 10th skill, e.g. alongside True Grit / Armaments plays).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Uncommon"
+    },
     "id": "TUNING_FORK",
     "kind": "relic",
-    "name": "Tuning Fork",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Tuning Fork"
   },
   "TWISTED_FUNNEL": {
     "aliases": [
       "Twisted Funnel",
       "TwistedFunnel"
     ],
-    "character": "Silent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "at combat start (turn 1), apply 4 Poison to ALL enemies.",
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "TWISTED_FUNNEL",
     "kind": "relic",
-    "name": "Twisted Funnel",
-    "play_notes": "",
-    "rarity": "Uncommon"
+    "name": "Twisted Funnel"
   },
   "UNCEASING_TOP": {
     "aliases": [
       "Unceasing Top",
       "UnceasingTop"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "whenever your hand is empty during your turn, draw 1 card.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "UNCEASING_TOP",
     "kind": "relic",
-    "name": "Unceasing Top",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Unceasing Top"
   },
   "UNDYING_SIGIL": {
     "aliases": [
       "Undying Sigil",
       "UndyingSigil"
     ],
-    "character": "Necrobinder",
-    "counter_shown": false,
-    "curated": false,
-    "description": "enemies whose Doom ≥ their current HP deal 50% damage to you; Doom on those enemies triggers at start of their turn instead of end.",
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "UNDYING_SIGIL",
     "kind": "relic",
-    "name": "Undying Sigil",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Undying Sigil"
   },
   "UNSETTLING_LAMP": {
     "aliases": [
       "Unsettling Lamp",
       "UnsettlingLamp"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "first card each combat that applies debuffs to enemies has those debuff amounts doubled. Values: Uppercut+ (2 Weak / 2 Vuln base) doubled to **4 Weak / 4 Vuln** as the combat's first debuff card; first-debuff doubling applies to the *current in-combat value* of the card — a StoneCracker-upgraded Tremble+ (7-class) doubled to 8 Vulnerable observed, above base-3×2=6.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "UNSETTLING_LAMP",
     "kind": "relic",
-    "name": "Unsettling Lamp",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Unsettling Lamp"
   },
   "VAJRA": {
     "aliases": [
       "Vajra"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Start each combat with 1 Strength.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "VAJRA",
     "kind": "relic",
-    "live_notes": "LIVE run-56: Act1 shop purchase 75g. Start each combat with 1 Strength. Passive strength for self-harm engine.",
-    "name": "Vajra",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "Vajra"
   },
   "VAMBRACE": {
     "aliases": [
       "Vambrace"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "The first time each combat you gain Block from a card, that Block amount is doubled (card-granted block only; relic/Fan block excluded). run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log): stacks MULTIPLICATIVELY with PAELS_LEGION — Defend 5 -> 20 (x2 Legion awake x2 Vambrace) and BloodWall 16 -> 64 confirmed live; first card-block of the combat is the doubled one, later cards face value.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "VAMBRACE",
     "kind": "relic",
-    "name": "Vambrace",
-    "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log): first card-block of combat doubled — Defend 5→10 confirmed; Impervious 30→60 pre-Frail, resolved 52 under Frail-2 and 22 under Frail-2 alone (frail taxes the doubled value). Rage/ornamental-fan blocks are not card-granted and do not consume the Vambrace slot.",
-    "rarity": "Uncommon"
+    "name": "Vambrace"
   },
   "VELVET_CHOKER": {
     "aliases": [
       "Velvet Choker",
       "VelvetChoker"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "+1 max Energy each turn; you cannot play more than 6 cards per turn.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "VELVET_CHOKER",
     "kind": "relic",
-    "name": "Velvet Choker",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Velvet Choker"
   },
   "VENERABLE_TEA_SET": {
     "aliases": [
@@ -4334,15 +4051,14 @@
       "VenerableTeaSet",
       "古茶具套装"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "On entering a Rest Site, the next combat starts with +2 Energy (T1 only). LIVE run-57: procced at (14,5) rest → Act2 Boss T1 energy 6/4 with Prismatic Gem; also Act1 boss-class fights after rests. Shop-buy run-57 (13,5) 189g.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "VENERABLE_TEA_SET",
     "kind": "relic",
-    "name": "Venerable Tea Set",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "Venerable Tea Set"
   },
   "VERY_HOT_COCOA": {
     "aliases": [
@@ -4350,221 +4066,208 @@
       "VeryHotCocoa",
       "极热可可"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Ancient relic (Tezcatara boon): +4 Energy on turn 1 of every combat (AfterSideTurnStart, TurnNumber<=1).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "VERY_HOT_COCOA",
     "kind": "relic",
-    "name": "Very Hot Cocoa",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Very Hot Cocoa"
   },
   "VEXING_PUZZLEBOX": {
     "aliases": [
       "Vexing Puzzlebox",
       "VexingPuzzlebox"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "At start of turn 1, add a random card from your class pool to hand; free this turn. Live run-42 drops: Juggling(0c) / Whirlwind(0c) / Mangle(0c) / Stoke(0c) / Bloodletting(0c) / Anger(0c) / Evil Eye(0c) / Brand(0c) / One-Two Punch(0c) / Armaments(0c) — added cards persist in combat piles that fight; under Vital Spark generated cards CAN arrive Tainted (One-Two Punch taxed +2 on play run-42).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "VEXING_PUZZLEBOX",
     "kind": "relic",
-    "name": "Vexing Puzzlebox",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "Vexing Puzzlebox"
   },
   "VITRUVIAN_MINION": {
     "aliases": [
       "Vitruvian Minion",
       "VitruvianMinion"
     ],
-    "character": "Regent",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Minion-tagged cards deal double damage and gain double Block.",
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
     "id": "VITRUVIAN_MINION",
     "kind": "relic",
-    "name": "Vitruvian Minion",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Vitruvian Minion"
   },
   "WAR_HAMMER": {
     "aliases": [
       "War Hammer",
       "WarHammer"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "whenever you defeat an elite, upgrade 4 random cards in deck.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "WAR_HAMMER",
     "kind": "relic",
-    "name": "War Hammer",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "War Hammer"
   },
   "WAR_PAINT": {
     "aliases": [
       "War Paint",
       "WarPaint"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "On pickup, upgrade 2 random Skill-card COPIES in your deck (not all copies of a type — live run-42: one Defend granted 8 block, another stayed 5; upgraded copies hidden from rest-site smith list).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "WAR_PAINT",
     "kind": "relic",
-    "name": "War Paint",
-    "play_notes": "",
-    "rarity": "Common"
+    "name": "War Paint"
   },
   "WHETSTONE": {
     "aliases": [
       "Whetstone",
       "磨刀石"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "on pickup, upgrade 2 random Attack cards in your deck. Shop (5,0) Act2 live price 151g run-43 (not bought - Barricade taken at 150g instead). Random targets - value depends on attack density. LIVE run-47: pickup upgrades observable via damage numbers — Strike base 6 dealt 9 after Whetstone (2 random Attacks upgraded); deck JSON shows base ids only, upgrade state is damage-inference only.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
     "id": "WHETSTONE",
     "kind": "relic",
-    "name": "Whetstone",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Common"
+    "name": "Whetstone"
   },
   "WHISPERING_EARRING": {
     "aliases": [
       "Whispering Earring",
       "WhisperingEarring"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "+1 max Energy each turn; Vakuu plays your first turn for you (up to 13 cards).",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "WHISPERING_EARRING",
     "kind": "relic",
-    "name": "Whispering Earring",
-    "play_notes": "",
-    "rarity": "Ancient"
+    "name": "Whispering Earring"
   },
   "WHITE_BEAST_STATUE": {
     "aliases": [
       "White Beast Statue",
       "WhiteBeastStatue"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "potions always appear in combat rewards.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "WHITE_BEAST_STATUE",
     "kind": "relic",
-    "name": "White Beast Statue",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "White Beast Statue"
   },
   "WHITE_STAR": {
     "aliases": [
       "White Star",
       "WhiteStar"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "elite combat rewards gain 1 additional Rare card reward.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
     "id": "WHITE_STAR",
     "kind": "relic",
-    "name": "White Star",
-    "play_notes": "",
-    "rarity": "Rare"
+    "name": "White Star"
   },
   "WIND_DAUGHTER": {
     "aliases": [
-      "Daughter of the Wind",
-      "DAUGHTER_OF_THE_WIND"
+      "DAUGHTER_OF_THE_WIND",
+      "Daughter of the Wind"
     ],
-    "character": "shared",
-    "curated": false,
-    "description": "Whenever you play an Attack, gain 1 Block.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Event"
+    },
     "id": "WIND_DAUGHTER",
     "kind": "relic",
-    "name": "Daughter of the Wind",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Daughter of the Wind"
   },
   "WINGED_BOOTS": {
     "aliases": [
       "Winged Boots",
       "羽翼之靴"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "3 charges: when choosing the next floor's room, ignore current route connectivity (any point on the next row). Neow Act1 live run-43 pick over Pommelander(+1 card upgrade) and SilverCrucible(3 upgraded rewards / empty first chest). Doctrine: reserve for rest/shop geometry escapes and pre-boss emergency jumps; charges unused all run-43 (draft geometry held) - unused charges are not a loss if the draft was correct.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
     "id": "WINGED_BOOTS",
     "kind": "relic",
-    "name": "Winged Boots",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Uncommon"
+    "name": "Winged Boots"
   },
   "WING_CHARM": {
     "aliases": [
       "Wing Charm"
     ],
-    "character": "shared",
-    "curated": false,
-    "description": "A random card in each card reward is Enchanted with Swift 1.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Shop"
+    },
     "id": "WING_CHARM",
     "kind": "relic",
-    "name": "Wing Charm",
-    "play_notes": "",
-    "rarity": "Shop"
+    "name": "Wing Charm"
   },
   "WONGOS_MYSTERY_TICKET": {
     "aliases": [
       "Wongo's Mystery Ticket",
       "WongosMysteryTicket"
     ],
-    "character": "shared",
-    "counter_shown": true,
-    "curated": false,
-    "description": "after 5 combats finished, the next combat's rewards gain 3 relic rewards.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Event"
+    },
     "id": "WONGOS_MYSTERY_TICKET",
     "kind": "relic",
-    "name": "Wongo's Mystery Ticket",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Wongo's Mystery Ticket"
   },
   "WONGO_CUSTOMER_APPRECIATION_BADGE": {
     "aliases": [
       "Wongo Customer Appreciation Badge",
       "WongoCustomerAppreciationBadge"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": false,
-    "description": "Does nothing.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
     "id": "WONGO_CUSTOMER_APPRECIATION_BADGE",
     "kind": "relic",
-    "name": "Wongo Customer Appreciation Badge",
-    "play_notes": "",
-    "rarity": "Event"
+    "name": "Wongo Customer Appreciation Badge"
   },
   "YUMMY_COOKIE": {
     "aliases": [
       "Yummy Cookie",
       "美味饼干"
     ],
-    "character": "shared",
-    "counter_shown": false,
-    "curated": true,
-    "description": "Ancient relic (Tezcatara boon): on pickup, upgrade 4 chosen cards permanently. Live run-43.",
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
     "id": "YUMMY_COOKIE",
     "kind": "relic",
-    "name": "Yummy Cookie",
-    "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Ancient"
+    "name": "Yummy Cookie"
   }
 }

@@ -650,15 +650,15 @@ def cmd_lookup(args):
     domain_guess = refs.guess_domain(key, args.domain)
     entry, url = refs.research_and_fold(key, domain_guess=domain_guess)
     if entry:
-        print(f"lookup: researched via {url} — folded into spirectl_lib/data (curated:false)")
+        print(f"lookup: researched via {url} — structure folded into spirectl_lib/data")
         if args.json:
             print(json.dumps(entry, ensure_ascii=False, indent=2))
         else:
             refs.print_entry(domain_guess or entry.get("kind"), entry, key, extra=f"folded_from: {url}")
         print(
-            "next: refine the entry (and its _zh.json twin) with perplexity-search/"
-            "decomp facts, set curated:true, then re-run "
-            "scripts/build_game_reference_json.py --check",
+            "next: curate the ZH name in the _zh twin if needed; structured facts "
+            "come from codex. Doctrine text belongs in memory/lessons. Re-run "
+            "scripts/build_game_reference_json.py --check after edits.",
             file=sys.stderr,
         )
         return 0
@@ -667,8 +667,8 @@ def cmd_lookup(args):
         f"lookup: MISS — '{key}' not in spirectl_lib/data/*.json and no spire-codex.com page matched.\n"
         f"  codex candidates tried: {candidates}\n"
         f"  next: research '{key}' via perplexity-search (or spire-codex.com browser search),\n"
-        f"  fold the result into the matching <domain>.json + <domain>_zh.json (key='{key}',\n"
-        f"  curated:true), then re-run build_game_reference_json.py --check. "
+        f"  fold structure into the matching <domain>.json + <domain>_zh.json (key='{key}',\n"
+        f"  structure from codex), then re-run build_game_reference_json.py --check. "
         "A lookup miss is a research trigger — never permission to guess.",
         file=sys.stderr,
     )

@@ -186,9 +186,7 @@ def _render_combat(state, ref_index):
         if move and ref_index:
             hit = ref_index.get(move) or ref_index.get(str(move).upper())
             if hit:
-                entry = hit[1]
-                snippet = entry.get("effect") or entry.get("description") or entry.get("play_notes") or ""
-                snippet = " ".join(str(snippet).split())[:60]
+                snippet = _ref_snippet(hit[1])
                 if snippet:
                     line += f" [{move}: {snippet}]"
         lines.append(line)
@@ -278,3 +276,30 @@ def render_compact(state):
         lines.append(actions)
     lines.append(f"fingerprint={state.get('fingerprint')}")
     return "\n".join(lines)
+
+
+def _ref_snippet(entry):
+    """Compact structured summary for a referenced entry (no prose fields)."""
+    if not isinstance(entry, dict):
+        return ""
+    if entry.get("kind") == "move" or "intents" in entry:
+        parts = []
+        for it in entry.get("intents") or []:
+            if not isinstance(it, dict):
+                continue
+            d, h = it.get("base_damage"), it.get("hits")
+            if d is not None:
+                parts.append(f"{d}x{h}" if h and h > 1 else str(d))
+            elif it.get("class"):
+                parts.append(str(it["class"]))
+        bd = entry.get("base_damage")
+        if not parts and bd is not None:
+            parts.append(str(bd))
+        return "; ".join(parts)[:60]
+    detail = entry.get("detail") if isinstance(entry.get("detail"), dict) else {}
+    hp = detail.get("hp")
+    if isinstance(hp, dict) and hp.get("min") is not None:
+        return f"HP {hp['min']}-{hp.get('max')}"
+    if detail.get("rarity"):
+        return str(detail["rarity"])
+    return ""

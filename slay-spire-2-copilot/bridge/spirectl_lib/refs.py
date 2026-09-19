@@ -1,19 +1,26 @@
-"""JSON reference DB lookup (spirectl_lib/data/*.json) and spire-codex.com research."""
+"""JSON reference DB lookup (spirectl_lib/data/*.json) and spire-codex.com research.
+
+Store schema: envelope {id, kind, name, aliases, detail} — purely
+programmatic; see spirectl_lib/schema.py for the strict per-kind detail
+shapes. Research folds write STRUCTURE from codex only; prose lives in
+memory/lessons.
+"""
+import copy
 import json
+import re
 import sys
 
 from .config import CODEX_API, CODEX_BASE, REF_DIR
-from .textutil import strip_codex_markup
+from .schema import KIND_TO_DETAIL, NESTED_FLAT, DOMAIN_DEFAULT_KIND, _keyset
 
 # Domain priority for bare-key resolution (first match wins; --all overrides).
-# (domain, file stem) pairs — also the kind->stem map for folding research.
 REF_DOMAIN_FILES = [
-    ("move", "monsters"),        # flattened from monsters[*].moves[*]
+    ("move", "monsters"),
     ("power", "powers"),
     ("relic", "relics"),
     ("card", "cards"),
     ("potion", "potions"),
-    ("event_option", "events"),  # flattened from events[*].options[*]
+    ("event_option", "events"),
     ("event", "events"),
     ("affliction", "afflictions"),
     ("status_card", "afflictions"),
@@ -22,79 +29,48 @@ REF_DOMAIN_FILES = [
     ("character", "characters"),
     ("monster", "monsters"),
 ]
-KIND_TO_STEM = dict(REF_DOMAIN_FILES)
-
-# spire-codex.com URL patterns: https://spire-codex.com/{category}/{lowercase_id}
-# (underscores work unencoded; category chosen by id shape).
 KIND_TO_API_PLURAL = {
-    "monster": "monsters",
-    "move": "monsters",
-    "relic": "relics",
-    "card": "cards",
-    "potion": "potions",
-    "power": "powers",
-    "event": "events",
-    "event_option": "events",
+    "monster": "monsters", "move": "monsters", "relic": "relics",
+    "card": "cards", "potion": "potions", "power": "powers",
+    "event": "events", "event_option": "events", "character": "characters",
 }
-
 _REF_INDEX_CACHE = {}
 _CODEX_API_CACHE = {}
 _CODEX_MOVE_INDEX = None
 
 
 def _read_json_dict(path):
-    """Load a JSON object file.
-
-    Args:
-        path: File to read.
-
-    Returns:
-        Parsed dict, or {} when the file is missing, unreadable, or not a dict.
-    """
     if not path.exists():
         return {}
     try:
-        loaded = json.loads(path.read_text(encoding="utf-8"))
+        data = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return {}
-    return loaded if isinstance(loaded, dict) else {}
+    return data if isinstance(data, dict) else {}
 
 
 def _write_json_dict(path, data):
-    """Write a dict to path as indented, key-sorted, UTF-8 JSON.
-
-    Args:
-        path: Destination file (parent dirs created as needed).
-        data: JSON-serializable dict.
-    """
     REF_DIR.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
 def load_reference_index(lang="en"):
-    """Load spirectl_lib/data/*.json (or *_zh.json) into {key: (domain, entry)}.
+    """Load spirectl_lib/data/*.json into {key: (domain, entry)}.
 
-    Flattens nested keys: monsters[*].moves[*] -> move domain,
-    events[*].options[*] -> event_option. Registers entry['id'], every
-    aliases[] element, and id case-variants. Cached per lang.
+    Registers envelope keys/aliases plus nested detail.moves / detail.options
+    records. Cached per lang.
     """
     if lang in _REF_INDEX_CACHE:
         return _REF_INDEX_CACHE[lang]
     index = {}
     suffix = "_zh.json" if lang == "zh" else ".json"
     if not REF_DIR.is_dir():
-        print(
-            f"lookup: reference dir missing: {REF_DIR} — "
-            "generate it with scripts/build_game_reference_json.py",
-            file=sys.stderr,
-        )
+        print(f"lookup: reference dir missing: {REF_DIR} — data lives at spirectl_lib/data", file=sys.stderr)
         _REF_INDEX_CACHE[lang] = index
         return index
 
-    def register(key, domain, entry):
-        if not key or not isinstance(key, str):
-            return
-        if key not in index:
+    def reg(key, domain, entry):
+        if key and isinstance(key, str) and key not in index:
             index[key] = (domain, entry)
 
     for domain, stem in REF_DOMAIN_FILES:
@@ -102,43 +78,31 @@ def load_reference_index(lang="en"):
         for key, entry in data.items():
             if not isinstance(entry, dict):
                 continue
-            entry_kind = entry.get("kind") or domain
-            register(key, entry_kind, entry)
-            register(entry.get("id"), entry_kind, entry)
+            kind = entry.get("kind") or DOMAIN_DEFAULT_KIND.get(stem, domain)
+            reg(key, kind, entry)
             for alias in entry.get("aliases") or []:
-                if isinstance(alias, str):
-                    register(alias, entry_kind, entry)
-            register(key.upper(), entry_kind, entry)
-            moves = entry.get("moves")
-            if isinstance(moves, dict):
-                for move_key, move_entry in moves.items():
-                    if not isinstance(move_entry, dict):
-                        continue
-                    register(move_key, "move", move_entry)
-                    register(move_entry.get("id"), "move", move_entry)
-                    for alias in move_entry.get("aliases") or []:
-                        if isinstance(alias, str):
-                            register(alias, "move", move_entry)
-            options = entry.get("options")
-            if isinstance(options, dict):
-                for opt_key, opt_entry in options.items():
-                    if not isinstance(opt_entry, dict):
-                        continue
-                    register(opt_key, "event_option", opt_entry)
-                    register(opt_entry.get("id"), "event_option", opt_entry)
-                    for alias in opt_entry.get("aliases") or []:
-                        if isinstance(alias, str):
-                            register(alias, "event_option", opt_entry)
+                reg(alias, kind, entry)
+            detail = entry.get("detail") if isinstance(entry.get("detail"), dict) else {}
+            for mk, mv in (detail.get("moves") or {}).items():
+                if isinstance(mv, dict):
+                    reg(mk, "move", mv)
+                    for alias in mv.get("aliases") or []:
+                        reg(alias, "move", mv)
+            for ok, ov in (detail.get("options") or {}).items():
+                if isinstance(ov, dict):
+                    reg(ok, "event_option", ov)
+                    for alias in ov.get("aliases") or []:
+                        reg(alias, "event_option", ov)
     _REF_INDEX_CACHE[lang] = index
     return index
 
 
 def lookup_reference(key, lang="en", domain=None, match_all=False):
-    """Resolve a live game id against the JSON reference DB.
+    """Resolve a live game id against the JSON store.
 
-    Resolution ladder: exact key -> event textKey / prefix before '.pages.'
-    -> case-insensitive -> suffix probes (X+ -> X; STRIKE family).
-    Returns list of (domain, entry); empty list = loud miss.
+    Resolution ladder: exact key -> prefix before '.pages.' / first dot ->
+    case-insensitive -> suffix probes. Returns list of (domain, entry);
+    empty list = loud miss.
     """
     if not key:
         return []
@@ -183,22 +147,14 @@ def lookup_reference(key, lang="en", domain=None, match_all=False):
 
 
 def codex_api_get(path, timeout=10.0):
-    """GET a spire-codex.com API path, return parsed JSON or None.
-
-    Cache-first: every successful payload is kept per-process so a burst of
-    lookups on the same monster/index does not re-hit the network.
-    """
+    """GET a spire-codex.com API path, return parsed JSON or None (memory cache)."""
     if path in _CODEX_API_CACHE:
         return _CODEX_API_CACHE[path]
     import urllib.request
-
-    url = CODEX_API + path
     req = urllib.request.Request(
-        url,
-        headers={
-            "User-Agent": "spirectl-lookup/0.2 (+spire-copilot-bridge)",
-            "Accept": "application/json",
-        },
+        CODEX_API + path,
+        headers={"User-Agent": "spirectl-lookup/0.2 (+spire-copilot-bridge)",
+                 "Accept": "application/json"},
     )
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
@@ -212,12 +168,7 @@ def codex_api_get(path, timeout=10.0):
 
 
 def codex_move_index():
-    """Build {live_move_id: (monster_dict, move_dict)} from /api/monsters.
-
-    API move ids carry no _MOVE suffix (SEA_KICK) while live state emits
-    SEA_KICK_MOVE — both shapes are registered. Cached per process; the full
-    monster list (~115 entries) is fetched once.
-    """
+    """Build {move_id: monster_dict} from /api/monsters (both id shapes)."""
     global _CODEX_MOVE_INDEX
     if _CODEX_MOVE_INDEX is not None:
         return _CODEX_MOVE_INDEX
@@ -228,179 +179,274 @@ def codex_move_index():
             if not isinstance(monster, dict):
                 continue
             for move in monster.get("moves") or []:
-                if not isinstance(move, dict):
-                    continue
-                mid = move.get("id")
-                if not mid:
-                    continue
-                index[mid] = (monster, move)
-                index[f"{mid}_MOVE"] = (monster, move)
+                if isinstance(move, dict) and move.get("id"):
+                    index[move["id"]] = monster
+                    index[f"{move['id']}_MOVE"] = monster
     _CODEX_MOVE_INDEX = index
     return index
 
 
 def codex_search(kind_path, query, timeout=10.0):
-    """Query the codex search endpoint, e.g. /powers?search=ravenous."""
     import urllib.parse
-
-    q = urllib.parse.quote(query)
-    data = codex_api_get(f"/{kind_path}?search={q}", timeout=timeout)
+    data = codex_api_get(f"/{kind_path}?search={urllib.parse.quote(query)}", timeout=timeout)
     return data if isinstance(data, list) else []
 
 
-def _format_damage(damage):
-    """Render codex damage dict: {'normal':11,'ascension':13,'hit_count':4}."""
-    if damage is None:
-        return None
-    if isinstance(damage, (int, float)):
-        return str(damage)
-    if not isinstance(damage, dict):
-        return str(damage)
-    normal = damage.get("normal")
-    asc = damage.get("ascension")
-    hits = damage.get("hit_count")
-    parts = []
-    if hits:
-        parts.append(f"{normal}x{hits}")
-    elif normal is not None:
-        parts.append(str(normal))
-    if asc is not None:
-        parts.append(f"A:{asc}")
-    return " ".join(parts) or None
+def _empty(value_type):
+    return [] if value_type == list else ({} if value_type == dict else
+            (False if value_type == bool else None))
 
 
-def describe_move_from_api(move):
-    """Build effect/play text for one codex move entry."""
-    bits = []
-    intent = move.get("intent")
-    if intent:
-        bits.append(str(intent))
-    dmg = _format_damage(move.get("damage"))
-    if dmg:
-        bits.append(f"damage {dmg}")
-    if move.get("block") is not None:
-        bits.append(f"block {move['block']}")
-    if move.get("heal") is not None:
-        bits.append(f"heal {move['heal']}")
-    for power in move.get("powers") or []:
-        if not isinstance(power, dict):
-            continue
-        pid = power.get("power_id") or power.get("id") or "?"
-        amt = power.get("amount")
-        target = power.get("target")
-        ptxt = pid if amt is None else f"{pid} {amt}"
-        if target:
-            ptxt += f" ({target})"
-        bits.append(ptxt)
-    effect = move.get("name") or move.get("id") or "move"
-    if bits:
-        effect = f"{effect}: " + "; ".join(bits)
-    return effect
+def new_entry(kind, key, name=None, aliases=None):
+    """Construct a schema-valid empty entry for the given kind."""
+    aliases = [a for a in (aliases or []) if a]
+    if kind in NESTED_FLAT:
+        req = _keyset(NESTED_FLAT[kind])
+        flat = {}
+        for f in req:
+            if f == "id": flat[f] = key
+            elif f == "kind": flat[f] = kind
+            elif f == "name": flat[f] = name or key
+            elif f == "aliases": flat[f] = aliases
+            else:
+                t = NESTED_FLAT[kind].__dataclass_fields__[f].type
+                flat[f] = [] if f == "intents" else None
+        return flat
+    dcls = KIND_TO_DETAIL.get(kind)
+    detail = {}
+    if dcls is not None:
+        for f in _keyset(dcls):
+            fname = f
+            if fname in ("hp",):
+                detail[fname] = {"min": None, "max": None, "min_asc": None, "max_asc": None}
+            elif fname in ("moves", "options"):
+                detail[fname] = {}
+            elif fname in ("acts", "passives", "display_names", "keywords",
+                           "affliction_keys", "member_classes", "cycle"):
+                detail[fname] = []
+            elif fname in ("is_boss", "is_elite", "counter_class", "host_of_affliction"):
+                detail[fname] = False
+            else:
+                detail[fname] = None
+    return {"id": key, "kind": kind, "name": name or key, "aliases": aliases, "detail": detail}
 
 
-def build_monster_entry_from_api(monster):
-    """Full monsters.json entry from a codex monster payload (live-id keys)."""
-    api_id = monster.get("id") or ""
-    moves = {}
-    cycle = []
-    for move in monster.get("moves") or []:
-        if not isinstance(move, dict):
-            continue
-        api_move_id = move.get("id")
-        if not api_move_id:
-            continue
-        live_move_id = f"{api_move_id}_MOVE"
-        cycle.append(live_move_id)
-        damage_raw = move.get("damage")
-        damage = damage_raw if isinstance(damage_raw, dict) else {}
-        intent = {
-            "type": move.get("intent"),
-            "base_damage": damage.get("normal"),
-            "hits": damage.get("hit_count"),
-        }
-        if damage.get("hit_count") in (None, 1):
-            if move.get("damage"):
-                intent["class"] = "SingleAttackIntent"
-        elif move.get("damage"):
-            intent["class"] = "MultiAttackIntent"
-        if damage.get("ascension") is not None:
-            intent["base_damage_ascension"] = {"ascension": damage.get("ascension")}
-        moves[live_move_id] = {
-            "id": live_move_id,
-            "kind": "move",
-            "monster_id": api_id,
-            "name": move.get("name") or api_move_id,
-            "intents": [intent],
-            "effect": describe_move_from_api(move),
-            "follow_up_id": None,
-            "play_notes": "",
-            "aliases": [move.get("name") or api_move_id, api_move_id],
-            "curated": False,
-        }
-    hp = {
-        "base": monster.get("min_hp"),
-        "max": monster.get("max_hp"),
-        "notes": "",
-    }
-    if monster.get("min_hp_ascension") is not None:
-        hp["ascension"] = {"min": monster.get("min_hp_ascension"), "max": monster.get("max_hp_ascension")}
+def move_entry(key, monster_id, name=None, aliases=None, intents=None,
+               base_damage=None, base_damage_ascension=None, hits=None):
     return {
-        "id": api_id,
-        "kind": "monster",
-        "name": monster.get("name") or api_id,
-        "type": monster.get("type"),
-        "acts": [],
-        "hp": hp,
-        "is_boss": (monster.get("type") or "").lower() == "boss",
-        "is_elite": (monster.get("type") or "").lower() == "elite",
-        "cycle": cycle,
-        "moves": moves,
-        "aliases": [monster.get("name") or api_id],
-        "description": (
-            f"{monster.get('name') or api_id} ({monster.get('type') or 'monster'}): "
-            f"HP {monster.get('min_hp')}-{monster.get('max_hp')} "
-            f"(A {monster.get('min_hp_ascension')}-{monster.get('max_hp_ascension')}); "
-            f"cycle {' → '.join(cycle) if cycle else 'unknown'}"
-        ),
-        "play_notes": "",
-        "curated": False,
+        "id": key, "kind": "move", "name": name or key,
+        "aliases": [a for a in (aliases or []) if a and a != key],
+        "monster_id": monster_id, "intents": intents or [],
+        "base_damage": base_damage, "base_damage_ascension": base_damage_ascension,
+        "hits": hits, "follow_up_id": None, "status_count": None,
     }
 
 
-def fold_monster_entry(entry):
-    """Merge a monster entry into monsters.json + monsters_zh.json.
-
-    Curated monsters are kept; the uncurated payload is skipped per language.
-    """
-    target_key = entry.get("id")
-    for lang in ("en", "zh"):
-        path = REF_DIR / f"monsters{'_zh' if lang == 'zh' else ''}.json"
+def fold_entry_into_reference(domain_stem, key, entry):
+    """Persist one entry; existing keys are preserved (fill-only on detail)."""
+    kind = entry.get("kind") or DOMAIN_DEFAULT_KIND.get(domain_stem, "relic")
+    suffixes = ("_zh.json", ".json")
+    for lang in ("zh", "en"):
+        path = REF_DIR / f"{domain_stem}{'_zh' if lang == 'zh' else ''}.json"
         data = _read_json_dict(path)
-        existing = data.get(target_key)
-        if isinstance(existing, dict) and existing.get("curated") is True:
-            continue
-        payload = dict(entry)
-        if lang == "zh":
-                    data[target_key] = payload
+        if key in data and isinstance(data[key], dict):
+            cur = data[key]
+            # fill-only: missing detail fields, never overwrite present values
+            det = cur.get("detail") if isinstance(cur.get("detail"), dict) else {}
+            new_det = entry.get("detail") or {}
+            for fk, fv in new_det.items():
+                if fk not in det or det[fk] in (None, "", [], {}):
+                    det[fk] = copy.deepcopy(fv)
+            if isinstance(cur.get("detail"), dict) or det:
+                cur["detail"] = det
+            merged_al = set(cur.get("aliases") or []) | set(entry.get("aliases") or [])
+            cur["aliases"] = sorted(a for a in merged_al if a)
+        else:
+            data[key] = copy.deepcopy(entry)
+            if lang == "zh":
+                # ZH name falls back to EN name until curated in the twin
+                pass
         _write_json_dict(path, data)
     _REF_INDEX_CACHE.clear()
+    return REF_DIR / f"{domain_stem}.json", True
 
 
-def fold_entry_into_reference(domain_stem, key, entry, lang="en"):
-    """Write/merge one entry into spirectl_lib/data/<stem>.json (+ _zh.json).
+def _fold_monster(entry):
+    """Persist a monster entry (EN+ZH), fill-only on existing keys."""
+    key = entry.get("id") or ""
+    fold_entry_into_reference("monsters", key, entry)
+    return entry
 
-    Returns:
-        Tuple (path, written); written is False when an existing curated
-        entry was kept.
+
+def _codex_move_struct(api_mid, mon_id, mv):
+    live = api_mid if str(api_mid).endswith("_MOVE") else (f"{api_mid}_MOVE" if api_mid else "")
+    if not live:
+        return None, None
+    dmg = mv.get("damage") if isinstance(mv.get("damage"), dict) else {}
+    nd, asc, hits = dmg.get("normal"), dmg.get("ascension"), dmg.get("hit_count")
+    intent = mv.get("intent")
+    intents = []
+    if intent:
+        cmap = {"Attack": "SingleAttackIntent" if not (hits and hits > 1) else "MultiAttackIntent",
+                "Buff": "BuffIntent", "Debuff": "DebuffIntent", "Defend": "DefendIntent",
+                "Heal": "HealIntent", "Sleep": "SleepIntent", "Stun": "StunIntent",
+                "Summon": "SummonIntent", "Status": "StatusIntent"}
+        cls = cmap.get(intent)
+        if cls:
+            it = {"class": cls, "type": "Attack" if "Attack" in cls else intent}
+            if nd is not None:
+                it.update({"base_damage": nd, "hits": hits or 1})
+                if asc is not None:
+                    it["base_damage_ascension"] = asc
+            intents.append(it)
+    return live, move_entry(live, mon_id, name=mv.get("name") or live,
+                            aliases=[api_mid] if api_mid and api_mid != live else [],
+                            intents=intents, base_damage=nd,
+                            base_damage_ascension=asc, hits=hits)
+
+
+def codex_fill_monster(target_key, detail_data):
+    """Merge codex monster structure into store under target_key."""
+    api_id = (detail_data or {}).get("id") or target_key
+    entry = new_entry("monster", target_key, name=(detail_data or {}).get("name") or target_key,
+                      aliases=[a for a in {api_id, (detail_data or {}).get("name")} if a])
+    det = entry["detail"]
+    if detail_data.get("min_hp") is not None:
+        det["hp"] = {"min": detail_data.get("min_hp"), "max": detail_data.get("max_hp"),
+                     "min_asc": detail_data.get("min_hp_ascension"),
+                     "max_asc": detail_data.get("max_hp_ascension")}
+    typ = str(detail_data.get("type") or "").lower()
+    det["type"] = str(detail_data.get("type") or "")
+    det["is_boss"] = typ == "boss"
+    det["is_elite"] = typ == "elite"
+    cycle = []
+    for mv in detail_data.get("moves") or []:
+        live, ment = _codex_move_struct(mv.get("id") or "", target_key, mv)
+        if live and ment:
+            det["moves"][live] = ment
+            cycle.append(live)
+    det["cycle"] = cycle[:12]
+    _fold_monster(entry)
+    return entry
+
+
+def codex_fill_flat(domain_stem, kind, key, data):
+    """Merge codex structured fields into a card/relic/power/potion/event/character."""
+    entry = new_entry(kind, key, name=(data or {}).get("name") or key,
+                      aliases=[a for a in {key, (data or {}).get("id"), (data or {}).get("name")} if a])
+    det = entry["detail"]
+    if kind == "relic" or kind == "enchant":
+        if data.get("rarity_key") or data.get("rarity"): det["rarity"] = data.get("rarity_key") or data.get("rarity")
+        if data.get("pool"): det["character"] = data.get("pool")
+    elif kind == "card":
+        if data.get("cost") is not None: det["cost"] = data.get("cost")
+        if data.get("type_key") or data.get("type"): det["card_type"] = data.get("type_key") or data.get("type")
+        if data.get("rarity_key") or data.get("rarity"): det["rarity"] = data.get("rarity_key") or data.get("rarity")
+        if data.get("target"): det["target_type"] = data.get("target")
+        if data.get("color"): det["character_pool"] = data.get("color")
+    elif kind == "power":
+        if data.get("type"): det["power_type"] = data.get("type")
+        if data.get("stack_type"): det["stack_type"] = data.get("stack_type")
+        det["counter_class"] = (data.get("stack_type") == "Counter")
+    elif kind == "potion":
+        if data.get("rarity_key") or data.get("rarity"): det["rarity"] = data.get("rarity_key") or data.get("rarity")
+        if data.get("target"): det["target"] = data.get("target")
+        if data.get("usage"): det["usage"] = data.get("usage")
+    elif kind == "character":
+        if data.get("starting_hp") is not None: det["hp"] = data.get("starting_hp")
+        if data.get("starting_gold") is not None: det["gold"] = data.get("starting_gold")
+    fold_entry_into_reference(domain_stem, key, entry)
+    return entry
+
+
+def research_and_fold(key, domain_guess=None):
+    """Lookup-miss fallback: spire-codex.com API structure first, HTML last.
+
+    Returns (entry, source_url) when research produced data, else (None, None).
+    Folds STRUCTURE only (no prose) under the live id key; both key shapes
+    land in aliases.
     """
-    path = REF_DIR / f"{domain_stem}{'_zh' if lang == 'zh' else ''}.json"
-    data = _read_json_dict(path)
-    existing = data.get(key)
-    if isinstance(existing, dict) and existing.get("curated") is True:
-        return path, False
-    data[key] = entry
-    _write_json_dict(path, data)
-    return path, True
+    kind = domain_guess
+    entry = None
+    source = None
+
+    if kind == "move" or "_MOVE" in key:
+        hit_monster = codex_move_index().get(key) or codex_move_index().get(key.replace("_MOVE", ""))
+        if hit_monster:
+            api_id = hit_monster.get("id") or key
+            # move-level miss: fold the host monster structure; entry = the move record
+            host_key = api_id
+            mon_entry = codex_fill_monster(host_key, hit_monster)
+            ment = (mon_entry.get("detail") or {}).get("moves", {}).get(key) or \
+                   (mon_entry.get("detail") or {}).get("moves", {}).get(key if key.endswith("_MOVE") else key + "_MOVE")
+            if ment:
+                entry = ment
+                source = f"codex-api:/monsters/{api_id}"
+                kind = "move"
+
+    if entry is None:
+        attempts = [
+            ("monster", lambda k, g: g == "monster" or (g is None and k.isupper()), "monsters", "monster"),
+            ("relic", lambda k, g: g in ("relic", None) or k.endswith("_PEARL") or k.isupper(), "relics", "relic"),
+            ("card", lambda k, g: g in ("card", None) or k.endswith("_STRIKE") or k.endswith("_IRONCLAD"), "cards", "card"),
+            ("potion", lambda k, g: g in ("potion", None) or k.endswith("_POTION") or "POTION" in k, "potions", "potion"),
+            ("power", lambda k, g: g in ("power", None), "powers", "power"),
+            ("event", lambda k, g: g in ("event", "event_option", None) or ".pages." in k, "events", "event"),
+        ]
+        for attempt_kind, probe, plural, eff_kind in attempts:
+            if not probe(key, kind):
+                continue
+            queries = [key]
+            if attempt_kind == "power" and key.endswith("_POWER"):
+                queries.append(key[: -len("_POWER")])
+            data = None
+            for q in queries:
+                data = codex_api_get(f"/{plural}/{q.lower()}")
+                if data is not None:
+                    break
+            if data is None:
+                results = codex_search(plural, key.replace("_", " ").lower())
+                data = results[0] if results else None
+            if isinstance(data, dict) and data.get("id"):
+                if attempt_kind == "monster":
+                    entry = codex_fill_monster(key, data)
+                else:
+                    entry = codex_fill_flat(plural, eff_kind, key, data)
+                source = f"codex-api:/{plural}/{data.get('id')}"
+                kind = eff_kind
+                break
+
+    if entry is None:
+        # HTML last resort: structure unknown -> record identity-only stub
+        urls = codex_candidate_urls(key)
+        best_url = None
+        for url in urls:
+            try:
+                probe = fetch_codex_text(url)
+            except Exception:
+                continue
+            if probe and len(probe) >= 80:
+                best_url = url
+                break
+        if not best_url:
+            return None, None
+        kind_eff = kind or guess_domain(key) or "relic"
+        if kind_eff in NESTED_FLAT:
+            kind_eff = "monster" if kind_eff == "move" else "event"
+        entry = new_entry(kind_eff, key)
+        stem = {"monster": "monsters", "move": "monsters", "relic": "relics", "card": "cards",
+                "potion": "potions", "power": "powers", "event": "events",
+                "event_option": "events", "character": "characters",
+                "affliction": "afflictions", "curse": "afflictions",
+                "status_card": "afflictions", "intent_type": "intents",
+                "intent_class": "intents", "enchant": "relics"}.get(kind_eff, "relics")
+        fold_entry_into_reference(stem, key, entry)
+        source = f"codex-html:{best_url}"
+    return entry, source
+
+
+def plural_of(kind):
+    return KIND_TO_API_PLURAL.get(kind, "relics")
 
 
 def codex_candidate_urls(key):
@@ -408,414 +454,66 @@ def codex_candidate_urls(key):
     slug = key.lower().replace(" ", "_")
     candidates = []
     if "_MOVE" in key:
-        stem = slug
-        if stem.endswith("_move"):
-            stem = stem[: -len("_move")]
+        stem = slug[:-5] if slug.endswith("_move") else slug
         candidates.extend([f"{CODEX_BASE}/monsters/{slug}", f"{CODEX_BASE}/monsters/{stem}"])
     elif key.endswith("_POWER"):
         candidates.append(f"{CODEX_BASE}/powers/{slug}")
     elif key.endswith("_POTION") or "POTION" in key:
         candidates.append(f"{CODEX_BASE}/potions/{slug}")
     elif ".pages." in key:
-        event = key.split(".pages.", 1)[0].lower()
-        candidates.append(f"{CODEX_BASE}/events/{event}")
+        candidates.append(f"{CODEX_BASE}/events/{key.split('.pages.', 1)[0].lower()}")
     elif key.isupper() or "_" in key:
         for category in ("relics", "cards", "potions", "powers", "events", "monsters", "characters"):
             candidates.append(f"{CODEX_BASE}/{category}/{slug}")
     else:
         for category in ("reference", "powers", "monsters", "cards"):
             candidates.append(f"{CODEX_BASE}/{category}/{slug}")
-    deduped = []
-    seen = set()
+    deduped, seen = [], set()
     for url in candidates:
         if url not in seen:
-            seen.add(url)
-            deduped.append(url)
+            seen.add(url); deduped.append(url)
     return deduped[:8]
 
 
 def fetch_codex_text(url, timeout=12.0):
-    """Best-effort HTML fetch, returned as plain text (last-resort fallback)."""
+    """Best-effort HTML fetch as plain text (last-resort fallback probe)."""
     import html as html_mod
-    import re as re_mod
     import urllib.request
-
-    req = urllib.request.Request(
-        url,
-        headers={"User-Agent": "spirectl-lookup/0.2 (+spire-copilot-bridge)"},
-    )
+    req = urllib.request.Request(url, headers={"User-Agent": "spirectl-lookup/0.2 (+spire-copilot-bridge)"})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         raw = resp.read().decode("utf-8", errors="replace")
-    raw = re_mod.sub(r"(?is)<(script|style)[^>]*>.*?</\1>", " ", raw)
-    raw = re_mod.sub(r"(?is)<br\s*/?>|</p>|</div>|</li>|</h[1-6]>", "\n", raw)
-    text = re_mod.sub(r"(?s)<[^>]+>", " ", raw)
+    raw = re.sub(r"(?is)<(script|style)[^>]*>.*?</\1>", " ", raw)
+    raw = re.sub(r"(?is)<br\s*/?>|</p>|</div>|</li>|</h[1-6]>", "\n", raw)
+    text = re.sub(r"(?s)<[^>]+>", " ", raw)
     text = html_mod.unescape(text)
-    text = re_mod.sub(r"[ \t]+", " ", text)
-    text = re_mod.sub(r"\n\s*\n+", "\n", text)
-    return text.strip()
-
-
-def _fetch_codex_first(plural, query_keys):
-    """Fetch the first codex API payload for any query key; search as fallback.
-
-    Args:
-        plural: API path segment (relics, cards, powers, ...).
-        query_keys: Id shapes to try, in order (direct GET then search each).
-
-    Returns:
-        Payload dict carrying an "id", or None.
-    """
-    data = None
-    for query in query_keys:
-        data = codex_api_get(f"/{plural}/{query.lower()}")
-        if data is not None:
-            break
-    if data is None:
-        for query in query_keys:
-            results = codex_search(plural, query.replace("_", " ").lower())
-            if results:
-                data = results[0]
-                break
-    return data if isinstance(data, dict) and data.get("id") else None
-
-
-def _power_queries(key):
-    """Query shapes for a power id: as-is, without _POWER, and humanized."""
-    queries = [key]
-    if key.endswith("_POWER"):
-        queries.append(key[: -len("_POWER")])
-    queries.append(key.replace("_", " ").lower())
-    return queries
-
-
-def _simple_api_entry(kind, key, data, fields, aliases_extra=()):
-    """Build a flat codex entry shared by relic/card/potion/power shapes."""
-    if not (isinstance(data, dict) and data.get("id")):
-        return None
-    entry = {
-        "id": key,
-        "kind": kind,
-        "name": data.get("name") or key,
-        **fields(data),
-        "description": strip_codex_markup(data.get("description") or data.get("description_raw") or ""),
-        "aliases": [data.get("name"), data.get("id"), *aliases_extra],
-        "play_notes": "",
-        "curated": False,
-    }
-    return entry
-
-
-def _relic_entry(key, data):
-    """Build a relic entry from a codex payload."""
-    return _simple_api_entry("relic", key, data, lambda d: {
-        "rarity": d.get("rarity_key") or d.get("rarity"),
-        "character": d.get("pool"),
-    })
-
-
-def _card_entry(key, data):
-    """Build a card entry from a codex payload."""
-    return _simple_api_entry("card", key, data, lambda d: {
-        "cost": d.get("cost"),
-        "card_type": d.get("type_key") or d.get("type"),
-        "rarity": d.get("rarity_key") or d.get("rarity"),
-        "target_type": d.get("target"),
-        "character_pool": d.get("color"),
-    })
-
-
-def _potion_entry(key, data):
-    """Build a potion entry from a codex payload."""
-    return _simple_api_entry("potion", key, data, lambda d: {
-        "rarity": d.get("rarity_key") or d.get("rarity"),
-    })
-
-
-def _power_entry(key, data):
-    """Build a power entry from a codex payload (alias drops the _POWER suffix)."""
-    return _simple_api_entry("power", key, data, lambda d: {
-        "power_type": d.get("type"),
-        "stack_type": d.get("stack_type"),
-        "counter_class": (d.get("stack_type") == "Counter"),
-    }, aliases_extra=(key.replace("_POWER", ""),))
-
-
-def _monster_entry(key, data):
-    """Build a full monster entry from a codex payload."""
-    if not (isinstance(data, dict) and data.get("id")):
-        return None
-    return build_monster_entry_from_api(data)
-
-
-def _event_entry(key, data):
-    """Build an event entry, plus an option stub when the miss was a page option."""
-    if not (isinstance(data, dict) and data.get("id")):
-        return None
-    event_id = key.split(".pages.", 1)[0] if ".pages." in key else key
-    description = strip_codex_markup(data.get("description") or "")
-    options_blob = data.get("options") or data.get("pages") or []
-    entry = {
-        "id": event_id,
-        "kind": "event",
-        "name": data.get("name") or event_id,
-        "acts": [data.get("act")] if data.get("act") else [],
-        "description": description,
-        "option_summary": json.dumps(options_blob, ensure_ascii=False)[:600] if options_blob else "",
-        "aliases": [data.get("name"), data.get("id")],
-        "play_notes": "",
-        "curated": False,
-        "options": {},
-    }
-    if ".pages." in key:
-        entry["options"][key] = {
-            "id": key,
-            "kind": "event_option",
-            "event_id": event_id,
-            "title": key.rsplit(".", 1)[-1].replace("_", " ").title(),
-            "description": description,
-            "aliases": [key.rsplit(".", 1)[-1]],
-            "play_notes": "",
-            "curated": False,
-        }
-    return entry
-
-
-# API-first research attempts, in order: (kind, probe(key, guess), queries(key), builder)
-_API_ATTEMPTS = (
-    ("monster",
-     lambda k, g: g == "monster" or (g is None and k.isupper()),
-     lambda k: [k], _monster_entry),
-    ("relic",
-     lambda k, g: g in ("relic", None) or k.endswith("_PEARL") or k.isupper(),
-     lambda k: [k], _relic_entry),
-    ("card",
-     lambda k, g: g in ("card", None) or k.endswith("_STRIKE") or k.endswith("_IRONCLAD"),
-     lambda k: [k], _card_entry),
-    ("potion",
-     lambda k, g: g in ("potion", None) or k.endswith("_POTION") or "POTION" in k,
-     lambda k: [k], _potion_entry),
-    ("power",
-     lambda k, g: g in ("power", None),
-     _power_queries, _power_entry),
-    ("event",
-     lambda k, g: g in ("event", "event_option", None) or ".pages." in k,
-     lambda k: [k.split(".pages.", 1)[0] if ".pages." in k else k], _event_entry),
-)
-
-
-def _research_html(key, kind):
-    """Last resort: scrape a codex HTML page into a minimal entry.
-
-    Returns:
-        Tuple (entry, kind, source); (None, kind, None) when no page matched
-        or the URL category is unrecognizable (fail-loud: never fold blind).
-    """
-    urls = codex_candidate_urls(key)
-    best_text = ""
-    best_url = None
-    for url in urls:
-        try:
-            text = fetch_codex_text(url)
-        except Exception:
-            continue
-        if not text or len(text) < 80:
-            continue
-        human = key.replace("_", " ").lower()
-        if key.lower() not in text.lower() and human not in text.lower():
-            continue
-        best_text = text
-        best_url = url
-        break
-    if not best_text:
-        return None, kind, None
-    nav_markers = (
-        "spire codex", "compendium", "card library", "relic collection",
-        "potion lab", "jump back in", "pages you open", "stats", "rankings",
-        "tier list", "leaderboard", "submit a run", "browse runs", "tools",
-        "companion apps", "steam mod", "art exporter", "overlay",
-        "knowledge demon bot", "sign in", "cookie", "press .",
-    )
-    human = key.replace("_", " ").lower()
-    lines = [ln.strip() for ln in best_text.splitlines() if ln.strip()]
-    body = []
-    total = 0
-    started = False
-    for ln in lines:
-        low = ln.lower()
-        if not started:
-            if key.lower() in low or human in low:
-                started = True
-            else:
-                continue
-        if any(m in low for m in nav_markers) and len(ln) < 60:
-            continue
-        if low.startswith("http"):
-            continue
-        body.append(ln)
-        total += len(ln)
-        if total > 600:
-            break
-    if not body:
-        body = [ln for ln in lines if not any(m in ln.lower() for m in nav_markers)][:8]
-    description = " ".join(body)[:700]
-    # Infer kind from the HTML URL category — fail-loud when unrecognizable.
-    url_kind = None
-    safe_url = best_url or ""
-    for cat, knd in (
-        ("relics", "relic"), ("cards", "card"), ("powers", "power"),
-        ("potions", "potion"), ("events", "event"), ("monsters", "monster"),
-        ("characters", "character"),
-    ):
-        if f"/{cat}/" in safe_url:
-            url_kind = knd
-            break
-    kind = url_kind or kind
-    if not kind or kind == "unknown":
-        return None, kind, None
-    entry = {
-        "id": key,
-        "kind": kind,
-        "name": key,
-        "description": description,
-        "aliases": [],
-        "play_notes": "",
-        "curated": False,
-    }
-    return entry, kind, f"codex-html:{best_url}"
-
-
-def _fold_researched(key, kind, entry, source):
-    """Persist a researched entry into spirectl_lib/data and return it.
-
-    Monster entries fold via fold_monster_entry; move misses land as stubs
-    under a synthetic generic host; events fold EN+ZH in one pass; everything
-    else goes through fold_entry_into_reference per language.
-    """
-    stem = KIND_TO_STEM.get(kind or "", "relics")
-
-    if stem == "monsters" and entry.get("kind") == "monster" and entry.get("moves"):
-        fold_monster_entry(entry)
-        return entry, source
-    if stem == "monsters" and "_MOVE" in key:
-        # Move-level stub nested under generic host (rare fallback path).
-        path = REF_DIR / "monsters.json"
-        data = _read_json_dict(path)
-        generic = data.get("generic")
-        if not isinstance(generic, dict):
-            generic = {"id": "generic", "kind": "monster", "name": "generic", "description": "synthetic host for move stubs", "aliases": [], "play_notes": "", "curated": False, "moves": {}}
-        moves = generic.get("moves")
-        if not isinstance(moves, dict):
-            moves = {}
-        stub = dict(entry)
-        stub["kind"] = "move"
-        if key not in moves or moves.get(key, {}).get("curated") is not True:
-            moves[key] = stub
-        generic["moves"] = moves
-        data["generic"] = generic
-        _write_json_dict(path, data)
-        _REF_INDEX_CACHE.clear()
-        return stub, source
-    if stem == "events" and entry.get("kind") == "event":
-        event_id = entry.get("id")
-        for lang in ("en", "zh"):
-            path = REF_DIR / f"events{'_zh' if lang == 'zh' else ''}.json"
-            data = _read_json_dict(path)
-            existing = data.get(event_id)
-            if isinstance(existing, dict) and existing.get("curated") is True:
-                continue
-            payload = json.loads(json.dumps(entry))
-            data[event_id] = payload
-            _write_json_dict(path, data)
-        _REF_INDEX_CACHE.clear()
-        return entry, source
-    fold_entry_into_reference(stem, key, entry, lang="en")
-    fold_entry_into_reference(stem, key, json.loads(json.dumps(entry)), lang="zh")
-    _REF_INDEX_CACHE.clear()
-    return entry, source
-
-
-def research_and_fold(key, domain_guess=None):
-    """Lookup-miss fallback: spire-codex.com API first, HTML last.
-
-    Returns (entry, source) when research produced data, else (None, None).
-    Folded entries carry key = the LIVE id (state's shape); API ids land in
-    aliases. Entries are curated:false — agent curation completes them.
-    """
-    kind = domain_guess
-    entry, source = None, None
-
-    # Move hits fold the whole host-monster entry (live move ids inside).
-    if kind == "move" or "_MOVE" in key:
-        hit = codex_move_index().get(key) or codex_move_index().get(key.replace("_MOVE", ""))
-        if hit:
-            monster = hit[0]
-            entry = build_monster_entry_from_api(monster)
-            source = f"codex-api:/monsters/{monster.get('id')}"
-            kind = "move"
-
-    if entry is None:
-        for attempt_kind, probe, queries, builder in _API_ATTEMPTS:
-            if not probe(key, kind):
-                continue
-            data = _fetch_codex_first(KIND_TO_API_PLURAL[attempt_kind], queries(key))
-            built = builder(key, data) if data is not None else None
-            if built is None:
-                continue
-            entry = built
-            plural = "events" if attempt_kind in ("event", "event_option") else f"{attempt_kind}s"
-            source = f"codex-api:/{plural}/{data.get('id')}"
-            if attempt_kind == "event":
-                kind = kind or "event"
-            else:
-                kind = attempt_kind
-            break
-
-    if entry is None:
-        entry, kind, source = _research_html(key, kind)
-        if entry is None:
-            return None, None
-
-    return _fold_researched(key, kind, entry, source)
+    text = re.sub(r"[ \t]+", " ", text)
+    return re.sub(r"\n\s*\n+", "\n", text).strip()
 
 
 def print_entry(domain, entry, key, extra=None):
-    """Human-readable lookup output; --json uses the raw entry instead."""
+    """Programmatic lookup output: envelope + detail fields (no prose)."""
     print(f"key={entry.get('id') or key} kind={entry.get('kind') or domain} domain={domain}")
     if entry.get("name"):
         print(f"name={entry['name']}")
-    if entry.get("description"):
-        print(f"description: {entry['description']}")
-    if entry.get("effect"):
-        print(f"effect: {entry['effect']}")
-    for field in (
-        "cost", "card_type", "rarity", "target_type", "character_pool", "upgrade",
-        "power_type", "stack_type", "counter_class", "host_of_affliction",
-        "hp", "acts", "is_boss", "is_elite", "cycle", "passives",
-        "base_damage", "hits", "status_card", "status_count",
-        "label_semantics", "state_fields", "decision_rule", "member_classes",
-        "intent_type", "follow_up_id", "display_note", "event_id", "title",
-        "gates", "option_summary", "usage", "character", "aliases",
-    ):
-        if field in entry and entry[field] not in (None, "", [], {}):
-            print(f"{field}: {json.dumps(entry[field], ensure_ascii=False)}")
-    if entry.get("play_notes"):
-        print(f"play_notes: {entry['play_notes']}")
-    if entry.get("curated") is False:
-        print("curated: false (auto-folded — refine before relying on it)")
+    if entry.get("aliases"):
+        print(f"aliases: {json.dumps(entry['aliases'], ensure_ascii=False)}")
+    detail = entry.get("detail")
+    if isinstance(detail, dict):
+        for k, v in detail.items():
+            if v in (None, "", [], {}):
+                continue
+            print(f"{k}: {json.dumps(v, ensure_ascii=False)}")
+    else:
+        for k, v in entry.items():
+            if k in ("id", "kind", "name", "aliases") or v in (None, "", [], {}):
+                continue
+            print(f"{k}: {json.dumps(v, ensure_ascii=False)}")
     if extra:
         print(extra)
 
 
 def guess_domain(key, explicit=None):
-    """Infer the reference domain for a lookup miss from key shape.
-
-    Args:
-        key: Live game id.
-        explicit: Caller-provided --domain value, used verbatim when set.
-
-    Returns:
-        Domain string, or None when no shape rule matches.
-    """
+    """Infer the reference domain for a lookup miss from key shape."""
     if explicit:
         return explicit
     if key.endswith("_MOVE") or "_MOVE_" in key:
