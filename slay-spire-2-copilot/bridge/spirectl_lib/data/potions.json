@@ -31,18 +31,20 @@
     "usage": "combat"
   },
   "BEETLE_JUICE": {
-    "aliases": [],
+    "aliases": [
+      "Beetle Juice"
+    ],
     "curated": false,
     "description": "Beetle Juice - Potion - Slay the Spire 2 (sts2) | Spire Codex ← Back to Potions ◆ Rare · shared · Potion Beetle Juice Enemy's attacks deal 30% less damage for the next 4 turns. On this page Community Description Relations Synergy Version history Community performance Live aggregate across community-submitted runs. Filter by bracket to see how it holds up at higher levels of play. All A10 A10 >30% WR A10 >50% WR A10 >75% WR All players Solo 2P 3P 4P Win rate 40.6 % 2.4k of 5.9k wins Pick rate 0.3 % 5,905 picks Codex Score C 60 Average Codex Elo — revealed preference Win rate by character Silent 46 % · 1.3k Ironclad 41.3 % · 1.3k",
     "id": "BEETLE_JUICE",
     "kind": "potion",
     "name": "BEETLE_JUICE",
-    "play_notes": ""
+    "play_notes": "",
+    "rarity": "Rare"
   },
   "BLESSING_OF_THE_FORGE": {
     "aliases": [
       "Blessing of the Forge",
-      "BLESSING_OF_THE_FORGE",
       "锻造祝福"
     ],
     "curated": true,
@@ -74,8 +76,8 @@
   },
   "BLOOD_POTION": {
     "aliases": [
+      "Blood Potion",
       "BloodPotion",
-      "BLOOD_POTION",
       "血药水"
     ],
     "curated": true,
@@ -95,7 +97,7 @@
       "BoneBrew"
     ],
     "curated": false,
-    "description": "Summon Osty with 15.",
+    "description": "Summon 15.",
     "display_name": "Bone Brew",
     "id": "BONE_BREW",
     "kind": "potion",
@@ -176,7 +178,7 @@
       "CunningPotion"
     ],
     "curated": false,
-    "description": "add 3 upgraded Shivs to hand.",
+    "description": "Add 3 Upgraded Shivs into your Hand.",
     "display_name": "Cunning Potion",
     "id": "CUNNING_POTION",
     "kind": "potion",
@@ -205,7 +207,6 @@
   "DEXTERITY_POTION": {
     "aliases": [
       "Dexterity Potion",
-      "DEXTERITY_POTION",
       "敏捷药水"
     ],
     "curated": true,
@@ -222,7 +223,6 @@
   "DISTILLED_CHAOS": {
     "aliases": [
       "Distilled Chaos",
-      "DISTILLED_CHAOS",
       "蒸馏混沌"
     ],
     "curated": true,
@@ -385,7 +385,7 @@
       "FocusPotion"
     ],
     "curated": false,
-    "description": "+2 Focus.",
+    "description": "Gain 2 Focus.",
     "display_name": "Focus Potion",
     "id": "FOCUS_POTION",
     "kind": "potion",
@@ -413,7 +413,6 @@
   "FOUL_POTION": {
     "aliases": [
       "Foul Potion",
-      "FOUL_POTION",
       "污浊药水"
     ],
     "curated": true,
@@ -482,7 +481,7 @@
       "GhostinaJar"
     ],
     "curated": false,
-    "description": "+1 Intangible.",
+    "description": "Gain 1 Intangible.",
     "display_name": "Ghost in a Jar",
     "id": "GHOST_IN_A_JAR",
     "kind": "potion",
@@ -494,8 +493,8 @@
   },
   "GIGANTIFICATION_POTION": {
     "aliases": [
+      "Gigantification Potion",
       "GigantificationPotion",
-      "GIGANTIFICATION_POTION",
       "巨化药水",
       "超巨化药水"
     ],
@@ -512,8 +511,8 @@
   },
   "GLOWWATER_POTION": {
     "aliases": [
+      "Glowwater Potion",
       "GlowwaterPotion",
-      "GLOWWATER_POTION",
       "发光水"
     ],
     "curated": true,
@@ -529,8 +528,8 @@
   },
   "HEART_OF_IRON": {
     "aliases": [
+      "Heart of Iron",
       "HeartOfIron",
-      "HEART_OF_IRON",
       "铁心药水"
     ],
     "curated": true,
@@ -616,7 +615,7 @@
       "MazalethsGift"
     ],
     "curated": false,
-    "description": "+1 Ritual.",
+    "description": "Gain 1 Ritual.",
     "display_name": "Mazaleth's Gift",
     "id": "MAZALETH_S_GIFT",
     "kind": "potion",
@@ -648,7 +647,7 @@
       "PoisonPotion"
     ],
     "curated": false,
-    "description": "apply 6 Poison.",
+    "description": "Apply 6 Poison.",
     "display_name": "Poison Potion",
     "id": "POISON_POTION",
     "kind": "potion",
@@ -680,7 +679,7 @@
       "PotionofCapacity"
     ],
     "curated": false,
-    "description": "+2 orb slots.",
+    "description": "Gain 2 Orb Slots.",
     "display_name": "Potion of Capacity",
     "id": "POTION_OF_CAPACITY",
     "kind": "potion",
@@ -696,7 +695,7 @@
       "PotionofDoom"
     ],
     "curated": false,
-    "description": "apply 33 Doom.",
+    "description": "Apply 33 Doom.",
     "display_name": "Potion of Doom",
     "id": "POTION_OF_DOOM",
     "kind": "potion",
@@ -707,6 +706,10 @@
     "usage": "combat"
   },
   "POTION_SHAPED_ROCK": {
+    "aliases": [
+      "POTION_SHAPED_ROCK",
+      "Potion-Shaped Rock"
+    ],
     "curated": true,
     "description": "Combat-use: dealt 15 damage to the target live (run-51 vs KnowledgeDemon). Procured at combat start by Petrified Toad. Not a heal.",
     "name": "Potion-Shaped Rock",
@@ -718,7 +721,7 @@
       "PotofGhouls"
     ],
     "curated": false,
-    "description": "add 2 Soul cards to hand.",
+    "description": "Add 2 Souls into your Hand.",
     "display_name": "Pot of Ghouls",
     "id": "POT_OF_GHOULS",
     "kind": "potion",
@@ -730,8 +733,8 @@
   },
   "POWDERED_DEMISE": {
     "aliases": [
+      "Powdered Demise",
       "PowderedDemise",
-      "POWDERED_DEMISE",
       "灭世粉"
     ],
     "curated": true,
@@ -747,8 +750,8 @@
   },
   "POWER_POTION": {
     "aliases": [
+      "Power Potion",
       "PowerPotion",
-      "POWER_POTION",
       "能力药水"
     ],
     "curated": true,
@@ -780,8 +783,8 @@
   },
   "REGEN_POTION": {
     "aliases": [
+      "Regen Potion",
       "RegenPotion",
-      "REGEN_POTION",
       "再生药水"
     ],
     "curated": true,
@@ -798,7 +801,6 @@
   "SHACKLING_POTION": {
     "aliases": [
       "Shackling Potion",
-      "SHACKLING_POTION",
       "枷锁药水"
     ],
     "curated": true,
@@ -862,8 +864,8 @@
   },
   "SOLDIER_STEW": {
     "aliases": [
-      "Soldier's Stew",
-      "SOLDIERS_STEW"
+      "SOLDIERS_STEW",
+      "Soldier's Stew"
     ],
     "curated": false,
     "description": "All cards containing Strike gain 1 Replay this combat.",
@@ -893,7 +895,6 @@
   "SPEED_POTION": {
     "aliases": [
       "Speed Potion",
-      "SPEED_POTION",
       "速度药水"
     ],
     "curated": true,
@@ -909,8 +910,8 @@
   },
   "STABLE": {
     "aliases": [
-      "Stable Serum",
-      "STABLE_SERUM"
+      "STABLE_SERUM",
+      "Stable Serum"
     ],
     "curated": true,
     "description": "Stable Serum: Retain your Hand for 2 turns (cards stay in hand end of turn). Uncommon. LIVE run-40: held as belt reserve through Act2; retain does not add block — not a lethal-intent answer by itself.",
@@ -943,7 +944,7 @@
       "StarPotion"
     ],
     "curated": false,
-    "description": "+3 stars (★).",
+    "description": "Gain [star:3].",
     "display_name": "Star Potion",
     "id": "STAR_POTION",
     "kind": "potion",
@@ -972,7 +973,6 @@
   "SWIFT_POTION": {
     "aliases": [
       "Swift Potion",
-      "SWIFT_POTION",
       "迅捷药水"
     ],
     "curated": true,
@@ -1020,8 +1020,8 @@
   },
   "WEAK_POTION": {
     "aliases": [
+      "Weak Potion",
       "WeakPotion",
-      "WEAK_POTION",
       "弱化药水"
     ],
     "curated": true,

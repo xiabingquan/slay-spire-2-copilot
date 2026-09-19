@@ -114,6 +114,7 @@
   "AROMA_OF_CHAOS": {
     "aliases": [
       "Aroma Of Chaos",
+      "Aroma of Chaos",
       "混沌芳香"
     ],
     "curated": false,
@@ -154,6 +155,9 @@
     "play_notes": ""
   },
   "BATTLEWORN_DUMMY": {
+    "acts": [
+      "Act3"
+    ],
     "aliases": [
       "Battleworn Dummy",
       "战痕累累的训练假人"
@@ -383,7 +387,7 @@
       "色彩哲学家"
     ],
     "curated": false,
-    "description": "offers 3-card reward via OfferCustom.",
+    "description": "Before you is a rather epic sight.\nYou see 3 different colored statues towering over a dais, having a heated debate over the philosophical implications of color.\n\nAs you listen in, you get a sense that the most important question at hand is which color truly is THE BEST.\n\nYou chime in with your thoughts.",
     "id": "COLORFUL_PHILOSOPHERS",
     "kind": "event",
     "name": "Colorful Philosophers",
@@ -461,8 +465,11 @@
     "play_notes": ""
   },
   "DARV": {
+    "acts": [
+      "Act2"
+    ],
     "aliases": [
-      "DARV",
+      "Darv",
       "先古移民"
     ],
     "curated": true,
@@ -616,6 +623,7 @@
   "DOORS_OF_LIGHT_AND_DARK": {
     "aliases": [
       "Doors Of Light And Dark",
+      "Doors of Light and Dark",
       "光与暗的门扉"
     ],
     "curated": false,
@@ -741,6 +749,7 @@
   "FAKE_MERCHANT": {
     "aliases": [
       "Fake Merchant",
+      "The Merchant???",
       "伪商人"
     ],
     "curated": false,
@@ -754,6 +763,7 @@
   "FIELD_OF_MAN_SIZED_HOLES": {
     "aliases": [
       "Field Of Man Sized Holes",
+      "Field of Man-Sized Holes",
       "人形洞穴之地"
     ],
     "curated": false,
@@ -813,6 +823,7 @@
   "GRAVE_OF_THE_FORGOTTEN": {
     "aliases": [
       "Grave Of The Forgotten",
+      "Grave of the Forgotten",
       "遗忘之墓"
     ],
     "curated": false,
@@ -855,6 +866,7 @@
   "HUNGRY_FOR_MUSHROOMS": {
     "aliases": [
       "Hungry For Mushrooms",
+      "Hungry for Mushrooms",
       "蘑菇饥渴"
     ],
     "curated": true,
@@ -982,6 +994,7 @@
   "LOST_WISP": {
     "aliases": [
       "Lost Wisp",
+      "The Lost Wisp",
       "迷失鬼火"
     ],
     "curated": true,
@@ -1499,6 +1512,9 @@
     "play_notes": ""
   },
   "NONUPEIPE": {
+    "acts": [
+      "Act3"
+    ],
     "aliases": [
       "Nonupeipe"
     ],
@@ -1582,6 +1598,9 @@
     "play_notes": "run-46 live: Fur Coat picked over Diamond Diadem/Brilliant Scarf; EV ranking for mid-HP Act3 entry documented."
   },
   "OROBAS": {
+    "acts": [
+      "Act2"
+    ],
     "aliases": [
       "Orobas",
       "欧洛巴斯"
@@ -1680,6 +1699,9 @@
     "play_notes": "run-39 live: picked TOUCH_OF_OROBAS at Act2 boon (Burning Blood→BlackBlood 12/combat) — archive's 'major Act-2 HP-economy source' claim live-confirmed (+12 after each subsequent fight). Options seen live: GLASS_EYE / RADIANT_PEARL / TOUCH_OF_OROBAS. Act-transition heal to full HP fired same screen."
   },
   "PAEL": {
+    "acts": [
+      "Act2"
+    ],
     "aliases": [
       "Pael",
       "佩尔"
@@ -1822,7 +1844,6 @@
   "POTION_COURIER": {
     "aliases": [
       "Potion Courier",
-      "POTION_COURIER",
       "药水信使"
     ],
     "curated": true,
@@ -1863,6 +1884,9 @@
     "play_notes": ""
   },
   "PUNCH_OFF": {
+    "acts": [
+      "Act1"
+    ],
     "aliases": [
       "Punch Off",
       "重拳出击"
@@ -1935,6 +1959,7 @@
   "RANWID_THE_ELDER": {
     "aliases": [
       "Ranwid The Elder",
+      "Ranwid the Elder",
       "长者兰伟德"
     ],
     "curated": false,
@@ -2033,6 +2058,7 @@
   "REFLECTIONS": {
     "aliases": [
       "Reflections",
+      "Reflections snoitcelfeR",
       "镜中倒影"
     ],
     "curated": false,
@@ -2103,6 +2129,7 @@
   "ROOM_FULL_OF_CHEESE": {
     "aliases": [
       "Room Full Of Cheese",
+      "Room Full of Cheese",
       "满屋芝士"
     ],
     "curated": true,
@@ -2145,6 +2172,7 @@
   "ROUND_TEA_PARTY": {
     "aliases": [
       "Round Tea Party",
+      "The Round Tea Party",
       "圆桌茶会"
     ],
     "curated": false,
@@ -2185,6 +2213,9 @@
     "play_notes": ""
   },
   "SAPPHIRE_SEED": {
+    "acts": [
+      "Act1"
+    ],
     "aliases": [
       "Sapphire Seed",
       "蓝宝石种子"
@@ -2229,6 +2260,7 @@
   "SELF_HELP_BOOK": {
     "aliases": [
       "Self Help Book",
+      "Self-Help Book",
       "自助指南"
     ],
     "curated": false,
@@ -2460,6 +2492,7 @@
   "STONE_OF_ALL_TIME": {
     "aliases": [
       "Stone Of All Time",
+      "Stone of All Time",
       "永恒之石"
     ],
     "curated": false,
@@ -2502,6 +2535,7 @@
   "SUNKEN_STATUE": {
     "aliases": [
       "Sunken Statue",
+      "The Sunken Statue",
       "沉没雕像"
     ],
     "curated": false,
@@ -2628,6 +2662,7 @@
   "TABLET_OF_TRUTH": {
     "aliases": [
       "Tablet Of Truth",
+      "Tablet of Truth",
       "真理石板"
     ],
     "curated": false,
@@ -2934,9 +2969,11 @@
     "play_notes": ""
   },
   "TEZCATARA": {
+    "acts": [
+      "Act2"
+    ],
     "aliases": [
       "Tezcatara",
-      "TEZCATARA",
       "特兹卡塔拉"
     ],
     "curated": true,
@@ -3061,6 +3098,9 @@
     "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)"
   },
   "THE_ARCHITECT": {
+    "acts": [
+      "Act3"
+    ],
     "aliases": [
       "The Architect",
       "建筑师"
@@ -3145,6 +3185,7 @@
   "THE_FUTURE_OF_POTIONS": {
     "aliases": [
       "The Future Of Potions",
+      "The Future of Potions?",
       "药水的未来"
     ],
     "curated": false,
@@ -3171,6 +3212,9 @@
     "play_notes": ""
   },
   "THE_LANTERN_KEY": {
+    "acts": [
+      "Act2"
+    ],
     "aliases": [
       "The Lantern Key",
       "灯火钥匙"
@@ -3241,6 +3285,9 @@
     "play_notes": ""
   },
   "THE_LEGENDS_WERE_TRUE": {
+    "acts": [
+      "Act2"
+    ],
     "aliases": [
       "The Legends Were True",
       "传说是真的"
@@ -3285,6 +3332,7 @@
   "THIS_OR_THAT": {
     "aliases": [
       "This Or That",
+      "This or That?",
       "这个还是那个"
     ],
     "curated": false,
@@ -3340,7 +3388,6 @@
   "TRASH_HEAP": {
     "aliases": [
       "Trash Heap",
-      "TRASH_HEAP",
       "垃圾堆"
     ],
     "curated": true,
@@ -3374,6 +3421,7 @@
   },
   "TRIAL": {
     "aliases": [
+      "The Trial",
       "Trial",
       "审判"
     ],
@@ -3493,6 +3541,7 @@
   "WAR_HISTORIAN_REPY": {
     "aliases": [
       "War Historian Repy",
+      "War Historian, Repy",
       "战史学家付袭"
     ],
     "curated": false,
@@ -3591,6 +3640,7 @@
   "WELCOME_TO_WONGOS": {
     "aliases": [
       "Welcome To Wongos",
+      "Welcome to Wongo's",
       "欢迎来到旺购百货"
     ],
     "curated": false,
@@ -3687,6 +3737,9 @@
     "play_notes": ""
   },
   "WELLSPRING": {
+    "acts": [
+      "Act1"
+    ],
     "aliases": [
       "Wellspring",
       "泉水"

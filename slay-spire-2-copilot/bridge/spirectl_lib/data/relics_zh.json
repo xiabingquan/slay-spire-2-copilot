@@ -1,8 +1,8 @@
 {
   "ADROIT": {
     "aliases": [
-      "Kifuda",
-      "KIFUDA"
+      "KIFUDA",
+      "Kifuda"
     ],
     "character": "shared",
     "curated": true,
@@ -17,7 +17,7 @@
     "aliases": [
       "Akabeko"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "第 1 回合开始，获得 8 点 Vigor。",
@@ -32,7 +32,7 @@
       "Alchemical Coffer",
       "AlchemicalCoffer"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，获得 4 个装满随机药水的药水栏。",
@@ -47,7 +47,7 @@
       "Amethyst Aubergine",
       "AmethystAubergine"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "战斗奖励额外 +15 金（最终章 Boss 除外）。run-41 live：每场战斗奖励在基础金币上 +15 — 与宝箱金共同支撑了 Act2 商店#1 的 255 金 100% 沉淀。",
@@ -61,7 +61,7 @@
     "aliases": [
       "Anchor"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "战斗开始，获得 10 格挡。",
@@ -76,7 +76,7 @@
       "Arcane Scroll",
       "ArcaneScroll"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，获得 1 张随机稀有卡牌。",
@@ -91,7 +91,7 @@
       "Archaic Tooth",
       "ArchaicTooth"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，将你的初始牌变为远古版本。",
@@ -106,7 +106,7 @@
       "Art of War",
       "ArtOfWar"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "若上回合未打出任何攻击牌，第 2 回合起回合开始获得 1 点能量。",
@@ -120,7 +120,7 @@
     "aliases": [
       "Astrolabe"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，变化 3 张选定牌，然后升级它们。",
@@ -135,7 +135,7 @@
       "Bag of Marbles",
       "BagOfMarbles"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "战斗开始（第 1 回合）对所有敌人施加 1 层易伤。run-1 脊线遗物（弹珠袋×拆卸教条）。run-46 live：Act2 (2,0) 商店 169g 购入——与红面具（T1 全体弱化）组成自动易伤/弱化包，每场战斗变成 T1 竞速窗；与 Bash/熔融之拳/主宰易伤包叠加支撑拆卸双击线。",
@@ -150,7 +150,7 @@
       "Bag of Preparation",
       "BagOfPreparation"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "第 1 回合，抽牌阶段额外抽 2 张牌。",
@@ -166,7 +166,7 @@
       "Beating Remnant",
       "BeatingRemnant"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "单回合失去的 HP 不超过 20。",
@@ -181,7 +181,7 @@
       "Beautiful Bracelet",
       "BeautifulBracelet"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，选择牌库中 3 张牌附魔 Swift 3。",
@@ -195,7 +195,7 @@
     "aliases": [
       "Bellows"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "第 1 回合开始，升级手牌中所有卡牌。",
@@ -210,7 +210,7 @@
       "Belt Buckle",
       "BeltBuckle"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "没有药水时，额外 +2 点敏捷（战斗内）。",
@@ -240,7 +240,7 @@
       "Big Mushroom",
       "BigMushroom"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "拾取时，+20 最大 HP；第 1 回合，抽牌阶段额外少抽 2 张牌。",
@@ -255,10 +255,9 @@
     "aliases": [
       "Biiig Hug",
       "BiiigHug",
-      "BIIIG_HUG",
       "大大拥抱"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "Ancient 遗物（Tezcatara 赐福）：拾取时移除牌库4张牌；每次洗牌向抽牌堆加入1张烟尘。",
@@ -273,7 +272,7 @@
       "Bing Bong",
       "BingBong"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每次向牌库加入卡牌时，额外加一份拷贝。",
@@ -285,8 +284,8 @@
   },
   "BLACK_BLOOD": {
     "aliases": [
-      "BlackBlood",
       "Black Blood",
+      "BlackBlood",
       "黑暗之血"
     ],
     "character": "IRONCLAD",
@@ -303,7 +302,7 @@
       "Black Star",
       "BlackStar"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "精英战额外 +1 遗物。run-51 live：Act2 两精英各掉双遗物。",
@@ -318,7 +317,7 @@
       "Blessed Antler",
       "BlessedAntler"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每回合 +1 最大能量；战斗开始，向抽牌堆洗入 3 张 Dazed。",
@@ -333,7 +332,7 @@
       "Blood-Soaked Rose",
       "BloodSoakedRose"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每回合 +1 最大能量；拾取时，向牌库加入 1 张 Enthralled。",
@@ -348,7 +347,7 @@
       "Blood Vial",
       "BloodVial"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "每场战斗开始时回复2点HP。对局40 live：每战触发（战斗开始读取时HP+2）；与燃烧之血战后+6、天选芝士+1/+1 同 HP 经济轨叠加。",
@@ -378,7 +377,7 @@
       "Bone Tea",
       "BoneTea"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "接下来 1 场战斗：第 1 回合开始，升级手牌中所有卡牌。",
@@ -404,12 +403,12 @@
   },
   "BOOK_OF_FIVE_RINGS": {
     "aliases": [
+      "Book of Five Rings",
       "BookOfFiveRINGS",
-      "BOOK_OF_FIVE_RINGS",
-      "五轮书",
-      "五轮之书"
+      "五轮之书",
+      "五轮书"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "Every 5 cards added to your deck, heal 20 HP (counter resets on payout). Anti-thinning relic — pays on card-add-heavy routes. LIVE run-57: two payouts (counter hit 5 twice — mid-Act1 Armaments add + mid-Act2 adds); heals landed at 68/86 pre-Elite② and mid-Act2 shop window.",
@@ -439,7 +438,7 @@
       "Booming Conch",
       "BoomingConch"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "精英战第 1 回合开始，额外抽 2 张牌并获得 1 点能量。",
@@ -467,11 +466,11 @@
   },
   "BOWLER_HAT": {
     "aliases": [
+      "Bowler Hat",
       "BowlerHat",
-      "BOWLER_HAT",
       "礼帽"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "Gold gained ×1.25. Only obtainable before Act-3 treasure chest; never sold in shops. LIVE run-57: Act2 chest + elite bounties scaled visibly (chest +43-class vs 30-class baseline).",
@@ -485,7 +484,7 @@
     "aliases": [
       "Bread"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "第 1 回合开始，失去 2 点能量；第 2 回合起，每回合 +1 最大能量。",
@@ -497,10 +496,9 @@
   },
   "BRIGHT_FLAME": {
     "aliases": [
-      "Storybook",
-      "STORYBOOK",
       "Brightest Flame",
-      "BRIGHT_FLAME",
+      "STORYBOOK",
+      "Storybook",
       "至亮之焰"
     ],
     "character": "shared",
@@ -517,7 +515,7 @@
       "Brilliant Scarf",
       "BrilliantScarf"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每回合从手牌打出的第 5 张牌免费。",
@@ -546,7 +544,7 @@
       "Bronze Scales",
       "BronzeScales"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "战斗开始，获得 3 点荆棘。",
@@ -577,7 +575,7 @@
       "Burning Sticks",
       "BurningSticks"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每场战斗首次消耗一张技能牌时，将其一份拷贝加入手牌。",
@@ -591,7 +589,7 @@
     "aliases": [
       "Byrdpip"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，获得卡牌 Byrd Swoop；战斗中有 Byrdpip 伴随。",
@@ -606,7 +604,7 @@
       "Calling Bell",
       "CallingBell"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，获得 1 张独特诅咒和 3 件遗物。",
@@ -620,7 +618,7 @@
     "aliases": [
       "Candelabra"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "第 2 回合开始，获得 2 点能量。",
@@ -635,7 +633,7 @@
       "Captain's Wheel",
       "CaptainsWheel"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "第 3 回合开始，获得 18 格挡。",
@@ -649,7 +647,7 @@
     "aliases": [
       "Cauldron"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，酿造 5 瓶随机药水。",
@@ -664,7 +662,7 @@
       "Centennial Puzzle",
       "CentennialPuzzle"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "每场战斗首次失去 HP 时，抽 3 张牌。任意掉血 tick 均触发——猩红披风回合开始 −1 / 放血 / 祭品类；披风部署后等效「T1 后战斗开始抽 3」。",
@@ -679,7 +677,7 @@
     "aliases": [
       "Chandelier"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "第 3 回合开始，获得 3 点能量。",
@@ -709,7 +707,7 @@
       "Chemical X",
       "ChemicalX"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "X 费卡牌的效果增强 2 点。",
@@ -724,7 +722,7 @@
       "Choices Paradox",
       "ChoicesParadox"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "第 1 回合开始，从 5 张随机卡中选 1 张加入手牌；这 5 张牌均获得 Retain。语义：为本战斗手牌添加（带 Retain），每战 T1 新五选一——**非**永久入牌库。",
@@ -737,10 +735,10 @@
   "CHOSEN_CHEESE": {
     "aliases": [
       "ChosenCheese",
-      "CHOSEN_CHEESE",
+      "The Chosen Cheese",
       "天选芝士"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "Event relic (ROOM_FULL_OF_CHEESE SEARCH branch, −14 HP on pickup run-57): +1 Max HP at the end of every combat (live run-51/57 class — stacks with Burning Blood heal and Feed Fatals). run-57: HP-rail component 80→97 combined with Feed; picking it at 46/95 HP-class cost was paid back across Act2 fights.",
@@ -754,7 +752,7 @@
     "aliases": [
       "Circlet"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "无效果。",
@@ -768,7 +766,7 @@
     "aliases": [
       "Claws"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，将至多 6 张牌变为 Maul。",
@@ -783,7 +781,7 @@
       "Cloak Clasp",
       "CloakClasp"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "回合结束，按手牌张数每张获得 1 格挡。",
@@ -812,7 +810,7 @@
     "aliases": [
       "Crossbow"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每回合开始，向手牌加入 1 张随机攻击牌；本回合免费。",
@@ -827,7 +825,7 @@
       "Cursed Pearl",
       "CursedPearl"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，向牌库加入 1 张 Greed 并获得 333 金币。",
@@ -842,7 +840,7 @@
       "Darkstone Periapt",
       "DarkstonePeriapt"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每次向牌库加入诅咒时，+6 最大 HP。",
@@ -872,7 +870,7 @@
       "Daughter of the Wind",
       "DaughterOfTheWind"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "每次打出攻击牌时，获得 1 格挡。",
@@ -902,7 +900,7 @@
       "Delicate Frond",
       "DelicateFrond"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "战斗开始，用随机药水填满所有空药水栏。",
@@ -932,7 +930,7 @@
       "Diamond Diadem",
       "DiamondDiadem"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "回合结束时，若本回合打出的牌 ≤2 张，受到的攻击伤害减半，持续至敌方回合结束。",
@@ -945,10 +943,9 @@
   "DINGY_RUG": {
     "aliases": [
       "Dingy Rug",
-      "DINGY_RUG",
       "破地毯"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "卡牌奖励中可出现无色牌。对局43 Act2 商店 (5,0) live 价格 208金（买不起）。稀释职业池奖励——除非定向找无色工具，优先级低。",
@@ -963,7 +960,7 @@
       "Distinguished Cape",
       "DistinguishedCape"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，−9 最大 HP；向牌库加入 3 张 Apparition。",
@@ -1008,7 +1005,7 @@
       "Dolly's Mirror",
       "DollysMirror"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，获得牌库中一张选定牌的拷贝。",
@@ -1023,7 +1020,7 @@
       "Dragon Fruit",
       "DragonFruit"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每次获得金币时，+1 最大 HP。",
@@ -1038,7 +1035,7 @@
       "Dream Catcher",
       "DreamCatcher"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "在休息点休息时，可以向牌库加入一张牌。",
@@ -1052,7 +1049,7 @@
     "aliases": [
       "Driftwood"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每份卡牌奖励可重掷一次。",
@@ -1067,7 +1064,7 @@
       "Dusty Tome",
       "DustyTome"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "事件遗物（DARV 赐福房，run-42 Act2 开局）：向牌库授予 腐化+（升级版腐化，费用 2）。腐化+：消耗；你的技能牌费用变为 0，打出时被消耗。",
@@ -1081,7 +1078,7 @@
     "aliases": [
       "Ectoplasm"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每回合 +1 最大能量；金币获取变为 0。",
@@ -1096,7 +1093,7 @@
       "Electric Shrymp",
       "ElectricShrymp"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，选择 1 张技能牌附魔 Imbued。",
@@ -1111,7 +1108,7 @@
       "Ember Tea",
       "EmberTea"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "接下来 5 场战斗开始时，获得 2 点力量。",
@@ -1141,7 +1138,7 @@
       "Empty Cage",
       "EmptyCage"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，从牌库移除 2 张牌。",
@@ -1153,8 +1150,7 @@
   },
   "ETERNAL_FEATHER": {
     "aliases": [
-      "Eternal Feather",
-      "ETERNAL_FEATHER"
+      "Eternal Feather"
     ],
     "character": "shared",
     "curated": false,
@@ -1167,10 +1163,11 @@
   },
   "FAKE_ANCHOR": {
     "aliases": [
+      "Anchor???",
       "Fake Anchor",
       "FakeAnchor"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "战斗开始，获得 4 格挡。",
@@ -1182,10 +1179,11 @@
   },
   "FAKE_BLOOD_VIAL": {
     "aliases": [
+      "Blood Vial???",
       "Fake Blood Vial",
       "FakeBloodVial"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "第 1 回合开始，回复 1 HP。",
@@ -1198,9 +1196,10 @@
   "FAKE_HAPPY_FLOWER": {
     "aliases": [
       "Fake Happy Flower",
-      "FakeHappyFlower"
+      "FakeHappyFlower",
+      "Happy Flower???"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每第 5 回合开始，获得 1 点能量。",
@@ -1213,9 +1212,10 @@
   "FAKE_LEES_WAFFLE": {
     "aliases": [
       "Fake Lee's Waffle",
-      "FakeLeesWaffle"
+      "FakeLeesWaffle",
+      "Lee's Waffle???"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，回复最大 HP 的 10%（下取整）。伪商人标价约 56 金。",
@@ -1228,9 +1228,10 @@
   "FAKE_MANGO": {
     "aliases": [
       "Fake Mango",
-      "FakeMango"
+      "FakeMango",
+      "Mango???"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，+3 最大 HP（当前与最大各 +3）。伪商人标价约 43 金。",
@@ -1243,9 +1244,10 @@
   "FAKE_MERCHANTS_RUG": {
     "aliases": [
       "Fake Merchant's Rug",
-      "FakeMerchantsRug"
+      "FakeMerchantsRug",
+      "The Merchant's Rug???"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "无效果。",
@@ -1258,9 +1260,10 @@
   "FAKE_ORICHALCUM": {
     "aliases": [
       "Fake Orichalcum",
-      "FakeOrichalcum"
+      "FakeOrichalcum",
+      "Orichalcum???"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "回合结束时，若没有格挡，获得 3 格挡。",
@@ -1273,9 +1276,10 @@
   "FAKE_SNECKO_EYE": {
     "aliases": [
       "Fake Snecko Eye",
-      "FakeSneckoEye"
+      "FakeSneckoEye",
+      "Snecko Eye???"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "战斗开始时处于 Confused。",
@@ -1288,9 +1292,10 @@
   "FAKE_STRIKE_DUMMY": {
     "aliases": [
       "Fake Strike Dummy",
-      "FakeStrikeDummy"
+      "FakeStrikeDummy",
+      "Strike Dummy???"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "名称含 Strike 标签的攻击牌额外造成 1 点伤害。",
@@ -1303,9 +1308,10 @@
   "FAKE_VENERABLE_TEA_SET": {
     "aliases": [
       "Fake Venerable Tea Set",
-      "FakeVenerableTeaSet"
+      "FakeVenerableTeaSet",
+      "Venerable Tea Set???"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "进入休息点时，下一场战斗开始额外 +1 能量。",
@@ -1335,7 +1341,7 @@
       "Festive Popper",
       "FestivePopper"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "第 1 回合开始，对所有敌人造成 9 点伤害。预削已在多类遭遇确认（啃咬机、千足虫各段、皇蟹双爪开战各 −9）。 LIVE run-47：全对局每战 T1 9 伤 AoE 确认，包括 Act1 Boss（从蝌蚪到瀑布巨兽）——可靠的预削遗物。",
@@ -1349,7 +1355,7 @@
     "aliases": [
       "Fiddle"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每回合抽牌阶段额外抽 2 张牌；回合内不能再抽牌。",
@@ -1364,7 +1370,7 @@
       "Fishing Rod",
       "FishingRod"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": true,
     "curated": false,
     "description": "每 3 场普通敌人战斗，升级牌库中 1 张随机牌。计数只统计 Monster 房间战斗——普通怪战第 3/6/9 场触发升级；精英战不推进计数。",
@@ -1379,7 +1385,7 @@
       "Forgotten Soul",
       "ForgottenSoul"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每次消耗卡牌时，对随机敌人造成 1 点伤害。",
@@ -1394,7 +1400,7 @@
       "Fragrant Mushroom",
       "FragrantMushroom"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，失去 15 HP 并升级牌库中 2 张随机牌。",
@@ -1409,7 +1415,7 @@
       "Fresnel Lens",
       "FresnelLens"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "获得格挡的卡牌加入牌库时，为其附魔 Nimble 2。",
@@ -1424,7 +1430,7 @@
       "Frozen Egg",
       "FrozenEgg"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "向牌库加入的能力（Power）牌会被升级。",
@@ -1454,7 +1460,7 @@
       "Fur Coat",
       "FurCoat"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "Act3 赐福房遗物（NONUPEIPE 事件）：随机标记 7 场战斗，标记战斗敌人仅 1HP。run-46 live：在钻石头冠（≤2 张出牌伤害减半）与艳丽围巾（第 5 张免费）之间选择——7 场近免战对中血线 Act3 期望值最高。",
@@ -1481,11 +1487,11 @@
   },
   "GAMBLING_CHIP": {
     "aliases": [
+      "Gambling Chip",
       "GamblingChip",
-      "GAMBLING_CHIP",
       "赌博筹码"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "Rare: at combat start, discard any number of cards then draw that many (mulligan via hand_select overlay: choose cards → proceed). LIVE run-57: mulligan dumped skill-class cards vs Infested Prism (zero-skill discipline); dumped Uppercut vs trio fight for block-class redraw. Combat-start overlay appears before play phase — play calls fail-loud until resolved.",
@@ -1500,7 +1506,7 @@
       "Game Piece",
       "GamePiece"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "每当你打出一张能力牌，抽 1 张牌。 run-53 live 2026-09-19：观测到的每次能力牌打出均触发抽1（Rupture、Vicious、Inflame、Pyre）——同帧 state 可见新手牌。",
@@ -1515,7 +1521,7 @@
       "Ghost Seed",
       "GhostSeed"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "打击与防御牌获得虚无 — 未打出的拷贝在你的回合末被消耗。run-42 live：Boss 战未打出的打击/防御回合末消耗（history \"exhausted STRIKE_IRONCLAD/DEFEND_IRONCLAD\"）；被动清堵；与 Corruption/FNP 消耗收益协同。",
@@ -1529,7 +1535,7 @@
     "aliases": [
       "Girya"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": true,
     "curated": false,
     "description": "休息点获得 Lift 选项（最多 3 次）；战斗开始，获得等同 Lift 次数的力量。",
@@ -1558,7 +1564,7 @@
       "Glass Eye",
       "GlassEye"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，获得 2 张普通、2 张罕见、1 张稀有卡牌。",
@@ -1572,7 +1578,7 @@
     "aliases": [
       "Glitter"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "全部卡牌奖励附魔华彩 Glam（每场战斗首次打出免费重放一次——见 GLAM）。",
@@ -1587,7 +1593,7 @@
       "Gnarled Hammer",
       "GnarledHammer"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，为至多 3 张攻击牌附魔 Sharp 3。",
@@ -1601,10 +1607,9 @@
     "aliases": [
       "Golden Compass",
       "GoldenCompass",
-      "GOLDEN_COMPASS",
       "黄金罗盘"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "Ancient 遗物（Tezcatara 赐福）：拾取时重新生成当前章节地图（按当前章节索引重掷）。",
@@ -1619,7 +1624,7 @@
       "Golden Pearl",
       "GoldenPearl"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，获得 150 金币。",
@@ -1647,10 +1652,9 @@
   "GORGET": {
     "aliases": [
       "Gorget",
-      "GORGET",
       "颈甲"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "Common: at the start of each combat, gain 4 Plating (rolling block — plating grants Amount block at end of each of your side turns, stacks decrement at your turn start; plating block stacks with card block for same-window cover math). LIVE run-57: Gorget+Defend+Shrug lines routinely built 14-22 block covers; IMBALANCED stun vs Bowlbug Rock fired on 16-total-block vs 15-intent.",
@@ -1665,7 +1669,7 @@
       "Gremlin Horn",
       "GremlinHorn"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "敌人死亡时，获得 1 点能量并抽 1 张牌。run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log)：产卵虫卵群击杀当场赔付 +2 能量（能量打印 6/3）— 击杀链为同回合补刀攻击供能；每次死亡立即单独结算赔付。",
@@ -1680,7 +1684,7 @@
       "Hand Drill",
       "HandDrill"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每次击破敌方格挡时，对该敌人施加 2 层 Vulnerable。",
@@ -1695,7 +1699,7 @@
       "Happy Flower",
       "HappyFlower"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": true,
     "curated": true,
     "description": "每 3 回合获得 1 点能量（计数器遗物）。",
@@ -1710,7 +1714,7 @@
       "Hefty Tablet",
       "HeftyTablet"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，从 3 张稀有牌中选 1 张加入牌库，并加入 1 张 Injury。",
@@ -1740,7 +1744,7 @@
       "History Course",
       "HistoryCourse"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "第 2 回合起，回合开始时自动打出你上一回合打出的最后一张攻击或技能牌的拷贝。",
@@ -1755,7 +1759,7 @@
       "Horn Cleat",
       "HornCleat"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "第 2 回合开始，获得 14 格挡。",
@@ -1770,7 +1774,7 @@
       "Ice Cream",
       "IceCream"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "能量在回合之间保留（仅第 1 回合重置）。",
@@ -1800,7 +1804,7 @@
       "Intimidating Helmet",
       "IntimidatingHelmet"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每次打出 2 能量及以上的卡牌时，获得 4 格挡。",
@@ -1815,7 +1819,7 @@
       "Iron Club",
       "IronClub"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每打出 4 张牌，抽 1 张牌。",
@@ -1845,7 +1849,7 @@
       "Jeweled Mask",
       "JeweledMask"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "战斗开始，将抽牌堆中一张随机能力牌放入手牌；本场战斗免费。",
@@ -1860,7 +1864,7 @@
       "Jewelry Box",
       "JewelryBox"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，向牌库加入 1 张 Apotheosis。",
@@ -1875,7 +1879,7 @@
       "Joss Paper",
       "JossPaper"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "每消耗 5 张牌，抽 1 张牌（计数 JOSS_PAPER:n；虚灵回合末消耗在回合结束计入；触发后清零重计）。run-38 实时：Offering/Ritual/Tremble/MoltenFist 消耗推进计数；:5 时 Boss 战中触发抽 1；触发后计数清零。消耗包牌组的被动抽牌引擎。 LIVE run-52：第二阵风消耗推进计数（SW 消耗一张 Defend 后 relics 行打印 JOSS_PAPER :0→:1）；与消耗挡包直接成组。",
@@ -1890,7 +1894,7 @@
       "Juzu Bracelet",
       "JuzuBracelet"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "未知（?）房间不再刷新怪物战斗 — 只出事件/宝箱。run-40 + run-42 live：拾取后未知房间均出事件/宝箱；精英类型房间不受影响。",
@@ -1904,7 +1908,7 @@
     "aliases": [
       "Kaleidoscope"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "拾取时，获得来自其他角色卡池的 2 份卡牌奖励。",
@@ -1932,7 +1936,7 @@
     "aliases": [
       "Kunai"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "同一回合每打出 3 张攻击牌，获得 1 敏捷。run-41 live：该遗物敏捷为战斗内有效 — 外骨骼虫战中次回合边界即消失；下一回合的挡值计算不得默认其存续。与锁镰在同一 3 攻击回合触发。",
@@ -1946,7 +1950,7 @@
     "aliases": [
       "Kusarigama"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "同一回合每打出 3 张攻击牌，对随机敌人造成 6 点伤害。run-41 live：鳗鱼群 T1 第三次攻击线上触发 — 6 点落在与攻击链不同的目标上，对群怪战有软化价值。",
@@ -1960,7 +1964,7 @@
     "aliases": [
       "Lantern"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "每场战斗开始时 +1 能量（仅 T1）。run-41 live：Boss T1 显示容量 4/3 — PS+双打击 或 Inferno+Brand+重锤+打击 线均可全打；可与跃升、佩尔之肉叠加。",
@@ -1975,7 +1979,7 @@
       "Large Capsule",
       "LargeCapsule"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，获得 2 件随机遗物；向牌库加入 1 张 Strike 和 1 张 Defend。",
@@ -1987,20 +1991,23 @@
   },
   "LASTING_CANDY": {
     "aliases": [
-      "Lasting Candy"
+      "Lasting Candy",
+      "永恒糖果"
     ],
+    "character": "shared",
     "curated": true,
     "description": "首战之后每隔一场战斗，战斗卡牌奖励 +1 个能力（Power）类选项（奖励屏 3 选变 4 选）。仅可在 Act3 宝箱前获得。LIVE run-45：遗物堆叠显示计数 :0/:1 交替；观察到两次四选一奖励——分别递送势不可当（精英奖励）与第二张狱火（战斗奖励）。Power 注入经济件。",
     "id": "LASTING_CANDY",
     "kind": "relic",
-    "name": "永恒糖果"
+    "name": "永恒糖果",
+    "rarity": "Uncommon"
   },
   "LAVA_LAMP": {
     "aliases": [
       "Lava Lamp",
       "LavaLamp"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "战斗结束时，若战斗中未受伤，升级所有卡牌奖励。",
@@ -2015,7 +2022,7 @@
       "Lava Rock",
       "LavaRock"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": true,
     "curated": false,
     "description": "Boss 战奖励额外掉落 2 件遗物（一次）。章节标签视为软性——Act2 Boss 奖励屏同样观察到 +2 遗物按钮（同类 WONGOS 门槛偏差）。",
@@ -2030,7 +2037,7 @@
       "Lead Paperweight",
       "LeadPaperweight"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，从 2 张无色牌中选 1 张加入牌库。",
@@ -2045,7 +2052,7 @@
       "Leafy Poultice",
       "LeafyPoultice"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，变化 1 张 Strike 和 1 张 Defend；失去 12 最大 HP。",
@@ -2060,7 +2067,7 @@
       "Lee's Waffle",
       "LeesWaffle"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，+7 最大 HP 并回满 HP。",
@@ -2075,7 +2082,7 @@
       "Letter Opener",
       "LetterOpener"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "单回合每打出 3 张技能牌，对所有敌人造成 5 点伤害。",
@@ -2090,7 +2097,7 @@
       "Lizard Tail",
       "LizardTail"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "HP 将降至 0 时，改为回复至最大 HP 的 50%（一次）。",
@@ -2105,7 +2112,7 @@
       "Looming Fruit",
       "LoomingFruit"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "拾取时，+31 最大 HP。",
@@ -2121,7 +2128,7 @@
       "Lord's Parasol",
       "LordsParasol"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "进入商人房间时，立刻购入商人的全部库存。",
@@ -2136,7 +2143,7 @@
       "Lost Coffer",
       "LostCoffer"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，获得 1 份卡牌奖励和 1 瓶随机药水。",
@@ -2151,7 +2158,7 @@
       "Lost Wisp",
       "LostWisp"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "每当你打出一张能力牌，对所有敌人造成 8 点伤害。事件遗物（迷失鬼火事件「抓住」选项：加入 Decay 诅咒 + 此遗物）。run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log)：Inferno/Vicious/Barricade 出牌均触发，全对局数十次；无属性 8 点独立 AoE — HARD_TO_KILL 单次 9 上限下全额 8 结算；能力牌充足的牌库中 Decay 诅咒成为 Inferno proc 燃料（EoT 2 自伤同回合触发 Inferno）。",
@@ -2166,7 +2173,7 @@
       "Lucky Fysh",
       "LuckyFysh"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每次向牌库加入卡牌时，获得 15 金币。触发源：商店购卡、卡牌奖励领取、SwipePower 偷牌在偷窃草蜢死亡时归还（静默入库同样 +15）。",
@@ -2195,7 +2202,7 @@
     "aliases": [
       "Mango"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，+14 最大 HP。",
@@ -2210,7 +2217,7 @@
       "Massive Scroll",
       "MassiveScroll"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，从 3 张多人模式卡中选 1 张加入牌库。",
@@ -2225,7 +2232,7 @@
       "Maw Bank",
       "MawBank"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每次上一层楼，获得 12 金币；在商店花费金币后失效。",
@@ -2238,10 +2245,9 @@
   "MEAL_TICKET": {
     "aliases": [
       "Meal Ticket",
-      "MEAL_TICKET",
       "餐券"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "进入商人房时恢复 15HP；仅在 Act3 宝箱前可获得。对局43 live 价格：Act1 (14,2) 187金 / Act2 (5,0) 未刷出。与商店脊线绑定的 HP 经济遗物。",
@@ -2256,7 +2262,7 @@
       "Meat Cleaver",
       "MeatCleaver"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "休息点获得 Cook 选项——**Cook = 永久移除牌库 2 张牌并获得 9 最大 HP**。低 HP 时 Cook 与 HEAL 的张力真实存在（HEAL 恢复当前生存力，Cook 为后期复利牌库+MaxHP）。",
@@ -2271,7 +2277,7 @@
       "Meat on the Bone",
       "MeatOnTheBone"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "战斗胜利时，若 HP ≤ 最大 HP 的 50%，回复 12 HP。",
@@ -2286,7 +2292,7 @@
       "Membership Card",
       "MembershipCard"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "商人价格 ×0.50。",
@@ -2301,7 +2307,7 @@
       "Mercury Hourglass",
       "MercuryHourglass"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "回合开始，对所有敌人造成 3 点伤害。",
@@ -2327,11 +2333,11 @@
   },
   "MINIATURE_CANNON": {
     "aliases": [
+      "Miniature Cannon",
       "MiniatureCannon",
-      "MINIATURE_CANNON",
       "迷你加农炮"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "Uncommon: upgraded Attack cards deal +3 damage. LIVE run-57: Bludgeon+ (42 base) + Sharp-2 enchant + Cannon +3 = 47-class unbuffed hits; under vuln ×1.5 → 70-class; Act1 Gigantification ×3 window hit 96 pre-upgrade.",
@@ -2346,7 +2352,7 @@
       "Miniature Tent",
       "MiniatureTent"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "休息点可以选择任意数量的选项。",
@@ -2376,7 +2382,7 @@
       "Molten Egg",
       "MoltenEgg"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "攻击牌入手即升级。run-51 live：自动升级 5 次（PS#2/AshenStrike/TwinStrike/DISMANTLE/BREAKTHROUGH）。",
@@ -2391,7 +2397,7 @@
       "Mr. Struggles",
       "MrStruggles"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "回合开始，对所有敌人造成等同当前回合数的伤害。",
@@ -2406,7 +2412,7 @@
       "Mummified Hand",
       "MummifiedHand"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每次打出能力牌时，手牌中一张随机牌本回合免费。",
@@ -2421,7 +2427,7 @@
       "Music Box",
       "MusicBox"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每回合打出的第一张攻击牌在手牌中生成一份虚无拷贝。",
@@ -2436,7 +2442,7 @@
       "Mystic Lighter",
       "MysticLighter"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "附魔的攻击牌额外造成 9 点伤害。",
@@ -2465,7 +2471,7 @@
       "Neow's Bones",
       "NeowsBones"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，获得 2 件随机 Neow 遗物；向牌库加入 1 张随机诅咒。",
@@ -2480,7 +2486,7 @@
       "Neow's Talisman",
       "NeowsTalisman"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "拾取时，升级 1 张打击和 1 张防御。",
@@ -2495,7 +2501,7 @@
       "Neow's Torment",
       "NeowsTorment"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，向牌库加入 1 张 Neow's Fury。",
@@ -2510,7 +2516,7 @@
       "New Leaf",
       "NewLeaf"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，变化 1 张选定牌。",
@@ -2553,7 +2559,7 @@
     "aliases": [
       "Nunchaku"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": true,
     "curated": true,
     "description": "每打出 10 张攻击牌，获得 1 点能量（计数显示 NUNCHAKU:n，触发后清零重计）。run-38 实时：:10 触发 → 同回合 +1 能量（能量显示 4/3）；Anger/Pacts End 0 费攻击免费推进计数。",
@@ -2568,7 +2574,7 @@
       "Nutritious Oyster",
       "NutritiousOyster"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，+11 最大 HP。",
@@ -2581,12 +2587,11 @@
   "NUTRITIOUS_SOUP": {
     "aliases": [
       "Event boon-relic decodes",
-      "NutritiousSoup",
       "Nutritious Soup",
-      "NUTRITIOUS_SOUP",
+      "NutritiousSoup",
       "营养汤"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "Ancient 遗物（Tezcatara 赐福）：拾取时为所有基础 Strike 类牌附加特兹卡塔拉之烬——费用降为0、获得永恒关键词、受能攻击+3伤。",
@@ -2598,12 +2603,12 @@
   },
   "ODDLY_SMOOTH_STONE": {
     "aliases": [
+      "Oddly Smooth Stone",
       "OddlySmoothStone",
-      "ODDLY_SMOOTH_STONE",
-      "滑石",
-      "奇异光滑石"
+      "奇异光滑石",
+      "滑石"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "Common: start each combat with 1 Dexterity (card-block values +1 all fight). LIVE run-57: Defend 5→6, Shrug 8→9, SW per-exhaust 5→6 class throughout; stacks with Dex sources additively.",
@@ -2618,7 +2623,7 @@
       "Old Coin",
       "OldCoin"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，获得 300 金币。",
@@ -2646,10 +2651,9 @@
   "ORICHALCUM": {
     "aliases": [
       "Orichalcum",
-      "ORICHALCUM",
       "橙铜"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "回合结束时若没有格挡，获得 6 格挡。攻击密集手牌的被动安全网；配合滑石 +1 敏捷时被动仍为 6（遗物挡不是卡牌挡）。对局43：多次在无挡手牌回合覆盖 15-24 来伤中的 6 点。",
@@ -2661,11 +2665,11 @@
   },
   "ORNAMENTAL_FAN": {
     "aliases": [
+      "Ornamental Fan",
       "OrnamentalFan",
-      "ORNAMENTAL_FAN",
       "装饰折扇"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "Every 3 Attack cards played in one turn, gain 4 Block (counter resets each turn; +4 resolves on the 3rd attack). LIVE run-57 reconfirmed across combats (Fan counter visible; +4 printed after 3rd attack; T4 millipede 3-attack line banked Fan+plating cover).",
@@ -2679,7 +2683,7 @@
     "aliases": [
       "Orrery"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，获得 5 份卡牌奖励。",
@@ -2694,7 +2698,7 @@
       "Pael's Blood",
       "PaelsBlood"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每回合抽牌阶段额外抽 1 张牌。",
@@ -2709,7 +2713,7 @@
       "Pael's Claw",
       "PaelsClaw"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，为牌库中所有 Defend 标签牌附魔 Goopy（附带 Exhaust）。",
@@ -2724,7 +2728,7 @@
       "Pael's Eye",
       "PaelsEye"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每场战斗首次未打出任何牌就结束回合时，消耗手牌并获得一个额外回合。",
@@ -2739,7 +2743,7 @@
       "Pael's Flesh",
       "PaelsFlesh"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "Act2 佩尔赐福遗物：每场战斗自第 3 回合起，回合开始额外获得 1 能量。run-41 live：未打出跃升时 T3+ 能量已显示 4/4 — 与跃升（+1）及灯笼（仅 T1）叠加，第 3 回合起保底 4-5 能量。",
@@ -2754,7 +2758,7 @@
       "Pael's Growth",
       "PaelsGrowth"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，选择 1 张牌附魔 Clone 4；休息点获得 Clone 选项。",
@@ -2769,7 +2773,7 @@
       "Pael's Horn",
       "PaelsHorn"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，向牌库加入 2 张 Relax。",
@@ -2784,7 +2788,7 @@
       "Pael's Legion",
       "PaelsLegion"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "卡牌获得的格挡翻倍；卡牌为你提供格挡后，该遗物沉睡 2 回合，期间格挡不翻倍。LIVE 节奏（对局 36）：**并非每战斗一次**——翻倍→休眠约 2 回合→再翻倍，整场战斗循环。实测：Impervious 30+敏捷在苏醒回合结算 46 与 62 多次；Defend+ 苏醒回合 8→16 级翻倍。events.md 旧文「每战斗首次挡牌翻倍」为**错误**——本条休眠节奏为准。 run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log)：清醒回合与 VAMBRACE 乘法 ×2 叠加；BARRICADE 在场时翻倍挡跨回合持久 — 无 Barricade 时银行挡照常衰减（Ovicopter T2：64 挡回合因 Barricade 未上手而消失）。",
@@ -2799,7 +2803,7 @@
       "Pael's Tears",
       "PaelsTears"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "回合结束时若有未花费的能量，下回合开始获得 2 点能量。",
@@ -2814,7 +2818,7 @@
       "Pael's Tooth",
       "PaelsTooth"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，移除 5 张选定牌；每场战斗后随机加回 1 张被移除的牌并升级。",
@@ -2829,7 +2833,7 @@
       "Pael's Wing",
       "PaelsWing"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "卡牌奖励获得献祭（Sacrifice）选项；每献祭 2 次，获得 1 件遗物。",
@@ -2844,7 +2848,7 @@
       "Pandora's Box",
       "PandorasBox"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，变化牌库中所有 Strike 和 Defend。",
@@ -2858,7 +2862,7 @@
     "aliases": [
       "Pantograph"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "Boss 战开始时，回复 25 HP。",
@@ -2900,8 +2904,7 @@
   },
   "PARRYING_SHIELD": {
     "aliases": [
-      "Parrying Shield",
-      "PARRYING_SHIELD"
+      "Parrying Shield"
     ],
     "character": "shared",
     "curated": true,
@@ -2916,7 +2919,7 @@
     "aliases": [
       "Pear"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，+10 最大 HP。",
@@ -2930,7 +2933,7 @@
     "aliases": [
       "Pendulum"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每第 3 回合开始，抽 1 张牌。",
@@ -2945,7 +2948,7 @@
       "Pen Nib",
       "PenNib"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": true,
     "curated": true,
     "description": "每第 10 张攻击牌造成双倍伤害。LIVE run-54 Act1 Boss Vantom T4：BLUDGEON+ 作为第 10 张攻击在易伤窗内结算 126 伤（42×1.5 易伤×2 笔尖——精确）。计数在 compact state 显示 PEN_NIB:n；把第 10 张攻击对准 Bludgeon 回合是可复用的窗口战术。",
@@ -2959,7 +2962,7 @@
     "aliases": [
       "Permafrost"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "每场战斗首次打出能力牌时，获得 7 格挡。效果已归档；run-38 牌组无能力牌（Feel No Pain/Stone Armor 类均跳过）——本局遗物全程未激活。牌组进能力牌后价值解锁。",
@@ -2974,7 +2977,7 @@
       "Petrified Toad",
       "PetrifiedToad"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "战斗开始：获得岩石形状药水（使用=对目标 15 伤，run-51 live）——每战 +1 伤害选项，非治疗。",
@@ -2989,7 +2992,7 @@
       "Phial Holster",
       "PhialHolster"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "拾取时，+1 个药水栏并获得 2 瓶随机药水。 LIVE run-47 Neow 选项（药瓶皮套/PHIAL_HOLSTER）：入手时 +1 药水栏位 + 2 瓶随机药水（roll 到 SKILL_POTION + POWER_POTION）；本章中段加入第 4 瓶（ATTACK_POTION）时确认 holster 容量为 4。",
@@ -3004,7 +3007,7 @@
       "Philosopher's Stone",
       "PhilosophersStone"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每回合 +1 最大能量；所有敌人战斗开始时 +1 点力量。",
@@ -3033,7 +3036,7 @@
     "aliases": [
       "Planisphere"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "进入问号房间时，回复 5 HP。",
@@ -3047,7 +3050,7 @@
     "aliases": [
       "Pocketwatch"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "上回合打出 ≤3 张牌时，第 2 回合起手牌额外抽 3 张。run-41 纪律：T1 刻意只打 3 张（如 Inferno+Brand+重锤）给怀表上弦 — 精英与 Act1 Boss 的 T2 8 张手牌交付了 Inferno+PS+跃升线；多打第 4 张会让下一整回合失去加成。",
@@ -3062,7 +3065,7 @@
       "Pollinous Core",
       "PollinousCore"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每第 4 回合，抽牌阶段额外抽 2 张牌。",
@@ -3076,7 +3079,7 @@
     "aliases": [
       "Pomander"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，升级 1 张选定牌。",
@@ -3091,7 +3094,7 @@
       "Potion Belt",
       "PotionBelt"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "药水栏位 +1。",
@@ -3121,7 +3124,7 @@
       "Prayer Wheel",
       "PrayerWheel"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "普通敌人战斗奖励额外掉落 1 份卡牌奖励。",
@@ -3136,7 +3139,7 @@
       "Precarious Shears",
       "PrecariousShears"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，移除 2 张牌并失去 16 HP。",
@@ -3151,7 +3154,7 @@
       "Precise Scissors",
       "PreciseScissors"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，从牌库移除 1 张牌。",
@@ -3166,7 +3169,7 @@
       "Preserved Fog",
       "PreservedFog"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，移除 3 张牌；向牌库加入 1 张 Folly。",
@@ -3178,11 +3181,11 @@
   },
   "PRISMATIC_GEM": {
     "aliases": [
+      "Prismatic Gem",
       "PrismaticGem",
-      "PRISMATIC_GEM",
       "棱彩宝石"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "Ancient (OROBOAS Act2 boon pool, run-57 pick): +1 max Energy each turn; card rewards include other characters' cards (cross-class pool live — Kingly Kick/Thunderclap/Crush Under offers appeared run-57). LIVE run-57: energy display 4/4 base became the run standard; 6/4 with Venerable Tea Set rest-proc at Act2 Boss T1 (Bludgeon+KinglyKick 74-dmg opening).",
@@ -3196,10 +3199,9 @@
     "aliases": [
       "Pumpkin Candle",
       "PumpkinCandle",
-      "PUMPKIN_CANDLE",
       "南瓜蜡烛"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": true,
     "curated": true,
     "description": "Ancient 遗物（Tezcatara 赐福）：燃烧层数>0 时 +1 最大能量；每场战斗结束 −1 层；休息点新增点燃选项 +5 层。计数器可见。",
@@ -3214,7 +3216,7 @@
       "Punch Dagger",
       "PunchDagger"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，选择 1 张攻击牌附魔 Momentum 5。",
@@ -3226,8 +3228,8 @@
   },
   "RADIANT": {
     "aliases": [
-      "Radiant Pearl",
-      "RADIANT_PEARL"
+      "RADIANT_PEARL",
+      "Radiant Pearl"
     ],
     "character": "shared",
     "curated": true,
@@ -3255,8 +3257,8 @@
   },
   "RAGE": {
     "aliases": [
-      "Sling of Courage",
-      "SLING_OF_COURAGE"
+      "SLING_OF_COURAGE",
+      "Sling of Courage"
     ],
     "character": "shared",
     "curated": true,
@@ -3272,7 +3274,7 @@
       "Rainbow Ring",
       "RainbowRing"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "单回合首次打出攻击、技能、能力各一张时，获得 1 点力量和 1 点敏捷。 run-53 live 2026-09-19：同回合首次打出攻击+技能+能力各一张时 +1 力量 +1 敏捷——桥历史确认 Inflame(能力)+Bloodletting(技能)+Strike(攻击) 回合与 Bash+Inflame+Bloodletting 回合均触发（玩家 powers 同帧 STR+1 DEX+1）。",
@@ -3287,7 +3289,7 @@
       "Razor Tooth",
       "RazorTooth"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "每次打出攻击或技能牌时，本场战斗内将其升级。语义 run-48 live 精修：**按单卡实例**——触发打出仍按基础值结算；该副本此后本战打出才用升级值。后抽到的新副本仍先按基础值打（run-48 Strike：Whetstone 升级过的副本首击 9，未升级副本首击 6 之后才升级）。**不是**全局卡牌类型升级。战中实例：Shrug 首打 8 → 后打 12 级；突破首打 9 → 后打 13；放血副本带升级时能量显示 6/3。",
@@ -3302,7 +3304,7 @@
       "Red Mask",
       "RedMask"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "战斗开始（第一回合）对所有敌人施加1层弱化。对局38+40 live：T1 每个敌人均可见弱化；对多段招式按 hit 削减攻击意图（外骨骼虫撕咬1x3→0x3；蜂群术士蜜蜂3x7→2x7；石碗虫头槌15→11；乐加维林族母 T1 沉睡未受益）。弱化在其回合结束递减。对局40 Act2 Shop#1 162 金买入——之后每战兑现。",
@@ -3346,7 +3348,7 @@
       "Regal Pillow",
       "RegalPillow"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "休息点治疗量 +15（与基础百分比治疗及加湿器类叠加）。run-46 live：三次休息均 +43 级（23→66、33→76、54 级→近满）——预 Boss/预精英休息几何在枕头下加倍兑现。",
@@ -3361,7 +3363,7 @@
       "Reptile Trinket",
       "ReptileTrinket"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每次使用药水时，本回合获得 3 点力量。任意药水使用均触发（Dex/血/Flex/攻击类）——以独立 power（REPTILE_TRINKET_POWER:3）与药水原生效果同回合叠加（如 Flex +5 + 饰品 +3 = 单回合 +8 力爆发窗）。",
@@ -3374,10 +3376,9 @@
   "RINGING_TRIANGLE": {
     "aliases": [
       "Ringing Triangle",
-      "RINGING_TRIANGLE",
       "铃三角"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "战斗第 1 回合保留手牌。对局43 Act1 商店 (14,2) live 价格 202金（未买——243金沉淀了滑石+Tremble；每回合敏捷 > 仅 T1 的一致性）。切勿与对局13 的 RINGING counter-class power（每回合限1牌）混淆——完全不同的东西。",
@@ -3422,7 +3423,7 @@
       "Ripple Basin",
       "RippleBasin"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "回合结束时，若本回合未打出任何攻击牌，获得 4 格挡。run-42 live：在纯能力回合触发（如对感染棱柱的 残酷+Inferno+Corruption 回合 → +4 挡）；与卡牌格挡叠加；低 HP 下\"无攻击回合\"纪律是真实生存杠杆。",
@@ -3437,7 +3438,7 @@
       "Royal Poison",
       "RoyalPoison"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "第 1 回合开始，失去 4 HP。",
@@ -3449,8 +3450,7 @@
   },
   "ROYAL_STAMP": {
     "aliases": [
-      "Royal Stamp",
-      "ROYAL_STAMP"
+      "Royal Stamp"
     ],
     "character": "shared",
     "curated": false,
@@ -3496,7 +3496,7 @@
       "Runic Pyramid",
       "RunicPyramid"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "回合结束不再弃置手牌。",
@@ -3510,7 +3510,7 @@
     "aliases": [
       "Sai"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每回合开始，获得 7 格挡。",
@@ -3525,7 +3525,7 @@
       "Sand Castle",
       "SandCastle"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，升级牌库中 6 张随机牌。",
@@ -3540,7 +3540,7 @@
       "Screaming Flagon",
       "ScreamingFlagon"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "回合结束时手牌为空，对所有敌人造成 20 点伤害。",
@@ -3555,7 +3555,7 @@
       "Scroll Boxes",
       "ScrollBoxes"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，从 2 捆卡牌包中选 1 捆加入牌库。",
@@ -3569,10 +3569,9 @@
     "aliases": [
       "Seal of Gold",
       "SealOfGold",
-      "SEAL_OF_GOLD",
       "黄金封印"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "Ancient 遗物（Tezcatara 赐福）：回合开始时金币≥5 则 +1 能量并 −5 金。",
@@ -3587,7 +3586,7 @@
       "Sea Glass",
       "SeaGlass"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，查看另一角色的 15 张牌（5 普通、5 罕见、5 稀有）；选择任意数量加入牌库。",
@@ -3617,7 +3616,7 @@
       "Sere Talon",
       "SereTalon"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，向牌库加入 2 张随机诅咒和 3 张 Wish。",
@@ -3645,7 +3644,7 @@
     "aliases": [
       "Shovel"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "休息点获得 DIG 挖掘选项，可得随机遗物。run-42 live bridge 备注：DIG 按钮出现在休息 UI（button DIG / actions rest(index=2)）但服务端 rest(index=2) 解析为 HEAL（HP 31→55，未给遗物）— bridge/mod 休息动作映射缺口；在 bridge 接线前视 DIG 为不可用。游戏侧遗物效果文本不变。",
@@ -3659,7 +3658,7 @@
     "aliases": [
       "Shuriken"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "单回合每打出 3 张攻击牌，获得 1 点力量。",
@@ -3674,7 +3673,7 @@
       "Signet Ring",
       "SignetRing"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，获得 999 金币。",
@@ -3689,7 +3688,7 @@
       "Silken Tress",
       "SilkenTress"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "拾取时失去全部金币；本局第一次卡牌奖励中的所有牌附魔 Glam（华彩）。run-55 live 规则：Glam 附魔牌在每场战斗首次打出时双结算，其后打出单结算（Glam 耸肩无视：该战首次打出 16 挡 + 抽 2；后续打出 8 挡 + 抽 1）。refine run-49「首打双结算」备注：双结算挂在附魔牌的首次打出上，而非战斗第 1 回合。",
@@ -3704,7 +3703,7 @@
       "Silver Crucible",
       "SilverCrucible"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "看到的前 3 份卡牌奖励为升级版；打开的第一个宝箱为空。",
@@ -3734,7 +3733,7 @@
       "Small Capsule",
       "SmallCapsule"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，获得 1 件随机遗物。",
@@ -3749,7 +3748,7 @@
       "Snecko Eye",
       "SneckoEye"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每回合抽牌阶段额外抽 2 张牌；战斗开始时处于 Confused。",
@@ -3778,7 +3777,7 @@
     "aliases": [
       "Sozu"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每回合 +1 最大能量；不再能获得药水。",
@@ -3793,7 +3792,7 @@
       "Sparkling Rouge",
       "SparklingRouge"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "第 3 回合开始，获得 1 点力量和 1 点敏捷。",
@@ -3808,7 +3807,7 @@
       "Spiked Gauntlets",
       "SpikedGauntlets"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每回合 +1 最大能量；能力牌费用 +1。",
@@ -3821,10 +3820,9 @@
   "STONE_CALENDAR": {
     "aliases": [
       "Stone Calendar",
-      "STONE_CALENDAR",
       "石日历"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": true,
     "curated": true,
     "description": "第 7 回合结束时，对所有敌人造成 52 伤（计数按战斗，下一场重置）。对局43 live 两次观测：虱虫之祖在第7回合末从 36HP 被击杀（日历在敌方 T7 行动前触发）；第 6 回合末确认不触发——触发点专指第 7 回合结束。虚无 1-2 层会把这 52 压成每实例 1——FADE 窗内不要指望它。",
@@ -3839,7 +3837,7 @@
       "Stone Cracker",
       "StoneCracker"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "战斗开始，将抽牌堆中 2 张随机牌升级（本场战斗内）。命中示例：Bash→Bash+（易伤 2→3）、TrueGrit→TrueGrit+（随机消耗→**选择式消耗叠层**——升级形态即选择式消耗版）、Spite→Spite+（掉血回合 2→3 击）、Impervious→Impervious+（挡 30→40）、Hemokinesis→Hemokinesis+（伤 15→20）、旋风斩 5→8/击、防御 5→8、打击 6→9、双重打击 5→7/击、剑柄打击 9→10。升级仅战斗内有效且卡面不显示 + 标记，以实机伤害数字为准。",
@@ -3854,7 +3852,7 @@
       "Stone Humidifier",
       "StoneHumidifier"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每次在休息点休息时，+5 最大 HP。",
@@ -3884,7 +3882,7 @@
     "aliases": [
       "Strawberry"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "拾取时，+7 最大 HP。",
@@ -3900,7 +3898,7 @@
       "Strike Dummy",
       "StrikeDummy"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "常见遗物：Strike 标签攻击牌 +3 伤，加成在易伤倍率前计入基础值。run-46 live：组装师 Strike 19（基础+力量+假人先入基础再乘易伤）；实验体 Str4+易伤下 13 级。事件 Strike 牌加成未确认。",
@@ -3915,7 +3913,7 @@
       "Sturdy Clamp",
       "SturdyClamp"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "稀有商店遗物：至多 10 挡跨回合保留（部分壁垒）。run-46 live：Act3 (5,5) 商店 289g 购入（合计沉淀 337/340），购时 HP 8/94——技能挡被 Enrage/VitalSpark 征税时的结构性对策。",
@@ -3930,7 +3928,7 @@
       "Sword of Jade",
       "SwordOfJade"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "战斗开始，获得 3 点力量。",
@@ -3945,7 +3943,7 @@
       "Sword of Stone",
       "SwordOfStone"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "击败 5 个精英后，变身为玉之剑。",
@@ -3975,7 +3973,7 @@
       "Tanx's Whistle",
       "TanxsWhistle"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，向牌库加入 1 张 Whistle。",
@@ -3990,7 +3988,7 @@
       "Tea of Discourtesy",
       "TeaOfDiscourtesy"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "接下来 1 场战斗开始时，向抽牌堆洗入 2 张 Dazed。",
@@ -4005,7 +4003,7 @@
       "The Abacus",
       "TheAbacus"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每次洗抽牌堆时，获得 6 格挡。",
@@ -4020,7 +4018,7 @@
       "The Boot",
       "TheBoot"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "你对敌人造成的 1-4 点未格挡攻击伤害提升为 5 点。",
@@ -4035,7 +4033,7 @@
       "The Courier",
       "TheCourier"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "商人价格 ×0.80；商人库存不再耗尽。",
@@ -4050,7 +4048,7 @@
       "Throwing Axe",
       "ThrowingAxe"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每场战斗打出的第一张牌额外再打出一次。",
@@ -4079,7 +4077,7 @@
       "Tiny Mailbox",
       "TinyMailbox"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "在休息点休息时，获得 2 瓶随机药水。",
@@ -4093,10 +4091,9 @@
     "aliases": [
       "Toasty Mittens",
       "ToastyMittens",
-      "TOASTY_MITTENS",
       "暖和手套"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "Ancient 遗物（Tezcatara 赐福）：每场战斗抽牌前消耗抽牌堆1张牌（第1回合跳过固有）并获得1力量。",
@@ -4110,7 +4107,7 @@
     "aliases": [
       "Toolbox"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "第 1 回合开始，从 3 张随机无色牌中选 1 张加入手牌。",
@@ -4122,8 +4119,11 @@
   },
   "TOUCH_OF_OROBAS": {
     "aliases": [
-      "TouchOfOrobas"
+      "Touch of Orobas",
+      "TouchOfOrobas",
+      "欧洛巴斯之触"
     ],
+    "character": "shared",
     "curated": true,
     "description": "欧洛巴斯 Act2 赐福选项：将 IRONCLAD 初始遗物燃烧之血替换为远古版黑暗之血（每战回 12 替代回 6）。标记换装行为；回血本体记在 BLACK_BLOOD。",
     "id": "TOUCH_OF_OROBAS",
@@ -4152,7 +4152,7 @@
       "Toxic Egg",
       "ToxicEgg"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "向牌库加入的技能牌会被升级。",
@@ -4166,10 +4166,9 @@
     "aliases": [
       "Toy Box",
       "ToyBox",
-      "TOY_BOX",
       "玩具盒"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "Ancient 遗物（Tezcatara 赐福）：拾取时获得4件蜡制遗物；每3场战斗最左侧蜡制遗物融化。",
@@ -4184,7 +4183,7 @@
       "Tri-Boomerang",
       "TriBoomerang"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "拾取时，选择 3 张攻击牌附魔 Instinct 1。Instinct 附魔（反编译）：有源攻击伤害 ×2（乘法，先于 Vulnerable 等其他乘区结算）。",
@@ -4199,7 +4198,7 @@
       "Tungsten Rod",
       "TungstenRod"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每次将失去 HP 时，少失去 1 点。",
@@ -4214,7 +4213,7 @@
       "Tuning Fork",
       "TuningFork"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": true,
     "curated": true,
     "description": "每打出 10 张技能牌，获得 7 点格挡。LIVE run-54：计数在 compact state 显示为 TUNING_FORK:n；多场战斗中 10/10 触发（第 10 张技能同帧 +7 挡，如与 True Grit / Armaments 同回合）。",
@@ -4244,7 +4243,7 @@
       "Unceasing Top",
       "UnceasingTop"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "回合内手牌为空时，抽 1 张牌。",
@@ -4274,7 +4273,7 @@
       "Unsettling Lamp",
       "UnsettlingLamp"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每场战斗首次打出对敌施加减益的卡牌时，减益效果翻倍。数值示例：Uppercut+（基础 2 弱/2 易伤）作为首张 debuff 牌翻倍至 **4 弱/4 易伤**；首 debuff 翻倍作用于打出时的*战内当前值*——被 StoneCracker 先行升级的 Tremble+（7 级）翻倍可到 8 易伤，高于基础 3×2=6。",
@@ -4288,7 +4287,7 @@
     "aliases": [
       "Vajra"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "战斗开始，获得 1 点力量。",
@@ -4303,7 +4302,7 @@
     "aliases": [
       "Vambrace"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "每场战斗中首次从卡牌获得格挡时，该格挡量翻倍（仅卡牌授予的挡；遗物/Fan 挡不计）。run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log)：与 PAELS_LEGION 乘法叠加 — Defend 5→20（Legion 清醒 ×2 × Vambrace ×2）、BloodWall 16→64 live 确认；仅每战第一张挡牌翻倍，后续按面值。",
@@ -4318,7 +4317,7 @@
       "Velvet Choker",
       "VelvetChoker"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每回合 +1 最大能量；每回合最多打出 6 张牌。",
@@ -4330,11 +4329,11 @@
   },
   "VENERABLE_TEA_SET": {
     "aliases": [
+      "Venerable Tea Set",
       "VenerableTeaSet",
-      "VENERABLE_TEA_SET",
       "古茶具套装"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "On entering a Rest Site, the next combat starts with +2 Energy (T1 only). LIVE run-57: procced at (14,5) rest → Act2 Boss T1 energy 6/4 with Prismatic Gem; also Act1 boss-class fights after rests. Shop-buy run-57 (13,5) 189g.",
@@ -4348,10 +4347,9 @@
     "aliases": [
       "Very Hot Cocoa",
       "VeryHotCocoa",
-      "VERY_HOT_COCOA",
       "极热可可"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "Ancient 遗物（Tezcatara 赐福）：每场战斗第1回合 +4 能量（回合开始结算，TurnNumber≤1）。",
@@ -4366,7 +4364,7 @@
       "Vexing Puzzlebox",
       "VexingPuzzlebox"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "第 1 回合开始时，从你的职业牌池随机添加 1 张牌到手牌；本回合免费。run-42 掉落：Juggling/Whirlwind/Mangle/Stoke/Bloodletting/Anger/Evil Eye/Brand/One-Two Punch/Armaments 均以 0c 出现 — 添加的牌该场战斗留在牌堆中；Vital Spark 下生成牌**可带 Tainted 到场**（run-42 One-Two Punch 打出收 +2 税）。",
@@ -4396,7 +4394,7 @@
       "War Hammer",
       "WarHammer"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每次击败精英时，升级牌库中 4 张随机牌。",
@@ -4411,7 +4409,7 @@
       "War Paint",
       "WarPaint"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "拾取时，升级牌库中 2 张随机技能牌**拷贝**（并非同类全部拷贝 — run-42 live：一张防御获得 8 格挡，另一张仍为 5；已升级拷贝在休息点锻造列表中隐藏）。",
@@ -4424,10 +4422,9 @@
   "WHETSTONE": {
     "aliases": [
       "Whetstone",
-      "WHETSTONE",
       "磨刀石"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "拾取时，随机升级牌库中 2 张攻击牌。对局43 Act2 商店 (5,0) live 价格 151金（未买——150金选了 Barricade）。目标随机——价值取决于攻击牌密度。 LIVE run-47：入手升级可通过伤害数字观察——打击基础 6 在磨刀石后结算 9（2 张随机攻击牌被升级）；牌库 JSON 仅显示基础 id，升级状态只能靠伤害推断。",
@@ -4442,7 +4439,7 @@
       "Whispering Earring",
       "WhisperingEarring"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "每回合 +1 最大能量；Vakuu 代你打出第一回合（至多 13 张牌）。",
@@ -4457,7 +4454,7 @@
       "White Beast Statue",
       "WhiteBeastStatue"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "药水总是出现在战斗奖励中。",
@@ -4472,7 +4469,7 @@
       "White Star",
       "WhiteStar"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "精英战斗奖励额外掉落 1 份稀有卡牌奖励。",
@@ -4499,10 +4496,9 @@
   "WINGED_BOOTS": {
     "aliases": [
       "Winged Boots",
-      "WINGED_BOOTS",
       "羽翼之靴"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "3 次充能：选择下一层房间时无视当前路线连通性（下一行任意点可达）。对局43 Act1 Neow live 之选（对比：橙塑香盒+1 升级 / 白银熔炉 3 次卡奖升级+首个宝箱为空）。教条：留给休息/商店几何逃生与 Boss 前紧急跳层；对局43 全程未消耗（草稿几何守住了）——草稿正确时未用掉的充能不是损失。",
@@ -4514,8 +4510,7 @@
   },
   "WING_CHARM": {
     "aliases": [
-      "Wing Charm",
-      "WING_CHARM"
+      "Wing Charm"
     ],
     "character": "shared",
     "curated": false,
@@ -4531,7 +4526,7 @@
       "Wongo's Mystery Ticket",
       "WongosMysteryTicket"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": true,
     "curated": false,
     "description": "完成 5 场战斗后，下一场战斗奖励额外获得 3 件遗物。",
@@ -4546,7 +4541,7 @@
       "Wongo Customer Appreciation Badge",
       "WongoCustomerAppreciationBadge"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": false,
     "description": "无效果。",
@@ -4559,10 +4554,9 @@
   "YUMMY_COOKIE": {
     "aliases": [
       "Yummy Cookie",
-      "YUMMY_COOKIE",
       "美味饼干"
     ],
-    "character": null,
+    "character": "shared",
     "counter_shown": false,
     "curated": true,
     "description": "Ancient 遗物（Tezcatara 赐福）：拾取时永久升级自选4张牌。对局43 live。",

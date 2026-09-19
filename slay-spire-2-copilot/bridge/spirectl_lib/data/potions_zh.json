@@ -31,18 +31,20 @@
     "usage": "combat"
   },
   "BEETLE_JUICE": {
-    "aliases": [],
+    "aliases": [
+      "Beetle Juice"
+    ],
     "curated": false,
     "description": "获得 2 点力量和 2 点敏捷。",
     "id": "BEETLE_JUICE",
     "kind": "potion",
     "name": "BEETLE_JUICE",
-    "play_notes": ""
+    "play_notes": "",
+    "rarity": "Rare"
   },
   "BLESSING_OF_THE_FORGE": {
     "aliases": [
       "Blessing of the Forge",
-      "BLESSING_OF_THE_FORGE",
       "锻造祝福"
     ],
     "curated": true,
@@ -74,8 +76,8 @@
   },
   "BLOOD_POTION": {
     "aliases": [
+      "Blood Potion",
       "BloodPotion",
-      "BLOOD_POTION",
       "血药水"
     ],
     "curated": true,
@@ -205,7 +207,6 @@
   "DEXTERITY_POTION": {
     "aliases": [
       "Dexterity Potion",
-      "DEXTERITY_POTION",
       "敏捷药水"
     ],
     "curated": true,
@@ -222,7 +223,6 @@
   "DISTILLED_CHAOS": {
     "aliases": [
       "Distilled Chaos",
-      "DISTILLED_CHAOS",
       "蒸馏混沌"
     ],
     "curated": true,
@@ -413,7 +413,6 @@
   "FOUL_POTION": {
     "aliases": [
       "Foul Potion",
-      "FOUL_POTION",
       "污浊药水"
     ],
     "curated": true,
@@ -494,8 +493,8 @@
   },
   "GIGANTIFICATION_POTION": {
     "aliases": [
+      "Gigantification Potion",
       "GigantificationPotion",
-      "GIGANTIFICATION_POTION",
       "巨化药水",
       "超巨化药水"
     ],
@@ -512,8 +511,8 @@
   },
   "GLOWWATER_POTION": {
     "aliases": [
+      "Glowwater Potion",
       "GlowwaterPotion",
-      "GLOWWATER_POTION",
       "发光水"
     ],
     "curated": true,
@@ -529,8 +528,8 @@
   },
   "HEART_OF_IRON": {
     "aliases": [
+      "Heart of Iron",
       "HeartOfIron",
-      "HEART_OF_IRON",
       "铁心药水"
     ],
     "curated": true,
@@ -707,6 +706,10 @@
     "usage": "combat"
   },
   "POTION_SHAPED_ROCK": {
+    "aliases": [
+      "POTION_SHAPED_ROCK",
+      "Potion-Shaped Rock"
+    ],
     "curated": true,
     "description": "战斗中使用：对目标造成 15 伤（run-51 对知识恶魔 live）。石化蟾蜍每战开始产出。非治疗类。",
     "name": "岩石形状药水",
@@ -730,8 +733,8 @@
   },
   "POWDERED_DEMISE": {
     "aliases": [
+      "Powdered Demise",
       "PowderedDemise",
-      "POWDERED_DEMISE",
       "灭世粉"
     ],
     "curated": true,
@@ -747,8 +750,8 @@
   },
   "POWER_POTION": {
     "aliases": [
+      "Power Potion",
       "PowerPotion",
-      "POWER_POTION",
       "能力药水"
     ],
     "curated": true,
@@ -780,8 +783,8 @@
   },
   "REGEN_POTION": {
     "aliases": [
+      "Regen Potion",
       "RegenPotion",
-      "REGEN_POTION",
       "再生药水"
     ],
     "curated": true,
@@ -798,7 +801,6 @@
   "SHACKLING_POTION": {
     "aliases": [
       "Shackling Potion",
-      "SHACKLING_POTION",
       "枷锁药水"
     ],
     "curated": true,
@@ -862,8 +864,8 @@
   },
   "SOLDIER_STEW": {
     "aliases": [
-      "Soldier's Stew",
-      "SOLDIERS_STEW"
+      "SOLDIERS_STEW",
+      "Soldier's Stew"
     ],
     "curated": false,
     "description": "All cards containing Strike gain 1 Replay this combat.",
@@ -893,7 +895,6 @@
   "SPEED_POTION": {
     "aliases": [
       "Speed Potion",
-      "SPEED_POTION",
       "速度药水"
     ],
     "curated": true,
@@ -909,8 +910,8 @@
   },
   "STABLE": {
     "aliases": [
-      "Stable Serum",
-      "STABLE_SERUM"
+      "STABLE_SERUM",
+      "Stable Serum"
     ],
     "curated": true,
     "description": "稳定血清：手牌保留2回合（回合结束留在手牌）。罕见。对局40 live：Act2 全程腰带储备；保留不提供格挡——其本身不是致命意图的答案。",
@@ -972,7 +973,6 @@
   "SWIFT_POTION": {
     "aliases": [
       "Swift Potion",
-      "SWIFT_POTION",
       "迅捷药水"
     ],
     "curated": true,
@@ -1020,8 +1020,8 @@
   },
   "WEAK_POTION": {
     "aliases": [
+      "Weak Potion",
       "WeakPotion",
-      "WEAK_POTION",
       "弱化药水"
     ],
     "curated": true,

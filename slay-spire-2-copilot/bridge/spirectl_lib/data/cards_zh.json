@@ -15,7 +15,7 @@
     "name": "磨蚀",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Thorns."
   },
   "ACCELERANT": {
@@ -34,7 +34,7 @@
     "name": "触媒",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "2 additional times."
   },
   "ACCURACY": {
@@ -53,7 +53,7 @@
     "name": "精准",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 damage."
   },
   "ACROBATICS": {
@@ -72,7 +72,7 @@
     "name": "杂技",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 4."
   },
   "ADAPTIVE_STRIKE": {
@@ -93,7 +93,7 @@
     "name": "适应打击",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+5 damage."
   },
   "ADRENALINE": {
@@ -114,7 +114,7 @@
     "name": "肾上腺素",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gain 2 Energy."
   },
   "AFTERIMAGE": {
@@ -135,7 +135,7 @@
     "name": "余像",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Innate."
   },
   "AFTERLIFE": {
@@ -156,7 +156,7 @@
     "name": "来生",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "Summon 9."
   },
   "AGGRESSION": {
@@ -177,7 +177,7 @@
     "name": "好勇斗狠",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Innate."
   },
   "ALCHEMIZE": {
@@ -198,7 +198,7 @@
     "name": "炼金术",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   },
   "ALIGNMENT": {
@@ -217,12 +217,13 @@
     "name": "星位序列",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gain 3 Energy."
   },
   "ALL_FOR_ONE": {
     "aliases": [
       "All For One",
+      "All for One",
       "万物一心"
     ],
     "card_type": "attack",
@@ -236,7 +237,7 @@
     "name": "万物一心",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+4 damage."
   },
   "ANGER": {
@@ -256,7 +257,7 @@
     "name": "愤怒",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage. Corrupted enchant (Symbiote event): Corrupted = \"attacks deal ×1.5 damage; owner takes 2 unblockable damage when played\". On Anger each play deals ~12-16 damage ((6+Str)×1.5) + 2 self-damage + copy to discard; **with Rupture Amount 2 in play the 2 self-damage fires Rupture +2 Strength per Anger play — copies inherit no enchant but the base Anger keeps re-triggering from discard every reshuffle (Str 2→4→6 across two Anger plays in one turn)**. Highest-frequency 0-cost Rupture fuel target in the Corrupted pool."
   },
   "ANOINTED": {
@@ -278,7 +279,7 @@
     "name": "受膏者",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Retain."
   },
   "ANTICIPATE": {
@@ -297,7 +298,7 @@
     "name": "预判",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+1 Dexterity."
   },
   "APOTHEOSIS": {
@@ -319,7 +320,7 @@
     "name": "升华",
     "play_notes": "",
     "rarity": "ancient",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 1."
   },
   "APPARITION": {
@@ -341,7 +342,7 @@
     "name": "幻影",
     "play_notes": "",
     "rarity": "ancient",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "removes Ethereal."
   },
   "ARMAMENTS": {
@@ -360,7 +361,7 @@
     "name": "武装",
     "play_notes": " run-49 live：战斗作用域升级再次观测——手内 Unmovable 费 2→1 仅本战斗生效；锻造屏过滤将永久升级单独显示。未升级版（1 目标）vs 升级版（全手）——run-49 副本为单目标版；覆盖层并非每次出现（一次打出未见 choose 屏即自动应用）。",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "instead upgrades ALL cards in your hand. **In-combat upgrades are combat-scoped only** — Bloodletting upgraded via Armaments gave +3 Energy that combat but reverted to +2 the next; a shop/rest SMITH upgrade (Rupture+) persisted normally. Do not plan Armaments upgrades as permanent deck value."
   },
   "ARSENAL": {
@@ -381,17 +382,18 @@
     "name": "武器库",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Innate."
   },
   "ASCENDERS_BANE": {
     "aliases": [
+      "Ascender's Bane",
       "Ascenders Bane",
       "攀登者之祸"
     ],
-    "card_type": null,
+    "card_type": "Curse",
     "character_pool": "CURSE",
-    "cost": null,
+    "cost": "-1",
     "curated": false,
     "description": "无法打出，诅咒，诅咒，永恒，虚无，无效果。无升级。",
     "id": "ASCENDERS_BANE",
@@ -402,14 +404,14 @@
     "kind": "card",
     "name": "攀登者之祸",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Curse",
+    "target_type": "None",
     "upgrade": null
   },
   "ASHEN_STRIKE": {
     "aliases": [
+      "Ashen Strike",
       "AshenStrike",
-      "ASHEN_STRIKE",
       "灰烬打击"
     ],
     "card_type": "attack",
@@ -427,7 +429,7 @@
     "name": "灰烬打击",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 per exhaust card (4 each)."
   },
   "ASSASSINATE": {
@@ -449,7 +451,7 @@
     "name": "刺杀",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage, +1 Vulnerable."
   },
   "ASTRAL_PULSE": {
@@ -487,7 +489,7 @@
     "name": "自动化",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   },
   "BACKFLIP": {
@@ -506,7 +508,7 @@
     "name": "后空翻",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "BACKSTAB": {
@@ -528,7 +530,7 @@
     "name": "背刺",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+4 damage."
   },
   "BAD_LUCK": {
@@ -536,9 +538,9 @@
       "Bad Luck",
       "厄运"
     ],
-    "card_type": null,
+    "card_type": "Curse",
     "character_pool": "CURSE",
-    "cost": null,
+    "cost": "-1",
     "curated": false,
     "description": "无法打出，诅咒，诅咒，永恒，回合结束仍在手牌则失去 13 HP（无视格挡）。无升级。",
     "id": "BAD_LUCK",
@@ -548,8 +550,8 @@
     "kind": "card",
     "name": "厄运",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Curse",
+    "target_type": "None",
     "upgrade": null
   },
   "BALL_LIGHTNING": {
@@ -568,11 +570,12 @@
     "name": "球状闪电",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "BANSHEES_CRY": {
     "aliases": [
+      "Banshee's Cry",
       "Banshees Cry",
       "女妖之嚎"
     ],
@@ -608,13 +611,12 @@
     "name": "弹幕齐射",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage per Orb."
   },
   "BARRICADE": {
     "aliases": [
       "Barricade",
-      "BARRICADE",
       "壁垒"
     ],
     "card_type": "power",
@@ -628,7 +630,7 @@
     "name": "壁垒",
     "play_notes": "对局43 live",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 2."
   },
   "BASH": {
@@ -647,7 +649,7 @@
     "name": "痛击",
     "play_notes": "",
     "rarity": "basic",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage, +1 Vulnerable."
   },
   "BATTLE_TRANCE": {
@@ -667,12 +669,13 @@
     "name": "战斗专注",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 4."
   },
   "BEACON_OF_HOPE": {
     "aliases": [
       "Beacon Of Hope",
+      "Beacon of Hope",
       "希望灯塔"
     ],
     "card_type": "power",
@@ -688,7 +691,7 @@
     "name": "希望灯塔",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Innate."
   },
   "BEAM_CELL": {
@@ -707,7 +710,7 @@
     "name": "光束射线",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 damage, +1 Vulnerable."
   },
   "BEAT_DOWN": {
@@ -726,12 +729,13 @@
     "name": "重击",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "RandomEnemy",
     "upgrade": "auto-play 4."
   },
   "BEAT_INTO_SHAPE": {
     "aliases": [
       "Beat Into Shape",
+      "Beat into Shape",
       "锻打成型"
     ],
     "card_type": "attack",
@@ -745,13 +749,12 @@
     "name": "锻打成型",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage, +2 Forge base and per-hit."
   },
   "BECKON": {
     "aliases": [
       "Beckon",
-      "BECKON",
       "招引"
     ],
     "card_type": "status",
@@ -765,11 +768,12 @@
     "name": "招引",
     "play_notes": "对局43 live",
     "rarity": "status",
-    "target_type": null,
+    "target_type": "None",
     "upgrade": null
   },
   "BEGONE": {
     "aliases": [
+      "BEGONE!",
       "Begone",
       "下去！"
     ],
@@ -784,12 +788,13 @@
     "name": "下去！",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "transformed card upgraded."
   },
   "BELIEVE_IN_YOU": {
     "aliases": [
       "Believe In You",
+      "Believe in You",
       "相信你"
     ],
     "card_type": "skill",
@@ -803,7 +808,7 @@
     "name": "相信你",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyAlly",
     "upgrade": "gain 3 Energy."
   },
   "BIASED_COGNITION": {
@@ -822,7 +827,7 @@
     "name": "偏差认知",
     "play_notes": "",
     "rarity": "ancient",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+5 Focus."
   },
   "BIG_BANG": {
@@ -844,7 +849,7 @@
     "name": "大爆炸",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Innate."
   },
   "BLACK_HOLE": {
@@ -884,12 +889,13 @@
     "name": "刀刃之舞",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "add 4 Shivs."
   },
   "BLADE_OF_INK": {
     "aliases": [
       "Blade Of Ink",
+      "Blade of Ink",
       "墨之刃"
     ],
     "card_type": "skill",
@@ -903,7 +909,7 @@
     "name": "墨之刃",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "add 3 Shivs."
   },
   "BLIGHT_STRIKE": {
@@ -924,7 +930,7 @@
     "name": "荒疫打击",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage."
   },
   "BLOODLETTING": {
@@ -943,7 +949,7 @@
     "name": "放血",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gain 3 Energy."
   },
   "BLOOD_WALL": {
@@ -962,7 +968,7 @@
     "name": "血墙",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+4 Block. LIVE (run-36): the 2 self-damage fires Inferno's \"whenever you lose HP on your turn\" AoE same play — used as the KILL INSTRUMENT twice vs Act2 elites (Entomancer died at 1 HP, InfestedPrism at 6 HP; a Snecko-Oil-rolled 0-cost BloodWall closed both fights before enemy damage resolved). With PaelsLegion awake, BloodWall's 16 doubles to 32-class."
   },
   "BLUDGEON": {
@@ -981,7 +987,7 @@
     "name": "重锤",
     "play_notes": "run-46 live：腐化×易伤乘法叠加于 45 基础——99/46 精确/57/70 级 live 数字；附魔首选目标。",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+10 damage."
   },
   "BLUR": {
@@ -1000,7 +1006,7 @@
     "name": "残影",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "BODYGUARD": {
@@ -1019,7 +1025,7 @@
     "name": "护卫",
     "play_notes": "",
     "rarity": "basic",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "Summon 7."
   },
   "BODY_SLAM": {
@@ -1038,7 +1044,7 @@
     "name": "全身撞击",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "cost 0."
   },
   "BOLAS": {
@@ -1057,7 +1063,7 @@
     "name": "双球连枷",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 damage."
   },
   "BOMBARDMENT": {
@@ -1078,7 +1084,7 @@
     "name": "轰炸",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+6 damage."
   },
   "BONE_SHARDS": {
@@ -1116,7 +1122,7 @@
     "name": "高速脱离",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "BOOT_SEQUENCE": {
@@ -1138,7 +1144,7 @@
     "name": "启动流程",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "BORROWED_TIME": {
@@ -1157,7 +1163,7 @@
     "name": "预借时间",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gain 6 Energy."
   },
   "BOUNCING_FLASK": {
@@ -1197,7 +1203,7 @@
     "name": "烙印",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+1 Strength."
   },
   "BREAK": {
@@ -1216,7 +1222,7 @@
     "name": "破击",
     "play_notes": "",
     "rarity": "ancient",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+10 damage, +2 Vulnerable."
   },
   "BREAKTHROUGH": {
@@ -1254,7 +1260,7 @@
     "name": "至亮之焰",
     "play_notes": "",
     "rarity": "ancient",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gain 3 Energy, draw 3."
   },
   "BUBBLE_BUBBLE": {
@@ -1273,7 +1279,7 @@
     "name": "咕嘟冒泡",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 Poison."
   },
   "BUFFER": {
@@ -1292,7 +1298,7 @@
     "name": "缓冲",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gain 2 Buffer."
   },
   "BULK_UP": {
@@ -1311,7 +1317,7 @@
     "name": "暴涨",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+1 Strength, +1 Dexterity."
   },
   "BULLET_TIME": {
@@ -1330,7 +1336,7 @@
     "name": "子弹时间",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 2."
   },
   "BULLY": {
@@ -1349,7 +1355,7 @@
     "name": "欺凌",
     "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：易伤 3 目标上打出 15 伤（含力量3）——0 费随易伤脊缩放；并以零能量喂 Rage/Fan/StoneCracker 攻击计数。",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 per Vulnerable stack (3 each)."
   },
   "BULWARK": {
@@ -1368,12 +1374,13 @@
     "name": "铸墙",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block, +3 Forge."
   },
   "BUNDLE_OF_JOY": {
     "aliases": [
       "Bundle Of Joy",
+      "Bundle of Joy",
       "新生之喜"
     ],
     "card_type": "skill",
@@ -1389,7 +1396,7 @@
     "name": "新生之喜",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "add 4."
   },
   "BURN": {
@@ -1397,7 +1404,7 @@
       "Burn",
       "燃烧"
     ],
-    "card_type": null,
+    "card_type": "Status",
     "character_pool": "STATUS",
     "cost": "-1",
     "curated": false,
@@ -1407,8 +1414,8 @@
     "kind": "card",
     "name": "燃烧",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Status",
+    "target_type": "None",
     "upgrade": null
   },
   "BURNING_PACT": {
@@ -1430,7 +1437,7 @@
     "name": "燃烧契约",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 3."
   },
   "BURST": {
@@ -1449,7 +1456,7 @@
     "name": "爆发",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "next 2 Skills."
   },
   "BURY": {
@@ -1468,7 +1475,7 @@
     "name": "埋葬",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+11 damage."
   },
   "BYRDONIS_EGG": {
@@ -1476,9 +1483,9 @@
       "Byrdonis Egg",
       "伯德尼斯之蛋"
     ],
-    "card_type": null,
+    "card_type": "Quest",
     "character_pool": "QUEST",
-    "cost": null,
+    "cost": "-1",
     "curated": false,
     "description": "无法打出，任务，任务，在牌组中时可在休息点孵化。无升级。",
     "id": "BYRDONIS_EGG",
@@ -1486,8 +1493,8 @@
     "kind": "card",
     "name": "伯德尼斯之蛋",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Quest",
+    "target_type": "None",
     "upgrade": null
   },
   "BYRD_SWOOP": {
@@ -1506,7 +1513,7 @@
     "name": "伯德突袭",
     "play_notes": "",
     "rarity": "event",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+4 damage."
   },
   "CALAMITY": {
@@ -1525,7 +1532,7 @@
     "name": "灾厄",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 2."
   },
   "CALCIFY": {
@@ -1544,7 +1551,7 @@
     "name": "钙化",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 damage."
   },
   "CALCULATED_GAMBLE": {
@@ -1566,12 +1573,13 @@
     "name": "计算下注",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Retain."
   },
   "CALL_OF_THE_VOID": {
     "aliases": [
       "Call Of The Void",
+      "Call of the Void",
       "虚空之唤"
     ],
     "card_type": "power",
@@ -1588,7 +1596,7 @@
     "name": "虚空之唤",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Innate."
   },
   "CALTROPS": {
@@ -1607,7 +1615,7 @@
     "name": "铁蒺藜",
     "play_notes": "",
     "rarity": "event",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Thorns."
   },
   "CAPACITOR": {
@@ -1626,7 +1634,7 @@
     "name": "扩容",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gain 3 Orb Slots."
   },
   "CAPTURE_SPIRIT": {
@@ -1645,7 +1653,7 @@
     "name": "捕捉灵魂",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 HP loss, +1 Soul."
   },
   "CASCADE": {
@@ -1664,7 +1672,7 @@
     "name": "倾泻",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "X+1 cards."
   },
   "CATASTROPHE": {
@@ -1683,7 +1691,7 @@
     "name": "灾变",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "auto-play 3."
   },
   "CELESTIAL_MIGHT": {
@@ -1702,7 +1710,7 @@
     "name": "天穹之力",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "4 hits."
   },
   "CHAOS": {
@@ -1721,11 +1729,12 @@
     "name": "混沌",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "Channel 2."
   },
   "CHARGE": {
     "aliases": [
+      "CHARGE!!",
       "Charge",
       "冲锋！！"
     ],
@@ -1740,7 +1749,7 @@
     "name": "冲锋！！",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "transformed cards upgraded."
   },
   "CHARGE_BATTERY": {
@@ -1759,12 +1768,13 @@
     "name": "充电",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "CHILD_OF_THE_STARS": {
     "aliases": [
       "Child Of The Stars",
+      "Child of the Stars",
       "群星之子"
     ],
     "card_type": "power",
@@ -1778,7 +1788,7 @@
     "name": "群星之子",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block per Star."
   },
   "CHILL": {
@@ -1799,7 +1809,7 @@
     "name": "冰寒",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "removes Exhaust."
   },
   "CINDER": {
@@ -1820,7 +1830,7 @@
     "name": "余烬",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+6 damage."
   },
   "CLASH": {
@@ -1839,7 +1849,7 @@
     "name": "冲突",
     "play_notes": "",
     "rarity": "event",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+4 damage."
   },
   "CLAW": {
@@ -1858,7 +1868,7 @@
     "name": "爪击",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 damage, +1 increase."
   },
   "CLEANSE": {
@@ -1879,12 +1889,13 @@
     "name": "洁净",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "Summon 5."
   },
   "CLOAK_AND_DAGGER": {
     "aliases": [
       "Cloak And Dagger",
+      "Cloak and Dagger",
       "斗篷与匕首"
     ],
     "card_type": "skill",
@@ -1898,12 +1909,13 @@
     "name": "斗篷与匕首",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "add 2 Shivs."
   },
   "CLOAK_OF_STARS": {
     "aliases": [
       "Cloak Of Stars",
+      "Cloak of Stars",
       "群星斗篷"
     ],
     "card_type": "skill",
@@ -1917,7 +1929,7 @@
     "name": "群星斗篷",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "CLUMSY": {
@@ -1925,9 +1937,9 @@
       "Clumsy",
       "笨拙"
     ],
-    "card_type": null,
+    "card_type": "Curse",
     "character_pool": "CURSE",
-    "cost": null,
+    "cost": "-1",
     "curated": false,
     "description": "无法打出，诅咒，诅咒，虚无，无效果。无升级。",
     "id": "CLUMSY",
@@ -1937,8 +1949,8 @@
     "kind": "card",
     "name": "笨拙",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Curse",
+    "target_type": "None",
     "upgrade": null
   },
   "COLD_SNAP": {
@@ -1957,7 +1969,7 @@
     "name": "寒流",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "COLLISION_COURSE": {
@@ -1976,7 +1988,7 @@
     "name": "碰撞轨迹",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+4 damage."
   },
   "COLOSSUS": {
@@ -1995,7 +2007,7 @@
     "name": "巨像",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "COMET": {
@@ -2014,7 +2026,7 @@
     "name": "彗星",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+11 damage."
   },
   "COMPACT": {
@@ -2033,7 +2045,7 @@
     "name": "压缩",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+1 Block; Fuel upgraded."
   },
   "COMPILE_DRIVER": {
@@ -2052,7 +2064,7 @@
     "name": "编译冲击",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "CONFLAGRATION": {
@@ -2090,7 +2102,7 @@
     "name": "征服者",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "Forge 5."
   },
   "CONSUMING_SHADOW": {
@@ -2109,7 +2121,7 @@
     "name": "吞噬暗影",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "Channel 3 Dark."
   },
   "CONVERGENCE": {
@@ -2130,7 +2142,7 @@
     "name": "汇流",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Stars next turn."
   },
   "COOLANT": {
@@ -2149,7 +2161,7 @@
     "name": "冷却剂",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block per type."
   },
   "COOLHEADED": {
@@ -2168,7 +2180,7 @@
     "name": "冷静头脑",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 2."
   },
   "COORDINATE": {
@@ -2187,7 +2199,7 @@
     "name": "协同",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyAlly",
     "upgrade": "+3 Strength."
   },
   "CORROSIVE_WAVE": {
@@ -2227,7 +2239,7 @@
     "name": "腐化",
     "play_notes": "",
     "rarity": "ancient",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 2."
   },
   "COSMIC_INDIFFERENCE": {
@@ -2246,7 +2258,7 @@
     "name": "宇宙冷漠",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "COUNTDOWN": {
@@ -2289,6 +2301,7 @@
   },
   "CREATIVE_AI": {
     "aliases": [
+      "Creative AI",
       "Creative Ai",
       "创造性AI"
     ],
@@ -2303,7 +2316,7 @@
     "name": "创造性AI",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 2."
   },
   "CRESCENT_SPEAR": {
@@ -2322,7 +2335,7 @@
     "name": "新月长矛",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 per Star-cost card."
   },
   "CRIMSON_MANTLE": {
@@ -2341,7 +2354,7 @@
     "name": "绯红披风",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Block."
   },
   "CRUELTY": {
@@ -2360,13 +2373,13 @@
     "name": "残酷",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+50% total."
   },
   "CRUSH_UNDER": {
     "aliases": [
+      "Crush Under",
       "CrushUnder",
-      "CRUSH_UNDER",
       "下砸"
     ],
     "card_type": "attack",
@@ -2386,11 +2399,12 @@
   "CURSE_OF_THE_BELL": {
     "aliases": [
       "Curse Of The Bell",
+      "Curse of the Bell",
       "丧钟之咒"
     ],
-    "card_type": null,
+    "card_type": "Curse",
     "character_pool": "CURSE",
-    "cost": null,
+    "cost": "-1",
     "curated": false,
     "description": "无法打出，诅咒，诅咒，永恒，无效果。无升级。",
     "id": "CURSE_OF_THE_BELL",
@@ -2400,8 +2414,8 @@
     "kind": "card",
     "name": "丧钟之咒",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Curse",
+    "target_type": "None",
     "upgrade": null
   },
   "DAGGER_SPRAY": {
@@ -2439,7 +2453,7 @@
     "name": "投掷匕首",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "DANSE_MACABRE": {
@@ -2458,7 +2472,7 @@
     "name": "死亡之舞",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Block."
   },
   "DARKNESS": {
@@ -2477,13 +2491,12 @@
     "name": "漆黑",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "2 times."
   },
   "DARK_EMBRACE": {
     "aliases": [
-      "Dark Embrace",
-      "DARK_EMBRACE"
+      "Dark Embrace"
     ],
     "card_type": "Power",
     "character_pool": "ironclad",
@@ -2515,7 +2528,7 @@
     "name": "黑暗镣铐",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "lose 15 Strength."
   },
   "DASH": {
@@ -2534,7 +2547,7 @@
     "name": "冲刺",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage, +3 Block."
   },
   "DAZED": {
@@ -2542,7 +2555,7 @@
       "Dazed",
       "眩晕"
     ],
-    "card_type": null,
+    "card_type": "Status",
     "character_pool": "STATUS",
     "cost": "-1",
     "curated": false,
@@ -2554,8 +2567,8 @@
     "kind": "card",
     "name": "眩晕",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Status",
+    "target_type": "None",
     "upgrade": null
   },
   "DEADLY_POISON": {
@@ -2574,7 +2587,7 @@
     "name": "致命毒药",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 Poison."
   },
   "DEATHBRINGER": {
@@ -2598,6 +2611,7 @@
   },
   "DEATHS_DOOR": {
     "aliases": [
+      "Death's Door",
       "Deaths Door",
       "死亡之门"
     ],
@@ -2612,7 +2626,7 @@
     "name": "死亡之门",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+1 Block."
   },
   "DEATH_MARCH": {
@@ -2631,7 +2645,7 @@
     "name": "死亡行军",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 base, +2 per card."
   },
   "DEBILITATE": {
@@ -2650,7 +2664,7 @@
     "name": "摧残",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage, 3 turns."
   },
   "DEBRIS": {
@@ -2671,7 +2685,7 @@
     "name": "碎屑",
     "play_notes": "",
     "rarity": "status",
-    "target_type": null,
+    "target_type": "None",
     "upgrade": null
   },
   "DEBT": {
@@ -2679,9 +2693,9 @@
       "Debt",
       "债务"
     ],
-    "card_type": null,
+    "card_type": "Curse",
     "character_pool": "CURSE",
-    "cost": null,
+    "cost": "-1",
     "curated": false,
     "description": "无法打出，诅咒，诅咒，回合结束仍在手牌则失去 10 金币。无升级。",
     "id": "DEBT",
@@ -2689,8 +2703,8 @@
     "kind": "card",
     "name": "债务",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Curse",
+    "target_type": "None",
     "upgrade": null
   },
   "DECAY": {
@@ -2698,7 +2712,7 @@
       "Decay",
       "衰败"
     ],
-    "card_type": null,
+    "card_type": "Curse",
     "character_pool": "CURSE",
     "cost": "-1",
     "curated": false,
@@ -2708,13 +2722,14 @@
     "kind": "card",
     "name": "衰败",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Curse",
+    "target_type": "None",
     "upgrade": null
   },
   "DECISIONS_DECISIONS": {
     "aliases": [
       "Decisions Decisions",
+      "Decisions, Decisions",
       "抉择，抉择"
     ],
     "card_type": "skill",
@@ -2730,11 +2745,12 @@
     "name": "抉择，抉择",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 5."
   },
   "DEFEND_DEFECT": {
     "aliases": [
+      "Defend",
       "Defend Defect",
       "防御"
     ],
@@ -2749,11 +2765,12 @@
     "name": "防御",
     "play_notes": "",
     "rarity": "basic",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "DEFEND_IRONCLAD": {
     "aliases": [
+      "Defend",
       "Defend Ironclad",
       "防御"
     ],
@@ -2768,11 +2785,12 @@
     "name": "防御",
     "play_notes": "run-48 live 2026-09-19：升级防御 history 读数 8 挡——档案 +2→7 过时。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
     "rarity": "basic",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "DEFEND_NECROBINDER": {
     "aliases": [
+      "Defend",
       "Defend Necrobinder",
       "防御"
     ],
@@ -2787,11 +2805,12 @@
     "name": "防御",
     "play_notes": "",
     "rarity": "basic",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "DEFEND_REGENT": {
     "aliases": [
+      "Defend",
       "Defend Regent",
       "防御"
     ],
@@ -2806,11 +2825,12 @@
     "name": "防御",
     "play_notes": "",
     "rarity": "basic",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "DEFEND_SILENT": {
     "aliases": [
+      "Defend",
       "Defend Silent",
       "防御"
     ],
@@ -2825,7 +2845,7 @@
     "name": "防御",
     "play_notes": "",
     "rarity": "basic",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "DEFILE": {
@@ -2846,7 +2866,7 @@
     "name": "玷污",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+4 damage."
   },
   "DEFLECT": {
@@ -2865,7 +2885,7 @@
     "name": "偏折",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "DEFRAGMENT": {
@@ -2884,7 +2904,7 @@
     "name": "碎片整理",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Focus."
   },
   "DEFY": {
@@ -2905,7 +2925,7 @@
     "name": "违逆",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 Block."
   },
   "DELAY": {
@@ -2924,7 +2944,7 @@
     "name": "拖延",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Block, +1 Energy next turn."
   },
   "DEMESNE": {
@@ -2945,7 +2965,7 @@
     "name": "领域",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 2."
   },
   "DEMONIC_SHIELD": {
@@ -2966,12 +2986,14 @@
     "name": "恶魔护盾",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyAlly",
     "upgrade": "removes Exhaust."
   },
   "DEMON_FORM": {
     "aliases": [
-      "DemonForm"
+      "Demon Form",
+      "DemonForm",
+      "恶魔形态"
     ],
     "card_type": "power",
     "character_pool": "IRONCLAD",
@@ -3001,7 +3023,7 @@
     "name": "葬送",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+10 damage."
   },
   "DEVOUR_LIFE": {
@@ -3020,7 +3042,7 @@
     "name": "吞噬生命",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "Summon 2."
   },
   "DIRGE": {
@@ -3041,24 +3063,31 @@
     "name": "挽歌",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "Summon 4 per X; Souls upgraded."
   },
   "DISCOVERY": {
-    "aliases": [],
+    "aliases": [
+      "Discovery"
+    ],
+    "card_type": "Skill",
+    "character_pool": "colorless",
+    "cost": "1",
     "curated": false,
     "description": "从 3 张随机牌中选择 1 张加入手牌。本回合费用为 0。",
     "id": "DISCOVERY",
     "kind": "card",
     "name": "DISCOVERY",
-    "play_notes": ""
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "target_type": "Self"
   },
   "DISINTEGRATION": {
     "aliases": [
       "Disintegration",
       "瓦解"
     ],
-    "card_type": null,
+    "card_type": "Status",
     "character_pool": "TOKEN",
     "cost": "-1",
     "curated": false,
@@ -3068,8 +3097,8 @@
     "kind": "card",
     "name": "瓦解",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Status",
+    "target_type": "None",
     "upgrade": null
   },
   "DISMANTLE": {
@@ -3088,7 +3117,7 @@
     "name": "拆卸",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage."
   },
   "DISTRACTION": {
@@ -3109,12 +3138,13 @@
     "name": "分心",
     "play_notes": "",
     "rarity": "event",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   },
   "DODGE_AND_ROLL": {
     "aliases": [
       "Dodge And Roll",
+      "Dodge and Roll",
       "闪躲翻滚"
     ],
     "card_type": "skill",
@@ -3128,7 +3158,7 @@
     "name": "闪躲翻滚",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Block both."
   },
   "DOMINATE": {
@@ -3149,7 +3179,7 @@
     "name": "主宰",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "applies 2 Vulnerable. Strength gain equals POST-application stack count: at extreme scale a target at Vuln 11 → Dominate applied 1 (→12) and granted +12 Strength same state read (player Str 11→23); on 0-Vuln targets grants ~+1 Str only (apply-1-then-count rule)."
   },
   "DOUBLE_ENERGY": {
@@ -3170,7 +3200,7 @@
     "name": "双倍能量",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   },
   "DOUBT": {
@@ -3178,9 +3208,9 @@
       "Doubt",
       "怀疑"
     ],
-    "card_type": null,
+    "card_type": "Curse",
     "character_pool": "CURSE",
-    "cost": null,
+    "cost": "-1",
     "curated": false,
     "description": "无法打出，诅咒，诅咒，回合结束仍在手牌则获得 1 层虚弱。无升级。",
     "id": "DOUBT",
@@ -3188,8 +3218,8 @@
     "kind": "card",
     "name": "怀疑",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Curse",
+    "target_type": "None",
     "upgrade": null
   },
   "DRAIN_POWER": {
@@ -3208,7 +3238,7 @@
     "name": "能量汲取",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage, upgrade 3 cards."
   },
   "DRAMATIC_ENTRANCE": {
@@ -3252,12 +3282,13 @@
     "name": "清淤",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Retain."
   },
   "DRUM_OF_BATTLE": {
     "aliases": [
       "Drum Of Battle",
+      "Drum of Battle",
       "战鼓"
     ],
     "card_type": "skill",
@@ -3273,7 +3304,7 @@
     "name": "战鼓",
     "play_notes": "run-43/46 live：仅外部消耗回费；SW×战鼓×仪式链；技能牌零技能战禁打。",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gain 3 Energy on Exhaust. Exhaust-refund rule: self-exhaust on play does NOT refund (playing it directly showed net −1 Energy +2 draw with no refund); external exhaust by another card's effect (Second Wind / Burning Pact class) DOES refund — Second Wind exhausting Drum from hand raised energy 3→4 the same moment. Verify per exhaust source before counting the energy."
   },
   "DUALCAST": {
@@ -3292,7 +3323,7 @@
     "name": "双重释放",
     "play_notes": "",
     "rarity": "basic",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   },
   "DUAL_WIELD": {
@@ -3311,7 +3342,7 @@
     "name": "双持",
     "play_notes": "",
     "rarity": "event",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "copy 2."
   },
   "DYING_STAR": {
@@ -3372,7 +3403,7 @@
     "name": "回响形态",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "removes Ethereal."
   },
   "EIDOLON": {
@@ -3393,12 +3424,13 @@
     "name": "幻景",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 1."
   },
   "END_OF_DAYS": {
     "aliases": [
       "End Of Days",
+      "End of Days",
       "末日降临"
     ],
     "card_type": "skill",
@@ -3433,7 +3465,7 @@
     "name": "能量涌动",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AllAllies",
     "upgrade": "gain 3 Energy."
   },
   "ENFEEBLING_TOUCH": {
@@ -3454,7 +3486,7 @@
     "name": "弱化之触",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "lose 11 Strength."
   },
   "ENLIGHTENMENT": {
@@ -3475,7 +3507,7 @@
     "name": "启迪",
     "play_notes": "",
     "rarity": "event",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cards cost 1 this combat (reduce-only). Base effect is ANTI-synergy with 0-cost engine cards (Bloodletting/Brand get raised to 1 cost that turn) — a Rupture-line IRONCLAD deck should treat this card and ZenWeaver BreathingTechniques (50g, +2 copies) with caution for that reason."
   },
   "ENTHRALLED": {
@@ -3496,7 +3528,7 @@
     "name": "着迷",
     "play_notes": "",
     "rarity": "curse",
-    "target_type": null,
+    "target_type": "None",
     "upgrade": null
   },
   "ENTRENCH": {
@@ -3515,7 +3547,7 @@
     "name": "壕沟固守",
     "play_notes": "",
     "rarity": "event",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 1."
   },
   "ENTROPY": {
@@ -3536,7 +3568,7 @@
     "name": "熵",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Innate."
   },
   "ENVENOM": {
@@ -3555,7 +3587,7 @@
     "name": "涂毒",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "2 Poison."
   },
   "EQUILIBRIUM": {
@@ -3576,7 +3608,7 @@
     "name": "均衡",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "ERADICATE": {
@@ -3597,7 +3629,7 @@
     "name": "根除",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "ESCAPE_PLAN": {
@@ -3616,7 +3648,7 @@
     "name": "逃脱计划",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Block."
   },
   "ETERNAL_ARMOR": {
@@ -3635,13 +3667,12 @@
     "name": "永恒护甲",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Plating."
   },
   "EVIL_EYE": {
     "aliases": [
       "Evil Eye",
-      "EVIL_EYE",
       "邪眼"
     ],
     "card_type": "skill",
@@ -3657,12 +3688,13 @@
     "name": "邪眼",
     "play_notes": "对局43 live",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block. Evil Eye's own Exhaust does NOT count for the double trigger — another card must be exhausted earlier the same turn (Tremble/Offering/Bloodletting-with-exhaust etc.); played alone it grants 8, played after a prior Exhaust it grants 16. Build anomaly: EvilEye's own disposal does NOT increment the exhaust pile count — the card lands in discard (discard +1, exhaust unchanged); treat EvilEye self-disposal as discard-class for exhaust-pile accounting; the double-block condition still fires correctly off PRIOR exhausts (TOXIC/TrueGrit/Purity plays); FnP/Juggernaut do not proc off EvilEye itself."
   },
   "EXPECT_A_FIGHT": {
     "aliases": [
       "Expect A Fight",
+      "Expect a Fight",
       "跃跃欲试"
     ],
     "card_type": "skill",
@@ -3676,7 +3708,7 @@
     "name": "跃跃欲试",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 1."
   },
   "EXPERTISE": {
@@ -3695,7 +3727,7 @@
     "name": "独门技术",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "until 7."
   },
   "EXPOSE": {
@@ -3716,7 +3748,7 @@
     "name": "暴露",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 Vulnerable."
   },
   "EXTERMINATE": {
@@ -3754,12 +3786,13 @@
     "name": "陨星",
     "play_notes": "",
     "rarity": "basic",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+4 damage. Has an undocumented Star cost in addition to the 0 Energy label — bridge reports `StarCostTooHigh` when Stars are insufficient; DIVINE_RIGHT's +3 combat-start Stars pay for a turn-1 play, and it becomes unplayable later in the fight once the Star bank is drained."
   },
   "FAN_OF_KNIVES": {
     "aliases": [
       "Fan Of Knives",
+      "Fan of Knives",
       "刀扇"
     ],
     "card_type": "power",
@@ -3794,7 +3827,7 @@
     "name": "系紧",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Block."
   },
   "FEAR": {
@@ -3815,13 +3848,12 @@
     "name": "恐惧",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 damage, +1 Vulnerable."
   },
   "FEED": {
     "aliases": [
       "Feed",
-      "FEED",
       "狂宴"
     ],
     "card_type": "attack",
@@ -3837,7 +3869,7 @@
     "name": "狂宴",
     "play_notes": "对局43 live 两次 Fatal",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage, +1 Max HP."
   },
   "FEEDING_FRENZY": {
@@ -3856,12 +3888,14 @@
     "name": "摄食狂热",
     "play_notes": "",
     "rarity": "event",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Strength."
   },
   "FEEL_NO_PAIN": {
     "aliases": [
-      "FeelNoPain"
+      "Feel No Pain",
+      "FeelNoPain",
+      "无痛"
     ],
     "card_type": "power",
     "character_pool": "IRONCLAD",
@@ -3891,7 +3925,7 @@
     "name": "野性",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 1."
   },
   "FETCH": {
@@ -3910,7 +3944,7 @@
     "name": "取回",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "Osty +3 damage."
   },
   "FIEND_FIRE": {
@@ -3931,12 +3965,13 @@
     "name": "恶魔之焰",
     "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：伤害按每张被耗牌结算实例——5 张手打出 7+7+7+4=25（含弱化税）恰杀 25HP 千足虫段。攻击类：HIVE 逐实例 Dazed 税下可用。",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage per card."
   },
   "FIGHT_ME": {
     "aliases": [
       "Fight Me",
+      "Fight Me!",
       "与我一战！"
     ],
     "card_type": "attack",
@@ -3950,7 +3985,7 @@
     "name": "与我一战",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 damage, +1 Strength."
   },
   "FIGHT_THROUGH": {
@@ -3969,7 +4004,7 @@
     "name": "强撑",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+4 Block."
   },
   "FINESSE": {
@@ -3988,7 +4023,7 @@
     "name": "技巧",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "FINISHER": {
@@ -4007,7 +4042,7 @@
     "name": "终结技",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage."
   },
   "FISTICUFFS": {
@@ -4026,7 +4061,7 @@
     "name": "拳斗",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage."
   },
   "FLAK_CANNON": {
@@ -4066,7 +4101,7 @@
     "name": "火焰屏障",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+4 Block, +6 damage back."
   },
   "FLANKING": {
@@ -4085,12 +4120,13 @@
     "name": "夹击",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "cost 1."
   },
   "FLASH_OF_STEEL": {
     "aliases": [
       "Flash Of Steel",
+      "Flash of Steel",
       "钢铁闪光"
     ],
     "card_type": "attack",
@@ -4104,7 +4140,7 @@
     "name": "钢铁闪光",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "FLATTEN": {
@@ -4123,7 +4159,7 @@
     "name": "重压",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "Osty +4 damage."
   },
   "FLECHETTES": {
@@ -4142,12 +4178,13 @@
     "name": "飞镖",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage."
   },
   "FLICK_FLACK": {
     "aliases": [
       "Flick Flack",
+      "Flick-Flack",
       "翻越撑击"
     ],
     "card_type": "attack",
@@ -4182,7 +4219,7 @@
     "name": "集中打击",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage, +1 Focus."
   },
   "FOLLY": {
@@ -4190,9 +4227,9 @@
       "Folly",
       "愚行"
     ],
-    "card_type": null,
+    "card_type": "Curse",
     "character_pool": "CURSE",
-    "cost": null,
+    "cost": "-1",
     "curated": false,
     "description": "无法打出，诅咒，诅咒，无法打出，永恒，固有，虚无，无效果。无升级。",
     "id": "FOLLY",
@@ -4205,8 +4242,8 @@
     "kind": "card",
     "name": "愚行",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Curse",
+    "target_type": "None",
     "upgrade": null
   },
   "FOOTWORK": {
@@ -4225,7 +4262,7 @@
     "name": "灵动步法",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Dexterity."
   },
   "FORBIDDEN_GRIMOIRE": {
@@ -4246,7 +4283,7 @@
     "name": "禁忌魔典",
     "play_notes": "",
     "rarity": "ancient",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 1."
   },
   "FOREGONE_CONCLUSION": {
@@ -4265,13 +4302,12 @@
     "name": "既定事项",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "pull 3."
   },
   "FORGOTTEN_RITUAL": {
     "aliases": [
       "Forgotten Ritual",
-      "FORGOTTEN_RITUAL",
       "被遗忘的仪式"
     ],
     "card_type": "skill",
@@ -4287,14 +4323,14 @@
     "name": "被遗忘的仪式",
     "play_notes": "对局43 live LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：DRUM_OF_BATTLE 的自耗**不**满足 Ritual「另一牌已耗」条件——Drum 之后打 Ritual 无退费（能量 2→1）。可用触发源仍为 BurningPact / 对其他牌的外部耗。",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gain 4 Energy. Its own Exhaust does NOT satisfy its own condition (EvilEye-class) — played alone, energy went 6→5 (paid 1, no +3). Another card must be exhausted FIRST the same turn (Brand/Slimed-class) for the +3 to fire."
   },
   "FRANTIC_ESCAPE": {
     "aliases": [
-      "FranticEscape",
-      "FRANTIC_ESCAPE",
       "FE",
+      "Frantic Escape",
+      "FranticEscape",
       "疯狂逃遁"
     ],
     "card_type": "status",
@@ -4308,7 +4344,7 @@
     "name": "疯狂逃遁",
     "play_notes": "",
     "rarity": "status",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": null
   },
   "FRIENDSHIP": {
@@ -4327,7 +4363,7 @@
     "name": "友谊",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "lose 1 Strength."
   },
   "FTL": {
@@ -4346,7 +4382,7 @@
     "name": "超越光速",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 damage, threshold 4."
   },
   "FUEL": {
@@ -4367,7 +4403,7 @@
     "name": "燃料",
     "play_notes": "",
     "rarity": "token",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 2."
   },
   "FURNACE": {
@@ -4386,7 +4422,7 @@
     "name": "熔炉",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "Forge 7."
   },
   "FUSION": {
@@ -4407,7 +4443,7 @@
     "name": "聚变",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "removes Exhaust."
   },
   "GAMMA_BLAST": {
@@ -4426,7 +4462,7 @@
     "name": "伽马爆破",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+5 damage."
   },
   "GANG_UP": {
@@ -4445,7 +4481,7 @@
     "name": "围殴",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 per ally hit."
   },
   "GATHER_LIGHT": {
@@ -4464,7 +4500,7 @@
     "name": "收集光辉",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "GENESIS": {
@@ -4483,7 +4519,7 @@
     "name": "创世纪",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gain 3 Stars."
   },
   "GENETIC_ALGORITHM": {
@@ -4504,7 +4540,7 @@
     "name": "遗传算法",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+4 increase."
   },
   "GIANT_ROCK": {
@@ -4523,7 +4559,7 @@
     "name": "巨石",
     "play_notes": "",
     "rarity": "token",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+4 damage."
   },
   "GLACIER": {
@@ -4542,7 +4578,7 @@
     "name": "冰川",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "GLASSWORK": {
@@ -4561,7 +4597,7 @@
     "name": "玻璃工艺",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "GLIMMER": {
@@ -4580,7 +4616,7 @@
     "name": "微光",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 4."
   },
   "GLIMPSE_BEYOND": {
@@ -4601,7 +4637,7 @@
     "name": "彼岸一瞥",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AllAllies",
     "upgrade": "add 4 Souls."
   },
   "GLITTERSTREAM": {
@@ -4620,7 +4656,7 @@
     "name": "流光溢彩",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Block both."
   },
   "GLOW": {
@@ -4639,7 +4675,7 @@
     "name": "辉光",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Stars."
   },
   "GOLD_AXE": {
@@ -4660,12 +4696,13 @@
     "name": "金斧",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "gains Retain."
   },
   "GO_FOR_THE_EYES": {
     "aliases": [
       "Go For The Eyes",
+      "Go for the Eyes",
       "眼部攻击"
     ],
     "card_type": "attack",
@@ -4679,7 +4716,7 @@
     "name": "眼部攻击",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 damage, +1 Weak."
   },
   "GRAND_FINALE": {
@@ -4719,7 +4756,7 @@
     "name": "坟冢爆射",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage; removes Exhaust."
   },
   "GRAVE_WARDEN": {
@@ -4738,7 +4775,7 @@
     "name": "守墓人",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "GREED": {
@@ -4746,9 +4783,9 @@
       "Greed",
       "贪婪"
     ],
-    "card_type": null,
+    "card_type": "Curse",
     "character_pool": "CURSE",
-    "cost": null,
+    "cost": "-1",
     "curated": false,
     "description": "无法打出，诅咒，诅咒，永恒，无效果。无升级。",
     "id": "GREED",
@@ -4758,12 +4795,13 @@
     "kind": "card",
     "name": "贪婪",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Curse",
+    "target_type": "None",
     "upgrade": null
   },
   "GUARDS": {
     "aliases": [
+      "GUARDS!!!",
       "Guards",
       "护驾！！！"
     ],
@@ -4780,7 +4818,7 @@
     "name": "护驾！！！",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "transformed cards upgraded."
   },
   "GUIDING_STAR": {
@@ -4799,7 +4837,7 @@
     "name": "引导之星",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 damage, draw 3."
   },
   "GUILTY": {
@@ -4807,9 +4845,9 @@
       "Guilty",
       "负罪"
     ],
-    "card_type": null,
+    "card_type": "Curse",
     "character_pool": "CURSE",
-    "cost": null,
+    "cost": "-1",
     "curated": false,
     "description": "无法打出，诅咒，诅咒，施加战斗计数减益（Combats 5）。无升级。",
     "id": "GUILTY",
@@ -4817,8 +4855,8 @@
     "kind": "card",
     "name": "负罪",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Curse",
+    "target_type": "None",
     "upgrade": null
   },
   "GUNK_UP": {
@@ -4837,7 +4875,7 @@
     "name": "污秽攻击",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 damage."
   },
   "HAILSTORM": {
@@ -4875,12 +4913,13 @@
     "name": "锤子时间",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 1."
   },
   "HAND_OF_GREED": {
     "aliases": [
       "Hand Of Greed",
+      "Hand of Greed",
       "贪婪之手"
     ],
     "card_type": "attack",
@@ -4894,7 +4933,7 @@
     "name": "贪婪之手",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+5 damage, +5 Gold."
   },
   "HAND_TRICK": {
@@ -4913,7 +4952,7 @@
     "name": "手上技法",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "HANG": {
@@ -4932,7 +4971,7 @@
     "name": "吊杀",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "HAUNT": {
@@ -4972,7 +5011,7 @@
     "name": "破灭",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   },
   "HAZE": {
@@ -4996,8 +5035,7 @@
   },
   "HEADBUTT": {
     "aliases": [
-      "Headbutt",
-      "HEADBUTT"
+      "Headbutt"
     ],
     "card_type": "Attack",
     "character_pool": "ironclad",
@@ -5027,7 +5065,7 @@
     "name": "天际钻头",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage."
   },
   "HEGEMONY": {
@@ -5046,7 +5084,7 @@
     "name": "霸权",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage, gain 3 Energy."
   },
   "HEIRLOOM_HAMMER": {
@@ -5065,7 +5103,7 @@
     "name": "传承之锤",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+5 damage."
   },
   "HELIX_DRILL": {
@@ -5084,7 +5122,7 @@
     "name": "螺旋钻击",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage per Energy."
   },
   "HELLO_WORLD": {
@@ -5105,7 +5143,7 @@
     "name": "你好世界",
     "play_notes": "",
     "rarity": "event",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Innate."
   },
   "HELLRAISER": {
@@ -5145,7 +5183,7 @@
     "name": "御血术",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+5 damage."
   },
   "HIDDEN_CACHE": {
@@ -5164,7 +5202,7 @@
     "name": "隐秘藏品",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+4 Stars next turn."
   },
   "HIDDEN_DAGGERS": {
@@ -5183,17 +5221,24 @@
     "name": "隐秘匕首",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "added Shivs are upgraded."
   },
   "HIDDEN_GEM": {
-    "aliases": [],
+    "aliases": [
+      "Hidden Gem"
+    ],
+    "card_type": "Skill",
+    "character_pool": "colorless",
+    "cost": "1",
     "curated": false,
     "description": "获得 1 点格挡。抽 1 张牌。消耗。",
     "id": "HIDDEN_GEM",
     "kind": "card",
     "name": "HIDDEN_GEM",
-    "play_notes": ""
+    "play_notes": "",
+    "rarity": "Rare",
+    "target_type": "Self"
   },
   "HIGH_FIVE": {
     "aliases": [
@@ -5232,7 +5277,7 @@
     "name": "全息影像",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Block; removes Exhaust."
   },
   "HOTFIX": {
@@ -5253,12 +5298,13 @@
     "name": "热修复",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "removes Exhaust."
   },
   "HOWL_FROM_BEYOND": {
     "aliases": [
       "Howl From Beyond",
+      "Howl from Beyond",
       "彼岸咆哮"
     ],
     "card_type": "attack",
@@ -5295,7 +5341,7 @@
     "name": "聚拢",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AllAllies",
     "upgrade": "draw 3."
   },
   "HYPERBEAM": {
@@ -5333,7 +5379,7 @@
     "name": "冰之长枪",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+5 damage."
   },
   "IGNITION": {
@@ -5354,7 +5400,7 @@
     "name": "引火",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyAlly",
     "upgrade": "removes Exhaust."
   },
   "IMPATIENCE": {
@@ -5373,7 +5419,7 @@
     "name": "急躁",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 3."
   },
   "IMPERVIOUS": {
@@ -5394,7 +5440,7 @@
     "name": "岿然不动",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+10 Block."
   },
   "INFECTION": {
@@ -5402,7 +5448,7 @@
       "Infection",
       "感染"
     ],
-    "card_type": null,
+    "card_type": "Status",
     "character_pool": "STATUS",
     "cost": "-1",
     "curated": false,
@@ -5412,8 +5458,8 @@
     "kind": "card",
     "name": "感染",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Status",
+    "target_type": "None",
     "upgrade": null
   },
   "INFERNAL_BLADE": {
@@ -5434,14 +5480,13 @@
     "name": "地狱之刃",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   },
   "INFERNO": {
     "aliases": [
       "Inferno",
-      "狱火",
-      "INFERNO"
+      "狱火"
     ],
     "card_type": "power",
     "character_pool": "IRONCLAD",
@@ -5475,7 +5520,7 @@
     "name": "无尽刀刃",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Innate."
   },
   "INFLAME": {
@@ -5495,7 +5540,7 @@
     "name": "燃烧",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Strength."
   },
   "INJURY": {
@@ -5503,7 +5548,7 @@
       "Injury",
       "伤口"
     ],
-    "card_type": null,
+    "card_type": "Curse",
     "character_pool": "CURSE",
     "cost": "-1",
     "curated": false,
@@ -5513,8 +5558,8 @@
     "kind": "card",
     "name": "伤口",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Curse",
+    "target_type": "None",
     "upgrade": null
   },
   "INTERCEPT": {
@@ -5533,7 +5578,7 @@
     "name": "拦截",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyAlly",
     "upgrade": "+4 Block."
   },
   "INVOKE": {
@@ -5552,7 +5597,7 @@
     "name": "唤起",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "Summon 3, gain 3 Energy."
   },
   "IRON_WAVE": {
@@ -5571,7 +5616,7 @@
     "name": "铁斩波",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage, +2 Block. Playing it with `target_combat_id` on an already-dead Reattach segment returns ok=true but no-ops the WHOLE card — neither damage nor the Block component applies. Never target 0-HP segments; the block is tied to the attack resolving on a live target."
   },
   "ITERATION": {
@@ -5590,7 +5635,7 @@
     "name": "迭代",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 3 additional."
   },
   "I_AM_INVINCIBLE": {
@@ -5609,7 +5654,7 @@
     "name": "所向无敌",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "JACKPOT": {
@@ -5628,12 +5673,13 @@
     "name": "头奖",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+5 damage; cards upgraded. A Colorless-Potion-granted copy is playable at **0 cost** the turn it is granted (potion rule: granted card is free this turn); granted 0-cost card examples include Rage/Bully/BattleTrance."
   },
   "JACK_OF_ALL_TRADES": {
     "aliases": [
       "Jack Of All Trades",
+      "Jack of All Trades",
       "万金油"
     ],
     "card_type": "skill",
@@ -5649,7 +5695,7 @@
     "name": "万金油",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "add 2."
   },
   "JUGGERNAUT": {
@@ -5689,13 +5735,13 @@
     "name": "杂耍",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Innate."
   },
   "KINGLY_KICK": {
     "aliases": [
+      "Kingly Kick",
       "KinglyKick",
-      "KINGLY_KICK",
       "王者踢"
     ],
     "card_type": "attack",
@@ -5709,7 +5755,7 @@
     "name": "王者踢",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+8 damage."
   },
   "KINGLY_PUNCH": {
@@ -5728,7 +5774,7 @@
     "name": "王者之拳",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage, +2 increase."
   },
   "KNIFE_TRAP": {
@@ -5747,7 +5793,7 @@
     "name": "刀刃陷阱",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "played Shivs are upgraded."
   },
   "KNOCKDOWN": {
@@ -5766,7 +5812,7 @@
     "name": "击倒",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+4 damage; 3x damage from others."
   },
   "KNOCKOUT_BLOW": {
@@ -5785,7 +5831,7 @@
     "name": "决胜一击",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+8 damage."
   },
   "KNOW_THY_PLACE": {
@@ -5806,7 +5852,7 @@
     "name": "何人僭越",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "removes Exhaust."
   },
   "LANTERN_KEY": {
@@ -5814,7 +5860,7 @@
       "Lantern Key",
       "灯笼钥匙"
     ],
-    "card_type": null,
+    "card_type": "Quest",
     "character_pool": "QUEST",
     "cost": "-1",
     "curated": false,
@@ -5824,8 +5870,8 @@
     "kind": "card",
     "name": "灯笼钥匙",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Quest",
+    "target_type": "Self",
     "upgrade": null
   },
   "LARGESSE": {
@@ -5844,7 +5890,7 @@
     "name": "慷慨捐助",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyAlly",
     "upgrade": "card is upgraded."
   },
   "LEADING_STRIKE": {
@@ -5865,7 +5911,7 @@
     "name": "先制打击",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "LEAP": {
@@ -5884,12 +5930,13 @@
     "name": "飞跃",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "LEGION_OF_BONE": {
     "aliases": [
       "Legion Of Bone",
+      "Legion of Bone",
       "骸骨军团"
     ],
     "card_type": "skill",
@@ -5905,7 +5952,7 @@
     "name": "骸骨军团",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AllAllies",
     "upgrade": "Summon 8."
   },
   "LEG_SWEEP": {
@@ -5924,7 +5971,7 @@
     "name": "扫腿",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 Block, +1 Weak."
   },
   "LETHALITY": {
@@ -5945,7 +5992,7 @@
     "name": "致死性",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+75%."
   },
   "LIFT": {
@@ -5964,7 +6011,7 @@
     "name": "举起",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyAlly",
     "upgrade": "+5 Block."
   },
   "LIGHTNING_ROD": {
@@ -5983,7 +6030,7 @@
     "name": "引雷针",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "LOOP": {
@@ -6002,7 +6049,7 @@
     "name": "循环",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "2 times."
   },
   "LUMINESCE": {
@@ -6024,7 +6071,7 @@
     "name": "发光",
     "play_notes": "",
     "rarity": "token",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gain 3 Energy."
   },
   "LUNAR_BLAST": {
@@ -6043,7 +6090,7 @@
     "name": "月面射击",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 damage."
   },
   "MACHINE_LEARNING": {
@@ -6064,7 +6111,7 @@
     "name": "机器学习",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Innate."
   },
   "MAD_SCIENCE": {
@@ -6085,7 +6132,7 @@
     "name": "疯狂科学",
     "play_notes": "",
     "rarity": "event",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "gains Innate."
   },
   "MAKE_IT_SO": {
@@ -6104,7 +6151,7 @@
     "name": "如此甚好",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "MALAISE": {
@@ -6125,7 +6172,7 @@
     "name": "萎靡",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "X+1."
   },
   "MANGLE": {
@@ -6144,7 +6191,7 @@
     "name": "凌虐",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+5 damage, +5 Strength loss."
   },
   "MANIFEST_AUTHORITY": {
@@ -6163,12 +6210,13 @@
     "name": "君权自授",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+1 Block; card upgraded."
   },
   "MASTER_OF_STRATEGY": {
     "aliases": [
       "Master Of Strategy",
+      "Master of Strategy",
       "战略大师"
     ],
     "card_type": "skill",
@@ -6184,7 +6232,7 @@
     "name": "战略大师",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 4."
   },
   "MASTER_PLANNER": {
@@ -6203,7 +6251,7 @@
     "name": "谋划专家",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 1."
   },
   "MAUL": {
@@ -6222,7 +6270,7 @@
     "name": "撕咬",
     "play_notes": "",
     "rarity": "ancient",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 damage, +1 increase."
   },
   "MAYHEM": {
@@ -6241,7 +6289,7 @@
     "name": "混乱",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 1."
   },
   "MELANCHOLY": {
@@ -6260,7 +6308,7 @@
     "name": "忧郁",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+4 Block."
   },
   "MEMENTO_MORI": {
@@ -6279,7 +6327,7 @@
     "name": "铭记死亡",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 base, +1 per discard."
   },
   "METAMORPHOSIS": {
@@ -6300,7 +6348,7 @@
     "name": "蜕变",
     "play_notes": "",
     "rarity": "event",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "shuffle 5."
   },
   "METEOR_SHOWER": {
@@ -6340,7 +6388,7 @@
     "name": "陨石打击",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+6 damage."
   },
   "MIMIC": {
@@ -6361,7 +6409,7 @@
     "name": "拟态",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyAlly",
     "upgrade": "removes Exhaust."
   },
   "MIND_BLAST": {
@@ -6382,7 +6430,7 @@
     "name": "精神冲击",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "cost 0."
   },
   "MIND_ROT": {
@@ -6390,7 +6438,7 @@
       "Mind Rot",
       "心智腐蚀"
     ],
-    "card_type": null,
+    "card_type": "Status",
     "character_pool": "TOKEN",
     "cost": "-1",
     "curated": false,
@@ -6400,8 +6448,8 @@
     "kind": "card",
     "name": "心智腐蚀",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Status",
+    "target_type": "None",
     "upgrade": null
   },
   "MINION_DIVE_BOMB": {
@@ -6422,7 +6470,7 @@
     "name": "仆从俯冲",
     "play_notes": "",
     "rarity": "token",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "MINION_SACRIFICE": {
@@ -6443,7 +6491,7 @@
     "name": "仆从捐躯",
     "play_notes": "",
     "rarity": "token",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "MINION_STRIKE": {
@@ -6465,7 +6513,7 @@
     "name": "仆从打击",
     "play_notes": "",
     "rarity": "token",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "MIRAGE": {
@@ -6486,7 +6534,7 @@
     "name": "蜃景",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   },
   "MISERY": {
@@ -6507,7 +6555,7 @@
     "name": "苦难",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage; gains Retain."
   },
   "MODDED": {
@@ -6526,7 +6574,7 @@
     "name": "模组改造",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 2."
   },
   "MOLTEN_FIST": {
@@ -6547,7 +6595,7 @@
     "name": "熔融之拳",
     "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：易伤 1→2 翻倍在蜂群术士与千足虫目标确认；力量3 下易伤目标 13 级命中；打出即自耗（附带牌库提纯）。",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+4 damage. On a target with 0 Vulnerable stacks it applies 0 Vuln (doubles zero) AND does not consume an enemy Artifact stack — no debuff event is generated at 0 stacks (an Artifact 2 stack stays 2). Value is wasted on un-Vulned/Artifact targets: apply Vuln first (Bash/Thunderclap), MoltenFist after."
   },
   "MOMENTUM_STRIKE": {
@@ -6568,11 +6616,12 @@
     "name": "趁势打击",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "MONARCHS_GAZE": {
     "aliases": [
+      "Monarch's Gaze",
       "Monarchs Gaze",
       "王之凝视"
     ],
@@ -6587,7 +6636,7 @@
     "name": "王之凝视",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 1."
   },
   "MONOLOGUE": {
@@ -6608,12 +6657,13 @@
     "name": "独白",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Retain."
   },
   "MULTI_CAST": {
     "aliases": [
       "Multi Cast",
+      "Multi-Cast",
       "多重释放"
     ],
     "card_type": "skill",
@@ -6627,7 +6677,7 @@
     "name": "多重释放",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "X+1."
   },
   "MURDER": {
@@ -6646,7 +6696,7 @@
     "name": "谋杀",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "cost 2."
   },
   "NECRO_MASTERY": {
@@ -6689,6 +6739,7 @@
   },
   "NEOWS_FURY": {
     "aliases": [
+      "Neow's Fury",
       "Neows Fury",
       "尼奥之怒"
     ],
@@ -6705,7 +6756,7 @@
     "name": "尼奥之怒",
     "play_notes": "",
     "rarity": "ancient",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+4 damage, return 3."
   },
   "NEUROSURGE": {
@@ -6724,7 +6775,7 @@
     "name": "精神过载",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gain 4 Energy."
   },
   "NEUTRALIZE": {
@@ -6743,7 +6794,7 @@
     "name": "中和",
     "play_notes": "",
     "rarity": "basic",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 damage, +1 Weak."
   },
   "NEUTRON_AEGIS": {
@@ -6762,7 +6813,7 @@
     "name": "中子护盾",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Plating."
   },
   "NIGHTMARE": {
@@ -6783,7 +6834,7 @@
     "name": "夜魇",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 2."
   },
   "NORMALITY": {
@@ -6791,9 +6842,9 @@
       "Normality",
       "常态"
     ],
-    "card_type": null,
+    "card_type": "Curse",
     "character_pool": "CURSE",
-    "cost": null,
+    "cost": "-1",
     "curated": false,
     "description": "无法打出，诅咒，诅咒，在手牌中时每回合最多打出 3 张牌。无升级。",
     "id": "NORMALITY",
@@ -6801,8 +6852,8 @@
     "kind": "card",
     "name": "常态",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Curse",
+    "target_type": "None",
     "upgrade": null
   },
   "NOSTALGIA": {
@@ -6821,7 +6872,7 @@
     "name": "怀旧",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   },
   "NOT_YET": {
@@ -6842,7 +6893,7 @@
     "name": "时候未到",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "heal 13 HP. The +10 HP heal fires in-combat — emergency sustain for HP-starved lines; stacks same-turn with TuningFork skill-count block."
   },
   "NOXIOUS_FUMES": {
@@ -6880,7 +6931,7 @@
     "name": "无处可逃",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "base 15."
   },
   "NULL": {
@@ -6899,7 +6950,7 @@
     "name": "空值",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage, +1 Weak."
   },
   "OBLIVION": {
@@ -6918,7 +6969,7 @@
     "name": "湮灭",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 Doom per card."
   },
   "OFFERING": {
@@ -6940,7 +6991,7 @@
     "name": "祭品",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 5."
   },
   "OMNISLICE": {
@@ -6959,13 +7010,12 @@
     "name": "全刃斩",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "ONE_TWO_PUNCH": {
     "aliases": [
-      "One-Two Punch",
-      "ONE_TWO_PUNCH"
+      "One-Two Punch"
     ],
     "card_type": "Skill",
     "character_pool": "ironclad",
@@ -6995,7 +7045,7 @@
     "name": "环绕轨道",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 1."
   },
   "OUTBREAK": {
@@ -7033,7 +7083,7 @@
     "name": "智取",
     "play_notes": "",
     "rarity": "event",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gain 3."
   },
   "OVERCLOCK": {
@@ -7052,13 +7102,13 @@
     "name": "超频",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 3."
   },
   "PACTS_END": {
     "aliases": [
+      "Pact's End",
       "PactsEnd",
-      "PACTS_END",
       "契约终结"
     ],
     "card_type": "attack",
@@ -7093,7 +7143,7 @@
     "name": "书页风暴",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   },
   "PALE_BLUE_DOT": {
@@ -7112,7 +7162,7 @@
     "name": "苍白蓝点",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 2 additional."
   },
   "PANACHE": {
@@ -7152,7 +7202,7 @@
     "name": "紧急按钮",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+10 Block."
   },
   "PARRY": {
@@ -7171,7 +7221,7 @@
     "name": "招架",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+4 Parry."
   },
   "PARSE": {
@@ -7192,7 +7242,7 @@
     "name": "解析",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 4."
   },
   "PARTICLE_WALL": {
@@ -7211,7 +7261,7 @@
     "name": "粒子墙",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "PATTER": {
@@ -7230,7 +7280,7 @@
     "name": "星星点点",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Block, +1 Vigor."
   },
   "PECK": {
@@ -7249,7 +7299,7 @@
     "name": "啄击",
     "play_notes": "",
     "rarity": "event",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "4 hits."
   },
   "PERFECTED_STRIKE": {
@@ -7270,7 +7320,7 @@
     "name": "完美打击",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 per Strike. LIVE (run-36): formula confirmed — with 7-9 Strike-tags in deck plus player Strength plus StrikeDummy +3 (Dummy applies before Vuln multiplier), resolves 23–30 class; TwinStrike copies each add a tag (+2 PS base each)."
   },
   "PHANTOM_BLADES": {
@@ -7291,7 +7341,7 @@
     "name": "幻影之刃",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+12 damage."
   },
   "PHOTON_CUT": {
@@ -7310,7 +7360,7 @@
     "name": "光子切割",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage, draw 2."
   },
   "PIERCING_WAIL": {
@@ -7350,12 +7400,13 @@
     "name": "掠夺",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "PILLAR_OF_CREATION": {
     "aliases": [
       "Pillar Of Creation",
+      "Pillar of Creation",
       "创世之柱"
     ],
     "card_type": "power",
@@ -7369,7 +7420,7 @@
     "name": "创世之柱",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+4 Block."
   },
   "PINPOINT": {
@@ -7388,7 +7439,7 @@
     "name": "精密瞄准",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+4 damage."
   },
   "POISONED_STAB": {
@@ -7407,7 +7458,7 @@
     "name": "带毒刺击",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage, +1 Poison."
   },
   "POKE": {
@@ -7426,7 +7477,7 @@
     "name": "戳击",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "Osty +3 damage."
   },
   "POMMEL_STRIKE": {
@@ -7447,7 +7498,7 @@
     "name": "剑柄打击",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 damage, draw 2."
   },
   "POOR_SLEEP": {
@@ -7455,9 +7506,9 @@
       "Poor Sleep",
       "睡眠不佳"
     ],
-    "card_type": null,
+    "card_type": "Curse",
     "character_pool": "CURSE",
-    "cost": null,
+    "cost": "-1",
     "curated": false,
     "description": "无法打出，诅咒，诅咒，保留，无效果。无升级。",
     "id": "POOR_SLEEP",
@@ -7467,8 +7518,8 @@
     "kind": "card",
     "name": "睡眠不佳",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Curse",
+    "target_type": "None",
     "upgrade": null
   },
   "POUNCE": {
@@ -7487,7 +7538,7 @@
     "name": "猛扑",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+6 damage."
   },
   "PRECISE_CUT": {
@@ -7506,7 +7557,7 @@
     "name": "确切击",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 base."
   },
   "PREDATOR": {
@@ -7525,7 +7576,7 @@
     "name": "猎杀者",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+5 damage."
   },
   "PREPARED": {
@@ -7544,7 +7595,7 @@
     "name": "早有准备",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 2, discard 2."
   },
   "PREP_TIME": {
@@ -7563,7 +7614,7 @@
     "name": "准备时间",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Vigor."
   },
   "PRIMAL_FORCE": {
@@ -7582,7 +7633,7 @@
     "name": "原始力量",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "transformed GiantRocks are upgraded. The transform is combat-scoped — the deck still contains the original attack cards after fights where hand attacks had been transformed (GiantRocks do not permanently replace deck cards)."
   },
   "PRODUCTION": {
@@ -7603,7 +7654,7 @@
     "name": "生产",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gain 3 Energy."
   },
   "PROLONG": {
@@ -7624,7 +7675,7 @@
     "name": "延长",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "removes Exhaust."
   },
   "PROPHESIZE": {
@@ -7643,7 +7694,7 @@
     "name": "预言",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 9."
   },
   "PROTECTOR": {
@@ -7662,7 +7713,7 @@
     "name": "守护者",
     "play_notes": "",
     "rarity": "ancient",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "cost 0; base 15."
   },
   "PROWESS": {
@@ -7681,7 +7732,7 @@
     "name": "敏锐",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+1 to both."
   },
   "PULL_AGGRO": {
@@ -7700,12 +7751,13 @@
     "name": "吸引仇恨",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "Summon 5, +2 Block."
   },
   "PULL_FROM_BELOW": {
     "aliases": [
       "Pull From Below",
+      "Pull from Below",
       "下界拉扯"
     ],
     "card_type": "attack",
@@ -7721,7 +7773,7 @@
     "name": "下界拉扯",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage."
   },
   "PURITY": {
@@ -7743,7 +7795,7 @@
     "name": "纯净",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "exhaust up to 5. Exhausting an unplayed FranticEscape from hand vs TheInsatiable caused ZERO Sandpit change at counter 4 — safe thin of trap cards; exhausts of Defend/Strike fire FeelNoPain +3 each when deployed; no Juggernaut procs off Purity exhausts without FnP converting them to Block first (see JUGGERNAUT entry)."
   },
   "PUTREFY": {
@@ -7764,7 +7816,7 @@
     "name": "腐化",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 to both."
   },
   "PYRE": {
@@ -7783,7 +7835,7 @@
     "name": "薪火之源",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 max Energy."
   },
   "QUADCAST": {
@@ -7802,7 +7854,7 @@
     "name": "四重释放",
     "play_notes": "",
     "rarity": "ancient",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   },
   "QUASAR": {
@@ -7821,7 +7873,7 @@
     "name": "类星体",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "offered cards are upgraded."
   },
   "RADIATE": {
@@ -7845,7 +7897,8 @@
   },
   "RAGE": {
     "aliases": [
-      "Rage"
+      "Rage",
+      "怒火"
     ],
     "card_type": "skill",
     "character_pool": "IRONCLAD",
@@ -7858,7 +7911,7 @@
     "name": "怒火",
     "play_notes": "攻击密集回合先打 Rage 再打攻击牌；0 费不与输出争能量。 LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：RAGE_POWER 数值 = 每次打出 3（非旧反思文本的 5）；当回合每张攻击牌 +3 挡。Vital Spark 下打出 RAGE 会给玩家挂 TAINTED_POWER:2——零技能战把 Rage 当技能类对待，尽管卡面 card_type 显示 power。",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "每次攻击触发的格挡 3→5。"
   },
   "RAINBOW": {
@@ -7879,7 +7932,7 @@
     "name": "彩虹",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "removes Exhaust."
   },
   "RALLY": {
@@ -7898,7 +7951,7 @@
     "name": "集结",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AllAllies",
     "upgrade": "+5 Block."
   },
   "RAMPAGE": {
@@ -7917,7 +7970,7 @@
     "name": "暴走",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+4 increase per play."
   },
   "RATTLE": {
@@ -7936,7 +7989,7 @@
     "name": "摇响",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "Osty +2 damage."
   },
   "REANIMATE": {
@@ -7957,7 +8010,7 @@
     "name": "死者苏生",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "Summon 25."
   },
   "REAP": {
@@ -7978,7 +8031,7 @@
     "name": "收割",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+6 damage."
   },
   "REAPER_FORM": {
@@ -7999,7 +8052,7 @@
     "name": "收割形态",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Retain."
   },
   "REAVE": {
@@ -8018,7 +8071,7 @@
     "name": "剥夺",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage; Soul upgraded."
   },
   "REBOOT": {
@@ -8039,7 +8092,7 @@
     "name": "重启",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 6."
   },
   "REBOUND": {
@@ -8058,7 +8111,7 @@
     "name": "反弹",
     "play_notes": "",
     "rarity": "event",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "REFINE_BLADE": {
@@ -8077,7 +8130,7 @@
     "name": "淬炼刀刃",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "Forge 13."
   },
   "REFLECT": {
@@ -8096,7 +8149,7 @@
     "name": "反射",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+5 Block."
   },
   "REFLEX": {
@@ -8115,7 +8168,7 @@
     "name": "本能反应",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 3."
   },
   "REFRACT": {
@@ -8134,7 +8187,7 @@
     "name": "折射",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "REGRET": {
@@ -8142,9 +8195,9 @@
       "Regret",
       "悔恨"
     ],
-    "card_type": null,
+    "card_type": "Curse",
     "character_pool": "CURSE",
-    "cost": null,
+    "cost": "-1",
     "curated": false,
     "description": "无法打出，诅咒，诅咒，回合结束仍在手牌则受到等同手牌数的无视格挡伤害。无升级。",
     "id": "REGRET",
@@ -8152,8 +8205,8 @@
     "kind": "card",
     "name": "悔恨",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Curse",
+    "target_type": "None",
     "upgrade": null
   },
   "RELAX": {
@@ -8174,17 +8227,24 @@
     "name": "休憩",
     "play_notes": "",
     "rarity": "ancient",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Block, draw 3, gain 3 Energy."
   },
   "REND": {
-    "aliases": [],
+    "aliases": [
+      "Rend"
+    ],
+    "card_type": "Attack",
+    "character_pool": "colorless",
+    "cost": "2",
     "curated": false,
     "description": "造成 7 点伤害 2 次。目标每有一层减益，额外造成 2 点伤害。",
     "id": "REND",
     "kind": "card",
     "name": "REND",
-    "play_notes": ""
+    "play_notes": "",
+    "rarity": "Rare",
+    "target_type": "AnyEnemy"
   },
   "RESONANCE": {
     "aliases": [
@@ -8223,7 +8283,7 @@
     "name": "焦躁",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 3, gain 3 Energy."
   },
   "RICOCHET": {
@@ -8261,12 +8321,13 @@
     "name": "右手之手",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "Osty +2 damage."
   },
   "RIP_AND_TEAR": {
     "aliases": [
       "Rip And Tear",
+      "Rip and Tear",
       "撕裂扯碎"
     ],
     "card_type": "attack",
@@ -8299,7 +8360,7 @@
     "name": "火箭飞拳",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 damage, draw 2."
   },
   "ROLLING_BOULDER": {
@@ -8337,7 +8398,7 @@
     "name": "王国资产",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+10 Gold."
   },
   "ROYAL_GAMBLE": {
@@ -8359,7 +8420,7 @@
     "name": "胜券在王",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Retain."
   },
   "RUPTURE": {
@@ -8378,7 +8439,7 @@
     "name": "撕裂",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gain 2 Strength. **Power Amount STACKS across copies** — smith-upgraded Rupture (Amount 2) + a second un-upgraded Rupture card played later raises RUPTURE_POWER to 3; every subsequent self-damage event grants +3 Strength (Bloodletting 0e = +3 Str AND +2 Energy). Foul Potion combat self-damage also triggers Rupture (potion is not a \"card you played\" per the wording, but the HP loss counts — treat any same-turn HP loss as a trigger)."
   },
   "SACRIFICE": {
@@ -8399,7 +8460,7 @@
     "name": "献祭",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   },
   "SALVO": {
@@ -8420,7 +8481,7 @@
     "name": "齐射",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+4 damage."
   },
   "SCARE": {
@@ -8462,7 +8523,7 @@
     "name": "内存清理",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gain 3 Energy next turn."
   },
   "SCOURGE": {
@@ -8481,7 +8542,7 @@
     "name": "鞭打",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 Doom, draw 2."
   },
   "SCRAPE": {
@@ -8500,7 +8561,7 @@
     "name": "刮削",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage, draw 5."
   },
   "SCRAWL": {
@@ -8522,7 +8583,7 @@
     "name": "乱写",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Retain."
   },
   "SCULPTING_STRIKE": {
@@ -8544,7 +8605,7 @@
     "name": "雕琢打击",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "SEANCE": {
@@ -8565,7 +8626,7 @@
     "name": "降神会",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   },
   "SECOND_WIND": {
@@ -8586,7 +8647,7 @@
     "name": "重振精神",
     "play_notes": "run-49 与 FNP+Unmovable 同场 live：耗尽 N 张非攻击牌 → SW 5N 挡 + FNP 每张耗尽 3 挡；Unmovable 翻倍该回合首次卡牌挡值（SW 为首个挡源时 5→10，如 1 张耗尽 = SW 10 + FNP 3）。手牌无其他非攻击牌时 SW 消耗自身——0 张非攻击 = 0 挡，FNP 无触发（run-49 T4 观测）。药水钓出的副本当回合免费打出。",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+7 Block each. Corrections: the effect exhausts OTHER non-Attacks only — Attacks in hand (e.g. Fiend Fire) are NOT exhausted and SW itself does not count toward its own exhaust-block total (2 Defends in hand → exhaust count 2, Block 10 at base values). Charon's Ashes procs once per card the effect exhausts, not on SW itself. Trap cards (FranticEscape-class) are defused by this exhaust — they are discarded-to-exhaust without their on-play downside firing. An event enchant granting +2 Block per exhausted card stacked with a smith upgrade that added +2 more (7→9 per card on an enchanted copy; the table's +7 upgrade value did not appear on that path)."
   },
   "SECRET_TECHNIQUE": {
@@ -8607,7 +8668,7 @@
     "name": "秘密技巧",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "removes Exhaust."
   },
   "SECRET_WEAPON": {
@@ -8628,7 +8689,7 @@
     "name": "秘密武器",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "removes Exhaust."
   },
   "SEEKER_STRIKE": {
@@ -8649,7 +8710,7 @@
     "name": "寻觅打击",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "SEEKING_EDGE": {
@@ -8687,7 +8748,7 @@
     "name": "哨戒模式",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 1."
   },
   "SERPENT_FORM": {
@@ -8727,7 +8788,7 @@
     "name": "预备打击",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage, +1 Strength."
   },
   "SEVEN_STARS": {
@@ -8765,7 +8826,7 @@
     "name": "断绝",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+5 damage."
   },
   "SHADOWMELD": {
@@ -8784,7 +8845,7 @@
     "name": "融入暗影",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   },
   "SHADOW_SHIELD": {
@@ -8803,7 +8864,7 @@
     "name": "暗影之盾",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+4 Block."
   },
   "SHADOW_STEP": {
@@ -8822,7 +8883,7 @@
     "name": "暗影步",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   },
   "SHAME": {
@@ -8830,9 +8891,9 @@
       "Shame",
       "羞耻"
     ],
-    "card_type": null,
+    "card_type": "Curse",
     "character_pool": "CURSE",
-    "cost": null,
+    "cost": "-1",
     "curated": false,
     "description": "无法打出，诅咒，诅咒，回合结束仍在手牌则获得 1 层脆弱。无升级。",
     "id": "SHAME",
@@ -8840,8 +8901,8 @@
     "kind": "card",
     "name": "羞耻",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Curse",
+    "target_type": "None",
     "upgrade": null
   },
   "SHARED_FATE": {
@@ -8862,7 +8923,7 @@
     "name": "共命运",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "enemy loses 3."
   },
   "SHATTER": {
@@ -8903,7 +8964,7 @@
     "name": "闪耀打击",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "SHIV": {
@@ -8964,7 +9025,7 @@
     "name": "幽幕",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "SHRUG_IT_OFF": {
@@ -8983,11 +9044,12 @@
     "name": "耸肩无视",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "SIC_EM": {
     "aliases": [
+      "Sic 'Em",
       "Sic Em",
       "放狗咬"
     ],
@@ -9002,7 +9064,7 @@
     "name": "放狗咬",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "Osty +1 damage, +1 SicEm."
   },
   "SIGNAL_BOOST": {
@@ -9023,7 +9085,7 @@
     "name": "信号增强",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   },
   "SKEWER": {
@@ -9042,7 +9104,7 @@
     "name": "串刺",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "SKIM": {
@@ -9061,12 +9123,13 @@
     "name": "快速检索",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 4."
   },
   "SLEIGHT_OF_FLESH": {
     "aliases": [
       "Sleight Of Flesh",
+      "Sleight of Flesh",
       "血肉戏法"
     ],
     "card_type": "power",
@@ -9080,7 +9143,7 @@
     "name": "血肉戏法",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+4 damage."
   },
   "SLICE": {
@@ -9099,7 +9162,7 @@
     "name": "切割",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "SLIMED": {
@@ -9120,7 +9183,7 @@
     "name": "黏液",
     "play_notes": "",
     "rarity": "status",
-    "target_type": null,
+    "target_type": "None",
     "upgrade": null
   },
   "SLOTH": {
@@ -9128,7 +9191,7 @@
       "Sloth",
       "怠惰"
     ],
-    "card_type": null,
+    "card_type": "Status",
     "character_pool": "TOKEN",
     "cost": "-1",
     "curated": false,
@@ -9138,8 +9201,8 @@
     "kind": "card",
     "name": "怠惰",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Status",
+    "target_type": "None",
     "upgrade": null
   },
   "SMOKESTACK": {
@@ -9179,7 +9242,7 @@
     "name": "蛇咬",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 Poison."
   },
   "SNAP": {
@@ -9200,7 +9263,7 @@
     "name": "响指",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "Osty +3 damage."
   },
   "SNEAKY": {
@@ -9219,7 +9282,7 @@
     "name": "鬼祟",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gain 2 Block."
   },
   "SOLAR_STRIKE": {
@@ -9240,7 +9303,7 @@
     "name": "太阳打击",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 damage, +1 Star."
   },
   "SOLDIER_STEW": {
@@ -9264,9 +9327,9 @@
       "Soot",
       "煤灰"
     ],
-    "card_type": null,
+    "card_type": "Status",
     "character_pool": "STATUS",
-    "cost": null,
+    "cost": "-1",
     "curated": false,
     "description": "无法打出，状态，状态，无效果。无升级。",
     "id": "SOOT",
@@ -9274,8 +9337,8 @@
     "kind": "card",
     "name": "煤灰",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Status",
+    "target_type": "None",
     "upgrade": null
   },
   "SOUL": {
@@ -9296,7 +9359,7 @@
     "name": "灵魂",
     "play_notes": "",
     "rarity": "token",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 3."
   },
   "SOUL_STORM": {
@@ -9315,7 +9378,7 @@
     "name": "灵魂风暴",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 per Soul."
   },
   "SOVEREIGN_BLADE": {
@@ -9376,7 +9439,7 @@
     "name": "光谱转换",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 1."
   },
   "SPEEDSTER": {
@@ -9416,12 +9479,13 @@
     "name": "旋转工艺",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "also Channel 1 Glass when played."
   },
   "SPIRIT_OF_ASH": {
     "aliases": [
       "Spirit Of Ash",
+      "Spirit of Ash",
       "灰烬之魂"
     ],
     "card_type": "power",
@@ -9437,7 +9501,7 @@
     "name": "灰烬之魂",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+5 Block."
   },
   "SPITE": {
@@ -9456,7 +9520,7 @@
     "name": "怨恨",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "3 hits."
   },
   "SPLASH": {
@@ -9475,7 +9539,7 @@
     "name": "溅射",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "offered cards upgraded."
   },
   "SPOILS_MAP": {
@@ -9483,7 +9547,7 @@
       "Spoils Map",
       "战利品地图"
     ],
-    "card_type": null,
+    "card_type": "Quest",
     "character_pool": "QUEST",
     "cost": "-1",
     "curated": false,
@@ -9493,13 +9557,14 @@
     "kind": "card",
     "name": "战利品地图",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Quest",
+    "target_type": "Self",
     "upgrade": null
   },
   "SPOILS_OF_BATTLE": {
     "aliases": [
       "Spoils Of Battle",
+      "Spoils of Battle",
       "战利品"
     ],
     "card_type": "skill",
@@ -9513,7 +9578,7 @@
     "name": "战利品",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "Forge 8."
   },
   "SPORE_MIND": {
@@ -9534,7 +9599,7 @@
     "name": "孢子之心",
     "play_notes": "",
     "rarity": "curse",
-    "target_type": null,
+    "target_type": "None",
     "upgrade": null
   },
   "SPUR": {
@@ -9555,7 +9620,7 @@
     "name": "激励",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "Summon 5, heal 7."
   },
   "SQUASH": {
@@ -9574,7 +9639,7 @@
     "name": "压扁",
     "play_notes": "",
     "rarity": "event",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage, +1 Vulnerable."
   },
   "SQUEEZE": {
@@ -9593,7 +9658,7 @@
     "name": "挤压",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "base 30, +6 per card."
   },
   "STACK": {
@@ -9612,13 +9677,12 @@
     "name": "堆叠",
     "play_notes": "",
     "rarity": "event",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "STAMPEDE": {
     "aliases": [
-      "Stampede",
-      "STAMPEDE"
+      "Stampede"
     ],
     "card_type": "Power",
     "character_pool": "ironclad",
@@ -9667,13 +9731,12 @@
     "name": "添柴",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "added cards are upgraded."
   },
   "STOMP": {
     "aliases": [
       "Stomp",
-      "STOMP",
       "践踏"
     ],
     "card_type": "Attack",
@@ -9704,7 +9767,7 @@
     "name": "岩石铠甲",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Plating."
   },
   "STORM": {
@@ -9723,12 +9786,13 @@
     "name": "雷暴",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "Channel 2."
   },
   "STORM_OF_STEEL": {
     "aliases": [
       "Storm Of Steel",
+      "Storm of Steel",
       "钢铁风暴"
     ],
     "card_type": "skill",
@@ -9742,7 +9806,7 @@
     "name": "钢铁风暴",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "added Shivs are upgraded."
   },
   "STRANGLE": {
@@ -9761,7 +9825,7 @@
     "name": "紧勒",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage, +1 Strangle."
   },
   "STRATAGEM": {
@@ -9780,11 +9844,12 @@
     "name": "谋略",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   },
   "STRIKE_DEFECT": {
     "aliases": [
+      "Strike",
       "Strike Defect",
       "打击"
     ],
@@ -9801,11 +9866,12 @@
     "name": "打击",
     "play_notes": "",
     "rarity": "basic",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "STRIKE_IRONCLAD": {
     "aliases": [
+      "Strike",
       "Strike Ironclad",
       "打击"
     ],
@@ -9822,11 +9888,12 @@
     "name": "打击",
     "play_notes": "",
     "rarity": "basic",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "STRIKE_NECROBINDER": {
     "aliases": [
+      "Strike",
       "Strike Necrobinder",
       "打击"
     ],
@@ -9843,11 +9910,12 @@
     "name": "打击",
     "play_notes": "",
     "rarity": "basic",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "STRIKE_REGENT": {
     "aliases": [
+      "Strike",
       "Strike Regent",
       "打击"
     ],
@@ -9864,11 +9932,12 @@
     "name": "打击",
     "play_notes": "",
     "rarity": "basic",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "STRIKE_SILENT": {
     "aliases": [
+      "Strike",
       "Strike Silent",
       "打击"
     ],
@@ -9885,7 +9954,7 @@
     "name": "打击",
     "play_notes": "",
     "rarity": "basic",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "SUBROUTINE": {
@@ -9904,7 +9973,7 @@
     "name": "子程序",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   },
   "SUCKER_PUNCH": {
@@ -9923,7 +9992,7 @@
     "name": "突然一拳",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage, +1 Weak."
   },
   "SUMMON_FORTH": {
@@ -9944,7 +10013,7 @@
     "name": "征召上前",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "Forge 11."
   },
   "SUNDER": {
@@ -9963,7 +10032,7 @@
     "name": "分离",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+8 damage."
   },
   "SUPERCRITICAL": {
@@ -9984,7 +10053,7 @@
     "name": "超临界态",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gain 6 Energy."
   },
   "SUPERMASSIVE": {
@@ -10003,7 +10072,7 @@
     "name": "超大质量",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 per generated card."
   },
   "SUPPRESS": {
@@ -10024,7 +10093,7 @@
     "name": "压制",
     "play_notes": "",
     "rarity": "ancient",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+6 damage, +2 Weak."
   },
   "SURVIVOR": {
@@ -10043,7 +10112,7 @@
     "name": "生存者",
     "play_notes": "",
     "rarity": "basic",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "SWEEPING_BEAM": {
@@ -10088,14 +10157,21 @@
     "upgrade": "Osty +5 damage."
   },
   "SWORD_BOOMERANG": {
-    "aliases": [],
+    "aliases": [
+      "Sword Boomerang"
+    ],
+    "card_type": "Attack",
+    "character_pool": "ironclad",
+    "cost": "1",
     "curated": true,
     "description": "对随机敌人造成 3 点伤害，共 3 次。（升级：4 点伤害 ×3。）多段攻击——随力量缩放。",
     "id": "SWORD_BOOMERANG",
     "kind": "card",
     "live_notes": "LIVE run-56：多段攻击，与 Rupture 力量叠层协同。",
     "name": "SWORD_BOOMERANG",
-    "play_notes": ""
+    "play_notes": "",
+    "rarity": "Common",
+    "target_type": "RandomEnemy"
   },
   "SWORD_SAGE": {
     "aliases": [
@@ -10113,7 +10189,7 @@
     "name": "剑圣",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 1."
   },
   "SYNCHRONIZE": {
@@ -10134,7 +10210,7 @@
     "name": "同步",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "removes Exhaust."
   },
   "SYNTHESIS": {
@@ -10153,7 +10229,7 @@
     "name": "人工合成",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+6 damage."
   },
   "TACTICIAN": {
@@ -10172,7 +10248,7 @@
     "name": "战术大师",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gain 2 Energy."
   },
   "TAG_TEAM": {
@@ -10191,7 +10267,7 @@
     "name": "组队作战",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+4 damage."
   },
   "TANK": {
@@ -10210,7 +10286,7 @@
     "name": "肉盾",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 1."
   },
   "TAUNT": {
@@ -10229,17 +10305,24 @@
     "name": "嘲讽",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 Block, +1 Vulnerable."
   },
   "TEAR_ASUNDER": {
-    "aliases": [],
+    "aliases": [
+      "Tear Asunder"
+    ],
+    "card_type": "Attack",
+    "character_pool": "ironclad",
+    "cost": "2",
     "curated": true,
     "description": "造成 14 点伤害。若击杀，获得 6 点格挡。",
     "id": "TEAR_ASUNDER",
     "kind": "card",
     "name": "TEAR_ASUNDER",
-    "play_notes": ""
+    "play_notes": "",
+    "rarity": "Rare",
+    "target_type": "AnyEnemy"
   },
   "TEMPEST": {
     "aliases": [
@@ -10257,7 +10340,7 @@
     "name": "暴风雨",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "X+1."
   },
   "TERRAFORMING": {
@@ -10276,7 +10359,7 @@
     "name": "地形改造",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Vigor."
   },
   "TESLA_COIL": {
@@ -10295,7 +10378,7 @@
     "name": "特斯拉线圈",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+1 damage; 2 times."
   },
   "THE_BOMB": {
@@ -10333,7 +10416,7 @@
     "name": "赌局",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+25 Block."
   },
   "THE_HUNT": {
@@ -10354,7 +10437,7 @@
     "name": "狩猎",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+5 damage."
   },
   "THE_SCYTHE": {
@@ -10375,7 +10458,7 @@
     "name": "巨镰",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+5 increase."
   },
   "THE_SEALED_THRONE": {
@@ -10394,7 +10477,7 @@
     "name": "封印王座",
     "play_notes": "",
     "rarity": "ancient",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   },
   "THE_SMITH": {
@@ -10413,22 +10496,28 @@
     "name": "铁匠",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "Forge 40."
   },
   "THINKING_AHEAD": {
-    "aliases": [],
+    "aliases": [
+      "Thinking Ahead"
+    ],
+    "card_type": "Skill",
+    "character_pool": "colorless",
+    "cost": "0",
     "curated": false,
     "description": "抽 2 张牌。将 1 张手牌置于抽牌堆顶。",
     "id": "THINKING_AHEAD",
     "kind": "card",
     "name": "THINKING_AHEAD",
-    "play_notes": ""
+    "play_notes": "",
+    "rarity": "Uncommon",
+    "target_type": "Self"
   },
   "THRASH": {
     "aliases": [
-      "Thrash",
-      "THRASH"
+      "Thrash"
     ],
     "card_type": "Attack",
     "character_pool": "ironclad",
@@ -10458,7 +10547,7 @@
     "name": "低鸣战斧",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "THUNDER": {
@@ -10477,13 +10566,12 @@
     "name": "雷霆",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "deal 8 damage."
   },
   "THUNDERCLAP": {
     "aliases": [
       "Thunderclap",
-      "THUNDERCLAP",
       "闪电霹雳"
     ],
     "card_type": "attack",
@@ -10502,6 +10590,7 @@
   },
   "TIMES_UP": {
     "aliases": [
+      "Time's Up",
       "Times Up",
       "时间到"
     ],
@@ -10519,12 +10608,13 @@
     "name": "时间到",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "gains Retain."
   },
   "TOOLS_OF_THE_TRADE": {
     "aliases": [
       "Tools Of The Trade",
+      "Tools of the Trade",
       "必备工具"
     ],
     "card_type": "power",
@@ -10538,7 +10628,7 @@
     "name": "必备工具",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   },
   "TORIC_TOUGHNESS": {
@@ -10557,7 +10647,7 @@
     "name": "环形坚韧",
     "play_notes": "",
     "rarity": "event",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Block."
   },
   "TOXIC": {
@@ -10578,7 +10668,7 @@
     "name": "剧毒",
     "play_notes": "",
     "rarity": "status",
-    "target_type": null,
+    "target_type": "None",
     "upgrade": null
   },
   "TRACKING": {
@@ -10597,7 +10687,7 @@
     "name": "跟踪",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 1; stacking applies 1 if already present."
   },
   "TRANSFIGURE": {
@@ -10618,12 +10708,13 @@
     "name": "变形",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "removes Exhaust."
   },
   "TRASH_TO_TREASURE": {
     "aliases": [
       "Trash To Treasure",
+      "Trash to Treasure",
       "化废为宝"
     ],
     "card_type": "power",
@@ -10639,7 +10730,7 @@
     "name": "化废为宝",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Innate (already innate base)."
   },
   "TREMBLE": {
@@ -10660,7 +10751,7 @@
     "name": "战栗",
     "play_notes": "run-39 live 订正：基础颤栗对现有易伤层数**叠加** 3（下水道蚌 VULN 1→4），不是重设为总计 3。run-37「Tremble+ 易伤总计 4」指升级卡的总计/叠加混淆；基础卡语义为叠加。Molten Fist 在颤栗之后对当前层数翻倍（run-39 Boss：0→颤栗3→MF 翻至 6 live）。",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+4 Vulnerable."
   },
   "TRUE_GRIT": {
@@ -10681,7 +10772,7 @@
     "name": "坚毅",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Block; exhaust a card of your choice."
   },
   "TURBO": {
@@ -10700,7 +10791,7 @@
     "name": "内核加速",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gain 3 Energy."
   },
   "TWIN_STRIKE": {
@@ -10721,7 +10812,7 @@
     "name": "双重打击",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage."
   },
   "TYRANNY": {
@@ -10743,7 +10834,7 @@
     "name": "暴政",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Innate."
   },
   "ULTIMATE_DEFEND": {
@@ -10764,7 +10855,7 @@
     "name": "究极防御",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+4 Block."
   },
   "ULTIMATE_STRIKE": {
@@ -10785,7 +10876,7 @@
     "name": "终极打击",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+6 damage."
   },
   "UNDEATH": {
@@ -10804,7 +10895,7 @@
     "name": "不死",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+2 Block."
   },
   "UNLEASH": {
@@ -10823,7 +10914,7 @@
     "name": "出击",
     "play_notes": "",
     "rarity": "basic",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "base 9."
   },
   "UNMOVABLE": {
@@ -10842,7 +10933,7 @@
     "name": "坚定不移",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 1. LIVE (run-36): power Amount displayed as 1 and observed ONE card-block doubled per turn (Defend 5+Dex→12-class single double); the \"first 2 times\" table value did not appear — plan on once-per-turn doubling and treat Legion (relic, sleep-cadence) as the second doubling layer, not a stacked ×4 on the same card."
   },
   "UNRELENTING": {
@@ -10861,7 +10952,7 @@
     "name": "无情猛攻",
     "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：FREE_ATTACK 作用于下一张攻击牌（PS/IronWave/Bash/Headbutt 均显示 cost=0）；每张 Unrelenting 一次免费攻击。",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+6 damage."
   },
   "UNTOUCHABLE": {
@@ -10880,7 +10971,7 @@
     "name": "触不可及",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Block."
   },
   "UPPERCUT": {
@@ -10899,7 +10990,7 @@
     "name": "升龙拳",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "applies 2 Weak and 2 Vulnerable. With UnsettlingLamp, Uppercut+ as the combat's first debuff card applies **4 Weak / 4 Vulnerable** (2/2 base doubled) — Lamp+Uppercut+ is the premier opener for boss/elite windows when that relic is in play."
   },
   "UPROAR": {
@@ -10920,7 +11011,7 @@
     "name": "骚动",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage."
   },
   "UP_MY_SLEEVE": {
@@ -10939,7 +11030,7 @@
     "name": "袖里乾坤",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "add 4 Shivs."
   },
   "VEILPIERCER": {
@@ -10960,7 +11051,7 @@
     "name": "穿帷者",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+3 damage."
   },
   "VENERATE": {
@@ -10979,7 +11070,7 @@
     "name": "崇拜",
     "play_notes": "",
     "rarity": "basic",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gain 3 Stars."
   },
   "VICIOUS": {
@@ -10998,7 +11089,7 @@
     "name": "凶恶",
     "play_notes": "run-49 Act1 (12,4) 休息锻造入选（优先于 Tremble+/Strike+）；锻造后 live：VICIOUS_POWER:2——每次易伤施加抽 2（Bash→+2 抽观测到）。与 Bash+/Tremble+/MF 翻倍组合成抽牌引擎；手牌无易伤源的 Vicious 回合是死抽（无后续易伤牌时跳过打出）。",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "draw 2."
   },
   "VOID": {
@@ -11006,9 +11097,9 @@
       "Void",
       "虚空"
     ],
-    "card_type": null,
+    "card_type": "Status",
     "character_pool": "STATUS",
-    "cost": null,
+    "cost": "-1",
     "curated": false,
     "description": "无法打出，状态，状态，虚无，抽到时失去 1 能量。无升级。",
     "id": "VOID",
@@ -11018,8 +11109,8 @@
     "kind": "card",
     "name": "虚空",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Status",
+    "target_type": "None",
     "upgrade": null
   },
   "VOID_FORM": {
@@ -11040,7 +11131,7 @@
     "name": "虚空形态",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "removes Ethereal."
   },
   "VOLLEY": {
@@ -11080,7 +11171,7 @@
     "name": "电流相生",
     "play_notes": "",
     "rarity": "rare",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "removes Exhaust."
   },
   "WASTE_AWAY": {
@@ -11088,7 +11179,7 @@
       "Waste Away",
       "消逝"
     ],
-    "card_type": null,
+    "card_type": "Status",
     "character_pool": "TOKEN",
     "cost": "-1",
     "curated": false,
@@ -11098,13 +11189,14 @@
     "kind": "card",
     "name": "消逝",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Status",
+    "target_type": "None",
     "upgrade": null
   },
   "WELL_LAID_PLANS": {
     "aliases": [
       "Well Laid Plans",
+      "Well-Laid Plans",
       "计划妥当"
     ],
     "card_type": "power",
@@ -11120,7 +11212,7 @@
     "name": "计划妥当",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "retain 2."
   },
   "WHIRLWIND": {
@@ -11139,7 +11231,7 @@
     ],
     "kind": "card",
     "name": "旋风斩",
-    "play_notes": "run-46 live：X=全部能量；放血+X=6 为波次清场与 Boss 阶段收尾工具。 LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：Act2 千足虫同窗工具——X=能量的 8/段实例（Whirlwind+ 力量3）命中全部段体；与单体收尾同回合打出即触发 fade-out 全灭。AllEnemies——省略 target_combat_id。",
+    "play_notes": "run-46 live：X=全部能量；放血+X=6 为波次清场与 Boss 阶段收尾工具。 LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：Act2 千足虫同窗工具——X=能量的 8/段实例（Whirlwind+ 力量3）命中全部段体；与单体收尾同回合打出即触发 fade-out 全灭。AllEnemies——省略 target_combat_id。 | Whirlwind+ 实例解析为**扁平 ~8/击，力量/木偶加法不进实例**（外骨骼虫包：3 实例 ×8=24/敌，非力量缩放 9×3）——反编译证实前按 8/击扁平处理；击杀数学改用 Strike/Bludgeon/PerfectedStrike 类力量缩放卡。",
     "rarity": "uncommon",
     "target_type": "AllEnemies",
     "upgrade": "+3 damage. Instances are flat — Strength/Dummy additive is NOT applied per instance (upgraded hits resolve at flat 8/hit); do not plan +Str per Whirlwind instance (contrast multi-hit Strike-tagged cards, which ARE Strength-scalers — see Card interactions). LIVE X-semantics (run-36): compact state displays `cost=0`, but playing it DUMPS ALL remaining energy as X hits — with 1 energy left it dealt 1 hit and consumed the energy (5 base resolved live at 7 with Strength). Never assume cost=0 means a free no-hit play; X = energy spent at play time."
@@ -11162,7 +11254,7 @@
     "name": "口哨",
     "play_notes": "",
     "rarity": "ancient",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+11 damage."
   },
   "WHITE_NOISE": {
@@ -11183,7 +11275,7 @@
     "name": "白噪声",
     "play_notes": "",
     "rarity": "uncommon",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   },
   "WISH": {
@@ -11205,7 +11297,7 @@
     "name": "愿望",
     "play_notes": "",
     "rarity": "ancient",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Retain."
   },
   "WISP": {
@@ -11227,7 +11319,7 @@
     "name": "鬼火",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "gains Retain."
   },
   "WITHER": {
@@ -11235,7 +11327,7 @@
       "Wither",
       "枯萎"
     ],
-    "card_type": null,
+    "card_type": "Status",
     "character_pool": "STATUS",
     "cost": "-1",
     "curated": false,
@@ -11245,8 +11337,8 @@
     "kind": "card",
     "name": "枯萎",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Status",
+    "target_type": "None",
     "upgrade": null
   },
   "WOUND": {
@@ -11254,7 +11346,7 @@
       "Wound",
       "创伤"
     ],
-    "card_type": null,
+    "card_type": "Status",
     "character_pool": "STATUS",
     "cost": "-1",
     "curated": false,
@@ -11264,8 +11356,8 @@
     "kind": "card",
     "name": "创伤",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Status",
+    "target_type": "None",
     "upgrade": null
   },
   "WRAITH_FORM": {
@@ -11284,7 +11376,7 @@
     "name": "幽魂形态",
     "play_notes": "",
     "rarity": "ancient",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "+3 Intangible."
   },
   "WRITHE": {
@@ -11292,9 +11384,9 @@
       "Writhe",
       "蠕动"
     ],
-    "card_type": null,
+    "card_type": "Curse",
     "character_pool": "CURSE",
-    "cost": null,
+    "cost": "-1",
     "curated": false,
     "description": "无法打出，诅咒，诅咒，固有，无效果。无升级。",
     "id": "WRITHE",
@@ -11304,13 +11396,14 @@
     "kind": "card",
     "name": "蠕动",
     "play_notes": "",
-    "rarity": null,
-    "target_type": null,
+    "rarity": "Curse",
+    "target_type": "None",
     "upgrade": null
   },
   "WROUGHT_IN_WAR": {
     "aliases": [
       "Wrought In War",
+      "Wrought in War",
       "战火铸就"
     ],
     "card_type": "attack",
@@ -11324,7 +11417,7 @@
     "name": "战火铸就",
     "play_notes": "",
     "rarity": "common",
-    "target_type": null,
+    "target_type": "AnyEnemy",
     "upgrade": "+2 damage, +2 Forge."
   },
   "ZAP": {
@@ -11343,7 +11436,7 @@
     "name": "电击",
     "play_notes": "",
     "rarity": "basic",
-    "target_type": null,
+    "target_type": "Self",
     "upgrade": "cost 0."
   }
 }

@@ -1,6 +1,8 @@
 {
   "ACCELERANT_POWER": {
     "aliases": [
+      "ACCELERANT",
+      "Accelerant",
       "AccelerantPower"
     ],
     "counter_class": false,
@@ -11,11 +13,13 @@
     "kind": "power",
     "name": "Accelerant",
     "play_notes": "",
-    "power_type": null,
-    "stack_type": null
+    "power_type": "Buff",
+    "stack_type": "Counter"
   },
   "ACCURACY_POWER": {
     "aliases": [
+      "ACCURACY",
+      "Accuracy",
       "AccuracyPower"
     ],
     "counter_class": false,
@@ -32,6 +36,7 @@
   "ADAPTABLE_POWER": {
     "aliases": [
       "ADAPTABLE",
+      "Adaptable",
       "AdaptablePower"
     ],
     "counter_class": false,
@@ -48,6 +53,7 @@
   "AFTERIMAGE_POWER": {
     "aliases": [
       "AFTERIMAGE",
+      "Afterimage",
       "AfterimagePower"
     ],
     "counter_class": false,
@@ -64,6 +70,7 @@
   "AGGRESSION_POWER": {
     "aliases": [
       "AGGRESSION",
+      "Aggression",
       "AggressionPower"
     ],
     "counter_class": false,
@@ -77,8 +84,24 @@
     "power_type": "Buff",
     "stack_type": "Counter"
   },
+  "ANTICIPATE": {
+    "aliases": [
+      "ANTICIPATE",
+      "Temporary Dexterity"
+    ],
+    "curated": false,
+    "description": "Gain Dexterity until the end of this turn.",
+    "id": "ANTICIPATE",
+    "kind": "power",
+    "name": "Temporary Dexterity",
+    "play_notes": "",
+    "power_type": "Buff",
+    "stack_type": "Counter"
+  },
   "ARSENAL_POWER": {
     "aliases": [
+      "ARSENAL",
+      "Arsenal",
       "ArsenalPower"
     ],
     "counter_class": false,
@@ -89,12 +112,13 @@
     "kind": "power",
     "name": "Arsenal",
     "play_notes": "",
-    "power_type": null,
+    "power_type": "Buff",
     "stack_type": "Counter"
   },
   "ARTIFACT_POWER": {
     "aliases": [
       "ARTIFACT",
+      "Artifact",
       "ArtifactPower"
     ],
     "counter_class": false,
@@ -109,11 +133,16 @@
     "stack_type": "Counter"
   },
   "ASLEEP": {
+    "aliases": [
+      "Asleep"
+    ],
     "curated": true,
     "description": "计数类：物主沉睡——若受到非零未挡伤害则醒来（移除自身镀甲若有、自眩晕进唤醒招、移除沉睡）。物主回合结束时沉睡减1；归零经唤醒招醒来；回合结束时沉睡≤1则镀甲被移除。对局39+40 live：乐加维林族母两次均由穿镀甲挡的小额未挡伤害触发唤醒（对局40：剑柄9+打击6 把12挡打穿至3未挡 → 同回合剥甲+眩晕）。",
     "id": "ASLEEP",
     "kind": "power",
-    "name": "沉睡"
+    "name": "沉睡",
+    "power_type": "Buff",
+    "stack_type": "Counter"
   },
   "ASLEEP_POWER": {
     "aliases": [
@@ -133,6 +162,8 @@
   },
   "AUTOMATION_POWER": {
     "aliases": [
+      "AUTOMATION",
+      "Automation",
       "AutomationPower"
     ],
     "counter_class": false,
@@ -149,6 +180,7 @@
   "BACK_ATTACK_LEFT_POWER": {
     "aliases": [
       "BACK_ATTACK_LEFT",
+      "Back Attack",
       "BackAttackLeftPower"
     ],
     "counter_class": false,
@@ -165,6 +197,7 @@
   "BACK_ATTACK_RIGHT_POWER": {
     "aliases": [
       "BACK_ATTACK_RIGHT",
+      "Back Attack",
       "BackAttackRightPower"
     ],
     "counter_class": false,
@@ -181,6 +214,7 @@
   "BARRICADE_POWER": {
     "aliases": [
       "BARRICADE",
+      "Barricade",
       "BarricadePower"
     ],
     "counter_class": false,
@@ -197,7 +231,8 @@
   "BATTLEWORN_DUMMY_TIME_LIMIT_POWER": {
     "aliases": [
       "BATTLEWORN_DUMMY_TIME_LIMIT",
-      "BattlewornDummyTimeLimitPower"
+      "BattlewornDummyTimeLimitPower",
+      "Time Limit"
     ],
     "counter_class": true,
     "curated": false,
@@ -212,6 +247,8 @@
   },
   "BEACON_OF_HOPE_POWER": {
     "aliases": [
+      "BEACON_OF_HOPE",
+      "Beacon of Hope",
       "BeaconOfHopePower"
     ],
     "counter_class": false,
@@ -227,6 +264,8 @@
   },
   "BIASED_COGNITION_POWER": {
     "aliases": [
+      "BIASED_COGNITION",
+      "Biased Cognition",
       "BiasedCognitionPower"
     ],
     "counter_class": false,
@@ -242,6 +281,8 @@
   },
   "BLACK_HOLE_POWER": {
     "aliases": [
+      "BLACK_HOLE",
+      "Black Hole",
       "BlackHolePower"
     ],
     "counter_class": false,
@@ -258,6 +299,7 @@
   "BLOCK_NEXT_TURN_POWER": {
     "aliases": [
       "BLOCK_NEXT_TURN",
+      "Block Next Turn",
       "BlockNextTurnPower"
     ],
     "counter_class": false,
@@ -273,6 +315,8 @@
   },
   "BLUR_POWER": {
     "aliases": [
+      "BLUR",
+      "Blur",
       "BlurPower"
     ],
     "counter_class": false,
@@ -288,6 +332,8 @@
   },
   "BORROWED_TIME_POWER": {
     "aliases": [
+      "BORROWED_TIME",
+      "Borrowed Time",
       "BorrowedTimePower"
     ],
     "counter_class": false,
@@ -304,6 +350,7 @@
   "BUFFER_POWER": {
     "aliases": [
       "BUFFER",
+      "Buffer",
       "BufferPower"
     ],
     "counter_class": false,
@@ -320,6 +367,7 @@
   "BURROWED_POWER": {
     "aliases": [
       "BURROWED",
+      "Burrowed",
       "BurrowedPower"
     ],
     "counter_class": false,
@@ -335,6 +383,8 @@
   },
   "BURST_POWER": {
     "aliases": [
+      "BURST",
+      "Burst",
       "BurstPower"
     ],
     "counter_class": false,
@@ -350,6 +400,8 @@
   },
   "CALAMITY_POWER": {
     "aliases": [
+      "CALAMITY",
+      "Calamity",
       "CalamityPower"
     ],
     "counter_class": false,
@@ -365,6 +417,8 @@
   },
   "CALCIFY_POWER": {
     "aliases": [
+      "CALCIFY",
+      "Calcify",
       "CalcifyPower"
     ],
     "counter_class": false,
@@ -380,6 +434,8 @@
   },
   "CALL_OF_THE_VOID_POWER": {
     "aliases": [
+      "CALL_OF_THE_VOID",
+      "Call of the Void",
       "CallOfTheVoidPower"
     ],
     "counter_class": false,
@@ -399,6 +455,7 @@
     ],
     "aliases": [
       "CHAINS_OF_BINDING",
+      "Chains of Binding",
       "ChainsOfBindingPower"
     ],
     "counter_class": true,
@@ -415,6 +472,7 @@
   "CHILD_OF_THE_STARS_POWER": {
     "aliases": [
       "CHILD_OF_THE_STARS",
+      "Child of the Stars",
       "ChildOfTheStarsPower"
     ],
     "counter_class": false,
@@ -431,6 +489,7 @@
   "CLARITY_POWER": {
     "aliases": [
       "CLARITY",
+      "Clarity",
       "ClarityPower"
     ],
     "counter_class": false,
@@ -447,6 +506,7 @@
   "COLOSSUS_POWER": {
     "aliases": [
       "COLOSSUS",
+      "Colossus",
       "ColossusPower"
     ],
     "counter_class": true,
@@ -462,6 +522,8 @@
   },
   "CONFUSED_POWER": {
     "aliases": [
+      "CONFUSED",
+      "Confused",
       "ConfusedPower"
     ],
     "counter_class": false,
@@ -478,6 +540,7 @@
   "CONQUEROR_POWER": {
     "aliases": [
       "CONQUEROR",
+      "Conqueror",
       "ConquerorPower"
     ],
     "counter_class": false,
@@ -494,6 +557,7 @@
   "CONSTRICT_POWER": {
     "aliases": [
       "CONSTRICT",
+      "Constrict",
       "ConstrictPower"
     ],
     "counter_class": false,
@@ -509,6 +573,8 @@
   },
   "CONSUMING_SHADOW_POWER": {
     "aliases": [
+      "CONSUMING_SHADOW",
+      "Consuming Shadow",
       "ConsumingShadowPower"
     ],
     "counter_class": false,
@@ -524,6 +590,8 @@
   },
   "COOLANT_POWER": {
     "aliases": [
+      "COOLANT",
+      "Coolant",
       "CoolantPower"
     ],
     "counter_class": false,
@@ -537,8 +605,24 @@
     "power_type": "Buff",
     "stack_type": "Counter"
   },
+  "COORDINATE": {
+    "aliases": [
+      "COORDINATE",
+      "Temporary Strength"
+    ],
+    "curated": false,
+    "description": "Gain Strength until the end of this turn.",
+    "id": "COORDINATE",
+    "kind": "power",
+    "name": "Temporary Strength",
+    "play_notes": "",
+    "power_type": "Buff",
+    "stack_type": "Counter"
+  },
   "CORROSIVE_WAVE_POWER": {
     "aliases": [
+      "CORROSIVE_WAVE",
+      "Corrosive Wave",
       "CorrosiveWavePower"
     ],
     "counter_class": false,
@@ -554,6 +638,8 @@
   },
   "CORRUPTION_POWER": {
     "aliases": [
+      "CORRUPTION",
+      "Corruption",
       "CorruptionPower"
     ],
     "counter_class": false,
@@ -569,6 +655,8 @@
   },
   "COUNTDOWN_POWER": {
     "aliases": [
+      "COUNTDOWN",
+      "Countdown",
       "CountdownPower"
     ],
     "counter_class": true,
@@ -584,6 +672,8 @@
   },
   "COVERED_POWER": {
     "aliases": [
+      "COVERED",
+      "Covered",
       "CoveredPower"
     ],
     "counter_class": false,
@@ -600,6 +690,7 @@
   "CRAB_RAGE_POWER": {
     "aliases": [
       "CRAB_RAGE",
+      "Crab Rage",
       "CrabRagePower"
     ],
     "counter_class": false,
@@ -616,6 +707,8 @@
   },
   "CREATIVE_AI_POWER": {
     "aliases": [
+      "CREATIVE_AI",
+      "Creative AI",
       "CreativeAiPower"
     ],
     "counter_class": false,
@@ -630,6 +723,10 @@
     "stack_type": "Counter"
   },
   "CRIMSON_MANTLE_POWER": {
+    "aliases": [
+      "CRIMSON_MANTLE",
+      "Crimson Mantle"
+    ],
     "curated": true,
     "description": "持有者阵营回合开始时失去 1 HP（无视格挡）并获得 Amount 格挡（卡牌 CRIMSON_MANTLE：基础 8、升级 10）。回合开始掉血可触发同回合失去-HP 触发器（撕裂/自成黏土/百年积木类），并满足怨恨/狱火类「本回合失去过 HP」条件。",
     "id": "CRIMSON_MANTLE_POWER",
@@ -639,6 +736,10 @@
     "stack_type": "Counter"
   },
   "CRUELTY_POWER": {
+    "aliases": [
+      "CRUELTY",
+      "Cruelty"
+    ],
     "curated": true,
     "description": "主人的攻击对易伤目标造成 +Amount% 伤害（基础 Amount=25；run-41 live CRUELTY_POWER:25）。在易伤 ×1.5 之上再乘 — run-41 live 中 32 基伤重锤对易伤目标结算 37；带打击假人 tag 的 PS 20 级结算 25-30。打出后整场战斗有效（能力牌）。",
     "id": "CRUELTY_POWER",
@@ -647,8 +748,24 @@
     "power_type": "Buff",
     "stack_type": "Counter"
   },
+  "CRUSH_UNDER": {
+    "aliases": [
+      "CRUSH_UNDER",
+      "Temporary Strength Down"
+    ],
+    "curated": false,
+    "description": "Lose Strength until the end of this turn.",
+    "id": "CRUSH_UNDER",
+    "kind": "power",
+    "name": "Temporary Strength Down",
+    "play_notes": "",
+    "power_type": "Debuff",
+    "stack_type": "Counter"
+  },
   "CURIOUS_POWER": {
     "aliases": [
+      "CURIOUS",
+      "Curious",
       "CuriousPower"
     ],
     "counter_class": false,
@@ -665,6 +782,7 @@
   "CURL_UP_POWER": {
     "aliases": [
       "CURL_UP",
+      "Curl Up",
       "CurlUpPower"
     ],
     "counter_class": true,
@@ -681,6 +799,7 @@
   "DAMPEN_POWER": {
     "aliases": [
       "DAMPEN",
+      "Dampen",
       "DampenPower"
     ],
     "counter_class": false,
@@ -697,6 +816,7 @@
   "DANSE_MACABRE_POWER": {
     "aliases": [
       "DANSE_MACABRE",
+      "Danse Macabre",
       "DanseMacabrePower"
     ],
     "counter_class": false,
@@ -713,6 +833,7 @@
   "DARK_EMBRACE_POWER": {
     "aliases": [
       "DARK_EMBRACE",
+      "Dark Embrace",
       "DarkEmbracePower"
     ],
     "counter_class": false,
@@ -726,9 +847,38 @@
     "power_type": "Buff",
     "stack_type": "Counter"
   },
+  "DARK_SHACKLES": {
+    "aliases": [
+      "DARK_SHACKLES",
+      "Temporary Strength Down"
+    ],
+    "curated": false,
+    "description": "Lose Strength until the end of this turn.",
+    "id": "DARK_SHACKLES",
+    "kind": "power",
+    "name": "Temporary Strength Down",
+    "play_notes": "",
+    "power_type": "Debuff",
+    "stack_type": "Counter"
+  },
+  "DEBILITATE": {
+    "aliases": [
+      "DEBILITATE",
+      "Debilitate"
+    ],
+    "curated": false,
+    "description": "Vulnerable and Weak are twice as effective for the next 2 turns.",
+    "id": "DEBILITATE",
+    "kind": "power",
+    "name": "Debilitate",
+    "play_notes": "",
+    "power_type": "Debuff",
+    "stack_type": "Counter"
+  },
   "DEMESNE_POWER": {
     "aliases": [
       "DEMESNE",
+      "Demesne",
       "DemesnePower"
     ],
     "counter_class": false,
@@ -745,6 +895,7 @@
   "DEMISE_POWER": {
     "aliases": [
       "DEMISE",
+      "Demise",
       "DemisePower"
     ],
     "counter_class": false,
@@ -761,6 +912,7 @@
   "DEMON_FORM_POWER": {
     "aliases": [
       "DEMON_FORM",
+      "Demon Form",
       "DemonFormPower"
     ],
     "counter_class": false,
@@ -776,6 +928,8 @@
   },
   "DEVOUR_LIFE_POWER": {
     "aliases": [
+      "DEVOUR_LIFE",
+      "Devour Life",
       "DevourLifePower"
     ],
     "counter_class": false,
@@ -792,6 +946,7 @@
   "DEXTERITY_POWER": {
     "aliases": [
       "DEXTERITY",
+      "Dexterity",
       "DexterityPower"
     ],
     "counter_class": false,
@@ -807,6 +962,8 @@
   },
   "DIAMOND_DIADEM_POWER": {
     "aliases": [
+      "DIAMOND_DIADEM",
+      "Diamond Diadem",
       "DiamondDiademPower"
     ],
     "counter_class": false,
@@ -823,6 +980,7 @@
   "DIE_FOR_YOU_POWER": {
     "aliases": [
       "DIE_FOR_YOU",
+      "Die for You",
       "DieForYouPower"
     ],
     "counter_class": false,
@@ -838,6 +996,7 @@
   },
   "DISINTEGRATION": {
     "aliases": [
+      "Disintegration",
       "DisintegrationPower"
     ],
     "counter_class": false,
@@ -848,8 +1007,8 @@
     "kind": "power",
     "name": "卡牌施加",
     "play_notes": "",
-    "power_type": null,
-    "stack_type": null
+    "power_type": "Debuff",
+    "stack_type": "Counter"
   },
   "DISINTEGRATION_POWER": {
     "aliases": [
@@ -870,6 +1029,7 @@
   "DOOM_POWER": {
     "aliases": [
       "DOOM",
+      "Doom",
       "DoomPower"
     ],
     "counter_class": false,
@@ -885,6 +1045,8 @@
   },
   "DOUBLE_DAMAGE_POWER": {
     "aliases": [
+      "DOUBLE_DAMAGE",
+      "Double Damage",
       "DoubleDamagePower"
     ],
     "counter_class": false,
@@ -901,6 +1063,7 @@
   "DRAW_CARDS_NEXT_TURN_POWER": {
     "aliases": [
       "DRAW_CARDS_NEXT_TURN",
+      "Draw Cards Next Turn",
       "DrawCardsNextTurnPower"
     ],
     "counter_class": false,
@@ -917,6 +1080,7 @@
   "DUPLICATION_POWER": {
     "aliases": [
       "DUPLICATION",
+      "Duplication",
       "DuplicationPower"
     ],
     "counter_class": false,
@@ -930,8 +1094,24 @@
     "power_type": "Buff",
     "stack_type": "Counter"
   },
+  "DYING_STAR": {
+    "aliases": [
+      "DYING_STAR",
+      "Temporary Strength Down"
+    ],
+    "curated": false,
+    "description": "Lose Strength until the end of this turn.",
+    "id": "DYING_STAR",
+    "kind": "power",
+    "name": "Temporary Strength Down",
+    "play_notes": "",
+    "power_type": "Debuff",
+    "stack_type": "Counter"
+  },
   "ECHO_FORM_POWER": {
     "aliases": [
+      "ECHO_FORM",
+      "Echo Form",
       "EchoFormPower"
     ],
     "counter_class": false,
@@ -948,6 +1128,7 @@
   "ENERGY_NEXT_TURN_POWER": {
     "aliases": [
       "ENERGY_NEXT_TURN",
+      "Energy Next Turn",
       "EnergyNextTurnPower"
     ],
     "counter_class": false,
@@ -961,9 +1142,24 @@
     "power_type": "Buff",
     "stack_type": "Counter"
   },
+  "ENFEEBLING_TOUCH": {
+    "aliases": [
+      "ENFEEBLING_TOUCH",
+      "Temporary Strength Down"
+    ],
+    "curated": false,
+    "description": "Lose Strength until the end of this turn.",
+    "id": "ENFEEBLING_TOUCH",
+    "kind": "power",
+    "name": "Temporary Strength Down",
+    "play_notes": "",
+    "power_type": "Debuff",
+    "stack_type": "Counter"
+  },
   "ENRAGE_POWER": {
     "aliases": [
       "ENRAGE",
+      "Enrage",
       "EnragePower"
     ],
     "counter_class": false,
@@ -977,8 +1173,24 @@
     "power_type": "Buff",
     "stack_type": "Counter"
   },
+  "ENTROPY": {
+    "aliases": [
+      "ENTROPY",
+      "Entropy"
+    ],
+    "curated": false,
+    "description": "At the start of your turn, Transform 1 card in your Hand.",
+    "id": "ENTROPY",
+    "kind": "power",
+    "name": "Entropy",
+    "play_notes": "",
+    "power_type": "Buff",
+    "stack_type": "Counter"
+  },
   "ENVENOM_POWER": {
     "aliases": [
+      "ENVENOM",
+      "Envenom",
       "EnvenomPower"
     ],
     "counter_class": false,
@@ -995,6 +1207,7 @@
   "ESCAPE_ARTIST_POWER": {
     "aliases": [
       "ESCAPE_ARTIST",
+      "Escape Artist",
       "EscapeArtistPower"
     ],
     "counter_class": true,
@@ -1010,6 +1223,8 @@
   },
   "FAN_OF_KNIVES_POWER": {
     "aliases": [
+      "FAN_OF_KNIVES",
+      "Fan of Knives",
       "FanOfKnivesPower"
     ],
     "counter_class": false,
@@ -1026,6 +1241,7 @@
   "FASTEN_POWER": {
     "aliases": [
       "FASTEN",
+      "Fasten",
       "FastenPower"
     ],
     "counter_class": false,
@@ -1039,9 +1255,24 @@
     "power_type": "Buff",
     "stack_type": "Counter"
   },
+  "FEEDING_FRENZY": {
+    "aliases": [
+      "FEEDING_FRENZY",
+      "Temporary Strength"
+    ],
+    "curated": false,
+    "description": "Gain Strength until the end of this turn.",
+    "id": "FEEDING_FRENZY",
+    "kind": "power",
+    "name": "Temporary Strength",
+    "play_notes": "",
+    "power_type": "Buff",
+    "stack_type": "Counter"
+  },
   "FEEL_NO_PAIN_POWER": {
     "aliases": [
       "FEEL_NO_PAIN",
+      "Feel No Pain",
       "FeelNoPainPower"
     ],
     "counter_class": false,
@@ -1055,9 +1286,24 @@
     "power_type": "Buff",
     "stack_type": "Counter"
   },
+  "FERAL": {
+    "aliases": [
+      "FERAL",
+      "Feral"
+    ],
+    "curated": false,
+    "description": "The first 2 times you play a 0[energy:1] Attack each turn, return it to your Hand.",
+    "id": "FERAL",
+    "kind": "power",
+    "name": "Feral",
+    "play_notes": "",
+    "power_type": "Buff",
+    "stack_type": "Counter"
+  },
   "FLAME_BARRIER_POWER": {
     "aliases": [
       "FLAME_BARRIER",
+      "Flame Barrier",
       "FlameBarrierPower"
     ],
     "counter_class": false,
@@ -1073,6 +1319,8 @@
   },
   "FLANKING_POWER": {
     "aliases": [
+      "FLANKING",
+      "Flanking",
       "FlankingPower"
     ],
     "counter_class": false,
@@ -1084,6 +1332,20 @@
     "name": "Flanking",
     "play_notes": "",
     "power_type": "Debuff",
+    "stack_type": "Counter"
+  },
+  "FLEX_POTION": {
+    "aliases": [
+      "FLEX_POTION",
+      "Temporary Strength"
+    ],
+    "curated": false,
+    "description": "Gain Strength until the end of this turn.",
+    "id": "FLEX_POTION",
+    "kind": "power",
+    "name": "Temporary Strength",
+    "play_notes": "",
+    "power_type": "Buff",
     "stack_type": "Counter"
   },
   "FLEX_POTION_POWER": {
@@ -1098,6 +1360,7 @@
   "FLUTTER_POWER": {
     "aliases": [
       "FLUTTER",
+      "Flutter",
       "FlutterPower"
     ],
     "counter_class": true,
@@ -1111,8 +1374,24 @@
     "power_type": "Buff",
     "stack_type": "Counter"
   },
+  "FOCUSED_STRIKE": {
+    "aliases": [
+      "FOCUSED_STRIKE",
+      "Temporary Focus"
+    ],
+    "curated": false,
+    "description": "Gain Focus until the end of this turn.",
+    "id": "FOCUSED_STRIKE",
+    "kind": "power",
+    "name": "Temporary Focus",
+    "play_notes": "",
+    "power_type": "Buff",
+    "stack_type": "Counter"
+  },
   "FOCUS_POWER": {
     "aliases": [
+      "FOCUS",
+      "Focus",
       "FocusPower"
     ],
     "counter_class": false,
@@ -1128,6 +1407,8 @@
   },
   "FORBIDDEN_GRIMOIRE_POWER": {
     "aliases": [
+      "FORBIDDEN_GRIMOIRE",
+      "Forbidden Grimoire",
       "ForbiddenGrimoirePower"
     ],
     "counter_class": false,
@@ -1143,6 +1424,8 @@
   },
   "FOREGONE_CONCLUSION_POWER": {
     "aliases": [
+      "FOREGONE_CONCLUSION",
+      "Foregone Conclusion",
       "ForegoneConclusionPower"
     ],
     "counter_class": false,
@@ -1159,6 +1442,7 @@
   "FRAIL_POWER": {
     "aliases": [
       "FRAIL",
+      "Frail",
       "FrailPower"
     ],
     "counter_class": false,
@@ -1175,6 +1459,7 @@
   "FREE_ATTACK_POWER": {
     "aliases": [
       "FREE_ATTACK",
+      "Free Attack",
       "FreeAttackPower"
     ],
     "counter_class": false,
@@ -1190,6 +1475,8 @@
   },
   "FREE_POWER_POWER": {
     "aliases": [
+      "FREE_POWER",
+      "Free Power",
       "FreePowerPower"
     ],
     "counter_class": false,
@@ -1205,6 +1492,8 @@
   },
   "FREE_SKILL_POWER": {
     "aliases": [
+      "FREE_SKILL",
+      "Free Skill",
       "FreeSkillPower"
     ],
     "counter_class": false,
@@ -1220,6 +1509,8 @@
   },
   "FRIENDSHIP_POWER": {
     "aliases": [
+      "FRIENDSHIP",
+      "Friendship",
       "FriendshipPower"
     ],
     "counter_class": false,
@@ -1235,6 +1526,8 @@
   },
   "FURNACE_POWER": {
     "aliases": [
+      "FURNACE",
+      "Furnace",
       "FurnacePower"
     ],
     "counter_class": false,
@@ -1254,6 +1547,7 @@
     ],
     "aliases": [
       "GALVANIC",
+      "Galvanic",
       "GalvanicPower"
     ],
     "counter_class": true,
@@ -1269,6 +1563,8 @@
   },
   "GENESIS_POWER": {
     "aliases": [
+      "GENESIS",
+      "Genesis",
       "GenesisPower"
     ],
     "counter_class": false,
@@ -1284,6 +1580,8 @@
   },
   "GIGANTIFICATION_POWER": {
     "aliases": [
+      "GIGANTIFICATION",
+      "Gigantification",
       "GigantificationPower"
     ],
     "counter_class": false,
@@ -1299,6 +1597,8 @@
   },
   "GRAVITY_POWER": {
     "aliases": [
+      "GRAVITY",
+      "Gravity",
       "GravityPower"
     ],
     "counter_class": false,
@@ -1314,6 +1614,8 @@
   },
   "GUARDED_POWER": {
     "aliases": [
+      "GUARDED",
+      "Guarded",
       "GuardedPower"
     ],
     "counter_class": false,
@@ -1327,8 +1629,24 @@
     "power_type": "Buff",
     "stack_type": "Single"
   },
+  "HAILSTORM": {
+    "aliases": [
+      "HAILSTORM",
+      "Hailstorm"
+    ],
+    "curated": false,
+    "description": "At the end of your turn, if you have Frost, deal 6 damage to ALL enemies.",
+    "id": "HAILSTORM",
+    "kind": "power",
+    "name": "Hailstorm",
+    "play_notes": "",
+    "power_type": "Buff",
+    "stack_type": "Counter"
+  },
   "HAMMER_TIME_POWER": {
     "aliases": [
+      "HAMMER_TIME",
+      "Hammer Time",
       "HammerTimePower"
     ],
     "counter_class": false,
@@ -1344,6 +1662,8 @@
   },
   "HANG_POWER": {
     "aliases": [
+      "HANG",
+      "Hang",
       "HangPower"
     ],
     "counter_class": false,
@@ -1360,6 +1680,7 @@
   "HARDENED_SHELL_POWER": {
     "aliases": [
       "HARDENED_SHELL",
+      "Hardened Shell",
       "HardenedShellPower"
     ],
     "counter_class": false,
@@ -1374,11 +1695,16 @@
     "stack_type": "Counter"
   },
   "HARD_TO_KILL": {
+    "aliases": [
+      "Hard to Kill"
+    ],
     "curated": true,
     "description": "计数类：物主每次伤害实例的 HP 损失上限为 Amount（ModifyDamageCap = Amount）；单次超出部分弃掉、不保留。对局40 live 外骨骼虫 Amount=9：突破/狱火 9 实例命中满值；重锤32 对该类目标浪费23——用多实例小额命中控速，避免单次大实例攻击。",
     "id": "HARD_TO_KILL",
     "kind": "power",
-    "name": "杀不死"
+    "name": "杀不死",
+    "power_type": "Buff",
+    "stack_type": "Counter"
   },
   "HARD_TO_KILL_POWER": {
     "aliases": [
@@ -1399,6 +1725,7 @@
   "HATCH_POWER": {
     "aliases": [
       "HATCH",
+      "Hatch",
       "HatchPower"
     ],
     "counter_class": true,
@@ -1414,6 +1741,8 @@
   },
   "HAUNT_POWER": {
     "aliases": [
+      "HAUNT",
+      "Haunt",
       "HauntPower"
     ],
     "counter_class": false,
@@ -1430,6 +1759,7 @@
   "HEIST_POWER": {
     "aliases": [
       "HEIST",
+      "Heist",
       "HeistPower"
     ],
     "counter_class": false,
@@ -1443,8 +1773,24 @@
     "power_type": "Buff",
     "stack_type": "Counter"
   },
+  "HELICAL_DART": {
+    "aliases": [
+      "HELICAL_DART",
+      "Temporary Dexterity"
+    ],
+    "curated": false,
+    "description": "Gain Dexterity until the end of this turn.",
+    "id": "HELICAL_DART",
+    "kind": "power",
+    "name": "Temporary Dexterity",
+    "play_notes": "",
+    "power_type": "Buff",
+    "stack_type": "Counter"
+  },
   "HELLO_WORLD_POWER": {
     "aliases": [
+      "HELLO_WORLD",
+      "Hello World",
       "HelloWorldPower"
     ],
     "counter_class": false,
@@ -1461,6 +1807,7 @@
   "HELLRAISER_POWER": {
     "aliases": [
       "HELLRAISER",
+      "Hellraiser",
       "HellraiserPower"
     ],
     "counter_class": false,
@@ -1480,6 +1827,7 @@
     ],
     "aliases": [
       "HEX",
+      "Hex",
       "HexPower"
     ],
     "counter_class": false,
@@ -1495,6 +1843,8 @@
   },
   "HIGH_VOLTAGE_POWER": {
     "aliases": [
+      "HIGH_VOLTAGE",
+      "High Voltage",
       "HighVoltagePower"
     ],
     "counter_class": false,
@@ -1508,9 +1858,24 @@
     "power_type": "Buff",
     "stack_type": "Counter"
   },
+  "HOTFIX": {
+    "aliases": [
+      "HOTFIX",
+      "Temporary Focus"
+    ],
+    "curated": false,
+    "description": "Gain Focus until the end of this turn.",
+    "id": "HOTFIX",
+    "kind": "power",
+    "name": "Temporary Focus",
+    "play_notes": "",
+    "power_type": "Buff",
+    "stack_type": "Counter"
+  },
   "ILLUSION_POWER": {
     "aliases": [
       "ILLUSION",
+      "Illusion",
       "IllusionPower"
     ],
     "counter_class": false,
@@ -1525,11 +1890,16 @@
     "stack_type": "Single"
   },
   "IMBALANCED": {
+    "aliases": [
+      "Imbalanced"
+    ],
     "curated": true,
     "description": "物主的攻击被完全格挡时眩晕（石碗虫改为设置 IsOffBalance）。部分格挡不触发。对局40 live：红面具弱化把头槌 15→11 显示；血墙16≥11 → 同敌方回合眩晕；三人组在眩晕窗内清场。",
     "id": "IMBALANCED",
     "kind": "power",
-    "name": "失衡"
+    "name": "失衡",
+    "power_type": "Debuff",
+    "stack_type": "Single"
   },
   "IMBALANCED_POWER": {
     "aliases": [
@@ -1549,6 +1919,8 @@
   },
   "IMPROVEMENT_POWER": {
     "aliases": [
+      "IMPROVEMENT",
+      "Improvement",
       "ImprovementPower"
     ],
     "counter_class": false,
@@ -1563,6 +1935,10 @@
     "stack_type": "Counter"
   },
   "INFERNO_POWER": {
+    "aliases": [
+      "INFERNO",
+      "Inferno"
+    ],
     "curated": true,
     "description": "持有者阵营回合开始时失去 1 HP（无视格挡）；持有者在自己回合内失去 HP 时，对所有可命中敌人造成 Amount 点非攻击伤害（卡牌 INFERNO：基础 6、升级 9）。自伤牌（放血/血墙/突破/放血术等）与任意同回合掉血每次事件触发一次 AoE。",
     "id": "INFERNO_POWER",
@@ -1574,6 +1950,7 @@
   "INFESTED_POWER": {
     "aliases": [
       "INFESTED",
+      "Infested",
       "InfestedPower"
     ],
     "counter_class": false,
@@ -1589,6 +1966,8 @@
   },
   "INFINITE_BLADES_POWER": {
     "aliases": [
+      "INFINITE_BLADES",
+      "Infinite Blades",
       "InfiniteBladesPower"
     ],
     "counter_class": false,
@@ -1605,6 +1984,7 @@
   "INTANGIBLE_POWER": {
     "aliases": [
       "INTANGIBLE",
+      "Intangible",
       "IntangiblePower"
     ],
     "counter_class": true,
@@ -1620,6 +2000,8 @@
   },
   "INTERCEPT_POWER": {
     "aliases": [
+      "INTERCEPT",
+      "Intercept",
       "InterceptPower"
     ],
     "counter_class": false,
@@ -1635,6 +2017,8 @@
   },
   "ITERATION_POWER": {
     "aliases": [
+      "ITERATION",
+      "Iteration",
       "IterationPower"
     ],
     "counter_class": false,
@@ -1651,6 +2035,7 @@
   "JUGGERNAUT_POWER": {
     "aliases": [
       "JUGGERNAUT",
+      "Juggernaut",
       "JuggernautPower"
     ],
     "counter_class": false,
@@ -1665,6 +2050,10 @@
     "stack_type": "Counter"
   },
   "JUGGLING_POWER": {
+    "aliases": [
+      "JUGGLING",
+      "Juggling"
+    ],
     "curated": true,
     "description": "持有者每回合打出的第 3 张攻击牌会复制进手牌（卡牌 JUGGLING）。复制体进手而非自动打出，未被减费时仍耗能。",
     "id": "JUGGLING_POWER",
@@ -1675,6 +2064,8 @@
   },
   "KNOCKDOWN_POWER": {
     "aliases": [
+      "KNOCKDOWN",
+      "Knockdown",
       "KnockdownPower"
     ],
     "counter_class": false,
@@ -1690,6 +2081,8 @@
   },
   "LEADERSHIP_POWER": {
     "aliases": [
+      "LEADERSHIP",
+      "Leadership",
       "LeadershipPower"
     ],
     "counter_class": false,
@@ -1705,6 +2098,8 @@
   },
   "LETHALITY_POWER": {
     "aliases": [
+      "LETHALITY",
+      "Lethality",
       "LethalityPower"
     ],
     "counter_class": false,
@@ -1720,6 +2115,8 @@
   },
   "LIGHTNING_ROD_POWER": {
     "aliases": [
+      "LIGHTNING_ROD",
+      "Lightning Rod",
       "LightningRodPower"
     ],
     "counter_class": false,
@@ -1733,8 +2130,24 @@
     "power_type": "Buff",
     "stack_type": "Counter"
   },
+  "LOOP": {
+    "aliases": [
+      "LOOP",
+      "Loop"
+    ],
+    "curated": false,
+    "description": "At the start of your turn, trigger the passive ability of your next Orb.",
+    "id": "LOOP",
+    "kind": "power",
+    "name": "Loop",
+    "play_notes": "",
+    "power_type": "Buff",
+    "stack_type": "Counter"
+  },
   "MACHINE_LEARNING_POWER": {
     "aliases": [
+      "MACHINE_LEARNING",
+      "Machine Learning",
       "MachineLearningPower"
     ],
     "counter_class": false,
@@ -1750,6 +2163,8 @@
   },
   "MAGIC_BOMB_POWER": {
     "aliases": [
+      "MAGIC_BOMB",
+      "Magic Bomb",
       "MagicBombPower"
     ],
     "counter_class": false,
@@ -1763,8 +2178,24 @@
     "power_type": "Debuff",
     "stack_type": "Counter"
   },
+  "MANGLE": {
+    "aliases": [
+      "MANGLE",
+      "Temporary Strength Down"
+    ],
+    "curated": false,
+    "description": "Lose Strength until the end of this turn.",
+    "id": "MANGLE",
+    "kind": "power",
+    "name": "Temporary Strength Down",
+    "play_notes": "",
+    "power_type": "Debuff",
+    "stack_type": "Counter"
+  },
   "MASTER_PLANNER_POWER": {
     "aliases": [
+      "MASTER_PLANNER",
+      "Master Planner",
       "MasterPlannerPower"
     ],
     "counter_class": false,
@@ -1780,6 +2211,8 @@
   },
   "MAYHEM_POWER": {
     "aliases": [
+      "MAYHEM",
+      "Mayhem",
       "MayhemPower"
     ],
     "counter_class": false,
@@ -1796,6 +2229,7 @@
   "MIND_ROT_POWER": {
     "aliases": [
       "MIND_ROT",
+      "Mind Rot",
       "MindRotPower"
     ],
     "counter_class": false,
@@ -1812,6 +2246,7 @@
   "MINION_POWER": {
     "aliases": [
       "MINION",
+      "Minion",
       "MinionPower"
     ],
     "counter_class": false,
@@ -1827,6 +2262,8 @@
   },
   "MONARCHS_GAZE_POWER": {
     "aliases": [
+      "MONARCHS_GAZE",
+      "Monarch's Gaze",
       "MonarchsGazePower"
     ],
     "counter_class": false,
@@ -1838,6 +2275,20 @@
     "name": "Monarchs Gaze",
     "play_notes": "",
     "power_type": "Buff",
+    "stack_type": "Counter"
+  },
+  "MONARCHS_GAZE_STRENGTH_DOWN": {
+    "aliases": [
+      "MONARCHS_GAZE_STRENGTH_DOWN",
+      "Temporary Strength Down"
+    ],
+    "curated": false,
+    "description": "Lose Strength until the end of this turn.",
+    "id": "MONARCHS_GAZE_STRENGTH_DOWN",
+    "kind": "power",
+    "name": "Temporary Strength Down",
+    "play_notes": "",
+    "power_type": "Debuff",
     "stack_type": "Counter"
   },
   "MONARCHS_GAZE_STRENGTH_DOWN_POWER": {
@@ -1858,6 +2309,7 @@
   "MONOLOGUE_POWER": {
     "aliases": [
       "MONOLOGUE",
+      "Monologue",
       "MonologuePower"
     ],
     "counter_class": false,
@@ -1873,6 +2325,8 @@
   },
   "NECRO_MASTERY_POWER": {
     "aliases": [
+      "NECRO_MASTERY",
+      "Necro Mastery",
       "NecroMasteryPower"
     ],
     "counter_class": false,
@@ -1886,8 +2340,24 @@
     "power_type": "Buff",
     "stack_type": "Counter"
   },
+  "NEMESIS": {
+    "aliases": [
+      "NEMESIS",
+      "Nemesis"
+    ],
+    "curated": false,
+    "description": "At the end of every other turn, gains Intangible 1.",
+    "id": "NEMESIS",
+    "kind": "power",
+    "name": "Nemesis",
+    "play_notes": "",
+    "power_type": "Buff",
+    "stack_type": "Single"
+  },
   "NEUROSURGE_POWER": {
     "aliases": [
+      "NEUROSURGE",
+      "Neurosurge",
       "NeurosurgePower"
     ],
     "counter_class": false,
@@ -1903,6 +2373,8 @@
   },
   "NIGHTMARE_POWER": {
     "aliases": [
+      "NIGHTMARE",
+      "Nightmare",
       "NightmarePower"
     ],
     "counter_class": false,
@@ -1918,6 +2390,8 @@
   },
   "NOSTALGIA_POWER": {
     "aliases": [
+      "NOSTALGIA",
+      "Nostalgia",
       "NostalgiaPower"
     ],
     "counter_class": false,
@@ -1928,11 +2402,13 @@
     "kind": "power",
     "name": "Nostalgia",
     "play_notes": "",
-    "power_type": null,
+    "power_type": "Buff",
     "stack_type": "Counter"
   },
   "NOXIOUS_FUMES_POWER": {
     "aliases": [
+      "NOXIOUS_FUMES",
+      "Noxious Fumes",
       "NoxiousFumesPower"
     ],
     "counter_class": false,
@@ -1946,9 +2422,24 @@
     "power_type": "Buff",
     "stack_type": "Counter"
   },
+  "NO_BLOCK": {
+    "aliases": [
+      "NO_BLOCK",
+      "No Block"
+    ],
+    "curated": false,
+    "description": "You cannot gain Block from cards for 2 turns.",
+    "id": "NO_BLOCK",
+    "kind": "power",
+    "name": "No Block",
+    "play_notes": "",
+    "power_type": "Debuff",
+    "stack_type": "Counter"
+  },
   "NO_DRAW_POWER": {
     "aliases": [
       "NO_DRAW",
+      "No Draw",
       "NoDrawPower"
     ],
     "counter_class": false,
@@ -1965,6 +2456,7 @@
   "NO_ENERGY_GAIN_POWER": {
     "aliases": [
       "NO_ENERGY_GAIN",
+      "No Energy Gain",
       "NoEnergyGainPower"
     ],
     "counter_class": false,
@@ -1980,6 +2472,8 @@
   },
   "OBLIVION_POWER": {
     "aliases": [
+      "OBLIVION",
+      "Oblivion",
       "OblivionPower"
     ],
     "counter_class": false,
@@ -1996,6 +2490,7 @@
   "ONE_TWO_PUNCH_POWER": {
     "aliases": [
       "ONE_TWO_PUNCH",
+      "One-Two Punch",
       "OneTwoPunchPower"
     ],
     "counter_class": false,
@@ -2011,6 +2506,8 @@
   },
   "ORBIT_POWER": {
     "aliases": [
+      "ORBIT",
+      "Orbit",
       "OrbitPower"
     ],
     "counter_class": false,
@@ -2026,6 +2523,8 @@
   },
   "OUTBREAK_POWER": {
     "aliases": [
+      "OUTBREAK",
+      "Outbreak",
       "OutbreakPower"
     ],
     "counter_class": false,
@@ -2041,6 +2540,8 @@
   },
   "PAGESTORM_POWER": {
     "aliases": [
+      "PAGESTORM",
+      "Pagestorm",
       "PagestormPower"
     ],
     "counter_class": false,
@@ -2056,6 +2557,8 @@
   },
   "PAINFUL_STABS_POWER": {
     "aliases": [
+      "PAINFUL_STABS",
+      "Painful Stabs",
       "PainfulStabsPower"
     ],
     "counter_class": false,
@@ -2066,10 +2569,14 @@
     "kind": "power",
     "name": "Painful Stabs",
     "play_notes": "",
-    "power_type": null,
-    "stack_type": null
+    "power_type": "Buff",
+    "stack_type": "Counter"
   },
   "PALE_BLUE_DOT_POWER": {
+    "aliases": [
+      "PALE_BLUE_DOT",
+      "Pale Blue Dot"
+    ],
     "curated": true,
     "description": "若持有者上回合打出 ≥5 张牌，本回合额外抽 Amount 张（卡牌 PALE_BLUE_DOT，储君池：基础抽 1、升级抽 2）。",
     "id": "PALE_BLUE_DOT_POWER",
@@ -2081,6 +2588,7 @@
   "PANACHE_POWER": {
     "aliases": [
       "PANACHE",
+      "Panache",
       "PanachePower"
     ],
     "counter_class": false,
@@ -2097,6 +2605,7 @@
   "PAPER_CUTS_POWER": {
     "aliases": [
       "PAPER_CUTS",
+      "Paper Cuts",
       "PaperCutsPower"
     ],
     "counter_class": false,
@@ -2114,6 +2623,7 @@
   "PARRY_POWER": {
     "aliases": [
       "PARRY",
+      "Parry",
       "ParryPower"
     ],
     "counter_class": false,
@@ -2128,11 +2638,16 @@
     "stack_type": "Counter"
   },
   "PERSONAL_HIVE": {
+    "aliases": [
+      "Personal Hive"
+    ],
     "curated": true,
     "description": "物主被攻击牌命中时，攻击者抽牌堆随机位置获得 Amount 张眩晕。信息素喷吐同一次读取内增加 Amount 并赋予力量。对局40 live：狱火能力伤害不触发 Hive 税（狱火 tick 期间 Hive 保持 :1；税仅由攻击牌命中触发）；零攻击纯技能回合使 Hive 保持休眠。",
     "id": "PERSONAL_HIVE",
     "kind": "power",
-    "name": "个人蜂巢"
+    "name": "个人蜂巢",
+    "power_type": "Buff",
+    "stack_type": "Counter"
   },
   "PERSONAL_HIVE_POWER": {
     "aliases": [
@@ -2152,6 +2667,8 @@
   },
   "PHANTOM_BLADES_POWER": {
     "aliases": [
+      "PHANTOM_BLADES",
+      "Phantom Blades",
       "PhantomBladesPower"
     ],
     "counter_class": false,
@@ -2166,6 +2683,10 @@
     "stack_type": "Counter"
   },
   "PIERCING_WAIL_POWER": {
+    "aliases": [
+      "PIERCING_WAIL",
+      "Temporary Strength Down"
+    ],
     "curated": true,
     "description": "临时力量子类（负向）：施加时给受影响敌人 -Amount 力量，各敌人阵营回合结束时等量回退。数值为负时显示 Debuff。",
     "id": "PIERCING_WAIL_POWER",
@@ -2176,6 +2697,8 @@
   },
   "PILLAR_OF_CREATION_POWER": {
     "aliases": [
+      "PILLAR_OF_CREATION",
+      "Pillar of Creation",
       "PillarOfCreationPower"
     ],
     "counter_class": false,
@@ -2192,6 +2715,7 @@
   "PLATING_POWER": {
     "aliases": [
       "PLATING",
+      "Plating",
       "PlatingPower"
     ],
     "counter_class": true,
@@ -2208,6 +2732,7 @@
   "PLOW_POWER": {
     "aliases": [
       "PLOW",
+      "Plow",
       "PlowPower"
     ],
     "counter_class": true,
@@ -2223,6 +2748,7 @@
   },
   "POISON": {
     "aliases": [
+      "Poison",
       "PoisonPower"
     ],
     "counter_class": false,
@@ -2239,6 +2765,7 @@
   "POSSESS_SPEED_POWER": {
     "aliases": [
       "POSSESS_SPEED",
+      "Possess Speed",
       "PossessSpeedPower"
     ],
     "counter_class": false,
@@ -2255,6 +2782,7 @@
   "POSSESS_STRENGTH_POWER": {
     "aliases": [
       "POSSESS_STRENGTH",
+      "Possess Strength",
       "PossessStrengthPower"
     ],
     "counter_class": false,
@@ -2268,9 +2796,24 @@
     "power_type": "Buff",
     "stack_type": "Counter"
   },
+  "PREP_TIME": {
+    "aliases": [
+      "PREP_TIME",
+      "Prep Time"
+    ],
+    "curated": false,
+    "description": "At the start of your turn, gain 4 Vigor.",
+    "id": "PREP_TIME",
+    "kind": "power",
+    "name": "Prep Time",
+    "play_notes": "",
+    "power_type": "Buff",
+    "stack_type": "Counter"
+  },
   "PYRE_POWER": {
     "aliases": [
       "PYRE",
+      "Pyre",
       "PyrePower"
     ],
     "counter_class": false,
@@ -2287,6 +2830,7 @@
   "RADIANCE_POWER": {
     "aliases": [
       "RADIANCE",
+      "Radiance",
       "RadiancePower"
     ],
     "counter_class": false,
@@ -2303,6 +2847,7 @@
   "RAGE_POWER": {
     "aliases": [
       "RAGE",
+      "Rage",
       "RagePower"
     ],
     "counter_class": false,
@@ -2319,6 +2864,7 @@
   "RAMPART_POWER": {
     "aliases": [
       "RAMPART",
+      "Rampart",
       "RampartPower"
     ],
     "counter_class": false,
@@ -2336,6 +2882,7 @@
   "RAVENOUS_POWER": {
     "aliases": [
       "RAVENOUS",
+      "Ravenous",
       "RavenousPower"
     ],
     "counter_class": true,
@@ -2351,6 +2898,8 @@
   },
   "REAPER_FORM_POWER": {
     "aliases": [
+      "REAPER_FORM",
+      "Reaper Form",
       "ReaperFormPower"
     ],
     "counter_class": false,
@@ -2365,11 +2914,16 @@
     "stack_type": "Counter"
   },
   "REATTACH": {
+    "aliases": [
+      "Reattach"
+    ],
     "curated": true,
     "description": "死亡时若其他带重接的段仍存活，物主进入 DEAD 状态（不可选中、不移出战斗）并在其回合结束重接、回复 Amount HP。仅当所有其他段同时死亡时才是真死。对局40 live：同窗清场教条——铺伤，其他段存活时绝不单杀（杀掉最后活段会让全部 DEAD 段各 +Amount 复活）；狱火 9 实例 tick 为三人组控速；最后对 1hp 活段的打击赢得淡出胜利。",
     "id": "REATTACH",
     "kind": "power",
-    "name": "重接"
+    "name": "重接",
+    "power_type": "Buff",
+    "stack_type": "Single"
   },
   "REATTACH_POWER": {
     "aliases": [
@@ -2389,6 +2943,8 @@
   },
   "REBOUND_POWER": {
     "aliases": [
+      "REBOUND",
+      "Rebound",
       "ReboundPower"
     ],
     "counter_class": false,
@@ -2399,12 +2955,27 @@
     "kind": "power",
     "name": "Rebound",
     "play_notes": "",
-    "power_type": null,
+    "power_type": "Buff",
+    "stack_type": "Counter"
+  },
+  "REFLECT": {
+    "aliases": [
+      "REFLECT",
+      "Reflect"
+    ],
+    "curated": false,
+    "description": "Blocked damage is reflected to your attacker.",
+    "id": "REFLECT",
+    "kind": "power",
+    "name": "Reflect",
+    "play_notes": "",
+    "power_type": "Buff",
     "stack_type": "Counter"
   },
   "REGEN_POWER": {
     "aliases": [
       "REGEN",
+      "Regen",
       "RegenPower"
     ],
     "counter_class": false,
@@ -2419,6 +2990,10 @@
     "stack_type": "Counter"
   },
   "REPTILE_TRINKET_POWER": {
+    "aliases": [
+      "REPTILE_TRINKET",
+      "Temporary Strength"
+    ],
     "curated": true,
     "description": "临时力量子类：持有者每次使用药水时本回合获得 +Amount 力量（遗物 REPTILE_TRINKET：+3），阵营回合结束时回退。任意药水使用均触发——可与药水自身的力量效果同回合叠加。",
     "id": "REPTILE_TRINKET_POWER",
@@ -2430,6 +3005,7 @@
   "RETAIN_HAND_POWER": {
     "aliases": [
       "RETAIN_HAND",
+      "Retain Hand",
       "RetainHandPower"
     ],
     "counter_class": false,
@@ -2449,6 +3025,7 @@
     ],
     "aliases": [
       "RINGING",
+      "Ringing",
       "RingingPower"
     ],
     "counter_class": true,
@@ -2465,6 +3042,7 @@
   "RITUAL_POWER": {
     "aliases": [
       "RITUAL",
+      "Ritual",
       "RitualPower"
     ],
     "counter_class": false,
@@ -2478,8 +3056,24 @@
     "power_type": "Buff",
     "stack_type": "Counter"
   },
+  "ROLLING_BOULDER": {
+    "aliases": [
+      "ROLLING_BOULDER",
+      "Rolling Boulder"
+    ],
+    "curated": false,
+    "description": "At the start of your turn, deal  damage to ALL enemies and increase this damage by 5.",
+    "id": "ROLLING_BOULDER",
+    "kind": "power",
+    "name": "Rolling Boulder",
+    "play_notes": "",
+    "power_type": "Buff",
+    "stack_type": "Counter"
+  },
   "ROYALTIES_POWER": {
     "aliases": [
+      "ROYALTIES",
+      "Royalties",
       "RoyaltiesPower"
     ],
     "counter_class": false,
@@ -2496,6 +3090,7 @@
   "RUPTURE_POWER": {
     "aliases": [
       "RUPTURE",
+      "Rupture",
       "RupturePower"
     ],
     "counter_class": false,
@@ -2512,6 +3107,7 @@
   "SANDPIT_POWER": {
     "aliases": [
       "SANDPIT",
+      "Sandpit",
       "SandpitPower"
     ],
     "counter_class": true,
@@ -2527,6 +3123,8 @@
   },
   "SEEKING_EDGE_POWER": {
     "aliases": [
+      "SEEKING_EDGE",
+      "Seeking Edge",
       "SeekingEdgePower"
     ],
     "counter_class": false,
@@ -2543,6 +3141,7 @@
   "SELF_FORMING_CLAY_POWER": {
     "aliases": [
       "SELF_FORMING_CLAY",
+      "Self-Forming Clay",
       "SelfFormingClayPower"
     ],
     "counter_class": false,
@@ -2558,6 +3157,8 @@
   },
   "SENTRY_MODE_POWER": {
     "aliases": [
+      "SENTRY_MODE",
+      "Sentry Mode",
       "SentryModePower"
     ],
     "counter_class": false,
@@ -2573,6 +3174,8 @@
   },
   "SERPENT_FORM_POWER": {
     "aliases": [
+      "SERPENT_FORM",
+      "Serpent Form",
       "SerpentFormPower"
     ],
     "counter_class": false,
@@ -2587,6 +3190,10 @@
     "stack_type": "Counter"
   },
   "SETUP_STRIKE_POWER": {
+    "aliases": [
+      "SETUP_STRIKE",
+      "Temporary Strength"
+    ],
     "curated": true,
     "description": "临时力量子类：本回合内 +Amount 力量（卡牌 SETUP_STRIKE：基础 +2、升级 +3），持有者阵营回合结束时回退。",
     "id": "SETUP_STRIKE_POWER",
@@ -2595,8 +3202,24 @@
     "power_type": "Buff",
     "stack_type": "Counter"
   },
+  "SHACKLING_POTION": {
+    "aliases": [
+      "SHACKLING_POTION",
+      "Temporary Strength Down"
+    ],
+    "curated": false,
+    "description": "Lose Strength until the end of this turn.",
+    "id": "SHACKLING_POTION",
+    "kind": "power",
+    "name": "Temporary Strength Down",
+    "play_notes": "",
+    "power_type": "Debuff",
+    "stack_type": "Counter"
+  },
   "SHADOWMELD_POWER": {
     "aliases": [
+      "SHADOWMELD",
+      "Shadowmeld",
       "ShadowmeldPower"
     ],
     "counter_class": false,
@@ -2610,9 +3233,24 @@
     "power_type": "Buff",
     "stack_type": "Counter"
   },
+  "SHADOW_STEP": {
+    "aliases": [
+      "SHADOW_STEP",
+      "Shadow Step"
+    ],
+    "curated": false,
+    "description": "For the next 2 turns after this one, Attacks deal double damage.",
+    "id": "SHADOW_STEP",
+    "kind": "power",
+    "name": "Shadow Step",
+    "play_notes": "",
+    "power_type": "Buff",
+    "stack_type": "Counter"
+  },
   "SHRIEK_POWER": {
     "aliases": [
       "SHRIEK",
+      "Shriek",
       "ShriekPower"
     ],
     "counter_class": true,
@@ -2629,6 +3267,7 @@
   "SHRINK_POWER": {
     "aliases": [
       "SHRINK",
+      "Shrink",
       "ShrinkPower"
     ],
     "counter_class": false,
@@ -2644,6 +3283,8 @@
   },
   "SHROUD_POWER": {
     "aliases": [
+      "SHROUD",
+      "Shroud",
       "ShroudPower"
     ],
     "counter_class": false,
@@ -2659,6 +3300,8 @@
   },
   "SIC_EM_POWER": {
     "aliases": [
+      "SIC_EM",
+      "Sic 'Em",
       "SicEmPower"
     ],
     "counter_class": false,
@@ -2674,6 +3317,8 @@
   },
   "SIGNAL_BOOST_POWER": {
     "aliases": [
+      "SIGNAL_BOOST",
+      "Signal Boost",
       "SignalBoostPower"
     ],
     "counter_class": false,
@@ -2688,11 +3333,16 @@
     "stack_type": "Counter"
   },
   "SKITTISH": {
+    "aliases": [
+      "Skittish"
+    ],
     "curated": true,
     "description": "物主本回合未获得格挡且受到卡牌攻击伤害时获得 Amount 挡（每回合一次；标记在对方回合结束重置）。对局40 live 鳗四件组：突破 AllEnemies 同一指令触发四只全部易惊（AoE 结算后各+6）；同回合后续攻击全额命中——AoE 穿透教条成立。",
     "id": "SKITTISH",
     "kind": "power",
-    "name": "易惊"
+    "name": "易惊",
+    "power_type": "Buff",
+    "stack_type": "Counter"
   },
   "SKITTISH_POWER": {
     "aliases": [
@@ -2711,6 +3361,10 @@
     "stack_type": "Counter"
   },
   "SLEIGHT_OF_FLESH_POWER": {
+    "aliases": [
+      "SLEIGHT_OF_FLESH",
+      "Sleight of Flesh"
+    ],
     "curated": true,
     "description": "持有者每次对敌人施加非临时减益时，对该敌人造成 Amount 点非攻击伤害（卡牌 SLEIGHT_OF_FLESH，亡灵契约师：基础 9、升级 13）。临时属性类减益不触发。",
     "id": "SLEIGHT_OF_FLESH_POWER",
@@ -2722,6 +3376,7 @@
   "SLIPPERY_POWER": {
     "aliases": [
       "SLIPPERY",
+      "Slippery",
       "SlipperyPower"
     ],
     "counter_class": false,
@@ -2737,6 +3392,10 @@
     "stack_type": "Counter"
   },
   "SLOTH_POWER": {
+    "aliases": [
+      "SLOTH",
+      "Sloth"
+    ],
     "counter_class": true,
     "curated": true,
     "description": "减益计数：持有者每回合最多出 Amount 张牌（回合开始重置；显示为本回合已出牌数）。由知识恶魔 CURSE_OF_KNOWLEDGE 选择牌 SLOTH 以 Amount 3 施加。击杀窗语义：上限即战斗约束——需超过 Amount 张出牌的爆发线在怠惰下失效；按 3 张线规划（放血+旋风计 2 张）。run-46 live：HP38 对 106HP 知识恶魔选怠惰弃崩解——3 张上限胜过 13/回合税升级；同战 FF+Ashes 2 张线在上限内收头。",
@@ -2750,6 +3409,7 @@
   "SLOW_POWER": {
     "aliases": [
       "SLOW",
+      "Slow",
       "SlowPower"
     ],
     "counter_class": false,
@@ -2767,6 +3427,7 @@
   "SLUMBER_POWER": {
     "aliases": [
       "SLUMBER",
+      "Slumber",
       "SlumberPower"
     ],
     "counter_class": true,
@@ -2786,6 +3447,7 @@
     ],
     "aliases": [
       "SMOGGY",
+      "Smoggy",
       "SmoggyPower"
     ],
     "counter_class": false,
@@ -2799,8 +3461,24 @@
     "power_type": "Debuff",
     "stack_type": "Single"
   },
+  "SMOKESTACK": {
+    "aliases": [
+      "SMOKESTACK",
+      "Smokestack"
+    ],
+    "curated": false,
+    "description": "Whenever you create a Status, deal damage to ALL enemies.",
+    "id": "SMOKESTACK",
+    "kind": "power",
+    "name": "Smokestack",
+    "play_notes": "",
+    "power_type": "Buff",
+    "stack_type": "Counter"
+  },
   "SNEAKY_POWER": {
     "aliases": [
+      "SNEAKY",
+      "Sneaky",
       "SneakyPower"
     ],
     "counter_class": false,
@@ -2817,6 +3495,7 @@
   "SOAR_POWER": {
     "aliases": [
       "SOAR",
+      "Soar",
       "SoarPower"
     ],
     "counter_class": false,
@@ -2832,6 +3511,8 @@
   },
   "SPECTRUM_SHIFT_POWER": {
     "aliases": [
+      "SPECTRUM_SHIFT",
+      "Spectrum Shift",
       "SpectrumShiftPower"
     ],
     "counter_class": false,
@@ -2846,11 +3527,29 @@
     "stack_type": "Counter"
   },
   "SPEEDSTER_POWER": {
+    "aliases": [
+      "SPEEDSTER",
+      "Speedster"
+    ],
     "curated": true,
     "description": "持有者每次在常规抽牌之外抽牌时，对所有可命中敌人造成 Amount 点非攻击伤害（卡牌 SPEEDSTER，静默池：基础 2、固有；升级数值见卡面）。",
     "id": "SPEEDSTER_POWER",
     "kind": "power",
     "name": "疾行者",
+    "power_type": "Buff",
+    "stack_type": "Counter"
+  },
+  "SPEED_POTION": {
+    "aliases": [
+      "SPEED_POTION",
+      "Temporary Dexterity"
+    ],
+    "curated": false,
+    "description": "Gain Dexterity until the end of this turn.",
+    "id": "SPEED_POTION",
+    "kind": "power",
+    "name": "Temporary Dexterity",
+    "play_notes": "",
     "power_type": "Buff",
     "stack_type": "Counter"
   },
@@ -2865,6 +3564,8 @@
   },
   "SPINNER_POWER": {
     "aliases": [
+      "SPINNER",
+      "Spinner",
       "SpinnerPower"
     ],
     "counter_class": false,
@@ -2880,6 +3581,8 @@
   },
   "SPIRIT_OF_ASH_POWER": {
     "aliases": [
+      "SPIRIT_OF_ASH",
+      "Spirit of Ash",
       "SpiritOfAshPower"
     ],
     "counter_class": false,
@@ -2896,6 +3599,7 @@
   "STAMPEDE_POWER": {
     "aliases": [
       "STAMPEDE",
+      "Stampede",
       "StampedePower"
     ],
     "counter_class": false,
@@ -2912,6 +3616,7 @@
   "STAR_NEXT_TURN_POWER": {
     "aliases": [
       "STAR_NEXT_TURN",
+      "Star Next Turn",
       "StarNextTurnPower"
     ],
     "counter_class": false,
@@ -2928,6 +3633,7 @@
   "STEAM_ERUPTION_POWER": {
     "aliases": [
       "STEAM_ERUPTION",
+      "Steam Eruption",
       "SteamEruptionPower"
     ],
     "counter_class": false,
@@ -2944,6 +3650,7 @@
   "STOCK_POWER": {
     "aliases": [
       "STOCK",
+      "Stock",
       "StockPower"
     ],
     "counter_class": false,
@@ -2959,6 +3666,8 @@
   },
   "STORM_POWER": {
     "aliases": [
+      "STORM",
+      "Storm",
       "StormPower"
     ],
     "counter_class": false,
@@ -2974,6 +3683,8 @@
   },
   "STRANGLE_POWER": {
     "aliases": [
+      "STRANGLE",
+      "Strangle",
       "StranglePower"
     ],
     "counter_class": false,
@@ -2990,6 +3701,7 @@
   "STRATAGEM_POWER": {
     "aliases": [
       "STRATAGEM",
+      "Stratagem",
       "StratagemPower"
     ],
     "counter_class": false,
@@ -3006,6 +3718,7 @@
   "STRENGTH_POWER": {
     "aliases": [
       "STRENGTH",
+      "Strength",
       "StrengthPower"
     ],
     "counter_class": false,
@@ -3021,6 +3734,8 @@
   },
   "SUBROUTINE_POWER": {
     "aliases": [
+      "SUBROUTINE",
+      "Subroutine",
       "SubroutinePower"
     ],
     "counter_class": false,
@@ -3035,6 +3750,10 @@
     "stack_type": "Counter"
   },
   "SUCK_POWER": {
+    "aliases": [
+      "SUCK",
+      "Suck"
+    ],
     "curated": true,
     "description": "持有者的攻击牌对任意目标造成未格挡伤害后，按成功命中实例每段 +Amount 力量（化石追踪者被动：+3）。攻击意图被完全格挡的回合不触发——格挡攻击轮可阻止力量滚雪球。",
     "id": "SUCK_POWER",
@@ -3046,6 +3765,7 @@
   "SUMMON_NEXT_TURN_POWER": {
     "aliases": [
       "SUMMON_NEXT_TURN",
+      "Summon Next Turn",
       "SummonNextTurnPower"
     ],
     "counter_class": false,
@@ -3062,6 +3782,7 @@
   "SURPRISE_POWER": {
     "aliases": [
       "SURPRISE",
+      "Surprise",
       "SurprisePower"
     ],
     "counter_class": false,
@@ -3078,6 +3799,7 @@
   "SURROUNDED_POWER": {
     "aliases": [
       "SURROUNDED",
+      "Surrounded",
       "SurroundedPower"
     ],
     "counter_class": false,
@@ -3093,6 +3815,10 @@
     "stack_type": "Single"
   },
   "SWIPE_POWER": {
+    "aliases": [
+      "SWIPE",
+      "Swipe"
+    ],
     "curated": true,
     "description": "持有者控制 1 张被窃牌库卡（偷窃草蜢 THIEVERY_MOVE 优先级：非铭刻罕见 → 普通/稀有/事件 → 基础/任务 → 远古/铭刻）；持有者死亡时被窃牌归还受害者牌库并额外给一张卡牌奖励。幸运飞鱼在静默加牌时 +15 金。",
     "id": "SWIPE_POWER",
@@ -3103,6 +3829,8 @@
   },
   "SWORD_SAGE_POWER": {
     "aliases": [
+      "SWORD_SAGE",
+      "Sword Sage",
       "SwordSagePower"
     ],
     "counter_class": false,
@@ -3116,12 +3844,41 @@
     "power_type": "Buff",
     "stack_type": "Counter"
   },
+  "SYNCHRONIZE": {
+    "aliases": [
+      "SYNCHRONIZE",
+      "Temporary Focus"
+    ],
+    "curated": false,
+    "description": "Gain Focus until the end of this turn.",
+    "id": "SYNCHRONIZE",
+    "kind": "power",
+    "name": "Temporary Focus",
+    "play_notes": "",
+    "power_type": "Buff",
+    "stack_type": "Counter"
+  },
+  "TAG_TEAM": {
+    "aliases": [
+      "TAG_TEAM",
+      "Tag Team"
+    ],
+    "curated": false,
+    "description": "The next Attack another player plays on the enemy is played an extra time.",
+    "id": "TAG_TEAM",
+    "kind": "power",
+    "name": "Tag Team",
+    "play_notes": "",
+    "power_type": "Debuff",
+    "stack_type": "Counter"
+  },
   "TAINTED_POWER": {
     "affliction_keys": [
       "TAINTED"
     ],
     "aliases": [
       "TAINTED",
+      "Tainted",
       "TaintedPower"
     ],
     "counter_class": false,
@@ -3141,6 +3898,7 @@
     ],
     "aliases": [
       "TANGLED",
+      "Tangled",
       "TangledPower"
     ],
     "counter_class": false,
@@ -3156,6 +3914,8 @@
   },
   "TANK_POWER": {
     "aliases": [
+      "TANK",
+      "Tank",
       "TankPower"
     ],
     "counter_class": false,
@@ -3172,6 +3932,7 @@
   "TENDER_POWER": {
     "aliases": [
       "TENDER",
+      "Tender",
       "TenderPower"
     ],
     "counter_class": false,
@@ -3188,6 +3949,7 @@
   "TERRITORIAL_POWER": {
     "aliases": [
       "TERRITORIAL",
+      "Territorial",
       "TerritorialPower"
     ],
     "counter_class": false,
@@ -3203,6 +3965,8 @@
   },
   "THE_BOMB_POWER": {
     "aliases": [
+      "THE_BOMB",
+      "The Bomb",
       "TheBombPower"
     ],
     "counter_class": true,
@@ -3219,6 +3983,7 @@
   "THE_GAMBIT_POWER": {
     "aliases": [
       "THE_GAMBIT",
+      "The Gambit",
       "TheGambitPower"
     ],
     "counter_class": true,
@@ -3234,6 +3999,8 @@
   },
   "THE_HUNT_POWER": {
     "aliases": [
+      "THE_HUNT",
+      "The Hunt",
       "TheHuntPower"
     ],
     "counter_class": false,
@@ -3249,6 +4016,8 @@
   },
   "THE_SEALED_THRONE_POWER": {
     "aliases": [
+      "THE_SEALED_THRONE",
+      "The Sealed Throne",
       "TheSealedThronePower"
     ],
     "counter_class": false,
@@ -3265,6 +4034,7 @@
   "THIEVERY_POWER": {
     "aliases": [
       "THIEVERY",
+      "Thievery",
       "ThieveryPower"
     ],
     "counter_class": false,
@@ -3281,6 +4051,7 @@
   "THORNS_POWER": {
     "aliases": [
       "THORNS",
+      "Thorns",
       "ThornsPower"
     ],
     "counter_class": false,
@@ -3296,6 +4067,8 @@
   },
   "THUNDER_POWER": {
     "aliases": [
+      "THUNDER",
+      "Thunder",
       "ThunderPower"
     ],
     "counter_class": false,
@@ -3312,6 +4085,7 @@
   "TOOLS_OF_THE_TRADE_POWER": {
     "aliases": [
       "TOOLS_OF_THE_TRADE",
+      "Tools of the Trade",
       "ToolsOfTheTradePower"
     ],
     "counter_class": false,
@@ -3328,6 +4102,7 @@
   "TORIC_TOUGHNESS_POWER": {
     "aliases": [
       "TORIC_TOUGHNESS",
+      "Toric Toughness",
       "ToricToughnessPower"
     ],
     "counter_class": false,
@@ -3343,6 +4118,8 @@
   },
   "TRACKING_POWER": {
     "aliases": [
+      "TRACKING",
+      "Tracking",
       "TrackingPower"
     ],
     "counter_class": false,
@@ -3356,9 +4133,24 @@
     "power_type": "Buff",
     "stack_type": "Counter"
   },
+  "TRASH_TO_TREASURE": {
+    "aliases": [
+      "TRASH_TO_TREASURE",
+      "Trash to Treasure"
+    ],
+    "curated": false,
+    "description": "Whenever you create a Status, Channel 2 random Orbs.",
+    "id": "TRASH_TO_TREASURE",
+    "kind": "power",
+    "name": "Trash to Treasure",
+    "play_notes": "",
+    "power_type": "Buff",
+    "stack_type": "Counter"
+  },
   "TYRANNY_POWER": {
     "aliases": [
       "TYRANNY",
+      "Tyranny",
       "TyrannyPower"
     ],
     "counter_class": false,
@@ -3373,11 +4165,16 @@
     "stack_type": "Counter"
   },
   "UNMOVABLE": {
+    "aliases": [
+      "Unmovable"
+    ],
     "curated": true,
     "description": "每回合前 Amount 次从卡牌获得格挡时翻倍。对局40 live 数值（Amount=1 能力牌，每回合前两次卡牌挡增益翻倍）：血墙16→32、邪眼8→16、究极防御11→22、耸肩8→16、武装5→10、防御5→10。药水源格挡不翻倍（封锁药水12仍为12）。",
     "id": "UNMOVABLE",
     "kind": "power",
-    "name": "岿然不动"
+    "name": "岿然不动",
+    "power_type": "Buff",
+    "stack_type": "Counter"
   },
   "UNMOVABLE_POWER": {
     "aliases": [
@@ -3397,6 +4194,8 @@
   },
   "VEILPIERCER_POWER": {
     "aliases": [
+      "VEILPIERCER",
+      "Veilpiercer",
       "VeilpiercerPower"
     ],
     "counter_class": false,
@@ -3413,6 +4212,7 @@
   "VICIOUS_POWER": {
     "aliases": [
       "VICIOUS",
+      "Vicious",
       "ViciousPower"
     ],
     "counter_class": false,
@@ -3429,6 +4229,7 @@
   "VIGOR_POWER": {
     "aliases": [
       "VIGOR",
+      "Vigor",
       "VigorPower"
     ],
     "counter_class": false,
@@ -3445,6 +4246,7 @@
   "VITAL_SPARK_POWER": {
     "aliases": [
       "VITAL_SPARK",
+      "Vital Spark",
       "VitalSparkPower"
     ],
     "counter_class": true,
@@ -3460,6 +4262,8 @@
   },
   "VOID_FORM_POWER": {
     "aliases": [
+      "VOID_FORM",
+      "Void Form",
       "VoidFormPower"
     ],
     "counter_class": false,
@@ -3476,6 +4280,7 @@
   "VULNERABLE_POWER": {
     "aliases": [
       "VULNERABLE",
+      "Vulnerable",
       "VulnerablePower"
     ],
     "counter_class": false,
@@ -3492,6 +4297,7 @@
   "WASTE_AWAY_POWER": {
     "aliases": [
       "WASTE_AWAY",
+      "Waste Away",
       "WasteAwayPower"
     ],
     "counter_class": false,
@@ -3508,6 +4314,7 @@
   "WEAK_POWER": {
     "aliases": [
       "WEAK",
+      "Weak",
       "WeakPower"
     ],
     "counter_class": false,
@@ -3523,6 +4330,8 @@
   },
   "WELL_LAID_PLANS_POWER": {
     "aliases": [
+      "WELL_LAID_PLANS",
+      "Well-Laid Plans",
       "WellLaidPlansPower"
     ],
     "counter_class": false,
@@ -3533,12 +4342,13 @@
     "kind": "power",
     "name": "Well Laid Plans",
     "play_notes": "",
-    "power_type": null,
+    "power_type": "Buff",
     "stack_type": "Counter"
   },
   "WITHERING_PRESENCE_POWER": {
     "aliases": [
       "WITHERING_PRESENCE",
+      "Withering Presence",
       "WitheringPresencePower"
     ],
     "counter_class": false,
@@ -3554,6 +4364,8 @@
   },
   "WRAITH_FORM_POWER": {
     "aliases": [
+      "WRAITH_FORM",
+      "Wraith Form",
       "WraithFormPower"
     ],
     "counter_class": false,

@@ -3,6 +3,7 @@
     "aliases": [
       "CHARACTER.DEFECT",
       "Defect",
+      "The Defect",
       "故障机器人"
     ],
     "card_pool": "DefectCardPool",
@@ -22,6 +23,7 @@
     "aliases": [
       "CHARACTER.IRONCLAD",
       "Ironclad",
+      "The Ironclad",
       "铁甲战士"
     ],
     "card_pool": "IroncladCardPool",
@@ -41,6 +43,7 @@
     "aliases": [
       "CHARACTER.NECROBINDER",
       "Necrobinder",
+      "The Necrobinder",
       "亡灵契约师"
     ],
     "card_pool": "NecrobinderCardPool",
@@ -60,6 +63,7 @@
     "aliases": [
       "CHARACTER.REGENT",
       "Regent",
+      "The Regent",
       "储君"
     ],
     "card_pool": "RegentCardPool",
@@ -79,6 +83,7 @@
     "aliases": [
       "CHARACTER.SILENT",
       "Silent",
+      "The Silent",
       "静默猎手"
     ],
     "card_pool": "SilentCardPool",
