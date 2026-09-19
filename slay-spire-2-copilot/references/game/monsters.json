@@ -2394,6 +2394,7 @@
           "BEAST_CRY"
         ],
         "curated": true,
+        "description": "Beast Cry: Debuff — RINGING 1 on player (1-card/turn limit until end of boss side turn; bridge enforces ok/no).",
         "effect": "Beast Cry: Debuff — RINGING 1 on player (1-card/turn limit until end of boss side turn; bridge enforces ok/no).",
         "follow_up_id": null,
         "id": "BEAST_CRY_MOVE",
@@ -2410,8 +2411,7 @@
         "name": "Beast Cry",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/CEREMONIAL_BEAST#BEAST_CRY",
-        "description": "Beast Cry: Debuff — RINGING 1 on player (1-card/turn limit until end of boss side turn; bridge enforces ok/no)."
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#BEAST_CRY"
       },
       "CRUSH_MOVE": {
         "aliases": [
@@ -2419,6 +2419,7 @@
           "CRUSH"
         ],
         "curated": true,
+        "description": "Crush: single attack 17 (A:19) + self +3 Strength.",
         "effect": "Crush: single attack 17 (A:19) + self +3 Strength.",
         "follow_up_id": null,
         "id": "CRUSH_MOVE",
@@ -2438,8 +2439,7 @@
         "name": "Crush",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/CEREMONIAL_BEAST#CRUSH",
-        "description": "Crush: single attack 17 (A:19) + self +3 Strength."
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#CRUSH"
       },
       "PLOW_MOVE": {
         "aliases": [
@@ -2447,6 +2447,7 @@
           "PLOW"
         ],
         "curated": true,
+        "description": "Plow: single attack 18 (A:20) + self +2 Strength; live run-48 intents climbed 13→22 as Territorial-style Str stacked; Weak cuts per-hit.",
         "effect": "Plow: single attack 18 (A:20) + self +2 Strength; live run-48 intents climbed 13→22 as Territorial-style Str stacked; Weak cuts per-hit.",
         "follow_up_id": null,
         "id": "PLOW_MOVE",
@@ -2466,8 +2467,7 @@
         "name": "Plow",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/CEREMONIAL_BEAST#PLOW",
-        "description": "Plow: single attack 18 (A:20) + self +2 Strength; live run-48 intents climbed 13→22 as Territorial-style Str stacked; Weak cuts per-hit."
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#PLOW"
       },
       "STAMP_MOVE": {
         "aliases": [
@@ -2475,6 +2475,7 @@
           "STAMP"
         ],
         "curated": true,
+        "description": "Stamp: Buff — applies PLOW_POWER 150 to self (free-damage window turn; run-48 T1 no incoming).",
         "effect": "Stamp: Buff — applies PLOW_POWER 150 to self (free-damage window turn; run-48 T1 no incoming).",
         "follow_up_id": null,
         "id": "STAMP_MOVE",
@@ -2491,8 +2492,7 @@
         "name": "Stamp",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/CEREMONIAL_BEAST#STAMP",
-        "description": "Stamp: Buff — applies PLOW_POWER 150 to self (free-damage window turn; run-48 T1 no incoming)."
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#STAMP"
       },
       "STOMP_MOVE": {
         "aliases": [
@@ -2500,6 +2500,7 @@
           "STOMP"
         ],
         "curated": true,
+        "description": "Stomp: single attack 15 (A:17).",
         "effect": "Stomp: single attack 15 (A:17).",
         "follow_up_id": null,
         "id": "STOMP_MOVE",
@@ -2519,8 +2520,7 @@
         "name": "Stomp",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/CEREMONIAL_BEAST#STOMP",
-        "description": "Stomp: single attack 15 (A:17)."
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#STOMP"
       },
       "STUN_MOVE": {
         "aliases": [
@@ -2528,6 +2528,7 @@
           "STUN"
         ],
         "curated": true,
+        "description": "Stun: stun-state move — appears in archive cycle after PLOW; LIVE run-48: the stun fired as STUNNED state when PLOW_POWER threshold was crossed (not a scheduled cycle slot on the un-stunned path; post-stun cycle resumed at BEAST_CRY).",
         "effect": "Stun: stun-state move — appears in archive cycle after PLOW; LIVE run-48: the stun fired as STUNNED state when PLOW_POWER threshold was crossed (not a scheduled cycle slot on the un-stunned path; post-stun cycle resumed at BEAST_CRY).",
         "follow_up_id": null,
         "id": "STUN_MOVE",
@@ -2544,8 +2545,7 @@
         "name": "Stun",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/CEREMONIAL_BEAST#STUN",
-        "description": "Stun: stun-state move — appears in archive cycle after PLOW; LIVE run-48: the stun fired as STUNNED state when PLOW_POWER threshold was crossed (not a scheduled cycle slot on the un-stunned path; post-stun cycle resumed at BEAST_CRY)."
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#STUN"
       }
     },
     "name": "Ceremonial Beast",
@@ -2665,151 +2665,39 @@
     "zh_name": "尸体蛞蝓"
   },
   "CUBEX_CONSTRUCT": {
-    "acts": [],
     "aliases": [
-      "Cubex Construct"
+      "CUBEX_CONSTRUCT",
+      "立柱构造体",
+      "CubexConstruct"
     ],
     "curated": true,
     "cycle": [
       "CHARGE_UP_MOVE",
       "REPEATER_BLAST_MOVE",
-      "REPEATER_BLAST_MOVE_2_MOVE",
+      "REPEATER_BLAST_MOVE_2",
       "EXPEL_MOVE"
     ],
-    "description": "Cubex Construct (Normal): HP 65-None (A 70-None); cycle CHARGE_UP_MOVE → REPEATER_BLAST_MOVE → REPEATER_BLAST_MOVE_2_MOVE → EXPEL_MOVE",
+    "description": "Act1 monster (run-49 live A1: 65 HP, display 立柱构造体 — NOTE: Chinese display name collides with InfestedPrism's alias; live history id CUBEX_CONSTRUCT is authoritative). ARTIFACT_POWER:1 at spawn. Cycle CHARGE_UP (self +2 Str, free window) → REPEATER_BLAST (7 A:8 attack + self +2 Str) → REPEATER_BLAST_2 (same class) → EXPEL (multi 5x2 A:6). Doctrine: strip Artifact with Bash/Tremble-class debuff applications (damage lands, debuff absorbed), then race; free-window turns (CHARGE_UP) are burst turns.",
     "hp": {
-      "ascension": {
-        "max": null,
-        "min": 70
-      },
       "base": 65,
-      "max": null,
-      "notes": ""
+      "notes": "65 live A1 run-49"
     },
     "id": "CUBEX_CONSTRUCT",
     "is_boss": false,
     "is_elite": false,
     "kind": "monster",
-    "moves": {
-      "CHARGE_UP_MOVE": {
-        "aliases": [
-          "Charge Up",
-          "CHARGE_UP"
-        ],
-        "curated": false,
-        "description": "Charge Up: Buff; STRENGTH 2 (self).",
-        "effect": "Charge Up: Buff; STRENGTH 2 (self)",
-        "follow_up_id": null,
-        "id": "CHARGE_UP_MOVE",
-        "intents": [
-          {
-            "base_damage": null,
-            "base_damage_ascension": null,
-            "hits": null,
-            "type": "Buff"
-          }
-        ],
-        "kind": "move",
-        "monster_id": "CUBEX_CONSTRUCT",
-        "name": "Charge Up",
-        "needs_zh": false,
-        "play_notes": "",
-        "source": "codex-api:/monsters/CUBEX_CONSTRUCT#CHARGE_UP",
-        "zh_description": "Charge Up: Buff; STRENGTH 2 (self)."
-      },
-      "EXPEL_MOVE": {
-        "aliases": [
-          "Expel",
-          "EXPEL"
-        ],
-        "curated": false,
-        "description": "Expel: multi attack 5x2 (A:6 per hit).",
-        "effect": "Expel: Attack; damage 5x2 A:6",
-        "follow_up_id": null,
-        "id": "EXPEL_MOVE",
-        "intents": [
-          {
-            "base_damage": 5,
-            "base_damage_ascension": {
-              "ascension": 6
-            },
-            "class": "MultiAttackIntent",
-            "hits": 2,
-            "type": "Attack"
-          }
-        ],
-        "kind": "move",
-        "monster_id": "CUBEX_CONSTRUCT",
-        "name": "Expel",
-        "needs_zh": false,
-        "play_notes": "",
-        "source": "codex-api:/monsters/CUBEX_CONSTRUCT#EXPEL",
-        "zh_description": "Expel: multi attack 5x2 (A:6 per hit)."
-      },
-      "REPEATER_BLAST_MOVE": {
-        "aliases": [
-          "Repeater Blast",
-          "REPEATER_BLAST"
-        ],
-        "curated": false,
-        "description": "Repeater Blast: Attack + Buff; damage 7 (A:8); STRENGTH 2 (self).",
-        "effect": "Repeater Blast: Attack + Buff; damage 7 A:8; STRENGTH 2 (self)",
-        "follow_up_id": null,
-        "id": "REPEATER_BLAST_MOVE",
-        "intents": [
-          {
-            "base_damage": 7,
-            "base_damage_ascension": {
-              "ascension": 8
-            },
-            "class": "SingleAttackIntent",
-            "hits": null,
-            "type": "Attack + Buff"
-          }
-        ],
-        "kind": "move",
-        "monster_id": "CUBEX_CONSTRUCT",
-        "name": "Repeater Blast",
-        "needs_zh": false,
-        "play_notes": "",
-        "source": "codex-api:/monsters/CUBEX_CONSTRUCT#REPEATER_BLAST",
-        "zh_description": "Repeater Blast: Attack + Buff; damage 7 (A:8); STRENGTH 2 (self)."
-      },
-      "REPEATER_BLAST_MOVE_2_MOVE": {
-        "aliases": [
-          "Repeater Blast Move 2",
-          "REPEATER_BLAST_MOVE_2"
-        ],
-        "curated": false,
-        "description": "Repeater Blast Move 2: Attack + Buff; damage 7 (A:8); STRENGTH 2 (self).",
-        "effect": "Repeater Blast Move 2: Attack + Buff; damage 7 A:8; STRENGTH 2 (self)",
-        "follow_up_id": null,
-        "id": "REPEATER_BLAST_MOVE_2_MOVE",
-        "intents": [
-          {
-            "base_damage": 7,
-            "base_damage_ascension": {
-              "ascension": 8
-            },
-            "class": "SingleAttackIntent",
-            "hits": null,
-            "type": "Attack + Buff"
-          }
-        ],
-        "kind": "move",
-        "monster_id": "CUBEX_CONSTRUCT",
-        "name": "Repeater Blast Move 2",
-        "needs_zh": false,
-        "play_notes": "",
-        "source": "codex-api:/monsters/CUBEX_CONSTRUCT#REPEATER_BLAST_MOVE_2",
-        "zh_description": "Repeater Blast Move 2: Attack + Buff; damage 7 (A:8); STRENGTH 2 (self)."
-      }
-    },
     "name": "Cubex Construct",
     "needs_zh": false,
-    "play_notes": "",
-    "source": "codex-api:/monsters/CUBEX_CONSTRUCT",
-    "type": "Normal"
+    "passives": [
+      {
+        "amount": 1,
+        "counter_class": false,
+        "description": "at spawn; absorbs first visible debuff application per stack",
+        "power_id": "ARTIFACT_POWER"
+      }
+    ],
+    "play_notes": "Run-49 live: Tremble stripped Artifact same-turn (received -1 ARTIFACT_POWER, Vuln absorbed); killed T3 on a RITUAL-free race line. Alias collision with InfestedPrism (感染棱柱/立柱构造体) folded into references as a lookup caution — resolve by live history id, not display name.",
+    "source": "run-49 live fold 2026-09-19 (logs run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c)"
   },
   "CeremonialBeast": {
     "acts": [],
@@ -4829,8 +4717,8 @@
         "power_id": "REATTACH_POWER"
       }
     ],
-    "play_notes": "",
-    "source": "md:monsters.md:L62",
+    "play_notes": "Run-49 live addendum: same-window doctrine executed — Breakthrough AoE spread held segments alive at 10/3/17; BloodWall×Unmovable 32-block absorbed stall turns; T7 Strike+SetupStrike exact kills (13-exact on a 13-HP segment) closed all live segments in one window. Nuance live-confirmed: a DEAD segment does not attack on its turn (incoming dropped by its would-be attack); killing the only remaining live segment while others are DEAD-pending triggers their reattach — spread damage, sweep in one window.",
+    "source": "run-49 live fold 2026-09-19 (logs run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c)",
     "zh_description": "残杀千足虫（Act2 DecimillipedeElite；各节段基础 40-46 HP）：节段 DecimillipedeSegmentBack/Front/Middle。招式：WRITHE_MOVE 多段 5x2（A:6）；CONSTRICT_MOVE 单段 8（A:9）+1 虚弱；BULK_MOVE 单段 6（A:7）+自身 2 力量；REATTACH_MOVE 治疗；DEAD_MOVE 死亡态。被动 ReattachPower 25：节段死亡而他段存活时进入 DEAD（不可选中），回合结束若仍有活段则回贴并治疗 25——全部其他节段死亡时整组消亡。同窗清段是击杀条件；0 HP DEAD 段不可选中，不要对其出招。",
     "zh_name": "残杀千足虫"
   },
@@ -5771,6 +5659,7 @@
           "DISTRACT"
         ],
         "curated": true,
+        "description": "Distract: Status-class move — status clog to player (low threat); Eye is 6-HP MINION add of Fogmog — master-first kill order.",
         "effect": "Distract: Status-class move — status clog to player (low threat); Eye is 6-HP MINION add of Fogmog — master-first kill order.",
         "follow_up_id": null,
         "id": "DISTRACT_MOVE",
@@ -5787,8 +5676,7 @@
         "name": "Distract",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/EYE_WITH_TEETH#DISTRACT",
-        "description": "Distract: Status-class move — status clog to player (low threat); Eye is 6-HP MINION add of Fogmog — master-first kill order."
+        "source": "codex-api:/monsters/EYE_WITH_TEETH#DISTRACT"
       }
     },
     "name": "Eye with Teeth",
@@ -5989,8 +5877,8 @@
         "power_id": "PERSONAL_HIVE_POWER"
       }
     ],
-    "play_notes": "",
-    "source": "md:monsters.md:L61",
+    "play_notes": "Run-49 live kill: 145→0 in 4 turns, bees intents never resolved — T1 Bludgeon 42 (1 Dazed tax), T2 Bash 10+Vuln3 then Glam Headbutt 13+13, T3 Bludgeon#2 63 on the SPIT buff turn (free window, Hive escalated to :2 but unused), T4 Strike kill at 4 HP before BEES 4x7 fired. Doctrine confirmed: kill-before-bees-resolve beats block-racing the hive; Hive Dazed tax observed but never binding at 1 stack.",
+    "source": "run-49 live fold 2026-09-19 (logs run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c)",
     "zh_description": "PHEROMONE_SPIT_MOVE = 增益——PersonalHivePower 1（另有力量增益 1/2）；BEES_MOVE = 多段攻击 3 ×7 (A:8)；SPEAR_MOVE = 单次攻击 18 (A:20)。被动 PersonalHivePower 1：拥有者每次被有源攻击命中时，攻击者的抽牌堆随机位置加入 1 张 Dazed（每层 1 张；Osty 的攻击记在其主人头上）。**PHEROMONE_SPIT 确认 = PersonalHive 1→2 **且** +1 力量（次回合 compact state 两者同时可见）；蜂群意图显示基础+力量的每击值（Buff 后 3+1=4 ×7 = `intent=4×7`，Buff 前显示 `3×7`）。蜂群税：每打出一张有源攻击牌，抽牌堆加入的 Dazed 数随当前层数缩放（Hive:2 时多段攻击牌税极重）；Hive 可 1→2→3 逐次信息素递增且每次 +1 力量——蜂群意图 3×7→4×7→5×7。**在 Buff 回合结束前击杀是胜利条件**。虚弱对多段意图**按击削减**（Weak 1 把显示 5×7 变为 3×7）——虚弱是蜂群的正确答案。能力药水在信息素 Buff 回合可免费（当回合 0 费）打出 Demon Form 类引擎。LIVE（对局 36 击杀，145→0）：Inferno 类**能力伤害不触发 Hive Dazed 税**（Inferno 连续 tick 时 Hive 维持 :1；税只在有源攻击**卡牌**命中时触发）；血墙/Hemo/BT 自伤同回合触发 Inferno AoE——本战作为 1HP 残血时的击杀手段（蜜蜂 5×7 未及结算）。T1 零攻击 + 精确 21 挡（Shrug Legion 翻倍 16 + Defend 5）把 Hive 按在 1。",
     "zh_moves": {
       "BEES_MOVE": "多段攻击 3 ×7 (A:8)；",
@@ -8013,6 +7901,7 @@
           "BITE"
         ],
         "curated": true,
+        "description": "Bite (Hunter Killer context): single attack 13-17 class live (A 15-class); Str-inflates; run-48 uncut intent 17 — block-gate turn.",
         "effect": "Bite (Hunter Killer context): single attack 13-17 class live (A 15-class); Str-inflates; run-48 uncut intent 17 — block-gate turn.",
         "follow_up_id": null,
         "id": "BITE_MOVE",
@@ -8032,8 +7921,7 @@
         "name": "Bite",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/HUNTER_KILLER#BITE",
-        "description": "Bite (Hunter Killer context): single attack 13-17 class live (A 15-class); Str-inflates; run-48 uncut intent 17 — block-gate turn."
+        "source": "codex-api:/monsters/HUNTER_KILLER#BITE"
       },
       "PUNCTURE_MOVE": {
         "aliases": [
@@ -8041,6 +7929,7 @@
           "PUNCTURE"
         ],
         "curated": true,
+        "description": "Puncture: multi attack 7×3 (A:8/hit); Str-inflates; Colossus×Vuln-on-attacker halves live (5×3→2×3, 7×3→3×3 run-48); pace block to the halved or full value per Colossus state.",
         "effect": "Puncture: multi attack 7×3 (A:8/hit); Str-inflates; Colossus×Vuln-on-attacker halves live (5×3→2×3, 7×3→3×3 run-48); pace block to the halved or full value per Colossus state.",
         "follow_up_id": null,
         "id": "PUNCTURE_MOVE",
@@ -8060,8 +7949,7 @@
         "name": "Puncture",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/HUNTER_KILLER#PUNCTURE",
-        "description": "Puncture: multi attack 7×3 (A:8/hit); Str-inflates; Colossus×Vuln-on-attacker halves live (5×3→2×3, 7×3→3×3 run-48); pace block to the halved or full value per Colossus state."
+        "source": "codex-api:/monsters/HUNTER_KILLER#PUNCTURE"
       },
       "TENDERIZING_GOOP_MOVE": {
         "aliases": [
@@ -8069,6 +7957,7 @@
           "TENDERIZING_GOOP"
         ],
         "curated": true,
+        "description": "Tenderizing Goop: Debuff — TENDER 1 on player (per-card Str/Dex drain within turn, restores on applier cycle; run-48 kill-chain tax).",
         "effect": "Tenderizing Goop: Debuff — TENDER 1 on player (per-card Str/Dex drain within turn, restores on applier cycle; run-48 kill-chain tax).",
         "follow_up_id": null,
         "id": "TENDERIZING_GOOP_MOVE",
@@ -8085,8 +7974,7 @@
         "name": "Tenderizing Goop",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/HUNTER_KILLER#TENDERIZING_GOOP",
-        "description": "Tenderizing Goop: Debuff — TENDER 1 on player (per-card Str/Dex drain within turn, restores on applier cycle; run-48 kill-chain tax)."
+        "source": "codex-api:/monsters/HUNTER_KILLER#TENDERIZING_GOOP"
       }
     },
     "name": "Hunter Killer",
@@ -9356,8 +9244,8 @@
     "name": "KinPriest",
     "needs_zh": false,
     "passives": [],
-    "play_notes": "Master-minion kill order (run-38 live). RITUAL +2 Str/cycle = race timer. Entry HP is the binding constraint — adds+orbs tax ~15-19/turn even while boss dies fast.",
-    "source": "md:monsters.md:L41",
+    "play_notes": "Master-minion kill order (run-38 live). RITUAL +2 Str/cycle = race timer. Entry HP is the binding constraint — adds+orbs tax ~15-19/turn even while boss dies fast. Run-49 live kill T7 at A1 entry 66/80 with 3 named potions; master-first race worked; adds' 15-19/turn tax never compounded past T7.",
+    "source": "run-49 live fold 2026-09-19 (logs run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c)",
     "zh_description": "Act1 Boss 级本体（run-38 A1 实时：190 HP + 2 同族信徒随从）。循环 ORB_OF_FRAILTY（单体 8 A:9 + 玩家 1 Frail）→ ORB_OF_WEAKNESS（单体 8 A:9 + 玩家 1 Weak）→ BEAM（多段 3×3）→ RITUAL（自身 +2 力量 A:3）→ 循环。本体-随从教条：随从带 MINION_POWER——其死亡不结束战斗；击杀同族神官才是胜利条件（LivingFog 本体规则）。RITUAL 每循环 +Str = 成长型击杀计时器：竞速打本体，除非 AoE 免费窗（Pacts End）否则不理会随从。run-38 死亡复盘：Boss 死于 39→4 的五回合 HP 经济磨损（随从 7-9/回合 + 球 6-10 + Frail/Weak 循环），死时 Boss 剩 26/190——约束是入场 HP 而非引擎。Red Mask 战斗开局 Weak 实时生效。",
     "zh_moves": {
       "BEAM_MOVE": "多段攻击 3 ×3；",
@@ -9614,6 +9502,7 @@
           "CLUMP_SHOT"
         ],
         "curated": true,
+        "description": "Clump Shot: single attack 8 (A:9).",
         "effect": "Clump Shot: single attack 8 (A:9).",
         "follow_up_id": null,
         "id": "CLUMP_SHOT_MOVE",
@@ -9633,8 +9522,7 @@
         "name": "Clump Shot",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/LEAF_SLIME_M#CLUMP_SHOT",
-        "description": "Clump Shot: single attack 8 (A:9)."
+        "source": "codex-api:/monsters/LEAF_SLIME_M#CLUMP_SHOT"
       },
       "STICKY_SHOT_MOVE": {
         "aliases": [
@@ -9642,6 +9530,7 @@
           "STICKY_SHOT"
         ],
         "curated": true,
+        "description": "Sticky Shot: Status ×2 — Slimed cards to player discard; no HP damage.",
         "effect": "Sticky Shot: Status ×2 — Slimed cards to player discard; no HP damage.",
         "follow_up_id": null,
         "id": "STICKY_SHOT_MOVE",
@@ -9658,8 +9547,7 @@
         "name": "Sticky Shot",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/LEAF_SLIME_M#STICKY_SHOT",
-        "description": "Sticky Shot: Status ×2 — Slimed cards to player discard; no HP damage."
+        "source": "codex-api:/monsters/LEAF_SLIME_M#STICKY_SHOT"
       }
     },
     "name": "Leaf Slime (M)",
@@ -9702,6 +9590,7 @@
           "GOOP"
         ],
         "curated": true,
+        "description": "Goop (Leaf Slime S variant): Status ×1 class — adds status cards; distinct from CorpseSlug GOOP Frail-2 behavior (different move context).",
         "effect": "Goop (Leaf Slime S variant): Status ×1 class — adds status cards; distinct from CorpseSlug GOOP Frail-2 behavior (different move context).",
         "follow_up_id": null,
         "id": "GOOP_MOVE",
@@ -9718,8 +9607,7 @@
         "name": "Goop",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/LEAF_SLIME_S#GOOP",
-        "description": "Goop (Leaf Slime S variant): Status ×1 class — adds status cards; distinct from CorpseSlug GOOP Frail-2 behavior (different move context)."
+        "source": "codex-api:/monsters/LEAF_SLIME_S#GOOP"
       },
       "TACKLE_MOVE": {
         "aliases": [
@@ -9727,6 +9615,7 @@
           "TACKLE"
         ],
         "curated": true,
+        "description": "Tackle: single attack 3 (A:4); Red Mask Weak cuts to 2-class live.",
         "effect": "Tackle: single attack 3 (A:4); Red Mask Weak cuts to 2-class live.",
         "follow_up_id": null,
         "id": "TACKLE_MOVE",
@@ -9746,8 +9635,7 @@
         "name": "Tackle",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/LEAF_SLIME_S#TACKLE",
-        "description": "Tackle: single attack 3 (A:4); Red Mask Weak cuts to 2-class live."
+        "source": "codex-api:/monsters/LEAF_SLIME_S#TACKLE"
       }
     },
     "name": "Leaf Slime (S)",
@@ -16825,8 +16713,8 @@
     "name": "SpinyToad",
     "needs_zh": false,
     "passives": [],
-    "play_notes": "",
-    "source": "md:monsters.md:L59",
+    "play_notes": "Run-49 death-site live: THORNS:5 + SPIKE_EXPLOSION intent 23 confirmed; thorns fired on the player's attack hits (Bludgeon took 5 self-damage same play); explosion landed as displayed. Run-39 death model recurrence — low-HP entry + zero-block hand. Post-explosion thorns-clear doctrine (run-48) never reached: the explosion turn is the kill window FOR THE TOAD against under-gated players. Draft rule: (13,2)-class corridor fights after an elite pair need belt refill or a pre-rest gate.",
+    "source": "run-49 live fold 2026-09-19 (logs run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c)",
     "zh_description": "PROTRUDING_SPIKES_MOVE = 增益 荆棘 +5；SPIKE_EXPLOSION_MOVE = 单次攻击 23 (A:25) 后荆棘 −5；TONGUE_LASH_MOVE = 单次攻击 17 (A:19)。循环 尖刺 → 爆发 → 舌击。",
     "zh_moves": {
       "PROTRUDING_SPIKES_MOVE": "增益 荆棘 +5；",
@@ -17525,6 +17413,7 @@
           "POKEY_POUNCE"
         ],
         "curated": true,
+        "description": "Pokey Pounce: single attack 11 (A:12); kill-timer — cancel by killing Twig Slime M before its pounce turn resolves; Weak cuts live 11→8-class.",
         "effect": "Pokey Pounce: single attack 11 (A:12); kill-timer — cancel by killing Twig Slime M before its pounce turn resolves; Weak cuts live 11→8-class.",
         "follow_up_id": null,
         "id": "POKEY_POUNCE_MOVE",
@@ -17544,8 +17433,7 @@
         "name": "Pokey Pounce",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/TWIG_SLIME_M#POKEY_POUNCE",
-        "description": "Pokey Pounce: single attack 11 (A:12); kill-timer — cancel by killing Twig Slime M before its pounce turn resolves; Weak cuts live 11→8-class."
+        "source": "codex-api:/monsters/TWIG_SLIME_M#POKEY_POUNCE"
       },
       "STICKY_SHOT_MOVE": {
         "aliases": [
@@ -17553,6 +17441,7 @@
           "STICKY_SHOT"
         ],
         "curated": true,
+        "description": "Sticky Shot: Status ×2 — adds Slimed status cards to the player discard pile; no HP damage that turn (free damage window).",
         "effect": "Sticky Shot: Status ×2 — adds Slimed status cards to the player discard pile; no HP damage that turn (free damage window).",
         "follow_up_id": null,
         "id": "STICKY_SHOT_MOVE",
@@ -17569,8 +17458,7 @@
         "name": "Sticky Shot",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/TWIG_SLIME_M#STICKY_SHOT",
-        "description": "Sticky Shot: Status ×2 — adds Slimed status cards to the player discard pile; no HP damage that turn (free damage window)."
+        "source": "codex-api:/monsters/TWIG_SLIME_M#STICKY_SHOT"
       }
     },
     "name": "Twig Slime (M)",

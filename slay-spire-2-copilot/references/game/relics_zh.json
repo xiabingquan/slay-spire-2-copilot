@@ -320,16 +320,20 @@
   },
   "BLACK_BLOOD": {
     "aliases": [
-      "BlackBlood"
+      "BlackBlood",
+      "Black Blood",
+      "黑暗之血"
     ],
+    "character": "IRONCLAD",
     "curated": true,
-    "description": "战斗结束时回复 12 HP（经欧洛巴斯之触替换燃血的 6）。run-39 live：草蜢战 24→36、碗虫战 4→16 两次 +12 确认——铁甲战士每战 HP 经济翻倍；档案称其为 Act2 HP 经济主力来源。",
+    "description": "每场战斗结束后回复 12 HP（IRONCLAD 初始遗物燃烧之血的升级形态；燃烧之血回 6）。经 TOUCH_OF_OROBAS 换装获得，换装同时替换掉燃烧之血。",
     "id": "BLACK_BLOOD",
     "kind": "relic",
     "name": "黑暗之血",
-    "play_notes": "run-39 live：每战回12 两次确认。燃血翻倍；与 ChosenCheese 类 Max HP 增益叠加。",
+    "needs_zh": false,
+    "play_notes": "run-49 live：战后回血 12 八次确认（61→73 / 65→77 / 2→14 级）。被动 HP 轨翻倍；HP 经济死亡类的系统性解。run-39 同事件先例成立。",
     "rarity": "Ancient",
-    "source": "run-39 live 结算 + events.json OROBAS"
+    "source": "run-49 live 折叠 2026-09-19（日志 run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c）"
   },
   "BLACK_STAR": {
     "aliases": [
@@ -1672,15 +1676,15 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "每次打出能力牌时，抽 1 张牌。",
+    "curated": true,
+    "description": "每当你打出一张能力牌，抽 1 张牌。",
     "id": "GAME_PIECE",
     "kind": "relic",
     "name": "棋子",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-49 live：Inflame/Vicious/Unmovable/FNP 每次打出后均观察到抽牌事件；与能力类引擎天然成套。",
     "rarity": "Rare",
-    "source": "md:relics.md:L102; md:relics_zh.md:L102; codex:relics/GAME_PIECE"
+    "source": "run-49 live 折叠 2026-09-19（日志 run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c）"
   },
   "GHOST_SEED": {
     "aliases": [
@@ -1717,19 +1721,19 @@
   },
   "GLAM": {
     "aliases": [
-      "Glitter",
-      "GLITTER"
+      "Glam",
+      "华彩"
     ],
     "character": "shared",
-    "curated": false,
-    "description": "Enchant all card rewards with Glam.",
+    "curated": true,
+    "description": "卡牌附魔：每场战斗中该牌首次打出时，效果免费重放一次（结算两次，能量只付一次）；同战斗内后续打出恢复正常。",
     "id": "GLAM",
-    "kind": "relic",
-    "name": "Glitter",
+    "kind": "enchant",
+    "name": "华彩",
     "needs_zh": false,
-    "play_notes": "",
-    "rarity": "Ancient",
-    "source": "codex-api:/relics/GLITTER"
+    "play_notes": "run-49 live 过程注：Glam 重放（第二次结算）在首次效果完整结算后触发，包括 Headbutt 的回收 choose。回收 choose 后立即提交下一个 act 可能吞掉重放窗口（2 次观察）。Glam Headbutt 的回收 choose 之后，若双结算重要，先 settle 重读再发下一 act。重放伤害 live 观测：9+9 / 12+12 / 13+13 / 15+15 / 22+5 级。",
+    "rarity": null,
+    "source": "run-49 live 折叠 2026-09-19（日志 run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c）"
   },
   "GLASS_EYE": {
     "aliases": [
@@ -1754,15 +1758,15 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "所有卡牌奖励附魔 Glam。",
+    "curated": true,
+    "description": "全部卡牌奖励附魔华彩 Glam（每场战斗首次打出免费重放一次——见 GLAM）。",
     "id": "GLITTER",
     "kind": "relic",
     "name": "亮片",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "全局长期附魔引擎；附魔效果见 GLAM。",
     "rarity": "Ancient",
-    "source": "md:relics.md:L168; md:relics_zh.md:L168"
+    "source": "perplexity-search 2026-09-19（gamerblurb Glam explained；spire-codex.com/enchantments/glam；mobalytics enchantments guide）+ 本局 Neow 屏 live 校验 F9S4BGVMFD"
   },
   "GNARLED_HAMMER": {
     "aliases": [
@@ -1891,15 +1895,15 @@
     ],
     "character": null,
     "counter_shown": true,
-    "curated": false,
-    "description": "每第 3 回合开始，获得 1 点能量。",
+    "curated": true,
+    "description": "每 3 回合获得 1 点能量（计数器遗物）。",
     "id": "HAPPY_FLOWER",
     "kind": "relic",
     "name": "开心小花",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-49 live：Act2 精英 (12,1) 掉落，计数 :0→:1→:2 随战斗回合推进显示；能量在计数归零回合到账。",
     "rarity": "Common",
-    "source": "md:relics.md:L29; md:relics_zh.md:L29; codex:relics/HAPPY_FLOWER"
+    "source": "run-49 live 折叠 2026-09-19（日志 run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c）"
   },
   "HEFTY_TABLET": {
     "aliases": [
@@ -2129,15 +2133,15 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，获得来自其他角色的 2 份卡牌奖励。",
+    "curated": true,
+    "description": "拾取时，获得来自其他角色卡池的 2 份卡牌奖励。",
     "id": "KALEIDOSCOPE",
     "kind": "relic",
     "name": "万花筒",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "跨角色奖励稀释 IRONCLAD 原型协同（自伤→力量引擎）；方差型选择。2026-09-19 Neow 选项 live 校验。",
     "rarity": "Ancient",
-    "source": "md:relics.md:L175; md:relics_zh.md:L175"
+    "source": "perplexity-search 2026-09-19（gamerblurb Glam explained；spire-codex.com/enchantments/glam；mobalytics enchantments guide）+ 本局 Neow 屏 live 校验 F9S4BGVMFD"
   },
   "KIFUDA": {
     "aliases": [
@@ -2761,15 +2765,15 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，升级 1 张 Strike 和 1 张 Defend。",
+    "curated": true,
+    "description": "拾取时，升级 1 张打击和 1 张防御。",
     "id": "NEOWS_TALISMAN",
     "kind": "relic",
     "name": "涅奥的护符",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "确定但上限低：打击 6→9 / 防御 5→8 级收益；若基础牌中期被删则价值衰减。2026-09-19 Neow 选项 live 校验。",
     "rarity": "Ancient",
-    "source": "md:relics.md:L187; md:relics_zh.md:L187"
+    "source": "perplexity-search 2026-09-19（gamerblurb Glam explained；spire-codex.com/enchantments/glam；mobalytics enchantments guide）+ 本局 Neow 屏 live 校验 F9S4BGVMFD"
   },
   "NEOWS_TORMENT": {
     "aliases": [
@@ -3453,15 +3457,15 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，获得 2 个药水栏。",
+    "curated": true,
+    "description": "药水栏位 +1。",
     "id": "POTION_BELT",
     "kind": "relic",
     "name": "药水腰带",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "run-49 live：Act2 宝箱 (8,2) 获得；belt 容量扩大后商店双药水+精英掉落可共存（Blood/Skill/Speed 类实测同时在栏）。",
     "rarity": "Common",
-    "source": "md:relics.md:L35; md:relics_zh.md:L35; codex:relics/POTION_BELT"
+    "source": "run-49 live 折叠 2026-09-19（日志 run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c）"
   },
   "POWER_CELL": {
     "aliases": [
@@ -4132,15 +4136,15 @@
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "拾取时，失去全部金币；第一份卡牌奖励中的所有牌附魔 Glam。",
+    "curated": true,
+    "description": "拾取时失去全部金币；首份卡牌奖励中的所有牌附魔华彩 Glam（每场战斗首次打出免费重放一次——见 GLAM）。",
     "id": "SILKEN_TRESS",
     "kind": "relic",
     "name": "华美发束",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "代价仅为金币（无诅咒牌、无 Max HP 税），经济延迟有限（约一个前期商店购买项）。回报是一张带 Glam 的前期脊线牌——引擎牌每战双结算，全局长期生效。尼奥诅咒池位；2026-09-19 选项文案 live 校验。",
     "rarity": "Ancient",
-    "source": "md:relics.md:L220; md:relics_zh.md:L220"
+    "source": "perplexity-search 2026-09-19（gamerblurb Glam explained；spire-codex.com/enchantments/glam；mobalytics enchantments guide）+ 本局 Neow 屏 live 校验 F9S4BGVMFD"
   },
   "SILVER_CRUCIBLE": {
     "aliases": [
@@ -4622,13 +4626,13 @@
       "TouchOfOrobas"
     ],
     "curated": true,
-    "description": "Orobas 事件选项：将初始遗物替换为远古版（IRONCLAD：燃血→黑暗之血 每战回12）。标记替换本身；回血效果在 BLACK_BLOOD 上。全池解码见 events.json OROBAS。",
+    "description": "欧洛巴斯 Act2 赐福选项：将 IRONCLAD 初始遗物燃烧之血替换为远古版黑暗之血（每战回 12 替代回 6）。标记换装行为；回血本体记在 BLACK_BLOOD。",
     "id": "TOUCH_OF_OROBAS",
     "kind": "relic",
     "name": "欧洛巴斯之触",
-    "play_notes": "run-39：Act2 赐福房选择；BlackBlood 每战回12 同局 live 确认。",
+    "play_notes": "run-49 live：Act2 赐福房选中；遗物栏显示 BLACK_BLOOD + TOUCH_OF_OROBAS 标记；+12/战同局验证。run-39 先例。另注：进入赐福房时转场治疗将玩家回满 80（run-49：29→80）——转场回血与换装相互独立。",
     "rarity": "Ancient",
-    "source": "run-39 live 选择 + events.json OROBAS"
+    "source": "run-49 live 折叠 2026-09-19（日志 run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c）"
   },
   "TOUGH_BANDAGES": {
     "aliases": [

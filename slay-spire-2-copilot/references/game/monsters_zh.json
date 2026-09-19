@@ -2309,6 +2309,7 @@
           "BEAST_CRY"
         ],
         "curated": true,
+        "description": "Beast Cry：减益——对玩家 RINGING 1（每回合限 1 张牌直至 Boss 侧回合结束；桥强制 ok/no）。",
         "effect": "Beast Cry：减益——对玩家 RINGING 1（每回合限 1 张牌直至 Boss 侧回合结束；桥强制 ok/no）。",
         "follow_up_id": null,
         "id": "BEAST_CRY_MOVE",
@@ -2325,8 +2326,7 @@
         "name": "Beast Cry",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/CEREMONIAL_BEAST#BEAST_CRY",
-        "description": "Beast Cry：减益——对玩家 RINGING 1（每回合限 1 张牌直至 Boss 侧回合结束；桥强制 ok/no）。"
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#BEAST_CRY"
       },
       "CRUSH_MOVE": {
         "aliases": [
@@ -2334,6 +2334,7 @@
           "CRUSH"
         ],
         "curated": true,
+        "description": "Crush：单体攻击 17（A:19）+ 自身 +3 力量。",
         "effect": "Crush：单体攻击 17（A:19）+ 自身 +3 力量。",
         "follow_up_id": null,
         "id": "CRUSH_MOVE",
@@ -2353,8 +2354,7 @@
         "name": "Crush",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/CEREMONIAL_BEAST#CRUSH",
-        "description": "Crush：单体攻击 17（A:19）+ 自身 +3 力量。"
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#CRUSH"
       },
       "PLOW_MOVE": {
         "aliases": [
@@ -2362,6 +2362,7 @@
           "PLOW"
         ],
         "curated": true,
+        "description": "Plow：单体攻击 18（A:20）+ 自身 +2 力量；run-48 live 意图随力量堆叠 13→22 爬升；弱化按次削减。",
         "effect": "Plow：单体攻击 18（A:20）+ 自身 +2 力量；run-48 live 意图随力量堆叠 13→22 爬升；弱化按次削减。",
         "follow_up_id": null,
         "id": "PLOW_MOVE",
@@ -2381,8 +2382,7 @@
         "name": "Plow",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/CEREMONIAL_BEAST#PLOW",
-        "description": "Plow：单体攻击 18（A:20）+ 自身 +2 力量；run-48 live 意图随力量堆叠 13→22 爬升；弱化按次削减。"
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#PLOW"
       },
       "STAMP_MOVE": {
         "aliases": [
@@ -2390,6 +2390,7 @@
           "STAMP"
         ],
         "curated": true,
+        "description": "Stamp：增益——自身获得 PLOW_POWER 150（免费伤害窗回合；run-48 T1 无伤害意图）。",
         "effect": "Stamp：增益——自身获得 PLOW_POWER 150（免费伤害窗回合；run-48 T1 无伤害意图）。",
         "follow_up_id": null,
         "id": "STAMP_MOVE",
@@ -2406,8 +2407,7 @@
         "name": "Stamp",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/CEREMONIAL_BEAST#STAMP",
-        "description": "Stamp：增益——自身获得 PLOW_POWER 150（免费伤害窗回合；run-48 T1 无伤害意图）。"
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#STAMP"
       },
       "STOMP_MOVE": {
         "aliases": [
@@ -2415,6 +2415,7 @@
           "STOMP"
         ],
         "curated": true,
+        "description": "Stomp：单体攻击 15（A:17）。",
         "effect": "Stomp：单体攻击 15（A:17）。",
         "follow_up_id": null,
         "id": "STOMP_MOVE",
@@ -2434,8 +2435,7 @@
         "name": "Stomp",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/CEREMONIAL_BEAST#STOMP",
-        "description": "Stomp：单体攻击 15（A:17）。"
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#STOMP"
       },
       "STUN_MOVE": {
         "aliases": [
@@ -2443,6 +2443,7 @@
           "STUN"
         ],
         "curated": true,
+        "description": "Stun：眩晕态招式——档案循环中位于 PLOW 之后；run-48 live：眩晕以 STUNNED 状态在 PLOW_POWER 阈值被越过时触发（未触发路径上并非固定循环槽；被晕后循环从 BEAST_CRY 恢复）。",
         "effect": "Stun：眩晕态招式——档案循环中位于 PLOW 之后；run-48 live：眩晕以 STUNNED 状态在 PLOW_POWER 阈值被越过时触发（未触发路径上并非固定循环槽；被晕后循环从 BEAST_CRY 恢复）。",
         "follow_up_id": null,
         "id": "STUN_MOVE",
@@ -2459,8 +2460,7 @@
         "name": "Stun",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/CEREMONIAL_BEAST#STUN",
-        "description": "Stun：眩晕态招式——档案循环中位于 PLOW 之后；run-48 live：眩晕以 STUNNED 状态在 PLOW_POWER 阈值被越过时触发（未触发路径上并非固定循环槽；被晕后循环从 BEAST_CRY 恢复）。"
+        "source": "codex-api:/monsters/CEREMONIAL_BEAST#STUN"
       }
     },
     "name": "Ceremonial Beast",
@@ -2578,144 +2578,39 @@
     "source": "codex:monsters/CORPSE_SLUG"
   },
   "CUBEX_CONSTRUCT": {
-    "acts": [],
     "aliases": [
-      "Cubex Construct"
+      "CUBEX_CONSTRUCT",
+      "立柱构造体",
+      "CubexConstruct"
     ],
     "curated": true,
     "cycle": [
       "CHARGE_UP_MOVE",
       "REPEATER_BLAST_MOVE",
-      "REPEATER_BLAST_MOVE_2_MOVE",
+      "REPEATER_BLAST_MOVE_2",
       "EXPEL_MOVE"
     ],
-    "description": "立柱构造体（codex 重复键 CUBEX_CONSTRUCT；live 条目见 CubexConstruct）。CHARGE_UP 自身 +2 力量；EXPEL 多段 5x2（A:6/命中）；REPEATER_BLAST/变体 攻击+增益 7（A:8）+ 自身 +2 力量。循环 CHARGE_UP→REPEATER→REPEATER_2→EXPEL（live run-42）。",
+    "description": "Act1 怪物（run-49 live A1：65 HP，显示名 立柱构造体——注意：中文显示名与 InfestedPrism 的别名冲突；live history id CUBEX_CONSTRUCT 为权威）。出生带 ARTIFACT_POWER:1。循环 CHARGE_UP（自身 +2 力，免费窗）→ REPEATER_BLAST（7 A:8 攻击 + 自身 +2 力）→ REPEATER_BLAST_2（同类）→ EXPEL（多段 5x2 A:6）。教条：用 Bash/Tremble 类 debuff 应用剥 Artifact（伤害落地、debuff 被吞），随后竞速；CHARGE_UP 免费窗回合是爆发回合。",
     "hp": {
-      "ascension": {
-        "max": null,
-        "min": 70
-      },
       "base": 65,
-      "max": null,
-      "notes": ""
+      "notes": "65 live A1 run-49"
     },
     "id": "CUBEX_CONSTRUCT",
     "is_boss": false,
     "is_elite": false,
     "kind": "monster",
-    "moves": {
-      "CHARGE_UP_MOVE": {
-        "aliases": [
-          "Charge Up",
-          "CHARGE_UP"
-        ],
-        "curated": false,
-        "effect": "Charge Up: Buff; STRENGTH 2 (self)",
-        "follow_up_id": null,
-        "id": "CHARGE_UP_MOVE",
-        "intents": [
-          {
-            "base_damage": null,
-            "base_damage_ascension": null,
-            "hits": null,
-            "type": "Buff"
-          }
-        ],
-        "kind": "move",
-        "monster_id": "CUBEX_CONSTRUCT",
-        "name": "Charge Up",
-        "needs_zh": true,
-        "play_notes": "",
-        "source": "codex-api:/monsters/CUBEX_CONSTRUCT#CHARGE_UP"
-      },
-      "EXPEL_MOVE": {
-        "aliases": [
-          "Expel",
-          "EXPEL"
-        ],
-        "curated": false,
-        "effect": "Expel: Attack; damage 5x2 A:6",
-        "follow_up_id": null,
-        "id": "EXPEL_MOVE",
-        "intents": [
-          {
-            "base_damage": 5,
-            "base_damage_ascension": {
-              "ascension": 6
-            },
-            "class": "MultiAttackIntent",
-            "hits": 2,
-            "type": "Attack"
-          }
-        ],
-        "kind": "move",
-        "monster_id": "CUBEX_CONSTRUCT",
-        "name": "Expel",
-        "needs_zh": true,
-        "play_notes": "",
-        "source": "codex-api:/monsters/CUBEX_CONSTRUCT#EXPEL"
-      },
-      "REPEATER_BLAST_MOVE": {
-        "aliases": [
-          "Repeater Blast",
-          "REPEATER_BLAST"
-        ],
-        "curated": false,
-        "effect": "Repeater Blast: Attack + Buff; damage 7 A:8; STRENGTH 2 (self)",
-        "follow_up_id": null,
-        "id": "REPEATER_BLAST_MOVE",
-        "intents": [
-          {
-            "base_damage": 7,
-            "base_damage_ascension": {
-              "ascension": 8
-            },
-            "class": "SingleAttackIntent",
-            "hits": null,
-            "type": "Attack + Buff"
-          }
-        ],
-        "kind": "move",
-        "monster_id": "CUBEX_CONSTRUCT",
-        "name": "Repeater Blast",
-        "needs_zh": true,
-        "play_notes": "",
-        "source": "codex-api:/monsters/CUBEX_CONSTRUCT#REPEATER_BLAST"
-      },
-      "REPEATER_BLAST_MOVE_2_MOVE": {
-        "aliases": [
-          "Repeater Blast Move 2",
-          "REPEATER_BLAST_MOVE_2"
-        ],
-        "curated": false,
-        "effect": "Repeater Blast Move 2: Attack + Buff; damage 7 A:8; STRENGTH 2 (self)",
-        "follow_up_id": null,
-        "id": "REPEATER_BLAST_MOVE_2_MOVE",
-        "intents": [
-          {
-            "base_damage": 7,
-            "base_damage_ascension": {
-              "ascension": 8
-            },
-            "class": "SingleAttackIntent",
-            "hits": null,
-            "type": "Attack + Buff"
-          }
-        ],
-        "kind": "move",
-        "monster_id": "CUBEX_CONSTRUCT",
-        "name": "Repeater Blast Move 2",
-        "needs_zh": true,
-        "play_notes": "",
-        "source": "codex-api:/monsters/CUBEX_CONSTRUCT#REPEATER_BLAST_MOVE_2"
-      }
-    },
-    "name": "Cubex Construct",
+    "name": "立柱构造体（Cubex）",
     "needs_zh": false,
-    "play_notes": "",
-    "source": "codex-api:/monsters/CUBEX_CONSTRUCT",
-    "type": "Normal",
-    "zh_description": "立柱构造体（codex 重复键 CUBEX_CONSTRUCT；live 条目见 CubexConstruct）。CHARGE_UP 自身 +2 力量；EXPEL 多段 5x2（A:6/命中）；REPEATER_BLAST/变体 攻击+增益 7（A:8）+ 自身 +2 力量。循环 CHARGE_UP→REPEATER→REPEATER_2→EXPEL（live run-42）。"
+    "passives": [
+      {
+        "amount": 1,
+        "counter_class": false,
+        "description": "出生自带；每层吸收首次可见 debuff 施加",
+        "power_id": "ARTIFACT_POWER"
+      }
+    ],
+    "play_notes": "run-49 live：Tremble 当回合剥 Artifact（received -1 ARTIFACT_POWER，易伤被吞）；RITUAL 无关竞速线 T3 击杀。与 InfestedPrism 的别名（感染棱柱/立柱构造体）冲突已折叠进 references 作为 lookup 警示——以 live history id 解析，不以显示名。",
+    "source": "run-49 live 折叠 2026-09-19（日志 run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c）"
   },
   "CeremonialBeast": {
     "acts": [],
@@ -4672,8 +4567,8 @@
         "power_id": "REATTACH_POWER"
       }
     ],
-    "play_notes": "",
-    "source": "md:monsters.md:L62"
+    "play_notes": "run-49 live 补充：同窗教条执行——Breakthrough AoE 摊伤把三段保持在 10/3/17 存活；BloodWall×Unmovable 32 挡吸收拖延回合；T7 Strike+SetupStrike 精确击杀（对 13HP 段 13 精确）在同一窗口清灭全部活段。细则 live 确认：DEAD 段在其回合不攻击（入账减少其应有攻击）；在其余段 DEAD-pending 时杀掉唯一活段会触发它们重生——摊伤保活，同窗扫灭。",
+    "source": "run-49 live 折叠 2026-09-19（日志 run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c）"
   },
   "DecimillipedeSegmentBack": {
     "acts": [],
@@ -5598,6 +5493,7 @@
           "DISTRACT"
         ],
         "curated": true,
+        "description": "Distract：状态类招式——向玩家施加状态堵塞（低威胁）；眼球是雾菇的 6 HP MINION 随从——母体优先击杀次序。",
         "effect": "Distract：状态类招式——向玩家施加状态堵塞（低威胁）；眼球是雾菇的 6 HP MINION 随从——母体优先击杀次序。",
         "follow_up_id": null,
         "id": "DISTRACT_MOVE",
@@ -5614,8 +5510,7 @@
         "name": "Distract",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/EYE_WITH_TEETH#DISTRACT",
-        "description": "Distract：状态类招式——向玩家施加状态堵塞（低威胁）；眼球是雾菇的 6 HP MINION 随从——母体优先击杀次序。"
+        "source": "codex-api:/monsters/EYE_WITH_TEETH#DISTRACT"
       }
     },
     "name": "Eye with Teeth",
@@ -5816,8 +5711,8 @@
         "power_id": "PERSONAL_HIVE_POWER"
       }
     ],
-    "play_notes": "",
-    "source": "md:monsters.md:L61"
+    "play_notes": "run-49 live 击杀：145→0 四回合，蜜蜂意图从未结算——T1 Bludgeon 42（1 张 Dazed 税），T2 Bash 10+易伤3 后 Glam Headbutt 13+13，T3 SPIT buff 免费窗 Bludgeon#2 63（Hive 升至 :2 但未使用），T4 敌 4HP 时 Strike 收头，BEES 4x7 未触发。教条确认：结算前击杀优于与 hive 挡值竞速；HIVE Dazed 税可见但在 1 层时从未绑定。",
+    "source": "run-49 live 折叠 2026-09-19（日志 run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c）"
   },
   "Exoskeleton": {
     "acts": [],
@@ -7748,6 +7643,7 @@
           "BITE"
         ],
         "curated": true,
+        "description": "撕咬（猎人杀手语境）：单体攻击 13-17 级 live（A 15 级）；随力量膨胀；run-48 无弱化意图 17——挡闸回合。",
         "effect": "撕咬（猎人杀手语境）：单体攻击 13-17 级 live（A 15 级）；随力量膨胀；run-48 无弱化意图 17——挡闸回合。",
         "follow_up_id": null,
         "id": "BITE_MOVE",
@@ -7767,8 +7663,7 @@
         "name": "Bite",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/HUNTER_KILLER#BITE",
-        "description": "撕咬（猎人杀手语境）：单体攻击 13-17 级 live（A 15 级）；随力量膨胀；run-48 无弱化意图 17——挡闸回合。"
+        "source": "codex-api:/monsters/HUNTER_KILLER#BITE"
       },
       "PUNCTURE_MOVE": {
         "aliases": [
@@ -7776,6 +7671,7 @@
           "PUNCTURE"
         ],
         "curated": true,
+        "description": "穿刺：多段攻击 7×3（A:8/段）；随力量膨胀；攻击者带易伤时巨像 live 减半（run-48 5×3→2×3、7×3→3×3）；按巨像在场与否以减半值或全值配挡。",
         "effect": "穿刺：多段攻击 7×3（A:8/段）；随力量膨胀；攻击者带易伤时巨像 live 减半（run-48 5×3→2×3、7×3→3×3）；按巨像在场与否以减半值或全值配挡。",
         "follow_up_id": null,
         "id": "PUNCTURE_MOVE",
@@ -7795,8 +7691,7 @@
         "name": "Puncture",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/HUNTER_KILLER#PUNCTURE",
-        "description": "穿刺：多段攻击 7×3（A:8/段）；随力量膨胀；攻击者带易伤时巨像 live 减半（run-48 5×3→2×3、7×3→3×3）；按巨像在场与否以减半值或全值配挡。"
+        "source": "codex-api:/monsters/HUNTER_KILLER#PUNCTURE"
       },
       "TENDERIZING_GOOP_MOVE": {
         "aliases": [
@@ -7804,6 +7699,7 @@
           "TENDERIZING_GOOP"
         ],
         "curated": true,
+        "description": "Tenderizing Goop：减益——对玩家 TENDER 1（回合内按出牌抽力量/敏捷，随施加者循环返还；run-48 击杀链税）。",
         "effect": "Tenderizing Goop：减益——对玩家 TENDER 1（回合内按出牌抽力量/敏捷，随施加者循环返还；run-48 击杀链税）。",
         "follow_up_id": null,
         "id": "TENDERIZING_GOOP_MOVE",
@@ -7820,8 +7716,7 @@
         "name": "Tenderizing Goop",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/HUNTER_KILLER#TENDERIZING_GOOP",
-        "description": "Tenderizing Goop：减益——对玩家 TENDER 1（回合内按出牌抽力量/敏捷，随施加者循环返还；run-48 击杀链税）。"
+        "source": "codex-api:/monsters/HUNTER_KILLER#TENDERIZING_GOOP"
       }
     },
     "name": "Hunter Killer",
@@ -9057,8 +8952,8 @@
     "name": "同族神官",
     "needs_zh": false,
     "passives": [],
-    "play_notes": "Master-minion kill order (run-38 live). RITUAL +2 Str/cycle = race timer. Entry HP is the binding constraint — adds+orbs tax ~15-19/turn even while boss dies fast.",
-    "source": "md:monsters.md:L41",
+    "play_notes": "Master-minion kill order (run-38 live). RITUAL +2 Str/cycle = race timer. Entry HP is the binding constraint — adds+orbs tax ~15-19/turn even while boss dies fast. run-49 live：A1 入场 66/80 + 3 瓶点名药水，T7 击杀；母体优先竞速成立；随从 15-19/回合税未超过 T7 复利。",
+    "source": "run-49 live 折叠 2026-09-19（日志 run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c）",
     "zh_description": "Act1 Boss 级本体（run-38 A1 实时：190 HP + 2 同族信徒随从）。循环 ORB_OF_FRAILTY（单体 8 A:9 + 玩家 1 Frail）→ ORB_OF_WEAKNESS（单体 8 A:9 + 玩家 1 Weak）→ BEAM（多段 3×3）→ RITUAL（自身 +2 力量 A:3）→ 循环。本体-随从教条：随从带 MINION_POWER——其死亡不结束战斗；击杀同族神官才是胜利条件（LivingFog 本体规则）。RITUAL 每循环 +Str = 成长型击杀计时器：竞速打本体，除非 AoE 免费窗（Pacts End）否则不理会随从。run-38 死亡复盘：Boss 死于 39→4 的五回合 HP 经济磨损（随从 7-9/回合 + 球 6-10 + Frail/Weak 循环），死时 Boss 剩 26/190——约束是入场 HP 而非引擎。Red Mask 战斗开局 Weak 实时生效。"
   },
   "KnowledgeDemon": {
@@ -9272,6 +9167,7 @@
           "CLUMP_SHOT"
         ],
         "curated": true,
+        "description": "团块射击：单体攻击 8（A:9）。",
         "effect": "团块射击：单体攻击 8（A:9）。",
         "follow_up_id": null,
         "id": "CLUMP_SHOT_MOVE",
@@ -9291,8 +9187,7 @@
         "name": "Clump Shot",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/LEAF_SLIME_M#CLUMP_SHOT",
-        "description": "团块射击：单体攻击 8（A:9）。"
+        "source": "codex-api:/monsters/LEAF_SLIME_M#CLUMP_SHOT"
       },
       "STICKY_SHOT_MOVE": {
         "aliases": [
@@ -9300,6 +9195,7 @@
           "STICKY_SHOT"
         ],
         "curated": true,
+        "description": "黏液射击：状态 ×2——黏液牌入玩家弃牌堆；无 HP 伤害。",
         "effect": "黏液射击：状态 ×2——黏液牌入玩家弃牌堆；无 HP 伤害。",
         "follow_up_id": null,
         "id": "STICKY_SHOT_MOVE",
@@ -9316,8 +9212,7 @@
         "name": "Sticky Shot",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/LEAF_SLIME_M#STICKY_SHOT",
-        "description": "黏液射击：状态 ×2——黏液牌入玩家弃牌堆；无 HP 伤害。"
+        "source": "codex-api:/monsters/LEAF_SLIME_M#STICKY_SHOT"
       }
     },
     "name": "Leaf Slime (M)",
@@ -9360,6 +9255,7 @@
           "GOOP"
         ],
         "curated": true,
+        "description": "粘液（树叶史莱姆小变体）：状态 ×1 级——加状态牌；与尸蛞蝓 GOOP 衰弱 2 行为不同（move 上下文不同）。",
         "effect": "粘液（树叶史莱姆小变体）：状态 ×1 级——加状态牌；与尸蛞蝓 GOOP 衰弱 2 行为不同（move 上下文不同）。",
         "follow_up_id": null,
         "id": "GOOP_MOVE",
@@ -9376,8 +9272,7 @@
         "name": "Goop",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/LEAF_SLIME_S#GOOP",
-        "description": "粘液（树叶史莱姆小变体）：状态 ×1 级——加状态牌；与尸蛞蝓 GOOP 衰弱 2 行为不同（move 上下文不同）。"
+        "source": "codex-api:/monsters/LEAF_SLIME_S#GOOP"
       },
       "TACKLE_MOVE": {
         "aliases": [
@@ -9385,6 +9280,7 @@
           "TACKLE"
         ],
         "curated": true,
+        "description": "冲撞：单体攻击 3（A:4）；红面具弱化 live 削至 2 级。",
         "effect": "冲撞：单体攻击 3（A:4）；红面具弱化 live 削至 2 级。",
         "follow_up_id": null,
         "id": "TACKLE_MOVE",
@@ -9404,8 +9300,7 @@
         "name": "Tackle",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/LEAF_SLIME_S#TACKLE",
-        "description": "冲撞：单体攻击 3（A:4）；红面具弱化 live 削至 2 级。"
+        "source": "codex-api:/monsters/LEAF_SLIME_S#TACKLE"
       }
     },
     "name": "Leaf Slime (S)",
@@ -16228,8 +16123,8 @@
     "name": "刺蟾",
     "needs_zh": false,
     "passives": [],
-    "play_notes": "",
-    "source": "md:monsters.md:L59"
+    "play_notes": "run-49 死亡点 live：THORNS:5 + SPIKE_EXPLOSION 意图 23 确认；荆棘在玩家攻击命中时触发（Bludgeon 同次打出自伤 5）；爆炸按显示值结算。run-39 死亡模型复发——低血入场 + 零挡手牌。run-48 的「爆炸后荆棘清零」教条未能到达：爆炸回合本身就是庄家对欠闸门玩家的击杀窗。草稿规则：精英对之后的 (13,2) 类走廊战斗需要 belt 补给或前置休息闸门。",
+    "source": "run-49 live 折叠 2026-09-19（日志 run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c）"
   },
   "TERROR_EEL": {
     "acts": [],
@@ -16917,6 +16812,7 @@
           "POKEY_POUNCE"
         ],
         "curated": true,
+        "description": "扑击：单体攻击 11（A:12）；击杀计时器——在扑击回合结算前击杀树枝史莱姆（中）取消；弱化 live 削减 11→8 级。",
         "effect": "扑击：单体攻击 11（A:12）；击杀计时器——在扑击回合结算前击杀树枝史莱姆（中）取消；弱化 live 削减 11→8 级。",
         "follow_up_id": null,
         "id": "POKEY_POUNCE_MOVE",
@@ -16936,8 +16832,7 @@
         "name": "Pokey Pounce",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/TWIG_SLIME_M#POKEY_POUNCE",
-        "description": "扑击：单体攻击 11（A:12）；击杀计时器——在扑击回合结算前击杀树枝史莱姆（中）取消；弱化 live 削减 11→8 级。"
+        "source": "codex-api:/monsters/TWIG_SLIME_M#POKEY_POUNCE"
       },
       "STICKY_SHOT_MOVE": {
         "aliases": [
@@ -16945,6 +16840,7 @@
           "STICKY_SHOT"
         ],
         "curated": true,
+        "description": "黏液射击：状态 ×2——向玩家弃牌堆加入黏液状态牌；该回合无 HP 伤害（免费伤害窗）。",
         "effect": "黏液射击：状态 ×2——向玩家弃牌堆加入黏液状态牌；该回合无 HP 伤害（免费伤害窗）。",
         "follow_up_id": null,
         "id": "STICKY_SHOT_MOVE",
@@ -16961,8 +16857,7 @@
         "name": "Sticky Shot",
         "needs_zh": false,
         "play_notes": "",
-        "source": "codex-api:/monsters/TWIG_SLIME_M#STICKY_SHOT",
-        "description": "黏液射击：状态 ×2——向玩家弃牌堆加入黏液状态牌；该回合无 HP 伤害（免费伤害窗）。"
+        "source": "codex-api:/monsters/TWIG_SLIME_M#STICKY_SHOT"
       }
     },
     "name": "Twig Slime (M)",
