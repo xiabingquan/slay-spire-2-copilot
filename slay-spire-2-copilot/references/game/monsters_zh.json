@@ -1944,7 +1944,7 @@
     ],
     "curated": true,
     "cycle": [],
-    "description": "Act1 精英，run-42 A1 live 127HP（表值 A 132 本次未观测）。A1 刷新无镀甲、无眩晕翻转 — Lagavulin 级唤醒教条不适用（run-38 修正 run-42 维持）。SLOW_POWER：受到的攻击伤害 x(1+0.1×本回合已打出牌数)；后打的牌伤害更高 — 便宜攻击先打、大伤害后打。循环 SLEEP → WAKE（自身+10 力量，自由窗）→ SLASHES 13（A:15，Str 6+ 时 live 23 级）→ 重复（run-42 live 图：SLEEP→WAKE→SLASHES，无第二次睡眠）。教条：自由窗纯竞速；第二次 SLASHES 前击杀（run-38 T4 / run-42 T4 双杀）。",
+    "description": "Act1 精英，run-42 A1 live 127HP（表值 A 132 本次未观测）。A1 刷新无镀甲、无眩晕翻转 — Lagavulin 级唤醒教条不适用（run-38 修正 run-42 维持）。SLOW_POWER：受到的攻击伤害 x(1+0.1×本回合已打出牌数)；后打的牌伤害更高 — 便宜攻击先打、大伤害后打。循环 SLEEP → WAKE（自身+10 力量，自由窗）→ SLASHES 13（A:15，Str 6+ 时 live 23 级）→ 重复（run-42 live 图：SLEEP→WAKE→SLASHES，无第二次睡眠）。教条：自由窗纯竞速；第二次 SLASHES 前击杀（run-38 T4 / run-42 T4 双杀）。 LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：T4 击杀——live 招式图为 SLEEP→WAKE→SLASHES（本局无 SLEEP_2；live 优先于档案循环表）。STR10 下 SLASHES 23 级；第二循环前收头。",
     "display_names": [
       "BygoneEffigy",
       "旧日雕像"
@@ -3730,7 +3730,7 @@
       "SELF_MOVE",
       "STRENGTH_MOVE"
     ],
-    "description": "Act2 Boss 部件（皇蟹级），209HP（表值 A:219；run-42 live 209）。能力：BACK_ATTACK_LEFT 面向惰性标记 + CRAB_RAGE。循环 THRASH 12（A:14；live 观测侧翼 x1.5 时 18[base12]、未侧翼 12[base12]）→ ENLARGING_STRIKE 4 → BUG_STING 6x2（A:7）+ 附加弱 2 + 衰 2 → ADAPT（增益）→ GUARDED_STRIKE 12 级 + 自身格挡 → 重复。CRAB_RAGE run-42 live：火箭死亡当帧碾碎爪获得 +6 力量与 99 无源格挡，随后能力移除。面向教条：SURROUNDED 持有者被携带侧翼标记的攻击者打 x1.5；指向碾碎爪使面向翻转、火箭成为侧翼方（其增益回合代价低）；指向火箭则碾碎爪成为侧翼方（THRASH 回合代价高）。",
+    "description": "Act2 Boss 部件（皇蟹级），209HP（表值 A:219；run-42 live 209）。能力：BACK_ATTACK_LEFT 面向惰性标记 + CRAB_RAGE。循环 THRASH 12（A:14；live 观测侧翼 x1.5 时 18[base12]、未侧翼 12[base12]）→ ENLARGING_STRIKE 4 → BUG_STING 6x2（A:7）+ 附加弱 2 + 衰 2 → ADAPT（增益）→ GUARDED_STRIKE 12 级 + 自身格挡 → 重复。CRAB_RAGE run-42 live：火箭死亡当帧碾碎爪获得 +6 力量与 99 无源格挡，随后能力移除。面向教条：SURROUNDED 持有者被携带侧翼标记的攻击者打 x1.5；指向碾碎爪使面向翻转、火箭成为侧翼方（其增益回合代价低）；指向火箭则碾碎爪成为侧翼方（THRASH 回合代价高）。 LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：火箭死亡触发蟹怒二阶段——+6 力量持续（T8 时合计 STR8）但 99 挡为无源挡当回合末消散。BUG_STING 随力量 6×2→9×2→14×2。朝向随每次指定目标翻转。",
     "display_names": [
       "Crusher 碾碎爪",
       "碾碎爪"
@@ -4201,7 +4201,7 @@
   },
   "DECIMILLIPEDE": {
     "curated": true,
-    "description": "Act2 精英三段（前/中/后，对局40 live 44/42/46；A 难度略高）。各带 REATTACH:25——某段死亡时若仍有其他段存活则进入 DEAD（不可选中），在其回合结束重接回 +25；当所有段同窗全灭时永久淡出。同窗全体击杀是唯一胜利条件：杀掉最后一只活段会让全部 DEAD 段 +25 复活。绝不瞄准 0 HP 的 DEAD 段。招式：WRITHE 多段 5x2、CONSTRICT 单击 8 + 玩家绞勒 3（玩家回合结束未挡伤害/层，每次施放 +3 叠层，施放者死亡时移除）、BULK 单击 6 + 自身力量 +2。对局40 T7 清场：狱火+9 每回合 9 实例压三段；T6 三段 4/0/10 时玩家 2 HP，Unmovable 32 级挡线撑住；T7 tick 杀一段，打击在另一段已 DEAD 时收掉最后活段 → 淡出获胜，8/95。 LIVE run-54（2026-09-19，log run-20260919-155115-7b29144e.log）：虱虫之祖战后 31HP 入场；T1 BLUDGEON+ 把一段压到 4HP（按铺伤条令留活）；PARRYING_SHIELD 回合末 6 伤直接击杀该段 -> DEAD 状态挂出 REATTACH heal 意图——兄弟段存活时本应在其回合末 +25 复活。T4 阵亡：余段 Bulk 每循环 +2 力叠加，入账（8+10+7×2 级）在 7HP 处超过全手挡线（~19+甲）。参考建议：AoE 或回合末 tick 类手段是 REATTACH 的天然答案；无此类手段时接近满血入场是参考标准。",
+    "description": "Act2 精英三段（前/中/后，对局40 live 44/42/46；A 难度略高）。各带 REATTACH:25——某段死亡时若仍有其他段存活则进入 DEAD（不可选中），在其回合结束重接回 +25；当所有段同窗全灭时永久淡出。同窗全体击杀是唯一胜利条件：杀掉最后一只活段会让全部 DEAD 段 +25 复活。绝不瞄准 0 HP 的 DEAD 段。招式：WRITHE 多段 5x2、CONSTRICT 单击 8 + 玩家绞勒 3（玩家回合结束未挡伤害/层，每次施放 +3 叠层，施放者死亡时移除）、BULK 单击 6 + 自身力量 +2。对局40 T7 清场：狱火+9 每回合 9 实例压三段；T6 三段 4/0/10 时玩家 2 HP，Unmovable 32 级挡线撑住；T7 tick 杀一段，打击在另一段已 DEAD 时收掉最后活段 → 淡出获胜，8/95。 LIVE run-54（2026-09-19，log run-20260919-155115-7b29144e.log）：虱虫之祖战后 31HP 入场；T1 BLUDGEON+ 把一段压到 4HP（按铺伤条令留活）；PARRYING_SHIELD 回合末 6 伤直接击杀该段 -> DEAD 状态挂出 REATTACH heal 意图——兄弟段存活时本应在其回合末 +25 复活。T4 阵亡：余段 Bulk 每循环 +2 力叠加，入账（8+10+7×2 级）在 7HP 处超过全手挡线（~19+甲）。参考建议：AoE 或回合末 tick 类手段是 REATTACH 的天然答案；无此类手段时接近满血入场是参考标准。 LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：fade-out 胜——三段同帧全 DEAD 立即结束战斗（Whirlwind 8/段 + 单体收尾）。中途单杀会触发 +25 复活，与档案一致。",
     "id": "DECIMILLIPEDE",
     "kind": "monster",
     "name": "残杀千足虫",
@@ -4693,7 +4693,7 @@
     ],
     "curated": false,
     "cycle": [],
-    "description": "残杀千足虫（Act2 DecimillipedeElite；各节段基础 40-46 HP）：节段 DecimillipedeSegmentBack/Front/Middle。招式：WRITHE_MOVE 多段 5x2（A:6）；CONSTRICT_MOVE 单段 8（A:9）+1 虚弱；BULK_MOVE 单段 6（A:7）+自身 2 力量；REATTACH_MOVE 治疗；DEAD_MOVE 死亡态。被动 ReattachPower 25：节段死亡而他段存活时进入 DEAD（不可选中），回合结束若仍有活段则回贴并治疗 25——全部其他节段死亡时整组消亡。同窗清段是击杀条件；0 HP DEAD 段不可选中，不要对其出招。",
+    "description": "残杀千足虫（Act2 DecimillipedeElite；各节段基础 40-46 HP）：节段 DecimillipedeSegmentBack/Front/Middle。招式：WRITHE_MOVE 多段 5x2（A:6）；CONSTRICT_MOVE 单段 8（A:9）+1 虚弱；BULK_MOVE 单段 6（A:7）+自身 2 力量；REATTACH_MOVE 治疗；DEAD_MOVE 死亡态。被动 ReattachPower 25：节段死亡而他段存活时进入 DEAD（不可选中），回合结束若仍有活段则回贴并治疗 25——全部其他节段死亡时整组消亡。同窗清段是击杀条件；0 HP DEAD 段不可选中，不要对其出招。 LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：fade-out 胜——三段同帧全 DEAD 立即结束战斗（Whirlwind 8/段 + 单体收尾）。中途单杀会触发 +25 复活，与档案一致。",
     "display_names": [
       "Decimillipede segments"
     ],
@@ -5885,7 +5885,7 @@
       "BEES_MOVE",
       "SPEAR_MOVE"
     ],
-    "description": "PHEROMONE_SPIT_MOVE = 增益——PersonalHivePower 1（另有力量增益 1/2）；BEES_MOVE = 多段攻击 3 ×7 (A:8)；SPEAR_MOVE = 单次攻击 18 (A:20)。被动 PersonalHivePower 1：拥有者每次被有源攻击命中时，攻击者的抽牌堆随机位置加入 1 张 Dazed（每层 1 张；Osty 的攻击记在其主人头上）。**PHEROMONE_SPIT 确认 = PersonalHive 1→2 **且** +1 力量（次回合 compact state 两者同时可见）；蜂群意图显示基础+力量的每击值（Buff 后 3+1=4 ×7 = `intent=4×7`，Buff 前显示 `3×7`）。蜂群税：每打出一张有源攻击牌，抽牌堆加入的 Dazed 数随当前层数缩放（Hive:2 时多段攻击牌税极重）；Hive 可 1→2→3 逐次信息素递增且每次 +1 力量——蜂群意图 3×7→4×7→5×7。**在 Buff 回合结束前击杀是胜利条件**。虚弱对多段意图**按击削减**（Weak 1 把显示 5×7 变为 3×7）——虚弱是蜂群的正确答案。能力药水在信息素 Buff 回合可免费（当回合 0 费）打出 Demon Form 类引擎。LIVE（对局 36 击杀，145→0）：Inferno 类**能力伤害不触发 Hive Dazed 税**（Inferno 连续 tick 时 Hive 维持 :1；税只在有源攻击**卡牌**命中时触发）；血墙/Hemo/BT 自伤同回合触发 Inferno AoE——本战作为 1HP 残血时的击杀手段（蜜蜂 5×7 未及结算）。T1 零攻击 + 精确 21 挡（Shrug Legion 翻倍 16 + Defend 5）把 Hive 按在 1。",
+    "description": "PHEROMONE_SPIT_MOVE = 增益——PersonalHivePower 1（另有力量增益 1/2）；BEES_MOVE = 多段攻击 3 ×7 (A:8)；SPEAR_MOVE = 单次攻击 18 (A:20)。被动 PersonalHivePower 1：拥有者每次被有源攻击命中时，攻击者的抽牌堆随机位置加入 1 张 Dazed（每层 1 张；Osty 的攻击记在其主人头上）。**PHEROMONE_SPIT 确认 = PersonalHive 1→2 **且** +1 力量（次回合 compact state 两者同时可见）；蜂群意图显示基础+力量的每击值（Buff 后 3+1=4 ×7 = `intent=4×7`，Buff 前显示 `3×7`）。蜂群税：每打出一张有源攻击牌，抽牌堆加入的 Dazed 数随当前层数缩放（Hive:2 时多段攻击牌税极重）；Hive 可 1→2→3 逐次信息素递增且每次 +1 力量——蜂群意图 3×7→4×7→5×7。**在 Buff 回合结束前击杀是胜利条件**。虚弱对多段意图**按击削减**（Weak 1 把显示 5×7 变为 3×7）——虚弱是蜂群的正确答案。能力药水在信息素 Buff 回合可免费（当回合 0 费）打出 Demon Form 类引擎。LIVE（对局 36 击杀，145→0）：Inferno 类**能力伤害不触发 Hive Dazed 税**（Inferno 连续 tick 时 Hive 维持 :1；税只在有源攻击**卡牌**命中时触发）；血墙/Hemo/BT 自伤同回合触发 Inferno AoE——本战作为 1HP 残血时的击杀手段（蜜蜂 5×7 未及结算）。T1 零攻击 + 精确 21 挡（Shrug Legion 翻倍 16 + Defend 5）把 Hive 按在 1。 LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：T3 击杀（145HP）——茶具 6 能 T1 + Bludgeon+ 63（弹珠袋易伤）+ 攻击链；HIVE Dazed 税约每张命中攻击牌 1 张；信息素升级回合前收头。",
     "display_names": [
       "Entomancer",
       "蜂群术士"
@@ -8217,7 +8217,7 @@
     ],
     "curated": true,
     "cycle": [],
-    "description": "Act2 怪物 run-42 live 121HP。TENDERIZING_GOOP 把 TENDER_POWER 加到玩家身上：run-42 live 观察每打出一张玩家牌 力量 -1 且 敏捷 -1；下一玩家回合开始时恢复 +N/+N（N=累计抽取量 — 观察到 +2/+2、+4/+4、+5/+5）。\"尊重机制否则战斗变刺\" — 少打大牌而非多打小牌。循环 TENDERIZING_GOOP（减益）→ RAND BITE 13（A:15；live 17 级）/ PUNCTURE 7x3（A:8x3）；BITE 档案残片另提及其他刷新的 BurrowedPower 先挡后攻交互 — 以 live 为准。",
+    "description": "Act2 怪物 run-42 live 121HP。TENDERIZING_GOOP 把 TENDER_POWER 加到玩家身上：run-42 live 观察每打出一张玩家牌 力量 -1 且 敏捷 -1；下一玩家回合开始时恢复 +N/+N（N=累计抽取量 — 观察到 +2/+2、+4/+4、+5/+5）。\"尊重机制否则战斗变刺\" — 少打大牌而非多打小牌。循环 TENDERIZING_GOOP（减益）→ RAND BITE 13（A:15；live 17 级）/ PUNCTURE 7x3（A:8x3）；BITE 档案残片另提及其他刷新的 BurrowedPower 先挡后攻交互 — 以 live 为准。 LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：T3 零损击杀——TENDER 抽取/回复逐牌重读；T1 易伤窗 Bludgeon+ 63 + Unrelenting/Pommel 链；T3 击杀取消 PUNCTURE。",
     "display_names": [
       "HunterKiller"
     ],
@@ -8518,7 +8518,7 @@
     ],
     "curated": true,
     "cycle": [],
-    "description": "Act2 精英 run-42 A1 live 161HP。VITAL_SPARK 计数类：玩家技能牌开战即带 Tainted(Amount)；打出一张给玩家附加 TAINTED_POWER Amount = 该敌方回合受击攻击伤害 +Amount（敌方回合末移除）；Pulsate 战斗中途 Spark +2。run-41 死亡 + run-42 击杀的扩展：（1）战斗中生成的牌（Puzzlebox 类）可带 Tainted 到场 — run-42 One-Two Punch 打出即 +2 税；（2）COLOSSUS 卡牌框在游戏内为技能标签 — Spark 下打出收 +4 税（尽管效果是能力）；牌库抽到的能力（Inferno/Rupture/Corruption/FNP/Cruelty）不收税；（3）纯攻击回合零税 — 零技能纪律 = 只打攻击与能力。循环 JAB 15（A:17）→ RADIATE 11（A:13）+ 自身格挡 11 → WHIRLWIND 5x3（A:6x3）→ PULSATE 8（A:10）+ 自身格挡 20 + Spark +2。击杀窗：免税回合后爆发竞速；run-42 于 7HP 入场 T7 击杀。",
+    "description": "Act2 精英 run-42 A1 live 161HP。VITAL_SPARK 计数类：玩家技能牌开战即带 Tainted(Amount)；打出一张给玩家附加 TAINTED_POWER Amount = 该敌方回合受击攻击伤害 +Amount（敌方回合末移除）；Pulsate 战斗中途 Spark +2。run-41 死亡 + run-42 击杀的扩展：（1）战斗中生成的牌（Puzzlebox 类）可带 Tainted 到场 — run-42 One-Two Punch 打出即 +2 税；（2）COLOSSUS 卡牌框在游戏内为技能标签 — Spark 下打出收 +4 税（尽管效果是能力）；牌库抽到的能力（Inferno/Rupture/Corruption/FNP/Cruelty）不收税；（3）纯攻击回合零税 — 零技能纪律 = 只打攻击与能力。循环 JAB 15（A:17）→ RADIATE 11（A:13）+ 自身格挡 11 → WHIRLWIND 5x3（A:6x3）→ PULSATE 8（A:10）+ 自身格挡 20 + Spark +2。击杀窗：免税回合后爆发竞速；run-42 于 7HP 入场 T7 击杀。 LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：T4 击杀（161HP）——零技能纪律持守；Bludgeon+ 56 破 RADIATE 11 自挡；PS 于 19 收头；PULSATE 升级取消。Rage 虽显示 power 仍计税。",
     "display_names": [
       "InfestedPrism",
       "感染棱柱"
@@ -12639,7 +12639,7 @@
     ],
     "curated": true,
     "cycle": [],
-    "description": "Act1 精英，61-68 HP。出场 INFESTED_POWER（4 层）：死亡同帧生成 4 只扭动虫；波次结算前战斗结束被阻塞。INFECT = 每目标弃牌堆 +3 张 Infection（不可打出 cost -1；回合末在手每张受 3 伤——run-55 live：可格挡，挡吸收 tick）。循环 INFECT→LASH。LASH run-55 live：多段 4×4（A:5/段级）；Weak 药把 live 意图砍到 3×4（WEAK_POWER:3，约 −25%/段）。教条：易伤窗爆发本体（run-55 本体 T4 死于 Bash+ 窗），波次才是真正的战斗——进场前备好 AoE/击杀钟。",
+    "description": "Act1 精英，61-68 HP。出场 INFESTED_POWER（4 层）：死亡同帧生成 4 只扭动虫；波次结算前战斗结束被阻塞。INFECT = 每目标弃牌堆 +3 张 Infection（不可打出 cost -1；回合末在手每张受 3 伤——run-55 live：可格挡，挡吸收 tick）。循环 INFECT→LASH。LASH run-55 live：多段 4×4（A:5/段级）；Weak 药把 live 意图砍到 3×4（WEAK_POWER:3，约 −25%/段）。教条：易伤窗爆发本体（run-55 本体 T4 死于 Bash+ 窗），波次才是真正的战斗——进场前备好 AoE/击杀钟。 LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：A2 下无 AoE T7 击杀——80/80 入场 + 缚魂/速度双药按无 AoE 建议执行；本体 T3 爆发，波次以逐段封顶命中磨赢，速度药水花在 LASH 回合。",
     "display_names": [
       "PhrogParasite",
       "异蛙寄生虫"

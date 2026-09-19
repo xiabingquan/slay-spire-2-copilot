@@ -1381,10 +1381,10 @@
       "尼奥"
     ],
     "curated": true,
-    "description": "no-modifier run → 3 options = 2 random positive relics + 1 random curse-cost relic. Positive pool: ArcaneScroll, BoomingConch, FishingRod, GoldenPearl, Kaleidoscope, LeadPaperweight, LostCoffer, MassiveScroll, NeowsTorment, NewLeaf, PhialHolster, PreciseScissors, ScrollBoxes, WingedBoots; plus one XOR extra pair rolled independently: LavaRock XOR SmallCapsule (skipped if the curse relic is LargeCapsule), NutritiousOyster XOR StoneHumidifier, NeowsTalisman XOR Pomander. Curse pool: CursedPearl, HeftyTablet, LargeCapsule, LeafyPoultice, NeowsBones, PrecariousShears, SilkenTress, SilverCrucible. Conflicts removed from the positive pool: CursedPearl−GoldenPearl, HeftyTablet−ArcaneScroll, LeafyPoultice−NewLeaf, PrecariousShears−PreciseScissors. Each relic also filtered by `IsAllowedAtNeow`. With run modifiers active, Neow instead offers each modifier's `GenerateNeowOption` in sequence.",
+    "description": "no-modifier run → 3 options = 2 random positive relics + 1 random curse-cost relic. Positive pool: ArcaneScroll, BoomingConch, FishingRod, GoldenPearl, Kaleidoscope, LeadPaperweight, LostCoffer, MassiveScroll, NeowsTorment, NewLeaf, PhialHolster, PreciseScissors, ScrollBoxes, WingedBoots; plus one XOR extra pair rolled independently: LavaRock XOR SmallCapsule (skipped if the curse relic is LargeCapsule), NutritiousOyster XOR StoneHumidifier, NeowsTalisman XOR Pomander. Curse pool: CursedPearl, HeftyTablet, LargeCapsule, LeafyPoultice, NeowsBones, PrecariousShears, SilkenTress, SilverCrucible. Conflicts removed from the positive pool: CursedPearl−GoldenPearl, HeftyTablet−ArcaneScroll, LeafyPoultice−NewLeaf, PrecariousShears−PreciseScissors. Each relic also filtered by `IsAllowedAtNeow`. With run modifiers active, Neow instead offers each modifier's `GenerateNeowOption` in sequence. LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log): LargeCapsule listed in the curse pool — declined per policy; ScrollBoxes declined per repeated dilution advisory.",
     "id": "NEOW",
     "kind": "event",
-    "live_notes": "LIVE run-56: options = GoldenPearl(150g) / BoomingConch(elite draw2+1energy) / SilkenTress(lose gold, Glam enchant). Picked BoomingConch — engine value > gold.",
+    "live_notes": "LIVE run-56: options = GoldenPearl(150g) / BoomingConch(elite draw2+1energy) / SilkenTress(lose gold, Glam enchant). Picked BoomingConch — engine value > gold. LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log): options = ScrollBoxes / GoldenPearl(150g) / LargeCapsule(2 relics + strike/defend dilution; curse-pool per references). Picked GoldenPearl — funded the (3,0) Act1 shop package (275g sunk).",
     "name": "Neow",
     "needs_zh": false,
     "options": {
@@ -4872,5 +4872,18 @@
     "source": "census:live_ids.json",
     "zh_description": "事件选项（live id 为本地化名称），关联遗物 MR_STRUGGLES：回合开始，对所有敌人造成等同当前回合数的伤害。",
     "zh_name": "抱抱先生"
+  },
+  "DARV": {
+    "id": "DARV",
+    "kind": "event",
+    "name": "Darv / Act2 boon room",
+    "aliases": [
+      "DARV",
+      "先古移民"
+    ],
+    "curated": true,
+    "description": "Act2 act-start boon room. LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log): offered Astrolabe (transform 3 cards then upgrade them) / Empty Cage (remove 2) / Sozu (permanent +1 Energy/turn; potions no longer obtainable).",
+    "live_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log): picked Sozu — boss T1 energy 7/4 with Lantern+TeaSet+HappyFlower stack.",
+    "needs_zh": false
   }
 }

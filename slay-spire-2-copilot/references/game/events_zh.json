@@ -1336,7 +1336,7 @@
     "description": "无 modifier 的对局 → 3 个选项 = 2 件随机正面遗物 + 1 件随机诅咒代价遗物。正面池：ArcaneScroll、BoomingConch、FishingRod、GoldenPearl、Kaleidoscope、LeadPaperweight、LostCoffer、MassiveScroll、NeowsTorment、NewLeaf、PhialHolster、PreciseScissors、ScrollBoxes、WingedBoots；另有三组独立 XOR 追加：LavaRock XOR SmallCapsule（诅咒为 LargeCapsule 时跳过）、NutritiousOyster XOR StoneHumidifier、NeowsTalisman XOR Pomander。诅咒池：CursedPearl、HeftyTablet、LargeCapsule、LeafyPoultice、NeowsBones、PrecariousShears、SilkenTress、SilverCrucible。冲突项从正面池剔除：CursedPearl−GoldenPearl、HeftyTablet−ArcaneScroll、LeafyPoultice−NewLeaf、PrecariousShears−PreciseScissors。每件遗物另经 `IsAllowedAtNeow` 过滤。对局存在 modifier 时，Neow 改为依次提供各 modifier 的 `GenerateNeowOption`。",
     "id": "NEOW",
     "kind": "event",
-    "live_notes": "LIVE run-56：选项 = 金色珍珠(150g) / 轰鸣海螺(精英抽2+1能) / 华美发束(失金换 Glam 附魔)。选轰鸣海螺——引擎价值>金币。",
+    "live_notes": "LIVE run-56：选项 = 金色珍珠(150g) / 轰鸣海螺(精英抽2+1能) / 华美发束(失金换 Glam 附魔)。选轰鸣海螺——引擎价值>金币。 LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：选项 = 卷轴箱 / 金色珍珠(150g) / 巨大扭蛋（2 遗物+打击防御稀释；references 标注诅咒代价池）。选金色珍珠——供养 Act1 (3,0) 商店包（沉淀 275g）。",
     "name": "尼奥",
     "needs_zh": false,
     "options": {
@@ -4734,5 +4734,18 @@
     "page": null,
     "play_notes": "",
     "source": "census:live_ids.json"
+  },
+  "DARV": {
+    "id": "DARV",
+    "kind": "event",
+    "name": "达夫 / Act2 赐福房",
+    "aliases": [
+      "DARV",
+      "先古移民"
+    ],
+    "curated": true,
+    "description": "Act2 章首赐福房。LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：选项 = 星盘（变化 3 张再升级）/ 空鸟笼（移除 2 张）/ 添水 Sozu（永久每回合 +1 能量；不再获得药水）。",
+    "live_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：选 Sozu——灯笼+茶具+HappyFlower 叠加使 Boss T1 能量 7/4。",
+    "needs_zh": false
   }
 }

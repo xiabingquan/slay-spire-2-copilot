@@ -3034,7 +3034,7 @@
     "kind": "relic",
     "name": "装饰折扇",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：每回合第 3 张攻击牌 +4 挡——与 Rage 叠加为加法；3 攻击以上回合稳定 +4，2 攻击回合无收益。",
     "rarity": "Uncommon",
     "source": "md:relics.md:L67; md:relics_zh.md:L68",
     "zh_description": "每回合打出第3张攻击牌时获得4挡（计数每回合重置；第3张攻击结算时+4）。run-57 live 多战再确认（Fan 计数可见；第3攻后+4打印；千足虫 T4 三攻线 Fan+镀甲入账）。"
@@ -4300,7 +4300,7 @@
     "kind": "relic",
     "name": "添水",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：Act2 DARV 赐福——永久每回合 +1 能量；不再获得药水。与灯笼+1、茶具休息后+2、Happy Flower 每3回合+1 叠加 → Boss T1 开局 7/4。HP 栏由 Burning Blood+Blood Vial+休息几何+LIFT Max HP 覆盖。",
     "rarity": "Ancient",
     "source": "md:relics.md:L224; md:relics_zh.md:L224"
   },
@@ -4369,7 +4369,7 @@
     "kind": "relic",
     "name": "碎石钻",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：战内升级在卡面无标记——以 live 伤害数字为准（牌库 Bludgeon+ 已是升级版；随机命中多落在打击/防御上）。",
     "rarity": "Uncommon",
     "source": "md:relics.md:L81; md:relics_zh.md:L82"
   },
@@ -4893,7 +4893,7 @@
     "kind": "relic",
     "name": "臂铠",
     "needs_zh": false,
-    "play_notes": "",
+    "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：每战首张挡牌翻倍——Defend 5→10 确认；Impervious 虚弱税前 30→60，虚弱2下结算 52、纯虚弱2结算 22（虚弱税作用于翻倍后的值）。Rage/装饰折扇的挡非卡牌授予，不占用 Vambrace 槽。",
     "rarity": "Uncommon",
     "source": "md:relics.md:L88; md:relics_zh.md:L88"
   },
