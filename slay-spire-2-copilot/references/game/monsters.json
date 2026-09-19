@@ -5897,13 +5897,13 @@
       "Exoskeleton",
       "外骨骼虫"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "SKITTER_MOVE",
       "MANDIBLES_MOVE",
       "ENRAGE_MOVE"
     ],
-    "description": "SKITTER_MOVE = multi 1 ×3 (A: ×4); MANDIBLES_MOVE = single attack 8 (A:9); ENRAGE_MOVE = buff +2 Strength. Passive HardToKillPower 9: every damage instance the owner takes is capped at 9 (`ModifyDamageCap` returns 9 for the owner) — excess damage on a hit is discarded.",
+    "description": "SKITTER_MOVE = multi 1 ×3 (A: ×4); MANDIBLES_MOVE = single attack 8 (A:9); ENRAGE_MOVE = buff +2 Strength. Passive HardToKillPower 9: every damage instance the owner takes is capped at 9 (`ModifyDamageCap` returns 9 for the owner) — excess damage on a hit is discarded. run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log): trio 27/26/28-class A2 live; HARD_TO_KILL:9 per-instance cap pacing held — multi-hit <=9 each (TC 6-each full value); ENRAGE self +2 Str = free dump window; kill order lowest-current-HP first.",
     "display_names": [
       "Exoskeleton",
       "外骨骼虫"
@@ -11276,13 +11276,13 @@
       "Myte",
       "异螨"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "TOXIC_MOVE",
       "BITE_MOVE",
       "SUCK_MOVE"
     ],
-    "description": "TOXIC status card — cost 1, Exhaust on play, 5 unpowered damage if still in hand at end of turn; cycle TOXIC 2 → BITE 13–15 (Weak-shavable) → SUCK 4+2str. TOXIC intents display as StatusCard label=count.",
+    "description": "TOXIC status card — cost 1, Exhaust on play, 5 unpowered damage if still in hand at end of turn; cycle TOXIC 2 → BITE 13–15 (Weak-shavable) → SUCK 4+2str. TOXIC intents display as StatusCard label=count. run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log): pair spawn 61/67 HP A2; TOXIC status cards cost 1 Exhaust-on-play, deal 5 unpowered damage if still in hand at EoT — exhaust both each turn they appear or eat 5 each; Inferno+proc 9/turn + Wisp 8 on Power plays is the counter-engine.",
     "display_names": [
       "Myte",
       "异螨"
@@ -11725,7 +11725,7 @@
       "TENDERIZER_MOVE",
       "NUTRITIONAL_PASTE_MOVE"
     ],
-    "description": "Act3/Act2-class (run-46 live (3,4) 261... corrected: run-46 (3,4) Ovicopter 261 HP was SlimedBerserker; Ovicopter recorded run-10/46: run-46 (3,4) fight was Ovicopter-class — cycle LAY_EGGS(summon ToughEgg HATCH:2-1 countdown) → RAND WAR_CHANT/FLAIL(9x2)/RAM(15) → branch; MINION eggs/larvae despawn on mother death. LIVE run-46: mother killed T3 (Bash+Dismantle window) — larvae despawned same resolution; HATCH countdown decrements EoT regardless of damage taken.",
+    "description": "Act3/Act2-class (run-46 live (3,4) 261... corrected: run-46 (3,4) Ovicopter 261 HP was SlimedBerserker; Ovicopter recorded run-10/46: run-46 (3,4) fight was Ovicopter-class — cycle LAY_EGGS(summon ToughEgg HATCH:2-1 countdown) → RAND WAR_CHANT/FLAIL(9x2)/RAM(15) → branch; MINION eggs/larvae despawn on mother death. LIVE run-46: mother killed T3 (Bash+Dismantle window) — larvae despawned same resolution; HATCH countdown decrements EoT regardless of damage taken. Aliases incl 直飞产卵虫. run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log): LAY_EGGS spawns 3 HATCH_POWER:1 MINION eggs (14/16/18-class HP); cycle LAY_EGGS -> SMASH (11-16) -> TENDERIZER (7+debuff) -> SUMMON_BRANCH; mother-kill despawns the clutch live (run-46 doctrine reconfirmed); eggs are Gremlin Horn fodder.",
     "display_names": [
       "Ovicopter",
       "直飞产卵虫"
@@ -17892,7 +17892,7 @@
       "无厌沙虫",
       "无底之欲"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "LIQUIFY_MOVE",
       "THRASH_MOVE",
@@ -17915,7 +17915,7 @@
       "SIDE_MOVE",
       "TURN_MOVE"
     ],
-    "description": "LIQUIFY_GROUND_MOVE = buff; THRASH_MOVE / THRASH_MOVE_2 = multi attack 8 (A:9) ×2; LUNGING_BITE_MOVE = single attack 28 (A:31); SALIVATE_MOVE = buff self +2 Strength (A:3). Cycle: LIQUIFY → THRASH → SALIVATE → THRASH_2 → LUNGING_BITE → THRASH… **KILL MECHANIC DECODED**: SANDPIT_POWER is a devour timer starting at **4**, −1 at start of each enemy side turn; **at 0 the player is instantly devoured regardless of HP/Block** (earlier \"intent-display bug\" attribution was wrong). The boss injects **6 FranticEscape** cards at fight start; **playing one +1's Sandpit Amount** (and +1's that card's own cost) — hold them for counter 1–2 as emergency extension; the earlier archive rule \"never play FranticEscape\" is WRONG. Purity exhausting an unplayed FranticEscape from hand causes ZERO Sandpit change (safe thin). Fight plan: **damage race** — burst the 321 HP before the timer expires; block helps vs THRASH/LUNGING_BITE but never stops the devour; track `SANDPIT_POWER:amount` every turn. Intents: THRASH 8×2 (Weak shaves per-hit), LUNGING_BITE 28 (Str-scaled ~30), SALIVATE +2 Strength buffs; enter with >60 effective HP + in-hand block lines on race turns.",
+    "description": "LIQUIFY_GROUND_MOVE = buff; THRASH_MOVE / THRASH_MOVE_2 = multi attack 8 (A:9) ×2; LUNGING_BITE_MOVE = single attack 28 (A:31); SALIVATE_MOVE = buff self +2 Strength (A:3). Cycle: LIQUIFY → THRASH → SALIVATE → THRASH_2 → LUNGING_BITE → THRASH… **KILL MECHANIC DECODED**: SANDPIT_POWER is a devour timer starting at **4**, −1 at start of each enemy side turn; **at 0 the player is instantly devoured regardless of HP/Block** (earlier \"intent-display bug\" attribution was wrong). The boss injects **6 FranticEscape** cards at fight start; **playing one +1's Sandpit Amount** (and +1's that card's own cost) — hold them for counter 1–2 as emergency extension; the earlier archive rule \"never play FranticEscape\" is WRONG. Purity exhausting an unplayed FranticEscape from hand causes ZERO Sandpit change (safe thin). Fight plan: **damage race** — burst the 321 HP before the timer expires; block helps vs THRASH/LUNGING_BITE but never stops the devour; track `SANDPIT_POWER:amount` every turn. Intents: THRASH 8×2 (Weak shaves per-hit), LUNGING_BITE 28 (Str-scaled ~30), SALIVATE +2 Strength buffs; enter with >60 effective HP + in-hand block lines on race turns. run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log): SANDPIT_POWER:4 visible on the boss creature print at fight start; LIQUIFY_GROUND T1 injects FranticEscape cards (4+ observed in history); live cycle order LIQUIFY_GROUND -> THRASH -> LUNGING_BITE -> SALIVATE -> THRASH_2 -> repeat; FE play +1 Sandpit confirmed live (counter 1->2->3 on a double-FE turn); Sandpit -1 at start of each enemy side turn; devour at 0 ignores HP/block.",
     "display_names": [
       "TheInsatiable 无底之欲",
       "无底之欲"

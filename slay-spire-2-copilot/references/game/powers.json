@@ -3119,8 +3119,8 @@
       "SandpitPower"
     ],
     "counter_class": true,
-    "curated": false,
-    "description": "The Insatiable's kill timer — **starts at 4**, decrements by 1 at start of Enemy side turn (late); **at 0 the player is instantly devoured regardless of HP/Block** (unblockable kill — previously misattributed to an intent-display bug). The boss injects **6 FranticEscape** cards into the player deck at fight start; playing one **+1 Sandpit Amount** (and permanently +1's that card's own cost) — hold them for counter 1–2 as emergency extensions, do NOT hoard unplayed and do NOT spam early. Fight plan: damage race first (block does not stop the devour), track Sandpit Amount every turn.",
+    "curated": true,
+    "description": "The Insatiable's kill timer — **starts at 4**, decrements by 1 at start of Enemy side turn (late); **at 0 the player is instantly devoured regardless of HP/Block** (unblockable kill — previously misattributed to an intent-display bug). The boss injects **6 FranticEscape** cards into the player deck at fight start; playing one **+1 Sandpit Amount** (and permanently +1's that card's own cost) — hold them for counter 1–2 as emergency extensions, do NOT hoard unplayed and do NOT spam early. Fight plan: damage race first (block does not stop the devour), track Sandpit Amount every turn. run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log): boss-print starts at 4; FE extensions live 1->2->3; devour timer is the fight's win condition — race the HP, extend with FE at counter 1-2.",
     "host_of_affliction": false,
     "id": "SANDPIT_POWER",
     "kind": "power",

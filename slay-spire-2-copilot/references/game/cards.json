@@ -1115,8 +1115,8 @@
     "card_type": "skill",
     "character_pool": "IRONCLAD",
     "cost": "0",
-    "curated": false,
-    "description": "lose 3 HP (unblockable); gain 2 Energy. Upgrade: gain 3 Energy.",
+    "curated": true,
+    "description": "lose 3 HP (unblockable); gain 2 Energy. Upgrade: gain 3 Energy. run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log): with Inferno in play, 0-cost Bloodletting (-3HP unblockable, +2 Energy) fires Inferno's proc same play — net -3 HP +2 Energy + 9 AoE; Lost Wisp does NOT fire (skill, not power); Spite double-hit does NOT trigger from Inferno turn-start tax alone (run-40 probe held) — needs player-phase HP loss like Bloodletting.",
     "id": "BLOODLETTING",
     "keywords": [],
     "kind": "card",
@@ -5173,8 +5173,8 @@
     "card_type": "status",
     "character_pool": "STATUS",
     "cost": "1",
-    "curated": false,
-    "description": "increases the Sandpit enemy's power on you by 1; this card's cost permanently +1. No upgrade.",
+    "curated": true,
+    "description": "increases the Sandpit enemy's power on you by 1; this card's cost permanently +1. No upgrade. run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log): each play +1 that copy's own cost AND +1 Sandpit Amount — double-play on one turn moved counter 1->3; hold for counter 1-2 per run-44 doctrine; unplayed FE sitting in hand is safe (no Sandpit change), Purity-exhaust class also safe.",
     "id": "FRANTIC_ESCAPE",
     "keywords": [],
     "kind": "card",
@@ -8744,7 +8744,7 @@
     "character_pool": "IRONCLAD",
     "cost": "2",
     "curated": true,
-    "description": "Strike-tagged; damage = 6 + 2 per Strike-tagged card owned (+3/tag more with Strike Dummy, applied before multipliers). Run-36 formula live; run-41 with Dummy+Str3 resolved 25 on Infested Prism T2 and 20-class on shell-capped Coral Colony — the PS+Strike-Dummy spine is the deck's primary single-hit instrument.",
+    "description": "Strike-tagged; damage = 6 + 2 per Strike-tagged card owned (+3/tag more with Strike Dummy, applied before multipliers). Run-36 formula live; run-41 with Dummy+Str3 resolved 25 on Infested Prism T2 and 20-class on shell-capped Coral Colony — the PS+Strike-Dummy spine is the deck's primary single-hit instrument. run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log): deck held 8 Strike-tags (5xStrike + SetupStrike + PommelStrike + PS itself counts) -> base 22 (6+2x8); under Marbles-Vuln resolved 33-class single hits.",
     "id": "PERFECTED_STRIKE",
     "keywords": [
       "Strike-tagged"
@@ -8757,7 +8757,8 @@
     "target_type": null,
     "upgrade": "+3 per Strike. LIVE (run-36): formula confirmed — with 7-9 Strike-tags in deck plus player Strength plus StrikeDummy +3 (Dummy applies before Vuln multiplier), resolves 23–30 class; TwinStrike copies each add a tag (+2 PS base each).",
     "zh_description": "2，攻击，普通，打击标签，伤害 = 6 + 你拥有的每张打击标签牌 2 点。升级：每张 3 点。LIVE（对局 36）：公式确认——牌组 7–9 张打击标签 + 玩家力量 + STRIKE_DUMMY +3（假人作用于易伤乘区之前）时结算 23–30 级；TwinStrike 拷贝各带一张标签（PS 基值每张 +2）。",
-    "zh_name": "完美打击"
+    "zh_name": "完美打击",
+    "needs_zh": false
   },
   "PHANTOM_BLADES": {
     "aliases": [

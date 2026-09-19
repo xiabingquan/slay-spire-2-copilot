@@ -2796,8 +2796,8 @@
       "SandpitPower"
     ],
     "counter_class": true,
-    "curated": false,
-    "description": "The Insatiable 的击杀倒计时—— **初始 4 层**，敌方阵营回合开始（late）时 -1；**归 0 时玩家被直接吞噬， 无视 HP/格挡**（不可格挡的处决——此前被误判为 意图显示 bug）。Boss 开战时向玩家牌库注入 **6 张 FranticEscape**；打出 一张 **沙坑 Amount +1**（该牌自身费用永久 +1）——留到计数 1–2 时作紧急 延时用，既不可全程不打，也不可早早挥霍。战斗计划：输出竞速优先（格挡 拦不住吞噬），每回合跟踪沙坑层数。",
+    "curated": true,
+    "description": "The Insatiable 的击杀倒计时—— **初始 4 层**，敌方阵营回合开始（late）时 -1；**归 0 时玩家被直接吞噬， 无视 HP/格挡**（不可格挡的处决——此前被误判为 意图显示 bug）。Boss 开战时向玩家牌库注入 **6 张 FranticEscape**；打出 一张 **沙坑 Amount +1**（该牌自身费用永久 +1）——留到计数 1–2 时作紧急 延时用，既不可全程不打，也不可早早挥霍。战斗计划：输出竞速优先（格挡 拦不住吞噬），每回合跟踪沙坑层数。 run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log)：Boss 打印开局为 4；FE 延时 live 1→2→3；吞噬计时器是本战胜负手 — 竞速打血，counter 1-2 时用 FE 延时。",
     "host_of_affliction": false,
     "id": "SANDPIT_POWER",
     "kind": "power",

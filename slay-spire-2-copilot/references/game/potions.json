@@ -326,7 +326,7 @@
       "Duplicator"
     ],
     "curated": true,
-    "description": "apply DuplicationPower 1 — the next card you play this turn is played 1 extra time; removed at end of turn. LIVE run-48 boss class proof: potions are NOT cards for RINGING — Duplicator + Uppercut on Ceremonial Beast T6 resolved 24×2=48 dmg under the 1-card rule (72→24 the fight's decisive turn). Burst-class bottle: name it at shops when the boss gate checklist asks for a burst potion; pairs with Bludgeon+/Uppercut+ window cards.",
+    "description": "Apply DuplicationPower 1 — the next card you play this combat is played 1 extra time; removed at end of turn. run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log): Pommel Strike 9 resolved twice (18) on a kill turn; potions are NOT cards for RINGING-class counters (run-48 rule held).",
     "display_name": "Duplicator",
     "id": "DUPLICATOR",
     "kind": "potion",
@@ -446,7 +446,7 @@
       "FirePotion"
     ],
     "curated": true,
-    "description": "Deal 20 damage. LIVE run-48 Ceremonial Beast Slow-window test: flat 20 — NOT amplified by enemy SLOW_POWER stacks or VULNERABLE (110→90 exact under Vuln 2 + Slow display). Potion-class damage is typeless vs those multipliers; do not count potion damage in Slow/Vuln window math.",
+    "description": "Deal 20 damage — typeless: NOT amplified by Vulnerable or SLOW stacks. run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log): exact 20 on Marbles-Vuln'd Insatiable confirmed; do not count potion damage in Vuln/Slow window math.",
     "display_name": "Fire Potion",
     "id": "FIRE_POTION",
     "kind": "potion",
@@ -627,7 +627,7 @@
       "GigantificationPotion"
     ],
     "curated": true,
-    "description": "Apply GigantificationPower 1 — your next powered Attack card this combat deals x3 damage; consumed by that attack. Live run-42: stacks multiplicatively with Weak x0.75 and Vuln x1.5 — Bludgeon (32+6 Str)x0.75x1.5x3 = 86 live, exact-kill on 86-HP Rocket.",
+    "description": "Apply GigantificationPower 1 — your next powered Attack card this combat deals x3 damage; consumed by that attack. run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log): Thunderclap-Vuln + player Weak + Gigantified Stomp resolved ~40 AoE (12 x3 x0.75 x1.5) — swept a 46/42/22 bowlbug trio in one Stomp; stacks multiplicatively with Weak x0.75 and Vuln x1.5 (run-42 formula reconfirmed).",
     "display_name": "Gigantification Potion",
     "id": "GIGANTIFICATION_POTION",
     "kind": "potion",
@@ -949,7 +949,7 @@
       "PowerPotion"
     ],
     "curated": true,
-    "description": "Choose 1 of 3 distinct Power cards from your character card pool (may skip); add to hand, free this turn. Live run-42 InfestedPrism: offered Dark Embrace / Unmovable / Cruelty — took Cruelty (CRUELTY_POWER:25 = +25% attack damage vs Vulnerable targets).",
+    "description": "Choose 1 of 3 distinct Power cards from your character pool; add to hand, free this turn. run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log) process note: choose(index) returned ok and closed the overlay but the chosen card appeared in neither hand, deck, nor powers — potion consumed for nothing; treat as flaky, re-read state after pick before counting the card.",
     "display_name": "Power Potion",
     "id": "POWER_POTION",
     "kind": "potion",

@@ -5721,13 +5721,13 @@
       "Exoskeleton",
       "外骨骼虫"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "SKITTER_MOVE",
       "MANDIBLES_MOVE",
       "ENRAGE_MOVE"
     ],
-    "description": "SKITTER_MOVE = 多段 1 ×3 (A: ×4)；MANDIBLES_MOVE = 单次攻击 8 (A:9)；ENRAGE_MOVE = 增益 +2 力量。被动 HardToKillPower 9：拥有者每次受到的伤害实例上限 9（`ModifyDamageCap` 对拥有者返回 9）——单次命中超出部分直接作废。",
+    "description": "SKITTER_MOVE = 多段 1 ×3 (A: ×4)；MANDIBLES_MOVE = 单次攻击 8 (A:9)；ENRAGE_MOVE = 增益 +2 力量。被动 HardToKillPower 9：拥有者每次受到的伤害实例上限 9（`ModifyDamageCap` 对拥有者返回 9）——单次命中超出部分直接作废。 run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log)：三人组 27/26/28 血级 A2 live；HARD_TO_KILL:9 单次上限配速成立 — 多段攻击每 hit ≤9 全额结算（TC 各 6 全额）；ENRAGE 自身 +2 力 = 自由爆发窗；杀序按当前血量从低到高。",
     "display_names": [
       "Exoskeleton",
       "外骨骼虫"
@@ -10872,13 +10872,13 @@
       "Myte",
       "异螨"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "TOXIC_MOVE",
       "BITE_MOVE",
       "SUCK_MOVE"
     ],
-    "description": "TOXIC_MOVE = 状态牌 ×2（注入毒性状态牌）；BITE_MOVE = 单次攻击 13 (A:15)；SUCK_MOVE = 单次攻击 4 (A:6) + 自身 +2 力量 (A:3)。循环 TOXIC → BITE → SUCK。",
+    "description": "TOXIC_MOVE = 状态牌 ×2（注入毒性状态牌）；BITE_MOVE = 单次攻击 13 (A:15)；SUCK_MOVE = 单次攻击 4 (A:6) + 自身 +2 力量 (A:3)。循环 TOXIC → BITE → SUCK。 run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log)：成对出现 61/67 血 A2；TOXIC 状态牌 1 费打出即消耗，回合结束仍在手中则各造成 5 点无属性伤害 — 出现的回合尽量打出消耗，否则每张吃 5；Inferno 每回合 proc 9 + Power 出牌 Wisp 8 是反制引擎。",
     "display_names": [
       "Myte",
       "异螨"
@@ -11301,7 +11301,7 @@
       "TENDERIZER_MOVE",
       "NUTRITIONAL_PASTE_MOVE"
     ],
-    "description": "Act3/Act2 级（run-10/46）：循环 LAY_EGGS（召唤 ToughEgg HATCH:2→1 倒计时）→ RAND WAR_CHANT/FLAIL(9×2)/RAM(15) → 分支；MINION 卵/幼虫随母体死亡消亡。run-46 live：T3 杀母体（Bash+Dismantle 窗）——幼虫同帧消亡；HATCH 倒计时按回合末递减非伤害驱动。",
+    "description": "Act3/Act2 级（run-10/46）：循环 LAY_EGGS（召唤 ToughEgg HATCH:2→1 倒计时）→ RAND WAR_CHANT/FLAIL(9×2)/RAM(15) → 分支；MINION 卵/幼虫随母体死亡消亡。run-46 live：T3 杀母体（Bash+Dismantle 窗）——幼虫同帧消亡；HATCH 倒计时按回合末递减非伤害驱动。 别名含 直飞产卵虫。run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log)：LAY_EGGS 召唤 3 枚 HATCH_POWER:1 MINION 卵（14/16/18 血级）；循环 LAY_EGGS→SMASH（11-16）→TENDERIZER（7+debuff）→SUMMON_BRANCH；母体死亡幼体同步消失 live（run-46 教条再确认）；卵是贪魔之角的饲料。",
     "display_names": [
       "Ovicopter",
       "直飞产卵虫"
@@ -17277,7 +17277,7 @@
       "无厌沙虫",
       "无底之欲"
     ],
-    "curated": false,
+    "curated": true,
     "cycle": [
       "LIQUIFY_MOVE",
       "THRASH_MOVE",
@@ -17300,7 +17300,7 @@
       "SIDE_MOVE",
       "TURN_MOVE"
     ],
-    "description": "LIQUIFY_GROUND_MOVE = 增益；THRASH_MOVE / THRASH_MOVE_2 = 多段攻击 8 (A:9) ×2；LUNGING_BITE_MOVE = 单次攻击 28 (A:31)；SALIVATE_MOVE = 增益 自身 +2 力量 (A:3)。循环：LIQUIFY → THRASH → SALIVATE → THRASH_2 → LUNGING_BITE → THRASH… **击杀机制已解码**：SANDPIT_POWER 是吞噬倒计时，初始 **4**，每次敌方阵营回合开始 −1；**归 0 时玩家被直接吞噬，无视 HP/格挡**（早前「意图显示 bug」判定错误）。开战向玩家牌库注入 **6 张 FranticEscape**；**打出一张 FE = 沙坑 Amount +1**（该牌自身费用永久 +1）——留到计数 1–2 作紧急延时；早前档案「绝不打出 FranticEscape」规则是错误的。纯净从手牌消耗未打出的 FranticEscape = 沙坑零变化（安全瘦身）。战斗计划：**输出竞速**——在倒计时耗尽前打掉 321 HP；格挡应对 THRASH/LUNGING_BITE 但拦不住吞噬；每回合跟踪 `SANDPIT_POWER:amount`。意图：THRASH 8×2（虚弱按击削减）、LUNGING_BITE 28（力量强化约 30）、SALIVATE +2 力量 Buff；进场有效 HP >60 且竞速回合手上有挡线。",
+    "description": "LIQUIFY_GROUND_MOVE = 增益；THRASH_MOVE / THRASH_MOVE_2 = 多段攻击 8 (A:9) ×2；LUNGING_BITE_MOVE = 单次攻击 28 (A:31)；SALIVATE_MOVE = 增益 自身 +2 力量 (A:3)。循环：LIQUIFY → THRASH → SALIVATE → THRASH_2 → LUNGING_BITE → THRASH… **击杀机制已解码**：SANDPIT_POWER 是吞噬倒计时，初始 **4**，每次敌方阵营回合开始 −1；**归 0 时玩家被直接吞噬，无视 HP/格挡**（早前「意图显示 bug」判定错误）。开战向玩家牌库注入 **6 张 FranticEscape**；**打出一张 FE = 沙坑 Amount +1**（该牌自身费用永久 +1）——留到计数 1–2 作紧急延时；早前档案「绝不打出 FranticEscape」规则是错误的。纯净从手牌消耗未打出的 FranticEscape = 沙坑零变化（安全瘦身）。战斗计划：**输出竞速**——在倒计时耗尽前打掉 321 HP；格挡应对 THRASH/LUNGING_BITE 但拦不住吞噬；每回合跟踪 `SANDPIT_POWER:amount`。意图：THRASH 8×2（虚弱按击削减）、LUNGING_BITE 28（力量强化约 30）、SALIVATE +2 力量 Buff；进场有效 HP >60 且竞速回合手上有挡线。 run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log)：开战时 Boss 实体打印可见 SANDPIT_POWER:4；LIQUIFY_GROUND T1 注入慌张逃离（history 可见 4+ 张）；live 循环顺序 LIQUIFY_GROUND→THRASH→LUNGING_BITE→SALIVATE→THRASH_2→重复；FE 打出 Sandpit +1 live 确认（双 FE 回合计数 1→2→3）；Sandpit 每次敌方回合开始 −1；归零吞噬无视血量/挡。",
     "display_names": [
       "TheInsatiable 无底之欲",
       "无底之欲"
@@ -17510,7 +17510,7 @@
         "status_count": null
       }
     },
-    "name": "无底之欲",
+    "name": "无厌沙虫",
     "needs_zh": false,
     "passives": [],
     "play_notes": "",
