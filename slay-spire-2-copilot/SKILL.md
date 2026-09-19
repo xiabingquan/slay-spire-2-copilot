@@ -44,6 +44,11 @@ and how log files are named: see "Runtime conventions" at the end.
 
 Execute in order; all of the following are the skill's own work:
 
+0. **Check the local Python environment.** `python3 --version` must exist
+   and be >= 3.8: spirectl uses the Python standard library only — no pip
+   install, no venv. If python3 is missing or too old, stop and report to
+   the user; do not proceed with the session setup.
+
 1. **Resolve the log folder and set the environment variable.** Parse the
    absolute path from the invocation arguments:
    - No path in the arguments: stop before touching the game and ask the user
