@@ -264,7 +264,7 @@ def fold_entry_into_reference(domain_stem, key, entry):
         else:
             data[key] = copy.deepcopy(entry)
             if lang == "zh":
-                # ZH name falls back to EN name until curated in the twin
+                # ZH twin starts as an EN-name placeholder
                 pass
         _write_json_dict(path, data)
     _REF_INDEX_CACHE.clear()

@@ -612,7 +612,7 @@ def cmd_lookup(args):
 
     Miss path: fall back to spire-codex.com research — fetch candidate pages,
     fold a minimal entry into the matching spirectl_lib/data/*.json + _zh.json
-    pair (curated:false), and return it. When codex has no page either,
+    pair (structure only — codex authoritative), and return it. When codex has no page either,
     exit 1 with a loud web-research trigger (agent doctrine: perplexity-search
     -> fold into JSON EN+ZH -> re-run).
 
