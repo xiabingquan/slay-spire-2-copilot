@@ -1,33 +1,13 @@
 # 角色（lessons）
 
-各角色玩法清单——经验列待填。静态数据：`spirectl lookup <id>`。
+各角色玩法清单——经验以无序列表写在各角色标题下。静态数据：`spirectl lookup <id>`。
 
-# IRONCLAD
+# IRONCLAD（铁甲战士）
 
-| id | 名称 | 经验 |
-|---|---|---|
-| IRONCLAD | 铁甲战士 |  |
+# SILENT（静默猎手）
 
-# SILENT
+# REGENT（储君）
 
-| id | 名称 | 经验 |
-|---|---|---|
-| SILENT | 静默猎手 |  |
+# NECROBINDER（亡灵契约师）
 
-# REGENT
-
-| id | 名称 | 经验 |
-|---|---|---|
-| REGENT | 储君 |  |
-
-# NECROBINDER
-
-| id | 名称 | 经验 |
-|---|---|---|
-| NECROBINDER | 亡灵契约师 |  |
-
-# DEFECT
-
-| id | 名称 | 经验 |
-|---|---|---|
-| DEFECT | 故障机器人 |  |
+# DEFECT（故障机器人）
