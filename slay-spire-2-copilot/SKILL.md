@@ -277,6 +277,25 @@ When the run ends (game_over screen, or abandon):
    **对局序号** column numbering runs chronologically from 1 (newest run at
    the top still shows the highest number).
 
+## Info-incomplete contract (user directive 2026-09-19)
+
+When the bridge reports incomplete info (`INFO-INCOMPLETE` / `info_complete=false`):
+
+- **Transient** (immediate re-read shows `info_complete`): auto-recover and continue — no special flow.
+- **Persistent** (re-read still false, or an info-contract hard-stop): do NOT hard-stop the
+  session. Instead:
+  1. Find the **root cause** (StateBuilder reflection miss? unsupported screen type? mod/game
+     version drift? missing protocol field?).
+  2. Fix it (client/mod code; rebuild with `bash scripts/install-mod.sh` when C# changed).
+  3. **Feishu-notify** the user: what broke, what was changed.
+  4. **Continue the SAME run** — in-game menu path to main menu then `act continue_run`
+     (see "SL restore path"); relaunch the game process only if it actually crashed.
+     **Never `start_run` to replace a wedged run.**
+  5. Record the cause and fix in the current run's memory note.
+
+This does not replace fail-loud (illegal act submits still reject immediately); it covers
+information-contract gaps only.
+
 ## Self-iteration
 
 - Tool defect (spirectl/mod/protocol issue): fix the code in this repo on the

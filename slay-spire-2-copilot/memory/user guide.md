@@ -114,7 +114,7 @@ reflection is one `## 反思 (yyyy-mm-dd)` subsection under it.
 
 ## SL count
 
-Every run note MUST record the run's SL (save/load) count — the number of
+Every run note should record the run's SL (save/load) count — the number of
 times the run was restored via `continue_run` / game relaunch mid-run (0 if
 the game process held the whole run). Record it in BOTH places:
 
@@ -137,3 +137,28 @@ reference for the game, not only a session-start artifact:
 - Optional before the run: full earlier run records, as needed
 - Any time during play: consult past summaries and character notes mid-run —
   e.g. to compare with previous runs when facing a decision
+
+## Experience is advisory, not advisory pattern (user directive 2026-09-19)
+
+When recording run memory, frame lessons for future runs as **suggestions /
+reference observations**, not as binding advisory patterns:
+
+- Wording: prefer "run-X observed… / 建议… / 参考…" over "强烈建议 / 强烈建议不要 / 参考经验 / 强烈建议"
+- **All past runs are reference only.** Concrete in-run measures must be decided
+  from the **current run's live state** (HP, deck, hand, enemy, map geometry),
+  not copied wholesale from earlier run notes
+- Past experience is one input to the decision; live situation always wins
+- The same applies when consulting memory mid-run: read past notes as data,
+  then adapt — do not replay another run's script
+
+## Phased reflection must cover frequent-death enemies (user directive 2026-09-19)
+
+In the 阶段性反思 section of `memory/overview.md`, in addition to existing
+gains/losses analysis:
+
+- Identify **high-frequency failure enemies** (enemies that killed multiple runs)
+  within the covered run range
+- For each: summarize the **root cause** of the deaths (mechanic misunderstanding?
+  HP-entry math? draw/deck issue? process debt?)
+- Think through **countermeasures** — framed as advisory suggestions for future
+  runs (not binding advisory pattern), to be adapted per live situation
