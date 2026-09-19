@@ -162,3 +162,17 @@ gains/losses analysis:
   HP-entry math? draw/deck issue? process debt?)
 - Think through **countermeasures** — framed as advisory suggestions for future
   runs (not binding advisory pattern), to be adapted per live situation
+
+## Only forward-valuable content in memory (user directive 2026-09-19)
+
+Overarching rule for run notes and overview: **record only what has reference
+value for FUTURE runs**.
+
+- **Delete revenge-type narrative** ("run-X killer now killed", 复仇 items) —
+  beating a previously-fatal enemy carries no forward reference value
+- **Delete mod-fix/process-reload narrative** (版本号、重建、工具缺陷重载过程) —
+  engineering log, not play reference
+- overview table 备注 and reflections: same standard — only future-valuable
+  facts (mechanics learned the hard way, economy numbers, decision insights)
+- What survives: live-verified mechanics, cost/HP economy data, synergies,
+  decision-quality observations, advisory suggestions for future situations
