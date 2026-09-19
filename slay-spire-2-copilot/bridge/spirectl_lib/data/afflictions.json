@@ -1,0 +1,350 @@
+{
+  "ASCENDERS_BANE": {
+    "aliases": [
+      "Ascenders Bane",
+      "天阶诅咒"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "ASCENDERS_BANE",
+    "kind": "curse",
+    "name": "Ascenders Bane"
+  },
+  "BOUND": {
+    "aliases": [
+      "Bound",
+      "束缚"
+    ],
+    "detail": {
+      "host_power_id": "CHAINS_OF_BINDING_POWER"
+    },
+    "id": "BOUND",
+    "kind": "affliction",
+    "name": "Bound"
+  },
+  "CLUMSY": {
+    "aliases": [
+      "Clumsy",
+      "笨拙"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "CLUMSY",
+    "kind": "curse",
+    "name": "Clumsy"
+  },
+  "COMPACT": {
+    "aliases": [
+      "Compact",
+      "压缩"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "COMPACT",
+    "kind": "status_card",
+    "name": "Compact"
+  },
+  "CURSE_OF_THE_BELL": {
+    "aliases": [
+      "Curse Of The Bell",
+      "钟之诅咒"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "CURSE_OF_THE_BELL",
+    "kind": "curse",
+    "name": "Curse Of The Bell"
+  },
+  "DAZED": {
+    "aliases": [
+      "Dazed",
+      "眩晕"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "DAZED",
+    "kind": "status_card",
+    "name": "Dazed"
+  },
+  "DECAY": {
+    "aliases": [
+      "Decay",
+      "腐化"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "DECAY",
+    "kind": "curse",
+    "name": "Decay"
+  },
+  "DISINTEGRATION": {
+    "aliases": [
+      "Disintegration",
+      "崩解"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "DISINTEGRATION",
+    "kind": "status_card",
+    "name": "Disintegration"
+  },
+  "DOUBT": {
+    "aliases": [
+      "Doubt",
+      "猜疑"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "DOUBT",
+    "kind": "curse",
+    "name": "Doubt"
+  },
+  "ENTANGLED": {
+    "aliases": [
+      "Entangled",
+      "缠绕"
+    ],
+    "detail": {
+      "host_power_id": "TANGLED_POWER"
+    },
+    "id": "ENTANGLED",
+    "kind": "affliction",
+    "name": "Entangled"
+  },
+  "FLAK_CANNON": {
+    "aliases": [
+      "Flak Cannon",
+      "散射炮"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "FLAK_CANNON",
+    "kind": "status_card",
+    "name": "Flak Cannon"
+  },
+  "GALVANIZED": {
+    "aliases": [
+      "Galvanized",
+      "电镀"
+    ],
+    "detail": {
+      "host_power_id": "GALVANIC_POWER"
+    },
+    "id": "GALVANIZED",
+    "kind": "affliction",
+    "name": "Galvanized"
+  },
+  "HEXED": {
+    "aliases": [
+      "Hexed",
+      "诅咒"
+    ],
+    "detail": {
+      "host_power_id": "HEX_POWER"
+    },
+    "id": "HEXED",
+    "kind": "affliction",
+    "name": "Hexed"
+  },
+  "INJURY": {
+    "aliases": [
+      "Injury",
+      "损伤"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "INJURY",
+    "kind": "curse",
+    "name": "Injury"
+  },
+  "ITERATION": {
+    "aliases": [
+      "Iteration",
+      "迭代"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "ITERATION",
+    "kind": "status_card",
+    "name": "Iteration"
+  },
+  "MIND_ROT": {
+    "aliases": [
+      "Mind Rot",
+      "脑蚀"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "MIND_ROT",
+    "kind": "status_card",
+    "name": "Mind Rot"
+  },
+  "NORMALITY": {
+    "aliases": [
+      "Normality",
+      "常态"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "NORMALITY",
+    "kind": "curse",
+    "name": "Normality"
+  },
+  "REGRET": {
+    "aliases": [
+      "Regret",
+      "悔恨"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "REGRET",
+    "kind": "curse",
+    "name": "Regret"
+  },
+  "RINGING": {
+    "aliases": [
+      "Ringing",
+      "耳鸣"
+    ],
+    "detail": {
+      "host_power_id": "RINGING_POWER"
+    },
+    "id": "RINGING",
+    "kind": "affliction",
+    "name": "Ringing"
+  },
+  "ROCKET_PUNCH": {
+    "aliases": [
+      "Rocket Punch",
+      "火箭飞拳"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "ROCKET_PUNCH",
+    "kind": "status_card",
+    "name": "Rocket Punch"
+  },
+  "SLIMED": {
+    "aliases": [
+      "Slimed",
+      "黏液"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "SLIMED",
+    "kind": "status_card",
+    "name": "Slimed"
+  },
+  "SLOTH": {
+    "aliases": [
+      "Sloth",
+      "怠惰"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "SLOTH",
+    "kind": "status_card",
+    "name": "Sloth"
+  },
+  "SMOG": {
+    "aliases": [
+      "Smog",
+      "烟雾"
+    ],
+    "detail": {
+      "host_power_id": "SMOGGY_POWER"
+    },
+    "id": "SMOG",
+    "kind": "affliction",
+    "name": "Smog"
+  },
+  "SMOKESTACK": {
+    "aliases": [
+      "Smokestack",
+      "烟囱"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "SMOKESTACK",
+    "kind": "status_card",
+    "name": "Smokestack"
+  },
+  "TAINTED": {
+    "aliases": [
+      "Tainted",
+      "污染"
+    ],
+    "detail": {
+      "host_power_id": "TAINTED_POWER"
+    },
+    "id": "TAINTED",
+    "kind": "affliction",
+    "name": "Tainted"
+  },
+  "TOXIC": {
+    "aliases": [
+      "Toxic",
+      "剧毒"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "TOXIC",
+    "kind": "status_card",
+    "name": "Toxic"
+  },
+  "TRASH_TO_TREASURE": {
+    "aliases": [
+      "Trash To Treasure",
+      "化废为宝"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "TRASH_TO_TREASURE",
+    "kind": "status_card",
+    "name": "Trash To Treasure"
+  },
+  "WASTE_AWAY": {
+    "aliases": [
+      "Waste Away",
+      "衰朽"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "WASTE_AWAY",
+    "kind": "status_card",
+    "name": "Waste Away"
+  },
+  "WOUND": {
+    "aliases": [
+      "Wound",
+      "创伤"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "WOUND",
+    "kind": "status_card",
+    "name": "Wound"
+  }
+}

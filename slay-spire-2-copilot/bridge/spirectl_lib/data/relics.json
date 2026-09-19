@@ -1,0 +1,4273 @@
+{
+  "ADROIT": {
+    "aliases": [
+      "KIFUDA",
+      "Kifuda"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Shop"
+    },
+    "id": "ADROIT",
+    "kind": "relic",
+    "name": "Kifuda"
+  },
+  "AKABEKO": {
+    "aliases": [
+      "Akabeko"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "AKABEKO",
+    "kind": "relic",
+    "name": "Akabeko"
+  },
+  "ALCHEMICAL_COFFER": {
+    "aliases": [
+      "Alchemical Coffer",
+      "AlchemicalCoffer"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "ALCHEMICAL_COFFER",
+    "kind": "relic",
+    "name": "Alchemical Coffer"
+  },
+  "AMETHYST_AUBERGINE": {
+    "aliases": [
+      "Amethyst Aubergine",
+      "AmethystAubergine"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "AMETHYST_AUBERGINE",
+    "kind": "relic",
+    "name": "Amethyst Aubergine"
+  },
+  "ANCHOR": {
+    "aliases": [
+      "Anchor"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "ANCHOR",
+    "kind": "relic",
+    "name": "Anchor"
+  },
+  "ARCANE_SCROLL": {
+    "aliases": [
+      "Arcane Scroll",
+      "ArcaneScroll"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "ARCANE_SCROLL",
+    "kind": "relic",
+    "name": "Arcane Scroll"
+  },
+  "ARCHAIC_TOOTH": {
+    "aliases": [
+      "Archaic Tooth",
+      "ArchaicTooth"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "ARCHAIC_TOOTH",
+    "kind": "relic",
+    "name": "Archaic Tooth"
+  },
+  "ART_OF_WAR": {
+    "aliases": [
+      "Art of War",
+      "ArtOfWar"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "ART_OF_WAR",
+    "kind": "relic",
+    "name": "Art of War"
+  },
+  "ASTROLABE": {
+    "aliases": [
+      "Astrolabe"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "ASTROLABE",
+    "kind": "relic",
+    "name": "Astrolabe"
+  },
+  "BAG_OF_MARBLES": {
+    "aliases": [
+      "Bag of Marbles",
+      "BagOfMarbles"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "BAG_OF_MARBLES",
+    "kind": "relic",
+    "name": "Bag of Marbles"
+  },
+  "BAG_OF_PREPARATION": {
+    "aliases": [
+      "Bag of Preparation",
+      "BagOfPreparation"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "BAG_OF_PREPARATION",
+    "kind": "relic",
+    "name": "Bag of Preparation"
+  },
+  "BEATING_REMNANT": {
+    "aliases": [
+      "Beating Remnant",
+      "BeatingRemnant"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "BEATING_REMNANT",
+    "kind": "relic",
+    "name": "Beating Remnant"
+  },
+  "BEAUTIFUL_BRACELET": {
+    "aliases": [
+      "Beautiful Bracelet",
+      "BeautifulBracelet"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "BEAUTIFUL_BRACELET",
+    "kind": "relic",
+    "name": "Beautiful Bracelet"
+  },
+  "BELLOWS": {
+    "aliases": [
+      "Bellows"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "BELLOWS",
+    "kind": "relic",
+    "name": "Bellows"
+  },
+  "BELT_BUCKLE": {
+    "aliases": [
+      "Belt Buckle",
+      "BeltBuckle"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "BELT_BUCKLE",
+    "kind": "relic",
+    "name": "Belt Buckle"
+  },
+  "BIG_HAT": {
+    "aliases": [
+      "Big Hat",
+      "BigHat"
+    ],
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "BIG_HAT",
+    "kind": "relic",
+    "name": "Big Hat"
+  },
+  "BIG_MUSHROOM": {
+    "aliases": [
+      "Big Mushroom",
+      "BigMushroom"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "BIG_MUSHROOM",
+    "kind": "relic",
+    "name": "Big Mushroom"
+  },
+  "BIIIG_HUG": {
+    "aliases": [
+      "Biiig Hug",
+      "BiiigHug",
+      "大大拥抱"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "BIIIG_HUG",
+    "kind": "relic",
+    "name": "Biiig Hug"
+  },
+  "BING_BONG": {
+    "aliases": [
+      "Bing Bong",
+      "BingBong"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "BING_BONG",
+    "kind": "relic",
+    "name": "Bing Bong"
+  },
+  "BLACK_BLOOD": {
+    "aliases": [
+      "Black Blood",
+      "BlackBlood",
+      "黑暗之血"
+    ],
+    "detail": {
+      "character": "IRONCLAD",
+      "counter_shown": null,
+      "rarity": "Ancient"
+    },
+    "id": "BLACK_BLOOD",
+    "kind": "relic",
+    "name": "Black Blood"
+  },
+  "BLACK_STAR": {
+    "aliases": [
+      "Black Star",
+      "BlackStar"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "BLACK_STAR",
+    "kind": "relic",
+    "name": "Black Star"
+  },
+  "BLESSED_ANTLER": {
+    "aliases": [
+      "Blessed Antler",
+      "BlessedAntler"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "BLESSED_ANTLER",
+    "kind": "relic",
+    "name": "Blessed Antler"
+  },
+  "BLOOD_SOAKED_ROSE": {
+    "aliases": [
+      "Blood-Soaked Rose",
+      "BloodSoakedRose"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "BLOOD_SOAKED_ROSE",
+    "kind": "relic",
+    "name": "Blood-Soaked Rose"
+  },
+  "BLOOD_VIAL": {
+    "aliases": [
+      "Blood Vial",
+      "BloodVial"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "BLOOD_VIAL",
+    "kind": "relic",
+    "name": "Blood Vial"
+  },
+  "BONE_FLUTE": {
+    "aliases": [
+      "Bone Flute",
+      "BoneFlute"
+    ],
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "BONE_FLUTE",
+    "kind": "relic",
+    "name": "Bone Flute"
+  },
+  "BONE_TEA": {
+    "aliases": [
+      "Bone Tea",
+      "BoneTea"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "BONE_TEA",
+    "kind": "relic",
+    "name": "Bone Tea"
+  },
+  "BOOKMARK": {
+    "aliases": [
+      "Bookmark"
+    ],
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "BOOKMARK",
+    "kind": "relic",
+    "name": "Bookmark"
+  },
+  "BOOK_OF_FIVE_RINGS": {
+    "aliases": [
+      "Book of Five Rings",
+      "BookOfFiveRINGS",
+      "五轮之书",
+      "五轮书"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "BOOK_OF_FIVE_RINGS",
+    "kind": "relic",
+    "name": "Book of Five Rings"
+  },
+  "BOOK_REPAIR_KNIFE": {
+    "aliases": [
+      "Book Repair Knife",
+      "BookRepairKnife"
+    ],
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "BOOK_REPAIR_KNIFE",
+    "kind": "relic",
+    "name": "Book Repair Knife"
+  },
+  "BOOMING_CONCH": {
+    "aliases": [
+      "Booming Conch",
+      "BoomingConch"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "BOOMING_CONCH",
+    "kind": "relic",
+    "name": "Booming Conch"
+  },
+  "BOUND_PHYLACTERY": {
+    "aliases": [
+      "Bound Phylactery",
+      "BoundPhylactery"
+    ],
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
+    "id": "BOUND_PHYLACTERY",
+    "kind": "relic",
+    "name": "Bound Phylactery"
+  },
+  "BOWLER_HAT": {
+    "aliases": [
+      "Bowler Hat",
+      "BowlerHat",
+      "礼帽"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "BOWLER_HAT",
+    "kind": "relic",
+    "name": "Bowler Hat"
+  },
+  "BREAD": {
+    "aliases": [
+      "Bread"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "BREAD",
+    "kind": "relic",
+    "name": "Bread"
+  },
+  "BRIGHT_FLAME": {
+    "aliases": [
+      "Brightest Flame",
+      "STORYBOOK",
+      "Storybook",
+      "至亮之焰"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Ancient"
+    },
+    "id": "BRIGHT_FLAME",
+    "kind": "relic",
+    "name": "Brightest Flame"
+  },
+  "BRILLIANT_SCARF": {
+    "aliases": [
+      "Brilliant Scarf",
+      "BrilliantScarf"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "BRILLIANT_SCARF",
+    "kind": "relic",
+    "name": "Brilliant Scarf"
+  },
+  "BRIMSTONE": {
+    "aliases": [
+      "Brimstone"
+    ],
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "BRIMSTONE",
+    "kind": "relic",
+    "name": "Brimstone"
+  },
+  "BRONZE_SCALES": {
+    "aliases": [
+      "Bronze Scales",
+      "BronzeScales"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "BRONZE_SCALES",
+    "kind": "relic",
+    "name": "Bronze Scales"
+  },
+  "BURNING_BLOOD": {
+    "aliases": [
+      "Burning Blood",
+      "BurningBlood"
+    ],
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
+    "id": "BURNING_BLOOD",
+    "kind": "relic",
+    "name": "Burning Blood"
+  },
+  "BURNING_STICKS": {
+    "aliases": [
+      "Burning Sticks",
+      "BurningSticks"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "BURNING_STICKS",
+    "kind": "relic",
+    "name": "Burning Sticks"
+  },
+  "BYRDPIP": {
+    "aliases": [
+      "Byrdpip"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "BYRDPIP",
+    "kind": "relic",
+    "name": "Byrdpip"
+  },
+  "CALLING_BELL": {
+    "aliases": [
+      "Calling Bell",
+      "CallingBell"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "CALLING_BELL",
+    "kind": "relic",
+    "name": "Calling Bell"
+  },
+  "CANDELABRA": {
+    "aliases": [
+      "Candelabra"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "CANDELABRA",
+    "kind": "relic",
+    "name": "Candelabra"
+  },
+  "CAPTAINS_WHEEL": {
+    "aliases": [
+      "Captain's Wheel",
+      "CaptainsWheel"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "CAPTAINS_WHEEL",
+    "kind": "relic",
+    "name": "Captain's Wheel"
+  },
+  "CAULDRON": {
+    "aliases": [
+      "Cauldron"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "CAULDRON",
+    "kind": "relic",
+    "name": "Cauldron"
+  },
+  "CENTENNIAL_PUZZLE": {
+    "aliases": [
+      "Centennial Puzzle",
+      "CentennialPuzzle"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "CENTENNIAL_PUZZLE",
+    "kind": "relic",
+    "name": "Centennial Puzzle"
+  },
+  "CHANDELIER": {
+    "aliases": [
+      "Chandelier"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "CHANDELIER",
+    "kind": "relic",
+    "name": "Chandelier"
+  },
+  "CHARONS_ASHES": {
+    "aliases": [
+      "Charon's Ashes",
+      "CharonsAshes"
+    ],
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "CHARONS_ASHES",
+    "kind": "relic",
+    "name": "Charon's Ashes"
+  },
+  "CHEMICAL_X": {
+    "aliases": [
+      "Chemical X",
+      "ChemicalX"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "CHEMICAL_X",
+    "kind": "relic",
+    "name": "Chemical X"
+  },
+  "CHOICES_PARADOX": {
+    "aliases": [
+      "Choices Paradox",
+      "ChoicesParadox"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "CHOICES_PARADOX",
+    "kind": "relic",
+    "name": "Choices Paradox"
+  },
+  "CHOSEN_CHEESE": {
+    "aliases": [
+      "ChosenCheese",
+      "The Chosen Cheese",
+      "天选芝士"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "CHOSEN_CHEESE",
+    "kind": "relic",
+    "name": "Chosen Cheese"
+  },
+  "CIRCLET": {
+    "aliases": [
+      "Circlet"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "None"
+    },
+    "id": "CIRCLET",
+    "kind": "relic",
+    "name": "Circlet"
+  },
+  "CLAWS": {
+    "aliases": [
+      "Claws"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "CLAWS",
+    "kind": "relic",
+    "name": "Claws"
+  },
+  "CLOAK_CLASP": {
+    "aliases": [
+      "Cloak Clasp",
+      "CloakClasp"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "CLOAK_CLASP",
+    "kind": "relic",
+    "name": "Cloak Clasp"
+  },
+  "CRACKED_CORE": {
+    "aliases": [
+      "Cracked Core",
+      "CrackedCore"
+    ],
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
+    "id": "CRACKED_CORE",
+    "kind": "relic",
+    "name": "Cracked Core"
+  },
+  "CROSSBOW": {
+    "aliases": [
+      "Crossbow"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "CROSSBOW",
+    "kind": "relic",
+    "name": "Crossbow"
+  },
+  "CURSED_PEARL": {
+    "aliases": [
+      "Cursed Pearl",
+      "CursedPearl"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "CURSED_PEARL",
+    "kind": "relic",
+    "name": "Cursed Pearl"
+  },
+  "DARKSTONE_PERIAPT": {
+    "aliases": [
+      "Darkstone Periapt",
+      "DarkstonePeriapt"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "DARKSTONE_PERIAPT",
+    "kind": "relic",
+    "name": "Darkstone Periapt"
+  },
+  "DATA_DISK": {
+    "aliases": [
+      "Data Disk",
+      "DataDisk"
+    ],
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "DATA_DISK",
+    "kind": "relic",
+    "name": "Data Disk"
+  },
+  "DAUGHTER_OF_THE_WIND": {
+    "aliases": [
+      "Daughter of the Wind",
+      "DaughterOfTheWind"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "DAUGHTER_OF_THE_WIND",
+    "kind": "relic",
+    "name": "Daughter of the Wind"
+  },
+  "DAUGHTER_OF_WIND": {
+    "aliases": [
+      "DAUGHTER_OF_THE_WIND",
+      "Daughter of the Wind"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Event"
+    },
+    "id": "DAUGHTER_OF_WIND",
+    "kind": "relic",
+    "name": "Daughter of the Wind"
+  },
+  "DELICATE_FROND": {
+    "aliases": [
+      "Delicate Frond",
+      "DelicateFrond"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "DELICATE_FROND",
+    "kind": "relic",
+    "name": "Delicate Frond"
+  },
+  "DEMON_TONGUE": {
+    "aliases": [
+      "Demon Tongue",
+      "DemonTongue"
+    ],
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "DEMON_TONGUE",
+    "kind": "relic",
+    "name": "Demon Tongue"
+  },
+  "DIAMOND_DIADEM": {
+    "aliases": [
+      "Diamond Diadem",
+      "DiamondDiadem"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "DIAMOND_DIADEM",
+    "kind": "relic",
+    "name": "Diamond Diadem"
+  },
+  "DINGY_RUG": {
+    "aliases": [
+      "Dingy Rug",
+      "破地毯"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "DINGY_RUG",
+    "kind": "relic",
+    "name": "Dingy Rug"
+  },
+  "DISTINGUISHED_CAPE": {
+    "aliases": [
+      "Distinguished Cape",
+      "DistinguishedCape"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "DISTINGUISHED_CAPE",
+    "kind": "relic",
+    "name": "Distinguished Cape"
+  },
+  "DIVINE_DESTINY": {
+    "aliases": [
+      "Divine Destiny",
+      "DivineDestiny"
+    ],
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
+    "id": "DIVINE_DESTINY",
+    "kind": "relic",
+    "name": "Divine Destiny"
+  },
+  "DIVINE_RIGHT": {
+    "aliases": [
+      "Divine Right",
+      "DivineRight"
+    ],
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
+    "id": "DIVINE_RIGHT",
+    "kind": "relic",
+    "name": "Divine Right"
+  },
+  "DOLLYS_MIRROR": {
+    "aliases": [
+      "Dolly's Mirror",
+      "DollysMirror"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "DOLLYS_MIRROR",
+    "kind": "relic",
+    "name": "Dolly's Mirror"
+  },
+  "DRAGON_FRUIT": {
+    "aliases": [
+      "Dragon Fruit",
+      "DragonFruit"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "DRAGON_FRUIT",
+    "kind": "relic",
+    "name": "Dragon Fruit"
+  },
+  "DREAM_CATCHER": {
+    "aliases": [
+      "Dream Catcher",
+      "DreamCatcher"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "DREAM_CATCHER",
+    "kind": "relic",
+    "name": "Dream Catcher"
+  },
+  "DRIFTWOOD": {
+    "aliases": [
+      "Driftwood"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "DRIFTWOOD",
+    "kind": "relic",
+    "name": "Driftwood"
+  },
+  "DUSTY_TOME": {
+    "aliases": [
+      "Dusty Tome",
+      "DustyTome"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "DUSTY_TOME",
+    "kind": "relic",
+    "name": "Dusty Tome"
+  },
+  "ECTOPLASM": {
+    "aliases": [
+      "Ectoplasm"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "ECTOPLASM",
+    "kind": "relic",
+    "name": "Ectoplasm"
+  },
+  "ELECTRIC_SHRYMP": {
+    "aliases": [
+      "Electric Shrymp",
+      "ElectricShrymp"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "ELECTRIC_SHRYMP",
+    "kind": "relic",
+    "name": "Electric Shrymp"
+  },
+  "EMBER_TEA": {
+    "aliases": [
+      "Ember Tea",
+      "EmberTea"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "EMBER_TEA",
+    "kind": "relic",
+    "name": "Ember Tea"
+  },
+  "EMOTION_CHIP": {
+    "aliases": [
+      "Emotion Chip",
+      "EmotionChip"
+    ],
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "EMOTION_CHIP",
+    "kind": "relic",
+    "name": "Emotion Chip"
+  },
+  "EMPTY_CAGE": {
+    "aliases": [
+      "Empty Cage",
+      "EmptyCage"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "EMPTY_CAGE",
+    "kind": "relic",
+    "name": "Empty Cage"
+  },
+  "ETERNAL_FEATHER": {
+    "aliases": [
+      "Eternal Feather"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Uncommon"
+    },
+    "id": "ETERNAL_FEATHER",
+    "kind": "relic",
+    "name": "Eternal Feather"
+  },
+  "FAKE_ANCHOR": {
+    "aliases": [
+      "Anchor???",
+      "Fake Anchor",
+      "FakeAnchor"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FAKE_ANCHOR",
+    "kind": "relic",
+    "name": "Fake Anchor"
+  },
+  "FAKE_BLOOD_VIAL": {
+    "aliases": [
+      "Blood Vial???",
+      "Fake Blood Vial",
+      "FakeBloodVial"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FAKE_BLOOD_VIAL",
+    "kind": "relic",
+    "name": "Fake Blood Vial"
+  },
+  "FAKE_HAPPY_FLOWER": {
+    "aliases": [
+      "Fake Happy Flower",
+      "FakeHappyFlower",
+      "Happy Flower???"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FAKE_HAPPY_FLOWER",
+    "kind": "relic",
+    "name": "Fake Happy Flower"
+  },
+  "FAKE_LEES_WAFFLE": {
+    "aliases": [
+      "Fake Lee's Waffle",
+      "FakeLeesWaffle",
+      "Lee's Waffle???"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FAKE_LEES_WAFFLE",
+    "kind": "relic",
+    "name": "Fake Lee's Waffle"
+  },
+  "FAKE_MANGO": {
+    "aliases": [
+      "Fake Mango",
+      "FakeMango",
+      "Mango???"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FAKE_MANGO",
+    "kind": "relic",
+    "name": "Fake Mango"
+  },
+  "FAKE_MERCHANTS_RUG": {
+    "aliases": [
+      "Fake Merchant's Rug",
+      "FakeMerchantsRug",
+      "The Merchant's Rug???"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FAKE_MERCHANTS_RUG",
+    "kind": "relic",
+    "name": "Fake Merchant's Rug"
+  },
+  "FAKE_ORICHALCUM": {
+    "aliases": [
+      "Fake Orichalcum",
+      "FakeOrichalcum",
+      "Orichalcum???"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FAKE_ORICHALCUM",
+    "kind": "relic",
+    "name": "Fake Orichalcum"
+  },
+  "FAKE_SNECKO_EYE": {
+    "aliases": [
+      "Fake Snecko Eye",
+      "FakeSneckoEye",
+      "Snecko Eye???"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FAKE_SNECKO_EYE",
+    "kind": "relic",
+    "name": "Fake Snecko Eye"
+  },
+  "FAKE_STRIKE_DUMMY": {
+    "aliases": [
+      "Fake Strike Dummy",
+      "FakeStrikeDummy",
+      "Strike Dummy???"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FAKE_STRIKE_DUMMY",
+    "kind": "relic",
+    "name": "Fake Strike Dummy"
+  },
+  "FAKE_VENERABLE_TEA_SET": {
+    "aliases": [
+      "Fake Venerable Tea Set",
+      "FakeVenerableTeaSet",
+      "Venerable Tea Set???"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FAKE_VENERABLE_TEA_SET",
+    "kind": "relic",
+    "name": "Fake Venerable Tea Set"
+  },
+  "FENCING_MANUAL": {
+    "aliases": [
+      "Fencing Manual",
+      "FencingManual"
+    ],
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "FENCING_MANUAL",
+    "kind": "relic",
+    "name": "Fencing Manual"
+  },
+  "FESTIVE_POPPER": {
+    "aliases": [
+      "Festive Popper",
+      "FestivePopper"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "FESTIVE_POPPER",
+    "kind": "relic",
+    "name": "Festive Popper"
+  },
+  "FIDDLE": {
+    "aliases": [
+      "Fiddle"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "FIDDLE",
+    "kind": "relic",
+    "name": "Fiddle"
+  },
+  "FISHING_ROD": {
+    "aliases": [
+      "Fishing Rod",
+      "FishingRod"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Ancient"
+    },
+    "id": "FISHING_ROD",
+    "kind": "relic",
+    "name": "Fishing Rod"
+  },
+  "FORGOTTEN_SOUL": {
+    "aliases": [
+      "Forgotten Soul",
+      "ForgottenSoul"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FORGOTTEN_SOUL",
+    "kind": "relic",
+    "name": "Forgotten Soul"
+  },
+  "FRAGRANT_MUSHROOM": {
+    "aliases": [
+      "Fragrant Mushroom",
+      "FragrantMushroom"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FRAGRANT_MUSHROOM",
+    "kind": "relic",
+    "name": "Fragrant Mushroom"
+  },
+  "FRESNEL_LENS": {
+    "aliases": [
+      "Fresnel Lens",
+      "FresnelLens"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FRESNEL_LENS",
+    "kind": "relic",
+    "name": "Fresnel Lens"
+  },
+  "FROZEN_EGG": {
+    "aliases": [
+      "Frozen Egg",
+      "FrozenEgg"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "FROZEN_EGG",
+    "kind": "relic",
+    "name": "Frozen Egg"
+  },
+  "FUNERARY_MASK": {
+    "aliases": [
+      "Funerary Mask",
+      "FuneraryMask"
+    ],
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "FUNERARY_MASK",
+    "kind": "relic",
+    "name": "Funerary Mask"
+  },
+  "FUR_COAT": {
+    "aliases": [
+      "Fur Coat",
+      "FurCoat"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "FUR_COAT",
+    "kind": "relic",
+    "name": "Fur Coat"
+  },
+  "GALACTIC_DUST": {
+    "aliases": [
+      "Galactic Dust",
+      "GalacticDust"
+    ],
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "GALACTIC_DUST",
+    "kind": "relic",
+    "name": "Galactic Dust"
+  },
+  "GAMBLING_CHIP": {
+    "aliases": [
+      "Gambling Chip",
+      "GamblingChip",
+      "赌博筹码"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "GAMBLING_CHIP",
+    "kind": "relic",
+    "name": "Gambling Chip"
+  },
+  "GAME_PIECE": {
+    "aliases": [
+      "Game Piece",
+      "GamePiece"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "GAME_PIECE",
+    "kind": "relic",
+    "name": "Game Piece"
+  },
+  "GHOST_SEED": {
+    "aliases": [
+      "Ghost Seed",
+      "GhostSeed"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "GHOST_SEED",
+    "kind": "relic",
+    "name": "Ghost Seed"
+  },
+  "GIRYA": {
+    "aliases": [
+      "Girya"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Rare"
+    },
+    "id": "GIRYA",
+    "kind": "relic",
+    "name": "Girya"
+  },
+  "GLAM": {
+    "aliases": [
+      "Glam",
+      "GlamEnchant",
+      "华彩"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": null
+    },
+    "id": "GLAM",
+    "kind": "enchant",
+    "name": "Glam"
+  },
+  "GLASS_EYE": {
+    "aliases": [
+      "Glass Eye",
+      "GlassEye"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "GLASS_EYE",
+    "kind": "relic",
+    "name": "Glass Eye"
+  },
+  "GLITTER": {
+    "aliases": [
+      "Glitter"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "GLITTER",
+    "kind": "relic",
+    "name": "Glitter"
+  },
+  "GNARLED_HAMMER": {
+    "aliases": [
+      "Gnarled Hammer",
+      "GnarledHammer"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "GNARLED_HAMMER",
+    "kind": "relic",
+    "name": "Gnarled Hammer"
+  },
+  "GOLDEN_COMPASS": {
+    "aliases": [
+      "Golden Compass",
+      "GoldenCompass",
+      "黄金罗盘"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "GOLDEN_COMPASS",
+    "kind": "relic",
+    "name": "Golden Compass"
+  },
+  "GOLDEN_PEARL": {
+    "aliases": [
+      "Golden Pearl",
+      "GoldenPearl"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "GOLDEN_PEARL",
+    "kind": "relic",
+    "name": "Golden Pearl"
+  },
+  "GOLD_PLATED_CABLES": {
+    "aliases": [
+      "Gold-Plated Cables",
+      "GoldPlatedCables"
+    ],
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "GOLD_PLATED_CABLES",
+    "kind": "relic",
+    "name": "Gold-Plated Cables"
+  },
+  "GORGET": {
+    "aliases": [
+      "Gorget",
+      "颈甲"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "GORGET",
+    "kind": "relic",
+    "name": "Gorget"
+  },
+  "GREMLIN_HORN": {
+    "aliases": [
+      "Gremlin Horn",
+      "GremlinHorn"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "GREMLIN_HORN",
+    "kind": "relic",
+    "name": "Gremlin Horn"
+  },
+  "HAND_DRILL": {
+    "aliases": [
+      "Hand Drill",
+      "HandDrill"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "HAND_DRILL",
+    "kind": "relic",
+    "name": "Hand Drill"
+  },
+  "HAPPY_FLOWER": {
+    "aliases": [
+      "Happy Flower",
+      "HappyFlower"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Common"
+    },
+    "id": "HAPPY_FLOWER",
+    "kind": "relic",
+    "name": "Happy Flower"
+  },
+  "HEFTY_TABLET": {
+    "aliases": [
+      "Hefty Tablet",
+      "HeftyTablet"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "HEFTY_TABLET",
+    "kind": "relic",
+    "name": "Hefty Tablet"
+  },
+  "HELICAL_DART": {
+    "aliases": [
+      "Helical Dart",
+      "HelicalDart"
+    ],
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "HELICAL_DART",
+    "kind": "relic",
+    "name": "Helical Dart"
+  },
+  "HISTORY_COURSE": {
+    "aliases": [
+      "History Course",
+      "HistoryCourse"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "HISTORY_COURSE",
+    "kind": "relic",
+    "name": "History Course"
+  },
+  "HORN_CLEAT": {
+    "aliases": [
+      "Horn Cleat",
+      "HornCleat"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "HORN_CLEAT",
+    "kind": "relic",
+    "name": "Horn Cleat"
+  },
+  "ICE_CREAM": {
+    "aliases": [
+      "Ice Cream",
+      "IceCream"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "ICE_CREAM",
+    "kind": "relic",
+    "name": "Ice Cream"
+  },
+  "INFUSED_CORE": {
+    "aliases": [
+      "Infused Core",
+      "InfusedCore"
+    ],
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
+    "id": "INFUSED_CORE",
+    "kind": "relic",
+    "name": "Infused Core"
+  },
+  "INTIMIDATING_HELMET": {
+    "aliases": [
+      "Intimidating Helmet",
+      "IntimidatingHelmet"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "INTIMIDATING_HELMET",
+    "kind": "relic",
+    "name": "Intimidating Helmet"
+  },
+  "IRON_CLUB": {
+    "aliases": [
+      "Iron Club",
+      "IronClub"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "IRON_CLUB",
+    "kind": "relic",
+    "name": "Iron Club"
+  },
+  "IVORY_TILE": {
+    "aliases": [
+      "Ivory Tile",
+      "IvoryTile"
+    ],
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "IVORY_TILE",
+    "kind": "relic",
+    "name": "Ivory Tile"
+  },
+  "JEWELED_MASK": {
+    "aliases": [
+      "Jeweled Mask",
+      "JeweledMask"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "JEWELED_MASK",
+    "kind": "relic",
+    "name": "Jeweled Mask"
+  },
+  "JEWELRY_BOX": {
+    "aliases": [
+      "Jewelry Box",
+      "JewelryBox"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "JEWELRY_BOX",
+    "kind": "relic",
+    "name": "Jewelry Box"
+  },
+  "JOSS_PAPER": {
+    "aliases": [
+      "Joss Paper",
+      "JossPaper"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "JOSS_PAPER",
+    "kind": "relic",
+    "name": "Joss Paper"
+  },
+  "JUZU_BRACELET": {
+    "aliases": [
+      "Juzu Bracelet",
+      "JuzuBracelet"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "JUZU_BRACELET",
+    "kind": "relic",
+    "name": "Juzu Bracelet"
+  },
+  "KALEIDOSCOPE": {
+    "aliases": [
+      "Kaleidoscope"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "KALEIDOSCOPE",
+    "kind": "relic",
+    "name": "Kaleidoscope"
+  },
+  "KIFUDA": {
+    "aliases": [
+      "Kifuda"
+    ],
+    "detail": {
+      "character": null,
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "KIFUDA",
+    "kind": "relic",
+    "name": "Kifuda"
+  },
+  "KUNAI": {
+    "aliases": [
+      "Kunai"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "KUNAI",
+    "kind": "relic",
+    "name": "Kunai"
+  },
+  "KUSARIGAMA": {
+    "aliases": [
+      "Kusarigama"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "KUSARIGAMA",
+    "kind": "relic",
+    "name": "Kusarigama"
+  },
+  "LANTERN": {
+    "aliases": [
+      "Lantern"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "LANTERN",
+    "kind": "relic",
+    "name": "Lantern"
+  },
+  "LARGE_CAPSULE": {
+    "aliases": [
+      "Large Capsule",
+      "LargeCapsule"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "LARGE_CAPSULE",
+    "kind": "relic",
+    "name": "Large Capsule"
+  },
+  "LASTING_CANDY": {
+    "aliases": [
+      "Lasting Candy",
+      "永恒糖果"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Uncommon"
+    },
+    "id": "LASTING_CANDY",
+    "kind": "relic",
+    "name": "Lasting Candy"
+  },
+  "LAVA_LAMP": {
+    "aliases": [
+      "Lava Lamp",
+      "LavaLamp"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "LAVA_LAMP",
+    "kind": "relic",
+    "name": "Lava Lamp"
+  },
+  "LAVA_ROCK": {
+    "aliases": [
+      "Lava Rock",
+      "LavaRock"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Ancient"
+    },
+    "id": "LAVA_ROCK",
+    "kind": "relic",
+    "name": "Lava Rock"
+  },
+  "LEAD_PAPERWEIGHT": {
+    "aliases": [
+      "Lead Paperweight",
+      "LeadPaperweight"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "LEAD_PAPERWEIGHT",
+    "kind": "relic",
+    "name": "Lead Paperweight"
+  },
+  "LEAFY_POULTICE": {
+    "aliases": [
+      "Leafy Poultice",
+      "LeafyPoultice"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "LEAFY_POULTICE",
+    "kind": "relic",
+    "name": "Leafy Poultice"
+  },
+  "LEES_WAFFLE": {
+    "aliases": [
+      "Lee's Waffle",
+      "LeesWaffle"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "LEES_WAFFLE",
+    "kind": "relic",
+    "name": "Lee's Waffle"
+  },
+  "LETTER_OPENER": {
+    "aliases": [
+      "Letter Opener",
+      "LetterOpener"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "LETTER_OPENER",
+    "kind": "relic",
+    "name": "Letter Opener"
+  },
+  "LIZARD_TAIL": {
+    "aliases": [
+      "Lizard Tail",
+      "LizardTail"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "LIZARD_TAIL",
+    "kind": "relic",
+    "name": "Lizard Tail"
+  },
+  "LOOMING_FRUIT": {
+    "aliases": [
+      "Looming Fruit",
+      "LoomingFruit"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "LOOMING_FRUIT",
+    "kind": "relic",
+    "name": "Looming Fruit"
+  },
+  "LORDS_PARASOL": {
+    "aliases": [
+      "Lord's Parasol",
+      "LordsParasol"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "LORDS_PARASOL",
+    "kind": "relic",
+    "name": "Lord's Parasol"
+  },
+  "LOST_COFFER": {
+    "aliases": [
+      "Lost Coffer",
+      "LostCoffer"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "LOST_COFFER",
+    "kind": "relic",
+    "name": "Lost Coffer"
+  },
+  "LOST_WISP": {
+    "aliases": [
+      "Lost Wisp",
+      "LostWisp"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "LOST_WISP",
+    "kind": "relic",
+    "name": "Lost Wisp"
+  },
+  "LUCKY_FYSH": {
+    "aliases": [
+      "Lucky Fysh",
+      "LuckyFysh"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "LUCKY_FYSH",
+    "kind": "relic",
+    "name": "Lucky Fysh"
+  },
+  "LUNAR_PASTRY": {
+    "aliases": [
+      "Lunar Pastry",
+      "LunarPastry"
+    ],
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "LUNAR_PASTRY",
+    "kind": "relic",
+    "name": "Lunar Pastry"
+  },
+  "MANGO": {
+    "aliases": [
+      "Mango"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "MANGO",
+    "kind": "relic",
+    "name": "Mango"
+  },
+  "MASSIVE_SCROLL": {
+    "aliases": [
+      "Massive Scroll",
+      "MassiveScroll"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "MASSIVE_SCROLL",
+    "kind": "relic",
+    "name": "Massive Scroll"
+  },
+  "MAW_BANK": {
+    "aliases": [
+      "Maw Bank",
+      "MawBank"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "MAW_BANK",
+    "kind": "relic",
+    "name": "Maw Bank"
+  },
+  "MEAL_TICKET": {
+    "aliases": [
+      "Meal Ticket",
+      "餐券"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "MEAL_TICKET",
+    "kind": "relic",
+    "name": "Meal Ticket"
+  },
+  "MEAT_CLEAVER": {
+    "aliases": [
+      "Meat Cleaver",
+      "MeatCleaver"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "MEAT_CLEAVER",
+    "kind": "relic",
+    "name": "Meat Cleaver"
+  },
+  "MEAT_ON_THE_BONE": {
+    "aliases": [
+      "Meat on the Bone",
+      "MeatOnTheBone"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "MEAT_ON_THE_BONE",
+    "kind": "relic",
+    "name": "Meat on the Bone"
+  },
+  "MEMBERSHIP_CARD": {
+    "aliases": [
+      "Membership Card",
+      "MembershipCard"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "MEMBERSHIP_CARD",
+    "kind": "relic",
+    "name": "Membership Card"
+  },
+  "MERCURY_HOURGLASS": {
+    "aliases": [
+      "Mercury Hourglass",
+      "MercuryHourglass"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "MERCURY_HOURGLASS",
+    "kind": "relic",
+    "name": "Mercury Hourglass"
+  },
+  "METRONOME": {
+    "aliases": [
+      "Metronome"
+    ],
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "METRONOME",
+    "kind": "relic",
+    "name": "Metronome"
+  },
+  "MINIATURE_CANNON": {
+    "aliases": [
+      "Miniature Cannon",
+      "MiniatureCannon",
+      "迷你加农炮"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "MINIATURE_CANNON",
+    "kind": "relic",
+    "name": "Miniature Cannon"
+  },
+  "MINIATURE_TENT": {
+    "aliases": [
+      "Miniature Tent",
+      "MiniatureTent"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "MINIATURE_TENT",
+    "kind": "relic",
+    "name": "Miniature Tent"
+  },
+  "MINI_REGENT": {
+    "aliases": [
+      "Mini Regent",
+      "MiniRegent"
+    ],
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "MINI_REGENT",
+    "kind": "relic",
+    "name": "Mini Regent"
+  },
+  "MOLTEN_EGG": {
+    "aliases": [
+      "Molten Egg",
+      "MoltenEgg"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "MOLTEN_EGG",
+    "kind": "relic",
+    "name": "Molten Egg"
+  },
+  "MR_STRUGGLES": {
+    "aliases": [
+      "Mr. Struggles",
+      "MrStruggles"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "MR_STRUGGLES",
+    "kind": "relic",
+    "name": "Mr. Struggles"
+  },
+  "MUMMIFIED_HAND": {
+    "aliases": [
+      "Mummified Hand",
+      "MummifiedHand"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "MUMMIFIED_HAND",
+    "kind": "relic",
+    "name": "Mummified Hand"
+  },
+  "MUSIC_BOX": {
+    "aliases": [
+      "Music Box",
+      "MusicBox"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "MUSIC_BOX",
+    "kind": "relic",
+    "name": "Music Box"
+  },
+  "MYSTIC_LIGHTER": {
+    "aliases": [
+      "Mystic Lighter",
+      "MysticLighter"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "MYSTIC_LIGHTER",
+    "kind": "relic",
+    "name": "Mystic Lighter"
+  },
+  "NEOW": {
+    "aliases": [
+      "ARCANE_SCROLL",
+      "Arcane Scroll"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Ancient"
+    },
+    "id": "NEOW",
+    "kind": "relic",
+    "name": "Arcane Scroll"
+  },
+  "NEOWS_BONES": {
+    "aliases": [
+      "Neow's Bones",
+      "NeowsBones"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "NEOWS_BONES",
+    "kind": "relic",
+    "name": "Neow's Bones"
+  },
+  "NEOWS_TALISMAN": {
+    "aliases": [
+      "Neow's Talisman",
+      "NeowsTalisman"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "NEOWS_TALISMAN",
+    "kind": "relic",
+    "name": "Neow's Talisman"
+  },
+  "NEOWS_TORMENT": {
+    "aliases": [
+      "Neow's Torment",
+      "NeowsTorment"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "NEOWS_TORMENT",
+    "kind": "relic",
+    "name": "Neow's Torment"
+  },
+  "NEW_LEAF": {
+    "aliases": [
+      "New Leaf",
+      "NewLeaf"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "NEW_LEAF",
+    "kind": "relic",
+    "name": "New Leaf"
+  },
+  "NIMBLE": {
+    "aliases": [
+      "FRESNEL_LENS",
+      "Fresnel Lens"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Event"
+    },
+    "id": "NIMBLE",
+    "kind": "relic",
+    "name": "Fresnel Lens"
+  },
+  "NINJA_SCROLL": {
+    "aliases": [
+      "Ninja Scroll",
+      "NinjaScroll"
+    ],
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "NINJA_SCROLL",
+    "kind": "relic",
+    "name": "Ninja Scroll"
+  },
+  "NUNCHAKU": {
+    "aliases": [
+      "Nunchaku"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Uncommon"
+    },
+    "id": "NUNCHAKU",
+    "kind": "relic",
+    "name": "Nunchaku"
+  },
+  "NUTRITIOUS_OYSTER": {
+    "aliases": [
+      "Nutritious Oyster",
+      "NutritiousOyster"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "NUTRITIOUS_OYSTER",
+    "kind": "relic",
+    "name": "Nutritious Oyster"
+  },
+  "NUTRITIOUS_SOUP": {
+    "aliases": [
+      "Event boon-relic decodes",
+      "Nutritious Soup",
+      "NutritiousSoup",
+      "营养汤"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "NUTRITIOUS_SOUP",
+    "kind": "relic",
+    "name": "Nutritious Soup"
+  },
+  "ODDLY_SMOOTH_STONE": {
+    "aliases": [
+      "Oddly Smooth Stone",
+      "OddlySmoothStone",
+      "奇异光滑石",
+      "滑石"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "ODDLY_SMOOTH_STONE",
+    "kind": "relic",
+    "name": "Oddly Smooth Stone"
+  },
+  "OLD_COIN": {
+    "aliases": [
+      "Old Coin",
+      "OldCoin"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "OLD_COIN",
+    "kind": "relic",
+    "name": "Old Coin"
+  },
+  "ORANGE_DOUGH": {
+    "aliases": [
+      "Orange Dough",
+      "OrangeDough"
+    ],
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "ORANGE_DOUGH",
+    "kind": "relic",
+    "name": "Orange Dough"
+  },
+  "ORICHALCUM": {
+    "aliases": [
+      "Orichalcum",
+      "橙铜"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "ORICHALCUM",
+    "kind": "relic",
+    "name": "Orichalcum"
+  },
+  "ORNAMENTAL_FAN": {
+    "aliases": [
+      "Ornamental Fan",
+      "OrnamentalFan",
+      "装饰折扇"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "ORNAMENTAL_FAN",
+    "kind": "relic",
+    "name": "Ornamental Fan"
+  },
+  "ORRERY": {
+    "aliases": [
+      "Orrery"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "ORRERY",
+    "kind": "relic",
+    "name": "Orrery"
+  },
+  "PAELS_BLOOD": {
+    "aliases": [
+      "Pael's Blood",
+      "PaelsBlood"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PAELS_BLOOD",
+    "kind": "relic",
+    "name": "Pael's Blood"
+  },
+  "PAELS_CLAW": {
+    "aliases": [
+      "Pael's Claw",
+      "PaelsClaw"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PAELS_CLAW",
+    "kind": "relic",
+    "name": "Pael's Claw"
+  },
+  "PAELS_EYE": {
+    "aliases": [
+      "Pael's Eye",
+      "PaelsEye"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PAELS_EYE",
+    "kind": "relic",
+    "name": "Pael's Eye"
+  },
+  "PAELS_FLESH": {
+    "aliases": [
+      "Pael's Flesh",
+      "PaelsFlesh"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PAELS_FLESH",
+    "kind": "relic",
+    "name": "Pael's Flesh"
+  },
+  "PAELS_GROWTH": {
+    "aliases": [
+      "Pael's Growth",
+      "PaelsGrowth"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PAELS_GROWTH",
+    "kind": "relic",
+    "name": "Pael's Growth"
+  },
+  "PAELS_HORN": {
+    "aliases": [
+      "Pael's Horn",
+      "PaelsHorn"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PAELS_HORN",
+    "kind": "relic",
+    "name": "Pael's Horn"
+  },
+  "PAELS_LEGION": {
+    "aliases": [
+      "Pael's Legion",
+      "PaelsLegion"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PAELS_LEGION",
+    "kind": "relic",
+    "name": "Pael's Legion"
+  },
+  "PAELS_TEARS": {
+    "aliases": [
+      "Pael's Tears",
+      "PaelsTears"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PAELS_TEARS",
+    "kind": "relic",
+    "name": "Pael's Tears"
+  },
+  "PAELS_TOOTH": {
+    "aliases": [
+      "Pael's Tooth",
+      "PaelsTooth"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PAELS_TOOTH",
+    "kind": "relic",
+    "name": "Pael's Tooth"
+  },
+  "PAELS_WING": {
+    "aliases": [
+      "Pael's Wing",
+      "PaelsWing"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PAELS_WING",
+    "kind": "relic",
+    "name": "Pael's Wing"
+  },
+  "PANDORAS_BOX": {
+    "aliases": [
+      "Pandora's Box",
+      "PandorasBox"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PANDORAS_BOX",
+    "kind": "relic",
+    "name": "Pandora's Box"
+  },
+  "PANTOGRAPH": {
+    "aliases": [
+      "Pantograph"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "PANTOGRAPH",
+    "kind": "relic",
+    "name": "Pantograph"
+  },
+  "PAPER_KRANE": {
+    "aliases": [
+      "Paper Krane",
+      "PaperKrane"
+    ],
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "PAPER_KRANE",
+    "kind": "relic",
+    "name": "Paper Krane"
+  },
+  "PAPER_PHROG": {
+    "aliases": [
+      "Paper Phrog",
+      "PaperPhrog"
+    ],
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "PAPER_PHROG",
+    "kind": "relic",
+    "name": "Paper Phrog"
+  },
+  "PARRYING_SHIELD": {
+    "aliases": [
+      "Parrying Shield"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Uncommon"
+    },
+    "id": "PARRYING_SHIELD",
+    "kind": "relic",
+    "name": "Parrying Shield"
+  },
+  "PEAR": {
+    "aliases": [
+      "Pear"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "PEAR",
+    "kind": "relic",
+    "name": "Pear"
+  },
+  "PENDULUM": {
+    "aliases": [
+      "Pendulum"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "PENDULUM",
+    "kind": "relic",
+    "name": "Pendulum"
+  },
+  "PEN_NIB": {
+    "aliases": [
+      "Pen Nib",
+      "PenNib"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Uncommon"
+    },
+    "id": "PEN_NIB",
+    "kind": "relic",
+    "name": "Pen Nib"
+  },
+  "PERMAFROST": {
+    "aliases": [
+      "Permafrost"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "PERMAFROST",
+    "kind": "relic",
+    "name": "Permafrost"
+  },
+  "PETRIFIED_TOAD": {
+    "aliases": [
+      "Petrified Toad",
+      "PetrifiedToad"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "PETRIFIED_TOAD",
+    "kind": "relic",
+    "name": "Petrified Toad"
+  },
+  "PHIAL_HOLSTER": {
+    "aliases": [
+      "Phial Holster",
+      "PhialHolster"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PHIAL_HOLSTER",
+    "kind": "relic",
+    "name": "Phial Holster"
+  },
+  "PHILOSOPHERS_STONE": {
+    "aliases": [
+      "Philosopher's Stone",
+      "PhilosophersStone"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PHILOSOPHERS_STONE",
+    "kind": "relic",
+    "name": "Philosopher's Stone"
+  },
+  "PHYLACTERY_UNBOUND": {
+    "aliases": [
+      "Phylactery Unbound",
+      "PhylacteryUnbound"
+    ],
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
+    "id": "PHYLACTERY_UNBOUND",
+    "kind": "relic",
+    "name": "Phylactery Unbound"
+  },
+  "PLANISPHERE": {
+    "aliases": [
+      "Planisphere"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "PLANISPHERE",
+    "kind": "relic",
+    "name": "Planisphere"
+  },
+  "POCKETWATCH": {
+    "aliases": [
+      "Pocketwatch"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "POCKETWATCH",
+    "kind": "relic",
+    "name": "Pocketwatch"
+  },
+  "POLLINOUS_CORE": {
+    "aliases": [
+      "Pollinous Core",
+      "PollinousCore"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "POLLINOUS_CORE",
+    "kind": "relic",
+    "name": "Pollinous Core"
+  },
+  "POMANDER": {
+    "aliases": [
+      "Pomander"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "POMANDER",
+    "kind": "relic",
+    "name": "Pomander"
+  },
+  "POTION_BELT": {
+    "aliases": [
+      "Potion Belt",
+      "PotionBelt"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "POTION_BELT",
+    "kind": "relic",
+    "name": "Potion Belt"
+  },
+  "POWER_CELL": {
+    "aliases": [
+      "Power Cell",
+      "PowerCell"
+    ],
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "POWER_CELL",
+    "kind": "relic",
+    "name": "Power Cell"
+  },
+  "PRAYER_WHEEL": {
+    "aliases": [
+      "Prayer Wheel",
+      "PrayerWheel"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "PRAYER_WHEEL",
+    "kind": "relic",
+    "name": "Prayer Wheel"
+  },
+  "PRECARIOUS_SHEARS": {
+    "aliases": [
+      "Precarious Shears",
+      "PrecariousShears"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PRECARIOUS_SHEARS",
+    "kind": "relic",
+    "name": "Precarious Shears"
+  },
+  "PRECISE_SCISSORS": {
+    "aliases": [
+      "Precise Scissors",
+      "PreciseScissors"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PRECISE_SCISSORS",
+    "kind": "relic",
+    "name": "Precise Scissors"
+  },
+  "PRESERVED_FOG": {
+    "aliases": [
+      "Preserved Fog",
+      "PreservedFog"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PRESERVED_FOG",
+    "kind": "relic",
+    "name": "Preserved Fog"
+  },
+  "PRISMATIC_GEM": {
+    "aliases": [
+      "Prismatic Gem",
+      "PrismaticGem",
+      "棱彩宝石"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PRISMATIC_GEM",
+    "kind": "relic",
+    "name": "Prismatic Gem"
+  },
+  "PUMPKIN_CANDLE": {
+    "aliases": [
+      "Pumpkin Candle",
+      "PumpkinCandle",
+      "南瓜蜡烛"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Ancient"
+    },
+    "id": "PUMPKIN_CANDLE",
+    "kind": "relic",
+    "name": "Pumpkin Candle"
+  },
+  "PUNCH_DAGGER": {
+    "aliases": [
+      "Punch Dagger",
+      "PunchDagger"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "PUNCH_DAGGER",
+    "kind": "relic",
+    "name": "Punch Dagger"
+  },
+  "RADIANT": {
+    "aliases": [
+      "RADIANT_PEARL",
+      "Radiant Pearl"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Ancient"
+    },
+    "id": "RADIANT",
+    "kind": "relic",
+    "name": "Radiant Pearl"
+  },
+  "RADIANT_PEARL": {
+    "aliases": [
+      "Radiant Pearl",
+      "RadiantPearl"
+    ],
+    "detail": {
+      "character": null,
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "RADIANT_PEARL",
+    "kind": "relic",
+    "name": "Radiant Pearl"
+  },
+  "RAGE": {
+    "aliases": [
+      "SLING_OF_COURAGE",
+      "Sling of Courage"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Shop"
+    },
+    "id": "RAGE",
+    "kind": "relic",
+    "name": "Sling of Courage"
+  },
+  "RAINBOW_RING": {
+    "aliases": [
+      "Rainbow Ring",
+      "RainbowRing"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "RAINBOW_RING",
+    "kind": "relic",
+    "name": "Rainbow Ring"
+  },
+  "RAZOR_TOOTH": {
+    "aliases": [
+      "Razor Tooth",
+      "RazorTooth"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "RAZOR_TOOTH",
+    "kind": "relic",
+    "name": "Razor Tooth"
+  },
+  "RED_MASK": {
+    "aliases": [
+      "Red Mask",
+      "RedMask"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "RED_MASK",
+    "kind": "relic",
+    "name": "Red Mask"
+  },
+  "RED_SKULL": {
+    "aliases": [
+      "Red Skull",
+      "RedSkull"
+    ],
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "RED_SKULL",
+    "kind": "relic",
+    "name": "Red Skull"
+  },
+  "REGALITE": {
+    "aliases": [
+      "Regalite"
+    ],
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "REGALITE",
+    "kind": "relic",
+    "name": "Regalite"
+  },
+  "REGAL_PILLOW": {
+    "aliases": [
+      "Regal Pillow",
+      "RegalPillow"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "REGAL_PILLOW",
+    "kind": "relic",
+    "name": "Regal Pillow"
+  },
+  "REPTILE_TRINKET": {
+    "aliases": [
+      "Reptile Trinket",
+      "ReptileTrinket"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "REPTILE_TRINKET",
+    "kind": "relic",
+    "name": "Reptile Trinket"
+  },
+  "RINGING_TRIANGLE": {
+    "aliases": [
+      "Ringing Triangle",
+      "铃三角"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "RINGING_TRIANGLE",
+    "kind": "relic",
+    "name": "Ringing Triangle"
+  },
+  "RING_OF_THE_DRAKE": {
+    "aliases": [
+      "Ring of the Drake",
+      "RingOfTheDrake"
+    ],
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
+    "id": "RING_OF_THE_DRAKE",
+    "kind": "relic",
+    "name": "Ring of the Drake"
+  },
+  "RING_OF_THE_SNAKE": {
+    "aliases": [
+      "Ring of the Snake",
+      "RingOfTheSnake"
+    ],
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
+    "id": "RING_OF_THE_SNAKE",
+    "kind": "relic",
+    "name": "Ring of the Snake"
+  },
+  "RIPPLE_BASIN": {
+    "aliases": [
+      "Ripple Basin",
+      "RippleBasin"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "RIPPLE_BASIN",
+    "kind": "relic",
+    "name": "Ripple Basin"
+  },
+  "ROYAL_POISON": {
+    "aliases": [
+      "Royal Poison",
+      "RoyalPoison"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "ROYAL_POISON",
+    "kind": "relic",
+    "name": "Royal Poison"
+  },
+  "ROYAL_STAMP": {
+    "aliases": [
+      "Royal Stamp"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Shop"
+    },
+    "id": "ROYAL_STAMP",
+    "kind": "relic",
+    "name": "Royal Stamp"
+  },
+  "RUINED_HELMET": {
+    "aliases": [
+      "Ruined Helmet",
+      "RuinedHelmet"
+    ],
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "RUINED_HELMET",
+    "kind": "relic",
+    "name": "Ruined Helmet"
+  },
+  "RUNIC_CAPACITOR": {
+    "aliases": [
+      "Runic Capacitor",
+      "RunicCapacitor"
+    ],
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "RUNIC_CAPACITOR",
+    "kind": "relic",
+    "name": "Runic Capacitor"
+  },
+  "RUNIC_PYRAMID": {
+    "aliases": [
+      "Runic Pyramid",
+      "RunicPyramid"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "RUNIC_PYRAMID",
+    "kind": "relic",
+    "name": "Runic Pyramid"
+  },
+  "SAI": {
+    "aliases": [
+      "Sai"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SAI",
+    "kind": "relic",
+    "name": "Sai"
+  },
+  "SAND_CASTLE": {
+    "aliases": [
+      "Sand Castle",
+      "SandCastle"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SAND_CASTLE",
+    "kind": "relic",
+    "name": "Sand Castle"
+  },
+  "SCREAMING_FLAGON": {
+    "aliases": [
+      "Screaming Flagon",
+      "ScreamingFlagon"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "SCREAMING_FLAGON",
+    "kind": "relic",
+    "name": "Screaming Flagon"
+  },
+  "SCROLL_BOXES": {
+    "aliases": [
+      "Scroll Boxes",
+      "ScrollBoxes"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SCROLL_BOXES",
+    "kind": "relic",
+    "name": "Scroll Boxes"
+  },
+  "SEAL_OF_GOLD": {
+    "aliases": [
+      "Seal of Gold",
+      "SealOfGold",
+      "黄金封印"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SEAL_OF_GOLD",
+    "kind": "relic",
+    "name": "Seal of Gold"
+  },
+  "SEA_GLASS": {
+    "aliases": [
+      "Sea Glass",
+      "SeaGlass"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SEA_GLASS",
+    "kind": "relic",
+    "name": "Sea Glass"
+  },
+  "SELF_FORMING_CLAY": {
+    "aliases": [
+      "Self-Forming Clay",
+      "SelfFormingClay"
+    ],
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "SELF_FORMING_CLAY",
+    "kind": "relic",
+    "name": "Self-Forming Clay"
+  },
+  "SERE_TALON": {
+    "aliases": [
+      "Sere Talon",
+      "SereTalon"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SERE_TALON",
+    "kind": "relic",
+    "name": "Sere Talon"
+  },
+  "SHARP": {
+    "aliases": [
+      "GNARLED_HAMMER",
+      "Gnarled Hammer"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Shop"
+    },
+    "id": "SHARP",
+    "kind": "relic",
+    "name": "Sharp (Enchant keyword) / Gnarled Hammer carrier relic"
+  },
+  "SHOVEL": {
+    "aliases": [
+      "Shovel"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "SHOVEL",
+    "kind": "relic",
+    "name": "Shovel"
+  },
+  "SHURIKEN": {
+    "aliases": [
+      "Shuriken"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "SHURIKEN",
+    "kind": "relic",
+    "name": "Shuriken"
+  },
+  "SIGNET_RING": {
+    "aliases": [
+      "Signet Ring",
+      "SignetRing"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SIGNET_RING",
+    "kind": "relic",
+    "name": "Signet Ring"
+  },
+  "SILKEN_TRESS": {
+    "aliases": [
+      "Silken Tress",
+      "SilkenTress"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SILKEN_TRESS",
+    "kind": "relic",
+    "name": "Silken Tress"
+  },
+  "SILVER_CRUCIBLE": {
+    "aliases": [
+      "Silver Crucible",
+      "SilverCrucible"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SILVER_CRUCIBLE",
+    "kind": "relic",
+    "name": "Silver Crucible"
+  },
+  "SLING_OF_COURAGE": {
+    "aliases": [
+      "Sling of Courage",
+      "SlingOfCourage"
+    ],
+    "detail": {
+      "character": null,
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "SLING_OF_COURAGE",
+    "kind": "relic",
+    "name": "Sling of Courage"
+  },
+  "SMALL_CAPSULE": {
+    "aliases": [
+      "Small Capsule",
+      "SmallCapsule"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SMALL_CAPSULE",
+    "kind": "relic",
+    "name": "Small Capsule"
+  },
+  "SNECKO_EYE": {
+    "aliases": [
+      "Snecko Eye",
+      "SneckoEye"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SNECKO_EYE",
+    "kind": "relic",
+    "name": "Snecko Eye"
+  },
+  "SNECKO_SKULL": {
+    "aliases": [
+      "Snecko Skull",
+      "SneckoSkull"
+    ],
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "SNECKO_SKULL",
+    "kind": "relic",
+    "name": "Snecko Skull"
+  },
+  "SOZU": {
+    "aliases": [
+      "Sozu"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SOZU",
+    "kind": "relic",
+    "name": "Sozu"
+  },
+  "SPARKLING_ROUGE": {
+    "aliases": [
+      "Sparkling Rouge",
+      "SparklingRouge"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "SPARKLING_ROUGE",
+    "kind": "relic",
+    "name": "Sparkling Rouge"
+  },
+  "SPIKED_GAUNTLETS": {
+    "aliases": [
+      "Spiked Gauntlets",
+      "SpikedGauntlets"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SPIKED_GAUNTLETS",
+    "kind": "relic",
+    "name": "Spiked Gauntlets"
+  },
+  "STONE_CALENDAR": {
+    "aliases": [
+      "Stone Calendar",
+      "石日历"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Rare"
+    },
+    "id": "STONE_CALENDAR",
+    "kind": "relic",
+    "name": "Stone Calendar"
+  },
+  "STONE_CRACKER": {
+    "aliases": [
+      "Stone Cracker",
+      "StoneCracker"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "STONE_CRACKER",
+    "kind": "relic",
+    "name": "Stone Cracker"
+  },
+  "STONE_HUMIDIFIER": {
+    "aliases": [
+      "Stone Humidifier",
+      "StoneHumidifier"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "STONE_HUMIDIFIER",
+    "kind": "relic",
+    "name": "Stone Humidifier"
+  },
+  "STORYBOOK": {
+    "aliases": [
+      "STORYBOOK",
+      "Storybook",
+      "故事书"
+    ],
+    "detail": {
+      "character": null,
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "STORYBOOK",
+    "kind": "relic",
+    "name": "Storybook"
+  },
+  "STRAWBERRY": {
+    "aliases": [
+      "Strawberry"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "STRAWBERRY",
+    "kind": "relic",
+    "name": "Strawberry"
+  },
+  "STRIKE_DUMMY": {
+    "aliases": [
+      "Strike Dummy",
+      "StrikeDummy"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "STRIKE_DUMMY",
+    "kind": "relic",
+    "name": "Strike Dummy"
+  },
+  "STURDY_CLAMP": {
+    "aliases": [
+      "Sturdy Clamp",
+      "SturdyClamp"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "STURDY_CLAMP",
+    "kind": "relic",
+    "name": "Sturdy Clamp"
+  },
+  "SWORD_OF_JADE": {
+    "aliases": [
+      "Sword of Jade",
+      "SwordOfJade"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "SWORD_OF_JADE",
+    "kind": "relic",
+    "name": "Sword of Jade"
+  },
+  "SWORD_OF_STONE": {
+    "aliases": [
+      "Sword of Stone",
+      "SwordOfStone"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "SWORD_OF_STONE",
+    "kind": "relic",
+    "name": "Sword of Stone"
+  },
+  "SYMBIOTIC_VIRUS": {
+    "aliases": [
+      "Symbiotic Virus",
+      "SymbioticVirus"
+    ],
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "SYMBIOTIC_VIRUS",
+    "kind": "relic",
+    "name": "Symbiotic Virus"
+  },
+  "TANXS_WHISTLE": {
+    "aliases": [
+      "Tanx's Whistle",
+      "TanxsWhistle"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "TANXS_WHISTLE",
+    "kind": "relic",
+    "name": "Tanx's Whistle"
+  },
+  "TEA_OF_DISCOURTESY": {
+    "aliases": [
+      "Tea of Discourtesy",
+      "TeaOfDiscourtesy"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "TEA_OF_DISCOURTESY",
+    "kind": "relic",
+    "name": "Tea of Discourtesy"
+  },
+  "THE_ABACUS": {
+    "aliases": [
+      "The Abacus",
+      "TheAbacus"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "THE_ABACUS",
+    "kind": "relic",
+    "name": "The Abacus"
+  },
+  "THE_BOOT": {
+    "aliases": [
+      "The Boot",
+      "TheBoot"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "THE_BOOT",
+    "kind": "relic",
+    "name": "The Boot"
+  },
+  "THE_COURIER": {
+    "aliases": [
+      "The Courier",
+      "TheCourier"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "THE_COURIER",
+    "kind": "relic",
+    "name": "The Courier"
+  },
+  "THROWING_AXE": {
+    "aliases": [
+      "Throwing Axe",
+      "ThrowingAxe"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "THROWING_AXE",
+    "kind": "relic",
+    "name": "Throwing Axe"
+  },
+  "TINGSHA": {
+    "aliases": [
+      "Tingsha"
+    ],
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "TINGSHA",
+    "kind": "relic",
+    "name": "Tingsha"
+  },
+  "TINY_MAILBOX": {
+    "aliases": [
+      "Tiny Mailbox",
+      "TinyMailbox"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "TINY_MAILBOX",
+    "kind": "relic",
+    "name": "Tiny Mailbox"
+  },
+  "TOASTY_MITTENS": {
+    "aliases": [
+      "Toasty Mittens",
+      "ToastyMittens",
+      "暖和手套"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "TOASTY_MITTENS",
+    "kind": "relic",
+    "name": "Toasty Mittens"
+  },
+  "TOOLBOX": {
+    "aliases": [
+      "Toolbox"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "TOOLBOX",
+    "kind": "relic",
+    "name": "Toolbox"
+  },
+  "TOUCH_OF_OROBAS": {
+    "aliases": [
+      "Touch of Orobas",
+      "TouchOfOrobas",
+      "欧洛巴斯之触"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Ancient"
+    },
+    "id": "TOUCH_OF_OROBAS",
+    "kind": "relic",
+    "name": "Touch of Orobas"
+  },
+  "TOUGH_BANDAGES": {
+    "aliases": [
+      "Tough Bandages",
+      "ToughBandages"
+    ],
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "TOUGH_BANDAGES",
+    "kind": "relic",
+    "name": "Tough Bandages"
+  },
+  "TOXIC_EGG": {
+    "aliases": [
+      "Toxic Egg",
+      "ToxicEgg"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "TOXIC_EGG",
+    "kind": "relic",
+    "name": "Toxic Egg"
+  },
+  "TOY_BOX": {
+    "aliases": [
+      "Toy Box",
+      "ToyBox",
+      "玩具盒"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "TOY_BOX",
+    "kind": "relic",
+    "name": "Toy Box"
+  },
+  "TRI_BOOMERANG": {
+    "aliases": [
+      "Tri-Boomerang",
+      "TriBoomerang"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "TRI_BOOMERANG",
+    "kind": "relic",
+    "name": "Tri-Boomerang"
+  },
+  "TUNGSTEN_ROD": {
+    "aliases": [
+      "Tungsten Rod",
+      "TungstenRod"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "TUNGSTEN_ROD",
+    "kind": "relic",
+    "name": "Tungsten Rod"
+  },
+  "TUNING_FORK": {
+    "aliases": [
+      "Tuning Fork",
+      "TuningFork"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Uncommon"
+    },
+    "id": "TUNING_FORK",
+    "kind": "relic",
+    "name": "Tuning Fork"
+  },
+  "TWISTED_FUNNEL": {
+    "aliases": [
+      "Twisted Funnel",
+      "TwistedFunnel"
+    ],
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "TWISTED_FUNNEL",
+    "kind": "relic",
+    "name": "Twisted Funnel"
+  },
+  "UNCEASING_TOP": {
+    "aliases": [
+      "Unceasing Top",
+      "UnceasingTop"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "UNCEASING_TOP",
+    "kind": "relic",
+    "name": "Unceasing Top"
+  },
+  "UNDYING_SIGIL": {
+    "aliases": [
+      "Undying Sigil",
+      "UndyingSigil"
+    ],
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "UNDYING_SIGIL",
+    "kind": "relic",
+    "name": "Undying Sigil"
+  },
+  "UNSETTLING_LAMP": {
+    "aliases": [
+      "Unsettling Lamp",
+      "UnsettlingLamp"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "UNSETTLING_LAMP",
+    "kind": "relic",
+    "name": "Unsettling Lamp"
+  },
+  "VAJRA": {
+    "aliases": [
+      "Vajra"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "VAJRA",
+    "kind": "relic",
+    "name": "Vajra"
+  },
+  "VAMBRACE": {
+    "aliases": [
+      "Vambrace"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "VAMBRACE",
+    "kind": "relic",
+    "name": "Vambrace"
+  },
+  "VELVET_CHOKER": {
+    "aliases": [
+      "Velvet Choker",
+      "VelvetChoker"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "VELVET_CHOKER",
+    "kind": "relic",
+    "name": "Velvet Choker"
+  },
+  "VENERABLE_TEA_SET": {
+    "aliases": [
+      "Venerable Tea Set",
+      "VenerableTeaSet",
+      "古茶具套装"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "VENERABLE_TEA_SET",
+    "kind": "relic",
+    "name": "Venerable Tea Set"
+  },
+  "VERY_HOT_COCOA": {
+    "aliases": [
+      "Very Hot Cocoa",
+      "VeryHotCocoa",
+      "极热可可"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "VERY_HOT_COCOA",
+    "kind": "relic",
+    "name": "Very Hot Cocoa"
+  },
+  "VEXING_PUZZLEBOX": {
+    "aliases": [
+      "Vexing Puzzlebox",
+      "VexingPuzzlebox"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "VEXING_PUZZLEBOX",
+    "kind": "relic",
+    "name": "Vexing Puzzlebox"
+  },
+  "VITRUVIAN_MINION": {
+    "aliases": [
+      "Vitruvian Minion",
+      "VitruvianMinion"
+    ],
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "VITRUVIAN_MINION",
+    "kind": "relic",
+    "name": "Vitruvian Minion"
+  },
+  "WAR_HAMMER": {
+    "aliases": [
+      "War Hammer",
+      "WarHammer"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "WAR_HAMMER",
+    "kind": "relic",
+    "name": "War Hammer"
+  },
+  "WAR_PAINT": {
+    "aliases": [
+      "War Paint",
+      "WarPaint"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "WAR_PAINT",
+    "kind": "relic",
+    "name": "War Paint"
+  },
+  "WHETSTONE": {
+    "aliases": [
+      "Whetstone",
+      "磨刀石"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "WHETSTONE",
+    "kind": "relic",
+    "name": "Whetstone"
+  },
+  "WHISPERING_EARRING": {
+    "aliases": [
+      "Whispering Earring",
+      "WhisperingEarring"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "WHISPERING_EARRING",
+    "kind": "relic",
+    "name": "Whispering Earring"
+  },
+  "WHITE_BEAST_STATUE": {
+    "aliases": [
+      "White Beast Statue",
+      "WhiteBeastStatue"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "WHITE_BEAST_STATUE",
+    "kind": "relic",
+    "name": "White Beast Statue"
+  },
+  "WHITE_STAR": {
+    "aliases": [
+      "White Star",
+      "WhiteStar"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "WHITE_STAR",
+    "kind": "relic",
+    "name": "White Star"
+  },
+  "WIND_DAUGHTER": {
+    "aliases": [
+      "DAUGHTER_OF_THE_WIND",
+      "Daughter of the Wind"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Event"
+    },
+    "id": "WIND_DAUGHTER",
+    "kind": "relic",
+    "name": "Daughter of the Wind"
+  },
+  "WINGED_BOOTS": {
+    "aliases": [
+      "Winged Boots",
+      "羽翼之靴"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "WINGED_BOOTS",
+    "kind": "relic",
+    "name": "Winged Boots"
+  },
+  "WING_CHARM": {
+    "aliases": [
+      "Wing Charm"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Shop"
+    },
+    "id": "WING_CHARM",
+    "kind": "relic",
+    "name": "Wing Charm"
+  },
+  "WONGOS_MYSTERY_TICKET": {
+    "aliases": [
+      "Wongo's Mystery Ticket",
+      "WongosMysteryTicket"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Event"
+    },
+    "id": "WONGOS_MYSTERY_TICKET",
+    "kind": "relic",
+    "name": "Wongo's Mystery Ticket"
+  },
+  "WONGO_CUSTOMER_APPRECIATION_BADGE": {
+    "aliases": [
+      "Wongo Customer Appreciation Badge",
+      "WongoCustomerAppreciationBadge"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "WONGO_CUSTOMER_APPRECIATION_BADGE",
+    "kind": "relic",
+    "name": "Wongo Customer Appreciation Badge"
+  },
+  "YUMMY_COOKIE": {
+    "aliases": [
+      "Yummy Cookie",
+      "美味饼干"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "YUMMY_COOKIE",
+    "kind": "relic",
+    "name": "Yummy Cookie"
+  }
+}

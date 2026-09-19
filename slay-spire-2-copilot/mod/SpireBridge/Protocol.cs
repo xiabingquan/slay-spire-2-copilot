@@ -38,9 +38,34 @@ public static class Protocol
     public static string ActResult(bool ok, string action, string message,
         System.Collections.Generic.Dictionary<string, object?>? state)
     {
+        // Information-completeness envelope: surfaced top-level so the client
+        // gate sees it without digging into state. info-incomplete failures
+        // always carry notify_user=true — the client hard-stops and pings
+        // Feishu (user directive 2026-09-19: no fallbacks, no uncertainty).
+        bool notify = false;
+        var missing = new System.Collections.Generic.List<string>();
+        if (state != null)
+        {
+            if (state.TryGetValue("notify_user", out object? nu) && nu is bool b && b)
+            {
+                notify = true;
+            }
+            if (state.TryGetValue("missing_info", out object? mi) && mi is System.Collections.Generic.List<string> ml)
+            {
+                missing = ml;
+            }
+        }
+        if (!ok && message.StartsWith("info incomplete", System.StringComparison.Ordinal))
+        {
+            notify = true;
+            if (missing.Count == 0)
+            {
+                missing.Add(message);
+            }
+        }
         object payload = state == null
-            ? new { type = "act_result", ok, action, message }
-            : new { type = "act_result", ok, action, message, state };
+            ? new { type = "act_result", ok, action, message, notify_user = notify, missing_info = missing }
+            : new { type = "act_result", ok, action, message, notify_user = notify, missing_info = missing, state };
         return Emit(payload);
     }
 

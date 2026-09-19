@@ -24,6 +24,14 @@
     <MakeDir Directories="$(GameModsDir)/spire-copilot-bridge" />
     <Copy SourceFiles="$(TargetDir)spire-copilot-bridge.dll;$(MSBuildProjectDirectory)/spire-copilot-bridge.json"
           DestinationFolder="$(GameModsDir)/spire-copilot-bridge" />
+    <!-- Derived data copy for mod-side lookup: source of truth stays at
+         bridge/spirectl_lib/data (repo); each build ships a snapshot. -->
+    <ItemGroup>
+      <BridgeReferenceData Include="$(MSBuildProjectDirectory)/../../bridge/spirectl_lib/data/*.json" />
+    </ItemGroup>
+    <Copy SourceFiles="@(BridgeReferenceData)"
+          DestinationFolder="$(GameModsDir)/spire-copilot-bridge/data"
+          SkipUnchangedFiles="true" />
     <Message Importance="high" Text="SpireBridge installed to $(GameModsDir)/spire-copilot-bridge" />
   </Target>
 </Project>

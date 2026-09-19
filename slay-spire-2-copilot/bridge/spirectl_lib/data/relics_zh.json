@@ -1,0 +1,4273 @@
+{
+  "ADROIT": {
+    "aliases": [
+      "KIFUDA",
+      "Kifuda"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Shop"
+    },
+    "id": "ADROIT",
+    "kind": "relic",
+    "name": "Kifuda"
+  },
+  "AKABEKO": {
+    "aliases": [
+      "Akabeko"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "AKABEKO",
+    "kind": "relic",
+    "name": "赤牛"
+  },
+  "ALCHEMICAL_COFFER": {
+    "aliases": [
+      "Alchemical Coffer",
+      "AlchemicalCoffer"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "ALCHEMICAL_COFFER",
+    "kind": "relic",
+    "name": "炼金箱"
+  },
+  "AMETHYST_AUBERGINE": {
+    "aliases": [
+      "Amethyst Aubergine",
+      "AmethystAubergine"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "AMETHYST_AUBERGINE",
+    "kind": "relic",
+    "name": "紫水晶茄子"
+  },
+  "ANCHOR": {
+    "aliases": [
+      "Anchor"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "ANCHOR",
+    "kind": "relic",
+    "name": "锚"
+  },
+  "ARCANE_SCROLL": {
+    "aliases": [
+      "Arcane Scroll",
+      "ArcaneScroll"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "ARCANE_SCROLL",
+    "kind": "relic",
+    "name": "奥术卷轴"
+  },
+  "ARCHAIC_TOOTH": {
+    "aliases": [
+      "Archaic Tooth",
+      "ArchaicTooth"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "ARCHAIC_TOOTH",
+    "kind": "relic",
+    "name": "古老牙齿"
+  },
+  "ART_OF_WAR": {
+    "aliases": [
+      "Art of War",
+      "ArtOfWar"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "ART_OF_WAR",
+    "kind": "relic",
+    "name": "孙子兵法"
+  },
+  "ASTROLABE": {
+    "aliases": [
+      "Astrolabe"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "ASTROLABE",
+    "kind": "relic",
+    "name": "星盘"
+  },
+  "BAG_OF_MARBLES": {
+    "aliases": [
+      "Bag of Marbles",
+      "BagOfMarbles"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "BAG_OF_MARBLES",
+    "kind": "relic",
+    "name": "弹珠袋"
+  },
+  "BAG_OF_PREPARATION": {
+    "aliases": [
+      "Bag of Preparation",
+      "BagOfPreparation"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "BAG_OF_PREPARATION",
+    "kind": "relic",
+    "name": "准备背包"
+  },
+  "BEATING_REMNANT": {
+    "aliases": [
+      "Beating Remnant",
+      "BeatingRemnant"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "BEATING_REMNANT",
+    "kind": "relic",
+    "name": "律动残余"
+  },
+  "BEAUTIFUL_BRACELET": {
+    "aliases": [
+      "Beautiful Bracelet",
+      "BeautifulBracelet"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "BEAUTIFUL_BRACELET",
+    "kind": "relic",
+    "name": "华美手镯"
+  },
+  "BELLOWS": {
+    "aliases": [
+      "Bellows"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "BELLOWS",
+    "kind": "relic",
+    "name": "风箱"
+  },
+  "BELT_BUCKLE": {
+    "aliases": [
+      "Belt Buckle",
+      "BeltBuckle"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "BELT_BUCKLE",
+    "kind": "relic",
+    "name": "腰带扣"
+  },
+  "BIG_HAT": {
+    "aliases": [
+      "Big Hat",
+      "BigHat"
+    ],
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "BIG_HAT",
+    "kind": "relic",
+    "name": "大帽子"
+  },
+  "BIG_MUSHROOM": {
+    "aliases": [
+      "Big Mushroom",
+      "BigMushroom"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "BIG_MUSHROOM",
+    "kind": "relic",
+    "name": "大蘑菇"
+  },
+  "BIIIG_HUG": {
+    "aliases": [
+      "Biiig Hug",
+      "BiiigHug",
+      "大大拥抱"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "BIIIG_HUG",
+    "kind": "relic",
+    "name": "大大拥抱"
+  },
+  "BING_BONG": {
+    "aliases": [
+      "Bing Bong",
+      "BingBong"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "BING_BONG",
+    "kind": "relic",
+    "name": "宾邦"
+  },
+  "BLACK_BLOOD": {
+    "aliases": [
+      "Black Blood",
+      "BlackBlood",
+      "黑暗之血"
+    ],
+    "detail": {
+      "character": "IRONCLAD",
+      "counter_shown": null,
+      "rarity": "Ancient"
+    },
+    "id": "BLACK_BLOOD",
+    "kind": "relic",
+    "name": "黑暗之血"
+  },
+  "BLACK_STAR": {
+    "aliases": [
+      "Black Star",
+      "BlackStar"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "BLACK_STAR",
+    "kind": "relic",
+    "name": "黑星"
+  },
+  "BLESSED_ANTLER": {
+    "aliases": [
+      "Blessed Antler",
+      "BlessedAntler"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "BLESSED_ANTLER",
+    "kind": "relic",
+    "name": "赐福鹿角"
+  },
+  "BLOOD_SOAKED_ROSE": {
+    "aliases": [
+      "Blood-Soaked Rose",
+      "BloodSoakedRose"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "BLOOD_SOAKED_ROSE",
+    "kind": "relic",
+    "name": "血染玫瑰"
+  },
+  "BLOOD_VIAL": {
+    "aliases": [
+      "Blood Vial",
+      "BloodVial"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "BLOOD_VIAL",
+    "kind": "relic",
+    "name": "血瓶"
+  },
+  "BONE_FLUTE": {
+    "aliases": [
+      "Bone Flute",
+      "BoneFlute"
+    ],
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "BONE_FLUTE",
+    "kind": "relic",
+    "name": "骨笛"
+  },
+  "BONE_TEA": {
+    "aliases": [
+      "Bone Tea",
+      "BoneTea"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "BONE_TEA",
+    "kind": "relic",
+    "name": "骨茶"
+  },
+  "BOOKMARK": {
+    "aliases": [
+      "Bookmark"
+    ],
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "BOOKMARK",
+    "kind": "relic",
+    "name": "书签"
+  },
+  "BOOK_OF_FIVE_RINGS": {
+    "aliases": [
+      "Book of Five Rings",
+      "BookOfFiveRINGS",
+      "五轮之书",
+      "五轮书"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "BOOK_OF_FIVE_RINGS",
+    "kind": "relic",
+    "name": "五轮之书"
+  },
+  "BOOK_REPAIR_KNIFE": {
+    "aliases": [
+      "Book Repair Knife",
+      "BookRepairKnife"
+    ],
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "BOOK_REPAIR_KNIFE",
+    "kind": "relic",
+    "name": "修书小刀"
+  },
+  "BOOMING_CONCH": {
+    "aliases": [
+      "Booming Conch",
+      "BoomingConch"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "BOOMING_CONCH",
+    "kind": "relic",
+    "name": "轰鸣海螺"
+  },
+  "BOUND_PHYLACTERY": {
+    "aliases": [
+      "Bound Phylactery",
+      "BoundPhylactery"
+    ],
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
+    "id": "BOUND_PHYLACTERY",
+    "kind": "relic",
+    "name": "缚魂命匣"
+  },
+  "BOWLER_HAT": {
+    "aliases": [
+      "Bowler Hat",
+      "BowlerHat",
+      "礼帽"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "BOWLER_HAT",
+    "kind": "relic",
+    "name": "礼帽"
+  },
+  "BREAD": {
+    "aliases": [
+      "Bread"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "BREAD",
+    "kind": "relic",
+    "name": "面包"
+  },
+  "BRIGHT_FLAME": {
+    "aliases": [
+      "Brightest Flame",
+      "STORYBOOK",
+      "Storybook",
+      "至亮之焰"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Ancient"
+    },
+    "id": "BRIGHT_FLAME",
+    "kind": "relic",
+    "name": "至亮之焰"
+  },
+  "BRILLIANT_SCARF": {
+    "aliases": [
+      "Brilliant Scarf",
+      "BrilliantScarf"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "BRILLIANT_SCARF",
+    "kind": "relic",
+    "name": "艳丽围巾"
+  },
+  "BRIMSTONE": {
+    "aliases": [
+      "Brimstone"
+    ],
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "BRIMSTONE",
+    "kind": "relic",
+    "name": "硫磺"
+  },
+  "BRONZE_SCALES": {
+    "aliases": [
+      "Bronze Scales",
+      "BronzeScales"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "BRONZE_SCALES",
+    "kind": "relic",
+    "name": "铜质鳞片"
+  },
+  "BURNING_BLOOD": {
+    "aliases": [
+      "Burning Blood",
+      "BurningBlood"
+    ],
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
+    "id": "BURNING_BLOOD",
+    "kind": "relic",
+    "name": "燃烧之血"
+  },
+  "BURNING_STICKS": {
+    "aliases": [
+      "Burning Sticks",
+      "BurningSticks"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "BURNING_STICKS",
+    "kind": "relic",
+    "name": "燃烧木棍"
+  },
+  "BYRDPIP": {
+    "aliases": [
+      "Byrdpip"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "BYRDPIP",
+    "kind": "relic",
+    "name": "异鸟宝宝"
+  },
+  "CALLING_BELL": {
+    "aliases": [
+      "Calling Bell",
+      "CallingBell"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "CALLING_BELL",
+    "kind": "relic",
+    "name": "召唤铃铛"
+  },
+  "CANDELABRA": {
+    "aliases": [
+      "Candelabra"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "CANDELABRA",
+    "kind": "relic",
+    "name": "烛台"
+  },
+  "CAPTAINS_WHEEL": {
+    "aliases": [
+      "Captain's Wheel",
+      "CaptainsWheel"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "CAPTAINS_WHEEL",
+    "kind": "relic",
+    "name": "舵盘"
+  },
+  "CAULDRON": {
+    "aliases": [
+      "Cauldron"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "CAULDRON",
+    "kind": "relic",
+    "name": "大锅"
+  },
+  "CENTENNIAL_PUZZLE": {
+    "aliases": [
+      "Centennial Puzzle",
+      "CentennialPuzzle"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "CENTENNIAL_PUZZLE",
+    "kind": "relic",
+    "name": "百年积木"
+  },
+  "CHANDELIER": {
+    "aliases": [
+      "Chandelier"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "CHANDELIER",
+    "kind": "relic",
+    "name": "吊灯"
+  },
+  "CHARONS_ASHES": {
+    "aliases": [
+      "Charon's Ashes",
+      "CharonsAshes"
+    ],
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "CHARONS_ASHES",
+    "kind": "relic",
+    "name": "卡戎之灰"
+  },
+  "CHEMICAL_X": {
+    "aliases": [
+      "Chemical X",
+      "ChemicalX"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "CHEMICAL_X",
+    "kind": "relic",
+    "name": "化学物X"
+  },
+  "CHOICES_PARADOX": {
+    "aliases": [
+      "Choices Paradox",
+      "ChoicesParadox"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "CHOICES_PARADOX",
+    "kind": "relic",
+    "name": "选择悖论"
+  },
+  "CHOSEN_CHEESE": {
+    "aliases": [
+      "ChosenCheese",
+      "The Chosen Cheese",
+      "天选芝士"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "CHOSEN_CHEESE",
+    "kind": "relic",
+    "name": "天选芝士"
+  },
+  "CIRCLET": {
+    "aliases": [
+      "Circlet"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "None"
+    },
+    "id": "CIRCLET",
+    "kind": "relic",
+    "name": "头环"
+  },
+  "CLAWS": {
+    "aliases": [
+      "Claws"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "CLAWS",
+    "kind": "relic",
+    "name": "利爪"
+  },
+  "CLOAK_CLASP": {
+    "aliases": [
+      "Cloak Clasp",
+      "CloakClasp"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "CLOAK_CLASP",
+    "kind": "relic",
+    "name": "斗篷扣"
+  },
+  "CRACKED_CORE": {
+    "aliases": [
+      "Cracked Core",
+      "CrackedCore"
+    ],
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
+    "id": "CRACKED_CORE",
+    "kind": "relic",
+    "name": "破损核心"
+  },
+  "CROSSBOW": {
+    "aliases": [
+      "Crossbow"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "CROSSBOW",
+    "kind": "relic",
+    "name": "十字弓"
+  },
+  "CURSED_PEARL": {
+    "aliases": [
+      "Cursed Pearl",
+      "CursedPearl"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "CURSED_PEARL",
+    "kind": "relic",
+    "name": "诅咒珍珠"
+  },
+  "DARKSTONE_PERIAPT": {
+    "aliases": [
+      "Darkstone Periapt",
+      "DarkstonePeriapt"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "DARKSTONE_PERIAPT",
+    "kind": "relic",
+    "name": "黑石护符"
+  },
+  "DATA_DISK": {
+    "aliases": [
+      "Data Disk",
+      "DataDisk"
+    ],
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "DATA_DISK",
+    "kind": "relic",
+    "name": "数据磁盘"
+  },
+  "DAUGHTER_OF_THE_WIND": {
+    "aliases": [
+      "Daughter of the Wind",
+      "DaughterOfTheWind"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "DAUGHTER_OF_THE_WIND",
+    "kind": "relic",
+    "name": "风的女儿"
+  },
+  "DAUGHTER_OF_WIND": {
+    "aliases": [
+      "DAUGHTER_OF_THE_WIND",
+      "Daughter of the Wind"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Event"
+    },
+    "id": "DAUGHTER_OF_WIND",
+    "kind": "relic",
+    "name": "Daughter of the Wind"
+  },
+  "DELICATE_FROND": {
+    "aliases": [
+      "Delicate Frond",
+      "DelicateFrond"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "DELICATE_FROND",
+    "kind": "relic",
+    "name": "娇嫩蕨草"
+  },
+  "DEMON_TONGUE": {
+    "aliases": [
+      "Demon Tongue",
+      "DemonTongue"
+    ],
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "DEMON_TONGUE",
+    "kind": "relic",
+    "name": "恶魔之舌"
+  },
+  "DIAMOND_DIADEM": {
+    "aliases": [
+      "Diamond Diadem",
+      "DiamondDiadem"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "DIAMOND_DIADEM",
+    "kind": "relic",
+    "name": "钻石头冠"
+  },
+  "DINGY_RUG": {
+    "aliases": [
+      "Dingy Rug",
+      "破地毯"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "DINGY_RUG",
+    "kind": "relic",
+    "name": "破地毯"
+  },
+  "DISTINGUISHED_CAPE": {
+    "aliases": [
+      "Distinguished Cape",
+      "DistinguishedCape"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "DISTINGUISHED_CAPE",
+    "kind": "relic",
+    "name": "卓越斗篷"
+  },
+  "DIVINE_DESTINY": {
+    "aliases": [
+      "Divine Destiny",
+      "DivineDestiny"
+    ],
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
+    "id": "DIVINE_DESTINY",
+    "kind": "relic",
+    "name": "天命所归"
+  },
+  "DIVINE_RIGHT": {
+    "aliases": [
+      "Divine Right",
+      "DivineRight"
+    ],
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
+    "id": "DIVINE_RIGHT",
+    "kind": "relic",
+    "name": "天赋君权"
+  },
+  "DOLLYS_MIRROR": {
+    "aliases": [
+      "Dolly's Mirror",
+      "DollysMirror"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "DOLLYS_MIRROR",
+    "kind": "relic",
+    "name": "多利之镜"
+  },
+  "DRAGON_FRUIT": {
+    "aliases": [
+      "Dragon Fruit",
+      "DragonFruit"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "DRAGON_FRUIT",
+    "kind": "relic",
+    "name": "火龙果"
+  },
+  "DREAM_CATCHER": {
+    "aliases": [
+      "Dream Catcher",
+      "DreamCatcher"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "DREAM_CATCHER",
+    "kind": "relic",
+    "name": "捕梦网"
+  },
+  "DRIFTWOOD": {
+    "aliases": [
+      "Driftwood"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "DRIFTWOOD",
+    "kind": "relic",
+    "name": "浮木"
+  },
+  "DUSTY_TOME": {
+    "aliases": [
+      "Dusty Tome",
+      "DustyTome"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "DUSTY_TOME",
+    "kind": "relic",
+    "name": "尘封魔典"
+  },
+  "ECTOPLASM": {
+    "aliases": [
+      "Ectoplasm"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "ECTOPLASM",
+    "kind": "relic",
+    "name": "灵体外质"
+  },
+  "ELECTRIC_SHRYMP": {
+    "aliases": [
+      "Electric Shrymp",
+      "ElectricShrymp"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "ELECTRIC_SHRYMP",
+    "kind": "relic",
+    "name": "放电异虾"
+  },
+  "EMBER_TEA": {
+    "aliases": [
+      "Ember Tea",
+      "EmberTea"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "EMBER_TEA",
+    "kind": "relic",
+    "name": "余烬茶"
+  },
+  "EMOTION_CHIP": {
+    "aliases": [
+      "Emotion Chip",
+      "EmotionChip"
+    ],
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "EMOTION_CHIP",
+    "kind": "relic",
+    "name": "情感芯片"
+  },
+  "EMPTY_CAGE": {
+    "aliases": [
+      "Empty Cage",
+      "EmptyCage"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "EMPTY_CAGE",
+    "kind": "relic",
+    "name": "空鸟笼"
+  },
+  "ETERNAL_FEATHER": {
+    "aliases": [
+      "Eternal Feather"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Uncommon"
+    },
+    "id": "ETERNAL_FEATHER",
+    "kind": "relic",
+    "name": "Eternal Feather"
+  },
+  "FAKE_ANCHOR": {
+    "aliases": [
+      "Anchor???",
+      "Fake Anchor",
+      "FakeAnchor"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FAKE_ANCHOR",
+    "kind": "relic",
+    "name": "锚？？？"
+  },
+  "FAKE_BLOOD_VIAL": {
+    "aliases": [
+      "Blood Vial???",
+      "Fake Blood Vial",
+      "FakeBloodVial"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FAKE_BLOOD_VIAL",
+    "kind": "relic",
+    "name": "小血瓶？？？"
+  },
+  "FAKE_HAPPY_FLOWER": {
+    "aliases": [
+      "Fake Happy Flower",
+      "FakeHappyFlower",
+      "Happy Flower???"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FAKE_HAPPY_FLOWER",
+    "kind": "relic",
+    "name": "开心小花？？？"
+  },
+  "FAKE_LEES_WAFFLE": {
+    "aliases": [
+      "Fake Lee's Waffle",
+      "FakeLeesWaffle",
+      "Lee's Waffle???"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FAKE_LEES_WAFFLE",
+    "kind": "relic",
+    "name": "李家华夫饼？？？"
+  },
+  "FAKE_MANGO": {
+    "aliases": [
+      "Fake Mango",
+      "FakeMango",
+      "Mango???"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FAKE_MANGO",
+    "kind": "relic",
+    "name": "芒果？？？"
+  },
+  "FAKE_MERCHANTS_RUG": {
+    "aliases": [
+      "Fake Merchant's Rug",
+      "FakeMerchantsRug",
+      "The Merchant's Rug???"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FAKE_MERCHANTS_RUG",
+    "kind": "relic",
+    "name": "商人的地毯？？？"
+  },
+  "FAKE_ORICHALCUM": {
+    "aliases": [
+      "Fake Orichalcum",
+      "FakeOrichalcum",
+      "Orichalcum???"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FAKE_ORICHALCUM",
+    "kind": "relic",
+    "name": "奥利哈钢？？？"
+  },
+  "FAKE_SNECKO_EYE": {
+    "aliases": [
+      "Fake Snecko Eye",
+      "FakeSneckoEye",
+      "Snecko Eye???"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FAKE_SNECKO_EYE",
+    "kind": "relic",
+    "name": "异蛇之眼？？？"
+  },
+  "FAKE_STRIKE_DUMMY": {
+    "aliases": [
+      "Fake Strike Dummy",
+      "FakeStrikeDummy",
+      "Strike Dummy???"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FAKE_STRIKE_DUMMY",
+    "kind": "relic",
+    "name": "打击木偶？？？"
+  },
+  "FAKE_VENERABLE_TEA_SET": {
+    "aliases": [
+      "Fake Venerable Tea Set",
+      "FakeVenerableTeaSet",
+      "Venerable Tea Set???"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FAKE_VENERABLE_TEA_SET",
+    "kind": "relic",
+    "name": "古茶具套装？？？"
+  },
+  "FENCING_MANUAL": {
+    "aliases": [
+      "Fencing Manual",
+      "FencingManual"
+    ],
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "FENCING_MANUAL",
+    "kind": "relic",
+    "name": "击剑指南"
+  },
+  "FESTIVE_POPPER": {
+    "aliases": [
+      "Festive Popper",
+      "FestivePopper"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "FESTIVE_POPPER",
+    "kind": "relic",
+    "name": "节日拉炮"
+  },
+  "FIDDLE": {
+    "aliases": [
+      "Fiddle"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "FIDDLE",
+    "kind": "relic",
+    "name": "小提琴"
+  },
+  "FISHING_ROD": {
+    "aliases": [
+      "Fishing Rod",
+      "FishingRod"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Ancient"
+    },
+    "id": "FISHING_ROD",
+    "kind": "relic",
+    "name": "钓鱼竿"
+  },
+  "FORGOTTEN_SOUL": {
+    "aliases": [
+      "Forgotten Soul",
+      "ForgottenSoul"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FORGOTTEN_SOUL",
+    "kind": "relic",
+    "name": "遗忘之魂"
+  },
+  "FRAGRANT_MUSHROOM": {
+    "aliases": [
+      "Fragrant Mushroom",
+      "FragrantMushroom"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FRAGRANT_MUSHROOM",
+    "kind": "relic",
+    "name": "芳香蘑菇"
+  },
+  "FRESNEL_LENS": {
+    "aliases": [
+      "Fresnel Lens",
+      "FresnelLens"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "FRESNEL_LENS",
+    "kind": "relic",
+    "name": "菲涅耳透镜"
+  },
+  "FROZEN_EGG": {
+    "aliases": [
+      "Frozen Egg",
+      "FrozenEgg"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "FROZEN_EGG",
+    "kind": "relic",
+    "name": "冻结之蛋"
+  },
+  "FUNERARY_MASK": {
+    "aliases": [
+      "Funerary Mask",
+      "FuneraryMask"
+    ],
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "FUNERARY_MASK",
+    "kind": "relic",
+    "name": "葬礼面具"
+  },
+  "FUR_COAT": {
+    "aliases": [
+      "Fur Coat",
+      "FurCoat"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "FUR_COAT",
+    "kind": "relic",
+    "name": "皮草大衣"
+  },
+  "GALACTIC_DUST": {
+    "aliases": [
+      "Galactic Dust",
+      "GalacticDust"
+    ],
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "GALACTIC_DUST",
+    "kind": "relic",
+    "name": "星系尘埃"
+  },
+  "GAMBLING_CHIP": {
+    "aliases": [
+      "Gambling Chip",
+      "GamblingChip",
+      "赌博筹码"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "GAMBLING_CHIP",
+    "kind": "relic",
+    "name": "赌博筹码"
+  },
+  "GAME_PIECE": {
+    "aliases": [
+      "Game Piece",
+      "GamePiece"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "GAME_PIECE",
+    "kind": "relic",
+    "name": "棋子"
+  },
+  "GHOST_SEED": {
+    "aliases": [
+      "Ghost Seed",
+      "GhostSeed"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "GHOST_SEED",
+    "kind": "relic",
+    "name": "幽灵种子"
+  },
+  "GIRYA": {
+    "aliases": [
+      "Girya"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Rare"
+    },
+    "id": "GIRYA",
+    "kind": "relic",
+    "name": "壶铃"
+  },
+  "GLAM": {
+    "aliases": [
+      "Glam",
+      "GlamEnchant",
+      "华彩"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": null
+    },
+    "id": "GLAM",
+    "kind": "enchant",
+    "name": "华彩"
+  },
+  "GLASS_EYE": {
+    "aliases": [
+      "Glass Eye",
+      "GlassEye"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "GLASS_EYE",
+    "kind": "relic",
+    "name": "玻璃眼珠"
+  },
+  "GLITTER": {
+    "aliases": [
+      "Glitter"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "GLITTER",
+    "kind": "relic",
+    "name": "亮片"
+  },
+  "GNARLED_HAMMER": {
+    "aliases": [
+      "Gnarled Hammer",
+      "GnarledHammer"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "GNARLED_HAMMER",
+    "kind": "relic",
+    "name": "扭曲锤子"
+  },
+  "GOLDEN_COMPASS": {
+    "aliases": [
+      "Golden Compass",
+      "GoldenCompass",
+      "黄金罗盘"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "GOLDEN_COMPASS",
+    "kind": "relic",
+    "name": "黄金罗盘"
+  },
+  "GOLDEN_PEARL": {
+    "aliases": [
+      "Golden Pearl",
+      "GoldenPearl"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "GOLDEN_PEARL",
+    "kind": "relic",
+    "name": "金色珍珠"
+  },
+  "GOLD_PLATED_CABLES": {
+    "aliases": [
+      "Gold-Plated Cables",
+      "GoldPlatedCables"
+    ],
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "GOLD_PLATED_CABLES",
+    "kind": "relic",
+    "name": "镀金缆线"
+  },
+  "GORGET": {
+    "aliases": [
+      "Gorget",
+      "颈甲"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "GORGET",
+    "kind": "relic",
+    "name": "颈甲"
+  },
+  "GREMLIN_HORN": {
+    "aliases": [
+      "Gremlin Horn",
+      "GremlinHorn"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "GREMLIN_HORN",
+    "kind": "relic",
+    "name": "贪魔之角"
+  },
+  "HAND_DRILL": {
+    "aliases": [
+      "Hand Drill",
+      "HandDrill"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "HAND_DRILL",
+    "kind": "relic",
+    "name": "手钻"
+  },
+  "HAPPY_FLOWER": {
+    "aliases": [
+      "Happy Flower",
+      "HappyFlower"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Common"
+    },
+    "id": "HAPPY_FLOWER",
+    "kind": "relic",
+    "name": "开心小花"
+  },
+  "HEFTY_TABLET": {
+    "aliases": [
+      "Hefty Tablet",
+      "HeftyTablet"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "HEFTY_TABLET",
+    "kind": "relic",
+    "name": "沉重石板"
+  },
+  "HELICAL_DART": {
+    "aliases": [
+      "Helical Dart",
+      "HelicalDart"
+    ],
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "HELICAL_DART",
+    "kind": "relic",
+    "name": "螺线飞镖"
+  },
+  "HISTORY_COURSE": {
+    "aliases": [
+      "History Course",
+      "HistoryCourse"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "HISTORY_COURSE",
+    "kind": "relic",
+    "name": "历史课"
+  },
+  "HORN_CLEAT": {
+    "aliases": [
+      "Horn Cleat",
+      "HornCleat"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "HORN_CLEAT",
+    "kind": "relic",
+    "name": "船夹板"
+  },
+  "ICE_CREAM": {
+    "aliases": [
+      "Ice Cream",
+      "IceCream"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "ICE_CREAM",
+    "kind": "relic",
+    "name": "冰淇淋"
+  },
+  "INFUSED_CORE": {
+    "aliases": [
+      "Infused Core",
+      "InfusedCore"
+    ],
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
+    "id": "INFUSED_CORE",
+    "kind": "relic",
+    "name": "注能核心"
+  },
+  "INTIMIDATING_HELMET": {
+    "aliases": [
+      "Intimidating Helmet",
+      "IntimidatingHelmet"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "INTIMIDATING_HELMET",
+    "kind": "relic",
+    "name": "骇人头盔"
+  },
+  "IRON_CLUB": {
+    "aliases": [
+      "Iron Club",
+      "IronClub"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "IRON_CLUB",
+    "kind": "relic",
+    "name": "铁棒"
+  },
+  "IVORY_TILE": {
+    "aliases": [
+      "Ivory Tile",
+      "IvoryTile"
+    ],
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "IVORY_TILE",
+    "kind": "relic",
+    "name": "象牙麻将牌"
+  },
+  "JEWELED_MASK": {
+    "aliases": [
+      "Jeweled Mask",
+      "JeweledMask"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "JEWELED_MASK",
+    "kind": "relic",
+    "name": "宝石面具"
+  },
+  "JEWELRY_BOX": {
+    "aliases": [
+      "Jewelry Box",
+      "JewelryBox"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "JEWELRY_BOX",
+    "kind": "relic",
+    "name": "珠宝盒"
+  },
+  "JOSS_PAPER": {
+    "aliases": [
+      "Joss Paper",
+      "JossPaper"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "JOSS_PAPER",
+    "kind": "relic",
+    "name": "金纸"
+  },
+  "JUZU_BRACELET": {
+    "aliases": [
+      "Juzu Bracelet",
+      "JuzuBracelet"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "JUZU_BRACELET",
+    "kind": "relic",
+    "name": "寿数手环"
+  },
+  "KALEIDOSCOPE": {
+    "aliases": [
+      "Kaleidoscope"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "KALEIDOSCOPE",
+    "kind": "relic",
+    "name": "万花筒"
+  },
+  "KIFUDA": {
+    "aliases": [
+      "Kifuda"
+    ],
+    "detail": {
+      "character": null,
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "KIFUDA",
+    "kind": "relic",
+    "name": "木札"
+  },
+  "KUNAI": {
+    "aliases": [
+      "Kunai"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "KUNAI",
+    "kind": "relic",
+    "name": "苦无"
+  },
+  "KUSARIGAMA": {
+    "aliases": [
+      "Kusarigama"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "KUSARIGAMA",
+    "kind": "relic",
+    "name": "锁镰"
+  },
+  "LANTERN": {
+    "aliases": [
+      "Lantern"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "LANTERN",
+    "kind": "relic",
+    "name": "灯笼"
+  },
+  "LARGE_CAPSULE": {
+    "aliases": [
+      "Large Capsule",
+      "LargeCapsule"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "LARGE_CAPSULE",
+    "kind": "relic",
+    "name": "巨大扭蛋"
+  },
+  "LASTING_CANDY": {
+    "aliases": [
+      "Lasting Candy",
+      "永恒糖果"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Uncommon"
+    },
+    "id": "LASTING_CANDY",
+    "kind": "relic",
+    "name": "永恒糖果"
+  },
+  "LAVA_LAMP": {
+    "aliases": [
+      "Lava Lamp",
+      "LavaLamp"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "LAVA_LAMP",
+    "kind": "relic",
+    "name": "熔岩灯"
+  },
+  "LAVA_ROCK": {
+    "aliases": [
+      "Lava Rock",
+      "LavaRock"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Ancient"
+    },
+    "id": "LAVA_ROCK",
+    "kind": "relic",
+    "name": "熔岩石"
+  },
+  "LEAD_PAPERWEIGHT": {
+    "aliases": [
+      "Lead Paperweight",
+      "LeadPaperweight"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "LEAD_PAPERWEIGHT",
+    "kind": "relic",
+    "name": "铅制镇纸"
+  },
+  "LEAFY_POULTICE": {
+    "aliases": [
+      "Leafy Poultice",
+      "LeafyPoultice"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "LEAFY_POULTICE",
+    "kind": "relic",
+    "name": "树叶药膏"
+  },
+  "LEES_WAFFLE": {
+    "aliases": [
+      "Lee's Waffle",
+      "LeesWaffle"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "LEES_WAFFLE",
+    "kind": "relic",
+    "name": "李家华夫饼"
+  },
+  "LETTER_OPENER": {
+    "aliases": [
+      "Letter Opener",
+      "LetterOpener"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "LETTER_OPENER",
+    "kind": "relic",
+    "name": "开信刀"
+  },
+  "LIZARD_TAIL": {
+    "aliases": [
+      "Lizard Tail",
+      "LizardTail"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "LIZARD_TAIL",
+    "kind": "relic",
+    "name": "蜥蜴尾巴"
+  },
+  "LOOMING_FRUIT": {
+    "aliases": [
+      "Looming Fruit",
+      "LoomingFruit"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "LOOMING_FRUIT",
+    "kind": "relic",
+    "name": "布质果实"
+  },
+  "LORDS_PARASOL": {
+    "aliases": [
+      "Lord's Parasol",
+      "LordsParasol"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "LORDS_PARASOL",
+    "kind": "relic",
+    "name": "领主阳伞"
+  },
+  "LOST_COFFER": {
+    "aliases": [
+      "Lost Coffer",
+      "LostCoffer"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "LOST_COFFER",
+    "kind": "relic",
+    "name": "失物盒"
+  },
+  "LOST_WISP": {
+    "aliases": [
+      "Lost Wisp",
+      "LostWisp"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "LOST_WISP",
+    "kind": "relic",
+    "name": "迷失鬼火"
+  },
+  "LUCKY_FYSH": {
+    "aliases": [
+      "Lucky Fysh",
+      "LuckyFysh"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "LUCKY_FYSH",
+    "kind": "relic",
+    "name": "招财异鱼"
+  },
+  "LUNAR_PASTRY": {
+    "aliases": [
+      "Lunar Pastry",
+      "LunarPastry"
+    ],
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "LUNAR_PASTRY",
+    "kind": "relic",
+    "name": "月亮糕点"
+  },
+  "MANGO": {
+    "aliases": [
+      "Mango"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "MANGO",
+    "kind": "relic",
+    "name": "芒果"
+  },
+  "MASSIVE_SCROLL": {
+    "aliases": [
+      "Massive Scroll",
+      "MassiveScroll"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "MASSIVE_SCROLL",
+    "kind": "relic",
+    "name": "巨大卷轴"
+  },
+  "MAW_BANK": {
+    "aliases": [
+      "Maw Bank",
+      "MawBank"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "MAW_BANK",
+    "kind": "relic",
+    "name": "巨口储蓄罐"
+  },
+  "MEAL_TICKET": {
+    "aliases": [
+      "Meal Ticket",
+      "餐券"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "MEAL_TICKET",
+    "kind": "relic",
+    "name": "餐券"
+  },
+  "MEAT_CLEAVER": {
+    "aliases": [
+      "Meat Cleaver",
+      "MeatCleaver"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "MEAT_CLEAVER",
+    "kind": "relic",
+    "name": "切肉刀"
+  },
+  "MEAT_ON_THE_BONE": {
+    "aliases": [
+      "Meat on the Bone",
+      "MeatOnTheBone"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "MEAT_ON_THE_BONE",
+    "kind": "relic",
+    "name": "带骨肉"
+  },
+  "MEMBERSHIP_CARD": {
+    "aliases": [
+      "Membership Card",
+      "MembershipCard"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "MEMBERSHIP_CARD",
+    "kind": "relic",
+    "name": "会员卡"
+  },
+  "MERCURY_HOURGLASS": {
+    "aliases": [
+      "Mercury Hourglass",
+      "MercuryHourglass"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "MERCURY_HOURGLASS",
+    "kind": "relic",
+    "name": "水银沙漏"
+  },
+  "METRONOME": {
+    "aliases": [
+      "Metronome"
+    ],
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "METRONOME",
+    "kind": "relic",
+    "name": "节拍器"
+  },
+  "MINIATURE_CANNON": {
+    "aliases": [
+      "Miniature Cannon",
+      "MiniatureCannon",
+      "迷你加农炮"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "MINIATURE_CANNON",
+    "kind": "relic",
+    "name": "迷你加农炮"
+  },
+  "MINIATURE_TENT": {
+    "aliases": [
+      "Miniature Tent",
+      "MiniatureTent"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "MINIATURE_TENT",
+    "kind": "relic",
+    "name": "微型帐篷"
+  },
+  "MINI_REGENT": {
+    "aliases": [
+      "Mini Regent",
+      "MiniRegent"
+    ],
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "MINI_REGENT",
+    "kind": "relic",
+    "name": "迷你储君"
+  },
+  "MOLTEN_EGG": {
+    "aliases": [
+      "Molten Egg",
+      "MoltenEgg"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "MOLTEN_EGG",
+    "kind": "relic",
+    "name": "熔火蛋"
+  },
+  "MR_STRUGGLES": {
+    "aliases": [
+      "Mr. Struggles",
+      "MrStruggles"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "MR_STRUGGLES",
+    "kind": "relic",
+    "name": "抱抱先生"
+  },
+  "MUMMIFIED_HAND": {
+    "aliases": [
+      "Mummified Hand",
+      "MummifiedHand"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "MUMMIFIED_HAND",
+    "kind": "relic",
+    "name": "干瘪之手"
+  },
+  "MUSIC_BOX": {
+    "aliases": [
+      "Music Box",
+      "MusicBox"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "MUSIC_BOX",
+    "kind": "relic",
+    "name": "音乐盒"
+  },
+  "MYSTIC_LIGHTER": {
+    "aliases": [
+      "Mystic Lighter",
+      "MysticLighter"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "MYSTIC_LIGHTER",
+    "kind": "relic",
+    "name": "神秘打火机"
+  },
+  "NEOW": {
+    "aliases": [
+      "ARCANE_SCROLL",
+      "Arcane Scroll"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Ancient"
+    },
+    "id": "NEOW",
+    "kind": "relic",
+    "name": "Arcane Scroll"
+  },
+  "NEOWS_BONES": {
+    "aliases": [
+      "Neow's Bones",
+      "NeowsBones"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "NEOWS_BONES",
+    "kind": "relic",
+    "name": "涅奥骨骰"
+  },
+  "NEOWS_TALISMAN": {
+    "aliases": [
+      "Neow's Talisman",
+      "NeowsTalisman"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "NEOWS_TALISMAN",
+    "kind": "relic",
+    "name": "涅奥的护符"
+  },
+  "NEOWS_TORMENT": {
+    "aliases": [
+      "Neow's Torment",
+      "NeowsTorment"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "NEOWS_TORMENT",
+    "kind": "relic",
+    "name": "涅奥的苦痛"
+  },
+  "NEW_LEAF": {
+    "aliases": [
+      "New Leaf",
+      "NewLeaf"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "NEW_LEAF",
+    "kind": "relic",
+    "name": "新叶"
+  },
+  "NIMBLE": {
+    "aliases": [
+      "FRESNEL_LENS",
+      "Fresnel Lens"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Event"
+    },
+    "id": "NIMBLE",
+    "kind": "relic",
+    "name": "Fresnel Lens"
+  },
+  "NINJA_SCROLL": {
+    "aliases": [
+      "Ninja Scroll",
+      "NinjaScroll"
+    ],
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "NINJA_SCROLL",
+    "kind": "relic",
+    "name": "忍术卷轴"
+  },
+  "NUNCHAKU": {
+    "aliases": [
+      "Nunchaku"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Uncommon"
+    },
+    "id": "NUNCHAKU",
+    "kind": "relic",
+    "name": "双截棍"
+  },
+  "NUTRITIOUS_OYSTER": {
+    "aliases": [
+      "Nutritious Oyster",
+      "NutritiousOyster"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "NUTRITIOUS_OYSTER",
+    "kind": "relic",
+    "name": "营养牡蛎"
+  },
+  "NUTRITIOUS_SOUP": {
+    "aliases": [
+      "Event boon-relic decodes",
+      "Nutritious Soup",
+      "NutritiousSoup",
+      "营养汤"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "NUTRITIOUS_SOUP",
+    "kind": "relic",
+    "name": "营养汤"
+  },
+  "ODDLY_SMOOTH_STONE": {
+    "aliases": [
+      "Oddly Smooth Stone",
+      "OddlySmoothStone",
+      "奇异光滑石",
+      "滑石"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "ODDLY_SMOOTH_STONE",
+    "kind": "relic",
+    "name": "奇异光滑石"
+  },
+  "OLD_COIN": {
+    "aliases": [
+      "Old Coin",
+      "OldCoin"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "OLD_COIN",
+    "kind": "relic",
+    "name": "古钱币"
+  },
+  "ORANGE_DOUGH": {
+    "aliases": [
+      "Orange Dough",
+      "OrangeDough"
+    ],
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "ORANGE_DOUGH",
+    "kind": "relic",
+    "name": "橙色团块"
+  },
+  "ORICHALCUM": {
+    "aliases": [
+      "Orichalcum",
+      "橙铜"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "ORICHALCUM",
+    "kind": "relic",
+    "name": "橙铜"
+  },
+  "ORNAMENTAL_FAN": {
+    "aliases": [
+      "Ornamental Fan",
+      "OrnamentalFan",
+      "装饰折扇"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "ORNAMENTAL_FAN",
+    "kind": "relic",
+    "name": "装饰折扇"
+  },
+  "ORRERY": {
+    "aliases": [
+      "Orrery"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "ORRERY",
+    "kind": "relic",
+    "name": "星系仪"
+  },
+  "PAELS_BLOOD": {
+    "aliases": [
+      "Pael's Blood",
+      "PaelsBlood"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PAELS_BLOOD",
+    "kind": "relic",
+    "name": "佩尔之血"
+  },
+  "PAELS_CLAW": {
+    "aliases": [
+      "Pael's Claw",
+      "PaelsClaw"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PAELS_CLAW",
+    "kind": "relic",
+    "name": "佩尔之爪"
+  },
+  "PAELS_EYE": {
+    "aliases": [
+      "Pael's Eye",
+      "PaelsEye"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PAELS_EYE",
+    "kind": "relic",
+    "name": "佩尔之眼"
+  },
+  "PAELS_FLESH": {
+    "aliases": [
+      "Pael's Flesh",
+      "PaelsFlesh"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PAELS_FLESH",
+    "kind": "relic",
+    "name": "佩尔之肉"
+  },
+  "PAELS_GROWTH": {
+    "aliases": [
+      "Pael's Growth",
+      "PaelsGrowth"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PAELS_GROWTH",
+    "kind": "relic",
+    "name": "佩尔的增生组织"
+  },
+  "PAELS_HORN": {
+    "aliases": [
+      "Pael's Horn",
+      "PaelsHorn"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PAELS_HORN",
+    "kind": "relic",
+    "name": "佩尔之角"
+  },
+  "PAELS_LEGION": {
+    "aliases": [
+      "Pael's Legion",
+      "PaelsLegion"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PAELS_LEGION",
+    "kind": "relic",
+    "name": "佩尔的士兵"
+  },
+  "PAELS_TEARS": {
+    "aliases": [
+      "Pael's Tears",
+      "PaelsTears"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PAELS_TEARS",
+    "kind": "relic",
+    "name": "佩尔之泪"
+  },
+  "PAELS_TOOTH": {
+    "aliases": [
+      "Pael's Tooth",
+      "PaelsTooth"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PAELS_TOOTH",
+    "kind": "relic",
+    "name": "佩尔之牙"
+  },
+  "PAELS_WING": {
+    "aliases": [
+      "Pael's Wing",
+      "PaelsWing"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PAELS_WING",
+    "kind": "relic",
+    "name": "佩尔之翼"
+  },
+  "PANDORAS_BOX": {
+    "aliases": [
+      "Pandora's Box",
+      "PandorasBox"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PANDORAS_BOX",
+    "kind": "relic",
+    "name": "潘多拉魔盒"
+  },
+  "PANTOGRAPH": {
+    "aliases": [
+      "Pantograph"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "PANTOGRAPH",
+    "kind": "relic",
+    "name": "缩放仪"
+  },
+  "PAPER_KRANE": {
+    "aliases": [
+      "Paper Krane",
+      "PaperKrane"
+    ],
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "PAPER_KRANE",
+    "kind": "relic",
+    "name": "纸鹤"
+  },
+  "PAPER_PHROG": {
+    "aliases": [
+      "Paper Phrog",
+      "PaperPhrog"
+    ],
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "PAPER_PHROG",
+    "kind": "relic",
+    "name": "纸蛙"
+  },
+  "PARRYING_SHIELD": {
+    "aliases": [
+      "Parrying Shield"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Uncommon"
+    },
+    "id": "PARRYING_SHIELD",
+    "kind": "relic",
+    "name": "Parrying Shield"
+  },
+  "PEAR": {
+    "aliases": [
+      "Pear"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "PEAR",
+    "kind": "relic",
+    "name": "梨子"
+  },
+  "PENDULUM": {
+    "aliases": [
+      "Pendulum"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "PENDULUM",
+    "kind": "relic",
+    "name": "摆动球"
+  },
+  "PEN_NIB": {
+    "aliases": [
+      "Pen Nib",
+      "PenNib"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Uncommon"
+    },
+    "id": "PEN_NIB",
+    "kind": "relic",
+    "name": "钢笔尖"
+  },
+  "PERMAFROST": {
+    "aliases": [
+      "Permafrost"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "PERMAFROST",
+    "kind": "relic",
+    "name": "永冻冰晶"
+  },
+  "PETRIFIED_TOAD": {
+    "aliases": [
+      "Petrified Toad",
+      "PetrifiedToad"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "PETRIFIED_TOAD",
+    "kind": "relic",
+    "name": "石化蟾蜍"
+  },
+  "PHIAL_HOLSTER": {
+    "aliases": [
+      "Phial Holster",
+      "PhialHolster"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PHIAL_HOLSTER",
+    "kind": "relic",
+    "name": "药瓶皮套"
+  },
+  "PHILOSOPHERS_STONE": {
+    "aliases": [
+      "Philosopher's Stone",
+      "PhilosophersStone"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PHILOSOPHERS_STONE",
+    "kind": "relic",
+    "name": "贤者之石"
+  },
+  "PHYLACTERY_UNBOUND": {
+    "aliases": [
+      "Phylactery Unbound",
+      "PhylacteryUnbound"
+    ],
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
+    "id": "PHYLACTERY_UNBOUND",
+    "kind": "relic",
+    "name": "无界命匣"
+  },
+  "PLANISPHERE": {
+    "aliases": [
+      "Planisphere"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "PLANISPHERE",
+    "kind": "relic",
+    "name": "活动星图"
+  },
+  "POCKETWATCH": {
+    "aliases": [
+      "Pocketwatch"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "POCKETWATCH",
+    "kind": "relic",
+    "name": "怀表"
+  },
+  "POLLINOUS_CORE": {
+    "aliases": [
+      "Pollinous Core",
+      "PollinousCore"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "POLLINOUS_CORE",
+    "kind": "relic",
+    "name": "花粉核心"
+  },
+  "POMANDER": {
+    "aliases": [
+      "Pomander"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "POMANDER",
+    "kind": "relic",
+    "name": "橙型香盒"
+  },
+  "POTION_BELT": {
+    "aliases": [
+      "Potion Belt",
+      "PotionBelt"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "POTION_BELT",
+    "kind": "relic",
+    "name": "药水腰带"
+  },
+  "POWER_CELL": {
+    "aliases": [
+      "Power Cell",
+      "PowerCell"
+    ],
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "POWER_CELL",
+    "kind": "relic",
+    "name": "能量电池"
+  },
+  "PRAYER_WHEEL": {
+    "aliases": [
+      "Prayer Wheel",
+      "PrayerWheel"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "PRAYER_WHEEL",
+    "kind": "relic",
+    "name": "转经轮"
+  },
+  "PRECARIOUS_SHEARS": {
+    "aliases": [
+      "Precarious Shears",
+      "PrecariousShears"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PRECARIOUS_SHEARS",
+    "kind": "relic",
+    "name": "松动羊毛剪"
+  },
+  "PRECISE_SCISSORS": {
+    "aliases": [
+      "Precise Scissors",
+      "PreciseScissors"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PRECISE_SCISSORS",
+    "kind": "relic",
+    "name": "精准剪刀"
+  },
+  "PRESERVED_FOG": {
+    "aliases": [
+      "Preserved Fog",
+      "PreservedFog"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PRESERVED_FOG",
+    "kind": "relic",
+    "name": "腌制活雾"
+  },
+  "PRISMATIC_GEM": {
+    "aliases": [
+      "Prismatic Gem",
+      "PrismaticGem",
+      "棱彩宝石"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "PRISMATIC_GEM",
+    "kind": "relic",
+    "name": "棱彩宝石"
+  },
+  "PUMPKIN_CANDLE": {
+    "aliases": [
+      "Pumpkin Candle",
+      "PumpkinCandle",
+      "南瓜蜡烛"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Ancient"
+    },
+    "id": "PUMPKIN_CANDLE",
+    "kind": "relic",
+    "name": "南瓜蜡烛"
+  },
+  "PUNCH_DAGGER": {
+    "aliases": [
+      "Punch Dagger",
+      "PunchDagger"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "PUNCH_DAGGER",
+    "kind": "relic",
+    "name": "拳刃"
+  },
+  "RADIANT": {
+    "aliases": [
+      "RADIANT_PEARL",
+      "Radiant Pearl"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Ancient"
+    },
+    "id": "RADIANT",
+    "kind": "relic",
+    "name": "Radiant Pearl"
+  },
+  "RADIANT_PEARL": {
+    "aliases": [
+      "Radiant Pearl",
+      "RadiantPearl"
+    ],
+    "detail": {
+      "character": null,
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "RADIANT_PEARL",
+    "kind": "relic",
+    "name": "发光珍珠"
+  },
+  "RAGE": {
+    "aliases": [
+      "SLING_OF_COURAGE",
+      "Sling of Courage"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Shop"
+    },
+    "id": "RAGE",
+    "kind": "relic",
+    "name": "Sling of Courage"
+  },
+  "RAINBOW_RING": {
+    "aliases": [
+      "Rainbow Ring",
+      "RainbowRing"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "RAINBOW_RING",
+    "kind": "relic",
+    "name": "彩虹戒指"
+  },
+  "RAZOR_TOOTH": {
+    "aliases": [
+      "Razor Tooth",
+      "RazorTooth"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "RAZOR_TOOTH",
+    "kind": "relic",
+    "name": "剃刀牙"
+  },
+  "RED_MASK": {
+    "aliases": [
+      "Red Mask",
+      "RedMask"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "RED_MASK",
+    "kind": "relic",
+    "name": "红面具"
+  },
+  "RED_SKULL": {
+    "aliases": [
+      "Red Skull",
+      "RedSkull"
+    ],
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "RED_SKULL",
+    "kind": "relic",
+    "name": "红头骨"
+  },
+  "REGALITE": {
+    "aliases": [
+      "Regalite"
+    ],
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "REGALITE",
+    "kind": "relic",
+    "name": "君王矿石"
+  },
+  "REGAL_PILLOW": {
+    "aliases": [
+      "Regal Pillow",
+      "RegalPillow"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "REGAL_PILLOW",
+    "kind": "relic",
+    "name": "皇家枕头"
+  },
+  "REPTILE_TRINKET": {
+    "aliases": [
+      "Reptile Trinket",
+      "ReptileTrinket"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "REPTILE_TRINKET",
+    "kind": "relic",
+    "name": "爬行动物饰品"
+  },
+  "RINGING_TRIANGLE": {
+    "aliases": [
+      "Ringing Triangle",
+      "铃三角"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "RINGING_TRIANGLE",
+    "kind": "relic",
+    "name": "铃三角"
+  },
+  "RING_OF_THE_DRAKE": {
+    "aliases": [
+      "Ring of the Drake",
+      "RingOfTheDrake"
+    ],
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
+    "id": "RING_OF_THE_DRAKE",
+    "kind": "relic",
+    "name": "长蛇戒指"
+  },
+  "RING_OF_THE_SNAKE": {
+    "aliases": [
+      "Ring of the Snake",
+      "RingOfTheSnake"
+    ],
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Starter"
+    },
+    "id": "RING_OF_THE_SNAKE",
+    "kind": "relic",
+    "name": "蛇之戒指"
+  },
+  "RIPPLE_BASIN": {
+    "aliases": [
+      "Ripple Basin",
+      "RippleBasin"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "RIPPLE_BASIN",
+    "kind": "relic",
+    "name": "波纹水盆"
+  },
+  "ROYAL_POISON": {
+    "aliases": [
+      "Royal Poison",
+      "RoyalPoison"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "ROYAL_POISON",
+    "kind": "relic",
+    "name": "王室猛毒"
+  },
+  "ROYAL_STAMP": {
+    "aliases": [
+      "Royal Stamp"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Shop"
+    },
+    "id": "ROYAL_STAMP",
+    "kind": "relic",
+    "name": "Royal Stamp"
+  },
+  "RUINED_HELMET": {
+    "aliases": [
+      "Ruined Helmet",
+      "RuinedHelmet"
+    ],
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "RUINED_HELMET",
+    "kind": "relic",
+    "name": "损毁头盔"
+  },
+  "RUNIC_CAPACITOR": {
+    "aliases": [
+      "Runic Capacitor",
+      "RunicCapacitor"
+    ],
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "RUNIC_CAPACITOR",
+    "kind": "relic",
+    "name": "符文电容器"
+  },
+  "RUNIC_PYRAMID": {
+    "aliases": [
+      "Runic Pyramid",
+      "RunicPyramid"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "RUNIC_PYRAMID",
+    "kind": "relic",
+    "name": "符文金字塔"
+  },
+  "SAI": {
+    "aliases": [
+      "Sai"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SAI",
+    "kind": "relic",
+    "name": "钗"
+  },
+  "SAND_CASTLE": {
+    "aliases": [
+      "Sand Castle",
+      "SandCastle"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SAND_CASTLE",
+    "kind": "relic",
+    "name": "沙堡"
+  },
+  "SCREAMING_FLAGON": {
+    "aliases": [
+      "Screaming Flagon",
+      "ScreamingFlagon"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "SCREAMING_FLAGON",
+    "kind": "relic",
+    "name": "尖叫酒壶"
+  },
+  "SCROLL_BOXES": {
+    "aliases": [
+      "Scroll Boxes",
+      "ScrollBoxes"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SCROLL_BOXES",
+    "kind": "relic",
+    "name": "卷轴箱"
+  },
+  "SEAL_OF_GOLD": {
+    "aliases": [
+      "Seal of Gold",
+      "SealOfGold",
+      "黄金封印"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SEAL_OF_GOLD",
+    "kind": "relic",
+    "name": "黄金封印"
+  },
+  "SEA_GLASS": {
+    "aliases": [
+      "Sea Glass",
+      "SeaGlass"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SEA_GLASS",
+    "kind": "relic",
+    "name": "海玻璃"
+  },
+  "SELF_FORMING_CLAY": {
+    "aliases": [
+      "Self-Forming Clay",
+      "SelfFormingClay"
+    ],
+    "detail": {
+      "character": "Ironclad",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "SELF_FORMING_CLAY",
+    "kind": "relic",
+    "name": "自成型黏土"
+  },
+  "SERE_TALON": {
+    "aliases": [
+      "Sere Talon",
+      "SereTalon"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SERE_TALON",
+    "kind": "relic",
+    "name": "原初之爪"
+  },
+  "SHARP": {
+    "aliases": [
+      "GNARLED_HAMMER",
+      "Gnarled Hammer"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Shop"
+    },
+    "id": "SHARP",
+    "kind": "relic",
+    "name": "Sharp (Enchant keyword) / Gnarled Hammer carrier relic"
+  },
+  "SHOVEL": {
+    "aliases": [
+      "Shovel"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "SHOVEL",
+    "kind": "relic",
+    "name": "铲子"
+  },
+  "SHURIKEN": {
+    "aliases": [
+      "Shuriken"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "SHURIKEN",
+    "kind": "relic",
+    "name": "手里剑"
+  },
+  "SIGNET_RING": {
+    "aliases": [
+      "Signet Ring",
+      "SignetRing"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SIGNET_RING",
+    "kind": "relic",
+    "name": "图章戒指"
+  },
+  "SILKEN_TRESS": {
+    "aliases": [
+      "Silken Tress",
+      "SilkenTress"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SILKEN_TRESS",
+    "kind": "relic",
+    "name": "华美发束"
+  },
+  "SILVER_CRUCIBLE": {
+    "aliases": [
+      "Silver Crucible",
+      "SilverCrucible"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SILVER_CRUCIBLE",
+    "kind": "relic",
+    "name": "白银熔炉"
+  },
+  "SLING_OF_COURAGE": {
+    "aliases": [
+      "Sling of Courage",
+      "SlingOfCourage"
+    ],
+    "detail": {
+      "character": null,
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "SLING_OF_COURAGE",
+    "kind": "relic",
+    "name": "勇气投石索"
+  },
+  "SMALL_CAPSULE": {
+    "aliases": [
+      "Small Capsule",
+      "SmallCapsule"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SMALL_CAPSULE",
+    "kind": "relic",
+    "name": "小型扭蛋"
+  },
+  "SNECKO_EYE": {
+    "aliases": [
+      "Snecko Eye",
+      "SneckoEye"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SNECKO_EYE",
+    "kind": "relic",
+    "name": "异蛇之眼"
+  },
+  "SNECKO_SKULL": {
+    "aliases": [
+      "Snecko Skull",
+      "SneckoSkull"
+    ],
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "SNECKO_SKULL",
+    "kind": "relic",
+    "name": "异蛇头骨"
+  },
+  "SOZU": {
+    "aliases": [
+      "Sozu"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SOZU",
+    "kind": "relic",
+    "name": "添水"
+  },
+  "SPARKLING_ROUGE": {
+    "aliases": [
+      "Sparkling Rouge",
+      "SparklingRouge"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "SPARKLING_ROUGE",
+    "kind": "relic",
+    "name": "闪亮口红"
+  },
+  "SPIKED_GAUNTLETS": {
+    "aliases": [
+      "Spiked Gauntlets",
+      "SpikedGauntlets"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "SPIKED_GAUNTLETS",
+    "kind": "relic",
+    "name": "带刺手甲"
+  },
+  "STONE_CALENDAR": {
+    "aliases": [
+      "Stone Calendar",
+      "石日历"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Rare"
+    },
+    "id": "STONE_CALENDAR",
+    "kind": "relic",
+    "name": "石日历"
+  },
+  "STONE_CRACKER": {
+    "aliases": [
+      "Stone Cracker",
+      "StoneCracker"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "STONE_CRACKER",
+    "kind": "relic",
+    "name": "碎石钻"
+  },
+  "STONE_HUMIDIFIER": {
+    "aliases": [
+      "Stone Humidifier",
+      "StoneHumidifier"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "STONE_HUMIDIFIER",
+    "kind": "relic",
+    "name": "石炉加湿器"
+  },
+  "STORYBOOK": {
+    "aliases": [
+      "STORYBOOK",
+      "Storybook",
+      "故事书"
+    ],
+    "detail": {
+      "character": null,
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "STORYBOOK",
+    "kind": "relic",
+    "name": "故事书"
+  },
+  "STRAWBERRY": {
+    "aliases": [
+      "Strawberry"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "STRAWBERRY",
+    "kind": "relic",
+    "name": "草莓"
+  },
+  "STRIKE_DUMMY": {
+    "aliases": [
+      "Strike Dummy",
+      "StrikeDummy"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "STRIKE_DUMMY",
+    "kind": "relic",
+    "name": "打击木偶"
+  },
+  "STURDY_CLAMP": {
+    "aliases": [
+      "Sturdy Clamp",
+      "SturdyClamp"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "STURDY_CLAMP",
+    "kind": "relic",
+    "name": "坚固钳子"
+  },
+  "SWORD_OF_JADE": {
+    "aliases": [
+      "Sword of Jade",
+      "SwordOfJade"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "SWORD_OF_JADE",
+    "kind": "relic",
+    "name": "玉之剑"
+  },
+  "SWORD_OF_STONE": {
+    "aliases": [
+      "Sword of Stone",
+      "SwordOfStone"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "SWORD_OF_STONE",
+    "kind": "relic",
+    "name": "石之剑"
+  },
+  "SYMBIOTIC_VIRUS": {
+    "aliases": [
+      "Symbiotic Virus",
+      "SymbioticVirus"
+    ],
+    "detail": {
+      "character": "Defect",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "SYMBIOTIC_VIRUS",
+    "kind": "relic",
+    "name": "共生病毒"
+  },
+  "TANXS_WHISTLE": {
+    "aliases": [
+      "Tanx's Whistle",
+      "TanxsWhistle"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "TANXS_WHISTLE",
+    "kind": "relic",
+    "name": "坦克斯的哨子"
+  },
+  "TEA_OF_DISCOURTESY": {
+    "aliases": [
+      "Tea of Discourtesy",
+      "TeaOfDiscourtesy"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "TEA_OF_DISCOURTESY",
+    "kind": "relic",
+    "name": "无礼之茶"
+  },
+  "THE_ABACUS": {
+    "aliases": [
+      "The Abacus",
+      "TheAbacus"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "THE_ABACUS",
+    "kind": "relic",
+    "name": "算盘"
+  },
+  "THE_BOOT": {
+    "aliases": [
+      "The Boot",
+      "TheBoot"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "THE_BOOT",
+    "kind": "relic",
+    "name": "发条靴"
+  },
+  "THE_COURIER": {
+    "aliases": [
+      "The Courier",
+      "TheCourier"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "THE_COURIER",
+    "kind": "relic",
+    "name": "送货员"
+  },
+  "THROWING_AXE": {
+    "aliases": [
+      "Throwing Axe",
+      "ThrowingAxe"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "THROWING_AXE",
+    "kind": "relic",
+    "name": "投斧"
+  },
+  "TINGSHA": {
+    "aliases": [
+      "Tingsha"
+    ],
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "TINGSHA",
+    "kind": "relic",
+    "name": "铜钹"
+  },
+  "TINY_MAILBOX": {
+    "aliases": [
+      "Tiny Mailbox",
+      "TinyMailbox"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "TINY_MAILBOX",
+    "kind": "relic",
+    "name": "小邮箱"
+  },
+  "TOASTY_MITTENS": {
+    "aliases": [
+      "Toasty Mittens",
+      "ToastyMittens",
+      "暖和手套"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "TOASTY_MITTENS",
+    "kind": "relic",
+    "name": "暖和手套"
+  },
+  "TOOLBOX": {
+    "aliases": [
+      "Toolbox"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "TOOLBOX",
+    "kind": "relic",
+    "name": "工具箱"
+  },
+  "TOUCH_OF_OROBAS": {
+    "aliases": [
+      "Touch of Orobas",
+      "TouchOfOrobas",
+      "欧洛巴斯之触"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Ancient"
+    },
+    "id": "TOUCH_OF_OROBAS",
+    "kind": "relic",
+    "name": "欧洛巴斯之触"
+  },
+  "TOUGH_BANDAGES": {
+    "aliases": [
+      "Tough Bandages",
+      "ToughBandages"
+    ],
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "TOUGH_BANDAGES",
+    "kind": "relic",
+    "name": "结实绷带"
+  },
+  "TOXIC_EGG": {
+    "aliases": [
+      "Toxic Egg",
+      "ToxicEgg"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "TOXIC_EGG",
+    "kind": "relic",
+    "name": "毒素之蛋"
+  },
+  "TOY_BOX": {
+    "aliases": [
+      "Toy Box",
+      "ToyBox",
+      "玩具盒"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "TOY_BOX",
+    "kind": "relic",
+    "name": "玩具盒"
+  },
+  "TRI_BOOMERANG": {
+    "aliases": [
+      "Tri-Boomerang",
+      "TriBoomerang"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "TRI_BOOMERANG",
+    "kind": "relic",
+    "name": "三刃回旋镖"
+  },
+  "TUNGSTEN_ROD": {
+    "aliases": [
+      "Tungsten Rod",
+      "TungstenRod"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "TUNGSTEN_ROD",
+    "kind": "relic",
+    "name": "钨合金棍"
+  },
+  "TUNING_FORK": {
+    "aliases": [
+      "Tuning Fork",
+      "TuningFork"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Uncommon"
+    },
+    "id": "TUNING_FORK",
+    "kind": "relic",
+    "name": "音叉"
+  },
+  "TWISTED_FUNNEL": {
+    "aliases": [
+      "Twisted Funnel",
+      "TwistedFunnel"
+    ],
+    "detail": {
+      "character": "Silent",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "TWISTED_FUNNEL",
+    "kind": "relic",
+    "name": "扭曲漏斗"
+  },
+  "UNCEASING_TOP": {
+    "aliases": [
+      "Unceasing Top",
+      "UnceasingTop"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "UNCEASING_TOP",
+    "kind": "relic",
+    "name": "不休陀螺"
+  },
+  "UNDYING_SIGIL": {
+    "aliases": [
+      "Undying Sigil",
+      "UndyingSigil"
+    ],
+    "detail": {
+      "character": "Necrobinder",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "UNDYING_SIGIL",
+    "kind": "relic",
+    "name": "不死符文"
+  },
+  "UNSETTLING_LAMP": {
+    "aliases": [
+      "Unsettling Lamp",
+      "UnsettlingLamp"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "UNSETTLING_LAMP",
+    "kind": "relic",
+    "name": "不安油灯"
+  },
+  "VAJRA": {
+    "aliases": [
+      "Vajra"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "VAJRA",
+    "kind": "relic",
+    "name": "金刚杵"
+  },
+  "VAMBRACE": {
+    "aliases": [
+      "Vambrace"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "VAMBRACE",
+    "kind": "relic",
+    "name": "臂铠"
+  },
+  "VELVET_CHOKER": {
+    "aliases": [
+      "Velvet Choker",
+      "VelvetChoker"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "VELVET_CHOKER",
+    "kind": "relic",
+    "name": "天鹅绒颈圈"
+  },
+  "VENERABLE_TEA_SET": {
+    "aliases": [
+      "Venerable Tea Set",
+      "VenerableTeaSet",
+      "古茶具套装"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "VENERABLE_TEA_SET",
+    "kind": "relic",
+    "name": "古茶具套装"
+  },
+  "VERY_HOT_COCOA": {
+    "aliases": [
+      "Very Hot Cocoa",
+      "VeryHotCocoa",
+      "极热可可"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "VERY_HOT_COCOA",
+    "kind": "relic",
+    "name": "极热可可"
+  },
+  "VEXING_PUZZLEBOX": {
+    "aliases": [
+      "Vexing Puzzlebox",
+      "VexingPuzzlebox"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "VEXING_PUZZLEBOX",
+    "kind": "relic",
+    "name": "烦人机关盒"
+  },
+  "VITRUVIAN_MINION": {
+    "aliases": [
+      "Vitruvian Minion",
+      "VitruvianMinion"
+    ],
+    "detail": {
+      "character": "Regent",
+      "counter_shown": false,
+      "rarity": "Shop"
+    },
+    "id": "VITRUVIAN_MINION",
+    "kind": "relic",
+    "name": "维特鲁威仆从"
+  },
+  "WAR_HAMMER": {
+    "aliases": [
+      "War Hammer",
+      "WarHammer"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "WAR_HAMMER",
+    "kind": "relic",
+    "name": "战锤"
+  },
+  "WAR_PAINT": {
+    "aliases": [
+      "War Paint",
+      "WarPaint"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "WAR_PAINT",
+    "kind": "relic",
+    "name": "战纹涂料"
+  },
+  "WHETSTONE": {
+    "aliases": [
+      "Whetstone",
+      "磨刀石"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Common"
+    },
+    "id": "WHETSTONE",
+    "kind": "relic",
+    "name": "磨刀石"
+  },
+  "WHISPERING_EARRING": {
+    "aliases": [
+      "Whispering Earring",
+      "WhisperingEarring"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "WHISPERING_EARRING",
+    "kind": "relic",
+    "name": "低语耳环"
+  },
+  "WHITE_BEAST_STATUE": {
+    "aliases": [
+      "White Beast Statue",
+      "WhiteBeastStatue"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "WHITE_BEAST_STATUE",
+    "kind": "relic",
+    "name": "白兽雕像"
+  },
+  "WHITE_STAR": {
+    "aliases": [
+      "White Star",
+      "WhiteStar"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Rare"
+    },
+    "id": "WHITE_STAR",
+    "kind": "relic",
+    "name": "白星"
+  },
+  "WIND_DAUGHTER": {
+    "aliases": [
+      "DAUGHTER_OF_THE_WIND",
+      "Daughter of the Wind"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Event"
+    },
+    "id": "WIND_DAUGHTER",
+    "kind": "relic",
+    "name": "Daughter of the Wind"
+  },
+  "WINGED_BOOTS": {
+    "aliases": [
+      "Winged Boots",
+      "羽翼之靴"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Uncommon"
+    },
+    "id": "WINGED_BOOTS",
+    "kind": "relic",
+    "name": "羽翼之靴"
+  },
+  "WING_CHARM": {
+    "aliases": [
+      "Wing Charm"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": null,
+      "rarity": "Shop"
+    },
+    "id": "WING_CHARM",
+    "kind": "relic",
+    "name": "Wing Charm"
+  },
+  "WONGOS_MYSTERY_TICKET": {
+    "aliases": [
+      "Wongo's Mystery Ticket",
+      "WongosMysteryTicket"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": true,
+      "rarity": "Event"
+    },
+    "id": "WONGOS_MYSTERY_TICKET",
+    "kind": "relic",
+    "name": "旺购神秘券"
+  },
+  "WONGO_CUSTOMER_APPRECIATION_BADGE": {
+    "aliases": [
+      "Wongo Customer Appreciation Badge",
+      "WongoCustomerAppreciationBadge"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Event"
+    },
+    "id": "WONGO_CUSTOMER_APPRECIATION_BADGE",
+    "kind": "relic",
+    "name": "旺购客户感恩徽章"
+  },
+  "YUMMY_COOKIE": {
+    "aliases": [
+      "Yummy Cookie",
+      "美味饼干"
+    ],
+    "detail": {
+      "character": "shared",
+      "counter_shown": false,
+      "rarity": "Ancient"
+    },
+    "id": "YUMMY_COOKIE",
+    "kind": "relic",
+    "name": "美味饼干"
+  }
+}

@@ -1,0 +1,923 @@
+{
+  "ASHWATER": {
+    "aliases": [
+      "Ashwater"
+    ],
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
+    "id": "ASHWATER",
+    "kind": "potion",
+    "name": "灰水"
+  },
+  "ATTACK_POTION": {
+    "aliases": [
+      "Attack Potion",
+      "AttackPotion"
+    ],
+    "detail": {
+      "rarity": "Common",
+      "target": "self",
+      "usage": "combat"
+    },
+    "id": "ATTACK_POTION",
+    "kind": "potion",
+    "name": "攻击药水"
+  },
+  "BEETLE_JUICE": {
+    "aliases": [
+      "Beetle Juice"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": null,
+      "usage": null
+    },
+    "id": "BEETLE_JUICE",
+    "kind": "potion",
+    "name": "BEETLE_JUICE"
+  },
+  "BLESSING_OF_THE_FORGE": {
+    "aliases": [
+      "Blessing of the Forge",
+      "锻造祝福"
+    ],
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
+    "id": "BLESSING_OF_THE_FORGE",
+    "kind": "potion",
+    "name": "锻造祝福"
+  },
+  "BLOCK_POTION": {
+    "aliases": [
+      "Block Potion",
+      "BlockPotion"
+    ],
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "BLOCK_POTION",
+    "kind": "potion",
+    "name": "封锁药水"
+  },
+  "BLOOD_POTION": {
+    "aliases": [
+      "Blood Potion",
+      "BloodPotion",
+      "血药水"
+    ],
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "anytime"
+    },
+    "id": "BLOOD_POTION",
+    "kind": "potion",
+    "name": "血药水"
+  },
+  "BONE_BREW": {
+    "aliases": [
+      "Bone Brew",
+      "BoneBrew"
+    ],
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
+    "id": "BONE_BREW",
+    "kind": "potion",
+    "name": "骨头酿"
+  },
+  "BOTTLED_POTENTIAL": {
+    "aliases": [
+      "Bottled Potential",
+      "BottledPotential"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "BOTTLED_POTENTIAL",
+    "kind": "potion",
+    "name": "瓶装潜能"
+  },
+  "CLARITY": {
+    "aliases": [
+      "CLARITY_EXTRACT",
+      "Clarity Extract",
+      "ClarityExtract"
+    ],
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "CLARITY",
+    "kind": "potion",
+    "name": "明晰提取物"
+  },
+  "COLORLESS_POTION": {
+    "aliases": [
+      "Colorless Potion",
+      "ColorlessPotion"
+    ],
+    "detail": {
+      "rarity": "Common",
+      "target": "self",
+      "usage": "combat"
+    },
+    "id": "COLORLESS_POTION",
+    "kind": "potion",
+    "name": "无色药水"
+  },
+  "COSMIC_CONCOCTION": {
+    "aliases": [
+      "Cosmic Concoction",
+      "CosmicConcoction"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "combat"
+    },
+    "id": "COSMIC_CONCOCTION",
+    "kind": "potion",
+    "name": "宇宙药剂"
+  },
+  "CUNNING_POTION": {
+    "aliases": [
+      "Cunning Potion",
+      "CunningPotion"
+    ],
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
+    "id": "CUNNING_POTION",
+    "kind": "potion",
+    "name": "狡诈药水"
+  },
+  "CURE_ALL": {
+    "aliases": [
+      "Cure All",
+      "CureAll"
+    ],
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "CURE_ALL",
+    "kind": "potion",
+    "name": "万灵药"
+  },
+  "DEXTERITY_POTION": {
+    "aliases": [
+      "Dexterity Potion",
+      "敏捷药水"
+    ],
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "DEXTERITY_POTION",
+    "kind": "potion",
+    "name": "敏捷药水"
+  },
+  "DISTILLED_CHAOS": {
+    "aliases": [
+      "Distilled Chaos",
+      "蒸馏混沌"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "combat"
+    },
+    "id": "DISTILLED_CHAOS",
+    "kind": "potion",
+    "name": "蒸馏混沌"
+  },
+  "DROPLET_OF_PRECOGNITION": {
+    "aliases": [
+      "Droplet of Precognition",
+      "DropletofPrecognition"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "combat"
+    },
+    "id": "DROPLET_OF_PRECOGNITION",
+    "kind": "potion",
+    "name": "预知之滴"
+  },
+  "DUPLICATOR": {
+    "aliases": [
+      "Duplicator"
+    ],
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
+    "id": "DUPLICATOR",
+    "kind": "potion",
+    "name": "复制药水"
+  },
+  "ENERGY_POTION": {
+    "aliases": [
+      "Energy Potion",
+      "EnergyPotion"
+    ],
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "ENERGY_POTION",
+    "kind": "potion",
+    "name": "能量药水"
+  },
+  "ENTROPIC_BREW": {
+    "aliases": [
+      "Entropic Brew",
+      "EntropicBrew"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "anytime"
+    },
+    "id": "ENTROPIC_BREW",
+    "kind": "potion",
+    "name": "混沌药水"
+  },
+  "ESSENCE_OF_DARKNESS": {
+    "aliases": [
+      "Essence of Darkness",
+      "EssenceofDarkness"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "combat"
+    },
+    "id": "ESSENCE_OF_DARKNESS",
+    "kind": "potion",
+    "name": "黑暗精华"
+  },
+  "EXPLOSIVE_AMPOULE": {
+    "aliases": [
+      "Explosive Ampoule",
+      "ExplosiveAmpoule"
+    ],
+    "detail": {
+      "rarity": "Common",
+      "target": "ALL enemies",
+      "usage": "combat"
+    },
+    "id": "EXPLOSIVE_AMPOULE",
+    "kind": "potion",
+    "name": "爆炸安瓿"
+  },
+  "FAIRY_IN_A_BOTTLE": {
+    "aliases": [
+      "Fairy in a Bottle",
+      "FairyinaBottle"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "auto"
+    },
+    "id": "FAIRY_IN_A_BOTTLE",
+    "kind": "potion",
+    "name": "瓶中精灵"
+  },
+  "FIRE_POTION": {
+    "aliases": [
+      "Fire Potion",
+      "FirePotion"
+    ],
+    "detail": {
+      "rarity": "Common",
+      "target": "any enemy",
+      "usage": "combat"
+    },
+    "id": "FIRE_POTION",
+    "kind": "potion",
+    "name": "火焰药水"
+  },
+  "FLEX_POTION": {
+    "aliases": [
+      "Flex Potion",
+      "FlexPotion"
+    ],
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "FLEX_POTION",
+    "kind": "potion",
+    "name": "肌肉药水"
+  },
+  "FOCUS_POTION": {
+    "aliases": [
+      "Focus Potion",
+      "FocusPotion"
+    ],
+    "detail": {
+      "rarity": "Common",
+      "target": "self",
+      "usage": "combat"
+    },
+    "id": "FOCUS_POTION",
+    "kind": "potion",
+    "name": "集中药水"
+  },
+  "FORTIFIER": {
+    "aliases": [
+      "Fortifier"
+    ],
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "FORTIFIER",
+    "kind": "potion",
+    "name": "固化药水"
+  },
+  "FOUL_POTION": {
+    "aliases": [
+      "Foul Potion",
+      "污浊药水"
+    ],
+    "detail": {
+      "rarity": "Event",
+      "target": "anytime",
+      "usage": "Event"
+    },
+    "id": "FOUL_POTION",
+    "kind": "potion",
+    "name": "污浊药水"
+  },
+  "FRUIT_JUICE": {
+    "aliases": [
+      "Fruit Juice",
+      "FruitJuice"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "anytime"
+    },
+    "id": "FRUIT_JUICE",
+    "kind": "potion",
+    "name": "果汁"
+  },
+  "FYSH_OIL": {
+    "aliases": [
+      "Fysh Oil",
+      "FyshOil"
+    ],
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "FYSH_OIL",
+    "kind": "potion",
+    "name": "异鱼之油"
+  },
+  "GAMBLER_S_BREW": {
+    "aliases": [
+      "GAMBLERS_BREW",
+      "Gambler's Brew",
+      "GamblersBrew"
+    ],
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
+    "id": "GAMBLER_S_BREW",
+    "kind": "potion",
+    "name": "赌徒特酿"
+  },
+  "GHOST_IN_A_JAR": {
+    "aliases": [
+      "Ghost in a Jar",
+      "GhostinaJar"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "GHOST_IN_A_JAR",
+    "kind": "potion",
+    "name": "罐装幽灵"
+  },
+  "GIGANTIFICATION_POTION": {
+    "aliases": [
+      "Gigantification Potion",
+      "GigantificationPotion",
+      "巨化药水",
+      "超巨化药水"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "GIGANTIFICATION_POTION",
+    "kind": "potion",
+    "name": "巨化药水"
+  },
+  "GLOWWATER_POTION": {
+    "aliases": [
+      "Glowwater Potion",
+      "GlowwaterPotion",
+      "发光水"
+    ],
+    "detail": {
+      "rarity": "Event",
+      "target": "combat",
+      "usage": "Event"
+    },
+    "id": "GLOWWATER_POTION",
+    "kind": "potion",
+    "name": "发光水"
+  },
+  "HEART_OF_IRON": {
+    "aliases": [
+      "Heart of Iron",
+      "HeartOfIron",
+      "铁心药水"
+    ],
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "HEART_OF_IRON",
+    "kind": "potion",
+    "name": "铁心药水"
+  },
+  "KING_S_COURAGE": {
+    "aliases": [
+      "KINGS_COURAGE",
+      "King's Courage",
+      "KingsCourage"
+    ],
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "KING_S_COURAGE",
+    "kind": "potion",
+    "name": "王之勇气"
+  },
+  "LIQUID_BRONZE": {
+    "aliases": [
+      "Liquid Bronze",
+      "LiquidBronze"
+    ],
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "LIQUID_BRONZE",
+    "kind": "potion",
+    "name": "流动铜液"
+  },
+  "LIQUID_MEMORIES": {
+    "aliases": [
+      "Liquid Memories",
+      "LiquidMemories"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "combat"
+    },
+    "id": "LIQUID_MEMORIES",
+    "kind": "potion",
+    "name": "液态记忆"
+  },
+  "LUCKY_TONIC": {
+    "aliases": [
+      "Lucky Tonic",
+      "LuckyTonic"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "LUCKY_TONIC",
+    "kind": "potion",
+    "name": "幸运补剂"
+  },
+  "MAZALETH_S_GIFT": {
+    "aliases": [
+      "MAZALETHS_GIFT",
+      "Mazaleth's Gift",
+      "MazalethsGift"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "MAZALETH_S_GIFT",
+    "kind": "potion",
+    "name": "马萨雷斯的赠礼"
+  },
+  "OROBIC_ACID": {
+    "aliases": [
+      "Orobic Acid",
+      "OrobicAcid"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "combat"
+    },
+    "id": "OROBIC_ACID",
+    "kind": "potion",
+    "name": "欧洛巴斯之酸"
+  },
+  "POISON_POTION": {
+    "aliases": [
+      "Poison Potion",
+      "PoisonPotion"
+    ],
+    "detail": {
+      "rarity": "Common",
+      "target": "any enemy",
+      "usage": "combat"
+    },
+    "id": "POISON_POTION",
+    "kind": "potion",
+    "name": "毒药水"
+  },
+  "POTION_OF_BINDING": {
+    "aliases": [
+      "Potion of Binding",
+      "PotionofBinding"
+    ],
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "ALL enemies",
+      "usage": "combat"
+    },
+    "id": "POTION_OF_BINDING",
+    "kind": "potion",
+    "name": "缚魂药水"
+  },
+  "POTION_OF_CAPACITY": {
+    "aliases": [
+      "Potion of Capacity",
+      "PotionofCapacity"
+    ],
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
+    "id": "POTION_OF_CAPACITY",
+    "kind": "potion",
+    "name": "扩容药水"
+  },
+  "POTION_OF_DOOM": {
+    "aliases": [
+      "Potion of Doom",
+      "PotionofDoom"
+    ],
+    "detail": {
+      "rarity": "Common",
+      "target": "any enemy",
+      "usage": "combat"
+    },
+    "id": "POTION_OF_DOOM",
+    "kind": "potion",
+    "name": "灾厄药水"
+  },
+  "POTION_SHAPED_ROCK": {
+    "aliases": [
+      "POTION_SHAPED_ROCK",
+      "Potion-Shaped Rock"
+    ],
+    "detail": {
+      "rarity": "Token",
+      "target": null,
+      "usage": null
+    },
+    "id": "POTION_SHAPED_ROCK",
+    "kind": "potion",
+    "name": "岩石形状药水"
+  },
+  "POT_OF_GHOULS": {
+    "aliases": [
+      "Pot of Ghouls",
+      "PotofGhouls"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": "self",
+      "usage": "combat"
+    },
+    "id": "POT_OF_GHOULS",
+    "kind": "potion",
+    "name": "尸鬼瓮"
+  },
+  "POWDERED_DEMISE": {
+    "aliases": [
+      "Powdered Demise",
+      "PowderedDemise",
+      "灭世粉"
+    ],
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any enemy",
+      "usage": "combat"
+    },
+    "id": "POWDERED_DEMISE",
+    "kind": "potion",
+    "name": "灭世粉"
+  },
+  "POWER_POTION": {
+    "aliases": [
+      "Power Potion",
+      "PowerPotion",
+      "能力药水"
+    ],
+    "detail": {
+      "rarity": "Common",
+      "target": "self",
+      "usage": "combat"
+    },
+    "id": "POWER_POTION",
+    "kind": "potion",
+    "name": "能力药水"
+  },
+  "RADIANT_TINCTURE": {
+    "aliases": [
+      "Radiant Tincture",
+      "RadiantTincture"
+    ],
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "RADIANT_TINCTURE",
+    "kind": "potion",
+    "name": "明耀酊剂"
+  },
+  "REGEN_POTION": {
+    "aliases": [
+      "Regen Potion",
+      "RegenPotion",
+      "再生药水"
+    ],
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "REGEN_POTION",
+    "kind": "potion",
+    "name": "再生药水"
+  },
+  "SHACKLING_POTION": {
+    "aliases": [
+      "Shackling Potion",
+      "枷锁药水"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": "ALL enemies",
+      "usage": "combat"
+    },
+    "id": "SHACKLING_POTION",
+    "kind": "potion",
+    "name": "枷锁药水"
+  },
+  "SHIP_IN_A_BOTTLE": {
+    "aliases": [
+      "Ship in a Bottle",
+      "ShipinaBottle"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "SHIP_IN_A_BOTTLE",
+    "kind": "potion",
+    "name": "瓶中船"
+  },
+  "SKILL_POTION": {
+    "aliases": [
+      "Skill Potion",
+      "SkillPotion"
+    ],
+    "detail": {
+      "rarity": "Common",
+      "target": "self",
+      "usage": "combat"
+    },
+    "id": "SKILL_POTION",
+    "kind": "potion",
+    "name": "技巧药水"
+  },
+  "SNECKO_OIL": {
+    "aliases": [
+      "Snecko Oil",
+      "SneckoOil"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "SNECKO_OIL",
+    "kind": "potion",
+    "name": "异蛇之油"
+  },
+  "SOLDIER_STEW": {
+    "aliases": [
+      "SOLDIERS_STEW",
+      "Soldier's Stew"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": null,
+      "usage": null
+    },
+    "id": "SOLDIER_STEW",
+    "kind": "potion",
+    "name": "Soldier's Stew"
+  },
+  "SOLDIER_S_STEW": {
+    "aliases": [
+      "SOLDIERS_STEW",
+      "Soldier's Stew",
+      "SoldiersStew"
+    ],
+    "detail": {
+      "rarity": "Rare",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "SOLDIER_S_STEW",
+    "kind": "potion",
+    "name": "士兵炖汤"
+  },
+  "SPEED_POTION": {
+    "aliases": [
+      "Speed Potion",
+      "速度药水"
+    ],
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "SPEED_POTION",
+    "kind": "potion",
+    "name": "速度药水"
+  },
+  "STABLE": {
+    "aliases": [
+      "STABLE_SERUM",
+      "Stable Serum"
+    ],
+    "detail": {
+      "rarity": "Uncommon",
+      "target": null,
+      "usage": null
+    },
+    "id": "STABLE",
+    "kind": "potion",
+    "name": "Stable Serum"
+  },
+  "STABLE_SERUM": {
+    "aliases": [
+      "STABLE_SERUM",
+      "StableSerum",
+      "稳定血清"
+    ],
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "STABLE_SERUM",
+    "kind": "potion",
+    "name": "稳定血清"
+  },
+  "STAR_POTION": {
+    "aliases": [
+      "Star Potion",
+      "StarPotion"
+    ],
+    "detail": {
+      "rarity": "Common",
+      "target": "self",
+      "usage": "combat"
+    },
+    "id": "STAR_POTION",
+    "kind": "potion",
+    "name": "星星药水"
+  },
+  "STRENGTH_POTION": {
+    "aliases": [
+      "Strength Potion",
+      "StrengthPotion"
+    ],
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "STRENGTH_POTION",
+    "kind": "potion",
+    "name": "力量药水"
+  },
+  "SWIFT_POTION": {
+    "aliases": [
+      "Swift Potion",
+      "迅捷药水"
+    ],
+    "detail": {
+      "rarity": "Common",
+      "target": "any player",
+      "usage": "combat"
+    },
+    "id": "SWIFT_POTION",
+    "kind": "potion",
+    "name": "迅捷药水"
+  },
+  "TOUCH_OF_INSANITY": {
+    "aliases": [
+      "Touch of Insanity",
+      "TouchofInsanity"
+    ],
+    "detail": {
+      "rarity": "Uncommon",
+      "target": "self",
+      "usage": "combat"
+    },
+    "id": "TOUCH_OF_INSANITY",
+    "kind": "potion",
+    "name": "癫狂之触"
+  },
+  "VULNERABLE_POTION": {
+    "aliases": [
+      "Vulnerable Potion",
+      "VulnerablePotion"
+    ],
+    "detail": {
+      "rarity": "Common",
+      "target": "any enemy",
+      "usage": "combat"
+    },
+    "id": "VULNERABLE_POTION",
+    "kind": "potion",
+    "name": "易伤药水"
+  },
+  "WEAK_POTION": {
+    "aliases": [
+      "Weak Potion",
+      "WeakPotion",
+      "弱化药水"
+    ],
+    "detail": {
+      "rarity": "Common",
+      "target": "any enemy",
+      "usage": "combat"
+    },
+    "id": "WEAK_POTION",
+    "kind": "potion",
+    "name": "弱化药水"
+  }
+}

@@ -1,0 +1,333 @@
+{
+  "Attack": {
+    "aliases": [],
+    "detail": {
+      "member_classes": [
+        "SingleAttackIntent",
+        "MultiAttackIntent"
+      ]
+    },
+    "id": "Attack",
+    "kind": "intent_type",
+    "name": "Attack"
+  },
+  "Buff": {
+    "aliases": [],
+    "detail": {
+      "member_classes": [
+        "BuffIntent"
+      ]
+    },
+    "id": "Buff",
+    "kind": "intent_type",
+    "name": "Buff"
+  },
+  "BuffIntent": {
+    "aliases": [
+      "Buff"
+    ],
+    "detail": {
+      "intent_type": "Buff"
+    },
+    "id": "BuffIntent",
+    "kind": "intent_class",
+    "name": "BuffIntent"
+  },
+  "CardDebuff": {
+    "aliases": [],
+    "detail": {
+      "member_classes": [
+        "CardDebuffIntent"
+      ]
+    },
+    "id": "CardDebuff",
+    "kind": "intent_type",
+    "name": "CardDebuff"
+  },
+  "CardDebuffIntent": {
+    "aliases": [
+      "CardDebuff"
+    ],
+    "detail": {
+      "intent_type": "CardDebuff"
+    },
+    "id": "CardDebuffIntent",
+    "kind": "intent_class",
+    "name": "CardDebuffIntent"
+  },
+  "DeathBlow": {
+    "aliases": [],
+    "detail": {
+      "member_classes": [
+        "DeathBlowIntent"
+      ]
+    },
+    "id": "DeathBlow",
+    "kind": "intent_type",
+    "name": "DeathBlow"
+  },
+  "DeathBlowIntent": {
+    "aliases": [
+      "DeathBlow"
+    ],
+    "detail": {
+      "intent_type": "DeathBlow"
+    },
+    "id": "DeathBlowIntent",
+    "kind": "intent_class",
+    "name": "DeathBlowIntent"
+  },
+  "Debuff": {
+    "aliases": [],
+    "detail": {
+      "member_classes": [
+        "DebuffIntent"
+      ]
+    },
+    "id": "Debuff",
+    "kind": "intent_type",
+    "name": "Debuff"
+  },
+  "DebuffIntent": {
+    "aliases": [
+      "Debuff"
+    ],
+    "detail": {
+      "intent_type": "Debuff"
+    },
+    "id": "DebuffIntent",
+    "kind": "intent_class",
+    "name": "DebuffIntent"
+  },
+  "DebuffStrong": {
+    "aliases": [],
+    "detail": {
+      "member_classes": [
+        "DebuffIntent"
+      ]
+    },
+    "id": "DebuffStrong",
+    "kind": "intent_type",
+    "name": "DebuffStrong"
+  },
+  "Defend": {
+    "aliases": [],
+    "detail": {
+      "member_classes": [
+        "DefendIntent"
+      ]
+    },
+    "id": "Defend",
+    "kind": "intent_type",
+    "name": "Defend"
+  },
+  "DefendIntent": {
+    "aliases": [
+      "Defend"
+    ],
+    "detail": {
+      "intent_type": "Defend"
+    },
+    "id": "DefendIntent",
+    "kind": "intent_class",
+    "name": "DefendIntent"
+  },
+  "Escape": {
+    "aliases": [],
+    "detail": {
+      "member_classes": [
+        "EscapeIntent"
+      ]
+    },
+    "id": "Escape",
+    "kind": "intent_type",
+    "name": "Escape"
+  },
+  "EscapeIntent": {
+    "aliases": [
+      "Escape"
+    ],
+    "detail": {
+      "intent_type": "Escape"
+    },
+    "id": "EscapeIntent",
+    "kind": "intent_class",
+    "name": "EscapeIntent"
+  },
+  "Heal": {
+    "aliases": [],
+    "detail": {
+      "member_classes": [
+        "HealIntent"
+      ]
+    },
+    "id": "Heal",
+    "kind": "intent_type",
+    "name": "Heal"
+  },
+  "HealIntent": {
+    "aliases": [
+      "Heal"
+    ],
+    "detail": {
+      "intent_type": "Heal"
+    },
+    "id": "HealIntent",
+    "kind": "intent_class",
+    "name": "HealIntent"
+  },
+  "Hidden": {
+    "aliases": [],
+    "detail": {
+      "member_classes": [
+        "HiddenIntent"
+      ]
+    },
+    "id": "Hidden",
+    "kind": "intent_type",
+    "name": "Hidden"
+  },
+  "HiddenIntent": {
+    "aliases": [
+      "Hidden"
+    ],
+    "detail": {
+      "intent_type": "Hidden"
+    },
+    "id": "HiddenIntent",
+    "kind": "intent_class",
+    "name": "HiddenIntent"
+  },
+  "MultiAttackIntent": {
+    "aliases": [
+      "Attack"
+    ],
+    "detail": {
+      "intent_type": "Attack"
+    },
+    "id": "MultiAttackIntent",
+    "kind": "intent_class",
+    "name": "MultiAttackIntent"
+  },
+  "SingleAttackIntent": {
+    "aliases": [
+      "Attack"
+    ],
+    "detail": {
+      "intent_type": "Attack"
+    },
+    "id": "SingleAttackIntent",
+    "kind": "intent_class",
+    "name": "SingleAttackIntent"
+  },
+  "Sleep": {
+    "aliases": [],
+    "detail": {
+      "member_classes": [
+        "SleepIntent"
+      ]
+    },
+    "id": "Sleep",
+    "kind": "intent_type",
+    "name": "Sleep"
+  },
+  "SleepIntent": {
+    "aliases": [
+      "Sleep"
+    ],
+    "detail": {
+      "intent_type": "Sleep"
+    },
+    "id": "SleepIntent",
+    "kind": "intent_class",
+    "name": "SleepIntent"
+  },
+  "StatusCard": {
+    "aliases": [],
+    "detail": {
+      "member_classes": [
+        "StatusIntent"
+      ]
+    },
+    "id": "StatusCard",
+    "kind": "intent_type",
+    "name": "StatusCard"
+  },
+  "StatusIntent": {
+    "aliases": [
+      "StatusCard"
+    ],
+    "detail": {
+      "intent_type": "StatusCard"
+    },
+    "id": "StatusIntent",
+    "kind": "intent_class",
+    "name": "StatusIntent"
+  },
+  "Stun": {
+    "aliases": [],
+    "detail": {
+      "member_classes": [
+        "StunIntent"
+      ]
+    },
+    "id": "Stun",
+    "kind": "intent_type",
+    "name": "Stun"
+  },
+  "StunIntent": {
+    "aliases": [
+      "Stun"
+    ],
+    "detail": {
+      "intent_type": "Stun"
+    },
+    "id": "StunIntent",
+    "kind": "intent_class",
+    "name": "StunIntent"
+  },
+  "Summon": {
+    "aliases": [],
+    "detail": {
+      "member_classes": [
+        "SummonIntent"
+      ]
+    },
+    "id": "Summon",
+    "kind": "intent_type",
+    "name": "Summon"
+  },
+  "SummonIntent": {
+    "aliases": [
+      "Summon"
+    ],
+    "detail": {
+      "intent_type": "Summon"
+    },
+    "id": "SummonIntent",
+    "kind": "intent_class",
+    "name": "SummonIntent"
+  },
+  "Unknown": {
+    "aliases": [],
+    "detail": {
+      "member_classes": [
+        "UnknownIntent"
+      ]
+    },
+    "id": "Unknown",
+    "kind": "intent_type",
+    "name": "Unknown"
+  },
+  "UnknownIntent": {
+    "aliases": [
+      "Unknown"
+    ],
+    "detail": {
+      "intent_type": "Unknown"
+    },
+    "id": "UnknownIntent",
+    "kind": "intent_class",
+    "name": "UnknownIntent"
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "ASCENDERS_BANE": {
+    "aliases": [
+      "Ascenders Bane",
+      "天阶诅咒"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "ASCENDERS_BANE",
+    "kind": "curse",
+    "name": "天阶诅咒"
+  },
+  "BOUND": {
+    "aliases": [
+      "Bound",
+      "束缚"
+    ],
+    "detail": {
+      "host_power_id": "CHAINS_OF_BINDING_POWER"
+    },
+    "id": "BOUND",
+    "kind": "affliction",
+    "name": "束缚"
+  },
+  "CLUMSY": {
+    "aliases": [
+      "Clumsy",
+      "笨拙"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "CLUMSY",
+    "kind": "curse",
+    "name": "笨拙"
+  },
+  "COMPACT": {
+    "aliases": [
+      "Compact",
+      "压缩"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "COMPACT",
+    "kind": "status_card",
+    "name": "压缩"
+  },
+  "CURSE_OF_THE_BELL": {
+    "aliases": [
+      "Curse Of The Bell",
+      "钟之诅咒"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "CURSE_OF_THE_BELL",
+    "kind": "curse",
+    "name": "钟之诅咒"
+  },
+  "DAZED": {
+    "aliases": [
+      "Dazed",
+      "眩晕"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "DAZED",
+    "kind": "status_card",
+    "name": "眩晕"
+  },
+  "DECAY": {
+    "aliases": [
+      "Decay",
+      "腐化"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "DECAY",
+    "kind": "curse",
+    "name": "腐化"
+  },
+  "DISINTEGRATION": {
+    "aliases": [
+      "Disintegration",
+      "崩解"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "DISINTEGRATION",
+    "kind": "status_card",
+    "name": "崩解"
+  },
+  "DOUBT": {
+    "aliases": [
+      "Doubt",
+      "猜疑"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "DOUBT",
+    "kind": "curse",
+    "name": "猜疑"
+  },
+  "ENTANGLED": {
+    "aliases": [
+      "Entangled",
+      "缠绕"
+    ],
+    "detail": {
+      "host_power_id": "TANGLED_POWER"
+    },
+    "id": "ENTANGLED",
+    "kind": "affliction",
+    "name": "缠绕"
+  },
+  "FLAK_CANNON": {
+    "aliases": [
+      "Flak Cannon",
+      "散射炮"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "FLAK_CANNON",
+    "kind": "status_card",
+    "name": "散射炮"
+  },
+  "GALVANIZED": {
+    "aliases": [
+      "Galvanized",
+      "电镀"
+    ],
+    "detail": {
+      "host_power_id": "GALVANIC_POWER"
+    },
+    "id": "GALVANIZED",
+    "kind": "affliction",
+    "name": "电镀"
+  },
+  "HEXED": {
+    "aliases": [
+      "Hexed",
+      "诅咒"
+    ],
+    "detail": {
+      "host_power_id": "HEX_POWER"
+    },
+    "id": "HEXED",
+    "kind": "affliction",
+    "name": "诅咒"
+  },
+  "INJURY": {
+    "aliases": [
+      "Injury",
+      "损伤"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "INJURY",
+    "kind": "curse",
+    "name": "损伤"
+  },
+  "ITERATION": {
+    "aliases": [
+      "Iteration",
+      "迭代"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "ITERATION",
+    "kind": "status_card",
+    "name": "迭代"
+  },
+  "MIND_ROT": {
+    "aliases": [
+      "Mind Rot",
+      "脑蚀"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "MIND_ROT",
+    "kind": "status_card",
+    "name": "脑蚀"
+  },
+  "NORMALITY": {
+    "aliases": [
+      "Normality",
+      "常态"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "NORMALITY",
+    "kind": "curse",
+    "name": "常态"
+  },
+  "REGRET": {
+    "aliases": [
+      "Regret",
+      "悔恨"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "REGRET",
+    "kind": "curse",
+    "name": "悔恨"
+  },
+  "RINGING": {
+    "aliases": [
+      "Ringing",
+      "耳鸣"
+    ],
+    "detail": {
+      "host_power_id": "RINGING_POWER"
+    },
+    "id": "RINGING",
+    "kind": "affliction",
+    "name": "耳鸣"
+  },
+  "ROCKET_PUNCH": {
+    "aliases": [
+      "Rocket Punch",
+      "火箭飞拳"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "ROCKET_PUNCH",
+    "kind": "status_card",
+    "name": "火箭飞拳"
+  },
+  "SLIMED": {
+    "aliases": [
+      "Slimed",
+      "黏液"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "SLIMED",
+    "kind": "status_card",
+    "name": "黏液"
+  },
+  "SLOTH": {
+    "aliases": [
+      "Sloth",
+      "怠惰"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "SLOTH",
+    "kind": "status_card",
+    "name": "怠惰"
+  },
+  "SMOG": {
+    "aliases": [
+      "Smog",
+      "烟雾"
+    ],
+    "detail": {
+      "host_power_id": "SMOGGY_POWER"
+    },
+    "id": "SMOG",
+    "kind": "affliction",
+    "name": "烟雾"
+  },
+  "SMOKESTACK": {
+    "aliases": [
+      "Smokestack",
+      "烟囱"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "SMOKESTACK",
+    "kind": "status_card",
+    "name": "烟囱"
+  },
+  "TAINTED": {
+    "aliases": [
+      "Tainted",
+      "污染"
+    ],
+    "detail": {
+      "host_power_id": "TAINTED_POWER"
+    },
+    "id": "TAINTED",
+    "kind": "affliction",
+    "name": "污染"
+  },
+  "TOXIC": {
+    "aliases": [
+      "Toxic",
+      "剧毒"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "TOXIC",
+    "kind": "status_card",
+    "name": "剧毒"
+  },
+  "TRASH_TO_TREASURE": {
+    "aliases": [
+      "Trash To Treasure",
+      "化废为宝"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "TRASH_TO_TREASURE",
+    "kind": "status_card",
+    "name": "化废为宝"
+  },
+  "WASTE_AWAY": {
+    "aliases": [
+      "Waste Away",
+      "衰朽"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "WASTE_AWAY",
+    "kind": "status_card",
+    "name": "衰朽"
+  },
+  "WOUND": {
+    "aliases": [
+      "Wound",
+      "创伤"
+    ],
+    "detail": {
+      "host_power_id": null
+    },
+    "id": "WOUND",
+    "kind": "status_card",
+    "name": "创伤"
+  }
+}

@@ -13,11 +13,16 @@ namespace SpireCopilot.Bridge;
 public static class BridgeMod
 {
     public const string ModId = "spire-copilot-bridge";
-    public const string ModVersion = "0.1.0";
+    public const string ModVersion = "0.4.6";
     public const int ProtocolVersion = 1;
     public const int DefaultPort = 17612;
 
     private static TcpServer? _server;
+
+    // Information-completeness contract: pending card-reward choose
+    // verification (set by ActionExecutor, resolved by StateBuilder).
+    // See InfoCompleteness.cs — no fallbacks; unverified = incomplete.
+    public static CardRewardVerifyPending? CardRewardVerifyPending;
 
     public static void Init()
     {

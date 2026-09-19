@@ -1,0 +1,117 @@
+{
+  "DEFECT": {
+    "aliases": [
+      "CHARACTER.DEFECT",
+      "Defect",
+      "The Defect",
+      "故障机器人"
+    ],
+    "detail": {
+      "card_pool": "DefectCardPool",
+      "gold": 99,
+      "hp": {
+        "max": null,
+        "max_asc": null,
+        "min": null,
+        "min_asc": null
+      },
+      "starter_relic": "CRACKED_CORE",
+      "unlocks_after_run_as": "Necrobinder"
+    },
+    "id": "DEFECT",
+    "kind": "character",
+    "name": "Defect"
+  },
+  "IRONCLAD": {
+    "aliases": [
+      "CHARACTER.IRONCLAD",
+      "Ironclad",
+      "The Ironclad",
+      "铁甲战士"
+    ],
+    "detail": {
+      "card_pool": "IroncladCardPool",
+      "gold": 99,
+      "hp": {
+        "max": null,
+        "max_asc": null,
+        "min": null,
+        "min_asc": null
+      },
+      "starter_relic": "BURNING_BLOOD",
+      "unlocks_after_run_as": null
+    },
+    "id": "IRONCLAD",
+    "kind": "character",
+    "name": "Ironclad"
+  },
+  "NECROBINDER": {
+    "aliases": [
+      "CHARACTER.NECROBINDER",
+      "Necrobinder",
+      "The Necrobinder",
+      "亡灵契约师"
+    ],
+    "detail": {
+      "card_pool": "NecrobinderCardPool",
+      "gold": 99,
+      "hp": {
+        "max": null,
+        "max_asc": null,
+        "min": null,
+        "min_asc": null
+      },
+      "starter_relic": "BOUND_PHYLACTERY",
+      "unlocks_after_run_as": "Regent"
+    },
+    "id": "NECROBINDER",
+    "kind": "character",
+    "name": "Necrobinder"
+  },
+  "REGENT": {
+    "aliases": [
+      "CHARACTER.REGENT",
+      "Regent",
+      "The Regent",
+      "储君"
+    ],
+    "detail": {
+      "card_pool": "RegentCardPool",
+      "gold": 99,
+      "hp": {
+        "max": null,
+        "max_asc": null,
+        "min": null,
+        "min_asc": null
+      },
+      "starter_relic": "DIVINE_RIGHT",
+      "unlocks_after_run_as": "Silent"
+    },
+    "id": "REGENT",
+    "kind": "character",
+    "name": "Regent"
+  },
+  "SILENT": {
+    "aliases": [
+      "CHARACTER.SILENT",
+      "Silent",
+      "The Silent",
+      "静默猎手"
+    ],
+    "detail": {
+      "card_pool": "SilentCardPool",
+      "gold": 99,
+      "hp": {
+        "max": null,
+        "max_asc": null,
+        "min": null,
+        "min_asc": null
+      },
+      "starter_relic": "RING_OF_THE_SNAKE",
+      "unlocks_after_run_as": null
+    },
+    "id": "SILENT",
+    "kind": "character",
+    "name": "Silent"
+  }
+}

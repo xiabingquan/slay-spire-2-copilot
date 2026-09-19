@@ -1,0 +1,3338 @@
+{
+  "ABYSSAL_BATHS": {
+    "aliases": [
+      "Abyssal Baths",
+      "深渊浴场"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "ABYSSAL_BATHS.pages.ALL.options.EXIT_BATHS": {
+          "aliases": [
+            "EXIT_BATHS",
+            "Exit Baths"
+          ],
+          "event_id": "ABYSSAL_BATHS",
+          "id": "ABYSSAL_BATHS.pages.ALL.options.EXIT_BATHS",
+          "kind": "event_option",
+          "name": "Exit Baths",
+          "page": "ALL"
+        },
+        "ABYSSAL_BATHS.pages.ALL.options.LINGER": {
+          "aliases": [
+            "LINGER",
+            "Linger"
+          ],
+          "event_id": "ABYSSAL_BATHS",
+          "id": "ABYSSAL_BATHS.pages.ALL.options.LINGER",
+          "kind": "event_option",
+          "name": "Linger",
+          "page": "ALL"
+        },
+        "ABYSSAL_BATHS.pages.INITIAL.options.ABSTAIN": {
+          "aliases": [
+            "ABSTAIN",
+            "Abstain"
+          ],
+          "event_id": "ABYSSAL_BATHS",
+          "id": "ABYSSAL_BATHS.pages.INITIAL.options.ABSTAIN",
+          "kind": "event_option",
+          "name": "Abstain",
+          "page": "INITIAL"
+        },
+        "ABYSSAL_BATHS.pages.INITIAL.options.IMMERSE": {
+          "aliases": [
+            "IMMERSE",
+            "Immerse"
+          ],
+          "event_id": "ABYSSAL_BATHS",
+          "id": "ABYSSAL_BATHS.pages.INITIAL.options.IMMERSE",
+          "kind": "event_option",
+          "name": "Immerse",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "ABYSSAL_BATHS",
+    "kind": "event",
+    "name": "Abyssal Baths"
+  },
+  "AMALGAMATOR": {
+    "aliases": [
+      "Amalgamator",
+      "熔合者"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "AMALGAMATOR.pages.INITIAL.options.COMBINE_DEFENDS": {
+          "aliases": [
+            "COMBINE_DEFENDS",
+            "Combine Defends"
+          ],
+          "event_id": "AMALGAMATOR",
+          "id": "AMALGAMATOR.pages.INITIAL.options.COMBINE_DEFENDS",
+          "kind": "event_option",
+          "name": "Combine Defends",
+          "page": "INITIAL"
+        },
+        "AMALGAMATOR.pages.INITIAL.options.COMBINE_STRIKES": {
+          "aliases": [
+            "COMBINE_STRIKES",
+            "Combine Strikes"
+          ],
+          "event_id": "AMALGAMATOR",
+          "id": "AMALGAMATOR.pages.INITIAL.options.COMBINE_STRIKES",
+          "kind": "event_option",
+          "name": "Combine Strikes",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "AMALGAMATOR",
+    "kind": "event",
+    "name": "Amalgamator"
+  },
+  "AROMA_OF_CHAOS": {
+    "aliases": [
+      "Aroma Of Chaos",
+      "Aroma of Chaos",
+      "混沌芳香"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "AROMA_OF_CHAOS.pages.INITIAL.options.LET_GO": {
+          "aliases": [
+            "LET_GO",
+            "Let Go"
+          ],
+          "event_id": "AROMA_OF_CHAOS",
+          "id": "AROMA_OF_CHAOS.pages.INITIAL.options.LET_GO",
+          "kind": "event_option",
+          "name": "Let Go",
+          "page": "INITIAL"
+        },
+        "AROMA_OF_CHAOS.pages.INITIAL.options.MAINTAIN_CONTROL": {
+          "aliases": [
+            "MAINTAIN_CONTROL",
+            "Maintain Control"
+          ],
+          "event_id": "AROMA_OF_CHAOS",
+          "id": "AROMA_OF_CHAOS.pages.INITIAL.options.MAINTAIN_CONTROL",
+          "kind": "event_option",
+          "name": "Maintain Control",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "AROMA_OF_CHAOS",
+    "kind": "event",
+    "name": "Aroma Of Chaos"
+  },
+  "BATTLEWORN_DUMMY": {
+    "aliases": [
+      "Battleworn Dummy",
+      "战痕累累的训练假人"
+    ],
+    "detail": {
+      "acts": [
+        "Act3"
+      ],
+      "options": {
+        "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING1": {
+          "aliases": [
+            "SETTING1",
+            "Setting1"
+          ],
+          "event_id": "BATTLEWORN_DUMMY",
+          "id": "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING1",
+          "kind": "event_option",
+          "name": "Setting1",
+          "page": "INITIAL"
+        },
+        "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING2": {
+          "aliases": [
+            "SETTING2",
+            "Setting2"
+          ],
+          "event_id": "BATTLEWORN_DUMMY",
+          "id": "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING2",
+          "kind": "event_option",
+          "name": "Setting2",
+          "page": "INITIAL"
+        },
+        "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING3": {
+          "aliases": [
+            "SETTING3",
+            "Setting3"
+          ],
+          "event_id": "BATTLEWORN_DUMMY",
+          "id": "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING3",
+          "kind": "event_option",
+          "name": "Setting3",
+          "page": "INITIAL"
+        },
+        "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING_1": {
+          "aliases": [
+            "SETTING_1",
+            "Setting 1"
+          ],
+          "event_id": "BATTLEWORN_DUMMY",
+          "id": "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING_1",
+          "kind": "event_option",
+          "name": "Setting 1",
+          "page": "INITIAL"
+        },
+        "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING_2": {
+          "aliases": [
+            "SETTING_2",
+            "Setting 2"
+          ],
+          "event_id": "BATTLEWORN_DUMMY",
+          "id": "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING_2",
+          "kind": "event_option",
+          "name": "Setting 2",
+          "page": "INITIAL"
+        },
+        "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING_3": {
+          "aliases": [
+            "SETTING_3",
+            "Setting 3"
+          ],
+          "event_id": "BATTLEWORN_DUMMY",
+          "id": "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING_3",
+          "kind": "event_option",
+          "name": "Setting 3",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "BATTLEWORN_DUMMY",
+    "kind": "event",
+    "name": "Battleworn Dummy"
+  },
+  "BRAIN_LEECH": {
+    "aliases": [
+      "Brain Leech",
+      "脑蛭"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "BRAIN_LEECH.pages.INITIAL.options.RIP": {
+          "aliases": [
+            "RIP",
+            "Rip"
+          ],
+          "event_id": "BRAIN_LEECH",
+          "id": "BRAIN_LEECH.pages.INITIAL.options.RIP",
+          "kind": "event_option",
+          "name": "Rip",
+          "page": "INITIAL"
+        },
+        "BRAIN_LEECH.pages.INITIAL.options.SHARE_KNOWLEDGE": {
+          "aliases": [
+            "SHARE_KNOWLEDGE",
+            "Share Knowledge"
+          ],
+          "event_id": "BRAIN_LEECH",
+          "id": "BRAIN_LEECH.pages.INITIAL.options.SHARE_KNOWLEDGE",
+          "kind": "event_option",
+          "name": "Share Knowledge",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "BRAIN_LEECH",
+    "kind": "event",
+    "name": "Brain Leech"
+  },
+  "BUGSLAYER": {
+    "aliases": [
+      "Bugslayer",
+      "害虫杀手"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "BUGSLAYER.pages.INITIAL.options.EXTERMINATION": {
+          "aliases": [
+            "EXTERMINATION",
+            "Extermination"
+          ],
+          "event_id": "BUGSLAYER",
+          "id": "BUGSLAYER.pages.INITIAL.options.EXTERMINATION",
+          "kind": "event_option",
+          "name": "Extermination",
+          "page": "INITIAL"
+        },
+        "BUGSLAYER.pages.INITIAL.options.SQUASH": {
+          "aliases": [
+            "SQUASH",
+            "Squash"
+          ],
+          "event_id": "BUGSLAYER",
+          "id": "BUGSLAYER.pages.INITIAL.options.SQUASH",
+          "kind": "event_option",
+          "name": "Squash",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "BUGSLAYER",
+    "kind": "event",
+    "name": "Bugslayer"
+  },
+  "BYRDONIS_NEST": {
+    "aliases": [
+      "Byrdonis Nest",
+      "多尼斯异鸟巢"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "BYRDONIS_NEST.pages.INITIAL.options.EAT": {
+          "aliases": [
+            "EAT",
+            "Eat"
+          ],
+          "event_id": "BYRDONIS_NEST",
+          "id": "BYRDONIS_NEST.pages.INITIAL.options.EAT",
+          "kind": "event_option",
+          "name": "Eat",
+          "page": "INITIAL"
+        },
+        "BYRDONIS_NEST.pages.INITIAL.options.TAKE": {
+          "aliases": [
+            "TAKE",
+            "Take"
+          ],
+          "event_id": "BYRDONIS_NEST",
+          "id": "BYRDONIS_NEST.pages.INITIAL.options.TAKE",
+          "kind": "event_option",
+          "name": "Take",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "BYRDONIS_NEST",
+    "kind": "event",
+    "name": "Byrdonis Nest"
+  },
+  "COLORFUL_PHILOSOPHERS": {
+    "aliases": [
+      "Colorful Philosophers",
+      "色彩哲学家"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {}
+    },
+    "id": "COLORFUL_PHILOSOPHERS",
+    "kind": "event",
+    "name": "Colorful Philosophers"
+  },
+  "COLOSSAL_FLOWER": {
+    "aliases": [
+      "Colossal Flower",
+      "巨大花卉"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "COLOSSAL_FLOWER.pages.INITIAL.options.OBTAIN_POLLINOUS_CORE": {
+          "aliases": [
+            "OBTAIN_POLLINOUS_CORE",
+            "Obtain Pollinous Core"
+          ],
+          "event_id": "COLOSSAL_FLOWER",
+          "id": "COLOSSAL_FLOWER.pages.INITIAL.options.OBTAIN_POLLINOUS_CORE",
+          "kind": "event_option",
+          "name": "Obtain Pollinous Core",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "COLOSSAL_FLOWER",
+    "kind": "event",
+    "name": "Colossal Flower"
+  },
+  "CRYSTAL_SPHERE": {
+    "aliases": [
+      "Crystal Sphere",
+      "水晶球"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "CRYSTAL_SPHERE.pages.INITIAL.options.PAYMENT_PLAN": {
+          "aliases": [
+            "PAYMENT_PLAN",
+            "Payment Plan"
+          ],
+          "event_id": "CRYSTAL_SPHERE",
+          "id": "CRYSTAL_SPHERE.pages.INITIAL.options.PAYMENT_PLAN",
+          "kind": "event_option",
+          "name": "Payment Plan",
+          "page": "INITIAL"
+        },
+        "CRYSTAL_SPHERE.pages.INITIAL.options.UNCOVER_FUTURE": {
+          "aliases": [
+            "UNCOVER_FUTURE",
+            "Uncover Future"
+          ],
+          "event_id": "CRYSTAL_SPHERE",
+          "id": "CRYSTAL_SPHERE.pages.INITIAL.options.UNCOVER_FUTURE",
+          "kind": "event_option",
+          "name": "Uncover Future",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "CRYSTAL_SPHERE",
+    "kind": "event",
+    "name": "Crystal Sphere"
+  },
+  "DARV": {
+    "aliases": [
+      "Darv",
+      "先古移民"
+    ],
+    "detail": {
+      "acts": [
+        "Act2"
+      ],
+      "options": {}
+    },
+    "id": "DARV",
+    "kind": "event",
+    "name": "Darv / Act2 boon room"
+  },
+  "DENSE_VEGETATION": {
+    "aliases": [
+      "Dense Vegetation",
+      "茂密的植被"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "DENSE_VEGETATION.pages.INITIAL.options.FIGHT": {
+          "aliases": [
+            "FIGHT",
+            "Fight"
+          ],
+          "event_id": "DENSE_VEGETATION",
+          "id": "DENSE_VEGETATION.pages.INITIAL.options.FIGHT",
+          "kind": "event_option",
+          "name": "Fight",
+          "page": "INITIAL"
+        },
+        "DENSE_VEGETATION.pages.INITIAL.options.REST": {
+          "aliases": [
+            "REST",
+            "Rest"
+          ],
+          "event_id": "DENSE_VEGETATION",
+          "id": "DENSE_VEGETATION.pages.INITIAL.options.REST",
+          "kind": "event_option",
+          "name": "Rest",
+          "page": "INITIAL"
+        },
+        "DENSE_VEGETATION.pages.INITIAL.options.TRUDGE_ON": {
+          "aliases": [
+            "TRUDGE_ON",
+            "Trudge On"
+          ],
+          "event_id": "DENSE_VEGETATION",
+          "id": "DENSE_VEGETATION.pages.INITIAL.options.TRUDGE_ON",
+          "kind": "event_option",
+          "name": "Trudge On",
+          "page": "INITIAL"
+        },
+        "DENSE_VEGETATION.pages.REST.options.FIGHT": {
+          "aliases": [
+            "FIGHT",
+            "Fight"
+          ],
+          "event_id": "DENSE_VEGETATION",
+          "id": "DENSE_VEGETATION.pages.REST.options.FIGHT",
+          "kind": "event_option",
+          "name": "Fight",
+          "page": "REST"
+        }
+      }
+    },
+    "id": "DENSE_VEGETATION",
+    "kind": "event",
+    "name": "Dense Vegetation"
+  },
+  "DOLL_ROOM": {
+    "aliases": [
+      "Doll Room",
+      "玩偶室"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "DOLL_ROOM.pages.INITIAL.options.CHOOSE_RANDOM": {
+          "aliases": [
+            "CHOOSE_RANDOM",
+            "Choose Random"
+          ],
+          "event_id": "DOLL_ROOM",
+          "id": "DOLL_ROOM.pages.INITIAL.options.CHOOSE_RANDOM",
+          "kind": "event_option",
+          "name": "Choose Random",
+          "page": "INITIAL"
+        },
+        "DOLL_ROOM.pages.INITIAL.options.EXAMINE": {
+          "aliases": [
+            "EXAMINE",
+            "Examine"
+          ],
+          "event_id": "DOLL_ROOM",
+          "id": "DOLL_ROOM.pages.INITIAL.options.EXAMINE",
+          "kind": "event_option",
+          "name": "Examine",
+          "page": "INITIAL"
+        },
+        "DOLL_ROOM.pages.INITIAL.options.RANDOM": {
+          "aliases": [
+            "RANDOM",
+            "Random"
+          ],
+          "event_id": "DOLL_ROOM",
+          "id": "DOLL_ROOM.pages.INITIAL.options.RANDOM",
+          "kind": "event_option",
+          "name": "Random",
+          "page": "INITIAL"
+        },
+        "DOLL_ROOM.pages.INITIAL.options.TAKE_SOME_TIME": {
+          "aliases": [
+            "TAKE_SOME_TIME",
+            "Take Some Time"
+          ],
+          "event_id": "DOLL_ROOM",
+          "id": "DOLL_ROOM.pages.INITIAL.options.TAKE_SOME_TIME",
+          "kind": "event_option",
+          "name": "Take Some Time",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "DOLL_ROOM",
+    "kind": "event",
+    "name": "Doll Room"
+  },
+  "DOORS_OF_LIGHT_AND_DARK": {
+    "aliases": [
+      "Doors Of Light And Dark",
+      "Doors of Light and Dark",
+      "光与暗的门扉"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "DOORS_OF_LIGHT_AND_DARK.pages.INITIAL.options.DARK": {
+          "aliases": [
+            "DARK",
+            "Dark"
+          ],
+          "event_id": "DOORS_OF_LIGHT_AND_DARK",
+          "id": "DOORS_OF_LIGHT_AND_DARK.pages.INITIAL.options.DARK",
+          "kind": "event_option",
+          "name": "Dark",
+          "page": "INITIAL"
+        },
+        "DOORS_OF_LIGHT_AND_DARK.pages.INITIAL.options.LIGHT": {
+          "aliases": [
+            "LIGHT",
+            "Light"
+          ],
+          "event_id": "DOORS_OF_LIGHT_AND_DARK",
+          "id": "DOORS_OF_LIGHT_AND_DARK.pages.INITIAL.options.LIGHT",
+          "kind": "event_option",
+          "name": "Light",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "DOORS_OF_LIGHT_AND_DARK",
+    "kind": "event",
+    "name": "Doors Of Light And Dark"
+  },
+  "DROWNING_BEACON": {
+    "aliases": [
+      "Drowning Beacon",
+      "淹水灯塔"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "DROWNING_BEACON.pages.INITIAL.options.BOTTLE": {
+          "aliases": [
+            "BOTTLE",
+            "Bottle"
+          ],
+          "event_id": "DROWNING_BEACON",
+          "id": "DROWNING_BEACON.pages.INITIAL.options.BOTTLE",
+          "kind": "event_option",
+          "name": "Bottle",
+          "page": "INITIAL"
+        },
+        "DROWNING_BEACON.pages.INITIAL.options.BOTTLE_OPTION": {
+          "aliases": [
+            "BOTTLE_OPTION",
+            "Bottle Option"
+          ],
+          "event_id": "DROWNING_BEACON",
+          "id": "DROWNING_BEACON.pages.INITIAL.options.BOTTLE_OPTION",
+          "kind": "event_option",
+          "name": "Bottle Option",
+          "page": "INITIAL"
+        },
+        "DROWNING_BEACON.pages.INITIAL.options.CLIMB": {
+          "aliases": [
+            "CLIMB",
+            "Climb"
+          ],
+          "event_id": "DROWNING_BEACON",
+          "id": "DROWNING_BEACON.pages.INITIAL.options.CLIMB",
+          "kind": "event_option",
+          "name": "Climb",
+          "page": "INITIAL"
+        },
+        "DROWNING_BEACON.pages.INITIAL.options.CLIMB_OPTION": {
+          "aliases": [
+            "CLIMB_OPTION",
+            "Climb Option"
+          ],
+          "event_id": "DROWNING_BEACON",
+          "id": "DROWNING_BEACON.pages.INITIAL.options.CLIMB_OPTION",
+          "kind": "event_option",
+          "name": "Climb Option",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "DROWNING_BEACON",
+    "kind": "event",
+    "name": "Drowning Beacon"
+  },
+  "ENDLESS_CONVEYOR": {
+    "aliases": [
+      "Endless Conveyor",
+      "无尽传送带"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {}
+    },
+    "id": "ENDLESS_CONVEYOR",
+    "kind": "event",
+    "name": "Endless Conveyor"
+  },
+  "FAKE_MERCHANT": {
+    "aliases": [
+      "Fake Merchant",
+      "The Merchant???",
+      "伪商人"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {}
+    },
+    "id": "FAKE_MERCHANT",
+    "kind": "event",
+    "name": "Fake Merchant"
+  },
+  "FIELD_OF_MAN_SIZED_HOLES": {
+    "aliases": [
+      "Field Of Man Sized Holes",
+      "Field of Man-Sized Holes",
+      "人形洞穴之地"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "FIELD_OF_MAN_SIZED_HOLES.pages.INITIAL.options.ENTER_YOUR_HOLE": {
+          "aliases": [
+            "ENTER_YOUR_HOLE",
+            "Enter Your Hole"
+          ],
+          "event_id": "FIELD_OF_MAN_SIZED_HOLES",
+          "id": "FIELD_OF_MAN_SIZED_HOLES.pages.INITIAL.options.ENTER_YOUR_HOLE",
+          "kind": "event_option",
+          "name": "Enter Your Hole",
+          "page": "INITIAL"
+        },
+        "FIELD_OF_MAN_SIZED_HOLES.pages.INITIAL.options.RESIST": {
+          "aliases": [
+            "RESIST",
+            "Resist"
+          ],
+          "event_id": "FIELD_OF_MAN_SIZED_HOLES",
+          "id": "FIELD_OF_MAN_SIZED_HOLES.pages.INITIAL.options.RESIST",
+          "kind": "event_option",
+          "name": "Resist",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "FIELD_OF_MAN_SIZED_HOLES",
+    "kind": "event",
+    "name": "Field Of Man Sized Holes"
+  },
+  "GLOWING_WATER": {
+    "aliases": [
+      "DROWNING_BEACON",
+      "Drowning Beacon"
+    ],
+    "detail": {
+      "acts": [
+        "Underdocks"
+      ],
+      "options": {}
+    },
+    "id": "GLOWING_WATER",
+    "kind": "event",
+    "name": "Drowning Beacon"
+  },
+  "GRAVE_OF_THE_FORGOTTEN": {
+    "aliases": [
+      "Grave Of The Forgotten",
+      "Grave of the Forgotten",
+      "遗忘之墓"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "GRAVE_OF_THE_FORGOTTEN.pages.INITIAL.options.ACCEPT": {
+          "aliases": [
+            "ACCEPT",
+            "Accept"
+          ],
+          "event_id": "GRAVE_OF_THE_FORGOTTEN",
+          "id": "GRAVE_OF_THE_FORGOTTEN.pages.INITIAL.options.ACCEPT",
+          "kind": "event_option",
+          "name": "Accept",
+          "page": "INITIAL"
+        },
+        "GRAVE_OF_THE_FORGOTTEN.pages.INITIAL.options.CONFRONT": {
+          "aliases": [
+            "CONFRONT",
+            "Confront"
+          ],
+          "event_id": "GRAVE_OF_THE_FORGOTTEN",
+          "id": "GRAVE_OF_THE_FORGOTTEN.pages.INITIAL.options.CONFRONT",
+          "kind": "event_option",
+          "name": "Confront",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "GRAVE_OF_THE_FORGOTTEN",
+    "kind": "event",
+    "name": "Grave Of The Forgotten"
+  },
+  "HUNGRY_FOR_MUSHROOMS": {
+    "aliases": [
+      "Hungry For Mushrooms",
+      "Hungry for Mushrooms",
+      "蘑菇饥渴"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "HUNGRY_FOR_MUSHROOMS.pages.INITIAL.options.BIG_MUSHROOM": {
+          "aliases": [
+            "BIG_MUSHROOM",
+            "Big Mushroom"
+          ],
+          "event_id": "HUNGRY_FOR_MUSHROOMS",
+          "id": "HUNGRY_FOR_MUSHROOMS.pages.INITIAL.options.BIG_MUSHROOM",
+          "kind": "event_option",
+          "name": "Big Mushroom",
+          "page": "INITIAL"
+        },
+        "HUNGRY_FOR_MUSHROOMS.pages.INITIAL.options.FRAGRANT_MUSHROOM": {
+          "aliases": [
+            "FRAGRANT_MUSHROOM",
+            "Fragrant Mushroom"
+          ],
+          "event_id": "HUNGRY_FOR_MUSHROOMS",
+          "id": "HUNGRY_FOR_MUSHROOMS.pages.INITIAL.options.FRAGRANT_MUSHROOM",
+          "kind": "event_option",
+          "name": "Fragrant Mushroom",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "HUNGRY_FOR_MUSHROOMS",
+    "kind": "event",
+    "name": "Hungry For Mushrooms"
+  },
+  "INFESTED_AUTOMATON": {
+    "aliases": [
+      "Infested Automaton",
+      "被寄生的自动机械"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "INFESTED_AUTOMATON.pages.INITIAL.options.STUDY": {
+          "aliases": [
+            "STUDY",
+            "Study"
+          ],
+          "event_id": "INFESTED_AUTOMATON",
+          "id": "INFESTED_AUTOMATON.pages.INITIAL.options.STUDY",
+          "kind": "event_option",
+          "name": "Study",
+          "page": "INITIAL"
+        },
+        "INFESTED_AUTOMATON.pages.INITIAL.options.TOUCH_CORE": {
+          "aliases": [
+            "TOUCH_CORE",
+            "Touch Core"
+          ],
+          "event_id": "INFESTED_AUTOMATON",
+          "id": "INFESTED_AUTOMATON.pages.INITIAL.options.TOUCH_CORE",
+          "kind": "event_option",
+          "name": "Touch Core",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "INFESTED_AUTOMATON",
+    "kind": "event",
+    "name": "Infested Automaton"
+  },
+  "JUNGLE_MAZE_ADVENTURE": {
+    "aliases": [
+      "Jungle Maze Adventure",
+      "丛林迷宫奇遇"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "JUNGLE_MAZE_ADVENTURE.pages.INITIAL.options.JOIN_FORCES": {
+          "aliases": [
+            "JOIN_FORCES",
+            "Join Forces"
+          ],
+          "event_id": "JUNGLE_MAZE_ADVENTURE",
+          "id": "JUNGLE_MAZE_ADVENTURE.pages.INITIAL.options.JOIN_FORCES",
+          "kind": "event_option",
+          "name": "Join Forces",
+          "page": "INITIAL"
+        },
+        "JUNGLE_MAZE_ADVENTURE.pages.INITIAL.options.SOLO_QUEST": {
+          "aliases": [
+            "SOLO_QUEST",
+            "Solo Quest"
+          ],
+          "event_id": "JUNGLE_MAZE_ADVENTURE",
+          "id": "JUNGLE_MAZE_ADVENTURE.pages.INITIAL.options.SOLO_QUEST",
+          "kind": "event_option",
+          "name": "Solo Quest",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "JUNGLE_MAZE_ADVENTURE",
+    "kind": "event",
+    "name": "Jungle Maze Adventure"
+  },
+  "LOST_WISP": {
+    "aliases": [
+      "Lost Wisp",
+      "The Lost Wisp",
+      "迷失鬼火"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "LOST_WISP.pages.INITIAL.options.CLAIM": {
+          "aliases": [
+            "CLAIM",
+            "Claim"
+          ],
+          "event_id": "LOST_WISP",
+          "id": "LOST_WISP.pages.INITIAL.options.CLAIM",
+          "kind": "event_option",
+          "name": "Claim",
+          "page": "INITIAL"
+        },
+        "LOST_WISP.pages.INITIAL.options.SEARCH": {
+          "aliases": [
+            "SEARCH",
+            "Search"
+          ],
+          "event_id": "LOST_WISP",
+          "id": "LOST_WISP.pages.INITIAL.options.SEARCH",
+          "kind": "event_option",
+          "name": "Search",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "LOST_WISP",
+    "kind": "event",
+    "name": "Lost Wisp"
+  },
+  "LUMINOUS_CHOIR": {
+    "aliases": [
+      "Luminous Choir",
+      "冷光合唱团"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "LUMINOUS_CHOIR.pages.INITIAL.options.OFFER_TRIBUTE": {
+          "aliases": [
+            "OFFER_TRIBUTE",
+            "Offer Tribute"
+          ],
+          "event_id": "LUMINOUS_CHOIR",
+          "id": "LUMINOUS_CHOIR.pages.INITIAL.options.OFFER_TRIBUTE",
+          "kind": "event_option",
+          "name": "Offer Tribute",
+          "page": "INITIAL"
+        },
+        "LUMINOUS_CHOIR.pages.INITIAL.options.REACH_INTO_THE_FLESH": {
+          "aliases": [
+            "REACH_INTO_THE_FLESH",
+            "Reach Into The Flesh"
+          ],
+          "event_id": "LUMINOUS_CHOIR",
+          "id": "LUMINOUS_CHOIR.pages.INITIAL.options.REACH_INTO_THE_FLESH",
+          "kind": "event_option",
+          "name": "Reach Into The Flesh",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "LUMINOUS_CHOIR",
+    "kind": "event",
+    "name": "Luminous Choir"
+  },
+  "MORPHIC_GROVE": {
+    "aliases": [
+      "Morphic Grove",
+      "变形灵林谷"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "MORPHIC_GROVE.pages.INITIAL.options.GROUP": {
+          "aliases": [
+            "GROUP",
+            "Group"
+          ],
+          "event_id": "MORPHIC_GROVE",
+          "id": "MORPHIC_GROVE.pages.INITIAL.options.GROUP",
+          "kind": "event_option",
+          "name": "Group",
+          "page": "INITIAL"
+        },
+        "MORPHIC_GROVE.pages.INITIAL.options.LONER": {
+          "aliases": [
+            "LONER",
+            "Loner"
+          ],
+          "event_id": "MORPHIC_GROVE",
+          "id": "MORPHIC_GROVE.pages.INITIAL.options.LONER",
+          "kind": "event_option",
+          "name": "Loner",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "MORPHIC_GROVE",
+    "kind": "event",
+    "name": "Morphic Grove"
+  },
+  "NEOW": {
+    "aliases": [
+      "Neow",
+      "尼奥"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "NEOW.pages.INITIAL.options.ARCANE_SCROLL": {
+          "aliases": [
+            "ARCANE_SCROLL",
+            "Arcane Scroll"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.ARCANE_SCROLL",
+          "kind": "event_option",
+          "name": "Arcane Scroll",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.BOOMING_CONCH": {
+          "aliases": [
+            "BOOMING_CONCH",
+            "Booming Conch"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.BOOMING_CONCH",
+          "kind": "event_option",
+          "name": "Booming Conch",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.CURSED_PEARL": {
+          "aliases": [
+            "CURSED_PEARL",
+            "Cursed Pearl"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.CURSED_PEARL",
+          "kind": "event_option",
+          "name": "Cursed Pearl",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.FISHING_ROD": {
+          "aliases": [
+            "FISHING_ROD",
+            "Fishing Rod"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.FISHING_ROD",
+          "kind": "event_option",
+          "name": "Fishing Rod",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.GOLDEN_PEARL": {
+          "aliases": [
+            "GOLDEN_PEARL",
+            "Golden Pearl"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.GOLDEN_PEARL",
+          "kind": "event_option",
+          "name": "Golden Pearl",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.HEFTY_TABLET": {
+          "aliases": [
+            "HEFTY_TABLET",
+            "Hefty Tablet"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.HEFTY_TABLET",
+          "kind": "event_option",
+          "name": "Hefty Tablet",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.KALEIDOSCOPE": {
+          "aliases": [
+            "KALEIDOSCOPE",
+            "Kaleidoscope"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.KALEIDOSCOPE",
+          "kind": "event_option",
+          "name": "Kaleidoscope",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.LARGE_CAPSULE": {
+          "aliases": [
+            "LARGE_CAPSULE",
+            "Large Capsule"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.LARGE_CAPSULE",
+          "kind": "event_option",
+          "name": "Large Capsule",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.LAVA_ROCK": {
+          "aliases": [
+            "LAVA_ROCK",
+            "Lava Rock"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.LAVA_ROCK",
+          "kind": "event_option",
+          "name": "Lava Rock",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.LEAD_PAPERWEIGHT": {
+          "aliases": [
+            "LEAD_PAPERWEIGHT",
+            "Lead Paperweight"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.LEAD_PAPERWEIGHT",
+          "kind": "event_option",
+          "name": "Lead Paperweight",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.LEAFY_POULTICE": {
+          "aliases": [
+            "LEAFY_POULTICE",
+            "Leafy Poultice"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.LEAFY_POULTICE",
+          "kind": "event_option",
+          "name": "Leafy Poultice",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.LOST_COFFER": {
+          "aliases": [
+            "LOST_COFFER",
+            "Lost Coffer"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.LOST_COFFER",
+          "kind": "event_option",
+          "name": "Lost Coffer",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.NEOWS_BONES": {
+          "aliases": [
+            "NEOWS_BONES",
+            "Neows Bones"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.NEOWS_BONES",
+          "kind": "event_option",
+          "name": "Neows Bones",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.NEOWS_TALISMAN": {
+          "aliases": [
+            "NEOWS_TALISMAN",
+            "Neows Talisman"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.NEOWS_TALISMAN",
+          "kind": "event_option",
+          "name": "Neows Talisman",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.NEOWS_TORMENT": {
+          "aliases": [
+            "NEOWS_TORMENT",
+            "Neows Torment"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.NEOWS_TORMENT",
+          "kind": "event_option",
+          "name": "Neows Torment",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.NEW_LEAF": {
+          "aliases": [
+            "NEW_LEAF",
+            "New Leaf"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.NEW_LEAF",
+          "kind": "event_option",
+          "name": "New Leaf",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.NUTRITIOUS_OYSTER": {
+          "aliases": [
+            "NUTRITIOUS_OYSTER",
+            "Nutritious Oyster"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.NUTRITIOUS_OYSTER",
+          "kind": "event_option",
+          "name": "Nutritious Oyster",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.PHIAL_HOLSTER": {
+          "aliases": [
+            "PHIAL_HOLSTER",
+            "Phial Holster"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.PHIAL_HOLSTER",
+          "kind": "event_option",
+          "name": "Phial Holster",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.POMANDER": {
+          "aliases": [
+            "POMANDER",
+            "Pomander"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.POMANDER",
+          "kind": "event_option",
+          "name": "Pomander",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.PRECARIOUS_SHEARS": {
+          "aliases": [
+            "PRECARIOUS_SHEARS",
+            "Precarious Shears"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.PRECARIOUS_SHEARS",
+          "kind": "event_option",
+          "name": "Precarious Shears",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.PRECISE_SCISSORS": {
+          "aliases": [
+            "PRECISE_SCISSORS",
+            "Precise Scissors"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.PRECISE_SCISSORS",
+          "kind": "event_option",
+          "name": "Precise Scissors",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.SCROLL_BOXES": {
+          "aliases": [
+            "SCROLL_BOXES",
+            "Scroll Boxes"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.SCROLL_BOXES",
+          "kind": "event_option",
+          "name": "Scroll Boxes",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.SILKEN_TRESS": {
+          "aliases": [
+            "SILKEN_TRESS",
+            "Silken Tress"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.SILKEN_TRESS",
+          "kind": "event_option",
+          "name": "Silken Tress",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.SILVER_CRUCIBLE": {
+          "aliases": [
+            "SILVER_CRUCIBLE",
+            "Silver Crucible"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.SILVER_CRUCIBLE",
+          "kind": "event_option",
+          "name": "Silver Crucible",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.SMALL_CAPSULE": {
+          "aliases": [
+            "SMALL_CAPSULE",
+            "Small Capsule"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.SMALL_CAPSULE",
+          "kind": "event_option",
+          "name": "Small Capsule",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.STONE_HUMIDIFIER": {
+          "aliases": [
+            "STONE_HUMIDIFIER",
+            "Stone Humidifier"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.STONE_HUMIDIFIER",
+          "kind": "event_option",
+          "name": "Stone Humidifier",
+          "page": "INITIAL"
+        },
+        "NEOW.pages.INITIAL.options.WINGED_BOOTS": {
+          "aliases": [
+            "WINGED_BOOTS",
+            "Winged Boots"
+          ],
+          "event_id": "NEOW",
+          "id": "NEOW.pages.INITIAL.options.WINGED_BOOTS",
+          "kind": "event_option",
+          "name": "Winged Boots",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "NEOW",
+    "kind": "event",
+    "name": "Neow"
+  },
+  "NONUPEIPE": {
+    "aliases": [
+      "Nonupeipe"
+    ],
+    "detail": {
+      "acts": [
+        "Act3"
+      ],
+      "options": {
+        "NONUPEIPE.pages.INITIAL.options.BRILLIANT_SCARF": {
+          "aliases": [
+            "BRILLIANT_SCARF",
+            "Brilliant Scarf"
+          ],
+          "event_id": "NONUPEIPE",
+          "id": "NONUPEIPE.pages.INITIAL.options.BRILLIANT_SCARF",
+          "kind": "event_option",
+          "name": "Brilliant Scarf",
+          "page": "INITIAL"
+        },
+        "NONUPEIPE.pages.INITIAL.options.FUR_COAT": {
+          "aliases": [
+            "FUR_COAT",
+            "Fur Coat"
+          ],
+          "event_id": "NONUPEIPE",
+          "id": "NONUPEIPE.pages.INITIAL.options.FUR_COAT",
+          "kind": "event_option",
+          "name": "Fur Coat",
+          "page": "INITIAL"
+        },
+        "NONUPEIPE.pages.INITIAL.options.GLITTER": {
+          "aliases": [
+            "GLITTER",
+            "Glitter"
+          ],
+          "event_id": "NONUPEIPE",
+          "id": "NONUPEIPE.pages.INITIAL.options.GLITTER",
+          "kind": "event_option",
+          "name": "Glitter",
+          "page": "INITIAL"
+        },
+        "NONUPEIPE.pages.INITIAL.options.JEWELRY_BOX": {
+          "aliases": [
+            "JEWELRY_BOX",
+            "Jewelry Box"
+          ],
+          "event_id": "NONUPEIPE",
+          "id": "NONUPEIPE.pages.INITIAL.options.JEWELRY_BOX",
+          "kind": "event_option",
+          "name": "Jewelry Box",
+          "page": "INITIAL"
+        },
+        "NONUPEIPE.pages.INITIAL.options.LOOMING_FRUIT": {
+          "aliases": [
+            "LOOMING_FRUIT",
+            "Looming Fruit"
+          ],
+          "event_id": "NONUPEIPE",
+          "id": "NONUPEIPE.pages.INITIAL.options.LOOMING_FRUIT",
+          "kind": "event_option",
+          "name": "Looming Fruit",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "NONUPEIPE",
+    "kind": "event",
+    "name": "Nonupeipe"
+  },
+  "OROBAS": {
+    "aliases": [
+      "Orobas",
+      "欧洛巴斯"
+    ],
+    "detail": {
+      "acts": [
+        "Act2"
+      ],
+      "options": {
+        "OROBAS.pages.INITIAL.options.DRIFTWOOD": {
+          "aliases": [
+            "DRIFTWOOD",
+            "Driftwood"
+          ],
+          "event_id": "OROBAS",
+          "id": "OROBAS.pages.INITIAL.options.DRIFTWOOD",
+          "kind": "event_option",
+          "name": "Driftwood",
+          "page": "INITIAL"
+        },
+        "OROBAS.pages.INITIAL.options.ELECTRIC_SHRYMP": {
+          "aliases": [
+            "ELECTRIC_SHRYMP",
+            "Electric Shrymp"
+          ],
+          "event_id": "OROBAS",
+          "id": "OROBAS.pages.INITIAL.options.ELECTRIC_SHRYMP",
+          "kind": "event_option",
+          "name": "Electric Shrymp",
+          "page": "INITIAL"
+        },
+        "OROBAS.pages.INITIAL.options.GLASS_EYE": {
+          "aliases": [
+            "GLASS_EYE",
+            "Glass Eye"
+          ],
+          "event_id": "OROBAS",
+          "id": "OROBAS.pages.INITIAL.options.GLASS_EYE",
+          "kind": "event_option",
+          "name": "Glass Eye",
+          "page": "INITIAL"
+        },
+        "OROBAS.pages.INITIAL.options.RADIANT_PEARL": {
+          "aliases": [
+            "RADIANT_PEARL",
+            "Radiant Pearl"
+          ],
+          "event_id": "OROBAS",
+          "id": "OROBAS.pages.INITIAL.options.RADIANT_PEARL",
+          "kind": "event_option",
+          "name": "Radiant Pearl",
+          "page": "INITIAL"
+        },
+        "OROBAS.pages.INITIAL.options.SAND_CASTLE": {
+          "aliases": [
+            "SAND_CASTLE",
+            "Sand Castle"
+          ],
+          "event_id": "OROBAS",
+          "id": "OROBAS.pages.INITIAL.options.SAND_CASTLE",
+          "kind": "event_option",
+          "name": "Sand Castle",
+          "page": "INITIAL"
+        },
+        "OROBAS.pages.INITIAL.options.TOUCH_OF_OROBAS": {
+          "aliases": [
+            "TOUCH_OF_OROBAS",
+            "Touch Of Orobas"
+          ],
+          "event_id": "OROBAS",
+          "id": "OROBAS.pages.INITIAL.options.TOUCH_OF_OROBAS",
+          "kind": "event_option",
+          "name": "Touch Of Orobas",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "OROBAS",
+    "kind": "event",
+    "name": "Orobas"
+  },
+  "PAEL": {
+    "aliases": [
+      "Pael",
+      "佩尔"
+    ],
+    "detail": {
+      "acts": [
+        "Act2"
+      ],
+      "options": {
+        "PAEL.pages.INITIAL.options.PAELS_BLOOD": {
+          "aliases": [
+            "PAELS_BLOOD",
+            "Paels Blood"
+          ],
+          "event_id": "PAEL",
+          "id": "PAEL.pages.INITIAL.options.PAELS_BLOOD",
+          "kind": "event_option",
+          "name": "Paels Blood",
+          "page": "INITIAL"
+        },
+        "PAEL.pages.INITIAL.options.PAELS_CLAW": {
+          "aliases": [
+            "PAELS_CLAW",
+            "Paels Claw"
+          ],
+          "event_id": "PAEL",
+          "id": "PAEL.pages.INITIAL.options.PAELS_CLAW",
+          "kind": "event_option",
+          "name": "Paels Claw",
+          "page": "INITIAL"
+        },
+        "PAEL.pages.INITIAL.options.PAELS_EYE": {
+          "aliases": [
+            "PAELS_EYE",
+            "Paels Eye"
+          ],
+          "event_id": "PAEL",
+          "id": "PAEL.pages.INITIAL.options.PAELS_EYE",
+          "kind": "event_option",
+          "name": "Paels Eye",
+          "page": "INITIAL"
+        },
+        "PAEL.pages.INITIAL.options.PAELS_FLESH": {
+          "aliases": [
+            "PAELS_FLESH",
+            "Paels Flesh"
+          ],
+          "event_id": "PAEL",
+          "id": "PAEL.pages.INITIAL.options.PAELS_FLESH",
+          "kind": "event_option",
+          "name": "Paels Flesh",
+          "page": "INITIAL"
+        },
+        "PAEL.pages.INITIAL.options.PAELS_HORN": {
+          "aliases": [
+            "PAELS_HORN",
+            "Paels Horn"
+          ],
+          "event_id": "PAEL",
+          "id": "PAEL.pages.INITIAL.options.PAELS_HORN",
+          "kind": "event_option",
+          "name": "Paels Horn",
+          "page": "INITIAL"
+        },
+        "PAEL.pages.INITIAL.options.PAELS_LEGION": {
+          "aliases": [
+            "PAELS_LEGION",
+            "Paels Legion"
+          ],
+          "event_id": "PAEL",
+          "id": "PAEL.pages.INITIAL.options.PAELS_LEGION",
+          "kind": "event_option",
+          "name": "Paels Legion",
+          "page": "INITIAL"
+        },
+        "PAEL.pages.INITIAL.options.PAELS_TEARS": {
+          "aliases": [
+            "PAELS_TEARS",
+            "Paels Tears"
+          ],
+          "event_id": "PAEL",
+          "id": "PAEL.pages.INITIAL.options.PAELS_TEARS",
+          "kind": "event_option",
+          "name": "Paels Tears",
+          "page": "INITIAL"
+        },
+        "PAEL.pages.INITIAL.options.PAELS_TOOTH": {
+          "aliases": [
+            "PAELS_TOOTH",
+            "Paels Tooth"
+          ],
+          "event_id": "PAEL",
+          "id": "PAEL.pages.INITIAL.options.PAELS_TOOTH",
+          "kind": "event_option",
+          "name": "Paels Tooth",
+          "page": "INITIAL"
+        },
+        "PAEL.pages.INITIAL.options.PAELS_WING": {
+          "aliases": [
+            "PAELS_WING",
+            "Paels Wing"
+          ],
+          "event_id": "PAEL",
+          "id": "PAEL.pages.INITIAL.options.PAELS_WING",
+          "kind": "event_option",
+          "name": "Paels Wing",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "PAEL",
+    "kind": "event",
+    "name": "Pael"
+  },
+  "POTION_COURIER": {
+    "aliases": [
+      "Potion Courier",
+      "药水信使"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "POTION_COURIER.pages.INITIAL.options.GRAB_POTIONS": {
+          "aliases": [],
+          "event_id": null,
+          "id": "POTION_COURIER.pages.INITIAL.options.GRAB_POTIONS",
+          "kind": "event_option",
+          "name": "Grab Potions",
+          "page": "INITIAL"
+        },
+        "POTION_COURIER.pages.INITIAL.options.RANSACK": {
+          "aliases": [],
+          "event_id": null,
+          "id": "POTION_COURIER.pages.INITIAL.options.RANSACK",
+          "kind": "event_option",
+          "name": "Ransack",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "POTION_COURIER",
+    "kind": "event",
+    "name": "Potion Courier"
+  },
+  "PROCEED": {
+    "aliases": [
+      "continue",
+      "继续"
+    ],
+    "event_id": null,
+    "id": "PROCEED",
+    "kind": "event_option",
+    "name": "Proceed",
+    "page": null
+  },
+  "PUNCH_OFF": {
+    "aliases": [
+      "Punch Off",
+      "重拳出击"
+    ],
+    "detail": {
+      "acts": [
+        "Act1"
+      ],
+      "options": {
+        "PUNCH_OFF.pages.INITIAL.options.ELITE": {
+          "aliases": [
+            "ELITE",
+            "Elite"
+          ],
+          "event_id": "PUNCH_OFF",
+          "id": "PUNCH_OFF.pages.INITIAL.options.ELITE",
+          "kind": "event_option",
+          "name": "Elite",
+          "page": "INITIAL"
+        },
+        "PUNCH_OFF.pages.INITIAL.options.I_CAN_TAKE_THEM": {
+          "aliases": [
+            "I Can Take Them",
+            "I_CAN_TAKE_THEM"
+          ],
+          "event_id": "PUNCH_OFF",
+          "id": "PUNCH_OFF.pages.INITIAL.options.I_CAN_TAKE_THEM",
+          "kind": "event_option",
+          "name": "I Can Take Them",
+          "page": "INITIAL"
+        },
+        "PUNCH_OFF.pages.INITIAL.options.NAB": {
+          "aliases": [
+            "NAB",
+            "Nab"
+          ],
+          "event_id": "PUNCH_OFF",
+          "id": "PUNCH_OFF.pages.INITIAL.options.NAB",
+          "kind": "event_option",
+          "name": "Nab",
+          "page": "INITIAL"
+        },
+        "PUNCH_OFF.pages.INITIAL.options.TAKE_THEM": {
+          "aliases": [
+            "TAKE_THEM",
+            "Take Them"
+          ],
+          "event_id": "PUNCH_OFF",
+          "id": "PUNCH_OFF.pages.INITIAL.options.TAKE_THEM",
+          "kind": "event_option",
+          "name": "Take Them",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "PUNCH_OFF",
+    "kind": "event",
+    "name": "Punch Off"
+  },
+  "RANWID_THE_ELDER": {
+    "aliases": [
+      "Ranwid The Elder",
+      "Ranwid the Elder",
+      "长者兰伟德"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "RANWID_THE_ELDER.pages.INITIAL.options.GIVE_GOLD": {
+          "aliases": [
+            "GIVE_GOLD",
+            "Give Gold"
+          ],
+          "event_id": "RANWID_THE_ELDER",
+          "id": "RANWID_THE_ELDER.pages.INITIAL.options.GIVE_GOLD",
+          "kind": "event_option",
+          "name": "Give Gold",
+          "page": "INITIAL"
+        },
+        "RANWID_THE_ELDER.pages.INITIAL.options.GIVE_POTION": {
+          "aliases": [
+            "GIVE_POTION",
+            "Give Potion"
+          ],
+          "event_id": "RANWID_THE_ELDER",
+          "id": "RANWID_THE_ELDER.pages.INITIAL.options.GIVE_POTION",
+          "kind": "event_option",
+          "name": "Give Potion",
+          "page": "INITIAL"
+        },
+        "RANWID_THE_ELDER.pages.INITIAL.options.GIVE_RELIC": {
+          "aliases": [
+            "GIVE_RELIC",
+            "Give Relic"
+          ],
+          "event_id": "RANWID_THE_ELDER",
+          "id": "RANWID_THE_ELDER.pages.INITIAL.options.GIVE_RELIC",
+          "kind": "event_option",
+          "name": "Give Relic",
+          "page": "INITIAL"
+        },
+        "RANWID_THE_ELDER.pages.INITIAL.options.GOLD": {
+          "aliases": [
+            "GOLD",
+            "Gold"
+          ],
+          "event_id": "RANWID_THE_ELDER",
+          "id": "RANWID_THE_ELDER.pages.INITIAL.options.GOLD",
+          "kind": "event_option",
+          "name": "Gold",
+          "page": "INITIAL"
+        },
+        "RANWID_THE_ELDER.pages.INITIAL.options.POTION": {
+          "aliases": [
+            "POTION",
+            "Potion"
+          ],
+          "event_id": "RANWID_THE_ELDER",
+          "id": "RANWID_THE_ELDER.pages.INITIAL.options.POTION",
+          "kind": "event_option",
+          "name": "Potion",
+          "page": "INITIAL"
+        },
+        "RANWID_THE_ELDER.pages.INITIAL.options.RELIC": {
+          "aliases": [
+            "RELIC",
+            "Relic"
+          ],
+          "event_id": "RANWID_THE_ELDER",
+          "id": "RANWID_THE_ELDER.pages.INITIAL.options.RELIC",
+          "kind": "event_option",
+          "name": "Relic",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "RANWID_THE_ELDER",
+    "kind": "event",
+    "name": "Ranwid The Elder"
+  },
+  "REFLECTIONS": {
+    "aliases": [
+      "Reflections",
+      "Reflections snoitcelfeR",
+      "镜中倒影"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "REFLECTIONS.pages.INITIAL.options.SHATTER": {
+          "aliases": [
+            "SHATTER",
+            "Shatter"
+          ],
+          "event_id": "REFLECTIONS",
+          "id": "REFLECTIONS.pages.INITIAL.options.SHATTER",
+          "kind": "event_option",
+          "name": "Shatter",
+          "page": "INITIAL"
+        },
+        "REFLECTIONS.pages.INITIAL.options.TOUCH_A_MIRROR": {
+          "aliases": [
+            "TOUCH_A_MIRROR",
+            "Touch A Mirror"
+          ],
+          "event_id": "REFLECTIONS",
+          "id": "REFLECTIONS.pages.INITIAL.options.TOUCH_A_MIRROR",
+          "kind": "event_option",
+          "name": "Touch A Mirror",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "REFLECTIONS",
+    "kind": "event",
+    "name": "Reflections"
+  },
+  "RELIC_TRADER": {
+    "aliases": [
+      "Relic Trader",
+      "遗物交换商"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "RELIC_TRADER.pages.INITIAL.options.BOTTOM": {
+          "aliases": [
+            "BOTTOM",
+            "Bottom"
+          ],
+          "event_id": "RELIC_TRADER",
+          "id": "RELIC_TRADER.pages.INITIAL.options.BOTTOM",
+          "kind": "event_option",
+          "name": "Bottom",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "RELIC_TRADER",
+    "kind": "event",
+    "name": "Relic Trader"
+  },
+  "ROOM_FULL_OF_CHEESE": {
+    "aliases": [
+      "Room Full Of Cheese",
+      "Room Full of Cheese",
+      "满屋芝士"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "ROOM_FULL_OF_CHEESE.pages.INITIAL.options.GORGE": {
+          "aliases": [
+            "GORGE",
+            "Gorge"
+          ],
+          "event_id": "ROOM_FULL_OF_CHEESE",
+          "id": "ROOM_FULL_OF_CHEESE.pages.INITIAL.options.GORGE",
+          "kind": "event_option",
+          "name": "Gorge",
+          "page": "INITIAL"
+        },
+        "ROOM_FULL_OF_CHEESE.pages.INITIAL.options.SEARCH": {
+          "aliases": [
+            "SEARCH",
+            "Search"
+          ],
+          "event_id": "ROOM_FULL_OF_CHEESE",
+          "id": "ROOM_FULL_OF_CHEESE.pages.INITIAL.options.SEARCH",
+          "kind": "event_option",
+          "name": "Search",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "ROOM_FULL_OF_CHEESE",
+    "kind": "event",
+    "name": "Room Full Of Cheese"
+  },
+  "ROUND_TEA_PARTY": {
+    "aliases": [
+      "Round Tea Party",
+      "The Round Tea Party",
+      "圆桌茶会"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "ROUND_TEA_PARTY.pages.INITIAL.options.ENJOY_TEA": {
+          "aliases": [
+            "ENJOY_TEA",
+            "Enjoy Tea"
+          ],
+          "event_id": "ROUND_TEA_PARTY",
+          "id": "ROUND_TEA_PARTY.pages.INITIAL.options.ENJOY_TEA",
+          "kind": "event_option",
+          "name": "Enjoy Tea",
+          "page": "INITIAL"
+        },
+        "ROUND_TEA_PARTY.pages.INITIAL.options.PICK_FIGHT": {
+          "aliases": [
+            "PICK_FIGHT",
+            "Pick Fight"
+          ],
+          "event_id": "ROUND_TEA_PARTY",
+          "id": "ROUND_TEA_PARTY.pages.INITIAL.options.PICK_FIGHT",
+          "kind": "event_option",
+          "name": "Pick Fight",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "ROUND_TEA_PARTY",
+    "kind": "event",
+    "name": "Round Tea Party"
+  },
+  "SAPPHIRE_SEED": {
+    "aliases": [
+      "Sapphire Seed",
+      "蓝宝石种子"
+    ],
+    "detail": {
+      "acts": [
+        "Act1"
+      ],
+      "options": {
+        "SAPPHIRE_SEED.pages.INITIAL.options.EAT": {
+          "aliases": [
+            "EAT",
+            "Eat"
+          ],
+          "event_id": "SAPPHIRE_SEED",
+          "id": "SAPPHIRE_SEED.pages.INITIAL.options.EAT",
+          "kind": "event_option",
+          "name": "Eat",
+          "page": "INITIAL"
+        },
+        "SAPPHIRE_SEED.pages.INITIAL.options.PLANT": {
+          "aliases": [
+            "PLANT",
+            "Plant"
+          ],
+          "event_id": "SAPPHIRE_SEED",
+          "id": "SAPPHIRE_SEED.pages.INITIAL.options.PLANT",
+          "kind": "event_option",
+          "name": "Plant",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "SAPPHIRE_SEED",
+    "kind": "event",
+    "name": "Sapphire Seed"
+  },
+  "SELF_HELP_BOOK": {
+    "aliases": [
+      "Self Help Book",
+      "Self-Help Book",
+      "自助指南"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "SELF_HELP_BOOK.pages.INITIAL.options.READ_ENTIRE_BOOK": {
+          "aliases": [
+            "READ_ENTIRE_BOOK",
+            "Read Entire Book"
+          ],
+          "event_id": "SELF_HELP_BOOK",
+          "id": "SELF_HELP_BOOK.pages.INITIAL.options.READ_ENTIRE_BOOK",
+          "kind": "event_option",
+          "name": "Read Entire Book",
+          "page": "INITIAL"
+        },
+        "SELF_HELP_BOOK.pages.INITIAL.options.READ_PASSAGE": {
+          "aliases": [
+            "READ_PASSAGE",
+            "Read Passage"
+          ],
+          "event_id": "SELF_HELP_BOOK",
+          "id": "SELF_HELP_BOOK.pages.INITIAL.options.READ_PASSAGE",
+          "kind": "event_option",
+          "name": "Read Passage",
+          "page": "INITIAL"
+        },
+        "SELF_HELP_BOOK.pages.INITIAL.options.READ_THE_BACK": {
+          "aliases": [
+            "READ_THE_BACK",
+            "Read The Back"
+          ],
+          "event_id": "SELF_HELP_BOOK",
+          "id": "SELF_HELP_BOOK.pages.INITIAL.options.READ_THE_BACK",
+          "kind": "event_option",
+          "name": "Read The Back",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "SELF_HELP_BOOK",
+    "kind": "event",
+    "name": "Self Help Book"
+  },
+  "SLIPPERY_BRIDGE": {
+    "aliases": [
+      "Slippery Bridge",
+      "滑脚木桥"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "SLIPPERY_BRIDGE.pages.HOLD_ON_0.options.HOLD_ON_1": {
+          "aliases": [
+            "HOLD_ON_1",
+            "Hold On 1"
+          ],
+          "event_id": "SLIPPERY_BRIDGE",
+          "id": "SLIPPERY_BRIDGE.pages.HOLD_ON_0.options.HOLD_ON_1",
+          "kind": "event_option",
+          "name": "Hold On 1",
+          "page": "HOLD_ON_0"
+        },
+        "SLIPPERY_BRIDGE.pages.INITIAL.options.HOLD_ON": {
+          "aliases": [
+            "HOLD_ON",
+            "Hold On"
+          ],
+          "event_id": "SLIPPERY_BRIDGE",
+          "id": "SLIPPERY_BRIDGE.pages.INITIAL.options.HOLD_ON",
+          "kind": "event_option",
+          "name": "Hold On",
+          "page": "INITIAL"
+        },
+        "SLIPPERY_BRIDGE.pages.INITIAL.options.HOLD_ON_0": {
+          "aliases": [
+            "HOLD_ON_0",
+            "Hold On 0"
+          ],
+          "event_id": "SLIPPERY_BRIDGE",
+          "id": "SLIPPERY_BRIDGE.pages.INITIAL.options.HOLD_ON_0",
+          "kind": "event_option",
+          "name": "Hold On 0",
+          "page": "INITIAL"
+        },
+        "SLIPPERY_BRIDGE.pages.INITIAL.options.OVERCOME": {
+          "aliases": [
+            "OVERCOME",
+            "Overcome"
+          ],
+          "event_id": "SLIPPERY_BRIDGE",
+          "id": "SLIPPERY_BRIDGE.pages.INITIAL.options.OVERCOME",
+          "kind": "event_option",
+          "name": "Overcome",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "SLIPPERY_BRIDGE",
+    "kind": "event",
+    "name": "Slippery Bridge"
+  },
+  "SPIRALING_WHIRLPOOL": {
+    "aliases": [
+      "Spiraling Whirlpool",
+      "螺旋漩涡"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "SPIRALING_WHIRLPOOL.pages.INITIAL.options.DRINK": {
+          "aliases": [
+            "DRINK",
+            "Drink"
+          ],
+          "event_id": "SPIRALING_WHIRLPOOL",
+          "id": "SPIRALING_WHIRLPOOL.pages.INITIAL.options.DRINK",
+          "kind": "event_option",
+          "name": "Drink",
+          "page": "INITIAL"
+        },
+        "SPIRALING_WHIRLPOOL.pages.INITIAL.options.OBSERVE": {
+          "aliases": [
+            "OBSERVE",
+            "Observe"
+          ],
+          "event_id": "SPIRALING_WHIRLPOOL",
+          "id": "SPIRALING_WHIRLPOOL.pages.INITIAL.options.OBSERVE",
+          "kind": "event_option",
+          "name": "Observe",
+          "page": "INITIAL"
+        },
+        "SPIRALING_WHIRLPOOL.pages.INITIAL.options.OBSERVE_THE_SPIRAL": {
+          "aliases": [
+            "OBSERVE_THE_SPIRAL",
+            "Observe The Spiral"
+          ],
+          "event_id": "SPIRALING_WHIRLPOOL",
+          "id": "SPIRALING_WHIRLPOOL.pages.INITIAL.options.OBSERVE_THE_SPIRAL",
+          "kind": "event_option",
+          "name": "Observe The Spiral",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "SPIRALING_WHIRLPOOL",
+    "kind": "event",
+    "name": "Spiraling Whirlpool"
+  },
+  "SPIRIT_GRAFTER": {
+    "aliases": [
+      "Spirit Grafter",
+      "灵魂嫁接者"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "SPIRIT_GRAFTER.pages.INITIAL.options.LET_IT_IN": {
+          "aliases": [
+            "LET_IT_IN",
+            "Let It In"
+          ],
+          "event_id": "SPIRIT_GRAFTER",
+          "id": "SPIRIT_GRAFTER.pages.INITIAL.options.LET_IT_IN",
+          "kind": "event_option",
+          "name": "Let It In",
+          "page": "INITIAL"
+        },
+        "SPIRIT_GRAFTER.pages.INITIAL.options.REJECTION": {
+          "aliases": [
+            "REJECTION",
+            "Rejection"
+          ],
+          "event_id": "SPIRIT_GRAFTER",
+          "id": "SPIRIT_GRAFTER.pages.INITIAL.options.REJECTION",
+          "kind": "event_option",
+          "name": "Rejection",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "SPIRIT_GRAFTER",
+    "kind": "event",
+    "name": "Spirit Grafter"
+  },
+  "STEADY": {
+    "aliases": [],
+    "detail": {
+      "acts": [],
+      "options": {}
+    },
+    "id": "STEADY",
+    "kind": "event",
+    "name": "Steady (enchant)"
+  },
+  "STONE_OF_ALL_TIME": {
+    "aliases": [
+      "Stone Of All Time",
+      "Stone of All Time",
+      "永恒之石"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "STONE_OF_ALL_TIME.pages.INITIAL.options.LIFT": {
+          "aliases": [
+            "LIFT",
+            "Lift"
+          ],
+          "event_id": "STONE_OF_ALL_TIME",
+          "id": "STONE_OF_ALL_TIME.pages.INITIAL.options.LIFT",
+          "kind": "event_option",
+          "name": "Lift",
+          "page": "INITIAL"
+        },
+        "STONE_OF_ALL_TIME.pages.INITIAL.options.PUSH": {
+          "aliases": [
+            "PUSH",
+            "Push"
+          ],
+          "event_id": "STONE_OF_ALL_TIME",
+          "id": "STONE_OF_ALL_TIME.pages.INITIAL.options.PUSH",
+          "kind": "event_option",
+          "name": "Push",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "STONE_OF_ALL_TIME",
+    "kind": "event",
+    "name": "Stone Of All Time"
+  },
+  "SUNKEN_STATUE": {
+    "aliases": [
+      "Sunken Statue",
+      "The Sunken Statue",
+      "沉没雕像"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "SUNKEN_STATUE.pages.INITIAL.options.DIVE_INTO_WATER": {
+          "aliases": [
+            "DIVE_INTO_WATER",
+            "Dive Into Water"
+          ],
+          "event_id": "SUNKEN_STATUE",
+          "id": "SUNKEN_STATUE.pages.INITIAL.options.DIVE_INTO_WATER",
+          "kind": "event_option",
+          "name": "Dive Into Water",
+          "page": "INITIAL"
+        },
+        "SUNKEN_STATUE.pages.INITIAL.options.GRAB_SWORD": {
+          "aliases": [
+            "GRAB_SWORD",
+            "Grab Sword"
+          ],
+          "event_id": "SUNKEN_STATUE",
+          "id": "SUNKEN_STATUE.pages.INITIAL.options.GRAB_SWORD",
+          "kind": "event_option",
+          "name": "Grab Sword",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "SUNKEN_STATUE",
+    "kind": "event",
+    "name": "Sunken Statue"
+  },
+  "SUNKEN_TREASURY": {
+    "aliases": [
+      "Sunken Treasury",
+      "淹水金库"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "SUNKEN_TREASURY.pages.INITIAL.options.FIRST_CHEST": {
+          "aliases": [
+            "FIRST_CHEST",
+            "First Chest"
+          ],
+          "event_id": "SUNKEN_TREASURY",
+          "id": "SUNKEN_TREASURY.pages.INITIAL.options.FIRST_CHEST",
+          "kind": "event_option",
+          "name": "First Chest",
+          "page": "INITIAL"
+        },
+        "SUNKEN_TREASURY.pages.INITIAL.options.SECOND_CHEST": {
+          "aliases": [
+            "SECOND_CHEST",
+            "Second Chest"
+          ],
+          "event_id": "SUNKEN_TREASURY",
+          "id": "SUNKEN_TREASURY.pages.INITIAL.options.SECOND_CHEST",
+          "kind": "event_option",
+          "name": "Second Chest",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "SUNKEN_TREASURY",
+    "kind": "event",
+    "name": "Sunken Treasury"
+  },
+  "SYMBIOTE": {
+    "aliases": [
+      "Symbiote",
+      "共生体"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "SYMBIOTE.pages.INITIAL.options.APPROACH": {
+          "aliases": [
+            "APPROACH",
+            "Approach"
+          ],
+          "event_id": "SYMBIOTE",
+          "id": "SYMBIOTE.pages.INITIAL.options.APPROACH",
+          "kind": "event_option",
+          "name": "Approach",
+          "page": "INITIAL"
+        },
+        "SYMBIOTE.pages.INITIAL.options.KILL_WITH_FIRE": {
+          "aliases": [
+            "KILL_WITH_FIRE",
+            "Kill With Fire"
+          ],
+          "event_id": "SYMBIOTE",
+          "id": "SYMBIOTE.pages.INITIAL.options.KILL_WITH_FIRE",
+          "kind": "event_option",
+          "name": "Kill With Fire",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "SYMBIOTE",
+    "kind": "event",
+    "name": "Symbiote"
+  },
+  "TABLET_OF_TRUTH": {
+    "aliases": [
+      "Tablet Of Truth",
+      "Tablet of Truth",
+      "真理石板"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "TABLET_OF_TRUTH.pages.DECIPHER.options.GIVE_UP": {
+          "aliases": [
+            "GIVE_UP",
+            "Give Up"
+          ],
+          "event_id": "TABLET_OF_TRUTH",
+          "id": "TABLET_OF_TRUTH.pages.DECIPHER.options.GIVE_UP",
+          "kind": "event_option",
+          "name": "Give Up",
+          "page": "DECIPHER"
+        },
+        "TABLET_OF_TRUTH.pages.DECIPHER_1.options.DECIPHER": {
+          "aliases": [
+            "DECIPHER",
+            "Decipher"
+          ],
+          "event_id": "TABLET_OF_TRUTH",
+          "id": "TABLET_OF_TRUTH.pages.DECIPHER_1.options.DECIPHER",
+          "kind": "event_option",
+          "name": "Decipher",
+          "page": "DECIPHER_1"
+        },
+        "TABLET_OF_TRUTH.pages.DECIPHER_2.options.DECIPHER": {
+          "aliases": [
+            "DECIPHER",
+            "Decipher"
+          ],
+          "event_id": "TABLET_OF_TRUTH",
+          "id": "TABLET_OF_TRUTH.pages.DECIPHER_2.options.DECIPHER",
+          "kind": "event_option",
+          "name": "Decipher",
+          "page": "DECIPHER_2"
+        },
+        "TABLET_OF_TRUTH.pages.DECIPHER_3.options.DECIPHER": {
+          "aliases": [
+            "DECIPHER",
+            "Decipher"
+          ],
+          "event_id": "TABLET_OF_TRUTH",
+          "id": "TABLET_OF_TRUTH.pages.DECIPHER_3.options.DECIPHER",
+          "kind": "event_option",
+          "name": "Decipher",
+          "page": "DECIPHER_3"
+        },
+        "TABLET_OF_TRUTH.pages.INITIAL.options.DECIPHER": {
+          "aliases": [
+            "DECIPHER",
+            "Decipher"
+          ],
+          "event_id": "TABLET_OF_TRUTH",
+          "id": "TABLET_OF_TRUTH.pages.INITIAL.options.DECIPHER",
+          "kind": "event_option",
+          "name": "Decipher",
+          "page": "INITIAL"
+        },
+        "TABLET_OF_TRUTH.pages.INITIAL.options.DECIPHER_1": {
+          "aliases": [
+            "DECIPHER_1",
+            "Decipher 1"
+          ],
+          "event_id": "TABLET_OF_TRUTH",
+          "id": "TABLET_OF_TRUTH.pages.INITIAL.options.DECIPHER_1",
+          "kind": "event_option",
+          "name": "Decipher 1",
+          "page": "INITIAL"
+        },
+        "TABLET_OF_TRUTH.pages.INITIAL.options.SMASH": {
+          "aliases": [
+            "SMASH",
+            "Smash"
+          ],
+          "event_id": "TABLET_OF_TRUTH",
+          "id": "TABLET_OF_TRUTH.pages.INITIAL.options.SMASH",
+          "kind": "event_option",
+          "name": "Smash",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "TABLET_OF_TRUTH",
+    "kind": "event",
+    "name": "Tablet Of Truth"
+  },
+  "TANX": {
+    "aliases": [
+      "Tanx",
+      "远古赐福房"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "TANX.pages.INITIAL.options.CLAWS": {
+          "aliases": [
+            "CLAWS",
+            "Claws"
+          ],
+          "event_id": "TANX",
+          "id": "TANX.pages.INITIAL.options.CLAWS",
+          "kind": "event_option",
+          "name": "Claws",
+          "page": "INITIAL"
+        },
+        "TANX.pages.INITIAL.options.CROSSBOW": {
+          "aliases": [
+            "CROSSBOW",
+            "Crossbow"
+          ],
+          "event_id": "TANX",
+          "id": "TANX.pages.INITIAL.options.CROSSBOW",
+          "kind": "event_option",
+          "name": "Crossbow",
+          "page": "INITIAL"
+        },
+        "TANX.pages.INITIAL.options.IRON_CLUB": {
+          "aliases": [
+            "IRON_CLUB",
+            "Iron Club"
+          ],
+          "event_id": "TANX",
+          "id": "TANX.pages.INITIAL.options.IRON_CLUB",
+          "kind": "event_option",
+          "name": "Iron Club",
+          "page": "INITIAL"
+        },
+        "TANX.pages.INITIAL.options.MEAT_CLEAVER": {
+          "aliases": [
+            "MEAT_CLEAVER",
+            "Meat Cleaver"
+          ],
+          "event_id": "TANX",
+          "id": "TANX.pages.INITIAL.options.MEAT_CLEAVER",
+          "kind": "event_option",
+          "name": "Meat Cleaver",
+          "page": "INITIAL"
+        },
+        "TANX.pages.INITIAL.options.SPIKED_GAUNTLETS": {
+          "aliases": [
+            "SPIKED_GAUNTLETS",
+            "Spiked Gauntlets"
+          ],
+          "event_id": "TANX",
+          "id": "TANX.pages.INITIAL.options.SPIKED_GAUNTLETS",
+          "kind": "event_option",
+          "name": "Spiked Gauntlets",
+          "page": "INITIAL"
+        },
+        "TANX.pages.INITIAL.options.TANXS_WHISTLE": {
+          "aliases": [
+            "TANXS_WHISTLE",
+            "Tanxs Whistle"
+          ],
+          "event_id": "TANX",
+          "id": "TANX.pages.INITIAL.options.TANXS_WHISTLE",
+          "kind": "event_option",
+          "name": "Tanxs Whistle",
+          "page": "INITIAL"
+        },
+        "TANX.pages.INITIAL.options.THROWING_AXE": {
+          "aliases": [
+            "THROWING_AXE",
+            "Throwing Axe"
+          ],
+          "event_id": "TANX",
+          "id": "TANX.pages.INITIAL.options.THROWING_AXE",
+          "kind": "event_option",
+          "name": "Throwing Axe",
+          "page": "INITIAL"
+        },
+        "TANX.pages.INITIAL.options.TRI_BOOMERANG": {
+          "aliases": [
+            "TRI_BOOMERANG",
+            "Tri Boomerang"
+          ],
+          "event_id": "TANX",
+          "id": "TANX.pages.INITIAL.options.TRI_BOOMERANG",
+          "kind": "event_option",
+          "name": "Tri Boomerang",
+          "page": "INITIAL"
+        },
+        "TANX.pages.INITIAL.options.WAR_HAMMER": {
+          "aliases": [
+            "WAR_HAMMER",
+            "War Hammer"
+          ],
+          "event_id": "TANX",
+          "id": "TANX.pages.INITIAL.options.WAR_HAMMER",
+          "kind": "event_option",
+          "name": "War Hammer",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "TANX",
+    "kind": "event",
+    "name": "Tanx"
+  },
+  "TEA_MASTER": {
+    "aliases": [
+      "Tea Master",
+      "茶艺大师"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "TEA_MASTER.pages.INITIAL.options.BONE_TEA": {
+          "aliases": [
+            "BONE_TEA",
+            "Bone Tea"
+          ],
+          "event_id": "TEA_MASTER",
+          "id": "TEA_MASTER.pages.INITIAL.options.BONE_TEA",
+          "kind": "event_option",
+          "name": "Bone Tea",
+          "page": "INITIAL"
+        },
+        "TEA_MASTER.pages.INITIAL.options.EMBER_TEA": {
+          "aliases": [
+            "EMBER_TEA",
+            "Ember Tea"
+          ],
+          "event_id": "TEA_MASTER",
+          "id": "TEA_MASTER.pages.INITIAL.options.EMBER_TEA",
+          "kind": "event_option",
+          "name": "Ember Tea",
+          "page": "INITIAL"
+        },
+        "TEA_MASTER.pages.INITIAL.options.TEA_OF_DISCOURTESY": {
+          "aliases": [
+            "TEA_OF_DISCOURTESY",
+            "Tea Of Discourtesy"
+          ],
+          "event_id": "TEA_MASTER",
+          "id": "TEA_MASTER.pages.INITIAL.options.TEA_OF_DISCOURTESY",
+          "kind": "event_option",
+          "name": "Tea Of Discourtesy",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "TEA_MASTER",
+    "kind": "event",
+    "name": "Tea Master"
+  },
+  "TEZCATARA": {
+    "aliases": [
+      "Tezcatara",
+      "特兹卡塔拉"
+    ],
+    "detail": {
+      "acts": [
+        "Act2"
+      ],
+      "options": {
+        "TEZCATARA.pages.INITIAL.options.BIIIG_HUG": {
+          "aliases": [
+            "BIIIG_HUG",
+            "Biiig Hug"
+          ],
+          "event_id": "TEZCATARA",
+          "id": "TEZCATARA.pages.INITIAL.options.BIIIG_HUG",
+          "kind": "event_option",
+          "name": "Biiig Hug",
+          "page": "INITIAL"
+        },
+        "TEZCATARA.pages.INITIAL.options.GOLDEN_COMPASS": {
+          "aliases": [
+            "GOLDEN_COMPASS",
+            "Golden Compass"
+          ],
+          "event_id": "TEZCATARA",
+          "id": "TEZCATARA.pages.INITIAL.options.GOLDEN_COMPASS",
+          "kind": "event_option",
+          "name": "Golden Compass",
+          "page": "INITIAL"
+        },
+        "TEZCATARA.pages.INITIAL.options.NUTRITIOUS_SOUP": {
+          "aliases": [
+            "NUTRITIOUS_SOUP",
+            "Nutritious Soup"
+          ],
+          "event_id": "TEZCATARA",
+          "id": "TEZCATARA.pages.INITIAL.options.NUTRITIOUS_SOUP",
+          "kind": "event_option",
+          "name": "Nutritious Soup",
+          "page": "INITIAL"
+        },
+        "TEZCATARA.pages.INITIAL.options.PUMPKIN_CANDLE": {
+          "aliases": [
+            "PUMPKIN_CANDLE",
+            "Pumpkin Candle"
+          ],
+          "event_id": "TEZCATARA",
+          "id": "TEZCATARA.pages.INITIAL.options.PUMPKIN_CANDLE",
+          "kind": "event_option",
+          "name": "Pumpkin Candle",
+          "page": "INITIAL"
+        },
+        "TEZCATARA.pages.INITIAL.options.SEAL_OF_GOLD": {
+          "aliases": [
+            "SEAL_OF_GOLD",
+            "Seal of Gold"
+          ],
+          "event_id": "TEZCATARA",
+          "id": "TEZCATARA.pages.INITIAL.options.SEAL_OF_GOLD",
+          "kind": "event_option",
+          "name": "Seal of Gold",
+          "page": "INITIAL"
+        },
+        "TEZCATARA.pages.INITIAL.options.STORYBOOK": {
+          "aliases": [],
+          "event_id": null,
+          "id": "TEZCATARA.pages.INITIAL.options.STORYBOOK",
+          "kind": "event_option",
+          "name": "Storybook",
+          "page": "INITIAL"
+        },
+        "TEZCATARA.pages.INITIAL.options.TOASTY_MITTENS": {
+          "aliases": [
+            "TOASTY_MITTENS",
+            "Toasty Mittens"
+          ],
+          "event_id": "TEZCATARA",
+          "id": "TEZCATARA.pages.INITIAL.options.TOASTY_MITTENS",
+          "kind": "event_option",
+          "name": "Toasty Mittens",
+          "page": "INITIAL"
+        },
+        "TEZCATARA.pages.INITIAL.options.TOY_BOX": {
+          "aliases": [],
+          "event_id": null,
+          "id": "TEZCATARA.pages.INITIAL.options.TOY_BOX",
+          "kind": "event_option",
+          "name": "Toy Box",
+          "page": "INITIAL"
+        },
+        "TEZCATARA.pages.INITIAL.options.VERY_HOT_COCOA": {
+          "aliases": [
+            "VERY_HOT_COCOA",
+            "Very Hot Cocoa"
+          ],
+          "event_id": "TEZCATARA",
+          "id": "TEZCATARA.pages.INITIAL.options.VERY_HOT_COCOA",
+          "kind": "event_option",
+          "name": "Very Hot Cocoa",
+          "page": "INITIAL"
+        },
+        "TEZCATARA.pages.INITIAL.options.YUMMY_COOKIE": {
+          "aliases": [],
+          "event_id": null,
+          "id": "TEZCATARA.pages.INITIAL.options.YUMMY_COOKIE",
+          "kind": "event_option",
+          "name": "Yummy Cookie",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "TEZCATARA",
+    "kind": "event",
+    "name": "Tezcatara"
+  },
+  "THE_ARCHITECT": {
+    "aliases": [
+      "The Architect",
+      "建筑师"
+    ],
+    "detail": {
+      "acts": [
+        "Act3"
+      ],
+      "options": {
+        "THE_ARCHITECT.dialogue.0": {
+          "aliases": [
+            "0"
+          ],
+          "event_id": "THE_ARCHITECT",
+          "id": "THE_ARCHITECT.dialogue.0",
+          "kind": "event_option",
+          "name": "0",
+          "page": "dialogue"
+        },
+        "THE_ARCHITECT.dialogue.1": {
+          "aliases": [
+            "1"
+          ],
+          "event_id": "THE_ARCHITECT",
+          "id": "THE_ARCHITECT.dialogue.1",
+          "kind": "event_option",
+          "name": "1",
+          "page": "dialogue"
+        },
+        "THE_ARCHITECT.pages.INITIAL.options.CONTINUE": {
+          "aliases": [
+            "CONTINUE",
+            "Continue"
+          ],
+          "event_id": "THE_ARCHITECT",
+          "id": "THE_ARCHITECT.pages.INITIAL.options.CONTINUE",
+          "kind": "event_option",
+          "name": "Continue",
+          "page": "INITIAL"
+        },
+        "THE_ARCHITECT.pages.INITIAL.options.PROCEED": {
+          "aliases": [
+            "PROCEED",
+            "Proceed"
+          ],
+          "event_id": "THE_ARCHITECT",
+          "id": "THE_ARCHITECT.pages.INITIAL.options.PROCEED",
+          "kind": "event_option",
+          "name": "Proceed",
+          "page": "INITIAL"
+        },
+        "THE_ARCHITECT.pages.INITIAL.options.THREATEN": {
+          "aliases": [
+            "THREATEN",
+            "Threaten"
+          ],
+          "event_id": "THE_ARCHITECT",
+          "id": "THE_ARCHITECT.pages.INITIAL.options.THREATEN",
+          "kind": "event_option",
+          "name": "Threaten",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "THE_ARCHITECT",
+    "kind": "event",
+    "name": "The Architect"
+  },
+  "THE_FUTURE_OF_POTIONS": {
+    "aliases": [
+      "The Future Of Potions",
+      "The Future of Potions?",
+      "药水的未来"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "THE_FUTURE_OF_POTIONS.pages.INITIAL.options.POTION": {
+          "aliases": [
+            "POTION",
+            "Potion"
+          ],
+          "event_id": "THE_FUTURE_OF_POTIONS",
+          "id": "THE_FUTURE_OF_POTIONS.pages.INITIAL.options.POTION",
+          "kind": "event_option",
+          "name": "Potion",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "THE_FUTURE_OF_POTIONS",
+    "kind": "event",
+    "name": "The Future Of Potions"
+  },
+  "THE_LANTERN_KEY": {
+    "aliases": [
+      "The Lantern Key",
+      "灯火钥匙"
+    ],
+    "detail": {
+      "acts": [
+        "Act2"
+      ],
+      "options": {
+        "THE_LANTERN_KEY.pages.INITIAL.options.FIGHT": {
+          "aliases": [
+            "FIGHT",
+            "Fight"
+          ],
+          "event_id": "THE_LANTERN_KEY",
+          "id": "THE_LANTERN_KEY.pages.INITIAL.options.FIGHT",
+          "kind": "event_option",
+          "name": "Fight",
+          "page": "INITIAL"
+        },
+        "THE_LANTERN_KEY.pages.INITIAL.options.KEEP_THE_KEY": {
+          "aliases": [
+            "KEEP_THE_KEY",
+            "Keep The Key"
+          ],
+          "event_id": "THE_LANTERN_KEY",
+          "id": "THE_LANTERN_KEY.pages.INITIAL.options.KEEP_THE_KEY",
+          "kind": "event_option",
+          "name": "Keep The Key",
+          "page": "INITIAL"
+        },
+        "THE_LANTERN_KEY.pages.INITIAL.options.RETURN_THE_KEY": {
+          "aliases": [
+            "RETURN_THE_KEY",
+            "Return The Key"
+          ],
+          "event_id": "THE_LANTERN_KEY",
+          "id": "THE_LANTERN_KEY.pages.INITIAL.options.RETURN_THE_KEY",
+          "kind": "event_option",
+          "name": "Return The Key",
+          "page": "INITIAL"
+        },
+        "THE_LANTERN_KEY.pages.KEEP_THE_KEY.options.FIGHT": {
+          "aliases": [
+            "FIGHT",
+            "Fight"
+          ],
+          "event_id": "THE_LANTERN_KEY",
+          "id": "THE_LANTERN_KEY.pages.KEEP_THE_KEY.options.FIGHT",
+          "kind": "event_option",
+          "name": "Fight",
+          "page": "KEEP_THE_KEY"
+        }
+      }
+    },
+    "id": "THE_LANTERN_KEY",
+    "kind": "event",
+    "name": "The Lantern Key"
+  },
+  "THE_LEGENDS_WERE_TRUE": {
+    "aliases": [
+      "The Legends Were True",
+      "传说是真的"
+    ],
+    "detail": {
+      "acts": [
+        "Act2"
+      ],
+      "options": {
+        "THE_LEGENDS_WERE_TRUE.pages.INITIAL.options.NAB_THE_MAP": {
+          "aliases": [
+            "NAB_THE_MAP",
+            "Nab The Map"
+          ],
+          "event_id": "THE_LEGENDS_WERE_TRUE",
+          "id": "THE_LEGENDS_WERE_TRUE.pages.INITIAL.options.NAB_THE_MAP",
+          "kind": "event_option",
+          "name": "Nab The Map",
+          "page": "INITIAL"
+        },
+        "THE_LEGENDS_WERE_TRUE.pages.INITIAL.options.SLOWLY_FIND_AN_EXIT": {
+          "aliases": [
+            "SLOWLY_FIND_AN_EXIT",
+            "Slowly Find An Exit"
+          ],
+          "event_id": "THE_LEGENDS_WERE_TRUE",
+          "id": "THE_LEGENDS_WERE_TRUE.pages.INITIAL.options.SLOWLY_FIND_AN_EXIT",
+          "kind": "event_option",
+          "name": "Slowly Find An Exit",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "THE_LEGENDS_WERE_TRUE",
+    "kind": "event",
+    "name": "The Legends Were True"
+  },
+  "THIS_OR_THAT": {
+    "aliases": [
+      "This Or That",
+      "This or That?",
+      "这个还是那个"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "THIS_OR_THAT.pages.INITIAL.options.ORNATE": {
+          "aliases": [
+            "ORNATE",
+            "Ornate"
+          ],
+          "event_id": "THIS_OR_THAT",
+          "id": "THIS_OR_THAT.pages.INITIAL.options.ORNATE",
+          "kind": "event_option",
+          "name": "Ornate",
+          "page": "INITIAL"
+        },
+        "THIS_OR_THAT.pages.INITIAL.options.PLAIN": {
+          "aliases": [
+            "PLAIN",
+            "Plain"
+          ],
+          "event_id": "THIS_OR_THAT",
+          "id": "THIS_OR_THAT.pages.INITIAL.options.PLAIN",
+          "kind": "event_option",
+          "name": "Plain",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "THIS_OR_THAT",
+    "kind": "event",
+    "name": "This Or That"
+  },
+  "TINKER_TIME": {
+    "aliases": [
+      "Tinker Time",
+      "打造时间"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {}
+    },
+    "id": "TINKER_TIME",
+    "kind": "event",
+    "name": "Tinker Time"
+  },
+  "TRASH_HEAP": {
+    "aliases": [
+      "Trash Heap",
+      "垃圾堆"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "TRASH_HEAP.pages.INITIAL.options.DIVE_IN": {
+          "aliases": [
+            "DIVE_IN"
+          ],
+          "event_id": null,
+          "id": "TRASH_HEAP.pages.INITIAL.options.DIVE_IN",
+          "kind": "event_option",
+          "name": "Dive In",
+          "page": "INITIAL"
+        },
+        "TRASH_HEAP.pages.INITIAL.options.GRAB": {
+          "aliases": [
+            "GRAB"
+          ],
+          "event_id": null,
+          "id": "TRASH_HEAP.pages.INITIAL.options.GRAB",
+          "kind": "event_option",
+          "name": "Grab",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "TRASH_HEAP",
+    "kind": "event",
+    "name": "Trash Heap"
+  },
+  "TRIAL": {
+    "aliases": [
+      "The Trial",
+      "Trial",
+      "审判"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {}
+    },
+    "id": "TRIAL",
+    "kind": "event",
+    "name": "Trial"
+  },
+  "UNREST_SITE": {
+    "aliases": [
+      "Unrest Site",
+      "无休之处"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "UNREST_SITE.pages.INITIAL.options.KILL": {
+          "aliases": [
+            "KILL",
+            "Kill"
+          ],
+          "event_id": "UNREST_SITE",
+          "id": "UNREST_SITE.pages.INITIAL.options.KILL",
+          "kind": "event_option",
+          "name": "Kill",
+          "page": "INITIAL"
+        },
+        "UNREST_SITE.pages.INITIAL.options.REST": {
+          "aliases": [
+            "REST",
+            "Rest"
+          ],
+          "event_id": "UNREST_SITE",
+          "id": "UNREST_SITE.pages.INITIAL.options.REST",
+          "kind": "event_option",
+          "name": "Rest",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "UNREST_SITE",
+    "kind": "event",
+    "name": "Unrest Site"
+  },
+  "VAKUU": {
+    "aliases": [
+      "Vakuu",
+      "荣光远古"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "VAKUU.pages.INITIAL.options.BLOOD_SOAKED_ROSE": {
+          "aliases": [
+            "BLOOD_SOAKED_ROSE",
+            "Blood Soaked Rose"
+          ],
+          "event_id": "VAKUU",
+          "id": "VAKUU.pages.INITIAL.options.BLOOD_SOAKED_ROSE",
+          "kind": "event_option",
+          "name": "Blood Soaked Rose",
+          "page": "INITIAL"
+        },
+        "VAKUU.pages.INITIAL.options.CHOICES_PARADOX": {
+          "aliases": [
+            "CHOICES_PARADOX",
+            "Choices Paradox"
+          ],
+          "event_id": "VAKUU",
+          "id": "VAKUU.pages.INITIAL.options.CHOICES_PARADOX",
+          "kind": "event_option",
+          "name": "Choices Paradox",
+          "page": "INITIAL"
+        },
+        "VAKUU.pages.INITIAL.options.SERE_TALON": {
+          "aliases": [
+            "SERE_TALON",
+            "Sere Talon"
+          ],
+          "event_id": "VAKUU",
+          "id": "VAKUU.pages.INITIAL.options.SERE_TALON",
+          "kind": "event_option",
+          "name": "Sere Talon",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "VAKUU",
+    "kind": "event",
+    "name": "Vakuu"
+  },
+  "VORTEX": {
+    "aliases": [],
+    "detail": {
+      "acts": [],
+      "options": {}
+    },
+    "id": "VORTEX",
+    "kind": "event",
+    "name": "Vortex / Spiral (enchant)"
+  },
+  "WAR_HISTORIAN_REPY": {
+    "aliases": [
+      "War Historian Repy",
+      "War Historian, Repy",
+      "战史学家付袭"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "WAR_HISTORIAN_REPY.pages.INITIAL.options.UNLOCK_CAGE": {
+          "aliases": [
+            "UNLOCK_CAGE",
+            "Unlock Cage"
+          ],
+          "event_id": "WAR_HISTORIAN_REPY",
+          "id": "WAR_HISTORIAN_REPY.pages.INITIAL.options.UNLOCK_CAGE",
+          "kind": "event_option",
+          "name": "Unlock Cage",
+          "page": "INITIAL"
+        },
+        "WAR_HISTORIAN_REPY.pages.INITIAL.options.UNLOCK_CHEST": {
+          "aliases": [
+            "UNLOCK_CHEST",
+            "Unlock Chest"
+          ],
+          "event_id": "WAR_HISTORIAN_REPY",
+          "id": "WAR_HISTORIAN_REPY.pages.INITIAL.options.UNLOCK_CHEST",
+          "kind": "event_option",
+          "name": "Unlock Chest",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "WAR_HISTORIAN_REPY",
+    "kind": "event",
+    "name": "War Historian Repy"
+  },
+  "WATERLOGGED_SCRIPTORIUM": {
+    "aliases": [
+      "Waterlogged Scriptorium",
+      "水漫缮写室"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "WATERLOGGED_SCRIPTORIUM.pages.INITIAL.options.BLOODY_INK": {
+          "aliases": [
+            "BLOODY_INK",
+            "Bloody Ink"
+          ],
+          "event_id": "WATERLOGGED_SCRIPTORIUM",
+          "id": "WATERLOGGED_SCRIPTORIUM.pages.INITIAL.options.BLOODY_INK",
+          "kind": "event_option",
+          "name": "Bloody Ink",
+          "page": "INITIAL"
+        },
+        "WATERLOGGED_SCRIPTORIUM.pages.INITIAL.options.PRICKLY_SPONGE": {
+          "aliases": [
+            "PRICKLY_SPONGE",
+            "Prickly Sponge"
+          ],
+          "event_id": "WATERLOGGED_SCRIPTORIUM",
+          "id": "WATERLOGGED_SCRIPTORIUM.pages.INITIAL.options.PRICKLY_SPONGE",
+          "kind": "event_option",
+          "name": "Prickly Sponge",
+          "page": "INITIAL"
+        },
+        "WATERLOGGED_SCRIPTORIUM.pages.INITIAL.options.TENTACLE_QUILL": {
+          "aliases": [
+            "TENTACLE_QUILL",
+            "Tentacle Quill"
+          ],
+          "event_id": "WATERLOGGED_SCRIPTORIUM",
+          "id": "WATERLOGGED_SCRIPTORIUM.pages.INITIAL.options.TENTACLE_QUILL",
+          "kind": "event_option",
+          "name": "Tentacle Quill",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "WATERLOGGED_SCRIPTORIUM",
+    "kind": "event",
+    "name": "Waterlogged Scriptorium"
+  },
+  "WELCOME_TO_WONGOS": {
+    "aliases": [
+      "Welcome To Wongos",
+      "Welcome to Wongo's",
+      "欢迎来到旺购百货"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "WELCOME_TO_WONGOS.pages.INITIAL.options.BARGAIN_BIN": {
+          "aliases": [
+            "BARGAIN_BIN",
+            "Bargain Bin"
+          ],
+          "event_id": "WELCOME_TO_WONGOS",
+          "id": "WELCOME_TO_WONGOS.pages.INITIAL.options.BARGAIN_BIN",
+          "kind": "event_option",
+          "name": "Bargain Bin",
+          "page": "INITIAL"
+        },
+        "WELCOME_TO_WONGOS.pages.INITIAL.options.BUY_BARGAIN_BIN": {
+          "aliases": [
+            "BUY_BARGAIN_BIN",
+            "Buy Bargain Bin"
+          ],
+          "event_id": "WELCOME_TO_WONGOS",
+          "id": "WELCOME_TO_WONGOS.pages.INITIAL.options.BUY_BARGAIN_BIN",
+          "kind": "event_option",
+          "name": "Buy Bargain Bin",
+          "page": "INITIAL"
+        },
+        "WELCOME_TO_WONGOS.pages.INITIAL.options.BUY_FEATURED_ITEM": {
+          "aliases": [
+            "BUY_FEATURED_ITEM",
+            "Buy Featured Item"
+          ],
+          "event_id": "WELCOME_TO_WONGOS",
+          "id": "WELCOME_TO_WONGOS.pages.INITIAL.options.BUY_FEATURED_ITEM",
+          "kind": "event_option",
+          "name": "Buy Featured Item",
+          "page": "INITIAL"
+        },
+        "WELCOME_TO_WONGOS.pages.INITIAL.options.BUY_MYSTERY_BOX": {
+          "aliases": [
+            "BUY_MYSTERY_BOX",
+            "Buy Mystery Box"
+          ],
+          "event_id": "WELCOME_TO_WONGOS",
+          "id": "WELCOME_TO_WONGOS.pages.INITIAL.options.BUY_MYSTERY_BOX",
+          "kind": "event_option",
+          "name": "Buy Mystery Box",
+          "page": "INITIAL"
+        },
+        "WELCOME_TO_WONGOS.pages.INITIAL.options.FEATURED_ITEM": {
+          "aliases": [
+            "FEATURED_ITEM",
+            "Featured Item"
+          ],
+          "event_id": "WELCOME_TO_WONGOS",
+          "id": "WELCOME_TO_WONGOS.pages.INITIAL.options.FEATURED_ITEM",
+          "kind": "event_option",
+          "name": "Featured Item",
+          "page": "INITIAL"
+        },
+        "WELCOME_TO_WONGOS.pages.INITIAL.options.LEAVE": {
+          "aliases": [
+            "LEAVE",
+            "Leave"
+          ],
+          "event_id": "WELCOME_TO_WONGOS",
+          "id": "WELCOME_TO_WONGOS.pages.INITIAL.options.LEAVE",
+          "kind": "event_option",
+          "name": "Leave",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "WELCOME_TO_WONGOS",
+    "kind": "event",
+    "name": "Welcome To Wongos"
+  },
+  "WELLSPRING": {
+    "aliases": [
+      "Wellspring",
+      "泉水"
+    ],
+    "detail": {
+      "acts": [
+        "Act1"
+      ],
+      "options": {
+        "WELLSPRING.pages.INITIAL.options.BATHE": {
+          "aliases": [
+            "BATHE",
+            "Bathe"
+          ],
+          "event_id": "WELLSPRING",
+          "id": "WELLSPRING.pages.INITIAL.options.BATHE",
+          "kind": "event_option",
+          "name": "Bathe",
+          "page": "INITIAL"
+        },
+        "WELLSPRING.pages.INITIAL.options.BOTTLE": {
+          "aliases": [
+            "BOTTLE",
+            "Bottle"
+          ],
+          "event_id": "WELLSPRING",
+          "id": "WELLSPRING.pages.INITIAL.options.BOTTLE",
+          "kind": "event_option",
+          "name": "Bottle",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "WELLSPRING",
+    "kind": "event",
+    "name": "Wellspring"
+  },
+  "WHISPERING_HOLLOW": {
+    "aliases": [
+      "Whispering Hollow",
+      "低语空谷"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "WHISPERING_HOLLOW.pages.INITIAL.options.GOLD": {
+          "aliases": [
+            "GOLD",
+            "Gold"
+          ],
+          "event_id": "WHISPERING_HOLLOW",
+          "id": "WHISPERING_HOLLOW.pages.INITIAL.options.GOLD",
+          "kind": "event_option",
+          "name": "Gold",
+          "page": "INITIAL"
+        },
+        "WHISPERING_HOLLOW.pages.INITIAL.options.HUG": {
+          "aliases": [
+            "HUG",
+            "Hug"
+          ],
+          "event_id": "WHISPERING_HOLLOW",
+          "id": "WHISPERING_HOLLOW.pages.INITIAL.options.HUG",
+          "kind": "event_option",
+          "name": "Hug",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "WHISPERING_HOLLOW",
+    "kind": "event",
+    "name": "Whispering Hollow"
+  },
+  "WOOD_CARVINGS": {
+    "aliases": [
+      "Wood Carvings",
+      "木雕"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "WOOD_CARVINGS.pages.INITIAL.options.BIRD": {
+          "aliases": [
+            "BIRD",
+            "Bird"
+          ],
+          "event_id": "WOOD_CARVINGS",
+          "id": "WOOD_CARVINGS.pages.INITIAL.options.BIRD",
+          "kind": "event_option",
+          "name": "Bird",
+          "page": "INITIAL"
+        },
+        "WOOD_CARVINGS.pages.INITIAL.options.SNAKE": {
+          "aliases": [
+            "SNAKE",
+            "Snake"
+          ],
+          "event_id": "WOOD_CARVINGS",
+          "id": "WOOD_CARVINGS.pages.INITIAL.options.SNAKE",
+          "kind": "event_option",
+          "name": "Snake",
+          "page": "INITIAL"
+        },
+        "WOOD_CARVINGS.pages.INITIAL.options.TORUS": {
+          "aliases": [
+            "TORUS",
+            "Torus"
+          ],
+          "event_id": "WOOD_CARVINGS",
+          "id": "WOOD_CARVINGS.pages.INITIAL.options.TORUS",
+          "kind": "event_option",
+          "name": "Torus",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "WOOD_CARVINGS",
+    "kind": "event",
+    "name": "Wood Carvings"
+  },
+  "ZEN_WEAVER": {
+    "aliases": [
+      "Zen Weaver",
+      "修禅织网者"
+    ],
+    "detail": {
+      "acts": [],
+      "options": {
+        "ZEN_WEAVER.pages.INITIAL.options.ARACHNID_ACUPUNCTURE": {
+          "aliases": [
+            "ARACHNID_ACUPUNCTURE",
+            "Arachnid Acupuncture"
+          ],
+          "event_id": "ZEN_WEAVER",
+          "id": "ZEN_WEAVER.pages.INITIAL.options.ARACHNID_ACUPUNCTURE",
+          "kind": "event_option",
+          "name": "Arachnid Acupuncture",
+          "page": "INITIAL"
+        },
+        "ZEN_WEAVER.pages.INITIAL.options.BREATHING_TECHNIQUES": {
+          "aliases": [
+            "BREATHING_TECHNIQUES",
+            "Breathing Techniques"
+          ],
+          "event_id": "ZEN_WEAVER",
+          "id": "ZEN_WEAVER.pages.INITIAL.options.BREATHING_TECHNIQUES",
+          "kind": "event_option",
+          "name": "Breathing Techniques",
+          "page": "INITIAL"
+        },
+        "ZEN_WEAVER.pages.INITIAL.options.EMOTIONAL_AWARENESS": {
+          "aliases": [
+            "EMOTIONAL_AWARENESS",
+            "Emotional Awareness"
+          ],
+          "event_id": "ZEN_WEAVER",
+          "id": "ZEN_WEAVER.pages.INITIAL.options.EMOTIONAL_AWARENESS",
+          "kind": "event_option",
+          "name": "Emotional Awareness",
+          "page": "INITIAL"
+        }
+      }
+    },
+    "id": "ZEN_WEAVER",
+    "kind": "event",
+    "name": "Zen Weaver"
+  },
+  "宾邦": {
+    "aliases": [],
+    "event_id": null,
+    "id": "宾邦",
+    "kind": "event_option",
+    "name": "Bing Bong (event option)",
+    "page": null
+  },
+  "抱抱先生": {
+    "aliases": [],
+    "event_id": null,
+    "id": "抱抱先生",
+    "kind": "event_option",
+    "name": "Mr. Struggles (event option)",
+    "page": null
+  }
+}

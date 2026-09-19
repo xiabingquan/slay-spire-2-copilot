@@ -18,7 +18,7 @@ operates the game until the run ends — then writes the run's memory note
 
 | Character | Record |
 |---|---|
-| <img src="assets/characters/character_icon_ironclad.webp" alt="IRONCLAD" width="28"> | Ascension 0 ✅ |
+| <img src="assets/characters/character_icon_ironclad.webp" alt="IRONCLAD" width="28"> | Ascension 0 ✅ Ascension 1 ✅ (Ascension 2 in progress) |
 | <img src="assets/characters/character_icon_silent.webp" alt="SILENT" width="28"> | N.A. |
 | <img src="assets/characters/character_icon_defect.webp" alt="DEFECT" width="28"> | N.A. |
 | <img src="assets/characters/character_icon_necrobinder.webp" alt="NECROBINDER" width="28"> | N.A. |
@@ -57,21 +57,23 @@ Run logs are written to the given folder as `run-20260916-013052-a3f9c012.log`
       .gitignore
       slay-spire-2-copilot/                (skill folder — all runtime files)
         SKILL.md                           (skill definition / invocation contract)
-        bridge/                            (spirectl.py CLI)
+        bridge/                            (spirectl.py CLI + spirectl_lib/ package)
+          docs/                            (CLI cheat sheet, wire protocol)
+          spirectl_lib/data/               (characters/cards/powers/relics/potions/afflictions/intents/monsters/events — EN+ZH JSON pairs keyed by live game ids, identical EN/ZH schema)
         scripts/                           (shell scripts: mod install, watchdog)
         mod/SpireBridge/                   (in-game communication mod source)
-        references/bridge/                 (CLI cheat sheet, wire protocol)
-        references/game/                   (characters, cards, powers, relics, potions, statuses, intents, monsters, events)
-        memory/                            (run memory: user guide, per-run notes)
+        memory/                            (memory system: user_guide, template, overview stats, lessons/ experience store, runs/ per-run notes)
 
 Skill symlink: `~/.claude/skills/slay-spire-2-copilot` → the skill folder above.
 
 Doc health check: [doctor.md](doctor.md) at the repo root is a
 documentation-organization checklist — README stays a project overview;
-`mod/` and `bridge/` stay code-only; run memory is written only under
-`memory/runs/`; `references/game/` keeps static material only; docs carry no
-user-conversation content (comments, requests, improvement asks); docs don't
-mix languages (Chinese docs stay Chinese, English docs stay English). How to
+`mod/` and `bridge/` hold code plus their fixed companions (`bridge/docs/`
+tooling docs, `bridge/spirectl_lib/data/` static game data); run memory is
+written only under `memory/runs/`; docs carry no user-conversation content (comments, requests, improvement asks); docs don't
+mix languages (Chinese docs stay Chinese, English docs stay English); EN/ZH
+twin docs state the same rules and constants; local-only archives
+(`local-archive/` etc.) stay untracked and uncited. How to
 run: have the agent execute the checklist (e.g. "run doctor.md") and fix
 violations. When to run: after each run ends, before committing documentation
 changes, or whenever files look misplaced.

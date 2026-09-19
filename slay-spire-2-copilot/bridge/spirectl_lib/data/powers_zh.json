@@ -1,0 +1,4495 @@
+{
+  "ACCELERANT_POWER": {
+    "aliases": [
+      "ACCELERANT",
+      "Accelerant",
+      "AccelerantPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "ACCELERANT_POWER",
+    "kind": "power",
+    "name": "Accelerant"
+  },
+  "ACCURACY_POWER": {
+    "aliases": [
+      "ACCURACY",
+      "Accuracy",
+      "AccuracyPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "ACCURACY_POWER",
+    "kind": "power",
+    "name": "精准"
+  },
+  "ADAPTABLE_POWER": {
+    "aliases": [
+      "ADAPTABLE",
+      "Adaptable",
+      "AdaptablePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "ADAPTABLE_POWER",
+    "kind": "power",
+    "name": "Adaptable"
+  },
+  "AFTERIMAGE_POWER": {
+    "aliases": [
+      "AFTERIMAGE",
+      "Afterimage",
+      "AfterimagePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "AFTERIMAGE_POWER",
+    "kind": "power",
+    "name": "余像"
+  },
+  "AGGRESSION_POWER": {
+    "aliases": [
+      "AGGRESSION",
+      "Aggression",
+      "AggressionPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "AGGRESSION_POWER",
+    "kind": "power",
+    "name": "Aggression"
+  },
+  "ANTICIPATE": {
+    "aliases": [
+      "ANTICIPATE",
+      "Temporary Dexterity"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "ANTICIPATE",
+    "kind": "power",
+    "name": "Temporary Dexterity"
+  },
+  "ARSENAL_POWER": {
+    "aliases": [
+      "ARSENAL",
+      "Arsenal",
+      "ArsenalPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "ARSENAL_POWER",
+    "kind": "power",
+    "name": "Arsenal"
+  },
+  "ARTIFACT_POWER": {
+    "aliases": [
+      "ARTIFACT",
+      "Artifact",
+      "ArtifactPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "ARTIFACT_POWER",
+    "kind": "power",
+    "name": "人工制品"
+  },
+  "ASLEEP": {
+    "aliases": [
+      "Asleep"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "ASLEEP",
+    "kind": "power",
+    "name": "沉睡"
+  },
+  "ASLEEP_POWER": {
+    "aliases": [
+      "ASLEEP",
+      "AsleepPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "ASLEEP_POWER",
+    "kind": "power",
+    "name": "沉睡"
+  },
+  "AUTOMATION_POWER": {
+    "aliases": [
+      "AUTOMATION",
+      "Automation",
+      "AutomationPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "AUTOMATION_POWER",
+    "kind": "power",
+    "name": "Automation"
+  },
+  "BACK_ATTACK_LEFT_POWER": {
+    "aliases": [
+      "BACK_ATTACK_LEFT",
+      "Back Attack",
+      "BackAttackLeftPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "BACK_ATTACK_LEFT_POWER",
+    "kind": "power",
+    "name": "背袭·左"
+  },
+  "BACK_ATTACK_RIGHT_POWER": {
+    "aliases": [
+      "BACK_ATTACK_RIGHT",
+      "Back Attack",
+      "BackAttackRightPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "BACK_ATTACK_RIGHT_POWER",
+    "kind": "power",
+    "name": "背袭·右"
+  },
+  "BARRICADE_POWER": {
+    "aliases": [
+      "BARRICADE",
+      "Barricade",
+      "BarricadePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "BARRICADE_POWER",
+    "kind": "power",
+    "name": "壁垒"
+  },
+  "BATTLEWORN_DUMMY_TIME_LIMIT_POWER": {
+    "aliases": [
+      "BATTLEWORN_DUMMY_TIME_LIMIT",
+      "BattlewornDummyTimeLimitPower",
+      "Time Limit"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "BATTLEWORN_DUMMY_TIME_LIMIT_POWER",
+    "kind": "power",
+    "name": "Battleworn Dummy Time Limit"
+  },
+  "BEACON_OF_HOPE_POWER": {
+    "aliases": [
+      "BEACON_OF_HOPE",
+      "Beacon of Hope",
+      "BeaconOfHopePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "BEACON_OF_HOPE_POWER",
+    "kind": "power",
+    "name": "Beacon Of Hope"
+  },
+  "BIASED_COGNITION_POWER": {
+    "aliases": [
+      "BIASED_COGNITION",
+      "Biased Cognition",
+      "BiasedCognitionPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "BIASED_COGNITION_POWER",
+    "kind": "power",
+    "name": "偏见认知"
+  },
+  "BLACK_HOLE_POWER": {
+    "aliases": [
+      "BLACK_HOLE",
+      "Black Hole",
+      "BlackHolePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "BLACK_HOLE_POWER",
+    "kind": "power",
+    "name": "Black Hole"
+  },
+  "BLOCK_NEXT_TURN_POWER": {
+    "aliases": [
+      "BLOCK_NEXT_TURN",
+      "Block Next Turn",
+      "BlockNextTurnPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "BLOCK_NEXT_TURN_POWER",
+    "kind": "power",
+    "name": "Block Next Turn"
+  },
+  "BLUR_POWER": {
+    "aliases": [
+      "BLUR",
+      "Blur",
+      "BlurPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "BLUR_POWER",
+    "kind": "power",
+    "name": "模糊"
+  },
+  "BORROWED_TIME_POWER": {
+    "aliases": [
+      "BORROWED_TIME",
+      "Borrowed Time",
+      "BorrowedTimePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "BORROWED_TIME_POWER",
+    "kind": "power",
+    "name": "Borrowed Time"
+  },
+  "BUFFER_POWER": {
+    "aliases": [
+      "BUFFER",
+      "Buffer",
+      "BufferPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "BUFFER_POWER",
+    "kind": "power",
+    "name": "缓冲"
+  },
+  "BURROWED_POWER": {
+    "aliases": [
+      "BURROWED",
+      "Burrowed",
+      "BurrowedPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "BURROWED_POWER",
+    "kind": "power",
+    "name": "钻地"
+  },
+  "BURST_POWER": {
+    "aliases": [
+      "BURST",
+      "Burst",
+      "BurstPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "BURST_POWER",
+    "kind": "power",
+    "name": "爆发"
+  },
+  "CALAMITY_POWER": {
+    "aliases": [
+      "CALAMITY",
+      "Calamity",
+      "CalamityPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "CALAMITY_POWER",
+    "kind": "power",
+    "name": "Calamity"
+  },
+  "CALCIFY_POWER": {
+    "aliases": [
+      "CALCIFY",
+      "Calcify",
+      "CalcifyPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "CALCIFY_POWER",
+    "kind": "power",
+    "name": "Calcify"
+  },
+  "CALL_OF_THE_VOID_POWER": {
+    "aliases": [
+      "CALL_OF_THE_VOID",
+      "Call of the Void",
+      "CallOfTheVoidPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "CALL_OF_THE_VOID_POWER",
+    "kind": "power",
+    "name": "Call Of The Void"
+  },
+  "CHAINS_OF_BINDING_POWER": {
+    "aliases": [
+      "CHAINS_OF_BINDING",
+      "Chains of Binding",
+      "ChainsOfBindingPower"
+    ],
+    "detail": {
+      "affliction_keys": [
+        "BOUND"
+      ],
+      "counter_class": true,
+      "host_of_affliction": true,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "CHAINS_OF_BINDING_POWER",
+    "kind": "power",
+    "name": "束缚之链"
+  },
+  "CHILD_OF_THE_STARS_POWER": {
+    "aliases": [
+      "CHILD_OF_THE_STARS",
+      "Child of the Stars",
+      "ChildOfTheStarsPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "CHILD_OF_THE_STARS_POWER",
+    "kind": "power",
+    "name": "Child Of The Stars"
+  },
+  "CLARITY_POWER": {
+    "aliases": [
+      "CLARITY",
+      "Clarity",
+      "ClarityPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "CLARITY_POWER",
+    "kind": "power",
+    "name": "Clarity"
+  },
+  "COLOSSUS_POWER": {
+    "aliases": [
+      "COLOSSUS",
+      "Colossus",
+      "ColossusPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "COLOSSUS_POWER",
+    "kind": "power",
+    "name": "巨像"
+  },
+  "CONFUSED_POWER": {
+    "aliases": [
+      "CONFUSED",
+      "Confused",
+      "ConfusedPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
+    "id": "CONFUSED_POWER",
+    "kind": "power",
+    "name": "混乱"
+  },
+  "CONQUEROR_POWER": {
+    "aliases": [
+      "CONQUEROR",
+      "Conqueror",
+      "ConquerorPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "CONQUEROR_POWER",
+    "kind": "power",
+    "name": "Conqueror"
+  },
+  "CONSTRICT_POWER": {
+    "aliases": [
+      "CONSTRICT",
+      "Constrict",
+      "ConstrictPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "CONSTRICT_POWER",
+    "kind": "power",
+    "name": "缩紧"
+  },
+  "CONSUMING_SHADOW_POWER": {
+    "aliases": [
+      "CONSUMING_SHADOW",
+      "Consuming Shadow",
+      "ConsumingShadowPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "CONSUMING_SHADOW_POWER",
+    "kind": "power",
+    "name": "Consuming Shadow"
+  },
+  "COOLANT_POWER": {
+    "aliases": [
+      "COOLANT",
+      "Coolant",
+      "CoolantPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "COOLANT_POWER",
+    "kind": "power",
+    "name": "Coolant"
+  },
+  "COORDINATE": {
+    "aliases": [
+      "COORDINATE",
+      "Temporary Strength"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "COORDINATE",
+    "kind": "power",
+    "name": "Temporary Strength"
+  },
+  "CORROSIVE_WAVE_POWER": {
+    "aliases": [
+      "CORROSIVE_WAVE",
+      "Corrosive Wave",
+      "CorrosiveWavePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "CORROSIVE_WAVE_POWER",
+    "kind": "power",
+    "name": "Corrosive Wave"
+  },
+  "CORRUPTION_POWER": {
+    "aliases": [
+      "CORRUPTION",
+      "Corruption",
+      "CorruptionPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "CORRUPTION_POWER",
+    "kind": "power",
+    "name": "腐化"
+  },
+  "COUNTDOWN_POWER": {
+    "aliases": [
+      "COUNTDOWN",
+      "Countdown",
+      "CountdownPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "COUNTDOWN_POWER",
+    "kind": "power",
+    "name": "Countdown"
+  },
+  "COVERED_POWER": {
+    "aliases": [
+      "COVERED",
+      "Covered",
+      "CoveredPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "COVERED_POWER",
+    "kind": "power",
+    "name": "位于被掩护者"
+  },
+  "CRAB_RAGE_POWER": {
+    "aliases": [
+      "CRAB_RAGE",
+      "Crab Rage",
+      "CrabRagePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "CRAB_RAGE_POWER",
+    "kind": "power",
+    "name": "蟹怒"
+  },
+  "CREATIVE_AI_POWER": {
+    "aliases": [
+      "CREATIVE_AI",
+      "Creative AI",
+      "CreativeAiPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "CREATIVE_AI_POWER",
+    "kind": "power",
+    "name": "Creative Ai"
+  },
+  "CRIMSON_MANTLE_POWER": {
+    "aliases": [
+      "CRIMSON_MANTLE",
+      "Crimson Mantle"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "CRIMSON_MANTLE_POWER",
+    "kind": "power",
+    "name": "猩红披风"
+  },
+  "CRUELTY_POWER": {
+    "aliases": [
+      "CRUELTY",
+      "Cruelty"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "CRUELTY_POWER",
+    "kind": "power",
+    "name": "残忍"
+  },
+  "CRUSH_UNDER": {
+    "aliases": [
+      "CRUSH_UNDER",
+      "Temporary Strength Down"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "CRUSH_UNDER",
+    "kind": "power",
+    "name": "Temporary Strength Down"
+  },
+  "CURIOUS_POWER": {
+    "aliases": [
+      "CURIOUS",
+      "Curious",
+      "CuriousPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "CURIOUS_POWER",
+    "kind": "power",
+    "name": "Curious"
+  },
+  "CURL_UP_POWER": {
+    "aliases": [
+      "CURL_UP",
+      "Curl Up",
+      "CurlUpPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "CURL_UP_POWER",
+    "kind": "power",
+    "name": "蜷缩"
+  },
+  "DAMPEN_POWER": {
+    "aliases": [
+      "DAMPEN",
+      "Dampen",
+      "DampenPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "None-stack"
+    },
+    "id": "DAMPEN_POWER",
+    "kind": "power",
+    "name": "弱化"
+  },
+  "DANSE_MACABRE_POWER": {
+    "aliases": [
+      "DANSE_MACABRE",
+      "Danse Macabre",
+      "DanseMacabrePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "DANSE_MACABRE_POWER",
+    "kind": "power",
+    "name": "Danse Macabre"
+  },
+  "DARK_EMBRACE_POWER": {
+    "aliases": [
+      "DARK_EMBRACE",
+      "Dark Embrace",
+      "DarkEmbracePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "DARK_EMBRACE_POWER",
+    "kind": "power",
+    "name": "黑暗之拥"
+  },
+  "DARK_SHACKLES": {
+    "aliases": [
+      "DARK_SHACKLES",
+      "Temporary Strength Down"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "DARK_SHACKLES",
+    "kind": "power",
+    "name": "Temporary Strength Down"
+  },
+  "DEBILITATE": {
+    "aliases": [
+      "DEBILITATE",
+      "Debilitate"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "DEBILITATE",
+    "kind": "power",
+    "name": "Debilitate"
+  },
+  "DEMESNE_POWER": {
+    "aliases": [
+      "DEMESNE",
+      "Demesne",
+      "DemesnePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "DEMESNE_POWER",
+    "kind": "power",
+    "name": "Demesne"
+  },
+  "DEMISE_POWER": {
+    "aliases": [
+      "DEMISE",
+      "Demise",
+      "DemisePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "DEMISE_POWER",
+    "kind": "power",
+    "name": "Demise"
+  },
+  "DEMON_FORM_POWER": {
+    "aliases": [
+      "DEMON_FORM",
+      "Demon Form",
+      "DemonFormPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "DEMON_FORM_POWER",
+    "kind": "power",
+    "name": "恶魔之形"
+  },
+  "DEVOUR_LIFE_POWER": {
+    "aliases": [
+      "DEVOUR_LIFE",
+      "Devour Life",
+      "DevourLifePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "DEVOUR_LIFE_POWER",
+    "kind": "power",
+    "name": "Devour Life"
+  },
+  "DEXTERITY_POWER": {
+    "aliases": [
+      "DEXTERITY",
+      "Dexterity",
+      "DexterityPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "DEXTERITY_POWER",
+    "kind": "power",
+    "name": "敏捷"
+  },
+  "DIAMOND_DIADEM_POWER": {
+    "aliases": [
+      "DIAMOND_DIADEM",
+      "Diamond Diadem",
+      "DiamondDiademPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "DIAMOND_DIADEM_POWER",
+    "kind": "power",
+    "name": "Diamond Diadem"
+  },
+  "DIE_FOR_YOU_POWER": {
+    "aliases": [
+      "DIE_FOR_YOU",
+      "Die for You",
+      "DieForYouPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "DIE_FOR_YOU_POWER",
+    "kind": "power",
+    "name": "Die For You"
+  },
+  "DISINTEGRATION": {
+    "aliases": [
+      "Disintegration",
+      "DisintegrationPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "DISINTEGRATION",
+    "kind": "power",
+    "name": "卡牌施加"
+  },
+  "DISINTEGRATION_POWER": {
+    "aliases": [
+      "DISINTEGRATION",
+      "DisintegrationPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "DISINTEGRATION_POWER",
+    "kind": "power",
+    "name": "崩解"
+  },
+  "DOOM_POWER": {
+    "aliases": [
+      "DOOM",
+      "Doom",
+      "DoomPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "DOOM_POWER",
+    "kind": "power",
+    "name": "末日"
+  },
+  "DOUBLE_DAMAGE_POWER": {
+    "aliases": [
+      "DOUBLE_DAMAGE",
+      "Double Damage",
+      "DoubleDamagePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "DOUBLE_DAMAGE_POWER",
+    "kind": "power",
+    "name": "Double Damage"
+  },
+  "DRAW_CARDS_NEXT_TURN_POWER": {
+    "aliases": [
+      "DRAW_CARDS_NEXT_TURN",
+      "Draw Cards Next Turn",
+      "DrawCardsNextTurnPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "DRAW_CARDS_NEXT_TURN_POWER",
+    "kind": "power",
+    "name": "Draw Cards Next Turn"
+  },
+  "DUPLICATION_POWER": {
+    "aliases": [
+      "DUPLICATION",
+      "Duplication",
+      "DuplicationPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "DUPLICATION_POWER",
+    "kind": "power",
+    "name": "复制"
+  },
+  "DYING_STAR": {
+    "aliases": [
+      "DYING_STAR",
+      "Temporary Strength Down"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "DYING_STAR",
+    "kind": "power",
+    "name": "Temporary Strength Down"
+  },
+  "ECHO_FORM_POWER": {
+    "aliases": [
+      "ECHO_FORM",
+      "Echo Form",
+      "EchoFormPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "ECHO_FORM_POWER",
+    "kind": "power",
+    "name": "回响形态"
+  },
+  "ENERGY_NEXT_TURN_POWER": {
+    "aliases": [
+      "ENERGY_NEXT_TURN",
+      "Energy Next Turn",
+      "EnergyNextTurnPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "ENERGY_NEXT_TURN_POWER",
+    "kind": "power",
+    "name": "Energy Next Turn"
+  },
+  "ENFEEBLING_TOUCH": {
+    "aliases": [
+      "ENFEEBLING_TOUCH",
+      "Temporary Strength Down"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "ENFEEBLING_TOUCH",
+    "kind": "power",
+    "name": "Temporary Strength Down"
+  },
+  "ENRAGE_POWER": {
+    "aliases": [
+      "ENRAGE",
+      "Enrage",
+      "EnragePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "ENRAGE_POWER",
+    "kind": "power",
+    "name": "暴怒"
+  },
+  "ENTROPY": {
+    "aliases": [
+      "ENTROPY",
+      "Entropy"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "ENTROPY",
+    "kind": "power",
+    "name": "Entropy"
+  },
+  "ENVENOM_POWER": {
+    "aliases": [
+      "ENVENOM",
+      "Envenom",
+      "EnvenomPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "ENVENOM_POWER",
+    "kind": "power",
+    "name": "中毒涂毒"
+  },
+  "ESCAPE_ARTIST_POWER": {
+    "aliases": [
+      "ESCAPE_ARTIST",
+      "Escape Artist",
+      "EscapeArtistPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "ESCAPE_ARTIST_POWER",
+    "kind": "power",
+    "name": "Escape Artist"
+  },
+  "FAN_OF_KNIVES_POWER": {
+    "aliases": [
+      "FAN_OF_KNIVES",
+      "Fan of Knives",
+      "FanOfKnivesPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FAN_OF_KNIVES_POWER",
+    "kind": "power",
+    "name": "刀扇之力"
+  },
+  "FASTEN_POWER": {
+    "aliases": [
+      "FASTEN",
+      "Fasten",
+      "FastenPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FASTEN_POWER",
+    "kind": "power",
+    "name": "Fasten"
+  },
+  "FEEDING_FRENZY": {
+    "aliases": [
+      "FEEDING_FRENZY",
+      "Temporary Strength"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FEEDING_FRENZY",
+    "kind": "power",
+    "name": "Temporary Strength"
+  },
+  "FEEL_NO_PAIN_POWER": {
+    "aliases": [
+      "FEEL_NO_PAIN",
+      "Feel No Pain",
+      "FeelNoPainPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FEEL_NO_PAIN_POWER",
+    "kind": "power",
+    "name": "无痛"
+  },
+  "FERAL": {
+    "aliases": [
+      "FERAL",
+      "Feral"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FERAL",
+    "kind": "power",
+    "name": "Feral"
+  },
+  "FLAME_BARRIER_POWER": {
+    "aliases": [
+      "FLAME_BARRIER",
+      "Flame Barrier",
+      "FlameBarrierPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FLAME_BARRIER_POWER",
+    "kind": "power",
+    "name": "火焰屏障"
+  },
+  "FLANKING_POWER": {
+    "aliases": [
+      "FLANKING",
+      "Flanking",
+      "FlankingPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "FLANKING_POWER",
+    "kind": "power",
+    "name": "Flanking"
+  },
+  "FLEX_POTION": {
+    "aliases": [
+      "FLEX_POTION",
+      "Temporary Strength"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FLEX_POTION",
+    "kind": "power",
+    "name": "Temporary Strength"
+  },
+  "FLEX_POTION_POWER": {
+    "aliases": [],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FLEX_POTION_POWER",
+    "kind": "power",
+    "name": "屈伸药水之力"
+  },
+  "FLUTTER_POWER": {
+    "aliases": [
+      "FLUTTER",
+      "Flutter",
+      "FlutterPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FLUTTER_POWER",
+    "kind": "power",
+    "name": "闪避"
+  },
+  "FOCUSED_STRIKE": {
+    "aliases": [
+      "FOCUSED_STRIKE",
+      "Temporary Focus"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FOCUSED_STRIKE",
+    "kind": "power",
+    "name": "Temporary Focus"
+  },
+  "FOCUS_POWER": {
+    "aliases": [
+      "FOCUS",
+      "Focus",
+      "FocusPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FOCUS_POWER",
+    "kind": "power",
+    "name": "专注"
+  },
+  "FORBIDDEN_GRIMOIRE_POWER": {
+    "aliases": [
+      "FORBIDDEN_GRIMOIRE",
+      "Forbidden Grimoire",
+      "ForbiddenGrimoirePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FORBIDDEN_GRIMOIRE_POWER",
+    "kind": "power",
+    "name": "禁忌魔典"
+  },
+  "FOREGONE_CONCLUSION_POWER": {
+    "aliases": [
+      "FOREGONE_CONCLUSION",
+      "Foregone Conclusion",
+      "ForegoneConclusionPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FOREGONE_CONCLUSION_POWER",
+    "kind": "power",
+    "name": "Foregone Conclusion"
+  },
+  "FRAIL_POWER": {
+    "aliases": [
+      "FRAIL",
+      "Frail",
+      "FrailPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "FRAIL_POWER",
+    "kind": "power",
+    "name": "脆弱"
+  },
+  "FREE_ATTACK_POWER": {
+    "aliases": [
+      "FREE_ATTACK",
+      "Free Attack",
+      "FreeAttackPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FREE_ATTACK_POWER",
+    "kind": "power",
+    "name": "Free Attack"
+  },
+  "FREE_POWER_POWER": {
+    "aliases": [
+      "FREE_POWER",
+      "Free Power",
+      "FreePowerPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FREE_POWER_POWER",
+    "kind": "power",
+    "name": "Free Power"
+  },
+  "FREE_SKILL_POWER": {
+    "aliases": [
+      "FREE_SKILL",
+      "Free Skill",
+      "FreeSkillPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FREE_SKILL_POWER",
+    "kind": "power",
+    "name": "Free Skill"
+  },
+  "FRIENDSHIP_POWER": {
+    "aliases": [
+      "FRIENDSHIP",
+      "Friendship",
+      "FriendshipPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FRIENDSHIP_POWER",
+    "kind": "power",
+    "name": "Friendship"
+  },
+  "FURNACE_POWER": {
+    "aliases": [
+      "FURNACE",
+      "Furnace",
+      "FurnacePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "FURNACE_POWER",
+    "kind": "power",
+    "name": "Furnace"
+  },
+  "GALVANIC_POWER": {
+    "aliases": [
+      "GALVANIC",
+      "Galvanic",
+      "GalvanicPower"
+    ],
+    "detail": {
+      "affliction_keys": [
+        "GALVANIZED"
+      ],
+      "counter_class": true,
+      "host_of_affliction": true,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "GALVANIC_POWER",
+    "kind": "power",
+    "name": "电镀"
+  },
+  "GENESIS_POWER": {
+    "aliases": [
+      "GENESIS",
+      "Genesis",
+      "GenesisPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "GENESIS_POWER",
+    "kind": "power",
+    "name": "Genesis"
+  },
+  "GIGANTIFICATION_POWER": {
+    "aliases": [
+      "GIGANTIFICATION",
+      "Gigantification",
+      "GigantificationPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "GIGANTIFICATION_POWER",
+    "kind": "power",
+    "name": "Gigantification"
+  },
+  "GRAVITY_POWER": {
+    "aliases": [
+      "GRAVITY",
+      "Gravity",
+      "GravityPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "GRAVITY_POWER",
+    "kind": "power",
+    "name": "Gravity"
+  },
+  "GUARDED_POWER": {
+    "aliases": [
+      "GUARDED",
+      "Guarded",
+      "GuardedPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "GUARDED_POWER",
+    "kind": "power",
+    "name": "Guarded"
+  },
+  "HAILSTORM": {
+    "aliases": [
+      "HAILSTORM",
+      "Hailstorm"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "HAILSTORM",
+    "kind": "power",
+    "name": "Hailstorm"
+  },
+  "HAMMER_TIME_POWER": {
+    "aliases": [
+      "HAMMER_TIME",
+      "Hammer Time",
+      "HammerTimePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "HAMMER_TIME_POWER",
+    "kind": "power",
+    "name": "Hammer Time"
+  },
+  "HANG_POWER": {
+    "aliases": [
+      "HANG",
+      "Hang",
+      "HangPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "HANG_POWER",
+    "kind": "power",
+    "name": "Hang"
+  },
+  "HARDENED_SHELL_POWER": {
+    "aliases": [
+      "HARDENED_SHELL",
+      "Hardened Shell",
+      "HardenedShellPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "HARDENED_SHELL_POWER",
+    "kind": "power",
+    "name": "Hardened Shell"
+  },
+  "HARD_TO_KILL": {
+    "aliases": [
+      "Hard to Kill"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "HARD_TO_KILL",
+    "kind": "power",
+    "name": "杀不死"
+  },
+  "HARD_TO_KILL_POWER": {
+    "aliases": [
+      "HARD_TO_KILL",
+      "HardToKillPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "HARD_TO_KILL_POWER",
+    "kind": "power",
+    "name": "难以击杀"
+  },
+  "HATCH_POWER": {
+    "aliases": [
+      "HATCH",
+      "Hatch",
+      "HatchPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "HATCH_POWER",
+    "kind": "power",
+    "name": "Hatch"
+  },
+  "HAUNT_POWER": {
+    "aliases": [
+      "HAUNT",
+      "Haunt",
+      "HauntPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "HAUNT_POWER",
+    "kind": "power",
+    "name": "Haunt"
+  },
+  "HEIST_POWER": {
+    "aliases": [
+      "HEIST",
+      "Heist",
+      "HeistPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "HEIST_POWER",
+    "kind": "power",
+    "name": "Heist"
+  },
+  "HELICAL_DART": {
+    "aliases": [
+      "HELICAL_DART",
+      "Temporary Dexterity"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "HELICAL_DART",
+    "kind": "power",
+    "name": "Temporary Dexterity"
+  },
+  "HELLO_WORLD_POWER": {
+    "aliases": [
+      "HELLO_WORLD",
+      "Hello World",
+      "HelloWorldPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "HELLO_WORLD_POWER",
+    "kind": "power",
+    "name": "Hello World"
+  },
+  "HELLRAISER_POWER": {
+    "aliases": [
+      "HELLRAISER",
+      "Hellraiser",
+      "HellraiserPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "HELLRAISER_POWER",
+    "kind": "power",
+    "name": "Hellraiser"
+  },
+  "HEX_POWER": {
+    "aliases": [
+      "HEX",
+      "Hex",
+      "HexPower"
+    ],
+    "detail": {
+      "affliction_keys": [
+        "HEXED"
+      ],
+      "counter_class": false,
+      "host_of_affliction": true,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
+    "id": "HEX_POWER",
+    "kind": "power",
+    "name": "诅咒"
+  },
+  "HIGH_VOLTAGE_POWER": {
+    "aliases": [
+      "HIGH_VOLTAGE",
+      "High Voltage",
+      "HighVoltagePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "HIGH_VOLTAGE_POWER",
+    "kind": "power",
+    "name": "High Voltage"
+  },
+  "HOTFIX": {
+    "aliases": [
+      "HOTFIX",
+      "Temporary Focus"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "HOTFIX",
+    "kind": "power",
+    "name": "Temporary Focus"
+  },
+  "ILLUSION_POWER": {
+    "aliases": [
+      "ILLUSION",
+      "Illusion",
+      "IllusionPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "ILLUSION_POWER",
+    "kind": "power",
+    "name": "幻象"
+  },
+  "IMBALANCED": {
+    "aliases": [
+      "Imbalanced"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
+    "id": "IMBALANCED",
+    "kind": "power",
+    "name": "失衡"
+  },
+  "IMBALANCED_POWER": {
+    "aliases": [
+      "IMBALANCED",
+      "ImbalancedPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
+    "id": "IMBALANCED_POWER",
+    "kind": "power",
+    "name": "失衡"
+  },
+  "IMPROVEMENT_POWER": {
+    "aliases": [
+      "IMPROVEMENT",
+      "Improvement",
+      "ImprovementPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "IMPROVEMENT_POWER",
+    "kind": "power",
+    "name": "Improvement"
+  },
+  "INFERNO_POWER": {
+    "aliases": [
+      "INFERNO",
+      "Inferno"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "INFERNO_POWER",
+    "kind": "power",
+    "name": "狱火"
+  },
+  "INFESTED_POWER": {
+    "aliases": [
+      "INFESTED",
+      "Infested",
+      "InfestedPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "INFESTED_POWER",
+    "kind": "power",
+    "name": "寄生"
+  },
+  "INFINITE_BLADES_POWER": {
+    "aliases": [
+      "INFINITE_BLADES",
+      "Infinite Blades",
+      "InfiniteBladesPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "INFINITE_BLADES_POWER",
+    "kind": "power",
+    "name": "Infinite Blades"
+  },
+  "INTANGIBLE_POWER": {
+    "aliases": [
+      "INTANGIBLE",
+      "Intangible",
+      "IntangiblePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "INTANGIBLE_POWER",
+    "kind": "power",
+    "name": "虚无"
+  },
+  "INTERCEPT_POWER": {
+    "aliases": [
+      "INTERCEPT",
+      "Intercept",
+      "InterceptPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "INTERCEPT_POWER",
+    "kind": "power",
+    "name": "Intercept"
+  },
+  "ITERATION_POWER": {
+    "aliases": [
+      "ITERATION",
+      "Iteration",
+      "IterationPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "ITERATION_POWER",
+    "kind": "power",
+    "name": "Iteration"
+  },
+  "JUGGERNAUT_POWER": {
+    "aliases": [
+      "JUGGERNAUT",
+      "Juggernaut",
+      "JuggernautPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "JUGGERNAUT_POWER",
+    "kind": "power",
+    "name": "Juggernaut"
+  },
+  "JUGGLING_POWER": {
+    "aliases": [
+      "JUGGLING",
+      "Juggling"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "JUGGLING_POWER",
+    "kind": "power",
+    "name": "戏法"
+  },
+  "KNOCKDOWN_POWER": {
+    "aliases": [
+      "KNOCKDOWN",
+      "Knockdown",
+      "KnockdownPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "KNOCKDOWN_POWER",
+    "kind": "power",
+    "name": "Knockdown"
+  },
+  "LEADERSHIP_POWER": {
+    "aliases": [
+      "LEADERSHIP",
+      "Leadership",
+      "LeadershipPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "LEADERSHIP_POWER",
+    "kind": "power",
+    "name": "Leadership"
+  },
+  "LETHALITY_POWER": {
+    "aliases": [
+      "LETHALITY",
+      "Lethality",
+      "LethalityPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "LETHALITY_POWER",
+    "kind": "power",
+    "name": "Lethality"
+  },
+  "LIGHTNING_ROD_POWER": {
+    "aliases": [
+      "LIGHTNING_ROD",
+      "Lightning Rod",
+      "LightningRodPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "LIGHTNING_ROD_POWER",
+    "kind": "power",
+    "name": "Lightning Rod"
+  },
+  "LOOP": {
+    "aliases": [
+      "LOOP",
+      "Loop"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "LOOP",
+    "kind": "power",
+    "name": "Loop"
+  },
+  "MACHINE_LEARNING_POWER": {
+    "aliases": [
+      "MACHINE_LEARNING",
+      "Machine Learning",
+      "MachineLearningPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "MACHINE_LEARNING_POWER",
+    "kind": "power",
+    "name": "Machine Learning"
+  },
+  "MAGIC_BOMB_POWER": {
+    "aliases": [
+      "MAGIC_BOMB",
+      "Magic Bomb",
+      "MagicBombPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "MAGIC_BOMB_POWER",
+    "kind": "power",
+    "name": "Magic Bomb"
+  },
+  "MANGLE": {
+    "aliases": [
+      "MANGLE",
+      "Temporary Strength Down"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "MANGLE",
+    "kind": "power",
+    "name": "Temporary Strength Down"
+  },
+  "MASTER_PLANNER_POWER": {
+    "aliases": [
+      "MASTER_PLANNER",
+      "Master Planner",
+      "MasterPlannerPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "MASTER_PLANNER_POWER",
+    "kind": "power",
+    "name": "Master Planner"
+  },
+  "MAYHEM_POWER": {
+    "aliases": [
+      "MAYHEM",
+      "Mayhem",
+      "MayhemPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "MAYHEM_POWER",
+    "kind": "power",
+    "name": "混乱"
+  },
+  "MIND_ROT_POWER": {
+    "aliases": [
+      "MIND_ROT",
+      "Mind Rot",
+      "MindRotPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "MIND_ROT_POWER",
+    "kind": "power",
+    "name": "脑蚀"
+  },
+  "MINION_POWER": {
+    "aliases": [
+      "MINION",
+      "Minion",
+      "MinionPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "MINION_POWER",
+    "kind": "power",
+    "name": "仆从"
+  },
+  "MONARCHS_GAZE_POWER": {
+    "aliases": [
+      "MONARCHS_GAZE",
+      "Monarch's Gaze",
+      "MonarchsGazePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "MONARCHS_GAZE_POWER",
+    "kind": "power",
+    "name": "Monarchs Gaze"
+  },
+  "MONARCHS_GAZE_STRENGTH_DOWN": {
+    "aliases": [
+      "MONARCHS_GAZE_STRENGTH_DOWN",
+      "Temporary Strength Down"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "MONARCHS_GAZE_STRENGTH_DOWN",
+    "kind": "power",
+    "name": "Temporary Strength Down"
+  },
+  "MONARCHS_GAZE_STRENGTH_DOWN_POWER": {
+    "aliases": [
+      "MonarchsGazePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "MONARCHS_GAZE_STRENGTH_DOWN_POWER",
+    "kind": "power",
+    "name": "Monarchs Gaze"
+  },
+  "MONOLOGUE_POWER": {
+    "aliases": [
+      "MONOLOGUE",
+      "Monologue",
+      "MonologuePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "MONOLOGUE_POWER",
+    "kind": "power",
+    "name": "Monologue"
+  },
+  "NECRO_MASTERY_POWER": {
+    "aliases": [
+      "NECRO_MASTERY",
+      "Necro Mastery",
+      "NecroMasteryPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "NECRO_MASTERY_POWER",
+    "kind": "power",
+    "name": "Necro Mastery"
+  },
+  "NEMESIS": {
+    "aliases": [
+      "NEMESIS",
+      "Nemesis"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "NEMESIS",
+    "kind": "power",
+    "name": "Nemesis"
+  },
+  "NEUROSURGE_POWER": {
+    "aliases": [
+      "NEUROSURGE",
+      "Neurosurge",
+      "NeurosurgePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "NEUROSURGE_POWER",
+    "kind": "power",
+    "name": "Neurosurge"
+  },
+  "NIGHTMARE_POWER": {
+    "aliases": [
+      "NIGHTMARE",
+      "Nightmare",
+      "NightmarePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "NIGHTMARE_POWER",
+    "kind": "power",
+    "name": "噩梦"
+  },
+  "NOSTALGIA_POWER": {
+    "aliases": [
+      "NOSTALGIA",
+      "Nostalgia",
+      "NostalgiaPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "NOSTALGIA_POWER",
+    "kind": "power",
+    "name": "Nostalgia"
+  },
+  "NOXIOUS_FUMES_POWER": {
+    "aliases": [
+      "NOXIOUS_FUMES",
+      "Noxious Fumes",
+      "NoxiousFumesPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "NOXIOUS_FUMES_POWER",
+    "kind": "power",
+    "name": "恶臭气体"
+  },
+  "NO_BLOCK": {
+    "aliases": [
+      "NO_BLOCK",
+      "No Block"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "NO_BLOCK",
+    "kind": "power",
+    "name": "No Block"
+  },
+  "NO_DRAW_POWER": {
+    "aliases": [
+      "NO_DRAW",
+      "No Draw",
+      "NoDrawPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
+    "id": "NO_DRAW_POWER",
+    "kind": "power",
+    "name": "禁止抽牌"
+  },
+  "NO_ENERGY_GAIN_POWER": {
+    "aliases": [
+      "NO_ENERGY_GAIN",
+      "No Energy Gain",
+      "NoEnergyGainPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
+    "id": "NO_ENERGY_GAIN_POWER",
+    "kind": "power",
+    "name": "No Energy Gain"
+  },
+  "OBLIVION_POWER": {
+    "aliases": [
+      "OBLIVION",
+      "Oblivion",
+      "OblivionPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "OBLIVION_POWER",
+    "kind": "power",
+    "name": "Oblivion"
+  },
+  "ONE_TWO_PUNCH_POWER": {
+    "aliases": [
+      "ONE_TWO_PUNCH",
+      "One-Two Punch",
+      "OneTwoPunchPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "ONE_TWO_PUNCH_POWER",
+    "kind": "power",
+    "name": "One Two Punch"
+  },
+  "ORBIT_POWER": {
+    "aliases": [
+      "ORBIT",
+      "Orbit",
+      "OrbitPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "ORBIT_POWER",
+    "kind": "power",
+    "name": "Orbit"
+  },
+  "OUTBREAK_POWER": {
+    "aliases": [
+      "OUTBREAK",
+      "Outbreak",
+      "OutbreakPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "OUTBREAK_POWER",
+    "kind": "power",
+    "name": "Outbreak"
+  },
+  "PAGESTORM_POWER": {
+    "aliases": [
+      "PAGESTORM",
+      "Pagestorm",
+      "PagestormPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "PAGESTORM_POWER",
+    "kind": "power",
+    "name": "Pagestorm"
+  },
+  "PAINFUL_STABS_POWER": {
+    "aliases": [
+      "PAINFUL_STABS",
+      "Painful Stabs",
+      "PainfulStabsPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "PAINFUL_STABS_POWER",
+    "kind": "power",
+    "name": "Painful Stabs"
+  },
+  "PALE_BLUE_DOT_POWER": {
+    "aliases": [
+      "PALE_BLUE_DOT",
+      "Pale Blue Dot"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "PALE_BLUE_DOT_POWER",
+    "kind": "power",
+    "name": "苍白蓝点"
+  },
+  "PANACHE_POWER": {
+    "aliases": [
+      "PANACHE",
+      "Panache",
+      "PanachePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "PANACHE_POWER",
+    "kind": "power",
+    "name": "实例化"
+  },
+  "PAPER_CUTS_POWER": {
+    "aliases": [
+      "PAPER_CUTS",
+      "Paper Cuts",
+      "PaperCutsPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "PAPER_CUTS_POWER",
+    "kind": "power",
+    "name": "Paper Cuts"
+  },
+  "PARRY_POWER": {
+    "aliases": [
+      "PARRY",
+      "Parry",
+      "ParryPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "PARRY_POWER",
+    "kind": "power",
+    "name": "招架"
+  },
+  "PERSONAL_HIVE": {
+    "aliases": [
+      "Personal Hive"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "PERSONAL_HIVE",
+    "kind": "power",
+    "name": "个人蜂巢"
+  },
+  "PERSONAL_HIVE_POWER": {
+    "aliases": [
+      "PERSONAL_HIVE",
+      "PersonalHivePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "PERSONAL_HIVE_POWER",
+    "kind": "power",
+    "name": "个人蜂巢"
+  },
+  "PHANTOM_BLADES_POWER": {
+    "aliases": [
+      "PHANTOM_BLADES",
+      "Phantom Blades",
+      "PhantomBladesPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "PHANTOM_BLADES_POWER",
+    "kind": "power",
+    "name": "Phantom Blades"
+  },
+  "PIERCING_WAIL_POWER": {
+    "aliases": [
+      "PIERCING_WAIL",
+      "Temporary Strength Down"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "PIERCING_WAIL_POWER",
+    "kind": "power",
+    "name": "穿刺哀嚎"
+  },
+  "PILLAR_OF_CREATION_POWER": {
+    "aliases": [
+      "PILLAR_OF_CREATION",
+      "Pillar of Creation",
+      "PillarOfCreationPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "PILLAR_OF_CREATION_POWER",
+    "kind": "power",
+    "name": "Pillar Of Creation"
+  },
+  "PLATING_POWER": {
+    "aliases": [
+      "PLATING",
+      "Plating",
+      "PlatingPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "PLATING_POWER",
+    "kind": "power",
+    "name": "镀甲"
+  },
+  "PLOW_POWER": {
+    "aliases": [
+      "PLOW",
+      "Plow",
+      "PlowPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "PLOW_POWER",
+    "kind": "power",
+    "name": "Plow"
+  },
+  "POISON": {
+    "aliases": [
+      "Poison",
+      "PoisonPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "POISON",
+    "kind": "power",
+    "name": "中毒"
+  },
+  "POSSESS_SPEED_POWER": {
+    "aliases": [
+      "POSSESS_SPEED",
+      "Possess Speed",
+      "PossessSpeedPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "POSSESS_SPEED_POWER",
+    "kind": "power",
+    "name": "夺迅"
+  },
+  "POSSESS_STRENGTH_POWER": {
+    "aliases": [
+      "POSSESS_STRENGTH",
+      "Possess Strength",
+      "PossessStrengthPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "POSSESS_STRENGTH_POWER",
+    "kind": "power",
+    "name": "夺力"
+  },
+  "PREP_TIME": {
+    "aliases": [
+      "PREP_TIME",
+      "Prep Time"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "PREP_TIME",
+    "kind": "power",
+    "name": "Prep Time"
+  },
+  "PYRE_POWER": {
+    "aliases": [
+      "PYRE",
+      "Pyre",
+      "PyrePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "PYRE_POWER",
+    "kind": "power",
+    "name": "Pyre"
+  },
+  "RADIANCE_POWER": {
+    "aliases": [
+      "RADIANCE",
+      "Radiance",
+      "RadiancePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "RADIANCE_POWER",
+    "kind": "power",
+    "name": "Radiance"
+  },
+  "RAGE_POWER": {
+    "aliases": [
+      "RAGE",
+      "Rage",
+      "RagePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "RAGE_POWER",
+    "kind": "power",
+    "name": "愤怒"
+  },
+  "RAMPART_POWER": {
+    "aliases": [
+      "RAMPART",
+      "Rampart",
+      "RampartPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "RAMPART_POWER",
+    "kind": "power",
+    "name": "Rampart"
+  },
+  "RAVENOUS_POWER": {
+    "aliases": [
+      "RAVENOUS",
+      "Ravenous",
+      "RavenousPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "RAVENOUS_POWER",
+    "kind": "power",
+    "name": "贪婪"
+  },
+  "REAPER_FORM_POWER": {
+    "aliases": [
+      "REAPER_FORM",
+      "Reaper Form",
+      "ReaperFormPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "REAPER_FORM_POWER",
+    "kind": "power",
+    "name": "Reaper Form"
+  },
+  "REATTACH": {
+    "aliases": [
+      "Reattach"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "REATTACH",
+    "kind": "power",
+    "name": "重接"
+  },
+  "REATTACH_POWER": {
+    "aliases": [
+      "REATTACH",
+      "ReattachPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "REATTACH_POWER",
+    "kind": "power",
+    "name": "重组"
+  },
+  "REBOUND_POWER": {
+    "aliases": [
+      "REBOUND",
+      "Rebound",
+      "ReboundPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "REBOUND_POWER",
+    "kind": "power",
+    "name": "Rebound"
+  },
+  "REFLECT": {
+    "aliases": [
+      "REFLECT",
+      "Reflect"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "REFLECT",
+    "kind": "power",
+    "name": "Reflect"
+  },
+  "REGEN_POWER": {
+    "aliases": [
+      "REGEN",
+      "Regen",
+      "RegenPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "REGEN_POWER",
+    "kind": "power",
+    "name": "再生"
+  },
+  "REPTILE_TRINKET_POWER": {
+    "aliases": [
+      "REPTILE_TRINKET",
+      "Temporary Strength"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "REPTILE_TRINKET_POWER",
+    "kind": "power",
+    "name": "爬虫饰品"
+  },
+  "RETAIN_HAND_POWER": {
+    "aliases": [
+      "RETAIN_HAND",
+      "Retain Hand",
+      "RetainHandPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "RETAIN_HAND_POWER",
+    "kind": "power",
+    "name": "Retain Hand"
+  },
+  "RINGING_POWER": {
+    "aliases": [
+      "RINGING",
+      "Ringing",
+      "RingingPower"
+    ],
+    "detail": {
+      "affliction_keys": [
+        "RINGING"
+      ],
+      "counter_class": true,
+      "host_of_affliction": true,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
+    "id": "RINGING_POWER",
+    "kind": "power",
+    "name": "耳鸣"
+  },
+  "RITUAL_POWER": {
+    "aliases": [
+      "RITUAL",
+      "Ritual",
+      "RitualPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "RITUAL_POWER",
+    "kind": "power",
+    "name": "仪式"
+  },
+  "ROLLING_BOULDER": {
+    "aliases": [
+      "ROLLING_BOULDER",
+      "Rolling Boulder"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "ROLLING_BOULDER",
+    "kind": "power",
+    "name": "Rolling Boulder"
+  },
+  "ROYALTIES_POWER": {
+    "aliases": [
+      "ROYALTIES",
+      "Royalties",
+      "RoyaltiesPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "ROYALTIES_POWER",
+    "kind": "power",
+    "name": "王权"
+  },
+  "RUPTURE_POWER": {
+    "aliases": [
+      "RUPTURE",
+      "Rupture",
+      "RupturePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "RUPTURE_POWER",
+    "kind": "power",
+    "name": "破灭"
+  },
+  "SANDPIT_POWER": {
+    "aliases": [
+      "SANDPIT",
+      "Sandpit",
+      "SandpitPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SANDPIT_POWER",
+    "kind": "power",
+    "name": "沙坑"
+  },
+  "SEEKING_EDGE_POWER": {
+    "aliases": [
+      "SEEKING_EDGE",
+      "Seeking Edge",
+      "SeekingEdgePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SEEKING_EDGE_POWER",
+    "kind": "power",
+    "name": "寻隙锋"
+  },
+  "SELF_FORMING_CLAY_POWER": {
+    "aliases": [
+      "SELF_FORMING_CLAY",
+      "Self-Forming Clay",
+      "SelfFormingClayPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SELF_FORMING_CLAY_POWER",
+    "kind": "power",
+    "name": "自成型黏土"
+  },
+  "SENTRY_MODE_POWER": {
+    "aliases": [
+      "SENTRY_MODE",
+      "Sentry Mode",
+      "SentryModePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SENTRY_MODE_POWER",
+    "kind": "power",
+    "name": "Sentry Mode"
+  },
+  "SERPENT_FORM_POWER": {
+    "aliases": [
+      "SERPENT_FORM",
+      "Serpent Form",
+      "SerpentFormPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SERPENT_FORM_POWER",
+    "kind": "power",
+    "name": "Serpent Form"
+  },
+  "SETUP_STRIKE_POWER": {
+    "aliases": [
+      "SETUP_STRIKE",
+      "Temporary Strength"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SETUP_STRIKE_POWER",
+    "kind": "power",
+    "name": "预备打击"
+  },
+  "SHACKLING_POTION": {
+    "aliases": [
+      "SHACKLING_POTION",
+      "Temporary Strength Down"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "SHACKLING_POTION",
+    "kind": "power",
+    "name": "Temporary Strength Down"
+  },
+  "SHADOWMELD_POWER": {
+    "aliases": [
+      "SHADOWMELD",
+      "Shadowmeld",
+      "ShadowmeldPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SHADOWMELD_POWER",
+    "kind": "power",
+    "name": "Shadowmeld"
+  },
+  "SHADOW_STEP": {
+    "aliases": [
+      "SHADOW_STEP",
+      "Shadow Step"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SHADOW_STEP",
+    "kind": "power",
+    "name": "Shadow Step"
+  },
+  "SHRIEK_POWER": {
+    "aliases": [
+      "SHRIEK",
+      "Shriek",
+      "ShriekPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "SHRIEK_POWER",
+    "kind": "power",
+    "name": "可为负"
+  },
+  "SHRINK_POWER": {
+    "aliases": [
+      "SHRINK",
+      "Shrink",
+      "ShrinkPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "SHRINK_POWER",
+    "kind": "power",
+    "name": "缩小"
+  },
+  "SHROUD_POWER": {
+    "aliases": [
+      "SHROUD",
+      "Shroud",
+      "ShroudPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SHROUD_POWER",
+    "kind": "power",
+    "name": "Shroud"
+  },
+  "SIC_EM_POWER": {
+    "aliases": [
+      "SIC_EM",
+      "Sic 'Em",
+      "SicEmPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "SIC_EM_POWER",
+    "kind": "power",
+    "name": "Sic Em"
+  },
+  "SIGNAL_BOOST_POWER": {
+    "aliases": [
+      "SIGNAL_BOOST",
+      "Signal Boost",
+      "SignalBoostPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SIGNAL_BOOST_POWER",
+    "kind": "power",
+    "name": "Signal Boost"
+  },
+  "SKITTISH": {
+    "aliases": [
+      "Skittish"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SKITTISH",
+    "kind": "power",
+    "name": "易惊"
+  },
+  "SKITTISH_POWER": {
+    "aliases": [
+      "SKITTISH",
+      "SkittishPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SKITTISH_POWER",
+    "kind": "power",
+    "name": "Skittish"
+  },
+  "SLEIGHT_OF_FLESH_POWER": {
+    "aliases": [
+      "SLEIGHT_OF_FLESH",
+      "Sleight of Flesh"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SLEIGHT_OF_FLESH_POWER",
+    "kind": "power",
+    "name": "血肉戏法"
+  },
+  "SLIPPERY_POWER": {
+    "aliases": [
+      "SLIPPERY",
+      "Slippery",
+      "SlipperyPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SLIPPERY_POWER",
+    "kind": "power",
+    "name": "湿滑"
+  },
+  "SLOTH_POWER": {
+    "aliases": [
+      "SLOTH",
+      "Sloth"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "SLOTH_POWER",
+    "kind": "power",
+    "name": "怠惰"
+  },
+  "SLOW_POWER": {
+    "aliases": [
+      "SLOW",
+      "Slow",
+      "SlowPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "SLOW_POWER",
+    "kind": "power",
+    "name": "缓速"
+  },
+  "SLUMBER_POWER": {
+    "aliases": [
+      "SLUMBER",
+      "Slumber",
+      "SlumberPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SLUMBER_POWER",
+    "kind": "power",
+    "name": "沉睡"
+  },
+  "SMOGGY_POWER": {
+    "aliases": [
+      "SMOGGY",
+      "Smoggy",
+      "SmoggyPower"
+    ],
+    "detail": {
+      "affliction_keys": [
+        "SMOG"
+      ],
+      "counter_class": false,
+      "host_of_affliction": true,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
+    "id": "SMOGGY_POWER",
+    "kind": "power",
+    "name": "烟雾"
+  },
+  "SMOKESTACK": {
+    "aliases": [
+      "SMOKESTACK",
+      "Smokestack"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SMOKESTACK",
+    "kind": "power",
+    "name": "Smokestack"
+  },
+  "SNEAKY_POWER": {
+    "aliases": [
+      "SNEAKY",
+      "Sneaky",
+      "SneakyPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SNEAKY_POWER",
+    "kind": "power",
+    "name": "Sneaky"
+  },
+  "SOAR_POWER": {
+    "aliases": [
+      "SOAR",
+      "Soar",
+      "SoarPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "SOAR_POWER",
+    "kind": "power",
+    "name": "Soar"
+  },
+  "SPECTRUM_SHIFT_POWER": {
+    "aliases": [
+      "SPECTRUM_SHIFT",
+      "Spectrum Shift",
+      "SpectrumShiftPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SPECTRUM_SHIFT_POWER",
+    "kind": "power",
+    "name": "Spectrum Shift"
+  },
+  "SPEEDSTER_POWER": {
+    "aliases": [
+      "SPEEDSTER",
+      "Speedster"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SPEEDSTER_POWER",
+    "kind": "power",
+    "name": "疾行者"
+  },
+  "SPEED_POTION": {
+    "aliases": [
+      "SPEED_POTION",
+      "Temporary Dexterity"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SPEED_POTION",
+    "kind": "power",
+    "name": "Temporary Dexterity"
+  },
+  "SPEED_POTION_POWER": {
+    "aliases": [],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SPEED_POTION_POWER",
+    "kind": "power",
+    "name": "速度药水之力"
+  },
+  "SPINNER_POWER": {
+    "aliases": [
+      "SPINNER",
+      "Spinner",
+      "SpinnerPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SPINNER_POWER",
+    "kind": "power",
+    "name": "Spinner"
+  },
+  "SPIRIT_OF_ASH_POWER": {
+    "aliases": [
+      "SPIRIT_OF_ASH",
+      "Spirit of Ash",
+      "SpiritOfAshPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SPIRIT_OF_ASH_POWER",
+    "kind": "power",
+    "name": "Spirit Of Ash"
+  },
+  "STAMPEDE_POWER": {
+    "aliases": [
+      "STAMPEDE",
+      "Stampede",
+      "StampedePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "STAMPEDE_POWER",
+    "kind": "power",
+    "name": "Stampede"
+  },
+  "STAR_NEXT_TURN_POWER": {
+    "aliases": [
+      "STAR_NEXT_TURN",
+      "Star Next Turn",
+      "StarNextTurnPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "STAR_NEXT_TURN_POWER",
+    "kind": "power",
+    "name": "Star Next Turn"
+  },
+  "STEAM_ERUPTION_POWER": {
+    "aliases": [
+      "STEAM_ERUPTION",
+      "Steam Eruption",
+      "SteamEruptionPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "STEAM_ERUPTION_POWER",
+    "kind": "power",
+    "name": "Steam Eruption"
+  },
+  "STOCK_POWER": {
+    "aliases": [
+      "STOCK",
+      "Stock",
+      "StockPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "STOCK_POWER",
+    "kind": "power",
+    "name": "储备"
+  },
+  "STORM_POWER": {
+    "aliases": [
+      "STORM",
+      "Storm",
+      "StormPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "STORM_POWER",
+    "kind": "power",
+    "name": "Storm"
+  },
+  "STRANGLE_POWER": {
+    "aliases": [
+      "STRANGLE",
+      "Strangle",
+      "StranglePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "STRANGLE_POWER",
+    "kind": "power",
+    "name": "Strangle"
+  },
+  "STRATAGEM_POWER": {
+    "aliases": [
+      "STRATAGEM",
+      "Stratagem",
+      "StratagemPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "STRATAGEM_POWER",
+    "kind": "power",
+    "name": "Stratagem"
+  },
+  "STRENGTH_POWER": {
+    "aliases": [
+      "STRENGTH",
+      "Strength",
+      "StrengthPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "STRENGTH_POWER",
+    "kind": "power",
+    "name": "力量"
+  },
+  "SUBROUTINE_POWER": {
+    "aliases": [
+      "SUBROUTINE",
+      "Subroutine",
+      "SubroutinePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SUBROUTINE_POWER",
+    "kind": "power",
+    "name": "Subroutine"
+  },
+  "SUCK_POWER": {
+    "aliases": [
+      "SUCK",
+      "Suck"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SUCK_POWER",
+    "kind": "power",
+    "name": "汲取"
+  },
+  "SUMMON_NEXT_TURN_POWER": {
+    "aliases": [
+      "SUMMON_NEXT_TURN",
+      "Summon Next Turn",
+      "SummonNextTurnPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SUMMON_NEXT_TURN_POWER",
+    "kind": "power",
+    "name": "Summon Next Turn"
+  },
+  "SURPRISE_POWER": {
+    "aliases": [
+      "SURPRISE",
+      "Surprise",
+      "SurprisePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "SURPRISE_POWER",
+    "kind": "power",
+    "name": "Surprise"
+  },
+  "SURROUNDED_POWER": {
+    "aliases": [
+      "SURROUNDED",
+      "Surrounded",
+      "SurroundedPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
+    "id": "SURROUNDED_POWER",
+    "kind": "power",
+    "name": "被夹击"
+  },
+  "SWIPE_POWER": {
+    "aliases": [
+      "SWIPE",
+      "Swipe"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "SWIPE_POWER",
+    "kind": "power",
+    "name": "夺取"
+  },
+  "SWORD_SAGE_POWER": {
+    "aliases": [
+      "SWORD_SAGE",
+      "Sword Sage",
+      "SwordSagePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SWORD_SAGE_POWER",
+    "kind": "power",
+    "name": "Sword Sage"
+  },
+  "SYNCHRONIZE": {
+    "aliases": [
+      "SYNCHRONIZE",
+      "Temporary Focus"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "SYNCHRONIZE",
+    "kind": "power",
+    "name": "Temporary Focus"
+  },
+  "TAG_TEAM": {
+    "aliases": [
+      "TAG_TEAM",
+      "Tag Team"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "TAG_TEAM",
+    "kind": "power",
+    "name": "Tag Team"
+  },
+  "TAINTED_POWER": {
+    "aliases": [
+      "TAINTED",
+      "Tainted",
+      "TaintedPower"
+    ],
+    "detail": {
+      "affliction_keys": [
+        "TAINTED"
+      ],
+      "counter_class": false,
+      "host_of_affliction": true,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "TAINTED_POWER",
+    "kind": "power",
+    "name": "污染"
+  },
+  "TANGLED_POWER": {
+    "aliases": [
+      "TANGLED",
+      "Tangled",
+      "TangledPower"
+    ],
+    "detail": {
+      "affliction_keys": [
+        "ENTANGLED"
+      ],
+      "counter_class": false,
+      "host_of_affliction": true,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "TANGLED_POWER",
+    "kind": "power",
+    "name": "缠结"
+  },
+  "TANK_POWER": {
+    "aliases": [
+      "TANK",
+      "Tank",
+      "TankPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Single"
+    },
+    "id": "TANK_POWER",
+    "kind": "power",
+    "name": "Tank"
+  },
+  "TENDER_POWER": {
+    "aliases": [
+      "TENDER",
+      "Tender",
+      "TenderPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "TENDER_POWER",
+    "kind": "power",
+    "name": "玩家侧"
+  },
+  "TERRITORIAL_POWER": {
+    "aliases": [
+      "TERRITORIAL",
+      "Territorial",
+      "TerritorialPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "TERRITORIAL_POWER",
+    "kind": "power",
+    "name": "领域"
+  },
+  "THE_BOMB_POWER": {
+    "aliases": [
+      "THE_BOMB",
+      "The Bomb",
+      "TheBombPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "THE_BOMB_POWER",
+    "kind": "power",
+    "name": "炸弹"
+  },
+  "THE_GAMBIT_POWER": {
+    "aliases": [
+      "THE_GAMBIT",
+      "The Gambit",
+      "TheGambitPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Single"
+    },
+    "id": "THE_GAMBIT_POWER",
+    "kind": "power",
+    "name": "The Gambit"
+  },
+  "THE_HUNT_POWER": {
+    "aliases": [
+      "THE_HUNT",
+      "The Hunt",
+      "TheHuntPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "THE_HUNT_POWER",
+    "kind": "power",
+    "name": "狩猎"
+  },
+  "THE_SEALED_THRONE_POWER": {
+    "aliases": [
+      "THE_SEALED_THRONE",
+      "The Sealed Throne",
+      "TheSealedThronePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "THE_SEALED_THRONE_POWER",
+    "kind": "power",
+    "name": "封印王座"
+  },
+  "THIEVERY_POWER": {
+    "aliases": [
+      "THIEVERY",
+      "Thievery",
+      "ThieveryPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "THIEVERY_POWER",
+    "kind": "power",
+    "name": "盗窃"
+  },
+  "THORNS_POWER": {
+    "aliases": [
+      "THORNS",
+      "Thorns",
+      "ThornsPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "THORNS_POWER",
+    "kind": "power",
+    "name": "荆棘"
+  },
+  "THUNDER_POWER": {
+    "aliases": [
+      "THUNDER",
+      "Thunder",
+      "ThunderPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "THUNDER_POWER",
+    "kind": "power",
+    "name": "Thunder"
+  },
+  "TOOLS_OF_THE_TRADE_POWER": {
+    "aliases": [
+      "TOOLS_OF_THE_TRADE",
+      "Tools of the Trade",
+      "ToolsOfTheTradePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "TOOLS_OF_THE_TRADE_POWER",
+    "kind": "power",
+    "name": "Tools Of The Trade"
+  },
+  "TORIC_TOUGHNESS_POWER": {
+    "aliases": [
+      "TORIC_TOUGHNESS",
+      "Toric Toughness",
+      "ToricToughnessPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "TORIC_TOUGHNESS_POWER",
+    "kind": "power",
+    "name": "Toric Toughness"
+  },
+  "TRACKING_POWER": {
+    "aliases": [
+      "TRACKING",
+      "Tracking",
+      "TrackingPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "TRACKING_POWER",
+    "kind": "power",
+    "name": "Tracking"
+  },
+  "TRASH_TO_TREASURE": {
+    "aliases": [
+      "TRASH_TO_TREASURE",
+      "Trash to Treasure"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "TRASH_TO_TREASURE",
+    "kind": "power",
+    "name": "Trash to Treasure"
+  },
+  "TYRANNY_POWER": {
+    "aliases": [
+      "TYRANNY",
+      "Tyranny",
+      "TyrannyPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "TYRANNY_POWER",
+    "kind": "power",
+    "name": "Tyranny"
+  },
+  "UNMOVABLE": {
+    "aliases": [
+      "Unmovable"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "UNMOVABLE",
+    "kind": "power",
+    "name": "岿然不动"
+  },
+  "UNMOVABLE_POWER": {
+    "aliases": [
+      "UNMOVABLE",
+      "UnmovablePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "UNMOVABLE_POWER",
+    "kind": "power",
+    "name": "Unmovable"
+  },
+  "VEILPIERCER_POWER": {
+    "aliases": [
+      "VEILPIERCER",
+      "Veilpiercer",
+      "VeilpiercerPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "VEILPIERCER_POWER",
+    "kind": "power",
+    "name": "Veilpiercer"
+  },
+  "VICIOUS_POWER": {
+    "aliases": [
+      "VICIOUS",
+      "Vicious",
+      "ViciousPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "VICIOUS_POWER",
+    "kind": "power",
+    "name": "Vicious"
+  },
+  "VIGOR_POWER": {
+    "aliases": [
+      "VIGOR",
+      "Vigor",
+      "VigorPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "VIGOR_POWER",
+    "kind": "power",
+    "name": "活力"
+  },
+  "VITAL_SPARK_POWER": {
+    "aliases": [
+      "VITAL_SPARK",
+      "Vital Spark",
+      "VitalSparkPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": true,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "VITAL_SPARK_POWER",
+    "kind": "power",
+    "name": "生命火花"
+  },
+  "VOID_FORM_POWER": {
+    "aliases": [
+      "VOID_FORM",
+      "Void Form",
+      "VoidFormPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "VOID_FORM_POWER",
+    "kind": "power",
+    "name": "Void Form"
+  },
+  "VULNERABLE_POWER": {
+    "aliases": [
+      "VULNERABLE",
+      "Vulnerable",
+      "VulnerablePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "VULNERABLE_POWER",
+    "kind": "power",
+    "name": "易伤"
+  },
+  "WASTE_AWAY_POWER": {
+    "aliases": [
+      "WASTE_AWAY",
+      "Waste Away",
+      "WasteAwayPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "WASTE_AWAY_POWER",
+    "kind": "power",
+    "name": "衰朽"
+  },
+  "WEAK_POWER": {
+    "aliases": [
+      "WEAK",
+      "Weak",
+      "WeakPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "WEAK_POWER",
+    "kind": "power",
+    "name": "虚弱"
+  },
+  "WELL_LAID_PLANS_POWER": {
+    "aliases": [
+      "WELL_LAID_PLANS",
+      "Well-Laid Plans",
+      "WellLaidPlansPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "WELL_LAID_PLANS_POWER",
+    "kind": "power",
+    "name": "Well Laid Plans"
+  },
+  "WITHERING_PRESENCE_POWER": {
+    "aliases": [
+      "WITHERING_PRESENCE",
+      "Withering Presence",
+      "WitheringPresencePower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Buff",
+      "stack_type": "Counter"
+    },
+    "id": "WITHERING_PRESENCE_POWER",
+    "kind": "power",
+    "name": "Withering Presence"
+  },
+  "WRAITH_FORM_POWER": {
+    "aliases": [
+      "WRAITH_FORM",
+      "Wraith Form",
+      "WraithFormPower"
+    ],
+    "detail": {
+      "affliction_keys": [],
+      "counter_class": false,
+      "host_of_affliction": false,
+      "power_type": "Debuff",
+      "stack_type": "Counter"
+    },
+    "id": "WRAITH_FORM_POWER",
+    "kind": "power",
+    "name": "幽灵形态"
+  }
+}
