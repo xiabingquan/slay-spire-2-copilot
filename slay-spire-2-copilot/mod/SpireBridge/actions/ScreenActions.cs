@@ -380,6 +380,32 @@ public static class ScreenActions
     }
 
 
+
+    // NErrorPopup exit (proposal 1): NoButton exists but stays invisible, so
+    // keyword matchers fail; the visible button IS the designed exit — it
+    // QueueFreeSafely() closes the popup. Never click anything Send-named
+    // (bug-report submission stays a user decision).
+    private static bool IsSendButton(NButton b) =>
+        b.Name.ToString().Contains("Send", StringComparison.OrdinalIgnoreCase);
+
+    private static bool IsErrorPopup(Node? modalNode) =>
+        modalNode is not null && modalNode.GetType().Name.Contains("ErrorPopup", StringComparison.OrdinalIgnoreCase);
+
+    private static (bool, string) ClickErrorPopupExit(Node modalNode)
+    {
+        foreach (NButton b in UiHelper.FindAll<NButton>(modalNode))
+        {
+            if (!b.Visible || IsSendButton(b))
+            {
+                continue;
+            }
+            NButton target = b;
+            ActionExecutor.Fire(() => UiHelper.Click(target), "error popup exit");
+            return (true, $"submitted error-popup dismiss via visible button ({target.Name})");
+        }
+        return (false, "NErrorPopup: no visible non-Send button found — leave manually");
+    }
+
     // NSendFeedbackScreen leave path (proposal 2): BackButton or
     // %ReturnToGameButton both Close() the screen per decompile. Send is
     // never auto-clicked — submitting a bug report is a user decision.
@@ -514,6 +540,10 @@ public static class ScreenActions
                 ActionExecutor.Fire(() => UiHelper.Click(target), "modal dismiss");
                 return (true, $"submitted modal dismiss ({target.Name})");
             }
+            if (IsErrorPopup(modalNode))
+            {
+                return ClickErrorPopupExit(modalNode);
+            }
             return (false, "no dismiss button on modal");
         }
         if (context is not Node screenNode)
@@ -639,7 +669,15 @@ public static class ScreenActions
         {
             List<NButton> buttons = UiHelper.FindAll<NButton>(modalNode);
             NButton? affirmative = FindModalButton(modalNode, "Yes", "Confirm", "OK", "Accept", "Proceed");
-            affirmative ??= buttons.FirstOrDefault(b => b.Visible);
+            if (affirmative != null && IsSendButton(affirmative))
+            {
+                affirmative = null; // never auto-submit a send-style button
+            }
+            affirmative ??= buttons.FirstOrDefault(b => b.Visible && !IsSendButton(b));
+            if (affirmative == null && IsErrorPopup(modalNode))
+            {
+                return ClickErrorPopupExit(modalNode);
+            }
             if (affirmative != null)
             {
                 NButton target = affirmative;

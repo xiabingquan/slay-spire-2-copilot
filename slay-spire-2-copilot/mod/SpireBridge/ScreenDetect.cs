@@ -265,6 +265,12 @@ public static class ScreenDetect
         {
             return "feedback";
         }
+        // NErrorPopup: hidden NoButton breaks the dismiss matcher; surface as
+        // modal so skip/proceed run the error-popup exit path (proposal 1).
+        if (typeName.Contains("ErrorPopup", StringComparison.OrdinalIgnoreCase))
+        {
+            return "modal";
+        }
         return "other";
     }
 }
