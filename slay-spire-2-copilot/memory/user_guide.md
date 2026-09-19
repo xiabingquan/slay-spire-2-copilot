@@ -17,9 +17,9 @@ consult, and remarks.
   run end — the note pair under `memory/runs/`, one row inserted at the TOP
   of the overview.md run table, and the `## 统计` crosstabs (战绩总览 /
   进阶进度) recounted from the table
-- **Phased reflection**: cadence unchanged — the first one covers ALL runs
-  recorded so far; every later one covers the 20 runs since the previous
-  (36–55, 56–75, …), fired when the cumulative run count reaches the
+- **Phased reflection**: the first one covers ALL runs recorded so far;
+  every later one covers the **10 runs** since the previous (e.g. 36–45,
+  46–55, 56–65, …), fired when the cumulative run count reaches the
   boundary. Output goes DIRECTLY into the matching `memory/lessons/*.md`
   category files — never into overview.md — and **every entry carries its
   date**. overview.md holds only overall run results (the table); no

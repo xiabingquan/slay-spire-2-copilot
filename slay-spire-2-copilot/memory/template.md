@@ -1,8 +1,11 @@
 # Run memory template
 
 Every run writes one bilingual pair under `memory/runs/`:
-`<character>_<YYYYmmdd-HHMMSS>_<hash8>.md` (English) +
-`<character>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md` (Chinese), content-aligned.
+`<run-number-4-digit-padded>_<CHARACTER>_<YYYYmmdd-HHMMSS>_<hash8>.md`
+(English) +
+`<run-number-4-digit-padded>_<CHARACTER>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md`
+(Chinese), content-aligned. The run-number prefix equals the run's 对局序号
+in memory/overview.md — the lookup key for this pair.
 
 How to fill this template (applies to every section):
 

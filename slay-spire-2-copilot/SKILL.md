@@ -288,9 +288,9 @@ When the run ends (game_over screen, or abandon):
    it is written directly into the matching `memory/lessons/*.md` category
    files as dated unordered-list items (each entry carries its date).
    Cadence: the **first** reflection covers **all runs recorded so far**;
-   every reflection after that covers the **20 runs** since the previous one
-   (second covers 36–55, third 56–75, … — fire when the cumulative run count
-   reaches that boundary). Source material is the run notes under
+   every reflection after that covers the **10 runs** since the previous one
+   (e.g. 36–45, 46–55, 56–65, … — fire when the cumulative run count reaches
+   that boundary). Source material is the run notes under
    `memory/runs/`. overview.md holds only overall run results (its table
    with the leading **对局序号** column, newest run on top).
 

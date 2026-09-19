@@ -17,7 +17,7 @@ https://github.com/user-attachments/assets/6eae44a2-312d-4a1c-abc3-f5617fe23f21
 
 | 角色 | 战绩 |
 |---|---|
-| <img src="assets/characters/character_icon_ironclad.webp" alt="IRONCLAD" width="28"> | 进阶0 ✅ |
+| <img src="assets/characters/character_icon_ironclad.webp" alt="IRONCLAD" width="28"> | 进阶0 ✅ 进阶1 ✅（进阶2 进行中） |
 | <img src="assets/characters/character_icon_silent.webp" alt="SILENT" width="28"> | N.A. |
 | <img src="assets/characters/character_icon_defect.webp" alt="DEFECT" width="28"> | N.A. |
 | <img src="assets/characters/character_icon_necrobinder.webp" alt="NECROBINDER" width="28"> | N.A. |
@@ -65,7 +65,9 @@ skill 符号链接：`~/.claude/skills/slay-spire-2-copilot` → 上述 skill �
 项目综述、`mod/` 与 `bridge/` 只放代码及其固定伴随物（`bridge/docs/` 工具文档、
 `bridge/spirectl_lib/data/` 静态游戏资料）、对局记忆只写入 `memory/runs/`、
 文档不含用户对话内容（评论、需求、改进等）、
-文档不混语言（中文文档尽量全中文，英文文档尽量全英文）。
+文档不混语言（中文文档尽量全中文，英文文档尽量全英文）、
+中英双语孪生文档所载规则与常数保持一致、本地档案（local-archive/ 等）
+不入库也不被引用。
 使用方法：让 agent 按清单执行（如 "run doctor.md"）并修正违规。触发时机：每局对局
 结束后、提交文档改动前，或怀疑文档放错位置时。
 
