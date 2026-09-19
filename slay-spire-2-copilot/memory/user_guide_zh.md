@@ -5,8 +5,7 @@
 ## 格式
 
 - 每局笔记（`memory/runs/` 下的英文 + `_zh` 中文对）：格式遵循
-  `memory/template.md`——Summary 事实表、Run overview 逐 Act 表，以及
-  What went well / What went poorly / Key moments 三张表
+  `memory/template.md`
 - 跨局总览表、阶段性反思、SL 列：规则遵循 `memory/overview.md` 自身
   （其表格规则块与 `# 阶段性反思` 节）
 

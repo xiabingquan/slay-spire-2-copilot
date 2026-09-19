@@ -6,8 +6,7 @@ consult, and remarks.
 ## 格式 Formats
 
 - Per-run notes (the EN+`_zh` pair under `memory/runs/`): format per
-  `memory/template.md` — Summary facts table, Run overview act table, and
-  the What went well / What went poorly / Key moments tables
+  `memory/template.md`
 - Cross-run overview table, phased reflections, SL column: rules per
   `memory/overview.md` itself (its 表格规则 block and `# 阶段性反思` section)
 
