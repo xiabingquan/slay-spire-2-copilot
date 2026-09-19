@@ -9,10 +9,8 @@
     "id": "ASHWATER",
     "kind": "potion",
     "name": "灰水",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L14; md:potions_zh.md:L14",
     "target": "self",
     "usage": "combat"
   },
@@ -27,10 +25,8 @@
     "id": "ATTACK_POTION",
     "kind": "potion",
     "name": "攻击药水",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:potions.md:L15; md:potions_zh.md:L15",
     "target": "self",
     "usage": "combat"
   },
@@ -41,9 +37,7 @@
     "id": "BEETLE_JUICE",
     "kind": "potion",
     "name": "BEETLE_JUICE",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "codex-html:https://spire-codex.com/potions/beetle_juice"
+    "play_notes": ""
   },
   "BLESSING_OF_THE_FORGE": {
     "aliases": [
@@ -57,13 +51,10 @@
     "id": "BLESSING_OF_THE_FORGE",
     "kind": "potion",
     "name": "锻造祝福",
-    "needs_zh": false,
     "play_notes": "对局43 live",
     "rarity": "Uncommon",
-    "source": "potions.md + 对局38/43 live",
     "target": "self",
-    "usage": "combat",
-    "zh_description": "为本场战斗升级手牌中所有可升级卡（战斗内限定——战斗后还原，Armaments 同类）。run-38 实时：致命意图 Boss 回合确认 Defend 5→8（8+8=16 挡对 17 来袭）；熔岩拳 10→14 同理。在手牌密度最高/来袭致命的回合使用——不是永久牌库投资。"
+    "usage": "combat"
   },
   "BLOCK_POTION": {
     "aliases": [
@@ -76,10 +67,8 @@
     "id": "BLOCK_POTION",
     "kind": "potion",
     "name": "封锁药水",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:potions.md:L18; md:potions_zh.md:L18; codex:potions/BLOCK_POTION; run-40 live fold 2026-09-18",
     "target": "any player",
     "usage": "combat"
   },
@@ -95,13 +84,10 @@
     "id": "BLOOD_POTION",
     "kind": "potion",
     "name": "血药水",
-    "needs_zh": false,
     "play_notes": "run-49 live：Entomancer 战中 HP 23→39（80 的 20% = 16）。走廊续航类——在致死回合之前喝，不是之后。",
     "rarity": "Common",
-    "source": "run-49 live 折叠 2026-09-19（日志 run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c）",
     "target": "any player",
-    "usage": "anytime",
-    "zh_description": "普通，随时可用：回复最大HP的20%（run-49 live 80Max→+16；run-57 95Max级→+19）。走廊续航——致命类回合**前**饮用，不是之后。run-57：千足虫战 incoming-28 窗口饮用，46→65 缓冲支撑多回合消耗。"
+    "usage": "anytime"
   },
   "BONE_BREW": {
     "aliases": [
@@ -114,10 +100,8 @@
     "id": "BONE_BREW",
     "kind": "potion",
     "name": "骨头酿",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L20; md:potions_zh.md:L20",
     "target": "self",
     "usage": "combat"
   },
@@ -132,10 +116,8 @@
     "id": "BOTTLED_POTENTIAL",
     "kind": "potion",
     "name": "瓶装潜能",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
-    "source": "md:potions.md:L21; md:potions_zh.md:L21",
     "target": "any player",
     "usage": "combat"
   },
@@ -151,10 +133,8 @@
     "id": "CLARITY",
     "kind": "potion",
     "name": "明晰提取物",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L22; md:potions_zh.md:L22",
     "target": "any player",
     "usage": "combat"
   },
@@ -169,10 +149,8 @@
     "id": "COLORLESS_POTION",
     "kind": "potion",
     "name": "无色药水",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:potions.md:L23; md:potions_zh.md:L23",
     "target": "self",
     "usage": "combat"
   },
@@ -187,10 +165,8 @@
     "id": "COSMIC_CONCOCTION",
     "kind": "potion",
     "name": "宇宙药剂",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
-    "source": "md:potions.md:L24; md:potions_zh.md:L24",
     "target": "self",
     "usage": "combat"
   },
@@ -205,10 +181,8 @@
     "id": "CUNNING_POTION",
     "kind": "potion",
     "name": "狡诈药水",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L25; md:potions_zh.md:L25",
     "target": "self",
     "usage": "combat"
   },
@@ -225,7 +199,6 @@
     "name": "万灵药",
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "run-51 live fold 2026-09-19",
     "target": "any player",
     "usage": "combat"
   },
@@ -241,10 +214,8 @@
     "id": "DEXTERITY_POTION",
     "kind": "potion",
     "name": "敏捷药水",
-    "needs_zh": false,
     "play_notes": "对局43 live",
     "rarity": "Common",
-    "source": "potions.md + 对局39/43 live",
     "target": "any player",
     "usage": "combat"
   },
@@ -260,10 +231,8 @@
     "id": "DISTILLED_CHAOS",
     "kind": "potion",
     "name": "蒸馏混沌",
-    "needs_zh": false,
     "play_notes": "对局43 live",
     "rarity": "Rare",
-    "source": "potions.md + 对局43 商店",
     "target": "self",
     "usage": "combat"
   },
@@ -278,10 +247,8 @@
     "id": "DROPLET_OF_PRECOGNITION",
     "kind": "potion",
     "name": "预知之滴",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
-    "source": "md:potions.md:L29; md:potions_zh.md:L29",
     "target": "self",
     "usage": "combat"
   },
@@ -295,10 +262,8 @@
     "id": "DUPLICATOR",
     "kind": "potion",
     "name": "复制药水",
-    "needs_zh": false,
     "play_notes": "run-48 live 2026-09-19：RINGING 下复制器+上勾拳 48 伤——药水不算卡规则 live。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L30; md:potions_zh.md:L30",
     "target": "self",
     "usage": "combat"
   },
@@ -313,10 +278,8 @@
     "id": "ENERGY_POTION",
     "kind": "potion",
     "name": "能量药水",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:potions.md:L31; md:potions_zh.md:L31; codex:potions/ENERGY_POTION",
     "target": "any player",
     "usage": "combat"
   },
@@ -331,10 +294,8 @@
     "id": "ENTROPIC_BREW",
     "kind": "potion",
     "name": "混沌药水",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
-    "source": "md:potions.md:L32; md:potions_zh.md:L32",
     "target": "self",
     "usage": "anytime"
   },
@@ -349,10 +310,8 @@
     "id": "ESSENCE_OF_DARKNESS",
     "kind": "potion",
     "name": "黑暗精华",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
-    "source": "md:potions.md:L33; md:potions_zh.md:L33",
     "target": "self",
     "usage": "combat"
   },
@@ -367,10 +326,8 @@
     "id": "EXPLOSIVE_AMPOULE",
     "kind": "potion",
     "name": "爆炸安瓿",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:potions.md:L34; md:potions_zh.md:L34",
     "target": "ALL enemies",
     "usage": "combat"
   },
@@ -385,10 +342,8 @@
     "id": "FAIRY_IN_A_BOTTLE",
     "kind": "potion",
     "name": "瓶中精灵",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
-    "source": "md:potions.md:L35; md:potions_zh.md:L35",
     "target": "self",
     "usage": "auto"
   },
@@ -403,10 +358,8 @@
     "id": "FIRE_POTION",
     "kind": "potion",
     "name": "火焰药水",
-    "needs_zh": false,
     "play_notes": "run-48 live 2026-09-19：易伤2+Slow 显示下平坦 20——确认不吃增幅。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
     "rarity": "Common",
-    "source": "md:potions.md:L37; md:potions_zh.md:L36; codex:potions/FIRE_POTION",
     "target": "any enemy",
     "usage": "combat"
   },
@@ -421,10 +374,8 @@
     "id": "FLEX_POTION",
     "kind": "potion",
     "name": "肌肉药水",
-    "needs_zh": false,
     "play_notes": "run-49 live：STR +5 当回合生效（powers 显示 STRENGTH_POWER + FLEX_POTION_POWER:5）；Setup Strike 后置 +3 叠加至 11 后回合末双双过期（11→3，Inflame 基础保留）。",
     "rarity": "Common",
-    "source": "run-49 live 折叠 2026-09-19（日志 run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c）",
     "target": "any player",
     "usage": "combat"
   },
@@ -439,10 +390,8 @@
     "id": "FOCUS_POTION",
     "kind": "potion",
     "name": "集中药水",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:potions.md:L39; md:potions_zh.md:L38",
     "target": "self",
     "usage": "combat"
   },
@@ -456,10 +405,8 @@
     "id": "FORTIFIER",
     "kind": "potion",
     "name": "固化药水",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L40; md:potions_zh.md:L39",
     "target": "any player",
     "usage": "combat"
   },
@@ -475,10 +422,8 @@
     "id": "FOUL_POTION",
     "kind": "potion",
     "name": "污浊药水",
-    "needs_zh": false,
     "play_notes": "对局43 live",
     "rarity": "Event",
-    "source": "potions.md + 对局42/43 live",
     "target": "anytime",
     "usage": "Event"
   },
@@ -493,10 +438,8 @@
     "id": "FRUIT_JUICE",
     "kind": "potion",
     "name": "果汁",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
-    "source": "md:potions.md:L42; md:potions_zh.md:L41; codex:potions/FRUIT_JUICE",
     "target": "any player",
     "usage": "anytime"
   },
@@ -511,10 +454,8 @@
     "id": "FYSH_OIL",
     "kind": "potion",
     "name": "异鱼之油",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L36; md:potions_zh.md:L42",
     "target": "any player",
     "usage": "combat"
   },
@@ -530,10 +471,8 @@
     "id": "GAMBLER_S_BREW",
     "kind": "potion",
     "name": "赌徒特酿",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L43; md:potions_zh.md:L43",
     "target": "self",
     "usage": "combat"
   },
@@ -548,10 +487,8 @@
     "id": "GHOST_IN_A_JAR",
     "kind": "potion",
     "name": "罐装幽灵",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
-    "source": "md:potions.md:L44; md:potions_zh.md:L44",
     "target": "any player",
     "usage": "combat"
   },
@@ -568,13 +505,10 @@
     "id": "GIGANTIFICATION_POTION",
     "kind": "potion",
     "name": "巨化药水",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
-    "source": "md:potions.md:L45; md:potions_zh.md:L45",
     "target": "any player",
-    "usage": "combat",
-    "zh_description": "稀有：获得 GigantificationPower 1——本场战斗下一张攻击牌×3伤，被该攻击消耗。run-57 live：Bludgeon 32×3=96 打在 Act1 Elite① 骇鳗 T1——单击穿越 SHRIEK:70，眩晕窗开启，战斗 T3 零伤获胜。Boss/精英爆发类储备。"
+    "usage": "combat"
   },
   "GLOWWATER_POTION": {
     "aliases": [
@@ -588,13 +522,10 @@
     "id": "GLOWWATER_POTION",
     "kind": "potion",
     "name": "发光水",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Event",
-    "source": "md:potions.md:L46; md:potions_zh.md:L46; codex:potions/GLOWWATER_POTION",
     "target": "combat",
-    "usage": "Event",
-    "zh_description": "事件药水（淹水灯塔装瓶分支）：消耗全部手牌，抽10张牌。run-57 live：耗尽5张手牌后同回合抽空剩余牌库（9张）——状态稀释战的手牌循环炸弹；与消耗脊协同（消耗触发 FNP）。"
+    "usage": "Event"
   },
   "HEART_OF_IRON": {
     "aliases": [
@@ -608,13 +539,10 @@
     "id": "HEART_OF_IRON",
     "kind": "potion",
     "name": "铁心药水",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L47; md:potions_zh.md:L47; codex:potions/HEART_OF_IRON",
     "target": "any player",
-    "usage": "combat",
-    "zh_description": "普通：获得7层镀甲（战斗内）。run-57 live：珊瑚群 Piercing Stabs 回合——铁心+7镀甲叠加 1-2 层残余镀甲+双Defend=18总挡精确覆盖 9×2 意图（run-41 教条级）。"
+    "usage": "combat"
   },
   "KING_S_COURAGE": {
     "aliases": [
@@ -628,10 +556,8 @@
     "id": "KING_S_COURAGE",
     "kind": "potion",
     "name": "王之勇气",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L48; md:potions_zh.md:L48",
     "target": "any player",
     "usage": "combat"
   },
@@ -646,10 +572,8 @@
     "id": "LIQUID_BRONZE",
     "kind": "potion",
     "name": "流动铜液",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L49; md:potions_zh.md:L49; codex:potions/LIQUID_BRONZE",
     "target": "any player",
     "usage": "combat"
   },
@@ -664,10 +588,8 @@
     "id": "LIQUID_MEMORIES",
     "kind": "potion",
     "name": "液态记忆",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
-    "source": "md:potions.md:L50; md:potions_zh.md:L50",
     "target": "self",
     "usage": "combat"
   },
@@ -682,10 +604,8 @@
     "id": "LUCKY_TONIC",
     "kind": "potion",
     "name": "幸运补剂",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
-    "source": "md:potions.md:L51; md:potions_zh.md:L51; codex:potions/LUCKY_TONIC",
     "target": "any player",
     "usage": "combat"
   },
@@ -701,10 +621,8 @@
     "id": "MAZALETH_S_GIFT",
     "kind": "potion",
     "name": "马萨雷斯的赠礼",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
-    "source": "md:potions.md:L52; md:potions_zh.md:L52",
     "target": "any player",
     "usage": "combat"
   },
@@ -719,10 +637,8 @@
     "id": "OROBIC_ACID",
     "kind": "potion",
     "name": "欧洛巴斯之酸",
-    "needs_zh": false,
     "play_notes": "run-48 live 2026-09-19：爆炸挡闸回合挡牌需求 whiff——方差燃料而非保险。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
     "rarity": "Rare",
-    "source": "md:potions.md:L53; md:potions_zh.md:L53",
     "target": "self",
     "usage": "combat"
   },
@@ -737,10 +653,8 @@
     "id": "POISON_POTION",
     "kind": "potion",
     "name": "毒药水",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:potions.md:L54; md:potions_zh.md:L54",
     "target": "any enemy",
     "usage": "combat"
   },
@@ -755,10 +669,8 @@
     "id": "POTION_OF_BINDING",
     "kind": "potion",
     "name": "缚魂药水",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L56; md:potions_zh.md:L56",
     "target": "ALL enemies",
     "usage": "combat"
   },
@@ -773,10 +685,8 @@
     "id": "POTION_OF_CAPACITY",
     "kind": "potion",
     "name": "扩容药水",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L57; md:potions_zh.md:L57",
     "target": "self",
     "usage": "combat"
   },
@@ -791,10 +701,8 @@
     "id": "POTION_OF_DOOM",
     "kind": "potion",
     "name": "灾厄药水",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:potions.md:L58; md:potions_zh.md:L58",
     "target": "any enemy",
     "usage": "combat"
   },
@@ -802,8 +710,7 @@
     "curated": true,
     "description": "战斗中使用：对目标造成 15 伤（run-51 对知识恶魔 live）。石化蟾蜍每战开始产出。非治疗类。",
     "name": "岩石形状药水",
-    "rarity": "Token",
-    "source": "run-51 live fold 2026-09-19"
+    "rarity": "Token"
   },
   "POT_OF_GHOULS": {
     "aliases": [
@@ -816,10 +723,8 @@
     "id": "POT_OF_GHOULS",
     "kind": "potion",
     "name": "尸鬼瓮",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
-    "source": "md:potions.md:L55; md:potions_zh.md:L55",
     "target": "self",
     "usage": "combat"
   },
@@ -835,13 +740,10 @@
     "id": "POWDERED_DEMISE",
     "kind": "potion",
     "name": "灭世粉",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L60; md:potions_zh.md:L60",
     "target": "any enemy",
-    "usage": "combat",
-    "zh_description": "普通：对目标施加 DemisePower 9——目标每回合末受9点无挡无源伤。击杀计时器类（run-41 4HP 外骨骼虫回合末击杀；run-57 蜂群术士竞速中 9/回合 chip 至 T5 击杀）。"
+    "usage": "combat"
   },
   "POWER_POTION": {
     "aliases": [
@@ -855,13 +757,10 @@
     "id": "POWER_POTION",
     "kind": "potion",
     "name": "能力药水",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:potions.md:L61; md:potions_zh.md:L61",
     "target": "self",
-    "usage": "combat",
-    "zh_description": "普通，战斗内：打开三选一能力 overlay；所选能力以0费卡生成入手——需手动打出。run-57 千足虫 T7 选项：VICIOUS/HELLRAISER/RUPTURE——选 RUPTURE（run-56 胜局脊柱 references 有档）而非无档项；Rupture 卡打出后 Breakthrough 自伤同回合触发+1力量（Str −2→−1 live）。"
+    "usage": "combat"
   },
   "RADIANT_TINCTURE": {
     "aliases": [
@@ -874,10 +773,8 @@
     "id": "RADIANT_TINCTURE",
     "kind": "potion",
     "name": "明耀酊剂",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L62; md:potions_zh.md:L62",
     "target": "any player",
     "usage": "combat"
   },
@@ -893,13 +790,10 @@
     "id": "REGEN_POTION",
     "kind": "potion",
     "name": "再生药水",
-    "needs_zh": false,
     "play_notes": "run-48 live 2026-09-19：15 HP 于猎人杀手战中打出；轨道约 4 跳后战中耗尽。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L63; md:potions_zh.md:L63; codex:potions/REGEN_POTION; run-40 live fold 2026-09-18",
     "target": "any player",
-    "usage": "combat",
-    "zh_description": "普通：获得5再生——每回合开始回复5，堆数递减。教条（run-48 live）：HP轨药水用于消耗战本身；run-57 千足虫战中段饮用——T3-T5 同窗铺垫回合中每回合+5tick。"
+    "usage": "combat"
   },
   "SHACKLING_POTION": {
     "aliases": [
@@ -913,10 +807,8 @@
     "id": "SHACKLING_POTION",
     "kind": "potion",
     "name": "枷锁药水",
-    "needs_zh": false,
     "play_notes": "对局43 live",
     "rarity": "Rare",
-    "source": "potions.md + 对局43 商店",
     "target": "ALL enemies",
     "usage": "combat"
   },
@@ -931,10 +823,8 @@
     "id": "SHIP_IN_A_BOTTLE",
     "kind": "potion",
     "name": "瓶中船",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
-    "source": "md:potions.md:L65; md:potions_zh.md:L65",
     "target": "any player",
     "usage": "combat"
   },
@@ -949,13 +839,10 @@
     "id": "SKILL_POTION",
     "kind": "potion",
     "name": "技巧药水",
-    "needs_zh": false,
     "play_notes": "run-54 live 观测选项（2026-09-19）：旧日雕像战给 HAVOC / BLOODLETTING / BURNING_POTION…（BURNING_PACT）；同局更早战斗给 BATTLE_TRANCE 类组合。0 费生成的 Bloodletting = 当回合净 +2 能量（组合启动器）；True Grit 副本（更早对局）= 7 挡 + 随机手牌消耗（run-53 注记适用）。",
     "rarity": "Common",
-    "source": "md:potions.md:L66; md:potions_zh.md:L66; run-40 live fold 2026-09-18",
     "target": "self",
-    "usage": "combat",
-    "zh_description": "从你的角色卡池 3 张不同技能牌中选 1（可跳过）；加入手牌，本回合免费。run-38 实时：card_choice 覆盖层给出 IMPERVOUS/TRUE_GRIT/PRIMAL_FORCE；选 Impervious——免费 +30 挡在 HP 24、零防御手牌的回合挡下精英 SWOOP 19。致命意图药水：当来袭超过手牌挡上限时使用。"
+    "usage": "combat"
   },
   "SNECKO_OIL": {
     "aliases": [
@@ -968,10 +855,8 @@
     "id": "SNECKO_OIL",
     "kind": "potion",
     "name": "异蛇之油",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
-    "source": "md:potions.md:L67; md:potions_zh.md:L67",
     "target": "any player",
     "usage": "combat"
   },
@@ -985,10 +870,8 @@
     "id": "SOLDIER_STEW",
     "kind": "potion",
     "name": "Soldier's Stew",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "codex-api:/potions/SOLDIERS_STEW"
+    "rarity": "Rare"
   },
   "SOLDIER_S_STEW": {
     "aliases": [
@@ -1002,10 +885,8 @@
     "id": "SOLDIER_S_STEW",
     "kind": "potion",
     "name": "士兵炖汤",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
-    "source": "md:potions.md:L68; md:potions_zh.md:L68",
     "target": "any player",
     "usage": "combat"
   },
@@ -1021,10 +902,8 @@
     "id": "SPEED_POTION",
     "kind": "potion",
     "name": "速度药水",
-    "needs_zh": false,
     "play_notes": "run-49 反例 live：棘刺蟾蜍 SPIKE_EXPLOSION 23 面前抽到零挡手牌——药水无法使用（无挡牌可放大）。run-43 教条逐字重演：Speed Potion 只有手牌有挡牌时才回本。",
     "rarity": "Common",
-    "source": "run-49 live 折叠 2026-09-19（日志 run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c）",
     "target": "any player",
     "usage": "combat"
   },
@@ -1038,10 +917,8 @@
     "id": "STABLE",
     "kind": "potion",
     "name": "Stable Serum",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "codex-api:/potions/STABLE_SERUM"
+    "rarity": "Uncommon"
   },
   "STABLE_SERUM": {
     "aliases": [
@@ -1055,13 +932,10 @@
     "id": "STABLE_SERUM",
     "kind": "potion",
     "name": "稳定血清",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L70; md:potions_zh.md:L70",
     "target": "any player",
-    "usage": "combat",
-    "zh_description": "普通：RetainHandPower 2——接下来2回合结束时不弃手牌（留手；后续抽牌叠加入手）。run-57 live：T4 手牌增至7张（留手5+抽牌）——Bludgeon 留到异螨击杀回合；「留手本身不加挡——不能单独回答致命意图」备注仍成立。"
+    "usage": "combat"
   },
   "STAR_POTION": {
     "aliases": [
@@ -1074,10 +948,8 @@
     "id": "STAR_POTION",
     "kind": "potion",
     "name": "星星药水",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:potions.md:L71; md:potions_zh.md:L71",
     "target": "self",
     "usage": "combat"
   },
@@ -1092,10 +964,8 @@
     "id": "STRENGTH_POTION",
     "kind": "potion",
     "name": "力量药水",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:potions.md:L72; md:potions_zh.md:L72; codex:potions/STRENGTH_POTION",
     "target": "any player",
     "usage": "combat"
   },
@@ -1111,10 +981,8 @@
     "id": "SWIFT_POTION",
     "kind": "potion",
     "name": "迅捷药水",
-    "needs_zh": false,
     "play_notes": "对局43 live",
     "rarity": "Common",
-    "source": "potions.md + 对局43 live",
     "target": "any player",
     "usage": "combat"
   },
@@ -1129,10 +997,8 @@
     "id": "TOUCH_OF_INSANITY",
     "kind": "potion",
     "name": "癫狂之触",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:potions.md:L74; md:potions_zh.md:L74",
     "target": "self",
     "usage": "combat"
   },
@@ -1147,10 +1013,8 @@
     "id": "VULNERABLE_POTION",
     "kind": "potion",
     "name": "易伤药水",
-    "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:potions.md:L75; md:potions_zh.md:L75; codex:potions/VULNERABLE_POTION",
     "target": "any enemy",
     "usage": "combat"
   },
@@ -1166,12 +1030,9 @@
     "id": "WEAK_POTION",
     "kind": "potion",
     "name": "弱化药水",
-    "needs_zh": false,
     "play_notes": "对局43 live",
     "rarity": "Common",
-    "source": "potions.md + 对局43 live",
     "target": "any enemy",
-    "usage": "combat",
-    "zh_description": "普通：对目标施加弱化（每击攻击削减类）。run-57 live：Act2 Boss——弱化3落地，LUNGING_BITE 意图 28→21 级削减显示；Uppercut 类弱化削减在异螨/蜜蜂类多段上同样 live（按击削减，非总量）。"
+    "usage": "combat"
   }
 }

@@ -336,8 +336,6 @@ def build_monster_entry_from_api(monster):
             "play_notes": "",
             "aliases": [move.get("name") or api_move_id, api_move_id],
             "curated": False,
-            "needs_zh": True,
-            "source": f"codex-api:/monsters/{api_id}#{api_move_id}",
         }
     hp = {
         "base": monster.get("min_hp"),
@@ -366,8 +364,6 @@ def build_monster_entry_from_api(monster):
         ),
         "play_notes": "",
         "curated": False,
-        "needs_zh": True,
-        "source": f"codex-api:/monsters/{api_id}",
     }
 
 
@@ -385,8 +381,7 @@ def fold_monster_entry(entry):
             continue
         payload = dict(entry)
         if lang == "zh":
-            payload["needs_zh"] = True
-        data[target_key] = payload
+                    data[target_key] = payload
         _write_json_dict(path, data)
     _REF_INDEX_CACHE.clear()
 
@@ -506,8 +501,6 @@ def _simple_api_entry(kind, key, data, fields, aliases_extra=()):
         "aliases": [data.get("name"), data.get("id"), *aliases_extra],
         "play_notes": "",
         "curated": False,
-        "needs_zh": True,
-        "source": f"codex-api:/{KIND_TO_API_PLURAL[kind]}/{data.get('id')}",
     }
     return entry
 
@@ -571,8 +564,6 @@ def _event_entry(key, data):
         "aliases": [data.get("name"), data.get("id")],
         "play_notes": "",
         "curated": False,
-        "needs_zh": True,
-        "source": f"codex-api:/events/{data.get('id')}",
         "options": {},
     }
     if ".pages." in key:
@@ -585,8 +576,6 @@ def _event_entry(key, data):
             "aliases": [key.rsplit(".", 1)[-1]],
             "play_notes": "",
             "curated": False,
-            "needs_zh": True,
-            "source": f"codex-api:/events/{data.get('id')}",
         }
     return entry
 
@@ -691,10 +680,8 @@ def _research_html(key, kind):
         "aliases": [],
         "play_notes": "",
         "curated": False,
-        "needs_zh": True,
-        "source": f"codex-html:{best_url}",
     }
-    return entry, kind, entry["source"]
+    return entry, kind, f"codex-html:{best_url}"
 
 
 def _fold_researched(key, kind, entry, source):
@@ -715,7 +702,7 @@ def _fold_researched(key, kind, entry, source):
         data = _read_json_dict(path)
         generic = data.get("generic")
         if not isinstance(generic, dict):
-            generic = {"id": "generic", "kind": "monster", "name": "generic", "description": "synthetic host for move stubs", "aliases": [], "play_notes": "", "curated": False, "needs_zh": True, "source": "synthetic", "moves": {}}
+            generic = {"id": "generic", "kind": "monster", "name": "generic", "description": "synthetic host for move stubs", "aliases": [], "play_notes": "", "curated": False, "moves": {}}
         moves = generic.get("moves")
         if not isinstance(moves, dict):
             moves = {}
@@ -737,16 +724,12 @@ def _fold_researched(key, kind, entry, source):
             if isinstance(existing, dict) and existing.get("curated") is True:
                 continue
             payload = json.loads(json.dumps(entry))
-            if lang == "zh":
-                payload["needs_zh"] = True
             data[event_id] = payload
             _write_json_dict(path, data)
         _REF_INDEX_CACHE.clear()
         return entry, source
     fold_entry_into_reference(stem, key, entry, lang="en")
-    zh_entry = json.loads(json.dumps(entry))
-    zh_entry["needs_zh"] = True
-    fold_entry_into_reference(stem, key, zh_entry, lang="zh")
+    fold_entry_into_reference(stem, key, json.loads(json.dumps(entry)), lang="zh")
     _REF_INDEX_CACHE.clear()
     return entry, source
 
@@ -779,7 +762,8 @@ def research_and_fold(key, domain_guess=None):
             if built is None:
                 continue
             entry = built
-            source = entry["source"]
+            plural = "events" if attempt_kind in ("event", "event_option") else f"{attempt_kind}s"
+            source = f"codex-api:/{plural}/{data.get('id')}"
             if attempt_kind == "event":
                 kind = kind or "event"
             else:
@@ -816,10 +800,6 @@ def print_entry(domain, entry, key, extra=None):
             print(f"{field}: {json.dumps(entry[field], ensure_ascii=False)}")
     if entry.get("play_notes"):
         print(f"play_notes: {entry['play_notes']}")
-    if entry.get("source"):
-        print(f"source: {entry['source']}")
-    if entry.get("needs_zh"):
-        print("needs_zh: true (Chinese description pending curation)")
     if entry.get("curated") is False:
         print("curated: false (auto-folded — refine before relying on it)")
     if extra:

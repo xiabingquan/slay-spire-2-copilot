@@ -1,4 +1,10 @@
-"""Entry envelope, curated-extras application, zh twin derivation, merge policy."""
+"""Entry envelope, curated-extras application, zh twin maintenance, merge policy.
+
+EN and ZH files share one schema per domain: identical key sets, identical
+field names. Chinese text lives ONLY in the ZH twin's name/description —
+EN entries never carry zh_* fields.
+"""
+import copy
 import json
 from pathlib import Path
 
@@ -7,7 +13,7 @@ from .textutil import has_cjk, humanize
 
 
 def envelope(entry_id: str, kind: str, name: str, description: str,
-             aliases=None, play_notes: str = "", source: str = "", **extra):
+             aliases=None, play_notes: str = "", **extra):
     """Build one reference entry with the standard field set.
 
     EN name must never carry CJK — falls back to the id humanized form.
@@ -22,8 +28,6 @@ def envelope(entry_id: str, kind: str, name: str, description: str,
         "aliases": sorted({str(a) for a in (aliases or []) if a and a != entry_id}),
         "play_notes": (play_notes or "").strip(),
         "curated": False,
-        "needs_zh": False,
-        "source": source,
     }
     e.update(extra)
     return e
@@ -67,7 +71,11 @@ def merge_domain(old: dict, new: dict) -> dict:
 
 
 def apply_extras(domain: str, entries: dict, zh_entries: dict):
-    """Apply CURATED_EXTRAS overlays; curated:true prev entries are kept."""
+    """Apply CURATED_EXTRAS overlays; curated:true prev entries are kept.
+
+    EN blocks write the EN twin; zh blocks write Chinese name/description
+    straight into the ZH twin. Both sides keep the same field schema.
+    """
     for key, extra in (CURATED_EXTRAS.get(domain) or {}).items():
         en = dict(extra.get("en") or {})
         zh = dict(extra.get("zh") or {})
@@ -82,12 +90,10 @@ def apply_extras(domain: str, entries: dict, zh_entries: dict):
                 for k, v in prev.items():
                     if k not in carried:
                         carried[k] = v
-                # curated field-level overrides win
                 for k, v in en.items():
                     carried[k] = v
                 en = carried
                 en["curated"] = True
-                # absorb parser-discovered moves if curated entry lacks them
                 if not (en.get("moves") and any(
                         (en["moves"] or {}).values())) and prev.get("moves"):
                     en["moves"] = prev["moves"]
@@ -98,75 +104,57 @@ def apply_extras(domain: str, entries: dict, zh_entries: dict):
             zh = dict(zh)
             zh.setdefault("id", key)
             for k, v in entries[key].items():
-                if k not in ("name", "description", "play_notes", "zh_name",
-                             "zh_description", "zh_moves", "aliases"):
+                if k not in ("name", "description", "play_notes"):
                     zh.setdefault(k, v)
             zh["name"] = zh.get("name") or entries[key].get("name")
             zh["description"] = zh.get("description") or entries[key].get("description")
             zh["curated"] = True
-            zh["needs_zh"] = False
             prevz = zh_entries.get(key)
             if prevz is None or prevz.get("curated") is not True:
                 zh_entries[key] = zh
 
 
-def to_zh_entry(en_entry: dict) -> dict:
-    """Derive the ZH twin from an EN entry (zh_name/zh_description win)."""
-    zh = {}
-    for k, v in en_entry.items():
-        if k in ("zh_name", "zh_description", "zh_moves", "zh_play_notes"):
-            continue
-        zh[k] = v
-    zh["name"] = en_entry.get("zh_name") or en_entry.get("name") or en_entry.get("id", "")
-    desc = en_entry.get("zh_description") or ""
-    if not desc:
-        desc = en_entry.get("description", "")
-        zh["needs_zh"] = True
-    else:
-        zh["needs_zh"] = False
-    zh["description"] = desc
-    zh["play_notes"] = en_entry.get("zh_play_notes") or en_entry.get("play_notes", "")
-    if en_entry.get("kind") == "monster":
-        zh_moves = en_entry.get("zh_moves") or {}
-        moves = {}
-        for mk, mv in (en_entry.get("moves") or {}).items():
-            mv_zh = dict(mv)
-            zh_desc = zh_moves.get(mk) or mv.get("zh_description")
-            if zh_desc:
-                mv_zh["description"] = zh_desc
-                mv_zh["needs_zh"] = False
-            moves[mk] = mv_zh
-        zh["moves"] = moves
-    if en_entry.get("kind") == "event":
-        options = {}
-        for ok, ov in (en_entry.get("options") or {}).items():
-            ov_zh = dict(ov)
-            if ov.get("zh_description"):
-                ov_zh["description"] = ov["zh_description"]
-                ov_zh["needs_zh"] = False
-            options[ok] = ov_zh
-        zh["options"] = options
-    return zh
-
-
 def fill_zh_twins(en_domain: dict, zh_domain: dict):
-    """Ensure every EN key has a ZH twin; non-curated twins follow EN fields.
+    """Create ZH twins only for keys missing in the ZH file.
 
-    Existing curated ZH entries are untouched. Non-curated ZH descriptions
-    that already carry real text (needs_zh false) are preserved over the
-    EN-derived fallback.
+    Existing ZH entries are never touched — Chinese text is authored and
+    curated in the ZH twin itself. New twins start as schema-identical
+    copies of the EN entry (English placeholder text until curated).
     """
     for k, e in en_domain.items():
         if k not in zh_domain:
-            zh_domain[k] = to_zh_entry(e)
+            zh_domain[k] = copy.deepcopy(e)
+
+def sync_schemas(en_domain: dict, zh_domain: dict):
+    """Make every ZH entry's key set identical to its EN twin (EN is the
+    structure authority). ZH-only keys are dropped; EN-only keys are copied
+    in (English placeholder values — Chinese is curated in the ZH twin).
+    Nested moves/options maps are synced the same way.
+    """
+    for k, e in en_domain.items():
+        z = zh_domain.get(k)
+        if not isinstance(z, dict) or not isinstance(e, dict):
             continue
-        z = zh_domain[k]
-        if z.get("curated") is True:
-            continue
-        twin = to_zh_entry(e)
-        if z.get("description") and not z.get("needs_zh"):
-            twin["description"] = z["description"]
-            twin["needs_zh"] = False
-        if z.get("name"):
-            twin["name"] = z["name"]
-        zh_domain[k] = twin
+        for fk in set(e) - set(z):
+            z[fk] = copy.deepcopy(e[fk])
+        for fk in set(z) - set(e):
+            del z[fk]
+        for nest in ("moves", "options"):
+            en_nest = e.get(nest)
+            if not isinstance(en_nest, dict):
+                continue
+            z_nest = z.get(nest)
+            if not isinstance(z_nest, dict):
+                z_nest = {}
+                z[nest] = z_nest
+            for nk, nv in en_nest.items():
+                zv = z_nest.get(nk)
+                if not isinstance(nv, dict) or not isinstance(zv, dict):
+                    z_nest[nk] = copy.deepcopy(nv)
+                    continue
+                for fk in set(nv) - set(zv):
+                    zv[fk] = copy.deepcopy(nv[fk])
+                for fk in set(zv) - set(nv):
+                    del zv[fk]
+            for nk in set(z_nest) - set(en_nest):
+                del z_nest[nk]

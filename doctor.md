@@ -129,7 +129,8 @@ verification retires them; docs cite the JSON.)
 Rule: static reference data — keys = live game ids, values = complete
 descriptions. Entries may gain facts during a run, but must never contain run
 records, dates, or session notes. `play_notes` holds static strategy only.
-`curated`/`source` fields are allowed. Note: `spirectl lookup` auto-folds
+`curated` marks agent-verified entries (`false` = auto-folded stub, refine
+before relying). Note: `spirectl lookup` auto-folds
 spire-codex.com stubs marked `curated:false` — those must be refined to
 `curated:true` (bilingual, EN+ZH aligned) before they count as curated
 content.

@@ -10,10 +10,8 @@
     "id": "ACCELERANT_POWER",
     "kind": "power",
     "name": "Accelerant",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": null,
-    "source": "md:powers.md:L429; md:powers_zh.md:L264",
     "stack_type": null
   },
   "ACCURACY_POWER": {
@@ -27,10 +25,8 @@
     "id": "ACCURACY_POWER",
     "kind": "power",
     "name": "精准",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L249; md:powers_zh.md:L223",
     "stack_type": "Counter"
   },
   "ADAPTABLE_POWER": {
@@ -45,10 +41,8 @@
     "id": "ADAPTABLE_POWER",
     "kind": "power",
     "name": "Adaptable",
-    "needs_zh": false,
     "play_notes": "run-46 live: ADAPTABLE→RESPAWN end-to-end; combat continues at 0 HP until revive resolves. | run-46 live：ADAPTABLE→RESPAWN 端到端——0HP 战斗续行至复活解决；分支标记经回退反射浮现。",
     "power_type": "Buff",
-    "source": "md:powers.md:L362; md:powers_zh.md:L320",
     "stack_type": "Single"
   },
   "AFTERIMAGE_POWER": {
@@ -63,10 +57,8 @@
     "id": "AFTERIMAGE_POWER",
     "kind": "power",
     "name": "余像",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L213; md:powers_zh.md:L190",
     "stack_type": "Counter"
   },
   "AGGRESSION_POWER": {
@@ -81,10 +73,8 @@
     "id": "AGGRESSION_POWER",
     "kind": "power",
     "name": "Aggression",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L166; md:powers_zh.md:L145",
     "stack_type": "Counter"
   },
   "ARSENAL_POWER": {
@@ -98,10 +88,8 @@
     "id": "ARSENAL_POWER",
     "kind": "power",
     "name": "Arsenal",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": null,
-    "source": "md:powers.md:L522; md:powers_zh.md:L459",
     "stack_type": "Counter"
   },
   "ARTIFACT_POWER": {
@@ -116,10 +104,8 @@
     "id": "ARTIFACT_POWER",
     "kind": "power",
     "name": "人工制品",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L71; md:powers_zh.md:L62",
     "stack_type": "Counter"
   },
   "ASLEEP": {
@@ -127,8 +113,7 @@
     "description": "计数类：物主沉睡——若受到非零未挡伤害则醒来（移除自身镀甲若有、自眩晕进唤醒招、移除沉睡）。物主回合结束时沉睡减1；归零经唤醒招醒来；回合结束时沉睡≤1则镀甲被移除。对局39+40 live：乐加维林族母两次均由穿镀甲挡的小额未挡伤害触发唤醒（对局40：剑柄9+打击6 把12挡打穿至3未挡 → 同回合剥甲+眩晕）。",
     "id": "ASLEEP",
     "kind": "power",
-    "name": "沉睡",
-    "source": "; run-40 live fold 2026-09-18"
+    "name": "沉睡"
   },
   "ASLEEP_POWER": {
     "aliases": [
@@ -142,10 +127,8 @@
     "id": "ASLEEP_POWER",
     "kind": "power",
     "name": "沉睡",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L401; md:powers_zh.md:L353",
     "stack_type": "Counter"
   },
   "AUTOMATION_POWER": {
@@ -159,13 +142,15 @@
     "id": "AUTOMATION_POWER",
     "kind": "power",
     "name": "Automation",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L162; md:powers_zh.md:L141",
     "stack_type": "Counter"
   },
   "BACK_ATTACK_LEFT_POWER": {
+    "aliases": [
+      "BACK_ATTACK_LEFT",
+      "BackAttackLeftPower"
+    ],
     "counter_class": false,
     "curated": true,
     "description": "惰性面向标记（Buff，Single），被 SURROUNDED_POWER 侧袭判定读取——持有该标记的爪在持有者面向反方向时对其 ×1.5。自身无钩子。",
@@ -173,12 +158,15 @@
     "id": "BACK_ATTACK_LEFT_POWER",
     "kind": "power",
     "name": "背袭·左",
-    "needs_zh": false,
+    "play_notes": "",
     "power_type": "Buff",
-    "source": "curated:powers.md SURROUNDED facing + KaiserCrab",
     "stack_type": "Single"
   },
   "BACK_ATTACK_RIGHT_POWER": {
+    "aliases": [
+      "BACK_ATTACK_RIGHT",
+      "BackAttackRightPower"
+    ],
     "counter_class": false,
     "curated": true,
     "description": "惰性面向标记（Buff，Single），被 SURROUNDED_POWER 侧袭判定读取——持有该标记的爪在持有者面向反方向时对其 ×1.5。自身无钩子。",
@@ -186,9 +174,8 @@
     "id": "BACK_ATTACK_RIGHT_POWER",
     "kind": "power",
     "name": "背袭·右",
-    "needs_zh": false,
+    "play_notes": "",
     "power_type": "Buff",
-    "source": "curated:powers.md SURROUNDED facing + KaiserCrab",
     "stack_type": "Single"
   },
   "BARRICADE_POWER": {
@@ -203,10 +190,8 @@
     "id": "BARRICADE_POWER",
     "kind": "power",
     "name": "壁垒",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L196; md:powers_zh.md:L173",
     "stack_type": "Single"
   },
   "BATTLEWORN_DUMMY_TIME_LIMIT_POWER": {
@@ -221,10 +206,8 @@
     "id": "BATTLEWORN_DUMMY_TIME_LIMIT_POWER",
     "kind": "power",
     "name": "Battleworn Dummy Time Limit",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L416; md:powers_zh.md:L365",
     "stack_type": "Counter"
   },
   "BEACON_OF_HOPE_POWER": {
@@ -238,10 +221,8 @@
     "id": "BEACON_OF_HOPE_POWER",
     "kind": "power",
     "name": "Beacon Of Hope",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L206; md:powers_zh.md:L183",
     "stack_type": "Single"
   },
   "BIASED_COGNITION_POWER": {
@@ -255,10 +236,8 @@
     "id": "BIASED_COGNITION_POWER",
     "kind": "power",
     "name": "偏见认知",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L471; md:powers_zh.md:L416",
     "stack_type": "Counter"
   },
   "BLACK_HOLE_POWER": {
@@ -272,10 +251,8 @@
     "id": "BLACK_HOLE_POWER",
     "kind": "power",
     "name": "Black Hole",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L532; md:powers_zh.md:L469",
     "stack_type": "Counter"
   },
   "BLOCK_NEXT_TURN_POWER": {
@@ -290,10 +267,8 @@
     "id": "BLOCK_NEXT_TURN_POWER",
     "kind": "power",
     "name": "Block Next Turn",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L200; md:powers_zh.md:L177",
     "stack_type": "Counter"
   },
   "BLUR_POWER": {
@@ -307,10 +282,8 @@
     "id": "BLUR_POWER",
     "kind": "power",
     "name": "模糊",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L198; md:powers_zh.md:L175",
     "stack_type": "Counter"
   },
   "BORROWED_TIME_POWER": {
@@ -324,10 +297,8 @@
     "id": "BORROWED_TIME_POWER",
     "kind": "power",
     "name": "Borrowed Time",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L184; md:powers_zh.md:L161",
     "stack_type": "Counter"
   },
   "BUFFER_POWER": {
@@ -342,10 +313,8 @@
     "id": "BUFFER_POWER",
     "kind": "power",
     "name": "缓冲",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L48; md:powers_zh.md:L43",
     "stack_type": "Counter"
   },
   "BURROWED_POWER": {
@@ -360,10 +329,8 @@
     "id": "BURROWED_POWER",
     "kind": "power",
     "name": "钻地",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L391; md:powers_zh.md:L344",
     "stack_type": "Single"
   },
   "BURST_POWER": {
@@ -377,10 +344,8 @@
     "id": "BURST_POWER",
     "kind": "power",
     "name": "爆发",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L473; md:powers_zh.md:L418",
     "stack_type": "Counter"
   },
   "CALAMITY_POWER": {
@@ -394,10 +359,8 @@
     "id": "CALAMITY_POWER",
     "kind": "power",
     "name": "Calamity",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L535; md:powers_zh.md:L472",
     "stack_type": "Counter"
   },
   "CALCIFY_POWER": {
@@ -411,10 +374,8 @@
     "id": "CALCIFY_POWER",
     "kind": "power",
     "name": "Calcify",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L251; md:powers_zh.md:L225",
     "stack_type": "Counter"
   },
   "CALL_OF_THE_VOID_POWER": {
@@ -428,10 +389,8 @@
     "id": "CALL_OF_THE_VOID_POWER",
     "kind": "power",
     "name": "Call Of The Void",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L537; md:powers_zh.md:L474",
     "stack_type": "Counter"
   },
   "CHAINS_OF_BINDING_POWER": {
@@ -449,10 +408,8 @@
     "id": "CHAINS_OF_BINDING_POWER",
     "kind": "power",
     "name": "束缚之链",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "powers.md + run-44 Boss 战 live（魂缚教条战中修正）",
     "stack_type": "Counter"
   },
   "CHILD_OF_THE_STARS_POWER": {
@@ -467,10 +424,8 @@
     "id": "CHILD_OF_THE_STARS_POWER",
     "kind": "power",
     "name": "Child Of The Stars",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L223; md:powers_zh.md:L200",
     "stack_type": "Counter"
   },
   "CLARITY_POWER": {
@@ -485,10 +440,8 @@
     "id": "CLARITY_POWER",
     "kind": "power",
     "name": "Clarity",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L138; md:powers_zh.md:L117",
     "stack_type": "Counter"
   },
   "COLOSSUS_POWER": {
@@ -503,10 +456,8 @@
     "id": "COLOSSUS_POWER",
     "kind": "power",
     "name": "巨像",
-    "needs_zh": false,
     "play_notes": "对局43 live | run-48 live 2026-09-19：对带易伤猎人杀手穿刺两次减半；计数一整个敌方回合后消耗确认。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
     "power_type": "Buff",
-    "source": "powers.md + 对局43 live",
     "stack_type": "Counter"
   },
   "CONFUSED_POWER": {
@@ -520,10 +471,8 @@
     "id": "CONFUSED_POWER",
     "kind": "power",
     "name": "混乱",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L61; md:powers_zh.md:L54",
     "stack_type": "Single"
   },
   "CONQUEROR_POWER": {
@@ -538,10 +487,8 @@
     "id": "CONQUEROR_POWER",
     "kind": "power",
     "name": "Conqueror",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L261; md:powers_zh.md:L235",
     "stack_type": "Counter"
   },
   "CONSTRICT_POWER": {
@@ -556,12 +503,9 @@
     "id": "CONSTRICT_POWER",
     "kind": "power",
     "name": "缩紧",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L321; md:powers_zh.md:L289",
-    "stack_type": "Counter",
-    "zh_description": "玩家身上的减益计数（run-38 实时）：玩家回合结束按层数每层受 Amount 点伤害；实时叠加——每次 CONSTRICT 招式释放 +3（蛇行扼杀者 T1 施加 3，T3 释放 → :6）；可被格挡（剩余挡吸收 tick）；施加者死亡时移除。计数类击杀计时器：3→6→9 递增——在 2-3 个循环内击杀施加者。"
+    "stack_type": "Counter"
   },
   "CONSUMING_SHADOW_POWER": {
     "aliases": [
@@ -574,10 +518,8 @@
     "id": "CONSUMING_SHADOW_POWER",
     "kind": "power",
     "name": "Consuming Shadow",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L610; md:powers_zh.md:L541",
     "stack_type": "Counter"
   },
   "COOLANT_POWER": {
@@ -591,10 +533,8 @@
     "id": "COOLANT_POWER",
     "kind": "power",
     "name": "Coolant",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L209; md:powers_zh.md:L186",
     "stack_type": "Counter"
   },
   "CORROSIVE_WAVE_POWER": {
@@ -608,10 +548,8 @@
     "id": "CORROSIVE_WAVE_POWER",
     "kind": "power",
     "name": "Corrosive Wave",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L297; md:powers_zh.md:L266",
     "stack_type": "Counter"
   },
   "CORRUPTION_POWER": {
@@ -625,10 +563,8 @@
     "id": "CORRUPTION_POWER",
     "kind": "power",
     "name": "腐化",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L177; md:powers_zh.md:L155",
     "stack_type": "Single"
   },
   "COUNTDOWN_POWER": {
@@ -642,10 +578,8 @@
     "id": "COUNTDOWN_POWER",
     "kind": "power",
     "name": "Countdown",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L308; md:powers_zh.md:L277",
     "stack_type": "Counter"
   },
   "COVERED_POWER": {
@@ -659,10 +593,8 @@
     "id": "COVERED_POWER",
     "kind": "power",
     "name": "位于被掩护者",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L277; md:powers_zh.md:L248",
     "stack_type": "Single"
   },
   "CRAB_RAGE_POWER": {
@@ -676,13 +608,11 @@
     "host_of_affliction": false,
     "id": "CRAB_RAGE_POWER",
     "kind": "power",
+    "live_notes": "LIVE run-56：皇蟹双体均有 CRAB_RAGE。触发时给蟹体 +力量 + 大量挡。",
     "name": "蟹怒",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L378; md:powers_zh.md:L333",
-    "stack_type": "Single",
-    "live_notes": "LIVE run-56：皇蟹双体均有 CRAB_RAGE。触发时给蟹体 +力量 + 大量挡。"
+    "stack_type": "Single"
   },
   "CREATIVE_AI_POWER": {
     "aliases": [
@@ -695,10 +625,8 @@
     "id": "CREATIVE_AI_POWER",
     "kind": "power",
     "name": "Creative Ai",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L540; md:powers_zh.md:L476",
     "stack_type": "Counter"
   },
   "CRIMSON_MANTLE_POWER": {
@@ -707,9 +635,7 @@
     "id": "CRIMSON_MANTLE_POWER",
     "kind": "power",
     "name": "猩红披风",
-    "needs_zh": false,
     "power_type": "Buff",
-    "source": "curated:cards.md CRIMSON_MANTLE + powers doctrine",
     "stack_type": "Counter"
   },
   "CRUELTY_POWER": {
@@ -719,7 +645,6 @@
     "kind": "power",
     "name": "残忍",
     "power_type": "Buff",
-    "source": "curated:cards.md CRUELTY + relics.md PaperPhrog",
     "stack_type": "Counter"
   },
   "CURIOUS_POWER": {
@@ -733,10 +658,8 @@
     "id": "CURIOUS_POWER",
     "kind": "power",
     "name": "Curious",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L169; md:powers_zh.md:L147",
     "stack_type": "Counter"
   },
   "CURL_UP_POWER": {
@@ -751,10 +674,8 @@
     "id": "CURL_UP_POWER",
     "kind": "power",
     "name": "蜷缩",
-    "needs_zh": false,
     "play_notes": "对局43 live",
     "power_type": "Buff",
-    "source": "powers.md + 对局42/43 live",
     "stack_type": "Counter"
   },
   "DAMPEN_POWER": {
@@ -769,10 +690,8 @@
     "id": "DAMPEN_POWER",
     "kind": "power",
     "name": "弱化",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L379; md:powers_zh.md:L334",
     "stack_type": "None-stack"
   },
   "DANSE_MACABRE_POWER": {
@@ -787,10 +706,8 @@
     "id": "DANSE_MACABRE_POWER",
     "kind": "power",
     "name": "Danse Macabre",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L221; md:powers_zh.md:L198",
     "stack_type": "Counter"
   },
   "DARK_EMBRACE_POWER": {
@@ -805,10 +722,8 @@
     "id": "DARK_EMBRACE_POWER",
     "kind": "power",
     "name": "黑暗之拥",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L458; md:powers_zh.md:L403",
     "stack_type": "Counter"
   },
   "DEMESNE_POWER": {
@@ -823,10 +738,8 @@
     "id": "DEMESNE_POWER",
     "kind": "power",
     "name": "Demesne",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L144; md:powers_zh.md:L123",
     "stack_type": "Counter"
   },
   "DEMISE_POWER": {
@@ -841,10 +754,8 @@
     "id": "DEMISE_POWER",
     "kind": "power",
     "name": "Demise",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L311; md:powers_zh.md:L280",
     "stack_type": "Counter"
   },
   "DEMON_FORM_POWER": {
@@ -859,10 +770,8 @@
     "id": "DEMON_FORM_POWER",
     "kind": "power",
     "name": "恶魔之形",
-    "needs_zh": false,
     "play_notes": "对局43 奖励屏",
     "power_type": "Buff",
-    "source": "powers.md + 对局43",
     "stack_type": "Counter"
   },
   "DEVOUR_LIFE_POWER": {
@@ -876,10 +785,8 @@
     "id": "DEVOUR_LIFE_POWER",
     "kind": "power",
     "name": "Devour Life",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L389; md:powers_zh.md:L342",
     "stack_type": "Counter"
   },
   "DEXTERITY_POWER": {
@@ -894,10 +801,8 @@
     "id": "DEXTERITY_POWER",
     "kind": "power",
     "name": "敏捷",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L25; md:powers_zh.md:L24",
     "stack_type": "Counter"
   },
   "DIAMOND_DIADEM_POWER": {
@@ -911,10 +816,8 @@
     "id": "DIAMOND_DIADEM_POWER",
     "kind": "power",
     "name": "Diamond Diadem",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L272; md:powers_zh.md:L244",
     "stack_type": "Single"
   },
   "DIE_FOR_YOU_POWER": {
@@ -929,10 +832,8 @@
     "id": "DIE_FOR_YOU_POWER",
     "kind": "power",
     "name": "Die For You",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L365; md:powers_zh.md:L322",
     "stack_type": "Single"
   },
   "DISINTEGRATION": {
@@ -946,10 +847,8 @@
     "id": "DISINTEGRATION",
     "kind": "power",
     "name": "卡牌施加",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": null,
-    "source": "md:powers.md:L326; md:powers_zh.md:L35",
     "stack_type": null
   },
   "DISINTEGRATION_POWER": {
@@ -964,10 +863,8 @@
     "id": "DISINTEGRATION_POWER",
     "kind": "power",
     "name": "崩解",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L313; md:powers_zh.md:L282",
     "stack_type": "Counter"
   },
   "DOOM_POWER": {
@@ -982,10 +879,8 @@
     "id": "DOOM_POWER",
     "kind": "power",
     "name": "末日",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L58; md:powers_zh.md:L51",
     "stack_type": "Counter"
   },
   "DOUBLE_DAMAGE_POWER": {
@@ -999,10 +894,8 @@
     "id": "DOUBLE_DAMAGE_POWER",
     "kind": "power",
     "name": "Double Damage",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L244; md:powers_zh.md:L219",
     "stack_type": "Counter"
   },
   "DRAW_CARDS_NEXT_TURN_POWER": {
@@ -1017,10 +910,8 @@
     "id": "DRAW_CARDS_NEXT_TURN_POWER",
     "kind": "power",
     "name": "Draw Cards Next Turn",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L140; md:powers_zh.md:L119",
     "stack_type": "Counter"
   },
   "DUPLICATION_POWER": {
@@ -1035,10 +926,8 @@
     "id": "DUPLICATION_POWER",
     "kind": "power",
     "name": "复制",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L476; md:powers_zh.md:L421",
     "stack_type": "Counter"
   },
   "ECHO_FORM_POWER": {
@@ -1052,10 +941,8 @@
     "id": "ECHO_FORM_POWER",
     "kind": "power",
     "name": "回响形态",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "powers.md + run-44 live（狱火 6 至 12 层翻倍首证）",
     "stack_type": "Counter"
   },
   "ENERGY_NEXT_TURN_POWER": {
@@ -1070,10 +957,8 @@
     "id": "ENERGY_NEXT_TURN_POWER",
     "kind": "power",
     "name": "Energy Next Turn",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L152; md:powers_zh.md:L130",
     "stack_type": "Counter"
   },
   "ENRAGE_POWER": {
@@ -1088,10 +973,8 @@
     "id": "ENRAGE_POWER",
     "kind": "power",
     "name": "暴怒",
-    "needs_zh": false,
     "play_notes": "run-46 live: Enrage fed by Bloodletting slip — zero-skill re-read-per-turn lesson recorded. | run-46 live：Enrage 被放血失误喂养（Bite 20→33）——每回合重读 live powers 教训；与 run-44 TAINTED 同类。",
     "power_type": "Buff",
-    "source": "md:powers.md:L461; md:powers_zh.md:L406",
     "stack_type": "Counter"
   },
   "ENVENOM_POWER": {
@@ -1105,10 +988,8 @@
     "id": "ENVENOM_POWER",
     "kind": "power",
     "name": "中毒涂毒",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L290; md:powers_zh.md:L260",
     "stack_type": "Counter"
   },
   "ESCAPE_ARTIST_POWER": {
@@ -1123,13 +1004,14 @@
     "id": "ESCAPE_ARTIST_POWER",
     "kind": "power",
     "name": "Escape Artist",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L413; md:powers_zh.md:L362",
     "stack_type": "Counter"
   },
   "FAN_OF_KNIVES_POWER": {
+    "aliases": [
+      "FanOfKnivesPower"
+    ],
     "counter_class": false,
     "curated": true,
     "description": "惰性标记 power（Buff，Counter）——自身无钩子；由 Shiv 标签卡牌查询（如刀扇激活时 Shiv 类命中全体敌人）。",
@@ -1137,9 +1019,8 @@
     "id": "FAN_OF_KNIVES_POWER",
     "kind": "power",
     "name": "刀扇之力",
-    "needs_zh": false,
+    "play_notes": "",
     "power_type": "Buff",
-    "source": "curated:powers.md inert marker group",
     "stack_type": "Counter"
   },
   "FASTEN_POWER": {
@@ -1154,10 +1035,8 @@
     "id": "FASTEN_POWER",
     "kind": "power",
     "name": "Fasten",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L228; md:powers_zh.md:L205",
     "stack_type": "Counter"
   },
   "FEEL_NO_PAIN_POWER": {
@@ -1172,10 +1051,8 @@
     "id": "FEEL_NO_PAIN_POWER",
     "kind": "power",
     "name": "无痛",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L192; md:powers_zh.md:L169",
     "stack_type": "Counter"
   },
   "FLAME_BARRIER_POWER": {
@@ -1190,10 +1067,8 @@
     "id": "FLAME_BARRIER_POWER",
     "kind": "power",
     "name": "火焰屏障",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L466; md:powers_zh.md:L411",
     "stack_type": "Counter"
   },
   "FLANKING_POWER": {
@@ -1207,10 +1082,8 @@
     "id": "FLANKING_POWER",
     "kind": "power",
     "name": "Flanking",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L265; md:powers_zh.md:L239",
     "stack_type": "Counter"
   },
   "FLEX_POTION_POWER": {
@@ -1219,9 +1092,7 @@
     "id": "FLEX_POTION_POWER",
     "kind": "power",
     "name": "屈伸药水之力",
-    "needs_zh": false,
     "power_type": "Buff",
-    "source": "curated:potions.md FlexPotion + powers.md temporary family",
     "stack_type": "Counter"
   },
   "FLUTTER_POWER": {
@@ -1238,7 +1109,6 @@
     "name": "闪避",
     "play_notes": "run-39 live：Flutter 每次攻击命中后减伤并 −1 层。层高时按约五成伤害规划击杀数学；优先多段指令烧层。",
     "power_type": "Buff",
-    "source": "run-39 草蜢战 live 数据",
     "stack_type": "Counter"
   },
   "FOCUS_POWER": {
@@ -1252,13 +1122,14 @@
     "id": "FOCUS_POWER",
     "kind": "power",
     "name": "专注",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L54; md:powers_zh.md:L47",
     "stack_type": "Counter"
   },
   "FORBIDDEN_GRIMOIRE_POWER": {
+    "aliases": [
+      "ForbiddenGrimoirePower"
+    ],
     "counter_class": false,
     "curated": true,
     "description": "宿主型 utility power（Buff，Counter）——战斗结束/预打出逻辑由源卡牌承载；精确触发见宿主卡面。",
@@ -1266,9 +1137,8 @@
     "id": "FORBIDDEN_GRIMOIRE_POWER",
     "kind": "power",
     "name": "禁忌魔典",
-    "needs_zh": false,
+    "play_notes": "",
     "power_type": "Buff",
-    "source": "curated:powers.md source-hosted utility group",
     "stack_type": "Counter"
   },
   "FOREGONE_CONCLUSION_POWER": {
@@ -1282,10 +1152,8 @@
     "id": "FOREGONE_CONCLUSION_POWER",
     "kind": "power",
     "name": "Foregone Conclusion",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L542; md:powers_zh.md:L478",
     "stack_type": "Counter"
   },
   "FRAIL_POWER": {
@@ -1300,10 +1168,8 @@
     "id": "FRAIL_POWER",
     "kind": "power",
     "name": "脆弱",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L21; md:powers_zh.md:L20",
     "stack_type": "Counter"
   },
   "FREE_ATTACK_POWER": {
@@ -1320,7 +1186,6 @@
     "name": "Free Attack",
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L171; md:powers_zh.md:L149",
     "stack_type": "Counter"
   },
   "FREE_POWER_POWER": {
@@ -1334,10 +1199,8 @@
     "id": "FREE_POWER_POWER",
     "kind": "power",
     "name": "Free Power",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L175; md:powers_zh.md:L153",
     "stack_type": "Counter"
   },
   "FREE_SKILL_POWER": {
@@ -1351,10 +1214,8 @@
     "id": "FREE_SKILL_POWER",
     "kind": "power",
     "name": "Free Skill",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L173; md:powers_zh.md:L151",
     "stack_type": "Counter"
   },
   "FRIENDSHIP_POWER": {
@@ -1368,10 +1229,8 @@
     "id": "FRIENDSHIP_POWER",
     "kind": "power",
     "name": "Friendship",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L147; md:powers_zh.md:L125",
     "stack_type": "Counter"
   },
   "FURNACE_POWER": {
@@ -1385,10 +1244,8 @@
     "id": "FURNACE_POWER",
     "kind": "power",
     "name": "Furnace",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L579; md:powers_zh.md:L513",
     "stack_type": "Counter"
   },
   "GALVANIC_POWER": {
@@ -1406,10 +1263,8 @@
     "id": "GALVANIC_POWER",
     "kind": "power",
     "name": "电镀",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L101; md:powers_zh.md:L85",
     "stack_type": "Counter"
   },
   "GENESIS_POWER": {
@@ -1423,10 +1278,8 @@
     "id": "GENESIS_POWER",
     "kind": "power",
     "name": "Genesis",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L154; md:powers_zh.md:L132",
     "stack_type": "Counter"
   },
   "GIGANTIFICATION_POWER": {
@@ -1440,10 +1293,8 @@
     "id": "GIGANTIFICATION_POWER",
     "kind": "power",
     "name": "Gigantification",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L259; md:powers_zh.md:L233",
     "stack_type": "Counter"
   },
   "GRAVITY_POWER": {
@@ -1457,10 +1308,8 @@
     "id": "GRAVITY_POWER",
     "kind": "power",
     "name": "Gravity",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L554; md:powers_zh.md:L490",
     "stack_type": "Counter"
   },
   "GUARDED_POWER": {
@@ -1474,10 +1323,8 @@
     "id": "GUARDED_POWER",
     "kind": "power",
     "name": "Guarded",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L280; md:powers_zh.md:L250",
     "stack_type": "Single"
   },
   "HAMMER_TIME_POWER": {
@@ -1491,10 +1338,8 @@
     "id": "HAMMER_TIME_POWER",
     "kind": "power",
     "name": "Hammer Time",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L577; md:powers_zh.md:L511",
     "stack_type": "Single"
   },
   "HANG_POWER": {
@@ -1508,10 +1353,8 @@
     "id": "HANG_POWER",
     "kind": "power",
     "name": "Hang",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L267; md:powers_zh.md:L241",
     "stack_type": "Counter"
   },
   "HARDENED_SHELL_POWER": {
@@ -1526,10 +1369,8 @@
     "id": "HARDENED_SHELL_POWER",
     "kind": "power",
     "name": "Hardened Shell",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L350; md:powers_zh.md:L310",
     "stack_type": "Counter"
   },
   "HARD_TO_KILL": {
@@ -1537,8 +1378,7 @@
     "description": "计数类：物主每次伤害实例的 HP 损失上限为 Amount（ModifyDamageCap = Amount）；单次超出部分弃掉、不保留。对局40 live 外骨骼虫 Amount=9：突破/狱火 9 实例命中满值；重锤32 对该类目标浪费23——用多实例小额命中控速，避免单次大实例攻击。",
     "id": "HARD_TO_KILL",
     "kind": "power",
-    "name": "杀不死",
-    "source": "; run-40 live fold 2026-09-18"
+    "name": "杀不死"
   },
   "HARD_TO_KILL_POWER": {
     "aliases": [
@@ -1554,7 +1394,6 @@
     "name": "难以击杀",
     "play_notes": "对局43 live",
     "power_type": "Buff",
-    "source": "powers.md + 对局41/43 live",
     "stack_type": "Counter"
   },
   "HATCH_POWER": {
@@ -1569,10 +1408,8 @@
     "id": "HATCH_POWER",
     "kind": "power",
     "name": "Hatch",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L427; md:powers_zh.md:L374",
     "stack_type": "Counter"
   },
   "HAUNT_POWER": {
@@ -1586,10 +1423,8 @@
     "id": "HAUNT_POWER",
     "kind": "power",
     "name": "Haunt",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L575; md:powers_zh.md:L509",
     "stack_type": "Counter"
   },
   "HEIST_POWER": {
@@ -1604,10 +1439,8 @@
     "id": "HEIST_POWER",
     "kind": "power",
     "name": "Heist",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L512; md:powers_zh.md:L453",
     "stack_type": "Counter"
   },
   "HELLO_WORLD_POWER": {
@@ -1621,10 +1454,8 @@
     "id": "HELLO_WORLD_POWER",
     "kind": "power",
     "name": "Hello World",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L544; md:powers_zh.md:L480",
     "stack_type": "Counter"
   },
   "HELLRAISER_POWER": {
@@ -1639,10 +1470,8 @@
     "id": "HELLRAISER_POWER",
     "kind": "power",
     "name": "Hellraiser",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L490; md:powers_zh.md:L433",
     "stack_type": "Single"
   },
   "HEX_POWER": {
@@ -1660,10 +1489,8 @@
     "id": "HEX_POWER",
     "kind": "power",
     "name": "诅咒",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L104; md:powers_zh.md:L88",
     "stack_type": "Single"
   },
   "HIGH_VOLTAGE_POWER": {
@@ -1677,10 +1504,8 @@
     "id": "HIGH_VOLTAGE_POWER",
     "kind": "power",
     "name": "High Voltage",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L568; md:powers_zh.md:L503",
     "stack_type": "Counter"
   },
   "ILLUSION_POWER": {
@@ -1695,10 +1520,8 @@
     "id": "ILLUSION_POWER",
     "kind": "power",
     "name": "幻象",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L358; md:powers_zh.md:L316",
     "stack_type": "Single"
   },
   "IMBALANCED": {
@@ -1706,8 +1529,7 @@
     "description": "物主的攻击被完全格挡时眩晕（石碗虫改为设置 IsOffBalance）。部分格挡不触发。对局40 live：红面具弱化把头槌 15→11 显示；血墙16≥11 → 同敌方回合眩晕；三人组在眩晕窗内清场。",
     "id": "IMBALANCED",
     "kind": "power",
-    "name": "失衡",
-    "source": "; run-40 live fold 2026-09-18"
+    "name": "失衡"
   },
   "IMBALANCED_POWER": {
     "aliases": [
@@ -1721,10 +1543,8 @@
     "id": "IMBALANCED_POWER",
     "kind": "power",
     "name": "失衡",
-    "needs_zh": false,
     "play_notes": "对局43 live",
     "power_type": "Debuff",
-    "source": "powers.md + 对局39/43 live",
     "stack_type": "Single"
   },
   "IMPROVEMENT_POWER": {
@@ -1738,10 +1558,8 @@
     "id": "IMPROVEMENT_POWER",
     "kind": "power",
     "name": "Improvement",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L510; md:powers_zh.md:L451",
     "stack_type": "Counter"
   },
   "INFERNO_POWER": {
@@ -1750,9 +1568,7 @@
     "id": "INFERNO_POWER",
     "kind": "power",
     "name": "狱火",
-    "needs_zh": false,
     "power_type": "Buff",
-    "source": "curated:cards.md INFERNO",
     "stack_type": "Counter"
   },
   "INFESTED_POWER": {
@@ -1767,10 +1583,8 @@
     "id": "INFESTED_POWER",
     "kind": "power",
     "name": "寄生",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L368; md:powers_zh.md:L324",
     "stack_type": "Single"
   },
   "INFINITE_BLADES_POWER": {
@@ -1784,10 +1598,8 @@
     "id": "INFINITE_BLADES_POWER",
     "kind": "power",
     "name": "Infinite Blades",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L546; md:powers_zh.md:L482",
     "stack_type": "Counter"
   },
   "INTANGIBLE_POWER": {
@@ -1802,10 +1614,8 @@
     "id": "INTANGIBLE_POWER",
     "kind": "power",
     "name": "虚无",
-    "needs_zh": false,
     "play_notes": "对局43 live",
     "power_type": "Buff",
-    "source": "powers.md + 对局43 live",
     "stack_type": "Counter"
   },
   "INTERCEPT_POWER": {
@@ -1819,10 +1629,8 @@
     "id": "INTERCEPT_POWER",
     "kind": "power",
     "name": "Intercept",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L274; md:powers_zh.md:L246",
     "stack_type": "Single"
   },
   "ITERATION_POWER": {
@@ -1836,10 +1644,8 @@
     "id": "ITERATION_POWER",
     "kind": "power",
     "name": "Iteration",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L500; md:powers_zh.md:L441",
     "stack_type": "Counter"
   },
   "JUGGERNAUT_POWER": {
@@ -1854,10 +1660,8 @@
     "id": "JUGGERNAUT_POWER",
     "kind": "power",
     "name": "Juggernaut",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L194; md:powers_zh.md:L171",
     "stack_type": "Counter"
   },
   "JUGGLING_POWER": {
@@ -1866,9 +1670,7 @@
     "id": "JUGGLING_POWER",
     "kind": "power",
     "name": "戏法",
-    "needs_zh": false,
     "power_type": "Buff",
-    "source": "curated:cards.md JUGGLING",
     "stack_type": "Counter"
   },
   "KNOCKDOWN_POWER": {
@@ -1882,10 +1684,8 @@
     "id": "KNOCKDOWN_POWER",
     "kind": "power",
     "name": "Knockdown",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L263; md:powers_zh.md:L237",
     "stack_type": "Counter"
   },
   "LEADERSHIP_POWER": {
@@ -1899,10 +1699,8 @@
     "id": "LEADERSHIP_POWER",
     "kind": "power",
     "name": "Leadership",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L253; md:powers_zh.md:L227",
     "stack_type": "Counter"
   },
   "LETHALITY_POWER": {
@@ -1916,10 +1714,8 @@
     "id": "LETHALITY_POWER",
     "kind": "power",
     "name": "Lethality",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L246; md:powers_zh.md:L221",
     "stack_type": "Counter"
   },
   "LIGHTNING_ROD_POWER": {
@@ -1933,10 +1729,8 @@
     "id": "LIGHTNING_ROD_POWER",
     "kind": "power",
     "name": "Lightning Rod",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L159; md:powers_zh.md:L137",
     "stack_type": "Counter"
   },
   "MACHINE_LEARNING_POWER": {
@@ -1950,10 +1744,8 @@
     "id": "MACHINE_LEARNING_POWER",
     "kind": "power",
     "name": "Machine Learning",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L142; md:powers_zh.md:L121",
     "stack_type": "Counter"
   },
   "MAGIC_BOMB_POWER": {
@@ -1967,10 +1759,8 @@
     "id": "MAGIC_BOMB_POWER",
     "kind": "power",
     "name": "Magic Bomb",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L315; md:powers_zh.md:L284",
     "stack_type": "Counter"
   },
   "MASTER_PLANNER_POWER": {
@@ -1984,10 +1774,8 @@
     "id": "MASTER_PLANNER_POWER",
     "kind": "power",
     "name": "Master Planner",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L508; md:powers_zh.md:L449",
     "stack_type": "Single"
   },
   "MAYHEM_POWER": {
@@ -2001,10 +1789,8 @@
     "id": "MAYHEM_POWER",
     "kind": "power",
     "name": "混乱",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L486; md:powers_zh.md:L429",
     "stack_type": "Counter"
   },
   "MIND_ROT_POWER": {
@@ -2019,10 +1805,8 @@
     "id": "MIND_ROT_POWER",
     "kind": "power",
     "name": "脑蚀",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L130; md:powers_zh.md:L110",
     "stack_type": "Counter"
   },
   "MINION_POWER": {
@@ -2037,12 +1821,9 @@
     "id": "MINION_POWER",
     "kind": "power",
     "name": "仆从",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "powers.md + run-44 女王战 live",
-    "stack_type": "Single",
-    "zh_description": "召唤物身上的单层增益标记（run-38 实时 KinFollower×2）：其死亡不触发战斗结束致命逻辑（OwnerIsSecondaryEnemy）。本体-随从教条（run-38 Boss + LivingFog 档案）：被标随从不是胜利条件——击杀本体（未标记的 Boss/召唤者）才结束战斗；随从死亡免费但与胜利无关。竞速本体期间可用 AoE（Pacts End 类）顺带削随从。"
+    "stack_type": "Single"
   },
   "MONARCHS_GAZE_POWER": {
     "aliases": [
@@ -2055,10 +1836,8 @@
     "id": "MONARCHS_GAZE_POWER",
     "kind": "power",
     "name": "Monarchs Gaze",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L601; md:powers_zh.md:L534",
     "stack_type": "Counter"
   },
   "MONARCHS_GAZE_STRENGTH_DOWN_POWER": {
@@ -2072,10 +1851,8 @@
     "id": "MONARCHS_GAZE_STRENGTH_DOWN_POWER",
     "kind": "power",
     "name": "Monarchs Gaze",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L604; md:powers_zh.md:L536",
     "stack_type": "Counter"
   },
   "MONOLOGUE_POWER": {
@@ -2090,10 +1867,8 @@
     "id": "MONOLOGUE_POWER",
     "kind": "power",
     "name": "Monologue",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L562; md:powers_zh.md:L498",
     "stack_type": "Counter"
   },
   "NECRO_MASTERY_POWER": {
@@ -2107,10 +1882,8 @@
     "id": "NECRO_MASTERY_POWER",
     "kind": "power",
     "name": "Necro Mastery",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L572; md:powers_zh.md:L507",
     "stack_type": "Counter"
   },
   "NEUROSURGE_POWER": {
@@ -2124,10 +1897,8 @@
     "id": "NEUROSURGE_POWER",
     "kind": "power",
     "name": "Neurosurge",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L306; md:powers_zh.md:L275",
     "stack_type": "Counter"
   },
   "NIGHTMARE_POWER": {
@@ -2141,10 +1912,8 @@
     "id": "NIGHTMARE_POWER",
     "kind": "power",
     "name": "噩梦",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L548; md:powers_zh.md:L484",
     "stack_type": "Counter"
   },
   "NOSTALGIA_POWER": {
@@ -2158,10 +1927,8 @@
     "id": "NOSTALGIA_POWER",
     "kind": "power",
     "name": "Nostalgia",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": null,
-    "source": "md:powers.md:L526; md:powers_zh.md:L463",
     "stack_type": "Counter"
   },
   "NOXIOUS_FUMES_POWER": {
@@ -2175,10 +1942,8 @@
     "id": "NOXIOUS_FUMES_POWER",
     "kind": "power",
     "name": "恶臭气体",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L292; md:powers_zh.md:L262",
     "stack_type": "Counter"
   },
   "NO_DRAW_POWER": {
@@ -2193,10 +1958,8 @@
     "id": "NO_DRAW_POWER",
     "kind": "power",
     "name": "禁止抽牌",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L133; md:powers_zh.md:L113",
     "stack_type": "Single"
   },
   "NO_ENERGY_GAIN_POWER": {
@@ -2211,10 +1974,8 @@
     "id": "NO_ENERGY_GAIN_POWER",
     "kind": "power",
     "name": "No Energy Gain",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L136; md:powers_zh.md:L115",
     "stack_type": "Single"
   },
   "OBLIVION_POWER": {
@@ -2228,10 +1989,8 @@
     "id": "OBLIVION_POWER",
     "kind": "power",
     "name": "Oblivion",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L304; md:powers_zh.md:L273",
     "stack_type": "Counter"
   },
   "ONE_TWO_PUNCH_POWER": {
@@ -2246,10 +2005,8 @@
     "id": "ONE_TWO_PUNCH_POWER",
     "kind": "power",
     "name": "One Two Punch",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L479; md:powers_zh.md:L423",
     "stack_type": "Counter"
   },
   "ORBIT_POWER": {
@@ -2263,10 +2020,8 @@
     "id": "ORBIT_POWER",
     "kind": "power",
     "name": "Orbit",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L164; md:powers_zh.md:L143",
     "stack_type": "Counter"
   },
   "OUTBREAK_POWER": {
@@ -2280,10 +2035,8 @@
     "id": "OUTBREAK_POWER",
     "kind": "power",
     "name": "Outbreak",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L299; md:powers_zh.md:L268",
     "stack_type": "Counter"
   },
   "PAGESTORM_POWER": {
@@ -2297,10 +2050,8 @@
     "id": "PAGESTORM_POWER",
     "kind": "power",
     "name": "Pagestorm",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L502; md:powers_zh.md:L443",
     "stack_type": "Counter"
   },
   "PAINFUL_STABS_POWER": {
@@ -2314,10 +2065,8 @@
     "id": "PAINFUL_STABS_POWER",
     "kind": "power",
     "name": "Painful Stabs",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": null,
-    "source": "md:powers.md:L606; md:powers_zh.md:L359",
     "stack_type": null
   },
   "PALE_BLUE_DOT_POWER": {
@@ -2326,9 +2075,7 @@
     "id": "PALE_BLUE_DOT_POWER",
     "kind": "power",
     "name": "苍白蓝点",
-    "needs_zh": false,
     "power_type": "Buff",
-    "source": "curated:cards.md PALE_BLUE_DOT",
     "stack_type": "Counter"
   },
   "PANACHE_POWER": {
@@ -2343,10 +2090,8 @@
     "id": "PANACHE_POWER",
     "kind": "power",
     "name": "实例化",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L493; md:powers_zh.md:L436",
     "stack_type": "Counter"
   },
   "PAPER_CUTS_POWER": {
@@ -2360,15 +2105,17 @@
     "host_of_affliction": false,
     "id": "PAPER_CUTS_POWER",
     "kind": "power",
+    "live_notes": "LIVE run-56：咬人卷轴被动。Amount 2——穿挡 HP 税。",
     "name": "Paper Cuts",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L323; md:powers_zh.md:L292",
-    "stack_type": "Counter",
-    "live_notes": "LIVE run-56：咬人卷轴被动。Amount 2——穿挡 HP 税。"
+    "stack_type": "Counter"
   },
   "PARRY_POWER": {
+    "aliases": [
+      "PARRY",
+      "ParryPower"
+    ],
     "counter_class": false,
     "curated": true,
     "description": "惰性标记 power（Buff，Counter）——自身无钩子；由特定卡牌查询（SovereignBlade 家族招架逻辑）。",
@@ -2376,9 +2123,8 @@
     "id": "PARRY_POWER",
     "kind": "power",
     "name": "招架",
-    "needs_zh": false,
+    "play_notes": "",
     "power_type": "Buff",
-    "source": "curated:powers.md inert marker group",
     "stack_type": "Counter"
   },
   "PERSONAL_HIVE": {
@@ -2386,8 +2132,7 @@
     "description": "物主被攻击牌命中时，攻击者抽牌堆随机位置获得 Amount 张眩晕。信息素喷吐同一次读取内增加 Amount 并赋予力量。对局40 live：狱火能力伤害不触发 Hive 税（狱火 tick 期间 Hive 保持 :1；税仅由攻击牌命中触发）；零攻击纯技能回合使 Hive 保持休眠。",
     "id": "PERSONAL_HIVE",
     "kind": "power",
-    "name": "个人蜂巢",
-    "source": "; run-40 live fold 2026-09-18"
+    "name": "个人蜂巢"
   },
   "PERSONAL_HIVE_POWER": {
     "aliases": [
@@ -2401,10 +2146,8 @@
     "id": "PERSONAL_HIVE_POWER",
     "kind": "power",
     "name": "个人蜂巢",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L117; md:powers_zh.md:L101",
     "stack_type": "Counter"
   },
   "PHANTOM_BLADES_POWER": {
@@ -2418,10 +2161,8 @@
     "id": "PHANTOM_BLADES_POWER",
     "kind": "power",
     "name": "Phantom Blades",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L255; md:powers_zh.md:L229",
     "stack_type": "Counter"
   },
   "PIERCING_WAIL_POWER": {
@@ -2430,9 +2171,7 @@
     "id": "PIERCING_WAIL_POWER",
     "kind": "power",
     "name": "穿刺哀嚎",
-    "needs_zh": false,
     "power_type": "Debuff",
-    "source": "curated:powers.md temporary-strength family",
     "stack_type": "Counter"
   },
   "PILLAR_OF_CREATION_POWER": {
@@ -2446,10 +2185,8 @@
     "id": "PILLAR_OF_CREATION_POWER",
     "kind": "power",
     "name": "Pillar Of Creation",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L230; md:powers_zh.md:L207",
     "stack_type": "Counter"
   },
   "PLATING_POWER": {
@@ -2464,10 +2201,8 @@
     "id": "PLATING_POWER",
     "kind": "power",
     "name": "镀甲",
-    "needs_zh": false,
     "play_notes": "对局43 live",
     "power_type": "Buff",
-    "source": "powers.md + 对局43 live",
     "stack_type": "Counter"
   },
   "PLOW_POWER": {
@@ -2482,10 +2217,8 @@
     "id": "PLOW_POWER",
     "kind": "power",
     "name": "Plow",
-    "needs_zh": false,
     "play_notes": "run-48 live 2026-09-19：仪式兽 T4 在 150 阈值触发眩晕窗；临时力量 live 消耗。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
     "power_type": "Debuff",
-    "source": "md:powers.md:L592; md:powers_zh.md:L526",
     "stack_type": "Counter"
   },
   "POISON": {
@@ -2499,13 +2232,15 @@
     "id": "POISON",
     "kind": "power",
     "name": "中毒",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L27; md:powers_zh.md:L26",
     "stack_type": "Counter"
   },
   "POSSESS_SPEED_POWER": {
+    "aliases": [
+      "POSSESS_SPEED",
+      "PossessSpeedPower"
+    ],
     "counter_class": false,
     "curated": true,
     "description": "持有者回合窃取玩家敏捷（每次偷取各持有者 +2 对应属性）。持有者死亡时被窃属性同帧归还玩家——击杀持有者即可收回。遗忘之物携带。",
@@ -2513,12 +2248,15 @@
     "id": "POSSESS_SPEED_POWER",
     "kind": "power",
     "name": "夺迅",
-    "needs_zh": false,
+    "play_notes": "",
     "power_type": "Buff",
-    "source": "curated:powers.md POSSESS group + monsters.md ForgottenThing",
     "stack_type": "Counter"
   },
   "POSSESS_STRENGTH_POWER": {
+    "aliases": [
+      "POSSESS_STRENGTH",
+      "PossessStrengthPower"
+    ],
     "counter_class": false,
     "curated": true,
     "description": "持有者回合窃取玩家力量（每次偷取各持有者 +2 对应属性；玩家力量显示随窃取清空）。持有者死亡时被窃属性同帧归还玩家——击杀持有者即可收回。失落之物携带。",
@@ -2526,9 +2264,8 @@
     "id": "POSSESS_STRENGTH_POWER",
     "kind": "power",
     "name": "夺力",
-    "needs_zh": false,
+    "play_notes": "",
     "power_type": "Buff",
-    "source": "curated:powers.md POSSESS group + monsters.md LostThing",
     "stack_type": "Counter"
   },
   "PYRE_POWER": {
@@ -2543,10 +2280,8 @@
     "id": "PYRE_POWER",
     "kind": "power",
     "name": "Pyre",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L146; md:powers_zh.md:L124; codex:powers/PYRE",
     "stack_type": "Counter"
   },
   "RADIANCE_POWER": {
@@ -2561,10 +2296,8 @@
     "id": "RADIANCE_POWER",
     "kind": "power",
     "name": "Radiance",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L157; md:powers_zh.md:L135",
     "stack_type": "Counter"
   },
   "RAGE_POWER": {
@@ -2579,10 +2312,8 @@
     "id": "RAGE_POWER",
     "kind": "power",
     "name": "愤怒",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L190; md:powers_zh.md:L167",
     "stack_type": "Counter"
   },
   "RAMPART_POWER": {
@@ -2596,15 +2327,17 @@
     "host_of_affliction": false,
     "id": "RAMPART_POWER",
     "kind": "power",
+    "live_notes": "LIVE run-56：活体盾被动 Amount 25。玩家回合初每存活炮台类随从获得 25 挡。优先击杀活体盾。",
     "name": "Rampart",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L211; md:powers_zh.md:L188",
-    "stack_type": "Counter",
-    "live_notes": "LIVE run-56：活体盾被动 Amount 25。玩家回合初每存活炮台类随从获得 25 挡。优先击杀活体盾。"
+    "stack_type": "Counter"
   },
   "RAVENOUS_POWER": {
+    "aliases": [
+      "RAVENOUS",
+      "RavenousPower"
+    ],
     "counter_class": true,
     "curated": true,
     "description": "同侧另一生物死亡且主人存活时，主人被眩晕进入吞噬招式并获得 +Amount 力量。击杀窗教条（CorpseSlug/SEAPUNK 类）：每回合一杀把队友死亡转化为幸存者的免费眩晕窗 — run-41 live：PS 在 T1 弹珠易伤窗一击带走 26 HP 蛞蝓，幸存者眩晕 +力量4，眩晕回合打击收掉，零伤害。",
@@ -2612,8 +2345,8 @@
     "id": "RAVENOUS_POWER",
     "kind": "power",
     "name": "贪婪",
+    "play_notes": "",
     "power_type": "Buff",
-    "source": "curated:powers.md RAVENOUS + coordinator audit 2026-09-18",
     "stack_type": "Counter"
   },
   "REAPER_FORM_POWER": {
@@ -2627,10 +2360,8 @@
     "id": "REAPER_FORM_POWER",
     "kind": "power",
     "name": "Reaper Form",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L302; md:powers_zh.md:L271",
     "stack_type": "Counter"
   },
   "REATTACH": {
@@ -2638,8 +2369,7 @@
     "description": "死亡时若其他带重接的段仍存活，物主进入 DEAD 状态（不可选中、不移出战斗）并在其回合结束重接、回复 Amount HP。仅当所有其他段同时死亡时才是真死。对局40 live：同窗清场教条——铺伤，其他段存活时绝不单杀（杀掉最后活段会让全部 DEAD 段各 +Amount 复活）；狱火 9 实例 tick 为三人组控速；最后对 1hp 活段的打击赢得淡出胜利。",
     "id": "REATTACH",
     "kind": "power",
-    "name": "重接",
-    "source": "; run-40 live fold 2026-09-18"
+    "name": "重接"
   },
   "REATTACH_POWER": {
     "aliases": [
@@ -2653,10 +2383,8 @@
     "id": "REATTACH_POWER",
     "kind": "power",
     "name": "重组",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L353; md:powers_zh.md:L312",
     "stack_type": "Single"
   },
   "REBOUND_POWER": {
@@ -2670,10 +2398,8 @@
     "id": "REBOUND_POWER",
     "kind": "power",
     "name": "Rebound",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": null,
-    "source": "md:powers.md:L520; md:powers_zh.md:L457",
     "stack_type": "Counter"
   },
   "REGEN_POWER": {
@@ -2688,10 +2414,8 @@
     "id": "REGEN_POWER",
     "kind": "power",
     "name": "再生",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L44; md:powers_zh.md:L39",
     "stack_type": "Counter"
   },
   "REPTILE_TRINKET_POWER": {
@@ -2700,9 +2424,7 @@
     "id": "REPTILE_TRINKET_POWER",
     "kind": "power",
     "name": "爬虫饰品",
-    "needs_zh": false,
     "power_type": "Buff",
-    "source": "curated:relics.md ReptileTrinket + powers.md family",
     "stack_type": "Counter"
   },
   "RETAIN_HAND_POWER": {
@@ -2717,10 +2439,8 @@
     "id": "RETAIN_HAND_POWER",
     "kind": "power",
     "name": "Retain Hand",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L518; md:powers_zh.md:L455",
     "stack_type": "Counter"
   },
   "RINGING_POWER": {
@@ -2738,10 +2458,8 @@
     "id": "RINGING_POWER",
     "kind": "power",
     "name": "耳鸣",
-    "needs_zh": false,
     "play_notes": "run-48 live 2026-09-19：RINGING 回合桥对首卡之后全部 no(None)；药水+卡牌同回合爆发合法。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
     "power_type": "Debuff",
-    "source": "md:powers.md:L94; md:powers_zh.md:L78",
     "stack_type": "Single"
   },
   "RITUAL_POWER": {
@@ -2756,13 +2474,14 @@
     "id": "RITUAL_POWER",
     "kind": "power",
     "name": "仪式",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L51; md:powers_zh.md:L45",
     "stack_type": "Counter"
   },
   "ROYALTIES_POWER": {
+    "aliases": [
+      "RoyaltiesPower"
+    ],
     "counter_class": false,
     "curated": true,
     "description": "宿主型 utility power（Buff，Counter）——触发逻辑由源卡牌承载；见宿主卡面。",
@@ -2770,9 +2489,8 @@
     "id": "ROYALTIES_POWER",
     "kind": "power",
     "name": "王权",
-    "needs_zh": false,
+    "play_notes": "",
     "power_type": "Buff",
-    "source": "curated:powers.md source-hosted utility group",
     "stack_type": "Counter"
   },
   "RUPTURE_POWER": {
@@ -2787,10 +2505,8 @@
     "id": "RUPTURE_POWER",
     "kind": "power",
     "name": "破灭",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L463; md:powers_zh.md:L408",
     "stack_type": "Counter"
   },
   "SANDPIT_POWER": {
@@ -2805,13 +2521,14 @@
     "id": "SANDPIT_POWER",
     "kind": "power",
     "name": "沙坑",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L418; md:powers_zh.md:L367",
     "stack_type": "Counter"
   },
   "SEEKING_EDGE_POWER": {
+    "aliases": [
+      "SeekingEdgePower"
+    ],
     "counter_class": false,
     "curated": true,
     "description": "惰性标记 power（Buff，Counter）——自身无钩子；由 SovereignBlade 家族卡牌查询。",
@@ -2819,9 +2536,8 @@
     "id": "SEEKING_EDGE_POWER",
     "kind": "power",
     "name": "寻隙锋",
-    "needs_zh": false,
+    "play_notes": "",
     "power_type": "Buff",
-    "source": "curated:powers.md inert marker group",
     "stack_type": "Counter"
   },
   "SELF_FORMING_CLAY_POWER": {
@@ -2836,10 +2552,8 @@
     "id": "SELF_FORMING_CLAY_POWER",
     "kind": "power",
     "name": "自成型黏土",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L202; md:powers_zh.md:L179",
     "stack_type": "Counter"
   },
   "SENTRY_MODE_POWER": {
@@ -2853,10 +2567,8 @@
     "id": "SENTRY_MODE_POWER",
     "kind": "power",
     "name": "Sentry Mode",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L550; md:powers_zh.md:L486",
     "stack_type": "Counter"
   },
   "SERPENT_FORM_POWER": {
@@ -2870,10 +2582,8 @@
     "id": "SERPENT_FORM_POWER",
     "kind": "power",
     "name": "Serpent Form",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L556; md:powers_zh.md:L492",
     "stack_type": "Counter"
   },
   "SETUP_STRIKE_POWER": {
@@ -2882,9 +2592,7 @@
     "id": "SETUP_STRIKE_POWER",
     "kind": "power",
     "name": "预备打击",
-    "needs_zh": false,
     "power_type": "Buff",
-    "source": "curated:cards.md SETUP_STRIKE",
     "stack_type": "Counter"
   },
   "SHADOWMELD_POWER": {
@@ -2898,10 +2606,8 @@
     "id": "SHADOWMELD_POWER",
     "kind": "power",
     "name": "Shadowmeld",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L225; md:powers_zh.md:L202",
     "stack_type": "Counter"
   },
   "SHRIEK_POWER": {
@@ -2916,10 +2622,8 @@
     "id": "SHRIEK_POWER",
     "kind": "power",
     "name": "可为负",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L596; md:powers_zh.md:L529",
     "stack_type": "Counter"
   },
   "SHRINK_POWER": {
@@ -2934,10 +2638,8 @@
     "id": "SHRINK_POWER",
     "kind": "power",
     "name": "缩小",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L238; md:powers_zh.md:L215",
     "stack_type": "Counter"
   },
   "SHROUD_POWER": {
@@ -2951,10 +2653,8 @@
     "id": "SHROUD_POWER",
     "kind": "power",
     "name": "Shroud",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L215; md:powers_zh.md:L192",
     "stack_type": "Counter"
   },
   "SIC_EM_POWER": {
@@ -2968,10 +2668,8 @@
     "id": "SIC_EM_POWER",
     "kind": "power",
     "name": "Sic Em",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L386; md:powers_zh.md:L340",
     "stack_type": "Counter"
   },
   "SIGNAL_BOOST_POWER": {
@@ -2985,10 +2683,8 @@
     "id": "SIGNAL_BOOST_POWER",
     "kind": "power",
     "name": "Signal Boost",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L482; md:powers_zh.md:L425",
     "stack_type": "Counter"
   },
   "SKITTISH": {
@@ -2996,8 +2692,7 @@
     "description": "物主本回合未获得格挡且受到卡牌攻击伤害时获得 Amount 挡（每回合一次；标记在对方回合结束重置）。对局40 live 鳗四件组：突破 AllEnemies 同一指令触发四只全部易惊（AoE 结算后各+6）；同回合后续攻击全额命中——AoE 穿透教条成立。",
     "id": "SKITTISH",
     "kind": "power",
-    "name": "易惊",
-    "source": "; run-40 live fold 2026-09-18"
+    "name": "易惊"
   },
   "SKITTISH_POWER": {
     "aliases": [
@@ -3011,10 +2706,8 @@
     "id": "SKITTISH_POWER",
     "kind": "power",
     "name": "Skittish",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L127; md:powers_zh.md:L538",
     "stack_type": "Counter"
   },
   "SLEIGHT_OF_FLESH_POWER": {
@@ -3023,9 +2716,7 @@
     "id": "SLEIGHT_OF_FLESH_POWER",
     "kind": "power",
     "name": "血肉戏法",
-    "needs_zh": false,
     "power_type": "Buff",
-    "source": "curated:cards.md SLEIGHT_OF_FLESH",
     "stack_type": "Counter"
   },
   "SLIPPERY_POWER": {
@@ -3039,13 +2730,11 @@
     "host_of_affliction": false,
     "id": "SLIPPERY_POWER",
     "kind": "power",
+    "live_notes": "LIVE run-56：墨影幻灵 Act1 Boss Slippery:8。每次命中消耗 1 层充能，伤害上限为剩余充能。run-42 教条确认。",
     "name": "湿滑",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L347; md:powers_zh.md:L308",
-    "stack_type": "Counter",
-    "live_notes": "LIVE run-56：墨影幻灵 Act1 Boss Slippery:8。每次命中消耗 1 层充能，伤害上限为剩余充能。run-42 教条确认。"
+    "stack_type": "Counter"
   },
   "SLOTH_POWER": {
     "counter_class": true,
@@ -3054,11 +2743,9 @@
     "id": "SLOTH_POWER",
     "kind": "power",
     "name": "怠惰",
-    "needs_zh": false,
+    "play_notes": "run-46 live: Sloth 3-plays/turn cap from KnowledgeDemon curse; beat Disintegration tax at low HP. | run-46 live：知识恶魔怠惰 3 张/回合上限；HP38 时胜过崩解税升级；2 张 FF+Ashes 线在上限内收头。",
     "power_type": "Debuff",
-    "source": "curated:afflictions.md SLOTH + monsters.md KnowledgeDemon",
-    "stack_type": "Counter",
-    "play_notes": "run-46 live: Sloth 3-plays/turn cap from KnowledgeDemon curse; beat Disintegration tax at low HP. | run-46 live：知识恶魔怠惰 3 张/回合上限；HP38 时胜过崩解税升级；2 张 FF+Ashes 线在上限内收头。"
+    "stack_type": "Counter"
   },
   "SLOW_POWER": {
     "aliases": [
@@ -3071,13 +2758,11 @@
     "host_of_affliction": false,
     "id": "SLOW_POWER",
     "kind": "power",
+    "live_notes": "LIVE run-56：旧日雕像精英。SLOW_POWER 计数器——攻击意图随剩余计数缩放。",
     "name": "缓速",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L64; md:powers_zh.md:L57",
-    "stack_type": "Counter",
-    "live_notes": "LIVE run-56：旧日雕像精英。SLOW_POWER 计数器——攻击意图随剩余计数缩放。"
+    "stack_type": "Counter"
   },
   "SLUMBER_POWER": {
     "aliases": [
@@ -3091,10 +2776,8 @@
     "id": "SLUMBER_POWER",
     "kind": "power",
     "name": "沉睡",
-    "needs_zh": false,
     "play_notes": "对局43 live",
     "power_type": "Buff",
-    "source": "powers.md + 对局43 live",
     "stack_type": "Counter"
   },
   "SMOGGY_POWER": {
@@ -3112,10 +2795,8 @@
     "id": "SMOGGY_POWER",
     "kind": "power",
     "name": "烟雾",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L107; md:powers_zh.md:L91",
     "stack_type": "Single"
   },
   "SNEAKY_POWER": {
@@ -3129,10 +2810,8 @@
     "id": "SNEAKY_POWER",
     "kind": "power",
     "name": "Sneaky",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L217; md:powers_zh.md:L194",
     "stack_type": "Counter"
   },
   "SOAR_POWER": {
@@ -3147,10 +2826,8 @@
     "id": "SOAR_POWER",
     "kind": "power",
     "name": "Soar",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L380; md:powers_zh.md:L242",
     "stack_type": "Single"
   },
   "SPECTRUM_SHIFT_POWER": {
@@ -3164,10 +2841,8 @@
     "id": "SPECTRUM_SHIFT_POWER",
     "kind": "power",
     "name": "Spectrum Shift",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L552; md:powers_zh.md:L488",
     "stack_type": "Counter"
   },
   "SPEEDSTER_POWER": {
@@ -3176,9 +2851,7 @@
     "id": "SPEEDSTER_POWER",
     "kind": "power",
     "name": "疾行者",
-    "needs_zh": false,
     "power_type": "Buff",
-    "source": "curated:cards.md SPEEDSTER",
     "stack_type": "Counter"
   },
   "SPEED_POTION_POWER": {
@@ -3187,9 +2860,7 @@
     "id": "SPEED_POTION_POWER",
     "kind": "power",
     "name": "速度药水之力",
-    "needs_zh": false,
     "power_type": "Buff",
-    "source": "curated:potions.md SpeedPotion + powers.md family",
     "stack_type": "Counter"
   },
   "SPINNER_POWER": {
@@ -3203,10 +2874,8 @@
     "id": "SPINNER_POWER",
     "kind": "power",
     "name": "Spinner",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L161; md:powers_zh.md:L139",
     "stack_type": "Counter"
   },
   "SPIRIT_OF_ASH_POWER": {
@@ -3220,10 +2889,8 @@
     "id": "SPIRIT_OF_ASH_POWER",
     "kind": "power",
     "name": "Spirit Of Ash",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L219; md:powers_zh.md:L196",
     "stack_type": "Counter"
   },
   "STAMPEDE_POWER": {
@@ -3238,10 +2905,8 @@
     "id": "STAMPEDE_POWER",
     "kind": "power",
     "name": "Stampede",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L488; md:powers_zh.md:L431",
     "stack_type": "Counter"
   },
   "STAR_NEXT_TURN_POWER": {
@@ -3256,10 +2921,8 @@
     "id": "STAR_NEXT_TURN_POWER",
     "kind": "power",
     "name": "Star Next Turn",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L155; md:powers_zh.md:L133",
     "stack_type": "Counter"
   },
   "STEAM_ERUPTION_POWER": {
@@ -3274,10 +2937,8 @@
     "id": "STEAM_ERUPTION_POWER",
     "kind": "power",
     "name": "Steam Eruption",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L374; md:powers_zh.md:L329",
     "stack_type": "Single"
   },
   "STOCK_POWER": {
@@ -3292,10 +2953,8 @@
     "id": "STOCK_POWER",
     "kind": "power",
     "name": "储备",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L371; md:powers_zh.md:L326",
     "stack_type": "Counter"
   },
   "STORM_POWER": {
@@ -3309,10 +2968,8 @@
     "id": "STORM_POWER",
     "kind": "power",
     "name": "Storm",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L558; md:powers_zh.md:L494",
     "stack_type": "Counter"
   },
   "STRANGLE_POWER": {
@@ -3326,10 +2983,8 @@
     "id": "STRANGLE_POWER",
     "kind": "power",
     "name": "Strangle",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L318; md:powers_zh.md:L287",
     "stack_type": "Counter"
   },
   "STRATAGEM_POWER": {
@@ -3344,10 +2999,8 @@
     "id": "STRATAGEM_POWER",
     "kind": "power",
     "name": "Stratagem",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L524; md:powers_zh.md:L461",
     "stack_type": "Counter"
   },
   "STRENGTH_POWER": {
@@ -3362,10 +3015,8 @@
     "id": "STRENGTH_POWER",
     "kind": "power",
     "name": "力量",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L23; md:powers_zh.md:L22",
     "stack_type": "Counter"
   },
   "SUBROUTINE_POWER": {
@@ -3379,10 +3030,8 @@
     "id": "SUBROUTINE_POWER",
     "kind": "power",
     "name": "Subroutine",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L560; md:powers_zh.md:L496",
     "stack_type": "Counter"
   },
   "SUCK_POWER": {
@@ -3391,9 +3040,7 @@
     "id": "SUCK_POWER",
     "kind": "power",
     "name": "汲取",
-    "needs_zh": false,
     "power_type": "Buff",
-    "source": "curated:monsters.md FossilStalker + power quick reference",
     "stack_type": "Counter"
   },
   "SUMMON_NEXT_TURN_POWER": {
@@ -3408,10 +3055,8 @@
     "id": "SUMMON_NEXT_TURN_POWER",
     "kind": "power",
     "name": "Summon Next Turn",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L384; md:powers_zh.md:L338",
     "stack_type": "Counter"
   },
   "SURPRISE_POWER": {
@@ -3426,10 +3071,8 @@
     "id": "SURPRISE_POWER",
     "kind": "power",
     "name": "Surprise",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L376; md:powers_zh.md:L331",
     "stack_type": "Single"
   },
   "SURROUNDED_POWER": {
@@ -3443,13 +3086,11 @@
     "host_of_affliction": false,
     "id": "SURROUNDED_POWER",
     "kind": "power",
+    "live_notes": "LIVE run-56：皇蟹战玩家侧 debuff。由火箭槽位施加——双体包围状态标记。",
     "name": "被夹击",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L74; md:powers_zh.md:L64",
-    "stack_type": "Single",
-    "live_notes": "LIVE run-56：皇蟹战玩家侧 debuff。由火箭槽位施加——双体包围状态标记。"
+    "stack_type": "Single"
   },
   "SWIPE_POWER": {
     "curated": true,
@@ -3457,9 +3098,7 @@
     "id": "SWIPE_POWER",
     "kind": "power",
     "name": "夺取",
-    "needs_zh": false,
     "power_type": "Buff",
-    "source": "curated:monsters.md ThievingHopper",
     "stack_type": "Single"
   },
   "SWORD_SAGE_POWER": {
@@ -3473,10 +3112,8 @@
     "id": "SWORD_SAGE_POWER",
     "kind": "power",
     "name": "Sword Sage",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L506; md:powers_zh.md:L447",
     "stack_type": "Counter"
   },
   "TAINTED_POWER": {
@@ -3496,7 +3133,6 @@
     "name": "污染",
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L111; md:powers_zh.md:L95",
     "stack_type": "Counter"
   },
   "TANGLED_POWER": {
@@ -3514,10 +3150,8 @@
     "id": "TANGLED_POWER",
     "kind": "power",
     "name": "缠结",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L98; md:powers_zh.md:L82",
     "stack_type": "Counter"
   },
   "TANK_POWER": {
@@ -3531,10 +3165,8 @@
     "id": "TANK_POWER",
     "kind": "power",
     "name": "Tank",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L282; md:powers_zh.md:L252",
     "stack_type": "Single"
   },
   "TENDER_POWER": {
@@ -3549,10 +3181,8 @@
     "id": "TENDER_POWER",
     "kind": "power",
     "name": "玩家侧",
-    "needs_zh": false,
     "play_notes": "run-48 live 2026-09-19：猎人杀手战抽取/返还振荡确认；链中 −3 力断送击杀。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
     "power_type": "Debuff",
-    "source": "md:powers.md:L285; md:powers_zh.md:L255",
     "stack_type": "Counter"
   },
   "TERRITORIAL_POWER": {
@@ -3567,12 +3197,9 @@
     "id": "TERRITORIAL_POWER",
     "kind": "power",
     "name": "领域",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L586; md:powers_zh.md:L520",
-    "stack_type": "Counter",
-    "zh_description": "持有者身上的增益计数（run-38 实时 Byrdonis）：其阵营回合结束时 +Amount 力量（基础 Amount=1；实时 STR 每回合爬一级——SWOOP 两个敌方回合内 17→19）。成长击杀计时器：每拖一回合，其全部攻击 +Amount。"
+    "stack_type": "Counter"
   },
   "THE_BOMB_POWER": {
     "aliases": [
@@ -3585,10 +3212,8 @@
     "id": "THE_BOMB_POWER",
     "kind": "power",
     "name": "炸弹",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L565; md:powers_zh.md:L500",
     "stack_type": "Counter"
   },
   "THE_GAMBIT_POWER": {
@@ -3603,13 +3228,14 @@
     "id": "THE_GAMBIT_POWER",
     "kind": "power",
     "name": "The Gambit",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L328; md:powers_zh.md:L293",
     "stack_type": "Single"
   },
   "THE_HUNT_POWER": {
+    "aliases": [
+      "TheHuntPower"
+    ],
     "counter_class": false,
     "curated": true,
     "description": "惰性成功标记 power（Buff，Counter）——自身无钩子；由 TheHunt 卡逻辑查询。",
@@ -3617,12 +3243,14 @@
     "id": "THE_HUNT_POWER",
     "kind": "power",
     "name": "狩猎",
-    "needs_zh": false,
+    "play_notes": "",
     "power_type": "Buff",
-    "source": "curated:powers.md inert marker group",
     "stack_type": "Counter"
   },
   "THE_SEALED_THRONE_POWER": {
+    "aliases": [
+      "TheSealedThronePower"
+    ],
     "counter_class": false,
     "curated": true,
     "description": "宿主型 utility power（Buff，Counter）——战斗结束/预打出逻辑由源卡牌承载；见宿主卡面。",
@@ -3630,12 +3258,15 @@
     "id": "THE_SEALED_THRONE_POWER",
     "kind": "power",
     "name": "封印王座",
-    "needs_zh": false,
+    "play_notes": "",
     "power_type": "Buff",
-    "source": "curated:powers.md source-hosted utility group",
     "stack_type": "Counter"
   },
   "THIEVERY_POWER": {
+    "aliases": [
+      "THIEVERY",
+      "ThieveryPower"
+    ],
     "counter_class": false,
     "curated": true,
     "description": "盗窃逻辑标记（Buff，Counter）——由盗窃逻辑查询；地精佣兵版本在其回合窃取玩家 20 金。自身无钩子。",
@@ -3643,9 +3274,8 @@
     "id": "THIEVERY_POWER",
     "kind": "power",
     "name": "盗窃",
-    "needs_zh": false,
+    "play_notes": "",
     "power_type": "Buff",
-    "source": "curated:powers.md inert marker group + monsters.md GremlinMerc",
     "stack_type": "Counter"
   },
   "THORNS_POWER": {
@@ -3660,10 +3290,8 @@
     "id": "THORNS_POWER",
     "kind": "power",
     "name": "荆棘",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L31; md:powers_zh.md:L29",
     "stack_type": "Counter"
   },
   "THUNDER_POWER": {
@@ -3677,10 +3305,8 @@
     "id": "THUNDER_POWER",
     "kind": "power",
     "name": "Thunder",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L570; md:powers_zh.md:L505",
     "stack_type": "Counter"
   },
   "TOOLS_OF_THE_TRADE_POWER": {
@@ -3695,10 +3321,8 @@
     "id": "TOOLS_OF_THE_TRADE_POWER",
     "kind": "power",
     "name": "Tools Of The Trade",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L148; md:powers_zh.md:L126",
     "stack_type": "Counter"
   },
   "TORIC_TOUGHNESS_POWER": {
@@ -3713,10 +3337,8 @@
     "id": "TORIC_TOUGHNESS_POWER",
     "kind": "power",
     "name": "Toric Toughness",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L204; md:powers_zh.md:L181",
     "stack_type": "Counter"
   },
   "TRACKING_POWER": {
@@ -3730,10 +3352,8 @@
     "id": "TRACKING_POWER",
     "kind": "power",
     "name": "Tracking",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L257; md:powers_zh.md:L231",
     "stack_type": "Counter"
   },
   "TYRANNY_POWER": {
@@ -3748,10 +3368,8 @@
     "id": "TYRANNY_POWER",
     "kind": "power",
     "name": "Tyranny",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L150; md:powers_zh.md:L128",
     "stack_type": "Counter"
   },
   "UNMOVABLE": {
@@ -3759,8 +3377,7 @@
     "description": "每回合前 Amount 次从卡牌获得格挡时翻倍。对局40 live 数值（Amount=1 能力牌，每回合前两次卡牌挡增益翻倍）：血墙16→32、邪眼8→16、究极防御11→22、耸肩8→16、武装5→10、防御5→10。药水源格挡不翻倍（封锁药水12仍为12）。",
     "id": "UNMOVABLE",
     "kind": "power",
-    "name": "岿然不动",
-    "source": "; run-40 live fold 2026-09-18"
+    "name": "岿然不动"
   },
   "UNMOVABLE_POWER": {
     "aliases": [
@@ -3774,10 +3391,8 @@
     "id": "UNMOVABLE_POWER",
     "kind": "power",
     "name": "Unmovable",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L227; md:powers_zh.md:L204; codex:powers/UNMOVABLE",
     "stack_type": "Counter"
   },
   "VEILPIERCER_POWER": {
@@ -3791,10 +3406,8 @@
     "id": "VEILPIERCER_POWER",
     "kind": "power",
     "name": "Veilpiercer",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L179; md:powers_zh.md:L157",
     "stack_type": "Counter"
   },
   "VICIOUS_POWER": {
@@ -3809,10 +3422,8 @@
     "id": "VICIOUS_POWER",
     "kind": "power",
     "name": "Vicious",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L504; md:powers_zh.md:L445",
     "stack_type": "Counter"
   },
   "VIGOR_POWER": {
@@ -3827,13 +3438,15 @@
     "id": "VIGOR_POWER",
     "kind": "power",
     "name": "活力",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L56; md:powers_zh.md:L49",
     "stack_type": "Counter"
   },
   "VITAL_SPARK_POWER": {
+    "aliases": [
+      "VITAL_SPARK",
+      "VitalSparkPower"
+    ],
     "counter_class": true,
     "curated": true,
     "description": "敌方反制类：开局玩家技能牌被污染为 Tainted(Amount)；打出污染牌使玩家获得 TAINTED_POWER Amount — 本回合受到的攻击伤害 +Amount（敌方回合结束移除）。Amount 可在战斗中上升（棱柱脉动 +2）。run-41 live：Brand（自伤技能）照样计税 — 零技能纪律指只打攻击与能力牌；血墙/重振精神/防御/耸肩全部加税。 LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：card_type 显示 power 的牌并不自动安全——RAGE 打出即挂 TAINTED:2。Inflame 无税。逐张 live 验证；RADIATE 意图当回合即显示税（11→13）。",
@@ -3841,8 +3454,8 @@
     "id": "VITAL_SPARK_POWER",
     "kind": "power",
     "name": "生命火花",
+    "play_notes": "",
     "power_type": "Buff",
-    "source": "curated:powers.md VITAL_SPARK + monsters.md InfestedPrism",
     "stack_type": "Counter"
   },
   "VOID_FORM_POWER": {
@@ -3856,10 +3469,8 @@
     "id": "VOID_FORM_POWER",
     "kind": "power",
     "name": "Void Form",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L181; md:powers_zh.md:L159",
     "stack_type": "Counter"
   },
   "VULNERABLE_POWER": {
@@ -3874,10 +3485,8 @@
     "id": "VULNERABLE_POWER",
     "kind": "power",
     "name": "易伤",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L14; md:powers_zh.md:L14",
     "stack_type": "Counter"
   },
   "WASTE_AWAY_POWER": {
@@ -3892,10 +3501,8 @@
     "id": "WASTE_AWAY_POWER",
     "kind": "power",
     "name": "衰朽",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L132; md:powers_zh.md:L112; codex:powers/WASTE_AWAY",
     "stack_type": "Counter"
   },
   "WEAK_POWER": {
@@ -3910,10 +3517,8 @@
     "id": "WEAK_POWER",
     "kind": "power",
     "name": "虚弱",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L18; md:powers_zh.md:L17",
     "stack_type": "Counter"
   },
   "WELL_LAID_PLANS_POWER": {
@@ -3927,10 +3532,8 @@
     "id": "WELL_LAID_PLANS_POWER",
     "kind": "power",
     "name": "Well Laid Plans",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": null,
-    "source": "md:powers.md:L528; md:powers_zh.md:L465",
     "stack_type": "Counter"
   },
   "WITHERING_PRESENCE_POWER": {
@@ -3945,10 +3548,8 @@
     "id": "WITHERING_PRESENCE_POWER",
     "kind": "power",
     "name": "Withering Presence",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Buff",
-    "source": "md:powers.md:L497; md:powers_zh.md:L439",
     "stack_type": "Counter"
   },
   "WRAITH_FORM_POWER": {
@@ -3962,10 +3563,8 @@
     "id": "WRAITH_FORM_POWER",
     "kind": "power",
     "name": "幽灵形态",
-    "needs_zh": false,
     "play_notes": "",
     "power_type": "Debuff",
-    "source": "md:powers.md:L469; md:powers_zh.md:L414",
     "stack_type": "Counter"
   }
 }

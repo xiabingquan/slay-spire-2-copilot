@@ -10,10 +10,7 @@
       "MultiAttackIntent"
     ],
     "name": "Attack",
-    "needs_zh": false,
-    "play_notes": "Incoming single attack — the label number is the live damage preview (Strength/Weak/Vulnerable already applied, floored at 0). Compare damage vs your Block + HP; Weak on the attacker cuts it (x0.75 per stack).",
-    "source": "decomp:IntentType enum (frozen constant; /tmp/sts2-decomp)",
-    "zh_description": "IntentType 枚举值 `Attack`。成员意图类：SingleAttackIntent、MultiAttackIntent。"
+    "play_notes": "Incoming single attack — the label number is the live damage preview (Strength/Weak/Vulnerable already applied, floored at 0). Compare damage vs your Block + HP; Weak on the attacker cuts it (x0.75 per stack)."
   },
   "Buff": {
     "aliases": [],
@@ -25,10 +22,7 @@
       "BuffIntent"
     ],
     "name": "Buff",
-    "needs_zh": false,
-    "play_notes": "Enemy self/allied buff this turn (Strength, Ritual, stances, some summons). Free damage window if you can race the ramp — check monsters.json move effect for the exact buff before ignoring.",
-    "source": "decomp:IntentType enum (frozen constant; /tmp/sts2-decomp)",
-    "zh_description": "IntentType 枚举值 `Buff`。成员意图类：BuffIntent。"
+    "play_notes": "Enemy self/allied buff this turn (Strength, Ritual, stances, some summons). Free damage window if you can race the ramp — check monsters.json move effect for the exact buff before ignoring."
   },
   "BuffIntent": {
     "aliases": [
@@ -42,17 +36,13 @@
     "kind": "intent_class",
     "label_semantics": "enemy buffs itself / allies (Strength, Ritual, stances, summons in some moves). Label is FORMAT_EMPTY in loc → bridge replaces with the intent type; compact shows `Buff` or `Buff(move_id)` (e.g. `Buff(PREPARE_MOVE)`).",
     "name": "BuffIntent",
-    "needs_zh": false,
     "play_notes": "Enemy self/allied buff this turn (Strength, Ritual, stances, some summons). Free damage window if you can race the ramp — check monsters.json move effect for the exact buff before ignoring.",
-    "source": "md:intents.md:L23; md:intents_zh.md:L21",
     "state_fields": [
       "type",
       "class",
       "label",
       "description"
-    ],
-    "zh_description": "敌人自我/友方强化（力量、仪式、姿态、 部分招式的召唤等）。loc 中标签为 FORMAT_EMPTY → bridge 服务端替换为 意图类型；紧凑视图显示 `Buff` 或 `Buff(招式id)`（如 `Buff(PREPARE_MOVE)`）。",
-    "zh_play_notes": "敌人自我/友方强化（力量、仪式、姿态、 部分招式的召唤等）。loc 中标签为 FORMAT_EMPTY → bridge 服务端替换为 意图类型；紧凑视图显示 `Buff` 或 `Buff(招式id)`（如 `Buff(PREPARE_MOVE)`）。"
+    ]
   },
   "CardDebuff": {
     "aliases": [],
@@ -64,10 +54,7 @@
       "CardDebuffIntent"
     ],
     "name": "CardDebuff",
-    "needs_zh": false,
-    "play_notes": "Injects status/curse cards into player piles (sometimes combined with attack on the same move). Treat as deck pollution unless the move table also lists an attack — then plan block for the attack half.",
-    "source": "decomp:IntentType enum (frozen constant; /tmp/sts2-decomp)",
-    "zh_description": "IntentType 枚举值 `CardDebuff`。成员意图类：CardDebuffIntent。"
+    "play_notes": "Injects status/curse cards into player piles (sometimes combined with attack on the same move). Treat as deck pollution unless the move table also lists an attack — then plan block for the attack half."
   },
   "CardDebuffIntent": {
     "aliases": [
@@ -81,17 +68,13 @@
     "kind": "intent_class",
     "label_semantics": "injects status/curse cards into the player's piles (often combined with an attack on the same move). Label is FORMAT_EMPTY → compact falls back to `CardDebuff(move_id)`. Treat as deck pollution incoming, not damage — unless the move also carries an attack (see combined labels below).",
     "name": "CardDebuffIntent",
-    "needs_zh": false,
     "play_notes": "Injects status/curse cards into player piles (sometimes combined with attack on the same move). Treat as deck pollution unless the move table also lists an attack — then plan block for the attack half.",
-    "source": "md:intents.md:L43; md:intents_zh.md:L38",
     "state_fields": [
       "type",
       "class",
       "label",
       "description"
-    ],
-    "zh_description": "向玩家牌堆注入状态/诅咒牌 （常与攻击同招）。loc 标签为 FORMAT_EMPTY → 紧凑视图回退为 `CardDebuff(招式id)`。按「牌组污染」应对，而非伤害——除非该招同时带 攻击（见下条组合标签）。",
-    "zh_play_notes": "向玩家牌堆注入状态/诅咒牌 （常与攻击同招）。loc 标签为 FORMAT_EMPTY → 紧凑视图回退为 `CardDebuff(招式id)`。按「牌组污染」应对，而非伤害——除非该招同时带 攻击（见下条组合标签）。"
+    ]
   },
   "DeathBlow": {
     "aliases": [],
@@ -103,10 +86,7 @@
       "DeathBlowIntent"
     ],
     "name": "DeathBlow",
-    "needs_zh": false,
-    "play_notes": "Lethal-styled single attack (DeathBlow icon). Same math as SingleAttackIntent — treat as ordinary attack damage; block or kill.",
-    "source": "decomp:IntentType enum (frozen constant; /tmp/sts2-decomp)",
-    "zh_description": "IntentType 枚举值 `DeathBlow`。成员意图类：DeathBlowIntent。"
+    "play_notes": "Lethal-styled single attack (DeathBlow icon). Same math as SingleAttackIntent — treat as ordinary attack damage; block or kill."
   },
   "DeathBlowIntent": {
     "aliases": [
@@ -120,9 +100,7 @@
     "kind": "intent_class",
     "label_semantics": "SingleAttackIntent subclass with death-blow icon — a lethal-styled attack; label is still the damage number.",
     "name": "DeathBlowIntent",
-    "needs_zh": false,
     "play_notes": "Lethal-styled single attack (DeathBlow icon). Same math as SingleAttackIntent — treat as ordinary attack damage; block or kill.",
-    "source": "md:intents.md:L21; md:intents_zh.md:L19",
     "state_fields": [
       "type",
       "class",
@@ -132,9 +110,7 @@
       "hits",
       "base_damage",
       "description"
-    ],
-    "zh_description": "SingleAttackIntent 子类， 使用致死一击图标——攻击语义不变；标签仍为伤害数字。",
-    "zh_play_notes": "SingleAttackIntent 子类， 使用致死一击图标——攻击语义不变；标签仍为伤害数字。"
+    ]
   },
   "Debuff": {
     "aliases": [],
@@ -146,10 +122,7 @@
       "DebuffIntent"
     ],
     "name": "Debuff",
-    "needs_zh": false,
-    "play_notes": "Enemy applies debuffs (Vulnerable/Weak/Frail/Poison/card afflictions). No direct damage — often a setup turn; Artifact blocks one visible debuff application; plan burst timing around the debuff window.",
-    "source": "decomp:IntentType enum (frozen constant; /tmp/sts2-decomp)",
-    "zh_description": "IntentType 枚举值 `Debuff`。成员意图类：DebuffIntent。"
+    "play_notes": "Enemy applies debuffs (Vulnerable/Weak/Frail/Poison/card afflictions). No direct damage — often a setup turn; Artifact blocks one visible debuff application; plan burst timing around the debuff window."
   },
   "DebuffIntent": {
     "aliases": [
@@ -163,17 +136,13 @@
     "kind": "intent_class",
     "label_semantics": "enemy applies debuffs (Vulnerable, Weak, Poison, Frail, card afflictions, etc.). Compact shows `Debuff`, or `DebuffStrong` when constructed with strong=true.",
     "name": "DebuffIntent",
-    "needs_zh": false,
     "play_notes": "Enemy applies debuffs (Vulnerable/Weak/Frail/Poison/card afflictions). No direct damage — often a setup turn; Artifact blocks one visible debuff application; plan burst timing around the debuff window.",
-    "source": "md:intents.md:L27; md:intents_zh.md:L25",
     "state_fields": [
       "type",
       "class",
       "label",
       "description"
-    ],
-    "zh_description": "敌人施加减益 （易伤、虚弱、中毒、脆弱、卡牌绑定减益等）。紧凑视图显示 `Debuff`； strong=true 时为 `DebuffStrong`。",
-    "zh_play_notes": "敌人施加减益 （易伤、虚弱、中毒、脆弱、卡牌绑定减益等）。紧凑视图显示 `Debuff`； strong=true 时为 `DebuffStrong`。"
+    ]
   },
   "DebuffStrong": {
     "aliases": [],
@@ -185,10 +154,7 @@
       "DebuffIntent"
     ],
     "name": "DebuffStrong",
-    "needs_zh": false,
-    "play_notes": "Enemy applies debuffs (Vulnerable/Weak/Frail/Poison/card afflictions). No direct damage — often a setup turn; Artifact blocks one visible debuff application; plan burst timing around the debuff window.",
-    "source": "decomp:IntentType enum (frozen constant; /tmp/sts2-decomp)",
-    "zh_description": "IntentType 枚举值 `DebuffStrong`。成员意图类：DebuffIntent。"
+    "play_notes": "Enemy applies debuffs (Vulnerable/Weak/Frail/Poison/card afflictions). No direct damage — often a setup turn; Artifact blocks one visible debuff application; plan burst timing around the debuff window."
   },
   "Defend": {
     "aliases": [],
@@ -200,10 +166,7 @@
       "DefendIntent"
     ],
     "name": "Defend",
-    "needs_zh": false,
-    "play_notes": "Enemy gains Block this turn — a low-threat turn; pile damage now or prepare Vulnerable for after the block decays.",
-    "source": "decomp:IntentType enum (frozen constant; /tmp/sts2-decomp)",
-    "zh_description": "IntentType 枚举值 `Defend`。成员意图类：DefendIntent。"
+    "play_notes": "Enemy gains Block this turn — a low-threat turn; pile damage now or prepare Vulnerable for after the block decays."
   },
   "DefendIntent": {
     "aliases": [
@@ -217,17 +180,13 @@
     "kind": "intent_class",
     "label_semantics": "enemy gains Block this turn. Compact shows `Defend`.",
     "name": "DefendIntent",
-    "needs_zh": false,
     "play_notes": "Enemy gains Block this turn — a low-threat turn; pile damage now or prepare Vulnerable for after the block decays.",
-    "source": "md:intents.md:L30; md:intents_zh.md:L28",
     "state_fields": [
       "type",
       "class",
       "label",
       "description"
-    ],
-    "zh_description": "敌人本回合获得格挡。显示 `Defend`。",
-    "zh_play_notes": "敌人本回合获得格挡。显示 `Defend`。"
+    ]
   },
   "Escape": {
     "aliases": [],
@@ -239,10 +198,7 @@
       "EscapeIntent"
     ],
     "name": "Escape",
-    "needs_zh": false,
-    "play_notes": "Enemy flees combat this turn — kill it NOW or it escapes at current HP (often unrewarded). Flutter/escape-timer counters can flip this intent if resolved first.",
-    "source": "decomp:IntentType enum (frozen constant; /tmp/sts2-decomp)",
-    "zh_description": "IntentType 枚举值 `Escape`。成员意图类：EscapeIntent。"
+    "play_notes": "Enemy flees combat this turn — kill it NOW or it escapes at current HP (often unrewarded). Flutter/escape-timer counters can flip this intent if resolved first."
   },
   "EscapeIntent": {
     "aliases": [
@@ -256,17 +212,13 @@
     "kind": "intent_class",
     "label_semantics": "enemy flees combat this turn. Compact shows `Escape`.",
     "name": "EscapeIntent",
-    "needs_zh": false,
     "play_notes": "Enemy flees combat this turn — kill it NOW or it escapes at current HP (often unrewarded). Flutter/escape-timer counters can flip this intent if resolved first.",
-    "source": "md:intents.md:L48; md:intents_zh.md:L42",
     "state_fields": [
       "type",
       "class",
       "label",
       "description"
-    ],
-    "zh_description": "敌人本回合逃离战斗。显示 `Escape`。",
-    "zh_play_notes": "敌人本回合逃离战斗。显示 `Escape`。"
+    ]
   },
   "Heal": {
     "aliases": [],
@@ -278,10 +230,7 @@
       "HealIntent"
     ],
     "name": "Heal",
-    "needs_zh": false,
-    "play_notes": "Enemy heals (also revive moves like REVIVE_MOVE). Kill-pressure turn: race the heal or re-apply kill-window conditions.",
-    "source": "decomp:IntentType enum (frozen constant; /tmp/sts2-decomp)",
-    "zh_description": "IntentType 枚举值 `Heal`。成员意图类：HealIntent。"
+    "play_notes": "Enemy heals (also revive moves like REVIVE_MOVE). Kill-pressure turn: race the heal or re-apply kill-window conditions."
   },
   "HealIntent": {
     "aliases": [
@@ -295,17 +244,13 @@
     "kind": "intent_class",
     "label_semantics": "enemy heals (also used by revive moves, e.g. IllusionPower REVIVE_MOVE). Compact shows `Heal`.",
     "name": "HealIntent",
-    "needs_zh": false,
     "play_notes": "Enemy heals (also revive moves like REVIVE_MOVE). Kill-pressure turn: race the heal or re-apply kill-window conditions.",
-    "source": "md:intents.md:L32; md:intents_zh.md:L29",
     "state_fields": [
       "type",
       "class",
       "label",
       "description"
-    ],
-    "zh_description": "敌人治疗（也用于复活招式，如 IllusionPower 的 REVIVE_MOVE）。显示 `Heal`。",
-    "zh_play_notes": "敌人治疗（也用于复活招式，如 IllusionPower 的 REVIVE_MOVE）。显示 `Heal`。"
+    ]
   },
   "Hidden": {
     "aliases": [],
@@ -317,10 +262,7 @@
       "HiddenIntent"
     ],
     "name": "Hidden",
-    "needs_zh": false,
-    "play_notes": "No sprite, no hover tip — action fully hidden. Play safe: keep block/economy; check monsters.json for hidden-move pools (e.g. burrowed BELOW_MOVE).",
-    "source": "decomp:IntentType enum (frozen constant; /tmp/sts2-decomp)",
-    "zh_description": "IntentType 枚举值 `Hidden`。成员意图类：HiddenIntent。"
+    "play_notes": "No sprite, no hover tip — action fully hidden. Play safe: keep block/economy; check monsters.json for hidden-move pools (e.g. burrowed BELOW_MOVE)."
   },
   "HiddenIntent": {
     "aliases": [
@@ -334,17 +276,13 @@
     "kind": "intent_class",
     "label_semantics": "no sprite, no hover tip — action fully hidden. Compact shows `Hidden`.",
     "name": "HiddenIntent",
-    "needs_zh": false,
     "play_notes": "No sprite, no hover tip — action fully hidden. Play safe: keep block/economy; check monsters.json for hidden-move pools (e.g. burrowed BELOW_MOVE).",
-    "source": "md:intents.md:L50; md:intents_zh.md:L43",
     "state_fields": [
       "type",
       "class",
       "label",
       "description"
-    ],
-    "zh_description": "无图标、无悬浮提示——行动完全隐藏。 显示 `Hidden`。",
-    "zh_play_notes": "无图标、无悬浮提示——行动完全隐藏。 显示 `Hidden`。"
+    ]
   },
   "MultiAttackIntent": {
     "aliases": [
@@ -358,9 +296,7 @@
     "kind": "intent_class",
     "label_semantics": "attack Repeats times. Label = FORMAT_DAMAGE_MULTI with Damage + Repeat → compact shows per-hit × hits, e.g. `3×7` (7 hits of 3; total = per-hit × hits). Same live-preview rule for the per-hit number.",
     "name": "MultiAttackIntent",
-    "needs_zh": false,
     "play_notes": "Incoming multi-hit attack — label shows per-hit x hits; total = per-hit x hits. Block absorbs EACH hit separately, so high Block is twice as effective here. Weak cuts the per-hit number.",
-    "source": "md:intents.md:L17; md:intents_zh.md:L16",
     "state_fields": [
       "type",
       "class",
@@ -370,9 +306,7 @@
       "hits",
       "base_damage",
       "description"
-    ],
-    "zh_description": "攻击 Repeats 次。标签 = FORMAT_DAMAGE_MULTI（Damage + Repeat）→ 紧凑视图显示 每段×次数， 如 `3×7`（7 段每段 3；总伤 = 每段 × 次数）。每段数字同样为实时预览。",
-    "zh_play_notes": "攻击 Repeats 次。标签 = FORMAT_DAMAGE_MULTI（Damage + Repeat）→ 紧凑视图显示 每段×次数， 如 `3×7`（7 段每段 3；总伤 = 每段 × 次数）。每段数字同样为实时预览。"
+    ]
   },
   "SingleAttackIntent": {
     "aliases": [
@@ -386,9 +320,7 @@
     "kind": "intent_class",
     "label_semantics": "attack once. Label = FORMAT_DAMAGE_SINGLE → compact shows the damage number, e.g. `8`. The number is the game's live damage preview (`GetSingleDamage` runs damage hooks, floored at 0) — it already includes Strength/Weak/Vulnerable-style modifiers, not the raw move value.",
     "name": "SingleAttackIntent",
-    "needs_zh": false,
     "play_notes": "Incoming single attack — the label number is the live damage preview (Strength/Weak/Vulnerable already applied, floored at 0). Compare damage vs your Block + HP; Weak on the attacker cuts it (x0.75 per stack).",
-    "source": "md:intents.md:L12; md:intents_zh.md:L12",
     "state_fields": [
       "type",
       "class",
@@ -398,9 +330,7 @@
       "hits",
       "base_damage",
       "description"
-    ],
-    "zh_description": "单次攻击。标签 = FORMAT_DAMAGE_SINGLE → 紧凑视图显示伤害数字，如 `8`。该数字是游戏内 实时伤害预览（`GetSingleDamage` 会跑伤害 hook，下限 0）——已包含 力量/虚弱/易伤等修正，并非招式原始值。",
-    "zh_play_notes": "单次攻击。标签 = FORMAT_DAMAGE_SINGLE → 紧凑视图显示伤害数字，如 `8`。该数字是游戏内 实时伤害预览（`GetSingleDamage` 会跑伤害 hook，下限 0）——已包含 力量/虚弱/易伤等修正，并非招式原始值。"
+    ]
   },
   "Sleep": {
     "aliases": [],
@@ -412,10 +342,7 @@
       "SleepIntent"
     ],
     "name": "Sleep",
-    "needs_zh": false,
-    "play_notes": "Enemy sleeps/skips action (AsleepPower/SlumberPower stances). Free damage window — but unblocked card damage wakes sleepers (strips Plating + Asleep, flips to Stun); decide deliberately between free hits and controlled wake-stun.",
-    "source": "decomp:IntentType enum (frozen constant; /tmp/sts2-decomp)",
-    "zh_description": "IntentType 枚举值 `Sleep`。成员意图类：SleepIntent。"
+    "play_notes": "Enemy sleeps/skips action (AsleepPower/SlumberPower stances). Free damage window — but unblocked card damage wakes sleepers (strips Plating + Asleep, flips to Stun); decide deliberately between free hits and controlled wake-stun."
   },
   "SleepIntent": {
     "aliases": [
@@ -429,17 +356,13 @@
     "kind": "intent_class",
     "label_semantics": "enemy sleeps / skips action (AsleepPower / SlumberPower stances). Compact shows `Sleep`.",
     "name": "SleepIntent",
-    "needs_zh": false,
     "play_notes": "Enemy sleeps/skips action (AsleepPower/SlumberPower stances). Free damage window — but unblocked card damage wakes sleepers (strips Plating + Asleep, flips to Stun); decide deliberately between free hits and controlled wake-stun.",
-    "source": "md:intents.md:L34; md:intents_zh.md:L31",
     "state_fields": [
       "type",
       "class",
       "label",
       "description"
-    ],
-    "zh_description": "敌人沉睡/跳过行动（AsleepPower / SlumberPower 姿态）。显示 `Sleep`。",
-    "zh_play_notes": "敌人沉睡/跳过行动（AsleepPower / SlumberPower 姿态）。显示 `Sleep`。"
+    ]
   },
   "StatusCard": {
     "aliases": [],
@@ -451,10 +374,7 @@
       "StatusIntent"
     ],
     "name": "StatusCard",
-    "needs_zh": false,
-    "play_notes": "Adds status/curse cards to player piles — card_count = number of cards. No direct damage; deck pollution incoming. Thin with exhaust/draw tools; status cards are usually unplayable clog.",
-    "source": "decomp:IntentType enum (frozen constant; /tmp/sts2-decomp)",
-    "zh_description": "IntentType 枚举值 `StatusCard`。成员意图类：StatusIntent。"
+    "play_notes": "Adds status/curse cards to player piles — card_count = number of cards. No direct damage; deck pollution incoming. Thin with exhaust/draw tools; status cards are usually unplayable clog."
   },
   "StatusIntent": {
     "aliases": [
@@ -468,18 +388,14 @@
     "kind": "intent_class",
     "label_semantics": "adds `count` status cards to the player's piles, no direct damage. Label = FORMAT_STATUS_CARD_COUNT → compact shows the card count.",
     "name": "StatusIntent",
-    "needs_zh": false,
     "play_notes": "Adds status/curse cards to player piles — card_count = number of cards. No direct damage; deck pollution incoming. Thin with exhaust/draw tools; status cards are usually unplayable clog.",
-    "source": "md:intents.md:L40; md:intents_zh.md:L36",
     "state_fields": [
       "type",
       "class",
       "label",
       "card_count",
       "description"
-    ],
-    "zh_description": "向玩家牌堆加入 `count` 张状态牌， 无直接伤害。标签 = FORMAT_STATUS_CARD_COUNT → 紧凑视图显示卡牌数量。",
-    "zh_play_notes": "向玩家牌堆加入 `count` 张状态牌， 无直接伤害。标签 = FORMAT_STATUS_CARD_COUNT → 紧凑视图显示卡牌数量。"
+    ]
   },
   "Stun": {
     "aliases": [],
@@ -491,10 +407,7 @@
       "StunIntent"
     ],
     "name": "Stun",
-    "needs_zh": false,
-    "play_notes": "Enemy stunned/skips action this turn (burrow break, wake-up stuns, Imbalanced). Pure free-damage window — spend it.",
-    "source": "decomp:IntentType enum (frozen constant; /tmp/sts2-decomp)",
-    "zh_description": "IntentType 枚举值 `Stun`。成员意图类：StunIntent。"
+    "play_notes": "Enemy stunned/skips action this turn (burrow break, wake-up stuns, Imbalanced). Pure free-damage window — spend it."
   },
   "StunIntent": {
     "aliases": [
@@ -508,17 +421,13 @@
     "kind": "intent_class",
     "label_semantics": "enemy is stunned / skips action this turn (Burrowed break, wake-up stuns, Imbalanced, etc.). Compact shows `Stun`.",
     "name": "StunIntent",
-    "needs_zh": false,
     "play_notes": "Enemy stunned/skips action this turn (burrow break, wake-up stuns, Imbalanced). Pure free-damage window — spend it.",
-    "source": "md:intents.md:L36; md:intents_zh.md:L33",
     "state_fields": [
       "type",
       "class",
       "label",
       "description"
-    ],
-    "zh_description": "敌人被击晕/本回合跳过行动（钻地破防、 醒来眩晕、Imbalanced 等）。显示 `Stun`。",
-    "zh_play_notes": "敌人被击晕/本回合跳过行动（钻地破防、 醒来眩晕、Imbalanced 等）。显示 `Stun`。"
+    ]
   },
   "Summon": {
     "aliases": [],
@@ -530,10 +439,7 @@
       "SummonIntent"
     ],
     "name": "Summon",
-    "needs_zh": false,
-    "play_notes": "Enemy summons adds this turn. Master-minion doctrine usually applies: killing the summoner despawns/clears adds; check the monster entry before switching targets.",
-    "source": "decomp:IntentType enum (frozen constant; /tmp/sts2-decomp)",
-    "zh_description": "IntentType 枚举值 `Summon`。成员意图类：SummonIntent。"
+    "play_notes": "Enemy summons adds this turn. Master-minion doctrine usually applies: killing the summoner despawns/clears adds; check the monster entry before switching targets."
   },
   "SummonIntent": {
     "aliases": [
@@ -547,17 +453,13 @@
     "kind": "intent_class",
     "label_semantics": "enemy summons adds this turn. Compact shows `Summon`.",
     "name": "SummonIntent",
-    "needs_zh": false,
     "play_notes": "Enemy summons adds this turn. Master-minion doctrine usually applies: killing the summoner despawns/clears adds; check the monster entry before switching targets.",
-    "source": "md:intents.md:L38; md:intents_zh.md:L35",
     "state_fields": [
       "type",
       "class",
       "label",
       "description"
-    ],
-    "zh_description": "敌人本回合召唤小怪。显示 `Summon`。",
-    "zh_play_notes": "敌人本回合召唤小怪。显示 `Summon`。"
+    ]
   },
   "Unknown": {
     "aliases": [],
@@ -569,10 +471,7 @@
       "UnknownIntent"
     ],
     "name": "Unknown",
-    "needs_zh": false,
-    "play_notes": "Action not yet revealed. Treat as unknown threat — keep defensive posture and consult the monster move table.",
-    "source": "decomp:IntentType enum (frozen constant; /tmp/sts2-decomp)",
-    "zh_description": "IntentType 枚举值 `Unknown`。成员意图类：UnknownIntent。"
+    "play_notes": "Action not yet revealed. Treat as unknown threat — keep defensive posture and consult the monster move table."
   },
   "UnknownIntent": {
     "aliases": [
@@ -586,16 +485,12 @@
     "kind": "intent_class",
     "label_semantics": "action not yet revealed; revealed later or after conditions. Compact shows `Unknown`.",
     "name": "UnknownIntent",
-    "needs_zh": false,
     "play_notes": "Action not yet revealed. Treat as unknown threat — keep defensive posture and consult the monster move table.",
-    "source": "md:intents.md:L52; md:intents_zh.md:L45",
     "state_fields": [
       "type",
       "class",
       "label",
       "description"
-    ],
-    "zh_description": "行动尚未揭示；稍后或满足条件后 揭示。显示 `Unknown`。",
-    "zh_play_notes": "行动尚未揭示；稍后或满足条件后 揭示。显示 `Unknown`。"
+    ]
   }
 }

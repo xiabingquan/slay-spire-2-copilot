@@ -2,8 +2,8 @@
 
 Exits nonzero when: (1) any hard-domain live id from the census does not
 resolve in the flattened index (top-level keys + aliases + monster moves +
-event options); (2) any entry lacks a non-empty EN description, or (except
-needs_zh:true) a non-empty ZH description; (3) an EN name field leaks CJK.
+event options); (2) any entry lacks a non-empty description in EN or ZH, the
+ZH twin is missing, or EN/ZH key sets diverge; (3) an EN name field leaks CJK.
 """
 from .config import DOMAINS, HARD_CENSUS_DOMAINS, SOFT_CENSUS_DOMAINS
 from .textutil import has_cjk
@@ -62,21 +62,30 @@ def run_check(all_en: dict, all_zh: dict, live_ids: dict) -> int:
             if zh_e is None:
                 desc_problems.append((domain, key, "missing in _zh.json"))
                 continue
+            if set(zh_e.keys()) != set(entry.keys()):
+                desc_problems.append((domain, key, "EN/ZH schema mismatch"))
             if not (zh_e.get("description") or "").strip():
-                if zh_e.get("needs_zh"):
-                    desc_problems.append((domain, key, "needs_zh:true (ZH empty)"))
-                else:
-                    desc_problems.append((domain, key, "ZH description empty"))
+                desc_problems.append((domain, key, "ZH description empty"))
             if domain == "monsters":
+                zh_moves = zh_e.get("moves") or {}
                 for mk, mv in (entry.get("moves") or {}).items():
                     if not (mv.get("description") or "").strip():
                         desc_problems.append((domain, f"{key}.moves.{mk}",
                                               "move EN description empty"))
+                    zmv = zh_moves.get(mk)
+                    if isinstance(zmv, dict) and not (zmv.get("description") or "").strip():
+                        desc_problems.append((domain, f"{key}.moves.{mk}",
+                                              "move ZH description empty"))
             if domain == "events":
+                zh_opts = zh_e.get("options") or {}
                 for ok, ov in (entry.get("options") or {}).items():
                     if not (ov.get("description") or "").strip():
                         desc_problems.append((domain, f"{key}.options.{ok}",
                                               "option EN description empty"))
+                    zov = zh_opts.get(ok)
+                    if isinstance(zov, dict) and not (zov.get("description") or "").strip():
+                        desc_problems.append((domain, f"{key}.options.{ok}",
+                                              "option ZH description empty"))
 
     print("== live-id coverage ==")
     total = sum(len(live_ids.get(d) or []) for d in HARD_CENSUS_DOMAINS)
@@ -94,14 +103,10 @@ def run_check(all_en: dict, all_zh: dict, live_ids: dict) -> int:
             print(f"  ... {len(soft_misses) - 40} more")
 
     print("\n== entry counts (EN) ==")
-    needs_zh_report = []
     for domain in DOMAINS:
         entries = all_en.get(domain) or {}
         zh_entries = all_zh.get(domain) or {}
-        needs = [k for k, e in zh_entries.items() if e.get("needs_zh")]
-        needs_zh_report.extend((domain, k) for k in needs)
-        print(f"  {domain:<14} EN={len(entries):<5} ZH={len(zh_entries):<5} "
-              f"needs_zh={len(needs)}")
+        print(f"  {domain:<14} EN={len(entries):<5} ZH={len(zh_entries):<5}")
 
     print("\n== EN name CJK leakage ==")
     print(f"count: {len(cjk_name_problems)}")
@@ -109,20 +114,12 @@ def run_check(all_en: dict, all_zh: dict, live_ids: dict) -> int:
         print(f"  {domain:<14} {key:<40} name={name!r}")
 
     print("\n== description problems ==")
-    hard_desc = [p for p in desc_problems if not p[2].startswith("needs_zh:true")]
-    needs_zh_desc = [p for p in desc_problems if p[2].startswith("needs_zh:true")]
-    print(f"hard: {len(hard_desc)}; needs_zh flags: {len(needs_zh_desc)}")
-    for domain, key, msg in hard_desc[:60]:
+    print(f"hard: {len(desc_problems)}")
+    for domain, key, msg in desc_problems[:60]:
         print(f"  {domain:<14} {key:<48} {msg}")
-    if len(hard_desc) > 60:
-        print(f"  ... {len(hard_desc) - 60} more")
-    if needs_zh_report:
-        print("\n== needs_zh:true keys (ZH description falls back to EN) ==")
-        for domain, key in needs_zh_report[:80]:
-            print(f"  {domain:<14} {key}")
-        if len(needs_zh_report) > 80:
-            print(f"  ... {len(needs_zh_report) - 80} more")
+    if len(desc_problems) > 60:
+        print(f"  ... {len(desc_problems) - 60} more")
 
-    ok = not misses and not hard_desc and not cjk_name_problems
+    ok = not misses and not desc_problems and not cjk_name_problems
     print("\n--check:", "PASS" if ok else "FAIL")
     return 0 if ok else 1

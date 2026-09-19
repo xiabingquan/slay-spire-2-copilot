@@ -9,7 +9,6 @@
     "id": "ABYSSAL_BATHS",
     "kind": "event",
     "name": "深渊浴场",
-    "needs_zh": false,
     "options": {
       "ABYSSAL_BATHS.pages.ALL.options.EXIT_BATHS": {
         "aliases": [
@@ -22,11 +21,8 @@
         "id": "ABYSSAL_BATHS.pages.ALL.options.EXIT_BATHS",
         "kind": "event_option",
         "name": "Exit Baths",
-        "needs_zh": false,
         "page": "ALL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 ABYSSAL_BATHS 的选项 `EXIT_BATHS`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "ABYSSAL_BATHS.pages.ALL.options.LINGER": {
         "aliases": [
@@ -39,11 +35,8 @@
         "id": "ABYSSAL_BATHS.pages.ALL.options.LINGER",
         "kind": "event_option",
         "name": "Linger",
-        "needs_zh": false,
         "page": "ALL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 ABYSSAL_BATHS 的选项 `LINGER`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "ABYSSAL_BATHS.pages.INITIAL.options.ABSTAIN": {
         "aliases": [
@@ -56,11 +49,8 @@
         "id": "ABYSSAL_BATHS.pages.INITIAL.options.ABSTAIN",
         "kind": "event_option",
         "name": "Abstain",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 ABYSSAL_BATHS 的选项 `ABSTAIN`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "ABYSSAL_BATHS.pages.INITIAL.options.IMMERSE": {
         "aliases": [
@@ -73,15 +63,11 @@
         "id": "ABYSSAL_BATHS.pages.INITIAL.options.IMMERSE",
         "kind": "event_option",
         "name": "Immerse",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 ABYSSAL_BATHS 的选项 `IMMERSE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md; run-40 live fold 2026-09-18"
+    "play_notes": ""
   },
   "AMALGAMATOR": {
     "aliases": [
@@ -93,7 +79,6 @@
     "id": "AMALGAMATOR",
     "kind": "event",
     "name": "熔合者",
-    "needs_zh": false,
     "options": {
       "AMALGAMATOR.pages.INITIAL.options.COMBINE_DEFENDS": {
         "aliases": [
@@ -106,11 +91,8 @@
         "id": "AMALGAMATOR.pages.INITIAL.options.COMBINE_DEFENDS",
         "kind": "event_option",
         "name": "Combine Defends",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 AMALGAMATOR 的选项 `COMBINE_DEFENDS`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "AMALGAMATOR.pages.INITIAL.options.COMBINE_STRIKES": {
         "aliases": [
@@ -123,16 +105,11 @@
         "id": "AMALGAMATOR.pages.INITIAL.options.COMBINE_STRIKES",
         "kind": "event_option",
         "name": "Combine Strikes",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "移除 Strike 牌，加入 UltimateStrike；CombineDefends → 移除 Defend 牌，加入 UltimateDefend",
-        "zh_name": "Combine Strikes"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md; run-40 live fold 2026-09-18"
+    "play_notes": ""
   },
   "AROMA_OF_CHAOS": {
     "aliases": [
@@ -144,7 +121,6 @@
     "id": "AROMA_OF_CHAOS",
     "kind": "event",
     "name": "混沌芳香",
-    "needs_zh": false,
     "options": {
       "AROMA_OF_CHAOS.pages.INITIAL.options.LET_GO": {
         "aliases": [
@@ -157,12 +133,8 @@
         "id": "AROMA_OF_CHAOS.pages.INITIAL.options.LET_GO",
         "kind": "event_option",
         "name": "Let Go",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "自选 1 张牌库卡随机变形；MAINTAIN_CONTROL → 自选 1 张牌库卡升级",
-        "zh_name": "Let Go"
+        "play_notes": ""
       },
       "AROMA_OF_CHAOS.pages.INITIAL.options.MAINTAIN_CONTROL": {
         "aliases": [
@@ -175,15 +147,11 @@
         "id": "AROMA_OF_CHAOS.pages.INITIAL.options.MAINTAIN_CONTROL",
         "kind": "event_option",
         "name": "Maintain Control",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 AROMA_OF_CHAOS 的选项 `MAINTAIN_CONTROL`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "BATTLEWORN_DUMMY": {
     "aliases": [
@@ -195,7 +163,6 @@
     "id": "BATTLEWORN_DUMMY",
     "kind": "event",
     "name": "战痕累累的训练假人",
-    "needs_zh": false,
     "options": {
       "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING1": {
         "aliases": [
@@ -208,12 +175,8 @@
         "id": "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING1",
         "kind": "event_option",
         "name": "Setting1",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "1 瓶药水；Setting2 → 随机升级 2 张牌组卡；Setting3 → 1 件遗物（RelicFactory 队首）",
-        "zh_name": "Setting1"
+        "play_notes": ""
       },
       "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING2": {
         "aliases": [
@@ -226,11 +189,8 @@
         "id": "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING2",
         "kind": "event_option",
         "name": "Setting2",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 BATTLEWORN_DUMMY 的选项 `SETTING2`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING3": {
         "aliases": [
@@ -243,11 +203,8 @@
         "id": "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING3",
         "kind": "event_option",
         "name": "Setting3",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 BATTLEWORN_DUMMY 的选项 `SETTING3`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING_1": {
         "aliases": [
@@ -260,12 +217,8 @@
         "id": "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING_1",
         "kind": "event_option",
         "name": "Setting 1",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "1 瓶药水；Setting2 → 随机升级 2 张牌组卡；Setting3 → 1 件遗物（RelicFactory 队首）",
-        "zh_name": "Setting 1"
+        "play_notes": ""
       },
       "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING_2": {
         "aliases": [
@@ -278,11 +231,8 @@
         "id": "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING_2",
         "kind": "event_option",
         "name": "Setting 2",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 BATTLEWORN_DUMMY 的选项 `SETTING_2`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING_3": {
         "aliases": [
@@ -295,15 +245,11 @@
         "id": "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING_3",
         "kind": "event_option",
         "name": "Setting 3",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 BATTLEWORN_DUMMY 的选项 `SETTING_3`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "BRAIN_LEECH": {
     "aliases": [
@@ -315,7 +261,6 @@
     "id": "BRAIN_LEECH",
     "kind": "event",
     "name": "脑蛭",
-    "needs_zh": false,
     "options": {
       "BRAIN_LEECH.pages.INITIAL.options.RIP": {
         "aliases": [
@@ -328,11 +273,8 @@
         "id": "BRAIN_LEECH.pages.INITIAL.options.RIP",
         "kind": "event_option",
         "name": "Rip",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 BRAIN_LEECH 的选项 `RIP`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "BRAIN_LEECH.pages.INITIAL.options.SHARE_KNOWLEDGE": {
         "aliases": [
@@ -345,16 +287,11 @@
         "id": "BRAIN_LEECH.pages.INITIAL.options.SHARE_KNOWLEDGE",
         "kind": "event_option",
         "name": "Share Knowledge",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "经卡牌堆流程加牌；Rip → 受到 5 点不可格挡伤害，获得 1 次奖励（选卡界面提供 3 个选项，非 5 选 1）",
-        "zh_name": "Share Knowledge"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "BUGSLAYER": {
     "aliases": [
@@ -366,7 +303,6 @@
     "id": "BUGSLAYER",
     "kind": "event",
     "name": "害虫杀手",
-    "needs_zh": false,
     "options": {
       "BUGSLAYER.pages.INITIAL.options.EXTERMINATION": {
         "aliases": [
@@ -379,12 +315,8 @@
         "id": "BUGSLAYER.pages.INITIAL.options.EXTERMINATION",
         "kind": "event_option",
         "name": "Extermination",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "Exterminate 卡；Squash → Squash 卡",
-        "zh_name": "Extermination"
+        "play_notes": ""
       },
       "BUGSLAYER.pages.INITIAL.options.SQUASH": {
         "aliases": [
@@ -397,15 +329,11 @@
         "id": "BUGSLAYER.pages.INITIAL.options.SQUASH",
         "kind": "event_option",
         "name": "Squash",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 BUGSLAYER 的选项 `SQUASH`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "BYRDONIS_NEST": {
     "aliases": [
@@ -417,7 +345,6 @@
     "id": "BYRDONIS_NEST",
     "kind": "event",
     "name": "多尼斯异鸟巢",
-    "needs_zh": false,
     "options": {
       "BYRDONIS_NEST.pages.INITIAL.options.EAT": {
         "aliases": [
@@ -430,12 +357,8 @@
         "id": "BYRDONIS_NEST.pages.INITIAL.options.EAT",
         "kind": "event_option",
         "name": "Eat",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "+7 最大 HP；TAKE → 向牌库加入 ByrdonisEgg 卡",
-        "zh_name": "Eat"
+        "play_notes": ""
       },
       "BYRDONIS_NEST.pages.INITIAL.options.TAKE": {
         "aliases": [
@@ -448,15 +371,11 @@
         "id": "BYRDONIS_NEST.pages.INITIAL.options.TAKE",
         "kind": "event_option",
         "name": "Take",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 BYRDONIS_NEST 的选项 `TAKE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "COLORFUL_PHILOSOPHERS": {
     "aliases": [
@@ -468,10 +387,8 @@
     "id": "COLORFUL_PHILOSOPHERS",
     "kind": "event",
     "name": "色彩哲学家",
-    "needs_zh": false,
     "options": {},
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "COLOSSAL_FLOWER": {
     "aliases": [
@@ -483,7 +400,6 @@
     "id": "COLOSSAL_FLOWER",
     "kind": "event",
     "name": "巨大花卉",
-    "needs_zh": false,
     "options": {
       "COLOSSAL_FLOWER.pages.INITIAL.options.OBTAIN_POLLINOUS_CORE": {
         "aliases": [
@@ -496,16 +412,11 @@
         "id": "COLOSSAL_FLOWER.pages.INITIAL.options.OBTAIN_POLLINOUS_CORE",
         "kind": "event_option",
         "name": "Obtain Pollinous Core",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "PollinousCore 遗物；ReachDeeper 扣血后进入更深层奖励",
-        "zh_name": "Obtain Pollinous Core"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "CRYSTAL_SPHERE": {
     "aliases": [
@@ -517,7 +428,6 @@
     "id": "CRYSTAL_SPHERE",
     "kind": "event",
     "name": "水晶球",
-    "needs_zh": false,
     "options": {
       "CRYSTAL_SPHERE.pages.INITIAL.options.PAYMENT_PLAN": {
         "aliases": [
@@ -530,12 +440,8 @@
         "id": "CRYSTAL_SPHERE.pages.INITIAL.options.PAYMENT_PLAN",
         "kind": "event_option",
         "name": "Payment Plan",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "加入 Debt 诅咒（6 次分期变量）",
-        "zh_name": "Payment Plan"
+        "play_notes": ""
       },
       "CRYSTAL_SPHERE.pages.INITIAL.options.UNCOVER_FUTURE": {
         "aliases": [
@@ -548,16 +454,23 @@
         "id": "CRYSTAL_SPHERE.pages.INITIAL.options.UNCOVER_FUTURE",
         "kind": "event_option",
         "name": "Uncover Future",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "支付 50 金币，开启 CrystalSphereMinigame：11×11=121 格，DivinationCount=3 次点击；隐藏物品 CardReward/Curse/Gold/Potion/Relic 经 Rng 播种于四角及其横纵连线（两轮扩展）；揭示后于小游戏 proceed 时统一发放",
-        "zh_name": "Uncover Future"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
+  },
+  "DARV": {
+    "aliases": [
+      "DARV",
+      "先古移民"
+    ],
+    "curated": true,
+    "description": "Act2 章首赐福房。LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：选项 = 星盘（变化 3 张再升级）/ 空鸟笼（移除 2 张）/ 添水 Sozu（永久每回合 +1 能量；不再获得药水）。",
+    "id": "DARV",
+    "kind": "event",
+    "live_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：选 Sozu——灯笼+茶具+HappyFlower 叠加使 Boss T1 能量 7/4。",
+    "name": "达夫 / Act2 赐福房"
   },
   "DENSE_VEGETATION": {
     "aliases": [
@@ -569,7 +482,6 @@
     "id": "DENSE_VEGETATION",
     "kind": "event",
     "name": "茂密的植被",
-    "needs_zh": false,
     "options": {
       "DENSE_VEGETATION.pages.INITIAL.options.FIGHT": {
         "aliases": [
@@ -582,11 +494,8 @@
         "id": "DENSE_VEGETATION.pages.INITIAL.options.FIGHT",
         "kind": "event_option",
         "name": "Fight",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 DENSE_VEGETATION 的选项 `FIGHT`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "DENSE_VEGETATION.pages.INITIAL.options.REST": {
         "aliases": [
@@ -599,11 +508,8 @@
         "id": "DENSE_VEGETATION.pages.INITIAL.options.REST",
         "kind": "event_option",
         "name": "Rest",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 DENSE_VEGETATION 的选项 `REST`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "DENSE_VEGETATION.pages.INITIAL.options.TRUDGE_ON": {
         "aliases": [
@@ -616,12 +522,8 @@
         "id": "DENSE_VEGETATION.pages.INITIAL.options.TRUDGE_ON",
         "kind": "event_option",
         "name": "Trudge On",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "不可格挡伤害 + 金币；Rest → 模拟休息点回复；Fight → DenseVegetationEventEncounter",
-        "zh_name": "Trudge On"
+        "play_notes": ""
       },
       "DENSE_VEGETATION.pages.REST.options.FIGHT": {
         "aliases": [
@@ -634,15 +536,11 @@
         "id": "DENSE_VEGETATION.pages.REST.options.FIGHT",
         "kind": "event_option",
         "name": "Fight",
-        "needs_zh": false,
         "page": "REST",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 DENSE_VEGETATION 的选项 `FIGHT`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "DOLL_ROOM": {
     "aliases": [
@@ -655,7 +553,6 @@
     "kind": "event",
     "live_notes": "LIVE run-56：选项 = 随机(1 尊玩偶遗物) / 慢慢来(−5HP，2 选 1) / 仔细检查(−15HP，3 选 1)。选慢慢来 → 风之女。",
     "name": "玩偶室",
-    "needs_zh": false,
     "options": {
       "DOLL_ROOM.pages.INITIAL.options.CHOOSE_RANDOM": {
         "aliases": [
@@ -668,12 +565,8 @@
         "id": "DOLL_ROOM.pages.INITIAL.options.CHOOSE_RANDOM",
         "kind": "event_option",
         "name": "Choose Random",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "获得玩偶遗物；TakeSomeTime → 5 点不可格挡伤害；Examine → 15 点不可格挡伤害",
-        "zh_name": "Choose Random"
+        "play_notes": ""
       },
       "DOLL_ROOM.pages.INITIAL.options.EXAMINE": {
         "aliases": [
@@ -686,11 +579,8 @@
         "id": "DOLL_ROOM.pages.INITIAL.options.EXAMINE",
         "kind": "event_option",
         "name": "Examine",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 DOLL_ROOM 的选项 `EXAMINE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "DOLL_ROOM.pages.INITIAL.options.RANDOM": {
         "aliases": [
@@ -703,12 +593,8 @@
         "id": "DOLL_ROOM.pages.INITIAL.options.RANDOM",
         "kind": "event_option",
         "name": "Random",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "获得玩偶遗物；TakeSomeTime → 5 点不可格挡伤害；Examine → 15 点不可格挡伤害",
-        "zh_name": "Random"
+        "play_notes": ""
       },
       "DOLL_ROOM.pages.INITIAL.options.TAKE_SOME_TIME": {
         "aliases": [
@@ -721,15 +607,11 @@
         "id": "DOLL_ROOM.pages.INITIAL.options.TAKE_SOME_TIME",
         "kind": "event_option",
         "name": "Take Some Time",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 DOLL_ROOM 的选项 `TAKE_SOME_TIME`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "DOORS_OF_LIGHT_AND_DARK": {
     "aliases": [
@@ -741,7 +623,6 @@
     "id": "DOORS_OF_LIGHT_AND_DARK",
     "kind": "event",
     "name": "光与暗的门扉",
-    "needs_zh": false,
     "options": {
       "DOORS_OF_LIGHT_AND_DARK.pages.INITIAL.options.DARK": {
         "aliases": [
@@ -754,11 +635,8 @@
         "id": "DOORS_OF_LIGHT_AND_DARK.pages.INITIAL.options.DARK",
         "kind": "event_option",
         "name": "Dark",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 DOORS_OF_LIGHT_AND_DARK 的选项 `DARK`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "DOORS_OF_LIGHT_AND_DARK.pages.INITIAL.options.LIGHT": {
         "aliases": [
@@ -771,16 +649,11 @@
         "id": "DOORS_OF_LIGHT_AND_DARK.pages.INITIAL.options.LIGHT",
         "kind": "event_option",
         "name": "Light",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "升级 2 张牌；Dark → 移除 2 张牌",
-        "zh_name": "Light"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "DROWNING_BEACON": {
     "aliases": [
@@ -792,7 +665,6 @@
     "id": "DROWNING_BEACON",
     "kind": "event",
     "name": "淹水灯塔",
-    "needs_zh": false,
     "options": {
       "DROWNING_BEACON.pages.INITIAL.options.BOTTLE": {
         "aliases": [
@@ -805,12 +677,8 @@
         "id": "DROWNING_BEACON.pages.INITIAL.options.BOTTLE",
         "kind": "event_option",
         "name": "Bottle",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "经奖励获得 GlowwaterPotion；ClimbOption → 失去 13 最大 HP，获得 FresnelLens 遗物",
-        "zh_name": "Bottle"
+        "play_notes": ""
       },
       "DROWNING_BEACON.pages.INITIAL.options.BOTTLE_OPTION": {
         "aliases": [
@@ -823,12 +691,8 @@
         "id": "DROWNING_BEACON.pages.INITIAL.options.BOTTLE_OPTION",
         "kind": "event_option",
         "name": "Bottle Option",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "经奖励获得 GlowwaterPotion；ClimbOption → 失去 13 最大 HP，获得 FresnelLens 遗物",
-        "zh_name": "Bottle Option"
+        "play_notes": ""
       },
       "DROWNING_BEACON.pages.INITIAL.options.CLIMB": {
         "aliases": [
@@ -841,11 +705,8 @@
         "id": "DROWNING_BEACON.pages.INITIAL.options.CLIMB",
         "kind": "event_option",
         "name": "Climb",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 DROWNING_BEACON 的选项 `CLIMB`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "DROWNING_BEACON.pages.INITIAL.options.CLIMB_OPTION": {
         "aliases": [
@@ -858,15 +719,11 @@
         "id": "DROWNING_BEACON.pages.INITIAL.options.CLIMB_OPTION",
         "kind": "event_option",
         "name": "Climb Option",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 DROWNING_BEACON 的选项 `CLIMB_OPTION`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "ENDLESS_CONVEYOR": {
     "aliases": [
@@ -878,10 +735,8 @@
     "id": "ENDLESS_CONVEYOR",
     "kind": "event",
     "name": "无尽传送带",
-    "needs_zh": false,
     "options": {},
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "FAKE_MERCHANT": {
     "aliases": [
@@ -893,10 +748,8 @@
     "id": "FAKE_MERCHANT",
     "kind": "event",
     "name": "伪商人",
-    "needs_zh": false,
     "options": {},
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "FIELD_OF_MAN_SIZED_HOLES": {
     "aliases": [
@@ -908,7 +761,6 @@
     "id": "FIELD_OF_MAN_SIZED_HOLES",
     "kind": "event",
     "name": "人形洞穴之地",
-    "needs_zh": false,
     "options": {
       "FIELD_OF_MAN_SIZED_HOLES.pages.INITIAL.options.ENTER_YOUR_HOLE": {
         "aliases": [
@@ -921,11 +773,8 @@
         "id": "FIELD_OF_MAN_SIZED_HOLES.pages.INITIAL.options.ENTER_YOUR_HOLE",
         "kind": "event_option",
         "name": "Enter Your Hole",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 FIELD_OF_MAN_SIZED_HOLES 的选项 `ENTER_YOUR_HOLE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "FIELD_OF_MAN_SIZED_HOLES.pages.INITIAL.options.RESIST": {
         "aliases": [
@@ -938,16 +787,11 @@
         "id": "FIELD_OF_MAN_SIZED_HOLES.pages.INITIAL.options.RESIST",
         "kind": "event_option",
         "name": "Resist",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "移除卡牌 + 加入 2 张 Normality 诅咒；EnterYourHole → 对卡牌附魔 PerfectFit",
-        "zh_name": "Resist"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "GLOWING_WATER": {
     "acts": [
@@ -962,12 +806,9 @@
     "id": "GLOWING_WATER",
     "kind": "event",
     "name": "Drowning Beacon",
-    "needs_zh": false,
     "option_summary": "[{\"id\": \"BOTTLE\", \"title\": \"Bottle\", \"description\": \"Procure [aqua]Glowwater Potion[/aqua].\"}, {\"id\": \"CLIMB\", \"title\": \"Climb\", \"description\": \"Obtain [gold]Fresnel Lens[/gold]. Lose [red]13[/red] Max HP.\"}]",
     "options": {},
-    "play_notes": "",
-    "source": "codex-api:/events/DROWNING_BEACON",
-    "zh_description": "发光水（药水域条目为权威）。"
+    "play_notes": ""
   },
   "GRAVE_OF_THE_FORGOTTEN": {
     "aliases": [
@@ -979,7 +820,6 @@
     "id": "GRAVE_OF_THE_FORGOTTEN",
     "kind": "event",
     "name": "遗忘之墓",
-    "needs_zh": false,
     "options": {
       "GRAVE_OF_THE_FORGOTTEN.pages.INITIAL.options.ACCEPT": {
         "aliases": [
@@ -992,11 +832,8 @@
         "id": "GRAVE_OF_THE_FORGOTTEN.pages.INITIAL.options.ACCEPT",
         "kind": "event_option",
         "name": "Accept",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 GRAVE_OF_THE_FORGOTTEN 的选项 `ACCEPT`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "GRAVE_OF_THE_FORGOTTEN.pages.INITIAL.options.CONFRONT": {
         "aliases": [
@@ -1009,16 +846,11 @@
         "id": "GRAVE_OF_THE_FORGOTTEN.pages.INITIAL.options.CONFRONT",
         "kind": "event_option",
         "name": "Confront",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "加入 Decay 诅咒 + 附魔 SoulsPower；Accept → ForgottenSoul 遗物",
-        "zh_name": "Confront"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "HUNGRY_FOR_MUSHROOMS": {
     "aliases": [
@@ -1031,7 +863,6 @@
     "kind": "event",
     "live_notes": "LIVE run-56：选项 = 大蘑菇(+20MaxHP，T1 抽牌−2) / 芳香蘑菇(−15HP，随机升级 2 张)。选大蘑菇。",
     "name": "蘑菇饥渴",
-    "needs_zh": false,
     "options": {
       "HUNGRY_FOR_MUSHROOMS.pages.INITIAL.options.BIG_MUSHROOM": {
         "aliases": [
@@ -1044,12 +875,8 @@
         "id": "HUNGRY_FOR_MUSHROOMS.pages.INITIAL.options.BIG_MUSHROOM",
         "kind": "event_option",
         "name": "Big Mushroom",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "BigMushroom 遗物；FragrantMushroom → FragrantMushroom 遗物",
-        "zh_name": "Big Mushroom"
+        "play_notes": ""
       },
       "HUNGRY_FOR_MUSHROOMS.pages.INITIAL.options.FRAGRANT_MUSHROOM": {
         "aliases": [
@@ -1062,15 +889,11 @@
         "id": "HUNGRY_FOR_MUSHROOMS.pages.INITIAL.options.FRAGRANT_MUSHROOM",
         "kind": "event_option",
         "name": "Fragrant Mushroom",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 HUNGRY_FOR_MUSHROOMS 的选项 `FRAGRANT_MUSHROOM`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "INFESTED_AUTOMATON": {
     "aliases": [
@@ -1082,7 +905,6 @@
     "id": "INFESTED_AUTOMATON",
     "kind": "event",
     "name": "被寄生的自动机械",
-    "needs_zh": false,
     "options": {
       "INFESTED_AUTOMATON.pages.INITIAL.options.STUDY": {
         "aliases": [
@@ -1095,12 +917,8 @@
         "id": "INFESTED_AUTOMATON.pages.INITIAL.options.STUDY",
         "kind": "event_option",
         "name": "Study",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "向牌库添加 1 张角色池随机能力牌；TouchCore → 向牌库添加 1 张按能量费用过滤（decomp 对 `c.EnergyCost` 的委托）的角色池随机卡",
-        "zh_name": "Study"
+        "play_notes": ""
       },
       "INFESTED_AUTOMATON.pages.INITIAL.options.TOUCH_CORE": {
         "aliases": [
@@ -1113,15 +931,11 @@
         "id": "INFESTED_AUTOMATON.pages.INITIAL.options.TOUCH_CORE",
         "kind": "event_option",
         "name": "Touch Core",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 INFESTED_AUTOMATON 的选项 `TOUCH_CORE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "JUNGLE_MAZE_ADVENTURE": {
     "aliases": [
@@ -1133,7 +947,6 @@
     "id": "JUNGLE_MAZE_ADVENTURE",
     "kind": "event",
     "name": "丛林迷宫奇遇",
-    "needs_zh": false,
     "options": {
       "JUNGLE_MAZE_ADVENTURE.pages.INITIAL.options.JOIN_FORCES": {
         "aliases": [
@@ -1146,11 +959,8 @@
         "id": "JUNGLE_MAZE_ADVENTURE.pages.INITIAL.options.JOIN_FORCES",
         "kind": "event_option",
         "name": "Join Forces",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 JUNGLE_MAZE_ADVENTURE 的选项 `JOIN_FORCES`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "JUNGLE_MAZE_ADVENTURE.pages.INITIAL.options.SOLO_QUEST": {
         "aliases": [
@@ -1163,16 +973,11 @@
         "id": "JUNGLE_MAZE_ADVENTURE.pages.INITIAL.options.SOLO_QUEST",
         "kind": "event_option",
         "name": "Solo Quest",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "受到 18 点不可格挡、无来源伤害，获得 150 ± rng −15..+15 金币（135–165）；JOIN_FORCES → 获得 50 ± rng −15..+15 金币（35–65），不掉血",
-        "zh_name": "Solo Quest"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "LOST_WISP": {
     "aliases": [
@@ -1184,7 +989,6 @@
     "id": "LOST_WISP",
     "kind": "event",
     "name": "迷失鬼火",
-    "needs_zh": false,
     "options": {
       "LOST_WISP.pages.INITIAL.options.CLAIM": {
         "aliases": [
@@ -1197,11 +1001,8 @@
         "id": "LOST_WISP.pages.INITIAL.options.CLAIM",
         "kind": "event_option",
         "name": "Claim",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 LOST_WISP 的选项 `CLAIM`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "LOST_WISP.pages.INITIAL.options.SEARCH": {
         "aliases": [
@@ -1214,16 +1015,11 @@
         "id": "LOST_WISP.pages.INITIAL.options.SEARCH",
         "kind": "event_option",
         "name": "Search",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "+60 金币；Claim → 加入 Decay 诅咒 + LostWisp 遗物",
-        "zh_name": "Search"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "LUMINOUS_CHOIR": {
     "aliases": [
@@ -1235,7 +1031,6 @@
     "id": "LUMINOUS_CHOIR",
     "kind": "event",
     "name": "冷光合唱团",
-    "needs_zh": false,
     "options": {
       "LUMINOUS_CHOIR.pages.INITIAL.options.OFFER_TRIBUTE": {
         "aliases": [
@@ -1248,11 +1043,8 @@
         "id": "LUMINOUS_CHOIR.pages.INITIAL.options.OFFER_TRIBUTE",
         "kind": "event_option",
         "name": "Offer Tribute",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 LUMINOUS_CHOIR 的选项 `OFFER_TRIBUTE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "LUMINOUS_CHOIR.pages.INITIAL.options.REACH_INTO_THE_FLESH": {
         "aliases": [
@@ -1265,16 +1057,11 @@
         "id": "LUMINOUS_CHOIR.pages.INITIAL.options.REACH_INTO_THE_FLESH",
         "kind": "event_option",
         "name": "Reach Into The Flesh",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "移除自选 2 张牌库卡，向牌库加入诅咒 SporeMind（孢子之心：1 费，诅咒，带消耗关键词）；OFFER_TRIBUTE → 支付花费，获得遗物队列最前端的下一件遗物（金币不足则锁定）",
-        "zh_name": "Reach Into The Flesh"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "MORPHIC_GROVE": {
     "aliases": [
@@ -1286,7 +1073,6 @@
     "id": "MORPHIC_GROVE",
     "kind": "event",
     "name": "变形灵林谷",
-    "needs_zh": false,
     "options": {
       "MORPHIC_GROVE.pages.INITIAL.options.GROUP": {
         "aliases": [
@@ -1299,12 +1085,8 @@
         "id": "MORPHIC_GROVE.pages.INITIAL.options.GROUP",
         "kind": "event_option",
         "name": "Group",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "失去全部金币（被窃），自选 2 张牌库卡各自随机变形；LONER → +5 最大 HP",
-        "zh_name": "Group"
+        "play_notes": ""
       },
       "MORPHIC_GROVE.pages.INITIAL.options.LONER": {
         "aliases": [
@@ -1317,15 +1099,11 @@
         "id": "MORPHIC_GROVE.pages.INITIAL.options.LONER",
         "kind": "event_option",
         "name": "Loner",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 MORPHIC_GROVE 的选项 `LONER`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "NEOW": {
     "aliases": [
@@ -1338,7 +1116,6 @@
     "kind": "event",
     "live_notes": "LIVE run-56：选项 = 金色珍珠(150g) / 轰鸣海螺(精英抽2+1能) / 华美发束(失金换 Glam 附魔)。选轰鸣海螺——引擎价值>金币。 LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：选项 = 卷轴箱 / 金色珍珠(150g) / 巨大扭蛋（2 遗物+打击防御稀释；references 标注诅咒代价池）。选金色珍珠——供养 Act1 (3,0) 商店包（沉淀 275g）。",
     "name": "尼奥",
-    "needs_zh": false,
     "options": {
       "NEOW.pages.INITIAL.options.ARCANE_SCROLL": {
         "aliases": [
@@ -1351,11 +1128,8 @@
         "id": "NEOW.pages.INITIAL.options.ARCANE_SCROLL",
         "kind": "event_option",
         "name": "Arcane Scroll",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `ARCANE_SCROLL`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.BOOMING_CONCH": {
         "aliases": [
@@ -1368,11 +1142,8 @@
         "id": "NEOW.pages.INITIAL.options.BOOMING_CONCH",
         "kind": "event_option",
         "name": "Booming Conch",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `BOOMING_CONCH`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.CURSED_PEARL": {
         "aliases": [
@@ -1385,11 +1156,8 @@
         "id": "NEOW.pages.INITIAL.options.CURSED_PEARL",
         "kind": "event_option",
         "name": "Cursed Pearl",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `CURSED_PEARL`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.FISHING_ROD": {
         "aliases": [
@@ -1402,11 +1170,8 @@
         "id": "NEOW.pages.INITIAL.options.FISHING_ROD",
         "kind": "event_option",
         "name": "Fishing Rod",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `FISHING_ROD`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.GOLDEN_PEARL": {
         "aliases": [
@@ -1419,11 +1184,8 @@
         "id": "NEOW.pages.INITIAL.options.GOLDEN_PEARL",
         "kind": "event_option",
         "name": "Golden Pearl",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `GOLDEN_PEARL`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.HEFTY_TABLET": {
         "aliases": [
@@ -1436,11 +1198,8 @@
         "id": "NEOW.pages.INITIAL.options.HEFTY_TABLET",
         "kind": "event_option",
         "name": "Hefty Tablet",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `HEFTY_TABLET`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.KALEIDOSCOPE": {
         "aliases": [
@@ -1453,11 +1212,8 @@
         "id": "NEOW.pages.INITIAL.options.KALEIDOSCOPE",
         "kind": "event_option",
         "name": "Kaleidoscope",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `KALEIDOSCOPE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.LARGE_CAPSULE": {
         "aliases": [
@@ -1470,11 +1226,8 @@
         "id": "NEOW.pages.INITIAL.options.LARGE_CAPSULE",
         "kind": "event_option",
         "name": "Large Capsule",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `LARGE_CAPSULE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.LAVA_ROCK": {
         "aliases": [
@@ -1487,11 +1240,8 @@
         "id": "NEOW.pages.INITIAL.options.LAVA_ROCK",
         "kind": "event_option",
         "name": "Lava Rock",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `LAVA_ROCK`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.LEAD_PAPERWEIGHT": {
         "aliases": [
@@ -1504,11 +1254,8 @@
         "id": "NEOW.pages.INITIAL.options.LEAD_PAPERWEIGHT",
         "kind": "event_option",
         "name": "Lead Paperweight",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `LEAD_PAPERWEIGHT`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.LEAFY_POULTICE": {
         "aliases": [
@@ -1521,11 +1268,8 @@
         "id": "NEOW.pages.INITIAL.options.LEAFY_POULTICE",
         "kind": "event_option",
         "name": "Leafy Poultice",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `LEAFY_POULTICE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.LOST_COFFER": {
         "aliases": [
@@ -1538,11 +1282,8 @@
         "id": "NEOW.pages.INITIAL.options.LOST_COFFER",
         "kind": "event_option",
         "name": "Lost Coffer",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `LOST_COFFER`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.NEOWS_BONES": {
         "aliases": [
@@ -1555,11 +1296,8 @@
         "id": "NEOW.pages.INITIAL.options.NEOWS_BONES",
         "kind": "event_option",
         "name": "Neows Bones",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `NEOWS_BONES`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.NEOWS_TALISMAN": {
         "aliases": [
@@ -1572,11 +1310,8 @@
         "id": "NEOW.pages.INITIAL.options.NEOWS_TALISMAN",
         "kind": "event_option",
         "name": "Neows Talisman",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `NEOWS_TALISMAN`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.NEOWS_TORMENT": {
         "aliases": [
@@ -1589,11 +1324,8 @@
         "id": "NEOW.pages.INITIAL.options.NEOWS_TORMENT",
         "kind": "event_option",
         "name": "Neows Torment",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `NEOWS_TORMENT`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.NEW_LEAF": {
         "aliases": [
@@ -1606,11 +1338,8 @@
         "id": "NEOW.pages.INITIAL.options.NEW_LEAF",
         "kind": "event_option",
         "name": "New Leaf",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `NEW_LEAF`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.NUTRITIOUS_OYSTER": {
         "aliases": [
@@ -1623,11 +1352,8 @@
         "id": "NEOW.pages.INITIAL.options.NUTRITIOUS_OYSTER",
         "kind": "event_option",
         "name": "Nutritious Oyster",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `NUTRITIOUS_OYSTER`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.PHIAL_HOLSTER": {
         "aliases": [
@@ -1640,11 +1366,8 @@
         "id": "NEOW.pages.INITIAL.options.PHIAL_HOLSTER",
         "kind": "event_option",
         "name": "Phial Holster",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `PHIAL_HOLSTER`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.POMANDER": {
         "aliases": [
@@ -1657,11 +1380,8 @@
         "id": "NEOW.pages.INITIAL.options.POMANDER",
         "kind": "event_option",
         "name": "Pomander",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `POMANDER`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.PRECARIOUS_SHEARS": {
         "aliases": [
@@ -1674,11 +1394,8 @@
         "id": "NEOW.pages.INITIAL.options.PRECARIOUS_SHEARS",
         "kind": "event_option",
         "name": "Precarious Shears",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `PRECARIOUS_SHEARS`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.PRECISE_SCISSORS": {
         "aliases": [
@@ -1691,11 +1408,8 @@
         "id": "NEOW.pages.INITIAL.options.PRECISE_SCISSORS",
         "kind": "event_option",
         "name": "Precise Scissors",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `PRECISE_SCISSORS`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.SCROLL_BOXES": {
         "aliases": [
@@ -1708,11 +1422,8 @@
         "id": "NEOW.pages.INITIAL.options.SCROLL_BOXES",
         "kind": "event_option",
         "name": "Scroll Boxes",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `SCROLL_BOXES`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.SILKEN_TRESS": {
         "aliases": [
@@ -1725,11 +1436,8 @@
         "id": "NEOW.pages.INITIAL.options.SILKEN_TRESS",
         "kind": "event_option",
         "name": "Silken Tress",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `SILKEN_TRESS`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.SILVER_CRUCIBLE": {
         "aliases": [
@@ -1742,11 +1450,8 @@
         "id": "NEOW.pages.INITIAL.options.SILVER_CRUCIBLE",
         "kind": "event_option",
         "name": "Silver Crucible",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `SILVER_CRUCIBLE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.SMALL_CAPSULE": {
         "aliases": [
@@ -1759,11 +1464,8 @@
         "id": "NEOW.pages.INITIAL.options.SMALL_CAPSULE",
         "kind": "event_option",
         "name": "Small Capsule",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `SMALL_CAPSULE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.STONE_HUMIDIFIER": {
         "aliases": [
@@ -1776,11 +1478,8 @@
         "id": "NEOW.pages.INITIAL.options.STONE_HUMIDIFIER",
         "kind": "event_option",
         "name": "Stone Humidifier",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `STONE_HUMIDIFIER`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "NEOW.pages.INITIAL.options.WINGED_BOOTS": {
         "aliases": [
@@ -1793,23 +1492,21 @@
         "id": "NEOW.pages.INITIAL.options.WINGED_BOOTS",
         "kind": "event_option",
         "name": "Winged Boots",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NEOW 的选项 `WINGED_BOOTS`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "NONUPEIPE": {
+    "aliases": [
+      "Nonupeipe"
+    ],
     "curated": true,
     "description": "Act3 赐福房事件（章首 Ancient）：钻石头冠（每回合≤2张出牌敌伤害减半）vs 艳丽围巾（每回合第5张免费）vs 皮草大衣（标记7场战斗敌1HP）。run-46 live：选皮草大衣——中血线 Act3 入场时 7 场近免战 > 条件防御 > 牌引擎延伸（期望值排序）。详见 FUR_COAT 遗物条目。",
     "id": "NONUPEIPE",
     "kind": "event",
     "name": "诺努佩佩",
-    "needs_zh": false,
     "options": {
       "NONUPEIPE.pages.INITIAL.options.BRILLIANT_SCARF": {
         "aliases": [
@@ -1822,11 +1519,8 @@
         "id": "NONUPEIPE.pages.INITIAL.options.BRILLIANT_SCARF",
         "kind": "event_option",
         "name": "Brilliant Scarf",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NONUPEIPE 的选项 `BRILLIANT_SCARF`——events.md 未解码逐项绑定；以 live 事件屏为准。"
+        "play_notes": ""
       },
       "NONUPEIPE.pages.INITIAL.options.FUR_COAT": {
         "aliases": [
@@ -1839,11 +1533,8 @@
         "id": "NONUPEIPE.pages.INITIAL.options.FUR_COAT",
         "kind": "event_option",
         "name": "Fur Coat",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NONUPEIPE 的选项 `FUR_COAT`——events.md 未解码逐项绑定；以 live 事件屏为准。"
+        "play_notes": ""
       },
       "NONUPEIPE.pages.INITIAL.options.GLITTER": {
         "aliases": [
@@ -1856,11 +1547,8 @@
         "id": "NONUPEIPE.pages.INITIAL.options.GLITTER",
         "kind": "event_option",
         "name": "Glitter",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NONUPEIPE 的选项 `GLITTER`——events.md 未解码逐项绑定；以 live 事件屏为准。"
+        "play_notes": ""
       },
       "NONUPEIPE.pages.INITIAL.options.JEWELRY_BOX": {
         "aliases": [
@@ -1873,11 +1561,8 @@
         "id": "NONUPEIPE.pages.INITIAL.options.JEWELRY_BOX",
         "kind": "event_option",
         "name": "Jewelry Box",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NONUPEIPE 的选项 `JEWELRY_BOX`——events.md 未解码逐项绑定；以 live 事件屏为准。"
+        "play_notes": ""
       },
       "NONUPEIPE.pages.INITIAL.options.LOOMING_FRUIT": {
         "aliases": [
@@ -1890,15 +1575,11 @@
         "id": "NONUPEIPE.pages.INITIAL.options.LOOMING_FRUIT",
         "kind": "event_option",
         "name": "Looming Fruit",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 NONUPEIPE 的选项 `LOOMING_FRUIT`——events.md 未解码逐项绑定；以 live 事件屏为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "run-46 live：选皮草大衣；中血线 Act3 入场的期望值排序记录。",
-    "source": "curated:events.md ancient options + census"
+    "play_notes": "run-46 live：选皮草大衣；中血线 Act3 入场的期望值排序记录。"
   },
   "OROBAS": {
     "aliases": [
@@ -1910,7 +1591,6 @@
     "id": "OROBAS",
     "kind": "event",
     "name": "欧洛巴斯",
-    "needs_zh": false,
     "options": {
       "OROBAS.pages.INITIAL.options.DRIFTWOOD": {
         "aliases": [
@@ -1923,11 +1603,8 @@
         "id": "OROBAS.pages.INITIAL.options.DRIFTWOOD",
         "kind": "event_option",
         "name": "Driftwood",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 OROBAS 的选项 `DRIFTWOOD`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "OROBAS.pages.INITIAL.options.ELECTRIC_SHRYMP": {
         "aliases": [
@@ -1940,11 +1617,8 @@
         "id": "OROBAS.pages.INITIAL.options.ELECTRIC_SHRYMP",
         "kind": "event_option",
         "name": "Electric Shrymp",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 OROBAS 的选项 `ELECTRIC_SHRYMP`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "OROBAS.pages.INITIAL.options.GLASS_EYE": {
         "aliases": [
@@ -1958,9 +1632,7 @@
         "kind": "event_option",
         "name": "玻璃眼",
         "page": "INITIAL",
-        "play_notes": "run-39：全池解码列出十个选项中的 GLASS_EYE；以 Act2 HP 经济理由改选欧洛巴斯之触（黑暗之血每战回12 当局 live 确认）。",
-        "source": "md:events.md + run-39 全池解码",
-        "zh_description": "从本职业卡池随机获得 2 普通 + 2 罕见 + 1 稀有卡牌（欧洛巴斯全池解码，run-39）。灌牌类选项 — 稀释代价高；run-39 改选欧洛巴斯之触（初始遗物→远古版，战士燃血→黑暗之血每战回12）。"
+        "play_notes": "run-39：全池解码列出十个选项中的 GLASS_EYE；以 Act2 HP 经济理由改选欧洛巴斯之触（黑暗之血每战回12 当局 live 确认）。"
       },
       "OROBAS.pages.INITIAL.options.RADIANT_PEARL": {
         "aliases": [
@@ -1973,11 +1645,8 @@
         "id": "OROBAS.pages.INITIAL.options.RADIANT_PEARL",
         "kind": "event_option",
         "name": "Radiant Pearl",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 OROBAS 的选项 `RADIANT_PEARL`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "OROBAS.pages.INITIAL.options.SAND_CASTLE": {
         "aliases": [
@@ -1990,11 +1659,8 @@
         "id": "OROBAS.pages.INITIAL.options.SAND_CASTLE",
         "kind": "event_option",
         "name": "Sand Castle",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 OROBAS 的选项 `SAND_CASTLE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "OROBAS.pages.INITIAL.options.TOUCH_OF_OROBAS": {
         "aliases": [
@@ -2007,15 +1673,11 @@
         "id": "OROBAS.pages.INITIAL.options.TOUCH_OF_OROBAS",
         "kind": "event_option",
         "name": "Touch Of Orobas",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 OROBAS 的选项 `TOUCH_OF_OROBAS`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "run-39 live：Act2 赐福房选 TOUCH_OF_OROBAS（燃血→黑暗之血 每战回12）——档案「Act2 HP 经济主力」claim live 确认（此后每战 +12）。局中所见选项：GLASS_EYE / RADIANT_PEARL / TOUCH_OF_OROBAS。章切换回满血同屏兑现。",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": "run-39 live：Act2 赐福房选 TOUCH_OF_OROBAS（燃血→黑暗之血 每战回12）——档案「Act2 HP 经济主力」claim live 确认（此后每战 +12）。局中所见选项：GLASS_EYE / RADIANT_PEARL / TOUCH_OF_OROBAS。章切换回满血同屏兑现。"
   },
   "PAEL": {
     "aliases": [
@@ -2027,7 +1689,6 @@
     "id": "PAEL",
     "kind": "event",
     "name": "佩尔",
-    "needs_zh": false,
     "options": {
       "PAEL.pages.INITIAL.options.PAELS_BLOOD": {
         "aliases": [
@@ -2040,11 +1701,8 @@
         "id": "PAEL.pages.INITIAL.options.PAELS_BLOOD",
         "kind": "event_option",
         "name": "Paels Blood",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 PAEL 的选项 `PAELS_BLOOD`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "PAEL.pages.INITIAL.options.PAELS_CLAW": {
         "aliases": [
@@ -2057,11 +1715,8 @@
         "id": "PAEL.pages.INITIAL.options.PAELS_CLAW",
         "kind": "event_option",
         "name": "Paels Claw",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 PAEL 的选项 `PAELS_CLAW`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "PAEL.pages.INITIAL.options.PAELS_EYE": {
         "aliases": [
@@ -2074,11 +1729,8 @@
         "id": "PAEL.pages.INITIAL.options.PAELS_EYE",
         "kind": "event_option",
         "name": "Paels Eye",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 PAEL 的选项 `PAELS_EYE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "PAEL.pages.INITIAL.options.PAELS_FLESH": {
         "aliases": [
@@ -2091,11 +1743,8 @@
         "id": "PAEL.pages.INITIAL.options.PAELS_FLESH",
         "kind": "event_option",
         "name": "Paels Flesh",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 PAEL 的选项 `PAELS_FLESH`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "PAEL.pages.INITIAL.options.PAELS_HORN": {
         "aliases": [
@@ -2108,11 +1757,8 @@
         "id": "PAEL.pages.INITIAL.options.PAELS_HORN",
         "kind": "event_option",
         "name": "Paels Horn",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 PAEL 的选项 `PAELS_HORN`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "PAEL.pages.INITIAL.options.PAELS_LEGION": {
         "aliases": [
@@ -2125,11 +1771,8 @@
         "id": "PAEL.pages.INITIAL.options.PAELS_LEGION",
         "kind": "event_option",
         "name": "Paels Legion",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 PAEL 的选项 `PAELS_LEGION`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "PAEL.pages.INITIAL.options.PAELS_TEARS": {
         "aliases": [
@@ -2142,11 +1785,8 @@
         "id": "PAEL.pages.INITIAL.options.PAELS_TEARS",
         "kind": "event_option",
         "name": "Paels Tears",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 PAEL 的选项 `PAELS_TEARS`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "PAEL.pages.INITIAL.options.PAELS_TOOTH": {
         "aliases": [
@@ -2159,11 +1799,8 @@
         "id": "PAEL.pages.INITIAL.options.PAELS_TOOTH",
         "kind": "event_option",
         "name": "Paels Tooth",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 PAEL 的选项 `PAELS_TOOTH`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "PAEL.pages.INITIAL.options.PAELS_WING": {
         "aliases": [
@@ -2176,15 +1813,11 @@
         "id": "PAEL.pages.INITIAL.options.PAELS_WING",
         "kind": "event_option",
         "name": "Paels Wing",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 PAEL 的选项 `PAELS_WING`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "POTION_COURIER": {
     "aliases": [
@@ -2197,31 +1830,23 @@
     "id": "POTION_COURIER",
     "kind": "event",
     "name": "药水信使",
-    "needs_zh": false,
     "options": {
       "POTION_COURIER.pages.INITIAL.options.GRAB_POTIONS": {
         "curated": true,
         "description": "Gain 3x Foul Potion.",
         "kind": "event_option",
         "name": "Grab Potions",
-        "needs_zh": false,
-        "page": "INITIAL",
-        "zh_description": "获得3瓶污浊药水。",
-        "zh_name": "拿走这批药水"
+        "page": "INITIAL"
       },
       "POTION_COURIER.pages.INITIAL.options.RANSACK": {
         "curated": true,
         "description": "Gain 1 random rare potion (claim on the rewards screen!).",
         "kind": "event_option",
         "name": "Ransack",
-        "needs_zh": false,
-        "page": "INITIAL",
-        "zh_description": "获得1瓶随机罕见药水（务必在奖励屏领取！）。",
-        "zh_name": "洗劫"
+        "page": "INITIAL"
       }
     },
-    "play_notes": "对局42/43 live",
-    "source": "对局42/43 live"
+    "play_notes": "对局42/43 live"
   },
   "PROCEED": {
     "aliases": [
@@ -2234,10 +1859,8 @@
     "id": "PROCEED",
     "kind": "event_option",
     "name": "继续",
-    "needs_zh": false,
     "page": null,
-    "play_notes": "",
-    "source": "generator:synthesized; census:live_ids.json"
+    "play_notes": ""
   },
   "PUNCH_OFF": {
     "aliases": [
@@ -2249,7 +1872,6 @@
     "id": "PUNCH_OFF",
     "kind": "event",
     "name": "重拳出击",
-    "needs_zh": false,
     "options": {
       "PUNCH_OFF.pages.INITIAL.options.ELITE": {
         "aliases": [
@@ -2262,11 +1884,8 @@
         "id": "PUNCH_OFF.pages.INITIAL.options.ELITE",
         "kind": "event_option",
         "name": "Elite",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 PUNCH_OFF 的选项 `ELITE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "PUNCH_OFF.pages.INITIAL.options.I_CAN_TAKE_THEM": {
         "aliases": [
@@ -2279,11 +1898,8 @@
         "id": "PUNCH_OFF.pages.INITIAL.options.I_CAN_TAKE_THEM",
         "kind": "event_option",
         "name": "I Can Take Them",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 PUNCH_OFF 的选项 `I_CAN_TAKE_THEM`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "PUNCH_OFF.pages.INITIAL.options.NAB": {
         "aliases": [
@@ -2296,12 +1912,8 @@
         "id": "PUNCH_OFF.pages.INITIAL.options.NAB",
         "kind": "event_option",
         "name": "Nab",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "加入 Injury 诅咒 + 奖励；TakeThem → 战斗 PunchOffEventEncounter",
-        "zh_name": "Nab"
+        "play_notes": ""
       },
       "PUNCH_OFF.pages.INITIAL.options.TAKE_THEM": {
         "aliases": [
@@ -2314,15 +1926,11 @@
         "id": "PUNCH_OFF.pages.INITIAL.options.TAKE_THEM",
         "kind": "event_option",
         "name": "Take Them",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 PUNCH_OFF 的选项 `TAKE_THEM`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "RANWID_THE_ELDER": {
     "aliases": [
@@ -2334,7 +1942,6 @@
     "id": "RANWID_THE_ELDER",
     "kind": "event",
     "name": "长者兰伟德",
-    "needs_zh": false,
     "options": {
       "RANWID_THE_ELDER.pages.INITIAL.options.GIVE_GOLD": {
         "aliases": [
@@ -2347,12 +1954,8 @@
         "id": "RANWID_THE_ELDER.pages.INITIAL.options.GIVE_GOLD",
         "kind": "event_option",
         "name": "Give Gold",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "支付 100 金币，获得遗物；GivePotion → 给予药水换遗物；GiveRelic → 移除一件遗物，获得另一件",
-        "zh_name": "Give Gold"
+        "play_notes": ""
       },
       "RANWID_THE_ELDER.pages.INITIAL.options.GIVE_POTION": {
         "aliases": [
@@ -2365,11 +1968,8 @@
         "id": "RANWID_THE_ELDER.pages.INITIAL.options.GIVE_POTION",
         "kind": "event_option",
         "name": "Give Potion",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 RANWID_THE_ELDER 的选项 `GIVE_POTION`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "RANWID_THE_ELDER.pages.INITIAL.options.GIVE_RELIC": {
         "aliases": [
@@ -2382,11 +1982,8 @@
         "id": "RANWID_THE_ELDER.pages.INITIAL.options.GIVE_RELIC",
         "kind": "event_option",
         "name": "Give Relic",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 RANWID_THE_ELDER 的选项 `GIVE_RELIC`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "RANWID_THE_ELDER.pages.INITIAL.options.GOLD": {
         "aliases": [
@@ -2399,12 +1996,8 @@
         "id": "RANWID_THE_ELDER.pages.INITIAL.options.GOLD",
         "kind": "event_option",
         "name": "Gold",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "支付 100 金币，获得遗物；GivePotion → 给予药水换遗物；GiveRelic → 移除一件遗物，获得另一件",
-        "zh_name": "Gold"
+        "play_notes": ""
       },
       "RANWID_THE_ELDER.pages.INITIAL.options.POTION": {
         "aliases": [
@@ -2417,11 +2010,8 @@
         "id": "RANWID_THE_ELDER.pages.INITIAL.options.POTION",
         "kind": "event_option",
         "name": "Potion",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 RANWID_THE_ELDER 的选项 `POTION`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "RANWID_THE_ELDER.pages.INITIAL.options.RELIC": {
         "aliases": [
@@ -2434,15 +2024,11 @@
         "id": "RANWID_THE_ELDER.pages.INITIAL.options.RELIC",
         "kind": "event_option",
         "name": "Relic",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 RANWID_THE_ELDER 的选项 `RELIC`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "REFLECTIONS": {
     "aliases": [
@@ -2454,7 +2040,6 @@
     "id": "REFLECTIONS",
     "kind": "event",
     "name": "镜中倒影",
-    "needs_zh": false,
     "options": {
       "REFLECTIONS.pages.INITIAL.options.SHATTER": {
         "aliases": [
@@ -2467,11 +2052,8 @@
         "id": "REFLECTIONS.pages.INITIAL.options.SHATTER",
         "kind": "event_option",
         "name": "Shatter",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 REFLECTIONS 的选项 `SHATTER`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "REFLECTIONS.pages.INITIAL.options.TOUCH_A_MIRROR": {
         "aliases": [
@@ -2484,16 +2066,11 @@
         "id": "REFLECTIONS.pages.INITIAL.options.TOUCH_A_MIRROR",
         "kind": "event_option",
         "name": "Touch A Mirror",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "对一张牌降级再升级；Shatter → 加牌 + BadLuck 诅咒",
-        "zh_name": "Touch A Mirror"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "RELIC_TRADER": {
     "aliases": [
@@ -2505,7 +2082,6 @@
     "id": "RELIC_TRADER",
     "kind": "event",
     "name": "遗物交换商",
-    "needs_zh": false,
     "options": {
       "RELIC_TRADER.pages.INITIAL.options.BOTTOM": {
         "aliases": [
@@ -2518,16 +2094,11 @@
         "id": "RELIC_TRADER.pages.INITIAL.options.BOTTOM",
         "kind": "event_option",
         "name": "Bottom",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "交易（移除持有的该槽遗物，获得新的该槽遗物）",
-        "zh_name": "Bottom"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "ROOM_FULL_OF_CHEESE": {
     "aliases": [
@@ -2539,7 +2110,6 @@
     "id": "ROOM_FULL_OF_CHEESE",
     "kind": "event",
     "name": "满屋芝士",
-    "needs_zh": false,
     "options": {
       "ROOM_FULL_OF_CHEESE.pages.INITIAL.options.GORGE": {
         "aliases": [
@@ -2552,12 +2122,8 @@
         "id": "ROOM_FULL_OF_CHEESE.pages.INITIAL.options.GORGE",
         "kind": "event_option",
         "name": "Gorge",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "加牌；Search → 受到 14 点不可格挡伤害，获得 ChosenCheese 遗物",
-        "zh_name": "Gorge"
+        "play_notes": ""
       },
       "ROOM_FULL_OF_CHEESE.pages.INITIAL.options.SEARCH": {
         "aliases": [
@@ -2570,15 +2136,11 @@
         "id": "ROOM_FULL_OF_CHEESE.pages.INITIAL.options.SEARCH",
         "kind": "event_option",
         "name": "Search",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 ROOM_FULL_OF_CHEESE 的选项 `SEARCH`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md; run-40 live fold 2026-09-18"
+    "play_notes": ""
   },
   "ROUND_TEA_PARTY": {
     "aliases": [
@@ -2590,7 +2152,6 @@
     "id": "ROUND_TEA_PARTY",
     "kind": "event",
     "name": "圆桌茶会",
-    "needs_zh": false,
     "options": {
       "ROUND_TEA_PARTY.pages.INITIAL.options.ENJOY_TEA": {
         "aliases": [
@@ -2603,12 +2164,8 @@
         "id": "ROUND_TEA_PARTY.pages.INITIAL.options.ENJOY_TEA",
         "kind": "event_option",
         "name": "Enjoy Tea",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "RoyalPoison 遗物 + 回复；PickFight → 11 点不可格挡伤害 + RoyalPoison",
-        "zh_name": "Enjoy Tea"
+        "play_notes": ""
       },
       "ROUND_TEA_PARTY.pages.INITIAL.options.PICK_FIGHT": {
         "aliases": [
@@ -2621,15 +2178,11 @@
         "id": "ROUND_TEA_PARTY.pages.INITIAL.options.PICK_FIGHT",
         "kind": "event_option",
         "name": "Pick Fight",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 ROUND_TEA_PARTY 的选项 `PICK_FIGHT`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "SAPPHIRE_SEED": {
     "aliases": [
@@ -2641,7 +2194,6 @@
     "id": "SAPPHIRE_SEED",
     "kind": "event",
     "name": "蓝宝石种子",
-    "needs_zh": false,
     "options": {
       "SAPPHIRE_SEED.pages.INITIAL.options.EAT": {
         "aliases": [
@@ -2654,12 +2206,8 @@
         "id": "SAPPHIRE_SEED.pages.INITIAL.options.EAT",
         "kind": "event_option",
         "name": "Eat",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "回复 9 + 升级；Plant → 附魔 Sown",
-        "zh_name": "Eat"
+        "play_notes": ""
       },
       "SAPPHIRE_SEED.pages.INITIAL.options.PLANT": {
         "aliases": [
@@ -2672,15 +2220,11 @@
         "id": "SAPPHIRE_SEED.pages.INITIAL.options.PLANT",
         "kind": "event_option",
         "name": "Plant",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 SAPPHIRE_SEED 的选项 `PLANT`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "SELF_HELP_BOOK": {
     "aliases": [
@@ -2692,7 +2236,6 @@
     "id": "SELF_HELP_BOOK",
     "kind": "event",
     "name": "自助指南",
-    "needs_zh": false,
     "options": {
       "SELF_HELP_BOOK.pages.INITIAL.options.READ_ENTIRE_BOOK": {
         "aliases": [
@@ -2705,11 +2248,8 @@
         "id": "SELF_HELP_BOOK.pages.INITIAL.options.READ_ENTIRE_BOOK",
         "kind": "event_option",
         "name": "Read Entire Book",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 SELF_HELP_BOOK 的选项 `READ_ENTIRE_BOOK`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "SELF_HELP_BOOK.pages.INITIAL.options.READ_PASSAGE": {
         "aliases": [
@@ -2722,11 +2262,8 @@
         "id": "SELF_HELP_BOOK.pages.INITIAL.options.READ_PASSAGE",
         "kind": "event_option",
         "name": "Read Passage",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 SELF_HELP_BOOK 的选项 `READ_PASSAGE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "SELF_HELP_BOOK.pages.INITIAL.options.READ_THE_BACK": {
         "aliases": [
@@ -2739,16 +2276,11 @@
         "id": "SELF_HELP_BOOK.pages.INITIAL.options.READ_THE_BACK",
         "kind": "event_option",
         "name": "Read The Back",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "为一张攻击牌附魔 Sharp 2（+2 伤害）；READ_PASSAGE → 为一张技能牌附魔 Nimble 2（+2 格挡）；READ_ENTIRE_BOOK → 为一张能力牌附魔 Swift 2（打出时抽 2 张）**",
-        "zh_name": "Read The Back"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "SLIPPERY_BRIDGE": {
     "aliases": [
@@ -2760,7 +2292,6 @@
     "id": "SLIPPERY_BRIDGE",
     "kind": "event",
     "name": "滑脚木桥",
-    "needs_zh": false,
     "options": {
       "SLIPPERY_BRIDGE.pages.HOLD_ON_0.options.HOLD_ON_1": {
         "aliases": [
@@ -2773,11 +2304,8 @@
         "id": "SLIPPERY_BRIDGE.pages.HOLD_ON_0.options.HOLD_ON_1",
         "kind": "event_option",
         "name": "Hold On 1",
-        "needs_zh": false,
         "page": "HOLD_ON_0",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 SLIPPERY_BRIDGE 的选项 `HOLD_ON_1`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "SLIPPERY_BRIDGE.pages.INITIAL.options.HOLD_ON": {
         "aliases": [
@@ -2790,11 +2318,8 @@
         "id": "SLIPPERY_BRIDGE.pages.INITIAL.options.HOLD_ON",
         "kind": "event_option",
         "name": "Hold On",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 SLIPPERY_BRIDGE 的选项 `HOLD_ON`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "SLIPPERY_BRIDGE.pages.INITIAL.options.HOLD_ON_0": {
         "aliases": [
@@ -2807,11 +2332,8 @@
         "id": "SLIPPERY_BRIDGE.pages.INITIAL.options.HOLD_ON_0",
         "kind": "event_option",
         "name": "Hold On 0",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 SLIPPERY_BRIDGE 的选项 `HOLD_ON_0`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "SLIPPERY_BRIDGE.pages.INITIAL.options.OVERCOME": {
         "aliases": [
@@ -2824,16 +2346,11 @@
         "id": "SLIPPERY_BRIDGE.pages.INITIAL.options.OVERCOME",
         "kind": "event_option",
         "name": "Overcome",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "移除 1 张随机卡；HoldOn → 受到 HP 损失 = 3 + 本事件已选 HoldOn 次数（3、4、5……递增）；事件在 HoldOn 与 Overcome 之间循环直到选择 Overcome",
-        "zh_name": "Overcome"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "SPIRALING_WHIRLPOOL": {
     "aliases": [
@@ -2845,7 +2362,6 @@
     "id": "SPIRALING_WHIRLPOOL",
     "kind": "event",
     "name": "螺旋漩涡",
-    "needs_zh": false,
     "options": {
       "SPIRALING_WHIRLPOOL.pages.INITIAL.options.DRINK": {
         "aliases": [
@@ -2858,11 +2374,8 @@
         "id": "SPIRALING_WHIRLPOOL.pages.INITIAL.options.DRINK",
         "kind": "event_option",
         "name": "Drink",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 SPIRALING_WHIRLPOOL 的选项 `DRINK`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "SPIRALING_WHIRLPOOL.pages.INITIAL.options.OBSERVE": {
         "aliases": [
@@ -2875,12 +2388,8 @@
         "id": "SPIRALING_WHIRLPOOL.pages.INITIAL.options.OBSERVE",
         "kind": "event_option",
         "name": "Observe",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "附魔 Spiral；Drink → 回复",
-        "zh_name": "Observe"
+        "play_notes": ""
       },
       "SPIRALING_WHIRLPOOL.pages.INITIAL.options.OBSERVE_THE_SPIRAL": {
         "aliases": [
@@ -2893,16 +2402,11 @@
         "id": "SPIRALING_WHIRLPOOL.pages.INITIAL.options.OBSERVE_THE_SPIRAL",
         "kind": "event_option",
         "name": "Observe The Spiral",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "附魔 Spiral；Drink → 回复",
-        "zh_name": "Observe The Spiral"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md; run-40 live fold 2026-09-18"
+    "play_notes": ""
   },
   "SPIRIT_GRAFTER": {
     "aliases": [
@@ -2914,7 +2418,6 @@
     "id": "SPIRIT_GRAFTER",
     "kind": "event",
     "name": "灵魂嫁接者",
-    "needs_zh": false,
     "options": {
       "SPIRIT_GRAFTER.pages.INITIAL.options.LET_IT_IN": {
         "aliases": [
@@ -2927,12 +2430,8 @@
         "id": "SPIRIT_GRAFTER.pages.INITIAL.options.LET_IT_IN",
         "kind": "event_option",
         "name": "Let It In",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "回复 25 + 加入 Metamorphosis 卡；Rejection → 升级 + 受到 10 点伤害",
-        "zh_name": "Let It In"
+        "play_notes": ""
       },
       "SPIRIT_GRAFTER.pages.INITIAL.options.REJECTION": {
         "aliases": [
@@ -2945,23 +2444,18 @@
         "id": "SPIRIT_GRAFTER.pages.INITIAL.options.REJECTION",
         "kind": "event_option",
         "name": "Rejection",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 SPIRIT_GRAFTER 的选项 `REJECTION`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "STEADY": {
     "curated": true,
     "description": "卡牌附魔=保留：被附魔的牌回合结束留在手牌而非弃掉。该副本上的永久修饰符。由水漫缮写室 触手羽毛笔（55金，1张）/ 扎手海绵（99金，2张）提供。来源：2026-09-18 perplexity（sts2.untapped.gg/enchantments/steady、spire-codex 附魔指南）。",
     "id": "STEADY",
     "kind": "event",
-    "name": "稳定（附魔）",
-    "source": "; run-40 live fold 2026-09-18"
+    "name": "稳定（附魔）"
   },
   "STONE_OF_ALL_TIME": {
     "aliases": [
@@ -2973,7 +2467,6 @@
     "id": "STONE_OF_ALL_TIME",
     "kind": "event",
     "name": "永恒之石",
-    "needs_zh": false,
     "options": {
       "STONE_OF_ALL_TIME.pages.INITIAL.options.LIFT": {
         "aliases": [
@@ -2986,12 +2479,8 @@
         "id": "STONE_OF_ALL_TIME.pages.INITIAL.options.LIFT",
         "kind": "event_option",
         "name": "Lift",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "+10 最大 HP（饮用药水路径——精确消耗 1 瓶药水）；Push → 6 点伤害 + 附魔（+8 Vigorous 变量）",
-        "zh_name": "Lift"
+        "play_notes": ""
       },
       "STONE_OF_ALL_TIME.pages.INITIAL.options.PUSH": {
         "aliases": [
@@ -3004,15 +2493,11 @@
         "id": "STONE_OF_ALL_TIME.pages.INITIAL.options.PUSH",
         "kind": "event_option",
         "name": "Push",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 STONE_OF_ALL_TIME 的选项 `PUSH`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "SUNKEN_STATUE": {
     "aliases": [
@@ -3024,7 +2509,6 @@
     "id": "SUNKEN_STATUE",
     "kind": "event",
     "name": "沉没雕像",
-    "needs_zh": false,
     "options": {
       "SUNKEN_STATUE.pages.INITIAL.options.DIVE_INTO_WATER": {
         "aliases": [
@@ -3037,11 +2521,8 @@
         "id": "SUNKEN_STATUE.pages.INITIAL.options.DIVE_INTO_WATER",
         "kind": "event_option",
         "name": "Dive Into Water",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 SUNKEN_STATUE 的选项 `DIVE_INTO_WATER`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "SUNKEN_STATUE.pages.INITIAL.options.GRAB_SWORD": {
         "aliases": [
@@ -3054,16 +2535,11 @@
         "id": "SUNKEN_STATUE.pages.INITIAL.options.GRAB_SWORD",
         "kind": "event_option",
         "name": "Grab Sword",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "SwordOfStone 遗物（relics_zh.md：击败 5 名精英后变化为 Sword of Jade）；DiveIntoWater → +111 金币，受到 7 点伤害",
-        "zh_name": "Grab Sword"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "SUNKEN_TREASURY": {
     "aliases": [
@@ -3075,7 +2551,6 @@
     "id": "SUNKEN_TREASURY",
     "kind": "event",
     "name": "淹水金库",
-    "needs_zh": false,
     "options": {
       "SUNKEN_TREASURY.pages.INITIAL.options.FIRST_CHEST": {
         "aliases": [
@@ -3088,12 +2563,8 @@
         "id": "SUNKEN_TREASURY.pages.INITIAL.options.FIRST_CHEST",
         "kind": "event_option",
         "name": "First Chest",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "+60 金币；SecondChest → +333 金币 + Greed 诅咒",
-        "zh_name": "First Chest"
+        "play_notes": ""
       },
       "SUNKEN_TREASURY.pages.INITIAL.options.SECOND_CHEST": {
         "aliases": [
@@ -3106,15 +2577,11 @@
         "id": "SUNKEN_TREASURY.pages.INITIAL.options.SECOND_CHEST",
         "kind": "event_option",
         "name": "Second Chest",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 SUNKEN_TREASURY 的选项 `SECOND_CHEST`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "SYMBIOTE": {
     "aliases": [
@@ -3126,7 +2593,6 @@
     "id": "SYMBIOTE",
     "kind": "event",
     "name": "共生体",
-    "needs_zh": false,
     "options": {
       "SYMBIOTE.pages.INITIAL.options.APPROACH": {
         "aliases": [
@@ -3139,12 +2605,8 @@
         "id": "SYMBIOTE.pages.INITIAL.options.APPROACH",
         "kind": "event_option",
         "name": "Approach",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "对 1 张攻击牌附魔 Corrupted——Corrupted 附魔：有源攻击伤害 ×1.5，但打出时其拥有者受到 2 点不可格挡无来源伤害；KillWithFire → 变形 1 张选定牌",
-        "zh_name": "Approach"
+        "play_notes": ""
       },
       "SYMBIOTE.pages.INITIAL.options.KILL_WITH_FIRE": {
         "aliases": [
@@ -3157,15 +2619,11 @@
         "id": "SYMBIOTE.pages.INITIAL.options.KILL_WITH_FIRE",
         "kind": "event_option",
         "name": "Kill With Fire",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 SYMBIOTE 的选项 `KILL_WITH_FIRE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "run-46 live：腐化 Bludgeon+ = 本局定义性附魔；附魔屏双步确认；×1.5 与易伤乘法叠加。",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": "run-46 live：腐化 Bludgeon+ = 本局定义性附魔；附魔屏双步确认；×1.5 与易伤乘法叠加。"
   },
   "TABLET_OF_TRUTH": {
     "aliases": [
@@ -3177,7 +2635,6 @@
     "id": "TABLET_OF_TRUTH",
     "kind": "event",
     "name": "真理石板",
-    "needs_zh": false,
     "options": {
       "TABLET_OF_TRUTH.pages.DECIPHER.options.GIVE_UP": {
         "aliases": [
@@ -3190,11 +2647,8 @@
         "id": "TABLET_OF_TRUTH.pages.DECIPHER.options.GIVE_UP",
         "kind": "event_option",
         "name": "Give Up",
-        "needs_zh": false,
         "page": "DECIPHER",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TABLET_OF_TRUTH 的选项 `GIVE_UP`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "TABLET_OF_TRUTH.pages.DECIPHER_1.options.DECIPHER": {
         "aliases": [
@@ -3207,12 +2661,8 @@
         "id": "TABLET_OF_TRUTH.pages.DECIPHER_1.options.DECIPHER",
         "kind": "event_option",
         "name": "Decipher",
-        "needs_zh": false,
         "page": "DECIPHER_1",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "递增的最大 HP 阶梯：各级代价 −3/−6/−12 Max HP（翻倍；loc 键 DECIPHER_1/2/3，每级均有\"继续解读\"选项），每级均可\"放弃\"；**任何已完成级别与放弃均未观察到奖励**——实测为纯最大 HP 消耗事件；原一行摘要\"失去 3 最大 HP + 升级路径\"判定为错误，除非另有来源确认奖励路径，否则应选 Smash",
-        "zh_name": "Decipher"
+        "play_notes": ""
       },
       "TABLET_OF_TRUTH.pages.DECIPHER_2.options.DECIPHER": {
         "aliases": [
@@ -3225,12 +2675,8 @@
         "id": "TABLET_OF_TRUTH.pages.DECIPHER_2.options.DECIPHER",
         "kind": "event_option",
         "name": "Decipher",
-        "needs_zh": false,
         "page": "DECIPHER_2",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "递增的最大 HP 阶梯：各级代价 −3/−6/−12 Max HP（翻倍；loc 键 DECIPHER_1/2/3，每级均有\"继续解读\"选项），每级均可\"放弃\"；**任何已完成级别与放弃均未观察到奖励**——实测为纯最大 HP 消耗事件；原一行摘要\"失去 3 最大 HP + 升级路径\"判定为错误，除非另有来源确认奖励路径，否则应选 Smash",
-        "zh_name": "Decipher"
+        "play_notes": ""
       },
       "TABLET_OF_TRUTH.pages.DECIPHER_3.options.DECIPHER": {
         "aliases": [
@@ -3243,12 +2689,8 @@
         "id": "TABLET_OF_TRUTH.pages.DECIPHER_3.options.DECIPHER",
         "kind": "event_option",
         "name": "Decipher",
-        "needs_zh": false,
         "page": "DECIPHER_3",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "递增的最大 HP 阶梯：各级代价 −3/−6/−12 Max HP（翻倍；loc 键 DECIPHER_1/2/3，每级均有\"继续解读\"选项），每级均可\"放弃\"；**任何已完成级别与放弃均未观察到奖励**——实测为纯最大 HP 消耗事件；原一行摘要\"失去 3 最大 HP + 升级路径\"判定为错误，除非另有来源确认奖励路径，否则应选 Smash",
-        "zh_name": "Decipher"
+        "play_notes": ""
       },
       "TABLET_OF_TRUTH.pages.INITIAL.options.DECIPHER": {
         "aliases": [
@@ -3261,12 +2703,8 @@
         "id": "TABLET_OF_TRUTH.pages.INITIAL.options.DECIPHER",
         "kind": "event_option",
         "name": "Decipher",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "递增的最大 HP 阶梯：各级代价 −3/−6/−12 Max HP（翻倍；loc 键 DECIPHER_1/2/3，每级均有\"继续解读\"选项），每级均可\"放弃\"；**任何已完成级别与放弃均未观察到奖励**——实测为纯最大 HP 消耗事件；原一行摘要\"失去 3 最大 HP + 升级路径\"判定为错误，除非另有来源确认奖励路径，否则应选 Smash",
-        "zh_name": "Decipher"
+        "play_notes": ""
       },
       "TABLET_OF_TRUTH.pages.INITIAL.options.DECIPHER_1": {
         "aliases": [
@@ -3279,12 +2717,8 @@
         "id": "TABLET_OF_TRUTH.pages.INITIAL.options.DECIPHER_1",
         "kind": "event_option",
         "name": "Decipher 1",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "递增的最大 HP 阶梯：各级代价 −3/−6/−12 Max HP（翻倍；loc 键 DECIPHER_1/2/3，每级均有\"继续解读\"选项），每级均可\"放弃\"；**任何已完成级别与放弃均未观察到奖励**——实测为纯最大 HP 消耗事件；原一行摘要\"失去 3 最大 HP + 升级路径\"判定为错误，除非另有来源确认奖励路径，否则应选 Smash",
-        "zh_name": "Decipher 1"
+        "play_notes": ""
       },
       "TABLET_OF_TRUTH.pages.INITIAL.options.SMASH": {
         "aliases": [
@@ -3297,16 +2731,11 @@
         "id": "TABLET_OF_TRUTH.pages.INITIAL.options.SMASH",
         "kind": "event_option",
         "name": "Smash",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "回复 20（20 点治疗溢出封顶至最大值；Smash 为价值线）",
-        "zh_name": "Smash"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "TANX": {
     "aliases": [
@@ -3318,7 +2747,6 @@
     "id": "TANX",
     "kind": "event",
     "name": "远古赐福房",
-    "needs_zh": false,
     "options": {
       "TANX.pages.INITIAL.options.CLAWS": {
         "aliases": [
@@ -3331,11 +2759,8 @@
         "id": "TANX.pages.INITIAL.options.CLAWS",
         "kind": "event_option",
         "name": "Claws",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TANX 的选项 `CLAWS`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "TANX.pages.INITIAL.options.CROSSBOW": {
         "aliases": [
@@ -3348,11 +2773,8 @@
         "id": "TANX.pages.INITIAL.options.CROSSBOW",
         "kind": "event_option",
         "name": "Crossbow",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TANX 的选项 `CROSSBOW`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "TANX.pages.INITIAL.options.IRON_CLUB": {
         "aliases": [
@@ -3365,11 +2787,8 @@
         "id": "TANX.pages.INITIAL.options.IRON_CLUB",
         "kind": "event_option",
         "name": "Iron Club",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TANX 的选项 `IRON_CLUB`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "TANX.pages.INITIAL.options.MEAT_CLEAVER": {
         "aliases": [
@@ -3382,12 +2801,8 @@
         "id": "TANX.pages.INITIAL.options.MEAT_CLEAVER",
         "kind": "event_option",
         "name": "Meat Cleaver",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "休息点获得 Cook 选项：永久移除牌库中 2 张牌并获得 9 最大 HP**",
-        "zh_name": "Meat Cleaver"
+        "play_notes": ""
       },
       "TANX.pages.INITIAL.options.SPIKED_GAUNTLETS": {
         "aliases": [
@@ -3400,11 +2815,8 @@
         "id": "TANX.pages.INITIAL.options.SPIKED_GAUNTLETS",
         "kind": "event_option",
         "name": "Spiked Gauntlets",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TANX 的选项 `SPIKED_GAUNTLETS`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "TANX.pages.INITIAL.options.TANXS_WHISTLE": {
         "aliases": [
@@ -3417,11 +2829,8 @@
         "id": "TANX.pages.INITIAL.options.TANXS_WHISTLE",
         "kind": "event_option",
         "name": "Tanxs Whistle",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TANX 的选项 `TANXS_WHISTLE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "TANX.pages.INITIAL.options.THROWING_AXE": {
         "aliases": [
@@ -3434,11 +2843,8 @@
         "id": "TANX.pages.INITIAL.options.THROWING_AXE",
         "kind": "event_option",
         "name": "Throwing Axe",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TANX 的选项 `THROWING_AXE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "TANX.pages.INITIAL.options.TRI_BOOMERANG": {
         "aliases": [
@@ -3451,11 +2857,8 @@
         "id": "TANX.pages.INITIAL.options.TRI_BOOMERANG",
         "kind": "event_option",
         "name": "Tri Boomerang",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TANX 的选项 `TRI_BOOMERANG`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "TANX.pages.INITIAL.options.WAR_HAMMER": {
         "aliases": [
@@ -3468,15 +2871,11 @@
         "id": "TANX.pages.INITIAL.options.WAR_HAMMER",
         "kind": "event_option",
         "name": "War Hammer",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TANX 的选项 `WAR_HAMMER`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "TEA_MASTER": {
     "aliases": [
@@ -3488,7 +2887,6 @@
     "id": "TEA_MASTER",
     "kind": "event",
     "name": "茶艺大师",
-    "needs_zh": false,
     "options": {
       "TEA_MASTER.pages.INITIAL.options.BONE_TEA": {
         "aliases": [
@@ -3501,12 +2899,8 @@
         "id": "TEA_MASTER.pages.INITIAL.options.BONE_TEA",
         "kind": "event_option",
         "name": "Bone Tea",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "支付 50 金币，获得 BoneTea（骨茶；金币不足则锁定）——1 场战斗：第 1 回合升级手牌中所有卡牌；EMBER_TEA → 支付 150 金币，获得 EmberTea（余烬茶；金币不足则锁定）——5 场战斗：进入战斗房时 +2 力量；TEA_OF_DISCOURTESY → 免费，获得 TeaOfDiscourtesy（无礼之茶）——1 场战斗：战斗开始前向抽牌堆随机位置加入 2 张 Dazed",
-        "zh_name": "Bone Tea"
+        "play_notes": ""
       },
       "TEA_MASTER.pages.INITIAL.options.EMBER_TEA": {
         "aliases": [
@@ -3519,11 +2913,8 @@
         "id": "TEA_MASTER.pages.INITIAL.options.EMBER_TEA",
         "kind": "event_option",
         "name": "Ember Tea",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TEA_MASTER 的选项 `EMBER_TEA`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "TEA_MASTER.pages.INITIAL.options.TEA_OF_DISCOURTESY": {
         "aliases": [
@@ -3536,15 +2927,11 @@
         "id": "TEA_MASTER.pages.INITIAL.options.TEA_OF_DISCOURTESY",
         "kind": "event_option",
         "name": "Tea Of Discourtesy",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 TEA_MASTER 的选项 `TEA_OF_DISCOURTESY`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "TEZCATARA": {
     "aliases": [
@@ -3557,7 +2944,6 @@
     "id": "TEZCATARA",
     "kind": "event",
     "name": "特兹卡塔拉",
-    "needs_zh": false,
     "options": {
       "TEZCATARA.pages.INITIAL.options.BIIIG_HUG": {
         "aliases": [
@@ -3566,15 +2952,11 @@
         ],
         "curated": true,
         "description": "获得大大拥抱遗物：拾取时从牌库移除4张牌；每次洗牌向抽牌堆加入1张烟尘。",
-        "en_description": "Gain Biiig Hug relic: on pickup remove 4 cards from your deck; on every shuffle add 1 Soot to your draw pile.",
         "event_id": "TEZCATARA",
         "id": "TEZCATARA.pages.INITIAL.options.BIIIG_HUG",
         "kind": "event_option",
         "name": "大大拥抱",
-        "needs_zh": false,
-        "page": "INITIAL",
-        "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
-        "zh_name": "大大拥抱"
+        "page": "INITIAL"
       },
       "TEZCATARA.pages.INITIAL.options.GOLDEN_COMPASS": {
         "aliases": [
@@ -3583,15 +2965,11 @@
         ],
         "curated": true,
         "description": "获得黄金罗盘遗物：拾取时重新生成当前章节地图（黄金路线重掷）。",
-        "en_description": "Gain Golden Compass relic: on pickup, regenerate the current act's map (golden-path reroll).",
         "event_id": "TEZCATARA",
         "id": "TEZCATARA.pages.INITIAL.options.GOLDEN_COMPASS",
         "kind": "event_option",
         "name": "黄金罗盘",
-        "needs_zh": false,
-        "page": "INITIAL",
-        "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
-        "zh_name": "黄金罗盘"
+        "page": "INITIAL"
       },
       "TEZCATARA.pages.INITIAL.options.NUTRITIOUS_SOUP": {
         "aliases": [
@@ -3600,15 +2978,11 @@
         ],
         "curated": true,
         "description": "获得营养汤遗物：拾取时为所有基础 Strike 类牌附加特兹卡塔拉之烬（费用0、永恒关键词、受能攻击+3伤）。",
-        "en_description": "Gain Nutritious Soup relic: on pickup, enchant every Basic Strike-tagged card with Tezcatara's Ember (cost 0, Eternal keyword, +3 damage on powered attacks).",
         "event_id": "TEZCATARA",
         "id": "TEZCATARA.pages.INITIAL.options.NUTRITIOUS_SOUP",
         "kind": "event_option",
         "name": "营养汤",
-        "needs_zh": false,
-        "page": "INITIAL",
-        "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
-        "zh_name": "营养汤"
+        "page": "INITIAL"
       },
       "TEZCATARA.pages.INITIAL.options.PUMPKIN_CANDLE": {
         "aliases": [
@@ -3617,15 +2991,11 @@
         ],
         "curated": true,
         "description": "获得南瓜蜡烛遗物：5层燃烧期间 +1 最大能量；每场战斗结束 −1 层；休息点新增点燃选项回复 +5 层。",
-        "en_description": "Gain Pumpkin Candle relic: +1 Max Energy while its 5-count Kindle is active; -1 count per combat end; rest sites gain a Kindle option that restores +5.",
         "event_id": "TEZCATARA",
         "id": "TEZCATARA.pages.INITIAL.options.PUMPKIN_CANDLE",
         "kind": "event_option",
         "name": "南瓜蜡烛",
-        "needs_zh": false,
-        "page": "INITIAL",
-        "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
-        "zh_name": "南瓜蜡烛"
+        "page": "INITIAL"
       },
       "TEZCATARA.pages.INITIAL.options.SEAL_OF_GOLD": {
         "aliases": [
@@ -3634,25 +3004,18 @@
         ],
         "curated": true,
         "description": "获得黄金封印遗物：回合开始时若金币≥5，获得1能量并失去5金。",
-        "en_description": "Gain Seal of Gold relic: at start of your turn, if you have >=5 gold, gain 1 Energy and lose 5 gold.",
         "event_id": "TEZCATARA",
         "id": "TEZCATARA.pages.INITIAL.options.SEAL_OF_GOLD",
         "kind": "event_option",
         "name": "黄金封印",
-        "needs_zh": false,
-        "page": "INITIAL",
-        "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
-        "zh_name": "黄金封印"
+        "page": "INITIAL"
       },
       "TEZCATARA.pages.INITIAL.options.STORYBOOK": {
         "curated": true,
         "description": "Add 1 Brightest Flame to your deck.",
         "kind": "event_option",
         "name": "Storybook",
-        "needs_zh": false,
-        "page": "INITIAL",
-        "zh_description": "将1张至亮之焰加入牌库。",
-        "zh_name": "故事书"
+        "page": "INITIAL"
       },
       "TEZCATARA.pages.INITIAL.options.TOASTY_MITTENS": {
         "aliases": [
@@ -3661,25 +3024,18 @@
         ],
         "curated": true,
         "description": "获得暖和手套遗物：每场战斗抽牌前，从抽牌堆消耗1张牌（第1回合跳过固有牌）并获得1力量。",
-        "en_description": "Gain Toasty Mittens relic: before hand draw each combat, exhaust a card from your draw pile (T1 skips Innate) and gain 1 Strength.",
         "event_id": "TEZCATARA",
         "id": "TEZCATARA.pages.INITIAL.options.TOASTY_MITTENS",
         "kind": "event_option",
         "name": "暖和手套",
-        "needs_zh": false,
-        "page": "INITIAL",
-        "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
-        "zh_name": "暖和手套"
+        "page": "INITIAL"
       },
       "TEZCATARA.pages.INITIAL.options.TOY_BOX": {
         "curated": true,
         "description": "Gain 4 Wax relics; leftmost melts every 3 combats.",
         "kind": "event_option",
         "name": "Toy Box",
-        "needs_zh": false,
-        "page": "INITIAL",
-        "zh_description": "获得4件蜡制遗物；每3战最左侧融化。",
-        "zh_name": "玩具盒"
+        "page": "INITIAL"
       },
       "TEZCATARA.pages.INITIAL.options.VERY_HOT_COCOA": {
         "aliases": [
@@ -3688,29 +3044,21 @@
         ],
         "curated": true,
         "description": "获得极热可可遗物：每场战斗第1回合 +4 能量。",
-        "en_description": "Gain Very Hot Cocoa relic: +4 Energy on turn 1 of every combat.",
         "event_id": "TEZCATARA",
         "id": "TEZCATARA.pages.INITIAL.options.VERY_HOT_COCOA",
         "kind": "event_option",
         "name": "热可可",
-        "needs_zh": false,
-        "page": "INITIAL",
-        "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
-        "zh_name": "热可可"
+        "page": "INITIAL"
       },
       "TEZCATARA.pages.INITIAL.options.YUMMY_COOKIE": {
         "curated": true,
         "description": "Upgrade 4 chosen cards permanently.",
         "kind": "event_option",
         "name": "Yummy Cookie",
-        "needs_zh": false,
-        "page": "INITIAL",
-        "zh_description": "永久升级自选4张牌。",
-        "zh_name": "美味饼干"
+        "page": "INITIAL"
       }
     },
-    "play_notes": "对局43 live",
-    "source": "对局40/43 live"
+    "play_notes": "对局43 live"
   },
   "THE_ARCHITECT": {
     "aliases": [
@@ -3722,7 +3070,6 @@
     "id": "THE_ARCHITECT",
     "kind": "event",
     "name": "建筑师",
-    "needs_zh": false,
     "options": {
       "THE_ARCHITECT.dialogue.0": {
         "aliases": [
@@ -3734,11 +3081,8 @@
         "id": "THE_ARCHITECT.dialogue.0",
         "kind": "event_option",
         "name": "0",
-        "needs_zh": false,
         "page": "dialogue",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 THE_ARCHITECT 的选项 `0`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "THE_ARCHITECT.dialogue.1": {
         "aliases": [
@@ -3750,11 +3094,8 @@
         "id": "THE_ARCHITECT.dialogue.1",
         "kind": "event_option",
         "name": "1",
-        "needs_zh": false,
         "page": "dialogue",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 THE_ARCHITECT 的选项 `1`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "THE_ARCHITECT.pages.INITIAL.options.CONTINUE": {
         "aliases": [
@@ -3767,11 +3108,8 @@
         "id": "THE_ARCHITECT.pages.INITIAL.options.CONTINUE",
         "kind": "event_option",
         "name": "Continue",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 THE_ARCHITECT 的选项 `CONTINUE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "THE_ARCHITECT.pages.INITIAL.options.PROCEED": {
         "aliases": [
@@ -3784,12 +3122,8 @@
         "id": "THE_ARCHITECT.pages.INITIAL.options.PROCEED",
         "kind": "event_option",
         "name": "Proceed",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "HP 0 是 EA 占位收束",
-        "zh_name": "Proceed"
+        "play_notes": ""
       },
       "THE_ARCHITECT.pages.INITIAL.options.THREATEN": {
         "aliases": [
@@ -3802,15 +3136,11 @@
         "id": "THE_ARCHITECT.pages.INITIAL.options.THREATEN",
         "kind": "event_option",
         "name": "Threaten",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 THE_ARCHITECT 的选项 `THREATEN`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "run-46 live：EA 结局链走完；THE_ARCHITECT 的 game_over HP0 = 胜利——A1 计数 2/3。",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": "run-46 live：EA 结局链走完；THE_ARCHITECT 的 game_over HP0 = 胜利——A1 计数 2/3。"
   },
   "THE_FUTURE_OF_POTIONS": {
     "aliases": [
@@ -3822,7 +3152,6 @@
     "id": "THE_FUTURE_OF_POTIONS",
     "kind": "event",
     "name": "药水的未来",
-    "needs_zh": false,
     "options": {
       "THE_FUTURE_OF_POTIONS.pages.INITIAL.options.POTION": {
         "aliases": [
@@ -3835,16 +3164,11 @@
         "id": "THE_FUTURE_OF_POTIONS.pages.INITIAL.options.POTION",
         "kind": "event_option",
         "name": "Potion",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "死灵池 WISP / INVOKE / NEGATIVE_PULSE 三选一）",
-        "zh_name": "Potion"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "THE_LANTERN_KEY": {
     "aliases": [
@@ -3856,7 +3180,6 @@
     "id": "THE_LANTERN_KEY",
     "kind": "event",
     "name": "灯火钥匙",
-    "needs_zh": false,
     "options": {
       "THE_LANTERN_KEY.pages.INITIAL.options.FIGHT": {
         "aliases": [
@@ -3869,11 +3192,8 @@
         "id": "THE_LANTERN_KEY.pages.INITIAL.options.FIGHT",
         "kind": "event_option",
         "name": "Fight",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 THE_LANTERN_KEY 的选项 `FIGHT`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "THE_LANTERN_KEY.pages.INITIAL.options.KEEP_THE_KEY": {
         "aliases": [
@@ -3886,11 +3206,8 @@
         "id": "THE_LANTERN_KEY.pages.INITIAL.options.KEEP_THE_KEY",
         "kind": "event_option",
         "name": "Keep The Key",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 THE_LANTERN_KEY 的选项 `KEEP_THE_KEY`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "THE_LANTERN_KEY.pages.INITIAL.options.RETURN_THE_KEY": {
         "aliases": [
@@ -3903,12 +3220,8 @@
         "id": "THE_LANTERN_KEY.pages.INITIAL.options.RETURN_THE_KEY",
         "kind": "event_option",
         "name": "Return The Key",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "+100 金币；KEEP_THE_KEY → FIGHT → MysteriousKnightEventEncounter 战斗；获胜后每名玩家获得 LanternKey 任务卡（不可打出；Act 索引 2 时强制未知地图点为事件房，并将下一个事件重定向至 WarHistorianRepy）",
-        "zh_name": "Return The Key"
+        "play_notes": ""
       },
       "THE_LANTERN_KEY.pages.KEEP_THE_KEY.options.FIGHT": {
         "aliases": [
@@ -3921,15 +3234,11 @@
         "id": "THE_LANTERN_KEY.pages.KEEP_THE_KEY.options.FIGHT",
         "kind": "event_option",
         "name": "Fight",
-        "needs_zh": false,
         "page": "KEEP_THE_KEY",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 THE_LANTERN_KEY 的选项 `FIGHT`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "THE_LEGENDS_WERE_TRUE": {
     "aliases": [
@@ -3941,7 +3250,6 @@
     "id": "THE_LEGENDS_WERE_TRUE",
     "kind": "event",
     "name": "传说是真的",
-    "needs_zh": false,
     "options": {
       "THE_LEGENDS_WERE_TRUE.pages.INITIAL.options.NAB_THE_MAP": {
         "aliases": [
@@ -3954,12 +3262,8 @@
         "id": "THE_LEGENDS_WERE_TRUE.pages.INITIAL.options.NAB_THE_MAP",
         "kind": "event_option",
         "name": "Nab The Map",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "向牌库加入 SpoilsMap（Quest，不可打出；SpoilsActIndex=1——在第二章地图标记价值 600 金币的战利品房）；SLOWLY_FIND_AN_EXIT → 受到 8 点不可格挡、无来源伤害，获得 1 瓶随机药水（角色药水池 + 共享池）",
-        "zh_name": "Nab The Map"
+        "play_notes": ""
       },
       "THE_LEGENDS_WERE_TRUE.pages.INITIAL.options.SLOWLY_FIND_AN_EXIT": {
         "aliases": [
@@ -3972,15 +3276,11 @@
         "id": "THE_LEGENDS_WERE_TRUE.pages.INITIAL.options.SLOWLY_FIND_AN_EXIT",
         "kind": "event_option",
         "name": "Slowly Find An Exit",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 THE_LEGENDS_WERE_TRUE 的选项 `SLOWLY_FIND_AN_EXIT`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "THIS_OR_THAT": {
     "aliases": [
@@ -3992,7 +3292,6 @@
     "id": "THIS_OR_THAT",
     "kind": "event",
     "name": "这个还是那个",
-    "needs_zh": false,
     "options": {
       "THIS_OR_THAT.pages.INITIAL.options.ORNATE": {
         "aliases": [
@@ -4005,11 +3304,8 @@
         "id": "THIS_OR_THAT.pages.INITIAL.options.ORNATE",
         "kind": "event_option",
         "name": "Ornate",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 THIS_OR_THAT 的选项 `ORNATE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "THIS_OR_THAT.pages.INITIAL.options.PLAIN": {
         "aliases": [
@@ -4022,16 +3318,11 @@
         "id": "THIS_OR_THAT.pages.INITIAL.options.PLAIN",
         "kind": "event_option",
         "name": "Plain",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "受到 6 点伤害 + 金币；Ornate → 获得遗物 + 加入 Clumsy 诅咒",
-        "zh_name": "Plain"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "TINKER_TIME": {
     "aliases": [
@@ -4043,10 +3334,8 @@
     "id": "TINKER_TIME",
     "kind": "event",
     "name": "打造时间",
-    "needs_zh": false,
     "options": {},
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "TRASH_HEAP": {
     "aliases": [
@@ -4059,7 +3348,6 @@
     "id": "TRASH_HEAP",
     "kind": "event",
     "name": "垃圾堆",
-    "needs_zh": false,
     "options": {
       "TRASH_HEAP.pages.INITIAL.options.DIVE_IN": {
         "aliases": [
@@ -4069,10 +3357,7 @@
         "description": "Lose 8 HP; gain 1 forgotten relic (mediocre pool).",
         "kind": "event_option",
         "name": "Dive In",
-        "needs_zh": false,
-        "page": "INITIAL",
-        "zh_description": "失去8HP；获得1件旧日遗物（池平庸）。",
-        "zh_name": "扎进垃圾堆"
+        "page": "INITIAL"
       },
       "TRASH_HEAP.pages.INITIAL.options.GRAB": {
         "aliases": [
@@ -4082,14 +3367,10 @@
         "description": "+100 Gold; add 1 forgotten card (Caltrops-class live run-43).",
         "kind": "event_option",
         "name": "Grab",
-        "needs_zh": false,
-        "page": "INITIAL",
-        "zh_description": "+100金；加入1张旧日卡牌（对局43 live 得铁蒺藜）。",
-        "zh_name": "随便拿点垃圾"
+        "page": "INITIAL"
       }
     },
-    "play_notes": "对局43 live",
-    "source": "perplexity 池 2026-09 + 对局43 live"
+    "play_notes": "对局43 live"
   },
   "TRIAL": {
     "aliases": [
@@ -4101,10 +3382,8 @@
     "id": "TRIAL",
     "kind": "event",
     "name": "审判",
-    "needs_zh": false,
     "options": {},
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "UNREST_SITE": {
     "aliases": [
@@ -4116,7 +3395,6 @@
     "id": "UNREST_SITE",
     "kind": "event",
     "name": "无休之处",
-    "needs_zh": false,
     "options": {
       "UNREST_SITE.pages.INITIAL.options.KILL": {
         "aliases": [
@@ -4129,11 +3407,8 @@
         "id": "UNREST_SITE.pages.INITIAL.options.KILL",
         "kind": "event_option",
         "name": "Kill",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 UNREST_SITE 的选项 `KILL`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "UNREST_SITE.pages.INITIAL.options.REST": {
         "aliases": [
@@ -4146,16 +3421,11 @@
         "id": "UNREST_SITE.pages.INITIAL.options.REST",
         "kind": "event_option",
         "name": "Rest",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "回复 + 诅咒；Kill → −8 最大 HP + 遗物",
-        "zh_name": "Rest"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "VAKUU": {
     "aliases": [
@@ -4167,7 +3437,6 @@
     "id": "VAKUU",
     "kind": "event",
     "name": "荣光远古",
-    "needs_zh": false,
     "options": {
       "VAKUU.pages.INITIAL.options.BLOOD_SOAKED_ROSE": {
         "aliases": [
@@ -4180,11 +3449,8 @@
         "id": "VAKUU.pages.INITIAL.options.BLOOD_SOAKED_ROSE",
         "kind": "event_option",
         "name": "Blood Soaked Rose",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 VAKUU 的选项 `BLOOD_SOAKED_ROSE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "VAKUU.pages.INITIAL.options.CHOICES_PARADOX": {
         "aliases": [
@@ -4197,11 +3463,8 @@
         "id": "VAKUU.pages.INITIAL.options.CHOICES_PARADOX",
         "kind": "event_option",
         "name": "Choices Paradox",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 VAKUU 的选项 `CHOICES_PARADOX`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "VAKUU.pages.INITIAL.options.SERE_TALON": {
         "aliases": [
@@ -4214,23 +3477,18 @@
         "id": "VAKUU.pages.INITIAL.options.SERE_TALON",
         "kind": "event_option",
         "name": "Sere Talon",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 VAKUU 的选项 `SERE_TALON`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "VORTEX": {
     "curated": true,
     "description": "卡牌附魔=重演1：打出时该牌在同一战斗内自动再打出一次。永久修饰符。由螺旋漩涡「观察」对基础打击或防御提供。来源：2026-09-18 perplexity（sts2.untapped.gg/enchantments、spire-codex 附魔指南、sts2guides 附魔指南）。",
     "id": "VORTEX",
     "kind": "event",
-    "name": "涡旋/螺旋（附魔）",
-    "source": "; run-40 live fold 2026-09-18"
+    "name": "涡旋/螺旋（附魔）"
   },
   "WAR_HISTORIAN_REPY": {
     "aliases": [
@@ -4242,7 +3500,6 @@
     "id": "WAR_HISTORIAN_REPY",
     "kind": "event",
     "name": "战史学家付袭",
-    "needs_zh": false,
     "options": {
       "WAR_HISTORIAN_REPY.pages.INITIAL.options.UNLOCK_CAGE": {
         "aliases": [
@@ -4255,11 +3512,8 @@
         "id": "WAR_HISTORIAN_REPY.pages.INITIAL.options.UNLOCK_CAGE",
         "kind": "event_option",
         "name": "Unlock Cage",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 WAR_HISTORIAN_REPY 的选项 `UNLOCK_CAGE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "WAR_HISTORIAN_REPY.pages.INITIAL.options.UNLOCK_CHEST": {
         "aliases": [
@@ -4272,16 +3526,11 @@
         "id": "WAR_HISTORIAN_REPY.pages.INITIAL.options.UNLOCK_CHEST",
         "kind": "event_option",
         "name": "Unlock Chest",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "奖励；UnlockCage → HistoryCourse 遗物；LanternKey 任务完成时移除钥匙卡",
-        "zh_name": "Unlock Chest"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "WATERLOGGED_SCRIPTORIUM": {
     "aliases": [
@@ -4293,7 +3542,6 @@
     "id": "WATERLOGGED_SCRIPTORIUM",
     "kind": "event",
     "name": "水漫缮写室",
-    "needs_zh": false,
     "options": {
       "WATERLOGGED_SCRIPTORIUM.pages.INITIAL.options.BLOODY_INK": {
         "aliases": [
@@ -4306,12 +3554,8 @@
         "id": "WATERLOGGED_SCRIPTORIUM.pages.INITIAL.options.BLOODY_INK",
         "kind": "event_option",
         "name": "Bloody Ink",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "+6 最大 HP；TentacleQuill → 支付 55 金币，附魔 Steady；PricklySponge → 支付 99 金币，附魔 Steady + 卡牌选项",
-        "zh_name": "Bloody Ink"
+        "play_notes": ""
       },
       "WATERLOGGED_SCRIPTORIUM.pages.INITIAL.options.PRICKLY_SPONGE": {
         "aliases": [
@@ -4324,11 +3568,8 @@
         "id": "WATERLOGGED_SCRIPTORIUM.pages.INITIAL.options.PRICKLY_SPONGE",
         "kind": "event_option",
         "name": "Prickly Sponge",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 WATERLOGGED_SCRIPTORIUM 的选项 `PRICKLY_SPONGE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "WATERLOGGED_SCRIPTORIUM.pages.INITIAL.options.TENTACLE_QUILL": {
         "aliases": [
@@ -4341,15 +3582,11 @@
         "id": "WATERLOGGED_SCRIPTORIUM.pages.INITIAL.options.TENTACLE_QUILL",
         "kind": "event_option",
         "name": "Tentacle Quill",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 WATERLOGGED_SCRIPTORIUM 的选项 `TENTACLE_QUILL`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md; run-40 live fold 2026-09-18"
+    "play_notes": ""
   },
   "WELCOME_TO_WONGOS": {
     "aliases": [
@@ -4361,7 +3598,6 @@
     "id": "WELCOME_TO_WONGOS",
     "kind": "event",
     "name": "欢迎来到旺购百货",
-    "needs_zh": false,
     "options": {
       "WELCOME_TO_WONGOS.pages.INITIAL.options.BARGAIN_BIN": {
         "aliases": [
@@ -4374,12 +3610,8 @@
         "id": "WELCOME_TO_WONGOS.pages.INITIAL.options.BARGAIN_BIN",
         "kind": "event_option",
         "name": "Bargain Bin",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "支付 100 金币，获得遗物；BuyFeaturedItem → 支付 200 金币，获得遗物；BuyMysteryBox → 支付 300 金币，获得 WongosMysteryTicket（5 场战斗后获得 3 件随机遗物）；Leave 离开",
-        "zh_name": "Bargain Bin"
+        "play_notes": ""
       },
       "WELCOME_TO_WONGOS.pages.INITIAL.options.BUY_BARGAIN_BIN": {
         "aliases": [
@@ -4392,12 +3624,8 @@
         "id": "WELCOME_TO_WONGOS.pages.INITIAL.options.BUY_BARGAIN_BIN",
         "kind": "event_option",
         "name": "Buy Bargain Bin",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "支付 100 金币，获得遗物；BuyFeaturedItem → 支付 200 金币，获得遗物；BuyMysteryBox → 支付 300 金币，获得 WongosMysteryTicket（5 场战斗后获得 3 件随机遗物）；Leave 离开",
-        "zh_name": "Buy Bargain Bin"
+        "play_notes": ""
       },
       "WELCOME_TO_WONGOS.pages.INITIAL.options.BUY_FEATURED_ITEM": {
         "aliases": [
@@ -4410,11 +3638,8 @@
         "id": "WELCOME_TO_WONGOS.pages.INITIAL.options.BUY_FEATURED_ITEM",
         "kind": "event_option",
         "name": "Buy Featured Item",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 WELCOME_TO_WONGOS 的选项 `BUY_FEATURED_ITEM`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "WELCOME_TO_WONGOS.pages.INITIAL.options.BUY_MYSTERY_BOX": {
         "aliases": [
@@ -4427,11 +3652,8 @@
         "id": "WELCOME_TO_WONGOS.pages.INITIAL.options.BUY_MYSTERY_BOX",
         "kind": "event_option",
         "name": "Buy Mystery Box",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 WELCOME_TO_WONGOS 的选项 `BUY_MYSTERY_BOX`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "WELCOME_TO_WONGOS.pages.INITIAL.options.FEATURED_ITEM": {
         "aliases": [
@@ -4444,11 +3666,8 @@
         "id": "WELCOME_TO_WONGOS.pages.INITIAL.options.FEATURED_ITEM",
         "kind": "event_option",
         "name": "Featured Item",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 WELCOME_TO_WONGOS 的选项 `FEATURED_ITEM`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "WELCOME_TO_WONGOS.pages.INITIAL.options.LEAVE": {
         "aliases": [
@@ -4461,15 +3680,11 @@
         "id": "WELCOME_TO_WONGOS.pages.INITIAL.options.LEAVE",
         "kind": "event_option",
         "name": "Leave",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 WELCOME_TO_WONGOS 的选项 `LEAVE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "WELLSPRING": {
     "aliases": [
@@ -4481,7 +3696,6 @@
     "id": "WELLSPRING",
     "kind": "event",
     "name": "泉水",
-    "needs_zh": false,
     "options": {
       "WELLSPRING.pages.INITIAL.options.BATHE": {
         "aliases": [
@@ -4494,11 +3708,8 @@
         "id": "WELLSPRING.pages.INITIAL.options.BATHE",
         "kind": "event_option",
         "name": "Bathe",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 WELLSPRING 的选项 `BATHE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "WELLSPRING.pages.INITIAL.options.BOTTLE": {
         "aliases": [
@@ -4511,16 +3722,11 @@
         "id": "WELLSPRING.pages.INITIAL.options.BOTTLE",
         "kind": "event_option",
         "name": "Bottle",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "药水奖励；Bathe → 移除卡牌（curses 变量 1——存在 Guilty 追加处理器）",
-        "zh_name": "Bottle"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "WHISPERING_HOLLOW": {
     "aliases": [
@@ -4532,7 +3738,6 @@
     "id": "WHISPERING_HOLLOW",
     "kind": "event",
     "name": "低语空谷",
-    "needs_zh": false,
     "options": {
       "WHISPERING_HOLLOW.pages.INITIAL.options.GOLD": {
         "aliases": [
@@ -4545,12 +3750,8 @@
         "id": "WHISPERING_HOLLOW.pages.INITIAL.options.GOLD",
         "kind": "event_option",
         "name": "Gold",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "支付 35 ± rng −9..+9 金币（26–44），获得 2 瓶随机药水；HUG → 受到 9 点不可格挡、无来源伤害，自选 1 张牌库卡随机变形",
-        "zh_name": "Gold"
+        "play_notes": ""
       },
       "WHISPERING_HOLLOW.pages.INITIAL.options.HUG": {
         "aliases": [
@@ -4563,15 +3764,11 @@
         "id": "WHISPERING_HOLLOW.pages.INITIAL.options.HUG",
         "kind": "event_option",
         "name": "Hug",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 WHISPERING_HOLLOW 的选项 `HUG`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "WOOD_CARVINGS": {
     "aliases": [
@@ -4583,7 +3780,6 @@
     "id": "WOOD_CARVINGS",
     "kind": "event",
     "name": "木雕",
-    "needs_zh": false,
     "options": {
       "WOOD_CARVINGS.pages.INITIAL.options.BIRD": {
         "aliases": [
@@ -4596,11 +3792,8 @@
         "id": "WOOD_CARVINGS.pages.INITIAL.options.BIRD",
         "kind": "event_option",
         "name": "Bird",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 WOOD_CARVINGS 的选项 `BIRD`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "WOOD_CARVINGS.pages.INITIAL.options.SNAKE": {
         "aliases": [
@@ -4613,12 +3806,8 @@
         "id": "WOOD_CARVINGS.pages.INITIAL.options.SNAKE",
         "kind": "event_option",
         "name": "Snake",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "附魔 Slither；Bird → 变形为 Peck；Torus → 变形为 ToricToughness",
-        "zh_name": "Snake"
+        "play_notes": ""
       },
       "WOOD_CARVINGS.pages.INITIAL.options.TORUS": {
         "aliases": [
@@ -4631,15 +3820,11 @@
         "id": "WOOD_CARVINGS.pages.INITIAL.options.TORUS",
         "kind": "event_option",
         "name": "Torus",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 WOOD_CARVINGS 的选项 `TORUS`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md"
+    "play_notes": ""
   },
   "ZEN_WEAVER": {
     "aliases": [
@@ -4651,7 +3836,6 @@
     "id": "ZEN_WEAVER",
     "kind": "event",
     "name": "修禅织网者",
-    "needs_zh": false,
     "options": {
       "ZEN_WEAVER.pages.INITIAL.options.ARACHNID_ACUPUNCTURE": {
         "aliases": [
@@ -4664,11 +3848,8 @@
         "id": "ZEN_WEAVER.pages.INITIAL.options.ARACHNID_ACUPUNCTURE",
         "kind": "event_option",
         "name": "Arachnid Acupuncture",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 ZEN_WEAVER 的选项 `ARACHNID_ACUPUNCTURE`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       },
       "ZEN_WEAVER.pages.INITIAL.options.BREATHING_TECHNIQUES": {
         "aliases": [
@@ -4681,12 +3862,8 @@
         "id": "ZEN_WEAVER.pages.INITIAL.options.BREATHING_TECHNIQUES",
         "kind": "event_option",
         "name": "Breathing Techniques",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "支付 50 金币，**加入 2 张 Enlightenment**；EmotionalAwareness → 支付 125 金币，**移除 1 张牌**；ArachnidAcupuncture → 支付 250 金币，**移除 2 张牌**",
-        "zh_name": "Breathing Techniques"
+        "play_notes": ""
       },
       "ZEN_WEAVER.pages.INITIAL.options.EMOTIONAL_AWARENESS": {
         "aliases": [
@@ -4699,15 +3876,11 @@
         "id": "ZEN_WEAVER.pages.INITIAL.options.EMOTIONAL_AWARENESS",
         "kind": "event_option",
         "name": "Emotional Awareness",
-        "needs_zh": false,
         "page": "INITIAL",
-        "play_notes": "",
-        "source": "md:events.md + census live textKeys",
-        "zh_description": "事件 ZEN_WEAVER 的选项 `EMOTIONAL_AWARENESS`。完整逐项效果见事件描述；以 live 事件屏选项 description 字段为准。"
+        "play_notes": ""
       }
     },
-    "play_notes": "",
-    "source": "md:events.md; md:events_zh.md; run-40 live fold 2026-09-18"
+    "play_notes": ""
   },
   "宾邦": {
     "aliases": [],
@@ -4717,10 +3890,8 @@
     "id": "宾邦",
     "kind": "event_option",
     "name": "宾邦",
-    "needs_zh": false,
     "page": null,
-    "play_notes": "",
-    "source": "census:live_ids.json"
+    "play_notes": ""
   },
   "抱抱先生": {
     "aliases": [],
@@ -4730,22 +3901,7 @@
     "id": "抱抱先生",
     "kind": "event_option",
     "name": "抱抱先生",
-    "needs_zh": false,
     "page": null,
-    "play_notes": "",
-    "source": "census:live_ids.json"
-  },
-  "DARV": {
-    "id": "DARV",
-    "kind": "event",
-    "name": "达夫 / Act2 赐福房",
-    "aliases": [
-      "DARV",
-      "先古移民"
-    ],
-    "curated": true,
-    "description": "Act2 章首赐福房。LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：选项 = 星盘（变化 3 张再升级）/ 空鸟笼（移除 2 张）/ 添水 Sozu（永久每回合 +1 能量；不再获得药水）。",
-    "live_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：选 Sozu——灯笼+茶具+HappyFlower 叠加使 Boss T1 能量 7/4。",
-    "needs_zh": false
+    "play_notes": ""
   }
 }

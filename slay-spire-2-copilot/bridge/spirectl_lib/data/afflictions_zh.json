@@ -10,9 +10,7 @@
     "id": "ASCENDERS_BANE",
     "kind": "curse",
     "name": "天阶诅咒",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L52; md:afflictions_zh.md:L51"
+    "play_notes": ""
   },
   "BOUND": {
     "aliases": [
@@ -25,9 +23,7 @@
     "id": "BOUND",
     "kind": "affliction",
     "name": "束缚",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L11; md:afflictions_zh.md:L11"
+    "play_notes": ""
   },
   "CLUMSY": {
     "aliases": [
@@ -40,9 +36,7 @@
     "id": "CLUMSY",
     "kind": "curse",
     "name": "笨拙",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L54; md:afflictions_zh.md:L54"
+    "play_notes": ""
   },
   "COMPACT": {
     "aliases": [
@@ -55,9 +49,7 @@
     "id": "COMPACT",
     "kind": "status_card",
     "name": "压缩",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L67; md:afflictions_zh.md:L67"
+    "play_notes": ""
   },
   "CURSE_OF_THE_BELL": {
     "aliases": [
@@ -70,9 +62,7 @@
     "id": "CURSE_OF_THE_BELL",
     "kind": "curse",
     "name": "钟之诅咒",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L53; md:afflictions_zh.md:L53"
+    "play_notes": ""
   },
   "DAZED": {
     "aliases": [
@@ -85,9 +75,7 @@
     "id": "DAZED",
     "kind": "status_card",
     "name": "眩晕",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L34; md:afflictions_zh.md:L34"
+    "play_notes": ""
   },
   "DECAY": {
     "aliases": [
@@ -100,9 +88,7 @@
     "id": "DECAY",
     "kind": "curse",
     "name": "腐化",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L56; md:afflictions_zh.md:L56"
+    "play_notes": ""
   },
   "DISINTEGRATION": {
     "aliases": [
@@ -115,9 +101,7 @@
     "id": "DISINTEGRATION",
     "kind": "status_card",
     "name": "崩解",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L39; md:afflictions_zh.md:L38"
+    "play_notes": ""
   },
   "DOUBT": {
     "aliases": [
@@ -130,9 +114,7 @@
     "id": "DOUBT",
     "kind": "curse",
     "name": "猜疑",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L58; md:afflictions_zh.md:L58"
+    "play_notes": ""
   },
   "ENTANGLED": {
     "aliases": [
@@ -145,9 +127,7 @@
     "id": "ENTANGLED",
     "kind": "affliction",
     "name": "缠绕",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L14; md:afflictions_zh.md:L14"
+    "play_notes": ""
   },
   "FLAK_CANNON": {
     "aliases": [
@@ -160,9 +140,7 @@
     "id": "FLAK_CANNON",
     "kind": "status_card",
     "name": "散射炮",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L68; md:afflictions_zh.md:L69"
+    "play_notes": ""
   },
   "GALVANIZED": {
     "aliases": [
@@ -175,9 +153,7 @@
     "id": "GALVANIZED",
     "kind": "affliction",
     "name": "电镀",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L16; md:afflictions_zh.md:L16"
+    "play_notes": ""
   },
   "HEXED": {
     "aliases": [
@@ -190,9 +166,7 @@
     "id": "HEXED",
     "kind": "affliction",
     "name": "诅咒",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L19; md:afflictions_zh.md:L19"
+    "play_notes": ""
   },
   "INJURY": {
     "aliases": [
@@ -205,9 +179,7 @@
     "id": "INJURY",
     "kind": "curse",
     "name": "损伤",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L55; md:afflictions_zh.md:L55"
+    "play_notes": ""
   },
   "ITERATION": {
     "aliases": [
@@ -220,9 +192,7 @@
     "id": "ITERATION",
     "kind": "status_card",
     "name": "迭代",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L69; md:afflictions_zh.md:L70"
+    "play_notes": ""
   },
   "MIND_ROT": {
     "aliases": [
@@ -235,9 +205,7 @@
     "id": "MIND_ROT",
     "kind": "status_card",
     "name": "脑蚀",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L42; md:afflictions_zh.md:L41"
+    "play_notes": ""
   },
   "NORMALITY": {
     "aliases": [
@@ -250,9 +218,7 @@
     "id": "NORMALITY",
     "kind": "curse",
     "name": "常态",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L62; md:afflictions_zh.md:L62"
+    "play_notes": ""
   },
   "REGRET": {
     "aliases": [
@@ -265,9 +231,7 @@
     "id": "REGRET",
     "kind": "curse",
     "name": "悔恨",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L60; md:afflictions_zh.md:L60"
+    "play_notes": ""
   },
   "RINGING": {
     "aliases": [
@@ -280,9 +244,7 @@
     "id": "RINGING",
     "kind": "affliction",
     "name": "耳鸣",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L21; md:afflictions_zh.md:L21"
+    "play_notes": ""
   },
   "ROCKET_PUNCH": {
     "aliases": [
@@ -295,9 +257,7 @@
     "id": "ROCKET_PUNCH",
     "kind": "status_card",
     "name": "火箭飞拳",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L71; md:afflictions_zh.md:L71"
+    "play_notes": ""
   },
   "SLIMED": {
     "aliases": [
@@ -310,9 +270,7 @@
     "id": "SLIMED",
     "kind": "status_card",
     "name": "黏液",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L33; md:afflictions_zh.md:L32"
+    "play_notes": ""
   },
   "SLOTH": {
     "aliases": [
@@ -325,9 +283,7 @@
     "id": "SLOTH",
     "kind": "status_card",
     "name": "怠惰",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L44; md:afflictions_zh.md:L43"
+    "play_notes": ""
   },
   "SMOG": {
     "aliases": [
@@ -340,9 +296,7 @@
     "id": "SMOG",
     "kind": "affliction",
     "name": "烟雾",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L23; md:afflictions_zh.md:L23"
+    "play_notes": ""
   },
   "SMOKESTACK": {
     "aliases": [
@@ -355,9 +309,7 @@
     "id": "SMOKESTACK",
     "kind": "status_card",
     "name": "烟囱",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L72; md:afflictions_zh.md:L72"
+    "play_notes": ""
   },
   "TAINTED": {
     "aliases": [
@@ -370,9 +322,7 @@
     "id": "TAINTED",
     "kind": "affliction",
     "name": "污染",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L26; md:afflictions_zh.md:L25"
+    "play_notes": ""
   },
   "TOXIC": {
     "aliases": [
@@ -385,9 +335,7 @@
     "id": "TOXIC",
     "kind": "status_card",
     "name": "剧毒",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L37; md:afflictions_zh.md:L36"
+    "play_notes": ""
   },
   "TRASH_TO_TREASURE": {
     "aliases": [
@@ -400,9 +348,7 @@
     "id": "TRASH_TO_TREASURE",
     "kind": "status_card",
     "name": "化废为宝",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L74; md:afflictions_zh.md:L73"
+    "play_notes": ""
   },
   "WASTE_AWAY": {
     "aliases": [
@@ -415,9 +361,7 @@
     "id": "WASTE_AWAY",
     "kind": "status_card",
     "name": "衰朽",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L47; md:afflictions_zh.md:L46"
+    "play_notes": ""
   },
   "WOUND": {
     "aliases": [
@@ -430,8 +374,6 @@
     "id": "WOUND",
     "kind": "status_card",
     "name": "创伤",
-    "needs_zh": false,
-    "play_notes": "",
-    "source": "md:afflictions.md:L36; md:afflictions_zh.md:L35"
+    "play_notes": ""
   }
 }

@@ -13,13 +13,6 @@ from .data import CREATURE_NAME_TO_KEY
 from .merge import envelope
 from .textutil import humanize
 
-def _append_source(ent: dict, suffix: str):
-    """Append a provenance suffix once; re-runs must stay idempotent."""
-    src = ent.get("source") or ""
-    if suffix not in src:
-        ent["source"] = src + suffix
-
-
 BBCode_RE = re.compile(r"\[/?[a-zA-Z_]+\]")
 
 
@@ -85,7 +78,6 @@ def fold_codex(all_en: dict, live_ids: dict, refresh: bool = False) -> int:
             if desc and (len(ent.get("description") or "") < 40
                          or not ent.get("description")):
                 ent["description"] = desc
-                _append_source(ent, f"; codex:powers/{cand}")
             if data.get("type") and not ent.get("power_type"):
                 ent["power_type"] = data["type"]
             break
@@ -112,7 +104,6 @@ def fold_codex(all_en: dict, live_ids: dict, refresh: bool = False) -> int:
             desc = codex_clean(data.get("description"))
             if desc and len(ent.get("description") or "") < 40:
                 ent["description"] = desc
-                _append_source(ent, f"; codex:{kind}/{lid}")
             if domain == "cards" and data.get("cost") is not None \
                     and ent.get("cost") is None:
                 ent["cost"] = str(data["cost"])
@@ -157,7 +148,6 @@ def fold_codex(all_en: dict, live_ids: dict, refresh: bool = False) -> int:
                 codex_clean(data.get("description")) or
                 f"Monster {data.get('name', target_key)} — codex {api_id}.",
                 aliases=[api_id, data.get("name")] if api_id else [],
-                source=f"codex:monsters/{api_id}",
                 acts=[], hp={"base": None, "notes": None},
                 is_boss=str(data.get("type", "")).lower() == "boss",
                 passives=[], cycle=[], moves={},
@@ -230,7 +220,6 @@ def fold_codex(all_en: dict, live_ids: dict, refresh: bool = False) -> int:
                     live_mid, "move", mv.get("name") or humanize(api_mid),
                     codex_desc,
                     aliases=[api_mid] if api_mid and api_mid != live_mid else [],
-                    source=f"codex:monsters/{api_id} move {api_mid}",
                     monster_id=target_key, intents=intents,
                     base_damage=norm,
                     base_damage_ascension=asc,
@@ -253,7 +242,6 @@ def fold_codex(all_en: dict, live_ids: dict, refresh: bool = False) -> int:
                 if thin and codex_desc and not prev_desc.startswith("codex:"):
                     prev["description"] = codex_desc + (
                         f" | archive: {prev_desc}" if prev_desc.strip() else "")
-                    _append_source(prev, f"; codex:monsters/{api_id}")
                 # numeric fills are independent of the description branch —
                 # applying both in one pass keeps re-runs idempotent
                 if norm is not None and prev.get("base_damage") is None:

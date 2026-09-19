@@ -1,10 +1,11 @@
 """Build orchestration: --check gate, or overlay refresh of the JSON store.
 
-The spirectl_lib/data JSON files are the durable source of truth (markdown
-twins retired). Generate mode is an overlay pass: codex enrichment +
-curated extras + zh twin fill + move/zh fixups applied ON TOP of the
-existing store — keys are never dropped, curated:true entries never
-overwritten.
+The spirectl_lib/data JSON files are the durable source of truth. EN and ZH
+twins share one schema per entry; Chinese text lives only in ZH files.
+Generate mode is an overlay pass: codex enrichment + curated extras + zh
+twin creation + move/zh fixups applied ON TOP of the existing store — keys
+are never dropped, curated:true entries never overwritten, existing ZH
+entries never regenerated.
 """
 import argparse
 import json
@@ -14,7 +15,7 @@ from pathlib import Path
 from . import census, codex, fixups
 from .config import DOMAINS, DEFAULT_LIVE_IDS, DEFAULT_OUT_DIR
 from .data import CURATED_MOVES
-from .merge import apply_extras, envelope, fill_zh_twins, load_existing
+from .merge import apply_extras, envelope, fill_zh_twins, load_existing, sync_schemas
 from .textutil import humanize
 
 
@@ -34,7 +35,6 @@ def _apply_curated_moves(en: dict):
                 mid, "move", mname, mdesc,
                 aliases=[humanize(mid.replace("_MOVE", ""))],
                 play_notes="",
-                source="curated:census + monsters.md archive cycle",
                 monster_id=mon_key,
                 intents=[mintent] if mintent else [],
                 base_damage=bdmg,
@@ -95,7 +95,7 @@ def main(argv=None) -> int:
     if not args.no_codex:
         hits = codex.fold_codex(en, live_ids, refresh=args.codex_refresh)
         print(f"  codex fold: {hits} API hits (cache: {codex.CODEX_CACHE})")
-    fixups.apply_move_fixups(en)
+    fixups.apply_move_fixups(en, zh)
     _propagate_affliction_hosts(en)
     _apply_curated_moves(en)
 
@@ -105,9 +105,10 @@ def main(argv=None) -> int:
         if domain == "monsters":
             _apply_curated_moves(en)
 
-    fixups.apply_post_fixups(en)
+    fixups.apply_post_fixups(en, zh)
     for domain in DOMAINS:
         fill_zh_twins(en[domain], zh[domain])
+        sync_schemas(en[domain], zh[domain])
 
     for domain in DOMAINS:
         en_path = out_dir / f"{domain}.json"

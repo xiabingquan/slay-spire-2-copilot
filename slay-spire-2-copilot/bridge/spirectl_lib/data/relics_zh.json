@@ -10,10 +10,8 @@
     "id": "ADROIT",
     "kind": "relic",
     "name": "Kifuda",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "codex-api:/relics/KIFUDA"
+    "rarity": "Shop"
   },
   "AKABEKO": {
     "aliases": [
@@ -26,10 +24,8 @@
     "id": "AKABEKO",
     "kind": "relic",
     "name": "赤牛",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L48; md:relics_zh.md:L48; codex:relics/AKABEKO"
+    "rarity": "Uncommon"
   },
   "ALCHEMICAL_COFFER": {
     "aliases": [
@@ -43,10 +39,8 @@
     "id": "ALCHEMICAL_COFFER",
     "kind": "relic",
     "name": "炼金箱",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L140; md:relics_zh.md:L140"
+    "rarity": "Ancient"
   },
   "AMETHYST_AUBERGINE": {
     "aliases": [
@@ -61,8 +55,7 @@
     "kind": "relic",
     "name": "紫水晶茄子",
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L16; md:relics_zh.md:L16"
+    "rarity": "Common"
   },
   "ANCHOR": {
     "aliases": [
@@ -75,10 +68,8 @@
     "id": "ANCHOR",
     "kind": "relic",
     "name": "锚",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L17; md:relics_zh.md:L17; codex:relics/ANCHOR"
+    "rarity": "Common"
   },
   "ARCANE_SCROLL": {
     "aliases": [
@@ -92,10 +83,8 @@
     "id": "ARCANE_SCROLL",
     "kind": "relic",
     "name": "奥术卷轴",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L141; md:relics_zh.md:L141; codex:relics/ARCANE_SCROLL"
+    "rarity": "Ancient"
   },
   "ARCHAIC_TOOTH": {
     "aliases": [
@@ -109,10 +98,8 @@
     "id": "ARCHAIC_TOOTH",
     "kind": "relic",
     "name": "古老牙齿",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L142; md:relics_zh.md:L142"
+    "rarity": "Ancient"
   },
   "ART_OF_WAR": {
     "aliases": [
@@ -126,10 +113,8 @@
     "id": "ART_OF_WAR",
     "kind": "relic",
     "name": "孙子兵法",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L89; md:relics_zh.md:L89"
+    "rarity": "Rare"
   },
   "ASTROLABE": {
     "aliases": [
@@ -142,10 +127,8 @@
     "id": "ASTROLABE",
     "kind": "relic",
     "name": "星盘",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L143; md:relics_zh.md:L143"
+    "rarity": "Ancient"
   },
   "BAG_OF_MARBLES": {
     "aliases": [
@@ -159,10 +142,8 @@
     "id": "BAG_OF_MARBLES",
     "kind": "relic",
     "name": "弹珠袋",
-    "needs_zh": false,
     "play_notes": "run-46 live：弹珠袋+红面具自动包=本局脊线；购买点 99% 金币沉淀。",
-    "rarity": "Common",
-    "source": "md:relics.md:L18; md:relics_zh.md:L18"
+    "rarity": "Common"
   },
   "BAG_OF_PREPARATION": {
     "aliases": [
@@ -177,10 +158,8 @@
     "kind": "relic",
     "live_notes": "LIVE run-56：每场战斗开局额外抽 2 张牌。引擎提前上线。",
     "name": "准备背包",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L19; md:relics_zh.md:L19; codex:relics/BAG_OF_PREPARATION"
+    "rarity": "Common"
   },
   "BEATING_REMNANT": {
     "aliases": [
@@ -194,10 +173,8 @@
     "id": "BEATING_REMNANT",
     "kind": "relic",
     "name": "律动残余",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L90; md:relics_zh.md:L90"
+    "rarity": "Rare"
   },
   "BEAUTIFUL_BRACELET": {
     "aliases": [
@@ -211,10 +188,8 @@
     "id": "BEAUTIFUL_BRACELET",
     "kind": "relic",
     "name": "华美手镯",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L144; md:relics_zh.md:L144"
+    "rarity": "Ancient"
   },
   "BELLOWS": {
     "aliases": [
@@ -227,10 +202,8 @@
     "id": "BELLOWS",
     "kind": "relic",
     "name": "风箱",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L91; md:relics_zh.md:L91"
+    "rarity": "Rare"
   },
   "BELT_BUCKLE": {
     "aliases": [
@@ -244,10 +217,8 @@
     "id": "BELT_BUCKLE",
     "kind": "relic",
     "name": "腰带扣",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L241; md:relics_zh.md:L241"
+    "rarity": "Shop"
   },
   "BIG_HAT": {
     "aliases": [
@@ -261,10 +232,8 @@
     "id": "BIG_HAT",
     "kind": "relic",
     "name": "大帽子",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L92; md:relics_zh.md:L92"
+    "rarity": "Rare"
   },
   "BIG_MUSHROOM": {
     "aliases": [
@@ -279,10 +248,8 @@
     "kind": "relic",
     "live_notes": "LIVE run-56：蘑菇事件选择。拾起时 +20 最大生命值；第 1 回合少抽 2 张牌（节奏代价）。",
     "name": "大蘑菇",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L272; md:relics_zh.md:L272"
+    "rarity": "Event"
   },
   "BIIIG_HUG": {
     "aliases": [
@@ -298,10 +265,8 @@
     "id": "BIIIG_HUG",
     "kind": "relic",
     "name": "大大拥抱",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
+    "rarity": "Ancient"
   },
   "BING_BONG": {
     "aliases": [
@@ -315,10 +280,8 @@
     "id": "BING_BONG",
     "kind": "relic",
     "name": "宾邦",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L273; md:relics_zh.md:L273"
+    "rarity": "Event"
   },
   "BLACK_BLOOD": {
     "aliases": [
@@ -332,10 +295,8 @@
     "id": "BLACK_BLOOD",
     "kind": "relic",
     "name": "黑暗之血",
-    "needs_zh": false,
     "play_notes": "run-49 live：战后回血 12 八次确认（61→73 / 65→77 / 2→14 级）。被动 HP 轨翻倍；HP 经济死亡类的系统性解。run-39 同事件先例成立。",
-    "rarity": "Ancient",
-    "source": "run-49 live 折叠 2026-09-19（日志 run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c）"
+    "rarity": "Ancient"
   },
   "BLACK_STAR": {
     "aliases": [
@@ -349,10 +310,8 @@
     "id": "BLACK_STAR",
     "kind": "relic",
     "name": "黑星",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "run-51 live fold 2026-09-19"
+    "rarity": "Ancient"
   },
   "BLESSED_ANTLER": {
     "aliases": [
@@ -366,10 +325,8 @@
     "id": "BLESSED_ANTLER",
     "kind": "relic",
     "name": "赐福鹿角",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L147; md:relics_zh.md:L147"
+    "rarity": "Ancient"
   },
   "BLOOD_SOAKED_ROSE": {
     "aliases": [
@@ -383,10 +340,8 @@
     "id": "BLOOD_SOAKED_ROSE",
     "kind": "relic",
     "name": "血染玫瑰",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L148; md:relics_zh.md:L148"
+    "rarity": "Ancient"
   },
   "BLOOD_VIAL": {
     "aliases": [
@@ -400,10 +355,8 @@
     "id": "BLOOD_VIAL",
     "kind": "relic",
     "name": "血瓶",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L20; md:relics_zh.md:L20; codex:relics/BLOOD_VIAL; run-40 live fold 2026-09-18"
+    "rarity": "Common"
   },
   "BONE_FLUTE": {
     "aliases": [
@@ -417,10 +370,8 @@
     "id": "BONE_FLUTE",
     "kind": "relic",
     "name": "骨笛",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L21; md:relics_zh.md:L21"
+    "rarity": "Common"
   },
   "BONE_TEA": {
     "aliases": [
@@ -434,10 +385,8 @@
     "id": "BONE_TEA",
     "kind": "relic",
     "name": "骨茶",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L274; md:relics_zh.md:L274"
+    "rarity": "Event"
   },
   "BOOKMARK": {
     "aliases": [
@@ -450,10 +399,8 @@
     "id": "BOOKMARK",
     "kind": "relic",
     "name": "书签",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L93; md:relics_zh.md:L93"
+    "rarity": "Rare"
   },
   "BOOK_OF_FIVE_RINGS": {
     "aliases": [
@@ -469,11 +416,8 @@
     "id": "BOOK_OF_FIVE_RINGS",
     "kind": "relic",
     "name": "五轮之书",
-    "needs_zh": false,
     "play_notes": "对局43 live",
-    "rarity": "Common",
-    "source": "relics.md + 对局43 商店",
-    "zh_description": "牌库每加入5张牌回复20HP（兑现后计数重置）。反稀简遗物——加牌密集路线兑现。run-57 live：两次兑现（计数两次到5——Act1 Armaments 入手 + Act2 中段加牌）；回血落在 Elite② 前 68/86 与 Act2 商店窗。"
+    "rarity": "Common"
   },
   "BOOK_REPAIR_KNIFE": {
     "aliases": [
@@ -487,10 +431,8 @@
     "id": "BOOK_REPAIR_KNIFE",
     "kind": "relic",
     "name": "修书小刀",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L49; md:relics_zh.md:L49"
+    "rarity": "Uncommon"
   },
   "BOOMING_CONCH": {
     "aliases": [
@@ -505,10 +447,8 @@
     "kind": "relic",
     "live_notes": "LIVE run-56：Neow 选择。精英战开局抽 +2 张牌并获得 1 能量。",
     "name": "轰鸣海螺",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L149; md:relics_zh.md:L149"
+    "rarity": "Ancient"
   },
   "BOUND_PHYLACTERY": {
     "aliases": [
@@ -522,10 +462,8 @@
     "id": "BOUND_PHYLACTERY",
     "kind": "relic",
     "name": "缚魂命匣",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Starter",
-    "source": "md:relics.md:L6; md:relics_zh.md:L6"
+    "rarity": "Starter"
   },
   "BOWLER_HAT": {
     "aliases": [
@@ -540,11 +478,8 @@
     "id": "BOWLER_HAT",
     "kind": "relic",
     "name": "礼帽",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L50; md:relics_zh.md:L50",
-    "zh_description": "金币获取×1.25。仅可在第三幕宝箱前获得；商店不出售。run-57 live：Act2 宝箱与精英赏金可见放大（宝箱+43级 vs 基准30级）。"
+    "rarity": "Uncommon"
   },
   "BREAD": {
     "aliases": [
@@ -557,10 +492,8 @@
     "id": "BREAD",
     "kind": "relic",
     "name": "面包",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L242; md:relics_zh.md:L242"
+    "rarity": "Shop"
   },
   "BRIGHT_FLAME": {
     "aliases": [
@@ -576,10 +509,8 @@
     "id": "BRIGHT_FLAME",
     "kind": "relic",
     "name": "至亮之焰",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
+    "rarity": "Ancient"
   },
   "BRILLIANT_SCARF": {
     "aliases": [
@@ -593,10 +524,8 @@
     "id": "BRILLIANT_SCARF",
     "kind": "relic",
     "name": "艳丽围巾",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L150; md:relics_zh.md:L150"
+    "rarity": "Ancient"
   },
   "BRIMSTONE": {
     "aliases": [
@@ -609,10 +538,8 @@
     "id": "BRIMSTONE",
     "kind": "relic",
     "name": "硫磺",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L243; md:relics_zh.md:L243"
+    "rarity": "Shop"
   },
   "BRONZE_SCALES": {
     "aliases": [
@@ -627,10 +554,8 @@
     "kind": "relic",
     "live_notes": "LIVE run-56：每场战斗开始时 +3 荆棘。荆棘伤害穿挡。",
     "name": "铜质鳞片",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L23; md:relics_zh.md:L23; codex:relics/BRONZE_SCALES"
+    "rarity": "Common"
   },
   "BURNING_BLOOD": {
     "aliases": [
@@ -644,10 +569,8 @@
     "id": "BURNING_BLOOD",
     "kind": "relic",
     "name": "燃烧之血",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Starter",
-    "source": "md:relics.md:L14; md:relics_zh.md:L14; codex:relics/BURNING_BLOOD"
+    "rarity": "Starter"
   },
   "BURNING_STICKS": {
     "aliases": [
@@ -661,10 +584,8 @@
     "id": "BURNING_STICKS",
     "kind": "relic",
     "name": "燃烧木棍",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L244; md:relics_zh.md:L244"
+    "rarity": "Shop"
   },
   "BYRDPIP": {
     "aliases": [
@@ -677,10 +598,8 @@
     "id": "BYRDPIP",
     "kind": "relic",
     "name": "异鸟宝宝",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L275; md:relics_zh.md:L275"
+    "rarity": "Event"
   },
   "CALLING_BELL": {
     "aliases": [
@@ -694,10 +613,8 @@
     "id": "CALLING_BELL",
     "kind": "relic",
     "name": "召唤铃铛",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L151; md:relics_zh.md:L151"
+    "rarity": "Ancient"
   },
   "CANDELABRA": {
     "aliases": [
@@ -710,10 +627,8 @@
     "id": "CANDELABRA",
     "kind": "relic",
     "name": "烛台",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L51; md:relics_zh.md:L51"
+    "rarity": "Uncommon"
   },
   "CAPTAINS_WHEEL": {
     "aliases": [
@@ -727,10 +642,8 @@
     "id": "CAPTAINS_WHEEL",
     "kind": "relic",
     "name": "舵盘",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L94; md:relics_zh.md:L94"
+    "rarity": "Rare"
   },
   "CAULDRON": {
     "aliases": [
@@ -743,10 +656,8 @@
     "id": "CAULDRON",
     "kind": "relic",
     "name": "大锅",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L245; md:relics_zh.md:L245"
+    "rarity": "Shop"
   },
   "CENTENNIAL_PUZZLE": {
     "aliases": [
@@ -761,10 +672,8 @@
     "kind": "relic",
     "live_notes": "LIVE run-56：每场战斗首次失去 HP 时抽 3 张牌。与自伤引擎协同（Hemokinesis/Bloodletting/BloodWall 触发）。",
     "name": "百年积木",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L24; md:relics_zh.md:L24"
+    "rarity": "Common"
   },
   "CHANDELIER": {
     "aliases": [
@@ -777,10 +686,8 @@
     "id": "CHANDELIER",
     "kind": "relic",
     "name": "吊灯",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L95; md:relics_zh.md:L95; codex:relics/CHANDELIER"
+    "rarity": "Rare"
   },
   "CHARONS_ASHES": {
     "aliases": [
@@ -794,10 +701,8 @@
     "id": "CHARONS_ASHES",
     "kind": "relic",
     "name": "卡戎之灰",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L96; md:relics_zh.md:L96"
+    "rarity": "Rare"
   },
   "CHEMICAL_X": {
     "aliases": [
@@ -811,10 +716,8 @@
     "id": "CHEMICAL_X",
     "kind": "relic",
     "name": "化学物X",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L246; md:relics_zh.md:L246"
+    "rarity": "Shop"
   },
   "CHOICES_PARADOX": {
     "aliases": [
@@ -828,10 +731,8 @@
     "id": "CHOICES_PARADOX",
     "kind": "relic",
     "name": "选择悖论",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L152; md:relics_zh.md:L152"
+    "rarity": "Ancient"
   },
   "CHOSEN_CHEESE": {
     "aliases": [
@@ -846,11 +747,8 @@
     "id": "CHOSEN_CHEESE",
     "kind": "relic",
     "name": "天选芝士",
-    "needs_zh": false,
     "play_notes": "run-46 live：16 次胜利滚动；与燃烧之血+华夫饼+Feed Fatal 构成 HP 铁路；Paper Cuts 税（Act3 卷轴战）是唯一观测漏点——全挡回合零 MaxHP 损失。",
-    "rarity": "Event",
-    "source": "run-51 live fold 2026-09-19",
-    "zh_description": "事件遗物（ROOM_FULL_OF_CHEESE 翻找分支，run-57 拾取时−14HP）：每场战斗结束+1最大HP（run-51/57 live 级——与燃烧之血回复及 Feed Fatal 叠加）。run-57：HP 轨组件 80→97（与 Feed 复合）；在 46/95 级 HP 付出的入场税由 Act2 各战兑付。"
+    "rarity": "Event"
   },
   "CIRCLET": {
     "aliases": [
@@ -863,10 +761,8 @@
     "id": "CIRCLET",
     "kind": "relic",
     "name": "头环",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "None",
-    "source": "md:relics.md:L46; md:relics_zh.md:L46"
+    "rarity": "None"
   },
   "CLAWS": {
     "aliases": [
@@ -879,10 +775,8 @@
     "id": "CLAWS",
     "kind": "relic",
     "name": "利爪",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L153; md:relics_zh.md:L153"
+    "rarity": "Ancient"
   },
   "CLOAK_CLASP": {
     "aliases": [
@@ -896,10 +790,8 @@
     "id": "CLOAK_CLASP",
     "kind": "relic",
     "name": "斗篷扣",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L97; md:relics_zh.md:L97"
+    "rarity": "Rare"
   },
   "CRACKED_CORE": {
     "aliases": [
@@ -913,10 +805,8 @@
     "id": "CRACKED_CORE",
     "kind": "relic",
     "name": "破损核心",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Starter",
-    "source": "md:relics.md:L8; md:relics_zh.md:L8"
+    "rarity": "Starter"
   },
   "CROSSBOW": {
     "aliases": [
@@ -929,10 +819,8 @@
     "id": "CROSSBOW",
     "kind": "relic",
     "name": "十字弓",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L154; md:relics_zh.md:L154"
+    "rarity": "Ancient"
   },
   "CURSED_PEARL": {
     "aliases": [
@@ -946,10 +834,8 @@
     "id": "CURSED_PEARL",
     "kind": "relic",
     "name": "诅咒珍珠",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L155; md:relics_zh.md:L155"
+    "rarity": "Ancient"
   },
   "DARKSTONE_PERIAPT": {
     "aliases": [
@@ -963,10 +849,8 @@
     "id": "DARKSTONE_PERIAPT",
     "kind": "relic",
     "name": "黑石护符",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L277; md:relics_zh.md:L277"
+    "rarity": "Event"
   },
   "DATA_DISK": {
     "aliases": [
@@ -980,10 +864,8 @@
     "id": "DATA_DISK",
     "kind": "relic",
     "name": "数据磁盘",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L25; md:relics_zh.md:L25"
+    "rarity": "Common"
   },
   "DAUGHTER_OF_THE_WIND": {
     "aliases": [
@@ -998,10 +880,8 @@
     "kind": "relic",
     "live_notes": "LIVE run-56：玩偶房选择。每打出一张攻击牌获得 1 挡。与攻击密集牌组构成被动挡引擎。",
     "name": "风的女儿",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L278; md:relics_zh.md:L278"
+    "rarity": "Event"
   },
   "DAUGHTER_OF_WIND": {
     "aliases": [
@@ -1014,10 +894,8 @@
     "id": "DAUGHTER_OF_WIND",
     "kind": "relic",
     "name": "Daughter of the Wind",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "codex-api:/relics/DAUGHTER_OF_THE_WIND"
+    "rarity": "Event"
   },
   "DELICATE_FROND": {
     "aliases": [
@@ -1031,10 +909,8 @@
     "id": "DELICATE_FROND",
     "kind": "relic",
     "name": "娇嫩蕨草",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L156; md:relics_zh.md:L156"
+    "rarity": "Ancient"
   },
   "DEMON_TONGUE": {
     "aliases": [
@@ -1048,10 +924,8 @@
     "id": "DEMON_TONGUE",
     "kind": "relic",
     "name": "恶魔之舌",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L98; md:relics_zh.md:L98"
+    "rarity": "Rare"
   },
   "DIAMOND_DIADEM": {
     "aliases": [
@@ -1065,10 +939,8 @@
     "id": "DIAMOND_DIADEM",
     "kind": "relic",
     "name": "钻石头冠",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L157; md:relics_zh.md:L157"
+    "rarity": "Ancient"
   },
   "DINGY_RUG": {
     "aliases": [
@@ -1083,10 +955,8 @@
     "id": "DINGY_RUG",
     "kind": "relic",
     "name": "破地毯",
-    "needs_zh": false,
     "play_notes": "对局43 live",
-    "rarity": "Shop",
-    "source": "relics.md + 对局43 商店"
+    "rarity": "Shop"
   },
   "DISTINGUISHED_CAPE": {
     "aliases": [
@@ -1100,10 +970,8 @@
     "id": "DISTINGUISHED_CAPE",
     "kind": "relic",
     "name": "卓越斗篷",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L158; md:relics_zh.md:L158"
+    "rarity": "Ancient"
   },
   "DIVINE_DESTINY": {
     "aliases": [
@@ -1117,10 +985,8 @@
     "id": "DIVINE_DESTINY",
     "kind": "relic",
     "name": "天命所归",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Starter",
-    "source": "md:relics.md:L9; md:relics_zh.md:L9"
+    "rarity": "Starter"
   },
   "DIVINE_RIGHT": {
     "aliases": [
@@ -1134,10 +1000,8 @@
     "id": "DIVINE_RIGHT",
     "kind": "relic",
     "name": "天赋君权",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Starter",
-    "source": "md:relics.md:L10; md:relics_zh.md:L10"
+    "rarity": "Starter"
   },
   "DOLLYS_MIRROR": {
     "aliases": [
@@ -1151,10 +1015,8 @@
     "id": "DOLLYS_MIRROR",
     "kind": "relic",
     "name": "多利之镜",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L248; md:relics_zh.md:L248"
+    "rarity": "Shop"
   },
   "DRAGON_FRUIT": {
     "aliases": [
@@ -1168,10 +1030,8 @@
     "id": "DRAGON_FRUIT",
     "kind": "relic",
     "name": "火龙果",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L249; md:relics_zh.md:L249"
+    "rarity": "Shop"
   },
   "DREAM_CATCHER": {
     "aliases": [
@@ -1185,10 +1045,8 @@
     "id": "DREAM_CATCHER",
     "kind": "relic",
     "name": "捕梦网",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L279; md:relics_zh.md:L279"
+    "rarity": "Event"
   },
   "DRIFTWOOD": {
     "aliases": [
@@ -1201,10 +1059,8 @@
     "id": "DRIFTWOOD",
     "kind": "relic",
     "name": "浮木",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L159; md:relics_zh.md:L159"
+    "rarity": "Ancient"
   },
   "DUSTY_TOME": {
     "aliases": [
@@ -1218,10 +1074,8 @@
     "id": "DUSTY_TOME",
     "kind": "relic",
     "name": "尘封魔典",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L160; md:relics_zh.md:L160"
+    "rarity": "Ancient"
   },
   "ECTOPLASM": {
     "aliases": [
@@ -1234,10 +1088,8 @@
     "id": "ECTOPLASM",
     "kind": "relic",
     "name": "灵体外质",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L161; md:relics_zh.md:L161"
+    "rarity": "Ancient"
   },
   "ELECTRIC_SHRYMP": {
     "aliases": [
@@ -1251,10 +1103,8 @@
     "id": "ELECTRIC_SHRYMP",
     "kind": "relic",
     "name": "放电异虾",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L162; md:relics_zh.md:L162"
+    "rarity": "Ancient"
   },
   "EMBER_TEA": {
     "aliases": [
@@ -1268,10 +1118,8 @@
     "id": "EMBER_TEA",
     "kind": "relic",
     "name": "余烬茶",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L280; md:relics_zh.md:L280"
+    "rarity": "Event"
   },
   "EMOTION_CHIP": {
     "aliases": [
@@ -1285,10 +1133,8 @@
     "id": "EMOTION_CHIP",
     "kind": "relic",
     "name": "情感芯片",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L99; md:relics_zh.md:L99"
+    "rarity": "Rare"
   },
   "EMPTY_CAGE": {
     "aliases": [
@@ -1302,10 +1148,8 @@
     "id": "EMPTY_CAGE",
     "kind": "relic",
     "name": "空鸟笼",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L163; md:relics_zh.md:L163"
+    "rarity": "Ancient"
   },
   "ETERNAL_FEATHER": {
     "aliases": [
@@ -1318,10 +1162,8 @@
     "id": "ETERNAL_FEATHER",
     "kind": "relic",
     "name": "Eternal Feather",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "codex-api:/relics/ETERNAL_FEATHER"
+    "rarity": "Uncommon"
   },
   "FAKE_ANCHOR": {
     "aliases": [
@@ -1335,10 +1177,8 @@
     "id": "FAKE_ANCHOR",
     "kind": "relic",
     "name": "锚？？？",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L281; md:relics_zh.md:L281"
+    "rarity": "Event"
   },
   "FAKE_BLOOD_VIAL": {
     "aliases": [
@@ -1352,10 +1192,8 @@
     "id": "FAKE_BLOOD_VIAL",
     "kind": "relic",
     "name": "小血瓶？？？",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L282; md:relics_zh.md:L282"
+    "rarity": "Event"
   },
   "FAKE_HAPPY_FLOWER": {
     "aliases": [
@@ -1369,10 +1207,8 @@
     "id": "FAKE_HAPPY_FLOWER",
     "kind": "relic",
     "name": "开心小花？？？",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L283; md:relics_zh.md:L283"
+    "rarity": "Event"
   },
   "FAKE_LEES_WAFFLE": {
     "aliases": [
@@ -1386,10 +1222,8 @@
     "id": "FAKE_LEES_WAFFLE",
     "kind": "relic",
     "name": "李家华夫饼？？？",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L284; md:relics_zh.md:L284"
+    "rarity": "Event"
   },
   "FAKE_MANGO": {
     "aliases": [
@@ -1403,10 +1237,8 @@
     "id": "FAKE_MANGO",
     "kind": "relic",
     "name": "芒果？？？",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L285; md:relics_zh.md:L285"
+    "rarity": "Event"
   },
   "FAKE_MERCHANTS_RUG": {
     "aliases": [
@@ -1420,10 +1252,8 @@
     "id": "FAKE_MERCHANTS_RUG",
     "kind": "relic",
     "name": "商人的地毯？？？",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L286; md:relics_zh.md:L286"
+    "rarity": "Event"
   },
   "FAKE_ORICHALCUM": {
     "aliases": [
@@ -1437,10 +1267,8 @@
     "id": "FAKE_ORICHALCUM",
     "kind": "relic",
     "name": "奥利哈钢？？？",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L287; md:relics_zh.md:L287"
+    "rarity": "Event"
   },
   "FAKE_SNECKO_EYE": {
     "aliases": [
@@ -1454,10 +1282,8 @@
     "id": "FAKE_SNECKO_EYE",
     "kind": "relic",
     "name": "异蛇之眼？？？",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L288; md:relics_zh.md:L288"
+    "rarity": "Event"
   },
   "FAKE_STRIKE_DUMMY": {
     "aliases": [
@@ -1471,10 +1297,8 @@
     "id": "FAKE_STRIKE_DUMMY",
     "kind": "relic",
     "name": "打击木偶？？？",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L289; md:relics_zh.md:L289"
+    "rarity": "Event"
   },
   "FAKE_VENERABLE_TEA_SET": {
     "aliases": [
@@ -1488,10 +1312,8 @@
     "id": "FAKE_VENERABLE_TEA_SET",
     "kind": "relic",
     "name": "古茶具套装？？？",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L290; md:relics_zh.md:L290"
+    "rarity": "Event"
   },
   "FENCING_MANUAL": {
     "aliases": [
@@ -1505,10 +1327,8 @@
     "id": "FENCING_MANUAL",
     "kind": "relic",
     "name": "击剑指南",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L26; md:relics_zh.md:L26"
+    "rarity": "Common"
   },
   "FESTIVE_POPPER": {
     "aliases": [
@@ -1522,10 +1342,8 @@
     "id": "FESTIVE_POPPER",
     "kind": "relic",
     "name": "节日拉炮",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L27; md:relics_zh.md:L27"
+    "rarity": "Common"
   },
   "FIDDLE": {
     "aliases": [
@@ -1538,10 +1356,8 @@
     "id": "FIDDLE",
     "kind": "relic",
     "name": "小提琴",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L164; md:relics_zh.md:L164"
+    "rarity": "Ancient"
   },
   "FISHING_ROD": {
     "aliases": [
@@ -1555,10 +1371,8 @@
     "id": "FISHING_ROD",
     "kind": "relic",
     "name": "钓鱼竿",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L165; md:relics_zh.md:L165"
+    "rarity": "Ancient"
   },
   "FORGOTTEN_SOUL": {
     "aliases": [
@@ -1572,10 +1386,8 @@
     "id": "FORGOTTEN_SOUL",
     "kind": "relic",
     "name": "遗忘之魂",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L291; md:relics_zh.md:L291"
+    "rarity": "Event"
   },
   "FRAGRANT_MUSHROOM": {
     "aliases": [
@@ -1589,10 +1401,8 @@
     "id": "FRAGRANT_MUSHROOM",
     "kind": "relic",
     "name": "芳香蘑菇",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L292; md:relics_zh.md:L292"
+    "rarity": "Event"
   },
   "FRESNEL_LENS": {
     "aliases": [
@@ -1606,10 +1416,8 @@
     "id": "FRESNEL_LENS",
     "kind": "relic",
     "name": "菲涅耳透镜",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L293; md:relics_zh.md:L293"
+    "rarity": "Event"
   },
   "FROZEN_EGG": {
     "aliases": [
@@ -1623,10 +1431,8 @@
     "id": "FROZEN_EGG",
     "kind": "relic",
     "name": "冻结之蛋",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L100; md:relics_zh.md:L100"
+    "rarity": "Rare"
   },
   "FUNERARY_MASK": {
     "aliases": [
@@ -1640,10 +1446,8 @@
     "id": "FUNERARY_MASK",
     "kind": "relic",
     "name": "葬礼面具",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L53; md:relics_zh.md:L53"
+    "rarity": "Uncommon"
   },
   "FUR_COAT": {
     "aliases": [
@@ -1657,10 +1461,8 @@
     "id": "FUR_COAT",
     "kind": "relic",
     "name": "皮草大衣",
-    "needs_zh": false,
     "play_notes": "run-46 live pick rationale: pacing relief > conditional defense > card-engine extension at Act3 entry.",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L166; md:relics_zh.md:L166"
+    "rarity": "Ancient"
   },
   "GALACTIC_DUST": {
     "aliases": [
@@ -1674,10 +1476,8 @@
     "id": "GALACTIC_DUST",
     "kind": "relic",
     "name": "星系尘埃",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L54; md:relics_zh.md:L54"
+    "rarity": "Uncommon"
   },
   "GAMBLING_CHIP": {
     "aliases": [
@@ -1692,11 +1492,8 @@
     "id": "GAMBLING_CHIP",
     "kind": "relic",
     "name": "赌博筹码",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L101; md:relics_zh.md:L101",
-    "zh_description": "稀有：战斗开始时弃任意数量牌并抽等量（经 hand_select overlay 换牌：选牌→proceed）。run-57 live：棱柱战（零技能纪律）换掉技能类牌；三敌战换掉 Uppercut 重抽挡件。overlay 在 play 阶段前出现——未解决前 play 调用被 fail-loud 拒绝。"
+    "rarity": "Rare"
   },
   "GAME_PIECE": {
     "aliases": [
@@ -1710,10 +1507,8 @@
     "id": "GAME_PIECE",
     "kind": "relic",
     "name": "棋子",
-    "needs_zh": false,
     "play_notes": "run-49 live：Inflame/Vicious/Unmovable/FNP 每次打出后均观察到抽牌事件；与能力类引擎天然成套。",
-    "rarity": "Rare",
-    "source": "run-49 live 折叠 2026-09-19（日志 run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c）"
+    "rarity": "Rare"
   },
   "GHOST_SEED": {
     "aliases": [
@@ -1727,10 +1522,8 @@
     "id": "GHOST_SEED",
     "kind": "relic",
     "name": "幽灵种子",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L250; md:relics_zh.md:L250"
+    "rarity": "Shop"
   },
   "GIRYA": {
     "aliases": [
@@ -1743,10 +1536,8 @@
     "id": "GIRYA",
     "kind": "relic",
     "name": "壶铃",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L103; md:relics_zh.md:L103"
+    "rarity": "Rare"
   },
   "GLAM": {
     "aliases": [
@@ -1759,10 +1550,8 @@
     "id": "GLAM",
     "kind": "enchant",
     "name": "华彩",
-    "needs_zh": false,
     "play_notes": "run-49 live 过程注：Glam 重放（第二次结算）在首次效果完整结算后触发，包括 Headbutt 的回收 choose。回收 choose 后立即提交下一个 act 可能吞掉重放窗口（2 次观察）。Glam Headbutt 的回收 choose 之后，若双结算重要，先 settle 重读再发下一 act。重放伤害 live 观测：9+9 / 12+12 / 13+13 / 15+15 / 22+5 级。",
-    "rarity": null,
-    "source": "run-49 live 折叠 2026-09-19（日志 run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c）"
+    "rarity": null
   },
   "GLASS_EYE": {
     "aliases": [
@@ -1776,10 +1565,8 @@
     "id": "GLASS_EYE",
     "kind": "relic",
     "name": "玻璃眼珠",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L167; md:relics_zh.md:L167"
+    "rarity": "Ancient"
   },
   "GLITTER": {
     "aliases": [
@@ -1792,10 +1579,8 @@
     "id": "GLITTER",
     "kind": "relic",
     "name": "亮片",
-    "needs_zh": false,
     "play_notes": "全局长期附魔引擎；附魔效果见 GLAM。",
-    "rarity": "Ancient",
-    "source": "perplexity-search 2026-09-19（gamerblurb Glam explained；spire-codex.com/enchantments/glam；mobalytics enchantments guide）+ 本局 Neow 屏 live 校验 F9S4BGVMFD"
+    "rarity": "Ancient"
   },
   "GNARLED_HAMMER": {
     "aliases": [
@@ -1809,10 +1594,8 @@
     "id": "GNARLED_HAMMER",
     "kind": "relic",
     "name": "扭曲锤子",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L251; md:relics_zh.md:L251"
+    "rarity": "Shop"
   },
   "GOLDEN_COMPASS": {
     "aliases": [
@@ -1828,10 +1611,8 @@
     "id": "GOLDEN_COMPASS",
     "kind": "relic",
     "name": "黄金罗盘",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
+    "rarity": "Ancient"
   },
   "GOLDEN_PEARL": {
     "aliases": [
@@ -1845,10 +1626,8 @@
     "id": "GOLDEN_PEARL",
     "kind": "relic",
     "name": "金色珍珠",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L170; md:relics_zh.md:L170; codex:relics/GOLDEN_PEARL"
+    "rarity": "Ancient"
   },
   "GOLD_PLATED_CABLES": {
     "aliases": [
@@ -1862,10 +1641,8 @@
     "id": "GOLD_PLATED_CABLES",
     "kind": "relic",
     "name": "镀金缆线",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L55; md:relics_zh.md:L55"
+    "rarity": "Uncommon"
   },
   "GORGET": {
     "aliases": [
@@ -1880,11 +1657,8 @@
     "id": "GORGET",
     "kind": "relic",
     "name": "颈甲",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L28; md:relics_zh.md:L28; codex:relics/GORGET",
-    "zh_description": "普通：每场战斗开始获得4层镀甲（滚动挡——镀甲在你方回合末提供Amount挡，你回合初堆数递减；镀甲与卡牌挡同窗叠加入账）。run-57 live：颈甲+Defend+Shrug 组合常构 14-22 挡覆盖；石碗虫 IMBALANCED 眩晕在 16总挡 vs 15意图时触发。"
+    "rarity": "Common"
   },
   "GREMLIN_HORN": {
     "aliases": [
@@ -1898,10 +1672,8 @@
     "id": "GREMLIN_HORN",
     "kind": "relic",
     "name": "贪魔之角",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L56; md:relics_zh.md:L56"
+    "rarity": "Uncommon"
   },
   "HAND_DRILL": {
     "aliases": [
@@ -1915,10 +1687,8 @@
     "id": "HAND_DRILL",
     "kind": "relic",
     "name": "手钻",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L294; md:relics_zh.md:L294"
+    "rarity": "Event"
   },
   "HAPPY_FLOWER": {
     "aliases": [
@@ -1932,10 +1702,8 @@
     "id": "HAPPY_FLOWER",
     "kind": "relic",
     "name": "开心小花",
-    "needs_zh": false,
     "play_notes": "run-49 live：Act2 精英 (12,1) 掉落，计数 :0→:1→:2 随战斗回合推进显示；能量在计数归零回合到账。",
-    "rarity": "Common",
-    "source": "run-49 live 折叠 2026-09-19（日志 run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c）"
+    "rarity": "Common"
   },
   "HEFTY_TABLET": {
     "aliases": [
@@ -1949,10 +1717,8 @@
     "id": "HEFTY_TABLET",
     "kind": "relic",
     "name": "沉重石板",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L171; md:relics_zh.md:L171"
+    "rarity": "Ancient"
   },
   "HELICAL_DART": {
     "aliases": [
@@ -1966,10 +1732,8 @@
     "id": "HELICAL_DART",
     "kind": "relic",
     "name": "螺线飞镖",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L104; md:relics_zh.md:L104"
+    "rarity": "Rare"
   },
   "HISTORY_COURSE": {
     "aliases": [
@@ -1983,10 +1747,8 @@
     "id": "HISTORY_COURSE",
     "kind": "relic",
     "name": "历史课",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L295; md:relics_zh.md:L295"
+    "rarity": "Event"
   },
   "HORN_CLEAT": {
     "aliases": [
@@ -2000,10 +1762,8 @@
     "id": "HORN_CLEAT",
     "kind": "relic",
     "name": "船夹板",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L57; md:relics_zh.md:L57; codex:relics/HORN_CLEAT"
+    "rarity": "Uncommon"
   },
   "ICE_CREAM": {
     "aliases": [
@@ -2017,10 +1777,8 @@
     "id": "ICE_CREAM",
     "kind": "relic",
     "name": "冰淇淋",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L105; md:relics_zh.md:L105"
+    "rarity": "Rare"
   },
   "INFUSED_CORE": {
     "aliases": [
@@ -2034,10 +1792,8 @@
     "id": "INFUSED_CORE",
     "kind": "relic",
     "name": "注能核心",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Starter",
-    "source": "md:relics.md:L5; md:relics_zh.md:L5"
+    "rarity": "Starter"
   },
   "INTIMIDATING_HELMET": {
     "aliases": [
@@ -2051,10 +1807,8 @@
     "id": "INTIMIDATING_HELMET",
     "kind": "relic",
     "name": "骇人头盔",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L106; md:relics_zh.md:L106"
+    "rarity": "Rare"
   },
   "IRON_CLUB": {
     "aliases": [
@@ -2068,10 +1822,8 @@
     "id": "IRON_CLUB",
     "kind": "relic",
     "name": "铁棒",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L172; md:relics_zh.md:L172; codex:relics/IRON_CLUB"
+    "rarity": "Ancient"
   },
   "IVORY_TILE": {
     "aliases": [
@@ -2085,10 +1837,8 @@
     "id": "IVORY_TILE",
     "kind": "relic",
     "name": "象牙麻将牌",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L107; md:relics_zh.md:L107"
+    "rarity": "Rare"
   },
   "JEWELED_MASK": {
     "aliases": [
@@ -2102,10 +1852,8 @@
     "id": "JEWELED_MASK",
     "kind": "relic",
     "name": "宝石面具",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L173; md:relics_zh.md:L173"
+    "rarity": "Ancient"
   },
   "JEWELRY_BOX": {
     "aliases": [
@@ -2119,10 +1867,8 @@
     "id": "JEWELRY_BOX",
     "kind": "relic",
     "name": "珠宝盒",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L174; md:relics_zh.md:L174"
+    "rarity": "Ancient"
   },
   "JOSS_PAPER": {
     "aliases": [
@@ -2136,11 +1882,8 @@
     "id": "JOSS_PAPER",
     "kind": "relic",
     "name": "金纸",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L58; md:relics_zh.md:L58",
-    "zh_description": "每消耗 5 张牌，抽 1 张牌（计数 JOSS_PAPER:n；虚灵回合末消耗在回合结束计入；触发后清零重计）。run-38 实时：Offering/Ritual/Tremble/MoltenFist 消耗推进计数；:5 时 Boss 战中触发抽 1；触发后计数清零。消耗包牌组的被动抽牌引擎。"
+    "rarity": "Uncommon"
   },
   "JUZU_BRACELET": {
     "aliases": [
@@ -2154,10 +1897,8 @@
     "id": "JUZU_BRACELET",
     "kind": "relic",
     "name": "寿数手环",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L30; md:relics_zh.md:L30; run-40 live fold 2026-09-18"
+    "rarity": "Common"
   },
   "KALEIDOSCOPE": {
     "aliases": [
@@ -2170,10 +1911,8 @@
     "id": "KALEIDOSCOPE",
     "kind": "relic",
     "name": "万花筒",
-    "needs_zh": false,
     "play_notes": "跨角色奖励稀释 IRONCLAD 原型协同（自伤→力量引擎）；方差型选择。2026-09-19 Neow 选项 live 校验。",
-    "rarity": "Ancient",
-    "source": "perplexity-search 2026-09-19（gamerblurb Glam explained；spire-codex.com/enchantments/glam；mobalytics enchantments guide）+ 本局 Neow 屏 live 校验 F9S4BGVMFD"
+    "rarity": "Ancient"
   },
   "KIFUDA": {
     "aliases": [
@@ -2186,10 +1925,8 @@
     "id": "KIFUDA",
     "kind": "relic",
     "name": "木札",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L252; md:relics_zh.md:L252"
+    "rarity": "Shop"
   },
   "KUNAI": {
     "aliases": [
@@ -2203,8 +1940,7 @@
     "kind": "relic",
     "name": "苦无",
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L108; md:relics_zh.md:L108"
+    "rarity": "Rare"
   },
   "KUSARIGAMA": {
     "aliases": [
@@ -2218,8 +1954,7 @@
     "kind": "relic",
     "name": "锁镰",
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L59; md:relics_zh.md:L59"
+    "rarity": "Uncommon"
   },
   "LANTERN": {
     "aliases": [
@@ -2233,8 +1968,7 @@
     "kind": "relic",
     "name": "灯笼",
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L31; md:relics_zh.md:L31; run-40 live fold 2026-09-18"
+    "rarity": "Common"
   },
   "LARGE_CAPSULE": {
     "aliases": [
@@ -2248,10 +1982,8 @@
     "id": "LARGE_CAPSULE",
     "kind": "relic",
     "name": "巨大扭蛋",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L176; md:relics_zh.md:L176"
+    "rarity": "Ancient"
   },
   "LASTING_CANDY": {
     "aliases": [
@@ -2261,8 +1993,7 @@
     "description": "首战之后每隔一场战斗，战斗卡牌奖励 +1 个能力（Power）类选项（奖励屏 3 选变 4 选）。仅可在 Act3 宝箱前获得。LIVE run-45：遗物堆叠显示计数 :0/:1 交替；观察到两次四选一奖励——分别递送势不可当（精英奖励）与第二张狱火（战斗奖励）。Power 注入经济件。",
     "id": "LASTING_CANDY",
     "kind": "relic",
-    "name": "永恒糖果",
-    "source": "run-45 live + 档案"
+    "name": "永恒糖果"
   },
   "LAVA_LAMP": {
     "aliases": [
@@ -2276,10 +2007,8 @@
     "id": "LAVA_LAMP",
     "kind": "relic",
     "name": "熔岩灯",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L253; md:relics_zh.md:L253"
+    "rarity": "Shop"
   },
   "LAVA_ROCK": {
     "aliases": [
@@ -2293,10 +2022,8 @@
     "id": "LAVA_ROCK",
     "kind": "relic",
     "name": "熔岩石",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L177; md:relics_zh.md:L177"
+    "rarity": "Ancient"
   },
   "LEAD_PAPERWEIGHT": {
     "aliases": [
@@ -2310,10 +2037,8 @@
     "id": "LEAD_PAPERWEIGHT",
     "kind": "relic",
     "name": "铅制镇纸",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L178; md:relics_zh.md:L178"
+    "rarity": "Ancient"
   },
   "LEAFY_POULTICE": {
     "aliases": [
@@ -2327,10 +2052,8 @@
     "id": "LEAFY_POULTICE",
     "kind": "relic",
     "name": "树叶药膏",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L179; md:relics_zh.md:L179"
+    "rarity": "Ancient"
   },
   "LEES_WAFFLE": {
     "aliases": [
@@ -2344,10 +2067,8 @@
     "id": "LEES_WAFFLE",
     "kind": "relic",
     "name": "李家华夫饼",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L254; md:relics_zh.md:L254"
+    "rarity": "Shop"
   },
   "LETTER_OPENER": {
     "aliases": [
@@ -2361,10 +2082,8 @@
     "id": "LETTER_OPENER",
     "kind": "relic",
     "name": "开信刀",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L61; md:relics_zh.md:L61"
+    "rarity": "Uncommon"
   },
   "LIZARD_TAIL": {
     "aliases": [
@@ -2378,10 +2097,8 @@
     "id": "LIZARD_TAIL",
     "kind": "relic",
     "name": "蜥蜴尾巴",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L109; md:relics_zh.md:L109"
+    "rarity": "Rare"
   },
   "LOOMING_FRUIT": {
     "aliases": [
@@ -2396,10 +2113,8 @@
     "kind": "relic",
     "live_notes": "LIVE run-56：Act3 NONUPEIPE 事件选择。拾起时 +31 最大生命值。与芝士/狂宴/大蘑菇/草莓叠层 HP 80→160。",
     "name": "布质果实",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L180; md:relics_zh.md:L180; codex:relics/LOOMING_FRUIT"
+    "rarity": "Ancient"
   },
   "LORDS_PARASOL": {
     "aliases": [
@@ -2413,10 +2128,8 @@
     "id": "LORDS_PARASOL",
     "kind": "relic",
     "name": "领主阳伞",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L181; md:relics_zh.md:L181"
+    "rarity": "Ancient"
   },
   "LOST_COFFER": {
     "aliases": [
@@ -2430,10 +2143,8 @@
     "id": "LOST_COFFER",
     "kind": "relic",
     "name": "失物盒",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L182; md:relics_zh.md:L182"
+    "rarity": "Ancient"
   },
   "LOST_WISP": {
     "aliases": [
@@ -2447,10 +2158,8 @@
     "id": "LOST_WISP",
     "kind": "relic",
     "name": "迷失鬼火",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L296; md:relics_zh.md:L296"
+    "rarity": "Event"
   },
   "LUCKY_FYSH": {
     "aliases": [
@@ -2464,10 +2173,8 @@
     "id": "LUCKY_FYSH",
     "kind": "relic",
     "name": "招财异鱼",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L62; md:relics_zh.md:L62"
+    "rarity": "Uncommon"
   },
   "LUNAR_PASTRY": {
     "aliases": [
@@ -2481,10 +2188,8 @@
     "id": "LUNAR_PASTRY",
     "kind": "relic",
     "name": "月亮糕点",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L110; md:relics_zh.md:L110"
+    "rarity": "Rare"
   },
   "MANGO": {
     "aliases": [
@@ -2497,10 +2202,8 @@
     "id": "MANGO",
     "kind": "relic",
     "name": "芒果",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L111; md:relics_zh.md:L111; codex:relics/MANGO"
+    "rarity": "Rare"
   },
   "MASSIVE_SCROLL": {
     "aliases": [
@@ -2514,10 +2217,8 @@
     "id": "MASSIVE_SCROLL",
     "kind": "relic",
     "name": "巨大卷轴",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L183; md:relics_zh.md:L183"
+    "rarity": "Ancient"
   },
   "MAW_BANK": {
     "aliases": [
@@ -2531,10 +2232,8 @@
     "id": "MAW_BANK",
     "kind": "relic",
     "name": "巨口储蓄罐",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L297; md:relics_zh.md:L297"
+    "rarity": "Event"
   },
   "MEAL_TICKET": {
     "aliases": [
@@ -2549,10 +2248,8 @@
     "id": "MEAL_TICKET",
     "kind": "relic",
     "name": "餐券",
-    "needs_zh": false,
     "play_notes": "对局43 live",
-    "rarity": "Common",
-    "source": "relics.md + 对局43 商店"
+    "rarity": "Common"
   },
   "MEAT_CLEAVER": {
     "aliases": [
@@ -2566,10 +2263,8 @@
     "id": "MEAT_CLEAVER",
     "kind": "relic",
     "name": "切肉刀",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L184; md:relics_zh.md:L184"
+    "rarity": "Ancient"
   },
   "MEAT_ON_THE_BONE": {
     "aliases": [
@@ -2583,10 +2278,8 @@
     "id": "MEAT_ON_THE_BONE",
     "kind": "relic",
     "name": "带骨肉",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L112; md:relics_zh.md:L112"
+    "rarity": "Rare"
   },
   "MEMBERSHIP_CARD": {
     "aliases": [
@@ -2600,10 +2293,8 @@
     "id": "MEMBERSHIP_CARD",
     "kind": "relic",
     "name": "会员卡",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L255; md:relics_zh.md:L255"
+    "rarity": "Shop"
   },
   "MERCURY_HOURGLASS": {
     "aliases": [
@@ -2617,10 +2308,8 @@
     "id": "MERCURY_HOURGLASS",
     "kind": "relic",
     "name": "水银沙漏",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L63; md:relics_zh.md:L63"
+    "rarity": "Uncommon"
   },
   "METRONOME": {
     "aliases": [
@@ -2633,10 +2322,8 @@
     "id": "METRONOME",
     "kind": "relic",
     "name": "节拍器",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L113; md:relics_zh.md:L113"
+    "rarity": "Rare"
   },
   "MINIATURE_CANNON": {
     "aliases": [
@@ -2651,11 +2338,8 @@
     "id": "MINIATURE_CANNON",
     "kind": "relic",
     "name": "迷你加农炮",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L64; md:relics_zh.md:L64",
-    "zh_description": "罕见：升级后的攻击牌+3伤。run-57 live：Bludgeon+（42基础）+锋利2附魔+加农炮+3=无加成47级单发；易伤×1.5→70级；Act1 巨化×3窗升级前打出96。"
+    "rarity": "Uncommon"
   },
   "MINIATURE_TENT": {
     "aliases": [
@@ -2669,10 +2353,8 @@
     "id": "MINIATURE_TENT",
     "kind": "relic",
     "name": "微型帐篷",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L256; md:relics_zh.md:L256"
+    "rarity": "Shop"
   },
   "MINI_REGENT": {
     "aliases": [
@@ -2686,10 +2368,8 @@
     "id": "MINI_REGENT",
     "kind": "relic",
     "name": "迷你储君",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L114; md:relics_zh.md:L114"
+    "rarity": "Rare"
   },
   "MOLTEN_EGG": {
     "aliases": [
@@ -2703,10 +2383,8 @@
     "id": "MOLTEN_EGG",
     "kind": "relic",
     "name": "熔火蛋",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "run-51 live fold 2026-09-19"
+    "rarity": "Rare"
   },
   "MR_STRUGGLES": {
     "aliases": [
@@ -2720,10 +2398,8 @@
     "id": "MR_STRUGGLES",
     "kind": "relic",
     "name": "抱抱先生",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L298; md:relics_zh.md:L298"
+    "rarity": "Event"
   },
   "MUMMIFIED_HAND": {
     "aliases": [
@@ -2737,10 +2413,8 @@
     "id": "MUMMIFIED_HAND",
     "kind": "relic",
     "name": "干瘪之手",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L116; md:relics_zh.md:L116"
+    "rarity": "Rare"
   },
   "MUSIC_BOX": {
     "aliases": [
@@ -2754,10 +2428,8 @@
     "id": "MUSIC_BOX",
     "kind": "relic",
     "name": "音乐盒",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L185; md:relics_zh.md:L185"
+    "rarity": "Ancient"
   },
   "MYSTIC_LIGHTER": {
     "aliases": [
@@ -2771,10 +2443,8 @@
     "id": "MYSTIC_LIGHTER",
     "kind": "relic",
     "name": "神秘打火机",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L257; md:relics_zh.md:L257"
+    "rarity": "Shop"
   },
   "NEOW": {
     "aliases": [
@@ -2787,11 +2457,8 @@
     "id": "NEOW",
     "kind": "relic",
     "name": "Arcane Scroll",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "codex-api:/relics/ARCANE_SCROLL",
-    "zh_description": "Upon pickup, obtain a random Rare Card to add to your Deck."
+    "rarity": "Ancient"
   },
   "NEOWS_BONES": {
     "aliases": [
@@ -2805,10 +2472,8 @@
     "id": "NEOWS_BONES",
     "kind": "relic",
     "name": "涅奥骨骰",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L186; md:relics_zh.md:L186"
+    "rarity": "Ancient"
   },
   "NEOWS_TALISMAN": {
     "aliases": [
@@ -2822,10 +2487,8 @@
     "id": "NEOWS_TALISMAN",
     "kind": "relic",
     "name": "涅奥的护符",
-    "needs_zh": false,
     "play_notes": "确定但上限低：打击 6→9 / 防御 5→8 级收益；若基础牌中期被删则价值衰减。2026-09-19 Neow 选项 live 校验。",
-    "rarity": "Ancient",
-    "source": "perplexity-search 2026-09-19（gamerblurb Glam explained；spire-codex.com/enchantments/glam；mobalytics enchantments guide）+ 本局 Neow 屏 live 校验 F9S4BGVMFD"
+    "rarity": "Ancient"
   },
   "NEOWS_TORMENT": {
     "aliases": [
@@ -2839,10 +2502,8 @@
     "id": "NEOWS_TORMENT",
     "kind": "relic",
     "name": "涅奥的苦痛",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L188; md:relics_zh.md:L188; codex:relics/NEOWS_TORMENT"
+    "rarity": "Ancient"
   },
   "NEW_LEAF": {
     "aliases": [
@@ -2856,10 +2517,8 @@
     "id": "NEW_LEAF",
     "kind": "relic",
     "name": "新叶",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L189; md:relics_zh.md:L189"
+    "rarity": "Ancient"
   },
   "NIMBLE": {
     "aliases": [
@@ -2872,10 +2531,8 @@
     "id": "NIMBLE",
     "kind": "relic",
     "name": "Fresnel Lens",
-    "needs_zh": false,
     "play_notes": " | run-46 会话：机制未解，攀爬选项（−13MaxHP）在 HP66 拒绝——档案未知不付确定 HP 税（run-20 教训）。",
-    "rarity": "Event",
-    "source": "codex-api:/relics/FRESNEL_LENS"
+    "rarity": "Event"
   },
   "NINJA_SCROLL": {
     "aliases": [
@@ -2889,10 +2546,8 @@
     "id": "NINJA_SCROLL",
     "kind": "relic",
     "name": "忍术卷轴",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L258; md:relics_zh.md:L258"
+    "rarity": "Shop"
   },
   "NUNCHAKU": {
     "aliases": [
@@ -2905,11 +2560,8 @@
     "id": "NUNCHAKU",
     "kind": "relic",
     "name": "双截棍",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L65; md:relics_zh.md:L65",
-    "zh_description": "每打出 10 张攻击牌，获得 1 点能量（计数显示 NUNCHAKU:n，触发后清零重计）。run-38 实时：:10 触发 → 同回合 +1 能量（能量显示 4/3）；Anger/Pacts End 0 费攻击免费推进计数。"
+    "rarity": "Uncommon"
   },
   "NUTRITIOUS_OYSTER": {
     "aliases": [
@@ -2923,10 +2575,8 @@
     "id": "NUTRITIOUS_OYSTER",
     "kind": "relic",
     "name": "营养牡蛎",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L190; md:relics_zh.md:L190; codex:relics/NUTRITIOUS_OYSTER"
+    "rarity": "Ancient"
   },
   "NUTRITIOUS_SOUP": {
     "aliases": [
@@ -2943,10 +2593,8 @@
     "id": "NUTRITIOUS_SOUP",
     "kind": "relic",
     "name": "营养汤",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
+    "rarity": "Ancient"
   },
   "ODDLY_SMOOTH_STONE": {
     "aliases": [
@@ -2962,11 +2610,8 @@
     "id": "ODDLY_SMOOTH_STONE",
     "kind": "relic",
     "name": "奇异光滑石",
-    "needs_zh": false,
     "play_notes": "对局43 live",
-    "rarity": "Common",
-    "source": "relics.md + 对局43 商店 live",
-    "zh_description": "普通：每场战斗开始获得1点敏捷（战斗内卡牌挡值+1）。run-57 live：Defend 5→6、Shrug 8→9、SW 每耗尽 5→6 级全程生效；与其他敏捷源加法叠加。"
+    "rarity": "Common"
   },
   "OLD_COIN": {
     "aliases": [
@@ -2980,10 +2625,8 @@
     "id": "OLD_COIN",
     "kind": "relic",
     "name": "古钱币",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L117; md:relics_zh.md:L117; codex:relics/OLD_COIN"
+    "rarity": "Rare"
   },
   "ORANGE_DOUGH": {
     "aliases": [
@@ -2997,10 +2640,8 @@
     "id": "ORANGE_DOUGH",
     "kind": "relic",
     "name": "橙色团块",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L118; md:relics_zh.md:L118"
+    "rarity": "Rare"
   },
   "ORICHALCUM": {
     "aliases": [
@@ -3015,10 +2656,8 @@
     "id": "ORICHALCUM",
     "kind": "relic",
     "name": "橙铜",
-    "needs_zh": false,
     "play_notes": "对局43 live",
-    "rarity": "Uncommon",
-    "source": "relics.md + 对局43 live"
+    "rarity": "Uncommon"
   },
   "ORNAMENTAL_FAN": {
     "aliases": [
@@ -3033,11 +2672,8 @@
     "id": "ORNAMENTAL_FAN",
     "kind": "relic",
     "name": "装饰折扇",
-    "needs_zh": false,
     "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：每回合第 3 张攻击牌 +4 挡——与 Rage 叠加为加法；3 攻击以上回合稳定 +4，2 攻击回合无收益。",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L67; md:relics_zh.md:L68",
-    "zh_description": "每回合打出第3张攻击牌时获得4挡（计数每回合重置；第3张攻击结算时+4）。run-57 live 多战再确认（Fan 计数可见；第3攻后+4打印；千足虫 T4 三攻线 Fan+镀甲入账）。"
+    "rarity": "Uncommon"
   },
   "ORRERY": {
     "aliases": [
@@ -3050,10 +2686,8 @@
     "id": "ORRERY",
     "kind": "relic",
     "name": "星系仪",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L259; md:relics_zh.md:L259"
+    "rarity": "Shop"
   },
   "PAELS_BLOOD": {
     "aliases": [
@@ -3067,10 +2701,8 @@
     "id": "PAELS_BLOOD",
     "kind": "relic",
     "name": "佩尔之血",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L192; md:relics_zh.md:L192; codex:relics/PAELS_BLOOD"
+    "rarity": "Ancient"
   },
   "PAELS_CLAW": {
     "aliases": [
@@ -3084,10 +2716,8 @@
     "id": "PAELS_CLAW",
     "kind": "relic",
     "name": "佩尔之爪",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L193; md:relics_zh.md:L193"
+    "rarity": "Ancient"
   },
   "PAELS_EYE": {
     "aliases": [
@@ -3101,10 +2731,8 @@
     "id": "PAELS_EYE",
     "kind": "relic",
     "name": "佩尔之眼",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L194; md:relics_zh.md:L194"
+    "rarity": "Ancient"
   },
   "PAELS_FLESH": {
     "aliases": [
@@ -3119,8 +2747,7 @@
     "kind": "relic",
     "name": "佩尔之肉",
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L195; md:relics_zh.md:L195"
+    "rarity": "Ancient"
   },
   "PAELS_GROWTH": {
     "aliases": [
@@ -3134,10 +2761,8 @@
     "id": "PAELS_GROWTH",
     "kind": "relic",
     "name": "佩尔的增生组织",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L196; md:relics_zh.md:L196"
+    "rarity": "Ancient"
   },
   "PAELS_HORN": {
     "aliases": [
@@ -3151,10 +2776,8 @@
     "id": "PAELS_HORN",
     "kind": "relic",
     "name": "佩尔之角",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L197; md:relics_zh.md:L197; codex:relics/PAELS_HORN"
+    "rarity": "Ancient"
   },
   "PAELS_LEGION": {
     "aliases": [
@@ -3168,10 +2791,8 @@
     "id": "PAELS_LEGION",
     "kind": "relic",
     "name": "佩尔的士兵",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L198; md:relics_zh.md:L198"
+    "rarity": "Ancient"
   },
   "PAELS_TEARS": {
     "aliases": [
@@ -3185,10 +2806,8 @@
     "id": "PAELS_TEARS",
     "kind": "relic",
     "name": "佩尔之泪",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L199; md:relics_zh.md:L199"
+    "rarity": "Ancient"
   },
   "PAELS_TOOTH": {
     "aliases": [
@@ -3202,10 +2821,8 @@
     "id": "PAELS_TOOTH",
     "kind": "relic",
     "name": "佩尔之牙",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L200; md:relics_zh.md:L200"
+    "rarity": "Ancient"
   },
   "PAELS_WING": {
     "aliases": [
@@ -3219,10 +2836,8 @@
     "id": "PAELS_WING",
     "kind": "relic",
     "name": "佩尔之翼",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L201; md:relics_zh.md:L201"
+    "rarity": "Ancient"
   },
   "PANDORAS_BOX": {
     "aliases": [
@@ -3236,10 +2851,8 @@
     "id": "PANDORAS_BOX",
     "kind": "relic",
     "name": "潘多拉魔盒",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L202; md:relics_zh.md:L202"
+    "rarity": "Ancient"
   },
   "PANTOGRAPH": {
     "aliases": [
@@ -3252,10 +2865,8 @@
     "id": "PANTOGRAPH",
     "kind": "relic",
     "name": "缩放仪",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L68; md:relics_zh.md:L69; codex:relics/PANTOGRAPH"
+    "rarity": "Uncommon"
   },
   "PAPER_KRANE": {
     "aliases": [
@@ -3269,10 +2880,8 @@
     "id": "PAPER_KRANE",
     "kind": "relic",
     "name": "纸鹤",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L119; md:relics_zh.md:L119"
+    "rarity": "Rare"
   },
   "PAPER_PHROG": {
     "aliases": [
@@ -3286,10 +2895,8 @@
     "id": "PAPER_PHROG",
     "kind": "relic",
     "name": "纸蛙",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L69; md:relics_zh.md:L70"
+    "rarity": "Uncommon"
   },
   "PARRYING_SHIELD": {
     "aliases": [
@@ -3302,10 +2909,8 @@
     "id": "PARRYING_SHIELD",
     "kind": "relic",
     "name": "Parrying Shield",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "codex-api:/relics/PARRYING_SHIELD"
+    "rarity": "Uncommon"
   },
   "PEAR": {
     "aliases": [
@@ -3318,10 +2923,8 @@
     "id": "PEAR",
     "kind": "relic",
     "name": "梨子",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L71; md:relics_zh.md:L72; codex:relics/PEAR"
+    "rarity": "Uncommon"
   },
   "PENDULUM": {
     "aliases": [
@@ -3334,10 +2937,8 @@
     "id": "PENDULUM",
     "kind": "relic",
     "name": "摆动球",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L34; md:relics_zh.md:L34; codex:relics/PENDULUM"
+    "rarity": "Common"
   },
   "PEN_NIB": {
     "aliases": [
@@ -3351,10 +2952,8 @@
     "id": "PEN_NIB",
     "kind": "relic",
     "name": "钢笔尖",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L72; md:relics_zh.md:L73"
+    "rarity": "Uncommon"
   },
   "PERMAFROST": {
     "aliases": [
@@ -3367,11 +2966,8 @@
     "id": "PERMAFROST",
     "kind": "relic",
     "name": "永冻冰晶",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L73; md:relics_zh.md:L74",
-    "zh_description": "每场战斗首次打出能力牌时，获得 7 格挡。效果已归档；run-38 牌组无能力牌（Feel No Pain/Stone Armor 类均跳过）——本局遗物全程未激活。牌组进能力牌后价值解锁。"
+    "rarity": "Uncommon"
   },
   "PETRIFIED_TOAD": {
     "aliases": [
@@ -3385,10 +2981,8 @@
     "id": "PETRIFIED_TOAD",
     "kind": "relic",
     "name": "石化蟾蜍",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "run-51 live fold 2026-09-19"
+    "rarity": "Uncommon"
   },
   "PHIAL_HOLSTER": {
     "aliases": [
@@ -3402,10 +2996,8 @@
     "id": "PHIAL_HOLSTER",
     "kind": "relic",
     "name": "药瓶皮套",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L203; md:relics_zh.md:L203"
+    "rarity": "Ancient"
   },
   "PHILOSOPHERS_STONE": {
     "aliases": [
@@ -3419,10 +3011,8 @@
     "id": "PHILOSOPHERS_STONE",
     "kind": "relic",
     "name": "贤者之石",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L204; md:relics_zh.md:L204"
+    "rarity": "Ancient"
   },
   "PHYLACTERY_UNBOUND": {
     "aliases": [
@@ -3436,10 +3026,8 @@
     "id": "PHYLACTERY_UNBOUND",
     "kind": "relic",
     "name": "无界命匣",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Starter",
-    "source": "md:relics.md:L7; md:relics_zh.md:L7"
+    "rarity": "Starter"
   },
   "PLANISPHERE": {
     "aliases": [
@@ -3452,10 +3040,8 @@
     "id": "PLANISPHERE",
     "kind": "relic",
     "name": "活动星图",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L75; md:relics_zh.md:L76; codex:relics/PLANISPHERE"
+    "rarity": "Uncommon"
   },
   "POCKETWATCH": {
     "aliases": [
@@ -3469,8 +3055,7 @@
     "kind": "relic",
     "name": "怀表",
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L120; md:relics_zh.md:L120"
+    "rarity": "Rare"
   },
   "POLLINOUS_CORE": {
     "aliases": [
@@ -3484,10 +3069,8 @@
     "id": "POLLINOUS_CORE",
     "kind": "relic",
     "name": "花粉核心",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L299; md:relics_zh.md:L299"
+    "rarity": "Event"
   },
   "POMANDER": {
     "aliases": [
@@ -3500,10 +3083,8 @@
     "id": "POMANDER",
     "kind": "relic",
     "name": "橙型香盒",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L205; md:relics_zh.md:L205"
+    "rarity": "Ancient"
   },
   "POTION_BELT": {
     "aliases": [
@@ -3517,10 +3098,8 @@
     "id": "POTION_BELT",
     "kind": "relic",
     "name": "药水腰带",
-    "needs_zh": false,
     "play_notes": "run-49 live：Act2 宝箱 (8,2) 获得；belt 容量扩大后商店双药水+精英掉落可共存（Blood/Skill/Speed 类实测同时在栏）。",
-    "rarity": "Common",
-    "source": "run-49 live 折叠 2026-09-19（日志 run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c）"
+    "rarity": "Common"
   },
   "POWER_CELL": {
     "aliases": [
@@ -3534,10 +3113,8 @@
     "id": "POWER_CELL",
     "kind": "relic",
     "name": "能量电池",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L121; md:relics_zh.md:L121"
+    "rarity": "Rare"
   },
   "PRAYER_WHEEL": {
     "aliases": [
@@ -3551,10 +3128,8 @@
     "id": "PRAYER_WHEEL",
     "kind": "relic",
     "name": "转经轮",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L122; md:relics_zh.md:L122"
+    "rarity": "Rare"
   },
   "PRECARIOUS_SHEARS": {
     "aliases": [
@@ -3568,10 +3143,8 @@
     "id": "PRECARIOUS_SHEARS",
     "kind": "relic",
     "name": "松动羊毛剪",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L206; md:relics_zh.md:L206"
+    "rarity": "Ancient"
   },
   "PRECISE_SCISSORS": {
     "aliases": [
@@ -3585,10 +3158,8 @@
     "id": "PRECISE_SCISSORS",
     "kind": "relic",
     "name": "精准剪刀",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L207; md:relics_zh.md:L207; codex:relics/PRECISE_SCISSORS"
+    "rarity": "Ancient"
   },
   "PRESERVED_FOG": {
     "aliases": [
@@ -3602,10 +3173,8 @@
     "id": "PRESERVED_FOG",
     "kind": "relic",
     "name": "腌制活雾",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L208; md:relics_zh.md:L208"
+    "rarity": "Ancient"
   },
   "PRISMATIC_GEM": {
     "aliases": [
@@ -3620,11 +3189,8 @@
     "id": "PRISMATIC_GEM",
     "kind": "relic",
     "name": "棱彩宝石",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L209; md:relics_zh.md:L209",
-    "zh_description": "远古（OROBAS Act2 赐福池，run-57 选取）：每回合+1最大能量；卡牌奖励含其他角色卡（跨职业池 live——run-57 出现 Kingly Kick/Thunderclap/Crush Under 供选）。run-57 live：能量显示 4/4 成为本局基准；Act2 Boss T1 叠加茶具休息触发=6/4（Bludgeon+KinglyKick 开场74伤）。"
+    "rarity": "Ancient"
   },
   "PUMPKIN_CANDLE": {
     "aliases": [
@@ -3640,10 +3206,8 @@
     "id": "PUMPKIN_CANDLE",
     "kind": "relic",
     "name": "南瓜蜡烛",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
+    "rarity": "Ancient"
   },
   "PUNCH_DAGGER": {
     "aliases": [
@@ -3657,10 +3221,8 @@
     "id": "PUNCH_DAGGER",
     "kind": "relic",
     "name": "拳刃",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L260; md:relics_zh.md:L260"
+    "rarity": "Shop"
   },
   "RADIANT": {
     "aliases": [
@@ -3673,10 +3235,8 @@
     "id": "RADIANT",
     "kind": "relic",
     "name": "Radiant Pearl",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "codex-api:/relics/RADIANT_PEARL"
+    "rarity": "Ancient"
   },
   "RADIANT_PEARL": {
     "aliases": [
@@ -3690,10 +3250,8 @@
     "id": "RADIANT_PEARL",
     "kind": "relic",
     "name": "发光珍珠",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L211; md:relics_zh.md:L211"
+    "rarity": "Ancient"
   },
   "RAGE": {
     "aliases": [
@@ -3706,10 +3264,8 @@
     "id": "RAGE",
     "kind": "relic",
     "name": "Sling of Courage",
-    "needs_zh": false,
     "play_notes": " | run-46 会话：Sling of Courage 的碰撞键载体；卡牌域 RAGE 为战士技能攻击牌，独立条目。",
-    "rarity": "Shop",
-    "source": "codex-api:/relics/SLING_OF_COURAGE"
+    "rarity": "Shop"
   },
   "RAINBOW_RING": {
     "aliases": [
@@ -3723,10 +3279,8 @@
     "id": "RAINBOW_RING",
     "kind": "relic",
     "name": "彩虹戒指",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L123; md:relics_zh.md:L123"
+    "rarity": "Rare"
   },
   "RAZOR_TOOTH": {
     "aliases": [
@@ -3740,10 +3294,8 @@
     "id": "RAZOR_TOOTH",
     "kind": "relic",
     "name": "剃刀牙",
-    "needs_zh": false,
     "play_notes": "run-48 live 2026-09-19：按实例语义确认——新副本先打基础值；Whetstone 升级副本与 Razor 升级副本相互独立。 [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "rarity": "Rare",
-    "source": "md:relics.md:L124; md:relics_zh.md:L124"
+    "rarity": "Rare"
   },
   "RED_MASK": {
     "aliases": [
@@ -3757,11 +3309,8 @@
     "id": "RED_MASK",
     "kind": "relic",
     "name": "红面具",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L36; md:relics_zh.md:L36; run-40 live fold 2026-09-18",
-    "zh_description": "战斗开始（第 1 回合）对所有敌人施加 1 层虚弱。run-38 实时：全部战斗 T1 敌方均可见 WEAK_POWER:1（Byrdonis SWOOP 17→12；史莱姆撞击 4→3/3→2；同族神官球 8→6）。虚弱持续期间敌方攻击伤害约 −25%（其阵营回合结束递减）。与 TERRITORIAL 类被动共存——短暂的「无 Weak」读数是 state settle-lag，非遗物失效。"
+    "rarity": "Common"
   },
   "RED_SKULL": {
     "aliases": [
@@ -3775,10 +3324,8 @@
     "id": "RED_SKULL",
     "kind": "relic",
     "name": "红头骨",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L37; md:relics_zh.md:L37"
+    "rarity": "Common"
   },
   "REGALITE": {
     "aliases": [
@@ -3791,10 +3338,8 @@
     "id": "REGALITE",
     "kind": "relic",
     "name": "君王矿石",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L76; md:relics_zh.md:L77"
+    "rarity": "Uncommon"
   },
   "REGAL_PILLOW": {
     "aliases": [
@@ -3808,10 +3353,8 @@
     "id": "REGAL_PILLOW",
     "kind": "relic",
     "name": "皇家枕头",
-    "needs_zh": false,
     "play_notes": "run-46 live：(6,6)/(8,4)/(13,4) 三次 +43 级治疗；草稿休息几何教条加倍兑现。",
-    "rarity": "Common",
-    "source": "md:relics.md:L38; md:relics_zh.md:L38"
+    "rarity": "Common"
   },
   "REPTILE_TRINKET": {
     "aliases": [
@@ -3825,10 +3368,8 @@
     "id": "REPTILE_TRINKET",
     "kind": "relic",
     "name": "爬行动物饰品",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L77; md:relics_zh.md:L78"
+    "rarity": "Uncommon"
   },
   "RINGING_TRIANGLE": {
     "aliases": [
@@ -3843,10 +3384,8 @@
     "id": "RINGING_TRIANGLE",
     "kind": "relic",
     "name": "铃三角",
-    "needs_zh": false,
     "play_notes": "对局43 live",
-    "rarity": "Shop",
-    "source": "relics.md + 对局43 商店"
+    "rarity": "Shop"
   },
   "RING_OF_THE_DRAKE": {
     "aliases": [
@@ -3860,10 +3399,8 @@
     "id": "RING_OF_THE_DRAKE",
     "kind": "relic",
     "name": "长蛇戒指",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Starter",
-    "source": "md:relics.md:L11; md:relics_zh.md:L11"
+    "rarity": "Starter"
   },
   "RING_OF_THE_SNAKE": {
     "aliases": [
@@ -3877,10 +3414,8 @@
     "id": "RING_OF_THE_SNAKE",
     "kind": "relic",
     "name": "蛇之戒指",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Starter",
-    "source": "md:relics.md:L12; md:relics_zh.md:L12; codex:relics/RING_OF_THE_SNAKE"
+    "rarity": "Starter"
   },
   "RIPPLE_BASIN": {
     "aliases": [
@@ -3894,10 +3429,8 @@
     "id": "RIPPLE_BASIN",
     "kind": "relic",
     "name": "波纹水盆",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L78; md:relics_zh.md:L79"
+    "rarity": "Uncommon"
   },
   "ROYAL_POISON": {
     "aliases": [
@@ -3911,10 +3444,8 @@
     "id": "ROYAL_POISON",
     "kind": "relic",
     "name": "王室猛毒",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L300; md:relics_zh.md:L300; codex:relics/ROYAL_POISON"
+    "rarity": "Event"
   },
   "ROYAL_STAMP": {
     "aliases": [
@@ -3927,10 +3458,8 @@
     "id": "ROYAL_STAMP",
     "kind": "relic",
     "name": "Royal Stamp",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "codex-api:/relics/ROYAL_STAMP"
+    "rarity": "Shop"
   },
   "RUINED_HELMET": {
     "aliases": [
@@ -3944,10 +3473,8 @@
     "id": "RUINED_HELMET",
     "kind": "relic",
     "name": "损毁头盔",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L125; md:relics_zh.md:L125"
+    "rarity": "Rare"
   },
   "RUNIC_CAPACITOR": {
     "aliases": [
@@ -3961,10 +3488,8 @@
     "id": "RUNIC_CAPACITOR",
     "kind": "relic",
     "name": "符文电容器",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L262; md:relics_zh.md:L262"
+    "rarity": "Shop"
   },
   "RUNIC_PYRAMID": {
     "aliases": [
@@ -3978,10 +3503,8 @@
     "id": "RUNIC_PYRAMID",
     "kind": "relic",
     "name": "符文金字塔",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L212; md:relics_zh.md:L212"
+    "rarity": "Ancient"
   },
   "SAI": {
     "aliases": [
@@ -3994,10 +3517,8 @@
     "id": "SAI",
     "kind": "relic",
     "name": "钗",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L213; md:relics_zh.md:L213"
+    "rarity": "Ancient"
   },
   "SAND_CASTLE": {
     "aliases": [
@@ -4011,10 +3532,8 @@
     "id": "SAND_CASTLE",
     "kind": "relic",
     "name": "沙堡",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L214; md:relics_zh.md:L214"
+    "rarity": "Ancient"
   },
   "SCREAMING_FLAGON": {
     "aliases": [
@@ -4028,10 +3547,8 @@
     "id": "SCREAMING_FLAGON",
     "kind": "relic",
     "name": "尖叫酒壶",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L264; md:relics_zh.md:L264"
+    "rarity": "Shop"
   },
   "SCROLL_BOXES": {
     "aliases": [
@@ -4045,10 +3562,8 @@
     "id": "SCROLL_BOXES",
     "kind": "relic",
     "name": "卷轴箱",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L215; md:relics_zh.md:L215"
+    "rarity": "Ancient"
   },
   "SEAL_OF_GOLD": {
     "aliases": [
@@ -4064,10 +3579,8 @@
     "id": "SEAL_OF_GOLD",
     "kind": "relic",
     "name": "黄金封印",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
+    "rarity": "Ancient"
   },
   "SEA_GLASS": {
     "aliases": [
@@ -4081,10 +3594,8 @@
     "id": "SEA_GLASS",
     "kind": "relic",
     "name": "海玻璃",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L216; md:relics_zh.md:L216"
+    "rarity": "Ancient"
   },
   "SELF_FORMING_CLAY": {
     "aliases": [
@@ -4098,10 +3609,8 @@
     "id": "SELF_FORMING_CLAY",
     "kind": "relic",
     "name": "自成型黏土",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L79; md:relics_zh.md:L80"
+    "rarity": "Uncommon"
   },
   "SERE_TALON": {
     "aliases": [
@@ -4115,10 +3624,8 @@
     "id": "SERE_TALON",
     "kind": "relic",
     "name": "原初之爪",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L218; md:relics_zh.md:L218"
+    "rarity": "Ancient"
   },
   "SHARP": {
     "aliases": [
@@ -4131,10 +3638,8 @@
     "id": "SHARP",
     "kind": "relic",
     "name": "Sharp (Enchant keyword) / Gnarled Hammer carrier relic",
-    "needs_zh": false,
     "play_notes": "run-48 live fold 2026-09-19: Sharp 2 on Bludgeon = 44 base (42+2) live; SELF_HELP_BOOK READ_THE_BACK is the grant source. [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "rarity": "Shop",
-    "source": "codex-api:/relics/GNARLED_HAMMER"
+    "rarity": "Shop"
   },
   "SHOVEL": {
     "aliases": [
@@ -4147,10 +3652,8 @@
     "id": "SHOVEL",
     "kind": "relic",
     "name": "铲子",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L126; md:relics_zh.md:L126"
+    "rarity": "Rare"
   },
   "SHURIKEN": {
     "aliases": [
@@ -4163,10 +3666,8 @@
     "id": "SHURIKEN",
     "kind": "relic",
     "name": "手里剑",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L127; md:relics_zh.md:L127"
+    "rarity": "Rare"
   },
   "SIGNET_RING": {
     "aliases": [
@@ -4180,10 +3681,8 @@
     "id": "SIGNET_RING",
     "kind": "relic",
     "name": "图章戒指",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L219; md:relics_zh.md:L219"
+    "rarity": "Ancient"
   },
   "SILKEN_TRESS": {
     "aliases": [
@@ -4197,11 +3696,8 @@
     "id": "SILKEN_TRESS",
     "kind": "relic",
     "name": "华美发束",
-    "needs_zh": false,
     "play_notes": "代价仅为金币（无诅咒牌、无 Max HP 税），经济延迟有限（约一个前期商店购买项）。回报是一张带 Glam 的前期脊线牌——引擎牌每战双结算，全局长期生效。尼奥诅咒池位；2026-09-19 选项文案 live 校验。",
-    "rarity": "Ancient",
-    "source": "perplexity-search 2026-09-19（gamerblurb Glam explained；spire-codex.com/enchantments/glam；mobalytics enchantments guide）+ 本局 Neow 屏 live 校验 F9S4BGVMFD",
-    "zh_description": "拾取时失去全部金币；本局第一次卡牌奖励中的所有牌附魔 Glam（华彩）。run-55 live 规则：Glam 附魔牌在每场战斗首次打出时双结算，其后打出单结算（Glam 耸肩无视：该战首次打出 16 挡 + 抽 2；后续打出 8 挡 + 抽 1）。refine run-49「首打双结算」备注：双结算挂在附魔牌的首次打出上，而非战斗第 1 回合。"
+    "rarity": "Ancient"
   },
   "SILVER_CRUCIBLE": {
     "aliases": [
@@ -4215,10 +3711,8 @@
     "id": "SILVER_CRUCIBLE",
     "kind": "relic",
     "name": "白银熔炉",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L221; md:relics_zh.md:L221"
+    "rarity": "Ancient"
   },
   "SLING_OF_COURAGE": {
     "aliases": [
@@ -4232,10 +3726,8 @@
     "id": "SLING_OF_COURAGE",
     "kind": "relic",
     "name": "勇气投石索",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L265; md:relics_zh.md:L265"
+    "rarity": "Shop"
   },
   "SMALL_CAPSULE": {
     "aliases": [
@@ -4249,10 +3741,8 @@
     "id": "SMALL_CAPSULE",
     "kind": "relic",
     "name": "小型扭蛋",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L222; md:relics_zh.md:L222; codex:relics/SMALL_CAPSULE"
+    "rarity": "Ancient"
   },
   "SNECKO_EYE": {
     "aliases": [
@@ -4266,10 +3756,8 @@
     "id": "SNECKO_EYE",
     "kind": "relic",
     "name": "异蛇之眼",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L223; md:relics_zh.md:L223"
+    "rarity": "Ancient"
   },
   "SNECKO_SKULL": {
     "aliases": [
@@ -4283,10 +3771,8 @@
     "id": "SNECKO_SKULL",
     "kind": "relic",
     "name": "异蛇头骨",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L39; md:relics_zh.md:L39"
+    "rarity": "Common"
   },
   "SOZU": {
     "aliases": [
@@ -4299,10 +3785,8 @@
     "id": "SOZU",
     "kind": "relic",
     "name": "添水",
-    "needs_zh": false,
     "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：Act2 DARV 赐福——永久每回合 +1 能量；不再获得药水。与灯笼+1、茶具休息后+2、Happy Flower 每3回合+1 叠加 → Boss T1 开局 7/4。HP 栏由 Burning Blood+Blood Vial+休息几何+LIFT Max HP 覆盖。",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L224; md:relics_zh.md:L224"
+    "rarity": "Ancient"
   },
   "SPARKLING_ROUGE": {
     "aliases": [
@@ -4316,10 +3800,8 @@
     "id": "SPARKLING_ROUGE",
     "kind": "relic",
     "name": "闪亮口红",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L80; md:relics_zh.md:L81"
+    "rarity": "Uncommon"
   },
   "SPIKED_GAUNTLETS": {
     "aliases": [
@@ -4333,10 +3815,8 @@
     "id": "SPIKED_GAUNTLETS",
     "kind": "relic",
     "name": "带刺手甲",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L225; md:relics_zh.md:L225"
+    "rarity": "Ancient"
   },
   "STONE_CALENDAR": {
     "aliases": [
@@ -4351,10 +3831,8 @@
     "id": "STONE_CALENDAR",
     "kind": "relic",
     "name": "石日历",
-    "needs_zh": false,
     "play_notes": "对局43 live 击杀实证",
-    "rarity": "Rare",
-    "source": "relics.md + 对局43 live"
+    "rarity": "Rare"
   },
   "STONE_CRACKER": {
     "aliases": [
@@ -4368,10 +3846,8 @@
     "id": "STONE_CRACKER",
     "kind": "relic",
     "name": "碎石钻",
-    "needs_zh": false,
     "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：战内升级在卡面无标记——以 live 伤害数字为准（牌库 Bludgeon+ 已是升级版；随机命中多落在打击/防御上）。",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L81; md:relics_zh.md:L82"
+    "rarity": "Uncommon"
   },
   "STONE_HUMIDIFIER": {
     "aliases": [
@@ -4385,10 +3861,8 @@
     "id": "STONE_HUMIDIFIER",
     "kind": "relic",
     "name": "石炉加湿器",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L226; md:relics_zh.md:L226"
+    "rarity": "Ancient"
   },
   "STORYBOOK": {
     "aliases": [
@@ -4403,10 +3877,8 @@
     "id": "STORYBOOK",
     "kind": "relic",
     "name": "故事书",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
+    "rarity": "Ancient"
   },
   "STRAWBERRY": {
     "aliases": [
@@ -4420,10 +3892,8 @@
     "kind": "relic",
     "live_notes": "LIVE run-56：拾起时 +7 最大生命值。MaxHP 叠层包组件。",
     "name": "草莓",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L41; md:relics_zh.md:L41; codex:relics/STRAWBERRY"
+    "rarity": "Common"
   },
   "STRIKE_DUMMY": {
     "aliases": [
@@ -4438,8 +3908,7 @@
     "kind": "relic",
     "name": "打击木偶",
     "play_notes": "run-46 live: base-feed formula confirmed — dummy +3 lands before ×1.5 Vuln multipliers.",
-    "rarity": "Common",
-    "source": "md:relics.md:L40; md:relics_zh.md:L40"
+    "rarity": "Common"
   },
   "STURDY_CLAMP": {
     "aliases": [
@@ -4453,10 +3922,8 @@
     "id": "STURDY_CLAMP",
     "kind": "relic",
     "name": "坚固钳子",
-    "needs_zh": false,
     "play_notes": "run-46 live: bought at HP 8/94; pairs with Meal Ticket shop-heal as the HP-economy recovery package.",
-    "rarity": "Rare",
-    "source": "md:relics.md:L129; md:relics_zh.md:L129"
+    "rarity": "Rare"
   },
   "SWORD_OF_JADE": {
     "aliases": [
@@ -4470,10 +3937,8 @@
     "id": "SWORD_OF_JADE",
     "kind": "relic",
     "name": "玉之剑",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L301; md:relics_zh.md:L301"
+    "rarity": "Event"
   },
   "SWORD_OF_STONE": {
     "aliases": [
@@ -4487,10 +3952,8 @@
     "id": "SWORD_OF_STONE",
     "kind": "relic",
     "name": "石之剑",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L302; md:relics_zh.md:L302"
+    "rarity": "Event"
   },
   "SYMBIOTIC_VIRUS": {
     "aliases": [
@@ -4504,10 +3967,8 @@
     "id": "SYMBIOTIC_VIRUS",
     "kind": "relic",
     "name": "共生病毒",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L83; md:relics_zh.md:L83"
+    "rarity": "Uncommon"
   },
   "TANXS_WHISTLE": {
     "aliases": [
@@ -4521,10 +3982,8 @@
     "id": "TANXS_WHISTLE",
     "kind": "relic",
     "name": "坦克斯的哨子",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L228; md:relics_zh.md:L228"
+    "rarity": "Ancient"
   },
   "TEA_OF_DISCOURTESY": {
     "aliases": [
@@ -4538,10 +3997,8 @@
     "id": "TEA_OF_DISCOURTESY",
     "kind": "relic",
     "name": "无礼之茶",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L303; md:relics_zh.md:L303"
+    "rarity": "Event"
   },
   "THE_ABACUS": {
     "aliases": [
@@ -4555,10 +4012,8 @@
     "id": "THE_ABACUS",
     "kind": "relic",
     "name": "算盘",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L266; md:relics_zh.md:L266"
+    "rarity": "Shop"
   },
   "THE_BOOT": {
     "aliases": [
@@ -4572,10 +4027,8 @@
     "id": "THE_BOOT",
     "kind": "relic",
     "name": "发条靴",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L304; md:relics_zh.md:L304"
+    "rarity": "Event"
   },
   "THE_COURIER": {
     "aliases": [
@@ -4589,10 +4042,8 @@
     "id": "THE_COURIER",
     "kind": "relic",
     "name": "送货员",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L130; md:relics_zh.md:L130"
+    "rarity": "Rare"
   },
   "THROWING_AXE": {
     "aliases": [
@@ -4606,10 +4057,8 @@
     "id": "THROWING_AXE",
     "kind": "relic",
     "name": "投斧",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L229; md:relics_zh.md:L229"
+    "rarity": "Ancient"
   },
   "TINGSHA": {
     "aliases": [
@@ -4622,10 +4071,8 @@
     "id": "TINGSHA",
     "kind": "relic",
     "name": "铜钹",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L84; md:relics_zh.md:L84"
+    "rarity": "Uncommon"
   },
   "TINY_MAILBOX": {
     "aliases": [
@@ -4639,10 +4086,8 @@
     "id": "TINY_MAILBOX",
     "kind": "relic",
     "name": "小邮箱",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L85; md:relics_zh.md:L85"
+    "rarity": "Uncommon"
   },
   "TOASTY_MITTENS": {
     "aliases": [
@@ -4658,10 +4103,8 @@
     "id": "TOASTY_MITTENS",
     "kind": "relic",
     "name": "暖和手套",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
+    "rarity": "Ancient"
   },
   "TOOLBOX": {
     "aliases": [
@@ -4674,10 +4117,8 @@
     "id": "TOOLBOX",
     "kind": "relic",
     "name": "工具箱",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L267; md:relics_zh.md:L267"
+    "rarity": "Shop"
   },
   "TOUCH_OF_OROBAS": {
     "aliases": [
@@ -4689,8 +4130,7 @@
     "kind": "relic",
     "name": "欧洛巴斯之触",
     "play_notes": "run-49 live：Act2 赐福房选中；遗物栏显示 BLACK_BLOOD + TOUCH_OF_OROBAS 标记；+12/战同局验证。run-39 先例。另注：进入赐福房时转场治疗将玩家回满 80（run-49：29→80）——转场回血与换装相互独立。",
-    "rarity": "Ancient",
-    "source": "run-49 live 折叠 2026-09-19（日志 run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c）"
+    "rarity": "Ancient"
   },
   "TOUGH_BANDAGES": {
     "aliases": [
@@ -4704,10 +4144,8 @@
     "id": "TOUGH_BANDAGES",
     "kind": "relic",
     "name": "结实绷带",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L133; md:relics_zh.md:L133"
+    "rarity": "Rare"
   },
   "TOXIC_EGG": {
     "aliases": [
@@ -4721,10 +4159,8 @@
     "id": "TOXIC_EGG",
     "kind": "relic",
     "name": "毒素之蛋",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L132; md:relics_zh.md:L132"
+    "rarity": "Rare"
   },
   "TOY_BOX": {
     "aliases": [
@@ -4740,10 +4176,8 @@
     "id": "TOY_BOX",
     "kind": "relic",
     "name": "玩具盒",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
+    "rarity": "Ancient"
   },
   "TRI_BOOMERANG": {
     "aliases": [
@@ -4757,10 +4191,8 @@
     "id": "TRI_BOOMERANG",
     "kind": "relic",
     "name": "三刃回旋镖",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L233; md:relics_zh.md:L233"
+    "rarity": "Ancient"
   },
   "TUNGSTEN_ROD": {
     "aliases": [
@@ -4774,10 +4206,8 @@
     "id": "TUNGSTEN_ROD",
     "kind": "relic",
     "name": "钨合金棍",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L131; md:relics_zh.md:L131"
+    "rarity": "Rare"
   },
   "TUNING_FORK": {
     "aliases": [
@@ -4791,10 +4221,8 @@
     "id": "TUNING_FORK",
     "kind": "relic",
     "name": "音叉",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L86; md:relics_zh.md:L86"
+    "rarity": "Uncommon"
   },
   "TWISTED_FUNNEL": {
     "aliases": [
@@ -4808,10 +4236,8 @@
     "id": "TWISTED_FUNNEL",
     "kind": "relic",
     "name": "扭曲漏斗",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L87; md:relics_zh.md:L87"
+    "rarity": "Uncommon"
   },
   "UNCEASING_TOP": {
     "aliases": [
@@ -4825,10 +4251,8 @@
     "id": "UNCEASING_TOP",
     "kind": "relic",
     "name": "不休陀螺",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L134; md:relics_zh.md:L134"
+    "rarity": "Rare"
   },
   "UNDYING_SIGIL": {
     "aliases": [
@@ -4842,10 +4266,8 @@
     "id": "UNDYING_SIGIL",
     "kind": "relic",
     "name": "不死符文",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L268; md:relics_zh.md:L268"
+    "rarity": "Shop"
   },
   "UNSETTLING_LAMP": {
     "aliases": [
@@ -4859,10 +4281,8 @@
     "id": "UNSETTLING_LAMP",
     "kind": "relic",
     "name": "不安油灯",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L135; md:relics_zh.md:L135"
+    "rarity": "Rare"
   },
   "VAJRA": {
     "aliases": [
@@ -4876,10 +4296,8 @@
     "kind": "relic",
     "live_notes": "LIVE run-56：Act1 商店购入 75g。每场战斗开始时 +1 力量。",
     "name": "金刚杵",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L42; md:relics_zh.md:L42; codex:relics/VAJRA"
+    "rarity": "Common"
   },
   "VAMBRACE": {
     "aliases": [
@@ -4892,10 +4310,8 @@
     "id": "VAMBRACE",
     "kind": "relic",
     "name": "臂铠",
-    "needs_zh": false,
     "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log)：每战首张挡牌翻倍——Defend 5→10 确认；Impervious 虚弱税前 30→60，虚弱2下结算 52、纯虚弱2结算 22（虚弱税作用于翻倍后的值）。Rage/装饰折扇的挡非卡牌授予，不占用 Vambrace 槽。",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L88; md:relics_zh.md:L88"
+    "rarity": "Uncommon"
   },
   "VELVET_CHOKER": {
     "aliases": [
@@ -4909,10 +4325,8 @@
     "id": "VELVET_CHOKER",
     "kind": "relic",
     "name": "天鹅绒颈圈",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L234; md:relics_zh.md:L234"
+    "rarity": "Ancient"
   },
   "VENERABLE_TEA_SET": {
     "aliases": [
@@ -4927,11 +4341,8 @@
     "id": "VENERABLE_TEA_SET",
     "kind": "relic",
     "name": "古茶具套装",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L43; md:relics_zh.md:L43; run-40 live fold 2026-09-18",
-    "zh_description": "进入休息站后，下一场战斗开局+2能量（仅T1）。run-57 live：(14,5) 休息触发 → Act2 Boss T1 与棱彩宝石叠加=6/4能。run-57 (13,5) 商店 189金购入。"
+    "rarity": "Common"
   },
   "VERY_HOT_COCOA": {
     "aliases": [
@@ -4947,10 +4358,8 @@
     "id": "VERY_HOT_COCOA",
     "kind": "relic",
     "name": "极热可可",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
+    "rarity": "Ancient"
   },
   "VEXING_PUZZLEBOX": {
     "aliases": [
@@ -4964,10 +4373,8 @@
     "id": "VEXING_PUZZLEBOX",
     "kind": "relic",
     "name": "烦人机关盒",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L136; md:relics_zh.md:L136"
+    "rarity": "Rare"
   },
   "VITRUVIAN_MINION": {
     "aliases": [
@@ -4981,10 +4388,8 @@
     "id": "VITRUVIAN_MINION",
     "kind": "relic",
     "name": "维特鲁威仆从",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L269; md:relics_zh.md:L269"
+    "rarity": "Shop"
   },
   "WAR_HAMMER": {
     "aliases": [
@@ -4998,10 +4403,8 @@
     "id": "WAR_HAMMER",
     "kind": "relic",
     "name": "战锤",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L236; md:relics_zh.md:L236"
+    "rarity": "Ancient"
   },
   "WAR_PAINT": {
     "aliases": [
@@ -5015,10 +4418,8 @@
     "id": "WAR_PAINT",
     "kind": "relic",
     "name": "战纹涂料",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L44; md:relics_zh.md:L44"
+    "rarity": "Common"
   },
   "WHETSTONE": {
     "aliases": [
@@ -5033,10 +4434,8 @@
     "id": "WHETSTONE",
     "kind": "relic",
     "name": "磨刀石",
-    "needs_zh": false,
     "play_notes": "对局43 live",
-    "rarity": "Common",
-    "source": "relics.md + 对局43 商店"
+    "rarity": "Common"
   },
   "WHISPERING_EARRING": {
     "aliases": [
@@ -5050,10 +4449,8 @@
     "id": "WHISPERING_EARRING",
     "kind": "relic",
     "name": "低语耳环",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L237; md:relics_zh.md:L237"
+    "rarity": "Ancient"
   },
   "WHITE_BEAST_STATUE": {
     "aliases": [
@@ -5067,10 +4464,8 @@
     "id": "WHITE_BEAST_STATUE",
     "kind": "relic",
     "name": "白兽雕像",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L137; md:relics_zh.md:L137"
+    "rarity": "Rare"
   },
   "WHITE_STAR": {
     "aliases": [
@@ -5084,10 +4479,8 @@
     "id": "WHITE_STAR",
     "kind": "relic",
     "name": "白星",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L138; md:relics_zh.md:L138"
+    "rarity": "Rare"
   },
   "WIND_DAUGHTER": {
     "aliases": [
@@ -5100,10 +4493,8 @@
     "id": "WIND_DAUGHTER",
     "kind": "relic",
     "name": "Daughter of the Wind",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "codex-api:/relics/DAUGHTER_OF_THE_WIND"
+    "rarity": "Event"
   },
   "WINGED_BOOTS": {
     "aliases": [
@@ -5118,10 +4509,8 @@
     "id": "WINGED_BOOTS",
     "kind": "relic",
     "name": "羽翼之靴",
-    "needs_zh": false,
     "play_notes": "对局43 live",
-    "rarity": "Uncommon",
-    "source": "对局43 Neow live"
+    "rarity": "Uncommon"
   },
   "WING_CHARM": {
     "aliases": [
@@ -5134,10 +4523,8 @@
     "id": "WING_CHARM",
     "kind": "relic",
     "name": "Wing Charm",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "codex-api:/relics/WING_CHARM"
+    "rarity": "Shop"
   },
   "WONGOS_MYSTERY_TICKET": {
     "aliases": [
@@ -5151,10 +4538,8 @@
     "id": "WONGOS_MYSTERY_TICKET",
     "kind": "relic",
     "name": "旺购神秘券",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L306; md:relics_zh.md:L306"
+    "rarity": "Event"
   },
   "WONGO_CUSTOMER_APPRECIATION_BADGE": {
     "aliases": [
@@ -5168,10 +4553,8 @@
     "id": "WONGO_CUSTOMER_APPRECIATION_BADGE",
     "kind": "relic",
     "name": "旺购客户感恩徽章",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L305; md:relics_zh.md:L305"
+    "rarity": "Event"
   },
   "YUMMY_COOKIE": {
     "aliases": [
@@ -5186,9 +4569,7 @@
     "id": "YUMMY_COOKIE",
     "kind": "relic",
     "name": "美味饼干",
-    "needs_zh": false,
     "play_notes": "对局43 live",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
+    "rarity": "Ancient"
   }
 }

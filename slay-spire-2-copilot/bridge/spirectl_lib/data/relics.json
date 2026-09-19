@@ -10,10 +10,8 @@
     "id": "ADROIT",
     "kind": "relic",
     "name": "Kifuda",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "codex-api:/relics/KIFUDA"
+    "rarity": "Shop"
   },
   "AKABEKO": {
     "aliases": [
@@ -26,12 +24,8 @@
     "id": "AKABEKO",
     "kind": "relic",
     "name": "Akabeko",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L48; md:relics_zh.md:L48; codex:relics/AKABEKO",
-    "zh_description": "第 1 回合开始，获得 8 点 Vigor。",
-    "zh_name": "赤牛"
+    "rarity": "Uncommon"
   },
   "ALCHEMICAL_COFFER": {
     "aliases": [
@@ -45,12 +39,8 @@
     "id": "ALCHEMICAL_COFFER",
     "kind": "relic",
     "name": "Alchemical Coffer",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L140; md:relics_zh.md:L140",
-    "zh_description": "拾取时，获得 4 个装满随机药水的药水栏。",
-    "zh_name": "炼金箱"
+    "rarity": "Ancient"
   },
   "AMETHYST_AUBERGINE": {
     "aliases": [
@@ -65,10 +55,7 @@
     "kind": "relic",
     "name": "Amethyst Aubergine",
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L16; md:relics_zh.md:L16",
-    "zh_description": "战斗奖励额外 +15 金币（最终幕 Boss 战除外）。",
-    "zh_name": "紫水晶茄子"
+    "rarity": "Common"
   },
   "ANCHOR": {
     "aliases": [
@@ -81,12 +68,8 @@
     "id": "ANCHOR",
     "kind": "relic",
     "name": "Anchor",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L17; md:relics_zh.md:L17; codex:relics/ANCHOR",
-    "zh_description": "战斗开始，获得 10 格挡。",
-    "zh_name": "锚"
+    "rarity": "Common"
   },
   "ARCANE_SCROLL": {
     "aliases": [
@@ -100,12 +83,8 @@
     "id": "ARCANE_SCROLL",
     "kind": "relic",
     "name": "Arcane Scroll",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L141; md:relics_zh.md:L141; codex:relics/ARCANE_SCROLL",
-    "zh_description": "拾取时，获得 1 张随机稀有卡牌。",
-    "zh_name": "奥术卷轴"
+    "rarity": "Ancient"
   },
   "ARCHAIC_TOOTH": {
     "aliases": [
@@ -119,12 +98,8 @@
     "id": "ARCHAIC_TOOTH",
     "kind": "relic",
     "name": "Archaic Tooth",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L142; md:relics_zh.md:L142",
-    "zh_description": "拾取时，将你的初始牌变为远古版本。",
-    "zh_name": "古老牙齿"
+    "rarity": "Ancient"
   },
   "ART_OF_WAR": {
     "aliases": [
@@ -138,12 +113,8 @@
     "id": "ART_OF_WAR",
     "kind": "relic",
     "name": "Art of War",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L89; md:relics_zh.md:L89",
-    "zh_description": "若上回合未打出任何攻击牌，第 2 回合起回合开始获得 1 点能量。",
-    "zh_name": "孙子兵法"
+    "rarity": "Rare"
   },
   "ASTROLABE": {
     "aliases": [
@@ -156,12 +127,8 @@
     "id": "ASTROLABE",
     "kind": "relic",
     "name": "Astrolabe",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L143; md:relics_zh.md:L143",
-    "zh_description": "拾取时，变化 3 张选定牌，然后升级它们。",
-    "zh_name": "星盘"
+    "rarity": "Ancient"
   },
   "BAG_OF_MARBLES": {
     "aliases": [
@@ -175,12 +142,8 @@
     "id": "BAG_OF_MARBLES",
     "kind": "relic",
     "name": "Bag of Marbles",
-    "needs_zh": false,
     "play_notes": "run-46 live: Marbles+Red Mask auto-package = run spine; 99% gold sunk at purchase point.",
-    "rarity": "Common",
-    "source": "md:relics.md:L18; md:relics_zh.md:L18",
-    "zh_description": "战斗开始（第 1 回合），对所有敌人施加 1 层 Vulnerable。",
-    "zh_name": "弹珠袋"
+    "rarity": "Common"
   },
   "BAG_OF_PREPARATION": {
     "aliases": [
@@ -195,12 +158,8 @@
     "kind": "relic",
     "live_notes": "LIVE run-56: combat start draw +2 additional cards. Engine-online faster every fight.",
     "name": "Bag of Preparation",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L19; md:relics_zh.md:L19; codex:relics/BAG_OF_PREPARATION",
-    "zh_description": "第 1 回合，抽牌阶段额外抽 2 张牌。",
-    "zh_name": "准备背包"
+    "rarity": "Common"
   },
   "BEATING_REMNANT": {
     "aliases": [
@@ -214,12 +173,8 @@
     "id": "BEATING_REMNANT",
     "kind": "relic",
     "name": "Beating Remnant",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L90; md:relics_zh.md:L90",
-    "zh_description": "单回合失去的 HP 不超过 20。",
-    "zh_name": "律动残余"
+    "rarity": "Rare"
   },
   "BEAUTIFUL_BRACELET": {
     "aliases": [
@@ -233,12 +188,8 @@
     "id": "BEAUTIFUL_BRACELET",
     "kind": "relic",
     "name": "Beautiful Bracelet",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L144; md:relics_zh.md:L144",
-    "zh_description": "拾取时，选择牌库中 3 张牌附魔 Swift 3。",
-    "zh_name": "华美手镯"
+    "rarity": "Ancient"
   },
   "BELLOWS": {
     "aliases": [
@@ -251,12 +202,8 @@
     "id": "BELLOWS",
     "kind": "relic",
     "name": "Bellows",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L91; md:relics_zh.md:L91",
-    "zh_description": "第 1 回合开始，升级手牌中所有卡牌。",
-    "zh_name": "风箱"
+    "rarity": "Rare"
   },
   "BELT_BUCKLE": {
     "aliases": [
@@ -270,12 +217,8 @@
     "id": "BELT_BUCKLE",
     "kind": "relic",
     "name": "Belt Buckle",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L241; md:relics_zh.md:L241",
-    "zh_description": "没有药水时，额外 +2 点敏捷（战斗内）。",
-    "zh_name": "腰带扣"
+    "rarity": "Shop"
   },
   "BIG_HAT": {
     "aliases": [
@@ -289,12 +232,8 @@
     "id": "BIG_HAT",
     "kind": "relic",
     "name": "Big Hat",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L92; md:relics_zh.md:L92",
-    "zh_description": "战斗开始，从你的卡池中向手牌加入 2 张随机虚无（Ethereal）牌。",
-    "zh_name": "大帽子"
+    "rarity": "Rare"
   },
   "BIG_MUSHROOM": {
     "aliases": [
@@ -309,12 +248,8 @@
     "kind": "relic",
     "live_notes": "LIVE run-56: Mushroom event pick. +20 MaxHP on pickup; turn 1 draw −2 cards (tempo cost in every subsequent fight).",
     "name": "Big Mushroom",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L272; md:relics_zh.md:L272",
-    "zh_description": "拾取时，+20 最大 HP；第 1 回合，抽牌阶段额外少抽 2 张牌。",
-    "zh_name": "大蘑菇"
+    "rarity": "Event"
   },
   "BIIIG_HUG": {
     "aliases": [
@@ -330,12 +265,8 @@
     "id": "BIIIG_HUG",
     "kind": "relic",
     "name": "Biiig Hug",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
-    "zh_description": "拾取时，移除 4 张牌；每次洗抽牌堆时向其中加入 1 张 Soot。",
-    "zh_name": "大～抱抱"
+    "rarity": "Ancient"
   },
   "BING_BONG": {
     "aliases": [
@@ -349,12 +280,8 @@
     "id": "BING_BONG",
     "kind": "relic",
     "name": "Bing Bong",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L273; md:relics_zh.md:L273",
-    "zh_description": "每次向牌库加入卡牌时，额外加一份拷贝。",
-    "zh_name": "宾邦"
+    "rarity": "Event"
   },
   "BLACK_BLOOD": {
     "aliases": [
@@ -368,10 +295,8 @@
     "id": "BLACK_BLOOD",
     "kind": "relic",
     "name": "Black Blood",
-    "needs_zh": false,
     "play_notes": "Run-49 live: heal 12 confirmed eight times post-combat (61→73, 65→77, 2→14 class). Doubles the passive HP rail; the systematic answer to the HP-economy death class. Run-39 first pick precedent held.",
-    "rarity": "Ancient",
-    "source": "run-49 live fold 2026-09-19 (logs run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c)"
+    "rarity": "Ancient"
   },
   "BLACK_STAR": {
     "aliases": [
@@ -385,12 +310,8 @@
     "id": "BLACK_STAR",
     "kind": "relic",
     "name": "Black Star",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "run-51 live fold 2026-09-19",
-    "zh_description": "精英被击败时额外掉落一件遗物。",
-    "zh_name": "黑星"
+    "rarity": "Ancient"
   },
   "BLESSED_ANTLER": {
     "aliases": [
@@ -404,12 +325,8 @@
     "id": "BLESSED_ANTLER",
     "kind": "relic",
     "name": "Blessed Antler",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L147; md:relics_zh.md:L147",
-    "zh_description": "每回合 +1 最大能量；战斗开始，向抽牌堆洗入 3 张 Dazed。",
-    "zh_name": "赐福鹿角"
+    "rarity": "Ancient"
   },
   "BLOOD_SOAKED_ROSE": {
     "aliases": [
@@ -423,12 +340,8 @@
     "id": "BLOOD_SOAKED_ROSE",
     "kind": "relic",
     "name": "Blood-Soaked Rose",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L148; md:relics_zh.md:L148",
-    "zh_description": "每回合 +1 最大能量；拾取时，向牌库加入 1 张 Enthralled。",
-    "zh_name": "血染玫瑰"
+    "rarity": "Ancient"
   },
   "BLOOD_VIAL": {
     "aliases": [
@@ -442,12 +355,8 @@
     "id": "BLOOD_VIAL",
     "kind": "relic",
     "name": "Blood Vial",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L20; md:relics_zh.md:L20; codex:relics/BLOOD_VIAL; run-40 live fold 2026-09-18",
-    "zh_description": "第 1 回合开始，回复 2 HP。",
-    "zh_name": "小血瓶"
+    "rarity": "Common"
   },
   "BONE_FLUTE": {
     "aliases": [
@@ -461,12 +370,8 @@
     "id": "BONE_FLUTE",
     "kind": "relic",
     "name": "Bone Flute",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L21; md:relics_zh.md:L21",
-    "zh_description": "Osty 每次攻击时，获得 2 格挡。",
-    "zh_name": "骨笛"
+    "rarity": "Common"
   },
   "BONE_TEA": {
     "aliases": [
@@ -480,12 +385,8 @@
     "id": "BONE_TEA",
     "kind": "relic",
     "name": "Bone Tea",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L274; md:relics_zh.md:L274",
-    "zh_description": "接下来 1 场战斗：第 1 回合开始，升级手牌中所有卡牌。",
-    "zh_name": "骨茶"
+    "rarity": "Event"
   },
   "BOOKMARK": {
     "aliases": [
@@ -498,12 +399,8 @@
     "id": "BOOKMARK",
     "kind": "relic",
     "name": "Bookmark",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L93; md:relics_zh.md:L93",
-    "zh_description": "回合结束时，随机一张被保留的手牌费用 −1 直至打出。",
-    "zh_name": "书签"
+    "rarity": "Rare"
   },
   "BOOK_OF_FIVE_RINGS": {
     "aliases": [
@@ -519,12 +416,8 @@
     "id": "BOOK_OF_FIVE_RINGS",
     "kind": "relic",
     "name": "Book of Five Rings",
-    "needs_zh": false,
     "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Common",
-    "source": "relics.md + run-43 shop live",
-    "zh_description": "牌库每加入5张牌回复20HP（兑现后计数重置）。反稀简遗物——加牌密集路线兑现。run-57 live：两次兑现（计数两次到5——Act1 Armaments 入手 + Act2 中段加牌）；回血落在 Elite② 前 68/86 与 Act2 商店窗。",
-    "zh_name": "五轮书"
+    "rarity": "Common"
   },
   "BOOK_REPAIR_KNIFE": {
     "aliases": [
@@ -538,12 +431,8 @@
     "id": "BOOK_REPAIR_KNIFE",
     "kind": "relic",
     "name": "Book Repair Knife",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L49; md:relics_zh.md:L49",
-    "zh_description": "非 Minion 敌人死于 Doom 时，按每个此类生物回复 3 HP。",
-    "zh_name": "修书小刀"
+    "rarity": "Uncommon"
   },
   "BOOMING_CONCH": {
     "aliases": [
@@ -558,12 +447,8 @@
     "kind": "relic",
     "live_notes": "LIVE run-56: Neow pick. Elite combat start draw +2 cards + gain 1 Energy. Confirmed every elite fight in the run.",
     "name": "Booming Conch",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L149; md:relics_zh.md:L149",
-    "zh_description": "精英战第 1 回合开始，额外抽 2 张牌并获得 1 点能量。",
-    "zh_name": "轰鸣海螺"
+    "rarity": "Ancient"
   },
   "BOUND_PHYLACTERY": {
     "aliases": [
@@ -577,12 +462,8 @@
     "id": "BOUND_PHYLACTERY",
     "kind": "relic",
     "name": "Bound Phylactery",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Starter",
-    "source": "md:relics.md:L6; md:relics_zh.md:L6",
-    "zh_description": "战斗开始，Summon 1 个 Osty；第 2 回合起每回合开始，Summon 1 个 Osty。",
-    "zh_name": "缚魂命匣"
+    "rarity": "Starter"
   },
   "BOWLER_HAT": {
     "aliases": [
@@ -597,12 +478,8 @@
     "id": "BOWLER_HAT",
     "kind": "relic",
     "name": "Bowler Hat",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L50; md:relics_zh.md:L50",
-    "zh_description": "金币获取×1.25。仅可在第三幕宝箱前获得；商店不出售。run-57 live：Act2 宝箱与精英赏金可见放大（宝箱+43级 vs 基准30级）。",
-    "zh_name": "圆顶礼帽"
+    "rarity": "Uncommon"
   },
   "BREAD": {
     "aliases": [
@@ -615,12 +492,8 @@
     "id": "BREAD",
     "kind": "relic",
     "name": "Bread",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L242; md:relics_zh.md:L242",
-    "zh_description": "第 1 回合开始，失去 2 点能量；第 2 回合起，每回合 +1 最大能量。",
-    "zh_name": "面包"
+    "rarity": "Shop"
   },
   "BRIGHT_FLAME": {
     "aliases": [
@@ -636,10 +509,8 @@
     "id": "BRIGHT_FLAME",
     "kind": "relic",
     "name": "Brightest Flame",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)"
+    "rarity": "Ancient"
   },
   "BRILLIANT_SCARF": {
     "aliases": [
@@ -653,12 +524,8 @@
     "id": "BRILLIANT_SCARF",
     "kind": "relic",
     "name": "Brilliant Scarf",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L150; md:relics_zh.md:L150",
-    "zh_description": "每回合从手牌打出的第 5 张牌免费。",
-    "zh_name": "艳丽围巾"
+    "rarity": "Ancient"
   },
   "BRIMSTONE": {
     "aliases": [
@@ -671,12 +538,8 @@
     "id": "BRIMSTONE",
     "kind": "relic",
     "name": "Brimstone",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L243; md:relics_zh.md:L243",
-    "zh_description": "回合开始，获得 2 点力量，所有敌人获得 1 点力量。",
-    "zh_name": "硫磺"
+    "rarity": "Shop"
   },
   "BRONZE_SCALES": {
     "aliases": [
@@ -691,12 +554,8 @@
     "kind": "relic",
     "live_notes": "LIVE run-56: Start each combat with 3 Thorns. Thorns damage is block-piercing.",
     "name": "Bronze Scales",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L23; md:relics_zh.md:L23; codex:relics/BRONZE_SCALES",
-    "zh_description": "战斗开始，获得 3 点荆棘。",
-    "zh_name": "铜质鳞片"
+    "rarity": "Common"
   },
   "BURNING_BLOOD": {
     "aliases": [
@@ -710,12 +569,8 @@
     "id": "BURNING_BLOOD",
     "kind": "relic",
     "name": "Burning Blood",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Starter",
-    "source": "md:relics.md:L14; md:relics_zh.md:L14; codex:relics/BURNING_BLOOD",
-    "zh_description": "战斗胜利时，回复 6 HP。",
-    "zh_name": "燃烧之血"
+    "rarity": "Starter"
   },
   "BURNING_STICKS": {
     "aliases": [
@@ -729,12 +584,8 @@
     "id": "BURNING_STICKS",
     "kind": "relic",
     "name": "Burning Sticks",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L244; md:relics_zh.md:L244",
-    "zh_description": "每场战斗首次消耗一张技能牌时，将其一份拷贝加入手牌。",
-    "zh_name": "燃烧木棍"
+    "rarity": "Shop"
   },
   "BYRDPIP": {
     "aliases": [
@@ -747,12 +598,8 @@
     "id": "BYRDPIP",
     "kind": "relic",
     "name": "Byrdpip",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L275; md:relics_zh.md:L275",
-    "zh_description": "拾取时，获得卡牌 Byrd Swoop；战斗中有 Byrdpip 伴随。",
-    "zh_name": "异鸟宝宝"
+    "rarity": "Event"
   },
   "CALLING_BELL": {
     "aliases": [
@@ -766,12 +613,8 @@
     "id": "CALLING_BELL",
     "kind": "relic",
     "name": "Calling Bell",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L151; md:relics_zh.md:L151",
-    "zh_description": "拾取时，获得 1 张独特诅咒和 3 件遗物。",
-    "zh_name": "召唤铃铛"
+    "rarity": "Ancient"
   },
   "CANDELABRA": {
     "aliases": [
@@ -784,12 +627,8 @@
     "id": "CANDELABRA",
     "kind": "relic",
     "name": "Candelabra",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L51; md:relics_zh.md:L51",
-    "zh_description": "第 2 回合开始，获得 2 点能量。",
-    "zh_name": "烛台"
+    "rarity": "Uncommon"
   },
   "CAPTAINS_WHEEL": {
     "aliases": [
@@ -803,12 +642,8 @@
     "id": "CAPTAINS_WHEEL",
     "kind": "relic",
     "name": "Captain's Wheel",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L94; md:relics_zh.md:L94",
-    "zh_description": "第 3 回合开始，获得 18 格挡。",
-    "zh_name": "舵盘"
+    "rarity": "Rare"
   },
   "CAULDRON": {
     "aliases": [
@@ -821,12 +656,8 @@
     "id": "CAULDRON",
     "kind": "relic",
     "name": "Cauldron",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L245; md:relics_zh.md:L245",
-    "zh_description": "拾取时，酿造 5 瓶随机药水。",
-    "zh_name": "大锅"
+    "rarity": "Shop"
   },
   "CENTENNIAL_PUZZLE": {
     "aliases": [
@@ -841,12 +672,8 @@
     "kind": "relic",
     "live_notes": "LIVE run-56: first time each combat you lose HP, draw 3 cards. Synergizes with self-harm engine (Hemokinesis/Bloodletting/BloodWall trigger it).",
     "name": "Centennial Puzzle",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L24; md:relics_zh.md:L24",
-    "zh_description": "每场战斗首次失去 HP 时，抽 3 张牌。任意掉血 tick 均触发——猩红披风回合开始 −1 / 放血 / 祭品类；披风部署后等效「T1 后战斗开始抽 3」。",
-    "zh_name": "百年积木"
+    "rarity": "Common"
   },
   "CHANDELIER": {
     "aliases": [
@@ -859,12 +686,8 @@
     "id": "CHANDELIER",
     "kind": "relic",
     "name": "Chandelier",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L95; md:relics_zh.md:L95; codex:relics/CHANDELIER",
-    "zh_description": "第 3 回合开始，获得 3 点能量。",
-    "zh_name": "吊灯"
+    "rarity": "Rare"
   },
   "CHARONS_ASHES": {
     "aliases": [
@@ -878,12 +701,8 @@
     "id": "CHARONS_ASHES",
     "kind": "relic",
     "name": "Charon's Ashes",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L96; md:relics_zh.md:L96",
-    "zh_description": "每次消耗卡牌时，对所有敌人造成 3 点伤害。",
-    "zh_name": "卡戎之灰"
+    "rarity": "Rare"
   },
   "CHEMICAL_X": {
     "aliases": [
@@ -897,12 +716,8 @@
     "id": "CHEMICAL_X",
     "kind": "relic",
     "name": "Chemical X",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L246; md:relics_zh.md:L246",
-    "zh_description": "X 费卡牌的效果增强 2 点。",
-    "zh_name": "化学物X"
+    "rarity": "Shop"
   },
   "CHOICES_PARADOX": {
     "aliases": [
@@ -916,12 +731,8 @@
     "id": "CHOICES_PARADOX",
     "kind": "relic",
     "name": "Choices Paradox",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L152; md:relics_zh.md:L152",
-    "zh_description": "第 1 回合开始，从 5 张随机卡中选 1 张加入手牌；这 5 张牌均获得 Retain。语义：为本战斗手牌添加（带 Retain），每战 T1 新五选一——**非**永久入牌库。",
-    "zh_name": "选择悖论"
+    "rarity": "Ancient"
   },
   "CHOSEN_CHEESE": {
     "aliases": [
@@ -936,12 +747,8 @@
     "id": "CHOSEN_CHEESE",
     "kind": "relic",
     "name": "Chosen Cheese",
-    "needs_zh": false,
     "play_notes": "run-46 live: 16 victory procs; HP-rail component with Burning Blood + Waffle + Feed Fatals; Paper-Cuts tax (Act3 scrolls) is the only observed leak — full-block turns cost zero MaxHP.",
-    "rarity": "Event",
-    "source": "run-51 live fold 2026-09-19",
-    "zh_description": "事件遗物（ROOM_FULL_OF_CHEESE 翻找分支，run-57 拾取时−14HP）：每场战斗结束+1最大HP（run-51/57 live 级——与燃烧之血回复及 Feed Fatal 叠加）。run-57：HP 轨组件 80→97（与 Feed 复合）；在 46/95 级 HP 付出的入场税由 Act2 各战兑付。",
-    "zh_name": "天选芝士"
+    "rarity": "Event"
   },
   "CIRCLET": {
     "aliases": [
@@ -954,12 +761,8 @@
     "id": "CIRCLET",
     "kind": "relic",
     "name": "Circlet",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "None",
-    "source": "md:relics.md:L46; md:relics_zh.md:L46",
-    "zh_description": "无效果。",
-    "zh_name": "头环"
+    "rarity": "None"
   },
   "CLAWS": {
     "aliases": [
@@ -972,12 +775,8 @@
     "id": "CLAWS",
     "kind": "relic",
     "name": "Claws",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L153; md:relics_zh.md:L153",
-    "zh_description": "拾取时，将至多 6 张牌变为 Maul。",
-    "zh_name": "利爪"
+    "rarity": "Ancient"
   },
   "CLOAK_CLASP": {
     "aliases": [
@@ -991,12 +790,8 @@
     "id": "CLOAK_CLASP",
     "kind": "relic",
     "name": "Cloak Clasp",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L97; md:relics_zh.md:L97",
-    "zh_description": "回合结束，按手牌张数每张获得 1 格挡。",
-    "zh_name": "斗篷扣"
+    "rarity": "Rare"
   },
   "CRACKED_CORE": {
     "aliases": [
@@ -1010,12 +805,8 @@
     "id": "CRACKED_CORE",
     "kind": "relic",
     "name": "Cracked Core",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Starter",
-    "source": "md:relics.md:L8; md:relics_zh.md:L8",
-    "zh_description": "战斗开始（第 1 回合），引导 1 个闪电球。",
-    "zh_name": "破损核心"
+    "rarity": "Starter"
   },
   "CROSSBOW": {
     "aliases": [
@@ -1028,12 +819,8 @@
     "id": "CROSSBOW",
     "kind": "relic",
     "name": "Crossbow",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L154; md:relics_zh.md:L154",
-    "zh_description": "每回合开始，向手牌加入 1 张随机攻击牌；本回合免费。",
-    "zh_name": "十字弓"
+    "rarity": "Ancient"
   },
   "CURSED_PEARL": {
     "aliases": [
@@ -1047,12 +834,8 @@
     "id": "CURSED_PEARL",
     "kind": "relic",
     "name": "Cursed Pearl",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L155; md:relics_zh.md:L155",
-    "zh_description": "拾取时，向牌库加入 1 张 Greed 并获得 333 金币。",
-    "zh_name": "诅咒珍珠"
+    "rarity": "Ancient"
   },
   "DARKSTONE_PERIAPT": {
     "aliases": [
@@ -1066,12 +849,8 @@
     "id": "DARKSTONE_PERIAPT",
     "kind": "relic",
     "name": "Darkstone Periapt",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L277; md:relics_zh.md:L277",
-    "zh_description": "每次向牌库加入诅咒时，+6 最大 HP。",
-    "zh_name": "黑石护符"
+    "rarity": "Event"
   },
   "DATA_DISK": {
     "aliases": [
@@ -1085,12 +864,8 @@
     "id": "DATA_DISK",
     "kind": "relic",
     "name": "Data Disk",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L25; md:relics_zh.md:L25",
-    "zh_description": "战斗开始，获得 1 点 Focus。",
-    "zh_name": "数据磁盘"
+    "rarity": "Common"
   },
   "DAUGHTER_OF_THE_WIND": {
     "aliases": [
@@ -1105,12 +880,8 @@
     "kind": "relic",
     "live_notes": "LIVE run-56: Doll room pick. Whenever you play an Attack card, gain 1 Block. Passive block engine synergy with attack-heavy deck.",
     "name": "Daughter of the Wind",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L278; md:relics_zh.md:L278",
-    "zh_description": "每次打出攻击牌时，获得 1 格挡。",
-    "zh_name": "风的女儿"
+    "rarity": "Event"
   },
   "DAUGHTER_OF_WIND": {
     "aliases": [
@@ -1123,10 +894,8 @@
     "id": "DAUGHTER_OF_WIND",
     "kind": "relic",
     "name": "Daughter of the Wind",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "codex-api:/relics/DAUGHTER_OF_THE_WIND"
+    "rarity": "Event"
   },
   "DELICATE_FROND": {
     "aliases": [
@@ -1140,12 +909,8 @@
     "id": "DELICATE_FROND",
     "kind": "relic",
     "name": "Delicate Frond",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L156; md:relics_zh.md:L156",
-    "zh_description": "战斗开始，用随机药水填满所有空药水栏。",
-    "zh_name": "娇嫩蕨草"
+    "rarity": "Ancient"
   },
   "DEMON_TONGUE": {
     "aliases": [
@@ -1159,12 +924,8 @@
     "id": "DEMON_TONGUE",
     "kind": "relic",
     "name": "Demon Tongue",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L98; md:relics_zh.md:L98",
-    "zh_description": "每场战斗在自己回合首次失去未格挡 HP 时，回复等量 HP。",
-    "zh_name": "恶魔之舌"
+    "rarity": "Rare"
   },
   "DIAMOND_DIADEM": {
     "aliases": [
@@ -1178,12 +939,8 @@
     "id": "DIAMOND_DIADEM",
     "kind": "relic",
     "name": "Diamond Diadem",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L157; md:relics_zh.md:L157",
-    "zh_description": "回合结束时，若本回合打出的牌 ≤2 张，受到的攻击伤害减半，持续至敌方回合结束。",
-    "zh_name": "钻石头冠"
+    "rarity": "Ancient"
   },
   "DINGY_RUG": {
     "aliases": [
@@ -1198,12 +955,8 @@
     "id": "DINGY_RUG",
     "kind": "relic",
     "name": "Dingy Rug",
-    "needs_zh": false,
     "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Shop",
-    "source": "relics.md + run-43 shop live",
-    "zh_description": "卡牌奖励现在可包含无色牌。",
-    "zh_name": "肮脏地毯"
+    "rarity": "Shop"
   },
   "DISTINGUISHED_CAPE": {
     "aliases": [
@@ -1217,12 +970,8 @@
     "id": "DISTINGUISHED_CAPE",
     "kind": "relic",
     "name": "Distinguished Cape",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L158; md:relics_zh.md:L158",
-    "zh_description": "拾取时，−9 最大 HP；向牌库加入 3 张 Apparition。",
-    "zh_name": "卓越斗篷"
+    "rarity": "Ancient"
   },
   "DIVINE_DESTINY": {
     "aliases": [
@@ -1236,12 +985,8 @@
     "id": "DIVINE_DESTINY",
     "kind": "relic",
     "name": "Divine Destiny",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Starter",
-    "source": "md:relics.md:L9; md:relics_zh.md:L9",
-    "zh_description": "第 1 回合开始，获得 6 点星星（★）。",
-    "zh_name": "天命所归"
+    "rarity": "Starter"
   },
   "DIVINE_RIGHT": {
     "aliases": [
@@ -1255,12 +1000,8 @@
     "id": "DIVINE_RIGHT",
     "kind": "relic",
     "name": "Divine Right",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Starter",
-    "source": "md:relics.md:L10; md:relics_zh.md:L10",
-    "zh_description": "进入战斗房间时，获得 3 点星星（★）。",
-    "zh_name": "天赋君权"
+    "rarity": "Starter"
   },
   "DOLLYS_MIRROR": {
     "aliases": [
@@ -1274,12 +1015,8 @@
     "id": "DOLLYS_MIRROR",
     "kind": "relic",
     "name": "Dolly's Mirror",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L248; md:relics_zh.md:L248",
-    "zh_description": "拾取时，获得牌库中一张选定牌的拷贝。",
-    "zh_name": "多利之镜"
+    "rarity": "Shop"
   },
   "DRAGON_FRUIT": {
     "aliases": [
@@ -1293,12 +1030,8 @@
     "id": "DRAGON_FRUIT",
     "kind": "relic",
     "name": "Dragon Fruit",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L249; md:relics_zh.md:L249",
-    "zh_description": "每次获得金币时，+1 最大 HP。",
-    "zh_name": "火龙果"
+    "rarity": "Shop"
   },
   "DREAM_CATCHER": {
     "aliases": [
@@ -1312,12 +1045,8 @@
     "id": "DREAM_CATCHER",
     "kind": "relic",
     "name": "Dream Catcher",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L279; md:relics_zh.md:L279",
-    "zh_description": "在休息点休息时，可以向牌库加入一张牌。",
-    "zh_name": "捕梦网"
+    "rarity": "Event"
   },
   "DRIFTWOOD": {
     "aliases": [
@@ -1330,12 +1059,8 @@
     "id": "DRIFTWOOD",
     "kind": "relic",
     "name": "Driftwood",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L159; md:relics_zh.md:L159",
-    "zh_description": "每份卡牌奖励可重掷一次。",
-    "zh_name": "浮木"
+    "rarity": "Ancient"
   },
   "DUSTY_TOME": {
     "aliases": [
@@ -1349,12 +1074,8 @@
     "id": "DUSTY_TOME",
     "kind": "relic",
     "name": "Dusty Tome",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L160; md:relics_zh.md:L160",
-    "zh_description": "拾取时，获得 1 张远古卡牌，且为升级版。",
-    "zh_name": "尘封魔典"
+    "rarity": "Ancient"
   },
   "ECTOPLASM": {
     "aliases": [
@@ -1367,12 +1088,8 @@
     "id": "ECTOPLASM",
     "kind": "relic",
     "name": "Ectoplasm",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L161; md:relics_zh.md:L161",
-    "zh_description": "每回合 +1 最大能量；金币获取变为 0。",
-    "zh_name": "灵体外质"
+    "rarity": "Ancient"
   },
   "ELECTRIC_SHRYMP": {
     "aliases": [
@@ -1386,12 +1103,8 @@
     "id": "ELECTRIC_SHRYMP",
     "kind": "relic",
     "name": "Electric Shrymp",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L162; md:relics_zh.md:L162",
-    "zh_description": "拾取时，选择 1 张技能牌附魔 Imbued。",
-    "zh_name": "放电异虾"
+    "rarity": "Ancient"
   },
   "EMBER_TEA": {
     "aliases": [
@@ -1405,12 +1118,8 @@
     "id": "EMBER_TEA",
     "kind": "relic",
     "name": "Ember Tea",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L280; md:relics_zh.md:L280",
-    "zh_description": "接下来 5 场战斗开始时，获得 2 点力量。",
-    "zh_name": "余烬茶"
+    "rarity": "Event"
   },
   "EMOTION_CHIP": {
     "aliases": [
@@ -1424,12 +1133,8 @@
     "id": "EMOTION_CHIP",
     "kind": "relic",
     "name": "Emotion Chip",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L99; md:relics_zh.md:L99",
-    "zh_description": "若上回合失去过 HP，回合开始时触发所有充能球的被动。",
-    "zh_name": "情感芯片"
+    "rarity": "Rare"
   },
   "EMPTY_CAGE": {
     "aliases": [
@@ -1443,12 +1148,8 @@
     "id": "EMPTY_CAGE",
     "kind": "relic",
     "name": "Empty Cage",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L163; md:relics_zh.md:L163",
-    "zh_description": "拾取时，从牌库移除 2 张牌。",
-    "zh_name": "空鸟笼"
+    "rarity": "Ancient"
   },
   "ETERNAL_FEATHER": {
     "aliases": [
@@ -1461,10 +1162,8 @@
     "id": "ETERNAL_FEATHER",
     "kind": "relic",
     "name": "Eternal Feather",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "codex-api:/relics/ETERNAL_FEATHER"
+    "rarity": "Uncommon"
   },
   "FAKE_ANCHOR": {
     "aliases": [
@@ -1478,12 +1177,8 @@
     "id": "FAKE_ANCHOR",
     "kind": "relic",
     "name": "Fake Anchor",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L281; md:relics_zh.md:L281",
-    "zh_description": "战斗开始，获得 4 格挡。",
-    "zh_name": "锚？？？"
+    "rarity": "Event"
   },
   "FAKE_BLOOD_VIAL": {
     "aliases": [
@@ -1497,12 +1192,8 @@
     "id": "FAKE_BLOOD_VIAL",
     "kind": "relic",
     "name": "Fake Blood Vial",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L282; md:relics_zh.md:L282",
-    "zh_description": "第 1 回合开始，回复 1 HP。",
-    "zh_name": "小血瓶？？？"
+    "rarity": "Event"
   },
   "FAKE_HAPPY_FLOWER": {
     "aliases": [
@@ -1516,12 +1207,8 @@
     "id": "FAKE_HAPPY_FLOWER",
     "kind": "relic",
     "name": "Fake Happy Flower",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L283; md:relics_zh.md:L283",
-    "zh_description": "每第 5 回合开始，获得 1 点能量。",
-    "zh_name": "开心小花？？？"
+    "rarity": "Event"
   },
   "FAKE_LEES_WAFFLE": {
     "aliases": [
@@ -1535,12 +1222,8 @@
     "id": "FAKE_LEES_WAFFLE",
     "kind": "relic",
     "name": "Fake Lee's Waffle",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L284; md:relics_zh.md:L284",
-    "zh_description": "拾取时，回复最大 HP 的 10%（下取整）。伪商人标价约 56 金。",
-    "zh_name": "李家华夫饼？？？"
+    "rarity": "Event"
   },
   "FAKE_MANGO": {
     "aliases": [
@@ -1554,12 +1237,8 @@
     "id": "FAKE_MANGO",
     "kind": "relic",
     "name": "Fake Mango",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L285; md:relics_zh.md:L285",
-    "zh_description": "拾取时，+3 最大 HP（当前与最大各 +3）。伪商人标价约 43 金。",
-    "zh_name": "芒果？？？"
+    "rarity": "Event"
   },
   "FAKE_MERCHANTS_RUG": {
     "aliases": [
@@ -1573,12 +1252,8 @@
     "id": "FAKE_MERCHANTS_RUG",
     "kind": "relic",
     "name": "Fake Merchant's Rug",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L286; md:relics_zh.md:L286",
-    "zh_description": "无效果。",
-    "zh_name": "商人的地毯？？？"
+    "rarity": "Event"
   },
   "FAKE_ORICHALCUM": {
     "aliases": [
@@ -1592,12 +1267,8 @@
     "id": "FAKE_ORICHALCUM",
     "kind": "relic",
     "name": "Fake Orichalcum",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L287; md:relics_zh.md:L287",
-    "zh_description": "回合结束时，若没有格挡，获得 3 格挡。",
-    "zh_name": "奥利哈钢？？？"
+    "rarity": "Event"
   },
   "FAKE_SNECKO_EYE": {
     "aliases": [
@@ -1611,12 +1282,8 @@
     "id": "FAKE_SNECKO_EYE",
     "kind": "relic",
     "name": "Fake Snecko Eye",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L288; md:relics_zh.md:L288",
-    "zh_description": "战斗开始时处于 Confused。",
-    "zh_name": "异蛇之眼？？？"
+    "rarity": "Event"
   },
   "FAKE_STRIKE_DUMMY": {
     "aliases": [
@@ -1630,12 +1297,8 @@
     "id": "FAKE_STRIKE_DUMMY",
     "kind": "relic",
     "name": "Fake Strike Dummy",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L289; md:relics_zh.md:L289",
-    "zh_description": "名称含 Strike 标签的攻击牌额外造成 1 点伤害。",
-    "zh_name": "打击木偶？？？"
+    "rarity": "Event"
   },
   "FAKE_VENERABLE_TEA_SET": {
     "aliases": [
@@ -1649,12 +1312,8 @@
     "id": "FAKE_VENERABLE_TEA_SET",
     "kind": "relic",
     "name": "Fake Venerable Tea Set",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L290; md:relics_zh.md:L290",
-    "zh_description": "进入休息点时，下一场战斗开始额外 +1 能量。",
-    "zh_name": "古茶具套装？？？"
+    "rarity": "Event"
   },
   "FENCING_MANUAL": {
     "aliases": [
@@ -1668,12 +1327,8 @@
     "id": "FENCING_MANUAL",
     "kind": "relic",
     "name": "Fencing Manual",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L26; md:relics_zh.md:L26",
-    "zh_description": "第 1 回合开始，Forge 10。",
-    "zh_name": "击剑指南"
+    "rarity": "Common"
   },
   "FESTIVE_POPPER": {
     "aliases": [
@@ -1687,12 +1342,8 @@
     "id": "FESTIVE_POPPER",
     "kind": "relic",
     "name": "Festive Popper",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L27; md:relics_zh.md:L27",
-    "zh_description": "第 1 回合开始，对所有敌人造成 9 点伤害。预削已在多类遭遇确认（啃咬机、千足虫各段、皇蟹双爪开战各 −9）。",
-    "zh_name": "节日拉炮"
+    "rarity": "Common"
   },
   "FIDDLE": {
     "aliases": [
@@ -1705,12 +1356,8 @@
     "id": "FIDDLE",
     "kind": "relic",
     "name": "Fiddle",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L164; md:relics_zh.md:L164",
-    "zh_description": "每回合抽牌阶段额外抽 2 张牌；回合内不能再抽牌。",
-    "zh_name": "小提琴"
+    "rarity": "Ancient"
   },
   "FISHING_ROD": {
     "aliases": [
@@ -1724,12 +1371,8 @@
     "id": "FISHING_ROD",
     "kind": "relic",
     "name": "Fishing Rod",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L165; md:relics_zh.md:L165",
-    "zh_description": "每 3 场普通敌人战斗，升级牌库中 1 张随机牌。计数只统计 Monster 房间战斗——普通怪战第 3/6/9 场触发升级；精英战不推进计数。",
-    "zh_name": "钓鱼竿"
+    "rarity": "Ancient"
   },
   "FORGOTTEN_SOUL": {
     "aliases": [
@@ -1743,12 +1386,8 @@
     "id": "FORGOTTEN_SOUL",
     "kind": "relic",
     "name": "Forgotten Soul",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L291; md:relics_zh.md:L291",
-    "zh_description": "每次消耗卡牌时，对随机敌人造成 1 点伤害。",
-    "zh_name": "遗忘之魂"
+    "rarity": "Event"
   },
   "FRAGRANT_MUSHROOM": {
     "aliases": [
@@ -1762,12 +1401,8 @@
     "id": "FRAGRANT_MUSHROOM",
     "kind": "relic",
     "name": "Fragrant Mushroom",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L292; md:relics_zh.md:L292",
-    "zh_description": "拾取时，失去 15 HP 并升级牌库中 2 张随机牌。",
-    "zh_name": "芳香蘑菇"
+    "rarity": "Event"
   },
   "FRESNEL_LENS": {
     "aliases": [
@@ -1781,12 +1416,8 @@
     "id": "FRESNEL_LENS",
     "kind": "relic",
     "name": "Fresnel Lens",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L293; md:relics_zh.md:L293",
-    "zh_description": "获得格挡的卡牌加入牌库时，为其附魔 Nimble 2。",
-    "zh_name": "菲涅耳透镜"
+    "rarity": "Event"
   },
   "FROZEN_EGG": {
     "aliases": [
@@ -1800,12 +1431,8 @@
     "id": "FROZEN_EGG",
     "kind": "relic",
     "name": "Frozen Egg",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L100; md:relics_zh.md:L100",
-    "zh_description": "向牌库加入的能力（Power）牌会被升级。",
-    "zh_name": "冻结之蛋"
+    "rarity": "Rare"
   },
   "FUNERARY_MASK": {
     "aliases": [
@@ -1819,12 +1446,8 @@
     "id": "FUNERARY_MASK",
     "kind": "relic",
     "name": "Funerary Mask",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L53; md:relics_zh.md:L53",
-    "zh_description": "战斗开始，向抽牌堆洗入 3 张 Soul。",
-    "zh_name": "葬礼面具"
+    "rarity": "Uncommon"
   },
   "FUR_COAT": {
     "aliases": [
@@ -1838,12 +1461,8 @@
     "id": "FUR_COAT",
     "kind": "relic",
     "name": "Fur Coat",
-    "needs_zh": false,
     "play_notes": "Act2/Act3 赐福房遗物（NONUPEIPE 事件选项 3）：随机标记 7 场战斗，被标记战斗中的敌人仅有 1 点生命。run-46 live：Act3 赐福在钻石头冠与艳丽围巾之间选择皮草大衣——对中等血线入 Act3 而言 7 场近乎免战是期望值最高的选择。",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L166; md:relics_zh.md:L166",
-    "zh_description": "拾取时，标记 7 场战斗；这些房间的敌人 HP 为 1。",
-    "zh_name": "皮草大衣"
+    "rarity": "Ancient"
   },
   "GALACTIC_DUST": {
     "aliases": [
@@ -1857,12 +1476,8 @@
     "id": "GALACTIC_DUST",
     "kind": "relic",
     "name": "Galactic Dust",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L54; md:relics_zh.md:L54",
-    "zh_description": "每消耗 10 点星星，获得 10 格挡。",
-    "zh_name": "星系尘埃"
+    "rarity": "Uncommon"
   },
   "GAMBLING_CHIP": {
     "aliases": [
@@ -1877,12 +1492,8 @@
     "id": "GAMBLING_CHIP",
     "kind": "relic",
     "name": "Gambling Chip",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L101; md:relics_zh.md:L101",
-    "zh_description": "稀有：战斗开始时弃任意数量牌并抽等量（经 hand_select overlay 换牌：选牌→proceed）。run-57 live：棱柱战（零技能纪律）换掉技能类牌；三敌战换掉 Uppercut 重抽挡件。overlay 在 play 阶段前出现——未解决前 play 调用被 fail-loud 拒绝。",
-    "zh_name": "赌博筹码"
+    "rarity": "Rare"
   },
   "GAME_PIECE": {
     "aliases": [
@@ -1896,12 +1507,8 @@
     "id": "GAME_PIECE",
     "kind": "relic",
     "name": "Game Piece",
-    "needs_zh": false,
     "play_notes": "Run-49 live: draw event observed after every Inflame/Vicious/Unmovable/FNP play; natural pair with power-class engines.",
-    "rarity": "Rare",
-    "source": "run-49 live fold 2026-09-19 (logs run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c)",
-    "zh_description": "每次打出能力牌时，抽 1 张牌。",
-    "zh_name": "棋子"
+    "rarity": "Rare"
   },
   "GHOST_SEED": {
     "aliases": [
@@ -1915,12 +1522,8 @@
     "id": "GHOST_SEED",
     "kind": "relic",
     "name": "Ghost Seed",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L250; md:relics_zh.md:L250",
-    "zh_description": "Strike 和 Defend 牌获得 Ethereal。",
-    "zh_name": "幽灵种子"
+    "rarity": "Shop"
   },
   "GIRYA": {
     "aliases": [
@@ -1933,12 +1536,8 @@
     "id": "GIRYA",
     "kind": "relic",
     "name": "Girya",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L103; md:relics_zh.md:L103",
-    "zh_description": "休息点获得 Lift 选项（最多 3 次）；战斗开始，获得等同 Lift 次数的力量。",
-    "zh_name": "壶铃"
+    "rarity": "Rare"
   },
   "GLAM": {
     "aliases": [
@@ -1952,10 +1551,8 @@
     "id": "GLAM",
     "kind": "enchant",
     "name": "Glam",
-    "needs_zh": false,
     "play_notes": "Run-49 live process note: Glam replay (second resolution) fires after the first resolution fully completes, INCLUDING Headbutt retrieval choose. If the next act is submitted immediately after the retrieval choose, the replay window can be skipped (2 observations). After retrieval choose on a Glam Headbutt, take a settle re-read before the next act when the double matters. Replay damage observed live every turn it fired: 9+9, 12+12, 13+13, 15+15, 22+5-class.",
-    "rarity": null,
-    "source": "run-49 live fold 2026-09-19 (logs run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c)"
+    "rarity": null
   },
   "GLASS_EYE": {
     "aliases": [
@@ -1969,12 +1566,8 @@
     "id": "GLASS_EYE",
     "kind": "relic",
     "name": "Glass Eye",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L167; md:relics_zh.md:L167",
-    "zh_description": "拾取时，获得 2 张普通、2 张罕见、1 张稀有卡牌。",
-    "zh_name": "玻璃眼珠"
+    "rarity": "Ancient"
   },
   "GLITTER": {
     "aliases": [
@@ -1987,12 +1580,8 @@
     "id": "GLITTER",
     "kind": "relic",
     "name": "Glitter",
-    "needs_zh": false,
     "play_notes": "Run-long enchant engine; see GLAM for the enchant effect.",
-    "rarity": "Ancient",
-    "source": "perplexity-search 2026-09-19 (gamerblurb Glam explained; spire-codex.com/enchantments/glam; mobalytics enchantments guide) + live Neow screen F9S4BGVMFD",
-    "zh_description": "所有卡牌奖励附魔 Glam。",
-    "zh_name": "亮片"
+    "rarity": "Ancient"
   },
   "GNARLED_HAMMER": {
     "aliases": [
@@ -2006,12 +1595,8 @@
     "id": "GNARLED_HAMMER",
     "kind": "relic",
     "name": "Gnarled Hammer",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L251; md:relics_zh.md:L251",
-    "zh_description": "拾取时，为至多 3 张攻击牌附魔 Sharp 3。",
-    "zh_name": "扭曲锤子"
+    "rarity": "Shop"
   },
   "GOLDEN_COMPASS": {
     "aliases": [
@@ -2027,12 +1612,8 @@
     "id": "GOLDEN_COMPASS",
     "kind": "relic",
     "name": "Golden Compass",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
-    "zh_description": "拾取时，用一条特殊路径替换第二章地图。",
-    "zh_name": "黄金罗盘"
+    "rarity": "Ancient"
   },
   "GOLDEN_PEARL": {
     "aliases": [
@@ -2046,12 +1627,8 @@
     "id": "GOLDEN_PEARL",
     "kind": "relic",
     "name": "Golden Pearl",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L170; md:relics_zh.md:L170; codex:relics/GOLDEN_PEARL",
-    "zh_description": "拾取时，获得 150 金币。",
-    "zh_name": "金色珍珠"
+    "rarity": "Ancient"
   },
   "GOLD_PLATED_CABLES": {
     "aliases": [
@@ -2065,12 +1642,8 @@
     "id": "GOLD_PLATED_CABLES",
     "kind": "relic",
     "name": "Gold-Plated Cables",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L55; md:relics_zh.md:L55",
-    "zh_description": "最右侧的充能球额外触发 1 次被动。",
-    "zh_name": "镀金缆线"
+    "rarity": "Uncommon"
   },
   "GORGET": {
     "aliases": [
@@ -2085,12 +1658,8 @@
     "id": "GORGET",
     "kind": "relic",
     "name": "Gorget",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L28; md:relics_zh.md:L28; codex:relics/GORGET",
-    "zh_description": "普通：每场战斗开始获得4层镀甲（滚动挡——镀甲在你方回合末提供Amount挡，你回合初堆数递减；镀甲与卡牌挡同窗叠加入账）。run-57 live：颈甲+Defend+Shrug 组合常构 14-22 挡覆盖；石碗虫 IMBALANCED 眩晕在 16总挡 vs 15意图时触发。",
-    "zh_name": "护喉甲"
+    "rarity": "Common"
   },
   "GREMLIN_HORN": {
     "aliases": [
@@ -2104,12 +1673,8 @@
     "id": "GREMLIN_HORN",
     "kind": "relic",
     "name": "Gremlin Horn",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L56; md:relics_zh.md:L56",
-    "zh_description": "敌人死亡时，获得 1 点能量并抽 1 张牌。击杀连锁：每次死亡立刻 +1 能量并抽牌，支撑波次战多杀回合。",
-    "zh_name": "地精之角"
+    "rarity": "Uncommon"
   },
   "HAND_DRILL": {
     "aliases": [
@@ -2123,12 +1688,8 @@
     "id": "HAND_DRILL",
     "kind": "relic",
     "name": "Hand Drill",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L294; md:relics_zh.md:L294",
-    "zh_description": "每次击破敌方格挡时，对该敌人施加 2 层 Vulnerable。",
-    "zh_name": "手钻"
+    "rarity": "Event"
   },
   "HAPPY_FLOWER": {
     "aliases": [
@@ -2142,12 +1703,8 @@
     "id": "HAPPY_FLOWER",
     "kind": "relic",
     "name": "Happy Flower",
-    "needs_zh": false,
     "play_notes": "Run-49 live: Act2 elite (12,1) drop; counter displayed :0→:1→:2 across combat turns; energy arrives on the counter-reset turn.",
-    "rarity": "Common",
-    "source": "run-49 live fold 2026-09-19 (logs run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c)",
-    "zh_description": "每第 3 回合开始，获得 1 点能量。",
-    "zh_name": "开心小花"
+    "rarity": "Common"
   },
   "HEFTY_TABLET": {
     "aliases": [
@@ -2161,12 +1718,8 @@
     "id": "HEFTY_TABLET",
     "kind": "relic",
     "name": "Hefty Tablet",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L171; md:relics_zh.md:L171",
-    "zh_description": "拾取时，从 3 张稀有牌中选 1 张加入牌库，并加入 1 张 Injury。",
-    "zh_name": "沉重石板"
+    "rarity": "Ancient"
   },
   "HELICAL_DART": {
     "aliases": [
@@ -2180,12 +1733,8 @@
     "id": "HELICAL_DART",
     "kind": "relic",
     "name": "Helical Dart",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L104; md:relics_zh.md:L104",
-    "zh_description": "每次打出带 Shiv 标签的牌时，本回合获得 1 点敏捷。",
-    "zh_name": "螺线飞镖"
+    "rarity": "Rare"
   },
   "HISTORY_COURSE": {
     "aliases": [
@@ -2199,12 +1748,8 @@
     "id": "HISTORY_COURSE",
     "kind": "relic",
     "name": "History Course",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L295; md:relics_zh.md:L295",
-    "zh_description": "第 2 回合起，回合开始时自动打出你上一回合打出的最后一张攻击或技能牌的拷贝。",
-    "zh_name": "历史课"
+    "rarity": "Event"
   },
   "HORN_CLEAT": {
     "aliases": [
@@ -2218,12 +1763,8 @@
     "id": "HORN_CLEAT",
     "kind": "relic",
     "name": "Horn Cleat",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L57; md:relics_zh.md:L57; codex:relics/HORN_CLEAT",
-    "zh_description": "第 2 回合开始，获得 14 格挡。",
-    "zh_name": "船夹板"
+    "rarity": "Uncommon"
   },
   "ICE_CREAM": {
     "aliases": [
@@ -2237,12 +1778,8 @@
     "id": "ICE_CREAM",
     "kind": "relic",
     "name": "Ice Cream",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L105; md:relics_zh.md:L105",
-    "zh_description": "能量在回合之间保留（仅第 1 回合重置）。",
-    "zh_name": "冰淇淋"
+    "rarity": "Rare"
   },
   "INFUSED_CORE": {
     "aliases": [
@@ -2256,12 +1793,8 @@
     "id": "INFUSED_CORE",
     "kind": "relic",
     "name": "Infused Core",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Starter",
-    "source": "md:relics.md:L5; md:relics_zh.md:L5",
-    "zh_description": "第 1 回合开始，引导 3 个闪电球；闪电球伤害 +1。",
-    "zh_name": "注能核心"
+    "rarity": "Starter"
   },
   "INTIMIDATING_HELMET": {
     "aliases": [
@@ -2275,12 +1808,8 @@
     "id": "INTIMIDATING_HELMET",
     "kind": "relic",
     "name": "Intimidating Helmet",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L106; md:relics_zh.md:L106",
-    "zh_description": "每次打出 2 能量及以上的卡牌时，获得 4 格挡。",
-    "zh_name": "骇人头盔"
+    "rarity": "Rare"
   },
   "IRON_CLUB": {
     "aliases": [
@@ -2294,12 +1823,8 @@
     "id": "IRON_CLUB",
     "kind": "relic",
     "name": "Iron Club",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L172; md:relics_zh.md:L172; codex:relics/IRON_CLUB",
-    "zh_description": "每打出 4 张牌，抽 1 张牌。",
-    "zh_name": "铁棒"
+    "rarity": "Ancient"
   },
   "IVORY_TILE": {
     "aliases": [
@@ -2313,12 +1838,8 @@
     "id": "IVORY_TILE",
     "kind": "relic",
     "name": "Ivory Tile",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L107; md:relics_zh.md:L107",
-    "zh_description": "每次打出 3 能量及以上的卡牌时，获得 1 点能量。",
-    "zh_name": "象牙麻将牌"
+    "rarity": "Rare"
   },
   "JEWELED_MASK": {
     "aliases": [
@@ -2332,12 +1853,8 @@
     "id": "JEWELED_MASK",
     "kind": "relic",
     "name": "Jeweled Mask",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L173; md:relics_zh.md:L173",
-    "zh_description": "战斗开始，将抽牌堆中一张随机能力牌放入手牌；本场战斗免费。",
-    "zh_name": "宝石面具"
+    "rarity": "Ancient"
   },
   "JEWELRY_BOX": {
     "aliases": [
@@ -2351,12 +1868,8 @@
     "id": "JEWELRY_BOX",
     "kind": "relic",
     "name": "Jewelry Box",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L174; md:relics_zh.md:L174",
-    "zh_description": "拾取时，向牌库加入 1 张 Apotheosis。",
-    "zh_name": "珠宝盒"
+    "rarity": "Ancient"
   },
   "JOSS_PAPER": {
     "aliases": [
@@ -2370,12 +1883,8 @@
     "id": "JOSS_PAPER",
     "kind": "relic",
     "name": "Joss Paper",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L58; md:relics_zh.md:L58",
-    "zh_description": "每消耗 5 张牌，抽 1 张牌（计数 JOSS_PAPER:n；虚灵回合末消耗在回合结束计入；触发后清零重计）。run-38 实时：Offering/Ritual/Tremble/MoltenFist 消耗推进计数；:5 时 Boss 战中触发抽 1；触发后计数清零。消耗包牌组的被动抽牌引擎。",
-    "zh_name": "金纸"
+    "rarity": "Uncommon"
   },
   "JUZU_BRACELET": {
     "aliases": [
@@ -2389,12 +1898,8 @@
     "id": "JUZU_BRACELET",
     "kind": "relic",
     "name": "Juzu Bracelet",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L30; md:relics_zh.md:L30; run-40 live fold 2026-09-18",
-    "zh_description": "问号房间不再出现普通敌人战斗；仅可在第三幕宝箱前获得。",
-    "zh_name": "佛珠手链"
+    "rarity": "Common"
   },
   "KALEIDOSCOPE": {
     "aliases": [
@@ -2407,12 +1912,8 @@
     "id": "KALEIDOSCOPE",
     "kind": "relic",
     "name": "Kaleidoscope",
-    "needs_zh": false,
     "play_notes": "Cross-character rewards dilute IRONCLAD archetype synergy (self-damage→Str engine); variance pick. Live-confirmed Neow option 2026-09-19.",
-    "rarity": "Ancient",
-    "source": "perplexity-search 2026-09-19 (gamerblurb Glam explained; spire-codex.com/enchantments/glam; mobalytics enchantments guide) + live Neow screen F9S4BGVMFD",
-    "zh_description": "拾取时，获得来自其他角色的 2 份卡牌奖励。",
-    "zh_name": "万花筒"
+    "rarity": "Ancient"
   },
   "KIFUDA": {
     "aliases": [
@@ -2425,12 +1926,8 @@
     "id": "KIFUDA",
     "kind": "relic",
     "name": "Kifuda",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L252; md:relics_zh.md:L252",
-    "zh_description": "拾取时，为至多 3 张牌附魔 Adroit 3。",
-    "zh_name": "木札"
+    "rarity": "Shop"
   },
   "KUNAI": {
     "aliases": [
@@ -2444,10 +1941,7 @@
     "kind": "relic",
     "name": "Kunai",
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L108; md:relics_zh.md:L108",
-    "zh_description": "单回合每打出 3 张攻击牌，获得 1 点敏捷。",
-    "zh_name": "苦无"
+    "rarity": "Rare"
   },
   "KUSARIGAMA": {
     "aliases": [
@@ -2461,10 +1955,7 @@
     "kind": "relic",
     "name": "Kusarigama",
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L59; md:relics_zh.md:L59",
-    "zh_description": "单回合每打出 3 张攻击牌，对随机敌人造成 6 点伤害。",
-    "zh_name": "锁镰"
+    "rarity": "Uncommon"
   },
   "LANTERN": {
     "aliases": [
@@ -2478,10 +1969,7 @@
     "kind": "relic",
     "name": "Lantern",
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L31; md:relics_zh.md:L31; run-40 live fold 2026-09-18",
-    "zh_description": "第 1 回合开始，获得 +1 能量。蜡烛燃着时与南瓜蜡烛叠层（T1 5 能）；蜡烛燃尽后 T1 回归基础 3 + 灯笼 1 = 4 能 —— 灯笼单独无法恢复蜡烛时代的能量。",
-    "zh_name": "灯笼"
+    "rarity": "Common"
   },
   "LARGE_CAPSULE": {
     "aliases": [
@@ -2495,12 +1983,8 @@
     "id": "LARGE_CAPSULE",
     "kind": "relic",
     "name": "Large Capsule",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L176; md:relics_zh.md:L176",
-    "zh_description": "拾取时，获得 2 件随机遗物；向牌库加入 1 张 Strike 和 1 张 Defend。",
-    "zh_name": "巨大扭蛋"
+    "rarity": "Ancient"
   },
   "LASTING_CANDY": {
     "aliases": [
@@ -2510,8 +1994,7 @@
     "description": "Every other combat after the first, combat card rewards gain 1 additional Power-class card option (reward screen shows 4 options instead of 3). Only obtainable before the Act-3 treasure chest. LIVE run-45: counter alternates :0/:1 on the relic stack display; two 4-option rewards observed — delivered JUGGERNAUT (elite reward) and a second INFERNO (fight reward). Power-injection economy piece.",
     "id": "LASTING_CANDY",
     "kind": "relic",
-    "name": "Lasting Candy",
-    "source": "run-45 live + archive"
+    "name": "Lasting Candy"
   },
   "LAVA_LAMP": {
     "aliases": [
@@ -2525,12 +2008,8 @@
     "id": "LAVA_LAMP",
     "kind": "relic",
     "name": "Lava Lamp",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L253; md:relics_zh.md:L253",
-    "zh_description": "战斗结束时，若战斗中未受伤，升级所有卡牌奖励。",
-    "zh_name": "熔岩灯"
+    "rarity": "Shop"
   },
   "LAVA_ROCK": {
     "aliases": [
@@ -2544,12 +2023,8 @@
     "id": "LAVA_ROCK",
     "kind": "relic",
     "name": "Lava Rock",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L177; md:relics_zh.md:L177",
-    "zh_description": "Boss 战奖励额外掉落 2 件遗物（一次）。章节标签视为软性——Act2 Boss 奖励屏同样观察到 +2 遗物按钮（同类 WONGOS 门槛偏差）。",
-    "zh_name": "熔岩石"
+    "rarity": "Ancient"
   },
   "LEAD_PAPERWEIGHT": {
     "aliases": [
@@ -2563,12 +2038,8 @@
     "id": "LEAD_PAPERWEIGHT",
     "kind": "relic",
     "name": "Lead Paperweight",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L178; md:relics_zh.md:L178",
-    "zh_description": "拾取时，从 2 张无色牌中选 1 张加入牌库。",
-    "zh_name": "铅制镇纸"
+    "rarity": "Ancient"
   },
   "LEAFY_POULTICE": {
     "aliases": [
@@ -2582,12 +2053,8 @@
     "id": "LEAFY_POULTICE",
     "kind": "relic",
     "name": "Leafy Poultice",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L179; md:relics_zh.md:L179",
-    "zh_description": "拾取时，变化 1 张 Strike 和 1 张 Defend；失去 12 最大 HP。",
-    "zh_name": "树叶药膏"
+    "rarity": "Ancient"
   },
   "LEES_WAFFLE": {
     "aliases": [
@@ -2601,12 +2068,8 @@
     "id": "LEES_WAFFLE",
     "kind": "relic",
     "name": "Lee's Waffle",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L254; md:relics_zh.md:L254",
-    "zh_description": "拾取时，+7 最大 HP 并回满 HP。",
-    "zh_name": "李家华夫饼"
+    "rarity": "Shop"
   },
   "LETTER_OPENER": {
     "aliases": [
@@ -2620,12 +2083,8 @@
     "id": "LETTER_OPENER",
     "kind": "relic",
     "name": "Letter Opener",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L61; md:relics_zh.md:L61",
-    "zh_description": "单回合每打出 3 张技能牌，对所有敌人造成 5 点伤害。",
-    "zh_name": "开信刀"
+    "rarity": "Uncommon"
   },
   "LIZARD_TAIL": {
     "aliases": [
@@ -2639,12 +2098,8 @@
     "id": "LIZARD_TAIL",
     "kind": "relic",
     "name": "Lizard Tail",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L109; md:relics_zh.md:L109",
-    "zh_description": "HP 将降至 0 时，改为回复至最大 HP 的 50%（一次）。",
-    "zh_name": "蜥蜴尾巴"
+    "rarity": "Rare"
   },
   "LOOMING_FRUIT": {
     "aliases": [
@@ -2659,12 +2114,8 @@
     "kind": "relic",
     "live_notes": "LIVE run-56: Act3 NONUPEIPE event pick. +31 MaxHP on pickup. Combined with CHOSEN_CHEESE+FEED+BIG_MUSHROOM+STRAWBERRY took HP 80→160.",
     "name": "Looming Fruit",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L180; md:relics_zh.md:L180; codex:relics/LOOMING_FRUIT",
-    "zh_description": "拾取时，+31 最大 HP。",
-    "zh_name": "布质果实"
+    "rarity": "Ancient"
   },
   "LORDS_PARASOL": {
     "aliases": [
@@ -2678,12 +2129,8 @@
     "id": "LORDS_PARASOL",
     "kind": "relic",
     "name": "Lord's Parasol",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L181; md:relics_zh.md:L181",
-    "zh_description": "进入商人房间时，立刻购入商人的全部库存。",
-    "zh_name": "领主阳伞"
+    "rarity": "Ancient"
   },
   "LOST_COFFER": {
     "aliases": [
@@ -2697,12 +2144,8 @@
     "id": "LOST_COFFER",
     "kind": "relic",
     "name": "Lost Coffer",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L182; md:relics_zh.md:L182",
-    "zh_description": "拾取时，获得 1 份卡牌奖励和 1 瓶随机药水。",
-    "zh_name": "失物盒"
+    "rarity": "Ancient"
   },
   "LOST_WISP": {
     "aliases": [
@@ -2716,12 +2159,8 @@
     "id": "LOST_WISP",
     "kind": "relic",
     "name": "Lost Wisp",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L296; md:relics_zh.md:L296",
-    "zh_description": "每次打出能力牌时，对所有敌人造成 8 点伤害。",
-    "zh_name": "迷失鬼火"
+    "rarity": "Event"
   },
   "LUCKY_FYSH": {
     "aliases": [
@@ -2735,12 +2174,8 @@
     "id": "LUCKY_FYSH",
     "kind": "relic",
     "name": "Lucky Fysh",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L62; md:relics_zh.md:L62",
-    "zh_description": "每次向牌库加入卡牌时，获得 15 金币。触发源：商店购卡、卡牌奖励领取、SwipePower 偷牌在偷窃草蜢死亡时归还（静默入库同样 +15）。",
-    "zh_name": "招财异鱼"
+    "rarity": "Uncommon"
   },
   "LUNAR_PASTRY": {
     "aliases": [
@@ -2754,12 +2189,8 @@
     "id": "LUNAR_PASTRY",
     "kind": "relic",
     "name": "Lunar Pastry",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L110; md:relics_zh.md:L110",
-    "zh_description": "回合结束，获得 1 点星星（★）。",
-    "zh_name": "月亮糕点"
+    "rarity": "Rare"
   },
   "MANGO": {
     "aliases": [
@@ -2772,12 +2203,8 @@
     "id": "MANGO",
     "kind": "relic",
     "name": "Mango",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L111; md:relics_zh.md:L111; codex:relics/MANGO",
-    "zh_description": "拾取时，+14 最大 HP。",
-    "zh_name": "芒果"
+    "rarity": "Rare"
   },
   "MASSIVE_SCROLL": {
     "aliases": [
@@ -2791,12 +2218,8 @@
     "id": "MASSIVE_SCROLL",
     "kind": "relic",
     "name": "Massive Scroll",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L183; md:relics_zh.md:L183",
-    "zh_description": "拾取时，从 3 张多人模式卡中选 1 张加入牌库。",
-    "zh_name": "巨大卷轴"
+    "rarity": "Ancient"
   },
   "MAW_BANK": {
     "aliases": [
@@ -2810,12 +2233,8 @@
     "id": "MAW_BANK",
     "kind": "relic",
     "name": "Maw Bank",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L297; md:relics_zh.md:L297",
-    "zh_description": "每次上一层楼，获得 12 金币；在商店花费金币后失效。",
-    "zh_name": "巨口储蓄罐"
+    "rarity": "Event"
   },
   "MEAL_TICKET": {
     "aliases": [
@@ -2830,12 +2249,8 @@
     "id": "MEAL_TICKET",
     "kind": "relic",
     "name": "Meal Ticket",
-    "needs_zh": false,
     "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Common",
-    "source": "relics.md + run-43 shop screens",
-    "zh_description": "进入商店房间（MerchantRoom）时，回复 15 HP；仅可在第三幕宝箱前获得。",
-    "zh_name": "餐券"
+    "rarity": "Common"
   },
   "MEAT_CLEAVER": {
     "aliases": [
@@ -2849,12 +2264,8 @@
     "id": "MEAT_CLEAVER",
     "kind": "relic",
     "name": "Meat Cleaver",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L184; md:relics_zh.md:L184",
-    "zh_description": "休息点获得 Cook 选项——**Cook = 永久移除牌库 2 张牌并获得 9 最大 HP**。低 HP 时 Cook 与 HEAL 的张力真实存在（HEAL 恢复当前生存力，Cook 为后期复利牌库+MaxHP）。",
-    "zh_name": "切肉刀"
+    "rarity": "Ancient"
   },
   "MEAT_ON_THE_BONE": {
     "aliases": [
@@ -2868,12 +2279,8 @@
     "id": "MEAT_ON_THE_BONE",
     "kind": "relic",
     "name": "Meat on the Bone",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L112; md:relics_zh.md:L112",
-    "zh_description": "战斗胜利时，若 HP ≤ 最大 HP 的 50%，回复 12 HP。",
-    "zh_name": "带骨肉"
+    "rarity": "Rare"
   },
   "MEMBERSHIP_CARD": {
     "aliases": [
@@ -2887,12 +2294,8 @@
     "id": "MEMBERSHIP_CARD",
     "kind": "relic",
     "name": "Membership Card",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L255; md:relics_zh.md:L255",
-    "zh_description": "商人价格 ×0.50。",
-    "zh_name": "会员卡"
+    "rarity": "Shop"
   },
   "MERCURY_HOURGLASS": {
     "aliases": [
@@ -2906,12 +2309,8 @@
     "id": "MERCURY_HOURGLASS",
     "kind": "relic",
     "name": "Mercury Hourglass",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L63; md:relics_zh.md:L63",
-    "zh_description": "回合开始，对所有敌人造成 3 点伤害。",
-    "zh_name": "水银沙漏"
+    "rarity": "Uncommon"
   },
   "METRONOME": {
     "aliases": [
@@ -2924,12 +2323,8 @@
     "id": "METRONOME",
     "kind": "relic",
     "name": "Metronome",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L113; md:relics_zh.md:L113",
-    "zh_description": "每场战斗累计首次引导 7 个充能球时，对所有敌人造成 30 点伤害。",
-    "zh_name": "节拍器"
+    "rarity": "Rare"
   },
   "MINIATURE_CANNON": {
     "aliases": [
@@ -2944,12 +2339,8 @@
     "id": "MINIATURE_CANNON",
     "kind": "relic",
     "name": "Miniature Cannon",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L64; md:relics_zh.md:L64",
-    "zh_description": "罕见：升级后的攻击牌+3伤。run-57 live：Bludgeon+（42基础）+锋利2附魔+加农炮+3=无加成47级单发；易伤×1.5→70级；Act1 巨化×3窗升级前打出96。",
-    "zh_name": "微型大炮"
+    "rarity": "Uncommon"
   },
   "MINIATURE_TENT": {
     "aliases": [
@@ -2963,12 +2354,8 @@
     "id": "MINIATURE_TENT",
     "kind": "relic",
     "name": "Miniature Tent",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L256; md:relics_zh.md:L256",
-    "zh_description": "休息点可以选择任意数量的选项。",
-    "zh_name": "微型帐篷"
+    "rarity": "Shop"
   },
   "MINI_REGENT": {
     "aliases": [
@@ -2982,12 +2369,8 @@
     "id": "MINI_REGENT",
     "kind": "relic",
     "name": "Mini Regent",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L114; md:relics_zh.md:L114",
-    "zh_description": "每回合首次消耗星星时，获得 1 点力量。",
-    "zh_name": "迷你储君"
+    "rarity": "Rare"
   },
   "MOLTEN_EGG": {
     "aliases": [
@@ -3001,12 +2384,8 @@
     "id": "MOLTEN_EGG",
     "kind": "relic",
     "name": "Molten Egg",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "run-51 live fold 2026-09-19",
-    "zh_description": "向牌库加入的攻击牌会被升级。",
-    "zh_name": "熔火之蛋"
+    "rarity": "Rare"
   },
   "MR_STRUGGLES": {
     "aliases": [
@@ -3020,12 +2399,8 @@
     "id": "MR_STRUGGLES",
     "kind": "relic",
     "name": "Mr. Struggles",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L298; md:relics_zh.md:L298",
-    "zh_description": "回合开始，对所有敌人造成等同当前回合数的伤害。",
-    "zh_name": "抱抱先生"
+    "rarity": "Event"
   },
   "MUMMIFIED_HAND": {
     "aliases": [
@@ -3039,12 +2414,8 @@
     "id": "MUMMIFIED_HAND",
     "kind": "relic",
     "name": "Mummified Hand",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L116; md:relics_zh.md:L116",
-    "zh_description": "每次打出能力牌时，手牌中一张随机牌本回合免费。",
-    "zh_name": "干瘪之手"
+    "rarity": "Rare"
   },
   "MUSIC_BOX": {
     "aliases": [
@@ -3058,12 +2429,8 @@
     "id": "MUSIC_BOX",
     "kind": "relic",
     "name": "Music Box",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L185; md:relics_zh.md:L185",
-    "zh_description": "每回合打出的第一张攻击牌在手牌中生成一份虚无拷贝。",
-    "zh_name": "音乐盒"
+    "rarity": "Ancient"
   },
   "MYSTIC_LIGHTER": {
     "aliases": [
@@ -3077,12 +2444,8 @@
     "id": "MYSTIC_LIGHTER",
     "kind": "relic",
     "name": "Mystic Lighter",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L257; md:relics_zh.md:L257",
-    "zh_description": "附魔的攻击牌额外造成 9 点伤害。",
-    "zh_name": "神秘打火机"
+    "rarity": "Shop"
   },
   "NEOW": {
     "aliases": [
@@ -3095,11 +2458,8 @@
     "id": "NEOW",
     "kind": "relic",
     "name": "Arcane Scroll",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "codex-api:/relics/ARCANE_SCROLL",
-    "zh_description": "Upon pickup, obtain a random Rare Card to add to your Deck."
+    "rarity": "Ancient"
   },
   "NEOWS_BONES": {
     "aliases": [
@@ -3113,12 +2473,8 @@
     "id": "NEOWS_BONES",
     "kind": "relic",
     "name": "Neow's Bones",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L186; md:relics_zh.md:L186",
-    "zh_description": "拾取时，获得 2 件随机 Neow 遗物；向牌库加入 1 张随机诅咒。",
-    "zh_name": "涅奥骨骰"
+    "rarity": "Ancient"
   },
   "NEOWS_TALISMAN": {
     "aliases": [
@@ -3132,12 +2488,8 @@
     "id": "NEOWS_TALISMAN",
     "kind": "relic",
     "name": "Neow's Talisman",
-    "needs_zh": false,
     "play_notes": "Certain but low ceiling: Strike 6→9 / Defend 5→8 class value; decays if starters are removed mid-run. Live-confirmed Neow option 2026-09-19.",
-    "rarity": "Ancient",
-    "source": "perplexity-search 2026-09-19 (gamerblurb Glam explained; spire-codex.com/enchantments/glam; mobalytics enchantments guide) + live Neow screen F9S4BGVMFD",
-    "zh_description": "拾取时，升级 1 张 Strike 和 1 张 Defend。",
-    "zh_name": "涅奥的护符"
+    "rarity": "Ancient"
   },
   "NEOWS_TORMENT": {
     "aliases": [
@@ -3151,12 +2503,8 @@
     "id": "NEOWS_TORMENT",
     "kind": "relic",
     "name": "Neow's Torment",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L188; md:relics_zh.md:L188; codex:relics/NEOWS_TORMENT",
-    "zh_description": "拾取时，向牌库加入 1 张 Neow's Fury。",
-    "zh_name": "涅奥的苦痛"
+    "rarity": "Ancient"
   },
   "NEW_LEAF": {
     "aliases": [
@@ -3170,12 +2518,8 @@
     "id": "NEW_LEAF",
     "kind": "relic",
     "name": "New Leaf",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L189; md:relics_zh.md:L189",
-    "zh_description": "拾取时，变化 1 张选定牌。",
-    "zh_name": "新叶"
+    "rarity": "Ancient"
   },
   "NIMBLE": {
     "aliases": [
@@ -3188,10 +2532,8 @@
     "id": "NIMBLE",
     "kind": "relic",
     "name": "Fresnel Lens",
-    "needs_zh": false,
     "play_notes": " | run-46 session: Nimble effect undecoded — Drowning Beacon CLIMB (−13 MaxHP for Fresnel Lens) declined at HP 66; archive-unknown = don't pay certain HP tax for uncertain future value (run-20 lesson).",
-    "rarity": "Event",
-    "source": "codex-api:/relics/FRESNEL_LENS"
+    "rarity": "Event"
   },
   "NINJA_SCROLL": {
     "aliases": [
@@ -3205,12 +2547,8 @@
     "id": "NINJA_SCROLL",
     "kind": "relic",
     "name": "Ninja Scroll",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L258; md:relics_zh.md:L258",
-    "zh_description": "战斗开始（第 1 回合），向手牌加入 3 张 Shiv。",
-    "zh_name": "忍术卷轴"
+    "rarity": "Shop"
   },
   "NUNCHAKU": {
     "aliases": [
@@ -3223,12 +2561,8 @@
     "id": "NUNCHAKU",
     "kind": "relic",
     "name": "Nunchaku",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L65; md:relics_zh.md:L65",
-    "zh_description": "每打出 10 张攻击牌，获得 1 点能量（计数显示 NUNCHAKU:n，触发后清零重计）。run-38 实时：:10 触发 → 同回合 +1 能量（能量显示 4/3）；Anger/Pacts End 0 费攻击免费推进计数。",
-    "zh_name": "双截棍"
+    "rarity": "Uncommon"
   },
   "NUTRITIOUS_OYSTER": {
     "aliases": [
@@ -3242,12 +2576,8 @@
     "id": "NUTRITIOUS_OYSTER",
     "kind": "relic",
     "name": "Nutritious Oyster",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L190; md:relics_zh.md:L190; codex:relics/NUTRITIOUS_OYSTER",
-    "zh_description": "拾取时，+11 最大 HP。",
-    "zh_name": "营养牡蛎"
+    "rarity": "Ancient"
   },
   "NUTRITIOUS_SOUP": {
     "aliases": [
@@ -3264,12 +2594,8 @@
     "id": "NUTRITIOUS_SOUP",
     "kind": "relic",
     "name": "Nutritious Soup",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
-    "zh_description": "拾取时，为牌库中所有带 Strike 标签的基础牌附魔 Tezcatara's Ember（Ember = **0 费 / +3 伤 / Eternal**——附魔期间基础 Strike 每战免费 +3 结算）。",
-    "zh_name": "营养汤"
+    "rarity": "Ancient"
   },
   "ODDLY_SMOOTH_STONE": {
     "aliases": [
@@ -3285,12 +2611,8 @@
     "id": "ODDLY_SMOOTH_STONE",
     "kind": "relic",
     "name": "Oddly Smooth Stone",
-    "needs_zh": false,
     "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Common",
-    "source": "relics.md + run-43 shop live",
-    "zh_description": "普通：每场战斗开始获得1点敏捷（战斗内卡牌挡值+1）。run-57 live：Defend 5→6、Shrug 8→9、SW 每耗尽 5→6 级全程生效；与其他敏捷源加法叠加。",
-    "zh_name": "意外光滑的石头"
+    "rarity": "Common"
   },
   "OLD_COIN": {
     "aliases": [
@@ -3304,12 +2626,8 @@
     "id": "OLD_COIN",
     "kind": "relic",
     "name": "Old Coin",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L117; md:relics_zh.md:L117; codex:relics/OLD_COIN",
-    "zh_description": "拾取时，获得 300 金币。",
-    "zh_name": "古钱币"
+    "rarity": "Rare"
   },
   "ORANGE_DOUGH": {
     "aliases": [
@@ -3323,12 +2641,8 @@
     "id": "ORANGE_DOUGH",
     "kind": "relic",
     "name": "Orange Dough",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L118; md:relics_zh.md:L118",
-    "zh_description": "战斗开始，向手牌加入 2 张随机无色牌。",
-    "zh_name": "橙色团块"
+    "rarity": "Rare"
   },
   "ORICHALCUM": {
     "aliases": [
@@ -3343,12 +2657,8 @@
     "id": "ORICHALCUM",
     "kind": "relic",
     "name": "Orichalcum",
-    "needs_zh": false,
     "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Uncommon",
-    "source": "relics.md + run-43 live",
-    "zh_description": "回合结束时，若没有格挡，获得 6 格挡。",
-    "zh_name": "奥利哈钢"
+    "rarity": "Uncommon"
   },
   "ORNAMENTAL_FAN": {
     "aliases": [
@@ -3363,12 +2673,8 @@
     "id": "ORNAMENTAL_FAN",
     "kind": "relic",
     "name": "Ornamental Fan",
-    "needs_zh": false,
     "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log): +4 Block on the 3rd Attack card each turn — stacks additively with Rage procs; attack-density turns (3+ attacks) banked 4 reliably, 2-attack turns banked nothing.",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L67; md:relics_zh.md:L68",
-    "zh_description": "每回合打出第3张攻击牌时获得4挡（计数每回合重置；第3张攻击结算时+4）。run-57 live 多战再确认（Fan 计数可见；第3攻后+4打印；千足虫 T4 三攻线 Fan+镀甲入账）。",
-    "zh_name": "精致折扇"
+    "rarity": "Uncommon"
   },
   "ORRERY": {
     "aliases": [
@@ -3381,12 +2687,8 @@
     "id": "ORRERY",
     "kind": "relic",
     "name": "Orrery",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L259; md:relics_zh.md:L259",
-    "zh_description": "拾取时，获得 5 份卡牌奖励。",
-    "zh_name": "星系仪"
+    "rarity": "Shop"
   },
   "PAELS_BLOOD": {
     "aliases": [
@@ -3400,12 +2702,8 @@
     "id": "PAELS_BLOOD",
     "kind": "relic",
     "name": "Pael's Blood",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L192; md:relics_zh.md:L192; codex:relics/PAELS_BLOOD",
-    "zh_description": "每回合抽牌阶段额外抽 1 张牌。",
-    "zh_name": "佩尔之血"
+    "rarity": "Ancient"
   },
   "PAELS_CLAW": {
     "aliases": [
@@ -3419,12 +2717,8 @@
     "id": "PAELS_CLAW",
     "kind": "relic",
     "name": "Pael's Claw",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L193; md:relics_zh.md:L193",
-    "zh_description": "拾取时，为牌库中所有 Defend 标签牌附魔 Goopy（附带 Exhaust）。",
-    "zh_name": "佩尔之爪"
+    "rarity": "Ancient"
   },
   "PAELS_EYE": {
     "aliases": [
@@ -3438,12 +2732,8 @@
     "id": "PAELS_EYE",
     "kind": "relic",
     "name": "Pael's Eye",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L194; md:relics_zh.md:L194",
-    "zh_description": "每场战斗首次未打出任何牌就结束回合时，消耗手牌并获得一个额外回合。",
-    "zh_name": "佩尔之眼"
+    "rarity": "Ancient"
   },
   "PAELS_FLESH": {
     "aliases": [
@@ -3458,10 +2748,7 @@
     "kind": "relic",
     "name": "Pael's Flesh",
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L195; md:relics_zh.md:L195",
-    "zh_description": "第 3 回合起，每回合 +1 最大能量。",
-    "zh_name": "佩尔之肉"
+    "rarity": "Ancient"
   },
   "PAELS_GROWTH": {
     "aliases": [
@@ -3475,12 +2762,8 @@
     "id": "PAELS_GROWTH",
     "kind": "relic",
     "name": "Pael's Growth",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L196; md:relics_zh.md:L196",
-    "zh_description": "拾取时，选择 1 张牌附魔 Clone 4；休息点获得 Clone 选项。",
-    "zh_name": "佩尔的增生组织"
+    "rarity": "Ancient"
   },
   "PAELS_HORN": {
     "aliases": [
@@ -3494,12 +2777,8 @@
     "id": "PAELS_HORN",
     "kind": "relic",
     "name": "Pael's Horn",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L197; md:relics_zh.md:L197; codex:relics/PAELS_HORN",
-    "zh_description": "拾取时，向牌库加入 2 张 Relax。",
-    "zh_name": "佩尔之角"
+    "rarity": "Ancient"
   },
   "PAELS_LEGION": {
     "aliases": [
@@ -3513,12 +2792,8 @@
     "id": "PAELS_LEGION",
     "kind": "relic",
     "name": "Pael's Legion",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L198; md:relics_zh.md:L198",
-    "zh_description": "卡牌获得的格挡翻倍；卡牌为你提供格挡后，该遗物沉睡 2 回合，期间格挡不翻倍。LIVE 节奏（对局 36）：**并非每战斗一次**——翻倍→休眠约 2 回合→再翻倍，整场战斗循环。实测：Impervious 30+敏捷在苏醒回合结算 46 与 62 多次；Defend+ 苏醒回合 8→16 级翻倍。events.md 旧文「每战斗首次挡牌翻倍」为**错误**——本条休眠节奏为准。",
-    "zh_name": "佩尔的士兵"
+    "rarity": "Ancient"
   },
   "PAELS_TEARS": {
     "aliases": [
@@ -3532,12 +2807,8 @@
     "id": "PAELS_TEARS",
     "kind": "relic",
     "name": "Pael's Tears",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L199; md:relics_zh.md:L199",
-    "zh_description": "回合结束时若有未花费的能量，下回合开始获得 2 点能量。",
-    "zh_name": "佩尔之泪"
+    "rarity": "Ancient"
   },
   "PAELS_TOOTH": {
     "aliases": [
@@ -3551,12 +2822,8 @@
     "id": "PAELS_TOOTH",
     "kind": "relic",
     "name": "Pael's Tooth",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L200; md:relics_zh.md:L200",
-    "zh_description": "拾取时，移除 5 张选定牌；每场战斗后随机加回 1 张被移除的牌并升级。",
-    "zh_name": "佩尔之牙"
+    "rarity": "Ancient"
   },
   "PAELS_WING": {
     "aliases": [
@@ -3570,12 +2837,8 @@
     "id": "PAELS_WING",
     "kind": "relic",
     "name": "Pael's Wing",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L201; md:relics_zh.md:L201",
-    "zh_description": "卡牌奖励获得献祭（Sacrifice）选项；每献祭 2 次，获得 1 件遗物。",
-    "zh_name": "佩尔之翼"
+    "rarity": "Ancient"
   },
   "PANDORAS_BOX": {
     "aliases": [
@@ -3589,12 +2852,8 @@
     "id": "PANDORAS_BOX",
     "kind": "relic",
     "name": "Pandora's Box",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L202; md:relics_zh.md:L202",
-    "zh_description": "拾取时，变化牌库中所有 Strike 和 Defend。",
-    "zh_name": "潘多拉魔盒"
+    "rarity": "Ancient"
   },
   "PANTOGRAPH": {
     "aliases": [
@@ -3607,12 +2866,8 @@
     "id": "PANTOGRAPH",
     "kind": "relic",
     "name": "Pantograph",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L68; md:relics_zh.md:L69; codex:relics/PANTOGRAPH",
-    "zh_description": "Boss 战开始时，回复 25 HP。",
-    "zh_name": "缩放仪"
+    "rarity": "Uncommon"
   },
   "PAPER_KRANE": {
     "aliases": [
@@ -3626,12 +2881,8 @@
     "id": "PAPER_KRANE",
     "kind": "relic",
     "name": "Paper Krane",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L119; md:relics_zh.md:L119",
-    "zh_description": "带 Weak 的敌人对你造成的伤害 −40%（原 −25%）。",
-    "zh_name": "纸鹤"
+    "rarity": "Rare"
   },
   "PAPER_PHROG": {
     "aliases": [
@@ -3645,12 +2896,8 @@
     "id": "PAPER_PHROG",
     "kind": "relic",
     "name": "Paper Phrog",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L69; md:relics_zh.md:L70",
-    "zh_description": "带 Vulnerable 的敌人受到的攻击伤害 +75%（原 +50%）。与残酷能力（+25%）加法叠加 → 易伤目标受到攻击伤害 +100%（×2.0）。牌库无残酷时：易伤目标命中值=（基础+力量）×1.75 精确——**力量在乘区内而非乘区后加**。纸蛙单独=×1.75；×2.0 需残酷加法叠层。商店标价约 196 金。",
-    "zh_name": "纸蛙"
+    "rarity": "Uncommon"
   },
   "PARRYING_SHIELD": {
     "aliases": [
@@ -3663,10 +2910,8 @@
     "id": "PARRYING_SHIELD",
     "kind": "relic",
     "name": "Parrying Shield",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "codex-api:/relics/PARRYING_SHIELD"
+    "rarity": "Uncommon"
   },
   "PEAR": {
     "aliases": [
@@ -3679,12 +2924,8 @@
     "id": "PEAR",
     "kind": "relic",
     "name": "Pear",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L71; md:relics_zh.md:L72; codex:relics/PEAR",
-    "zh_description": "拾取时，+10 最大 HP。",
-    "zh_name": "梨子"
+    "rarity": "Uncommon"
   },
   "PENDULUM": {
     "aliases": [
@@ -3697,12 +2938,8 @@
     "id": "PENDULUM",
     "kind": "relic",
     "name": "Pendulum",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L34; md:relics_zh.md:L34; codex:relics/PENDULUM",
-    "zh_description": "每第 3 回合开始，抽 1 张牌。",
-    "zh_name": "摆动球"
+    "rarity": "Common"
   },
   "PEN_NIB": {
     "aliases": [
@@ -3716,12 +2953,8 @@
     "id": "PEN_NIB",
     "kind": "relic",
     "name": "Pen Nib",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L72; md:relics_zh.md:L73",
-    "zh_description": "每打出的第 10 张攻击牌造成双倍伤害。",
-    "zh_name": "钢笔尖"
+    "rarity": "Uncommon"
   },
   "PERMAFROST": {
     "aliases": [
@@ -3734,12 +2967,8 @@
     "id": "PERMAFROST",
     "kind": "relic",
     "name": "Permafrost",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L73; md:relics_zh.md:L74",
-    "zh_description": "每场战斗首次打出能力牌时，获得 7 格挡。效果已归档；run-38 牌组无能力牌（Feel No Pain/Stone Armor 类均跳过）——本局遗物全程未激活。牌组进能力牌后价值解锁。",
-    "zh_name": "永冻冰晶"
+    "rarity": "Uncommon"
   },
   "PETRIFIED_TOAD": {
     "aliases": [
@@ -3753,12 +2982,8 @@
     "id": "PETRIFIED_TOAD",
     "kind": "relic",
     "name": "Petrified Toad",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "run-51 live fold 2026-09-19",
-    "zh_description": "战斗开始，获得 1 瓶药水形状的石头。",
-    "zh_name": "石化蟾蜍"
+    "rarity": "Uncommon"
   },
   "PHIAL_HOLSTER": {
     "aliases": [
@@ -3772,12 +2997,8 @@
     "id": "PHIAL_HOLSTER",
     "kind": "relic",
     "name": "Phial Holster",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L203; md:relics_zh.md:L203",
-    "zh_description": "拾取时，+1 个药水栏并获得 2 瓶随机药水。",
-    "zh_name": "药瓶皮套"
+    "rarity": "Ancient"
   },
   "PHILOSOPHERS_STONE": {
     "aliases": [
@@ -3791,12 +3012,8 @@
     "id": "PHILOSOPHERS_STONE",
     "kind": "relic",
     "name": "Philosopher's Stone",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L204; md:relics_zh.md:L204",
-    "zh_description": "每回合 +1 最大能量；所有敌人战斗开始时 +1 点力量。",
-    "zh_name": "贤者之石"
+    "rarity": "Ancient"
   },
   "PHYLACTERY_UNBOUND": {
     "aliases": [
@@ -3810,12 +3027,8 @@
     "id": "PHYLACTERY_UNBOUND",
     "kind": "relic",
     "name": "Phylactery Unbound",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Starter",
-    "source": "md:relics.md:L7; md:relics_zh.md:L7",
-    "zh_description": "战斗开始，Summon 5 个 Osty；每回合开始，Summon 2 个 Osty。",
-    "zh_name": "无界命匣"
+    "rarity": "Starter"
   },
   "PLANISPHERE": {
     "aliases": [
@@ -3828,12 +3041,8 @@
     "id": "PLANISPHERE",
     "kind": "relic",
     "name": "Planisphere",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L75; md:relics_zh.md:L76; codex:relics/PLANISPHERE",
-    "zh_description": "进入问号房间时，回复 5 HP。",
-    "zh_name": "活动星图"
+    "rarity": "Uncommon"
   },
   "POCKETWATCH": {
     "aliases": [
@@ -3847,10 +3056,7 @@
     "kind": "relic",
     "name": "Pocketwatch",
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L120; md:relics_zh.md:L120",
-    "zh_description": "若上回合打出的牌 ≤3 张，第 2 回合起抽牌阶段额外抽 3 张牌。",
-    "zh_name": "怀表"
+    "rarity": "Rare"
   },
   "POLLINOUS_CORE": {
     "aliases": [
@@ -3864,12 +3070,8 @@
     "id": "POLLINOUS_CORE",
     "kind": "relic",
     "name": "Pollinous Core",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L299; md:relics_zh.md:L299",
-    "zh_description": "每第 4 回合，抽牌阶段额外抽 2 张牌。",
-    "zh_name": "花粉核心"
+    "rarity": "Event"
   },
   "POMANDER": {
     "aliases": [
@@ -3882,12 +3084,8 @@
     "id": "POMANDER",
     "kind": "relic",
     "name": "Pomander",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L205; md:relics_zh.md:L205",
-    "zh_description": "拾取时，升级 1 张选定牌。",
-    "zh_name": "橙型香盒"
+    "rarity": "Ancient"
   },
   "POTION_BELT": {
     "aliases": [
@@ -3901,12 +3099,8 @@
     "id": "POTION_BELT",
     "kind": "relic",
     "name": "Potion Belt",
-    "needs_zh": false,
     "play_notes": "Run-49 live: Act2 宝箱 (8,2) 获得；belt 容量扩大后商店购入双药水+精英掉落三药可共存（Blood/Skill/Speed 类实测同时在栏）。",
-    "rarity": "Common",
-    "source": "run-49 live fold 2026-09-19 (logs run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c)",
-    "zh_description": "拾取时，获得 2 个药水栏。",
-    "zh_name": "药水腰带"
+    "rarity": "Common"
   },
   "POWER_CELL": {
     "aliases": [
@@ -3920,12 +3114,8 @@
     "id": "POWER_CELL",
     "kind": "relic",
     "name": "Power Cell",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L121; md:relics_zh.md:L121",
-    "zh_description": "战斗开始（第 1 回合），从抽牌堆将 2 张零费牌加入手牌。",
-    "zh_name": "能量电池"
+    "rarity": "Rare"
   },
   "PRAYER_WHEEL": {
     "aliases": [
@@ -3939,12 +3129,8 @@
     "id": "PRAYER_WHEEL",
     "kind": "relic",
     "name": "Prayer Wheel",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L122; md:relics_zh.md:L122",
-    "zh_description": "普通敌人战斗奖励额外掉落 1 份卡牌奖励。",
-    "zh_name": "转经轮"
+    "rarity": "Rare"
   },
   "PRECARIOUS_SHEARS": {
     "aliases": [
@@ -3958,12 +3144,8 @@
     "id": "PRECARIOUS_SHEARS",
     "kind": "relic",
     "name": "Precarious Shears",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L206; md:relics_zh.md:L206",
-    "zh_description": "拾取时，移除 2 张牌并失去 16 HP。",
-    "zh_name": "松动羊毛剪"
+    "rarity": "Ancient"
   },
   "PRECISE_SCISSORS": {
     "aliases": [
@@ -3977,12 +3159,8 @@
     "id": "PRECISE_SCISSORS",
     "kind": "relic",
     "name": "Precise Scissors",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L207; md:relics_zh.md:L207; codex:relics/PRECISE_SCISSORS",
-    "zh_description": "拾取时，从牌库移除 1 张牌。",
-    "zh_name": "精准剪刀"
+    "rarity": "Ancient"
   },
   "PRESERVED_FOG": {
     "aliases": [
@@ -3996,12 +3174,8 @@
     "id": "PRESERVED_FOG",
     "kind": "relic",
     "name": "Preserved Fog",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L208; md:relics_zh.md:L208",
-    "zh_description": "拾取时，移除 3 张牌；向牌库加入 1 张 Folly。",
-    "zh_name": "腌制活雾"
+    "rarity": "Ancient"
   },
   "PRISMATIC_GEM": {
     "aliases": [
@@ -4016,12 +3190,8 @@
     "id": "PRISMATIC_GEM",
     "kind": "relic",
     "name": "Prismatic Gem",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L209; md:relics_zh.md:L209",
-    "zh_description": "远古（OROBAS Act2 赐福池，run-57 选取）：每回合+1最大能量；卡牌奖励含其他角色卡（跨职业池 live——run-57 出现 Kingly Kick/Thunderclap/Crush Under 供选）。run-57 live：能量显示 4/4 成为本局基准；Act2 Boss T1 叠加茶具休息触发=6/4（Bludgeon+KinglyKick 开场74伤）。",
-    "zh_name": "棱彩宝石"
+    "rarity": "Ancient"
   },
   "PUMPKIN_CANDLE": {
     "aliases": [
@@ -4037,12 +3207,8 @@
     "id": "PUMPKIN_CANDLE",
     "kind": "relic",
     "name": "Pumpkin Candle",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
-    "zh_description": "每回合 +1 最大能量；5 场战斗后熄灭；休息点获得 Kindle 选项（+5 场战斗）。第 5 战准时燃尽；KINDLE 作为营火第三按钮（HEAL/SMITH/KINDLE）出现；复燃消耗当次营火行动 —— HP 危机迫使每次营火都 HEAL 时蜡烛在 Boss 战前保持熄灭。",
-    "zh_name": "南瓜蜡烛"
+    "rarity": "Ancient"
   },
   "PUNCH_DAGGER": {
     "aliases": [
@@ -4056,12 +3222,8 @@
     "id": "PUNCH_DAGGER",
     "kind": "relic",
     "name": "Punch Dagger",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L260; md:relics_zh.md:L260",
-    "zh_description": "拾取时，选择 1 张攻击牌附魔 Momentum 5。",
-    "zh_name": "拳刃"
+    "rarity": "Shop"
   },
   "RADIANT": {
     "aliases": [
@@ -4074,10 +3236,8 @@
     "id": "RADIANT",
     "kind": "relic",
     "name": "Radiant Pearl",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "codex-api:/relics/RADIANT_PEARL"
+    "rarity": "Ancient"
   },
   "RADIANT_PEARL": {
     "aliases": [
@@ -4091,12 +3251,8 @@
     "id": "RADIANT_PEARL",
     "kind": "relic",
     "name": "Radiant Pearl",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L211; md:relics_zh.md:L211",
-    "zh_description": "第 1 回合开始，向手牌加入 1 张 Luminesce。",
-    "zh_name": "发光珍珠"
+    "rarity": "Ancient"
   },
   "RAGE": {
     "aliases": [
@@ -4109,10 +3265,8 @@
     "id": "RAGE",
     "kind": "relic",
     "name": "Sling of Courage",
-    "needs_zh": false,
     "play_notes": " | run-46 session: key-collision carrier for Sling of Courage; card-domain RAGE is the Ironclad skill-attack card, separate entry.",
-    "rarity": "Shop",
-    "source": "codex-api:/relics/SLING_OF_COURAGE"
+    "rarity": "Shop"
   },
   "RAINBOW_RING": {
     "aliases": [
@@ -4126,12 +3280,8 @@
     "id": "RAINBOW_RING",
     "kind": "relic",
     "name": "Rainbow Ring",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L123; md:relics_zh.md:L123",
-    "zh_description": "单回合首次打出攻击、技能、能力各一张时，获得 1 点力量和 1 点敏捷。",
-    "zh_name": "彩虹戒指"
+    "rarity": "Rare"
   },
   "RAZOR_TOOTH": {
     "aliases": [
@@ -4145,12 +3295,8 @@
     "id": "RAZOR_TOOTH",
     "kind": "relic",
     "name": "Razor Tooth",
-    "needs_zh": false,
     "play_notes": "run-48 live 2026-09-19: per-instance semantics confirmed — fresh copies play base first; Whetstone-upgraded copies distinct from Razor-upgraded ones. [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "rarity": "Rare",
-    "source": "md:relics.md:L124; md:relics_zh.md:L124",
-    "zh_description": "每次打出攻击或技能牌时，本场战斗内将其升级。语义：触发升级的那次打出仍按**基础值**结算，该牌此后本战打出才用升级值（如 Rage 首打 Amount 3/后打 5、Defend 首打 5/后打 8；速度药水敏捷回合的后打 Defend 读数 13 = 基础5+升级3+敏捷5）。",
-    "zh_name": "剃刀牙"
+    "rarity": "Rare"
   },
   "RED_MASK": {
     "aliases": [
@@ -4164,12 +3310,8 @@
     "id": "RED_MASK",
     "kind": "relic",
     "name": "Red Mask",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L36; md:relics_zh.md:L36; run-40 live fold 2026-09-18",
-    "zh_description": "战斗开始（第 1 回合）对所有敌人施加 1 层虚弱。run-38 实时：全部战斗 T1 敌方均可见 WEAK_POWER:1（Byrdonis SWOOP 17→12；史莱姆撞击 4→3/3→2；同族神官球 8→6）。虚弱持续期间敌方攻击伤害约 −25%（其阵营回合结束递减）。与 TERRITORIAL 类被动共存——短暂的「无 Weak」读数是 state settle-lag，非遗物失效。",
-    "zh_name": "红面具"
+    "rarity": "Common"
   },
   "RED_SKULL": {
     "aliases": [
@@ -4183,12 +3325,8 @@
     "id": "RED_SKULL",
     "kind": "relic",
     "name": "Red Skull",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L37; md:relics_zh.md:L37",
-    "zh_description": "HP ≤ 最大 HP 的 50% 时，额外 +3 点力量。",
-    "zh_name": "红头骨"
+    "rarity": "Common"
   },
   "REGALITE": {
     "aliases": [
@@ -4201,12 +3339,8 @@
     "id": "REGALITE",
     "kind": "relic",
     "name": "Regalite",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L76; md:relics_zh.md:L77",
-    "zh_description": "每次创造卡牌时，获得 2 格挡。",
-    "zh_name": "君王矿石"
+    "rarity": "Uncommon"
   },
   "REGAL_PILLOW": {
     "aliases": [
@@ -4220,12 +3354,8 @@
     "id": "REGAL_PILLOW",
     "kind": "relic",
     "name": "Regal Pillow",
-    "needs_zh": false,
     "play_notes": "run-46 live: +43-class heals at (6,6)/(8,4)/(13,4) rests; draft rest-geometry doctrine paid double.",
-    "rarity": "Common",
-    "source": "md:relics.md:L38; md:relics_zh.md:L38",
-    "zh_description": "休息点回复量增加 15 HP。与石炉加湿器休息叠加（基础百分比治疗 + 枕头 15 + 加湿器每次休息 +5 Max）。",
-    "zh_name": "皇家枕头"
+    "rarity": "Common"
   },
   "REPTILE_TRINKET": {
     "aliases": [
@@ -4239,12 +3369,8 @@
     "id": "REPTILE_TRINKET",
     "kind": "relic",
     "name": "Reptile Trinket",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L77; md:relics_zh.md:L78",
-    "zh_description": "每次使用药水时，本回合获得 3 点力量。任意药水使用均触发（Dex/血/Flex/攻击类）——以独立 power（REPTILE_TRINKET_POWER:3）与药水原生效果同回合叠加（如 Flex +5 + 饰品 +3 = 单回合 +8 力爆发窗）。",
-    "zh_name": "爬行动物饰品"
+    "rarity": "Uncommon"
   },
   "RINGING_TRIANGLE": {
     "aliases": [
@@ -4259,12 +3385,8 @@
     "id": "RINGING_TRIANGLE",
     "kind": "relic",
     "name": "Ringing Triangle",
-    "needs_zh": false,
     "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Shop",
-    "source": "relics.md + run-43 shop live",
-    "zh_description": "战斗首回合保留手牌。",
-    "zh_name": "三角铃鼓"
+    "rarity": "Shop"
   },
   "RING_OF_THE_DRAKE": {
     "aliases": [
@@ -4278,12 +3400,8 @@
     "id": "RING_OF_THE_DRAKE",
     "kind": "relic",
     "name": "Ring of the Drake",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Starter",
-    "source": "md:relics.md:L11; md:relics_zh.md:L11",
-    "zh_description": "第 1-3 回合，抽牌阶段额外抽 2 张牌。",
-    "zh_name": "长蛇戒指"
+    "rarity": "Starter"
   },
   "RING_OF_THE_SNAKE": {
     "aliases": [
@@ -4297,12 +3415,8 @@
     "id": "RING_OF_THE_SNAKE",
     "kind": "relic",
     "name": "Ring of the Snake",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Starter",
-    "source": "md:relics.md:L12; md:relics_zh.md:L12; codex:relics/RING_OF_THE_SNAKE",
-    "zh_description": "第 1 回合，抽牌阶段额外抽 2 张牌。",
-    "zh_name": "蛇之戒指"
+    "rarity": "Starter"
   },
   "RIPPLE_BASIN": {
     "aliases": [
@@ -4316,12 +3430,8 @@
     "id": "RIPPLE_BASIN",
     "kind": "relic",
     "name": "Ripple Basin",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L78; md:relics_zh.md:L79",
-    "zh_description": "回合结束时，若本回合未打出任何攻击牌，获得 4 格挡。回合末与卡牌格挡加法叠加（如 Spiral 附魔防御 22 + 水盆 4 = 26）；低血时「弃攻击换挡」是真实生存杠杆。",
-    "zh_name": "波纹水盆"
+    "rarity": "Uncommon"
   },
   "ROYAL_POISON": {
     "aliases": [
@@ -4335,12 +3445,8 @@
     "id": "ROYAL_POISON",
     "kind": "relic",
     "name": "Royal Poison",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L300; md:relics_zh.md:L300; codex:relics/ROYAL_POISON",
-    "zh_description": "第 1 回合开始，失去 4 HP。",
-    "zh_name": "王室猛毒"
+    "rarity": "Event"
   },
   "ROYAL_STAMP": {
     "aliases": [
@@ -4353,10 +3459,8 @@
     "id": "ROYAL_STAMP",
     "kind": "relic",
     "name": "Royal Stamp",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "codex-api:/relics/ROYAL_STAMP"
+    "rarity": "Shop"
   },
   "RUINED_HELMET": {
     "aliases": [
@@ -4370,12 +3474,8 @@
     "id": "RUINED_HELMET",
     "kind": "relic",
     "name": "Ruined Helmet",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L125; md:relics_zh.md:L125",
-    "zh_description": "每场战斗首次获得力量时，获得量翻倍。",
-    "zh_name": "损毁头盔"
+    "rarity": "Rare"
   },
   "RUNIC_CAPACITOR": {
     "aliases": [
@@ -4389,12 +3489,8 @@
     "id": "RUNIC_CAPACITOR",
     "kind": "relic",
     "name": "Runic Capacitor",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L262; md:relics_zh.md:L262",
-    "zh_description": "第 1 回合开始，额外 +3 充能球槽。",
-    "zh_name": "符文电容器"
+    "rarity": "Shop"
   },
   "RUNIC_PYRAMID": {
     "aliases": [
@@ -4408,12 +3504,8 @@
     "id": "RUNIC_PYRAMID",
     "kind": "relic",
     "name": "Runic Pyramid",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L212; md:relics_zh.md:L212",
-    "zh_description": "回合结束不再弃置手牌。",
-    "zh_name": "符文金字塔"
+    "rarity": "Ancient"
   },
   "SAI": {
     "aliases": [
@@ -4426,12 +3518,8 @@
     "id": "SAI",
     "kind": "relic",
     "name": "Sai",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L213; md:relics_zh.md:L213",
-    "zh_description": "每回合开始，获得 7 格挡。",
-    "zh_name": "钗"
+    "rarity": "Ancient"
   },
   "SAND_CASTLE": {
     "aliases": [
@@ -4445,12 +3533,8 @@
     "id": "SAND_CASTLE",
     "kind": "relic",
     "name": "Sand Castle",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L214; md:relics_zh.md:L214",
-    "zh_description": "拾取时，升级牌库中 6 张随机牌。",
-    "zh_name": "沙堡"
+    "rarity": "Ancient"
   },
   "SCREAMING_FLAGON": {
     "aliases": [
@@ -4464,12 +3548,8 @@
     "id": "SCREAMING_FLAGON",
     "kind": "relic",
     "name": "Screaming Flagon",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L264; md:relics_zh.md:L264",
-    "zh_description": "回合结束时手牌为空，对所有敌人造成 20 点伤害。",
-    "zh_name": "尖叫酒壶"
+    "rarity": "Shop"
   },
   "SCROLL_BOXES": {
     "aliases": [
@@ -4483,12 +3563,8 @@
     "id": "SCROLL_BOXES",
     "kind": "relic",
     "name": "Scroll Boxes",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L215; md:relics_zh.md:L215",
-    "zh_description": "拾取时，从 2 捆卡牌包中选 1 捆加入牌库。",
-    "zh_name": "卷轴箱"
+    "rarity": "Ancient"
   },
   "SEAL_OF_GOLD": {
     "aliases": [
@@ -4504,12 +3580,8 @@
     "id": "SEAL_OF_GOLD",
     "kind": "relic",
     "name": "Seal of Gold",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
-    "zh_description": "回合开始时，若金币 ≥5，花费 5 金币并获得 1 点能量。",
-    "zh_name": "黄金印"
+    "rarity": "Ancient"
   },
   "SEA_GLASS": {
     "aliases": [
@@ -4523,12 +3595,8 @@
     "id": "SEA_GLASS",
     "kind": "relic",
     "name": "Sea Glass",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L216; md:relics_zh.md:L216",
-    "zh_description": "拾取时，查看另一角色的 15 张牌（5 普通、5 罕见、5 稀有）；选择任意数量加入牌库。",
-    "zh_name": "海玻璃"
+    "rarity": "Ancient"
   },
   "SELF_FORMING_CLAY": {
     "aliases": [
@@ -4542,12 +3610,8 @@
     "id": "SELF_FORMING_CLAY",
     "kind": "relic",
     "name": "Self-Forming Clay",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L79; md:relics_zh.md:L80",
-    "zh_description": "战斗中每次失去 HP 时，下回合开始获得 3 格挡。",
-    "zh_name": "自成型黏土"
+    "rarity": "Uncommon"
   },
   "SERE_TALON": {
     "aliases": [
@@ -4561,12 +3625,8 @@
     "id": "SERE_TALON",
     "kind": "relic",
     "name": "Sere Talon",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L218; md:relics_zh.md:L218",
-    "zh_description": "拾取时，向牌库加入 2 张随机诅咒和 3 张 Wish。",
-    "zh_name": "原初之爪"
+    "rarity": "Ancient"
   },
   "SHARP": {
     "aliases": [
@@ -4579,10 +3639,8 @@
     "id": "SHARP",
     "kind": "relic",
     "name": "Sharp (Enchant keyword) / Gnarled Hammer carrier relic",
-    "needs_zh": false,
     "play_notes": "run-48 live fold 2026-09-19: Sharp 2 on Bludgeon = 44 base (42+2) live; SELF_HELP_BOOK READ_THE_BACK is the grant source. [run-48 live fold 2026-09-19 (log run-20260919-095135-c4b014e2.log)]",
-    "rarity": "Shop",
-    "source": "codex-api:/relics/GNARLED_HAMMER"
+    "rarity": "Shop"
   },
   "SHOVEL": {
     "aliases": [
@@ -4595,12 +3653,8 @@
     "id": "SHOVEL",
     "kind": "relic",
     "name": "Shovel",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L126; md:relics_zh.md:L126",
-    "zh_description": "休息点获得 Dig 选项，可获得随机遗物。",
-    "zh_name": "铲子"
+    "rarity": "Rare"
   },
   "SHURIKEN": {
     "aliases": [
@@ -4613,12 +3667,8 @@
     "id": "SHURIKEN",
     "kind": "relic",
     "name": "Shuriken",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L127; md:relics_zh.md:L127",
-    "zh_description": "单回合每打出 3 张攻击牌，获得 1 点力量。",
-    "zh_name": "手里剑"
+    "rarity": "Rare"
   },
   "SIGNET_RING": {
     "aliases": [
@@ -4632,12 +3682,8 @@
     "id": "SIGNET_RING",
     "kind": "relic",
     "name": "Signet Ring",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L219; md:relics_zh.md:L219",
-    "zh_description": "拾取时，获得 999 金币。",
-    "zh_name": "图章戒指"
+    "rarity": "Ancient"
   },
   "SILKEN_TRESS": {
     "aliases": [
@@ -4651,12 +3697,8 @@
     "id": "SILKEN_TRESS",
     "kind": "relic",
     "name": "Silken Tress",
-    "needs_zh": false,
     "play_notes": "Cost is gold only (no curse card, no Max HP tax). Bounded econ delay: one early-shop item. Payoff is a Glam'd early spine pick — engine cards double-cast every combat all run. Neow curse-pool slot; live-confirmed option text 2026-09-19.",
-    "rarity": "Ancient",
-    "source": "perplexity-search 2026-09-19 (gamerblurb Glam explained; spire-codex.com/enchantments/glam; mobalytics enchantments guide) + live Neow screen F9S4BGVMFD",
-    "zh_description": "拾取时失去全部金币；本局第一次卡牌奖励中的所有牌附魔 Glam（华彩）。run-55 live 规则：Glam 附魔牌在每场战斗首次打出时双结算，其后打出单结算（Glam 耸肩无视：该战首次打出 16 挡 + 抽 2；后续打出 8 挡 + 抽 1）。refine run-49「首打双结算」备注：双结算挂在附魔牌的首次打出上，而非战斗第 1 回合。",
-    "zh_name": "华美发束"
+    "rarity": "Ancient"
   },
   "SILVER_CRUCIBLE": {
     "aliases": [
@@ -4670,12 +3712,8 @@
     "id": "SILVER_CRUCIBLE",
     "kind": "relic",
     "name": "Silver Crucible",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L221; md:relics_zh.md:L221",
-    "zh_description": "看到的前 3 份卡牌奖励为升级版；打开的第一个宝箱为空。",
-    "zh_name": "白银熔炉"
+    "rarity": "Ancient"
   },
   "SLING_OF_COURAGE": {
     "aliases": [
@@ -4689,12 +3727,8 @@
     "id": "SLING_OF_COURAGE",
     "kind": "relic",
     "name": "Sling of Courage",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L265; md:relics_zh.md:L265",
-    "zh_description": "精英战开始时，获得 2 点力量。",
-    "zh_name": "勇气投石索"
+    "rarity": "Shop"
   },
   "SMALL_CAPSULE": {
     "aliases": [
@@ -4708,12 +3742,8 @@
     "id": "SMALL_CAPSULE",
     "kind": "relic",
     "name": "Small Capsule",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L222; md:relics_zh.md:L222; codex:relics/SMALL_CAPSULE",
-    "zh_description": "拾取时，获得 1 件随机遗物。",
-    "zh_name": "小型扭蛋"
+    "rarity": "Ancient"
   },
   "SNECKO_EYE": {
     "aliases": [
@@ -4727,12 +3757,8 @@
     "id": "SNECKO_EYE",
     "kind": "relic",
     "name": "Snecko Eye",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L223; md:relics_zh.md:L223",
-    "zh_description": "每回合抽牌阶段额外抽 2 张牌；战斗开始时处于 Confused。",
-    "zh_name": "异蛇之眼"
+    "rarity": "Ancient"
   },
   "SNECKO_SKULL": {
     "aliases": [
@@ -4746,12 +3772,8 @@
     "id": "SNECKO_SKULL",
     "kind": "relic",
     "name": "Snecko Skull",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L39; md:relics_zh.md:L39",
-    "zh_description": "你施加的中毒层数 +1。",
-    "zh_name": "异蛇头骨"
+    "rarity": "Common"
   },
   "SOZU": {
     "aliases": [
@@ -4764,12 +3786,8 @@
     "id": "SOZU",
     "kind": "relic",
     "name": "Sozu",
-    "needs_zh": false,
     "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log): boss-relic boon at Act2 DARV — +1 Energy every turn permanently; potions no longer obtainable. Stacks with Lantern +1, Tea Set +2 post-rest, Happy Flower +1/3turn → boss T1 opened at 7/4. HP rail covered by Burning Blood + Blood Vial + rests + LIFT Max HP.",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L224; md:relics_zh.md:L224",
-    "zh_description": "每回合 +1 最大能量；不再能获得药水。",
-    "zh_name": "添水"
+    "rarity": "Ancient"
   },
   "SPARKLING_ROUGE": {
     "aliases": [
@@ -4783,12 +3801,8 @@
     "id": "SPARKLING_ROUGE",
     "kind": "relic",
     "name": "Sparkling Rouge",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L80; md:relics_zh.md:L81",
-    "zh_description": "第 3 回合开始，获得 1 点力量和 1 点敏捷。",
-    "zh_name": "闪亮口红"
+    "rarity": "Uncommon"
   },
   "SPIKED_GAUNTLETS": {
     "aliases": [
@@ -4802,12 +3816,8 @@
     "id": "SPIKED_GAUNTLETS",
     "kind": "relic",
     "name": "Spiked Gauntlets",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L225; md:relics_zh.md:L225",
-    "zh_description": "每回合 +1 最大能量；能力牌费用 +1。",
-    "zh_name": "带刺手甲"
+    "rarity": "Ancient"
   },
   "STONE_CALENDAR": {
     "aliases": [
@@ -4822,12 +3832,8 @@
     "id": "STONE_CALENDAR",
     "kind": "relic",
     "name": "Stone Calendar",
-    "needs_zh": false,
     "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Rare",
-    "source": "relics.md + run-43 live kill",
-    "zh_description": "第 7 回合结束时，对所有敌人造成 52 点伤害。",
-    "zh_name": "历石"
+    "rarity": "Rare"
   },
   "STONE_CRACKER": {
     "aliases": [
@@ -4841,12 +3847,8 @@
     "id": "STONE_CRACKER",
     "kind": "relic",
     "name": "Stone Cracker",
-    "needs_zh": false,
     "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log): in-combat upgrades are unmarked on card display — read live damage numbers (Bludgeon+ already upgraded in deck; random hits landed on strikes/defends most fights).",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L81; md:relics_zh.md:L82",
-    "zh_description": "战斗开始，将抽牌堆中 2 张随机牌升级（本场战斗内）。命中示例：Bash→Bash+（易伤 2→3）、TrueGrit→TrueGrit+（随机消耗→**选择式消耗叠层**——升级形态即选择式消耗版）、Spite→Spite+（掉血回合 2→3 击）、Impervious→Impervious+（挡 30→40）、Hemokinesis→Hemokinesis+（伤 15→20）、旋风斩 5→8/击、防御 5→8、打击 6→9、双重打击 5→7/击、剑柄打击 9→10。升级仅战斗内有效且卡面不显示 + 标记，以实机伤害数字为准。",
-    "zh_name": "碎石钻"
+    "rarity": "Uncommon"
   },
   "STONE_HUMIDIFIER": {
     "aliases": [
@@ -4860,12 +3862,8 @@
     "id": "STONE_HUMIDIFIER",
     "kind": "relic",
     "name": "Stone Humidifier",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L226; md:relics_zh.md:L226",
-    "zh_description": "每次在休息点休息时，+5 最大 HP。",
-    "zh_name": "石炉加湿器"
+    "rarity": "Ancient"
   },
   "STORYBOOK": {
     "aliases": [
@@ -4880,12 +3878,8 @@
     "id": "STORYBOOK",
     "kind": "relic",
     "name": "Storybook",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
-    "zh_description": "拾取时，向牌库加入 1 张 Brightest Flame。",
-    "zh_name": "故事书"
+    "rarity": "Ancient"
   },
   "STRAWBERRY": {
     "aliases": [
@@ -4899,12 +3893,8 @@
     "kind": "relic",
     "live_notes": "LIVE run-56: +7 MaxHP on pickup. Part of the MaxHP stacking package.",
     "name": "Strawberry",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L41; md:relics_zh.md:L41; codex:relics/STRAWBERRY",
-    "zh_description": "拾取时，+7 最大 HP。",
-    "zh_name": "草莓"
+    "rarity": "Common"
   },
   "STRIKE_DUMMY": {
     "aliases": [
@@ -4919,10 +3909,7 @@
     "kind": "relic",
     "name": "Strike Dummy",
     "play_notes": "常见遗物：带 Strike 标签的攻击牌 +3 伤害；加成在易伤/倍率叠乘前进入基础值。run-46 live：组装师母体 Strike 结算 19（基础+力量+假人先入基础再 ×易伤）；实验体战 Str4+易伤下 Strike 13 级。事件类 Strike 标签牌是否享受加成未确认。",
-    "rarity": "Common",
-    "source": "md:relics.md:L40; md:relics_zh.md:L40",
-    "zh_description": "名称含 Strike 标签的攻击牌额外造成 3 点伤害。木偶加成在易伤乘区之前（如 Pommel Strike 18 =（9 基础 +3 木偶）×1.5）；Peck（事件 Strike 标签）的 2 伤段未见木偶加成，事件牌标签覆盖范围未确认。",
-    "zh_name": "打击木偶"
+    "rarity": "Common"
   },
   "STURDY_CLAMP": {
     "aliases": [
@@ -4936,12 +3923,8 @@
     "id": "STURDY_CLAMP",
     "kind": "relic",
     "name": "Sturdy Clamp",
-    "needs_zh": false,
     "play_notes": "稀有商店遗物：至多 10 点格挡跨回合保留（部分壁垒效果）。run-46 live：Act3 (5,5) 商店 289g 购入（与能量药水 48 合计 337/340 沉淀），购买时 HP 8/94——当技能类挡牌被 Enrage/Vital Spark 类 power 征税时，常驻 10 挡缓冲是 HP 经济墙的结构性解。",
-    "rarity": "Rare",
-    "source": "md:relics.md:L129; md:relics_zh.md:L129",
-    "zh_description": "至多 10 点格挡可跨回合保留。",
-    "zh_name": "坚固钳子"
+    "rarity": "Rare"
   },
   "SWORD_OF_JADE": {
     "aliases": [
@@ -4955,12 +3938,8 @@
     "id": "SWORD_OF_JADE",
     "kind": "relic",
     "name": "Sword of Jade",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L301; md:relics_zh.md:L301",
-    "zh_description": "战斗开始，获得 3 点力量。",
-    "zh_name": "玉之剑"
+    "rarity": "Event"
   },
   "SWORD_OF_STONE": {
     "aliases": [
@@ -4974,12 +3953,8 @@
     "id": "SWORD_OF_STONE",
     "kind": "relic",
     "name": "Sword of Stone",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L302; md:relics_zh.md:L302",
-    "zh_description": "击败 5 个精英后，变身为玉之剑。",
-    "zh_name": "石之剑"
+    "rarity": "Event"
   },
   "SYMBIOTIC_VIRUS": {
     "aliases": [
@@ -4993,12 +3968,8 @@
     "id": "SYMBIOTIC_VIRUS",
     "kind": "relic",
     "name": "Symbiotic Virus",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L83; md:relics_zh.md:L83",
-    "zh_description": "第 1 回合开始，引导 1 个暗球。",
-    "zh_name": "共生病毒"
+    "rarity": "Uncommon"
   },
   "TANXS_WHISTLE": {
     "aliases": [
@@ -5012,12 +3983,8 @@
     "id": "TANXS_WHISTLE",
     "kind": "relic",
     "name": "Tanx's Whistle",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L228; md:relics_zh.md:L228",
-    "zh_description": "拾取时，向牌库加入 1 张 Whistle。",
-    "zh_name": "坦克斯的哨子"
+    "rarity": "Ancient"
   },
   "TEA_OF_DISCOURTESY": {
     "aliases": [
@@ -5031,12 +3998,8 @@
     "id": "TEA_OF_DISCOURTESY",
     "kind": "relic",
     "name": "Tea of Discourtesy",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L303; md:relics_zh.md:L303",
-    "zh_description": "接下来 1 场战斗开始时，向抽牌堆洗入 2 张 Dazed。",
-    "zh_name": "无礼之茶"
+    "rarity": "Event"
   },
   "THE_ABACUS": {
     "aliases": [
@@ -5050,12 +4013,8 @@
     "id": "THE_ABACUS",
     "kind": "relic",
     "name": "The Abacus",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L266; md:relics_zh.md:L266",
-    "zh_description": "每次洗抽牌堆时，获得 6 格挡。",
-    "zh_name": "算盘"
+    "rarity": "Shop"
   },
   "THE_BOOT": {
     "aliases": [
@@ -5069,12 +4028,8 @@
     "id": "THE_BOOT",
     "kind": "relic",
     "name": "The Boot",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L304; md:relics_zh.md:L304",
-    "zh_description": "你对敌人造成的 1-4 点未格挡攻击伤害提升为 5 点。",
-    "zh_name": "发条靴"
+    "rarity": "Event"
   },
   "THE_COURIER": {
     "aliases": [
@@ -5088,12 +4043,8 @@
     "id": "THE_COURIER",
     "kind": "relic",
     "name": "The Courier",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L130; md:relics_zh.md:L130",
-    "zh_description": "商人价格 ×0.80；商人库存不再耗尽。",
-    "zh_name": "送货员"
+    "rarity": "Rare"
   },
   "THROWING_AXE": {
     "aliases": [
@@ -5107,12 +4058,8 @@
     "id": "THROWING_AXE",
     "kind": "relic",
     "name": "Throwing Axe",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L229; md:relics_zh.md:L229",
-    "zh_description": "每场战斗打出的第一张牌额外再打出一次。",
-    "zh_name": "投斧"
+    "rarity": "Ancient"
   },
   "TINGSHA": {
     "aliases": [
@@ -5125,12 +4072,8 @@
     "id": "TINGSHA",
     "kind": "relic",
     "name": "Tingsha",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L84; md:relics_zh.md:L84",
-    "zh_description": "回合内每弃 1 张牌，对随机敌人造成 3 点伤害。",
-    "zh_name": "铜钹"
+    "rarity": "Uncommon"
   },
   "TINY_MAILBOX": {
     "aliases": [
@@ -5144,12 +4087,8 @@
     "id": "TINY_MAILBOX",
     "kind": "relic",
     "name": "Tiny Mailbox",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L85; md:relics_zh.md:L85",
-    "zh_description": "在休息点休息时，获得 2 瓶随机药水。",
-    "zh_name": "小邮箱"
+    "rarity": "Uncommon"
   },
   "TOASTY_MITTENS": {
     "aliases": [
@@ -5165,12 +4104,8 @@
     "id": "TOASTY_MITTENS",
     "kind": "relic",
     "name": "Toasty Mittens",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
-    "zh_description": "每回合抽牌前，消耗抽牌堆顶牌并获得 1 点力量。每回合 +1 力零例外；消耗顶牌在无痛部署时同步触发 FnP（消耗源计入无痛）。**与 Headbutt 取回反协同**：取回件置于抽牌堆顶后会被 Mittens 下回合开始时消耗。",
-    "zh_name": "烘焙手套"
+    "rarity": "Ancient"
   },
   "TOOLBOX": {
     "aliases": [
@@ -5183,12 +4118,8 @@
     "id": "TOOLBOX",
     "kind": "relic",
     "name": "Toolbox",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L267; md:relics_zh.md:L267",
-    "zh_description": "第 1 回合开始，从 3 张随机无色牌中选 1 张加入手牌。",
-    "zh_name": "工具箱"
+    "rarity": "Shop"
   },
   "TOUCH_OF_OROBAS": {
     "aliases": [
@@ -5201,8 +4132,7 @@
     "kind": "relic",
     "name": "Touch of Orobas",
     "play_notes": "Run-49 live: picked at Act2 boon; relic list showed BLACK_BLOOD + TOUCH_OF_OROBAS marker; +12/combat verified same run. Run-39 precedent. Also note: act transition full-healed the player to 80 on entering the boon room (run-49: 29→80) — act-start heal independent of the swap.",
-    "rarity": "Ancient",
-    "source": "run-49 live fold 2026-09-19 (logs run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c)"
+    "rarity": "Ancient"
   },
   "TOUGH_BANDAGES": {
     "aliases": [
@@ -5216,12 +4146,8 @@
     "id": "TOUGH_BANDAGES",
     "kind": "relic",
     "name": "Tough Bandages",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L133; md:relics_zh.md:L133",
-    "zh_description": "回合内每弃 1 张牌，获得 3 格挡。",
-    "zh_name": "结实绷带"
+    "rarity": "Rare"
   },
   "TOXIC_EGG": {
     "aliases": [
@@ -5235,12 +4161,8 @@
     "id": "TOXIC_EGG",
     "kind": "relic",
     "name": "Toxic Egg",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L132; md:relics_zh.md:L132",
-    "zh_description": "向牌库加入的技能牌会被升级。",
-    "zh_name": "毒素之蛋"
+    "rarity": "Rare"
   },
   "TOY_BOX": {
     "aliases": [
@@ -5256,12 +4178,8 @@
     "id": "TOY_BOX",
     "kind": "relic",
     "name": "Toy Box",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
-    "zh_description": "拾取时，获得 4 件蜡质遗物；每 3 场战斗，最左侧蜡质遗物融化消失。",
-    "zh_name": "玩具盒"
+    "rarity": "Ancient"
   },
   "TRI_BOOMERANG": {
     "aliases": [
@@ -5275,12 +4193,8 @@
     "id": "TRI_BOOMERANG",
     "kind": "relic",
     "name": "Tri-Boomerang",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L233; md:relics_zh.md:L233",
-    "zh_description": "拾取时，选择 3 张攻击牌附魔 Instinct 1。Instinct 附魔（反编译）：有源攻击伤害 ×2（乘法，先于 Vulnerable 等其他乘区结算）。",
-    "zh_name": "三刃回旋镖"
+    "rarity": "Ancient"
   },
   "TUNGSTEN_ROD": {
     "aliases": [
@@ -5294,12 +4208,8 @@
     "id": "TUNGSTEN_ROD",
     "kind": "relic",
     "name": "Tungsten Rod",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L131; md:relics_zh.md:L131",
-    "zh_description": "每次将失去 HP 时，少失去 1 点。",
-    "zh_name": "钨合金棍"
+    "rarity": "Rare"
   },
   "TUNING_FORK": {
     "aliases": [
@@ -5313,12 +4223,8 @@
     "id": "TUNING_FORK",
     "kind": "relic",
     "name": "Tuning Fork",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L86; md:relics_zh.md:L86",
-    "zh_description": "每打出 10 张技能牌，获得 7 格挡。",
-    "zh_name": "音叉"
+    "rarity": "Uncommon"
   },
   "TWISTED_FUNNEL": {
     "aliases": [
@@ -5332,12 +4238,8 @@
     "id": "TWISTED_FUNNEL",
     "kind": "relic",
     "name": "Twisted Funnel",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L87; md:relics_zh.md:L87",
-    "zh_description": "战斗开始（第 1 回合），对所有敌人施加 4 层中毒。",
-    "zh_name": "扭曲漏斗"
+    "rarity": "Uncommon"
   },
   "UNCEASING_TOP": {
     "aliases": [
@@ -5351,12 +4253,8 @@
     "id": "UNCEASING_TOP",
     "kind": "relic",
     "name": "Unceasing Top",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L134; md:relics_zh.md:L134",
-    "zh_description": "回合内手牌为空时，抽 1 张牌。",
-    "zh_name": "不休陀螺"
+    "rarity": "Rare"
   },
   "UNDYING_SIGIL": {
     "aliases": [
@@ -5370,12 +4268,8 @@
     "id": "UNDYING_SIGIL",
     "kind": "relic",
     "name": "Undying Sigil",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L268; md:relics_zh.md:L268",
-    "zh_description": "Doom 不低于其当前 HP 的敌人对你造成的伤害 −50%；这些敌人的 Doom 在其回合开始时触发而非回合结束。",
-    "zh_name": "不死符文"
+    "rarity": "Shop"
   },
   "UNSETTLING_LAMP": {
     "aliases": [
@@ -5389,12 +4283,8 @@
     "id": "UNSETTLING_LAMP",
     "kind": "relic",
     "name": "Unsettling Lamp",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L135; md:relics_zh.md:L135",
-    "zh_description": "每场战斗首次打出对敌施加减益的卡牌时，减益效果翻倍。数值示例：Uppercut+（基础 2 弱/2 易伤）作为首张 debuff 牌翻倍至 **4 弱/4 易伤**；首 debuff 翻倍作用于打出时的*战内当前值*——被 StoneCracker 先行升级的 Tremble+（7 级）翻倍可到 8 易伤，高于基础 3×2=6。",
-    "zh_name": "不安油灯"
+    "rarity": "Rare"
   },
   "VAJRA": {
     "aliases": [
@@ -5408,12 +4298,8 @@
     "kind": "relic",
     "live_notes": "LIVE run-56: Act1 shop purchase 75g. Start each combat with 1 Strength. Passive strength for self-harm engine.",
     "name": "Vajra",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L42; md:relics_zh.md:L42; codex:relics/VAJRA",
-    "zh_description": "战斗开始，获得 1 点力量。",
-    "zh_name": "金刚杵"
+    "rarity": "Common"
   },
   "VAMBRACE": {
     "aliases": [
@@ -5426,12 +4312,8 @@
     "id": "VAMBRACE",
     "kind": "relic",
     "name": "Vambrace",
-    "needs_zh": false,
     "play_notes": "LIVE run-58 live fold 2026-09-19 (log run-20260919-205108-aa378115.log): first card-block of combat doubled — Defend 5→10 confirmed; Impervious 30→60 pre-Frail, resolved 52 under Frail-2 and 22 under Frail-2 alone (frail taxes the doubled value). Rage/ornamental-fan blocks are not card-granted and do not consume the Vambrace slot.",
-    "rarity": "Uncommon",
-    "source": "md:relics.md:L88; md:relics_zh.md:L88",
-    "zh_description": "每场战斗首次从卡牌获得格挡时，获得量翻倍。每战首张挡牌精确翻倍（嘲讽 7→14、火焰屏障 12→24、Defend 5→10）；仅首次触发（同战后续 Defend 按面值）。",
-    "zh_name": "臂甲"
+    "rarity": "Uncommon"
   },
   "VELVET_CHOKER": {
     "aliases": [
@@ -5445,12 +4327,8 @@
     "id": "VELVET_CHOKER",
     "kind": "relic",
     "name": "Velvet Choker",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L234; md:relics_zh.md:L234",
-    "zh_description": "每回合 +1 最大能量；每回合最多打出 6 张牌。",
-    "zh_name": "天鹅绒颈圈"
+    "rarity": "Ancient"
   },
   "VENERABLE_TEA_SET": {
     "aliases": [
@@ -5465,12 +4343,8 @@
     "id": "VENERABLE_TEA_SET",
     "kind": "relic",
     "name": "Venerable Tea Set",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L43; md:relics_zh.md:L43; run-40 live fold 2026-09-18",
-    "zh_description": "进入休息站后，下一场战斗开局+2能量（仅T1）。run-57 live：(14,5) 休息触发 → Act2 Boss T1 与棱彩宝石叠加=6/4能。run-57 (13,5) 商店 189金购入。",
-    "zh_name": "古茶具套装"
+    "rarity": "Common"
   },
   "VERY_HOT_COCOA": {
     "aliases": [
@@ -5486,12 +4360,8 @@
     "id": "VERY_HOT_COCOA",
     "kind": "relic",
     "name": "Very Hot Cocoa",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
-    "zh_description": "第 1 回合开始，获得 +4 能量。",
-    "zh_name": "烫嘴可可"
+    "rarity": "Ancient"
   },
   "VEXING_PUZZLEBOX": {
     "aliases": [
@@ -5505,12 +4375,8 @@
     "id": "VEXING_PUZZLEBOX",
     "kind": "relic",
     "name": "Vexing Puzzlebox",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L136; md:relics_zh.md:L136",
-    "zh_description": "第 1 回合开始，向手牌加入一张随机牌；本回合免费。",
-    "zh_name": "烦人机关盒"
+    "rarity": "Rare"
   },
   "VITRUVIAN_MINION": {
     "aliases": [
@@ -5524,12 +4390,8 @@
     "id": "VITRUVIAN_MINION",
     "kind": "relic",
     "name": "Vitruvian Minion",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "md:relics.md:L269; md:relics_zh.md:L269",
-    "zh_description": "名称含 Minion 标签的卡牌伤害翻倍、格挡翻倍。",
-    "zh_name": "维特鲁威仆从"
+    "rarity": "Shop"
   },
   "WAR_HAMMER": {
     "aliases": [
@@ -5543,12 +4405,8 @@
     "id": "WAR_HAMMER",
     "kind": "relic",
     "name": "War Hammer",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L236; md:relics_zh.md:L236",
-    "zh_description": "每次击败精英时，升级牌库中 4 张随机牌。",
-    "zh_name": "战锤"
+    "rarity": "Ancient"
   },
   "WAR_PAINT": {
     "aliases": [
@@ -5562,12 +4420,8 @@
     "id": "WAR_PAINT",
     "kind": "relic",
     "name": "War Paint",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Common",
-    "source": "md:relics.md:L44; md:relics_zh.md:L44",
-    "zh_description": "拾取时，升级牌库中 2 张随机技能牌。",
-    "zh_name": "战纹涂料"
+    "rarity": "Common"
   },
   "WHETSTONE": {
     "aliases": [
@@ -5582,12 +4436,8 @@
     "id": "WHETSTONE",
     "kind": "relic",
     "name": "Whetstone",
-    "needs_zh": false,
     "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Common",
-    "source": "relics.md + run-43 shop live",
-    "zh_description": "拾取时，升级牌库中 2 张随机攻击牌。升级目标为攻击标签（如 Bash→Bash+ 10 伤/3 易伤；MoltenFist→MoltenFist+ 14 伤）。",
-    "zh_name": "磨刀石"
+    "rarity": "Common"
   },
   "WHISPERING_EARRING": {
     "aliases": [
@@ -5601,12 +4451,8 @@
     "id": "WHISPERING_EARRING",
     "kind": "relic",
     "name": "Whispering Earring",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Ancient",
-    "source": "md:relics.md:L237; md:relics_zh.md:L237",
-    "zh_description": "每回合 +1 最大能量；Vakuu 代你打出第一回合（至多 13 张牌）。",
-    "zh_name": "低语耳环"
+    "rarity": "Ancient"
   },
   "WHITE_BEAST_STATUE": {
     "aliases": [
@@ -5620,12 +4466,8 @@
     "id": "WHITE_BEAST_STATUE",
     "kind": "relic",
     "name": "White Beast Statue",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L137; md:relics_zh.md:L137",
-    "zh_description": "药水总是出现在战斗奖励中。",
-    "zh_name": "白兽雕像"
+    "rarity": "Rare"
   },
   "WHITE_STAR": {
     "aliases": [
@@ -5639,12 +4481,8 @@
     "id": "WHITE_STAR",
     "kind": "relic",
     "name": "White Star",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Rare",
-    "source": "md:relics.md:L138; md:relics_zh.md:L138",
-    "zh_description": "精英战斗奖励额外掉落 1 份稀有卡牌奖励。",
-    "zh_name": "白星"
+    "rarity": "Rare"
   },
   "WIND_DAUGHTER": {
     "aliases": [
@@ -5657,10 +4495,8 @@
     "id": "WIND_DAUGHTER",
     "kind": "relic",
     "name": "Daughter of the Wind",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "codex-api:/relics/DAUGHTER_OF_THE_WIND"
+    "rarity": "Event"
   },
   "WINGED_BOOTS": {
     "aliases": [
@@ -5675,12 +4511,8 @@
     "id": "WINGED_BOOTS",
     "kind": "relic",
     "name": "Winged Boots",
-    "needs_zh": false,
     "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Uncommon",
-    "source": "run-43 Neow live",
-    "zh_description": "选择行进房间时可忽略路径限制 3 次。LIVE（对局 36）：`map_select` 指向**任意**地图坐标均可成功，无视 `available_map_points` 列表——是完全传送，不限于子节点选择。实用例：(14,3)→(12,6) 商店，再 (12,6)→(15,3) Boss 门，跳过精英走廊；3 跳消耗 2 跳。",
-    "zh_name": "羽翼之靴"
+    "rarity": "Uncommon"
   },
   "WING_CHARM": {
     "aliases": [
@@ -5693,10 +4525,8 @@
     "id": "WING_CHARM",
     "kind": "relic",
     "name": "Wing Charm",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Shop",
-    "source": "codex-api:/relics/WING_CHARM"
+    "rarity": "Shop"
   },
   "WONGOS_MYSTERY_TICKET": {
     "aliases": [
@@ -5710,12 +4540,8 @@
     "id": "WONGOS_MYSTERY_TICKET",
     "kind": "relic",
     "name": "Wongo's Mystery Ticket",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L306; md:relics_zh.md:L306",
-    "zh_description": "完成 5 场战斗后，下一场战斗奖励额外获得 3 件遗物。",
-    "zh_name": "旺购神秘券"
+    "rarity": "Event"
   },
   "WONGO_CUSTOMER_APPRECIATION_BADGE": {
     "aliases": [
@@ -5729,12 +4555,8 @@
     "id": "WONGO_CUSTOMER_APPRECIATION_BADGE",
     "kind": "relic",
     "name": "Wongo Customer Appreciation Badge",
-    "needs_zh": false,
     "play_notes": "",
-    "rarity": "Event",
-    "source": "md:relics.md:L305; md:relics_zh.md:L305",
-    "zh_description": "无效果。",
-    "zh_name": "旺购客户感恩徽章"
+    "rarity": "Event"
   },
   "YUMMY_COOKIE": {
     "aliases": [
@@ -5749,11 +4571,7 @@
     "id": "YUMMY_COOKIE",
     "kind": "relic",
     "name": "Yummy Cookie",
-    "needs_zh": false,
     "play_notes": "run-43 live fold 2026-09-19 (log run-20260919-020127-e4b53676.log)",
-    "rarity": "Ancient",
-    "source": "decomp fold run-43 2026-09-19 (Tezcatara.cs + Relics/*.cs)",
-    "zh_description": "拾取时，升级 4 张选定牌。升级为永久牌库升级（deck_select 叠层——逐张 choose 后 proceed 确认）；该方式升级的 Rupture+ Amount 2 此后每次 Bloodletting/Breakthrough 自伤 +2 力量。",
-    "zh_name": "美味饼干"
+    "rarity": "Ancient"
   }
 }

@@ -650,7 +650,7 @@ def cmd_lookup(args):
     domain_guess = refs.guess_domain(key, args.domain)
     entry, url = refs.research_and_fold(key, domain_guess=domain_guess)
     if entry:
-        print(f"lookup: researched via {url} — folded into spirectl_lib/data (curated:false, needs_zh:true)")
+        print(f"lookup: researched via {url} — folded into spirectl_lib/data (curated:false)")
         if args.json:
             print(json.dumps(entry, ensure_ascii=False, indent=2))
         else:
