@@ -154,13 +154,13 @@
   ],
   "character": null,
   "counter_shown": false,
-  "curated": false,
-  "description": "战斗开始（第 1 回合），对所有敌人施加 1 层 Vulnerable。",
+  "curated": true,
+  "description": "战斗开始（第 1 回合）对所有敌人施加 1 层易伤。run-1 脊线遗物（弹珠袋×拆卸教条）。run-46 live：Act2 (2,0) 商店 169g 购入——与红面具（T1 全体弱化）组成自动易伤/弱化包，每场战斗变成 T1 竞速窗；与 Bash/熔融之拳/主宰易伤包叠加支撑拆卸双击线。",
   "id": "BAG_OF_MARBLES",
   "kind": "relic",
   "name": "弹珠袋",
   "needs_zh": false,
-  "play_notes": "",
+  "play_notes": "run-46 live：弹珠袋+红面具自动包=本局脊线；购买点 99% 金币沉淀。",
   "rarity": "Common",
   "source": "md:relics.md:L18; md:relics_zh.md:L18"
  },
@@ -828,12 +828,12 @@
   "character": null,
   "counter_shown": false,
   "curated": true,
-  "description": "战斗结束（胜利）时 +1 最大HP 且 +1 当前HP。满屋芝士事件「翻找」遗物（−14 无挡HP，税额精确）。对局40 live：全局最大HP 86→94（每场胜利触发）；与燃烧之血+6、血瓶+2 同轨叠加。14HP 税约14场战斗回本；长期最大HP成长是 HP 经济对策类。",
+  "description": "战斗胜利结算时 +1 最大生命且 +1 当前生命。满屋芝士 Search 选项（−14 无挡生命）事件遗物。run-40 live：最大 86→94；run-46 live：胜局滚动 16 次（MaxHP 80→97 净值，含华夫饼 +7 与 Feed Fatal，扣除卷轴战 Paper Cuts 税）。与燃烧之血每战 +6、Feed Fatal +3 MaxHP 加法叠加。",
   "id": "CHOSEN_CHEESE",
   "kind": "relic",
   "name": "天选芝士",
   "needs_zh": false,
-  "play_notes": "",
+  "play_notes": "run-46 live：16 次胜利滚动；与燃烧之血+华夫饼+Feed Fatal 构成 HP 铁路；Paper Cuts 税（Act3 卷轴战）是唯一观测漏点——全挡回合零 MaxHP 损失。",
   "rarity": "Event",
   "source": "md:relics.md:L276; md:relics_zh.md:L276; run-40 live fold 2026-09-18"
  },
@@ -1621,13 +1621,13 @@
   ],
   "character": null,
   "counter_shown": false,
-  "curated": false,
-  "description": "拾取时，标记 7 场战斗；这些房间的敌人 HP 为 1。",
+  "curated": true,
+  "description": "Act3 赐福房遗物（NONUPEIPE 事件）：随机标记 7 场战斗，标记战斗敌人仅 1HP。run-46 live：在钻石头冠（≤2 张出牌伤害减半）与艳丽围巾（第 5 张免费）之间选择——7 场近免战对中血线 Act3 期望值最高。",
   "id": "FUR_COAT",
   "kind": "relic",
   "name": "皮草大衣",
   "needs_zh": false,
-  "play_notes": "",
+  "play_notes": "run-46 live pick rationale: pacing relief > conditional defense > card-engine extension at Act3 entry.",
   "rarity": "Ancient",
   "source": "md:relics.md:L166; md:relics_zh.md:L166"
  },
@@ -2218,14 +2218,14 @@
   "source": "md:relics.md:L176; md:relics_zh.md:L176"
  },
  "LASTING_CANDY": {
-  "id": "LASTING_CANDY",
-  "name": "永恒糖果",
   "aliases": [
    "Lasting Candy"
   ],
-  "kind": "relic",
   "curated": true,
   "description": "首战之后每隔一场战斗，战斗卡牌奖励 +1 个能力（Power）类选项（奖励屏 3 选变 4 选）。仅可在 Act3 宝箱前获得。LIVE run-45：遗物堆叠显示计数 :0/:1 交替；观察到两次四选一奖励——分别递送势不可当（精英奖励）与第二张狱火（战斗奖励）。Power 注入经济件。",
+  "id": "LASTING_CANDY",
+  "kind": "relic",
+  "name": "永恒糖果",
   "source": "run-45 live + 档案"
  },
  "LAVA_LAMP": {
@@ -2804,6 +2804,22 @@
   "play_notes": "",
   "rarity": "Ancient",
   "source": "md:relics.md:L189; md:relics_zh.md:L189"
+ },
+ "NIMBLE": {
+  "aliases": [
+   "Fresnel Lens",
+   "FRESNEL_LENS"
+  ],
+  "character": "shared",
+  "curated": true,
+  "description": "附魔关键词（Nimble N）：附于入手的挡类卡牌——菲涅耳透镜（淹水灯塔事件）为此类牌附魔 Nimble 2。Nimble 具体机制未 live 解码——观测到前视为未知，不围绕其规划。",
+  "id": "NIMBLE",
+  "kind": "relic",
+  "name": "Fresnel Lens",
+  "needs_zh": false,
+  "play_notes": " | run-46 会话：机制未解，攀爬选项（−13MaxHP）在 HP66 拒绝——档案未知不付确定 HP 税（run-20 教训）。",
+  "rarity": "Event",
+  "source": "codex-api:/relics/FRESNEL_LENS"
  },
  "NINJA_SCROLL": {
   "aliases": [
@@ -3618,6 +3634,22 @@
   "rarity": "Ancient",
   "source": "md:relics.md:L211; md:relics_zh.md:L211"
  },
+ "RAGE": {
+  "aliases": [
+   "Sling of Courage",
+   "SLING_OF_COURAGE"
+  ],
+  "character": "shared",
+  "curated": true,
+  "description": "查找碰撞载体（run-46 会话）：relic 域 RAGE 键交叉搜索误折叠——实际内容为 Sling of Courage（商店遗物：每场精英战开局 +2 力量）。战士 RAGE 是卡牌非遗物。run-46 Act2 商店见 74-78g 级标价。",
+  "id": "RAGE",
+  "kind": "relic",
+  "name": "Sling of Courage",
+  "needs_zh": false,
+  "play_notes": " | run-46 会话：Sling of Courage 的碰撞键载体；卡牌域 RAGE 为战士技能攻击牌，独立条目。",
+  "rarity": "Shop",
+  "source": "codex-api:/relics/SLING_OF_COURAGE"
+ },
  "RAINBOW_RING": {
   "aliases": [
    "Rainbow Ring",
@@ -3710,13 +3742,13 @@
   ],
   "character": null,
   "counter_shown": false,
-  "curated": false,
-  "description": "休息点回复量增加 15 HP。与石炉加湿器休息叠加（基础百分比治疗 + 枕头 15 + 加湿器每次休息 +5 Max）。",
+  "curated": true,
+  "description": "休息点治疗量 +15（与基础百分比治疗及加湿器类叠加）。run-46 live：三次休息均 +43 级（23→66、33→76、54 级→近满）——预 Boss/预精英休息几何在枕头下加倍兑现。",
   "id": "REGAL_PILLOW",
   "kind": "relic",
   "name": "皇家枕头",
   "needs_zh": false,
-  "play_notes": "",
+  "play_notes": "run-46 live：(6,6)/(8,4)/(13,4) 三次 +43 级治疗；草稿休息几何教条加倍兑现。",
   "rarity": "Common",
   "source": "md:relics.md:L38; md:relics_zh.md:L38"
  },
@@ -4323,11 +4355,11 @@
   "character": null,
   "counter_shown": false,
   "curated": true,
-  "description": "带 Strike 标签的攻击牌伤害 +3；加成在易伤/残酷乘区之前生效（run-36 公式注记，run-41 live：棱柱 T2 PS 结算 25，购前为 20 级 — 约 8 个 tag × +3 喂入基伤）。事件类 Strike 标签牌（佩克类）是否享受加成未确认。",
+  "description": "常见遗物：Strike 标签攻击牌 +3 伤，加成在易伤倍率前计入基础值。run-46 live：组装师 Strike 19（基础+力量+假人先入基础再乘易伤）；实验体 Str4+易伤下 13 级。事件 Strike 牌加成未确认。",
   "id": "STRIKE_DUMMY",
   "kind": "relic",
   "name": "打击木偶",
-  "play_notes": "",
+  "play_notes": "run-46 live: base-feed formula confirmed — dummy +3 lands before ×1.5 Vuln multipliers.",
   "rarity": "Common",
   "source": "md:relics.md:L40; md:relics_zh.md:L40"
  },
@@ -4338,13 +4370,13 @@
   ],
   "character": null,
   "counter_shown": false,
-  "curated": false,
-  "description": "至多 10 点格挡可跨回合保留。",
+  "curated": true,
+  "description": "稀有商店遗物：至多 10 挡跨回合保留（部分壁垒）。run-46 live：Act3 (5,5) 商店 289g 购入（合计沉淀 337/340），购时 HP 8/94——技能挡被 Enrage/VitalSpark 征税时的结构性对策。",
   "id": "STURDY_CLAMP",
   "kind": "relic",
   "name": "坚固钳子",
   "needs_zh": false,
-  "play_notes": "",
+  "play_notes": "run-46 live: bought at HP 8/94; pairs with Meal Ticket shop-heal as the HP-economy recovery package.",
   "rarity": "Rare",
   "source": "md:relics.md:L129; md:relics_zh.md:L129"
  },

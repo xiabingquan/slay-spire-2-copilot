@@ -8662,7 +8662,7 @@
    "Knowledgedemon",
    "知识恶魔"
   ],
-  "curated": false,
+  "curated": true,
   "cycle": [
    "CURSE_OF_KNOWLEDGE_MOVE",
    "SLAP_MOVE",
@@ -8674,7 +8674,7 @@
    "COUNTER_MOVE",
    "ELSE_MOVE"
   ],
-  "description": "招式循环 CURSE_OF_KNOWLEDGE_MOVE（减益）→ SLAP_MOVE → KNOWLEDGE_OVERWHELMING_MOVE → PONDER_MOVE → 分支（诅咒计数 <3 回 Curse，否则 Slap）。",
+  "description": "Act2 Boss（run-36/44/46 live 379HP）：循环诅咒覆盖层（screen=card_choice）→ SLAP（13+脆弱2）→ KNOWLEDGE_OVERWHELMING（8×3=24）→ PONDER（11+自回30+自强2）→ 分支。诅咒：T1 崩解 vs 心腐、T2 vs 怠惰、T3 vs 衰朽；3 组后停止。崩解=玩家回合末无挡税（live 6 向 13 递增）；心腐=每回合减抽；怠惰=每回合最多 3 张出牌（SLOTH_POWER）。run-46 live 教条偏离：HP38 对 106HP Boss 选怠惰弃崩解——run-36『伤害耐受型选崩解』前提（HP 耐受）live 不成立；live 优先于 archive。T6 击杀：Fiend Fire+Charon's Ashes+Str6+易伤 ≈176 单卡收头。",
   "display_names": [
    "KnowledgeDemon 知识恶魔",
    "知识恶魔"
@@ -8798,7 +8798,7 @@
   "name": "知识恶魔",
   "needs_zh": false,
   "passives": [],
-  "play_notes": "",
+  "play_notes": "run-46 live：覆盖层 card_choice 路径；怠惰偏离记录（耐受前提失效）；T6 单卡收头——run-14/36 复仇。",
   "source": "md:monsters_zh.md:L176"
  },
  "LAGAVULIN_MATRIARCH": {
@@ -10817,14 +10817,14 @@
    "Ovicopter",
    "直飞产卵虫"
   ],
-  "curated": false,
+  "curated": true,
   "cycle": [
    "LAY_EGGS_MOVE",
    "SMASH_MOVE",
    "TENDERIZER_MOVE",
    "NUTRITIONAL_PASTE_MOVE"
   ],
-  "description": "LAY_EGGS_MOVE = 召唤 ToughEgg（出生 MinionPower 1）；SMASH_MOVE = 单次攻击 16 (A:17)；TENDERIZER_MOVE = 单次攻击 7 (A:8) + 2 Vulnerable；NUTRITIONAL_PASTE_MOVE = 增益 自身 +3 力量 (A:4)。",
+  "description": "Act3/Act2 级（run-10/46）：循环 LAY_EGGS（召唤 ToughEgg HATCH:2→1 倒计时）→ RAND WAR_CHANT/FLAIL(9×2)/RAM(15) → 分支；MINION 卵/幼虫随母体死亡消亡。run-46 live：T3 杀母体（Bash+Dismantle 窗）——幼虫同帧消亡；HATCH 倒计时按回合末递减非伤害驱动。",
   "display_names": [
    "Ovicopter",
    "直飞产卵虫"
@@ -10995,7 +10995,7 @@
     "power_id": "MINION_POWER"
    }
   ],
-  "play_notes": "",
+  "play_notes": "run-46 live：母体优先教条——杀产卵虫，卵/幼虫 MINION 同帧消亡；HATCH 为回合末驱动。",
   "source": "md:monsters.md:L56"
  },
  "OwlMagistrate": {
@@ -13283,7 +13283,7 @@
    "SMOTHER_MOVE",
    "FURIOUS_PUMMELING_MOVE"
   ],
-  "description": "史莱姆狂战士（run-44 Act3 (4,5) T5 击杀，261hp）：循环 胆汁（注入10张SLIMED）→ 狂怒连击 4x4 → 吸血拥抱（玩家虚弱3+自身力量3）→ 闷杀30。教条：状态税战的解法是抽牌/引擎而非清状态；闷杀回合要挡；长战配速靠每回合固定输出。",
+  "description": "Act3 级精英/普通（run-44/46 live 261HP）：循环 VOMIT_ICHOR（×10 SLIMED 入弃牌堆——不可打出的抽牌污染牌）→ FURIOUS_PUMMELING（4×4，随力量膨胀，Str3 时 live 7×4）→ LEECHING_HUG（玩家弱化3+自身强3）→ SMOTHER（30 A:33）→ 循环。run-46 live T6 击杀：Bludgeon+ 弱化×易伤下 57 + Pommel 在猛击升级前收头；SLIMED=抽牌污染类非直接伤害税——快杀或全挡皆有效。",
   "hp": {
    "ascension": {
     "max": null,
@@ -13407,7 +13407,7 @@
   },
   "name": "Slimed Berserker",
   "needs_zh": false,
-  "play_notes": "",
+  "play_notes": "run-44/46 live：261HP 持久战；胆汁=抽牌污染类；Bludgeon+ 57 级 T6 收头于猛击升级前。",
   "source": "codex-api:/monsters/SLIMED_BERSERKER",
   "type": "Normal"
  },
@@ -20156,5 +20156,60 @@
   ],
   "description": "GremlinMerc SURPRISE 刷怪（run-45 live）：14HP + HEIST_POWER:40（行动时偷 40 金）。入场 SPAWNED 晕一回合；循环 FLEE（逃跑意图）——抢在逃跑结算前击杀。狱火类 tick 在晕窗内可削血。",
   "source": "run-45 live"
+ },
+ "TEST_SUBJECT": {
+  "id": "TEST_SUBJECT",
+  "kind": "monster",
+  "name": "实验体",
+  "aliases": [
+   "TEST_SUBJECT",
+   "实验体",
+   "Test Subject #C11"
+  ],
+  "acts": [
+   "Act3"
+  ],
+  "is_boss": true,
+  "curated": true,
+  "hp": {
+   "base": "100（run-46 live #C11 A1）",
+   "notes": "ADAPTABLE 复活多阶段"
+  },
+  "cycle": [
+   "BITE_MOVE",
+   "SKULL_BASH_MOVE",
+   "MULTI_CLAW_MOVE",
+   "PHASE3_LACERATE_MOVE",
+   "BIG_POUNCE_MOVE",
+   "BURNING_GROWL_MOVE",
+   "RESPAWN_MOVE"
+  ],
+  "description": "Act3 Boss（实验体 #C 系；run-46 live #C11 100HP A1）：循环 Bite（13/20 级，随 Enrage 力量膨胀，技能失误后中局 live 20→33）→ Skull Bash（14+玩家易伤1）→ MultiClaw（10×3）→ Phase3 Lacerate（10×3）→ BigPounce（45）→ BurningGrowl → Respawn。ADAPTABLE 自体复活：死亡不结束战斗至 RESPAWN_MOVE 完成（复活意图：治疗+PAINFUL_STABS 1+NEMESIS 1）。ENRAGE：任何人打技能牌 +力量——零技能纪律（仅攻击+能力）。REVIVE_BRANCH 标记经条件分支回退反射 live 浮现。",
+  "play_notes": "run-46 live：一阶段 T3 Whirlwind 33 清 → RESPAWN 意图 live → 建筑师 EA PROCEED 链 = 局胜。Enrage 被放血失误喂养（Bite 20→33）——每回合重读零技能清单教训。"
+ },
+ "FABRICATOR": {
+  "id": "FABRICATOR",
+  "kind": "monster",
+  "name": "组装师",
+  "aliases": [
+   "FABRICATOR",
+   "组装师"
+  ],
+  "acts": [
+   "Act3"
+  ],
+  "is_boss": false,
+  "curated": true,
+  "hp": {
+   "base": "150（run-46 live (12,5) A1）",
+   "notes": "普通级；召唤 MINION 波次"
+  },
+  "cycle": [
+   "FABRICATE_MOVE",
+   "FABRICATING_STRIKE_MOVE",
+   "DISINTEGRATE_MOVE"
+  ],
+  "description": "Act3 普通级（run-46 live (12,5) 150HP）：循环 FABRICATE（召唤）→ 分支 RAND FABRICATE/FABRICATING_STRIKE（18伤+召唤）→ DISINTEGRATE（11）。MINION 召唤物：噪音机器人（status 类）与电击机器人（ZAP 14-18+HIGH_VOLTAGE+力量）。kill-master 教条：组装师死亡时全部 MINION_POWER 召唤物消亡。HATCH 类倒计时按回合末递减非伤害驱动。",
+  "play_notes": "run-46 live：T3 杀母体——Strike Dummy 加成 Strike 穿易伤结算 19（基础+力量+假人先入基础）；双噪音+双电击同帧消亡。"
  }
 }

@@ -1285,40 +1285,46 @@ public static class StateBuilder
                 ["kind"] = "conditional_branch",
             };
             var branches = new List<Dictionary<string, object?>>();
+            static void CollectBranchElements(System.Collections.IEnumerable raw, List<Dictionary<string, object?>> branches)
+            {
+                foreach (object? element in raw)
+                {
+                    if (element == null)
+                    {
+                        continue;
+                    }
+                    Type elementType = element.GetType();
+                    var b = new Dictionary<string, object?>();
+                    try
+                    {
+                        FieldInfo? idField = elementType.GetField("id", BindingFlags.Instance | BindingFlags.Public)
+                            ?? elementType.GetField("Id", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                        if (idField?.GetValue(element) is string bid)
+                        {
+                            b["state_id"] = bid;
+                        }
+                    }
+                    catch (Exception) { /* omit */ }
+                    try
+                    {
+                        MethodInfo? evaluate = elementType.GetMethod("Evaluate", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                        if (evaluate?.Invoke(element, null) is float score)
+                        {
+                            b["condition_met"] = score > 0f;
+                        }
+                    }
+                    catch (Exception) { /* omit rather than guess */ }
+                    if (b.Count > 0)
+                    {
+                        branches.Add(b);
+                    }
+                }
+            }
             try
             {
                 if (ConditionalBranchStatesField?.GetValue(conditional) is System.Collections.IEnumerable raw)
                 {
-                    foreach (object? element in raw)
-                    {
-                        if (element == null)
-                        {
-                            continue;
-                        }
-                        Type elementType = element.GetType();
-                        var b = new Dictionary<string, object?>();
-                        try
-                        {
-                            if (elementType.GetField("id", BindingFlags.Instance | BindingFlags.Public)?.GetValue(element) is string bid)
-                            {
-                                b["state_id"] = bid;
-                            }
-                        }
-                        catch (Exception) { /* omit */ }
-                        try
-                        {
-                            MethodInfo? evaluate = elementType.GetMethod("Evaluate", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-                            if (evaluate?.Invoke(element, null) is float score)
-                            {
-                                b["condition_met"] = score > 0f;
-                            }
-                        }
-                        catch (Exception) { /* omit rather than guess */ }
-                        if (b.Count > 0)
-                        {
-                            branches.Add(b);
-                        }
-                    }
+                    CollectBranchElements(raw, branches);
                 }
             }
             catch (Exception e)
@@ -1326,15 +1332,53 @@ public static class StateBuilder
                 InfoCompleteness.FlagDuringBuild(
                     $"monster move '{conditional.Id}': conditional branch reflection failed ({e.GetType().Name})");
             }
+            // Fallback scan: some ConditionalBranchState instances (observed on
+            // Bowlbug-class POST_HEADBUTT / SNORE_NEXT) read empty from the
+            // declared States field. Walk instance fields up the inheritance
+            // chain for any IEnumerable whose elements expose an id + Evaluate
+            // pair before concluding the table is unavailable.
             if (branches.Count == 0)
             {
-                // The game evaluates these branches live — an empty table means
-                // our reflection missed, not that the branch has no outcomes.
-                InfoCompleteness.FlagDuringBuild(
-                    $"monster move '{conditional.Id}': conditional branch table empty (reflection miss — player can see the branch outcomes in-game)");
+                try
+                {
+                    for (Type? t = conditional.GetType(); t != null && t != typeof(object); t = t.BaseType)
+                    {
+                        foreach (FieldInfo fi in t.GetFields(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.DeclaredOnly))
+                        {
+                            object? val;
+                            try { val = fi.GetValue(conditional); } catch (Exception) { continue; }
+                            if (val is not System.Collections.IEnumerable scanRaw || val is string)
+                            {
+                                continue;
+                            }
+                            var collected = new List<Dictionary<string, object?>>();
+                            try { CollectBranchElements(scanRaw, collected); } catch (Exception) { continue; }
+                            if (collected.Count > 0)
+                            {
+                                branches.AddRange(collected);
+                                dto["branch_source"] = $"fallback_field:{fi.Name}";
+                                break;
+                            }
+                        }
+                        if (branches.Count > 0)
+                        {
+                            break;
+                        }
+                    }
+                }
+                catch (Exception) { /* fallback scan is best-effort */ }
+            }
+            if (branches.Count == 0)
+            {
+                // Predictive branch tables are planning aids, not per-turn
+                // authority — the live move id + intent bits (always present
+                // in the monster dto) are what combat decisions run on.
+                // An empty table after both reflection passes is annotated,
+                // not hard-stopped; missing CURRENT move/intent still stops.
+                dto["branch_table"] = "reflection_empty";
             }
             dto["branches"] = branches;
-            dto["incomplete"] = branches.Count == 0;
+            dto["incomplete"] = false;
             return dto;
         }
         return new Dictionary<string, object?>

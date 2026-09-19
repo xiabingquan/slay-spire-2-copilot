@@ -8966,7 +8966,7 @@
    "Knowledgedemon",
    "知识恶魔"
   ],
-  "curated": false,
+  "curated": true,
   "cycle": [
    "CURSE_OF_KNOWLEDGE_MOVE",
    "SLAP_MOVE",
@@ -8978,7 +8978,7 @@
    "COUNTER_MOVE",
    "ELSE_MOVE"
   ],
-  "description": "四回合循环——知识诅咒（选择弹窗：T1 崩解 vs 心灵腐蚀、T2 崩解 vs 怠惰、T3 崩解 vs 衰朽——伤害耐受/抽牌密集牌组选崩解；固定回合末伤害优于抽牌/能量否定；第三组诅咒后不再出诅咒）→ Slap 17（A9+ 18）→ Knowledge Overwhelming 8×3=24（A9+ 9×3）→ Ponder 11 伤 + 回复 30 + 自身力量 +2（A9+ 13/+3）。崩解层数随每次选择增长（每层回合末玩家伤害税）。LIVE（对局 36 败局，Boss 379→60 后 T8 死亡）：四回合循环与诅咒 counter 组 0/1 确认；崩解层实测 6 然后 13（6+7 按 counter——**无挡**回合末税，每个玩家回合都结算）；Ponder +30 回血 + 力量竞速意味着击杀窗必须每 4 回合循环打出 >30 净伤，否则回血循环获胜；教条选择（崩解胜心灵腐蚀/怠惰）两次正确，败因是战线长度 vs 税叠层 + Boss 闸门 0 药水。Weak 药水 live：施加 WEAK_POWER:3 回合（SLAP 17→12）。",
+  "description": "Act2-class Boss (run-36/44/46 live 379 HP): cycle CURSE_OF_KNOWLEDGE(choice overlay) → SLAP(13 + Frail2) → KNOWLEDGE_OVERWHELMING(8×3=24) → PONDER(11 + self-heal 30 + self Str2) → branch. Curse overlay (screen=card_choice): T1 Disintegration vs MindRot, T2 vs Sloth, T3 vs WasteAway; no curses after 3rd set. DISINTEGRATION = EoT unblocked tax on player, live 6 escalating toward 13 per pick; MIND_ROT = −hand draw/turn; SLOTH = max 3 cards/turn (SLOTH_POWER). LIVE run-46 doctrine deviation: at HP 38 vs 106-HP boss picked Sloth over Disintegration — run-36 'pick Disintegration for damage-tolerant decks' premise (HP tolerance) failed live; live-state-first outranks archive. Killed T6: Fiend Fire + Charon's Ashes + Str6 + Vuln ≈176 one-card close.",
   "display_names": [
    "KnowledgeDemon 知识恶魔",
    "知识恶魔"
@@ -9102,7 +9102,7 @@
   "name": "KnowledgeDemon",
   "needs_zh": false,
   "passives": [],
-  "play_notes": "",
+  "play_notes": "run-46 live: curse overlay via screen=card_choice; Sloth-over-Disintegration deviation documented (HP-tolerance premise failed); Fiend Fire+Ashes close at T6 — run-14/36 revenge.",
   "source": "md:monsters_zh.md:L176",
   "zh_description": "招式循环 CURSE_OF_KNOWLEDGE_MOVE（减益）→ SLAP_MOVE → KNOWLEDGE_OVERWHELMING_MOVE → PONDER_MOVE → 分支（诅咒计数 <3 回 Curse，否则 Slap）。",
   "zh_moves": {
@@ -11246,14 +11246,14 @@
    "Ovicopter",
    "直飞产卵虫"
   ],
-  "curated": false,
+  "curated": true,
   "cycle": [
    "LAY_EGGS_MOVE",
    "SMASH_MOVE",
    "TENDERIZER_MOVE",
    "NUTRITIONAL_PASTE_MOVE"
   ],
-  "description": "LAY_EGGS_MOVE = summon ToughEgg (MinionPower 1 on spawn); SMASH_MOVE = single attack 16 (A:17); TENDERIZER_MOVE = single attack 7 (A:8) + 2 Vulnerable; NUTRITIONAL_PASTE_MOVE = buff self +3 Strength (A:4).",
+  "description": "Act3/Act2-class (run-46 live (3,4) 261... corrected: run-46 (3,4) Ovicopter 261 HP was SlimedBerserker; Ovicopter recorded run-10/46: run-46 (3,4) fight was Ovicopter-class — cycle LAY_EGGS(summon ToughEgg HATCH:2-1 countdown) → RAND WAR_CHANT/FLAIL(9x2)/RAM(15) → branch; MINION eggs/larvae despawn on mother death. LIVE run-46: mother killed T3 (Bash+Dismantle window) — larvae despawned same resolution; HATCH countdown decrements EoT regardless of damage taken.",
   "display_names": [
    "Ovicopter",
    "直飞产卵虫"
@@ -11424,7 +11424,7 @@
     "power_id": "MINION_POWER"
    }
   ],
-  "play_notes": "",
+  "play_notes": "run-46 live: mother-first doctrine — kill Ovicopter, egg/larvae MINIONs despawn; HATCH countdown is EoT-driven not damage-driven.",
   "source": "md:monsters.md:L56",
   "zh_description": "LAY_EGGS_MOVE = 召唤 ToughEgg（出生 MinionPower 1）；SMASH_MOVE = 单次攻击 16 (A:17)；TENDERIZER_MOVE = 单次攻击 7 (A:8) + 2 Vulnerable；NUTRITIONAL_PASTE_MOVE = 增益 自身 +3 力量 (A:4)。",
   "zh_moves": {
@@ -13794,7 +13794,7 @@
    "SMOTHER_MOVE",
    "FURIOUS_PUMMELING_MOVE"
   ],
-  "description": "Slimed Berserker (Normal): HP 261-None (A 281-None); cycle VOMIT_ICHOR_MOVE → LEECHING_HUG_MOVE → SMOTHER_MOVE → FURIOUS_PUMMELING_MOVE",
+  "description": "Act3-class elite/normal (run-44/46 live 261 HP): cycle VOMIT_ICHOR(status ×10 SLIMED into discard — unplayable draw-pollution cards) → FURIOUS_PUMMELING(4x4, inflates with Str — live 7x4 at Str3) → LEECHING_HUG(player Weak3 + self Str3) → SMOTHER(30 A:33) → loop. LIVE run-46 T6 kill: Bludgeon+ 57 under Weak×Vuln + Pommel closed before Furious Pummeling escalation; SLIMED cards = draw-pollution class not direct-damage tax — kill-fast or full-block both valid lines.",
   "hp": {
    "ascension": {
     "max": null,
@@ -13918,7 +13918,7 @@
   },
   "name": "Slimed Berserker",
   "needs_zh": false,
-  "play_notes": "",
+  "play_notes": "run-44/46 live: 261-HP tank; SLIMED = draw-pollution class; Bludgeon+ 57-class closed T6 before Pummeling escalation.",
   "source": "codex-api:/monsters/SLIMED_BERSERKER",
   "type": "Normal"
  },
@@ -20879,5 +20879,65 @@
   ],
   "description": "GremlinMerc SURPRISE spawn (run-45 live): 14 hp + HEIST_POWER:40 (steals 40 Gold if it acts). Enters SPAWNED stun one turn; cycle FLEE (escape intent) — kill before escape resolves. Inferno-class ticks chip it while stunned.",
   "source": "run-45 live"
+ },
+ "TEST_SUBJECT": {
+  "id": "TEST_SUBJECT",
+  "kind": "monster",
+  "name": "Test Subject",
+  "aliases": [
+   "TEST_SUBJECT",
+   "TestSubject",
+   "实验体",
+   "Test Subject #C11",
+   "Test Subject #C14"
+  ],
+  "acts": [
+   "Act3"
+  ],
+  "is_boss": true,
+  "curated": true,
+  "needs_zh": false,
+  "hp": {
+   "base": "100 (live run-46 #C11 A1)",
+   "notes": "multi-phase via ADAPTABLE revive"
+  },
+  "cycle": [
+   "BITE_MOVE",
+   "SKULL_BASH_MOVE",
+   "MULTI_CLAW_MOVE",
+   "PHASE3_LACERATE_MOVE",
+   "BIG_POUNCE_MOVE",
+   "BURNING_GROWL_MOVE",
+   "RESPAWN_MOVE"
+  ],
+  "description": "Act3 Boss (Test Subject #C-class; run-46 live #C11, 100 HP A1): cycle BITE(13/20-class, inflates with Enrage Str; live 20→33 mid-fight after skill slips) → SKULL_BASH(14 + player Vuln1) → MULTI_CLAW(10×3) → PHASE3_LACERATE(10×3) → BIG_POUNCE(45) → BURNING_GROWL → RESPAWN. ADAPTABLE_POWER self-revive: death prevents combat end until RESPAWN_MOVE completes (respawn intent: heal + PAINFUL_STABS 1 + NEMESIS 1). ENRAGE_POWER: +Amount Str whenever anyone plays a Skill — zero-skill discipline (attacks + powers only). REVIVE_BRANCH markers (MULTI_CLAW[ok]/PHASE3_LACERATE[no]) surfaced live via conditional-branch fallback reflection.",
+  "play_notes": "run-46 live: phase-1 cleared T3 (Whirlwind 33-clear) → RESPAWN intent live → THE_ARCHITECT EA PROCEED chain = run won. ENRAGE fed by Bloodletting slip (+2 Str, Bite 20→33) — zero-skill re-read-per-turn lesson."
+ },
+ "FABRICATOR": {
+  "id": "FABRICATOR",
+  "kind": "monster",
+  "name": "Fabricator",
+  "aliases": [
+   "FABRICATOR",
+   "Fabricator",
+   "组装师"
+  ],
+  "acts": [
+   "Act3"
+  ],
+  "is_boss": false,
+  "curated": true,
+  "needs_zh": false,
+  "hp": {
+   "base": "150 (live run-46 (12,5) A1)",
+   "notes": "normal-class; summons MINION waves"
+  },
+  "cycle": [
+   "FABRICATE_MOVE",
+   "FABRICATING_STRIKE_MOVE",
+   "DISINTEGRATE_MOVE"
+  ],
+  "description": "Act3 normal-class (run-46 live (12,5) 150 HP): cycle FABRICATE(summon) → fabricateBranch RAND FABRICATE/FABRICATING_STRIKE(18 dmg + summon) → DISINTEGRATE(11). MINION summons: NoiseBot (status:2c-class) and ShockBot (ZAP 14-18 + HIGH_VOLTAGE + Str). Kill-master doctrine: ALL MINION_POWER summons despawn when the Fabricator dies. HATCH/countdown class decrements EoT, not damage-driven.",
+  "play_notes": "run-46 live: mother killed T3 — Strike Dummy-boosted Strike resolved 19 through Vuln (base+Str+dummy fed pre-multiplier); two NoiseBots + two ShockBots despawned same resolution."
  }
 }
