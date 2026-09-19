@@ -653,6 +653,7 @@
     "description": "ChooseRandom → 获得玩偶遗物；TakeSomeTime → 5 点不可格挡伤害；Examine → 15 点不可格挡伤害。",
     "id": "DOLL_ROOM",
     "kind": "event",
+    "live_notes": "LIVE run-56：选项 = 随机(1 尊玩偶遗物) / 慢慢来(−5HP，2 选 1) / 仔细检查(−15HP，3 选 1)。选慢慢来 → 风之女。",
     "name": "玩偶室",
     "needs_zh": false,
     "options": {
@@ -728,8 +729,7 @@
       }
     },
     "play_notes": "",
-    "source": "md:events.md; md:events_zh.md",
-    "live_notes": "LIVE run-56：选项 = 随机(1 尊玩偶遗物) / 慢慢来(−5HP，2 选 1) / 仔细检查(−15HP，3 选 1)。选慢慢来 → 风之女。"
+    "source": "md:events.md; md:events_zh.md"
   },
   "DOORS_OF_LIGHT_AND_DARK": {
     "aliases": [
@@ -949,6 +949,26 @@
     "play_notes": "",
     "source": "md:events.md; md:events_zh.md"
   },
+  "GLOWING_WATER": {
+    "acts": [
+      "Underdocks"
+    ],
+    "aliases": [
+      "Drowning Beacon",
+      "DROWNING_BEACON"
+    ],
+    "curated": true,
+    "description": "Crossing a dreamscape of rocks and still waters, you emerge to face a sinking lighthouse emitting anti-light.\n\nYou can bottle up the eerily-glowing water that has pooled here or climb up the dilapidated structure to retrieve the lens.",
+    "id": "GLOWING_WATER",
+    "kind": "event",
+    "name": "Drowning Beacon",
+    "needs_zh": false,
+    "option_summary": "[{\"id\": \"BOTTLE\", \"title\": \"Bottle\", \"description\": \"Procure [aqua]Glowwater Potion[/aqua].\"}, {\"id\": \"CLIMB\", \"title\": \"Climb\", \"description\": \"Obtain [gold]Fresnel Lens[/gold]. Lose [red]13[/red] Max HP.\"}]",
+    "options": {},
+    "play_notes": "",
+    "source": "codex-api:/events/DROWNING_BEACON",
+    "zh_description": "发光水（药水域条目为权威）。"
+  },
   "GRAVE_OF_THE_FORGOTTEN": {
     "aliases": [
       "Grave Of The Forgotten",
@@ -1009,6 +1029,7 @@
     "description": "BigMushroom → BigMushroom 遗物；FragrantMushroom → FragrantMushroom 遗物。",
     "id": "HUNGRY_FOR_MUSHROOMS",
     "kind": "event",
+    "live_notes": "LIVE run-56：选项 = 大蘑菇(+20MaxHP，T1 抽牌−2) / 芳香蘑菇(−15HP，随机升级 2 张)。选大蘑菇。",
     "name": "蘑菇饥渴",
     "needs_zh": false,
     "options": {
@@ -1049,8 +1070,7 @@
       }
     },
     "play_notes": "",
-    "source": "md:events.md; md:events_zh.md",
-    "live_notes": "LIVE run-56：选项 = 大蘑菇(+20MaxHP，T1 抽牌−2) / 芳香蘑菇(−15HP，随机升级 2 张)。选大蘑菇。"
+    "source": "md:events.md; md:events_zh.md"
   },
   "INFESTED_AUTOMATON": {
     "aliases": [
@@ -1316,6 +1336,7 @@
     "description": "无 modifier 的对局 → 3 个选项 = 2 件随机正面遗物 + 1 件随机诅咒代价遗物。正面池：ArcaneScroll、BoomingConch、FishingRod、GoldenPearl、Kaleidoscope、LeadPaperweight、LostCoffer、MassiveScroll、NeowsTorment、NewLeaf、PhialHolster、PreciseScissors、ScrollBoxes、WingedBoots；另有三组独立 XOR 追加：LavaRock XOR SmallCapsule（诅咒为 LargeCapsule 时跳过）、NutritiousOyster XOR StoneHumidifier、NeowsTalisman XOR Pomander。诅咒池：CursedPearl、HeftyTablet、LargeCapsule、LeafyPoultice、NeowsBones、PrecariousShears、SilkenTress、SilverCrucible。冲突项从正面池剔除：CursedPearl−GoldenPearl、HeftyTablet−ArcaneScroll、LeafyPoultice−NewLeaf、PrecariousShears−PreciseScissors。每件遗物另经 `IsAllowedAtNeow` 过滤。对局存在 modifier 时，Neow 改为依次提供各 modifier 的 `GenerateNeowOption`。",
     "id": "NEOW",
     "kind": "event",
+    "live_notes": "LIVE run-56：选项 = 金色珍珠(150g) / 轰鸣海螺(精英抽2+1能) / 华美发束(失金换 Glam 附魔)。选轰鸣海螺——引擎价值>金币。",
     "name": "尼奥",
     "needs_zh": false,
     "options": {
@@ -1780,8 +1801,7 @@
       }
     },
     "play_notes": "",
-    "source": "md:events.md; md:events_zh.md",
-    "live_notes": "LIVE run-56：选项 = 金色珍珠(150g) / 轰鸣海螺(精英抽2+1能) / 华美发束(失金换 Glam 附魔)。选轰鸣海螺——引擎价值>金币。"
+    "source": "md:events.md; md:events_zh.md"
   },
   "NONUPEIPE": {
     "curated": true,
@@ -1877,8 +1897,8 @@
         "zh_description": "事件 NONUPEIPE 的选项 `LOOMING_FRUIT`——events.md 未解码逐项绑定；以 live 事件屏为准。"
       }
     },
-    "source": "curated:events.md ancient options + census",
-    "play_notes": "run-46 live：选皮草大衣；中血线 Act3 入场的期望值排序记录。"
+    "play_notes": "run-46 live：选皮草大衣；中血线 Act3 入场的期望值排序记录。",
+    "source": "curated:events.md ancient options + census"
   },
   "OROBAS": {
     "aliases": [

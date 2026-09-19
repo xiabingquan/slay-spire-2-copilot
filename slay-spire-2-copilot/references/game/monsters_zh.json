@@ -4376,6 +4376,183 @@
     "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK",
     "type": "Elite"
   },
+  "DECIMILLIPEDE_SEGMENT_MIDDLE": {
+    "acts": [],
+    "aliases": [
+      "DecimillipedeSegmentMiddle",
+      "残杀千足虫",
+      "DECIMILLIPEDE_SEGMENT_MIDDLE"
+    ],
+    "curated": true,
+    "cycle": [
+      "WRITHE_MOVE",
+      "BULK_MOVE",
+      "CONSTRICT_MOVE",
+      "DEAD_MOVE",
+      "REATTACH_MOVE"
+    ],
+    "description": "Act2 Elite segment (trio). Live run-57 A2 trio 40/44/42 HP, each REATTACH:25. REATTACH doctrine live: killing a segment while others alive → DEAD_MOVE state (untargetable) → REATTACH heal intent next; death fatal only when ALL segments dead same window. LIVE run-57 same-window kill: Inferno+ online → Breakthrough self-damage triggered Inferno-9 AoE + Breakthrough-9 = 18 per segment → both living segments died same turn → fight ended. Buffs (Str stacks) persist through death. Do NOT kill single segments outside a same-window plan.",
+    "hp": {
+      "ascension": {
+        "max": 52,
+        "min": 46
+      },
+      "base": 40,
+      "max": 46,
+      "notes": ""
+    },
+    "id": "DECIMILLIPEDE_SEGMENT_MIDDLE",
+    "is_boss": false,
+    "is_elite": true,
+    "kind": "monster",
+    "moves": {
+      "BULK_MOVE": {
+        "aliases": [
+          "Bulk",
+          "BULK"
+        ],
+        "curated": true,
+        "description": "Bulk：单体攻击6（A:7）+自身+2力量。每次 Bulk 该段+2力量——Writhe/Constrict 意图随力量每层膨胀（run-54/57 live：Str2 时 Writhe 7×2 级）。",
+        "effect": "Bulk: Attack + Buff; damage 6 A:7; STRENGTH 2 (self)",
+        "follow_up_id": null,
+        "id": "BULK_MOVE",
+        "intents": [
+          {
+            "base_damage": 6,
+            "base_damage_ascension": {
+              "ascension": 7
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DECIMILLIPEDE_SEGMENT_MIDDLE",
+        "name": "Bulk",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_MIDDLE#BULK",
+        "zh_description": "Bulk：单体攻击6（A:7）+自身+2力量。每次 Bulk 该段+2力量——Writhe/Constrict 意图随力量每层膨胀（run-54/57 live：Str2 时 Writhe 7×2 级）。"
+      },
+      "CONSTRICT_MOVE": {
+        "aliases": [
+          "Constrict",
+          "CONSTRICT"
+        ],
+        "curated": true,
+        "description": "Constrict：单体攻击8（A:9）+ConstrictPower 类减益（玩家回合末按层数吃无挡伤；施加者死亡则移除；可被剩余挡格挡）。",
+        "effect": "Constrict: Attack + Debuff; damage 8 A:9; WEAK 1 (player)",
+        "follow_up_id": null,
+        "id": "CONSTRICT_MOVE",
+        "intents": [
+          {
+            "base_damage": 8,
+            "base_damage_ascension": {
+              "ascension": 9
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DECIMILLIPEDE_SEGMENT_MIDDLE",
+        "name": "Constrict",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_MIDDLE#CONSTRICT",
+        "zh_description": "Constrict：单体攻击8（A:9）+ConstrictPower 类减益（玩家回合末按层数吃无挡伤；施加者死亡则移除；可被剩余挡格挡）。"
+      },
+      "DEAD_MOVE": {
+        "aliases": [
+          "Dead",
+          "DEAD"
+        ],
+        "curated": true,
+        "description": "Dead：REATTACH 待决期间的死态占位——该段不可选中、不行动；增益跨此状态存续。",
+        "effect": "Dead: Unknown",
+        "follow_up_id": null,
+        "id": "DEAD_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Unknown"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DECIMILLIPEDE_SEGMENT_MIDDLE",
+        "name": "Dead",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_MIDDLE#DEAD",
+        "zh_description": "Dead：REATTACH 待决期间的死态占位——该段不可选中、不行动；增益跨此状态存续。"
+      },
+      "REATTACH_MOVE": {
+        "aliases": [
+          "Reattach",
+          "REATTACH"
+        ],
+        "curated": true,
+        "description": "Reattach：治疗意图——死态段回复 Amount（live 25）并在**存在其他 REATTACH 存活段时**回归战斗；仅全部段死亡才致命。",
+        "effect": "Reattach: Heal",
+        "follow_up_id": null,
+        "id": "REATTACH_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Heal"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DECIMILLIPEDE_SEGMENT_MIDDLE",
+        "name": "Reattach",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_MIDDLE#REATTACH",
+        "zh_description": "Reattach：治疗意图——死态段回复 Amount（live 25）并在**存在其他 REATTACH 存活段时**回归战斗；仅全部段死亡才致命。"
+      },
+      "WRITHE_MOVE": {
+        "aliases": [
+          "Writhe",
+          "WRITHE"
+        ],
+        "curated": true,
+        "description": "Writhe：多段攻击5（A:6）×2——随段力量膨胀（run-54/57 live：Str2 时 7×2，Str4 级 9×2）。",
+        "effect": "Writhe: Attack; damage 5x2 A:6",
+        "follow_up_id": null,
+        "id": "WRITHE_MOVE",
+        "intents": [
+          {
+            "base_damage": 5,
+            "base_damage_ascension": {
+              "ascension": 6
+            },
+            "class": "MultiAttackIntent",
+            "hits": 2,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DECIMILLIPEDE_SEGMENT_MIDDLE",
+        "name": "Writhe",
+        "needs_zh": false,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_MIDDLE#WRITHE",
+        "zh_description": "Writhe：多段攻击5（A:6）×2——随段力量膨胀（run-54/57 live：Str2 时 7×2，Str4 级 9×2）。"
+      }
+    },
+    "name": "残杀千足虫",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_MIDDLE",
+    "type": "Elite",
+    "zh_description": "Act2 Elite 段体（三件组）。run-57 A2 live 40/44/42HP，各 REATTACH:25。REATTACH 教条 live：他段存活时杀一段 → DEAD_MOVE 死态（不可选）→ 下回合 REATTACH 治疗意图；仅全部段同窗死亡才致命。run-57 同窗击杀 live：Inferno+ 在场 → Breakthrough 自伤触发 Inferno-9AoE+自身9AoE=每段18 → 两存活段同回合死亡 → 战斗终结。力量叠层跨死亡存续。严禁窗外单杀段。"
+  },
   "DEFECT": {
     "acts": [],
     "curated": true,
@@ -5601,12 +5778,19 @@
     "source": "md:monsters.md:L180"
   },
   "ENTOMANCER": {
+    "aliases": [
+      "Entomancer",
+      "蜂群术士",
+      "ENTOMANCER"
+    ],
     "curated": true,
-    "description": "Act2 精英。145 HP（A:155）。循环 信息素喷吐→蜜蜂→长矛。PERSONAL_HIVE:1——每张命中其的攻击牌按 Hive 层数给攻击者抽牌堆加 1 张眩晕；狱火类能力伤害不触发 Hive 税。信息素喷吐：Hive +1 且力量 +1（蜜蜂 3x7→4x7→5x7）。蜜蜂 多段 3x7（每 hit 随力量成长；弱化按 hit 削减：红面具弱化1 → 显示 2x7）。长矛 单击 18（A:20）。教条：在 Buff 回合前击杀。对局40 live：8/95 入场——T1 零攻击技能线（Unmovable+究极防御+血墙+武装=43 挡）满挡弱化蜜蜂 2x7 并把 Hive 压在 :1；T4 蜜蜂 4x7=28 对上 21 挡手牌上限于 6 HP 死亡，Boss 剩 117/145。对策：入场 HP ≥50 或封锁药类储备。",
+    "description": "Act2 Elite. Live run-57 A2: 145 HP. PERSONAL_HIVE live: each powered-attack card that hits adds Dazed to attacker draw pile scaled by Hive stacks (live: attack plays generated Dazed). Cycle PHEROMONE_SPIT(Hive+1, self +Str)→BEES(multi 3x7 inflates)→SPEAR(18) offset per fight entry. run-57 kill T5: Powdered Demise 9/tick + Uppercut Weak-cut + race; run-41 death and run-49/51 kills hold as archive. HP-entry gate ≥50 or potion reserve.",
     "id": "ENTOMANCER",
     "kind": "monster",
     "name": "蜂群术士",
-    "source": "; run-40 live fold 2026-09-18"
+    "needs_zh": false,
+    "source": "; run-40 live fold 2026-09-18",
+    "zh_description": "Act2 Elite。run-57 A2 live：145HP。PERSONAL_HIVE live：每张命中的攻击牌按 Hive 层数向攻击者抽堆注入 Dazed（live：攻击牌打出即生成 Dazed）。周期 PHEROMONE_SPIT(Hive+1+自身力量)→BEES(多段3×7随力量膨胀)→SPEAR(18)，入场相位各异。run-57 T5 击杀：灭世粉9/tick+Uppercut 弱化削减+竞速；run-41 死亡与 run-49/51 击杀档案并存。入场 HP 门线 ≥50 或药水储备。"
   },
   "EXOSKELETON": {
     "acts": [
@@ -8164,7 +8348,9 @@
   "INFESTED_PRISM": {
     "acts": [],
     "aliases": [
-      "Infested Prism"
+      "InfestedPrism",
+      "感染棱柱",
+      "INFESTED_PRISM"
     ],
     "curated": true,
     "cycle": [
@@ -8173,7 +8359,7 @@
       "WHIRLWIND_MOVE",
       "PULSATE_MOVE"
     ],
-    "description": "感染棱柱（Act2 精英）：基础 HP 161（A 171+）；run-41 A1 live 161/161。周期 突刺→辐射→旋风→脉动。VITAL_SPARK 反制类：玩家技能牌开局被 Tainted(N) — 打出污染牌使本回合受到的攻击伤害 +N（敌方回合结束移除）；脉动令棱柱 Spark +2（升级计时器）。纪律：关键回合只打攻击与能力牌；自伤技能（Brand）仍属技能类照样计税。须在第二次脉动前击杀。",
+    "description": "Act2 Elite. Live run-57 A2: 161 HP, VITAL_SPARK:2 live — zero-skill discipline (attacks AND powers only; Defend/Shrug/SW/Armaments all tax). Cycle JAB(15)→RADIATE(11+self block)→WHIRLWIND(multi 5x3)→PULSATE. LIVE run-57 T3 kill: T1 Bash+Bludgeon+ (70-class vuln window) + strikes = 93 dmg; Uppercut Weak-cut Whirlwind 5x3→3x3 live; T3 kill chain. Gambling Chip mulligan dumped skill cards pre-combat.",
     "hp": {
       "ascension": {
         "max": null,
@@ -8297,10 +8483,12 @@
         "source": "codex-api:/monsters/INFESTED_PRISM#WHIRLWIND"
       }
     },
-    "name": "Infested Prism",
+    "name": "感染棱柱",
+    "needs_zh": false,
     "play_notes": "run-41 死亡剩 83/161：34/80 入场（<50 闸门），零技能线执行到位但技能类挡牌脊线自我加税，旋风 5×3→9×3=27；挡墙后剩 1 HP，次回合开始的 Inferno tick 收掉。run-36 以 血墙/放血→Inferno 同帧 T3 击杀；两局一致结论：本战是与 Spark 升级赛跑的入场 HP 竞速。",
     "source": "codex-api:/monsters/INFESTED_PRISM",
-    "type": "Elite"
+    "type": "Elite",
+    "zh_description": "Act2 Elite。run-57 A2 live：161HP，VITAL_SPARK:2 live——零技能纪律（仅攻击+能力牌；Defend/Shrug/SW/Armaments 全计税）。周期 JAB(15)→RADIATE(11+自身挡)→WHIRLWIND(多段5×3)→PULSATE。run-57 T3 击杀 live：T1 Bash+Bludgeon+（70级易伤窗）+strikes=93伤；Uppercut 弱化 live 砍 Whirlwind 5×3→3×3；T3 击杀链收头。开战前 Chip 换牌弃技能类牌。"
   },
   "IRONCLAD": {
     "acts": [],
@@ -8790,6 +8978,7 @@
     "id": "KaiserCrab",
     "is_boss": false,
     "kind": "monster",
+    "live_notes": "LIVE run-56 A1：Act2 Boss。碾碎爪 209 + 火箭 199。T9 击杀（先火箭后本体）。玩家侧 SURROUNDED_POWER；双体 CRAB_RAGE_POWER。战终 HP 15/96。",
     "moves": {
       "CLAW_MOVE": {
         "aliases": [
@@ -8842,8 +9031,7 @@
       }
     ],
     "play_notes": "",
-    "source": "md:monsters.md:L67",
-    "live_notes": "LIVE run-56 A1：Act2 Boss。碾碎爪 209 + 火箭 199。T9 击杀（先火箭后本体）。玩家侧 SURROUNDED_POWER；双体 CRAB_RAGE_POWER。战终 HP 15/96。"
+    "source": "md:monsters.md:L67"
   },
   "KinFollower": {
     "acts": [],
@@ -10268,6 +10456,7 @@
     "id": "LivingShield",
     "is_boss": false,
     "kind": "monster",
+    "live_notes": "LIVE run-56：Act3 走廊。RAMPART_POWER 25——每回合初给高塔炮手喂 25 挡。优先击杀活体盾切断挡引擎。",
     "moves": {},
     "name": "活体盾",
     "needs_zh": false,
@@ -10280,8 +10469,7 @@
       }
     ],
     "play_notes": "",
-    "source": "md:monsters.md:L98",
-    "live_notes": "LIVE run-56：Act3 走廊。RAMPART_POWER 25——每回合初给高塔炮手喂 25 挡。优先击杀活体盾切断挡引擎。"
+    "source": "md:monsters.md:L98"
   },
   "LostThing": {
     "acts": [],
@@ -10650,6 +10838,21 @@
     "play_notes": "",
     "source": "codex-api:/monsters/MECHA_KNIGHT",
     "type": "Elite"
+  },
+  "MITE": {
+    "aliases": [
+      "AberrantMite",
+      "异螨",
+      "MITE",
+      "MYTE"
+    ],
+    "curated": true,
+    "description": "Act2 corridor. Live run-57 A2: pairs spawn 61/65 HP class. TOXIC_MOVE = status card injection: Toxic card costs 1, Exhaust on play, deals 5 unpowered damage if still in hand at end of turn (live: two Toxics left unplayed = 10 EoT tax through consumed block). SUCK_MOVE = attack 4 + self +2 Strength (Str-growth timer class). BITE 7-class. Doctrine: play/dump Toxics same turn or count EVERY Toxic in hand toward the EoT tax budget.",
+    "id": "MITE",
+    "kind": "monster",
+    "name": "异螨",
+    "needs_zh": false,
+    "zh_description": "Act2 走廊。run-57 A2 live：成对刷新 61/65HP 级。TOXIC_MOVE=状态牌注入：Toxic 卡 1费、打出即消耗、留手至回合末吃5点无挡伤（live：两张留手=挡被吃光后10伤穿透）。SUCK_MOVE=攻击4+自身+2力量（力量成长计时器类）。BITE 7级。教条：Toxic 当回合打出/消耗，或税账数清手中每一张。"
   },
   "MagiKnight": {
     "acts": [],
@@ -11867,10 +12070,9 @@
       "Act1"
     ],
     "aliases": [
+      "PhantasmalGardener",
       "花园幽灵鳗",
-      "花园幽灵鳗四件组",
-      "TerrorEel",
-      "EelQuartet"
+      "PHANTASMAL_GARDENER"
     ],
     "curated": true,
     "cycle": [
@@ -11879,7 +12081,7 @@
       "BITE_MOVE",
       "LASH_MOVE"
     ],
-    "description": "Act1 精英四件套（4 只同 model_id PHANTASMAL_GARDENER）。live run-37：全员 SKITTISH_POWER:6——每回合首次命中该生物的攻击牌结算后 +6 挡；多段单指令规则：同一攻击指令内全部命中先于 Skittish 挡结算（Dismantle/FightMe 双击穿透）。四鳗同循环不同相位：FLAIL→ENLARGE→BITE→LASH。ENLARGE=Buff +2 力量；BITE=单击（live 5→7[base5]）；LASH=单击 7 档（live 7→9[base7]）；FLAIL=多段 1×3（live 随力量升至 3×3）。 run-53 live 2026-09-19（精英#2 (13,6)）：A1 意图——FLAIL 多段 1x3 基础（鳗带 Str2 后 3x3）、BITE 基础5（Str2 后 7[base5]）、LASH 基础7（Str2 后 9[base7]）、ENLARGE 自身+2力量免费窗。Skittish:6 在每条鳗首张攻击牌后触发（7伤 Strike→鳗+6挡）。run-37 击杀顺序教条成立；新增清场线：攻击药水 Whirlwind X=4 = 32 AoE 单指令清四鳗于玩家 9HP 处。",
+    "description": "Act2 Elite quartet. Live run-57 A2 trio-class spawn: 30/27/29/31 HP each, SKITTISH:6 live — first attack card hitting a gardener per turn grants it 6 Block AFTER that attack resolves (Breakthrough AoE: 9 each then +6 block per unit live). Cycle FLAIL(multi 1x3)→ENLARGE(+2 self Str, free window)→BITE→LASH offset per unit. Doctrine (run-37/53/57): kill/damage attack-intent units on their attack turns; dump on ENLARGE windows; AoE pierces Skittish per unit (each unit still gains its own 6 after the hit).",
     "hp": {
       "base": "26-31 each",
       "notes": "live run-37 quartet 27/26/29/30"
@@ -11980,7 +12182,8 @@
     "needs_zh": false,
     "play_notes": "击杀顺序教条（run-37 T8 清场）：从 move_graph.current_move_id 读各鳗相位；攻击意图回合集火攻击者；ENLARGE（buff）窗倾泻伤害；多段指令穿透 Skittish（易伤下 Dismantle / FightMe）。run-21 死于此处的路线几何（无前置休息）——run-37 休息后 61 血 + 药水储备进场，T8 清场。",
     "source": "run-37 live quartet decode + codex-api /monsters/phantasmal_gardener",
-    "type": "Elite"
+    "type": "Elite",
+    "zh_description": "Act2 Elite 四件组。run-57 A2 live：30/27/29/31HP 各体，SKITTISH:6 live——每回合首张命中该鳗的攻击牌结算完后其+6挡（Breakthrough AoE：各9伤后各+6挡 live）。周期 FLAIL(多段1×3)→ENLARGE(自身+2力量，自由窗)→BITE→LASH 错相位。教条（run-37/53/57）：攻击意图体在其攻击回合击杀/压血；ENLARGE 窗倾泻；AoE 按体各自触发 Skittish（每体命中后仍各得6挡）。"
   },
   "PHROG_PARASITE": {
     "acts": [],
@@ -12783,6 +12986,7 @@
     "id": "Queen",
     "is_boss": true,
     "kind": "monster",
+    "live_notes": "LIVE run-56 A1：Act3 Boss 400HP。火炬头 T6 后本体 T9 击杀。run-44 威胁源优先教条确认。",
     "moves": {
       "BUFF_MOVE": {
         "aliases": [
@@ -12996,8 +13200,7 @@
       }
     ],
     "play_notes": "",
-    "source": "md:monsters.md:L80",
-    "live_notes": "LIVE run-56 A1：Act3 Boss 400HP。火炬头 T6 后本体 T9 击杀。run-44 威胁源优先教条确认。"
+    "source": "md:monsters.md:L80"
   },
   "REGENT": {
     "acts": [],
@@ -14130,6 +14333,7 @@
           "CONSTRICT"
         ],
         "curated": true,
+        "description": "束缚：减益；对玩家施加 CONSTRICT 3（每回合受到伤害递增）",
         "effect": "Constrict: Debuff; CONSTRICT 3 (player)",
         "follow_up_id": null,
         "id": "CONSTRICT_MOVE",
@@ -14146,8 +14350,7 @@
         "name": "Constrict",
         "needs_zh": true,
         "play_notes": "",
-        "source": "codex-api:/monsters/SLITHERING_STRANGLER#CONSTRICT",
-        "description": "束缚：减益；对玩家施加 CONSTRICT 3（每回合受到伤害递增）"
+        "source": "codex-api:/monsters/SLITHERING_STRANGLER#CONSTRICT"
       },
       "LASH_MOVE": {
         "aliases": [
@@ -14155,6 +14358,7 @@
           "LASH"
         ],
         "curated": true,
+        "description": "鞭挞：攻击；伤害 12（进阶1:13）",
         "effect": "Lash: Attack; damage 12 A:13",
         "follow_up_id": null,
         "id": "LASH_MOVE",
@@ -14174,8 +14378,7 @@
         "name": "Lash",
         "needs_zh": true,
         "play_notes": "",
-        "source": "codex-api:/monsters/SLITHERING_STRANGLER#LASH",
-        "description": "鞭挞：攻击；伤害 12（进阶1:13）"
+        "source": "codex-api:/monsters/SLITHERING_STRANGLER#LASH"
       },
       "THWACK_MOVE": {
         "aliases": [
@@ -14183,6 +14386,7 @@
           "THWACK"
         ],
         "curated": true,
+        "description": "重击：攻击+防御；伤害 7（进阶1:8）+ 挡 5",
         "effect": "Thwack: Attack + Defend; damage 7 A:8; block 5",
         "follow_up_id": null,
         "id": "THWACK_MOVE",
@@ -14202,8 +14406,7 @@
         "name": "Thwack",
         "needs_zh": true,
         "play_notes": "",
-        "source": "codex-api:/monsters/SLITHERING_STRANGLER#THWACK",
-        "description": "重击：攻击+防御；伤害 7（进阶1:8）+ 挡 5"
+        "source": "codex-api:/monsters/SLITHERING_STRANGLER#THWACK"
       }
     },
     "name": "Slithering Strangler",
@@ -14512,6 +14715,7 @@
     "id": "ScrollOfBiting",
     "is_boss": false,
     "kind": "monster",
+    "live_notes": "LIVE run-56：Act3 走廊。PAPER_CUTS_POWER 2（穿挡 HP 税）。CHOMP/CHEW/MORE_TEETH 循环。三体战。",
     "moves": {
       "BUFF_MOVE": {
         "aliases": [
@@ -14676,8 +14880,7 @@
       }
     ],
     "play_notes": "",
-    "source": "md:monsters.md:L104",
-    "live_notes": "LIVE run-56：Act3 走廊。PAPER_CUTS_POWER 2（穿挡 HP 税）。CHOMP/CHEW/MORE_TEETH 循环。三体战。"
+    "source": "md:monsters.md:L104"
   },
   "SewerClam": {
     "acts": [],
@@ -16619,7 +16822,9 @@
   "THE_INSATIABLE": {
     "acts": [],
     "aliases": [
-      "The Insatiable"
+      "TheInsatiable",
+      "无厌沙虫",
+      "THE_INSATIABLE"
     ],
     "curated": true,
     "cycle": [
@@ -16629,7 +16834,7 @@
       "LUNGING_BITE_MOVE",
       "SALIVATE_MOVE"
     ],
-    "description": "无厌沙虫 Act2 Boss（run-44 T7 击杀，321hp）：**沙坑吞噬计时器** — SANDPIT counter 每个敌方回合 -1，归零时无视 HP/挡直接吞噬；FranticEscapes（恐慌逃生）是 **+1 延时卡**，在 counter=1 时打出（run-16/20/22/35 档案错误「绝不打出 FE」已作废）。教条：逐回合读 POWER:amount；FE 是救命牌不是死牌；吞没前竞速击杀。",
+    "description": "Act2 Boss. 321 HP live A2 run-57. SANDPIT kill-timer: starts 4, decrements at start of Enemy side turn; at 0 player is devoured instantly regardless of HP/Block. Injects 6 FranticEscape cards at fight start; playing one +1 Sandpit and permanently +1 that copy cost (live: FE copies showed cost 2 after use). LIVE run-57 A2: cycle order observed LIQUIFY_GROUND(buff+6 status)→THRASH(8x2)→LUNGING_BITE(28)→SALIVATE(self +2 Str)→THRASH_2(8x2); Uppercut Weak cut displayed Thrash 10x2→7x2 per-hit. Three FE extensions (all at counter 2) held Sandpit through T6 — death was damage-race (boss 120/321 at T6) not devour. Doctrine: race damage first; FE at counter 1-2; block never stops devour.",
     "hp": {
       "ascension": {
         "max": null,
@@ -16779,11 +16984,12 @@
         "source": "codex-api:/monsters/THE_INSATIABLE#THRASH_MOVE_2 + run-44 live"
       }
     },
-    "name": "The Insatiable",
+    "name": "无厌沙虫",
     "needs_zh": false,
     "play_notes": "",
     "source": "codex-api:/monsters/THE_INSATIABLE",
-    "type": "Boss"
+    "type": "Boss",
+    "zh_description": "Act2 Boss。run-57 A2 live 321HP。SANDPIT 吞噬计时器：起点4，敌方回合初递减，归零=无视HP/挡直接吞噬。开局注入6张 FranticEscape，打出+1计数且该副本永久+1费（live：用后 FE 显示2费）。run-57 A2 live 周期：LIQUIFY_GROUND(buff+6状态牌)→THRASH(8×2)→LUNGING_BITE(28)→SALIVATE(自身+2力量)→THRASH_2(8×2)；Uppercut 弱化 live 砍 Thrash 10×2→7×2 每击。三次 FE 延时（均在 counter 2 打出）把吞噬钟控到 T6 之后——死因是竞速赤字（T6 时 Boss 剩 120/321）而非吞噬。教条：先竞速；FE 在 counter 1-2 打；挡挡不住吞噬。"
   },
   "THE_LOST": {
     "acts": [],
@@ -18469,6 +18675,7 @@
     "id": "TorchHeadAggregate",
     "is_boss": false,
     "kind": "monster",
+    "live_notes": "LIVE run-56 A1：Act3 Boss 爪牙 199HP。MINION_POWER + 力量爬层。Boss 战 T6 击杀。",
     "moves": {},
     "name": "火炬头聚合体",
     "needs_zh": false,
@@ -18481,8 +18688,7 @@
       }
     ],
     "play_notes": "",
-    "source": "md:monsters.md:L95",
-    "live_notes": "LIVE run-56 A1：Act3 Boss 爪牙 199HP。MINION_POWER + 力量爬层。Boss 战 T6 击杀。"
+    "source": "md:monsters.md:L95"
   },
   "ToughEgg": {
     "acts": [],
@@ -18615,13 +18821,13 @@
     "id": "TowerGunner",
     "is_boss": false,
     "kind": "monster",
+    "live_notes": "LIVE run-56：Act3 走廊。开局 25 挡；UNLOAD 多段攻击。活体盾存活时 RAMPART 每回合刷新挡。",
     "moves": {},
     "name": "高塔炮手",
     "needs_zh": false,
     "passives": [],
     "play_notes": "",
-    "source": "md:monsters.md:L99",
-    "live_notes": "LIVE run-56：Act3 走廊。开局 25 挡；UNLOAD 多段攻击。活体盾存活时 RAMPART 每回合刷新挡。"
+    "source": "md:monsters.md:L99"
   },
   "TrackerRubyRaider": {
     "acts": [],

@@ -4517,6 +4517,178 @@
     "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_BACK",
     "type": "Elite"
   },
+  "DECIMILLIPEDE_SEGMENT_MIDDLE": {
+    "acts": [],
+    "aliases": [
+      "DecimillipedeSegmentMiddle",
+      "残杀千足虫",
+      "DECIMILLIPEDE_SEGMENT_MIDDLE"
+    ],
+    "curated": true,
+    "cycle": [
+      "WRITHE_MOVE",
+      "BULK_MOVE",
+      "CONSTRICT_MOVE",
+      "DEAD_MOVE",
+      "REATTACH_MOVE"
+    ],
+    "description": "Act2 Elite segment (trio). Live run-57 A2 trio 40/44/42 HP, each REATTACH:25. REATTACH doctrine live: killing a segment while others alive → DEAD_MOVE state (untargetable) → REATTACH heal intent next; death fatal only when ALL segments dead same window. LIVE run-57 same-window kill: Inferno+ online → Breakthrough self-damage triggered Inferno-9 AoE + Breakthrough-9 = 18 per segment → both living segments died same turn → fight ended. Buffs (Str stacks) persist through death. Do NOT kill single segments outside a same-window plan.",
+    "hp": {
+      "ascension": {
+        "max": 52,
+        "min": 46
+      },
+      "base": 40,
+      "max": 46,
+      "notes": ""
+    },
+    "id": "DECIMILLIPEDE_SEGMENT_MIDDLE",
+    "is_boss": false,
+    "is_elite": true,
+    "kind": "monster",
+    "moves": {
+      "BULK_MOVE": {
+        "aliases": [
+          "Bulk",
+          "BULK"
+        ],
+        "curated": true,
+        "description": "Bulk: single attack 6 (A:7) + self +2 Strength. Each Bulk stacks +2 Str on the segment — Writhe/Constrict intents inflate per stack (live run-54/57: Writhe 7x2-class at Str2).",
+        "effect": "Bulk: Attack + Buff; damage 6 A:7; STRENGTH 2 (self)",
+        "follow_up_id": null,
+        "id": "BULK_MOVE",
+        "intents": [
+          {
+            "base_damage": 6,
+            "base_damage_ascension": {
+              "ascension": 7
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Buff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DECIMILLIPEDE_SEGMENT_MIDDLE",
+        "name": "Bulk",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_MIDDLE#BULK"
+      },
+      "CONSTRICT_MOVE": {
+        "aliases": [
+          "Constrict",
+          "CONSTRICT"
+        ],
+        "curated": true,
+        "description": "Constrict: single attack 8 (A:9) + ConstrictPower-class debuff (end-of-player-turn unblocked damage per stack; removed when applier dies; blockable by remaining block).",
+        "effect": "Constrict: Attack + Debuff; damage 8 A:9; WEAK 1 (player)",
+        "follow_up_id": null,
+        "id": "CONSTRICT_MOVE",
+        "intents": [
+          {
+            "base_damage": 8,
+            "base_damage_ascension": {
+              "ascension": 9
+            },
+            "class": "SingleAttackIntent",
+            "hits": null,
+            "type": "Attack + Debuff"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DECIMILLIPEDE_SEGMENT_MIDDLE",
+        "name": "Constrict",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_MIDDLE#CONSTRICT"
+      },
+      "DEAD_MOVE": {
+        "aliases": [
+          "Dead",
+          "DEAD"
+        ],
+        "curated": true,
+        "description": "Dead: dead-state placeholder while REATTACH is pending — segment untargetable, does not act; buffs persist through this state.",
+        "effect": "Dead: Unknown",
+        "follow_up_id": null,
+        "id": "DEAD_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Unknown"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DECIMILLIPEDE_SEGMENT_MIDDLE",
+        "name": "Dead",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_MIDDLE#DEAD"
+      },
+      "REATTACH_MOVE": {
+        "aliases": [
+          "Reattach",
+          "REATTACH"
+        ],
+        "curated": true,
+        "description": "Reattach: heal intent — dead-state segment heals Amount (25 live) and returns to combat IF any other Reattach segment is still alive; death is fatal only when all segments are dead.",
+        "effect": "Reattach: Heal",
+        "follow_up_id": null,
+        "id": "REATTACH_MOVE",
+        "intents": [
+          {
+            "base_damage": null,
+            "base_damage_ascension": null,
+            "hits": null,
+            "type": "Heal"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DECIMILLIPEDE_SEGMENT_MIDDLE",
+        "name": "Reattach",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_MIDDLE#REATTACH"
+      },
+      "WRITHE_MOVE": {
+        "aliases": [
+          "Writhe",
+          "WRITHE"
+        ],
+        "curated": true,
+        "description": "Writhe: multi attack 5 (A:6) x2 — inflates with segment Strength (live run-54/57: 7x2 at Str2, 9x2-class at Str4).",
+        "effect": "Writhe: Attack; damage 5x2 A:6",
+        "follow_up_id": null,
+        "id": "WRITHE_MOVE",
+        "intents": [
+          {
+            "base_damage": 5,
+            "base_damage_ascension": {
+              "ascension": 6
+            },
+            "class": "MultiAttackIntent",
+            "hits": 2,
+            "type": "Attack"
+          }
+        ],
+        "kind": "move",
+        "monster_id": "DECIMILLIPEDE_SEGMENT_MIDDLE",
+        "name": "Writhe",
+        "needs_zh": true,
+        "play_notes": "",
+        "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_MIDDLE#WRITHE"
+      }
+    },
+    "name": "Decimillipede Segment (Middle)",
+    "needs_zh": false,
+    "play_notes": "",
+    "source": "codex-api:/monsters/DECIMILLIPEDE_SEGMENT_MIDDLE",
+    "type": "Elite",
+    "zh_description": "Act2 Elite 段体（三件组）。run-57 A2 live 40/44/42HP，各 REATTACH:25。REATTACH 教条 live：他段存活时杀一段 → DEAD_MOVE 死态（不可选）→ 下回合 REATTACH 治疗意图；仅全部段同窗死亡才致命。run-57 同窗击杀 live：Inferno+ 在场 → Breakthrough 自伤触发 Inferno-9AoE+自身9AoE=每段18 → 两存活段同回合死亡 → 战斗终结。力量叠层跨死亡存续。严禁窗外单杀段。"
+  },
   "DEFECT": {
     "acts": [],
     "aliases": [
@@ -5767,12 +5939,19 @@
     "zh_name": "精英"
   },
   "ENTOMANCER": {
+    "aliases": [
+      "Entomancer",
+      "蜂群术士",
+      "ENTOMANCER"
+    ],
     "curated": true,
-    "description": "Act2 Elite. 145 HP (A:155). Cycle PHEROMONE_SPIT→BEES→SPEAR. PERSONAL_HIVE:1 — each powered-attack CARD that hits adds 1 Dazed per Hive stack to the attacker draw pile; Inferno-class POWER damage does NOT tax Hive. PHEROMONE_SPIT: Hive +1 AND +1 Strength (bees 3x7→4x7→5x7). BEES multi 3x7 (per-hit scales with Str; Weak cuts PER-HIT: Red Mask Weak1 → 2x7 displayed). SPEAR single 18 (A:20). Kill-before-buff-turn doctrine. LIVE run-40: entered 8/95 — T1 zero-attack skill line (Unmovable+UltimateDefend+BloodWall+Armaments=43 block) full-blocked Weak-cut bees 2x7 and held Hive at :1; T4 bees 4x7=28 vs 21-block hand ceiling at 6 HP = death, boss left 117/145. Counter-class: HP-economy entry gate ≥50 HP or BlockPotion-class reserve.",
+    "description": "Act2 Elite. Live run-57 A2: 145 HP. PERSONAL_HIVE live: each powered-attack card that hits adds Dazed to attacker draw pile scaled by Hive stacks (live: attack plays generated Dazed). Cycle PHEROMONE_SPIT(Hive+1, self +Str)→BEES(multi 3x7 inflates)→SPEAR(18) offset per fight entry. run-57 kill T5: Powdered Demise 9/tick + Uppercut Weak-cut + race; run-41 death and run-49/51 kills hold as archive. HP-entry gate ≥50 or potion reserve.",
     "id": "ENTOMANCER",
     "kind": "monster",
     "name": "Entomancer",
-    "source": "; run-40 live fold 2026-09-18"
+    "needs_zh": false,
+    "source": "; run-40 live fold 2026-09-18",
+    "zh_description": "Act2 Elite。run-57 A2 live：145HP。PERSONAL_HIVE live：每张命中的攻击牌按 Hive 层数向攻击者抽堆注入 Dazed（live：攻击牌打出即生成 Dazed）。周期 PHEROMONE_SPIT(Hive+1+自身力量)→BEES(多段3×7随力量膨胀)→SPEAR(18)，入场相位各异。run-57 T5 击杀：灭世粉9/tick+Uppercut 弱化削减+竞速；run-41 死亡与 run-49/51 击杀档案并存。入场 HP 门线 ≥50 或药水储备。"
   },
   "EXOSKELETON": {
     "acts": [
@@ -8434,7 +8613,9 @@
   "INFESTED_PRISM": {
     "acts": [],
     "aliases": [
-      "Infested Prism"
+      "InfestedPrism",
+      "感染棱柱",
+      "INFESTED_PRISM"
     ],
     "curated": true,
     "cycle": [
@@ -8443,7 +8624,7 @@
       "WHIRLWIND_MOVE",
       "PULSATE_MOVE"
     ],
-    "description": "Infested Prism (Act2 Elite): HP 161 base (A 171+); run-41 live 161/161 at A1. Cycle JAB→RADIATE→WHIRLWIND→PULSATE. VITAL_SPARK counter-class: player Skill cards are Tainted(N) at combat start — playing a Tainted card adds +N to incoming attack damage for the turn (removed end of enemy side); Pulsate raises the prism's Spark +2 (escalation timer). Discipline: attacks and Power cards only on key turns; self-damage skills (Brand) are still skill-class and tax. Kill before the second Pulsate.",
+    "description": "Act2 Elite. Live run-57 A2: 161 HP, VITAL_SPARK:2 live — zero-skill discipline (attacks AND powers only; Defend/Shrug/SW/Armaments all tax). Cycle JAB(15)→RADIATE(11+self block)→WHIRLWIND(multi 5x3)→PULSATE. LIVE run-57 T3 kill: T1 Bash+Bludgeon+ (70-class vuln window) + strikes = 93 dmg; Uppercut Weak-cut Whirlwind 5x3→3x3 live; T3 kill chain. Gambling Chip mulligan dumped skill cards pre-combat.",
     "hp": {
       "ascension": {
         "max": null,
@@ -8568,9 +8749,11 @@
       }
     },
     "name": "Infested Prism",
+    "needs_zh": false,
     "play_notes": "run-41 death at 83/161: entered 34/80 (<50 gate), zero-skill line held but skill-class block spine self-taxed Whirlwind 5x3→9x3=27; 1 HP after the block wall, Inferno turn-start tick killed at next turn start. Run-36 killed it T3 with BloodWall/Hemo→Inferno same-frame; both runs agree the fight is an HP-entry race against Spark escalation.",
     "source": "codex-api:/monsters/INFESTED_PRISM",
-    "type": "Elite"
+    "type": "Elite",
+    "zh_description": "Act2 Elite。run-57 A2 live：161HP，VITAL_SPARK:2 live——零技能纪律（仅攻击+能力牌；Defend/Shrug/SW/Armaments 全计税）。周期 JAB(15)→RADIATE(11+自身挡)→WHIRLWIND(多段5×3)→PULSATE。run-57 T3 击杀 live：T1 Bash+Bludgeon+（70级易伤窗）+strikes=93伤；Uppercut 弱化 live 砍 Whirlwind 5×3→3×3；T3 击杀链收头。开战前 Chip 换牌弃技能类牌。"
   },
   "IRONCLAD": {
     "acts": [],
@@ -9073,6 +9256,7 @@
     "id": "KaiserCrab",
     "is_boss": false,
     "kind": "monster",
+    "live_notes": "LIVE run-56 A1: Act2 Boss. Crusher 209 + Rocket 199. Killed T9 (rocket first, then crusher). SURROUNDED_POWER on player; CRAB_RAGE_POWER on both bodies. HP 15/96 at end — self-harm tax nearly fatal.",
     "moves": {
       "CLAW_MOVE": {
         "aliases": [
@@ -9127,8 +9311,7 @@
     "play_notes": "",
     "source": "md:monsters.md:L67",
     "zh_description": "槽位 crusher + rocket，无本体目标。遭遇生成 Crusher（crusher 槽）+ Rocket（rocket 槽）。玩家侧被动 SurroundedPower；每只爪各带 BackAttackLeftPower/BackAttackRightPower（朝向标记）+ CrabRagePower。",
-    "zh_name": "皇蟹",
-    "live_notes": "LIVE run-56 A1: Act2 Boss. Crusher 209 + Rocket 199. Killed T9 (rocket first, then crusher). SURROUNDED_POWER on player; CRAB_RAGE_POWER on both bodies. HP 15/96 at end — self-harm tax nearly fatal."
+    "zh_name": "皇蟹"
   },
   "KinFollower": {
     "acts": [],
@@ -10634,6 +10817,7 @@
     "id": "LivingShield",
     "is_boss": false,
     "kind": "monster",
+    "live_notes": "LIVE run-56: Act3 hallway. RAMPART_POWER 25 — feeds Block to TowerGunner each player-turn start. Kill LivingShield first to cut the block engine.",
     "moves": {},
     "name": "LivingShield",
     "needs_zh": false,
@@ -10648,8 +10832,7 @@
     "play_notes": "",
     "source": "md:monsters.md:L98",
     "zh_description": "被动 RAMPART_POWER 25——玩家阵营回合开始时，每名存活的 TurretOperator 系盟友（如高塔炮手）获得 25 格挡。必须先杀它，否则炮手格挡每回合回满。",
-    "zh_name": "活体盾",
-    "live_notes": "LIVE run-56: Act3 hallway. RAMPART_POWER 25 — feeds Block to TowerGunner each player-turn start. Kill LivingShield first to cut the block engine."
+    "zh_name": "活体盾"
   },
   "LostThing": {
     "acts": [],
@@ -11032,6 +11215,21 @@
     "play_notes": "",
     "source": "codex-api:/monsters/MECHA_KNIGHT",
     "type": "Elite"
+  },
+  "MITE": {
+    "aliases": [
+      "AberrantMite",
+      "异螨",
+      "MITE",
+      "MYTE"
+    ],
+    "curated": true,
+    "description": "Act2 corridor. Live run-57 A2: pairs spawn 61/65 HP class. TOXIC_MOVE = status card injection: Toxic card costs 1, Exhaust on play, deals 5 unpowered damage if still in hand at end of turn (live: two Toxics left unplayed = 10 EoT tax through consumed block). SUCK_MOVE = attack 4 + self +2 Strength (Str-growth timer class). BITE 7-class. Doctrine: play/dump Toxics same turn or count EVERY Toxic in hand toward the EoT tax budget.",
+    "id": "MITE",
+    "kind": "monster",
+    "name": "Aberrant Mite",
+    "needs_zh": false,
+    "zh_description": "Act2 走廊。run-57 A2 live：成对刷新 61/65HP 级。TOXIC_MOVE=状态牌注入：Toxic 卡 1费、打出即消耗、留手至回合末吃5点无挡伤（live：两张留手=挡被吃光后10伤穿透）。SUCK_MOVE=攻击4+自身+2力量（力量成长计时器类）。BITE 7级。教条：Toxic 当回合打出/消耗，或税账数清手中每一张。"
   },
   "MagiKnight": {
     "acts": [],
@@ -12309,10 +12507,9 @@
       "Act1"
     ],
     "aliases": [
+      "PhantasmalGardener",
       "花园幽灵鳗",
-      "花园幽灵鳗四件组",
-      "TerrorEel",
-      "EelQuartet"
+      "PHANTASMAL_GARDENER"
     ],
     "curated": true,
     "cycle": [
@@ -12321,7 +12518,7 @@
       "BITE_MOVE",
       "LASH_MOVE"
     ],
-    "description": "Act1 elite quartet (4 spawns, shared model_id PHANTASMAL_GARDENER). Live run-37: each spawns with SKITTISH_POWER:6 — every turn, the first attack card that hits this creature grants it 6 block AFTER that attack resolves; multi-hit single-attack-command rule: ALL hits in one command resolve BEFORE the Skittish block (Dismantle/FightMe double-hits pierce). Each eel runs the SAME 4-move cycle at a different phase: FLAIL_MOVE→ENLARGE_MOVE→BITE_MOVE→LASH_MOVE rotating. ENLARGE = Buff +2 Strength (self); BITE = single attack (live 5→7[base5] as Str climbs; codex table 13 A:15 — live wins); LASH = single 7-class (live 7→9[base7]); FLAIL = multi 1x3 (live 1x3→3x3 as Str climbs, base 1). run-53 live 2026-09-19 (elite#2, (13,6)): A1 intents — FLAIL multi 1x3 base (3x3 once eel holds Str2), BITE base5 (7[base5] with Str2), LASH base7 (9[base7] with Str2), ENLARGE +2 self Str free window. Skittish:6 fired after first attack card per eel (7-dmg Strike → eel +6 block). Run-37 kill-order doctrine held; NEW wipe line: Attack-Potion Whirlwind X=4 = 32 AoE cleared all four in one command at 9 player HP.",
+    "description": "Act2 Elite quartet. Live run-57 A2 trio-class spawn: 30/27/29/31 HP each, SKITTISH:6 live — first attack card hitting a gardener per turn grants it 6 Block AFTER that attack resolves (Breakthrough AoE: 9 each then +6 block per unit live). Cycle FLAIL(multi 1x3)→ENLARGE(+2 self Str, free window)→BITE→LASH offset per unit. Doctrine (run-37/53/57): kill/damage attack-intent units on their attack turns; dump on ENLARGE windows; AoE pierces Skittish per unit (each unit still gains its own 6 after the hit).",
     "hp": {
       "base": "26-31 each",
       "notes": "live run-37 quartet 27/26/29/30"
@@ -12422,7 +12619,8 @@
     "needs_zh": false,
     "play_notes": "Kill-order doctrine (run-37 T8 clear): read each eel's phase from move_graph.current_move_id; kill/damage the attacking-intent ones on their attack turns; dump damage on ENLARGE (buff) windows; Skittish-pierce with multi-hit commands (Dismantle under Vuln / FightMe). run-21 died here to route geometry (no pre-rest) — run-37 entered at 61 HP post-rest with potion reserve and cleared T8.",
     "source": "run-37 live quartet decode + codex-api /monsters/phantasmal_gardener",
-    "type": "Elite"
+    "type": "Elite",
+    "zh_description": "Act2 Elite 四件组。run-57 A2 live：30/27/29/31HP 各体，SKITTISH:6 live——每回合首张命中该鳗的攻击牌结算完后其+6挡（Breakthrough AoE：各9伤后各+6挡 live）。周期 FLAIL(多段1×3)→ENLARGE(自身+2力量，自由窗)→BITE→LASH 错相位。教条（run-37/53/57）：攻击意图体在其攻击回合击杀/压血；ENLARGE 窗倾泻；AoE 按体各自触发 Skittish（每体命中后仍各得6挡）。"
   },
   "PHROG_PARASITE": {
     "acts": [],
@@ -13257,6 +13455,7 @@
     "id": "Queen",
     "is_boss": true,
     "kind": "monster",
+    "live_notes": "LIVE run-56 A1: Act3 Boss 400HP. Killed T9 after Torchhead T6. Run-44 doctrine confirmed: minion (Torchhead) first, then Queen. PUPPET_STRINGS chains debuff on player.",
     "moves": {
       "BUFF_MOVE": {
         "aliases": [
@@ -13481,8 +13680,7 @@
       "PUPPET_STRINGS_MOVE": "卡牌减益——",
       "YOU_ARE_MINE_MOVE": "减益——99 Frail/Weak/Vulnerable；"
     },
-    "zh_name": "火炬头聚合体",
-    "live_notes": "LIVE run-56 A1: Act3 Boss 400HP. Killed T9 after Torchhead T6. Run-44 doctrine confirmed: minion (Torchhead) first, then Queen. PUPPET_STRINGS chains debuff on player."
+    "zh_name": "火炬头聚合体"
   },
   "REGENT": {
     "acts": [],
@@ -14636,6 +14834,7 @@
           "CONSTRICT"
         ],
         "curated": true,
+        "description": "Constrict: Debuff; CONSTRICT 3 (player)",
         "effect": "Constrict: Debuff; CONSTRICT 3 (player)",
         "follow_up_id": null,
         "id": "CONSTRICT_MOVE",
@@ -14652,8 +14851,7 @@
         "name": "Constrict",
         "needs_zh": true,
         "play_notes": "",
-        "source": "codex-api:/monsters/SLITHERING_STRANGLER#CONSTRICT",
-        "description": "Constrict: Debuff; CONSTRICT 3 (player)"
+        "source": "codex-api:/monsters/SLITHERING_STRANGLER#CONSTRICT"
       },
       "LASH_MOVE": {
         "aliases": [
@@ -14661,6 +14859,7 @@
           "LASH"
         ],
         "curated": true,
+        "description": "Lash: Attack; damage 12 A:13",
         "effect": "Lash: Attack; damage 12 A:13",
         "follow_up_id": null,
         "id": "LASH_MOVE",
@@ -14680,8 +14879,7 @@
         "name": "Lash",
         "needs_zh": true,
         "play_notes": "",
-        "source": "codex-api:/monsters/SLITHERING_STRANGLER#LASH",
-        "description": "Lash: Attack; damage 12 A:13"
+        "source": "codex-api:/monsters/SLITHERING_STRANGLER#LASH"
       },
       "THWACK_MOVE": {
         "aliases": [
@@ -14689,6 +14887,7 @@
           "THWACK"
         ],
         "curated": true,
+        "description": "Thwack: Attack + Defend; damage 7 A:8; block 5",
         "effect": "Thwack: Attack + Defend; damage 7 A:8; block 5",
         "follow_up_id": null,
         "id": "THWACK_MOVE",
@@ -14708,8 +14907,7 @@
         "name": "Thwack",
         "needs_zh": true,
         "play_notes": "",
-        "source": "codex-api:/monsters/SLITHERING_STRANGLER#THWACK",
-        "description": "Thwack: Attack + Defend; damage 7 A:8; block 5"
+        "source": "codex-api:/monsters/SLITHERING_STRANGLER#THWACK"
       }
     },
     "name": "Slithering Strangler",
@@ -15020,6 +15218,7 @@
     "id": "ScrollOfBiting",
     "is_boss": false,
     "kind": "monster",
+    "live_notes": "LIVE run-56: Act3 hallway. PAPER_CUTS_POWER 2 (unblockable HP tax). CHOMP/CHEW/MORE_TEETH cycle. 3-body fight.",
     "moves": {
       "BUFF_MOVE": {
         "aliases": [
@@ -15192,8 +15391,7 @@
       "MORE_TEETH": "增益 自身 +2 力量。PaperCutsPower：持有者的有源攻击造成未格挡伤害时，对玩家追加纸割伤害（见 powers_zh.md）。",
       "PAPER_CUTS_POWER_MOVE": "2；"
     },
-    "zh_name": "咬人卷轴",
-    "live_notes": "LIVE run-56: Act3 hallway. PAPER_CUTS_POWER 2 (unblockable HP tax). CHOMP/CHEW/MORE_TEETH cycle. 3-body fight."
+    "zh_name": "咬人卷轴"
   },
   "SewerClam": {
     "acts": [],
@@ -17219,7 +17417,9 @@
   "THE_INSATIABLE": {
     "acts": [],
     "aliases": [
-      "The Insatiable"
+      "TheInsatiable",
+      "无厌沙虫",
+      "THE_INSATIABLE"
     ],
     "curated": true,
     "cycle": [
@@ -17229,7 +17429,7 @@
       "LUNGING_BITE_MOVE",
       "SALIVATE_MOVE"
     ],
-    "description": "The Insatiable (Boss): HP 321-None (A 341-None); cycle LIQUIFY_GROUND_MOVE → THRASH_MOVE → THRASH_MOVE_2_MOVE → LUNGING_BITE_MOVE → SALIVATE_MOVE",
+    "description": "Act2 Boss. 321 HP live A2 run-57. SANDPIT kill-timer: starts 4, decrements at start of Enemy side turn; at 0 player is devoured instantly regardless of HP/Block. Injects 6 FranticEscape cards at fight start; playing one +1 Sandpit and permanently +1 that copy cost (live: FE copies showed cost 2 after use). LIVE run-57 A2: cycle order observed LIQUIFY_GROUND(buff+6 status)→THRASH(8x2)→LUNGING_BITE(28)→SALIVATE(self +2 Str)→THRASH_2(8x2); Uppercut Weak cut displayed Thrash 10x2→7x2 per-hit. Three FE extensions (all at counter 2) held Sandpit through T6 — death was damage-race (boss 120/321 at T6) not devour. Doctrine: race damage first; FE at counter 1-2; block never stops devour.",
     "hp": {
       "ascension": {
         "max": null,
@@ -17383,7 +17583,8 @@
     "needs_zh": false,
     "play_notes": "",
     "source": "codex-api:/monsters/THE_INSATIABLE",
-    "type": "Boss"
+    "type": "Boss",
+    "zh_description": "Act2 Boss。run-57 A2 live 321HP。SANDPIT 吞噬计时器：起点4，敌方回合初递减，归零=无视HP/挡直接吞噬。开局注入6张 FranticEscape，打出+1计数且该副本永久+1费（live：用后 FE 显示2费）。run-57 A2 live 周期：LIQUIFY_GROUND(buff+6状态牌)→THRASH(8×2)→LUNGING_BITE(28)→SALIVATE(自身+2力量)→THRASH_2(8×2)；Uppercut 弱化 live 砍 Thrash 10×2→7×2 每击。三次 FE 延时（均在 counter 2 打出）把吞噬钟控到 T6 之后——死因是竞速赤字（T6 时 Boss 剩 120/321）而非吞噬。教条：先竞速；FE 在 counter 1-2 打；挡挡不住吞噬。"
   },
   "THE_LOST": {
     "acts": [],
@@ -19115,6 +19316,7 @@
     "id": "TorchHeadAggregate",
     "is_boss": false,
     "kind": "monster",
+    "live_notes": "LIVE run-56 A1: Act3 Boss minion 199HP. MINION_POWER + Strength ramp. Killed T6 of boss fight. Threat-source priority doctrine from run-44 held.",
     "moves": {},
     "name": "TorchHeadAggregate",
     "needs_zh": false,
@@ -19129,8 +19331,7 @@
     "play_notes": "",
     "source": "md:monsters.md:L95",
     "zh_description": "MinionPower + 力量成长 （观察 +2/回合）；意图区间 18 → 12×3 → 16×3 → 24（多段攻击循环）。独立战斗目标——存活时女王战不会结束。",
-    "zh_name": "火炬头聚合体",
-    "live_notes": "LIVE run-56 A1: Act3 Boss minion 199HP. MINION_POWER + Strength ramp. Killed T6 of boss fight. Threat-source priority doctrine from run-44 held."
+    "zh_name": "火炬头聚合体"
   },
   "ToughEgg": {
     "acts": [],
@@ -19269,6 +19470,7 @@
     "id": "TowerGunner",
     "is_boss": false,
     "kind": "monster",
+    "live_notes": "LIVE run-56: Act3 hallway. Starts with 25 Block; UNLOAD multi-attack. Block refreshed by LivingShield RAMPART while shield alive.",
     "moves": {},
     "name": "TowerGunner",
     "needs_zh": false,
@@ -19276,8 +19478,7 @@
     "play_notes": "",
     "source": "md:monsters.md:L99",
     "zh_description": "出场自带 25 格挡；意图 3×5 多段（15）。活体盾存活期间，其格挡在玩家回合开始时刷新。",
-    "zh_name": "高塔炮手",
-    "live_notes": "LIVE run-56: Act3 hallway. Starts with 25 Block; UNLOAD multi-attack. Block refreshed by LivingShield RAMPART while shield alive."
+    "zh_name": "高塔炮手"
   },
   "TrackerRubyRaider": {
     "acts": [],

@@ -276,14 +276,14 @@
     "id": "ANGER",
     "keywords": [],
     "kind": "card",
+    "live_notes": "LIVE run-56：0 费攻击，将自身复制品加入弃牌堆。力量缩放价值。",
     "name": "愤怒",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "common",
     "source": "md:cards.md:L18; md:cards_zh.md",
     "target_type": null,
-    "upgrade": "+2 damage. Corrupted enchant (Symbiote event): Corrupted = \"attacks deal ×1.5 damage; owner takes 2 unblockable damage when played\". On Anger each play deals ~12-16 damage ((6+Str)×1.5) + 2 self-damage + copy to discard; **with Rupture Amount 2 in play the 2 self-damage fires Rupture +2 Strength per Anger play — copies inherit no enchant but the base Anger keeps re-triggering from discard every reshuffle (Str 2→4→6 across two Anger plays in one turn)**. Highest-frequency 0-cost Rupture fuel target in the Corrupted pool.",
-    "live_notes": "LIVE run-56：0 费攻击，将自身复制品加入弃牌堆。力量缩放价值。"
+    "upgrade": "+2 damage. Corrupted enchant (Symbiote event): Corrupted = \"attacks deal ×1.5 damage; owner takes 2 unblockable damage when played\". On Anger each play deals ~12-16 damage ((6+Str)×1.5) + 2 self-damage + copy to discard; **with Rupture Amount 2 in play the 2 self-damage fires Rupture +2 Strength per Anger play — copies inherit no enchant but the base Anger keeps re-triggering from discard every reshuffle (Str 2→4→6 across two Anger plays in one turn)**. Highest-frequency 0-cost Rupture fuel target in the Corrupted pool."
   },
   "ANOINTED": {
     "aliases": [
@@ -448,20 +448,22 @@
   },
   "ASHEN_STRIKE": {
     "aliases": [
-      "Ashen Strike",
+      "AshenStrike",
+      "ASHEN_STRIKE",
       "灰烬打击"
     ],
     "card_type": "attack",
     "character_pool": "IRONCLAD",
     "cost": "1",
     "curated": true,
-    "description": "1，攻击，罕见，消耗，打击标签，伤害 = 6 + 消耗堆每张牌 3 点。升级：每张 +4。",
+    "description": "1-cost uncommon attack, Exhaust: deal damage = 6 + 3 per card in exhaust pile (upgrade +1/card). Self-exhaust on play. LIVE run-57: exhaust-pile count read at play time (fresh combat exhaust=0 → 6 base; mid-fight pile 2 → 12 live). Strike-tagged (grows Perfected Strike). Exhaust fuel for FNP/PactsEnd/Ashen scaling chain.",
     "id": "ASHEN_STRIKE",
     "keywords": [
       "Exhaust",
       "Strike-tagged"
     ],
     "kind": "card",
+    "live_notes": "LIVE run-56：铁匠升级。带自伤燃料组件的攻击牌。",
     "name": "灰烬打击",
     "needs_zh": false,
     "play_notes": "",
@@ -469,7 +471,7 @@
     "source": "md:cards.md:L20; md:cards_zh.md",
     "target_type": null,
     "upgrade": "+1 per exhaust card (4 each).",
-    "live_notes": "LIVE run-56：铁匠升级。带自伤燃料组件的攻击牌。"
+    "zh_description": "1费罕见攻击，消耗：伤害=6+消耗堆每张+3（升级每张+1）。打出时自身消耗。run-57 live：按打出时消耗堆计数（新战斗堆0→基础6；战中堆2→12 live）。带 Strike 标签（长完美打击）。FNP/PactsEnd/Ashen 缩放链的消耗燃料。"
   },
   "ASSASSINATE": {
     "aliases": [
@@ -726,14 +728,14 @@
     "id": "BATTLE_TRANCE",
     "keywords": [],
     "kind": "card",
+    "live_notes": "LIVE run-56：抽 3 张，本回合不再抽牌。自伤牌组引擎件。",
     "name": "战斗专注",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "uncommon",
     "source": "md:cards.md:L23; md:cards_zh.md",
     "target_type": null,
-    "upgrade": "draw 4.",
-    "live_notes": "LIVE run-56：抽 3 张，本回合不再抽牌。自伤牌组引擎件。"
+    "upgrade": "draw 4."
   },
   "BEACON_OF_HOPE": {
     "aliases": [
@@ -1566,14 +1568,14 @@
       "Exhaust"
     ],
     "kind": "card",
+    "live_notes": "LIVE run-56：Act2 商店购入 78g。消耗一张牌，抽 2 张。状态稀释战答案（Infection 类）。",
     "name": "燃烧契约",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "uncommon",
     "source": "md:cards.md:L32; md:cards_zh.md",
     "target_type": null,
-    "upgrade": "draw 3.",
-    "live_notes": "LIVE run-56：Act2 商店购入 78g。消耗一张牌，抽 2 张。状态稀释战答案（Infection 类）。"
+    "upgrade": "draw 3."
   },
   "BURST": {
     "aliases": [
@@ -2602,14 +2604,15 @@
   },
   "CRUSH_UNDER": {
     "aliases": [
-      "Crush Under",
+      "CrushUnder",
+      "CRUSH_UNDER",
       "下砸"
     ],
     "card_type": "attack",
     "character_pool": "REGENT",
     "cost": "1",
-    "curated": false,
-    "description": "1，攻击，普通，对所有敌人造成 7 点伤害；本回合其失去 1 力量。升级：伤害 +1、失去 2 力量。",
+    "curated": true,
+    "description": "1-cost common attack (cross-class pool): deal 7 damage to ALL enemies; they lose 1 Strength this turn (live run-57: per-target −1 Str applied; intents dropped per-hit on multi-hit moves, e.g. millipede Writhe 7x2→6x2-class). Upgrade +1 dmg / −2 Str. Anti-multi-body staple; pairs with AoE doctrine for wave fights.",
     "id": "CRUSH_UNDER",
     "keywords": [],
     "kind": "card",
@@ -2619,7 +2622,8 @@
     "rarity": "common",
     "source": "md:cards.md:L401; md:cards_zh.md",
     "target_type": "AllEnemies",
-    "upgrade": "+1 damage, lose 2 Strength."
+    "upgrade": "+1 damage, lose 2 Strength.",
+    "zh_description": "1费普通攻击（跨职业池）：全体7伤；本回合各失去1力量（run-57 live：逐目标−1力量生效；多段意图每击降档，如千足虫 Writhe 7×2→6×2 级）。升级+1伤/−2力量。多体战常备件；与 AoE 教条协同波次战。"
   },
   "CURSE_OF_THE_BELL": {
     "aliases": [
@@ -4210,7 +4214,7 @@
     "character_pool": "IRONCLAD",
     "cost": "1",
     "curated": true,
-    "description": "消耗，造成10伤；击杀则 +3 MaxHP（升级 +2伤/+4MaxHP）。MaxHP 增益同步增加当前 HP（对局43 live：Fatal 时 38→42/88；本局 80→84→88 两次 Fatal）。1费 HP 经济引擎：Act2 小怪战 Fatal 机会密集。",
+    "description": "1-cost common attack, Exhaust: deal 10 damage; if Fatal (this card lands the killing blow) gain 3 Max HP — current HP rises by the same amount. Upgrade +2 dmg / +4 MaxHP. LIVE run-57: Fatal on silk bowlbug (19→HP-rail class) and earlier Fatal class hits; MaxHP rail 80→97 by Act2 Boss combined with Chosen Cheese. Do NOT pair with kill-setups that leave Feed unable to land the final blow (run-57 mite window: Feed 10 < 14 target — killing blow went to Strike, no Fatal).",
     "id": "FEED",
     "keywords": [
       "Exhaust"
@@ -4222,7 +4226,8 @@
     "rarity": "common",
     "source": "cards.md + 对局43 live",
     "target_type": null,
-    "upgrade": "+2 damage, +1 Max HP."
+    "upgrade": "+2 damage, +1 Max HP.",
+    "zh_description": "1费普通攻击，消耗：10伤；若 Fatal（此牌完成最后一击）最大HP+3——当前HP同步增加。升级+2伤/+4MaxHP。run-57 live：丝碗虫 Fatal 与更早 Fatal 类命中；至 Act2 Boss 时 MaxHP 轨 80→97（与天选芝士叠加）。勿与让 Feed 无法完成最后一击的击杀链搭配（run-57 异螨窗：Feed 10<14 目标——末击归 Strike，无 Fatal）。"
   },
   "FEEDING_FRENZY": {
     "aliases": [
@@ -4721,24 +4726,27 @@
   },
   "FRANTIC_ESCAPE": {
     "aliases": [
-      "Frantic Escape",
-      "慌张逃离"
+      "FranticEscape",
+      "FRANTIC_ESCAPE",
+      "FE",
+      "疯狂逃遁"
     ],
     "card_type": "status",
     "character_pool": "STATUS",
     "cost": "1",
     "curated": true,
-    "description": "1，状态，状态，使沙坑敌人对你的 power +1；此牌费用永久 +1。无升级。 run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log)：每打出一次该副本自身费用 +1 且 Sandpit +1 — 同回合连打两张把计数 1→3；按 run-44 教条持有到 counter 1-2 再打；未打出的 FE 留在手中是安全的（Sandpit 不变），纯净化类消耗同理安全。",
+    "description": "Boss-injected card (The Insatiable). Playing one: +1 Sandpit Amount on the boss and permanently +1 that copy cost (live run-57: cost displayed 2 after first play). No other effect. Doctrine: play at Sandpit counter 1-2 as emergency extension; do NOT hoard unplayed, do NOT spam early. run-57: 3 FEs played at counter-2 (T4/T5/T6) — devour never fired; run died to damage race instead.",
     "id": "FRANTIC_ESCAPE",
     "keywords": [],
     "kind": "card",
-    "name": "慌张逃离",
+    "name": "疯狂逃遁",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "status",
     "source": "md:cards.md:L573; md:cards_zh.md",
     "target_type": null,
-    "upgrade": null
+    "upgrade": null,
+    "zh_description": "Boss 注入牌（无厌沙虫）。打出：Boss 的 SANDPIT 计数+1，且该副本永久+1费（run-57 live：打出后费用显示2）。无其他效果。教条：SANDPIT counter 1-2 时作为应急延时打出；不囤不用滥。run-57：3张 FE 均在 counter-2 打出（T4/T5/T6）——吞噬从未触发；死因为竞速赤字。"
   },
   "FRIENDSHIP": {
     "aliases": [
@@ -5985,13 +5993,14 @@
   "INFERNO": {
     "aliases": [
       "Inferno",
-      "狱火"
+      "狱火",
+      "INFERNO"
     ],
     "card_type": "power",
     "character_pool": "IRONCLAD",
     "cost": "1",
     "curated": true,
-    "description": "回合开始时失去 1 点 HP（不可挡）；每当你的回合内失去 HP，对全体敌人造成 Amount 点伤害。升级：9 点。LIVE run-45 灵魂异鱼 Boss 战：副本按副本之和叠层——先打出未升级狱火（Power 6）再打出狱火+ 后 INFERNO_POWER 6→15；在场每张副本回合初各税 1 HP（双狱火 = −2 HP/回合，不可挡），且每次自伤事件（放血/血动力学/血墙）以叠层 Amount 触发一次。引擎税是真实预算：run-45 Boss T6 在 2HP 时被 −2 回合初 tick 收头。弱化免疫伤害类——触发伤害无视虚弱。",
+    "description": "1-cost uncommon Power. At start of your turn lose 1 HP (unblockable); whenever you lose HP on your turn deal Amount damage to ALL enemies (base 6, upgrade 9). LIVE run-57: the turn-start tax itself counts as on-turn HP loss — Inferno+ (Amount 9) proc fired on its own tax each turn (net −1+9 chip vs boss). Self-damage cards (Breakthrough/Cinder/Feed) fire extra procs same turn. LIVE run-57 same-window: Inferno+ then Breakthrough = 9(AoE proc on Break self-dmg)+9(Break) = 18 per enemy — the Decimillipede trio clear. Engine tax is real budget: run-41/42/57 deaths/attrition cite −1/turn unblockable.",
     "id": "INFERNO",
     "keywords": [],
     "kind": "card",
@@ -6001,7 +6010,8 @@
     "rarity": "uncommon",
     "source": "md:cards.md:L62; md:cards_zh.md",
     "target_type": "AllEnemies",
-    "upgrade": "deal 9 damage."
+    "upgrade": "deal 9 damage.",
+    "zh_description": "1费罕见能力。回合开始失去1HP（不可挡）；回合内每当失去HP对全体敌人造成Amount伤（基础6，升级9）。run-57 live：回合初税自身即计为回合内HP损失——Inferno+（Amount 9）每回合靠自身税触发proc（对Boss净−1+9 chip）。自伤牌（Breakthrough/Cinder/Feed）同回合触发额外proc。run-57 同窗live：Inferno+后接Breakthrough=9(Break自伤触发AoE)+9(Break自身)=每敌18——千足虫三段清场。引擎税是真实预算：run-41/42/57 的死亡/消耗战均引 −1/回合不可挡。"
   },
   "INFINITE_BLADES": {
     "aliases": [
@@ -6039,14 +6049,14 @@
     "id": "INFLAME",
     "keywords": [],
     "kind": "card",
+    "live_notes": "LIVE run-56：铁匠升级。+力量 Power——Rupture 协同核心引擎件。",
     "name": "燃烧",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "uncommon",
     "source": "md:cards.md:L63; md:cards_zh.md; codex:cards/INFLAME",
     "target_type": null,
-    "upgrade": "+3 Strength.",
-    "live_notes": "LIVE run-56：铁匠升级。+力量 Power——Rupture 协同核心引擎件。"
+    "upgrade": "+3 Strength."
   },
   "INJURY": {
     "aliases": [
@@ -6263,24 +6273,26 @@
   },
   "KINGLY_KICK": {
     "aliases": [
-      "Kingly Kick",
-      "王者之踢"
+      "KinglyKick",
+      "KINGLY_KICK",
+      "王者踢"
     ],
     "card_type": "attack",
     "character_pool": "REGENT",
-    "cost": "4",
-    "curated": false,
-    "description": "4，攻击，罕见，造成 27 点伤害。升级：伤害 +8。",
+    "cost": "2",
+    "curated": true,
+    "description": "2-cost Attack (live cost=2 run-57 A2; earlier archive said 4 — live wins), deal 27 damage. Upgrade +8. Cross-class (Regent pool via Prismatic Gem). Live run-57: Boss T1 TeaSet+Prismatic 6-energy window paired Bludgeon+ (47) + Kingly Kick (27) = 74 opening damage on The Insatiable.",
     "id": "KINGLY_KICK",
     "keywords": [],
     "kind": "card",
-    "name": "王者之踢",
+    "name": "王者踢",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "uncommon",
     "source": "md:cards.md:L423; md:cards_zh.md",
     "target_type": null,
-    "upgrade": "+8 damage."
+    "upgrade": "+8 damage.",
+    "zh_description": "2费攻击（run-57 A2 live 费用=2；早前档案记4费——live 优先），造成27伤。升级+8。跨职业（棱彩宝石引入 REGENT 池）。run-57 live：Boss T1 茶具+棱彩6能窗 Bludgeon+（47）+Kingly Kick（27）=开场74伤。"
   },
   "KINGLY_PUNCH": {
     "aliases": [
@@ -7629,14 +7641,14 @@
       "Exhaust"
     ],
     "kind": "card",
+    "live_notes": "LIVE run-56：失去 HP，获得能量 + 抽牌。自伤燃料 + 爆发启动器。",
     "name": "祭品",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "rare",
     "source": "md:cards.md:L70; md:cards_zh.md",
     "target_type": null,
-    "upgrade": "draw 5.",
-    "live_notes": "LIVE run-56：失去 HP，获得能量 + 抽牌。自伤燃料 + 爆发启动器。"
+    "upgrade": "draw 5."
   },
   "OMNISLICE": {
     "aliases": [
@@ -7764,14 +7776,15 @@
   },
   "PACTS_END": {
     "aliases": [
-      "Pacts End",
+      "PactsEnd",
+      "PACTS_END",
       "契约终结"
     ],
     "card_type": "attack",
     "character_pool": "IRONCLAD",
     "cost": "0",
     "curated": true,
-    "description": "0 费攻击，对所有敌人造成 17 点伤害；仅当消耗堆至少 3 张牌时造成伤害。升级：+6。run-38 实时：exhaust=3 时 17 AoE（四史莱姆：26→9 / 33→16 / 1 HP 补刀）；exhaust<3 时打出合法但 0 伤——条件闸门真实。Offering+Ritual+Tremble/MoltenFist 链在战斗中段自然凑满阈值。条件未满足时打出仍计入 Nunchaku 攻击数。",
+    "description": "0-cost rare attack: deal 17 damage to ALL enemies; ONLY if exhaust pile ≥3, else 0. Upgrade +6. LIVE run-57 condition gate reconfirmed: exhaust<3 played legal but dealt 0; exhaust≥3 (after SW/Drum/Ashen/Cinder exhausts) fired 17 AoE — killed last millipede segment attempt context (Decimillipede fight T6 prior turn window; final kill was Inferno chain, PactsEnd gate stood). Cross-class AoE payoff for exhaust-spine decks.",
     "id": "PACTS_END",
     "keywords": [],
     "kind": "card",
@@ -7782,7 +7795,7 @@
     "source": "md:cards.md:L72; md:cards_zh.md",
     "target_type": "AllEnemies",
     "upgrade": "+6 damage.",
-    "zh_description": "0 费攻击，对所有敌人造成 17 点伤害；仅当消耗堆至少 3 张牌时造成伤害。升级：+6。run-38 实时：exhaust=3 时 17 AoE（四史莱姆：26→9 / 33→16 / 1 HP 补刀）；exhaust<3 时打出合法但 0 伤——条件闸门真实。Offering+Ritual+Tremble/MoltenFist 链在战斗中段自然凑满阈值。条件未满足时打出仍计入 Nunchaku 攻击数。"
+    "zh_description": "0费稀有攻击：全体17伤；**仅当消耗堆≥3**，否则0伤。升级+6。run-57 条件闸门再确认：消耗<3打出合法但0伤；消耗≥3（SW/战鼓/Ashen/Cinder 消耗后）触发17AoE。消耗脊牌组的跨职业 AoE 兑现件。"
   },
   "PAGESTORM": {
     "aliases": [
@@ -8631,24 +8644,24 @@
     "upgrade": "+1 damage. DIVINE_RIGHT's AfterRoomEntered +3 Stars count as \"Stars gained this turn\" — turn-1 ShiningStrike (+2★) → RADIATE deals 5×3 = 15 AoE for 0 Energy in every combat."
   },
   "RAGE": {
-    "id": "RAGE",
-    "name": "怒火",
-    "card_type": "skill",
-    "character_pool": "IRONCLAD",
-    "cost": "0",
-    "rarity": "uncommon",
-    "target_type": null,
-    "keywords": [],
-    "upgrade": "每次攻击触发的格挡 3→5。",
-    "description": "0费技能。本回合你每打出一张攻击牌，获得 3 格挡。升级：每次攻击 5 格挡。攻击回合挡引擎：恰好奖励 IRONCLAD 本来就想要的攻击倾泻回合；在不牺牲输出的前提下缓解「致命回合手牌偏攻击、无挡」死因。2026-09-19 run-55 经 perplexity 研究（spire-codex + wiki 来源）；此前 lookup 仅命中 SludgeSpinner 怪物招式 RAGE_MOVE。",
     "aliases": [
       "Rage"
     ],
+    "card_type": "skill",
+    "character_pool": "IRONCLAD",
+    "cost": "0",
     "curated": true,
+    "description": "0费技能。本回合你每打出一张攻击牌，获得 3 格挡。升级：每次攻击 5 格挡。攻击回合挡引擎：恰好奖励 IRONCLAD 本来就想要的攻击倾泻回合；在不牺牲输出的前提下缓解「致命回合手牌偏攻击、无挡」死因。2026-09-19 run-55 经 perplexity 研究（spire-codex + wiki 来源）；此前 lookup 仅命中 SludgeSpinner 怪物招式 RAGE_MOVE。",
+    "id": "RAGE",
+    "keywords": [],
     "kind": "card",
+    "name": "怒火",
     "needs_zh": false,
     "play_notes": "攻击密集回合先打 Rage 再打攻击牌；0 费不与输出争能量。",
-    "source": "perplexity-search 2026-09-19 (slaythespiretwo.com wiki, spire-codex.com/cards/rage, sts2.untapped.gg)"
+    "rarity": "uncommon",
+    "source": "perplexity-search 2026-09-19 (slaythespiretwo.com wiki, spire-codex.com/cards/rage, sts2.untapped.gg)",
+    "target_type": null,
+    "upgrade": "每次攻击触发的格挡 3→5。"
   },
   "RAINBOW": {
     "aliases": [
@@ -11110,11 +11123,11 @@
     "description": "对随机敌人造成 3 点伤害，共 3 次。（升级：4 点伤害 ×3。）多段攻击——随力量缩放。",
     "id": "SWORD_BOOMERANG",
     "kind": "card",
+    "live_notes": "LIVE run-56：多段攻击，与 Rupture 力量叠层协同。",
     "name": "SWORD_BOOMERANG",
     "needs_zh": false,
     "play_notes": "",
-    "source": "codex-html:https://spire-codex.com/cards/sword_boomerang",
-    "live_notes": "LIVE run-56：多段攻击，与 Rupture 力量叠层协同。"
+    "source": "codex-html:https://spire-codex.com/cards/sword_boomerang"
   },
   "SWORD_SAGE": {
     "aliases": [
@@ -11543,13 +11556,14 @@
   "THUNDERCLAP": {
     "aliases": [
       "Thunderclap",
+      "THUNDERCLAP",
       "闪电霹雳"
     ],
     "card_type": "attack",
     "character_pool": "IRONCLAD",
     "cost": "1",
-    "curated": false,
-    "description": "1，攻击，普通，对所有敌人造成 4 点伤害；各施加 1 层易伤。升级：伤害 +3。",
+    "curated": true,
+    "description": "1-cost common attack (cross-class): deal 4 damage to ALL enemies; apply 1 Vulnerable each. Upgrade +3. Live run-57: picked blind via chained reward claim (process-debt instance); performed as designed — AoE chip + team vuln on mite fight.",
     "id": "THUNDERCLAP",
     "keywords": [],
     "kind": "card",
@@ -11559,7 +11573,8 @@
     "rarity": "common",
     "source": "md:cards.md:L95; md:cards_zh.md",
     "target_type": "AllEnemies",
-    "upgrade": "+3 damage."
+    "upgrade": "+3 damage.",
+    "zh_description": "1费普通攻击（跨职业）：全体4伤；各施加1易伤。升级+3。run-57 live：链式奖励自动领取入手（过程债实例）；表现符合设计——异螨战 AoE chip+群体易伤。"
   },
   "TIMES_UP": {
     "aliases": [

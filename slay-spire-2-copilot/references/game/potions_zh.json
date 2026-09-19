@@ -85,21 +85,23 @@
   },
   "BLOOD_POTION": {
     "aliases": [
-      "Blood Potion",
-      "BloodPotion"
+      "BloodPotion",
+      "BLOOD_POTION",
+      "血药水"
     ],
     "curated": true,
-    "description": "回复最大 HP 的 20%（run-49 live：Max 80 → +16）。任意时刻可用。",
+    "description": "Common, anytime: heal 20% of Max HP (run-49 live 80 Max→+16; run-57 95-class Max→+19). Corridor sustain — drink BEFORE the lethal-class turn, not after. run-57: spent mid-Decimillipede at incoming-28-class window, raised 46→65 buffer for the multi-turn grind.",
     "display_name": "Blood Potion",
     "id": "BLOOD_POTION",
     "kind": "potion",
-    "name": "鲜血药水",
+    "name": "血药水",
     "needs_zh": false,
     "play_notes": "run-49 live：Entomancer 战中 HP 23→39（80 的 20% = 16）。走廊续航类——在致死回合之前喝，不是之后。",
     "rarity": "Common",
     "source": "run-49 live 折叠 2026-09-19（日志 run-20260919-104140-b09841c6 + 113157-adafd09b + 113214-9fd1a25c）",
     "target": "any player",
-    "usage": "anytime"
+    "usage": "anytime",
+    "zh_description": "普通，随时可用：回复最大HP的20%（run-49 live 80Max→+16；run-57 95Max级→+19）。走廊续航——致命类回合**前**饮用，不是之后。run-57：千足虫战 incoming-28 窗口饮用，46→65 缓冲支撑多回合消耗。"
   },
   "BONE_BREW": {
     "aliases": [
@@ -555,11 +557,13 @@
   },
   "GIGANTIFICATION_POTION": {
     "aliases": [
-      "Gigantification Potion",
-      "GigantificationPotion"
+      "GigantificationPotion",
+      "GIGANTIFICATION_POTION",
+      "巨化药水",
+      "超巨化药水"
     ],
     "curated": true,
-    "description": "施加 GigantificationPower 1 — 本场战斗下一张有力量加成的攻击牌造成 ×3 伤害；被该攻击消耗。run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log)：TC 易伤 + 玩家虚弱 + 巨化 Stomp 结算 ≈40 AoE（12×3×0.75×1.5）— 一发 Stomp 横扫 46/42/22 碗虫三人组；与虚弱 ×0.75、易伤 ×1.5 乘法叠加（run-42 公式再确认）。",
+    "description": "Rare: apply GigantificationPower 1 — next Attack card this combat deals ×3 damage, consumed by that attack. LIVE run-57: Bludgeon 32 ×3 = 96 on Terror Eel T1 (Act1 Elite①) — crossed SHRIEK:70 in one hit, stun window opened, fight won T3 zero-damage. Boss/elite burst-class reserve.",
     "display_name": "Gigantification Potion",
     "id": "GIGANTIFICATION_POTION",
     "kind": "potion",
@@ -569,15 +573,17 @@
     "rarity": "Rare",
     "source": "md:potions.md:L45; md:potions_zh.md:L45",
     "target": "any player",
-    "usage": "combat"
+    "usage": "combat",
+    "zh_description": "稀有：获得 GigantificationPower 1——本场战斗下一张攻击牌×3伤，被该攻击消耗。run-57 live：Bludgeon 32×3=96 打在 Act1 Elite① 骇鳗 T1——单击穿越 SHRIEK:70，眩晕窗开启，战斗 T3 零伤获胜。Boss/精英爆发类储备。"
   },
   "GLOWWATER_POTION": {
     "aliases": [
-      "Glowwater Potion",
-      "GlowwaterPotion"
+      "GlowwaterPotion",
+      "GLOWWATER_POTION",
+      "发光水"
     ],
-    "curated": false,
-    "description": "消耗手牌；抽 10 张。",
+    "curated": true,
+    "description": "Event potion (Drowning Beacon bottle branch): Exhaust your hand, draw 10 cards. LIVE run-57: exhausted 5-card hand then drew the full remaining deck (9 cards) same turn — hand-cycle bomb for status-dilution fights; pairs with exhaust-spine (FNP procs on the exhaust).",
     "display_name": "Glowwater Potion",
     "id": "GLOWWATER_POTION",
     "kind": "potion",
@@ -587,15 +593,17 @@
     "rarity": "Event",
     "source": "md:potions.md:L46; md:potions_zh.md:L46; codex:potions/GLOWWATER_POTION",
     "target": "combat",
-    "usage": "Event"
+    "usage": "Event",
+    "zh_description": "事件药水（淹水灯塔装瓶分支）：消耗全部手牌，抽10张牌。run-57 live：耗尽5张手牌后同回合抽空剩余牌库（9张）——状态稀释战的手牌循环炸弹；与消耗脊协同（消耗触发 FNP）。"
   },
   "HEART_OF_IRON": {
     "aliases": [
-      "Heart of Iron",
-      "HeartofIron"
+      "HeartOfIron",
+      "HEART_OF_IRON",
+      "铁心药水"
     ],
-    "curated": false,
-    "description": "+7 镀甲（Plating）。",
+    "curated": true,
+    "description": "Uncommon: gain 7 Plating (combat). LIVE run-57: Skulking Colony Piercing Stabs turn — Heart of Iron +7 plating on top of 1-2 plating + double Defend = 18-total-block exact cover vs 9x2 intent (run-41 doctrine class).",
     "display_name": "Heart of Iron",
     "id": "HEART_OF_IRON",
     "kind": "potion",
@@ -605,7 +613,8 @@
     "rarity": "Uncommon",
     "source": "md:potions.md:L47; md:potions_zh.md:L47; codex:potions/HEART_OF_IRON",
     "target": "any player",
-    "usage": "combat"
+    "usage": "combat",
+    "zh_description": "普通：获得7层镀甲（战斗内）。run-57 live：珊瑚群 Piercing Stabs 回合——铁心+7镀甲叠加 1-2 层残余镀甲+双Defend=18总挡精确覆盖 9×2 意图（run-41 教条级）。"
   },
   "KING_S_COURAGE": {
     "aliases": [
@@ -816,38 +825,43 @@
   },
   "POWDERED_DEMISE": {
     "aliases": [
-      "Powdered Demise",
-      "PowderedDemise"
+      "PowderedDemise",
+      "POWDERED_DEMISE",
+      "灭世粉"
     ],
     "curated": true,
-    "description": "对目标施加 DemisePower 9 — 目标在自己每个回合结束时受到 9 点无视格挡、非能力加成的伤害。run-41 live：在 4 HP 外骨骼虫完成攻击后于回合末将其击杀；这是逃跑钟与 HP 墙战斗的击杀计时药水，不是挡伤工具。",
+    "description": "Uncommon: apply DemisePower 9 to target — target takes 9 unblockable unpowered damage at end of each of its turns. Kill-timer class (run-41 4-HP exoskeleton EoT kill; run-57 Entomancer race chip 9/turn through the T5 kill).",
     "display_name": "Powdered Demise",
     "id": "POWDERED_DEMISE",
     "kind": "potion",
-    "name": "消亡粉末",
+    "name": "灭世粉",
+    "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
     "source": "md:potions.md:L60; md:potions_zh.md:L60",
     "target": "any enemy",
-    "usage": "combat"
+    "usage": "combat",
+    "zh_description": "普通：对目标施加 DemisePower 9——目标每回合末受9点无挡无源伤。击杀计时器类（run-41 4HP 外骨骼虫回合末击杀；run-57 蜂群术士竞速中 9/回合 chip 至 T5 击杀）。"
   },
   "POWER_POTION": {
     "aliases": [
-      "Power Potion",
-      "PowerPotion"
+      "PowerPotion",
+      "POWER_POTION",
+      "能力药水"
     ],
     "curated": true,
-    "description": "打开三选一能力 card_choice 覆盖层（live run-52 选项：DEMON_FORM / STONE_ARMOR / STAMPEDE）。选中的能力**以 0 费卡形式生成进手牌**——须像普通卡一样打出，不会自动生效。run-52 选 STAMPEDE = 0 费卡打出后获得 STAMPEDE_POWER:1（自动后打出阶段从手牌自动打出 Amount 张攻击牌）。",
+    "description": "Common, combat: opens choose-one-power overlay; the chosen power is generated as a 0-cost card into hand — must be played manually. LIVE run-57 Decimillipede T7 options: VICIOUS / HELLRAISER / RUPTURE — picked RUPTURE (references-known run-56 win spine) over undocumented options; Rupture card played, Breakthrough self-damage proc'd +1 Str same turn (Str −2→−1 live).",
     "display_name": "Power Potion",
     "id": "POWER_POTION",
     "kind": "potion",
-    "name": "力量药水",
+    "name": "能力药水",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
     "source": "md:potions.md:L61; md:potions_zh.md:L61",
     "target": "self",
-    "usage": "combat"
+    "usage": "combat",
+    "zh_description": "普通，战斗内：打开三选一能力 overlay；所选能力以0费卡生成入手——需手动打出。run-57 千足虫 T7 选项：VICIOUS/HELLRAISER/RUPTURE——选 RUPTURE（run-56 胜局脊柱 references 有档）而非无档项；Rupture 卡打出后 Breakthrough 自伤同回合触发+1力量（Str −2→−1 live）。"
   },
   "RADIANT_TINCTURE": {
     "aliases": [
@@ -869,11 +883,12 @@
   },
   "REGEN_POTION": {
     "aliases": [
-      "Regen Potion",
-      "RegenPotion"
+      "RegenPotion",
+      "REGEN_POTION",
+      "再生药水"
     ],
     "curated": true,
-    "description": "使用获得 5 再生（每回合开始回 5，层数递减）。罕见。run-40 持药死亡；run-48 在墙战**之中**正确打出（猎人杀手 T1 于 15 HP——轨道跨 4 跳 15→19→23→26 级后战中耗尽）。教条：HP 轨药水用于消耗战本身，不是战后的休息点——run-48 的休息点在死亡点之后两站。",
+    "description": "Uncommon: gain 5 Regen — heal 5 at start of each of your turns, stacks decrement. Doctrine (run-48 live): HP-rail potions are for the attrition fight itself; run-57 spent mid-Decimillipede — rail ticked +5/turn across the T3-T5 same-window setup turns.",
     "display_name": "Regen Potion",
     "id": "REGEN_POTION",
     "kind": "potion",
@@ -883,7 +898,8 @@
     "rarity": "Uncommon",
     "source": "md:potions.md:L63; md:potions_zh.md:L63; codex:potions/REGEN_POTION; run-40 live fold 2026-09-18",
     "target": "any player",
-    "usage": "combat"
+    "usage": "combat",
+    "zh_description": "普通：获得5再生——每回合开始回复5，堆数递减。教条（run-48 live）：HP轨药水用于消耗战本身；run-57 千足虫战中段饮用——T3-T5 同窗铺垫回合中每回合+5tick。"
   },
   "SHACKLING_POTION": {
     "aliases": [
@@ -1029,11 +1045,12 @@
   },
   "STABLE_SERUM": {
     "aliases": [
-      "Stable Serum",
-      "StableSerum"
+      "StableSerum",
+      "STABLE_SERUM",
+      "稳定血清"
     ],
-    "curated": false,
-    "description": "获得 RetainHandPower 2——接下来 2 个回合结束时不弃手牌。",
+    "curated": true,
+    "description": "Uncommon: RetainHandPower 2 — your hand is not flushed at end of turn for the next 2 turns (cards stay; next draws add to hand). LIVE run-57: T4 hand grew to 7 cards (retained 5 + draws) — Bludgeon retained into the kill turn vs aberrant mite; \"retain does not add block — not a lethal-intent answer by itself\" note holds.",
     "display_name": "Stable Serum",
     "id": "STABLE_SERUM",
     "kind": "potion",
@@ -1043,7 +1060,8 @@
     "rarity": "Uncommon",
     "source": "md:potions.md:L70; md:potions_zh.md:L70",
     "target": "any player",
-    "usage": "combat"
+    "usage": "combat",
+    "zh_description": "普通：RetainHandPower 2——接下来2回合结束时不弃手牌（留手；后续抽牌叠加入手）。run-57 live：T4 手牌增至7张（留手5+抽牌）——Bludgeon 留到异螨击杀回合；「留手本身不加挡——不能单独回答致命意图」备注仍成立。"
   },
   "STAR_POTION": {
     "aliases": [
@@ -1138,12 +1156,12 @@
   },
   "WEAK_POTION": {
     "aliases": [
-      "Weak Potion",
+      "WeakPotion",
       "WEAK_POTION",
       "弱化药水"
     ],
     "curated": true,
-    "description": "对目标施加 3 层虚弱（攻击 −25%，持续3回合）。对局43 Act1 Boss 灵魂异鱼 T7 live：玩家带易伤时 DE_GAS 意图 24→18，6 点削减 + 6 挡把 24 漏伤压到 12。Boss 闸门储备教条：花在 live 意图最高的一回合，身后保留一瓶治疗类药水。",
+    "description": "Uncommon: apply Weak to target (per-hit attack reduction class). LIVE run-57: Boss The Insatiable — Weak 3 landed, displayed intent 28→21-class cuts on Lunging Bite; Uppercut-style Weak cuts also live on mite/bees-class multi-hits (per-hit reduction, not total).",
     "display_name": "Weak Potion",
     "id": "WEAK_POTION",
     "kind": "potion",
@@ -1153,6 +1171,7 @@
     "rarity": "Common",
     "source": "potions.md + 对局43 live",
     "target": "any enemy",
-    "usage": "combat"
+    "usage": "combat",
+    "zh_description": "普通：对目标施加弱化（每击攻击削减类）。run-57 live：Act2 Boss——弱化3落地，LUNGING_BITE 意图 28→21 级削减显示；Uppercut 类弱化削减在异螨/蜜蜂类多段上同样 live（按击削减，非总量）。"
   }
 }

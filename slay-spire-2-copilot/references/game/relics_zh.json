@@ -175,12 +175,12 @@
     "description": "第 1 回合，抽牌阶段额外抽 2 张牌。",
     "id": "BAG_OF_PREPARATION",
     "kind": "relic",
+    "live_notes": "LIVE run-56：每场战斗开局额外抽 2 张牌。引擎提前上线。",
     "name": "准备背包",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:relics.md:L19; md:relics_zh.md:L19; codex:relics/BAG_OF_PREPARATION",
-    "live_notes": "LIVE run-56：每场战斗开局额外抽 2 张牌。引擎提前上线。"
+    "source": "md:relics.md:L19; md:relics_zh.md:L19; codex:relics/BAG_OF_PREPARATION"
   },
   "BEATING_REMNANT": {
     "aliases": [
@@ -277,12 +277,12 @@
     "description": "拾取时，+20 最大 HP；第 1 回合，抽牌阶段额外少抽 2 张牌。",
     "id": "BIG_MUSHROOM",
     "kind": "relic",
+    "live_notes": "LIVE run-56：蘑菇事件选择。拾起时 +20 最大生命值；第 1 回合少抽 2 张牌（节奏代价）。",
     "name": "大蘑菇",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Event",
-    "source": "md:relics.md:L272; md:relics_zh.md:L272",
-    "live_notes": "LIVE run-56：蘑菇事件选择。拾起时 +20 最大生命值；第 1 回合少抽 2 张牌（节奏代价）。"
+    "source": "md:relics.md:L272; md:relics_zh.md:L272"
   },
   "BIIIG_HUG": {
     "aliases": [
@@ -457,21 +457,23 @@
   },
   "BOOK_OF_FIVE_RINGS": {
     "aliases": [
-      "Book of Five Rings",
+      "BookOfFiveRINGS",
       "BOOK_OF_FIVE_RINGS",
-      "五轮书"
+      "五轮书",
+      "五轮之书"
     ],
     "character": null,
     "counter_shown": false,
     "curated": true,
-    "description": "牌库每增加 5 张牌，恢复 20HP。对局43 Act2 商店 (5,0) live 价格 196金（买不起）。反精简遗物——只在加牌密集的路线上回本。",
+    "description": "Every 5 cards added to your deck, heal 20 HP (counter resets on payout). Anti-thinning relic — pays on card-add-heavy routes. LIVE run-57: two payouts (counter hit 5 twice — mid-Act1 Armaments add + mid-Act2 adds); heals landed at 68/86 pre-Elite② and mid-Act2 shop window.",
     "id": "BOOK_OF_FIVE_RINGS",
     "kind": "relic",
-    "name": "五轮书",
+    "name": "五轮之书",
     "needs_zh": false,
     "play_notes": "对局43 live",
     "rarity": "Common",
-    "source": "relics.md + 对局43 商店"
+    "source": "relics.md + 对局43 商店",
+    "zh_description": "牌库每加入5张牌回复20HP（兑现后计数重置）。反稀简遗物——加牌密集路线兑现。run-57 live：两次兑现（计数两次到5——Act1 Armaments 入手 + Act2 中段加牌）；回血落在 Elite② 前 68/86 与 Act2 商店窗。"
   },
   "BOOK_REPAIR_KNIFE": {
     "aliases": [
@@ -501,12 +503,12 @@
     "description": "精英战第 1 回合开始，额外抽 2 张牌并获得 1 点能量。",
     "id": "BOOMING_CONCH",
     "kind": "relic",
+    "live_notes": "LIVE run-56：Neow 选择。精英战开局抽 +2 张牌并获得 1 能量。",
     "name": "轰鸣海螺",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L149; md:relics_zh.md:L149",
-    "live_notes": "LIVE run-56：Neow 选择。精英战开局抽 +2 张牌并获得 1 能量。"
+    "source": "md:relics.md:L149; md:relics_zh.md:L149"
   },
   "BOUND_PHYLACTERY": {
     "aliases": [
@@ -527,20 +529,22 @@
   },
   "BOWLER_HAT": {
     "aliases": [
-      "Bowler Hat",
-      "BowlerHat"
+      "BowlerHat",
+      "BOWLER_HAT",
+      "礼帽"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "金币获取 ×1.25；仅可在第三幕宝箱前获得；商店中不会出售。",
+    "curated": true,
+    "description": "Gold gained ×1.25. Only obtainable before Act-3 treasure chest; never sold in shops. LIVE run-57: Act2 chest + elite bounties scaled visibly (chest +43-class vs 30-class baseline).",
     "id": "BOWLER_HAT",
     "kind": "relic",
-    "name": "圆顶礼帽",
+    "name": "礼帽",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:relics.md:L50; md:relics_zh.md:L50"
+    "source": "md:relics.md:L50; md:relics_zh.md:L50",
+    "zh_description": "金币获取×1.25。仅可在第三幕宝箱前获得；商店不出售。run-57 live：Act2 宝箱与精英赏金可见放大（宝箱+43级 vs 基准30级）。"
   },
   "BREAD": {
     "aliases": [
@@ -621,12 +625,12 @@
     "description": "战斗开始，获得 3 点荆棘。",
     "id": "BRONZE_SCALES",
     "kind": "relic",
+    "live_notes": "LIVE run-56：每场战斗开始时 +3 荆棘。荆棘伤害穿挡。",
     "name": "铜质鳞片",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:relics.md:L23; md:relics_zh.md:L23; codex:relics/BRONZE_SCALES",
-    "live_notes": "LIVE run-56：每场战斗开始时 +3 荆棘。荆棘伤害穿挡。"
+    "source": "md:relics.md:L23; md:relics_zh.md:L23; codex:relics/BRONZE_SCALES"
   },
   "BURNING_BLOOD": {
     "aliases": [
@@ -755,12 +759,12 @@
     "description": "每场战斗首次失去 HP 时，抽 3 张牌。任意掉血 tick 均触发——猩红披风回合开始 −1 / 放血 / 祭品类；披风部署后等效「T1 后战斗开始抽 3」。",
     "id": "CENTENNIAL_PUZZLE",
     "kind": "relic",
+    "live_notes": "LIVE run-56：每场战斗首次失去 HP 时抽 3 张牌。与自伤引擎协同（Hemokinesis/Bloodletting/BloodWall 触发）。",
     "name": "百年积木",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:relics.md:L24; md:relics_zh.md:L24",
-    "live_notes": "LIVE run-56：每场战斗首次失去 HP 时抽 3 张牌。与自伤引擎协同（Hemokinesis/Bloodletting/BloodWall 触发）。"
+    "source": "md:relics.md:L24; md:relics_zh.md:L24"
   },
   "CHANDELIER": {
     "aliases": [
@@ -831,20 +835,22 @@
   },
   "CHOSEN_CHEESE": {
     "aliases": [
-      "Chosen Cheese",
-      "ChosenCheese"
+      "ChosenCheese",
+      "CHOSEN_CHEESE",
+      "天选芝士"
     ],
     "character": null,
     "counter_shown": false,
     "curated": true,
-    "description": "run-51 live：每战触发；全局 MaxHP 80→88（含其他来源）——HP 经济轨，与百分比休息复利。",
+    "description": "Event relic (ROOM_FULL_OF_CHEESE SEARCH branch, −14 HP on pickup run-57): +1 Max HP at the end of every combat (live run-51/57 class — stacks with Burning Blood heal and Feed Fatals). run-57: HP-rail component 80→97 combined with Feed; picking it at 46/95 HP-class cost was paid back across Act2 fights.",
     "id": "CHOSEN_CHEESE",
     "kind": "relic",
     "name": "天选芝士",
     "needs_zh": false,
     "play_notes": "run-46 live：16 次胜利滚动；与燃烧之血+华夫饼+Feed Fatal 构成 HP 铁路；Paper Cuts 税（Act3 卷轴战）是唯一观测漏点——全挡回合零 MaxHP 损失。",
     "rarity": "Event",
-    "source": "run-51 live fold 2026-09-19"
+    "source": "run-51 live fold 2026-09-19",
+    "zh_description": "事件遗物（ROOM_FULL_OF_CHEESE 翻找分支，run-57 拾取时−14HP）：每场战斗结束+1最大HP（run-51/57 live 级——与燃烧之血回复及 Feed Fatal 叠加）。run-57：HP 轨组件 80→97（与 Feed 复合）；在 46/95 级 HP 付出的入场税由 Act2 各战兑付。"
   },
   "CIRCLET": {
     "aliases": [
@@ -990,12 +996,12 @@
     "description": "每次打出攻击牌时，获得 1 格挡。",
     "id": "DAUGHTER_OF_THE_WIND",
     "kind": "relic",
+    "live_notes": "LIVE run-56：玩偶房选择。每打出一张攻击牌获得 1 挡。与攻击密集牌组构成被动挡引擎。",
     "name": "风的女儿",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Event",
-    "source": "md:relics.md:L278; md:relics_zh.md:L278",
-    "live_notes": "LIVE run-56：玩偶房选择。每打出一张攻击牌获得 1 挡。与攻击密集牌组构成被动挡引擎。"
+    "source": "md:relics.md:L278; md:relics_zh.md:L278"
   },
   "DAUGHTER_OF_WIND": {
     "aliases": [
@@ -1675,20 +1681,22 @@
   },
   "GAMBLING_CHIP": {
     "aliases": [
-      "Gambling Chip",
-      "GamblingChip"
+      "GamblingChip",
+      "GAMBLING_CHIP",
+      "赌博筹码"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "战斗开始，可弃置任意数量卡牌并抽取等量牌。",
+    "curated": true,
+    "description": "Rare: at combat start, discard any number of cards then draw that many (mulligan via hand_select overlay: choose cards → proceed). LIVE run-57: mulligan dumped skill-class cards vs Infested Prism (zero-skill discipline); dumped Uppercut vs trio fight for block-class redraw. Combat-start overlay appears before play phase — play calls fail-loud until resolved.",
     "id": "GAMBLING_CHIP",
     "kind": "relic",
     "name": "赌博筹码",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Rare",
-    "source": "md:relics.md:L101; md:relics_zh.md:L101"
+    "source": "md:relics.md:L101; md:relics_zh.md:L101",
+    "zh_description": "稀有：战斗开始时弃任意数量牌并抽等量（经 hand_select overlay 换牌：选牌→proceed）。run-57 live：棱柱战（零技能纪律）换掉技能类牌；三敌战换掉 Uppercut 重抽挡件。overlay 在 play 阶段前出现——未解决前 play 调用被 fail-loud 拒绝。"
   },
   "GAME_PIECE": {
     "aliases": [
@@ -1861,19 +1869,22 @@
   },
   "GORGET": {
     "aliases": [
-      "Gorget"
+      "Gorget",
+      "GORGET",
+      "颈甲"
     ],
     "character": null,
     "counter_shown": false,
     "curated": true,
-    "description": "每场战斗开始时获得 4 层 Plating。LIVE run-54（2026-09-19，log run-20260919-155115-7b29144e.log）：每战开战 PLATING_POWER:4 落地；甲层随入账伤害实例递减（compact state powers 行可见）。",
+    "description": "Common: at the start of each combat, gain 4 Plating (rolling block — plating grants Amount block at end of each of your side turns, stacks decrement at your turn start; plating block stacks with card block for same-window cover math). LIVE run-57: Gorget+Defend+Shrug lines routinely built 14-22 block covers; IMBALANCED stun vs Bowlbug Rock fired on 16-total-block vs 15-intent.",
     "id": "GORGET",
     "kind": "relic",
-    "name": "护喉甲",
+    "name": "颈甲",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:relics.md:L28; md:relics_zh.md:L28; codex:relics/GORGET"
+    "source": "md:relics.md:L28; md:relics_zh.md:L28; codex:relics/GORGET",
+    "zh_description": "普通：每场战斗开始获得4层镀甲（滚动挡——镀甲在你方回合末提供Amount挡，你回合初堆数递减；镀甲与卡牌挡同窗叠加入账）。run-57 live：颈甲+Defend+Shrug 组合常构 14-22 挡覆盖；石碗虫 IMBALANCED 眩晕在 16总挡 vs 15意图时触发。"
   },
   "GREMLIN_HORN": {
     "aliases": [
@@ -2383,12 +2394,12 @@
     "description": "拾取时，+31 最大 HP。",
     "id": "LOOMING_FRUIT",
     "kind": "relic",
+    "live_notes": "LIVE run-56：Act3 NONUPEIPE 事件选择。拾起时 +31 最大生命值。与芝士/狂宴/大蘑菇/草莓叠层 HP 80→160。",
     "name": "布质果实",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L180; md:relics_zh.md:L180; codex:relics/LOOMING_FRUIT",
-    "live_notes": "LIVE run-56：Act3 NONUPEIPE 事件选择。拾起时 +31 最大生命值。与芝士/狂宴/大蘑菇/草莓叠层 HP 80→160。"
+    "source": "md:relics.md:L180; md:relics_zh.md:L180; codex:relics/LOOMING_FRUIT"
   },
   "LORDS_PARASOL": {
     "aliases": [
@@ -2629,20 +2640,22 @@
   },
   "MINIATURE_CANNON": {
     "aliases": [
-      "Miniature Cannon",
-      "MiniatureCannon"
+      "MiniatureCannon",
+      "MINIATURE_CANNON",
+      "迷你加农炮"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "升级后的攻击牌额外造成 3 点伤害。",
+    "curated": true,
+    "description": "Uncommon: upgraded Attack cards deal +3 damage. LIVE run-57: Bludgeon+ (42 base) + Sharp-2 enchant + Cannon +3 = 47-class unbuffed hits; under vuln ×1.5 → 70-class; Act1 Gigantification ×3 window hit 96 pre-upgrade.",
     "id": "MINIATURE_CANNON",
     "kind": "relic",
-    "name": "微型大炮",
+    "name": "迷你加农炮",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:relics.md:L64; md:relics_zh.md:L64"
+    "source": "md:relics.md:L64; md:relics_zh.md:L64",
+    "zh_description": "罕见：升级后的攻击牌+3伤。run-57 live：Bludgeon+（42基础）+锋利2附魔+加农炮+3=无加成47级单发；易伤×1.5→70级；Act1 巨化×3窗升级前打出96。"
   },
   "MINIATURE_TENT": {
     "aliases": [
@@ -2762,6 +2775,23 @@
     "play_notes": "",
     "rarity": "Shop",
     "source": "md:relics.md:L257; md:relics_zh.md:L257"
+  },
+  "NEOW": {
+    "aliases": [
+      "Arcane Scroll",
+      "ARCANE_SCROLL"
+    ],
+    "character": "shared",
+    "curated": true,
+    "description": "Upon pickup, obtain a random Rare Card to add to your Deck.",
+    "id": "NEOW",
+    "kind": "relic",
+    "name": "Arcane Scroll",
+    "needs_zh": false,
+    "play_notes": "",
+    "rarity": "Ancient",
+    "source": "codex-api:/relics/ARCANE_SCROLL",
+    "zh_description": "Upon pickup, obtain a random Rare Card to add to your Deck."
   },
   "NEOWS_BONES": {
     "aliases": [
@@ -2920,21 +2950,23 @@
   },
   "ODDLY_SMOOTH_STONE": {
     "aliases": [
-      "Oddly Smooth Stone",
+      "OddlySmoothStone",
       "ODDLY_SMOOTH_STONE",
-      "滑石"
+      "滑石",
+      "奇异光滑石"
     ],
     "character": null,
     "counter_shown": false,
     "curated": true,
-    "description": "每场战斗开始时 +1 敏捷（卡牌挡全程 +1）。对局43 Act1 尾部商店 (14,2) live 价格 191金——与 Tremble 一同作为 Act1 尾部沉淀口买入（243/244=99.6% 沉淀）。战斗中与敏捷药水加算叠加。",
+    "description": "Common: start each combat with 1 Dexterity (card-block values +1 all fight). LIVE run-57: Defend 5→6, Shrug 8→9, SW per-exhaust 5→6 class throughout; stacks with Dex sources additively.",
     "id": "ODDLY_SMOOTH_STONE",
     "kind": "relic",
-    "name": "滑石",
+    "name": "奇异光滑石",
     "needs_zh": false,
     "play_notes": "对局43 live",
     "rarity": "Common",
-    "source": "relics.md + 对局43 商店 live"
+    "source": "relics.md + 对局43 商店 live",
+    "zh_description": "普通：每场战斗开始获得1点敏捷（战斗内卡牌挡值+1）。run-57 live：Defend 5→6、Shrug 8→9、SW 每耗尽 5→6 级全程生效；与其他敏捷源加法叠加。"
   },
   "OLD_COIN": {
     "aliases": [
@@ -2990,20 +3022,22 @@
   },
   "ORNAMENTAL_FAN": {
     "aliases": [
-      "Ornamental Fan",
-      "OrnamentalFan"
+      "OrnamentalFan",
+      "ORNAMENTAL_FAN",
+      "装饰折扇"
     ],
     "character": null,
     "counter_shown": false,
     "curated": true,
-    "description": "每回合打出 3 张攻击牌，获得 4 点格挡。计数每回合重置；第 3 张攻击牌结算时 +4 挡。run-50 live fold 2026-09-19 (log run-20260919-115250-401c95c0.log)：Fan 触发多次 live 验证（第 3 张攻击后 block 打印 +4；compact state 可见 Fan: 计数）。",
+    "description": "Every 3 Attack cards played in one turn, gain 4 Block (counter resets each turn; +4 resolves on the 3rd attack). LIVE run-57 reconfirmed across combats (Fan counter visible; +4 printed after 3rd attack; T4 millipede 3-attack line banked Fan+plating cover).",
     "id": "ORNAMENTAL_FAN",
     "kind": "relic",
-    "name": "装饰扇",
+    "name": "装饰折扇",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Uncommon",
-    "source": "md:relics.md:L67; md:relics_zh.md:L68"
+    "source": "md:relics.md:L67; md:relics_zh.md:L68",
+    "zh_description": "每回合打出第3张攻击牌时获得4挡（计数每回合重置；第3张攻击结算时+4）。run-57 live 多战再确认（Fan 计数可见；第3攻后+4打印；千足虫 T4 三攻线 Fan+镀甲入账）。"
   },
   "ORRERY": {
     "aliases": [
@@ -3575,20 +3609,22 @@
   },
   "PRISMATIC_GEM": {
     "aliases": [
-      "Prismatic Gem",
-      "PrismaticGem"
+      "PrismaticGem",
+      "PRISMATIC_GEM",
+      "棱彩宝石"
     ],
     "character": null,
     "counter_shown": false,
-    "curated": false,
-    "description": "每回合 +1 最大能量；卡牌奖励包含其他角色的牌。",
+    "curated": true,
+    "description": "Ancient (OROBOAS Act2 boon pool, run-57 pick): +1 max Energy each turn; card rewards include other characters' cards (cross-class pool live — Kingly Kick/Thunderclap/Crush Under offers appeared run-57). LIVE run-57: energy display 4/4 base became the run standard; 6/4 with Venerable Tea Set rest-proc at Act2 Boss T1 (Bludgeon+KinglyKick 74-dmg opening).",
     "id": "PRISMATIC_GEM",
     "kind": "relic",
     "name": "棱彩宝石",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Ancient",
-    "source": "md:relics.md:L209; md:relics_zh.md:L209"
+    "source": "md:relics.md:L209; md:relics_zh.md:L209",
+    "zh_description": "远古（OROBAS Act2 赐福池，run-57 选取）：每回合+1最大能量；卡牌奖励含其他角色卡（跨职业池 live——run-57 出现 Kingly Kick/Thunderclap/Crush Under 供选）。run-57 live：能量显示 4/4 成为本局基准；Act2 Boss T1 叠加茶具休息触发=6/4（Bludgeon+KinglyKick 开场74伤）。"
   },
   "PUMPKIN_CANDLE": {
     "aliases": [
@@ -4382,12 +4418,12 @@
     "description": "拾取时，+7 最大 HP。",
     "id": "STRAWBERRY",
     "kind": "relic",
+    "live_notes": "LIVE run-56：拾起时 +7 最大生命值。MaxHP 叠层包组件。",
     "name": "草莓",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:relics.md:L41; md:relics_zh.md:L41; codex:relics/STRAWBERRY",
-    "live_notes": "LIVE run-56：拾起时 +7 最大生命值。MaxHP 叠层包组件。"
+    "source": "md:relics.md:L41; md:relics_zh.md:L41; codex:relics/STRAWBERRY"
   },
   "STRIKE_DUMMY": {
     "aliases": [
@@ -4838,12 +4874,12 @@
     "description": "战斗开始，获得 1 点力量。",
     "id": "VAJRA",
     "kind": "relic",
+    "live_notes": "LIVE run-56：Act1 商店购入 75g。每场战斗开始时 +1 力量。",
     "name": "金刚杵",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:relics.md:L42; md:relics_zh.md:L42; codex:relics/VAJRA",
-    "live_notes": "LIVE run-56：Act1 商店购入 75g。每场战斗开始时 +1 力量。"
+    "source": "md:relics.md:L42; md:relics_zh.md:L42; codex:relics/VAJRA"
   },
   "VAMBRACE": {
     "aliases": [
@@ -4880,20 +4916,22 @@
   },
   "VENERABLE_TEA_SET": {
     "aliases": [
-      "Venerable Tea Set",
-      "VenerableTeaSet"
+      "VenerableTeaSet",
+      "VENERABLE_TEA_SET",
+      "古茶具套装"
     ],
     "character": null,
     "counter_shown": false,
     "curated": true,
-    "description": "进入休息点后，下一场战斗开始+2能量（第一回合）。对局40 live：每次访问休息点触发一次；被下一场战斗消耗（非休息后所有战斗）。与可可/灯笼叠加，休息后 T1 10 能量。",
+    "description": "On entering a Rest Site, the next combat starts with +2 Energy (T1 only). LIVE run-57: procced at (14,5) rest → Act2 Boss T1 energy 6/4 with Prismatic Gem; also Act1 boss-class fights after rests. Shop-buy run-57 (13,5) 189g.",
     "id": "VENERABLE_TEA_SET",
     "kind": "relic",
-    "name": "venerable 茶具",
+    "name": "古茶具套装",
     "needs_zh": false,
     "play_notes": "",
     "rarity": "Common",
-    "source": "md:relics.md:L43; md:relics_zh.md:L43; run-40 live fold 2026-09-18"
+    "source": "md:relics.md:L43; md:relics_zh.md:L43; run-40 live fold 2026-09-18",
+    "zh_description": "进入休息站后，下一场战斗开局+2能量（仅T1）。run-57 live：(14,5) 休息触发 → Act2 Boss T1 与棱彩宝石叠加=6/4能。run-57 (13,5) 商店 189金购入。"
   },
   "VERY_HOT_COCOA": {
     "aliases": [
