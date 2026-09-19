@@ -95,6 +95,7 @@ rules:
 - The 备注 cell stays meta: one line of outcome/death cause. Narrative and
   lessons go in the run's memory/runs/ note, or in the `# 阶段性反思`
   section — never in the table cells
+- 备注只写最简单的信息，范例：`Act3 全清 → 到达建筑师（本存档首次 Act3 通关）`、`死于 Act2 Boss 知识恶魔（剩 91/379）`
 - The ascension recorded in the run note's Summary table, the memory
   remark, and the overview row must all match
 

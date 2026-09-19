@@ -86,6 +86,27 @@ only meta information — 对局序号 (chronological run number), character, da
 ascension, floor, outcome, SL count, and a one-line outcome/death remark.
 No narrative and no lessons inside the table cells.
 
+Diagnostics for the table:
+
+- **Column order** is 对局序号 | 角色 | 日期 | 进阶 | 到达楼层 | 胜负 | SL 次数 |
+  备注; the 进阶 cell holds a **bare number** (0, 1, 2, …) only — no
+  prefixes, no extra text.
+- **Row order**: the newest run sits at the **TOP** with the highest 对局序号
+  (reverse chronological order). New runs are inserted at the top —
+  appending at the bottom is a violation.
+- **备注 cells hold only the simplest outcome facts** — at most one clearance
+  clause plus one death clause:
+  - Win: `ActX 全清 → 到达建筑师（optional milestone tag）` — e.g.
+    `Act3 全清 → 到达建筑师（本存档首次 Act3 通关）`
+  - Loss: `死于 ActX <Boss/精英/走廊> <敌人>（剩 x/y 或入场 HP）` — e.g.
+    `死于 Act2 Boss 知识恶魔（剩 91/379）`; a short clearance summary may
+    precede it — e.g. `Act1+Act2 双章全清；死于 Act3 电球头 T3（16HP 入场）`
+  - Parenthetical holds simple numbers/milestones only: enemy remaining HP,
+    entry HP, kill turn, first-kill / ascension / run-first tags
+- **备注 violations**: process-debt tallies, death-cause analysis or
+  lessons, run-XXX cross-references, card/relic names, shop-sink
+  percentages, mechanics commentary — any of these inside a cell.
+
 Exception — `# 阶段性反思`: this top-level section holds phased reflections,
 one `## 反思 (yyyy-mm-dd)` subsection each. Reflection content (gains, losses,
 structured review) lives only there, never in the run table. Cadence and
@@ -95,7 +116,8 @@ the 20 runs since the previous reflection.
 
 Violation → move narrative content out of the table cells into that run's
 `memory/runs/` note (or, if it is reflection material, into the matching
-`## 反思` subsection); keep table cells down to meta.
+`## 反思` subsection); rewrite 备注 cells that fail the format down to
+simplest outcome facts; fix column/row-order violations in place.
 
 ### 4. references/game/ is static reference material
 
