@@ -25,7 +25,7 @@ Core facts table (fill every row):
 | Character | e.g. IRONCLAD |
 | Date | e.g. 2026-09-20 |
 | Floor reached | e.g. 33 |
-| Score | e.g. — (EA build has no score field) |
+| Score | e.g. 1234 |
 | Ascension | e.g. 2 |
 | Fixed seed used | e.g. no |
 | Seed | e.g. E77FN3DSSY |
