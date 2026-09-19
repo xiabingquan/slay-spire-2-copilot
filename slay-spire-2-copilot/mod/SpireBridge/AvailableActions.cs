@@ -209,6 +209,11 @@ public static class AvailableActions
                 actions.Add(new Dictionary<string, object?> { ["action"] = "proceed", ["args"] = new Dictionary<string, object?>() });
                 actions.Add(new Dictionary<string, object?> { ["action"] = "skip", ["args"] = new Dictionary<string, object?>() });
                 break;
+            case "feedback":
+                // Leave-only: BackButton/ReturnToGameButton (Send is never offered).
+                actions.Add(new Dictionary<string, object?> { ["action"] = "proceed", ["args"] = new Dictionary<string, object?>() });
+                actions.Add(new Dictionary<string, object?> { ["action"] = "skip", ["args"] = new Dictionary<string, object?>() });
+                break;
             case "crystal_sphere":
             {
                 foreach (Dictionary<string, object?> option in screenOptions)

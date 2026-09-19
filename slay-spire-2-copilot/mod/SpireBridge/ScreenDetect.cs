@@ -259,6 +259,12 @@ public static class ScreenDetect
         {
             return "shop";
         }
+        // NSendFeedbackScreen (bug-report form): leave-only screen — never
+        // auto-click Send; Back/ReturnToGame close it per decompile.
+        if (typeName.Contains("SendFeedback", StringComparison.OrdinalIgnoreCase))
+        {
+            return "feedback";
+        }
         return "other";
     }
 }

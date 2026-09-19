@@ -379,6 +379,43 @@ public static class ScreenActions
         return (true, $"submitted {actionLabel} index {index}");
     }
 
+
+    // NSendFeedbackScreen leave path (proposal 2): BackButton or
+    // %ReturnToGameButton both Close() the screen per decompile. Send is
+    // never auto-clicked — submitting a bug report is a user decision.
+    private static bool IsFeedbackScreen(object? context) =>
+        context is not null && context.GetType().Name.Contains("SendFeedback", StringComparison.OrdinalIgnoreCase);
+
+    private static (bool, string) LeaveFeedbackScreen(IScreenContext context)
+    {
+        Node node = (Node)context;
+        NBackButton? back = UiHelper.FindFirst<NBackButton>(node);
+        if (back != null && back.Visible)
+        {
+            NBackButton target = back;
+            ActionExecutor.Fire(() => UiHelper.Click(target), "feedback back");
+            return (true, "submitted feedback leave (BackButton)");
+        }
+        Node? named = node.GetNodeOrNull("%ReturnToGameButton");
+        if (named is NClickableControl { Visible: true } namedClick)
+        {
+            ActionExecutor.Fire(() => UiHelper.Click(namedClick), "feedback return-to-game");
+            return (true, "submitted feedback leave (ReturnToGameButton)");
+        }
+        foreach (NButton b in UiHelper.FindAll<NButton>(node))
+        {
+            string n = b.Name.ToString();
+            if (b.Visible && b.IsEnabled && (n.Contains("ReturnToGame", StringComparison.OrdinalIgnoreCase)
+                || n.Contains("Back", StringComparison.OrdinalIgnoreCase)))
+            {
+                NButton target = b;
+                ActionExecutor.Fire(() => UiHelper.Click(target), "feedback named leave");
+                return (true, $"submitted feedback leave ({n})");
+            }
+        }
+        return (false, "feedback screen: no BackButton/ReturnToGameButton found — Send is never auto-clicked; leave manually");
+    }
+
     private static (bool, string) ClickIndexedButton(Node screenNode, int index, string label)
     {
         List<NClickableControl> buttons = UiHelper.FindAll<NRestSiteButton>(screenNode).Cast<NClickableControl>().ToList();
@@ -464,6 +501,10 @@ public static class ScreenActions
             return SkipHandSelectEmpty();
         }
         IScreenContext? context = ActiveScreenContext.Instance.GetCurrentScreen();
+        if (IsFeedbackScreen(context))
+        {
+            return LeaveFeedbackScreen(context!);
+        }
         if (NModalContainer.Instance?.OpenModal is Node modalNode && ReferenceEquals(context, modalNode))
         {
             NButton? dismiss = FindModalButton(modalNode, "No", "Cancel", "Close", "Dismiss");
@@ -582,6 +623,10 @@ public static class ScreenActions
             return ConfirmHandSelect();
         }
         IScreenContext? context = ActiveScreenContext.Instance.GetCurrentScreen();
+        if (IsFeedbackScreen(context))
+        {
+            return LeaveFeedbackScreen(context!);
+        }
         // Game-over summary needs the Continue -> ReturnToMainMenu chain, not a
         // proceed button; this is the any-state takeover entry.
         if (context is MegaCrit.Sts2.Core.Nodes.Screens.GameOverScreen.NGameOverScreen endedScreen)
