@@ -49,16 +49,16 @@ Spire 2 via Claude Code or Codex"。
 
          SPIREBRIDGE_LOG_DIR=<绝对文件夹> python3 bridge/spirectl.py <子命令>
 
-2. **读记忆**（先于其他操作）。memory/ 已纳入版本控制，是整个会话的
-   常驻游玩参考：
-   - 每局开始前必读：
-     - 所有已记录对局的 Summary 节（memory/runs/*.md——各局核心信息与
-       最大的得与失）
-     - 即将使用角色的关键玩法沉淀（来自该角色的对局记录，
-       <角色>_*.md）
-   - 选读：按需翻阅更早的完整对局记录。
-   - 游玩全程：memory 随时可查——历史 summary 与角色玩法笔记是局内
-     决策的实时参考。
+2. **读记忆**（先于其他操作）。记忆体系是整个会话的常驻游玩参考：
+   - **开局必读**：`memory/overview.md`（对局表 + 统计交叉表——跨局
+     全景）+ lessons 通用类内容——战斗原则、协同、角色脊线
+     （`memory/lessons/`）。
+   - **每步决策之前**：只查**最小必要内容**——与该决策直接相关的那一条
+     lessons 条目或 `spirectl lookup` 结果（选遗物 → lessons/relics.md；
+     进战斗前 → lessons/enemies.md + lookup；选路线 → lessons/route.md；
+     完整路由见 memory/user_guide.md），不做全量翻阅。
+   - **按需**：单局笔记 memory/runs/——文件名前缀 = overview.md 的
+     对局序号，查号后开文件。
 
 3. **环境检查与 mod 自装/自愈**（cwd = 本 skill 文件夹
    `<repo>/slay-spire-2-copilot`，全部运行时文件都在此处）：
@@ -130,7 +130,8 @@ memory 记录里。
    map_select 该点；state 会把它重新注入 `available_map_points` 头部，
    紧凑视图会打印 ACT-START BOON ROOM UNVISITED 警告。该标志存在时
    绝不能跳到第 1 排及之后的点——跳过赐福是永久损失（地图不能回头）
-2. 结合状态与记忆（对局 summary、角色玩法笔记）决定动作
+2. 结合状态与记忆决定动作——只查该决策对应的最小必要内容：匹配的
+   `memory/lessons/` 条目和/或 `spirectl lookup <id>` 结果
 3. `... act <动作> --args '<json>' --wait` — action 立即返回（已提交）；`--wait`
    轮询至状态稳定（指纹不再跳动）后打印。**每次只打一张牌 — 硬规则**：
    战斗中的卡牌打出**绝不批量提交**。每次 `act play` 只打**一**
@@ -162,7 +163,7 @@ memory 记录里。
 
 1. **每场与不熟悉敌人的战斗首回合前，以及每场精英/Boss 战无例外**：
    先用 `python3 bridge/spirectl.py lookup <id>` 解析每一个不熟悉的
-   move_id/power_id/relic_id（或直接读 spirectl_lib/data/monsters.json /
+   move_id/power_id/relic_id（或直接读 bridge/spirectl_lib/data/monsters.json /
    powers.json）——招式循环、每一个被动 Power、施加的每一个
    debuff/buff。live state 显示的每个 power/意图都必须能用参考解释；
    任何未知 → perplexity-search → 折入 references 双语 → 再出牌。
@@ -198,20 +199,26 @@ game_over 时 finalize）。该文件夹在 skill 目录之外、仓库之外—
 对局结束时（game_over 界面，或 abandon）：
 
 1. 将本局 memory 记录写入
-   memory/runs/<角色>_<YYYYmmdd-HHMMSS>_<hash8>.md（角色 id 在前，后接
-   run 日志的时间戳与哈希，小写、下划线分隔）及其对应的中文版
-   memory/runs/<角色>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md——两者内容必须完全
-   对应。均遵循 memory/user_guide.md 的要点与 memory/template.md 的章节
-   结构（格式以 memory/template.md 为准）。引用 run 日志时只写文件名，绝不写个人绝对路径。
+   memory/runs/<对局序号4位>_<CHARACTER>_<YYYYmmdd-HHMMSS>_<hash8>.md
+   （对局序号 = 本局在 overview.md 将携带的序号——最新序号 + 1；后接角色
+   id、run 日志时间戳与哈希，下划线分隔）及其对应中文版
+   memory/runs/<对局序号4位>_<CHARACTER>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md——
+   两者内容必须完全对应。均遵循 memory/user_guide.md 与 memory/template.md
+   （格式以 template.md 为准）。引用 run 日志时只写文件名，绝不写个人绝对路径。
 2. 对局中新观察到的游戏**结构化事实**（卡牌/遗物/药水/能力/意图的机制
-   字段）直接折入 spirectl_lib/data/ 下对应的 *.json 及其 `_zh` 双语对——
+   字段）直接折入 bridge/spirectl_lib/data/ 下对应的 *.json 及其 `_zh` 双语对——
    key = live 游戏 id，schema 见 bridge/spirectl_lib/schema.py（信封 +
    按 kind 的 detail；codex 为权威结构源，散文教条归 memory/lessons）——
    随后运行 `python3 scripts/build_game_reference_json.py --check`，提交前
    必须 exit 0。memory 只记对局感悟与过程，不记游戏基础数据。
-3. 将本局 memory 记录及其 `_zh` 中文版提交进仓库——memory 已纳入版本控制。
-4. 若用户已停止游玩：解除看门狗武装（见「运行时约定」）。
-5. **阶段性反思**：反思内容绝不写入 `overview.md`——直接写入
+3. 更新 `memory/overview.md`：对局表**顶部**插入一行，随后按表格重新核算
+   `## 统计` 交叉表（战绩总览 / 进阶进度）。
+4. 将本局前向价值经验沉淀进 `memory/lessons/` 对应分类文件——能与条目
+   清单表格某行一对一对应的写入该行「经验」格，其余以无序列表附在表格后。
+5. 将本局 memory 记录、其 `_zh` 中文版、overview 更新与 lessons 沉淀一并
+   提交进仓库——memory 已纳入版本控制。
+6. 若用户已停止游玩：解除看门狗武装（见「运行时约定」）。
+7. **阶段性反思**：反思内容绝不写入 `overview.md`——直接写入
    `memory/lessons/` 对应的分类 markdown，以带日期的无序列表条目记录
    （每条标注日期）。节奏：**第一次反思覆盖目前为止的全部对局**；从第二次
    起每次覆盖自上次以来的 **20 局**（第二次 36–55、第三次 56–75……累计
@@ -299,9 +306,14 @@ bridge/ — 工具文档与游戏数据：
 
 memory/ — 对局记忆（已纳入版本控制）：
 
-- `memory/user_guide.md` — 用户手写的记忆要点（agent 记录时的参考）
+- `memory/user_guide.md` — 记忆写作指南：格式、写入时机、查阅时机、备注
 - `memory/template.md` — 每局 memory 记录的章节模板
+- `memory/overview.md` — 跨局对局表（`## 对局表`）+ 统计交叉表（`## 统计`）；
+  只放结果，不含经验内容
+- `memory/lessons/` — 跨局常备经验，每类一个文件（characters / cards /
+  relics / synergies / combat / economy / route / enemies / events），
+  各含英文版与 `_zh` 中文版
 - `memory/runs/` — 每局一条记录及其 `_zh` 中文版，文件名
-  <角色>_<YYYYmmdd-HHMMSS>_<hash8>.md / <角色>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md
+  <对局序号4位>_<CHARACTER>_<YYYYmmdd-HHMMSS>_<hash8>.md / _zh.md
 
 - `SKILL.md` — skill 触发与定义（英文版）；本文件为其说明

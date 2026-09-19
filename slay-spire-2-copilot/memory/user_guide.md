@@ -49,7 +49,9 @@ consult, and remarks.
 - **Single run note on demand**: file-name prefix equals the 对局序号 column
   in overview.md — look the number up, then open the note
 - Principle: every decision starts with a lookup of prior experience; never
-  decide from impressions alone
+  decide from impressions alone. Consult only the MINIMAL necessary content:
+  before each decision open just the one lessons entry / lookup directly
+  relevant to it — never browse wholesale
 
 ## 备注 Remarks
 

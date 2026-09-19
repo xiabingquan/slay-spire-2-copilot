@@ -63,20 +63,20 @@ Execute in order; all of the following are the skill's own work:
 
          SPIREBRIDGE_LOG_DIR=<abs-folder> python3 bridge/spirectl.py <subcommand>
 
-2. **Read memory** (before anything else). Memory under memory/ is
-   version-controlled and serves as a standing play reference for the whole
-   session:
-   - **Mandatory before each run: `memory/overview.md` only** (table + stats
-     — the standing cross-run picture; reflections live in lessons). Full per-run
-     notes are NOT required at session start.
-   - **On demand**: when a specific past run matters for a decision, read
-     that single note under memory/runs/ — files are named with the run
-     number prefix (e.g. `0051_IRONCLAD_....md`) matching the 对局序号 column
-     in overview.md; look the number up there first, then open the file.
-   - Per-character playstyle notes: consult on demand the same way
-     (filter runs/ by character prefix when needed).
-   - During play: memory may be consulted at any time — past summaries and
-     character playstyle notes are live reference for in-run decisions.
+2. **Read memory** (before anything else). The memory system is a standing
+   play reference for the whole session:
+   - **Mandatory at session/run start**: `memory/overview.md` (run table +
+     statistics crosstabs — the standing cross-run picture) plus the general
+     lessons categories — combat principles, synergies, character spines
+     (`memory/lessons/`).
+   - **Before every decision**: consult only the MINIMAL necessary content —
+     the single lessons entry or `spirectl lookup` result directly relevant
+     to that decision (relic pick -> lessons/relics.md; entering a fight ->
+     lessons/enemies.md + lookup; route -> lessons/route.md; full routing in
+     memory/user_guide.md). Never browse wholesale.
+   - **On demand**: a single run note under memory/runs/ — the file-name
+     prefix equals the 对局序号 in overview.md; look the number up there
+     first, then open the file.
 
 3. **Environment check and mod self-install / self-heal** (cwd = this skill
    folder `<repo>/slay-spire-2-copilot`, which holds all runtime files):
@@ -170,7 +170,9 @@ Repeat until the run ends or the user stops you. Every spirectl call carries
    `available_map_points` and the compact view prints an ACT-START BOON ROOM
    UNVISITED warning. Never jump to row-1+ points while that flag is live —
    skipping the boon is a permanent loss (no backtracking)
-2. Decide the action from the state plus memory (run summaries, character playstyles)
+2. Decide the action from the state plus the minimal relevant memory (the
+   matching `memory/lessons/` entry and/or `spirectl lookup <id>` result —
+   only what that decision needs)
 3. `... act <action> --args '<json>' --wait` — actions return immediately once
    submitted; `--wait` polls until the state settles (stable fingerprint) then
    prints it. **One card per call — hard rule**:
@@ -212,7 +214,7 @@ decks. Every fight is played mechanic-first:
 1. **Before the first turn of every combat against an unfamiliar enemy, and
    every elite/boss without exception**: resolve every unfamiliar
    move_id/power_id/relic_id via `python3 bridge/spirectl.py lookup <id>`
-   (or read spirectl_lib/data/monsters.json / powers.json directly) — move
+   (or read bridge/spirectl_lib/data/monsters.json / powers.json directly) — move
    cycle, every passive Power, every debuff/buff it applies. Every
    power/intent the live state shows must be one you can explain from
    references. Any unknown → perplexity-search → fold the answer into
@@ -240,10 +242,10 @@ decks. Every fight is played mechanic-first:
 Before acting each turn, check: ALL enemy powers/debuffs/buffs with amounts,
 enemy intents, your HP/block, energy, and whether the hand is playable.
 Keep a brief running commentary in your replies. Memory is consultable
-mid-run at any moment — when a decision would benefit from past runs (boss
-patterns, route choices, card evaluations), re-read the relevant run
-summaries or the character's notes. Decision lessons and card/potion/relic/
-intent knowledge: see "References" at the end.
+mid-run at any moment — before each decision, open only the minimal relevant
+content: the matching `memory/lessons/` category entry (enemy doctrine,
+relic tricks, synergies…) and/or `spirectl lookup <id>` for structured
+mechanics facts; per-run notes on demand via the overview 对局序号.
 
 ## Run end
 
@@ -261,23 +263,28 @@ When the run ends (game_over screen, or abandon):
    number + 1; then character id, run log timestamp and hash, underscore-
    separated) and its Chinese twin
    memory/runs/<run-number-4-digit-padded>_<CHARACTER>_<YYYYmmdd-HHMMSS>_<hash8>_zh.md — the two files
-   must stay content-aligned. Both follow memory/user_guide.md and the
-   section structure of memory/template.md (formats defined there). Cite the
-   run log by file name only —
-   never personal absolute paths.
+   must stay content-aligned. Both follow memory/user_guide.md and
+   memory/template.md (formats defined there). Cite the run log by file name
+   only — never personal absolute paths.
 2. Fold newly observed game STRUCTURE (card/relic/potion/power/intent
-   mechanics as structured fields) into the matching spirectl_lib/data/*.json
+   mechanics as structured fields) into the matching bridge/spirectl_lib/data/*.json
    and its `_zh` twin, entries keyed by live game id — schema is
    bridge/spirectl_lib/schema.py (envelope + per-kind detail; codex is the
    authoritative structure source, prose doctrine goes to memory/lessons) —
    then run `python3 scripts/build_game_reference_json.py --check`; it must
    exit 0 before any commit. Memory holds play insights and run process only,
    never game base data.
-3. Commit the run memory note and its `_zh` twin to the repo — memory is
-   version-controlled.
-4. If the user has stopped playing: disarm the watchdog (see "Runtime
+3. Update `memory/overview.md`: insert one row at the TOP of the run table,
+   then recount the `## 统计` crosstabs (战绩总览 / 进阶进度) from the table.
+4. Distill this run's forward-valuable experience into the matching
+   `memory/lessons/` category files — items mapping one-to-one to an
+   inventory-table row go into that row's experience cell; others stay as
+   unordered-list items after the table.
+5. Commit the run note, its `_zh` twin, the overview update, and the lessons
+   changes — memory is version-controlled.
+6. If the user has stopped playing: disarm the watchdog (see "Runtime
    conventions").
-5. **Phased reflection**: reflection content never enters `overview.md` —
+7. **Phased reflection**: reflection content never enters `overview.md` —
    it is written directly into the matching `memory/lessons/*.md` category
    files as dated unordered-list items (each entry carries its date).
    Cadence: the **first** reflection covers **all runs recorded so far**;
@@ -287,7 +294,7 @@ When the run ends (game_over screen, or abandon):
    `memory/runs/`. overview.md holds only overall run results (its table
    with the leading **对局序号** column, newest run on top).
 
-## Info-incomplete contract (user directive 2026-09-19)
+## Info-incomplete contract
 
 When the bridge reports incomplete info (`INFO-INCOMPLETE` / `info_complete=false`):
 
@@ -403,8 +410,14 @@ bridge/ — tooling docs and game data:
 
 memory/ — run memory (version-controlled):
 
-- `memory/user_guide.md` — user-written guidance for what agents should record
+- `memory/user_guide.md` — memory-writing guidance: formats, when to write,
+  when to consult, remarks
 - `memory/template.md` — section template for per-run memory notes
+- `memory/overview.md` — cross-run table (`## 对局表`) + statistics crosstabs
+  (`## 统计`); results only, no experience content
+- `memory/lessons/` — standing cross-run experience, one file per category
+  (characters / cards / relics / synergies / combat / economy / route /
+  enemies / events), each EN + `_zh` twin
 - `memory/runs/` — one note per run plus a `_zh` Chinese twin, named
   <run-number-4-digit-padded>_<CHARACTER>_<YYYYmmdd-HHMMSS>_<hash8>.md / _zh.md — the run
   number prefix equals the 对局序号 in memory/overview.md (lookup key)
