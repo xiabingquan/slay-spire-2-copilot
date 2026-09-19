@@ -2,6 +2,8 @@
 
 Full card inventory by character pool — experience cells stay empty until filled. Card data: `spirectl lookup <id>`.
 
+Experience is written as Markdown unordered-list items (`- item`); entries distilled from phased reflections carry their date.
+
 # IRONCLAD
 
 | id | name | experience |

@@ -2,6 +2,8 @@
 
 Full event inventory by act — experience cells stay empty until filled. Event data: `spirectl lookup <id>`.
 
+Experience is written as Markdown unordered-list items (`- item`); entries distilled from phased reflections carry their date.
+
 # Act 1
 
 | id | name | experience |

@@ -7,20 +7,25 @@ consult, and remarks.
 
 - Per-run notes (the EN+`_zh` pair under `memory/runs/`): format per
   `memory/template.md`
-- Cross-run overview table, phased reflections, SL column: rules per
-  `memory/overview.md` itself (its 表格规则 block and `# 阶段性反思` section)
+- Cross-run overview table and SL column: rules per `memory/overview.md`
+  itself (its 表格规则 block)
 
 ## 写入时机 When to write
 
 - **Run note + overview row**: written immediately at every run end —
   the note pair under `memory/runs/`, plus one row inserted at the TOP of
   the overview.md table
-- **Phased reflection**: the first one covers ALL runs recorded so far;
-  every later one covers the 20 runs since the previous (36–55, 56–75, …) —
-  fire it when the cumulative run count reaches that boundary
-- **lessons/**: forward-valuable experience from the run is distilled into
-  the matching category file; standing conclusions from phased reflections
-  enter lessons the same way
+- **Phased reflection**: cadence unchanged — the first one covers ALL runs
+  recorded so far; every later one covers the 20 runs since the previous
+  (36–55, 56–75, …), fired when the cumulative run count reaches the
+  boundary. Output goes DIRECTLY into the matching `memory/lessons/*.md`
+  category files — never into overview.md — and **every entry carries its
+  date**. overview.md holds only overall run results (the table); no
+  experience content lives there
+- **lessons/**: forward-valuable experience from the run and from phased
+  reflections is written into the matching category file as unordered-list
+  items (each lessons markdown states this format rule internally);
+  reflection-derived items are dated per entry
 
 ## 查阅时机 When to consult
 

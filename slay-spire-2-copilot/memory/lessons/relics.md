@@ -2,6 +2,8 @@
 
 Full relic inventory grouped by ownership — experience cells stay empty until filled. Relic data: `spirectl lookup <id>`.
 
+Experience is written as Markdown unordered-list items (`- item`); entries distilled from phased reflections carry their date.
+
 # Shared
 
 | id | name | experience |
