@@ -7,14 +7,16 @@ consult, and remarks.
 
 - Per-run notes (the EN+`_zh` pair under `memory/runs/`): format per
   `memory/template.md`
-- Cross-run overview table and SL column: rules per `memory/overview.md`
-  itself (its 表格规则 block)
+- Cross-run overview (`memory/overview.md`): two sections — `## 对局表`
+  (run table; rules in its 表格规则 block) and `## 统计` (crosstab
+  statistics, recounted from the run table)
 
 ## 写入时机 When to write
 
-- **Run note + overview row**: written immediately at every run end —
-  the note pair under `memory/runs/`, plus one row inserted at the TOP of
-  the overview.md table
+- **Run note + overview row + statistics**: written immediately at every
+  run end — the note pair under `memory/runs/`, one row inserted at the TOP
+  of the overview.md run table, and the `## 统计` crosstabs (战绩总览 /
+  进阶进度) recounted from the table
 - **Phased reflection**: cadence unchanged — the first one covers ALL runs
   recorded so far; every later one covers the 20 runs since the previous
   (36–55, 56–75, …), fired when the cumulative run count reaches the
@@ -23,9 +25,11 @@ consult, and remarks.
   date**. overview.md holds only overall run results (the table); no
   experience content lives there
 - **lessons/**: forward-valuable experience from the run and from phased
-  reflections is written into the matching category file as unordered-list
-  items (each lessons markdown states this format rule internally);
-  reflection-derived items are dated per entry
+  reflections is written into the matching category file — an item that maps
+  one-to-one to an inventory-table row goes INTO that row's experience cell
+  (still as a `- (date) …` list item); anything without a unique row stays
+  as an unordered-list item after the table. Reflection-derived items are
+  dated per entry
 
 ## 查阅时机 When to consult
 
