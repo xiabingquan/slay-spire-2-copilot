@@ -535,19 +535,17 @@ public static class ActionExecutor
         {
             case NCardRewardSelectionScreen cardReward:
             {
-                List<NCardHolder> holders = UiHelper.FindAll<NCardHolder>(cardReward);
-                if (index < 0 || index >= holders.Count)
-                {
-                    return (false, $"index {index} out of range ({holders.Count} card options)");
-                }
-                // Information contract (2026-09-19): printed reward order has
-                // diverged from the applied card live (run-44). Resolve the
-                // REQUESTED option id before pressing — if it cannot be
-                // resolved, refuse the choose (no fallback, no guess) and let
-                // the state payload flag notify_user so the client stops and
-                // pings Feishu. On success, snapshot the deck so the next
-                // Build can verify what was actually applied.
+                // Printed index space = screen._options (StateBuilder.CardRewardOptions).
+                // UI holder order diverged from _options live (run-51: printed [2]=FEED,
+                // unfiltered FindAll<NCardHolder>[2] pressed MANGLE) — same ghost/preview
+                // pollution class as run-12 THE_GAMBIT→PROLONG on grid screens, which
+                // SelectableCardHolders fixed for card_choice but NOT for card_reward.
+                // Root fix: resolve by card id, never by raw holder index — probe
+                // _options[index] for the requested id, then press the holder that
+                // actually carries that id. Unresolvable / no-match = fail-loud refuse
+                // (no fallback, no guess). 2026-09-19 user contract.
                 string? requestedId = null;
+                int optionCount = 0;
                 try
                 {
                     if (StateBuilder.CardRewardOptionsField?.GetValue(cardReward) is System.Collections.IEnumerable raw)
@@ -555,10 +553,10 @@ public static class ActionExecutor
                         int i = 0;
                         foreach (object? opt in raw)
                         {
+                            optionCount++;
                             if (i == index && opt != null)
                             {
                                 requestedId = StateBuilder.ProbeModelId(opt);
-                                break;
                             }
                             i++;
                         }
@@ -568,12 +566,51 @@ public static class ActionExecutor
                 {
                     BridgeMod.LogErr($"card_reward requested-id probe failed: {e}");
                 }
+                if (index < 0 || (optionCount > 0 && index >= optionCount))
+                {
+                    return (false, $"index {index} out of range ({optionCount} card options)");
+                }
                 if (string.IsNullOrEmpty(requestedId))
                 {
                     InfoCompleteness.FlagDuringAction(
                         $"card_reward choose refused: option {index} id unresolvable at press time (player reads the card on screen)");
                     return (false,
                         $"info incomplete: card_reward option {index} id unresolvable — choose refused (no fallback; client must stop + notify)");
+                }
+                // Candidate holders: grid-filtered first (reward layouts that use
+                // NGridCardHolder), else all NCardHolder. Press by id match only.
+                List<NCardHolder> candidates = UiHelper.FindAll<NGridCardHolder>(cardReward).Cast<NCardHolder>().ToList();
+                if (candidates.Count == 0)
+                {
+                    candidates = UiHelper.FindAll<NCardHolder>(cardReward);
+                }
+                NCardHolder? target = null;
+                var resolvedIds = new List<string>();
+                foreach (NCardHolder h in candidates)
+                {
+                    string? hid = StateBuilder.ProbeModelId(h);
+                    if (!string.IsNullOrEmpty(hid))
+                    {
+                        resolvedIds.Add(hid);
+                        if (target is null && hid.StartsWith(requestedId, StringComparison.Ordinal))
+                        {
+                            target = h;
+                        }
+                    }
+                }
+                if (target is null)
+                {
+                    if (resolvedIds.Count == 0)
+                    {
+                        InfoCompleteness.FlagDuringAction(
+                            $"card_reward choose refused: holder ids unresolvable (requested {requestedId} at printed index {index})");
+                        return (false,
+                            $"info incomplete: card_reward holder ids unresolvable — choose refused (requested_id={requestedId}; no fallback)");
+                    }
+                    InfoCompleteness.FlagDuringAction(
+                        $"card_reward choose refused: requested_id={requestedId} not present on any holder (holder ids: {string.Join(",", resolvedIds)}) — printed/UI mapping divergence");
+                    return (false,
+                        $"card_reward mapping divergence: requested_id={requestedId} not on any holder [holder_ids={string.Join(",", resolvedIds)}] — choose refused (no fallback; re-read state and choose by printed id)");
                 }
                 RunState? verifyRun = null;
                 Player? verifyPlayer = null;
@@ -592,10 +629,10 @@ public static class ActionExecutor
                 List<string> deckBefore = StateBuilder.DeckTupleSnapshot(verifyPlayer, verifyRun);
                 BridgeMod.CardRewardVerifyPending =
                     new CardRewardVerifyPending(index, requestedId, deckBefore);
-                NCardHolder holder = holders[index];
-                Fire(() => { holder.EmitSignal(NCardHolder.SignalName.Pressed, holder); return Task.CompletedTask; }, "choose card reward");
+                NCardHolder pressTarget = target;
+                Fire(() => { pressTarget.EmitSignal(NCardHolder.SignalName.Pressed, pressTarget); return Task.CompletedTask; }, "choose card reward");
                 return (true,
-                    $"submitted choose card reward index {index} (requested_id={requestedId}; applied-card verification pending next state — check last_choose_verification)");
+                    $"submitted choose card reward index {index} (requested_id={requestedId}; pressed holder by id match; applied-card verification pending next state)");
             }
             case NChooseARelicSelection relicScreen:
             {
