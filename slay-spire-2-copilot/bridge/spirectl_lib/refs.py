@@ -22,13 +22,53 @@ REF_DOMAIN_FILES = [
     ("character", "characters"),
     ("monster", "monsters"),
 ]
+KIND_TO_STEM = dict(REF_DOMAIN_FILES)
 
 # spire-codex.com URL patterns: https://spire-codex.com/{category}/{lowercase_id}
 # (underscores work unencoded; category chosen by id shape).
+KIND_TO_API_PLURAL = {
+    "monster": "monsters",
+    "move": "monsters",
+    "relic": "relics",
+    "card": "cards",
+    "potion": "potions",
+    "power": "powers",
+    "event": "events",
+    "event_option": "events",
+}
 
 _REF_INDEX_CACHE = {}
 _CODEX_API_CACHE = {}
 _CODEX_MOVE_INDEX = None
+
+
+def _read_json_dict(path):
+    """Load a JSON object file.
+
+    Args:
+        path: File to read.
+
+    Returns:
+        Parsed dict, or {} when the file is missing, unreadable, or not a dict.
+    """
+    if not path.exists():
+        return {}
+    try:
+        loaded = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return loaded if isinstance(loaded, dict) else {}
+
+
+def _write_json_dict(path, data):
+    """Write a dict to path as indented, key-sorted, UTF-8 JSON.
+
+    Args:
+        path: Destination file (parent dirs created as needed).
+        data: JSON-serializable dict.
+    """
+    REF_DIR.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
 def load_reference_index(lang="en"):
@@ -58,16 +98,7 @@ def load_reference_index(lang="en"):
             index[key] = (domain, entry)
 
     for domain, stem in REF_DOMAIN_FILES:
-        path = REF_DIR / f"{stem}{suffix}"
-        if not path.exists():
-            continue
-        try:
-            data = json.loads(path.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError) as exc:
-            print(f"lookup: failed to read {path.name}: {exc}", file=sys.stderr)
-            continue
-        if not isinstance(data, dict):
-            continue
+        data = _read_json_dict(REF_DIR / f"{stem}{suffix}")
         for key, entry in data.items():
             if not isinstance(entry, dict):
                 continue
@@ -315,7 +346,7 @@ def build_monster_entry_from_api(monster):
     }
     if monster.get("min_hp_ascension") is not None:
         hp["ascension"] = {"min": monster.get("min_hp_ascension"), "max": monster.get("max_hp_ascension")}
-    entry = {
+    return {
         "id": api_id,
         "kind": "monster",
         "name": monster.get("name") or api_id,
@@ -338,55 +369,42 @@ def build_monster_entry_from_api(monster):
         "needs_zh": True,
         "source": f"codex-api:/monsters/{api_id}",
     }
-    return entry
 
 
 def fold_monster_entry(entry):
-    """Merge a monster entry into monsters.json + monsters_zh.json."""
-    api_id = entry.get("id")
-    target_key = api_id
+    """Merge a monster entry into monsters.json + monsters_zh.json.
+
+    Curated monsters are kept; the uncurated payload is skipped per language.
+    """
+    target_key = entry.get("id")
     for lang in ("en", "zh"):
-        suffix = "_zh.json" if lang == "zh" else ".json"
-        path = REF_DIR / f"monsters{suffix}"
-        data = {}
-        if path.exists():
-            try:
-                loaded = json.loads(path.read_text(encoding="utf-8"))
-                if isinstance(loaded, dict):
-                    data = loaded
-            except (OSError, json.JSONDecodeError):
-                data = {}
+        path = REF_DIR / f"monsters{'_zh' if lang == 'zh' else ''}.json"
+        data = _read_json_dict(path)
         existing = data.get(target_key)
         if isinstance(existing, dict) and existing.get("curated") is True:
-            # Keep curated monster; still merge uncurated live-key aliases
             continue
-        zh_entry = dict(entry)
+        payload = dict(entry)
         if lang == "zh":
-            zh_entry["needs_zh"] = True
-        data[target_key] = zh_entry
-        REF_DIR.mkdir(parents=True, exist_ok=True)
-        path.write_text(json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+            payload["needs_zh"] = True
+        data[target_key] = payload
+        _write_json_dict(path, data)
     _REF_INDEX_CACHE.clear()
 
 
 def fold_entry_into_reference(domain_stem, key, entry, lang="en"):
-    """Write/merge one entry into references/game/<stem>.json (+ _zh.json)."""
-    suffix = "_zh.json" if lang == "zh" else ".json"
-    path = REF_DIR / f"{domain_stem}{suffix}"
-    data = {}
-    if path.exists():
-        try:
-            loaded = json.loads(path.read_text(encoding="utf-8"))
-            if isinstance(loaded, dict):
-                data = loaded
-        except (OSError, json.JSONDecodeError):
-            data = {}
+    """Write/merge one entry into references/game/<stem>.json (+ _zh.json).
+
+    Returns:
+        Tuple (path, written); written is False when an existing curated
+        entry was kept.
+    """
+    path = REF_DIR / f"{domain_stem}{'_zh' if lang == 'zh' else ''}.json"
+    data = _read_json_dict(path)
     existing = data.get(key)
     if isinstance(existing, dict) and existing.get("curated") is True:
         return path, False
     data[key] = entry
-    REF_DIR.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    _write_json_dict(path, data)
     return path, True
 
 
@@ -442,275 +460,259 @@ def fetch_codex_text(url, timeout=12.0):
     return text.strip()
 
 
-def research_and_fold(key, domain_guess=None):
-    """Lookup-miss fallback: spire-codex.com API first, HTML last.
+def _fetch_codex_first(plural, query_keys):
+    """Fetch the first codex API payload for any query key; search as fallback.
 
-    Returns (entry, source) when research produced data, else (None, None).
-    Folded entries carry key = the LIVE id (state's shape); API ids land in
-    aliases. Entries are curated:false — agent curation completes them.
+    Args:
+        plural: API path segment (relics, cards, powers, ...).
+        query_keys: Id shapes to try, in order (direct GET then search each).
+
+    Returns:
+        Payload dict carrying an "id", or None.
     """
-    source = None
-    kind = domain_guess
-    entry = None
-
-    # ---------- API-first per domain ----------
-    # Power ids: live shape has _POWER suffix; API ids usually don't.
-    power_queries = [key]
-    if key.endswith("_POWER"):
-        power_queries.append(key[: -len("_POWER")])
-    power_queries.append(key.replace("_", " ").lower())
-
-    if kind == "move" or "_MOVE" in key:
-        index = codex_move_index()
-        hit = index.get(key) or index.get(key.replace("_MOVE", ""))
-        if hit:
-            monster = hit[0]
-            entry = build_monster_entry_from_api(monster)
-            source = f"codex-api:/monsters/{monster.get('id')}"
-            kind = "move"
-    if entry is None and (kind == "monster" or (kind is None and key.isupper())):
-        data = codex_api_get(f"/monsters/{key.lower()}")
-        if data is None:
-            results = codex_search("monsters", key.replace("_", " ").lower())
-            data = results[0] if results else None
-        if isinstance(data, dict) and data.get("id"):
-            entry = build_monster_entry_from_api(data)
-            source = f"codex-api:/monsters/{data.get('id')}"
-            kind = "monster"
-    if entry is None and (kind in ("relic", None) or key.endswith("_PEARL") or key.isupper()):
-        data = codex_api_get(f"/relics/{key.lower()}")
-        if data is None:
-            results = codex_search("relics", key.replace("_", " ").lower())
-            data = results[0] if results else None
-        if isinstance(data, dict) and data.get("id"):
-            description = strip_codex_markup(data.get("description") or data.get("description_raw") or "")
-            entry = {
-                "id": key,
-                "kind": "relic",
-                "name": data.get("name") or key,
-                "rarity": data.get("rarity_key") or data.get("rarity"),
-                "character": data.get("pool"),
-                "description": description,
-                "aliases": [data.get("name"), data.get("id")],
-                "play_notes": "",
-                "curated": False,
-                "needs_zh": True,
-                "source": f"codex-api:/relics/{data.get('id')}",
-            }
-            source = entry["source"]
-            kind = "relic"
-    if entry is None and (kind in ("card", None) or key.endswith("_STRIKE") or key.endswith("_IRONCLAD")):
-        data = codex_api_get(f"/cards/{key.lower()}")
-        if data is None:
-            results = codex_search("cards", key.replace("_", " ").lower())
-            data = results[0] if results else None
-        if isinstance(data, dict) and data.get("id"):
-            description = strip_codex_markup(data.get("description") or data.get("description_raw") or "")
-            entry = {
-                "id": key,
-                "kind": "card",
-                "name": data.get("name") or key,
-                "cost": data.get("cost"),
-                "card_type": data.get("type_key") or data.get("type"),
-                "rarity": data.get("rarity_key") or data.get("rarity"),
-                "target_type": data.get("target"),
-                "character_pool": data.get("color"),
-                "description": description,
-                "aliases": [data.get("name"), data.get("id")],
-                "play_notes": "",
-                "curated": False,
-                "needs_zh": True,
-                "source": f"codex-api:/cards/{data.get('id')}",
-            }
-            source = entry["source"]
-            kind = "card"
-    if entry is None and (kind in ("potion", None) or key.endswith("_POTION") or "POTION" in key):
-        data = codex_api_get(f"/potions/{key.lower()}")
-        if data is None:
-            results = codex_search("potions", key.replace("_", " ").lower())
-            data = results[0] if results else None
-        if isinstance(data, dict) and data.get("id"):
-            description = strip_codex_markup(data.get("description") or data.get("description_raw") or "")
-            entry = {
-                "id": key,
-                "kind": "potion",
-                "name": data.get("name") or key,
-                "rarity": data.get("rarity_key") or data.get("rarity"),
-                "description": description,
-                "aliases": [data.get("name"), data.get("id")],
-                "play_notes": "",
-                "curated": False,
-                "needs_zh": True,
-                "source": f"codex-api:/potions/{data.get('id')}",
-            }
-            source = entry["source"]
-            kind = "potion"
-    if entry is None and kind in ("power", None):
-        data = None
-        for query in power_queries:
-            data = codex_api_get(f"/powers/{query.lower()}")
-            if data is not None:
-                break
-        if data is None:
-            for query in power_queries:
-                results = codex_search("powers", query.replace("_", " ").lower())
-                if results:
-                    data = results[0]
-                    break
-        if isinstance(data, dict) and data.get("id"):
-            description = strip_codex_markup(data.get("description") or data.get("description_raw") or "")
-            entry = {
-                "id": key,
-                "kind": "power",
-                "name": data.get("name") or key,
-                "power_type": data.get("type"),
-                "stack_type": data.get("stack_type"),
-                "counter_class": (data.get("stack_type") == "Counter"),
-                "description": description,
-                "aliases": [data.get("name"), data.get("id"), key.replace("_POWER", "")],
-                "play_notes": "",
-                "curated": False,
-                "needs_zh": True,
-                "source": f"codex-api:/powers/{data.get('id')}",
-            }
-            source = entry["source"]
-            kind = "power"
-    if entry is None and (kind in ("event", "event_option", None) or ".pages." in key):
-        event_id = key.split(".pages.", 1)[0] if ".pages." in key else key
-        data = codex_api_get(f"/events/{event_id.lower()}")
-        if data is None:
-            results = codex_search("events", event_id.replace("_", " ").lower())
-            data = results[0] if results else None
-        if isinstance(data, dict) and data.get("id"):
-            description = strip_codex_markup(data.get("description") or "")
-            options_blob = data.get("options") or data.get("pages") or []
-            entry = {
-                "id": event_id,
-                "kind": "event",
-                "name": data.get("name") or event_id,
-                "acts": [data.get("act")] if data.get("act") else [],
-                "description": description,
-                "option_summary": json.dumps(options_blob, ensure_ascii=False)[:600] if options_blob else "",
-                "aliases": [data.get("name"), data.get("id")],
-                "play_notes": "",
-                "curated": False,
-                "needs_zh": True,
-                "source": f"codex-api:/events/{data.get('id')}",
-                "options": {},
-            }
-            # Fold the specific event_option key when the miss was an option.
-            if ".pages." in key:
-                option_entry = {
-                    "id": key,
-                    "kind": "event_option",
-                    "event_id": event_id,
-                    "title": key.rsplit(".", 1)[-1].replace("_", " ").title(),
-                    "description": description,
-                    "aliases": [key.rsplit(".", 1)[-1]],
-                    "play_notes": "",
-                    "curated": False,
-                    "needs_zh": True,
-                    "source": f"codex-api:/events/{data.get('id')}",
-                }
-                entry["options"][key] = option_entry
-            source = entry["source"]
-            kind = kind or "event"
-
-    # ---------- HTML last resort ----------
-    if entry is None:
-        urls = codex_candidate_urls(key)
-        best_text = ""
-        best_url = None
-        for url in urls:
-            try:
-                text = fetch_codex_text(url)
-            except Exception:
-                continue
-            if not text or len(text) < 80:
-                continue
-            human = key.replace("_", " ").lower()
-            if key.lower() not in text.lower() and human not in text.lower():
-                continue
-            best_text = text
-            best_url = url
+    data = None
+    for query in query_keys:
+        data = codex_api_get(f"/{plural}/{query.lower()}")
+        if data is not None:
             break
-        if not best_text:
-            return None, None
-        nav_markers = (
-            "spire codex", "compendium", "card library", "relic collection",
-            "potion lab", "jump back in", "pages you open", "stats", "rankings",
-            "tier list", "leaderboard", "submit a run", "browse runs", "tools",
-            "companion apps", "steam mod", "art exporter", "overlay",
-            "knowledge demon bot", "sign in", "cookie", "press .",
-        )
-        human = key.replace("_", " ").lower()
-        lines = [ln.strip() for ln in best_text.splitlines() if ln.strip()]
-        body = []
-        total = 0
-        started = False
-        for ln in lines:
-            low = ln.lower()
-            if not started:
-                if key.lower() in low or human in low:
-                    started = True
-                else:
-                    continue
-            if any(m in low for m in nav_markers) and len(ln) < 60:
-                continue
-            if low.startswith("http"):
-                continue
-            body.append(ln)
-            total += len(ln)
-            if total > 600:
+    if data is None:
+        for query in query_keys:
+            results = codex_search(plural, query.replace("_", " ").lower())
+            if results:
+                data = results[0]
                 break
-        if not body:
-            body = [ln for ln in lines if not any(m in ln.lower() for m in nav_markers)][:8]
-        description = " ".join(body)[:700]
-        # Infer kind/stem from the HTML URL category — fail-loud when the
-        # category is unrecognizable instead of folding into a random domain.
-        url_kind = None
-        safe_url = best_url or ""
-        for cat, knd in (
-            ("relics", "relic"), ("cards", "card"), ("powers", "power"),
-            ("potions", "potion"), ("events", "event"), ("monsters", "monster"),
-            ("characters", "character"),
-        ):
-            if f"/{cat}/" in safe_url:
-                url_kind = knd
-                break
-        kind = url_kind or kind
-        if not kind or kind == "unknown":
-            return None, None
-        entry = {
+    return data if isinstance(data, dict) and data.get("id") else None
+
+
+def _power_queries(key):
+    """Query shapes for a power id: as-is, without _POWER, and humanized."""
+    queries = [key]
+    if key.endswith("_POWER"):
+        queries.append(key[: -len("_POWER")])
+    queries.append(key.replace("_", " ").lower())
+    return queries
+
+
+def _simple_api_entry(kind, key, data, fields, aliases_extra=()):
+    """Build a flat codex entry shared by relic/card/potion/power shapes."""
+    if not (isinstance(data, dict) and data.get("id")):
+        return None
+    entry = {
+        "id": key,
+        "kind": kind,
+        "name": data.get("name") or key,
+        **fields(data),
+        "description": strip_codex_markup(data.get("description") or data.get("description_raw") or ""),
+        "aliases": [data.get("name"), data.get("id"), *aliases_extra],
+        "play_notes": "",
+        "curated": False,
+        "needs_zh": True,
+        "source": f"codex-api:/{KIND_TO_API_PLURAL[kind]}/{data.get('id')}",
+    }
+    return entry
+
+
+def _relic_entry(key, data):
+    """Build a relic entry from a codex payload."""
+    return _simple_api_entry("relic", key, data, lambda d: {
+        "rarity": d.get("rarity_key") or d.get("rarity"),
+        "character": d.get("pool"),
+    })
+
+
+def _card_entry(key, data):
+    """Build a card entry from a codex payload."""
+    return _simple_api_entry("card", key, data, lambda d: {
+        "cost": d.get("cost"),
+        "card_type": d.get("type_key") or d.get("type"),
+        "rarity": d.get("rarity_key") or d.get("rarity"),
+        "target_type": d.get("target"),
+        "character_pool": d.get("color"),
+    })
+
+
+def _potion_entry(key, data):
+    """Build a potion entry from a codex payload."""
+    return _simple_api_entry("potion", key, data, lambda d: {
+        "rarity": d.get("rarity_key") or d.get("rarity"),
+    })
+
+
+def _power_entry(key, data):
+    """Build a power entry from a codex payload (alias drops the _POWER suffix)."""
+    return _simple_api_entry("power", key, data, lambda d: {
+        "power_type": d.get("type"),
+        "stack_type": d.get("stack_type"),
+        "counter_class": (d.get("stack_type") == "Counter"),
+    }, aliases_extra=(key.replace("_POWER", ""),))
+
+
+def _monster_entry(key, data):
+    """Build a full monster entry from a codex payload."""
+    if not (isinstance(data, dict) and data.get("id")):
+        return None
+    return build_monster_entry_from_api(data)
+
+
+def _event_entry(key, data):
+    """Build an event entry, plus an option stub when the miss was a page option."""
+    if not (isinstance(data, dict) and data.get("id")):
+        return None
+    event_id = key.split(".pages.", 1)[0] if ".pages." in key else key
+    description = strip_codex_markup(data.get("description") or "")
+    options_blob = data.get("options") or data.get("pages") or []
+    entry = {
+        "id": event_id,
+        "kind": "event",
+        "name": data.get("name") or event_id,
+        "acts": [data.get("act")] if data.get("act") else [],
+        "description": description,
+        "option_summary": json.dumps(options_blob, ensure_ascii=False)[:600] if options_blob else "",
+        "aliases": [data.get("name"), data.get("id")],
+        "play_notes": "",
+        "curated": False,
+        "needs_zh": True,
+        "source": f"codex-api:/events/{data.get('id')}",
+        "options": {},
+    }
+    if ".pages." in key:
+        entry["options"][key] = {
             "id": key,
-            "kind": kind,
-            "name": key,
+            "kind": "event_option",
+            "event_id": event_id,
+            "title": key.rsplit(".", 1)[-1].replace("_", " ").title(),
             "description": description,
-            "aliases": [],
+            "aliases": [key.rsplit(".", 1)[-1]],
             "play_notes": "",
             "curated": False,
             "needs_zh": True,
-            "source": f"codex-html:{best_url}",
+            "source": f"codex-api:/events/{data.get('id')}",
         }
-        source = entry["source"]
+    return entry
 
-    # ---------- Fold ----------
-    stem = {d: s for d, s in REF_DOMAIN_FILES}.get(kind or "", "relics")
 
-    if stem == "monsters" and isinstance(entry, dict) and entry.get("kind") == "monster" and entry.get("moves"):
+# API-first research attempts, in order: (kind, probe(key, guess), queries(key), builder)
+_API_ATTEMPTS = (
+    ("monster",
+     lambda k, g: g == "monster" or (g is None and k.isupper()),
+     lambda k: [k], _monster_entry),
+    ("relic",
+     lambda k, g: g in ("relic", None) or k.endswith("_PEARL") or k.isupper(),
+     lambda k: [k], _relic_entry),
+    ("card",
+     lambda k, g: g in ("card", None) or k.endswith("_STRIKE") or k.endswith("_IRONCLAD"),
+     lambda k: [k], _card_entry),
+    ("potion",
+     lambda k, g: g in ("potion", None) or k.endswith("_POTION") or "POTION" in k,
+     lambda k: [k], _potion_entry),
+    ("power",
+     lambda k, g: g in ("power", None),
+     _power_queries, _power_entry),
+    ("event",
+     lambda k, g: g in ("event", "event_option", None) or ".pages." in k,
+     lambda k: [k.split(".pages.", 1)[0] if ".pages." in k else k], _event_entry),
+)
+
+
+def _research_html(key, kind):
+    """Last resort: scrape a codex HTML page into a minimal entry.
+
+    Returns:
+        Tuple (entry, kind, source); (None, kind, None) when no page matched
+        or the URL category is unrecognizable (fail-loud: never fold blind).
+    """
+    urls = codex_candidate_urls(key)
+    best_text = ""
+    best_url = None
+    for url in urls:
+        try:
+            text = fetch_codex_text(url)
+        except Exception:
+            continue
+        if not text or len(text) < 80:
+            continue
+        human = key.replace("_", " ").lower()
+        if key.lower() not in text.lower() and human not in text.lower():
+            continue
+        best_text = text
+        best_url = url
+        break
+    if not best_text:
+        return None, kind, None
+    nav_markers = (
+        "spire codex", "compendium", "card library", "relic collection",
+        "potion lab", "jump back in", "pages you open", "stats", "rankings",
+        "tier list", "leaderboard", "submit a run", "browse runs", "tools",
+        "companion apps", "steam mod", "art exporter", "overlay",
+        "knowledge demon bot", "sign in", "cookie", "press .",
+    )
+    human = key.replace("_", " ").lower()
+    lines = [ln.strip() for ln in best_text.splitlines() if ln.strip()]
+    body = []
+    total = 0
+    started = False
+    for ln in lines:
+        low = ln.lower()
+        if not started:
+            if key.lower() in low or human in low:
+                started = True
+            else:
+                continue
+        if any(m in low for m in nav_markers) and len(ln) < 60:
+            continue
+        if low.startswith("http"):
+            continue
+        body.append(ln)
+        total += len(ln)
+        if total > 600:
+            break
+    if not body:
+        body = [ln for ln in lines if not any(m in ln.lower() for m in nav_markers)][:8]
+    description = " ".join(body)[:700]
+    # Infer kind from the HTML URL category — fail-loud when unrecognizable.
+    url_kind = None
+    safe_url = best_url or ""
+    for cat, knd in (
+        ("relics", "relic"), ("cards", "card"), ("powers", "power"),
+        ("potions", "potion"), ("events", "event"), ("monsters", "monster"),
+        ("characters", "character"),
+    ):
+        if f"/{cat}/" in safe_url:
+            url_kind = knd
+            break
+    kind = url_kind or kind
+    if not kind or kind == "unknown":
+        return None, kind, None
+    entry = {
+        "id": key,
+        "kind": kind,
+        "name": key,
+        "description": description,
+        "aliases": [],
+        "play_notes": "",
+        "curated": False,
+        "needs_zh": True,
+        "source": f"codex-html:{best_url}",
+    }
+    return entry, kind, entry["source"]
+
+
+def _fold_researched(key, kind, entry, source):
+    """Persist a researched entry into references/game and return it.
+
+    Monster entries fold via fold_monster_entry; move misses land as stubs
+    under a synthetic generic host; events fold EN+ZH in one pass; everything
+    else goes through fold_entry_into_reference per language.
+    """
+    stem = KIND_TO_STEM.get(kind or "", "relics")
+
+    if stem == "monsters" and entry.get("kind") == "monster" and entry.get("moves"):
         fold_monster_entry(entry)
         return entry, source
     if stem == "monsters" and "_MOVE" in key:
         # Move-level stub nested under generic host (rare fallback path).
         path = REF_DIR / "monsters.json"
-        data = {}
-        if path.exists():
-            try:
-                loaded = json.loads(path.read_text(encoding="utf-8"))
-                if isinstance(loaded, dict):
-                    data = loaded
-            except (OSError, json.JSONDecodeError):
-                data = {}
+        data = _read_json_dict(path)
         generic = data.get("generic")
         if not isinstance(generic, dict):
             generic = {"id": "generic", "kind": "monster", "name": "generic", "description": "synthetic host for move stubs", "aliases": [], "play_notes": "", "curated": False, "needs_zh": True, "source": "synthetic", "moves": {}}
@@ -723,22 +725,14 @@ def research_and_fold(key, domain_guess=None):
             moves[key] = stub
         generic["moves"] = moves
         data["generic"] = generic
-        path.write_text(json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        _write_json_dict(path, data)
         _REF_INDEX_CACHE.clear()
         return stub, source
-    if stem == "events" and isinstance(entry, dict) and entry.get("kind") == "event":
+    if stem == "events" and entry.get("kind") == "event":
         event_id = entry.get("id")
         for lang in ("en", "zh"):
-            suffix = "_zh.json" if lang == "zh" else ".json"
-            path = REF_DIR / f"events{suffix}"
-            data = {}
-            if path.exists():
-                try:
-                    loaded = json.loads(path.read_text(encoding="utf-8"))
-                    if isinstance(loaded, dict):
-                        data = loaded
-                except (OSError, json.JSONDecodeError):
-                    data = {}
+            path = REF_DIR / f"events{'_zh' if lang == 'zh' else ''}.json"
+            data = _read_json_dict(path)
             existing = data.get(event_id)
             if isinstance(existing, dict) and existing.get("curated") is True:
                 continue
@@ -746,7 +740,7 @@ def research_and_fold(key, domain_guess=None):
             if lang == "zh":
                 payload["needs_zh"] = True
             data[event_id] = payload
-            path.write_text(json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+            _write_json_dict(path, data)
         _REF_INDEX_CACHE.clear()
         return entry, source
     fold_entry_into_reference(stem, key, entry, lang="en")
@@ -755,6 +749,49 @@ def research_and_fold(key, domain_guess=None):
     fold_entry_into_reference(stem, key, zh_entry, lang="zh")
     _REF_INDEX_CACHE.clear()
     return entry, source
+
+
+def research_and_fold(key, domain_guess=None):
+    """Lookup-miss fallback: spire-codex.com API first, HTML last.
+
+    Returns (entry, source) when research produced data, else (None, None).
+    Folded entries carry key = the LIVE id (state's shape); API ids land in
+    aliases. Entries are curated:false — agent curation completes them.
+    """
+    kind = domain_guess
+    entry, source = None, None
+
+    # Move hits fold the whole host-monster entry (live move ids inside).
+    if kind == "move" or "_MOVE" in key:
+        hit = codex_move_index().get(key) or codex_move_index().get(key.replace("_MOVE", ""))
+        if hit:
+            monster = hit[0]
+            entry = build_monster_entry_from_api(monster)
+            source = f"codex-api:/monsters/{monster.get('id')}"
+            kind = "move"
+
+    if entry is None:
+        for attempt_kind, probe, queries, builder in _API_ATTEMPTS:
+            if not probe(key, kind):
+                continue
+            data = _fetch_codex_first(KIND_TO_API_PLURAL[attempt_kind], queries(key))
+            built = builder(key, data) if data is not None else None
+            if built is None:
+                continue
+            entry = built
+            source = entry["source"]
+            if attempt_kind == "event":
+                kind = kind or "event"
+            else:
+                kind = attempt_kind
+            break
+
+    if entry is None:
+        entry, kind, source = _research_html(key, kind)
+        if entry is None:
+            return None, None
+
+    return _fold_researched(key, kind, entry, source)
 
 
 def print_entry(domain, entry, key, extra=None):
