@@ -22,6 +22,7 @@ Core facts table (fill every row):
 | Field | Value |
 |---|---|
 | Character | e.g. IRONCLAD |
+| Date | e.g. 2026-09-20 |
 | Floor reached | e.g. 33 |
 | Score | e.g. — (EA build has no score field) |
 | Ascension | e.g. 2 |
